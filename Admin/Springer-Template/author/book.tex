@@ -30,6 +30,11 @@
 
 % see the list of further useful packages
 % in the Reference Guide
+\usepackage[english]{babel}
+\usepackage{csquotes}
+\usepackage[inline,shortlabels]{enumitem}
+
+
 
 \makeindex             % used for the subject index
                        % please use the style svind.ist with
@@ -37,37 +42,54 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\date{Septerm 3, 2022}
+\date{\today}
 
 \begin{document}
 
-\author{Author name(s)}
-\title{Book title}
-\subtitle{-- Monograph --}
+\author{Wolfgang Arendt, Annette Grabosch, G\"unther Greiner, Ulrich Groh, Heinrich P. Lotz, Ulrich Moustakas, Rainer Nagel, Frank Neubrander, Ulf Schlotterbeck}
+%% --
+\title{One-parameter Semigroups of Positive Operators\\{\large{Edited by R. Nagel}}}
+%% --
+\subtitle{Lecture Notes in Mathematics\\ \\ 1184\\ \\Springer-Verlag\\ Berlin Heidelberg New York Tokyo}
+%% --
 \maketitle
 
 \frontmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \include{dedication}
-\include{foreword}
+%\include{foreword}
 \include{preface}
-\include{acknowledgement}
-\include{ethics}
+%\include{acknowledgement}
+%\include{ethics}
 
 \tableofcontents
 
-\include{acronym}
+%\include{acronym}
 
 
 \mainmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\include{part}
-\include{chapter}
-\include{appendix}
+
+%% -- Part-A
+\include{partA}
+\include{LN-A1}
+
+%% -- Part-B
+\include{partB}
+
+%% -- Part-C
+\include{partC}
+
+%% -- Part-D
+\include{partD}
+\include{LN-D1}
+
+%\include{chapter}
+%\include{appendix}
 
 \backmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\include{glossary}
-\include{solutions}
-\printindex
+%\include{glossary}
+%\include{solutions}
+%\printindex
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

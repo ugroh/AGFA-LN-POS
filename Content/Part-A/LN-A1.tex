@@ -1,0 +1,206 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{array}
+\usepackage[inline,shortlabels]{enumitem}
+
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{remark}{Remark}
+\newtheorem{example}{Example}
+
+\begin{document}
+
+\section{ONE-PARAMETER SEMIGROUPS ON BANACH SPACES}
+
+\subsection*{CHAPTER A-I}
+
+\subsection*{BASIC RESULTS ON SEMIGROUPS ON BANACH SPACES}
+
+Since the basic theory of one-parameter semigroups can be found in several excellent books (e.g. Davies (1980), Goldstein (1985a), Pazy (1983) or Hille-Phillips (1957)) we do not want to give a self-contained introduction to this subject here.
+It may however be useful to fix our notation, to collect briefly some important definitions and results (Section 1), to present a list of standard examples (Section 2) and to discuss standard constructions of new semigroups from a given one (Section 3).
+In the entire chapter we denote by $E$ a (real or) complex Banach space and consider one-parameter semigroups of bounded linear operators $T(t)$ on $E$.
+By this we understand a subset $\{T(t): t \in \mathbb{R}_{+}\}$ of $L(E)$, usually written as $(T(t))_{t \geq 0}$, such that
+$T(0) = Id$
+$T(s+t) = T(s) \cdot T(t)$ for all $s, t \in \mathbb{R}_{+}$.
+In more abstract terms this means that the map $t \mapsto T(t)$ is a homomorphism from the additive semigroup $\mathbb{R}_{+}$ into the multiplicative semigroup $(L(E), \cdot)$.
+Similarly, a one-parameter group $(T(t))_{t \in \mathbb{R}}$ will be a homomorphic image of the group $(\mathbb{R},+)$ in $(L(E), \cdot)$.
+
+\section{STANDARD DEFINITIONS AND RESULTS}
+
+We consider a one-parameter semigroup $(T(t))_{t \geq 0}$ on a Banach space $E$ and observe that the domain $\mathbb{R}_{+}$ and the range $L(E)$ of the (semigroup) homomorphism $\tau: t \mapsto T(t)$ are topological semigroups for the natural topology on $\mathbb{R}_{+}$ and any one of the standard operator topologies on $L(E)$.
+We single out the strong operator topology on $L(E)$ and require $\tau$ to be continuous.
+
+\begin{definition}
+A one-parameter semigroup $(T(t))_{t \geq 0}$ is called strongly continuous if the map $t \mapsto T(t)$ is continuous for the strong operator topology on $L(E)$, i.e., $\lim_{t \to t_0} \|T(t)f - T(t_0)f\| = 0$ for every $f \in E$ and $t, t_0 \geq 0$.
+\end{definition}
+
+Clearly one defines in a similar way weakly continuous, resp. uniformly continuous (compare A-II, Def. 1.19) semigroups, but since we concentrate on the strongly continuous case we agree on the following terminology:
+From now on 'semigroup' always means strongly continuous one-parameter semigroup of bounded linear operators.
+
+Next we collect a few elementary facts on the continuity and boundedness of one-parameter semigroups.
+
+\begin{remark}
+
+\begin{enumerate}[(i)]
+\item
+A one-parameter semigroup $(T(t))_{t \geq 0}$ on a Banach space $E$ is strongly continuous if and only if for any $f \in E$ it is true that $T(t)f \to f$ as $t \to 0$.
+
+\item
+For every strongly continuous semigroup $(T(t))_{t \geq 0}$ there exist constants $M \geq 1$, $\omega \in \mathbb{R}$ such that $\|T(t)\| \leq M \cdot e^{\omega t}$ for every $t \geq 0$.
+
+\item
+If $(T(t))_{t \geq 0}$ is a one-parameter semigroup such that $\|T(t)\|$ is bounded for $0 \leq t \leq \delta$ then it is strongly continuous if and only if $\lim_{t \to 0} T(t)f = f$ for every $f$ in a total subset of $E$.
+
+\end{enumerate}
+
+\end{remark}
+
+\begin{definition}
+By the growth bound (or type) of the semigroup $(T(t))_{t \geq 0}$ we understand the number
+\begin{equation}
+\omega := \inf\{w \in \mathbb{R}: \text{There exists } M \in \mathbb{R}_{+} \text{ such that } \|T(t)\| \leq M e^{wt} \text{ for } t \geq 0\}
+\end{equation}
+$= \lim_{t \to \infty} \frac{1}{t} \cdot \log\|T(t)\| = \inf_{t > 0} \frac{1}{t} \cdot \log\|T(t)\|$
+\end{definition}
+
+Particularly important are semigroups such that for every $t \geq 0$ we have $\|T(t)\| \leq M$ (bounded semigroups) or $\|T(t)\| \leq 1$ (contraction semigroups).
+In both cases we have $\omega \leq 0$.
+It follows from the subsequent examples and from 3.1 that $\omega$ may be any number $-\infty \leq \omega < +\infty$.
+Moreover the reader should observe that the infimum in (1.1) need not be attained and that $M$ may be larger than 1 even for bounded semigroups.
+
+\begin{example}
+\begin{enumerate}[(i)]
+\item
+Take $E = \mathbb{C}^2$, $A = \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix}$ and $T(t) = e^{tA} = \begin{pmatrix} 1 & t \\ 0 & 1 \end{pmatrix}$.
+Then for the 1-norm on $E$ we obtain $\|T(t)\| = 1 + t$, hence $(T(t))_{t \geq 0}$ is an unbounded semigroup having growth bound $\omega = 0$.
+
+\item
+Take $E = L^1(\mathbb{R})$ and for $f \in E$, $t \geq 0$ define
+\[
+T(t)f(x) := \begin{cases}
+2 \cdot f(x+t) & \text{if } x \in [-t,0] \\
+f(x+t) & \text{otherwise.}
+\end{cases}
+\]
+Each $T(t)$, $t > 0$, satisfies $\|T(t)\| = 2$ as can be seen by taking $f := 1_{[0,t]}$.
+Therefore $(T(t))_{t \geq 0}$ is a strongly continuous semigroup which is bounded, hence has $\omega = 0$, but the constant $M$ in (1.1) cannot be chosen to be 1.
+
+\end{enumerate}
+\end{example}
+
+\begin{definition}
+To every semigroup $(T(t))_{t \geq 0}$ there belongs an operator $(A,D(A))$, called the generator and defined on the domain
+\[
+D(A) := \left\{f \in E: \lim_{h \to 0} \frac{T(h)f-f}{h} \text{ exists in } E\right\}
+\]
+by $Af := \lim_{h \to 0} \frac{T(h)f-f}{h}$ for $f \in D(A)$.
+\end{definition}
+
+Clearly, $D(A)$ is a linear subspace of $E$ and $A$ is linear from $D(A)$ into $E$.
+Only in certain special cases (see 2.1) the generator is everywhere defined and therefore bounded (use Prop. 1.9(i)).
+In general the precise extent of the domain $D(A)$ is essential for the characterization of the generator.
+But since the domain is canonically associated to the generator of a semigroup we shall write in most cases $A$ instead of $(A,D(A))$.
+
+\begin{proposition}
+For the generator $A$ of a semigroup $(T(t))_{t \geq 0}$ on a Banach space $E$ the following assertions hold:
+(i) If $f \in D(A)$ then $T(t)f \in D(A)$ for every $t \geq 0$.
+(ii) The map $t \mapsto T(t)f$ is differentiable on $\mathbb{R}_{+}$ if and only if $f \in D(A)$.
+In that case one has
+\begin{equation}
+\frac{d}{dt}T(t)f = AT(t)f = T(t)Af.
+\end{equation}
+(iii) For every $f \in E$ one has $\int_0^t T(s)f ds \in D(A)$ and
+\begin{equation}
+A\int_0^t T(s)f ds = T(t)f - f.
+\end{equation}
+(iv) If $f \in D(A)$ then
+\[
+T(t)f = f + \int_0^t AT(s)f ds = f + \int_0^t T(s)Af ds.
+\]
+(v) The domain $D(A)$ is dense in $E$.
+\end{proposition}
+
+\begin{theorem}
+Let $(A,D(A))$ be the generator of a strongly continuous semigroup $(T(t))_{t \geq 0}$ on the Banach space $E$.
+Then the 'abstract Cauchy problem' (ACP)
+\[
+\frac{d}{dt}\xi(t) = A\xi(t), \quad \xi(0) = f_0,
+\]
+has a unique solution $\xi: \mathbb{R}_{+} \to D(A)$ in $C^1(\mathbb{R}_{+},E)$ for every $f_0 \in D(A)$.
+In fact, this solution is given by $\xi(t) := T(t)f_0$.
+\end{theorem}
+
+For the important relation of semigroups to abstract Cauchy problems we refer to A-II, Section 1.
+Here we only point out that the above theorem implies that a semigroup is uniquely determined by its generator.
+While the generator is bounded only for uniformly continuous semigroups (see 2.1 below), it always enjoys a weaker but useful property.
+
+\begin{definition}
+An operator $B$ with domain $D(B)$ on a Banach space $E$ is called closed if $D(B)$ endowed with the graph norm
+\[
+\|f\|_B := \|f\| + \|Bf\|
+\]
+becomes a Banach space.
+Equivalently, $(B,D(B))$ is closed if and only if its graph $\{(f,Bf): f \in D(B)\}$ is closed in $E \times E$, i.e.
+\begin{equation}
+f_n \in D(B), f_n \to f \text{ and } Bf_n \to g \text{ implies } f \in D(B) \text{ and } Bf = g.
+\end{equation}
+\end{definition}
+
+It is clear from this definition that the 'closedness' of an operator $B$ depends very much on the size of the domain $D(B)$.
+For example, a bounded and densely defined operator $(B,D(B))$ is closed if and only if $D(B) = E$.
+On the other hand it may happen that $(B,D(B))$ is not closed but has a closed extension $(C,D(C))$, i.e., $D(B) \subset D(C)$ and $Bf = Cf$ for every $f \in D(B)$.
+In that case, $B$ is called closable, a property which is equivalent to the following:
+\begin{equation}
+f_n \in D(B), f_n \to 0 \text{ and } Bf_n \to g \text{ implies } g = 0.
+\end{equation}
+
+The smallest closed extension of $(B,D(B))$ will be called the closure $\bar{B}$ with domain $D(\bar{B})$.
+In other words, the graph of $\bar{B}$ is the closure of $\{(f,Bf): f \in D(B)\}$ in $E \times E$.
+Finally we call a subset $D_0$ of $D(B)$ a core for $B$ if $D_0$ is $\|\cdot\|_B$-dense in $D(B)$.
+This means that a closed operator is determined (via closure) by its restriction to a core in its domain.
+
+\begin{proposition}
+For the generator $A$ of a strongly continuous semigroup $(T(t))_{t \geq 0}$ the following holds:
+(i) The generator $A$ is a closed operator.
+(ii) If a subspace $D_0$ of the domain $D(A)$ is dense in $E$ and $(T(t))$-invariant, then it is a core for $A$.
+(iii) Define $D(A^n) := \{f \in D(A^{n-1}): Af \in D(A^{n-1})\}$, $D(A^1) = D(A)$.
+Then $D(A^\infty) := \bigcap_{n \in \mathbb{N}} D(A^n)$ is dense in $E$ and a core for $A$.
+\end{proposition}
+
+\begin{example}
+Property (iii) above does not hold for general densely defined closed operators.
+Take $E = C[0,1]$, $D(B) = C^1[0,1]$ and $Bf = q \cdot f$ for some nowhere differentiable function $q \in C[0,1]$.
+Then $B$ is closed, but $D(B^2) = (0)$.
+\end{example}
+
+\begin{proposition}
+For the generator $A$ of a strongly continuous semigroup $(T(t))_{t \geq 0}$ on a Banach space $E$ the following holds.
+If $\int_0^\infty e^{-\lambda t}T(t)f dt$ exists for every $f \in E$ and some $\lambda \in \mathbb{C}$, then $\lambda \in \rho(A)$ and $R(\lambda,A)f = \int_0^\infty e^{-\lambda t}T(t)f dt$.
+In particular,
+\begin{equation}
+R(\lambda,A)^{n+1}f = \frac{(-1)^n}{n!}\left(\frac{d}{d\lambda}\right)^n R(\lambda,A)f = \int_0^\infty e^{-\lambda t}\frac{t^n}{n!}T(t)f dt
+\end{equation}
+for $n \in \mathbb{N}$, $f \in E$ and all $\lambda$ with $\operatorname{Re}\lambda > \omega$.
+\end{proposition}
+
+\begin{remark}
+(1) For continuous Banach space valued functions such as $t \mapsto T(t)f$ we consider the Riemann integral and define $\int_0^\infty T(t)f dt$ as $\lim_{t \to \infty} \int_0^t T(s)f ds$.
+Sometimes such integrals for strongly continuous semigroups $(T(t))_{t \geq 0}$ are written as $\int_a^b T(t)dt$ and understood in the strong sense.
+(2) Since the generator $(A,D(A))$ determines the semigroup $(T(t))_{t > 0}$ uniquely, we will speak occasionally of the growth bound of the generator instead of the semigroup, i.e., we write $\omega = \omega(A) = \omega((T(t))_{t \geq 0})$.
+(3) For one-parameter groups it might seem to be more natural to define the generator as the `derivative' rather than just the `right derivative' at $t = 0$.
+This yields the same operator as the following result shows:
+The strongly continuous semigroup $(T(t))_{t \geq 0}$ with generator $A$ can be extended to a strongly continuous one-parameter group $(U(t))_{t \in \mathbb{R}}$ if and only if $-A$ generates a semigroup $(S(t))_{t \geq 0}$.
+In that case $(U(t))_{t \in \mathbb{R}}$ is obtained as
+\[
+U(t) := \begin{cases}
+T(t) & \text{for } t \geq 0 \\
+S(-t) & \text{for } t \leq 0
+\end{cases}
+\]
+We refer to [Davies (1980), Prop.~1.14] for the details.
+\end{remark}
+
+\end{document}
