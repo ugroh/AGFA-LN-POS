@@ -1,8 +1,7 @@
-%%%%%%%%%%%%%%%%%%%% book.tex %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%% LN-Book.tex %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% sample root file for the chapters of your "monograph"
+% Stand: 2025/01/13 ulgr
 %
-% Use this file as a template for your own input.
 %
 %%%%%%%%%%%%%%%% Springer-Verlag %%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -34,15 +33,52 @@
 \usepackage{csquotes}
 \usepackage[inline,shortlabels]{enumitem}
 
+%% -- Part A etc
+%% -- A-I etc für \chapter
+%% -- 1. für \section etc
+%% --
+\renewcommand\thepart{\Alph{part}}
+%\renewcommand\thechapter{\thepart-\Roman{chapter}}
+%\renewcommand\thesection{\arabic{section}}
+%\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+%
 
+%% -- Für Links im PDF
+%% --
+\usepackage{hyperref}
+\hypersetup{%
+	,breaklinks = true	%
+	,colorlinks	= true  %  Farbige Links false/true, für onlineversion true                                                           
+	,urlcolor	= blue  %                                                              
+	,citecolor	= blue  %                                                          
+	,linkcolor	= blue	% oder black
+%  	,hidelinks 			% Vor dem Druck % entfernen
+	}
+
+%% -- \subsection nicht ins TOC
+%% --
+\setcounter{tocdepth}{1}
+
+%% -- Durchgehende Nummerierung
+%% -- 
+\makeatletter
+\let\c@remark=\c@theorem % Make remark share the theorem counter
+\let\c@definition=\c@theorem % Make definition share the theorem counter
+\let\c@example=\c@theorem % Make example share the theorem counter
+\let\c@lemma=\c@theorem % Make lemma share the theorem counter
+\let\c@corollary=\c@theorem % Make corollary share the theorem counter
+\let\c@proposition=\c@theorem % Make proposition share the theorem counter
+\makeatother
 
 \makeindex             % used for the subject index
                        % please use the style svind.ist with
                        % your makeindex program
+                       
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\date{\today}
+\date{Stand: \today}
 
 \begin{document}
 
@@ -56,37 +92,38 @@
 
 \frontmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\include{dedication}
+\include{LN-dedication}
 %\include{foreword}
-\include{preface}
+\include{LN-preface}
 %\include{acknowledgement}
 %\include{ethics}
 
 \tableofcontents
 
-%\include{acronym}
+
 
 
 \mainmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% -- Part-A
-\include{partA}
+\include{LN-partA}
 \include{LN-A1}
 
 %% -- Part-B
-\include{partB}
+\include{LN-partB}
 
 %% -- Part-C
-\include{partC}
+\include{LN-partC}
 
 %% -- Part-D
-\include{partD}
+\include{LN-partD}
 \include{LN-D1}
 
 %\include{chapter}
 %\include{appendix}
 
 \backmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\include{acronym}
 %\include{glossary}
 %\include{solutions}
 %\printindex
