@@ -1,0 +1,147 @@
+%%%%%%%%%%%%%%%%%%%% LN-Book.tex %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Stand: 2025/01/14 ulgr
+%
+%
+%%%%%%%%%%%%%%%% Springer-Verlag %%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% RECOMMENDED %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[graybox,envcountchap,sectrefs]{svmono}
+
+% choose options for [] as required from the list
+% in the Reference Guide
+
+%\usepackage{mathptmx}
+%\usepackage{helvet}
+%\usepackage{courier}
+%
+\usepackage{type1cm}         
+
+\usepackage{makeidx}         % allows index generation
+\usepackage{graphicx}        % standard LaTeX graphics tool
+                             % when including figure files
+\usepackage{multicol}        % used for the two-column index
+\usepackage[bottom]{footmisc}% places footnotes at page bottom
+
+\usepackage{newtxtext}       % 
+\usepackage[varvw]{newtxmath}       % selects Times Roman as basic font
+
+% see the list of further useful packages
+% in the Reference Guide
+\usepackage[english]{babel}
+\usepackage{csquotes}
+\usepackage[inline,shortlabels]{enumitem}
+
+%% -- Part A etc
+%% -- A-I etc für \chapter
+%% -- 1. für \section etc
+%% --
+\renewcommand\thepart{\Alph{part}}
+%\renewcommand\thechapter{\thepart-\Roman{chapter}}
+%\renewcommand\thesection{\arabic{section}}
+%\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+%
+
+%% -- Für Links im PDF
+%% --
+\usepackage{hyperref}
+\hypersetup{%
+	,breaklinks = true	%
+	,colorlinks	= true  %  Farbige Links false/true, für onlineversion true                                                           
+	,urlcolor	= blue  %                                                              
+	,citecolor	= blue  %                                                          
+	,linkcolor	= blue	% oder black
+%  	,hidelinks 			% Vor dem Druck % entfernen
+	}
+
+%% -- \subsection nicht ins TOC
+%% --
+\setcounter{tocdepth}{1}
+
+%% -- Durchgehende Nummerierung
+%% -- siehe 
+\makeatletter
+\let\c@remark=\c@theorem 		% Make remark share the theorem counter
+\let\c@definition=\c@theorem 	% Make definition share the theorem counter
+\let\c@example=\c@theorem 		% Make example share the theorem counter
+\let\c@lemma=\c@theorem 		% Make lemma share the theorem counter
+\let\c@corollary=\c@theorem 	% Make corollary share the theorem counter
+\let\c@proposition=\c@theorem 	% Make proposition share the theorem counter
+\makeatother
+
+%% --
+
+\makeindex             % used for the subject index
+                       % please use the style svind.ist with
+                       % your makeindex program
+                       
+%% --
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\date{Stand: \today}
+
+\begin{document}
+
+\author{Wolfgang Arendt, Annette Grabosch, G\"unther Greiner, Ulrich Groh, Heinrich P. Lotz, Ulrich Moustakas, Rainer Nagel, Frank Neubrander, Ulf Schlotterbeck}
+%% --
+\title{One-parameter Semigroups of Positive Operators\\
+		{\large{Edited by R. Nagel}}}
+%% --
+\subtitle{Lecture Notes in Mathematics\\ \\ 1184\\ \\Springer-Verlag\\ Berlin Heidelberg New York Tokyo}
+%% --
+\maketitle
+
+\frontmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% -- part-0
+\include{author/part-0/ln-dedication}
+%\include{author/part-0/foreword}
+\include{author/part-0/ln-preface}
+%\include{author/part-0/acknowledgement}
+
+\tableofcontents
+
+%\include{author/acronym}
+
+
+\mainmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% -- Part-A
+\include{author/part-a/ln-part-a}
+\include{author/part-a/ln-a1}
+%\include{author/part-a/appendix}
+
+%% -- Part-B
+\include{author/part-a/ln-part-b}
+%\include{author/part-b/chapter}
+%\include{author/part-b/appendix}
+
+%% -- Part-C
+\include{author/part-a/ln-part-c}
+%\include{author/part-c/chapter}
+%\include{author/part-c/appendix}
+
+%% -- Part-D
+\include{author/part-a/ln-part-d}
+\include{author/part-a/ln-d1}
+%\include{author/part-d/appendix}
+
+%% -- Part-E
+%\include{author/part-a/ln-part-e}
+%\include{author/part-e/chapter}
+%\include{author/part-e/appendix}
+
+\backmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\include{author/glossary}
+%\include{author/solutions}
+%\printindex
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
+
+
+
+
+

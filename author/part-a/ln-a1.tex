@@ -1,4 +1,4 @@
-% !TEX root = book.tex
+% !TEX root = LN-Book.tex
 %% -- Stand 2025/01/13
 %% -- ulgr
 %% --
@@ -7,11 +7,11 @@
 Since the basic theory of one-parameter semigroups can be found in several excellent books (e.g. Davies (1980), Goldstein (1985a), Pazy (1983) or Hille-Phillips (1957)) we do not want to give a self-contained introduction to this subject here.
 It may however be useful to fix our notation, to collect briefly some important definitions and results (Section 1), to present a list of standard examples (Section 2) and to discuss standard constructions of new semigroups from a given one (Section 3).
 In the entire chapter we denote by $E$ a (real or) complex Banach space and consider one-parameter semigroups of bounded linear operators $T(t)$ on $E$.
-By this we understand a subset $\{T(t): t \in \mathbb{R}_{+}\}$ of $L(E)$, usually written as $(T(t))_{t \geq 0}$, such that
+By this we understand a subset $\{T(t) \colon t \in \mathbb{R}_{+}\}$ of $L(E)$, usually written as $(T(t))_{t \geq 0}$, such that
 %% --
 \begin{align*}
-	T(0) &= Id \\
-	T(s+t) = T(s) \cdot T(t) \text{ for all $s, t \in \mathbb{R}_{+}$.}
+	T(0) 	&= 	Id \\
+	T(s+t) 	&= 	T(s) \cdot T(t) \text{ for all $s, t \in \mathbb{R}_{+}$.}
 \end{align*}
 %% --
 In more abstract terms this means that the map $t \mapsto T(t)$ is a homomorphism from the additive semigroup $\mathbb{R}_{+}$ into the multiplicative semigroup $(L(E), \cdot)$.
@@ -19,7 +19,7 @@ Similarly, a one-parameter group $(T(t))_{t \in \mathbb{R}}$ will be a homomorph
 %% --
 \section{Standard Definitions and Results}
 %% --
-We consider a one-parameter semigroup $(T(t))_{t \geq 0}$ on a Banach space $E$ and observe that the domain $\mathbb{R}_{+}$ and the range $L(E)$ of the (semigroup) homomorphism $\tau: t \mapsto T(t)$ are topological semigroups for the natural topology on $\mathbb{R}_{+}$ and any one of the standard operator topologies on $L(E)$.
+We consider a one-parameter semigroup $(T(t))_{t \geq 0}$ on a Banach space $E$ and observe that the domain $\mathbb{R}_{+}$ and the range $L(E)$ of the (semigroup) homomorphism $\tau \colon t \mapsto T(t)$ are topological semigroups for the natural topology on $\mathbb{R}_{+}$ and any one of the standard operator topologies on $L(E)$.
 We single out the strong operator topology on $L(E)$ and require $\tau$ to be continuous.
 %% --
 \begin{definition}
@@ -27,7 +27,7 @@ A one-parameter semigroup $(T(t))_{t \geq 0}$ is called strongly continuous if t
 \end{definition}
 %% --
 Clearly one defines in a similar way weakly continuous, resp. uniformly continuous (compare A-II, Def. 1.19) semigroups, but since we concentrate on the strongly continuous case we agree on the following terminology:
-From now on 'semigroup' always means strongly continuous one-parameter semigroup of bounded linear operators.
+From now on \enquote*{semigroup} always means strongly continuous one-parameter semigroup of bounded linear operators.
 
 Next we collect a few elementary facts on the continuity and boundedness of one-parameter semigroups.
 %% --
@@ -50,34 +50,37 @@ If $(T(t))_{t \geq 0}$ is a one-parameter semigroup such that $\|T(t)\|$ is boun
 \begin{definition}
 By the growth bound (or type) of the semigroup $(T(t))_{t \geq 0}$ we understand the number
 %% --
-\begin{equation}
-\omega := \inf\{w \in \mathbb{R}: \text{There exists } M \in \mathbb{R}_{+} \text{ such that } \|T(t)\| \leq M e^{wt} \text{ for } t \geq 0\}
-\end{equation}
-%% --
-$= \lim_{t \to \infty} \frac{1}{t} \cdot \log\|T(t)\| = \inf_{t > 0} \frac{1}{t} \cdot \log\|T(t)\|$
+\begin{align*}
+\omega_{0} &:= \inf\{w \in \mathbb{R} \colon \text{There exists $ M \in \mathbb{R}_{+}$ such that $\|T(t)\| \leq M e^{wt}$ 
+	for $t \geq 0$} \} \tag{*}\\
+&= \lim_{t \to \infty} \frac{1}{t} \cdot \log\|T(t)\| = \inf_{t > 0} \frac{1}{t} \cdot \log\|T(t)\|
+\end{align*}
 \end{definition}
 %% --
 Particularly important are semigroups such that for every $t \geq 0$ we have $\|T(t)\| \leq M$ (bounded semigroups) or $\|T(t)\| \leq 1$ (contraction semigroups).
-In both cases we have $\omega \leq 0$.
-It follows from the subsequent examples and from 3.1 that $\omega$ may be any number $-\infty \leq \omega < +\infty$.
-Moreover the reader should observe that the infimum in (1.1) need not be attained and that $M$ may be larger than 1 even for bounded semigroups.
+In both cases we have $\omega_{0} \leq 0$.
+
+It follows from the subsequent examples and from 3.1 that $\omega_{0}$ may be any number $-\infty \leq \omega_{0} < +\infty$.
+Moreover the reader should observe that the infimum in $ (*) $ need not be attained and that $M$ may be larger than $ 1 $ even for bounded semigroups.
 %% --
 \begin{example}
 \begin{enumerate}[(i)]
 \item
 Take $E = \mathbb{C}^{2}$, $A = \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix}$ and $T(t) = e^{tA} = \begin{pmatrix} 1 & t \\ 0 & 1 \end{pmatrix}$.
-Then for the 1-norm on $E$ we obtain $\|T(t)\| = 1 + t$, hence $(T(t))_{t \geq 0}$ is an unbounded semigroup having growth bound $\omega = 0$.
+Then for the $1$-norm on $E$ we obtain $\|T(t)\| = 1 + t$, hence $(T(t))_{t \geq 0}$ is an unbounded semigroup having growth bound $\omega_{0} = 0$.
 
 \item
-Take $E = L^{1}(\mathbb{R})$ and for $f \in E$, $t \geq 0$ define
+Take $E = L^{1}(\mathbb{R})$ and for $f \in E$ and $t \geq 0$ define
+%% --
 \[
-T(t)f(x) := \begin{cases}
-2 \cdot f(x+t) & \text{if } x \in [-t,0] \\
-f(x+t) & \text{otherwise.}
+	T(t)f(x) := \begin{cases}
+		2 \cdot f(x+t) & \text{if } x \in [-t,0] \\
+		f(x+t) & \text{otherwise.}
 \end{cases}
 \]
+%% --
 Each $T(t)$, $t > 0$, satisfies $\|T(t)\| = 2$ as can be seen by taking $f := 1_{[0,t]}$.
-Therefore $(T(t))_{t \geq 0}$ is a strongly continuous semigroup which is bounded, hence has $\omega = 0$, but the constant $M$ in (1.1) cannot be chosen to be 1.
+Therefore $(T(t))_{t \geq 0}$ is a strongly continuous semigroup which is bounded, hence has $\omega_{0} = 0$, but the constant $M$ in $ (*) $ cannot be chosen to be $ 1 $.
 
 \end{enumerate}
 \end{example}
@@ -85,14 +88,14 @@ Therefore $(T(t))_{t \geq 0}$ is a strongly continuous semigroup which is bounde
 \begin{definition}
 To every semigroup $(T(t))_{t \geq 0}$ there belongs an operator $(A,D(A))$, called the generator and defined on the domain
 \[
-D(A) := \left\{f \in E: \lim_{h \to 0} \frac{T(h)f-f}{h} \text{ exists in } E\right\}
+D(A) := \left\{f \in E \colon \lim_{h \to 0} \frac{T(h)f-f}{h} \text{ exists in } E\right\}
 \]
 by $Af := \lim_{h \to 0} \frac{T(h)f-f}{h}$ for $f \in D(A)$.
 \end{definition}
 %% --
 Clearly, $D(A)$ is a linear subspace of $E$ and $A$ is linear from $D(A)$ into $E$.
 Only in certain special cases (see 2.1) the generator is everywhere defined and therefore bounded (use Prop. 1.9(i)).
-In general the precise extent of the domain $D(A)$ is essential for the characterization of the generator.
+In general the precise extent of the domain $D(A)$ is essential for the characterisation of the generator.
 But since the domain is canonically associated to the generator of a semigroup we shall write in most cases $A$ instead of $(A,D(A))$.
 %% --
 \begin{proposition}
@@ -137,7 +140,7 @@ Then the \enquote*{abstract Cauchy problem} (ACP)
 \[
 \frac{d}{dt}\xi(t) = A\xi(t), \quad \xi(0) = f_0,
 \]
-has a unique solution $\xi: \mathbb{R}_{+} \to D(A)$ in $C^{1}(\mathbb{R}_{+},E)$ for every $f_0 \in D(A)$.
+has a unique solution $\xi \colon \mathbb{R}_{+} \to D(A)$ in $C^{1}(\mathbb{R}_{+},E)$ for every $f_0 \in D(A)$.
 In fact, this solution is given by $\xi(t) := T(t)f_0$.
 \end{theorem}
 %% --
@@ -151,7 +154,7 @@ An operator $B$ with domain $D(B)$ on a Banach space $E$ is called closed if $D(
 \|f\|_{B} := \|f\| + \|Bf\|
 \]
 becomes a Banach space.
-Equivalently, $(B,D(B))$ is closed if and only if its graph $\{(f,Bf): f \in D(B)\}$ is closed in $E \times E$, i.e.
+Equivalently, $(B,D(B))$ is closed if and only if its graph $\{(f,Bf) \colon f \in D(B)\}$ is closed in $E \times E$, i.e.
 \begin{equation}
 f_{n} \in D(B), f_{n} \to f \text{ and } Bf_{n} \to g \text{ implies } f \in D(B) \text{ and } Bf = g.
 \end{equation}
@@ -167,7 +170,7 @@ f_{n} \in D(B), f_{n} \to 0 \text{ and } Bf_{n} \to g \text{ implies } g = 0.
 \end{equation}
 %% --
 The smallest closed extension of $(B,D(B))$ will be called the closure $\bar{B}$ with domain $D(\bar{B})$.
-In other words, the graph of $\bar{B}$ is the closure of $\{(f,Bf): f \in D(B)\}$ in $E \times E$.
+In other words, the graph of $\bar{B}$ is the closure of $\{(f,Bf) \colon f \in D(B)\}$ in $E \times E$.
 Finally we call a subset $D_0$ of $D(B)$ a core for $B$ if $D_0$ is $\|\cdot\|_{B}$-dense in $D(B)$.
 This means that a closed operator is determined (via closure) by its restriction to a core in its domain.
 %% --
@@ -181,7 +184,7 @@ The generator $A$ is a closed operator.
 \item
 If a subspace $D_0$ of the domain $D(A)$ is dense in $E$ and $(T(t))$-invariant, then it is a core for $A$.
 \item
-Define $D(A^{n}) := \{f \in D(A^{n-1}): Af \in D(A^{n-1})\}$, $D(A^{1}) = D(A)$.
+Define $D(A^{n}) := \{f \in D(A^{n-1}) \colon Af \in D(A^{n-1})\}$, $D(A^{1}) = D(A)$.
 Then $D(A^\infty) := \bigcap_{n \in \mathbb{N}} D(A^{n})$ is dense in $E$ and a core for $A$.
 
 \end{enumerate}
@@ -239,7 +242,7 @@ We start with the class of semigroups mentioned after Definition 1.1.
 It follows from elementary operator theory that for every bounded operator $A \in L(E)$ the sum exists and determines a unique uniformly continuous (semi)group $(e^{tA})_{t \in \mathbb{R}}$ having $A$ as its generator.
 %% --
 \[
-\sum_{n=0}^{m} \frac{t^n A^n}{n!} =: e^{tA}
+\sum_{n=0}^{m} \frac{t^n A^n}{n!} = \colon e^{tA}
 \]
 %% --
 Conversely, any uniformly continuous semigroup is of this form: If the semigroup $(T(t))_{t \geq 0}$ is uniformly continuous, then $\frac{1}{t} \int_{0}^{t} T(s) ds$ uniformly converges to $T(0)=Id$ as $t \rightarrow 0$.
@@ -259,23 +262,29 @@ Then
 %% --
 \[
 e^{tA}  = 
-\begin{cases}
-e^{ts/2} \cdot [D^{-1} 2\sinh(tD/2) \cdot A + (\cosh(tD/2)-sD^{-1}\sinh(tD/2)) \cdot Id] & \text{ if } D \neq 0, \\
-e^{ts/2} \cdot [tA+(1-ts/2) \cdot Id] & \text{ if $D=\emptyset$ resp.}
-\end{cases}
+e^{ts/2} \cdot [D^{-1} 2\sinh(tD/2) \cdot A + (\cosh(tD/2)-sD^{-1}\sinh(tD/2)) \cdot Id]
 \]
+%% --
+if $D \neq 0$ and
+%% -- 
+\[
+e^{tA}  = 
+e^{ts/2} \cdot [tA+(1-ts/2) \cdot Id] \text{\phantom{xxxxxxxxx}}
+\]
+%% --
+if $D=\emptyset$ resp.
 %% --
 \subsection{Multiplication Semigroups}
 Many Banach spaces appearing in applications are Banach spaces of (real or) complex valued functions over a set $X$.
 As the most standard of these "function spaces", we mention the space $C_0(X)$ of all continuous complex valued functions vanishing at infinity on a locally compact space $X$, or the space $L^p(X,\Sigma,\mu), 1 \leq p \leq \infty$, of all (equivalence classes of) p-integrable functions on a $\sigma$-finite measure space $(X,\Sigma,\mu)$.
 
-On these function spaces $E=C_0(X)$, resp. $E=L^p(X,\Sigma,\mu)$, there is a simple way to define "multiplication operators": Take a continuous, resp. measurable function $q: X \rightarrow \mathbb{C}$ and define
+On these function spaces $E=C_0(X)$, resp. $E=L^p(X,\Sigma,\mu)$, there is a simple way to define \enquote{multiplication operators}: Take a continuous, resp. measurable function $q \colon X \rightarrow \mathbb{C}$ and define
 %% --
 \[
 M_{q}f := q \cdot f, \text{ i.e. } M_{q}f(x) := q(x) \cdot f(x) \text{ for } x \in X,
 \]
 %% --
-for every $f$ in the "maximal" domain $D(M_{q}) := \{g \in E: q \cdot g \in E\}$.
+for every $f$ in the "maximal" domain $D(M_{q}) := \{g \in E \colon q \cdot g \in E\}$.
 
 For such multiplication operators many properties can be checked quite directly.
 For example, the following statements are equivalent:
@@ -308,7 +317,7 @@ Then the properties (a) and (b), resp. $(a')$ and $(b')$, are equivalent:
 \item
 $M_{q}$ generates a strongly continuous semigroup.
 \item
-$\sup\{\text{Re }q(x): x \in X\} < \infty$.
+$\sup\{\text{Re }q(x) \colon x \in X\} < \infty$.
 \end{enumerate}
 %% --
 
@@ -316,16 +325,16 @@ $\sup\{\text{Re }q(x): x \in X\} < \infty$.
 \item
 $M_{q}$ generates a uniformly continuous semigroup.
 \item
-$\sup\{|q(x)|: x \in X\} < \infty$.
+$\sup\{|q(x)| \colon x \in X\} < \infty$.
 \end{enumerate}
 %% --
 \end{proposition} 
 As a consequence one computes the growth bound of a multiplication semigroup as follows:
 \[
-\omega = \sup\{\text{Re }q(x): x \in X\} \text{ in the case } E = C_0(X),
+\omega = \sup\{\text{Re }q(x) \colon x \in X\} \text{ in the case } E = C_0(X),
 \]
 \[
-\omega = \text{ess-sup}\{\text{Re }q(x): x \in X\} \text{ in the case } E = L^p(\mu).
+\omega = \text{ess-sup}\{\text{Re }q(x) \colon x \in X\} \text{ in the case } E = L^p(\mu).
 \]
 %% --
 It is a nice exercise to characterize those multiplication operators which generate strongly continuous groups.
@@ -351,7 +360,7 @@ Af := \frac{d}{dx}f = f',
 \]
 with domain 
 \[
-D(A) := \{f \in E: f \text{ differentiable and } f' \in E\}
+D(A) := \{f \in E \colon f \text{ differentiable and } f' \in E\}
 \]
 %% --
 \begin{proof} For $f \in D(A)$ it follows that for every $x \in \mathbb{R}_{(+)}$
@@ -378,7 +387,7 @@ Af := \frac{d}{dx}f = f',
 \]
 with domain
 \[
-D(A) := \{f \in E: f \text{ absolutely continuous}, f' \in E\}
+D(A) := \{f \in E \colon f \text{ absolutely continuous}, f' \in E\}
 \]
 \end{enumerate}
 %% --
@@ -394,13 +403,13 @@ yield a group $(R_\tau(t))_{t \in \mathbb{R}}$ having period $\tau$, i.e. $R_\ta
 As in Example 2.4 one shows that its generator has the form
 %% --
 \[
-D(A) = \{f \in E: f \text{ absolutely continuous}, f' \in E\},
+D(A) = \{f \in E \colon f \text{ absolutely continuous}, f' \in E\},
 \]
 \[
 Af(z) = (2\pi i/\tau) \cdot z \cdot f'(z).
 \]
 %% --
-An isomorphic copy of the group $(R_\tau(t))_{t \in \mathbb{R}}$ is obtained if we consider $E=\{f \in C[0,1]: f(0)=f(1)\}$, resp. $E=L^p([0,1])$ and the group of 'periodic translations'
+An isomorphic copy of the group $(R_\tau(t))_{t \in \mathbb{R}}$ is obtained if we consider $E=\{f \in C[0,1] \colon f(0)=f(1)\}$, resp. $E=L^p([0,1])$ and the group of 'periodic translations'
 %% --
 \[
 T(t)f(x) := f(y) \text{ for } y \in [0,1], y = x+t \text{ mod } 1
@@ -409,7 +418,7 @@ T(t)f(x) := f(y) \text{ for } y \in [0,1], y = x+t \text{ mod } 1
 with generator
 %% --
 \[
-D(A) := \{f \in E: f \text{ absolutely continuous}, f' \in E\},
+D(A) := \{f \in E \colon f \text{ absolutely continuous}, f' \in E\},
 \]
 \[
 Af := f'.
@@ -428,7 +437,7 @@ f(x+t) & \text{if } x+t \leq \tau \\
 Then $(T(t))_{t \geq 0}$ is a semigroup satisfying $T(t)=0$ for $t \geq \tau$.
 Its generator is still the first derivative $A=\frac{d}{dx}$, but its domain is
 \[
-D(A) = \{f \in L^p([0,\tau]): f \text{ absolutely continuous}, f' \in L^p([0,\tau]), f(\tau)=0\}.
+D(A) = \{f \in L^p([0,\tau]) \colon f \text{ absolutely continuous}, f' \in L^p([0,\tau]), f(\tau)=0\}.
 \]
 %% --
 In fact, if $f \in D(A)$ then $f$ is absolutely continuous with $f' \in E$.
@@ -443,7 +452,7 @@ Bf(x) := \frac{d^2}{dx^2}f(x) = f''(x)
 %% --
 we take the domain
 \[
-D(B) := \{f \in C^2[0,1]: f'(0)=f'(1)=0\}
+D(B) := \{f \in C^2[0,1] \colon f'(0)=f'(1)=0\}
 \]
 in the Banach space $E=C[0,1]$.
 Then $D(B)$ is dense in $C[0,1]$, but closed for the graph norm.
@@ -456,13 +465,13 @@ e_{n}(x) := \cos \pi nx, \quad n \in \mathbb{Z},
 is contained in $D(B)$ and an eigenfunction of $B$ pertaining to the eigenvalue $\lambda_{n} := -\pi^2n^2$.
 The linear hull
 \[
-\text{span}\{e_{n}: n \in \mathbb{Z}\} =: E_0
+\text{span}\{e_{n} \colon n \in \mathbb{Z}\} = \colon E_0
 \]
 forms a subalgebra of $D(B)$ which by the Stone-Weierstrass theorem is dense in $E$.
 
 We now use $e_{n}$ to define bounded linear operators
 \[
-e_{n} \otimes e_{n}: f \rightarrow \left(\int_0^1 f(x)e_{n}(x)dx\right)e_{n} = \langle f,e_{n}\rangle e_{n}
+e_{n} \otimes e_{n} \colon f \rightarrow \left(\int_0^1 f(x)e_{n}(x)dx\right)e_{n} = \langle f,e_{n}\rangle e_{n}
 \]
 satisfying $\|e_{n} \otimes e_{n}\| \leq 1$ and
 $(e_{n} \otimes e_{n})(e_{m} \otimes e_{m}) = \delta_{n,m}(e_{n} \otimes e_{n})$ for $n \in \mathbb{Z}$.
