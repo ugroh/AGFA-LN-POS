@@ -1,0 +1,50 @@
+% continuation of chapter-A-II-1-section1.tex
+
+It remains to show that (iv) implies (i).
+Assertion (iv) implies that for all $t \geq 0$ there exist bounded operators $T(t) \in \mathcal{L}(E)$ such that $u(t,f) = T(t)f$ if $f \in D(A)$.
+Moreover, $\sup_{0\leq t\leq1} \|T(t)\| < \infty$.
+It follows that $T(\cdot)f$ is strongly continuous for all $f \in E$ (since it is so for $f \in D(A)$ and $D(A)$ is dense).
+Let $t > 1$.
+There exist unique $n \in \mathbb{N}$ and $s \in [0,1)$ such that $t = n + s$.
+Let $T(t) := T(1)^{n}T(s)$.
+From the uniqueness of the solutions it follows that $T(t)f = u(t,f)$ for all $t \geq 0$ as well as $T(t+s)f = T(s)T(t)f$ for all $f \in D(A)$ and $s,t \geq 0$.
+Thus $(T(t))_{t\geq0}$ is a semigroup.
+Denote by $B$ its generator.
+It follows from the definition that $A \subset B$.
+Moreover, $D(A)$ is invariant under the semigroup.
+So by A-I,Prop.1.9.(ii) $D(A)$ is a core of $B$.
+Since $A$ is closed this implies that $A = B$.
+\end{proof}
+
+\begin{remark}\label{rem:1.3}
+It is surprising that from condition (ii) and (iii) in the corollary it follows automatically that $D(A)$ is dense.
+On the other hand this condition cannot be omitted in (iv).
+In fact, consider any generator $\tilde{A}$ and its restriction $A$ with domain $D(A) = \{0\}$.
+Then $A$ satisfies the remaining conditions in (iv) but is not a generator (if $\dim E > 0$).
+\end{remark}
+
+\begin{example}\label{ex:1.4}
+We give a densely defined closed operator $A$, such that there exists a unique solution of (ACP) for all initial values in $D(A)$, but $A$ is not a generator.
+Let $B$ be a densely defined unbounded closed operator on a Banach space $F$.
+Consider $E = F \oplus F$ and $A$ on $E$ given by
+%% -- 
+\[
+A = \begin{pmatrix} 0 & B \\ 0 & 0 \end{pmatrix}
+\]
+%% -- 
+with domain $F \times D(B)$.
+
+Then $D(A^{2}) = \{(f,g) \in F \times D(B) : Bg \in F\} = D(A)$ and so $A_{1} \in \mathcal{L}(E_{1})$.
+In particular, $A_{1}$ is a generator.
+But $A$ is not.
+For instance condition (ii) in Corollary 1.2.\ does not hold, since for each $\lambda \in \mathbb{C}$,
+%% -- 
+\[
+(\lambda-A)D(A) = \{(\lambda f-Bg,\lambda g) : f \in F, g \in D(B)\} \subset F \times D(B) \neq F \times F = E.
+\]
+%% -- 
+So $\rho(A) = \emptyset$.
+\end{example}
+
+As a further illustration, we note that the solution of the corresponding abstract Cauchy problem for the initial value $(f,g) \in F \times D(B)$ is given by $u(t) = (f + tBg,g)$.
+Since $B$ is unbounded, condition (iv) of Corollary 1.2.\ is clearly violated.

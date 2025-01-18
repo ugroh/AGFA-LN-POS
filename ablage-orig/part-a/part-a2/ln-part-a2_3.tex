@@ -1,0 +1,44 @@
+% chapter-A-II-1-section1.tex
+
+\subsection{The Abstract Cauchy Problem}\label{sec:acp}
+
+Let $A$ be a closed operator on a Banach space $E$ and consider the abstract Cauchy problem
+%% -- 
+\[
+\begin{aligned}
+\text{(ACP)} \quad \begin{cases}
+\dot{u}(t) &= Au(t) \quad (t \geq 0) \\
+u(0) &= f.
+\end{cases}
+\end{aligned}
+\]
+%% -- 
+By a solution of (ACP) for the initial value $f \in D(A)$ we understand a continuously differentiable function $u : [0,\infty) \to E$ satisfying $u(0) = f$ and $u(t) \in D(A)$ for all $t \geq 0$ such that $\dot{u}(t) = Au(t)$ for $t \geq 0$.
+
+By A-I,Thm.1.7 there exists a unique solution of (ACP) for all initial values in the domain $D(A)$ whenever $A$ is the generator of a strongly continuous semigroup.
+The converse does not hold (see Example 1.4.\ below).
+However, for the operator $A_{1}$ on the Banach space $E_{1} = D(A)$ (see A-I,3.5) with domain $D(A_{1}) = D(A^{2})$ given by $A_{1}f = Af$ $(f \in D(A_{1}))$ the following holds.
+
+\begin{theorem}\label{thm:1.1}
+The following assertions are equivalent.
+\begin{enumerate}[(a)]
+\item For every $f \in D(A)$ there exists a unique solution of (ACP).
+\item $A_{1}$ is the generator of a strongly continuous semigroup.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+(i) implies (ii).
+Assume that (i) holds; i.e., for every $f \in D(A)$ there exists a unique solution $u(\cdot,f) \in C^{1}([0,\infty),E)$ of (ACP).
+For $f \in E_{1}$ define $T_{1}(t)f := u(t,f)$ $(t\geq0)$.
+By the uniqueness of the solutions it follows that $T_{1}(t)$ is a linear operator on $E_{1}$ and $T_{1}(s+t) = T_{1}(s)T_{1}(t)$.
+Moreover, since $u(\cdot,f) \in C^{1}$, it follows that $t \mapsto T_{1}(t)f$ is continuous from $[0,\infty)$ into $E_{1}$.
+We show that $T_{1}(t)$ is a continuous operator for all $t>0$.
+
+Let $t>0$.
+Consider the mapping $\eta: E_{1} \to C([0,t],E_{1})$ given by $\eta(f) = T_{1}(\cdot)f = u(\cdot,f)$.
+We show that $\eta$ has a closed graph.
+In fact, let $f_{n} \to f$ in $E_{1}$ and $\eta(f_{n}) = u(\cdot,f_{n}) \to v$ in $C([0,t],E_{1})$.
+Then $u(s,f_{n}) = f_{n} + \int_0^s Au(r,f_{n})dr$.
+Letting $n\to\infty$ we obtain $v(s) = f + \int_0^s Av(r)dr$ for $0 \leq s \leq t$.
+Let $\tilde{v}(s) = T_{1}(s-t)v(t)$ for $s > t$, and $\tilde{v}(s) = v(s)$ for $0 \leq s \leq t$.

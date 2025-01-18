@@ -1,0 +1,29 @@
+[previous content...]
+
+Let $(P_k)$ be a sequence of mutually orthogonal projections in $M$ such that every $P_k$ is equivalent to $1$ via some $u_k \in M$ [Sakai (1971), 2.2].
+
+Without loss of generality we may assume $\|(T_n - \text{Id})(u_n)\| \leq n^{-1}$ since the semigroup $T$ is strongly continuous. Thus we obtained the following:
+
+(1) $\lim_n \|(T_n - \text{Id})(P_k x_k P_k)\| = 0$ uniformly in $k \in \mathbb{N}$ for every bounded sequence $(x_k)$ in $M$.
+
+(2) Every projection $P_k$ is equivalent to $1$ via some $u_k \in M$.
+
+(3) $\|(T_n - \text{Id})u_n\| \leq n^{-1}$ for all $n \in \mathbb{N}$.
+
+For the following construction see A-I,3.6 and D-II,Sec.2.
+
+Let $\tilde{M}$ be an ultrapower of $M$, let $p := (P_k)' \in \tilde{M}$, $T := (T_n)' \in L(\tilde{M})$ and $u := (u_k)' \in \tilde{M}$. Then $T$ is identity preserving and of Schwarz type on $\tilde{M}$. Since $u^*u = p$ and $uu^* = 1$ it follows $pu^* = u^*$ and $(uu^*)x(uu^*) = x$ for all $x \in \tilde{M}$. Finally, $T(pxp) = pxp$ for all $x \in \tilde{M}$, which follows from (1), and $T(u^*) = T(pu^*) = pu^* = u^*$ and $T(u) = u$, which follows from (3). Using the Schwarz inequality we obtain
+
+\[T(uu^*) = T(1) \leq 1 = uu^* = T(u)T(u)^*.\]
+
+Using D-III, Lemma 1.1. we conclude $T(ux) = uT(x)$ and $T(xu^*) = T(x)u^*$ for all $x \in \tilde{M}$. Hence
+
+\begin{align*}
+T(x) &= T(uu^*xuu^*) = uT(u^*xu)u^* = uT(pu^*xup)u^* \\
+&= upu^*xupu^* = uu^*xuu^* = x
+\end{align*}
+
+for all $x \in \tilde{M}$. From this we obtain that for every bounded sequence $(x_k)$ in $M$
+\[\lim_m \|T_m x_m - x_m\| = 0\]
+for some subsequence of the $T_n$'s and of the $x_k$'s. This conflicts with our assumption at the beginning, hence the theorem is proved.
+\end{proof}

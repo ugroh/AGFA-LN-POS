@@ -1,8 +1,5 @@
 %%%%%%%%%%%%%%%%%%%% LN-Book.tex %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-% Stand: 2025/01/14 ulgr
-%
-%
+% Stand: 2025/01/18 ulgr
 %%%%%%%%%%%%%%%% Springer-Verlag %%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -32,28 +29,22 @@
 \usepackage[english]{babel}
 \usepackage{csquotes}
 \usepackage[inline,shortlabels]{enumitem}
+\usepackage{ragged2e}
+
 
 %% -- Part A etc
 %% -- A-I etc für \chapter
 %% -- 1. für \section etc
 %% --
 \renewcommand\thepart{\Alph{part}}
-%\renewcommand\thechapter{\thepart-\Roman{chapter}}
-%\renewcommand\thesection{\arabic{section}}
-%\renewcommand\thesubsection{\thesection.\arabic{subsection}}
-%
+\renewcommand\thechapter{\thepart-\Roman{chapter}}
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
 
-%% -- Für Links im PDF
-%% --
-\usepackage{hyperref}
-\hypersetup{%
-	,breaklinks = true	%
-	,colorlinks	= true  %  Farbige Links false/true, für onlineversion true                                                           
-	,urlcolor	= blue  %                                                              
-	,citecolor	= blue  %                                                          
-	,linkcolor	= blue	% oder black
-%  	,hidelinks 			% Vor dem Druck % entfernen
-	}
+%% -- Wegen Überlappung im TOC
+\usepackage{tocloft}
+\renewcommand\cftchapnumwidth{1cm}
+
 
 %% -- \subsection nicht ins TOC
 %% --
@@ -64,11 +55,20 @@
 \makeatletter
 \let\c@remark=\c@theorem 		% Make remark share the theorem counter
 \let\c@definition=\c@theorem 	% Make definition share the theorem counter
-\let\c@example=\c@theorem 		% Make example share the theorem counter
-\let\c@lemma=\c@theorem 		% Make lemma share the theorem counter
+%\let\c@example=\c@theorem 		% Make example share the theorem counter
+%\let\c@lemma=\c@theorem 		% Make lemma share the theorem counter
 \let\c@corollary=\c@theorem 	% Make corollary share the theorem counter
 \let\c@proposition=\c@theorem 	% Make proposition share the theorem counter
 \makeatother
+
+%% -- Nummer von Theorem etc. korrekt
+%% --
+\renewcommand\thetheorem{\thesection.\arabic{theorem}}
+\renewcommand\theproposition{\thesection.\arabic{proposition}}
+\renewcommand\thedefinition{\thesection.\arabic{definition}}
+\renewcommand\thelemma{\thesection.\arabic{lemma}}
+\renewcommand\thecorollary{\thesection.\arabic{corollary}}
+\renewcommand\theremark{\thesection.\arabic{remark}}
 
 %% --
 
@@ -78,9 +78,65 @@
                        
 %% -- nur nutzen 
 \includeonly{%
-,author/part-0/ln-dedication}
+,author/part-0/ln-dedication
+%,author/part-0/foreword
+,author/part-0/ln-preface
+%,author/part-0/acknowledgement
+%,author/acronym
+%% -- Part A
+,author/part-a/ln-part-a
+,author/part-a/ln-a1
+,author/part-a/ln-a2
+,author/part-a/ln-a3
+,author/part-a/ln-a4
+%,author/part-a/ln-parta-appendix
+%% -- Part B
+,author/part-b/ln-part-b
+%,author/part-b/ln-b1
+%,author/part-b/ln-b2
+%,author/part-b/ln-b3
+%,author/part-b/ln-b4
+%,author/part-b/ln-part-b-appendix
+%% -- Part C
+,author/part-c/ln-part-c
+%,author/part-c/ln-c1
+%,author/part-c/ln-c2
+%,author/part-c/ln-c3
+%,author/part-c/ln-c4
+%,author/part-c/ln-part-c-appendix
+%% -- Part C
+,author/part-d/ln-part-d
+,author/part-d/ln-d1
+,author/part-d/ln-d2
+,author/part-d/ln-d3
+%,author/part-d/ln-d4
+%,author/part-d/ln-part-d-appendix
+}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% -- Definitionen
+\DeclareMathOperator{\Id}{Id}
+\newcommand{\WA}{$\mathrm{W}^{*}$}
+\newcommand{\CA}{$\mathrm{C}^{*}$}
+\newcommand{\Fix}{\mathrm{Fix}}
+
+%% --
+\usepackage{tikz}
+\usepackage{tikz-cd}
+
+%% -- Für Links im PDF
+%% --
+\usepackage{hyperref}
+\hypersetup{%
+	,breaklinks = true	%
+	,colorlinks	= true  %  Farbige Links false/true, für onlineversion true                                                           
+	,urlcolor	= blue  %                                                              
+	,citecolor	= blue  %                                                          
+	,linkcolor	= blue	% oder black
+  	,hidelinks 			% Vor dem Druck % entfernen
+	}
+	
+%% -- Stand
+%% --
 
 \date{Stand: \today}
 
@@ -112,21 +168,26 @@
 %% -- Part-A
 \include{author/part-a/ln-part-a}
 \include{author/part-a/ln-a1}
+\include{author/part-a/ln-a2}
+\include{author/part-a/ln-a3}
+\include{author/part-a/ln-a4}
 %\include{author/part-a/appendix}
 
 %% -- Part-B
-\include{author/part-a/ln-part-b}
+\include{author/part-b/ln-part-b}
 %\include{author/part-b/chapter}
 %\include{author/part-b/appendix}
 
 %% -- Part-C
-\include{author/part-a/ln-part-c}
+\include{author/part-c/ln-part-c}
 %\include{author/part-c/chapter}
 %\include{author/part-c/appendix}
 
 %% -- Part-D
-\include{author/part-a/ln-part-d}
-\include{author/part-a/ln-d1}
+\include{author/part-d/ln-part-d}
+\include{author/part-d/ln-d1}
+\include{author/part-d/ln-d2}
+\include{author/part-d/ln-d3}
 %\include{author/part-d/appendix}
 
 %% -- Part-E

@@ -1,0 +1,310 @@
+% chapter-D-III.tex
+%% -- Datnd 2025/01/18
+
+\chapter{Spectral Theory of Positive Semigroups on W*-Algebras and their Preduals}
+
+Motivated by the classical results of Perron and Frobenius one expects the following spectral properties for the generator $A$ of a positive semigroup: The spectral bound $s(A) := \sup\{\Re(\lambda) : \lambda \in \sigma(A)\}$ belongs to the spectrum $\sigma(A)$ and the boundary spectrum
+%% -- 
+\[
+\sigma_{b}(A) := \sigma(A) \cap \{s(A)+i\mathbb{R}\}
+\]
+%% -- 
+possesses a certain symmetric structure, called cyclicity.
+
+Results of this type have been proved in Chapter B-III for positive semigroups on commutative C*-algebras, but in the non-commutative case the situation is more complicated.
+While \enquote{$s(A) \in \sigma(A)$} still holds (see Greiner-Voigt-Wolff (1980)) the cyclicity of the boundary spectrum $\sigma_{b}(A)$ is true only under additional assumptions on the semigroup (e.g., irreducibility, see Section 1 below).
+
+For technical reasons we consider mostly strongly continuous semigroups on the predual of a W*-algebra $M$ or its adjoint semigroup which is a weak*-continuous semigroup on $M$.
+
+\section{Spectral Theory for Positive Semigroups on Preduals}
+
+The aim of this section is to develop a Perron-Frobenius theory for identity preserving semigroups of Schwarz type on W*-algebras.
+But as we will show in the example preceding Theorem 1.1 below the boundary spectrum is no longer cyclic.
+The appropriate hypothesis on the semigroup implying the desired results seems to be the concept of irreducibility.
+
+Let us first recall some facts on normal linear functionals.
+If $\phi$ is a normal linear functional on a W*-algebra $M$ then there exists a partial isometry $u\in M$ and a positive linear functional $|\phi|\in M_{*}$ such that
+%% -- 
+\[
+\phi(x) = |\phi|(xu) =: (u|\phi|)(x), x\in M
+\]
+%% -- 
+%% -- 
+\[
+u^*u = s(|\phi|),
+\]
+%% -- 
+where $s(|\phi|)$ denotes the support projection of $|\phi|$ in $M$.
+We refer to this as the \emph{polar decomposition} of $\phi$ [Takesaki (1979), Theorem III.4.2].
+In addition, $|\phi|$ is uniquely determined by the following two conditions [Takesaki (1979), Proposition III.4.6]:
+%% -- 
+\[
+	\|\phi\| = \| |\phi| \|,
+\]
+%% -- 
+$(*)$ 
+%% -- 
+\[
+	|\phi(x)|^{2} \leq |\phi|(xx^*) \quad (x\in M).
+\]
+%% -- 
+For the polar decomposition of $\phi^*$, where $\phi^*(x) = \phi(x^*)^*$, we obtain
+%% -- 
+\[
+	\phi^* = u^*|\phi^*|, \quad |\phi^*| = u|\phi|u^* \quad \text{and} \quad 		uu^* = s(|\phi^*|).
+\]
+%% -- 
+It is easy to see that $u^*\in s(|\phi|)M$.
+
+If $\Psi$ is a subset of the state space of a C*-algebra $M$, then $\Psi$ is called \emph{faithful} if $0 \leq x\in M$ and $\psi(x) = 0$ for all $\psi\in\Psi$ implies $x = 0$.
+$\Psi$ is called \emph{subinvariant} for a positive map $T\in\mathcal{L}(M)$ (resp., positive semigroup $T$) if $T'\psi \leq \psi$ for all $\psi\in\Psi$ (resp., $T(t)'\psi \leq \psi$ for all $T(t)\in T$ and $\psi\in\Psi$).
+Recall that for every positive map $T\in\mathcal{L}(M)$ there exists a state $\phi$ on $M$ such that $T'\phi = r(T)\phi$ [Groh (1981), Theorem 2.1], where $r(T)$ denotes the spectral radius of $T$.
+
+Let us start our investigation with two lemmas.
+Recall that $\Fix(T)$ is the fixed space of $T$, i.e. the set $\{x\in M: Tx=x\}$.
+
+% ln-part-d3_3.tex
+
+\begin{lemma}\label{lem:1.1}
+Suppose $M$ to be a C*-algebra and $T\in\mathcal{L}(M)$ an identity preserving Schwarz map.
+
+\begin{enumerate}[(i)]
+\item Let $b: M\times M \to M$ be a sesquilinear map such that for all $z\in M$ $b(z,z) \geq 0$.
+Then $b(x,x) = 0$ for some $x\in M$ if and only if $b(x,y) = 0$ and $b(y,x) = 0$ for all $y\in M$.
+
+\item If there exists a faithful family $\Psi$ of subinvariant states for $T$ on $M$, then $\Fix(T)$ is a \CA-subalgebra of $M$ and $T(xy) = xT(y)$ for all $x\in\Fix(T)$ and $y\in M$.
+
+\end{enumerate}
+\end{lemma}
+%%  --
+\begin{proof} 
+(i) Take $0 \leq \psi\in M^*$ and consider $f := \psi\circ b$.
+Then $f$ is a positive semidefinite sesquilinear form on $M$ with values in $\mathbb{C}$.
+From the Cauchy-Schwarz inequality it follows that $f(x,x) = 0$ for some $x\in M$ if and only if $f(x,y) = 0$ and $f(y,x) = 0$ for all $y\in M$.
+Since the positive cone $M^*_{+}$ is generating, assertion (a) is proved.
+
+(ii) Since $T$ is positive it follows $T(x)^* = T(x^*)$ for all $x\in M$.
+Hence $\Fix(T)$ is a self adjoint subspace of $M$, i.e. invariant under the involution on $M$.
+For every $x,y\in M$ let
+%% -- 
+\[
+	b(x,y) := T(xy^*) - T(x)T(y)^*.
+\]
+%% -- 
+Then $b$ satisfies the assumptions of (i).
+
+If $x\in\Fix(T)$ then
+%% -- 
+\[
+0 \leq xx^* = (Tx)(Tx)^* \leq T(xx^*),
+\]
+%% -- 
+hence
+%% -- 
+\[
+0 \leq \psi(T(xx^*) - xx^*) \leq 0 \quad \text{for all } \psi\in\Psi.
+\]
+%% -- 
+But this implies $T(xx^*) = T(x)T(x)^* = xx^*$.
+Consequently, $b(x,x) = 0$.
+Hence $T(xy^*) = xT(y)^*$ for all $y\in M$ and (ii) is proved.
+\end{proof}
+
+\begin{lemma}\label{lem:1.2}
+Let $M$ be a \WA-algebra, $T$ an identity preserving Schwarz map on $M$ and $S\in\mathcal{L}(M)$ such that $S(x)(Sx)^* \leq T(xx^*)$ for every $x\in M$.
+
+\begin{enumerate}[(a)]
+\item If $v\in M$ such that $S(v^*) = v^*$ and $T(v^*v) = v^*v$, then $T(xv) = S(x)v$ for all $x\in M$.
+\item Suppose there exists $\phi\in M_{*}$ with polar decomposition $\phi = u|\phi|$ such that $S_{*}\phi = \phi$ and $T_{*}|\phi| = |\phi|$.
+If the closed subspace $s(|\phi|)M$ is T-invariant, then $Su^* = u^*$ and $T(u^*u) = u^*u$.
+\end{enumerate}
+\end{lemma}
+%% --
+\begin{proof}
+(a) Define a positive semidefinite sesquilinear map $b: M\times M \to M$ by
+%% -- 
+\[
+b(x,y) := T(xy^*) - S(x)S(y)^* \quad (x,y\in M).
+\]
+%% -- 
+\end{proof}
+
+%% -- ln-part-d3_4 --%%
+
+Since $b(v^{*},v^{*}) = 0$ we obtain $b(x,v^{*}) = 0$ for all $x \in M$ (Lemma 1.1.a), hence $T(xv) = S(x)v$.
+
+\begin{enumerate}[(a)]
+\item 
+Since $s(|\phi|)M$ is a closed right ideal, the closed face $F := s(|\phi|)(M_{+})s(|\phi|)$ determines $s(|\phi|)M$ uniquely, i.e.,
+%% --
+\[
+s(|\phi|)M = \{x \in M : xx^{*} \in F\}
+\]
+%% --
+[Pedersen (1979), Theorem 1.5.2].
+Since $T$ is a Schwarz map and $s(|\phi|)M$ is $T$-invariant, it follows $TF \subseteq F$.
+On the other hand, if $x \in s(|\phi|)M$ then $xx^{*} \in F$.
+Consequently,
+%% --
+\[
+0 \leq S(x)S(x)^{*} \leq T(xx^{*}) \in F,
+\]
+%% --
+whence $S(x) \in s(|\phi|)M$.
+
+Next we show $T(u^{*}u) = u^{*}u$ and $Su^{*} = u^{*} \in s(|\phi|)M$.
+First of all
+%% --
+\[
+0 \leq (Su^{*} - u^{*})(Su^{*} - u^{*})^{*} \leq
+\]
+%% --
+%% --
+\[
+\leq T(u^{*}u) - u^{*}S(u^{*})^{*} - (Su^{*})u + u^{*}u.
+\]
+%% --
+Since $S_{*}\phi = \phi$, $T_{*}|\phi| = |\phi|$ and $\phi = u|\phi|$ it follows
+%% --
+\[
+0 \leq |\phi|((Su^{*} - u^{*})(Su^{*} - u^{*})^{*}) \leq
+\]
+%% --
+%% --
+\[
+\leq 2|\phi|(u^{*}u) - |\phi|(S(u^{*})u)^{*} - |\phi|(S(u^{*})u) =
+\]
+%% --
+%% --
+\[
+= 2|\phi|(uu^{*}) - \phi(u^{*})^{*} - \phi(u^{*}) =
+\]
+%% --
+%% --
+\[
+= 2(|\phi|(u^{*}u) - |\phi|(u^{*}u)) = 0.
+\]
+%% --
+
+Since $(Su^{*} - u^{*})(Su^{*} - u^{*}) \in F$ and $|\phi|$ is faithful on $F$ we obtain $Su^{*} = u^{*}$.
+Consequently,
+%% --
+\[
+0 \leq u^{*}u = (Su^{*})(Su^{*})^{*} \leq T(u^{*}u).
+\]
+%% --
+
+Hence $T(u^{*}u) = u^{*}u$ by the faithfulness and $T$-invariance of $|\phi|$.
+\end{enumerate}
+
+% !TEX root = ln-part-d3-test.tex
+%% -- ln-part-d3_5 --%%
+
+\begin{remark}\label{rem:1.3}
+Take $S$ and $T$ as in Lemma 1.2 (b).
+If $V_{u^*}$ (resp. $V_u$) is the map $(x \mapsto xu^*)$ (resp. $(x \mapsto xu)$) on $M$, then $V_{u^*}$ is a continuous bijection from $Ms(|\phi|)$ onto $Ms(|\phi^*|)$ with inverse $V_u$ (because $V_u \circ V_{u^*} = \operatorname{Id}_{Ms(|\phi|)}$ and $V_{u^*} \circ V_u = \operatorname{Id}_{Ms(|\phi^*|)}$).
+Let $x \in M$.
+From $T(xu) = S(x)u$ we obtain $T(xu)u^* = S(x)uu^*$.
+In particular, if $Ms(|\phi^*|)$ is $S$-invariant, then
+%% --
+\[
+(V_{u^*} \circ T \circ V_u)(x) = T(xu)u^* = S(x)
+\]
+%% --
+for every $x \in Ms(|\phi^*|)$.
+Let $T|$ (resp. $S|$) be the restriction of $T$ to $Ms(|\phi|)$ (resp. of $S$ to $Ms(|\phi^*|)$).
+Then the following diagram is commutative:
+%% --
+\begin{equation*}
+\begin{tikzcd}[column sep=large, row sep=large, scale=1.5]
+Ms(|\phi|) \arrow[r, "T|"] \arrow[d, "V_u"'] & Ms(|\phi|) \arrow[d, "V_{u^*}"] \\
+Ms(|\phi^*|) \arrow[r, "S|"'] & Ms(|\phi^*|)
+\end{tikzcd}
+\end{equation*}
+%% --
+In particular, $\sigma(S|) = \sigma(T|)$.
+Therefore we may deduce spectral properties of $S|$ from $T|$ and vice versa.
+More concrete applications of Lemma 1.2 will follow.
+\end{remark}
+%% --
+We now investigate the fixed space $\operatorname{Fix}(R) := \operatorname{Fix}(\lambda R(\lambda))$, $\lambda \in D$, of a pseudo-resolvent $R$ with values in the predual of a W*-algebra $M$.
+
+\begin{proposition}\label{prop:1.4}
+Let $R$ be a pseudo-resolvent on $D = \{\lambda \in \mathbb{C}: \operatorname{Re}(\lambda) > 0\}$ with values in the predual $M_*$ of a W*-algebra $M$ and suppose $R$ to be identity preserving and of Schwarz type.
+
+\begin{enumerate}[(a)]
+\item 
+If $a \in \mathbb{R}$ and $\psi \in M_*$ such that $(\gamma - ia)R(\gamma)\psi = \psi$ for some $\gamma \in D$, then $\lambda R(\lambda)|\psi| = |\psi|$ and $\lambda R(\lambda)|\psi^*| = |\psi^*|$ for all $\lambda \in D$.
+
+\item 
+$\operatorname{Fix}(R)$ is invariant under the involution in $M_*$.
+If $\psi \in \operatorname{Fix}(R)$ is self adjoint, then the positive part $\psi^+$ and the negative part $\psi^-$ of $\psi$ are elements of $\operatorname{Fix}(R)$.
+\end{enumerate}
+\end{proposition}
+
+%% -- ln-part-d3_6 --%%
+
+\begin{proof}
+If $(\gamma - i\alpha)R(\gamma)\psi = \psi$ then $(\lambda - i\alpha)R(\lambda)\psi = \psi$ for all $\lambda \in D$.
+In particular, $\mu R(\mu + i\alpha)\psi = \psi$ ($\mu \in \mathbb{R}_+$).
+For all $x \in M$ we obtain
+%% --
+\[
+|\psi(x)|^2 = |<\mu R(\mu+i\alpha)'x,\psi>|^2 \leq
+\]
+%% --
+%% --
+\[
+\leq \|\psi\| <(\mu R(\mu+i\alpha)'x)(\mu R(\mu+i\alpha)'x)^*,\psi> \leq
+\]
+%% --
+%% --
+\[
+\leq \|\psi\| <\mu R(\mu)'(xx^*),|\psi|>
+\]
+%% --
+(D-I, Corollary 2.2).
+Since
+%% --
+\[
+\|\psi\| = \| |\psi| \| = |\psi|(1) =
+\]
+%% --
+%% --
+\[
+= <\mu R(\mu)'1,|\psi|> = \| \mu R(\mu)|\psi| \|,
+\]
+%% --
+we obtain $\mu R(\mu)|\psi| = |\psi|$ by the uniqueness theorem (*) mentioned at the beginning.
+Therefore $|\psi| \in \operatorname{Fix}(R)$.
+Since
+%% --
+\[
+0 \leq (\mu R(\mu)'x)(\mu R(\mu)'x)^* \leq \mu R(\mu)'xx^*,
+\]
+%% --
+the map $R(\mu)$ is positive.
+Consequently $(\mu+i\alpha)R(\mu)\psi^* = \psi^*$ from which $|\psi^*| \in \operatorname{Fix}(R)$ follows.
+If $\phi \in \operatorname{Fix}(R)$ is selfadjoint with Jordan decomposition $\phi = \phi^+ - \phi^-$, then $|\phi| = \phi^+ + \phi^-$ [Takesaki (1979), Theorem III.4.2.].
+From this we obtain that $\phi^+$ and $\phi^-$ are in $\operatorname{Fix}(R)$.
+\end{proof}
+%% --
+\begin{corollary}\label{cor:1.5}
+Let $T$ be an identity preserving semigroup of Schwarz type on $M_*$ with generator $A$ and suppose $P\sigma(A) \cap i\mathbb{R} \neq \emptyset$.
+
+\begin{enumerate}[(i)]
+\item
+If $\alpha \in \mathbb{R}$ and $\psi \in \operatorname{ker}(i\alpha - A)$, then $|\psi|$ and $|\psi^*|$ are elements of $\operatorname{Fix}(T) = \operatorname{ker}(A)$.
+
+\item 
+$\operatorname{Fix}(T)$ is invariant under the involution of $M_*$.
+If $\psi \in \operatorname{Fix}(T)$ is self adjoint, then the positive part $\psi^+$ and the negative part $\psi^-$ of $\psi$ are elements of $\operatorname{Fix}(T)$.
+\end{enumerate}
+
+\end{corollary}
+%% --
+The proof follows immediately from D-I, Corollary 2.2 and the fact that $\operatorname{ker}(A) = \operatorname{Fix}(\lambda R(\lambda,A))$ for all $\lambda \in \mathbb{C}$ with $\operatorname{Re}(\lambda) > 0$.
+
+If $T$ is the semigroup of translations on $L^1(\mathbb{R})$ and $A'$ the gene-
+
+%% --

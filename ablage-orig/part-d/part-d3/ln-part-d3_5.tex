@@ -1,0 +1,44 @@
+% !TEX root = ln-part-d3-test.tex
+%% -- ln-part-d3_5 --%%
+
+\begin{remark}\label{rem:1.3}
+Take $S$ and $T$ as in Lemma 1.2 (b).
+If $V_{u^*}$ (resp. $V_u$) is the map $(x \mapsto xu^*)$ (resp. $(x \mapsto xu)$) on $M$, then $V_{u^*}$ is a continuous bijection from $Ms(|\phi|)$ onto $Ms(|\phi^*|)$ with inverse $V_u$ (because $V_u \circ V_{u^*} = \operatorname{Id}_{Ms(|\phi|)}$ and $V_{u^*} \circ V_u = \operatorname{Id}_{Ms(|\phi^*|)}$).
+Let $x \in M$.
+From $T(xu) = S(x)u$ we obtain $T(xu)u^* = S(x)uu^*$.
+In particular, if $Ms(|\phi^*|)$ is $S$-invariant, then
+%% --
+\[
+(V_{u^*} \circ T \circ V_u)(x) = T(xu)u^* = S(x)
+\]
+%% --
+for every $x \in Ms(|\phi^*|)$.
+Let $T|$ (resp. $S|$) be the restriction of $T$ to $Ms(|\phi|)$ (resp. of $S$ to $Ms(|\phi^*|)$).
+Then the following diagram is commutative:
+%% --
+\begin{equation*}
+\begin{tikzcd}[column sep=large, row sep=large, scale=1.5]
+Ms(|\phi|) \arrow[r, "T|"] \arrow[d, "V_u"'] & Ms(|\phi|) \arrow[d, "V_{u^*}"] \\
+Ms(|\phi^*|) \arrow[r, "S|"'] & Ms(|\phi^*|)
+\end{tikzcd}
+\end{equation*}
+%% --
+In particular, $\sigma(S|) = \sigma(T|)$.
+Therefore we may deduce spectral properties of $S|$ from $T|$ and vice versa.
+More concrete applications of Lemma 1.2 will follow.
+\end{remark}
+%% --
+We now investigate the fixed space $\operatorname{Fix}(R) := \operatorname{Fix}(\lambda R(\lambda))$, $\lambda \in D$, of a pseudo-resolvent $R$ with values in the predual of a W*-algebra $M$.
+
+\begin{proposition}\label{prop:1.4}
+Let $R$ be a pseudo-resolvent on $D = \{\lambda \in \mathbb{C}: \operatorname{Re}(\lambda) > 0\}$ with values in the predual $M_*$ of a W*-algebra $M$ and suppose $R$ to be identity preserving and of Schwarz type.
+
+\begin{enumerate}[(a)]
+\item 
+If $a \in \mathbb{R}$ and $\psi \in M_*$ such that $(\gamma - ia)R(\gamma)\psi = \psi$ for some $\gamma \in D$, then $\lambda R(\lambda)|\psi| = |\psi|$ and $\lambda R(\lambda)|\psi^*| = |\psi^*|$ for all $\lambda \in D$.
+
+\item 
+$\operatorname{Fix}(R)$ is invariant under the involution in $M_*$.
+If $\psi \in \operatorname{Fix}(R)$ is self adjoint, then the positive part $\psi^+$ and the negative part $\psi^-$ of $\psi$ are elements of $\operatorname{Fix}(R)$.
+\end{enumerate}
+\end{proposition}

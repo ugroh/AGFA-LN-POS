@@ -1,0 +1,65 @@
+% ln-part-d3_3.tex
+
+\begin{lemma}\label{lem:1.1}
+Suppose $M$ to be a C*-algebra and $T\in\mathcal{L}(M)$ an identity preserving Schwarz map.
+
+\begin{enumerate}[(i)]
+\item Let $b: M\times M \to M$ be a sesquilinear map such that for all $z\in M$ $b(z,z) \geq 0$.
+Then $b(x,x) = 0$ for some $x\in M$ if and only if $b(x,y) = 0$ and $b(y,x) = 0$ for all $y\in M$.
+
+\item If there exists a faithful family $\Psi$ of subinvariant states for $T$ on $M$, then $\Fix(T)$ is a \CA-subalgebra of $M$ and $T(xy) = xT(y)$ for all $x\in\Fix(T)$ and $y\in M$.
+
+\end{enumerate}
+\end{lemma}
+%%  --
+\begin{proof} 
+(i) Take $0 \leq \psi\in M^*$ and consider $f := \psi\circ b$.
+Then $f$ is a positive semidefinite sesquilinear form on $M$ with values in $\mathbb{C}$.
+From the Cauchy-Schwarz inequality it follows that $f(x,x) = 0$ for some $x\in M$ if and only if $f(x,y) = 0$ and $f(y,x) = 0$ for all $y\in M$.
+Since the positive cone $M^*_{+}$ is generating, assertion (a) is proved.
+
+(ii) Since $T$ is positive it follows $T(x)^* = T(x^*)$ for all $x\in M$.
+Hence $\Fix(T)$ is a self adjoint subspace of $M$, i.e. invariant under the involution on $M$.
+For every $x,y\in M$ let
+%% -- 
+\[
+	b(x,y) := T(xy^*) - T(x)T(y)^*.
+\]
+%% -- 
+Then $b$ satisfies the assumptions of (i).
+
+If $x\in\Fix(T)$ then
+%% -- 
+\[
+0 \leq xx^* = (Tx)(Tx)^* \leq T(xx^*),
+\]
+%% -- 
+hence
+%% -- 
+\[
+0 \leq \psi(T(xx^*) - xx^*) \leq 0 \quad \text{for all } \psi\in\Psi.
+\]
+%% -- 
+But this implies $T(xx^*) = T(x)T(x)^* = xx^*$.
+Consequently, $b(x,x) = 0$.
+Hence $T(xy^*) = xT(y)^*$ for all $y\in M$ and (ii) is proved.
+\end{proof}
+
+\begin{lemma}\label{lem:1.2}
+Let $M$ be a \WA-algebra, $T$ an identity preserving Schwarz map on $M$ and $S\in\mathcal{L}(M)$ such that $S(x)(Sx)^* \leq T(xx^*)$ for every $x\in M$.
+
+\begin{enumerate}[(a)]
+\item If $v\in M$ such that $S(v^*) = v^*$ and $T(v^*v) = v^*v$, then $T(xv) = S(x)v$ for all $x\in M$.
+\item Suppose there exists $\phi\in M_{*}$ with polar decomposition $\phi = u|\phi|$ such that $S_{*}\phi = \phi$ and $T_{*}|\phi| = |\phi|$.
+If the closed subspace $s(|\phi|)M$ is T-invariant, then $Su^* = u^*$ and $T(u^*u) = u^*u$.
+\end{enumerate}
+\end{lemma}
+%% --
+\begin{proof}
+(a) Define a positive semidefinite sesquilinear map $b: M\times M \to M$ by
+%% -- 
+\[
+b(x,y) := T(xy^*) - S(x)S(y)^* \quad (x,y\in M).
+\]
+%% -- 
+\end{proof}
