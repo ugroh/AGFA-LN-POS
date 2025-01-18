@@ -1,7 +1,7 @@
 ### AGFA-LN-POS: Neuauflage das Buches LN1184
 
 
-[Link zu Springer](https://www.springer.com/gp/authors-editors/book-authors-editors/your-publication-journey)
+[LN 1184 als PDF](https://github.com/ugroh/AGFA-LN-POS/blob/main/ablage-orig/ln-orig/ln-pos-1184.pdf)
 
 #### Struktur
 
