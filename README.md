@@ -5,6 +5,11 @@
 
 #### Struktur
 
+* AGFA-LN-POS ist das Masterverzeichnis. Darunter befinden sich
+	* ablage-orig: Hier finden sich die PDF's der einzelnen Kapitel einmal als Gesamt-PDF als auch aufgeteilt in die einzelnen Seiten. Also aus `foo.pdf` werden dann `foo\_1.pdf` bis `foo\_n.pdf`, wenn es n Seiten gibt.
+	* author: Hier finden sich die finalen `TeX` Dateien.
+	* python: nur relevant für mich
+	etc. 
 
 
 #### Anleitung für Claude
