@@ -47,6 +47,7 @@ Wenn man dieses systematisch macht, also bei `\_1`anfängt, hat man nach x-Stund
 8. den Text nach \item auf eine neue Zeile setzen
 9. Eventuelle Leerzeilen nach bzw. vor %% -- wegmachen
 10. Diagramme mit `Tikz` setzen
+11. Alle griechischen Buchstaben oder mathematische Zeichen in LaTeX-Code umsetzen.
 
 
 
