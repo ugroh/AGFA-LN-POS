@@ -2,7 +2,7 @@
 
 [LN 1184 als PDF](https://github.com/ugroh/AGFA-LN-POS/blob/main/ablage-orig/ln-orig/ln-pos-1184.pdf) ist vorhanden. Des weiteren sind die einzelnen Kapitel parallel heruntergeladen worden und als `LN-chap-xx.pdf` abgespeichert (siehe unten für weitere Erläuterungen dazu). Alles auf Gihub kann man sich herunterladen. 
 
-__Achtung__: Bitte nichts an der datei `LN-Book.tex` ändern, höchstens mal reinschauen. 
+__Achtung__: Bitte nichts an der Datei `LN-Book.tex` ändern, höchstens mal reinschauen. 
 
 #### Die Struktur
 
