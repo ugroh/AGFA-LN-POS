@@ -49,6 +49,7 @@ Wenn man dieses systematisch macht, also bei `\_1`anfängt, hat man nach x-Stund
 9. Eventuelle Leerzeilen nach bzw. vor %% -- wegmachen
 10. Diagramme mit `Tikz` setzen
 11. Alle griechischen Buchstaben oder mathematische Zeichen in LaTeX-Code umsetzen.
+12. Vor und nach einer mathematischen Bezeichnung bitte eine Leerstelle einfügen, also NICHT a\tob sondern a \to b .
 
 
 
