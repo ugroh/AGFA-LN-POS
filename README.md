@@ -37,6 +37,8 @@ Dazu habe ich  die KI [Claude](http://claude.ai) genutzt. Das Vorgehen:
 
 Wenn man dieses systematisch macht, also bei `a1_1`anfängt, hat man nach x-Stunden das Kapitel fertig und kann sich nun um die redaktionelle Arbeit kümmern. Natürlich kann man sich auch ein anderes Kapitel vornehmen – der Ablauf ist immer der gleiche.
 
+*Zur Beachtung:* Bei dieser Methode kann es sein, dass Fehlermeldungen auftauchen, dass irgendwelche Umgebungen nicht beendet wurden. Dies kann man aber einfach klären, wenn man regelmäßig das Hauptdokument `chap-a1-test.tex` aufruft (am besten, nachdem man in `cahap-a1.tex` kopiert hat.)
+
 
 #### Anleitung für Claude
 
