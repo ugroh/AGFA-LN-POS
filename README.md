@@ -45,7 +45,9 @@ Wenn man dieses systematisch macht, also bei `a1_1`anfängt, hat man nach x-Stun
 1. Leerzeilen bleiben erhalten
 2. Jeder neue Satz auf eine neue Zeile aber ohne eine Leerzeile dazwischen
 3. Vor \[ und nach \] eine neue Zeile einfügen mit %% -- 
-4. ^a und \_a stest in {} einklammern
+4. Bei Subskripts: _a wird zu _{a}
+	Bei Superskripts: ^a wird zu ^{a}
+	Dies gilt auch für zusammengesetzte Ausdrücke und griechische Buchstaben
 5. Listen mit \begin{enumerate}[(i)] oder [(a)] setzen (je nach Fall
 6. Theoreme etc mit \label versehen, etwa \label{thm:nummer}; entsprechend bei Definitionen etc.
 7. Hochkommata mit \enquote{text} schreiben

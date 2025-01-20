@@ -4,19 +4,19 @@
 
 \chapter{Basic Results on Semigroups and Operator Algebras}\label{chap:D-I}
 
-This is not a systematic introduction into the theory of strongly continuous semigroups on C*- and W*-algebras.
+This is not a systematic introduction into the theory of strongly continuous semigroups on \CA- and \WA-algebras.
 For that we refer to Bratteli-Robinson (1979), Davies (1976) and the survey article of Oseledets (1984).
 We only prepare for the subsequent chapters on spectral theory and asymptotics by fixing the notations and introducing some standard constructions.
 
 \section{Notations}\label{sec:notations}
 
-By $ M $ we shall denote a C*-algebra with unit $ 1 $.
+By $ M $ we shall denote a \CA-algebra with unit $ 1 $.
 $ M^{sa} := \{x \in M : x^* = x\} $ is the self-adjoint part of $ M $ and $ M_{+} := \{ x^*x : x \in M\} $ the positive cone in $ M $.
 If $ M' $ is the dual of $ M $, then $ M'_{+} := \{\psi \in M' : \psi(x) \geq 0, x \in M_{+}\} $ is a weak*-closed generating cone in $ M' $.
 $ S(M) := \{\psi \in M'_{+}: \psi(1) = 1\} $ is called the state space of $ M $.
-For the theory of C*-algebras and related notions we refer to [Pedersen (1979)].
+For the theory of \CA-algebras and related notions we refer to [Pedersen (1979)].
 
-$ M $ is called a W*-algebra, if there exists a Banach space $ M_{*} $, such that its dual $ (M_{*})' $ is (isomorphic to) $ M $.
+$ M $ is called a \WA-algebra, if there exists a Banach space $ M_{*} $, such that its dual $ (M_{*})' $ is (isomorphic to) $ M $.
 We call $ M_{*} $ the predual of $ M $ and $ \psi \in M_{*} $ a normal linear functional.
 It is known that $ M_{*} $ is unique [Sakai (1971), 1.13.3].
 For further properties of $ M_{*} $ we refer to [Takesaki (1979), Chapter III].
@@ -24,7 +24,7 @@ For further properties of $ M_{*} $ we refer to [Takesaki (1979), Chapter III].
 %% -- d1_2
 %% --
 2. A map $ T \in L(M) $ is called positive (in symbols $ T \geq 0 $) if $ T(M_{+}) \subseteq M_{+} $.
-$ T \in L(M) $ is called n-positive ($ n \in \mathbb{N} $) if $ T \otimes \text{Id}_n $ is positive from $ M \otimes M_n $ in $ M \otimes M_n $, where $ \text{Id}_n $ is the identity map on the C*-algebra $ M_n $ of all $ n \times n $-matrices.
+$ T \in L(M) $ is called n-positive ($ n \in \mathbb{N} $) if $ T \otimes \text{Id}_n $ is positive from $ M \otimes M_n $ in $ M \otimes M_n $, where $ \text{Id}_n $ is the identity map on the \CA-algebra $ M_n $ of all $ n \times n $-matrices.
 Obviously, every n-positive map is positive.
 We call $ T \in L(M) $ a Schwarz map if $ T $ satisfies the inequality
 %% --
@@ -33,25 +33,25 @@ T(x)T(x)^* \leq T(xx^*) \, , \, x \in M .
 \]
 %% --
 Note that such $ T $ is necessarily a contraction.
-It is well known that every n-positive contraction, $ n \geq 2 $ and that every positive contraction on a commutative C*-algebra is a Schwarz map [Takesaki (1979), Corollary IV. 3.8.].
+It is well known that every n-positive contraction, $ n \geq 2 $ and that every positive contraction on a commutative \CA-algebra is a Schwarz map [Takesaki (1979), Corollary IV. 3.8.].
 As we shall see, the Schwarz inequality is crucial for our investigations.
 
-3. If $ M $ is a C*-algebra we assume $ T = (T(t))_{t \geq 0} $ to be a strongly continuous semigroup (abbreviated semigroup) while on W*-algebras we consider weak*-semigroups, i.e. the mapping $ (t \mapsto T(t)x) $ is continuous from $ \mathbb{R}_+ $ into $ (M,\sigma(M,M_*)) $, $ M_* $ the predual of $ M $, and every $ T(t) \in T $ is $ \sigma(M,M_*) $-continuous.
+3. If $ M $ is a \CA-algebra we assume $ T = (T(t))_{t \geq 0} $ to be a strongly continuous semigroup (abbreviated semigroup) while on \WA-algebras we consider weak*-semigroups, i.e. the mapping $ (t \mapsto T(t)x) $ is continuous from $ \mathbb{R}_+ $ into $ (M,\sigma(M,M_{*})) $, $ M_{*} $ the predual of $ M $, and every $ T(t) \in T $ is $ \sigma(M,M_{*}) $-continuous.
 Note that the preadjoint semigroup
 %% --
 \[
-T_* = \{ T(t)_* : T(t) \in T \}
+T_{*} = \{ T(t)_{*} : T(t) \in T \}
 \]
 %% --
-is weakly, hence strongly continuous on $ M_* $ (see e.g., Davies (1980), Prop.1.23).
+is weakly, hence strongly continuous on $ M_{*} $ (see e.g., Davies (1980), Prop.1.23).
 We call $ T $ identity preserving if $ T(t)1 = 1 $ and of Schwarz type if every $ T(t) \in T $ is a Schwarz map.
 
 For the notations concerning one-parameter semigroups we refer to Part A.
-In addition we recommend to compare the results of this section of the book with the corresponding results for commutative C*-algebras, i.e. for $ C_0(X) $, $ C(K) $ and $ L^\infty(\mu) $ (see Part B).
+In addition we recommend to compare the results of this section of the book with the corresponding results for commutative \CA-algebras, i.e. for $ C_0(X) $, $ C(K) $ and $ L^\infty(\mu) $ (see Part B).
 
 \section{A Fundamental Inequality for the Resolvent}\label{sec:fundamental}
 
-If $ T = (T(t))_{t\geq0} $ is a strongly continuous semigroup of Schwarz maps on a C*-algebra $ M $ (resp. a weak*-semigroup of Schwarz type on a W*-algebra $ M $) with generator $ A $, then the spectral bound $ s(A) \leq 0 $.
+If $ T = (T(t))_{t\geq0} $ is a strongly continuous semigroup of Schwarz maps on a \CA-algebra $ M $ (resp. a weak*-semigroup of Schwarz type on a \WA-algebra $ M $) with generator $ A $, then the spectral bound $ s(A) \leq 0 $.
 Then for $ \lambda \in \mathbb{C} $, $ \text{Re}(\lambda) > 0 $, there exists a representation for the resolvent $ R(\lambda,A) $ given by the formula
 %% --
 \[
@@ -69,7 +69,7 @@ Here we relate the domination of two semigroups to an inequality for the corresp
 This inequality will be needed later.
 
 \begin{theorem}\label{thm:2.1}
-Let $ T = (T(t))_{t\geq0} $ be a semigroup of Schwarz type and $ T = (S(t))_{t\geq0} $ a semigroup on a C*-algebra $ M $ with generators $ A $ and $ B $, respectively.
+Let $ T = (T(t))_{t\geq0} $ be a semigroup of Schwarz type and $ T = (S(t))_{t\geq0} $ a semigroup on a \CA-algebra $ M $ with generators $ A $ and $ B $, respectively.
 If
 %% --
 \[
@@ -83,7 +83,7 @@ for all $ x \in M $ and $ t \in \mathbb{R}_+ $, then
 \]
 %% --
 for all $ x \in M $ and $ \mu \in \mathbb{R}_+ $.
-The same result holds if $ T $ is a weak*-semigroup of Schwarz type and $ S $ is a weak*-semigroup on a W*-algebra $ M $ such that $ (*) $ is fulfilled.
+The same result holds if $ T $ is a weak*-semigroup of Schwarz type and $ S $ is a weak*-semigroup on a \WA-algebra $ M $ such that $ (*) $ is fulfilled.
 \end{theorem}
 
 \begin{proof}
@@ -144,7 +144,7 @@ This is shown by examples in [Davies (1980)] where $ S(t)x $ is given by $ e^{tB
 \end{remark}
 
 \begin{corollary}\label{cor:2.2}
-Let $ T = (T(t))_{t\geq0} $ be a semigroup of Schwarz type on a C*-algebra $ M $ with generator $ A $.
+Let $ T = (T(t))_{t\geq0} $ be a semigroup of Schwarz type on a \CA-algebra $ M $ with generator $ A $.
 Then for all $ \mu \in \mathbb{R}_+ $ and $ x \in M $:
 %% --
 \[
@@ -225,7 +225,7 @@ for all $ \lambda $ and $ \mu $ in $ D $.
 %% -- d1_5
 %% --
 
-If $ R $ is a pseudo-resolvent on $ D = \{\lambda \in \mathbb{C} : \text{Re}(\lambda) > 0\} $ with values in a C*- or W*-algebra, then $ R $ is called of Schwarz type if
+If $ R $ is a pseudo-resolvent on $ D = \{\lambda \in \mathbb{C} : \text{Re}(\lambda) > 0\} $ with values in a \CA- or \WA-algebra, then $ R $ is called of Schwarz type if
 %% --
 \[
 (R(\lambda)x)(R(\lambda)x)^* \leq (\text{Re}\lambda)^{-1} R(\text{Re}\lambda)xx^*
@@ -252,8 +252,8 @@ R(\mu) = \sum_n (\lambda - \mu)^n R(\lambda)^{n+1}.
 \end{enumerate}
 
 \begin{definition}\label{def:2.4}
-We call a semigroup $ T $ on the predual $ M_* $ of a W*-algebra $ M $ identity preserving and of Schwarz type, if its adjoint weak*-semigroup has these properties.
-Likewise, a pseudo-resolvent $ R $ on $ D = \{\lambda \in \mathbb{C} : \text{Re}(\lambda) > 0\} $ with values in $ M_* $ is called identity preserving and of Schwarz type, if $ R' $ has these properties.
+We call a semigroup $ T $ on the predual $ M_{*} $ of a \WA-algebra $ M $ identity preserving and of Schwarz type, if its adjoint weak*-semigroup has these properties.
+Likewise, a pseudo-resolvent $ R $ on $ D = \{\lambda \in \mathbb{C} : \text{Re}(\lambda) > 0\} $ with values in $ M_{*} $ is called identity preserving and of Schwarz type, if $ R' $ has these properties.
 \end{definition}
 
 Since for a semigroup of contractions on a Banach space
@@ -287,7 +287,7 @@ We call the semigroup $ S|_F := \{S|_F : S \in S \} $ the reduced semigroup.
 Note that for a one-parameter semigroup $ T $ (resp., pseudo-resolvent $ R $) the reduced semigroup is again strongly continuous (resp. $ R|_F $ is again a pseudo-resolvent) (compare the construction in A-I,3.2).
 
 \item
-Let $ M $ be a W*-algebra, $ p \in M $ a projection and $ S \in L(M) $ such that $ S(p^{\perp}M) \subseteq p^{\perp}M $ and $ S(Mp^{\perp}) \subseteq Mp^{\perp} $, where $ p^{\perp} := 1-p $.
+Let $ M $ be a \WA-algebra, $ p \in M $ a projection and $ S \in L(M) $ such that $ S(p^{\perp}M) \subseteq p^{\perp}M $ and $ S(Mp^{\perp}) \subseteq Mp^{\perp} $, where $ p^{\perp} := 1-p $.
 Since for all $ x \in M $:
 %% --
 \[
@@ -312,10 +312,10 @@ If $ R $ is an identity preserving pseudo-resolvent of Schwarz type on $ D = \{\
 Again, the induced pseudo-resolvent $ R_p $ is of Schwarz type and identity preserving.
 
 \item
-Let $ \phi $ be a positive normal linear functional on a W*-algebra $ M $ such that $ T_*\phi = \phi $ for some identity preserving Schwarz map $ T $ on $ M $ with preadjoint $ T_* \in L(M_*) $.
+Let $ \phi $ be a positive normal linear functional on a \WA-algebra $ M $ such that $ T_{*}\phi = \phi $ for some identity preserving Schwarz map $ T $ on $ M $ with preadjoint $ T_{*} \in L(M_{*}) $.
 Then $ T(s(\phi)^{\perp}) \leq s(\phi)^{\perp} $ where $ s(\phi) $ is the support projection of $ \phi $.
 To see this let $ L_{\phi} := \{x \in M: \phi(xx^*) = 0\} $ and $ M_{\phi} := L_{\phi} \cap L_{\phi}^* $.
-Since $ \phi $ is $ T_* $-invariant, and $ T $ is a Schwarz map, the subspaces $ L_{\phi} $ and $ M_{\phi} $ are $ T $-invariant.
+Since $ \phi $ is $ T_{*} $-invariant, and $ T $ is a Schwarz map, the subspaces $ L_{\phi} $ and $ M_{\phi} $ are $ T $-invariant.
 From $ M_{\phi} = s(\phi)^{\perp}Ms(\phi)^{\perp} $ and $ T(s(\phi)^{\perp}) \leq 1 $ it follows that $ T(s(\phi)^{\perp}) \leq s(\phi)^{\perp} $.
 
 \end{enumerate}
@@ -327,24 +327,24 @@ Let $ T_{s(\phi)} $ be the induced map on $ M_{s(\phi)} $.
 If
 %% --
 \[
-s(\phi)M_*s(\phi) := \{\psi \in M_* : \psi = s(\phi)\psi s(\phi)\}
+s(\phi)M_{*}s(\phi) := \{\psi \in M_{*} : \psi = s(\phi)\psi s(\phi)\}
 \]
 %% --
-where $ \langle s(\phi)\psi s(\phi),x \rangle := \langle \psi,s(\phi)xs(\phi) \rangle $ ($ x \in M $), and if $ \psi \in s(\phi)M_*s(\phi) $, then for all $ x \in M $:
+where $ \langle s(\phi)\psi s(\phi),x \rangle := \langle \psi,s(\phi)xs(\phi) \rangle $ ($ x \in M $), and if $ \psi \in s(\phi)M_{*}s(\phi) $, then for all $ x \in M $:
 %% --
 \[
-(T_*\psi)(x) = \psi(Tx) = \langle \psi,s(\phi)(Tx)s(\phi) \rangle =
+(T_{*}\psi)(x) = \psi(Tx) = \langle \psi,s(\phi)(Tx)s(\phi) \rangle =
 \]
 %% --
 \[
-= \langle \psi,s(\phi)(T(s(\phi)xs(\phi)))s(\phi) \rangle = \langle T_*\psi,s(\phi)xs(\phi) \rangle,
+= \langle \psi,s(\phi)(T(s(\phi)xs(\phi)))s(\phi) \rangle = \langle T_{*}\psi,s(\phi)xs(\phi) \rangle,
 \]
 %% --
-hence $ T_*\psi \in s(\phi)M_*s(\phi) $.
-Since the dual of $ s(\phi)M_*s(\phi) $ is $ M_{s(\phi)} $, it follows that the adjoint of the reduced map $ T_*| $ is identity preserving and of Schwarz type.
+hence $ T_{*}\psi \in s(\phi)M_{*}s(\phi) $.
+Since the dual of $ s(\phi)M_{*}s(\phi) $ is $ M_{s(\phi)} $, it follows that the adjoint of the reduced map $ T_{*}| $ is identity preserving and of Schwarz type.
 
-For example, if $ T $ is an identity preserving semigroup of Schwarz type on $ M_* $ such that $ \phi \in \text{Fix}(T) $, then the semigroup $ T|(s(\phi)M_*s(\phi)) $ is again identity preserving and of Schwarz type.
-Furthermore, if $ R $ is a pseudo-resolvent on $ D = \{\lambda \in \mathbb{C} : \text{Re}(\lambda) > 0\} $ with values in $ M_* $ which is identity preserving and of Schwarz type such that $ R(\mu)\phi = \phi $ for some $ \mu \in \mathbb{R}_+ $, then $ R|s(\phi)M_*s(\phi) $ has the same properties.
+For example, if $ T $ is an identity preserving semigroup of Schwarz type on $ M_{*} $ such that $ \phi \in \text{Fix}(T) $, then the semigroup $ T|(s(\phi)M_{*}s(\phi)) $ is again identity preserving and of Schwarz type.
+Furthermore, if $ R $ is a pseudo-resolvent on $ D = \{\lambda \in \mathbb{C} : \text{Re}(\lambda) > 0\} $ with values in $ M_{*} $ which is identity preserving and of Schwarz type such that $ R(\mu)\phi = \phi $ for some $ \mu \in \mathbb{R}_+ $, then $ R|s(\phi)M_{*}s(\phi) $ has the same properties.
 
 %% -- Ende d1
 %% --
