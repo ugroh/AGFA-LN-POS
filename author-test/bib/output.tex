@@ -5,7 +5,7 @@
 \chapter{Basic Results on Semigroups and Operator Algebras}\label{chap:D-I}
 
 This is not a systematic introduction into the theory of strongly continuous semigroups on \CA- and \WA-algebras.
-For that we refer to [Bratteli-Robinson (1979)], [Davies (1976)] and the survey article of [Oseledets (1984)].
+For that we refer to \textcite{bratteli_robinson:1979}, \textcite{davies:1976} and the survey article of \textcite{oseledets:1984}.
 We only prepare for the subsequent chapters on spectral theory and asymptotics by fixing the notations and introducing some standard constructions.
 
 \section{Notations}\label{sec:notations}
@@ -17,12 +17,12 @@ By $ M $ we shall denote a \CA-algebra with unit $ 1 $.
 $ M^{sa} := \{x \in M : x^{*} = x\} $ is the self-adjoint part of $ M $ and $ M_{+} := \{ x^{*}x : x \in M\} $ the positive cone in $ M $.
 If $ M' $ is the dual of $ M $, then $ M'_{+} := \{\psi \in M' : \psi(x) \geq 0, x \in M_{+}\} $ is a weak*-closed generating cone in $ M' $.
 $ S(M) := \{\psi \in M'_{+}: \psi(1) = 1\} $ is called the state space of $ M $.
-For the theory of \CA-algebras and related notions we refer to [Pedersen (1979)].
+For the theory of \CA-algebras and related notions we refer to \textcite{pedersen:1979}.
 
 $ M $ is called a \WA-algebra, if there exists a Banach space $ M_{*} $, such that its dual $ (M_{*})' $ is (isomorphic to) $ M $.
 We call $ M_{*} $ the predual of $ M $ and $ \psi \in M_{*} $ a normal linear functional.
-It is known that $ M_{*} $ is unique [Sakai (1971), 1.13.3].
-For further properties of $ M_{*} $ we refer to [Takesaki (1979), Chapter III].
+It is known that $ M_{*} $ is unique \textcite[1.13.3]{sakai:1971}.
+For further properties of $ M_{*} $ we refer to \textcite[Chapter III]{takesaki:1979}.
 
 %% -- d1_2
 %% --
@@ -37,7 +37,7 @@ T(x)T(x)^{*} \leq T(xx^{*}) \, , \, x \in M .
 \]
 %% --
 Note that such $ T $ is necessarily a contraction.
-It is well known that every n-positive contraction, $ n \geq 2 $ and that every positive contraction on a commutative \CA-algebra is a Schwarz map [Takesaki (1979), Corollary IV. 3.8.].
+It is well known that every n-positive contraction, $ n \geq 2 $ and that every positive contraction on a commutative \CA-algebra is a Schwarz map \textcite[Corollary IV. 3.8.]{takesaki:1979}.
 As we shall see, the Schwarz inequality is crucial for our investigations.
 
 \item If $ M $ is a \CA-algebra we assume $ T = (T(t))_{t \geq 0} $ to be a strongly continuous semigroup (abbreviated semigroup) while on \WA-algebras we consider weak*-semigroups, i.e. the mapping $ (t \mapsto T(t)x) $ is continuous from $ \mathbb{R}_{+} $ into $ (M,\sigma(M,M_{*})) $, $ M_{*} $ the predual of $ M $, and every $ T(t) \in T $ is $ \sigma(M,M_{*}) $-continuous.
@@ -70,7 +70,7 @@ where the integral exists in the norm topology.
 %% -- d1_3
 %% --
 
-In [Bratteli-Robinson (1979)] it is shown that $ T $ is a semigroup of Schwarz type if and only if $ \mu R(\mu,A) $ is a Schwarz map for every $ \mu \in \mathbb{R}_{+} $.
+In \textcite{bratteli_robinson:1979} it is shown that $ T $ is a semigroup of Schwarz type if and only if $ \mu R(\mu,A) $ is a Schwarz map for every $ \mu \in \mathbb{R}_{+} $.
 Here we relate the domination of two semigroups to an inequality for the corresponding resolvent operator.
 This inequality will be needed later.
 
@@ -127,7 +127,7 @@ The second step follows from $ S(t)$ being a contraction semigroup and the third
 
 \begin{remark}
 The assumption that $ T $ is a semigroup of Schwarz type cannot be weakened in general to $ T $ being a positive contraction semigroup.
-This is shown by examples in [Davies (1980)] where $ S(t)x $ is given by $ e^{tB}x $ for a skew-adjoint generator $ B $ and $ T(t)x \equiv x $.
+This is shown by examples in \textcite{davies:1980} where $ S(t)x $ is given by $ e^{tB}x $ for a skew-adjoint generator $ B $ and $ T(t)x \equiv x $.
 \end{remark}
 
 \begin{corollary}\label{cor:2.2}
@@ -153,7 +153,7 @@ Just set $ S = T $ in Theorem~\ref{thm:2.1}.
 = (\int_{0}^\infty e^{-\mu s} \, ds)(\int_{0}^\infty e^{-\mu t}T(t)xx^{*} \, dt) = \mu^{-1}R(\mu,A)xx^{*}
 \end{multline*}
 %% --
-where the handling of the integral is justified by [Bourbaki (1955), §8, n° 4, Proposition 9].
+where the handling of the integral is justified by \textcite[§8, n° 4, Proposition 9]{bourbaki:1955}.
 \end{proof}
 
 

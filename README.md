@@ -59,6 +59,14 @@ Wenn man dieses systematisch macht, also bei `a1_1`anfängt, hat man nach x-Stun
 13. Mehrzeilige mathematische Formeln bitte mit \begin{align*} .. \end{align*} setzen, einzeilige aber weiterhin mit \[ .. \] wie oben beschrieben. 
 13. Aufzählungen, die mit Zahlen nummeriert sind, bitte mit [(i)] in der enumerate-Umgebung setzen. Listen, die mit Buchstaben nummeriert sind, bitte mit [(a)] in der  enumerate-Umgebung setzen. 
 
+#### Einige Tools
+
+##### Literaturzitate
+
+In `author-test/bib` findet sich ein Pythonprogramm `convert2bib_ref.py`, mithilfe dessen man Literaturzitate der Form `[Bratteli-Robinson (1979)]` oder `[Takesaki (1979), Chapter III]` in `\cite{bratelli_robinson:1979}` oder `\cite[Chapter III]{takesaki:1979}` umwandeln kann.
+
+_TODO:_ Eine Literaturdatenbank aus den einzelnen erstellen und `BibTeX` verstehen (nutze sonst `BibLaTeX`).
+
 
 
 
