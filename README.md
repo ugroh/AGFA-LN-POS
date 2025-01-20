@@ -32,6 +32,8 @@ Dazu habe ich  die KI [Claude](http://claude.ai) genutzt. Das Vorgehen:
 * Nachdem Claude fertig ist, dieses umgesetzte Dokument via Copy&Paste in das `TeX` File `chap-a1.tex` kopieren (analog bei den anderen).
 * Wenn man alle Seiten umgesetzt hat, dan kann man das `LaTeX`-Dokument überarbeiten.
 * Ist man der Meinung, alles final zu haben, dann kommt dieses Dokument in das entsprechende Kapitel unter `author-final`.
+* Alle bearbeiteten `pdf`-Seiten kommen in das Unterverzeichnis `bearbeitet`. 
++ Kleiner Tipp: In der zugehörigen `LaTeX`-Datei ist es sinnvoll, einen Kommentar wie `%% -- \_1` einzufügen und danach dann die erste umgewandelte Seite zu speichern. Dann ein `%% -- \_12` und danach dann die zweite umgewandelte Seite zu speichern. Macht die Fehlerkorrekturen beim Verleich zum `pdf` einfacher.
 
 Wenn man dieses systematisch macht, also bei `\_1`anfängt, hat man nach x-Stunden das Kapitel fertig und kann sich nun um die redaktionelle Arbeit kümmern. Natürlich kann man sich auch ein anderes Kapitel vornehmen – der Ablauf ist immer der gleiche.
 
@@ -50,6 +52,7 @@ Wenn man dieses systematisch macht, also bei `\_1`anfängt, hat man nach x-Stund
 10. Diagramme mit `Tikz` setzen
 11. Alle griechischen Buchstaben oder mathematische Zeichen in LaTeX-Code umsetzen.
 12. Vor und nach einer mathematischen Bezeichnung bitte eine Leerstelle einfügen, also NICHT a\tob sondern a \to b .
+
 
 
 
