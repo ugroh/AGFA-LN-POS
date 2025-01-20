@@ -27,12 +27,13 @@ Das Verzeichnis `author-final` ist analog aufgebaut, wobei aber auf eine nochmal
 Dazu habe ich  die KI [Claude](http://claude.ai) genutzt. Das Vorgehen:
 
 * Anmelden bei Claude und eine Session starten.
-* Claude mitteilen, dass man ein `PDF`in `LaTeX` umsetzen will.
-* Im dabei die unten stehen Anleitung mitgeben.
-* Dann in das Unterverzeichnis unter `author-test/part-a/chap-a1` gehen, für das man zuständig ist und eine der Seiten des Kapitels mit Copy&Paste bei Claude einsetzen. 
+* Claude mitteilen, dass man ein `PDF`in `LaTeX` umsetzen will und ihm dabei die unten stehen Anleitung mitgeben.
+* Dann in das Unterverzeichnis unter `author-test/part-a/chap-a1` gehen, für das man zuständig ist und eine der Seiten des Kapitels mit Copy&Paste bei Claude einsetzen.
 * Nachdem Claude fertig ist, dieses umgesetzte Dokument via Copy&Paste in das `TeX` File `chap-a1.tex` kopieren (analog bei den anderen).
+* Wenn man alle Seiten umgesetzt hat, dan kann man das `LaTeX`-Dokument überarbeiten.
+* Ist man der Meinung, alles final zu haben, dann kommt dieses Dokument in das entsprechende Kapitel unter `author-final`.
 
-Wenn man dieses systematisch macht, also bei `\_1`anfängt, hat man nach x-Stunden das Kapitel fertig und kann sich nun um die redaktionelle Arbeit kümmern. 
+Wenn man dieses systematisch macht, also bei `\_1`anfängt, hat man nach x-Stunden das Kapitel fertig und kann sich nun um die redaktionelle Arbeit kümmern. Natürlich kann man sich auch ein anderes Kapitel vornehmen – der Ablauf ist immer der gleiche.
 
 
 #### Anleitung für Claude
