@@ -54,6 +54,8 @@ Wenn man dieses systematisch macht, also bei `a1_1`anfängt, hat man nach x-Stun
 10. Diagramme mit `Tikz` setzen
 11. Alle griechischen Buchstaben oder mathematische Zeichen in LaTeX-Code umsetzen.
 12. Vor und nach einer mathematischen Bezeichnung bitte eine Leerstelle einfügen, also NICHT a\tob sondern a \to b .
+13. Mehrzeilige mathematische Formeln bitte mit \begin{align*} .. \end{align*} setzen, einzeilige aber weiterhin mit \[ .. \] wie oben beschrieben. 
+13. Aufzählungen, die mit Zahlen nummeriert sind, bitte mit [(i)] in der enumerate-Umgebung setzen. Listen, die mit Buchstaben nummeriert sind, bitte mit [(a)] in der  enumerate-Umgebung setzen. 
 
 
 
