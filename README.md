@@ -1,4 +1,4 @@
-### AGFA-LN-POS: Neuauflage das Buches LN1184
+### AGFA-LN-POS: Neuauflage das Buches LN1184 (Stand: 2024/01/20)
 
 [LN 1184 als PDF](https://github.com/ugroh/AGFA-LN-POS/blob/main/ablage-orig/ln-orig/ln-pos-1184.pdf) ist vorhanden. Des weiteren sind die einzelnen Kapitel parallel heruntergeladen worden und als `LN-chap-xx.pdf` abgespeichert (siehe unten für weitere Erläuterungen dazu). Alles auf Gihub kann man sich herunterladen (grüner Knopf `Code` und dort als `zip`-Datei herunterladen).
 
