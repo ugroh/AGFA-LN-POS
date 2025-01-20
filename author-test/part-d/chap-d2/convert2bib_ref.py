@@ -50,25 +50,25 @@ def convert_citation(text):
 
 # Test the function
 if __name__ == "__main__":
-    # Test cases
-    test_texts = [
-        "[Takesaki (1979), Chapter III]",
-        "[Von Neumann (1932), Section 2.1]",
-        "[Reed Moore (1975), Theorem 1.2]",
-        "[Bratteli-Robinson (1979)]",
-        "[von Neumann (1932)]",
-        "[Bratteli-Robinson (1979)]"
-    ]
-
-    for text in test_texts:
-        converted = convert_citation(text)
-        print(f"Original: {text}")
-        print(f"Converted: {converted}")
-        print()
+    # # Test cases
+    # test_texts = [
+    #     "[Takesaki (1979), Chapter III]",
+    #     "[Von Neumann (1932), Section 2.1]",
+    #     "[Reed Moore (1975), Theorem 1.2]",
+    #     "[Bratteli-Robinson (1979)]",
+    #     "[von Neumann (1932)]",
+    #     "[Bratteli-Robinson (1979)]"
+    # ]
+    #
+    # for text in test_texts:
+    #     converted = convert_citation(text)
+    #     print(f"Original: {text}")
+    #     print(f"Converted: {converted}")
+    #     print()
 
 # Example usage:
-    with open('chap-d1.tex', 'r') as file:
+    with open('chap-d2.tex', 'r') as file:
         text = file.read()
         converted_text = convert_citation(text)
-    with open('chap-d1-bib.tex', 'w') as file:
+    with open('chap-d2-bib.tex', 'w') as file:
         file.write(converted_text)

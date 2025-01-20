@@ -1,8 +1,14 @@
+% !TEX TS-program = pdflatex
+% !BIB program = bibtex
 \documentclass{book}
 
 %% --
 \usepackage{graphicx}        % standard LaTeX graphics tool
 \usepackage{libertine}
+
+%% -- Referenzen
+%% --
+\bibliographystyle{spmpsci}
 
 % see the list of further useful packages
 % in the Reference Guide
@@ -40,7 +46,11 @@
                      
 \begin{document}
 
-\input{chap-d2}
+\input{chap-d2-bib}
+
+%% -- Literatur
+\RaggedRight
+\bibliography{ln-references} 
 
 \end{document}
 

@@ -1,8 +1,16 @@
+% !TEX TS-program = pdflatex
+% !BIB program = bibtex
+%% --
 \documentclass{book}
 
 %% --
 \usepackage{graphicx}        % standard LaTeX graphics tool
 \usepackage{libertine}
+
+%% -- Referenzen
+%% --
+\bibliographystyle{spmpsci}
+
 
 % see the list of further useful packages
 % in the Reference Guide
@@ -34,7 +42,7 @@
 %\newcommand{\CA}{$\mathrm{C}^{*}$}
 %\newcommand{\Fix}{\mathrm{Fix}}
 \usepackage{ablatt-defn}
-\usepackage{ablatt-biblio}
+
 
 %% --
 \usepackage{tikz}
@@ -43,6 +51,10 @@
 \begin{document}
 
 \input{chap-d1}
+
+%% -- Literatur
+\RaggedRight
+\bibliography{ln-references} 
 
 \end{document}
 

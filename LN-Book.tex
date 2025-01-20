@@ -1,10 +1,15 @@
+% !TEX TS-program = pdflatex
+% !BIB program = bibtex
 %%%%%%%%%%%%%%%%%%%% LN-Book.tex %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Stand: 2025/01/19 ulgr
 %%%%%%%%%%%%%%%% Springer-Verlag %%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
-% RECOMMENDED %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\documentclass[graybox,envcountchap,sectrefs]{svmono}
+\documentclass[%
+	,graybox
+	,envcountchap
+	,sectrefs
+%	,referee
+	]{svmono}
 
 % choose options for [] as required from the list
 % in the Reference Guide
@@ -23,6 +28,10 @@
 
 \usepackage{newtxtext}       % 
 \usepackage[varvw]{newtxmath}       % selects Times Roman as basic font
+
+%% -- Referenzen
+%% --
+\bibliographystyle{spmpsci}
 
 % see the list of further useful packages
 % in the Reference Guide
@@ -81,50 +90,53 @@
 %% --
 
 \includeonly{%
-,author-final/part-0/ln-dedication
+%,author-final/part-0/ln-dedication
 %,author-final/part-0/foreword
-,author-final/part-0/ln-preface
+%,author-final/part-0/ln-preface
 %,author-final/part-0/acknowledgement
 %,author-final/acronym
 %% -- Part A
 %% --
-,author-final/part-a/ln-part-a
-,author-final/part-a/chap-a1
-,author-final/part-a/chap-a2
-,author-final/part-a/chap-a3
-,author-final/part-a/chap-a4
+%,author-final/part-a/ln-part-a
+%,author-final/part-a/chap-a1
+%,author-final/part-a/chap-a2
+%,author-final/part-a/chap-a3
+%,author-final/part-a/chap-a4
 %,author-final/part-a/appendix-a
 %% -- Part B
 %% --
-,author-final/part-b/ln-part-b
-,author-final/part-b/chap-b1
-,author-final/part-b/chap-b2
-,author-final/part-b/chap-b3
-,author-final/part-b/chap-b4
+%,author-final/part-b/ln-part-b
+%,author-final/part-b/chap-b1
+%,author-final/part-b/chap-b2
+%,author-final/part-b/chap-b3
+%,author-final/part-b/chap-b4
 %,author-final/part-b/appendix-b
 %% -- Part C
 %% --
-,author-final/part-c/ln-part-c
-,author-final/part-c/chap-c1
-,author-final/part-c/chap-c2
-,author-final/part-c/chap-c3
-,author-final/part-c/chap-c4
+%,author-final/part-c/ln-part-c
+%,author-final/part-c/chap-c1
+%,author-final/part-c/chap-c2
+%,author-final/part-c/chap-c3
+%,author-final/part-c/chap-c4
 %,author-final/part-c/appendix-c
 %% -- Part D
 %% --
 ,author-final/part-d/ln-part-d
 ,author-final/part-d/chap-d1
 ,author-final/part-d/chap-d2
-,author-final/part-d/chap-d3
+%,author-final/part-d/chap-d3
 %,author-final/part-d/chap-d4
 %,author-final/part-d/appendix-d
 }
 
 %% -- Definitionen
 \DeclareMathOperator{\Id}{Id}
-\newcommand{\WA}{$\mathrm{W}^{*}$}
-\newcommand{\CA}{$\mathrm{C}^{*}$}
-\newcommand{\Fix}{\mathrm{Fix}}
+% !BIB program = %\newcommand{\WA}{$\mathrm{W}^{*}$}
+%\newcommand{\CA}{$\mathrm{C}^{*}$}
+%\newcommand{\Fix}{\mathrm{Fix}}
+
+\usepackage{ablatt-defn}
+
 
 %% --
 \usepackage{tikz}
@@ -156,56 +168,59 @@
 %% --
 \subtitle{Lecture Notes in Mathematics\\ \\ 1184\\ \\Springer-Verlag\\ Berlin Heidelberg New York Tokyo}
 %% --
-\maketitle
-
-\frontmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% -- part-0
-\include{author-final-final/part-0/ln-dedication}
-\include{author/part-0/foreword}
-\include{author-final/part-0/ln-preface}
-\include{author-final/part-0/acknowledgement}
-
-\tableofcontents
-
+%\maketitle
+%
+%\frontmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% -- part-0
+%\include{author-final-final/part-0/ln-dedication}
+%\include{author/part-0/foreword}
+%\include{author-final/part-0/ln-preface}
+%\include{author-final/part-0/acknowledgement}
+%%
+%%\tableofcontents
+%%
 %\include{author-final/acronym}
-
-
-\mainmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%% -- Part-A
-\include{author-final/part-a/ln-part-a}
-\include{author-final/part-a/chap-a1}
-\include{author-final/part-a/chap-a2}
-\include{author-final/part-a/chap-a3}
-\include{author-final/part-a/chap-a4}
-%\include{author-final/part-a/appendix-a}
-
-%% -- Part-B
-\include{author-final/part-b/ln-part-b}
-\include{author-final/part-b/chap-b1}
-\include{author-final/part-b/chap-b2}
-\include{author-final/part-b/chap-b3}
-\include{author-final/part-b/chap-b4}
+%%
+%%
+%\mainmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%%% -- Part-A
+%\include{author-final/part-a/ln-part-a}
+%\include{author-final/part-a/chap-a1}
+%\include{author-final/part-a/chap-a2}
+%\include{author-final/part-a/chap-a3}
+%\include{author-final/part-a/chap-a4}
+%%\include{author-final/part-a/appendix-a}
+%
+%%% -- Part-B
+%\include{author-final/part-b/ln-part-b}
+%\include{author-final/part-b/chap-b1}
+%\include{author-final/part-b/chap-b2}
+%\include{author-final/part-b/chap-b3}
+%\include{author-final/part-b/chap-b4}
 %\include{author-final/part-b/appendix-b}
-
-%% -- Part-C
-\include{author-final/part-c/ln-part-c}
-\include{author-final/part-c/chap-c1}
-\include{author-final/part-c/chap-c2}
-\include{author-final/part-c/chap-c3}
-\include{author-final/part-c/chap-c4}
+%
+%%% -- Part-C
+%\include{author-final/part-c/ln-part-c}
+%\include{author-final/part-c/chap-c1}
+%\include{author-final/part-c/chap-c2}
+%\include{author-final/part-c/chap-c3}
+%\include{author-final/part-c/chap-c4}
 %\include{author/part-c/appendix-c}
-
+%
 %% -- Part-D
 \include{author-final/part-d/ln-part-d}
 \include{author-final/part-d/chap-d1}
 \include{author-final/part-d/chap-d2}
-\include{author-final/part-d/chap-d3}
-\include{author-final/part-d/chap-d4}
+%\include{author-final/part-d/chap-d3}
+%\include{author-final/part-d/chap-d4}
 %\include{author/part-d/appendix-d}
 
 
 \backmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\RaggedRight
+\bibliography{ln-references}
 %\include{author/glossary}
 %\include{author/solutions}
 %\printindex

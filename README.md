@@ -63,9 +63,35 @@ Wenn man dieses systematisch macht, also bei `a1_1`anfängt, hat man nach x-Stun
 
 ##### Literaturzitate
 
-In `author-test/bib` findet sich ein Pythonprogramm `convert2bib_ref.py`, mithilfe dessen man Literaturzitate der Form `[Bratteli-Robinson (1979)]` oder `[Takesaki (1979), Chapter III]` in `\cite{bratelli_robinson:1979}` oder `\cite[Chapter III]{takesaki:1979}` umwandeln kann.
+In `author-test/bib` findet sich ein Pythonprogramm `convert2bib_ref.py`, mithilfe dessen man Literaturzitate der Form `[Bratteli-Robinson (1979)]` oder `[Takesaki (1979), Chapter III]` in `\cite{bratelli_robinson:1979}` oder `\cite[Chapter III]{takesaki:1979}` umwandeln kann. Daher bitte die Zitate im LN so belassen (auch nach der Umsetzung). 
 
-_TODO:_ Eine Literaturdatenbank aus den einzelnen erstellen und `BibTeX` verstehen (nutze sonst `BibLaTeX`).
+Unter `author-test/bib` findet sich die Literaturdatenbank `ln-references-bib`. Diese und die `bst`-Datei (um es einfach zu machen) zur `TeX`-Datei kopieren (s.u.). Die Testdateien sind angepasst. 
+
+##### Installation
+
+* Die `bst`-Datei `spmpsci.bst` muss in einem Verzeichnis liegen, das TeX finden kann. Das bedeutet:
+
+1. Entweder im gleichen Verzeichnis wie die `TeX`-Datei
+2. Oder im lokalen texmf-Baum,:
+   - Windows: `C:\Users\IhrName\texmf\bibtex\bst\`
+   - macOS: `~/Library/texmf/bibtex/bst/`
+   - Linux: `~/texmf/bibtex/bst/`
+
+Um herauszufinden, ob TeX die Datei findet, auf der Kommandozeile `kpsewhich spmpsci.bst` eingeben. Dies zeigt an wo TeX nach der Datei sucht.
+
+Die sauberste Lösung ist, die Datei im lokalen texmf-Baum zu installieren. 
+
+##### Nützlich
+
+Nützlich ist noch das Programm `bibtool`, das man sich mit `brew install bib-tool` installieren kann. Möglichkeit: Auslesen der verwendeten Literatur (wird ergänzt).
+
+Dies erfolgt mittels (Muster)
+
+`bibtool -x chap-d1-test.aux -i ln-references.bib -o new-references.bib`
+
+mit Pfad zur `bib`-Datei (bei mir `/Users/ugroh/Library/texmf/bibtex/bib/ln-references.bib`)
+
+Literatur: [bibtool-manual](https://ctan.org/pkg/bibtool)
 
 
 

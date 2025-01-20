@@ -9,3 +9,22 @@ _{\1}
 
 \^([a-zA-Z0-9\*\+])(?![{])
 ^{\1}
+
+Mit Grep in BBEdit können Sie die doppelten Einträge so finden:
+
+Suchen nach:
+`^###.*\n(.*\n)*?\}`
+
+Dies findet:
+- `^###` - eine Zeile die mit ### beginnt
+- `.*\n` - Rest der Zeile und Zeilenumbruch
+- `(.*\n)*?` - beliebig viele Zeilen (non-greedy)
+- `\}` - bis zur schließenden Klammer des BibTeX-Eintrags
+
+Mit dieser Suchabfrage können Sie die doppelten Einträge finden und löschen. Dabei ist wichtig, dass Sie die ###-Version und nicht den originalen Eintrag löschen.
+
+Sie können das auch schrittweise machen:
+1. Suchen nach `^###`
+2. Dann manuell bis zur nächsten schließenden Klammer löschen
+
+Welche Methode möchten Sie verwenden?
