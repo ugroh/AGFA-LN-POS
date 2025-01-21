@@ -18,7 +18,7 @@ Der Aufbau ist wie folgt (analog dann auch für die anderen Teile):
 
 *  Das Unterverzeichnis `part-a` enthält die zugehörigen Kapitel, d.h. `chap-a1 ` bis `chap-a4`. In diesem befinden sich dann die jeweiligen Kapitel, in der Form `LN-chap-a1.pdf` und die einzelnen Seiten dieses Kapitels, also `ln-chap-a1_1.pdf` etc. 
 * Des weiteren die beiden `TeX`-Dateien `chap-a1-test.tex` und `chap-a1.tex` die zum Testen des jeweiligen Kapitels genutzt werden. 
-* Ist ein solches Kapile vollständig fertig, dann wird es nach `author-final/part-a/chap-a1.tex` kopiert. 
+* Ist ein solches Kapitelvollständig fertig, dann wird es nach `author-final/part-a/chap-a1.tex` kopiert. 
 
 Das Verzeichnis `author-final` ist analog aufgebaut, wobei aber auf eine nochmalige Verfeinerung verzichtet wurde. 
 
