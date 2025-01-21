@@ -6,8 +6,8 @@
 
 \documentclass[%
 	,graybox
-	,envcountsame
-	,envcountchap
+%	,envcountsame
+%	,envcountchap
 	,sectrefs
 %	,referee
 	]{svmono}
@@ -62,14 +62,14 @@
 
 %% -- Durchgehende Nummerierung
 %% -- entbehrlich
-%\makeatletter
-%\let\c@remark=\c@theorem 		% Make remark share the theorem counter
-%\let\c@definition=\c@theorem 	% Make definition share the theorem counter
-%\let\c@example=\c@theorem 		% Make example share the theorem counter
-%\let\c@lemma=\c@theorem 		% Make lemma share the theorem counter
-%\let\c@corollary=\c@theorem 	% Make corollary share the theorem counter
-%\let\c@proposition=\c@theorem 	% Make proposition share the theorem counter
-%\makeatother
+\makeatletter
+\let\c@remark=\c@theorem 		% Make remark share the theorem counter
+\let\c@definition=\c@theorem 	% Make definition share the theorem counter
+\let\c@example=\c@theorem 		% Make example share the theorem counter
+\let\c@lemma=\c@theorem 		% Make lemma share the theorem counter
+\let\c@corollary=\c@theorem 	% Make corollary share the theorem counter
+\let\c@proposition=\c@theorem 	% Make proposition share the theorem counter
+\makeatother
 
 %% -- Nummer von Theorem etc. korrekt
 %% --
@@ -79,7 +79,7 @@
 \renewcommand\thelemma{\thesection.\arabic{lemma}}
 \renewcommand\thecorollary{\thesection.\arabic{corollary}}
 \renewcommand\theremark{\thesection.\arabic{remark}}
-
+\renewcommand\theexample{\thesection.\arabic{example}}
 %% --
 
 \makeindex             % used for the subject index
@@ -221,7 +221,7 @@
 \backmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \RaggedRight
-\bibliography{d1-references}
+\bibliography{ln-references}
 %\include{author/glossary}
 %\include{author/solutions}
 %\printindex
