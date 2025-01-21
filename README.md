@@ -44,19 +44,19 @@ Wenn man dieses systematisch macht, also bei `a1_1`anfängt, hat man nach x-Stun
 
 1. Leerzeilen bleiben erhalten
 2. Jeder neue Satz auf eine neue Zeile aber ohne eine Leerzeile dazwischen
-3. Vor \[ und nach \] eine neue Zeile einfügen mit %% -- 
-4. Bei Subskripts: _a wird zu _{a}
+3. Vor \\[ und nach \\] eine neue Zeile einfügen mit %% -- 
+4. Bei Subskripts: \_a wird zu \_{a}
 	Bei Superskripts: ^a wird zu ^{a}
 	Dies gilt auch für zusammengesetzte Ausdrücke und griechische Buchstaben
-5. Listen mit \begin{enumerate}[(i)] oder [(a)] setzen (je nach Fall
-6. Theoreme etc mit \label versehen, etwa \label{thm:nummer}; entsprechend bei Definitionen etc.
-7. Hochkommata mit \enquote{text} schreiben
-8. den Text nach \item auf eine neue Zeile setzen
+5. Listen mit \\begin{enumerate}[(i)] oder [(a)] setzen (je nach Fall
+6. Theoreme etc mit \\label versehen, etwa \\label{thm:nummer}; entsprechend bei Definitionen etc.
+7. Hochkommata mit \\enquote{text} schreiben
+8. den Text nach \\item auf eine neue Zeile setzen
 9. Eventuelle Leerzeilen nach bzw. vor %% -- wegmachen
 10. Diagramme mit `Tikz` setzen
 11. Alle griechischen Buchstaben oder mathematische Zeichen in LaTeX-Code umsetzen.
-12. Vor und nach einer mathematischen Bezeichnung bitte eine Leerstelle einfügen, also NICHT a\tob sondern a \to b .
-13. Mehrzeilige mathematische Formeln bitte mit \begin{align*} .. \end{align*} setzen, einzeilige aber weiterhin mit \[ .. \] wie oben beschrieben. 
+12. Vor und nach einer mathematischen Bezeichnung bitte eine Leerstelle einfügen, also NICHT a\\tob sondern a \\to b .
+13. Mehrzeilige mathematische Formeln bitte mit \\begin{align\*} .. \\end{align\*} setzen, einzeilige aber weiterhin mit \\[ .. \\] wie oben beschrieben. 
 13. Aufzählungen, die mit Zahlen nummeriert sind, bitte mit [(i)] in der enumerate-Umgebung setzen. Listen, die mit Buchstaben nummeriert sind, bitte mit [(a)] in der  enumerate-Umgebung setzen. 
 
 #### Einige Tools
