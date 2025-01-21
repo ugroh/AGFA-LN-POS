@@ -63,7 +63,7 @@ Wenn man dieses systematisch macht, also bei `a1_1`anfängt, hat man nach x-Stun
 
 ##### Literaturzitate
 
-In `author-test/bib` findet sich ein Pythonprogramm `convert2bib_ref.py`, mithilfe dessen man Literaturzitate der Form `[Bratteli-Robinson (1979)]` oder `[Takesaki (1979), Chapter III]` in `\cite{bratelli_robinson:1979}` oder `\cite[Chapter III]{takesaki:1979}` umwandeln kann. Daher bitte die Zitate im LN so belassen (auch nach der Umsetzung). 
+In `author-test/bib` findet sich ein Pythonprogramm `convert2bib_ref.py`, mithilfe dessen man Literaturzitate der Form `[Bratteli-Robinson (1979)]` oder `[Takesaki (1979), Chapter III]` in `\cite{bratelli_robinson:1979}` oder `\cite[Chapter III]{takesaki:1979}` umwandeln kann. Daher bitte die Zitate im LN so belassen (auch nach der Umsetzung) aber eventuell mit `[ ]` einklammern, falls dies nicht der Fall sein sollte.
 
 Unter `author-test/bib` findet sich die Literaturdatenbank `ln-references-bib`. Diese und die `bst`-Datei (um es einfach zu machen) zur `TeX`-Datei kopieren (s.u.). Die Testdateien sind angepasst. 
 
