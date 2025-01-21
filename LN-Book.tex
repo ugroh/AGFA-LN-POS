@@ -6,7 +6,8 @@
 
 \documentclass[%
 	,graybox
-%	,envcountchap
+	,envcountsame
+	,envcountchap
 	,sectrefs
 %	,referee
 	]{svmono}
@@ -60,15 +61,15 @@
 \setcounter{tocdepth}{1}
 
 %% -- Durchgehende Nummerierung
-%% -- siehe 
-\makeatletter
-\let\c@remark=\c@theorem 		% Make remark share the theorem counter
-\let\c@definition=\c@theorem 	% Make definition share the theorem counter
-\let\c@example=\c@theorem 		% Make example share the theorem counter
-\let\c@lemma=\c@theorem 		% Make lemma share the theorem counter
-\let\c@corollary=\c@theorem 	% Make corollary share the theorem counter
-\let\c@proposition=\c@theorem 	% Make proposition share the theorem counter
-\makeatother
+%% -- entbehrlich
+%\makeatletter
+%\let\c@remark=\c@theorem 		% Make remark share the theorem counter
+%\let\c@definition=\c@theorem 	% Make definition share the theorem counter
+%\let\c@example=\c@theorem 		% Make example share the theorem counter
+%\let\c@lemma=\c@theorem 		% Make lemma share the theorem counter
+%\let\c@corollary=\c@theorem 	% Make corollary share the theorem counter
+%\let\c@proposition=\c@theorem 	% Make proposition share the theorem counter
+%\makeatother
 
 %% -- Nummer von Theorem etc. korrekt
 %% --
@@ -220,7 +221,7 @@
 \backmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \RaggedRight
-\bibliography{ln-references}
+\bibliography{d1-references}
 %\include{author/glossary}
 %\include{author/solutions}
 %\printindex
