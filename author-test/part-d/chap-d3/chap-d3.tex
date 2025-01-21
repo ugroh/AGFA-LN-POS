@@ -1,7 +1,8 @@
+% !TEX root = chap-d3-test.tex
 %% -- Chapter D-III
 %% --
 
-\chapter{Spectral Theory of Positive Semigroups on W*-Algebras and their Preduals}
+\chapter{Spectral Theory of Positive Semigroups on W*-Algebras and their Preduals}\label{chap:D-III}
 
 Motivated by the classical results of Perron and Frobenius one expects the following spectral properties for the generator $A$ of a positive semigroup: The spectral bound $s(A) := \sup\{\Re(\lambda) : \lambda \in \sigma(A)\}$ belongs to the spectrum $\sigma(A)$ and the boundary spectrum
 %% -- 
@@ -12,11 +13,11 @@ Motivated by the classical results of Perron and Frobenius one expects the follo
 possesses a certain symmetric structure, called cyclicity.
 
 Results of this type have been proved in Chapter B-III for positive semigroups on commutative C*-algebras, but in the non-commutative case the situation is more complicated.
-While \enquote{$s(A) \in \sigma(A)$} still holds (see Greiner-Voigt-Wolff (1980)) the cyclicity of the boundary spectrum $\sigma_{b}(A)$ is true only under additional assumptions on the semigroup (e.g., irreducibility, see Section 1 below).
+While \enquote{$s(A) \in \sigma(A)$} still holds (see [Greiner-Voigt-Wolff (1980)]) the cyclicity of the boundary spectrum $\sigma_{b}(A)$ is true only under additional assumptions on the semigroup (e.g., irreducibility, see Section 1 below).
 
 For technical reasons we consider mostly strongly continuous semigroups on the predual of a W*-algebra $M$ or its adjoint semigroup which is a weak*-continuous semigroup on $M$.
 
-\section{Spectral Theory for Positive Semigroups on Preduals}
+\section{Spectral Theory for Positive Semigroups on Preduals}\label{sec:d3-1}
 
 The aim of this section is to develop a Perron-Frobenius theory for identity preserving semigroups of Schwarz type on W*-algebras.
 But as we will show in the example preceding Theorem 1.1 below the boundary spectrum is no longer cyclic.
@@ -67,7 +68,7 @@ Recall that $\Fix(T)$ is the fixed space of $T$, i.e. the set $\{x\in M: Tx=x\}$
 
 % ln-part-d3_3.tex
 
-\begin{lemma}\label{lem:1.1}
+\begin{lemma}\label{lem:d3-1.1}
 Suppose $M$ to be a C*-algebra and $T\in\mathcal{L}(M)$ an identity preserving Schwarz map.
 
 \begin{enumerate}[(i)]
@@ -112,7 +113,7 @@ Consequently, $b(x,x) = 0$.
 Hence $T(xy^*) = xT(y)^*$ for all $y\in M$ and (ii) is proved.
 \end{proof}
 
-\begin{lemma}\label{lem:1.2}
+\begin{lemma}\label{lem:d3-1.2}
 Let $M$ be a \WA-algebra, $T$ an identity preserving Schwarz map on $M$ and $S\in\mathcal{L}(M)$ such that $S(x)(Sx)^* \leq T(xx^*)$ for every $x\in M$.
 
 \begin{enumerate}[(a)]
@@ -198,7 +199,6 @@ Consequently,
 Hence $T(u^{*}u) = u^{*}u$ by the faithfulness and $T$-invariance of $|\phi|$.
 \end{enumerate}
 
-% !TEX root = ln-part-d3-test.tex
 %% -- ln-part-d3_5 --%%
 
 \begin{remark}\label{rem:1.3}
@@ -230,7 +230,7 @@ More concrete applications of Lemma 1.2 will follow.
 %% --
 We now investigate the fixed space $\operatorname{Fix}(R) := \operatorname{Fix}(\lambda R(\lambda))$, $\lambda \in D$, of a pseudo-resolvent $R$ with values in the predual of a W*-algebra $M$.
 
-\begin{proposition}\label{prop:1.4}
+\begin{proposition}\label{prop:d3-1.4}
 Let $R$ be a pseudo-resolvent on $D = \{\lambda \in \mathbb{C}: \operatorname{Re}(\lambda) > 0\}$ with values in the predual $M_*$ of a W*-algebra $M$ and suppose $R$ to be identity preserving and of Schwarz type.
 
 \begin{enumerate}[(a)]
@@ -290,7 +290,7 @@ If $\phi \in \operatorname{Fix}(R)$ is selfadjoint with Jordan decomposition $\p
 From this we obtain that $\phi^+$ and $\phi^-$ are in $\operatorname{Fix}(R)$.
 \end{proof}
 %% --
-\begin{corollary}\label{cor:1.5}
+\begin{corollary}\label{cor:d3-1.5}
 Let $T$ be an identity preserving semigroup of Schwarz type on $M_*$ with generator $A$ and suppose $P\sigma(A) \cap i\mathbb{R} \neq \emptyset$.
 
 \begin{enumerate}[(i)]
@@ -306,6 +306,188 @@ If $\psi \in \operatorname{Fix}(T)$ is self adjoint, then the positive part $\ps
 %% --
 The proof follows immediately from D-I, Corollary 2.2 and the fact that $\operatorname{ker}(A) = \operatorname{Fix}(\lambda R(\lambda,A))$ for all $\lambda \in \mathbb{C}$ with $\operatorname{Re}(\lambda) > 0$.
 
-If $T$ is the semigroup of translations on $L^1(\mathbb{R})$ and $A'$ the gene-
+%% -- d3-7
 
+If $T$ is the semigroup of translations on $L^1(\mathbb{R})$ and $A'$ the genenerator 
+of the adjoint weak*-semigroup, then $P_{\sigma}(A) \cap i\mathbb{R} = \emptyset$, while $P_{\sigma}(A') \cap i\mathbb{R} = i\mathbb{R}$.
+
+For that reason we cannot expect a simple connection between these two sets.
+
+But as we shall see below, if a semigroup on the predual of a W*-algebra has sufficiently many invariant states, then the point spectra of $A$ and $A'$ contained in $i\mathbb{R}$ are identical.
+
+Helpful for these investigations will be the next lemma.
+
+\begin{lemma}\label{lem:d3-1-6}
+Let $R$ be a pseudo-resolvent on $D = \{\lambda \in \mathbb{C} : \Re(\lambda) > 0\}$ with values in a Banach space $E$ such that $\|R(\mu + i\alpha)\| \leq 1$ for all $(\mu,\alpha) \in \mathbb{R}_{+} \times \mathbb{R}$.
+
+Then
+%% --
+\[
+\dim \Fix(\lambda R(\lambda + i\alpha)) \leq \dim \Fix(\lambda R(\lambda + i\alpha)')
+\]
+%% --
+for all $\lambda \in D$.
+\end{lemma}
+
+\begin{proof}
+Let $(\mu,\alpha) \in \mathbb{R}_{+} \times \mathbb{R}$ and $S := \mu R(\mu + i\alpha)$.
+Since $S$ is a contraction, its adjoint $S'$ maps the dual unit ball $E'_{1}$ into itself.
+
+Let $U$ be a free ultrafilter on $[1,\infty)$ which converges to $1$.
+Since $E'_{1}$ is $\sigma(E',E)$-compact,
+%% --
+\[
+\psi_{o} := \lim_{U}(\lambda - 1)R(\lambda,S)'\psi
+\]
+%% --
+exists for all $\psi \in E'_{1}$.
+Since $S'$ is $\sigma(E',E)$-continuous and since $S'R(\lambda,S)' = \lambda R(\lambda,S')-\Id$ we conclude $\psi_{o} \in \Fix(S')$.
+
+Take now $0 \neq x_{o} \in \Fix(S)$ and choose $\psi \in E'_{1}$ such that $\psi(x_{o})$ is different from zero.
+
+From the considerations above it follows
+%% --
+\[
+\psi_{o}(x_{o}) = \lim_{U}(\lambda - 1)\psi(R(\lambda,S)x_{o}) = \psi(x_{o}) \neq 0
+\]
+%% --
+hence $0 \neq \psi_{o} \in \Fix(S)$.
+
+Therefore $\Fix(S')$ separates the points of $\Fix(S)$.
+
+From this it follows that
+%% --
+\[
+\dim \Fix(S) \leq \dim \Fix(S')
+\]
+%% --
+
+Since $R$ and $R'$ are pseudo-resolvents, the assertion is proved.
+\end{proof}
+
+\begin{corollary}\label{cor:d3-1-7}
+Let $T$ be a semigroup of contractions on a Banach space $E$ with generator $A$.
+
+Then
+%% --
+\[
+\dim \ker(i\alpha - A) \leq \dim \ker(i\alpha - A')
+\]
+%% --
+for all $\alpha \in \mathbb{R}$.
+\end{corollary}
+
+%% -- d3-8
+
+I'll convert this part of the document to LaTeX following your specified rules:
+
+This follows from Lemma \ref{lem:d3-1-6} because $\Fix(\lambda R(\lambda+i\alpha)) = \ker(i\alpha-A)$.
+
+\begin{proposition}\label{prop:d3-1-8}
+Let $T$ be an identity preserving semigroup of Schwarz type with generator $A$ on the predual of a W*-algebra and suppose that there exists a faithful family $\Psi$ of $T$-invariant states.
+
+Then for all $\alpha \in \mathbb{R}$ we have
+%% --
+\[
+\dim \ker(i\alpha - A) = \dim \ker(i\alpha - A')
+\]
+%% --
+and
+%% --
+\[
+P_{\sigma}(A) \cap i\mathbb{R} = P_{\sigma}(A') \cap i\mathbb{R}
+\]
+%% --
+\end{proposition}
+
+\begin{proof}
+The inequality $\dim \ker(i\alpha - A) \leq \dim \ker(i\alpha - A')$ follows from Corollary \ref{cor:d3-1-7}.
+
+Let $D = \{\lambda \in \mathbb{C} : \Re(\lambda) > 0\}$ and $R$ the pseudo-resolvent induced by $R(\lambda,A)$ on $D$.
+
+Then $R$ is identity preserving and of Schwarz type.
+
+Take $i\alpha \in P_{\sigma}(A)$ ($\alpha \in \mathbb{R}$) and choose $0 < \mu \in \mathbb{R}$.
+
+If $\psi_{\alpha} \in M_{*}$ is of norm one with polar decomposition $\psi_{\alpha} = u_{\alpha}|\psi_{\alpha}|$ such that $\psi_{\alpha} = (\mu - i\alpha)R(\mu)\psi_{\alpha}$ then $\mu R(\mu)|\psi_{\alpha}| = |\psi_{\alpha}|$ (Proposition 1.4.a).
+
+Since
+%% --
+\[
+\mu R(\mu)'(1 - s(|\psi_{\alpha}|)) \leq 1 - s(|\psi_{\alpha}|)
+\]
+%% --
+we obtain $\mu R(\mu)'s(|\psi_{\alpha}|) = s(|\psi_{\alpha}|)$ by the faithfulness of $\Psi$.
+
+Hence the maps $S := (\mu - i\alpha)R(\mu)'$ and $T := \mu R(\mu)'$ fulfil the assumptions of Lemma 1.2.b.
+
+Therefore $Su_{\alpha}^{*} = u_{\alpha}^{*}$ or $(\mu-i\alpha)R(\mu)'u_{\alpha}^{*} = u_{\alpha}^{*}$ which implies $u_{\alpha}^{*} \in D(A')$ and $A'u_{\alpha}^{*} = i\alpha u_{\alpha}^{*}$.
+
+If $i\alpha \in P_{\sigma}(A')$, $\alpha \in \mathbb{R}$, choose $0 \neq v_{\alpha}$ such that
+%% --
+\[
+v_{\alpha} = (\mu - i\alpha)R(\mu)'v_{\alpha} \quad (\mu \in \mathbb{R}_{+})
+\]
+%% --
+and $\psi \in \Psi$ such that $\psi(v_{\alpha}v_{\alpha}^{*}) \neq 0$.
+
+Since
+%% --
+\[
+0 \leq v_{\alpha}v_{\alpha}^{*} = ((\mu - i\alpha)R(\mu)'v_{\alpha})((\mu - i\alpha)R(\mu)'v_{\alpha})^{*} \leq \mu R(\mu)'(v_{\alpha}v_{\alpha}^{*})
+\]
+%% --
+we obtain $\mu R(\mu)'(v_{\alpha}v_{\alpha}^{*}) = v_{\alpha}v_{\alpha}^{*}$ because $\Psi$ is faithful.
+
+%% -- d3-9
+
+Hence from Lemma 1.2.a it follows
+%% --
+\[
+\mu R(\mu)'(xv_{\alpha}^{*}) = ((\mu - i\alpha)R(\mu)'x)v_{\alpha}^{*}
+\]
+%% --
+for all $x \in M$.
+
+Let $\psi_{\alpha}$ be the normal linear functional $(x \mapsto \psi(xv_{\alpha}^{*}))$ on $M$ and note that $\psi_{\alpha}(v_{\alpha}) \neq 0$.
+
+Then
+%% --
+\begin{align*}
+\langle x, (\mu - i\alpha)R(\mu)\psi_{\alpha} \rangle &= \langle ((\mu - i\alpha)R(\mu)'x)v_{\alpha}^{*},\psi \rangle \\
+&= \langle \mu R(\mu)'(xv_{\alpha}^{*}),\psi \rangle = \psi(xv_{\alpha}^{*}) = \psi_{\alpha}(x)
+\end{align*}
+%% --
+for all $x \in M$.
+
+Consequently $i\alpha \in P_{\sigma}(A)$ and
+%% --
+\[
+\dim \ker(i\alpha - A') \leq \dim \ker(i\alpha - A)
+\]
+%% --
+which proves the assertion.
+\end{proof}
+
+\begin{remark}\label{rem:d3-1-9}
+From the above proof we obtain the following: If $0 \neq \psi_{\alpha} \in \ker(i\alpha - A)$ with polar decomposition $\psi_{\alpha} = u_{\alpha}|\psi_{\alpha}|$ ($\alpha \in \mathbb{R}$) then $A'u_{\alpha} = i\alpha u_{\alpha}$.
+
+Conversely, if $0 \neq v_{\alpha} \in \ker(i\alpha - A')$, then there exists $\psi \in \Psi$ such that $\psi(v_{\alpha}v_{\alpha}^{*}) \neq 0$ and the normal linear form
+%% --
+\[
+\psi_{\alpha} := (x \mapsto \psi(xv_{\alpha}^{*}))
+\]
+%% --
+is an eigenvector of $A$ pertaining to the eigenvalue $i\alpha$.
+\end{remark}
+
+If $T$ is a $C_{0}$-semigroup of Markov operators on a commutative C*-algebra with generator $A$, it has been shown in B-III, that the boundary spectrum $\sigma(A) \cap i\mathbb{R}$ of its generator is additively cyclic.
+
+This is no longer true in the non commutative case:
+
+For $0 \neq \lambda \in i\mathbb{R}$ and $t \in \mathbb{R}$ let
+%% --
+\[
+u_{t} := \begin{pmatrix} 1 & 0 \\ 0 & e^{\lambda t} \end{pmatrix} \in M_{2}(\mathbb{C})
+\]
 %% --
