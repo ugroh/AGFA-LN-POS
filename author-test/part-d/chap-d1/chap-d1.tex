@@ -8,9 +8,9 @@ This is not a systematic introduction into the theory of strongly continuous sem
 For that we refer to \cite{brattelirobinson:1979}, \cite{davies:1976} and the survey article of \cite{oseledets:1984}.
 We only prepare for the subsequent chapters on spectral theory and asymptotics by fixing the notations and introducing some standard constructions.
 
-\section{Notations}\label{sec:notations}
+\section{Notations}\label{sec:d1-1}
 
-\begin{enumerate}[1. , wide]
+\begin{enumerate}[1., wide]
 
 \item
 By $ M $ we shall denote a \CA-algebra with unit $ 1 $.
@@ -55,7 +55,7 @@ We call $ T $ identity preserving if $ T(t)1 = 1 $ and of Schwarz type if every 
 For the notations concerning one-parameter semigroups we refer to Part A.
 In addition we recommend to compare the results of this section of the book with the corresponding results for commutative \CA-algebras, i.e. for $ C_{0}(X) $, $ C(K) $ and $ L^\infty(\mu) $ (see Part B).
 
-\section{A Fundamental Inequality for the Resolvent}\label{sec:fundamental}
+\section{A Fundamental Inequality for the Resolvent}\label{sec:d1-2}
 
 If $ T = (T(t))_{t \geq 0} $ is a strongly continuous semigroup of Schwarz maps on a \CA-algebra $ M $ (resp. a weak*-semigroup of Schwarz type on a \WA-algebra $ M $) with generator $ A $, then the spectral bound $ s(A) \leq 0 $.
 Then for $ \lambda \in \mathbb{C} $, $ \text{Re}(\lambda) > 0 $, there exists a representation for the resolvent $ R(\lambda,A) $ given by the formula
@@ -74,7 +74,7 @@ In \cite{brattelirobinson:1979} it is shown that $ T $ is a semigroup of Schwarz
 Here we relate the domination of two semigroups to an inequality for the corresponding resolvent operator.
 This inequality will be needed later.
 
-\begin{theorem}\label{thm:2.1}
+\begin{theorem}\label{thm:d1-2.1}
 Let $ T = (T(t))_{t\geq0} $ be a semigroup of Schwarz type and $ T = (S(t))_{t\geq0} $ a semigroup on a \CA-algebra $ M $ with generators $ A $ and $ B $, respectively.
 If
 %% --
@@ -125,12 +125,12 @@ Here we used the inequality derived above in the first step.
 The second step follows from $ S(t)$ being a contraction semigroup and the third step is achieved by integration.
 \end{proof}
 
-\begin{remark}
+\begin{remark}\label{rem:d1-2.1}
 The assumption that $ T $ is a semigroup of Schwarz type cannot be weakened in general to $ T $ being a positive contraction semigroup.
 This is shown by examples in \cite{davies:1980} where $ S(t)x $ is given by $ e^{tB}x $ for a skew-adjoint generator $ B $ and $ T(t)x \equiv x $.
 \end{remark}
 
-\begin{corollary}\label{cor:2.2}
+\begin{corollary}\label{cor:d1-2.2}
 Let $ T = (T(t))_{t\geq0} $ be a semigroup of Schwarz type on a \CA-algebra $ M $ with generator $ A $.
 Then for all $ \mu \in \mathbb{R}_{+} $ and $ x \in M $:
 %% --
@@ -144,7 +144,7 @@ Then for all $ \mu \in \mathbb{R}_{+} $ and $ x \in M $:
 %% -- d1_{4}
 %% --
 \begin{proof}
-Just set $ S = T $ in Theorem~\ref{thm:2.1}.
+Just set $ S = T $ in Theorem~\ref{thm:d1-2.1}.
 %% --
 \begin{multline*}
 = \frac{1}{2}(\int_{0}^\infty \int_{0}^\infty e^{-\mu(r+t)} ((S(r)x)(S(t)x)^{*} \\
@@ -157,7 +157,7 @@ where the handling of the integral is justified by \cite[§8, n° 4, Proposition
 \end{proof}
 
 
-\begin{corollary}\label{cor:2.3}
+\begin{corollary}\label{cor:d1-2.3}
 Let $ T $ be a semigroup of Schwarz maps (resp., weak*-semigroup of Schwarz maps).
 Then for all $ \lambda \in \mathbb{C} $ with $ \text{Re}(\lambda) > 0 $:
 %% --
@@ -188,7 +188,7 @@ Consequently $ R(\lambda,A) = R(\text{Re}\lambda,B) $ and the corollary follows 
 
 As in Section C-III the following notion will be an important tool for the spectral theory of semigroups.
 
-\begin{definition}\label{def:2.3}
+\begin{definition}\label{def:d1-2.3}
 Let $ E $ be a Banach space and $ \emptyset \neq D $ an open subset of $ \mathbb{C} $.
 A family $ R: D \to L(E) $ is called a pseudo-resolvent on $ D $ with values in $ E $ if
 %% --
@@ -214,7 +214,7 @@ $ R $ is called identity preserving if $ \lambda R(\lambda)1 = 1 $ for all $ \la
 For examples and properties of a pseudo-resolvent see C-III, 2.5.
 We state what will be used without further reference.
 
-\begin{enumerate}[(a)]
+\begin{enumerate}[(i)]
 \item 
 If $ \alpha \in \mathbb{C} $ and $ x \in E $ such that $ (\alpha - \lambda)R(\lambda)x = x $ for some $ \lambda \in D $, then $ (\alpha - \mu)R(\mu)x = x $ for all $ \mu \in D $ (use the \enquote{resolvent equation}).
 
@@ -228,7 +228,7 @@ R(\mu) = \sum_{n} (\lambda - \mu)^{n} R(\lambda)^{n+1}.
 %% --
 \end{enumerate}
 
-\begin{definition}\label{def:2.4}
+\begin{definition}\label{def:d1-2.4}
 We call a semigroup $ T $ on the predual $ M_{*} $ of a \WA-algebra $ M $ identity preserving and of Schwarz type, if its adjoint weak*-semigroup has these properties.
 Likewise, a pseudo-resolvent $ R $ on $ D = \{\lambda \in \mathbb{C} : \text{Re}(\lambda) > 0\} $ with values in $ M_{*} $ is called identity preserving and of Schwarz type, if $ R' $ has these properties.
 \end{definition}
@@ -324,5 +324,5 @@ Since the dual of $ s(\phi)M_{*}s(\phi) $ is $ M_{s(\phi)} $, it follows that th
 For example, if $ T $ is an identity preserving semigroup of Schwarz type on $ M_{*} $ such that $ \phi \in \text{Fix}(T) $, then the semigroup $ T|(s(\phi)M_{*}s(\phi)) $ is again identity preserving and of Schwarz type.
 Furthermore, if $ R $ is a pseudo-resolvent on $ D = \{\lambda \in \mathbb{C} : \text{Re}(\lambda) > 0\} $ with values in $ M_{*} $ which is identity preserving and of Schwarz type such that $ R(\mu)\phi = \phi $ for some $ \mu \in \mathbb{R}_{+} $, then $ R|s(\phi)M_{*}s(\phi) $ has the same properties.
 
-%% -- Ende d1
+%% -- Ende d1_8
 %% --

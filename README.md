@@ -42,6 +42,8 @@ Wenn man dieses systematisch macht, also bei `a1_1`anfängt, hat man nach x-Stun
 
 #### Anleitung für Claude
 
+Damit die label eindeutig werden, bitte bei Punkt 6 angeben, um welches Kapitel es sich handelt. Also `\\label{thm:a2-nummer}` etwa angeben (sollte klar sein, was gemeint ist)
+
 1. Leerzeilen bleiben erhalten
 2. Jeder neue Satz auf eine neue Zeile aber ohne eine Leerzeile dazwischen
 3. Vor \\[ und nach \\] eine neue Zeile einfügen mit %% -- 
@@ -49,7 +51,7 @@ Wenn man dieses systematisch macht, also bei `a1_1`anfängt, hat man nach x-Stun
 	Bei Superskripts: ^a wird zu ^{a}
 	Dies gilt auch für zusammengesetzte Ausdrücke und griechische Buchstaben
 5. Listen mit \\begin{enumerate}[(i)] oder [(a)] setzen (je nach Fall
-6. Theoreme etc mit \\label versehen, etwa \\label{thm:nummer}; entsprechend bei Definitionen etc.
+6. Theoreme etc mit \\label versehen, etwa \\label{thm:d3-nummer}; entsprechend bei Definitionen, Corollary, Proposition, Remark, Example etc.
 7. Hochkommata mit \\enquote{text} schreiben
 8. den Text nach \\item auf eine neue Zeile setzen
 9. Eventuelle Leerzeilen nach bzw. vor %% -- wegmachen

@@ -69,16 +69,20 @@
 \let\c@lemma=\c@theorem 		% Make lemma share the theorem counter
 \let\c@corollary=\c@theorem 	% Make corollary share the theorem counter
 \let\c@proposition=\c@theorem 	% Make proposition share the theorem counter
+\let\c@remark=\c@theorem 		% Make proposition share the theorem counter
+\let\c@remarks=\c@theorem 		% Make proposition share the theorem counter
 \makeatother
 
 %% -- Nummer von Theorem etc. korrekt
 %% --
+\newtheorem{remarks}[theorem]{Remarks}
 \renewcommand\thetheorem{\thesection.\arabic{theorem}}
 \renewcommand\theproposition{\thesection.\arabic{proposition}}
 \renewcommand\thedefinition{\thesection.\arabic{definition}}
 \renewcommand\thelemma{\thesection.\arabic{lemma}}
 \renewcommand\thecorollary{\thesection.\arabic{corollary}}
 \renewcommand\theremark{\thesection.\arabic{remark}}
+\renewcommand\theremarks{\thesection.\arabic{remarks}}
 \renewcommand\theexample{\thesection.\arabic{example}}
 %% --
 
@@ -137,6 +141,8 @@
 %\newcommand{\Fix}{\mathrm{Fix}}
 
 \usepackage{ablatt-defn}
+\newcommand{\rank}{\mathrm{Rang}\,}
+
 
 
 %% --
