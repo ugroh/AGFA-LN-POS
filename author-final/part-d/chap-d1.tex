@@ -1,4 +1,4 @@
-% !TEX root = chap-d1-test.tex
+% !TEX root = ../../LN-Book.tex
 %% -- Chapter D-I
 %% --
 
@@ -235,13 +235,10 @@ Likewise, a pseudo-resolvent $ R $ on $ D = \{\lambda \in \mathbb{C} : \text{Re}
 
 Since for a semigroup of contractions on a Banach space
 %% --
-\[
-\text{Fix}(T) = \bigcap_{t \geq 0} \text{ker}(\text{Id} - T(t)) =
-\]
-%% --
-\[
-= \text{ker}(\text{Id} - \lambda R(\lambda,A)) = \text{Fix}(\lambda R(\lambda,A))
-\]
+\begin{align*}
+	\text{Fix}(T) &= \bigcap_{t \geq 0} \text{ker}(\text{Id} - T(t)) \\
+	& = \text{ker}(\text{Id} - \lambda R(\lambda,A)) = \text{Fix}(\lambda R(\lambda,A))	
+\end{align*}
 %% --
 for all $ \lambda \in \mathbb{C} $ with $ \text{Re}(\lambda) > 0 $, it follows that a semigroup of contractions on $ M $ is identity preserving if and only if the (pseudo)-resolvent on $ D = \{\lambda \in \mathbb{C} : \text{Re}(\lambda) > 0\} $ given by
 %% --
