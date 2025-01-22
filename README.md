@@ -4,13 +4,15 @@
 
 __Achtung__: Bitte nichts an der Datei `LN-Book.tex` ändern, höchstens mal reinschauen. 
 
+Die Vorlagen und weitere Erläuterungen finden sich auf der [Springer-Webseite](https://www.springernature.com/gp/authors/campaigns/latex-author-support) bzw. im Unterverzeichnis `springer`. 
+
 #### Die Struktur
 
 * `AGFA-LN-POS` ist das Masterverzeichnis unter dem sich die weiteren Verzeichnisse befinden. Im Einzelnen:
 
-	* `ablage-final:` Dies ist das Verzeichnis, in dem die finalen Beiträge abgelegt sind. 
-	* `ablage-test:` Dies ist das Verzeichnis, das die noch nicht fertigen `TeX`-Dateien enthält. 
-	* `springer:` Hier finden sich die Dateien des Pakets von Springer. Für Erstellung der einzelnen Beiträge sind diese nicht erforderlich. Wer dennoch die Dateien nutzen will (`svmono`), muss die in `springer/springer-style` sich befindlichen in auf seinen PC installieren (oder `Overleaf` nutzen).
+	* `ablage-final:` Dies ist das Verzeichnis, in dem die finalen Beiträge abgelegt sind. Dies sollte momentan nicht benutzt werden. 
+	* `ablage-test:` Dies ist das Verzeichnis, das die noch nicht fertigen `TeX`-Dateien enthält. In diesem sind alle Kapitel enthalten (Reihenfolge wie im Buch) und man sich eines dieser Verzeichnisse herunterladen und bearbeiten.
+	* `springer:` Hier finden sich die Dateien des Pakets `svmono` und `svmult`von Springer. Für Erstellung der einzelnen Beiträge sind diese nicht erforderlich. Wichtiger wäre es, mal in die Dokumente reinzusehen, die sich unter `springer-manuals`finden. 
 	
 #### Der Aufbau von `author-test`
 
@@ -21,6 +23,10 @@ Der Aufbau ist wie folgt (analog dann auch für die anderen Teile):
 * Ist ein solches Kapitelvollständig fertig, dann wird es nach `author-final/part-a/chap-a1.tex` kopiert. 
 
 Das Verzeichnis `author-final` ist analog aufgebaut, wobei aber auf eine nochmalige Verfeinerung verzichtet wurde. 
+
+#### Literatur zu `LaTeX`
+
+Wer Literatur benötigt – bitte mich anschreiben. Bitte auch das Dokument (*muss noch erstellt werden*) `LaTeX-HowDo` beachten, in der einige Regeln festgehalten sind, damit die Dokumente einheitlich werden.
 
 #### Vom `PDF` zum `LaTeX`-Dokument
 
@@ -94,6 +100,7 @@ Dies erfolgt mittels (Muster)
 mit Pfad zur `bib`-Datei (bei mir `/Users/ugroh/Library/texmf/bibtex/bib/ln-references.bib`)
 
 Literatur: [bibtool-manual](https://ctan.org/pkg/bibtool)
+
 
 
 
