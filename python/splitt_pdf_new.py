@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+# !/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 import os
@@ -22,7 +22,7 @@ def split_pdf_in_directory():
         writer = PdfWriter()
         writer.add_page(reader.pages[page_num])
 
-        output_filename = f"{base_filename}_{str(page_num + 1).zfill(2)}.pdf"
+        output_filename = f"{base_filename.lower()}_{str(page_num + 1).zfill(2)}.pdf"
         with open(output_filename, 'wb') as output_pdf:
             writer.write(output_pdf)
 

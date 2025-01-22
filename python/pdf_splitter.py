@@ -35,3 +35,4 @@ if __name__ == "__main__":
         print("PDF erfolgreich in Einzelseiten zerlegt!")
     except Exception as e:
         print(f"Fehler: {e}")
+
