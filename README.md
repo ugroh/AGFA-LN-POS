@@ -24,6 +24,13 @@ Der Aufbau ist wie folgt (analog dann auch für die anderen Teile):
 
 Das Verzeichnis `author-final` ist analog aufgebaut, wobei aber auf eine nochmalige Verfeinerung verzichtet wurde. 
 
+Noch ein Hinweis: Da einzelne Seiten konvertiert werden, macht es Sinn, in der `TeX`-Datei dies mittels
+
+	\newpage
+	%% -- Seite AI-nach
+	
+wobei `n` die Seitennummer des PDF's ist, das man umgewandelt hat. Dann kann man relativ einfach das neue PDF mit dem Original vergleichen und Fehler finden.
+
 #### Literatur zu `LaTeX`
 
 Wer Literatur benötigt – bitte mich anschreiben. Bitte auch das Dokument (*muss noch erstellt werden*) `LaTeX-HowDo` beachten, in der einige Regeln festgehalten sind, damit die Dokumente einheitlich werden.

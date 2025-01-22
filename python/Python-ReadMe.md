@@ -13,4 +13,9 @@ Programm aufrufen:
 
 	python3 programm.py
 	
+
+#### Splitten von PDF	
+
+	pdf_splitter.py
+	python3 pdf_splitter.py
 	
