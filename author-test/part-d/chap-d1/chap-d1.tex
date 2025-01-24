@@ -58,24 +58,27 @@ A map $ T \in L(M) $ is called \emph{positive} (in symbols $ T \geq 0 $) if $ T(
 $ T \in L(M) $ is called \emph{$n$-positive} ($ n \in \mathbb{N} $) if $ T \otimes \text{Id}_{n} $ is positive from $ M \otimes M_{n} $ in $ M \otimes M_{n} $, where $ \text{Id}_{n} $ is the identity map on the \CA-algebra $ M_{n} $ of all $ n \times n $-matrices.
 Obviously, every n-positive map is positive.
 
-We call a contraction $ T \in L(M) $ a Schwarz map if $ T $ satisfies the inequality
+We call a contraction $ T \in L(M) $ a Schwarz map if $ T $ satisfies the so called \emph{Schwarz-inequality}
 %% --
 \[
-T(x)T(x)^{*} \leq T(xx^{*}) \, , \, x \in M .
+	T(x)T(x)^{*} \leq T(xx^{*}) 
 \]
 %% --
 %Note that such $ T $ is necessarily a contraction.
+for all $ x \in M $.
 It is well known that every $n$-positive contraction, $ n \geq 2 $ and that every positive contraction on a commutative \CA-algebra is a Schwarz map (\cite[Corollary IV. 3.8.]{takesaki:1979}).
+
 As we shall see, the Schwarz inequality is crucial for our investigations.
 
 \item If $ M $ is a \CA-algebra we assume $ \mathcal{T} = (T(t))_{t \geq 0} $ to be a strongly continuous semigroup (abbreviated semigroup) while on \WA-algebras we consider weak*-semigroups, i.e. the mapping $ (t \mapsto T(t)x) $ is continuous from $ \mathbb{R}_{+} $ into $ (M,\sigma(M,M_{*})) $, $ M_{*} $ the predual of $ M $, and every $ T(t) \in T $ is $ \sigma(M,M_{*}) $-continuous.
 Note that the preadjoint semigroup
 %% --
 \[
-T_{*} = \{ T(t)_{*} : T(t) \in T \}
+	\mathcal{T}_{*} = \{ T(t)_{*} : T(t) \in \mathcal{T} \}
 \]
 %% --
 is weakly, hence strongly continuous on $ M_{*} $ (see e.g., \cite[Prop. 1.23]{davies:1980}).
+
 We call $ \mathcal{T} $ identity preserving if $ T(t)1 = 1 $ and of Schwarz type if every $ T(t) $ is a Schwarz map.
 
 \end{enumerate}
@@ -86,10 +89,10 @@ In addition we recommend to compare the results of this section of the book with
 \section{A Fundamental Inequality for the Resolvent}\label{sec:d1-2}
 
 If $ \mathcal{T} = (T(t))_{t \geq 0} $ is a strongly continuous semigroup of Schwarz maps on a \CA-algebra $ M $ (resp. a weak*-semigroup of Schwarz type on a \WA-algebra $ M $) with generator $ A $, then the spectral bound $ s(A) \leq 0 $.
-Then for $ \lambda \in \mathbb{C} $, $ \text{Re}(\lambda) > 0 $, there exists a representation for the resolvent $ R(\lambda,A) $ given by the formula
+Then $ \text{Re}(\lambda) > 0 $ for $ \lambda \in \mathbb{C} $ and there exists a representation for the resolvent $ R(\lambda,A) $ given by the formula
 %% --
 \[
- 	R(\lambda,A)x = \int_{0}^\infty e^{-\lambda t} T(t)x \, \dt \, , \, x \in M
+ 	R(\lambda,A)x = \int_{0}^\infty e^{-\lambda t} T(t)x \, \dt  \quad (x \in M)
 \]
 %% --
 where the integral exists in the norm topology.
