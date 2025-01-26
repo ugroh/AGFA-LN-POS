@@ -1,51 +1,54 @@
 %% -- Chapter C-IV
 %% --
-\documentclass[a4paper]{book}
+\documentclass[%
+	,12pt		% zur Kontrolle mit % auskommentieren
+		]{book}
 
 %% --
-\usepackage{graphicx}        % standard LaTeX graphics tool
+\usepackage{graphicx}        
 \usepackage{libertine}
 
-%% -- Referenzen
+%% -- Für die Referenzen
 %% --
-\bibliographystyle{spmpsci}
+%%  --\bibliographystyle{spmpsci}
 
-% see the list of further useful packages
-% in the Reference Guide
-\usepackage[english]{babel}
-\usepackage{csquotes}
-\usepackage[inline,shortlabels]{enumitem}
-\usepackage{ragged2e}
+%% -- Unsere Pakete
+%% --
+\usepackage[english]{babel}		% Trennungen richtig
+\usepackage{csquotes}			% \enquote{Text} gibt die US Variante von "Text"
+\usepackage[inline,shortlabels]{enumitem}	% \begin{enumerate}[(i)] oder [(a)] 
+%% -- 					
+\usepackage{ragged2e}		% \RaggedRight = Flattersatz
+
+%% -- Theorem-Umgebungen
+%% --
+\usepackage{amsmath, amssymb, amsthm}	
 
 %% --
-\usepackage{amsmath, amssymb, amsthm}
-
-% Theorem-Umgebungen
 \theoremstyle{plain}
 \newtheorem{theorem}{Theorem}[chapter]
 \newtheorem{proposition}[theorem]{Proposition}
 \newtheorem{corollary}[theorem]{Corollary}
 \newtheorem{lemma}[theorem]{Lemma}
-
+%% --
 \theoremstyle{definition}
 \newtheorem{example}[theorem]{Example}
 \newtheorem{definition}[theorem]{Definition}
-
+%% --
 \theoremstyle{remark}
 \newtheorem{remark}[theorem]{Remark}
+\newtheorem{remarks}[theorem]{Remarks}
 
+%% -- Eigene Definitionen
+%% --
                      
 \begin{document}
 
 \input{chap-c4}
 
 %% -- Literatur
-\RaggedRight
-\bibliography{ln-references} 
+%% --
+%\RaggedRight
+%\bibliography{ln-references} 
 
 \end{document}
-
-
-
-
-
