@@ -4,7 +4,7 @@
 
 __Achtung__: Bitte nichts an der Datei `LN-Book.tex` ändern, höchstens mal reinschauen. 
 
-Die Vorlagen und weitere Erläuterungen finden sich auf der [Springer-Webseite](https://www.springernature.com/gp/authors/campaigns/latex-author-support) bzw. im Unterverzeichnis `springer`. 
+Die Vorlagen und weitere Erläuterungen finden sich auf der [Springer-Webseite](https://www.springer.com/gp/authors-editors/book-authors-editors/your-publication-journey/manuscript-preparation) bzw. im Unterverzeichnis `springer`. 
 
 #### Die Struktur
 
