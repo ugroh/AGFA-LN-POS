@@ -1,16 +1,138 @@
+% !TEX root = chap-a1-test.tex
 %% -- Chapter A-I
 
+%% -- a1-1
 
+\chapter{Basic Results on Semigroups on Banach Spaces}\label{chap:a1}
+
+Since the basic theory of one-parameter semigroups can be found in several excellent books (e.g. [Davies (1980)], [Goldstein (1985a)], [Pazy (1983)] or [Hille-Phillips (1957)]) we do not want to give a self-contained introduction to this subject here.
+It may however be useful to fix our notation, to collect briefly some important definitions and results (Section 1), to present a list of standard examples (Section 2) and to discuss standard constructions of new semigroups from a given one (Section 3).
+
+In the entire chapter we denote by $E$ a (real or) complex Banach space and consider one-parameter semigroups of bounded linear operators $T(t)$ on $E$.
+By this we understand a subset $\{T(t) : t \in \mathbb{R}_{+}\}$ of $L(E)$, usually written as $(T(t))_{t\geq0}$, such that
+%% --
+\begin{align*}
+	T(0) &= \text{Id}, \\
+	T(s+t) &= T(s) \cdot T(t) \text{ for all } s, t \in \mathbb{R}_{+}
+\end{align*}
+%% --
+In more abstract terms this means that the map $t \to T(t)$ is a homomorphism from the additive semigroup $(\mathbb{R}_{+},+)$ into the multiplicative semigroup $(L(E),\cdot)$.
+Similarly, a one-parameter group $(T(t))_{t\in\mathbb{R}}$ will be a homomorphic image of the group $(\mathbb{R},+)$ in $(L(E),\cdot)$.
+%% --
+\section{Standard Definitions and Results}\label{sec:a1-1}
+%% --
+We consider a one-parameter semigroup $(T(t))_{t \geq 0}$ on a Banach space $E$ 
 
 %% --
 \newpage
-%% -- A1-Seite 2
+%% -- a1-2
+and observe that the domain $\mathbb{R}_{+}$ and the range $L(E)$ of the (semi-
+Group) homomorphism $\tau \colon t \to T(t)$ are topological semigroups for the natural topology on $\mathbb{R}_{+}$ and any one of the standard operator topologies on $L(E)$.
+We single out the strong operator topology on $L(E)$ and require $\tau$ to be continuous.
 
+\begin{definition}\label{def:a1-1.1}
+A one-parameter semigroup $(T(t))_{t\geq0}$ is called strongly continuous if the map $t \to T(t)$ is continuous for the strong operator topology on $L(E)$, i.e. 
+%% --
+\[
+	\lim_{t\to t_{0}} \|T(t)f - T(t_{0})f\| = 0
+\]
+%% --
+for every $f \in E$ and $t$, $t_{0} \geq 0$.
+\end{definition}
+%% --
+Clearly one defines in a similar way weakly continuous, resp. uniformly continuous (compare A-II, Def. 1.19) semigroups, but since we concentrate on the strongly continuous case we agree on the following terminology:
 
+If not stated otherwise, a semigroup is a strongly continuous one-parameter semigroup of bounded linear operators.
+
+Next we collect a few elementary facts on the continuity and boundedness of one-parameter semigroups.
+%% --
+\begin{remarks}\label{rem:a1-1.2}
+%% --
+\begin{enumerate}[(i), wide]
+
+\item 
+A one-parameter semigroup $(T(t))_{t \geq 0}$ on a Banach space $E$ is strongly continuous if and only if for any $f \in E$ it is true that $T(t)f \to f$ as $t \to 0$.
+
+\item 
+For every strongly continuous semigroup there exist constants $M \geq 1$, $w \in \mathbb{R}$ such that $\|T(t)\| \leq M \cdot e^{wt}$ for every $t \geq 0$.
+\item If $(T(t))_{t\geq0}$ is a one-parameter semigroup such that $\|T(t)\|$ is bounded for $0 < t \leq \delta$ then it is strongly continuous if and only if $\lim_{t \to 0} T(t)f = f$ for every $f$ in a total subset of $E$.
+
+\end{enumerate}
+\end{remarks}
+%% --
+The exponential estimate from Remark~\ref{rem:a1-1.2}(ii) for the growth of $\|T(t)\|$ can be used to define an important characteristic of the semigroup.
+%% --
+\begin{definition}\label{def:a1-1.3}
+By the growth bound (or type) of the semigroup $(T(t))_{t\geq0}$ we understand the number
+%% --
+%\begin{align*}
+%\omega_{0} &:= \inf\{w \in \mathbb{R} \colon \text{There exists } M \in \mathbb{R}_{+} \text{ such that } \|T(t)\| \leq Me^{wt} \text{ for } t \geq 0\} \\
+%&= \lim_{t\to\infty} \frac{1}{t}\log\|T(t)\| = \inf_{t>0} \frac{1}{t}\log\|T(t)\|.
+%\end{align*}
+%%% --
+%% --
+\begin{align}\label{eq:a1-1.1}
+\omega_{0} \coloneqq{}& \inf\{w \in \mathbb{R} \colon \text{There exists } M \in \mathbb{R}_{+} \text{ such that } \|T(t)\| \leq Me^{wt} \text{ for } t \geq 0\} \\
+={}& \lim_{t\to\infty} \frac{1}{t}\log\|T(t)\| = \inf_{t>0} \frac{1}{t}\log\|T(t)\| \notag
+\end{align}
+%% --
+\end{definition}
 %% --
 \newpage
 %% -- A1-Seite 3
 
+Particularily important are semigroups such that for every $t \geq 0$ we have $\|T(t)\| \leq M$ (bounded semigroups) or $\|T(t)\| \leq 1$ (contraction semigroups).
+In both cases we have $\omega_{0} \leq 0$.
+
+It follows from the subsequent examples and from 3.1 that $\omega$ may be any number $ -\infty \leq \omega < +\infty$.
+Moreover the reader should observe that the infimum in (1.1) need not be attained and that $M$ may be larger than $1$ even for bounded semigroups.
+
+\begin{examples}\label{ex:a1-1.4}
+%% --
+\begin{enumerate}[(i), wide]
+\item 
+Take $E = \mathbb{C}^2$, $A = \begin{pmatrix}0 & 1\\0 & 0\end{pmatrix}$ and $T(t) = e^{tA} = \begin{pmatrix}1 & t\\0 & 1\end{pmatrix}$.
+Then for the $\ell^{1}$-norm on $E$ we obtain $\|T(t)\| = 1 + t$, hence $(T(t))_{t\geq0}$ is an unbounded semigroup having growth bound $\omega_{0} = 0$.
+
+\item 
+Take $E = L^1(\mathbb{R})$ and for $f \in E$, $t \geq 0$ define
+
+%% --
+\begin{align*}
+T(t)f(x) \coloneqq \begin{cases}
+2\cdot f(x+t) & \text{if } x \in [-t,0] \\
+f(x+t) & \text{otherwise}.
+\end{cases}
+\end{align*}
+%% --
+
+Each $T(t)$, $t > 0$, satisfies $\|T(t)\| = 2$ as can be seen by taking $f \coloneqq 1_{[0,t]}$.
+Therefore $(T(t))_{t\geq0}$ is a strongly continuous semigroup which is bounded, hence has $\omega_{0} = 0$, but the constant $M$ in (1.1) cannot be chosen to be $1$.
+
+\end{enumerate}
+\end{examples}
+%% --
+The most important object associated to a strongly continuous semigroup $(T(t))_{t\geq0}$ is its \emph{generator} which is obtained as the (right)derivative of the map $t \to T(t)$ at $t = 0$.
+Since for strongly continuous semigroups the functions $t \to T(t)f$, $f \in E$, are continuous but not always differentiable we have to restrict our attention to those $f \in E$ for which the desired derivative exists.
+We then obtain the \emph{generator} as a not necessarily everywhere defined operator.
+
+\begin{definition}\label{def:a1-1.5}
+To every semigroup $(T(t))_{t \geq 0}$ there belongs an operator $(A,D(A))$, called the generator and defined on the domain
+%% --
+\begin{align*}
+D(A) &\coloneqq \{f \in E : \lim_{h\to0} \frac{T(h)f - f}{h} \text{ exists in } E\}
+\end{align*}
+%% --
+by
+%% --
+\begin{align*}
+Af &\coloneqq \lim_{h\to0} \frac{T(h)f - f}{h} \text{ for } f \in D(A).
+\end{align*}
+%% --
+\end{definition}
+
+Clearly, $D(A)$ is a linear subspace of $E$ and $A$ is linear from $D(A)$ into $E$.
+Only in certain special cases (see 2.1) the generator
 %% --
 \newpage
 %% -- A1-Seite 4

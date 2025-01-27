@@ -1,7 +1,7 @@
 %% -- Chapter A-I
 %% --
 \documentclass[%
-	,12pt		% zur Kontrolle mit % auskommentieren
+ 	,12pt		% für Korrekturen % wegmachen und Zeilenabstand größer machen
 		]{book}
 
 %% --
@@ -23,7 +23,7 @@
 %% -- Theorem-Umgebungen
 %% --
 \usepackage{amsmath, amssymb, amsthm}	
-
+\usepackage{mathtools}
 %% --
 \theoremstyle{plain}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -33,11 +33,23 @@
 %% --
 \theoremstyle{definition}
 \newtheorem{example}[theorem]{Example}
+\newtheorem{examples}[theorem]{Examples}
 \newtheorem{definition}[theorem]{Definition}
 %% --
 \theoremstyle{remark}
 \newtheorem{remark}[theorem]{Remark}
 \newtheorem{remarks}[theorem]{Remarks}
+
+%% -- Zeilenabstand für Korrekturen global
+%% -- 12pt setzen und % wegmachen
+	\usepackage{setspace}
+	\doublespacing     
+
+% Lokal:
+%\begin{spacing}{1.2}
+%Text mit 1.2-fachem Zeilenabstand
+%\end{spacing}
+
 
 %% -- Eigene Definitionen
 %% --
