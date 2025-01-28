@@ -1,28 +1,17 @@
 %% -- Chapter A-II
 %% --
 \documentclass[%
-	,12pt		% zur Kontrolle mit % auskommentieren
-		]{book}
+,12pt		% zur Kontrolle mit % auskommentieren
+,oneside]{book}
 
 %% --
 \usepackage{graphicx}        
 \usepackage{libertine}
 
-%% -- Für die Referenzen
-%% --
-%%  --\bibliographystyle{spmpsci}
-
-%% -- Unsere Pakete
-%% --
-\usepackage[english]{babel}		% Trennungen richtig
-\usepackage{csquotes}			% \enquote{Text} gibt die US Variante von "Text"
-\usepackage[inline,shortlabels]{enumitem}	% \begin{enumerate}[(i)] oder [(a)] 
-%% -- 					
-\usepackage{ragged2e}		% \RaggedRight = Flattersatz
-
 %% -- Theorem-Umgebungen
 %% --
 \usepackage{amsmath, amssymb, amsthm}	
+\usepackage{mathtools}
 
 %% --
 \theoremstyle{plain}
@@ -33,11 +22,19 @@
 %% --
 \theoremstyle{definition}
 \newtheorem{example}[theorem]{Example}
+\newtheorem{examples}[theorem]{Examples}
 \newtheorem{definition}[theorem]{Definition}
 %% --
 \theoremstyle{remark}
 \newtheorem{remark}[theorem]{Remark}
 \newtheorem{remarks}[theorem]{Remarks}
+
+%% -- Unsere Pakete
+%% --
+\usepackage[english]{babel}					% Trennungen richtig
+\usepackage{csquotes}						% gibt die US Variante von "Text"
+\usepackage[inline,shortlabels]{enumitem}	% \begin{enumerate}[(i)] oder [(a)] 				
+\usepackage{ragged2e}						% \RaggedRight = Flattersatz
 
 %% -- Eigene Definitionen
 %% --
@@ -46,9 +43,10 @@
 
 \input{chap-a2}
 
-%% -- Literatur
+%% -- Literatur wird separat gemacht
 %% --
 %\RaggedRight
+%bibliographystyle{spmpsci}
 %\bibliography{ln-references} 
 
 \end{document}

@@ -1,6 +1,6 @@
 Bitte nach diesen Regel jedes der folgenden PDF mit mathematischen Inhalt in ein LaTeX-Dokument umsetzen und dabei nicht nach Deutsch übersetzen.
 
-
+- Bitte KEINE Korrekturen am Englischen vornehmen, selbst wenn es ein Fehler sein sollte
 
 - Leerzeilen bleiben erhalten
 
