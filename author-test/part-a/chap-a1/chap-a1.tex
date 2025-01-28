@@ -6,7 +6,11 @@
 \chapter{Basic Results on Semigroups on Banach Spaces}\label{chap:a1}
 \index{Basic Results}
 
-Since the basic theory of one-parameter semigroups can be found in several excellent books (e.g. Davies~\cite{davies:1980}, [Goldstein (1985a)], Pazy~\cite{pazy:1983} or Hille-Phillips~\cite{hillephillips:1957}) we do not want to give a self-contained introduction to this subject here.
+Since the basic theory of one-parameter semigroups can be found in several excellent books (e.g. \citeidx{davies:1980}{Davies}, 
+\citet{goldstein:1985a}, 
+\citet{pazy:1983} or
+\citeidx{hillephillips:1957}{Hille-Phillips}) 
+we do not want to give a self-contained introduction to this subject here.
 It may however be useful to fix our notation, to collect briefly some important definitions and results (Section 1), to present a list of \emph{standard examples}~Section \ref{sec:a1-2} %(Section 2) 
 and to discuss standard constructions of new semigroups from a given one (Section 3).
 
@@ -310,7 +314,7 @@ In that case $(U(t))_{t \in \mathbb{R}}$ is obtained as
     \end{cases}
 \]
 %% --
-We refer to Davies~\cite[Prop.1.14]{davies:1980} for the details.
+We refer to \citep[Prop.1.14]{davies:1980} for the details.
 
 \end{enumerate}
 \end{remarks}
@@ -780,7 +784,7 @@ Moreover,
     \|T(t)f\|_{p} \leq \|\mu_{t}\|_{1}\|f\|_{p} = \|f\|_{p}
 \]
 %% --
-by Young's inequality Reed-Simon~\cite[p.28]{reedsimon:1975}, hence $\|T(t)\| \leq 1$ for every $t > 0$.
+by Young's inequality \citet[p.28]{reedsimon:1975}, hence $\|T(t)\| \leq 1$ for every $t > 0$.
 Next we observe that $S(\mathbb{R}^{n})$ is dense in $E$ and invariant under each $T(t)$.
 
 
@@ -1006,6 +1010,8 @@ In particular it follows that the domain of the generator is
 The adjoint operators $(T(t)')_{t \geq 0}$ of a strongly continuous semigroup $(T(t))_{t \geq 0}$ on a Banach space $E$ form a semigroup on $E'$ which need, however, not be strongly continuous.
 
 \begin{example}\label{ex:a1-3.2}
+\index{Example!Adjoint Semigroup}
+%% --
 Take the translation operators $T(t)f(x) = f(x+t)$ on $E = L^{1}(\mathbb{R})$ (see Example 2.4) and their adjoints
 %% --
 \[
@@ -1034,12 +1040,12 @@ and $A'\phi = \psi$.
 
 In particular, $A'$ is a closed and $\sigma(E',E)$-densely defined operator in $E'$.
 
-It follows from Thm.III.5.30 in Kato~\cite{kato:1966} that the resolvent $R(\lambda,A')$ of $A'$ is $R(\lambda,A)'$.
+It follows from Thm.III.5.30 in \citeidx{kato:1966}{Kato} that the resolvent $R(\lambda,A')$ of $A'$ is $R(\lambda,A)'$.
 In particular, the spectra $\sigma(A)$ and $\sigma(A')$ coincide.
 But it is still necessary in some situations to have strong continuity for the adjoint semigroup.
 In order to achieve this we restrict $T(t)'$ to an appropriate subspace of $E'$.
 
-\begin{definition}[Phillips \cite{phillips:1955}]\label{def:a1-3.1}
+\begin{definition}[\citet{phillips:1954}]\label{def:a1-3.1}
 The \emph{semigroup dual} of the Banach space $E$ with respect to the strongly continuous semigroup $(T(t))_{t \geq 0}$ is
 %% --
 \[
@@ -1128,17 +1134,74 @@ Then $\frac{1}{t}\int_{0}^{t} T(s)'\psi \,ds$, $t > 0$, belongs to $D(A')$ and n
 Now take $\phi \in D(A')$ such that $A'\phi \in E^{*}$.
 As above define the func-
 
-\end{proof}
-
-
 
 %% --
 \newpage
 %% -- a1-18
 
+The assumption on $\phi$ implies the set of all derivatives ${f'_f : f \in D(A), \|f\| \leq 1}$ to be equicontinuous at $t = 0$.
 
+This means that for every $\varepsilon > 0$ there exists $0 < t_o < 1$ such that $|f'_f(0) - f'_f(s)| < \varepsilon$ for every $f \in D(A)$, $\|f\| \leq 1$ and $0 < s < t_o$.
 
+In particular,
+%% --
+\[
+    \varepsilon > |f'_f(0) - \frac{1}{s}(\xi_f(s)-\xi_f(0))| = |<f,A'\phi - \frac{1}{s}(T(s)'\phi-\phi)>|
+\]
+%% --
+hence
+%% --
+\[
+    \varepsilon > \|A'\phi - \frac{1}{s}(T(s)'\phi-\phi)\|
+\]
+%% --
+for all $0 \leq s \leq t_o$.
+From this it follows that $\phi \in D(A^*)$.
 
+\end{proof}
+
+On reflexive Banach spaces we have $A^* = A'$ by the above proposition.
+
+In other cases this construction is more interesting.
+
+\begin{example}[continued]\label{ex:a1-3.4}
+%\index{Translations!Adjoints}
+\index{Example!Adjoint Semigroup}
+%% --
+The adjoints of the (left) translation $T(t)$ on $E = L^1(\mathbb{R})$ are the (right) translations $T(t)'$ on $E' = L^\infty(\mathbb{R})$.
+
+The largest subspace of $L^\infty(\mathbb{R})$ on which these translations form a semigroup which is strongly continuous with respect to the sup-norm, is the space of all bounded uniformly continuous functions on $\mathbb{R}$, i.e. $E^* = C_{bu}(\mathbb{R})$.
+
+Calculating $D(A')$ and $D(A^*)$ respectively, one obtains
+%% --
+\begin{align*}
+    D(A') &= \{f \in L^\infty(\mathbb{R}) \colon f \in AC, f' \in L^\infty(\mathbb{R})\} \\
+    D(A^*) &= \{f \in L^\infty(\mathbb{R}) \colon f \in C^1(\mathbb{R}), f' \in C_{bu}(\mathbb{R})\}
+\end{align*}
+%% --
+Obviously, the function $x \mapsto |\sin x|$ belongs to $D(A')$ but not to $D(A^*)$.
+\end{example}
+
+\subsection{The Associated Sobolev Semigroups}\label{subsec:a1-3.5}
+%\index{Sobolev Semigroups}
+\index{Standard Constructions!Associated Sobolev Semigroups}
+
+Since the generator $A$ of a strongly continuous semigroup $(T(t))_{t\geq 0}$ is closed, its domain $D(A)$ becomes a Banach space for the graph norm
+%% --
+\[
+    \|f\|_1 \coloneqq \|f\| + \|Af\|
+\]
+%% --
+
+We denote this Banach space by $E_1$ and the continuous injection from $E_1$ into $E$ by $i_1$.
+
+Since $E_1$ is invariant under $(T(t))_{t\geq 0}$ - apply Prop.1.6.i - it makes sense to consider the semigroup $(T_1(t))_{t\geq 0}$ of all restrictions $T_1(t) \coloneqq T(t)|_{E_1}$.
+
+The results of Prop.1.6 imply that $T_1(t) \in L(E_1)$ and $\|T_1(t)f-f\|_1 \to 0$ as $t \to 0$ for every $f \in E_1$.
+
+Thus $(T_1(t))_{t\geq 0}$ is a strongly continuous semigroup on $E_1$ and has a generator denoted by $(A_1,D(A_1))$.
+
+Using Prop.1.6 again we see that $A_1$ is the restriction of $A$ to $E_1$ with maximal domain, i.e.
 
 %% --
 \newpage

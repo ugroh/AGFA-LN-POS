@@ -1,4 +1,4 @@
-Bitte nach diesen Regel jedes folgende PDF mit mathematischen Inhalt in ein LaTeX-Dokument umsetzen:
+Bitte nach diesen Regel jedes der folgenden PDF mit mathematischen Inhalt in ein LaTeX-Dokument umsetzen und dabei nicht nach Deutsch übersetzen.
 
 
 
