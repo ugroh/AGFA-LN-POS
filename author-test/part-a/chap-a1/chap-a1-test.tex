@@ -3,7 +3,7 @@
 %% -- Chapter A-I
 %% --
 \documentclass[%
-% 	,12pt		% für Korrekturen % wegmachen und Zeilenabstand größer machen
+	,12pt		% für Korrekturen % wegmachen und Zeilenabstand größer machen
 ,oneside]{book}
 
 %% -- 
@@ -49,6 +49,15 @@
 \usepackage{csquotes}						% \enquote{Text} gibt die US Variante von "Text"
 \usepackage[inline,shortlabels]{enumitem}	% \begin{enumerate}[(i)] oder [(a)] 					
 \usepackage{ragged2e}						% \RaggedRight = Flattersatz
+%% --
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usetikzlibrary{matrix,arrows.meta,calc}
+%% --
+\usepackage{comment}
+%% --
+\usepackage{setspace}
+\doublespacing 
 
 %% --
 \usepackage[round]{natbib}
@@ -73,16 +82,19 @@
 
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\R}{\mathbb{R}}
+\DeclareMathOperator{\Id}{Id}
           
 %% --
            
 \begin{document}
 %\tableofcontents
+\setcounter{chapter}{1}
+\setcounter{section}{1}
 \input{chap-a1}
 
 %% -- Literatur
 %% --
-\RaggedRight
+%\RaggedRight
 
 
 
@@ -90,7 +102,7 @@
 %% -- Datei findet sich unter bib/
 %% -- Bitte beachten: Man muss bibtex nutzen
 %% --
-\bibliography{ln-references} 
+%\bibliography{ln-references} 
 
 %% -- Nach dem Lauf mit bibtex finddet sich
 %% --  alles in chap-a1-test.bbl
@@ -137,8 +149,8 @@
 %% -- Index
 %% --
 
-\clearpage
-\printindex
+%\clearpage
+%\printindex
 
 %% --
 \end{document}
