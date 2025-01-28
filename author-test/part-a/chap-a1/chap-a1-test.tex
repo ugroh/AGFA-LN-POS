@@ -1,24 +1,19 @@
+% !TEX TS-program = pdflatexmk
+% !BIB program = bibtex
 %% -- Chapter A-I
 %% --
 \documentclass[%
 % 	,12pt		% für Korrekturen % wegmachen und Zeilenabstand größer machen
-		]{book}
+,oneside]{book}
 
-%% --
+%% -- 
 \usepackage{graphicx}        
 \usepackage{libertine}
 
-%% -- Für die Referenzen
+%% -- Für die Referenzen, muss im gleichen Verzeichnis sein
+%% -- befindet sich unter springer/svmono/styles
 %% --
-%%  --\bibliographystyle{spmpsci}
-
-%% -- Unsere Pakete
-%% --
-\usepackage[english]{babel}		% Trennungen richtig
-\usepackage{csquotes}			% \enquote{Text} gibt die US Variante von "Text"
-\usepackage[inline,shortlabels]{enumitem}	% \begin{enumerate}[(i)] oder [(a)] 
-%% -- 					
-\usepackage{ragged2e}		% \RaggedRight = Flattersatz
+%% --\bibliographystyle{spmpsci}
 
 %% -- Theorem-Umgebungen
 %% --
@@ -29,7 +24,7 @@
 \newtheorem{theorem}{Theorem}[chapter]
 \newtheorem{proposition}[theorem]{Proposition}
 \newtheorem{corollary}[theorem]{Corollary}
-\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{lemma}[theorem]{Lemma} 
 %% --
 \theoremstyle{definition}
 \newtheorem{example}[theorem]{Example}
@@ -40,29 +35,105 @@
 \newtheorem{remark}[theorem]{Remark}
 \newtheorem{remarks}[theorem]{Remarks}
 
-%% -- Zeilenabstand für Korrekturen global
-%% -- 12pt setzen und % wegmachen
-%	\usepackage{setspace}
-%	\doublespacing     
 
-% Lokal:
-%\begin{spacing}{1.2}
-%Text mit 1.2-fachem Zeilenabstand
-%\end{spacing}
+%% -- für Index
+%% -- svind.ist im gleichen Verzeichnis
+%% -- befindet sich unter springer/svmono/styles
+%% --
+\usepackage{imakeidx}
+\makeindex[columns=2, options=-s svind.ist]
 
+%% -- Unsere Pakete
+%% --
+\usepackage[english]{babel}					% Trennungen richtig
+\usepackage{csquotes}						% \enquote{Text} gibt die US Variante von "Text"
+\usepackage[inline,shortlabels]{enumitem}	% \begin{enumerate}[(i)] oder [(a)] 					
+\usepackage{ragged2e}						% \RaggedRight = Flattersatz
+
+%% --
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    urlcolor=blue,
+    linktoc=all
+}
 
 %% -- Eigene Definitionen
 %% --
-                     
-\begin{document}
 
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+          
+%% --
+           
+\begin{document}
+%\tableofcontents
 \input{chap-a1}
 
 %% -- Literatur
 %% --
-%\RaggedRight
+\RaggedRight
+
+
+
+%% -- ln-references.bib im gleichen Verzeichnis
+%% -- Datei findet sich unter bib/
+%% -- Bitte beachten: Man muss bibtex nutzen
+%% --
 %\bibliography{ln-references} 
 
+%% -- Nach dem Lauf mit bibtex finddet sich
+%% --  alles in chap-a1-test.bbl
+%% -- den Inhalt dieser Datei dann hierher kopieren und man 
+%% -- erspart sich bibtex Lauf (final aber!!)
+%% --
+
+\begin{thebibliography}{99}
+%%
+\providecommand{\url}[1]{{#1}}
+\providecommand{\urlprefix}{URL }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{DOI~\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{DOI~\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+%% -
+
+\bibitem{davies:1980}
+Davies, E.: One-parameter Semigroups.
+\newblock Academic Press, London-New York-San Francisco (1980)
+
+\bibitem{hillephillips:1957}
+Hille, E., Phillips, R.S.: Functional Analysis and Semigroups, \emph{Colloquium
+  Publications}, vol.~31.
+\newblock American Mathematical Society, Providence, R.I. (1957)
+
+\bibitem{kato:1966}
+Kato, T.: Perturbation Theory for Linear Operators (1966).
+\newblock 2nd printing: Berlin-Heidelberg-New York: Springer 1976
+
+\bibitem{pazy:1983}
+Pazy, A.: Semigroups of Linear Operators and Applications to Partial
+  Differential Equations.
+\newblock Springer, Berlin-Heidelberg-New York-Tokyo (1983)
+
+\bibitem{reedsimon:1975}
+Reed, M., Simon, B.: Methods of Modern Mathematical Physics {II}. {Fourier}
+  Analysis, Self-Adjointness.
+\newblock Academic Press, New York (1975)
+
+\end{thebibliography}
+
+
+%% -- Index
+%% --
+
+\clearpage
+\printindex
+
+%% --
 \end{document}
 
 
