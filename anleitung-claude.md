@@ -2,33 +2,47 @@ Bitte nach diesen Regel jedes der folgenden PDF mit mathematischen Inhalt in ein
 
 - Bitte KEINE Korrekturen am Englischen vornehmen, selbst wenn es ein Fehler sein sollte
 
-- Leerzeilen bleiben erhalten
+- Leerzeilen bleiben stets im Text erhalten
 
-- Jeder neue Satz auf eine neue Zeile aber ohne eine Leerzeile dazwischen
+- Jeder neue Satz beginnt auf einer neuer Zeile aber ohne eine Leerzeile dazwischen
 
-- Inline Mathematik stets mit $ ... $ einschließen, abgesetzte Formeln mit \\[ ... \\], wobei der mathematische Ausdruck auf einer eingerückten neunen Zeile beginnt. 
+- Inline Mathematik stets mit $ ... $ einschließen, abgesetzte Formeln mit \\[ ... \\], wobei der mathematische Ausdruck auf einer eingerückten neuen Zeile beginnt. 
 
-- Vor \\[ und nach \\] eine neue Zeile einfügen mit %% -- (keine Leerzeile nach oder vor %% --)
+- Vor \\[ eineine neue Zeile einfügen mit einem  %% -- 
 
-- Mehrzeilige mathematische Formeln bitte mit \\begin{align\*} .. \\end{align\*} setzen, nummerierte mit \\begin{equation}\label{eq:nummer} ... \\end{equation}.
+- Nach \\] eine neue Zeile einfügen mit %% -- 
 
-- Doppelpunkt : in mathematischen Ausdrücken als \\colon setzen und := durch \\coloneqq
+- Keine Leerzeile vor einem %% --
+
+- Keine Leerzeile nach einem %% --
+
+- Mehrzeilige mathematische Formeln bitte mit \\begin{align\*} .. \\end{align\*} setzen, 
+
+- Einzeilig und nummeriert mit \\begin{equation}\label{eq:nummer} . \\end{equation}.
+
+- Doppelpunkt : in mathematischen Ausdrücken als \\colon setzen 
+
+- Stets := in mathematischen Ausdrücken als \\coloneqq
 
 - Bei Subskripts: \_a wird zu \_{a}, bei Superskripts: ^a wird zu ^{a}. Dies gilt auch für zusammengesetzte Ausdrücke und griechische Buchstaben
 
 - Wichtig: Bei Zahlen als Sub- oder Superskript immer die Zahl verwenden, also {0} statt {o}
 
-- Aufzählungen mit \\begin{enumerate}[x] \\item \\end{enumerate} setzen. Dabei ist x (i) für Aufzählungen, die mit Zahlen nummeriert sind und es ist x (a) für Aufzählungen, die mit Buchstaben nummeriert sind.
+- Aufzählungen mit \\begin{enumerate}[(x)] \\item \\end{enumerate} setzen. Dabei ist x der Buchstabe i für Aufzählungen, die mit Zahlen nummeriert sind und es ist x der Buchstabe a für Aufzählungen, die mit Buchstaben nummeriert sind.
 
 - In Aufzählungen gilt: Jeder Satz nach \\item beginnt auf einer neuen Zeile ohne Einrückung. Mehrere Sätze innerhalb eines \\item werden durch eine neue Zeile getrennt.
 
-- Theoreme etc mit \\label versehen, etwa \\label{thm:d3-nummer}; entsprechend bei Definitionen, Corollary, Proposition, Remark, Example oder nummerierten Gleichungen. Dabei die Nummer im Format x.y ausgeben, also etwa 4.14.
+- Theoreme etc mit \\label versehen, etwa \\label{thm:c1-nummer}; entsprechend bei Definitionen, Corollary, Proposition, Remark, Example oder nummerierten Gleichungen. Dabei die Nummer im Format x.y ausgeben, also etwa 4.14.
 
-- Begriffe in Hochkommata oder einfachen Anführungszeichen werden mit \emph{} gesetzt.
+- Begriffe in Hochkommata oder einfachen Anführungszeichen werden mit \\emph{} gesetzt.
 
-- Eventuelle Leerzeilen nach bzw. vor %% -- entfernen. 
+- Leerzeilen vor %% -- entfernen
 
-- In Leerzeilen vor \\begin{...} bzw. nach \\end{...} ein %% -- einsetzen (ohne Leerzeile nach oder vor %% --)
+- Leerzeilen nach %% -- entfernen. 
+
+- In Leerzeilen vor \\begin{...} ein %% -- einsetzen
+
+- In Leerzeilen nach \\end{...} ein %% -- einsetzen
 
 - Für Fallunterscheidungen: Verwendung von cases-Umgebung mit Einrückung von 4 Spaces.
 
@@ -40,23 +54,18 @@ Bitte nach diesen Regel jedes der folgenden PDF mit mathematischen Inhalt in ein
 
 - Vor und nach einer mathematischen Bezeichnung bitte eine Leerstelle einfügen, also NICHT a\\tob sondern a \\to b . Analog zu allen anderen Fällen. 
 
-- Theoreme etc. werden mit einem \\label versehen. Dabei werden die Nummer des PDF verwendet und folgendes etwa Format erzeugt: \\label{thm:a1-y.z} , wobei thm bei Theoremen, cor bei Corolly etc. Anwendung findet. 
+- Theoreme etc. werden mit einem \\label versehen. Dabei werden die Nummer des PDF verwendet und folgendes etwa Format erzeugt: \\label{thm:c1-y.z} , wobei thm bei Theoremen, cor bei Corolly etc. Anwendung findet. 
 
 - Weitere Beispiele: 
 
-- Für Definitionen: \label{def:ax-y.z}
-- Für Corollary: \label{cor:ax-y.z}
-- Für Proposition: \label{prop:ax-y.z}
-- Für Remark: \label{rem:ax-y.z}
-- Für Example: \label{ex:ax-y.z}
-- Für Gleichungen: \label{eq:ax-y.z}
+- Für Definitionen: \label{def:c1-y.z}
+- Für Corollary: \label{cor:c1-y.z}
+- Für Proposition: \label{prop:c1-y.z}
+- Für Remark: \label{rem:c1-y.z}
+- Für Example: \label{ex:c1-y.z}
+- Für Gleichungen: \label{eq:c1-y.z}
 
-Dabei steht:
-- a für den Teil (A,B,C,...)
-- x für das Kapitel (1,2,3 oder 4)
-- y.z für die Nummerierung im Format x.y
-
-Ja, ich ergänze die Regeln um die Index-Struktur. Hier ist der zusätzliche Punkt für die Formatierungsregeln:
+Dabei ist y.z für die Nummerierung, wobei die Nummer aus dem PDF genommen werden soll.
 
 - Index-Einträge:
   - Für Sektionen, Subsektionen etc. immer dreifache Indexierung verwenden:

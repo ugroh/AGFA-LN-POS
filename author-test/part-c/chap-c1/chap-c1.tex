@@ -1,5 +1,140 @@
 %% -- Chapter C-I
 %% --
 
-\chapter{Basic Results on Banach Lattices and Positive Operators}\label{chap:C-I}
+\chapter{Basic Results on Banach Lattices and Positive Operators}\label{chap:c1}
+\index{Banach Lattices!Basic Results}
+\index{Positive Operators!Basic Results}
+\index{Basic Results!Banach Lattices and Positive Operators}
+
+This introductory chapter is intended to give a brief exposition of those results on Banach lattices and ordered Banach spaces which are indispensable for an understanding of the subsequent chapters.
+We do not want to give proofs of the results we are going to present, since these can easily be found in the literature (e.g., in Schaefer 1974).
+We rather want to give the reader who is unfamiliar with these results or with the terminology used in this book the necessary information for an intelligent reading of the main discussions.
+Since relatively few general results on ordered Banach spaces are needed, we will primarily talk about Banach lattices.
+The scalar field will be $ \mathbb{R} $ except for the last three sections, where complex Banach lattices will be discussed.
+
+The notion of a Banach lattice was devised to get a common abstract setting within which one could talk about phenomena related to positivity that had previously been studied in various types of spaces of real-valued functions, such as the spaces $ C(K) $ of continuous functions on a compact topological space $ K $, the Lebesgue spaces $ L^{1}(\mu) $ or more generally the spaces $ L^{p}(\mu) $ constructed over a measure space $ (X,\Sigma,\mu) $ for $ 1 \leq p \leq \infty $.
+Thus it is a good idea to think of such spaces first in order to get a feeling for the concrete meaning of the abstract notions we are going to introduce.
+Later we will see that the connections between abstract Banach lattices and the \emph{concrete} function lattices $ C(K) $ and $ L^{1}(\mu) $ are closer than one might think at first.
+We will use without further explanation the terms order relation (ordering), ordered set, majorant, minorant, supremum, infimum.
+
+\pagebreak
+%% -- c3-2
+
+Ich setze die Umwandlung fort:
+
+By definition, a Banach lattice is a Banach space $ (E,\|\cdot\|) $ which is endowed with an order relation, usually written $ \leq $, such that $ (E,\leq) $ is a lattice and the ordering is compatible with the Banach space structure of $ E $.
+We are going to elaborate this in more detail now.
+
+The axioms of compatibility between the linear structure of $ E $ and the order are as follows:
+
 %% --
+\begin{align*}
+\text{(LO}_1\text{)} & \quad f \leq g \text{ implies } f + h \leq g + h \text{ for all } f, g, h \text{ in } E \\
+\text{(LO}_2\text{)} & \quad f \geq 0 \text{ implies } \lambda f \geq 0 \text{ for all } f \text{ in } E \text{ and } \lambda \geq 0
+\end{align*}
+%% --
+
+Any (real) vector space with an ordering satisfying $ \text{(LO}_1\text{)} $ and $ \text{(LO}_2\text{)} $ is called an \emph{ordered vector space}.
+The property expressed in $ \text{(LO}_1\text{)} $ is sometimes called translation invariance and implies that the ordering of an ordered vector space $ E $ is completely determined by the positive part $ E_{+} = \{f \in E \colon f \geq 0\} $ of $ E $.
+In fact, one has $ f \leq g $ if and only if $ g - f \in E_{+} $.
+$ \text{(LO}_1\text{)} $ together with $ \text{(LO}_2\text{)} $ furthermore imply that the positive part of $ E $ is a convex set and a cone with vertex $ 0 $ (often called the \emph{positive cone} of $ E $).
+It is easily verified that conversely any proper convex cone $ C $ with vertex $ 0 $ in $ E $ is the positive part of $ E $ with respect to a uniquely determined compatible ordering.
+
+An ordered vector space $ E $ is called a \emph{vector lattice} if any two elements $ f, g $ in $ E $ have a supremum, which is denoted by $ \sup(f,g) $ or by $ f \vee g $, and an infimum, denoted by $ \inf(f,g) $ or by $ f \wedge g $.
+It is obvious that the existence of, e.g., the supremum of any two elements in an ordered vector space implies the existence of the supremum of any finite number of elements in $ E $ and, since $ f \leq g $ is equivalent to $ -g \leq -f $ this automatically implies the existence of finite infima.
+However, suprema (infima) of infinite majorized subsets need not exist in a vector lattice.
+If they do, then the vector lattice is called \emph{order complete} (\emph{countably order complete} or \emph{$ \sigma $-order complete} if suprema of countable majorized subsets exist).
+At any rate, the binary relations sup and inf in a vector lattice automatically satisfy the (infinite) distributive laws
+
+%% --
+\begin{align*}
+\inf(\sup_{\alpha}f_{\alpha},h) & = \sup_{\alpha}(\inf(f_{\alpha},h)) \\
+\sup(\inf_{\alpha}f_{\alpha},h) & = \inf_{\alpha}(\sup(f_{\alpha},h))
+\end{align*}
+%% --
+
+\pagebreak
+%% -- c3-3
+
+
+
+\pagebreak
+%% -- c3-4
+
+
+
+
+\pagebreak
+%% -- c3-5
+
+
+
+
+\pagebreak
+%% -- c3-6
+
+
+
+
+
+\pagebreak
+%% -- c3-7
+
+
+
+
+\pagebreak
+%% -- c3-8
+
+
+
+
+
+\pagebreak
+%% -- c3-9
+
+
+
+
+
+\pagebreak
+%% -- c3-10
+
+
+
+
+
+
+\pagebreak
+%% -- c3-11
+
+
+
+
+
+\pagebreak
+%% -- c3-12
+
+
+
+
+
+
+\pagebreak
+%% -- c3-13
+
+
+
+
+
+
+\pagebreak
+%% -- c3-14
+
+
+
+
+
+
+\pagebreak
+%% -- c3-15
