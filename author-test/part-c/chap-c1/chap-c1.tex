@@ -56,18 +56,113 @@ At any rate, the binary relations sup and inf in a vector lattice automatically 
 \pagebreak
 %% -- c3-3
 
+whenever one side exists and give rise to the following definitions:
 
+%% --
+\begin{align*}
+\sup(f,-f) &= |f| \text{ is called the \emph{absolute value} of } f \\
+\sup(f,0) &= f^{+} \text{ is called the \emph{positive part} of } f \\
+\sup(-f,0) &= f^{-} \text{ is called the \emph{negative part} of } f
+\end{align*}
+%% --
+
+Note that the negative part of $ f $ is positive.
+
+We call two elements $ f, g $ of a vector lattice \emph{orthogonal} or \emph{lattice disjoint} and write $ f \perp g $, if $ \inf(|f|,|g|) = 0 $.
+Apart from this, the above definitions allow us to formulate the axiom of compatibility between norm and order requested in a Banach lattice in the following short way:
+
+%% --
+\begin{equation}\label{eq:c1-1}
+\text{(LN)} \quad |f| \leq |g| \text{ implies } \|f\| \leq \|g\|
+\end{equation}
+%% --
+
+A norm on a vector lattice is called a \emph{lattice norm}, if it satisfies (LN), and with these notations we can now give the definition of a Banach lattice as follows:
+A \emph{Banach lattice} is a Banach space $ E $ endowed with an ordering $ \leq $ such that $ (E,\leq) $ is a vector lattice and the norm on $ E $ is a lattice norm.
+By a \emph{normed vector lattice} we understand a vector lattice endowed with a lattice norm.
+
+There is a number of elementary, but very important formulas valid in any vector lattice, such as
+
+%% --
+\begin{align*}
+f &= f^{+} - f^{-} & |f + g| &\leq |f| + |g| \\
+|f| &= f^{+} + f^{-} & f + g &= \sup(f,g) + \inf(f,g)
+\end{align*}
+%% --
+etc.
+
+Let us note in passing the following consequences:
+
+\begin{enumerate}[(i)]
+\item The lattice operations $ (f,g) \mapsto \sup(f,g) $ and $ (f,g) \mapsto \inf(f,g) $ and the mappings $ f \mapsto f^{+} $, $ f \mapsto f^{-} $, $ f \mapsto |f| $ are uniformly continuous.
+\item The positive cone is closed.
+\item \emph{Order intervals}, i.e. sets of the form
+%% --
+\[
+[f,g] = \{ h \in E \colon f \leq h \leq g \}
+\]
+%% --
+are closed and bounded.
+\end{enumerate}
+
+Instead of dwelling upon a detailed discussion of the above equalities and inequalities let us rather formulate the following principle,
 
 \pagebreak
 %% -- c3-4
 
+which allows us to verify any of them and to invent, prove or disprove new ones whenever necessary:
 
+Any general formula relating a finite number of \emph{variables} to each other by means of lattice operations and/or linear operations is valid in any Banach lattice as soon as it is valid in the real number system.
+
+In fact, we are going to see below that any Banach lattice $ E $ is, as a vector lattice, \emph{locally} of type $ C(X) $, more exactly:
+Given any finite number $ x_{1},\ldots,x_{n} $ of elements in $ E $ there is a compact topological space $ X $ and a vector sublattice $ J $ of $ E $ which is isomorphic to $ C(X) $ and contains $ x_{1},\ldots,x_{n} $ (see Section 4).
+The above principle is an easy consequence of this:
+In a space $ C(X) $ it is clear that a formula of the type considered need only be verified pointwise, i.e. in $ \mathbb{R} $.
+
+The reader may now be prepared to follow a concise presentation of the most basic facts on Banach lattices.
+
+\section{SUBLATTICES, IDEALS, BANDS}\label{sec:c1-1}
+\index{Sublattices}
+\index{Ideals}
+\index{Bands}
+
+The notion of a \emph{vector sublattice} of a vector lattice $ E $ is self-explanatory, but it should be pointed out that a vector subspace $ F $ of $ E $ which is a vector lattice for the ordering induced by $ E $ need not be a vector sublattice of $ E $ (formation of suprema may differ in $ E $ and in $ F $), and that a vector sublattice need not contain (or may lead to different) infinite suprema and infima.
+The following are necessary and sufficient conditions on a vector subspace $ G $ of $ E $ to be a vector sublattice:
+
+\begin{enumerate}[(i)]
+\item $ |h| \in G $ for all $ h \in G $
+\item $ h^{+} \in G $ for all $ h \in G $
+\item $ h^{-} \in G $ for all $ h \in G $
+\end{enumerate}
+
+A subset $ B $ of a vector lattice is called \emph{solid} if $ f \in B $, $ |g| \leq |f| $ implies $ g \in B $.
+Thus a norm on a vector lattice is a lattice norm if and only if its unit ball is solid.
+A solid linear subspace is called an \emph{ideal}.
+Ideals are automatically vector sublattices since $ |\sup(f,g)| \leq |f| + |g| $.
+On the other hand, a vector sublattice $ F $ is an ideal in $ E $ if $ g \in F $ and $ 0 \leq f \leq g $ imply $ f \in F $.
+A \emph{band} in a vector lattice $ E $ is an ideal which contains arbitrary suprema, more exactly: 
 
 
 \pagebreak
 %% -- c3-5
 
+$ B $ is a band in $ E $ if $ B $ is an ideal in $ E $ and $ \sup M $ is contained in $ B $ whenever $ M $ is contained in $ B $ and has a supremum in $ E $.
+Since the notions of sublattice, ideal, band are invariant under the formation of arbitrary intersections there exists, for any subset $ B $ of $ E $, a uniquely determined smallest sublattice (ideal, band) of $ E $ containing $ B $: the \emph{sublattice} (\emph{ideal}, \emph{band}) \emph{generated by} $ B $.
 
+If we denote by $ B^{d} $ the set $ \{h \in E \colon \inf(|h|,|f|) = 0 \text{ for all } f \in B\} $, then $ B^{d} $ is a band for any subset $ B $ of $ E $, and $ (B^{d})^{d} = B^{dd} $ is a band containing $ B $.
+If $ E $ is a normed vector lattice (more generally, if $ E $ is archimedean ordered, see e.g. [Schaefer (1974)]), then $ B^{dd} $ is the band generated by $ B $.
+
+If two ideals $ I, J $ of a vector lattice $ E $ have trivial intersection $ \{0\} $, then $ I $ and $ J $ are \emph{lattice disjoint}, i.e. $ I \subset J^{d} $.
+Thus if $ E $ is the direct sum of two ideals $ I, J $ then one has automatically $ I = J^{d} $ and $ J = I^{d} $, hence $ I = I^{dd} $ and $ J = J^{dd} $ must be bands in this situation.
+In general, an ideal $ I $ need not have a complementary ideal $ J $, even if $ I = I^{dd} $ is a band.
+This amounts to the same as saying that even if $ I = I^{dd} $ (which is always true if $ I $ is a band in a normed vector lattice) one need not necessarily have $ E = I + I^{d} $.
+An ideal $ I $ is called a \emph{projection band} if it does have a complementary ideal, and in this case the projection of $ E $ onto $ I $ with kernel $ I^{d} $ is called the \emph{band projection} belonging to $ I $.
+An example of a band which is not a projection band is furnished by the subspace of $ C([0,1]) $ consisting of the functions vanishing on $ [0,1/2] $.
+
+The \emph{Riesz Decomposition Theorem} asserts that in an order complete vector lattice every band is a projection band.
+As a consequence, if $ E $ is order complete and $ B $ is an arbitrary subset of $ E $, then $ E $ is the direct sum of the complementary bands $ B^{d} $ and $ B^{dd} $.
+
+This Theorem, which is quite easy to prove, is widely used in Analysis and gives an abstract background to, e.g., the decomposition of a measure into atomic and diffuse parts (the atomic measures being those contained in the band generated by the point measures, the diffuse measures those disjoint to the latter) or, more specifically, to the well-known decomposition of a measure on $ [a,b] $ into an atomic part and a diffuse part, which latter can in turn be decomposed into the sum of a measure which is \emph{absolutely continuous} (which means, contained in the band generated by Lebesgue measure) and a \emph{singular measure} (which means, a diffuse measure disjoint to Lebesgue measure).
 
 
 \pagebreak
