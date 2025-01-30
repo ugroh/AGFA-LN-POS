@@ -28,7 +28,7 @@ Gern können wir alles im Rahmen eines Zoom-Meetings besprechen.
 
 - Reelle Zahlen etc. stehen mit `\mathbb{R}` im System, gern auch mittels `\R`, `\N` etc. eingeben.
 
-- Den Punkt nach `e.g.` interpretiert `TeX` als Satzende. Daher `\eq`, oder `ie` oder `\resp` eingeben. 
+- Den Punkt nach `e.g.` interpretiert `TeX` als Satzende. Daher `\eg`, oder `ie` oder `\resp` eingeben. 
 
 Beim Integral `ds` oder `dt` etc. als `\ds` oder `\dt` eingeben, damit das `d` aufrecht ist. 
 
