@@ -2,22 +2,27 @@
 
 Das Projekt ist es, das Buch [LN 1184](https://github.com/ugroh/AGFA-LN-POS/blob/main/ablage-orig/ln-orig/ln-pos-1184.pdf), das im `PDF`-Format vorhanden ist, in das `LaTeX` umzuwandeln. Um dieses strukturiert anzugehen, ist auf `GitHub` das Repository [AGFA-LN-POS](https://github.com/ugroh/AGFA-LN-POS) angelegt worden, in dem sich alles findet, was dazu erforderlich ist. Man kann sich dieses herunterladen (grüner Knopf `Code` und dort als `zip`-Datei herunterladen) oder auch einzelne Dateien (Datei anklicken und dann findet sich rechts oben das Symbol dazu).
 
-
-
-
-__Achtung__: Bitte nichts an der Datei `LN-Book.tex` ändern, höchstens mal hineinschauen. 
-
 Die Vorlagen und weitere Erläuterungen finden sich auf der [Springer-Webseite](https://www.springer.com/gp/authors-editors/book-authors-editors/your-publication-journey/manuscript-preparation) bzw. im Unterverzeichnis `springer`. 
 
 ##### Die Struktur
 
 * `AGFA-LN-POS` ist das Masterverzeichnis, unter dem sich die weiteren Verzeichnisse befinden. Im Einzelnen:
 	* `ablage-final:` Dies ist das Verzeichnis, in dem die finalen Beiträge abgelegt sind. Dies sollte momentan nicht benutzt werden. Bitte auch die Datei `LN-Book.tex` nicht ändern, höchstens mal reinschauen.
-	* `ablage-test:` Dies ist das Verzeichnis, das die noch nicht fertigen `TeX`-Dateien enthält. In diesem sind alle Kapitel enthalten (Reihenfolge wie im Buch) .
-	* Das Unterverzeichnis `preamble` enthält `TeX`-Dateien, die in den Testprogrammen genutzt werden (folgt im Detail noch)
-	* `springer:` Hier finden sich die Dateien des Pakets `svmono` und `svmult`von Springer. Für die Erstellung der einzelnen Beiträge sind diese nicht erforderlich. Wichtiger wäre es, mal in die Dokumente hereinzusehen, die sich unter `springer-manuals`finden. 
-	* `literatur:` Wie der Name sagt – ergänzende Literatur zum Hineinschauen. 
 	
+	* `ablage-test:` Dies ist das Verzeichnis, das die noch nicht fertigen `TeX`-Dateien enthält. In diesem sind alle Kapitel enthalten (Reihenfolge wie im Buch) .
+	
+	* Das Unterverzeichnis `preamble` enthält die folgenden `TeX`-Dateien:
+	
+	  * `chap-xy-test.tex` und `chap-xy.tex` ; beide zum Testen der erstellten `TeX`-Dateien.
+	  * `ln-defintionen.tex`enthält die Abkürzungen, die für die richtige Erstellung der Vorlagen erforderlich sind (beschrieben im `How2Do`).
+	  * `ln-preamble.tex`: Hier ist alles zusammengefasst, was wir für die Testphase nutzen. 
+
+​		Die beiden letzten sind mittels `input{}` in `chap-xy-test.tex` eingebunden. Bitte dieses dann in 		das `working directory` zusammen mit den `TeX`-Dateien kopieren und nutzen. Erleichtert das 		Leben! 	
+
+* `springer:` Hier finden sich die Dateien des Pakets `svmono` und `svmult`von Springer. Für die Erstellung der einzelnen Beiträge sind diese nicht erforderlich. Wichtiger wäre es, mal in die Dokumente hereinzusehen, die sich unter `springer-manuals`finden. 
+	
+* `literatur:` Wie der Name sagt – ergänzende Literatur zum Hineinschauen, insbesondere in den `Grätzer`.
+
 #### Der Aufbau von `author-test`
 
 Der Aufbau ist wie folgt (analog dann auch für die anderen Teile):
