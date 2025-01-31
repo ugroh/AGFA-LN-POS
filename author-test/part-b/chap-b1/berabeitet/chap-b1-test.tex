@@ -1,0 +1,56 @@
+% !TEX TS-program = pdflatexmk
+% !BIB program = bibtex
+%% -- Chapter B-I
+%% --
+\documentclass[%
+,12pt		% zur Kontrolle mit % auskommentieren
+,oneside]{book}
+
+%% --
+\usepackage{graphicx}        
+\usepackage{libertine}
+
+\usepackage{setspace}
+\doublespacing
+
+%% -- Theorem-Umgebungen
+%% --
+\usepackage{amsmath, amssymb, amsthm}	
+
+%% --
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+%% --
+\theoremstyle{definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{definition}[theorem]{Definition}
+%% --
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{remarks}[theorem]{Remarks}
+
+%% -- Unsere Pakete
+%% --
+\usepackage[english]{babel}		% Trennungen richtig
+\usepackage{csquotes}			% \enquote{Text} gibt die US Variante von "Text"
+\usepackage[inline,shortlabels]{enumitem}	% \begin{enumerate}[(i)] oder [(a)] 
+%% -- 					
+\usepackage{ragged2e}		% \RaggedRight = Flattersatz
+
+%% -- Eigene Definitionen
+%% --
+                     
+\begin{document}
+
+\input{chap-b1}
+
+%% -- Literatur
+%% --
+%\RaggedRight
+%\bibliographystyle{spmpsci}
+%\bibliography{ln-references} 
+
+\end{document}
