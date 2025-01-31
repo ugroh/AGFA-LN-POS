@@ -32,7 +32,7 @@ Gern können wir alles im Rahmen eines Zoom-Meetings besprechen.
 
 Beim Integral `ds` oder `dt` etc. als `\ds` oder `\dt` eingeben, damit das `d` aufrecht ist. 
 
-Diese Definitionen finden sich in [`ln-defin itionen.tex`](https://github.com/ugroh/AGFA-LN-POS/blob/main/author-test/LN-Definition.tex), die man mittels `\input` in der Präambel einbinden muss (eventuell vorher in das Arbeitsverzeichnis kopieren)
+Diese Definitionen finden sich in [`ln-definitionen.tex`](https://github.com/ugroh/AGFA-LN-POS/blob/main/author-test/LN-Definition.tex), die man mittels `\input` in der Präambel einbinden muss (eventuell vorher in das Arbeitsverzeichnis kopieren)
 
 - Hochkommata bzw. 'Text' mittels `\enquote{Text}` oder `\enquote*{Text}` eingeben (siehe auch die Anweisung für Claude)
 
