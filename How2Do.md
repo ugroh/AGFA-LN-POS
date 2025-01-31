@@ -32,7 +32,7 @@ Gern können wir alles im Rahmen eines Zoom-Meetings besprechen.
 
 Beim Integral `ds` oder `dt` etc. als `\ds` oder `\dt` eingeben, damit das `d` aufrecht ist. 
 
-Diese Definitionen finden sich in [`ln-definitionen.tex`](https://github.com/ugroh/AGFA-LN-POS/blob/main/author-test/LN-Definition.tex), die man mittels `\input` in der Präambel einbinden muss (eventuell vorher in das Arbeitsverzeichnis kopieren)
+Diese Definitionen finden sich in [`ln-definitionen.tex`](https://github.com/ugroh/AGFA-LN-POS/tree/main/author-test/preamble), die man mittels `\input` in der Präambel einbinden muss (eventuell vorher in das Arbeitsverzeichnis kopieren). Die Datei auf `GitHub` auswählen (anklicken) und man dann diese sich auf den eignen rechner herunterladen (rechts oben gibt es ein Symbol dazu).  Wichtig: Das Paket `xspace` mittels `\input{xspace}` noch in die Präambel des eigenen `TeX`-Dokuments aufnehmen. 
 
 - Hochkommata bzw. 'Text' mittels `\enquote{Text}` oder `\enquote*{Text}` eingeben (siehe auch die Anweisung für Claude)
 
