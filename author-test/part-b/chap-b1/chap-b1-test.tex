@@ -3,14 +3,14 @@
 %% -- Chapter A-I (anpassen an die Realität)
 %% --
 \documentclass[%
-,12pt		% für Korrekturen % wegmachen und Zeilenabstand größer machen
+%,12pt		% für Korrekturen % wegmachen und Zeilenabstand größer machen
 ,oneside]{book}
 
 %% --
 %\usepackage{setspace}
 %\doublespacing 
 
-%% -- Gemeinsame Pakete und definitionen
+%% -- Gemeinsame Pakete und Definitionen
 %% --
 \input{ln-preamble}
 
@@ -18,12 +18,11 @@
 %% --
 \input{ln-definitionen.tex}
 
-
 %% -- Index für später
 %% --
 
-%\usepackage{imakeidx}
-%\makeindex[columns=2, options=-s svind.ist]
+\usepackage{imakeidx}
+\makeindex[columns=2, options=-s svind.ist]
 
 
 %% -- Literatur
@@ -64,13 +63,13 @@
 %% -- oder im TeX-Baum texmf/bibtex/bib
 %% --
 %\RaggedRight
-% \bibliography{ln-references} 
+%\bibliography{ln-references} 
 
 %% -- Index
 %% --
 
-%\clearpage
-%\printindex
+\clearpage
+\printindex
 
 %% --
 \end{document}

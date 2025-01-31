@@ -37,19 +37,19 @@
  
 % see the list of further useful packages
 % in the Reference Guide
-\usepackage[english]{babel}
-\usepackage{csquotes}
-\usepackage[inline,shortlabels]{enumitem}
-\setlist{%
-	,labelsep=0.8em
-	,leftmargin=1em
-	,itemindent=2em
-	,labelwidth=10pt
-	,itemsep=0.15ex
-	,parsep=.75ex
-	}
-\usepackage{ragged2e}
-
+%\usepackage[english]{babel}
+%\usepackage{csquotes}
+%\usepackage[inline,shortlabels]{enumitem}
+%\setlist{%
+%	,labelsep=0.8em
+%	,leftmargin=1em
+%	,itemindent=2em
+%	,labelwidth=10pt
+%	,itemsep=0.15ex
+%	,parsep=.75ex
+%	}
+%\usepackage{ragged2e}
+\input{ln-preamble-final}
 
 %% -- Part A etc
 %% -- A-I etc für \chapter
@@ -144,15 +144,7 @@
 %}
 
 %% -- Definitionen
-\DeclareMathOperator{\Id}{Id}
-% !BIB program = %\newcommand{\WA}{$\mathrm{W}^{*}$}
-%\newcommand{\CA}{$\mathrm{C}^{*}$}
-%\newcommand{\Fix}{\mathrm{Fix}}
-
-\usepackage{ablatt-defn}
-\newcommand{\rank}{\mathrm{Rang}\,}
-
-
+\input{ln-definitionen}
 
 %% --
 \usepackage{tikz}
@@ -167,7 +159,7 @@
 	,urlcolor	= blue  %                                                              
 	,citecolor	= blue  %                                                          
 	,linkcolor	= blue	% oder black
-  	,hidelinks 			% Vor dem Druck % entfernen
+%  	,hidelinks 			% Vor dem Druck % entfernen
 	}
 	
 %% -- Stand
@@ -239,7 +231,7 @@
 %\bibliography{ln-references}
 %\include{author/glossary}
 %\include{author/solutions}
-%\printindex
+\printindex
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
