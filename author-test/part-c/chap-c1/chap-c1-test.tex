@@ -1,66 +1,80 @@
-%% -- Chapter C-I
+% !TEX TS-program = pdflatexmk
+% !BIB program = bibtex 
+%% -- Chapter A-I (anpassen an die Realität)
 %% --
 \documentclass[%
-,12pt		% zur Kontrolle mit % auskommentieren
+,12pt		% für Korrekturen % wegmachen und Zeilenabstand größer machen
 ,oneside]{book}
 
 %% --
-\usepackage{graphicx}        
-\usepackage{libertine}
-
 %\usepackage{setspace}
-%\doublespacing
+%\doublespacing 
 
-%% -- Für die Referenzen
+%% -- Gemeinsame Pakete und Definitionen
 %% --
-%%  --\bibliographystyle{spmpsci}
+\input{ln-preamble}
 
-%% -- Unsere Pakete
+%% -- Gemeinsame Abkürzungen
 %% --
-\usepackage[english]{babel}		% Trennungen richtig
-\usepackage{csquotes}			% \enquote{Text} gibt die US Variante von "Text"
-\usepackage[inline,shortlabels]{enumitem}	% \begin{enumerate}[(i)] oder [(a)] 
-%% -- 					
-\usepackage{ragged2e}		% \RaggedRight = Flattersatz
+\input{ln-definitionen.tex}
 
-%% -- Theorem-Umgebungen
+%% -- Index für später
 %% --
-\usepackage{amsmath, amssymb, amsthm}	
 
-%% --
-\theoremstyle{plain}
-\newtheorem{theorem}{Theorem}[chapter]
-\newtheorem{proposition}[theorem]{Proposition}
-\newtheorem{corollary}[theorem]{Corollary}
-\newtheorem{lemma}[theorem]{Lemma}
-%% --
-\theoremstyle{definition}
-\newtheorem{example}[theorem]{Example}
-\newtheorem{definition}[theorem]{Definition}
-%% --
-\theoremstyle{remark}
-\newtheorem{remark}[theorem]{Remark}
-\newtheorem{remarks}[theorem]{Remarks}
+\usepackage{imakeidx}
+\makeindex[columns=2, options=-s svind.ist]
 
-%% -- Eigene Definitionen
-%% --
-\input{../../../author-test/LN-Definition}
-\usepackage{xspace}
+
+%% -- Literatur
+%% -- für später
+
+%\usepackage[round]{natbib}
+%\bibliographystyle{spmpsci}
+%\bibliographystyle{abbrvnat}
 
 %% --
 
+\usepackage{hyperref}
+\hypersetup{%
+,colorlinks=true 
+,linkcolor=blue
+,citecolor=blue
+,urlcolor=blue
+,linktoc=all
+%,hidelinks=true
+}
 
 
-
+          
 %% --
-                     
+           
 \begin{document}
+%\tableofcontents
+
+\setcounter{chapter}{0}		%% anpassen 1/2/3 -> Chapter 2/3/4
+\setcounter{section}{1}		%% immer
 
 \input{chap-c1}
 
 %% -- Literatur
 %% --
+
+% -- ln-references.bib im gleichen Verzeichnis
+%% -- oder im TeX-Baum texmf/bibtex/bib
+%% --
 %\RaggedRight
 %\bibliography{ln-references} 
 
+%% -- Index
+%% --
+
+\clearpage
+\printindex
+
+%% --
 \end{document}
+
+
+
+
+

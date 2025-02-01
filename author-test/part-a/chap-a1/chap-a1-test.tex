@@ -1,187 +1,83 @@
 % !TEX TS-program = pdflatexmk
 % !BIB program = bibtex 
-%% -- Chapter A-I
+%% -- Chapter A-I (anpassen an die Realität)
 %% --
 \documentclass[%
 ,12pt		% für Korrekturen % wegmachen und Zeilenabstand größer machen
 ,oneside]{book}
+
 %% --
 %\usepackage{setspace}
 %\doublespacing 
-%% -- 
-\usepackage{graphicx}        
-\usepackage{libertine}
 
-%% -- Für die Referenzen, muss im gleichen Verzeichnis sein
-%% -- befindet sich unter springer/svmono/styles
+%% -- Gemeinsame Pakete und Definitionen
 %% --
-%% --\bibliographystyle{spmpsci}
+\input{ln-preamble}  
 
-%\renewcommand\thepart{\Alph{part}}
-%\renewcommand\thechapter{\thepart-\Roman{chapter}}
-\renewcommand\thesection{\arabic{section}}
-\renewcommand\thesubsection{\thesection.\arabic{subsection}}
 
-%% -- Theorem-Umgebungen
+%% -- Gemeinsame Abkürzungen
 %% --
-\usepackage{amsmath, amssymb, amsthm}	
-\usepackage{mathtools}
-%% --
-\theoremstyle{plain}
-\newtheorem{theorem}{Theorem}[section]
-\newtheorem{proposition}[theorem]{Proposition}
-\newtheorem{corollary}[theorem]{Corollary}
-\newtheorem{lemma}[theorem]{Lemma} 
-%% --
-\theoremstyle{definition}
-\newtheorem{example}[theorem]{Example}
-\newtheorem{examples}[theorem]{Examples} 
-\newtheorem{definition}[theorem]{Definition}
-%% --
-\theoremstyle{remark}
-\newtheorem{remark}[theorem]{Remark}
-\newtheorem{remarks}[theorem]{Remarks}
+\input{ln-definitionen.tex}
 
-%% -- Durchgehende Nummerierung
-%% -- entbehrlich
-\makeatletter
-\let\c@remark=\c@theorem 		% Make remark share the theorem counter
-\let\c@definition=\c@theorem 	% Make definition share the theorem counter
-\let\c@example=\c@theorem 		% Make example share the theorem counter
-\let\c@lemma=\c@theorem 		% Make lemma share the theorem counter
-\let\c@corollary=\c@theorem 	% Make corollary share the theorem counter
-\let\c@proposition=\c@theorem 	% Make proposition share the theorem counter
-\let\c@remark=\c@theorem 		% Make proposition share the theorem counter
-\let\c@remarks=\c@theorem 		% Make proposition share the theorem counter
-\makeatother
+%% -- Index für später
+%% --
 
-%% -- Nummer von Theorem etc. korrekt
-%% --
-%\newtheorem{remarks}[theorem]{Remarks}
-%\renewcommand\thetheorem{\thesection.\arabic{theorem}}
-%\renewcommand\theproposition{\thesection.\arabic{proposition}}
-%\renewcommand\thedefinition{\thesection.\arabic{definition}}
-%\renewcommand\thelemma{\thesection.\arabic{lemma}}
-%\renewcommand\thecorollary{\thesection.\arabic{corollary}}
-%\renewcommand\theremark{\thesection.\arabic{remark}}
-%\renewcommand\theremarks{\thesection.\arabic{remarks}}
-%\renewcommand\theexample{\thesection.\arabic{example}}
-%% -- für Index
-%% -- svind.ist im gleichen Verzeichnis
-%% -- befindet sich unter springer/svmono/styles
-%% --
 \usepackage{imakeidx}
 \makeindex[columns=2, options=-s svind.ist]
 
-%% -- Unsere Pakete
-%% --
-\usepackage[english]{babel}					% Trennungen richtig
-\usepackage{csquotes}						% \enquote{Text} gibt die US Variante von "Text"
-\usepackage[inline,shortlabels]{enumitem}	% \begin{enumerate}[(i)] oder [(a)] 					
-\usepackage{ragged2e}						% \RaggedRight = Flattersatz
-%% --
-\usepackage{tikz}
-\usepackage{tikz-cd}
-\usetikzlibrary{matrix,arrows.meta,calc}
-%% --
-\usepackage{comment}
-\usepackage{xspace}
 
+%% -- Literatur
+%% -- für später
 
-
-%% --
-\usepackage[round]{natbib}
-%\bibliographystyle{spmpsci}
-\bibliographystyle{abbrvnat}
-\newcommand{\citeidx}[2]{\citet{#1}\index{References!#2!cited on}} %% Für Index
-%% -- Eintrag im Index \citeidx{kato:1966}{Kato} 
+%\usepackage[round]{natbib}
+%%\bibliographystyle{spmpsci}
+%\bibliographystyle{abbrvnat}
 
 %% --
 
 \usepackage{hyperref}
-\hypersetup{
-    colorlinks=true,
-    linkcolor=blue,
-    citecolor=blue,
-    urlcolor=blue,
-    linktoc=all
+\hypersetup{%
+,colorlinks=true 
+,linkcolor=blue
+,citecolor=blue
+,urlcolor=blue
+,linktoc=all
+%,hidelinks=true
 }
 
-%% -- Eigene Definitionen
-%% --
 
-\input{../../../author-test/LN-Definition.tex}
           
 %% --
            
 \begin{document}
 %\tableofcontents
-\setcounter{chapter}{1}
-\setcounter{section}{1}
+
+\setcounter{chapter}{0}		%% anpassen 1/2/3 -> Chapter 2/3/4
+\setcounter{section}{1}		%% immer
+
 \input{chap-a1}
 
 %% -- Literatur
 %% --
+
+% -- ln-references.bib im gleichen Verzeichnis
+%% -- oder im TeX-Baum texmf/bibtex/bib
+%% --
 %\RaggedRight
-
-
-
-%% -- ln-references.bib im gleichen Verzeichnis
-%% -- Datei findet sich unter bib/
-%% -- Bitte beachten: Man muss bibtex nutzen
-%% --
 \bibliography{ln-references} 
-
-%% -- Nach dem Lauf mit bibtex finddet sich
-%% --  alles in chap-a1-test.bbl
-%% -- den Inhalt dieser Datei dann hierher kopieren und man 
-%% -- erspart sich bibtex Lauf (final aber!!)
-%% --
-
-%\begin{thebibliography}{99}
-%%%
-%\providecommand{\url}[1]{{#1}}
-%\providecommand{\urlprefix}{URL }
-%\expandafter\ifx\csname urlstyle\endcsname\relax
-%  \providecommand{\doi}[1]{DOI~\discretionary{}{}{}#1}\else
-%  \providecommand{\doi}{DOI~\discretionary{}{}{}\begingroup
-%  \urlstyle{rm}\Url}\fi
-%%% -
-%
-%\bibitem{davies:1980}
-%Davies, E.: One-parameter Semigroups.
-%\newblock Academic Press, London-New York-San Francisco (1980)
-%
-%\bibitem{hillephillips:1957}
-%Hille, E., Phillips, R.S.: Functional Analysis and Semigroups, \emph{Colloquium
-%  Publications}, vol.~31.
-%\newblock American Mathematical Society, Providence, R.I. (1957)
-%
-%\bibitem{kato:1966}
-%Kato, T.: Perturbation Theory for Linear Operators (1966).
-%\newblock 2nd printing: Berlin-Heidelberg-New York: Springer 1976
-%
-%\bibitem{pazy:1983}
-%Pazy, A.: Semigroups of Linear Operators and Applications to Partial
-%  Differential Equations.
-%\newblock Springer, Berlin-Heidelberg-New York-Tokyo (1983)
-%
-%\bibitem{reedsimon:1975}
-%Reed, M., Simon, B.: Methods of Modern Mathematical Physics {II}. {Fourier}
-%  Analysis, Self-Adjointness.
-%\newblock Academic Press, New York (1975)
-%
-%\end{thebibliography}
-
 
 %% -- Index
 %% --
 
-%\clearpage
-%\printindex
+\clearpage
+\printindex
 
 %% --
 \end{document}
+
+
+
+
 
 
 
