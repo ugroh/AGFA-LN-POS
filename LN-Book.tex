@@ -6,9 +6,11 @@
 
 \documentclass[%
 	,graybox
-	,envcountsame
-	,envcountchap
+%	,envcountsect			%% not working 
+%	,evvcountsame			%% -- " --
+%	,envcountresetsect		%% -- " --
 	,sectrefs
+	,natbib
 %	,referee
 	]{svmono}
 
@@ -32,7 +34,7 @@
 
 %% -- Referenzen
 %% --
-\bibliographystyle{spmpsci}
+%\bibliographystyle{spmpsci}
 %\usepackage[sectionbib]{chapterbib}
  
 % see the list of further useful packages
@@ -71,12 +73,19 @@
 %% --
 \setcounter{tocdepth}{1}
 
+%% -- Remarks und Examples
+%% -- 
+\spnewtheorem{remarks}[theorem]{Remarks}{\normalfont\bfseries}{\itshape}
+\spnewtheorem{examples}[theorem]{Examples}{\normalfont\bfseries}{\itshape}
+
 %% -- Durchgehende Nummerierung
-%% -- entbehrlich
+%% -- 
 \makeatletter
 \let\c@remark=\c@theorem 		% Make remark share the theorem counter
 \let\c@definition=\c@theorem 	% Make definition share the theorem counter
 \let\c@example=\c@theorem 		% Make example share the theorem counter
+\let\c@definition=\c@theorem 	% Make definition share the theorem counter
+\let\c@examples=\c@theorem 	% Make examples share the theorem counter
 \let\c@lemma=\c@theorem 		% Make lemma share the theorem counter
 \let\c@corollary=\c@theorem 	% Make corollary share the theorem counter
 \let\c@proposition=\c@theorem 	% Make proposition share the theorem counter
@@ -86,7 +95,7 @@
 
 %% -- Nummer von Theorem etc. korrekt
 %% --
-\newtheorem{remarks}[theorem]{Remarks}
+
 \renewcommand\thetheorem{\thesection.\arabic{theorem}}
 \renewcommand\theproposition{\thesection.\arabic{proposition}}
 \renewcommand\thedefinition{\thesection.\arabic{definition}}
@@ -95,6 +104,8 @@
 \renewcommand\theremark{\thesection.\arabic{remark}}
 \renewcommand\theremarks{\thesection.\arabic{remarks}}
 \renewcommand\theexample{\thesection.\arabic{example}}
+\renewcommand\theexamples{\thesection.\arabic{examples}}
+
 %% --
 
 %\makeindex             % used for the subject index
@@ -107,43 +118,43 @@
 %% --
 
 \includeonly{%
-,author-final/part-0/ln-dedication
+%,author-final/part-0/ln-dedication
 %,author-final/part-0/foreword
-,author-final/part-0/ln-preface
+%,author-final/part-0/ln-preface
 %,author-final/part-0/acknowledgement
-%,author-final/acronym
+%,author-final/part-0/ln-symbols
 %% -- Part A
 %% --
-,author-final/part-a/ln-part-a
+%,author-final/part-a/ln-part-a
 ,author-final/part-a/chap-a1
-,author-final/part-a/chap-a2
-,author-final/part-a/chap-a3
-,author-final/part-a/chap-a4
-%,author-final/part-a/appendix-a
-%% -- Part B
-%% --
-,author-final/part-b/ln-part-b
-,author-final/part-b/chap-b1
-,author-final/part-b/chap-b2
-,author-final/part-b/chap-b3
-,author-final/part-b/chap-b4
-%,author-final/part-b/appendix-b
-%% -- Part C
-%% --
-,author-final/part-c/ln-part-c
-,author-final/part-c/chap-c1
-,author-final/part-c/chap-c2
-,author-final/part-c/chap-c3
-,author-final/part-c/chap-c4
-%,author-final/part-c/appendix-c
-%% -- Part D
-%% --
-,author-final/part-d/ln-part-d
-,author-final/part-d/chap-d1
-,author-final/part-d/chap-d2
-,author-final/part-d/chap-d3
-,author-final/part-d/chap-d4
-%,author-final/part-d/appendix-d
+%,author-final/part-a/chap-a2
+%,author-final/part-a/chap-a3
+%,author-final/part-a/chap-a4
+%%,author-final/part-a/appendix-a
+%%% -- Part B
+%%% --
+%,author-final/part-b/ln-part-b
+%,author-final/part-b/chap-b1
+%,author-final/part-b/chap-b2
+%,author-final/part-b/chap-b3
+%,author-final/part-b/chap-b4
+%%,author-final/part-b/appendix-b
+%%% -- Part C
+%%% --
+%,author-final/part-c/ln-part-c
+%,author-final/part-c/chap-c1
+%,author-final/part-c/chap-c2
+%,author-final/part-c/chap-c3
+%,author-final/part-c/chap-c4
+%%,author-final/part-c/appendix-c
+%%% -- Part D
+%%% --
+%,author-final/part-d/ln-part-d
+%,author-final/part-d/chap-d1
+%,author-final/part-d/chap-d2
+%,author-final/part-d/chap-d3
+%,author-final/part-d/chap-d4
+%%,author-final/part-d/appendix-d
 }
 
 %% -- Definitionen
@@ -157,11 +168,11 @@
 %% --
 \usepackage{hyperref}
 \hypersetup{%
-	,breaklinks = true	%
-	,colorlinks	= true  %  Farbige Links false/true, für onlineversion true                                                           
-	,urlcolor	= blue  %                                                              
-	,citecolor	= blue  %                                                          
-	,linkcolor	= blue	% oder black
+%	,breaklinks = true	%
+%	,colorlinks	= true  %  Farbige Links false/true, für onlineversion true                                                           
+%	,urlcolor	= blue  %                                                              
+%	,citecolor	= blue  %                                                          
+%	,linkcolor	= blue	% oder black
 %  	,hidelinks 			% Vor dem Druck % entfernen
 	}
 	
@@ -169,6 +180,10 @@
 %% --
 
 \date{Stand: \today}
+
+%\usepackage[round]{natbib}
+%\bibliographystyle{spmpsci}
+%\bibliographystyle{abbrvnat}
 
 \begin{document}
 
@@ -231,7 +246,7 @@
 \backmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \RaggedRight
-%\bibliography{ln-references}
+\bibliography{ln-references}
 %\include{author/glossary}
 %\include{author/solutions}
 \printindex
