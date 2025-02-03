@@ -1,4 +1,4 @@
-% !TEX TS-program = pdflatex
+
 %%%%%%%%%%%%%%%%%%%% LN-Book.tex %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Stand: 2025/02/02 ulgr
 %%%%%%%%%%%%%%%% Springer-Verlag %%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -8,8 +8,8 @@
 %	,envcountsect			%% not working 
 %	,evvcountsame			%% -- " --
 %	,envcountresetsect		%% -- " --
-%	,sectrefs
-%	,natbib
+% 	,sectrefs
+% 	,natbib
 %	,referee
 	]{svmono}
 
@@ -31,47 +31,6 @@
 \usepackage{newtxtext}       % 
 \usepackage[varvw]{newtxmath}       % selects Times Roman as basic font
 
-%% -- Referenzen
-%% --
-%\bibliographystyle{spmpsci}
-%\usepackage[sectionbib]{chapterbib}
- 
-% see the list of further useful packages
-% in the Reference Guide
-%\usepackage[english]{babel}
-%\usepackage{csquotes}
-%\usepackage[inline,shortlabels]{enumitem}
-%\setlist{%
-%	,labelsep=0.8em
-%	,leftmargin=1em
-%	,itemindent=2em
-%	,labelwidth=10pt
-%	,itemsep=0.15ex
-%	,parsep=.75ex
-%	}
-%\usepackage{ragged2e}
-\input{ln-preamble-final}
-\usepackage{mathtools}
-
-
-%% -- Part A etc
-%% -- A-I etc für \chapter
-%% -- 1. für \section etc
-%% --
-\renewcommand\thepart{\Alph{part}}
-\renewcommand\thechapter{\thepart-\Roman{chapter}}
-\renewcommand\thesection{\arabic{section}}
-\renewcommand\thesubsection{\thesection.\arabic{subsection}}
-
-%% -- Wegen Überlappung im TOC
-\usepackage{tocloft}
-\renewcommand\cftchapnumwidth{1cm}
-
-
-%% -- \subsection nicht ins TOC
-%% --
-\setcounter{tocdepth}{1}
-
 %% -- Remarks und Examples
 %% -- 
 \spnewtheorem{remarks}[theorem]{Remarks}{\normalfont\bfseries}{\itshape}
@@ -80,7 +39,6 @@
 %% -- Durchgehende Nummerierung
 %% -- 
 \makeatletter
-\let\c@remark=\c@theorem 		% Make remark share the theorem counter
 \let\c@definition=\c@theorem 	% Make definition share the theorem counter
 \let\c@example=\c@theorem 		% Make example share the theorem counter
 \let\c@definition=\c@theorem 	% Make definition share the theorem counter
@@ -105,64 +63,34 @@
 \renewcommand\theexample{\thesection.\arabic{example}}
 \renewcommand\theexamples{\thesection.\arabic{examples}}
 
+%% -- Pakete etc.
+%% -- 
+\input{ln-preamble-final}
+\usepackage{mathtools}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+
+%% -- Definitionen
 %% --
+\input{ln-definitionen}
+
+%% -- References
+%% --
+
+\usepackage{chapterbib}
+\usepackage[round,authoryear]{natbib}
+
+%\bibliographystyle{spmpsci}
+%\bibliographystyle{abbrvnat}
+
+\nocite{schaefer:1974,feller:1952}
+
 
 %\makeindex             % used for the subject index
 %\usepackage{imakeidx}
 %\makeindex[columns=2, options=-s svind.ist]                      % please use the style svind.ist with
                        % your makeindex program
                        
-%% -- nur die Dateien nutzen,
-%% -- die nicht auskommentiert sind (ohne %)
-%% --
-
-\includeonly{%
-,author-final/part-0/ln-dedication
-%,author-final/part-0/foreword
-,author-final/part-0/ln-preface
-%,author-final/part-0/acknowledgement
-%,author-final/part-0/ln-symbols
-%% -- Part A
-%% --
-,author-final/part-a/ln-part-a
-,author-final/part-a/chap-a1
-,author-final/part-a/chap-a2
-,author-final/part-a/chap-a3
-,author-final/part-a/chap-a4
-%,author-final/part-a/appendix-a
-%% -- Part B
-%% --
-,author-final/part-b/ln-part-b
-,author-final/part-b/chap-b1
-,author-final/part-b/chap-b2
-,author-final/part-b/chap-b3
-,author-final/part-b/chap-b4
-%,author-final/part-b/appendix-b
-%% -- Part C
-%% --
-,author-final/part-c/ln-part-c
-,author-final/part-c/chap-c1
-,author-final/part-c/chap-c2
-,author-final/part-c/chap-c3
-,author-final/part-c/chap-c4
-%,author-final/part-c/appendix-c
-%% -- Part D
-%% --
-,author-final/part-d/ln-part-d
-,author-final/part-d/chap-d1
-,author-final/part-d/chap-d2
-,author-final/part-d/chap-d3
-,author-final/part-d/chap-d4
-%,author-final/part-d/appendix-d
-}
-
-%% -- Definitionen
-%\input{ln-definitionen}
-
-%% --
-\usepackage{tikz}
-\usepackage{tikz-cd}
-
 %% -- Für Links im PDF
 %% --
 \usepackage{hyperref}
@@ -180,14 +108,70 @@
 
 \date{Stand: \today}
 
-%\usepackage[round]{natbib}
-%\bibliographystyle{spmpsci}
-%\bibliographystyle{abbrvnat}
+%% -- Part A etc
+%% -- A-I etc für \chapter
+%% -- 1. für \section etc
+%% --
+\renewcommand\thepart{\Alph{part}}
+\renewcommand\thechapter{\thepart-\Roman{chapter}}
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
 
-\input{ln-definitionen}
+%% -- Wegen Überlappung im TOC
+\usepackage{tocloft}
+\renewcommand\cftchapnumwidth{1cm}
 
+%% -- \subsection nicht ins TOC
+%% --
+\setcounter{tocdepth}{1}
+
+%% -- 
+%% -- nur die Dateien nutzen,
+%% -- die nicht auskommentiert sind (ohne %)
+%% --
+
+\includeonly{%
+,./part-0/ln-dedication
+%,./part-0/foreword
+,./part-0/ln-preface
+%,./part-0/acknowledgement
+%,./part-0/ln-symbols
+%% -- Part A
+%% --
+,./part-a/part-a
+,./part-a/chap-a1
+%,./part-a/chap-a2
+%,./part-a/chap-a3
+%,./part-a/chap-a4
+%,./part-a/appendix-a
+%% -- Part B
+%% --
+,./part-b/part-b
+,./part-b/chap-b1
+%,./part-b/chap-b2
+%,./part-b/chap-b3
+%,./part-b/chap-b4
+%,./part-b/appendix-b
+%% -- Part C
+%% --
+,./part-c/part-c
+,./part-c/chap-c1
+%,./part-c/chap-c2
+%,./part-c/chap-c3
+%,./part-c/chap-c4
+%,./part-c/appendix-c
+%% -- Part D
+%% --
+,./part-d/part-d
+%,./part-d/chap-d1
+,./part-d/chap-d2
+%,./part-d/chap-d3
+%,./part-d/chap-d4
+%,./part-d/appendix-d
+}
+%% --
 \begin{document}
-
+%% --
 \author{Wolfgang Arendt, Annette Grabosch, G\"unther Greiner, Ulrich Groh, Heinrich P. Lotz, Ulrich Moustakas, Rainer Nagel, Frank Neubrander, Ulf Schlotterbeck}
 %% --
 \title{One-parameter Semigroups of Positive Operators\\
@@ -196,67 +180,71 @@
 \subtitle{Lecture Notes in Mathematics\\ \\ 1184\\ \\Springer-Verlag\\ Berlin Heidelberg New York Tokyo}
 %% --
 \maketitle
-%
+%% --
 \frontmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% -- part-0
-\include{author-final/part-0/ln-dedication}
-%\include{author-final/part-0/foreword}
-\include{author-final/part-0/ln-preface}
-%\include{author-final/part-0/acknowledgement}
-%%
+\include{./part-0/ln-dedication}
+%\include{./part-0/foreword}
+\include{./part-0/ln-preface}
+%\include{./part-0/acknowledgement}
+%% --
 \tableofcontents
-%%
-\include{author-final/part-0/ln-symbols}
-%%
+%% --
+%\include{./part-0/ln-symbols}
 %%
 \mainmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 %%% -- Part-A
-\include{author-final/part-a/ln-part-a}
-\include{author-final/part-a/chap-a1}
-\include{author-final/part-a/chap-a2}
-\include{author-final/part-a/chap-a3}
-\include{author-final/part-a/chap-a4}
-%%\include{author-final/part-a/appendix-a}
+\include{./part-a/part-a}
+\include{./part-a/chap-a1}
+\include{./part-a/chap-a2}
+\include{./part-a/chap-a3}
+\include{./part-a/chap-a4}
+\include{./part-a/appendix-a}
 %
 %%% -- Part-B
-\include{author-final/part-b/ln-part-b}
-\include{author-final/part-b/chap-b1}
-\include{author-final/part-b/chap-b2}
-\include{author-final/part-b/chap-b3}
-\include{author-final/part-b/chap-b4}
-%\include{author-final/part-b/appendix-b}
+\include{./part-b/part-b}
+\include{./part-b/chap-b1}
+\include{./part-b/chap-b2}
+\include{./part-b/chap-b3}
+\include{./part-b/chap-b4}
+\include{./part-b/appendix-b}
 %
 %%% -- Part-C
-\include{author-final/part-c/ln-part-c}
-\include{author-final/part-c/chap-c1}
-\include{author-final/part-c/chap-c2}
-\include{author-final/part-c/chap-c3}
-\include{author-final/part-c/chap-c4}
-%\include{author/part-c/appendix-c}
+\include{./part-c/part-c}
+\include{./part-c/chap-c1}
+\include{./part-c/chap-c2}
+\include{./part-c/chap-c3}
+\include{./part-c/chap-c4}
+\include{author/part-c/appendix-c}
 %
 %% -- Part-D
-\include{author-final/part-d/ln-part-d}
-\include{author-final/part-d/chap-d1}
-\include{author-final/part-d/chap-d2}
-\include{author-final/part-d/chap-d3}
-\include{author-final/part-d/chap-d4}
-%\include{author/part-d/appendix-d}
-
+\include{./part-d/part-d}
+\include{./part-d/chap-d1}
+\include{./part-d/chap-d2}
+\include{./part-d/chap-d3}
+\include{./part-d/chap-d4}
+\include{author/part-d/appendix-d}
 
 \backmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\RaggedRight
+%\cleardoublepage  % Neue Seite für die zusätzliche Literatur
+%\section*{Additional References}  % oder ein anderer passender Titel
+%\nocite{*}  % Lädt alle Einträge aus der zusätzlichen Bibliographie
+%\bibliographystyle{abbrvnat}
+%\bibliography{bib/ln-additional}  % Beachten Sie den anderen Dateinamen
+%\RaggedRight
+%\bibliographystyle{spmpsci}
+%\nocite{feller:1952}
+%\bibliographystyle{abbrvnat}
 %\bibliography{ln-references}
 %\include{author/glossary}
 %\include{author/solutions}
-\printindex
+%\printindex
+%\input{additional.bbl}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \end{document}
-
-
-
 
 

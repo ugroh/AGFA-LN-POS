@@ -1,4 +1,4 @@
-% !TEX TS-program = pdflatexmk
+% !TEX TS-program = pdflatex
 % !BIB program = bibtex 
 %% -- Chapter A-I (anpassen an die Realität)
 %% --
@@ -55,7 +55,7 @@
 \setcounter{chapter}{0}		%% anpassen 1/2/3 -> Chapter 2/3/4
 \setcounter{section}{1}		%% immer
 
-\input{chap-b1}
+\input{chap-b1-english-corrected}
 
 %% -- Literatur
 %% --
@@ -64,7 +64,9 @@
 %% -- oder im TeX-Baum texmf/bibtex/bib
 %% --
 %\RaggedRight
-%\bibliography{ln-references} 
+%\bibliographystyle{spmpsci}
+\nocite{schaefer:1974}
+\bibliography{ln-references} 
 
 %% -- Index
 %% --
