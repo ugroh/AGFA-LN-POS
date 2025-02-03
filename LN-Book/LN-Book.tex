@@ -83,12 +83,11 @@
 %\bibliographystyle{spmpsci}
 %\bibliographystyle{abbrvnat}
 
-\nocite{schaefer:1974,feller:1952}
-
 
 %\makeindex             % used for the subject index
-%\usepackage{imakeidx}
-%\makeindex[columns=2, options=-s svind.ist]                      % please use the style svind.ist with
+\usepackage{imakeidx}
+\makeindex[columns=2, options=-s svind.ist]                      
+% please use the style svind.ist with
                        % your makeindex program
                        
 %% -- Für Links im PDF
@@ -131,11 +130,11 @@
 %% --
 
 \includeonly{%
-,./part-0/ln-dedication
+%,./part-0/ln-dedication
 %,./part-0/foreword
 ,./part-0/ln-preface
 %,./part-0/acknowledgement
-%,./part-0/ln-symbols
+,./part-0/ln-symbols
 %% -- Part A
 %% --
 ,./part-a/part-a
@@ -146,25 +145,25 @@
 %,./part-a/appendix-a
 %% -- Part B
 %% --
-,./part-b/part-b
-,./part-b/chap-b1
+%,./part-b/part-b
+%,./part-b/chap-b1
 %,./part-b/chap-b2
 %,./part-b/chap-b3
 %,./part-b/chap-b4
 %,./part-b/appendix-b
 %% -- Part C
 %% --
-,./part-c/part-c
-,./part-c/chap-c1
+%,./part-c/part-c
+%,./part-c/chap-c1
 %,./part-c/chap-c2
 %,./part-c/chap-c3
 %,./part-c/chap-c4
 %,./part-c/appendix-c
 %% -- Part D
 %% --
-,./part-d/part-d
+%,./part-d/part-d
 %,./part-d/chap-d1
-,./part-d/chap-d2
+%,./part-d/chap-d2
 %,./part-d/chap-d3
 %,./part-d/chap-d4
 %,./part-d/appendix-d
@@ -183,14 +182,15 @@
 %% --
 \frontmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% -- part-0
-\include{./part-0/ln-dedication}
+%\include{./part-0/ln-dedication}
 %\include{./part-0/foreword}
-\include{./part-0/ln-preface}
+%\include{./part-0/ln-preface}
 %\include{./part-0/acknowledgement}
+%\include{./part-0/ln-symbols}
 %% --
 \tableofcontents
 %% --
-%\include{./part-0/ln-symbols}
+
 %%
 \mainmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -228,7 +228,7 @@
 
 \backmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%\cleardoublepage  % Neue Seite für die zusätzliche Literatur
+\cleardoublepage  % Neue Seite für die zusätzliche Literatur
 %\section*{Additional References}  % oder ein anderer passender Titel
 %\nocite{*}  % Lädt alle Einträge aus der zusätzlichen Bibliographie
 %\bibliographystyle{abbrvnat}
@@ -240,7 +240,8 @@
 %\bibliography{ln-references}
 %\include{author/glossary}
 %\include{author/solutions}
-%\printindex
+%\include{./part-0/ln-symbols}
+\printindex
 %\input{additional.bbl}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
