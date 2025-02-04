@@ -1143,6 +1143,43 @@ It is now possible to repeat this construction in order to obtain Banach spaces 
 \end{tikzpicture}
 \end{center}
 %% --
+%\newpage
+%\begin{center}
+%\begin{tikzpicture}[scale=1.5]
+%% Nodes
+%\node (E1) at (0,6) {$E$};
+%\node (E2) at (4,6) {$E$};
+%\node (E11) at (0,4) {$E_1$};
+%\node (E12) at (4,4) {$E_1 = D(A)$};
+%\node (E21) at (0,2) {$E_2$};
+%\node (E22) at (4,2) {$E_2 = D(A_1) = D(A^2)$};
+%\node (E31) at (0,0) {$E_3$};
+%\node (E32) at (4,0) {$E_3$};
+%
+%% Horizontal arrows
+%\draw[->] (E1) -- node[above] {$T(t)$} (E2);
+%\draw[->] (E11) -- node[above] {$T_1(t)$} (E12);
+%\draw[->] (E21) -- (E22);
+%\draw[->] (E31) -- (E32);
+%
+%% Vertical arrows up
+%\draw[->] (E11) -- node[left] {$i_1$} (E1);
+%\draw[->] (E21) -- node[left] {$i_2$} (E11);
+%\draw[->] (E31) -- node[left] {$i_3$} (E21);
+%
+%% Vertical arrows right side
+%\draw[->] (E12) -- node[right] {$i_1$} (E2);
+%\draw[->] (E22) -- node[right] {$i_2$} (E12);
+%\draw[->] (E32) -- node[right] {$i_3$} (E22);
+%
+%% Diagonal arrows A
+%\draw[->] (E1) -- node[above right] {$A$} (E12);
+%\draw[->] (E11) -- node[above right] {$A_1$} (E22);
+%\draw[->] (E21) -- node[above right] {} (E32);  % Unlabeled diagonal arrow
+%\end{tikzpicture}
+%\end{center}
+%\newpage
+%% --
 For the translation semigroup on $L^{p}(\R)$ (see 2.3) the above construction leads to the usual \emph{Sobolev spaces}.
 Therefore we might call $E_{n}$ the \emph{n-th Sobolev space} and $(T_{n}(t))_{t \geq 0}$ the \emph{n-th Sobolev semigroup} associated to $E$ and $(T(t))_{t \geq 0}$.
 %% --
