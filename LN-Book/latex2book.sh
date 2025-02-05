@@ -32,7 +32,7 @@ build() {
 clean() {
     print_status "Räume auf..."
     # Erst normales Aufräumen durch latexmk
-    latexmk -C
+    latexmk -c
     # Dann zusätzlich .thm Dateien löschen
     find . -name "*.thm" -type f -delete
     print_success "Aufräumen abgeschlossen!"

@@ -132,7 +132,7 @@
 %% --
 
 \includeonly{%
-%%,./part-0/ln-dedication
+%,./part-0/ln-dedication
 %,./part-0/foreword
 ,./part-0/ln-preface
 %,./part-0/acknowledgement
@@ -184,21 +184,20 @@
 %% --
 \frontmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% -- part-0
-%\include{./part-0/ln-dedication}
+\include{./part-0/ln-dedication}
 %\include{./part-0/foreword}
-%\include{./part-0/ln-preface}
+\include{./part-0/ln-preface}
 %\include{./part-0/acknowledgement}
-%\include{./part-0/ln-symbols}
 %% --
 \tableofcontents
 %% --
-
+ \include{./part-0/ln-symbols}
 %%
 \mainmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 %%% -- Part-A
 
-\include{./part-a/part-a}
+\include{./part-a/part-a} 
 \include{./part-a/chap-a1}
 \include{./part-a/chap-a2}
 \include{./part-a/chap-a3}
