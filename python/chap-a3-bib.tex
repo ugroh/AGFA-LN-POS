@@ -6,7 +6,7 @@
 \chapter{Spectral Theory}\label{chap:A-III}
 
 %% --
-\section{Introduction}
+%\section{Introduction}
 
 In this chapter we start a systematic analysis of the spectrum of a strongly continuous semigroup $\TT = (T(t))_{t\geq 0}$ on a complex Banach space $E$.
 By the spectrum of the semigroup we understand the spectrum $\sigma(A)$ of the generator $A$ of $\TT$.
@@ -16,13 +16,13 @@ The heuristic formula
 \[
 T(t) = e^{tA}
 \]
-%% --
+%% -- 
 serves as a leitmotiv and suggests relations of the form
 %% --
 \[
 \sigma(T(t)) = e^{t\sigma(A)} = \{ e^{t\lambda} \colon \lambda \in \sigma(A) \}
 \]
-%% --
+%% -- 
 called \emph{spectral mapping theorem}.
 These---or similar---relations will be of great use in Chapter IV and enable us to determine the asymptotic behavior of the semigroup $\TT$ by the spectrum of the generator.
 
@@ -31,19 +31,19 @@ As a motivation as well as a preliminary step we concentrate here on the spectra
 \[
 r(T(t)) \coloneqq \sup \{ |\lambda| \colon \lambda \in \sigma(T(t)) \}, \quad t \geq 0
 \]
-%% --
+%% -- 
 and show how it is related to the spectral bound
 %% --
 \[
 s(A) \coloneqq \sup \{ \Re\lambda \colon \lambda \in \sigma(A) \}
 \]
-%% --
+%% -- 
 of the generator $A$ and to the growth bound
 %% --
 \[
 \omega_{0} \coloneqq \inf \{\omega \in \R \colon \|T(t)\| \leq M_{\omega}\cdot e^{\omega t} \text{ for all } t \geq 0 \text{ and suitable } M_{\omega}\}
 \]
-%% --
+%% -- 
 of the semigroup $\TT = (T(t))_{t\geq 0}$.
 (Recall that we sometimes write $\omega(\TT)$ or $\omega(A)$ instead of $\omega_{0}$).
 The \ref{ex:a3-1.3}  and \ref{ex:a3-1.4} below illustrate the main difficulties to be encountered.
@@ -55,7 +55,7 @@ Then
 \[
 r(T(t)) = e^{\omega t}
 \]
-%% --
+%% -- 
 for every $t \geq 0$.
 \end{proposition}
 
@@ -64,7 +64,7 @@ for every $t \geq 0$.
 \begin{proof}
 From A-I, (1.1) we know that
 %% --
-\[
+\[ 
     \omega(\TT) = \lim_{t \to \infty} \frac{1}{t} \log \|T(t)\|
 \]
 %% --
@@ -171,7 +171,7 @@ Therefore $\TT = (T(t))_{t\geq 0}$ is a semigroup having $s(A) = -1$ but $\omega
 For every $n \in \N$ consider the $n$-dimensional Hilbert space $E_{n} \coloneqq \C^{n}$ and operators $A_{n} \in L(E_{n})$ defined by the matrices
 %% --
 \[
-    A_{n} =
+    A_{n} = 
     \begin{pmatrix}
     0 & 1 & \cdots & 0 \\
     \cdot & 0 & 1 & \cdot \\
@@ -182,15 +182,15 @@ For every $n \in \N$ consider the $n$-dimensional Hilbert space $E_{n} \coloneqq
 %% --
 These matrices are nilpotent and therefore $\sigma(A_{n}) = \{0\}$.
 The elements $x_{n} \coloneqq n^{-1/2}(1, \ldots, 1) \in E_{n}$ satisfy the following properties:
-%% --
+
 \begin{enumerate}[(i)]
-\item
+\item 
 $\|x_{n}\| = 1$ for every $n \in \N$
 
-\item
+\item 
 $\lim_{n \to \infty} \|A_{n}x_{n} - x_{n}\| = 0$
 
-\item
+\item 
 $\lim_{n \to \infty} \|\exp(tA_{n})x_{n} - e^{t}x_{n}\| = 0$
 
 \end{enumerate}
@@ -204,8 +204,10 @@ Analogously we define a semigroup $\TT = (T(t))_{t \geq 0}$ by
 %% --
 \end{example}
 %% --
+
 \newpage
 %% -- a3-4
+
 Since $\|\exp(tA_{n})\| \leq e^{t}$ for every $n \in \N$, $t \geq 0$, and since $t \mapsto T(t)x$ is continuous on each component $E_{n}$ it follows that $T$ is strongly continuous.
 Its generator is the operator $A$ as defined above.
 
@@ -226,6 +228,7 @@ On the other hand, it is easy to see that $\|T(t)\| = e^{t}$, hence $\omega(\TT)
 
 
 Finally if we take $S(t) \coloneqq e^{-t/2}T(t)$ we obtain a semigroup having spectral bound $-\frac{1}{2}$ but such that $\lim_{t \to \infty} \|S(t)\| = \infty$ in contrast with Cor. 1.2.
+%% --
 
 These examples show that neither the conclusion of Cor.1.2, i.e. '$s(A) < 0$ implies stability', nor the 'spectral mapping theorem'
 %% --
@@ -249,9 +252,11 @@ which is a holomorphic map from $\rho(A)$ into $L(E)$.
 In contrast to the finite dimensional situation, where a linear operator fails to be surjective if and only if it fails to be injective, we now have to distinguish different cases of 'non-invertibility' of $\lambda - A$.
 This distinction gives rise to a subdivision of $\sigma(A)$ into different subsets.
 We point out that these subsets need not be disjoint, but our definition seems
-%% --
+
+
 \newpage
 %% -- a3-5
+
 to be justified by the fact that for each of the following subsets of $\sigma(A)$ there exist canonical constructions converting the corresponding spectral values into eigenvalues (see Prop.~\ref{prop:a3-2.2}.ii and Prop.~\ref{prop:a3-4.5} below).
 %% --
 \begin{definition}\label{def:a3-2.1}
@@ -283,10 +288,10 @@ For a closed, densely defined, linear operator $(A,D(A))$ in a Banach space $E$ 
 %% --
 \begin{enumerate}[(i)]
 
-\item
+\item 
 The topological boundary $\partial\sigma(A)$ of $\sigma(A)$ is contained in $A\sigma(A)$
 
-\item
+\item 
 $R\sigma(A) = P\sigma(A')$ for the adjoint operator $A'$ on $E'$
 
 \end{enumerate}
@@ -297,14 +302,18 @@ $R\sigma(A) = P\sigma(A')$ for the adjoint operator $A'$ on $E'$
 
 \item Take $\lambda_{0} \in \partial\sigma(A)$ and $\lambda_{n} \in \rho(A)$ such that $\lambda_{n} \to \lambda_{0}$.
 
-Since $\|R(\lambda_{n},A)\| \geq (\text{dist}(x,\sigma(A)))^{-1}$ (see Prop.~\ref{prop:a3-2.5}.(ii)), by the uniform boundedness principle we find $f \in E$ such that
+Since $\|R(\lambda_{n},A)\| \geq (\text{dist}(x,\sigma(A)))^{-1}$ (see Prop.~\ref{prop:a3-2.5}.(ii)), by the uniform boundedness principle we find $f \in E$ such that 
 %%--
 %% --
 \[
 \lim_{n \to \infty}\|R(\lambda_n ,A)f\| = \infty~.
 \]
 %% --
+%%--
 \end{enumerate}
+%
+%
+%
 %\newpage
 %%% -- a3-6
 %% --
@@ -321,7 +330,7 @@ and use the identity
 \]
 %% --
 to show that $(g_{n})_{n \in \N}$ is an approximate eigenvector corresponding to $\lambda_{0}$.
-
+ 
 (ii) This is a simple consequence of the Hahn-Banach theorem.
 %% --
 \end{proof}
@@ -333,7 +342,8 @@ In order to illuminate the above definitons we now return to the Standard Exampl
 \index{Spectrum!Multiplication Semigroups}
 %\index{Semigroups!Multiplication}
 %\index{Examples!Multiplication Semigroups}
-Take $E = C_{0}(X)$ for some locally compact space $X$ and take a continuous function $q \colon X \mapsto \C$ whose real part is bounded above.
+
+Take $E = C_{0}(X)$ for some locally compact space $X$ and take a continuous function $q \colon X \to \C$ whose real part is bounded above.
 As observed in A-I,2.3 the multiplication operator
 %% --
 \[
@@ -352,6 +362,7 @@ Since $M_{q}$ is bounded if and only if $q$ is bounded we conclude that $M_{q}$ 
 0 \notin \overline\{{q(x)  \colon x \in X\}}
 \]
 %% --
+
 Therefore we obtain
 %% --
 \[
@@ -826,9 +837,9 @@ where $\infty \cdot 0 = \infty$.
 
 These inequalities yield the following implications:
 \begin{enumerate}[-]
-\item
+\item  
 $m_{a} < \infty$ if and only if $\lambda_{0}$ is a pole with $m_{g} < \infty$
-\item
+\item 
 if $\lambda_{0}$ is a pole with order $k$, then $\lambda_{0} \in P\sigma(A)$ and $PE = \text{ker}(\lambda_{0} - A)^{k}$
 \end{enumerate}
 
@@ -877,7 +888,7 @@ Thus $r_{\text{ess}}(T)$ can be characterized as follows
 %% --
 \begin{equation}\label{eq:a3-3.8}
 \begin{split}
-r_{\text{ess}}(T) \text{ is the smallest } r \in \R_{+}
+r_{\text{ess}}(T) \text{ is the smallest } r \in \R_{+} 
 & \text{ such that every } \lambda \in \sigma(T), |\lambda| > r \\
 & \text{ is a pole of finite algebraic multiplicity.}
 \end{split}
@@ -1366,7 +1377,7 @@ We assume $\tau = 2\pi$ and show first that $\sum_{-\infty}^{+\infty} P_{n}f$ is
 Take $H$ to be a finite subset of $\mathbb{Z} \setminus \{0\}$ and $\phi \in E'$. Then
 %% --
 \begin{align*}
-\left|\sum_{n \in H} \langle P_{n}f,\phi \rangle\right|
+\left|\sum_{n \in H} \langle P_{n}f,\phi \rangle\right| 
 &= \left|\sum_{n \in H} (in)^{-1} \langle P_{n}g,\phi \rangle\right| \\
 &\leq (\sum_{n \in H} n^{-2})^{1/2}(\sum_{n \in H} |\langle P_{n}g,\phi \rangle|^{2})^{1/2}
 \end{align*}
@@ -1428,12 +1439,12 @@ This semigroup has period $\tau/k$ for some $k \in \N$ if and only if there exis
 \index{Example!Rotation Group}
 \index{Rotation Group}
 
-From A-I,2.5 we recall briefly the rotation group
+From A-I,2.5 we recall briefly the rotation group 
 %% --
 \[
 R_{\tau}(t)f(z) \coloneqq f(\exp(2\pi int/\tau) \cdot z)
 \]
-%% --
+%% -- 
 on $E = C(\Gamma)$, resp. $E = L^{p}(\Gamma,m)$ for $1 \leq p < \infty$.
 The spectrum of the generator\quad
 $Af(z) = (2\pi i/\tau)z \cdot f'(z)$\quad
@@ -1492,7 +1503,7 @@ Before doing so, we have another look at the examples.
 
 \begin{enumerate}[(i), wide]
 
-\item
+\item 
 Take the nilpotent translation semigroup from A-I,2.6. Then $\sigma(A) = \emptyset$ and $\sigma(T(t)) = 0$ for every $t > 0$.
 
 By this trivial example and since $e^{z} = 0$ for every $z \in \C$, it is natural to read the 'spectral mapping theorem' modulo the addition of $\{0\}$, i.e.
@@ -1501,7 +1512,7 @@ By this trivial example and since $e^{z} = 0$ for every $z \in \C$, it is natura
 \sigma(T(t)) \cup \{0\} = \exp(t\sigma(A)) \cup \{0\} \text{ for } t \geq 0
 \]
 %% --
-\item
+\item 
 The spectrum of the generator $A$ of the $\tau$-periodic rotation group $(R_{\tau}(t))_{t \geq 0}$ on $C(\Gamma)$ is $\sigma(A) = 2\pi i/\tau\cdot\mathbb{Z}$ and $\exp(2\pi int/\tau)$, $n \in \mathbb{Z}$, is an eigenvalue of $R_{\tau}(t)$ for every $t \geq 0$ (see Example 5.6).
 
 If $t/\tau$ is irrational these eigenvalues form a dense subset of $\Gamma$.
@@ -1603,7 +1614,7 @@ Then
 \begin{proof}
 For the proof of (6.4) take $t_{0} > 0$ and $0 \neq \lambda \in P\sigma(T(t_{0}))$.
 
-After rescaling the semigroup $\TT = (T(t))_{t \geq 0}$ to the semigroup
+After rescaling the semigroup $\TT = (T(t))_{t \geq 0}$ to the semigroup 
 %% --
 \[
 (\exp(-t \cdot \log\lambda/t_{0})T(t))_{t \geq 0}
@@ -2078,7 +2089,7 @@ Since $\text{span }\bigcup_{k\in\mathbb{Z}} P_{k}E$ is dense (Lemma 7.7) we conc
 
 As the final step we construct the inverse operator of $\text{Id} + T(\pi)$ showing that $-1 \in \rho(T(\pi))$.
 We define $\psi_{0}(\alpha) \coloneqq \phi_{0}(\alpha)\cdot(1 + e^{i\pi\alpha})^{-1}$, $\alpha \in \R$.
-Then we have $\psi_{0} \in S$ and $\psi_{0}(1 + e^{i\pi}) = \phi_{0}$,
+Then we have $\psi_{0} \in S$ and $\psi_{0}(1 + e^{i\pi}) = \phi_{0}$, 
 hence $\hat{\psi_{0}}(x) + \hat{\psi_{0}}(x + \pi) = \hat{\phi_{0}}(x)$ for all $x \in \R$.
 Then (7.6) implies
 \begin{align*}
@@ -2206,11 +2217,11 @@ This yields for every finite subset $N$ of $\mathbb{Z}$:
 %\begin{align*}
 %% --
 \[
-\|\sum_{k\in N} R(ik,A)f_{k}\| \leq \|(1 - e^{-2\pi\lambda}T(2\pi))^{-1}\|\cdot\int_{0}^{2\pi} \|T(s)\| \|\sum_{k\in N} e^{-iks}g_{k}\| \ds
+\|\sum_{k\in N} R(ik,A)f_{k}\| \leq \|(1 - e^{-2\pi\lambda}T(2\pi))^{-1}\|\cdot\int_{0}^{2\pi} \|T(s)\| \|\sum_{k\in N} e^{-iks}g_{k}\| \ds 
 \]
 %% --
 \[
-\leq \|(1 - e^{-2\pi\lambda}T(2\pi))^{-1}\|\cdot(\int_{0}^{2\pi}\|T(s)\|^{2} \ds)^{1/2} \cdot (\int_{0}^{2\pi}\|\sum_{k\in N} e^{-iks}g_{k}\|^{2} dx)^{1/2}
+\leq \|(1 - e^{-2\pi\lambda}T(2\pi))^{-1}\|\cdot(\int_{0}^{2\pi}\|T(s)\|^{2} \ds)^{1/2} \cdot (\int_{0}^{2\pi}\|\sum_{k\in N} e^{-iks}g_{k}\|^{2} dx)^{1/2} 
 \]
 %% --
 \[
@@ -2227,7 +2238,7 @@ Here $c\coloneqq \|(1 - e^{-2\pi\lambda}T(2\pi))^{-1}\|\cdot(\int_{0}^{2\pi}\|T(
 Let $A$ be the generator of a semigroup $(T(t))_{t\geq 0}$ on some Hilbert space $H$.
 Then the following form of the spectral mapping theorem is valid
 \begin{align*}
-\sigma(T(t))\setminus\{0\} = \{e^{\lambda t} \colon
+\sigma(T(t))\setminus\{0\} = \{e^{\lambda t} \colon  
 & \text{ either } \mu_{k}\coloneqq \lambda + 2\pi i k/t \in \sigma(A) \text{ for some } k \in \mathbb{Z}\\
 & \text{ or } (\|R(\mu_{k},A)\|)_{k\in\mathbb{Z}} \text{ is unbounded}\}
 \end{align*}
@@ -2240,6 +2251,8 @@ For the converse inclusion it suffices to assume $t = 2\pi$ and $\lambda = 0$ (u
 Assuming that $i\mathbb{Z} \subset \rho(A)$ and $\|R(ik,A)\|$ is bounded then $\sum_{k\in\mathbb{Z}} R(ik,A)Q_{k}f$ is summable by Lemma 7.9.
 Since every summable series is Césaro-summable condition (c) of Prop. 7.8 is satisfied and we conclude $1 \in \rho(T(2\pi))$.
 \end{proof}
+
+\newpage
 %% -- a3-36
 As an immediate consequence we obtain an interesting characterization of the growth bound $\omega_{0}$ of semigroups on Hilbert spaces.
 
@@ -2282,7 +2295,7 @@ Tensor products of operators and their spectral theory have been studied by Ichi
 The spectral mapping theorem in Corollary 6.8 generalizes Thm.XIII.35 of \citet{reedsimon:1978} (see also \citet{herbst:1982}).
 
 \paragraph{Section 7.} Matrix valued multiplication semigroups appear as solution, via Fourier transformation, of systems of partial differential equations.
-Kreiss initiated a systematic investigation (see, e.g., \citet{kreiss:1958}, \citet{kreiss:1959}, \citet{millerstrang:1966}) and the Weak Spectral Mapping Theorem 7.2 must have been known to him. The direct proof of the Weak Spectral Mapping Theorem 7.4 for polynomially bounded groups seems to be new. The result can also be deduced from the theory of spectral subspaces of group representations (see, e.g., \citet{combesdelaroche:1978}), since the Arveson spectrum of a strongly continuous one-parameter group can be identified with the spectrum of the generator (see \citet{evans:1976}). The final part of this section is taken from \citet{greiner:1985} and yields a new approach to Gearhart's characterization of the spectrum of semigroups on Hilbert spaces \citet{gearhart:1978}. Different proofs can be found in \citet{herbst:1983}, \citet{howland:1984} and \citet{pruess:1984}. %% Achtung kein ü etc
-
+Kreiss initiated a systematic investigation (see, e.g., \citet{kreiss:1958}, \citet{kreiss:1959}, \citet{millerstrang:1966}) and the Weak Spectral Mapping Theorem 7.2 must have been known to him. The direct proof of the Weak Spectral Mapping Theorem 7.4 for polynomially bounded groups seems to be new. The result can also be deduced from the theory of spectral subspaces of group representations (see, e.g., \citet{combesdelaroche:1978}), since the Arveson spectrum of a strongly continuous one-parameter group can be identified with the spectrum of the generator (see \citet{evans:1976}). The final part of this section is taken from \citet{greiner:1985} and yields a new approach to Gearhart's characterization of the spectrum of semigroups on Hilbert spaces \citet{gearhart:1978}. Different proofs can be found in \citet{herbst:1983}, \citet{howland:1984} and \citet{prüß:1984}.
+\end{document}
 
 

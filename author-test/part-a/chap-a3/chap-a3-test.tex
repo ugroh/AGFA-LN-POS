@@ -1,54 +1,77 @@
-%% -- Chapter A-III
+% !TEX TS-program = pdflatexmk
+% !BIB program = bibtex 
+%% -- Chapter A-I (anpassen an die Realität)
 %% --
 \documentclass[%
-%,12pt		% zur Kontrolle mit % auskommentieren
+%,12pt		% für Korrekturen % wegmachen und Zeilenabstand größer machen
 ,oneside]{book}
 
 %% --
-\usepackage{graphicx}        
-\usepackage{libertine}
+%\usepackage{setspace}
+%\doublespacing 
 
-%% -- Theorem-Umgebungen
+%% -- Gemeinsame Pakete und Definitionen
 %% --
-\usepackage{amsmath, amssymb, amsthm}	
-\usepackage{mathtools}
+\input{ln-preamble}  
+\input{ln-definitionen}
+
+%% -- Index 
+%% --
+
+\usepackage{imakeidx}
+\makeindex[columns=2, options=-s svind.ist]
+
+
+%% -- Literatur
+%% -- für später
+
+\usepackage[round]{natbib}
 
 %% --
-\theoremstyle{plain}
-\newtheorem{theorem}{Theorem}[chapter]
-\newtheorem{proposition}[theorem]{Proposition}
-\newtheorem{corollary}[theorem]{Corollary}
-\newtheorem{lemma}[theorem]{Lemma}
-%% --
-\theoremstyle{definition}
-\newtheorem{example}[theorem]{Example}
-\newtheorem{examples}[theorem]{Examples}
-\newtheorem{definition}[theorem]{Definition}
-%% --
-\theoremstyle{remark}
-\newtheorem{remark}[theorem]{Remark}
-\newtheorem{remarks}[theorem]{Remarks}
 
-%% -- Unsere Pakete
-%% --
-\usepackage[english]{babel}					% Trennungen richtig
-\usepackage{csquotes}						% gibt die US Variante von "Text"
-\usepackage[inline,shortlabels]{enumitem}	% \begin{enumerate}[(i)] oder [(a)] 				
-\usepackage{ragged2e}						% \RaggedRight = Flattersatz
+\usepackage{hyperref}
+\hypersetup{%
+,colorlinks=true 
+,linkcolor=blue
+,citecolor=blue
+,urlcolor=blue
+,linktoc=all
+%,hidelinks=true
+}
 
-%% -- Eigene Definitionen
+
+          
 %% --
-                     
+           
 \begin{document}
+%\tableofcontents
 
-\newcommand{\TT}{\mathcal{T}}
+\setcounter{chapter}{2}		%% anpassen 1/2/3 -> Chapter 2/3/4
+\setcounter{section}{1}		%% immer
 
 \input{chap-a3}
 
-%% -- Literatur wird separat gemacht
+%% -- Literatur
 %% --
-%\RaggedRight
-%bibliographystyle{spmpsci}
-%\bibliography{ln-references} 
 
+\RaggedRight
+\bibliographystyle{abbrvnat}
+\bibliography{ln-references} 
+
+%% -- Index
+%% --
+
+\clearpage
+\printindex
+
+%% --
 \end{document}
+
+
+
+
+
+
+
+
+

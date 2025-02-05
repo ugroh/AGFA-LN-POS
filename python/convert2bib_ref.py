@@ -20,12 +20,15 @@ def convert_citation(text):
         # author_label = author_label.replace(' ', '_')
         # author_label = author_label.replace('-', '_')
 
-        author_name = author
+        #author_name = author
         author_label = author.lower()
         author_label = author_label.replace(' ', '')
         author_label = author_label.replace('-', '')
 
-        return f"{author_name}~\\cite[{note}]{{{author_label}:{year}}}"
+        #return f"{author_name}~\\cite[{note}]{{{author_label}:{year}}}"
+        return f"\\citet[{note}]{{{author_label}:{year}}}"
+
+
 
     def replace_simple_citation(match):
         author = match.group(1).strip()
@@ -39,7 +42,7 @@ def convert_citation(text):
         author_label = author_label.replace(' ', '')
         author_label = author_label.replace('-', '')
 
-        return f"{author_name}~\\cite{{{author_label}:{year}}}"
+        return f"\\citet{{{author_label}:{year}}}"
 
     # Pattern for citations with notes
     pattern_with_note = r"\[([\w\s-]+)\s+\((\d{4})\),\s+([^\]]+)\]"
@@ -73,8 +76,8 @@ if __name__ == "__main__":
         print()
 
 # Example usage:
-    with open('chap-a1.tex', 'r') as file:
+    with open('chap-a3.tex', 'r') as file:
         text = file.read()
         converted_text = convert_citation(text)
-        with open('chap-d1-bib.tex', 'w') as file:
+        with open('chap-a3-bib.tex', 'w') as file:
             file.write(converted_text)
