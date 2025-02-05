@@ -4,61 +4,58 @@
 
 \chapter{Basic Results on Semigroups and Operator Algebras}\label{chap:D-I}
 
-This is not a systematic introduction into the theory of strongly continuous semigroups on \CA- and \WA-algebras.
-For that we refer to \cite{brattelirobinson:1979}, \cite{davies:1976} and the survey article of \cite{oseledets:1984}.
+This is not a systematic introduction to the theory of strongly continuous semigroups on \CA- and \WA-algebras.
+For that we refer to \citet{brattelirobinson:1979}, \citet{davies:1976} and the survey article of \citet{oseledets:1984}.
 We only prepare for the subsequent chapters on spectral theory and asymptotics by fixing the notations and introducing some standard constructions.
 
 \section{Notations}\label{sec:d1-1}
 
-\begin{enumerate}[1., wide]
+\begin{enumerate}[1., wide, labelsep=1em, itemindent=\parindent]
 
 \item
 By $ M $ we shall denote a \CA-algebra with unit $ 1 $, with 
 %
 \[
-	M^{sa} := \{x \in M : x^{*} = x\} 
+	M^{sa} \coloneqq \{x \in M \colon x^{*} = x\} 
 \]
 %
 the self-adjoint part of $ M $ and 
 %
 \[
-	M_{+} := \{ x^{*}x : x \in M\} 
+	M_{+} \coloneqq \{ x^{*}x \colon x \in M\} 
 \]
 %
 is the positive cone in $ M $.
-
 If $ M' $ is the dual of $ M $, then 
 %
 \[
-	M'_{+} := \{\psi \in M' : \psi(x) \geq 0, x \in M_{+}\} 
+	M'_{+} \coloneqq \{\psi \in M' \colon \psi(x) \geq 0, x \in M_{+}\} 
 \]
 %
 is a weak*-closed generating cone in $ M' $ and 
 %
 \[
-	S(M) := \{\psi \in M'_{+}: \psi(1) = 1\} 
+	S(M) \coloneqq \{\psi \in M'_{+}: \psi(1) = 1\} 
 \]
 %
-is called the state space of $ M $.
-
-For the theory of \CA-algebras and related notions we refer to \cite{pedersen:1979}.
+is called the state space of $ M $. 
+For the theory of \CA-algebras and related notions we refer to \citet{pedersen:1979}.
 
 \item
-$ M $ is called a \WA-algebra, if there exists a Banach space $ M_{*} $, such that its dual $ (M_{*})' $ is (isomorphic to) $ M $.
-We call $ M_{*} $ the predual of $ M $ and $ \psi \in M_{*} $ a normal linear functional.
+$ M $ is called a \WA-algebra if there exists a Banach space $ M_{*} $, such that its dual $ (M_{*})' $ is (isomorphic to) $ M $.
+We call $ M_{*} $ the \emph{predual} of $ M $ and $ \psi \in M_{*} $ a \emph{normal linear functional}.
 It is known that $ M_{*} $ is unique \cite[1.13.3]{sakai:1971}.
-
 For further properties of $ M_{*} $ we refer to \cite[Chapter III]{takesaki:1979}.
-
+%%% --
 \newpage
 %% -- d1_2
 %% --
 \item
-A map $ T \in L(M) $ is called \emph{positive} (in symbols $ T \geq 0 $) if $ T(M_{+}) \subseteq M_{+} $.
-$ T \in L(M) $ is called \emph{$n$-positive} ($ n \in \mathbb{N} $) if $ T \otimes \text{Id}_{n} $ is positive from $ M \otimes M_{n} $ in $ M \otimes M_{n} $, where $ \text{Id}_{n} $ is the identity map on the \CA-algebra $ M_{n} $ of all $ n \times n $-matrices.
+A map $ T \in \L{M} $ is called \emph{positive} (in symbols $ T \geq 0 $) if $ T(M_{+}) \subseteq M_{+} $.
+$ T \in \L{M} $ is called \emph{$n$-positive} ($ n \in \mathbb{N} $) if $ T \otimes \text{Id}_{n} $ is positive from $ M \otimes M_{n} $ in $ M \otimes M_{n} $, where $ \text{Id}_{n} $ is the identity map on the \CA-algebra $ M_{n} $ of all $ n \times n $-matrices.
 Obviously, every n-positive map is positive.
 
-We call a contraction $ T \in L(M) $ a Schwarz map if $ T $ satisfies the so called \emph{Schwarz-inequality}
+We call a contraction $ T \in \L{M} $ a Schwarz map if $ T $ satisfies the so called \emph{Schwarz-inequality}
 %% --
 \[
 	T(x)T(x)^{*} \leq T(xx^{*}) 
@@ -67,104 +64,107 @@ We call a contraction $ T \in L(M) $ a Schwarz map if $ T $ satisfies the so cal
 %Note that such $ T $ is necessarily a contraction.
 for all $ x \in M $.
 It is well known that every $n$-positive contraction, $ n \geq 2 $ and that every positive contraction on a commutative \CA-algebra is a Schwarz map (\cite[Corollary IV. 3.8.]{takesaki:1979}).
-
 As we shall see, the Schwarz inequality is crucial for our investigations.
 
-\item If $ M $ is a \CA-algebra we assume $ \mathcal{T} = (T(t))_{t \geq 0} $ to be a strongly continuous semigroup (abbreviated semigroup) while on \WA-algebras we consider weak*-semigroups, i.e. the mapping $ (t \mapsto T(t)x) $ is continuous from $ \mathbb{R}_{+} $ into $ (M,\sigma(M,M_{*})) $, $ M_{*} $ the predual of $ M $, and every $ T(t) \in T $ is $ \sigma(M,M_{*}) $-continuous.
+\item 
+If $ M $ is a \CA-algebra we assume $ \TT = (T(t))_{t \geq 0} $ to be a strongly continuous semigroup (abbreviated semigroup) while on \WA-algebras we consider weak*-semigroups, i.e. the mapping $ (t \mapsto T(t)x) $ is continuous from $ \R_{+} $ into $ (M,\sigma(M,M_{*})) $, $ M_{*} $ the predual of $ M $, and every $ T(t) \in \TT $ is $ \sigma(M,M_{*}) $-continuous.
 Note that the preadjoint semigroup
 %% --
 \[
-	\mathcal{T}_{*} = \{ T(t)_{*} : T(t) \in \mathcal{T} \}
+	\TT_{*} = \{ T(t)_{*} \colon T(t) \in \TT \}
 \]
 %% --
 is weakly, hence strongly continuous on $ M_{*} $ (see e.g., \cite[Prop. 1.23]{davies:1980}).
 
-We call $ \mathcal{T} $ identity preserving if $ T(t)1 = 1 $ and of Schwarz type if every $ T(t) $ is a Schwarz map.
+\item
+We call $ \TT $ identity preserving if $ T(t)1 = 1 $ and of \emph{Schwarz type} if every $ T(t) $ is a Schwarz map.
 
 \end{enumerate}
 %% --
 For the notations concerning one-parameter semigroups we refer to Part A.
-In addition we recommend to compare the results of this section of the book with the corresponding results for commutative \CA-algebras, i.e. for $ C_{0}(X) $, $ C(K) $ and $ L^\infty(\mu) $ (see Part B).
-
+In addition, we recommend to compare the results of this section of the book with the corresponding results for commutative \CA-algebras, \ie for $ C_{0}(X) $, $ C(K) $ and $ L^\infty(\mu) $ (see Part B).
+%% --
 \section{A Fundamental Inequality for the Resolvent}\label{sec:d1-2}
-
-If $ \mathcal{T} = (T(t))_{t \geq 0} $ is a strongly continuous semigroup of Schwarz maps on a \CA-algebra $ M $ (resp. a weak*-semigroup of Schwarz type on a \WA-algebra $ M $) with generator $ A $, then the spectral bound $ s(A) \leq 0 $.
-Then $ \text{Re}(\lambda) > 0 $ for $ \lambda \in \mathbb{C} $ and there exists a representation for the resolvent $ R(\lambda,A) $ given by the formula
+%% --
+If $ \TT = (T(t))_{t \geq 0} $ is a strongly continuous semigroup of Schwarz maps on a \CA-algebra $ M $ (resp. a weak*-semigroup of Schwarz type on a \WA-algebra $ M $) with generator $ A $, then the spectral bound $ s(A) \leq 0 $.
+Then $ \Re(\lambda) > 0 $ for $ \lambda \in \mathbb{C} $ and there exists a representation for the resolvent $ R(\lambda,A) $ given by the formula
 %% --
 \[
  	R(\lambda,A)x = \int_{0}^\infty e^{-\lambda t} T(t)x \, \dt  \quad (x \in M)
 \]
 %% --
 where the integral exists in the norm topology.
-
+%% --
 \newpage
 %% -- d1_3
 %% --
-
-In \cite{brattelirobinson:1979} it is shown that $ \mathcal{T} $ is a semigroup of Schwarz type if and only if $ \mu R(\mu,A) $ is a Schwarz map for every $ \mu \in \mathbb{R}_{+} $.
+%% --
+In \citet{brattelirobinson:1979} it is shown that $ \TT $ is a semigroup of Schwarz type if and only if $ \mu R(\mu,A) $ is a Schwarz map for every $ \mu \in \R_{+} $.
 Here we relate the domination of two semigroups to an inequality for the corresponding resolvent operator.
 This inequality will be needed later.
 %% --
 \begin{theorem}\label{thm:d1-2.1}
-Let $  \mathcal{T}  = (T(t))_{t\geq0} $ be a semigroup of Schwarz type and $ \mathcal{S} = (S(t))_{t\geq0} $ a semigroup on a \CA-algebra $ M $ with generators $ A $ and $ B $, respectively.
+Let $  \TT  = (T(t))_{t\geq0} $ be a semigroup of Schwarz type with generator $ A $ and $ \mathcal{S} = (S(t))_{t\geq0} $ a semigroup with generator $ B $ on a\, \CA-algebra $ M $.
 If
 %% --
-\[
-	(*) \qquad (S(t)x)(S(t)x)^{*} \leq T(t)xx^{*}
-\]
+\begin{equation}
+	(S(t)x)(S(t)x)^{*} \leq T(t)(xx^{*}) \tag{*}
+\end{equation}
 %% --
-for all $ x \in M $ and $ t \in \mathbb{R}_{+} $, then
+for all $ x \in M $ and $ t \in \R_{+} $. 
+Then 
 %% --
 \[
 	(\mu R(\mu,B)x)(\mu R(\mu,B)x)^{*} \leq \mu R(\mu,A)xx^{*}
 \]
 %% --
-for all $ x \in M $ and $ \mu \in \mathbb{R}_{+} $.
-
-The same result holds if $ \mathcal{T} $ is a weak*-semigroup of Schwarz type and $ \mathcal{S} $ is a weak*-semigroup on a \WA-algebra $ M $ such that $ (*) $ is fulfilled.
+for all $ x \in M $ and $ \mu \in \R_{+} $.
+%% --
+The same result holds if $ \,\TT $ is a weak*-semigroup of Schwarz type and $ \mathcal{S} $ is a weak*-semigroup on a \WA-algebra $ M $ such that $ (*) $ is fulfilled.
 \end{theorem}
 
 \begin{proof}
 From the assumption $ (*) $ it follows that
 %% --
-\begin{multline*}
-	0 	\leq (S(r)x - S(t)x)(S(r)x - S(t)x)^{*} = \\
-		 = (S(r)x)(S(r)x)^{*} - (S(r)x)(S(t)x)^{*} 
+\begin{align*}
+	0 	\leq (S(r)x - S(t)x)(S(r)x - S(t)x)^{*} {}&\\
+		 & = (S(r)x)(S(r)x)^{*} - (S(r)x)(S(t)x)^{*} 
 		 - (S(t)x)(S(r)x)^{*} + (S(t)x)(S(t)x)^{*}  \\
-		 \leq T(r)xx^{*} + T(t)xx^{*} - (S(r)x)(S(t)x)^{*} -  
+		 \leq T(r)xx^{*} + T(t)xx^{*} &- (S(r)x)(S(t)x)^{*} -  
 		   (S(t)x)(S(r)x)^{*}
-\end{multline*}
+\end{align*}
 %% --
-for every $ r $, $ t \in \mathbb{R}_{+} $.
+for every $ r $, $ t \in \R_{+} $.
 Hence
 %% --
 \[
 	(S(r)x)(S(r)x)^{*} + (S(t)x)(S(t)x)^{*} \leq T(r)xx^{*} + T(t)xx^{*}.
 \]
 %% --
-Obviously, $ \|S(t)\| \leq 1 $ for all $ t \in \mathbb{R}_{+} $.
-Then for all $ \mu \in \mathbb{R}_{+} $ and $ x \in M $:
+Obviously, $ S(t)\_{|} \leq 1 $ for all $ t \in \R_{+} $.
+Then for all $ \mu \in \R_{+} $ and $ x \in M $:
 %% --
-\begin{multline*}
-	(R(\mu,B)x)(R(\mu,B)x)^{*} = (\int_{0}^\infty e^{-\mu r}S(r)x \, dr)(\int_{0}^\infty e^{-\mu t}S(t)x \, 				\dt)^{*}   \\
-	= (\int_{0}^\infty \int_{0}^\infty e^{-\mu(r+t)} (S(r)x)(S(t)x)^{*} \, dr \, \dt) \\
-	\leq \int_{0}^\infty \int_{0}^\infty e^{-\mu(r+t)} (T(r)xx^{*} + T(t)xx^{*})/2 \, dr \, \dt \\
-	= \int_{0}^\infty e^{-\mu r} T(r)xx^{*} \, dr \int_{0}^\infty e^{-\mu t} \, \dt  \\
-	= \mu^{-1} \int_{0}^\infty e^{-\mu r} T(r)xx^{*} \, dr = R(\mu,A)xx^{*}.
-\end{multline*}
+\begin{align*}
+	(R(\mu,B)x)(R(\mu,B)x)^{*} &= (\int_{0}^\infty e^{-\mu r}S(r)x \, dr)(\int_{0}^\infty e^{-\mu t}S(t)x \, \dt)^{*}   \\
+	&= (\int_{0}^\infty \int_{0}^\infty e^{-\mu(r+t)} (S(r)x)(S(t)x)^{*} \, dr \, \dt) \\
+	&\leq \int_{0}^\infty \int_{0}^\infty e^{-\mu(r+t)} (T(r)xx^{*} + T(t)xx^{*})/2 \, dr \, \dt \\
+	&= \int_{0}^\infty e^{-\mu r} T(r)xx^{*} \, dr \int_{0}^\infty e^{-\mu t} \, \dt  \\
+	&= \mu^{-1} \int_{0}^\infty e^{-\mu r} T(r)xx^{*} \, dr \\
+	&= R(\mu,A)xx^{*}.
+\end{align*}
 %% --
 Here we used the inequality derived above in the first step.
 The second step follows from $ S(t)$ being a contraction semigroup and the third step is achieved by integration.
 \end{proof}
-
+%% --
 \begin{remark}\label{rem:d1-2.1}
-The assumption that $ T $ is a semigroup of Schwarz type cannot be weakened in general to $ T $ being a positive contraction semigroup.
-This is shown by examples in \cite{davies:1980} where $ S(t)x $ is given by $ e^{tB}x $ for a skew-adjoint generator $ B $ and $ T(t)x \equiv x $.
+The assumption that $ \TT $ is a semigroup of Schwarz type cannot be weakened in general to $ \TT $ being a positive contraction semigroup.
+This is demonstrated through examples in \citet{davies:1980}, where $S(t)x$ is defined as $ e^{tB}x $ for a skew-adjoint generator $ B $ and $ T(t)x = x $.
 \end{remark}
-
+%% --
 \begin{corollary}\label{cor:d1-2.2}
 Let $ T = (T(t))_{t\geq0} $ be a semigroup of Schwarz type on a \CA-algebra $ M $ with generator $ A $.
-Then for all $ \mu \in \mathbb{R}_{+} $ and $ x \in M $:
+Then for all $ \mu \in \R_{+} $ and $ x \in M $:
 %% --
 \[
 (\mu R(\mu,A)x)(\mu R(\mu,A)x)^{*} \leq \mu R(\mu,A)(xx^{*}).
@@ -176,7 +176,7 @@ Then for all $ \mu \in \mathbb{R}_{+} $ and $ x \in M $:
 %% -- d1_{4}
 %% --
 \begin{proof}
-Just set $ S = T $ in Theorem~\ref{thm:d1-2.1}.
+Just set $ S = T $ in Theorem~\ref{thm:d1-2.1}. Then
 %% --
 \begin{multline*}
 = \frac{1}{2}(\int_{0}^\infty \int_{0}^\infty e^{-\mu(r+t)} ((S(r)x)(S(t)x)^{*} \\
@@ -191,13 +191,13 @@ where the handling of the integral is justified by \cite[§8, n° 4, Proposition
 
 \begin{corollary}\label{cor:d1-2.3}
 Let $ T $ be a semigroup of Schwarz maps (resp., weak*-semigroup of Schwarz maps).
-Then for all $ \lambda \in \mathbb{C} $ with $ \text{Re}(\lambda) > 0 $:
+Then for all $ \lambda \in \mathbb{C} $ with $ \Re(\lambda) > 0 $:
 %% --
 \[
-(R(\lambda,A)x)(R(\lambda,A)x)^{*} \leq (\text{Re}\lambda)^{-1} R(\text{Re}\lambda,A)xx^{*} \, , \, x \in M .
+(R(\lambda,A)x)(R(\lambda,A)x)^{*} \leq (\Re\lambda)^{-1} R(\Re\lambda,A)xx^{*} \, , \, x \in M .
 \]
 %% --
-In particular for all $ (\mu,\alpha) \in \mathbb{R}_{+} \times \mathbb{R} $, $ x \in M $:
+In particular for all $ (\mu,\alpha) \in \R_{+} \times \R $, $ x \in M $:
 %% --
 \[
 (\mu R(\mu+i\alpha,A)x)(\mu R(\mu+i\alpha,A)x)^{*} \leq \mu R(\mu,A)(xx^{*}).
@@ -206,23 +206,23 @@ In particular for all $ (\mu,\alpha) \in \mathbb{R}_{+} \times \mathbb{R} $, $ x
 \end{corollary}
 
 \begin{proof}
-Let $ \lambda \in \mathbb{C} $ with $ \text{Re}(\lambda) > 0 $.
+Let $ \lambda \in \mathbb{C} $ with $ \Re(\lambda) > 0 $.
 Then the semigroup
 %% --
 \[
-S := (e^{-i\text{Im}(\lambda)t}T(t))_{t\geq0}
+S \coloneqq (e^{-i\text{Im}(\lambda)t}T(t))_{t\geq0}
 \]
 %% --
-fulfils the assumption of Thm \ref{thm:2.1} and $ B := A - i\lambda $ is the generator of $ S $.
-Consequently $ R(\lambda,A) = R(\text{Re}\lambda,B) $ and the corollary follows from Theorem \ref{thm:2.1}.
+fulfils the assumption of Thm \ref{thm:2.1} and $ B \coloneqq A - i\lambda $ is the generator of $ S $.
+Consequently $ R(\lambda,A) = R(\Re\lambda,B) $ and the corollary follows from Theorem \ref{thm:2.1}.
 \qed
 \end{proof}
 
 As in Section C-III the following notion will be an important tool for the spectral theory of semigroups.
 
 \begin{definition}\label{def:d1-2.3}
-Let $ E $ be a Banach space and $ \emptyset \neq D $ an open subset of $ \mathbb{C} $.
-A family $ R: D \to L(E) $ is called a pseudo-resolvent on $ D $ with values in $ E $ if
+Let $E$ be a Banach space and let $D$ be a non-empty open subset of $\mathbb{C}$.
+A family $ R: D \mapsto L(E) $ is called a pseudo-resolvent on $ D $ with values in $ E $ if
 %% --
 \[
 R(\lambda) - R(\mu) = -(\lambda - \mu)R(\lambda)R(\mu)
@@ -230,15 +230,15 @@ R(\lambda) - R(\mu) = -(\lambda - \mu)R(\lambda)R(\mu)
 %% --
 for all $ \lambda $ and $ \mu $ in $ D $.
 \end{definition}
-
+%% --
 \newpage
 %% -- d1_5
 %% --
-
-If $ R $ is a pseudo-resolvent on $ D = \{\lambda \in \mathbb{C} : \text{Re}(\lambda) > 0\} $ with values in a \CA- or \WA-algebra, then $ R $ is called of Schwarz type if
+%% --
+If $ R $ is a pseudo-resolvent on $ D = \{\lambda \in \mathbb{C} \colon \Re(\lambda) > 0\} $ with values in a \CA- or \WA-algebra, then $ R $ is called of Schwarz type if
 %% --
 \[
-(R(\lambda)x)(R(\lambda)x)^{*} \leq (\text{Re}\lambda)^{-1} R(\text{Re}\lambda)xx^{*}
+(R(\lambda)x)(R(\lambda)x)^{*} \leq (\Re\lambda)^{-1} R(\Re\lambda)xx^{*}
 \]
 %% --
 for all $ \lambda \in D $ and $ x \in M $.
@@ -246,7 +246,7 @@ $ R $ is called identity preserving if $ \lambda R(\lambda)1 = 1 $ for all $ \la
 
 For examples and properties of a pseudo-resolvent see C-III, 2.5.
 We state what will be used without further reference.
-
+%% --
 \begin{enumerate}[(i)]
 \item 
 If $ \alpha \in \mathbb{C} $ and $ x \in E $ such that $ (\alpha - \lambda)R(\lambda)x = x $ for some $ \lambda \in D $, then $ (\alpha - \mu)R(\mu)x = x $ for all $ \mu \in D $ (use the \enquote{resolvent equation}).
@@ -260,12 +260,12 @@ R(\mu) = \sum_{n} (\lambda - \mu)^{n} R(\lambda)^{n+1}.
 \]
 %% --
 \end{enumerate}
-
+%% --
 \begin{definition}\label{def:d1-2.4}
-We call a semigroup $ T $ on the predual $ M_{*} $ of a \WA-algebra $ M $ identity preserving and of Schwarz type, if its adjoint weak*-semigroup has these properties.
-Likewise, a pseudo-resolvent $ R $ on $ D = \{\lambda \in \mathbb{C} : \text{Re}(\lambda) > 0\} $ with values in $ M_{*} $ is called identity preserving and of Schwarz type, if $ R' $ has these properties.
+We call a semigroup $ T $ on the \emph{predual} $ M_{*} $ of a \WA-algebra $ M $ \emph{identity preserving and of Schwarz type}, if its adjoint weak*-semigroup has these properties.
+Likewise, a pseudo-resolvent $ R $ on $ D = \{\lambda \in \mathbb{C} \colon \Re(\lambda) > 0\} $ with values in $ M_{*} $ is called identity preserving and of Schwarz type, if $ R' $ has these properties.
 \end{definition}
-
+%% --
 Since for a semigroup of contractions on a Banach space
 %% --
 \[
@@ -276,10 +276,10 @@ Since for a semigroup of contractions on a Banach space
 = \text{ker}(\text{Id} - \lambda R(\lambda,A)) = \text{Fix}(\lambda R(\lambda,A))
 \]
 %% --
-for all $ \lambda \in \mathbb{C} $ with $ \text{Re}(\lambda) > 0 $, it follows that a semigroup of contractions on $ M $ is identity preserving if and only if the (pseudo)-resolvent on $ D = \{\lambda \in \mathbb{C} : \text{Re}(\lambda) > 0\} $ given by
+for all $ \lambda \in \mathbb{C} $ with $ \Re(\lambda) > 0 $, it follows that a semigroup of contractions on $ M $ is identity preserving if and only if the (pseudo)-resolvent on $ D = \{\lambda \in \mathbb{C} \colon \Re(\lambda) > 0\} $ given by
 %% --
 \[
-R(\lambda) := R(\lambda,A)|_{D}
+R(\lambda) \coloneqq R(\lambda,A)|_{D}
 \]
 %% --
 is identity preserving.
@@ -293,12 +293,12 @@ By Corollary \ref{cor:2.2} an analogous statement holds for \enquote{Schwarz typ
 
 \begin{enumerate}[1., wide]
 \item
-If $ E $ is a Banach space and $ S \subseteq L(E) $ a semigroup of bounded operators, then a closed subspace $ F $ is called $ S $-invariant, if $ SF \subseteq F $ for all $ S \in S $.
-We call the semigroup $ S|_{F} := \{S|_{F} : S \in S \} $ the reduced semigroup.
-Note that for a one-parameter semigroup $ T $ (resp., pseudo-resolvent $ R $) the reduced semigroup is again strongly continuous (resp. $ R|_{F} $ is again a pseudo-resolvent) (compare the construction in A-I,3.2).
+If $ E $ is a Banach space and $ S \subseteq L(E) $ is a semigroup of bounded operators, then a closed subspace $ F $ is called $ S $-invariant, if $ SF \subseteq F $ for all $ S \in S $.
+We call the semigroup $ S|_{F} \coloneqq \{S|_{F} \colon S \in S \} $ the reduced semigroup.
+Note that for a one-parameter semigroup $ T $ (\resp, pseudo-resolvent $ R $) the reduced semigroup is again strongly continuous (resp. $ R|_{F} $ is again a pseudo-resolvent) (compare the construction in A-I,3.2).
 
 \item
-Let $ M $ be a \WA-algebra, $ p \in M $ a projection and $ S \in L(M) $ such that $ S(p^{\perp}M) \subseteq p^{\perp}M $ and $ S(Mp^{\perp}) \subseteq Mp^{\perp} $, where $ p^{\perp} := 1-p $.
+Let $ M $ be a \WA-algebra, $ p \in M $ a projection and $ S \in \L{M} $ such that $ S(p^{\perp}M) \subseteq p^{\perp}M $ and $ S(Mp^{\perp}) \subseteq Mp^{\perp} $, where $ p^{\perp} \coloneqq 1-p $.
 Since for all $ x \in M $:
 %% --
 \[
@@ -306,58 +306,55 @@ p[S(x) - S(pxp)] = p[S(p^{\perp}xp) + S(xp^{\perp})]p = 0,
 \]
 %% --
 we obtain $ p(Sx)p = p(S(pxp))p $.
-Therefore the map
+Therefore, the map
 %% --
 \[
-S_{p} := (x \mapsto p(Sx)p) : pMp \to pMp
+S_{p} \coloneqq (x \mapsto p(Sx)p) \colon pMp \to pMp
 \]
 %% --
-is well defined.
-We call $ S_{p} $ the induced map.
+is well defined and we call $ S_{p} $ the induced map.
 If $ S $ is an identity preserving Schwarz map, then it is easy to see that $ S_{p} $ is again a Schwarz map such that $ S_{p}(p) = p $.
 
-If $ T = (T(t))_{t\geq0} $ is a weak*-semigroup on $ M $ which is of Schwarz type and if $ T(t)(p^{\perp}) \leq p^{\perp} $ for all $ t \in \mathbb{R}_{+} $, then $ T $ leaves $ p^{\perp}M $ and $ Mp^{\perp} $ invariant.
-It is easy to see that the induced semigroup $ T_{p} = (T(t)_{p})_{t\geq0} $ is again a weak*-semigroup.
+If $ T = (T(t))_{t\geq0} $ is a weak*-semigroup on $ M $ which is of Schwarz type and if $ T(t)(p^{\perp}) \leq p^{\perp} $ for all $ t \in \R_{+} $, then $ T $ leaves $ p^{\perp}M $ and $ Mp^{\perp} $ invariant.
+One can verify that the induced semigroup $T_p = (T(t)p){t\geq0}$ is again a weak*-semigroup.
 
-If $ R $ is an identity preserving pseudo-resolvent of Schwarz type on $ D = \{\lambda \in \mathbb{C} : \text{Re}(\lambda) > 0\} $ with values in $ M $ such that $ R(\mu)p^{\perp} \leq p^{\perp} $ for some $ \mu \in \mathbb{R}_{+} $, then $ p^{\perp}M $ and $ Mp^{\perp} $ are $ R $-invariant.
-Again, the induced pseudo-resolvent $ R_{p} $ is of Schwarz type and identity preserving.
+If $ R $ is an identity preserving pseudo-resolvent of Schwarz type on $ D = \{\lambda \in \mathbb{C} \colon \Re(\lambda) > 0\} $ with values in $ M $ such that $ R(\mu)p^{\perp} \leq p^{\perp} $ for some $ \mu \in \R_{+} $, then $ p^{\perp}M $ and $ Mp^{\perp} $ are $ R $-invariant.
+It follows directly that the induced pseudo-resolvent $R_p$ has both the Schwarz type property and is identity preservation.
 
 \item
 Let $ \phi $ be a positive normal linear functional on a \WA-algebra $ M $ such that $ T_{*}\phi = \phi $ for some identity preserving Schwarz map $ T $ on $ M $ with preadjoint $ T_{*} \in L(M_{*}) $.
 Then $ T(s(\phi)^{\perp}) \leq s(\phi)^{\perp} $ where $ s(\phi) $ is the support projection of $ \phi $.
 
-To see this let $ L_{\phi} := \{x \in M: \phi(xx^{*}) = 0\} $ and $ M_{\phi} := L_{\phi} \cap L_{\phi}^{*} $.
+Let $L_\phi \coloneqq {x \in M: \phi(xx^) = 0}$ and $M_\phi \coloneqq L_\phi \cap L_\phi$ be defined.
 Since $ \phi $ is $ T_{*} $-invariant, and $ T $ is a Schwarz map, the subspaces $ L_{\phi} $ and $ M_{\phi} $ are $ T $-invariant.
 From $ M_{\phi} = s(\phi)^{\perp}Ms(\phi)^{\perp} $ and $ T(s(\phi)^{\perp}) \leq 1 $ it follows that $ T(s(\phi)^{\perp}) \leq s(\phi)^{\perp} $.
 
 \end{enumerate}
-
+%% --
 \newpage
 %% -- d1_7
 %% --
-
+%% --
 Let $ T_{s(\phi)} $ be the induced map on $ M_{s(\phi)} $. 
 If
 %% --
 \[
-s(\phi)M_{*}s(\phi) := \{\psi \in M_{*} : \psi = s(\phi)\psi s(\phi)\}
+s(\phi)M_{*}s(\phi) \coloneqq \{\psi \in M_{*} \colon \psi = s(\phi)\psi s(\phi)\}
 \]
 %% --
-where $ \langle s(\phi)\psi s(\phi),x \rangle := \langle \psi,s(\phi)xs(\phi) \rangle $ ($ x \in M $), and if $ \psi \in s(\phi)M_{*}s(\phi) $, then for all $ x \in M $:
+where $ \langle s(\phi)\psi s(\phi),x \rangle \coloneqq \langle \psi,s(\phi)xs(\phi) \rangle $ ($ x \in M $).
+For any $\psi \in s(\phi)M_s(\phi)$ and all $x \in M$, the following equalities holds:
 %% --
-\[
-(T_{*}\psi)(x) = \psi(Tx) = \langle \psi,s(\phi)(Tx)s(\phi) \rangle =
-\]
-%% --
-\[
-= \langle \psi,s(\phi)(T(s(\phi)xs(\phi)))s(\phi) \rangle = \langle T_{*}\psi,s(\phi)xs(\phi) \rangle,
-\]
+\begin{align*}
+(T_{*}\psi)(x) &= \psi(Tx) = \langle \psi,s(\phi)(Tx)s(\phi) \rangle \\
+	&= \langle \psi,s(\phi)(T(s(\phi)xs(\phi)))s(\phi) \rangle = \langle T_{*}\psi,s(\phi)xs(\phi) \rangle,
+\end{align*}
 %% --
 hence $ T_{*}\psi \in s(\phi)M_{*}s(\phi) $.
 Since the dual of $ s(\phi)M_{*}s(\phi) $ is $ M_{s(\phi)} $, it follows that the adjoint of the reduced map $ T_{*}| $ is identity preserving and of Schwarz type.
 
 For example, if $ T $ is an identity preserving semigroup of Schwarz type on $ M_{*} $ such that $ \phi \in \text{Fix}(T) $, then the semigroup $ T|(s(\phi)M_{*}s(\phi)) $ is again identity preserving and of Schwarz type.
-Furthermore, if $ R $ is a pseudo-resolvent on $ D = \{\lambda \in \mathbb{C} : \text{Re}(\lambda) > 0\} $ with values in $ M_{*} $ which is identity preserving and of Schwarz type such that $ R(\mu)\phi = \phi $ for some $ \mu \in \mathbb{R}_{+} $, then $ R|s(\phi)M_{*}s(\phi) $ has the same properties.
+Furthermore, if $ R $ is a pseudo-resolvent on $ D = \{\lambda \in \mathbb{C} \colon \Re(\lambda) > 0\} $ with values in $ M_{*} $ which is identity preserving and of Schwarz type such that $ R(\mu)\phi = \phi $ for some $ \mu \in \R_{+} $, then $ R|s(\phi)M_{*}s(\phi) $ has the same properties.
 
 %% -- Ende d1_8
 %% --

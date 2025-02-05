@@ -1,67 +1,75 @@
-% !TEX TS-program = pdflatex
-% !BIB program = bibtex
+% !TEX TS-program = pdflatexmk
+% !BIB program = bibtex 
+%% -- Chapter IV-I
 %% --
-%% -- Chapter D-I
+\documentclass[%
+%,12pt		% für Korrekturen % wegmachen und Zeilenabstand größer machen
+,oneside]{book}
+
+%% -- für Korrekturlesen % entferenen
 %% --
-\documentclass[a4paper]{book}
+%\usepackage{setspace}
+%\doublespacing 
 
+%% -- Gemeinsame Pakete und Definitionen
 %% --
-\usepackage{graphicx}        % standard LaTeX graphics tool
-\usepackage{libertine}
+\input{ln-preamble}  
+\input{ln-definitionen}
 
-%% -- Referenzen
+%% -- Index - wenn alles klar ist
 %% --
-\bibliographystyle{spmpsci}
+
+%\usepackage{imakeidx}
+%\makeindex[columns=2, options=-s svind.ist]
 
 
-% see the list of further useful packages
-% in the Reference Guide
-\usepackage[english]{babel}
-\usepackage{csquotes}
-\usepackage[inline,shortlabels]{enumitem}
-\usepackage{ragged2e}
-
+%% -- Literatur - wenn alles klar ist
 %% --
-\usepackage{amsmath, amssymb, amsthm}
 
-% Theorem-Umgebungen
-\theoremstyle{plain}
-\newtheorem{theorem}{Theorem}[chapter]
-\newtheorem{proposition}[theorem]{Proposition}
-\newtheorem{corollary}[theorem]{Corollary}
-\newtheorem{lemma}[theorem]{Lemma}
-
-\theoremstyle{definition}
-\newtheorem{example}[theorem]{Example}
-\newtheorem{definition}[theorem]{Definition}
-
-\theoremstyle{remark}
-\newtheorem{remark}[theorem]{Remark}
-
-%% -- Definitionen
-\DeclareMathOperator{\Id}{Id}
-%\newcommand{\WA}{$\mathrm{W}^{*}$}
-%\newcommand{\CA}{$\mathrm{C}^{*}$}
-%\newcommand{\Fix}{\mathrm{Fix}}
-\usepackage{ablatt-defn}
-
+\usepackage[round]{natbib}
 
 %% --
-\usepackage{tikz}
-\usepackage{tikz-cd}
-                     
+
+\usepackage{hyperref}
+\hypersetup{%
+,colorlinks=true 
+,linkcolor=blue
+,citecolor=blue
+,urlcolor=blue
+,linktoc=all
+%,hidelinks=true
+}
+
+
+          
+%% --
+           
 \begin{document}
+
+\setcounter{chapter}{0}		%% anpassen y=0/1/2/3 -> Chapter 1/2/3/4
+\setcounter{section}{1}		%% immer
 
 \input{chap-d1}
 
-\RaggedRight
-\input{references-d1}
-
 %% -- Literatur
-%\RaggedRight
-%\bibliography{ln-references} 
+%% --
 
+\RaggedRight
+\bibliographystyle{abbrvnat}
+\bibliography{ln-references} 
+
+%% -- Index
+%% --
+
+%\clearpage
+%\printindex
+
+%% --
 \end{document}
+
+
+
+
 
 
 
