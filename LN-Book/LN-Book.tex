@@ -1,5 +1,5 @@
 % !TEX TS-program = pdflatexmk
-
+% !BIB program = bibtex
 
 %%%%%%%%%%%%%%%%%%%% LN-Book.tex %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Stand: 2025/02/02 ulgr
@@ -7,10 +7,10 @@
 
 \documentclass[%
 	,graybox
-%	,envcountsect			%% not working 
+	,envcountsect			%% not working  
 %	,evvcountsame			%% -- " --
 %	,envcountresetsect		%% -- " --
-% 	,sectrefs
+%  	,sectrefs
 % 	,natbib
 %	,referee
 	]{svmono}
@@ -38,6 +38,19 @@
 \spnewtheorem{remarks}[theorem]{Remarks}{\normalfont\bfseries}{\itshape}
 \spnewtheorem{examples}[theorem]{Examples}{\normalfont\bfseries}{\itshape}
 
+%% -- Nummer von Theorem etc. korrekt
+%% --
+
+\renewcommand\thetheorem{\thesection.\arabic{theorem}}
+\renewcommand\theproposition{\thesection.\arabic{proposition}}
+\renewcommand\thedefinition{\thesection.\arabic{definition}}
+\renewcommand\thelemma{\thesection.\arabic{lemma}}
+\renewcommand\thecorollary{\thesection.\arabic{corollary}}
+\renewcommand\theremark{\thesection.\arabic{remark}}
+\renewcommand\theremarks{\thesection.\arabic{remarks}}
+\renewcommand\theexample{\thesection.\arabic{example}}
+\renewcommand\theexamples{\thesection.\arabic{examples}}
+
 %% -- Durchgehende Nummerierung
 %% -- 
 \makeatletter
@@ -51,19 +64,6 @@
 \let\c@remark=\c@theorem 		% Make proposition share the theorem counter
 \let\c@remarks=\c@theorem 		% Make proposition share the theorem counter
 \makeatother
-
-%% -- Nummer von Theorem etc. korrekt
-%% --
-
-\renewcommand\thetheorem{\thesection.\arabic{theorem}}
-\renewcommand\theproposition{\thesection.\arabic{proposition}}
-\renewcommand\thedefinition{\thesection.\arabic{definition}}
-\renewcommand\thelemma{\thesection.\arabic{lemma}}
-\renewcommand\thecorollary{\thesection.\arabic{corollary}}
-\renewcommand\theremark{\thesection.\arabic{remark}}
-\renewcommand\theremarks{\thesection.\arabic{remarks}}
-\renewcommand\theexample{\thesection.\arabic{example}}
-\renewcommand\theexamples{\thesection.\arabic{examples}}
 
 %% -- Pakete etc.
 %% -- 
@@ -163,8 +163,8 @@
 %,./part-c/appendix-c
 %% -- Part D
 %% --
-%,./part-d/part-d
-%,./part-d/chap-d1
+,./part-d/part-d
+,./part-d/chap-d1
 %,./part-d/chap-d2
 %,./part-d/chap-d3
 %,./part-d/chap-d4

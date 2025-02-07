@@ -1,69 +1,74 @@
-% !TEX TS-program = pdflatex
-% !BIB program = bibtex
-%% -- Chapter D-II 
+% !TEX TS-program = pdflatexmk
+% !BIB program = bibtex 
+%% -- Chapter IV-I
 %% --
-\documentclass[a4paper]{book}
+\documentclass[%
+%,12pt		% für Korrekturen % wegmachen und Zeilenabstand größer machen
+,oneside]{book}
 
+%% -- für Korrekturlesen % entferenen
 %% --
-\usepackage{graphicx}        % standard LaTeX graphics tool
-\usepackage{libertine}
+%\usepackage{setspace}
+%\doublespacing 
 
-%% -- Referenzen
+%% -- Gemeinsame Pakete und Definitionen
 %% --
-%\bibliographystyle{spmpsci}
+\input{ln-preamble}  
+\input{ln-definitionen}
 
-% see the list of further useful packages
-% in the Reference Guide
-\usepackage[english]{babel}
-\usepackage{csquotes}
-\usepackage[inline,shortlabels]{enumitem}
-%\setlist{leftmargin=3em, rightmargin=2em}
-\setlist{%
-	,labelsep=0.8em
-	,leftmargin=1em
-	,itemindent=2em
-	,labelwidth=10pt
-	,itemsep=0.15ex
-	,parsep=.75ex
-	}
-\usepackage{ragged2e}
-
+%% -- Index - wenn alles klar ist
 %% --
-\usepackage{amsmath, amssymb, amsthm}
 
-% Theorem-Umgebungen
-\theoremstyle{plain}
-\newtheorem{theorem}{Theorem}[chapter]
-\newtheorem{proposition}[theorem]{Proposition}
-\newtheorem{corollary}[theorem]{Corollary}
-\newtheorem{lemma}[theorem]{Lemma}
+%\usepackage{imakeidx}
+%\makeindex[columns=2, options=-s svind.ist]
 
-\theoremstyle{definition}
-\newtheorem{example}[theorem]{Example}
-\newtheorem{definition}[theorem]{Definition}
 
-\theoremstyle{remark}
-\newtheorem{remark}[theorem]{Remark}
+%% -- Literatur - wenn alles klar ist
+%% --
 
-%% -- Definitionen
-\DeclareMathOperator{\Id}{Id}
-\newcommand{\WA}{$\mathrm{W}^{*}$}
-\newcommand{\CA}{$\mathrm{C}^{*}$}
-\newcommand{\Fix}{\mathrm{Fix}}
+\usepackage[round]{natbib}
 
 %% --
-\usepackage{tikz}
-\usepackage{tikz-cd}
-                     
-\begin{document}
+
+\usepackage{hyperref}
+\hypersetup{%
+,colorlinks=true 
+,linkcolor=blue
+,citecolor=blue
+,urlcolor=blue
+,linktoc=all
+%,hidelinks=true
+}
+           
+\begin{document} 
+
+\setcounter{chapter}{1}		%% anpassen y=0/1/2/3 -> Chapter 1/2/3/4
+\setcounter{section}{1}		%% immer
 
 \input{chap-d2}
 
-%% -- Literatur
-\RaggedRight
-%\bibliography{ln-references} 
 
+
+%% -- Literatur
+%% --
+
+%\RaggedRight
+%\nocite{davies:1976, oseledets:1984, bourbaki:2004a}
+\bibliographystyle{abbrvnat}
+\bibliography{ln-references} 
+
+%% -- Index
+%% --
+
+%\clearpage
+%\printindex
+
+%% --
 \end{document}
+
+
+
+
 
 
 
