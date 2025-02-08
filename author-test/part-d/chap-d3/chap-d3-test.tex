@@ -1,63 +1,73 @@
-%% -- Chapter D-III 
+% !TEX TS-program = pdflatexmk
+% !BIB program = bibtex 
+%% -- Chapter IV-III
 %% --
-\documentclass[a4paper]{book}
+\documentclass[%
+%,12pt		% für Korrekturen % wegmachen und Zeilenabstand größer machen
+,oneside]{book}
 
+%% -- für Korrekturlesen % entferenen
 %% --
-\usepackage{graphicx}        % standard LaTeX graphics tool
-\usepackage{libertine}
+%\usepackage{setspace}
+%\doublespacing 
 
-%% -- Referenzen
+%% -- Gemeinsame Pakete und Definitionen
 %% --
-\bibliographystyle{spmpsci}
+\input{ln-preamble}  
+\input{ln-definitionen}
 
-
-% see the list of further useful packages
-% in the Reference Guide
-\usepackage[english]{babel}
-\usepackage{csquotes}
-\usepackage[inline,shortlabels]{enumitem}
-\usepackage{ragged2e}
-
+%% -- Index - wenn alles klar ist
 %% --
-\usepackage{amsmath, amssymb, amsthm}
 
-% Theorem-Umgebungen
-\theoremstyle{plain}
-\newtheorem{theorem}{Theorem}[chapter]
-\newtheorem{proposition}[theorem]{Proposition}
-\newtheorem{corollary}[theorem]{Corollary}
-\newtheorem{lemma}[theorem]{Lemma}
+\usepackage{imakeidx}
+\makeindex[columns=2, options=-s svind.ist]
 
-\theoremstyle{definition}
-\newtheorem{example}[theorem]{Example}
-\newtheorem{definition}[theorem]{Definition}
 
-\theoremstyle{remark}
-\newtheorem{remark}[theorem]{Remark}
-\newtheorem{remarks}[theorem]{Remarks}
+%% -- Literatur - wenn alles klar ist
+%% --
 
-%% -- Definitionen
-\DeclareMathOperator{\Id}{Id}
-\newcommand{\WA}{$\mathrm{W}^{*}$}
-\newcommand{\CA}{$\mathrm{C}^{*}$}
-\newcommand{\Fix}{\mathrm{Fix}}
+\usepackage[round]{natbib}
 
 %% --
-\usepackage{tikz}
-\usepackage{tikz-cd}
 
-\newcommand{\rank}{\mathrm{Rang}}
+\usepackage{hyperref}
+\hypersetup{%
+,colorlinks=true 
+,linkcolor=blue
+,citecolor=blue
+,urlcolor=blue
+,linktoc=all
+%,hidelinks=true
+}
 
-                     
-\begin{document}
+\newcommand*{\I}{\ensuremath{\mathrm{i}}}
+           
+\begin{document} 
 
 \input{chap-d3}
 
+
+
 %% -- Literatur
+%% --
+
 \RaggedRight
+%\nocite{davies:1976, oseledets:1984, bourbaki:2004a}
+\bibliographystyle{abbrvnat}
 \bibliography{ln-references} 
 
+%% -- Index
+%% --
+
+\clearpage
+\printindex
+
+%% --
 \end{document}
+
+
+
+
 
 
 
