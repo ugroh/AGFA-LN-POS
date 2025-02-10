@@ -1,0 +1,73 @@
+%% --
+%% Welche Pakete verwenden wir 
+%% -- 
+\usepackage{graphicx}        
+\usepackage{libertine}
+
+%% -- Nummerierung Abschnittsweise
+%% --
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+
+%% -- AMS-math und mathtools
+%% --
+\usepackage{amsmath, amssymb, amsthm}	
+\usepackage{mathtools}
+
+%% -- Die Theorem-Umgebungen: Nummerierung nach Abschnitten
+%% --
+
+%% --
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma} 
+%% --
+\theoremstyle{definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{examples}[theorem]{Examples} 
+\newtheorem{definition}[theorem]{Definition}
+%% --
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{remarks}[theorem]{Remarks}
+
+
+
+%% -- Unsere Pakete
+%% --
+\usepackage[english]{babel}					% Trennungen richtig
+\usepackage{csquotes}						% \enquote{Text} gibt die US Variante von "Text"
+\usepackage[inline,shortlabels]{enumitem}	% \begin{enumerate}[(i)] oder [(a)] 
+\setlist{parsep=0.0em}				
+\usepackage{ragged2e}						% \RaggedRight = Flattersatz
+%% --
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usetikzlibrary{matrix,arrows.meta,calc}
+%% --
+\usepackage{comment}
+\usepackage{xspace}
+
+%% --
+\usepackage[round]{natbib}
+%\bibliographystyle{spmpsci}
+\bibliographystyle{abbrvnat}
+\newcommand{\citeidx}[2]{\citet{#1}\index{References!#2!cited on}} %% Für Index
+%% -- Eintrag im Index \citeidx{kato:1966}{Kato} 
+
+%% --
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    urlcolor=blue,
+    linktoc=all
+}
+
+%% -- Eigene Definitionen
+%% --
+
