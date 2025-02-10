@@ -4,7 +4,7 @@ Grundsätzlich bietet sich [Overleaf](https://www.overleaf.com/) als System zur 
 
 Nun zu meinen Vorschlägen zur einheitlichen Erstellung unserer `LaTeX`- Texte, wobei `Claude` mithilfe der Regeln schon sehr gut arbeitet. Gern können wir alles im Rahmen eines Zoom-Meetings besprechen. 
 
-- Die  `LaTeX`-Testdateien werde ich noch etwas anpassen, damit das Erstellen, das Lesen und der Vergleich mit dem Originalen besser wird. Alles dazu werde ich in das Verzeichnis [author-test/peamble](https://github.com/ugroh/AGFA-LN-POS/tree/main/author-test) stellen und euch informieren. 
+- Die  `LaTeX`-Testdateien werde ich noch etwas anpassen, damit das Erstellen, das Lesen und der Vergleich mit dem Originalen besser wird. Alles dazu werde ich in das Verzeichnis [author-test/preamble](https://github.com/ugroh/AGFA-LN-POS/tree/main/author-test) stellen und euch informieren. 
 
 - *Aufzählungen:* Hier versenden wir das Paket [enumitem](https://ctan.org/pkg/translation-enumitem-de) in der folgenden Form:
 
