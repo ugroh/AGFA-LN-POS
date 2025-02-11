@@ -54,6 +54,8 @@ Damit es bei der Bearbeitung einigermaßen einheitlich zugeht, bitte ich folgend
 
 - Reelle Zahlen etc. stehen mit `\mathbb{R}` im System, gern auch mittels `\R`, `\N` etc. eingeben – mach alles lesbarer.
 
+- Bitte momentan die Literaturzitate belassen und diese mit `[ ]` einklammern. Umwandeln kann man es dann via `\citet{engelnagel:2006}`oder `\citet[Thm. III.4.6.]{takesaki:1979}`. Wir besprechen dies separat, da hier `BibTeX `zuschlägt.
+
 ##### `Overleaf`
 
 - Grundsätzlich bietet sich [Overleaf](https://www.overleaf.com/) als System zur Erstellung von `LaTeX`-Dokumenten an. Auch hat dieses System ein sehr gutes Hilfesystem. Also bei Fragen kann man dieses konsultieren. Wichtig ist aber, dass man **nur** seinen Teil dort bearbeitet und nicht das ganze System in Overleaf einstellt. Dabei lädt man das Kapitel, für das man zuständig ist, als `ZIP`-Datei und als neues Projekt hoch. 
