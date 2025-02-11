@@ -7,7 +7,7 @@
 \chaptermark{Spectral Theory  on \WA-algebras}
 \index{Spectral Theory on Operator Algebras}
 %% --
-Motivated by the classical results of Perron and Frobenius one expects the following spectral properties for the generator $A$ of a positive semigroup.
+Motivated by the classical results of Perron and Frobenius one expects the following spectral properties for the generator $A$ of a positive semigroup. 
 %% --
 \begin{quote}
 The spectral bound 
@@ -213,22 +213,22 @@ Therefore we may deduce spectral properties of $S_{|}$ from $T_{|}$ and vice ver
 More concrete applications of Lemma 1.2 will follow.
 \end{remark}
 %% --
-We now investigate the fixed space $\Fix{R} \coloneqq \Fix{\lambda R(\lambda)}$, $\lambda \in D$, of a pseudo-resolvent $\mathcal{R}$ with values in the predual of a \WA-algebra $M$.
+We now investigate the fixed space $\Fix{R} \coloneqq \Fix{\lambda R(\lambda)}$, $\lambda \in D$, of a pseudo-resolvent $\RR$ with values in the predual of a \WA-algebra $M$.
 
 \textbf{10.02.} 
 
 \newpage
 
 \begin{proposition}\label{prop:d3-1.4}
-Let $\mathcal{R}$ be a pseudo-resolvent on $D = \{\lambda \in \mathbb{C} \colon \Re(\lambda) > 0\}$ with values in the predual $M_*$ of a \WA-algebra $M$ and suppose $\mathcal{R}$ to be identity preserving and of Schwarz type.
+Let $\RR$ be a pseudo-resolvent on $D = \{\lambda \in \mathbb{C} \colon \Re(\lambda) > 0\}$ with values in the predual $M_*$ of a \WA-algebra $M$ and suppose $\RR$ to be identity preserving and of Schwarz type.
 
 \begin{enumerate}[(a)]
 \item 
 If $a \in \R$ and $\psi \in M_*$ such that $(\gamma - ia)R(\gamma)\psi = \psi$ for some $\gamma \in D$, then $\lambda R(\lambda)|\psi| = |\psi|$ and $\lambda R(\lambda)|\psi^{*}| = |\psi^{*}|$ for all $\lambda \in D$.
 
 \item 
-$ \Fix{\mathcal{R}} $ is invariant under the involution in $M_*$.
-If $\psi \in \Fix{\mathcal{R}} $ is self adjoint, then the positive part $\psi^{+}$ and the negative part $\psi^{-}$ of $\psi$ are elements of $ \Fix{\mathcal{R}} $.
+$ \Fix{\RR} $ is invariant under the involution in $M_*$.
+If $\psi \in \Fix{\RR} $ is self adjoint, then the positive part $\psi^{+}$ and the negative part $\psi^{-}$ of $\psi$ are elements of $ \Fix{\RR} $.
 \end{enumerate}
 \end{proposition}
 
@@ -266,7 +266,7 @@ Since
 \]
 %% --
 we obtain $\mu R(\mu)|\psi| = |\psi|$ by the uniqueness theorem (*) mentioned at the beginning.
-Therefore $|\psi| \in \Fix{\mathcal{R}} $.
+Therefore $|\psi| \in \Fix{\RR} $.
 Since
 %% --
 \[
@@ -274,9 +274,9 @@ Since
 \]
 %% --
 the map $R(\mu)$ is positive.
-Consequently $(\mu+\im\alpha)R(\mu)\psi^{*} = \psi^{*}$ from which $|\psi^{*}| \in \Fix{\mathcal{R}} $ follows.
-If $\phi \in \Fix{\mathcal{R}} $ is selfadjoint with Jordan decomposition $\phi = \phi^{+} - \phi^{-}$, then $|\phi| = \phi^{+} + \phi^{-}$.(\citet[Theorem III.4.2.]{takesaki:1979})
-From this we obtain that $\phi^{+}$ and $\phi^{-}$ are in $ \Fix{\mathcal{R}} $.
+Consequently $(\mu+\im\alpha)R(\mu)\psi^{*} = \psi^{*}$ from which $|\psi^{*}| \in \Fix{\RR} $ follows.
+If $\phi \in \Fix{\RR} $ is selfadjoint with Jordan decomposition $\phi = \phi^{+} - \phi^{-}$, then $|\phi| = \phi^{+} + \phi^{-}$.(\citet[Theorem III.4.2.]{takesaki:1979})
+From this we obtain that $\phi^{+}$ and $\phi^{-}$ are in $ \Fix{\RR} $.
 \end{proof}
 %% --
 \begin{corollary}\label{cor:d3-1.5}
@@ -303,7 +303,7 @@ But as we shall see below, if a semigroup on the predual of a \WA-algebra has su
 Helpful for these investigations will be the next lemma.
 %% --
 \begin{lemma}\label{lem:d3-1.6}
-Let $\mathcal{R}$ be a pseudo-resolvent on $D = \{\lambda \in \mathbb{C} \colon \Re(\lambda) > 0\}$ with values in a Banach space $E$ such that $\|R(\mu + \im\,\alpha)\| \leq 1$ for all $(\mu,\alpha) \in \R_{+} \times \R$.
+Let $\RR$ be a pseudo-resolvent on $D = \{\lambda \in \mathbb{C} \colon \Re(\lambda) > 0\}$ with values in a Banach space $E$ such that $\|R(\mu + \im\,\alpha)\| \leq 1$ for all $(\mu,\alpha) \in \R_{+} \times \R$.
 
 Then
 %% --
@@ -347,7 +347,7 @@ From this it follows that
 \]
 %% --
 
-Since $\mathcal{R}$ and $\mathcal{R'}$ are pseudo-resolvents, the assertion is proved.
+Since $\RR$ and $\mathcal{R'}$ are pseudo-resolvents, the assertion is proved.
 \end{proof}
 %% --
 \begin{corollary}\label{cor:d3-1.7}
@@ -384,8 +384,8 @@ P_{\sigma}(A) \cap \im\R = P_{\sigma}(A') \cap \im\R
 \begin{proof}
 The inequality $\dim \ker(\im\alpha - A) \leq \dim \ker(\im\alpha - A')$ follows from Corollary \ref{cor:d3-1.7}.
 
-Let $D = \{\lambda \in \mathbb{C} \colon \Re(\lambda) > 0\}$ and $\mathcal{R}$ the pseudo-resolvent induced by $R(\lambda,A)$ on $D$.
-Then $\mathcal{R}$ is identity preserving and of Schwarz type.
+Let $D = \{\lambda \in \mathbb{C} \colon \Re(\lambda) > 0\}$ and $\RR$ the pseudo-resolvent induced by $R(\lambda,A)$ on $D$.
+Then $\RR$ is identity preserving and of Schwarz type.
 Take $\im\alpha \in P_{\sigma}(A)$ ($\alpha \in \R$) and choose $0 < \mu \in \R$.
 
 If $\psi_{\alpha} \in M_{*}$ is of norm one with polar decomposition $\psi_{\alpha} = u_{\alpha}|\psi_{\alpha}|$ such that $\psi_{\alpha} = (\mu - \im\,\alpha)R(\mu)\psi_{\alpha}$ then $\mu R(\mu)|\psi_{\alpha}| = |\psi_{\alpha}|$ (Proposition \ref{prop:d3-1.4}\,(i)).
@@ -708,7 +708,7 @@ For the basic theory of uniformly ergodic semigroups on Banach spaces we refer t
 Our first result yields an estimate for the dimension of the eigenspaces pertaining to eigenvalues of a pseudo-resolvent.
 
 \begin{proposition}\label{prop:d3-2.1}
-Let $\mathcal{R}$ be an identity preserving pseudo-resolvent of Schwarz type on $D = \{\lambda \in \mathbb{C} \colon \Re(\lambda) > 0\}$ with values in the predual of a \WA-algebra $M$.
+Let $\RR$ be an identity preserving pseudo-resolvent of Schwarz type on $D = \{\lambda \in \mathbb{C} \colon \Re(\lambda) > 0\}$ with values in the predual of a \WA-algebra $M$.
 
 If $\Fix(\lambda R(\lambda))$ is finite dimensional for some $\lambda \in D$, then
 %% --
@@ -720,7 +720,7 @@ for all $\gamma \in D$ and $\alpha \in \R$.
 \end{proposition}
 
 \begin{proof}
-By D-IV, Remark 3.2.c we may assume without loss of generality that there exists a faithful family of $\mathcal{R}$-invariant normal states on $M$.
+By D-IV, Remark 3.2.c we may assume without loss of generality that there exists a faithful family of $\RR$-invariant normal states on $M$.
 
 In particular the fixed space $N$ of the adjoint pseudo-resolvent $R'$ is a W*-subalgebra of $M$ with $1 \in N$ (by Lemma 1.1.b).
 
@@ -739,7 +739,7 @@ From Lemma 1.1.b we therefore obtain that for all $x \in N$ and $y \in M$,
 \]
 %% --
 
-In particular, $R_{j}$, resp., $L_{j}$ are invariant under $R'$, respectively, $\mathcal{R}$.
+In particular, $R_{j}$, resp., $L_{j}$ are invariant under $R'$, respectively, $\RR$.
 
 Furthermore, if $\psi \in L_{j}$ with polar decomposition $\psi = u|\psi|$, then $u^{*}u \leq s(|\psi|) \leq p_{j}$.
 
@@ -759,7 +759,7 @@ Since $\lambda R(\lambda)|\psi_{\alpha}| = |\psi_{\alpha}|$ (Proposition 1.4), w
 \]
 %% --
 
-From the existence of a faithful family of $\mathcal{R}$-invariant normal states and since $R'$ is identity preserving it follows that
+From the existence of a faithful family of $\RR$-invariant normal states and since $R'$ is identity preserving it follows that
 %% --
 \[
 \mu R(\mu)'s(|\psi_{\alpha}|) = s(|\psi_{\alpha}|)
@@ -883,7 +883,7 @@ Recall that the approximative point spectrum $A_{\sigma}(T)$ is equal to the poi
 This construction gives us the possibility to characterize uniformly ergodic semigroups with finite dimensional fixed space.
 
 \begin{lemma}\label{lem:d3-2.2}
-Let $\mathcal{R}$ be a pseudo-resolvent on $D = \{\lambda \in \mathbb{C} \colon \Re(\lambda) > 0\}$ such that $\|R(\mu+\im\alpha)\| \leq 1$ for all $(\mu,\alpha) \in \R_{+} \times \R$ and suppose
+Let $\RR$ be a pseudo-resolvent on $D = \{\lambda \in \mathbb{C} \colon \Re(\lambda) > 0\}$ such that $\|R(\mu+\im\alpha)\| \leq 1$ for all $(\mu,\alpha) \in \R_{+} \times \R$ and suppose
 %% --
 \[
 0 < \dim \Fix((\lambda-\im\alpha)\hat{R}(\lambda)) < \infty \quad \text{for some} \quad \lambda \in D \, , \, \alpha \in \R
@@ -904,7 +904,7 @@ Then the following assertions hold:
 
 \item $\dim \Fix((\lambda-\im\alpha)R(\lambda)) = \dim \Fix((\lambda-\im\alpha)\hat{R}(\lambda))$ for all $\lambda \in D$.
 
-\item $\im\alpha$ is a pole of the pseudo-resolvent $\mathcal{R}$ and the residue of $\mathcal{R}$ and $R(.,R(\lambda))$ in $\im\alpha$ respectively $(\lambda - \im\,\alpha)^{-1}$ are identical.
+\item $\im\alpha$ is a pole of the pseudo-resolvent $\RR$ and the residue of $\RR$ and $R(.,R(\lambda))$ in $\im\alpha$ respectively $(\lambda - \im\,\alpha)^{-1}$ are identical.
 \end{enumerate}
 \end{lemma}
 
@@ -1104,7 +1104,7 @@ If $T$ is uniformly ergodic with finite dimensional fixed space, then every $\ga
 \end{theorem}
 
 \begin{proof}
-Let $D = \{\lambda \in \mathbb{C} \colon \Re(\lambda) > 0\}$ and $\mathcal{R}$ the $M_{*}$-valued pseudo-resolvent of Schwarz type induced by $R(.,A)$ on $D$.
+Let $D = \{\lambda \in \mathbb{C} \colon \Re(\lambda) > 0\}$ and $\RR$ the $M_{*}$-valued pseudo-resolvent of Schwarz type induced by $R(.,A)$ on $D$.
 Then
 %% --
 \[

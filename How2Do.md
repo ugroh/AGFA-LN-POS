@@ -1,8 +1,35 @@
-##### How2Do (Stand: 2024/01/31)
+##### How2Do (Stand: 2024/02/11)
 
-Grundsätzlich bietet sich [Overleaf](https://www.overleaf.com/) als System zur Erstellung von `LaTeX`-Dokumenten an. Auch hat dieses System ein sehr gutes Hilfesystem. Also bei Fragen kann man dieses konsultieren.
+##### Struktur der Dateien
 
-Nun zu meinen Vorschlägen zur einheitlichen Erstellung unserer `LaTeX`- Texte, wobei `Claude` mithilfe der Regeln schon sehr gut arbeitet. Gern können wir alles im Rahmen eines Zoom-Meetings besprechen. 
+- Unter `author-test` finden sich die Unterverzeichnisse `part-a`bis `part-b`und darunter jeweils `chap-x1` bis `chap-x4`, `x=1/2/3/4`. In den letzteren sind die eizelnen `PDF` Seiten des jeweiligen Kapitels des Buches, die mithilfe von Claude in ein `LaTeX` dokument umgesetzt werden soll. Zum Testen findet man dann dort `chap-xy-test.tex` und `chap-xy.tex` zum Testen bzw. zum Speichern der umgewandelten Dateien. Bitte ausshließlich diese Struktur nutzen und nicht eigene Varianten anlegen, was nur das Leben erschwert.
+- In `author-test/preamble` findet sich die jeweils aktuelle Version des Literaturverzeichnisses (was sicherlich noch zu überarbeiten ist) und die beiden Dateien, die für die Testphase erforderlich sind. Das `ln-definitionen.tex` bschreibe ich weiter unten. 
+- Wer `Overleaf` nutzt: Das jewilige Unterverzeichnis inkl. der Dateien aus `author-test/preamble` zusammen als `ZIP`-File als neues Projekt hochladen und auf Overleaf weiter bearbeiten. Wer da Probleme hat: da kann ich gern helfen. 
+
+##### Gemeinsames `LaTeX`
+
+Damit es bei der bearbeitung einigermaßnen einheitlich zugeht bitte ich folgendes zu beachten: 
+
+- `$$ ... $$` für abgesetzte Formeln ist verboten. Bitte `\[...\]` stattdessen nutzen.
+- `eqnarray` ist verboten. Bitte die `align*` Umgebung nutzen.
+- `\it`, `\bf` u.ä. Befehle für Schriftvariationen sind seit einigen Jahren nicht mehr üblich, da dies zu Problemen führen kann. Stattdesssen bitte `\textit`, `textbf` etc. nutzen.
+- Ein neuer Satz beginnt auf einer neuen Zeile und Absätzte werden mittels einer Leerzeile erzeugt (und nicht durch `\\`, `\newline`o.ä. )
+- Aufzählungen machen wir mithilfe des Pakes `enumitem` durch 
+		``\begin{enumerate}[(i)] oder [(a)]`
+		`\item`
+		`Text`
+		`\end{enumerate}`
+	wobei `[(a)]` bei äquivalenten Bedingungen genommen wird (ausschließlich). Mithilfe des Pakes kann man noch mehr erreichen, etwa `\begin{enumerate}[(i), wide]` gibt eine Aufzählung, wobei den die gesamte textbreite genutzt wird, was sicherlich manchmal sinnvoll ist.
+- Claude hat die Angewohnheit, unsere abgestzten Formeln zeilwenweise mithilfe von `\[ ...\]` zu erzeugen. Bitte dies mittels der `align*`-Umgebung ändern.
+- In der `ln-definitionen.tex` Datei habe ich einige Makros erfasst, die für die Erstellung der `LaTeX` Dateien sinnvoll sind. Dazu gehört `\TT`, damit `if T is a simgroup`  das `T` in `\mathcal` erscheint., oder `\RR` oder `\ds` oder .. . Bitte die Definitionen in [`ln-definitionen.tex`]()
+- 
+Grundsätzlich bietet sich [Overleaf](https://www.overleaf.com/) als System zur Erstellung von `LaTeX`-Dokumenten an. Auch hat dieses System ein sehr gutes Hilfesystem. Also bei Fragen kann man dieses konsultieren. Wichtig ist aber, dass man **nur** seinen Teil dort bearbeitet und nicht das ganze System in Overleaf einstellt.
+
+Nun zu meinen Vorschlägen zur einheitlichen Erstellung unserer `LaTeX`- Texte.
+
+- Mithilfe von `Claude` und den regeln, die sich unter xxx finden, seitenweise von einem PDF in ein LaTeX-Dokument umwandeln. Die umgewandeltten Seiten anschließend einem testlauf unterziehen. Dazu habe ich zwei Dateien zur Verfügung gestellt. 
+	
+- 
 
 - Die  `LaTeX`-Testdateien werde ich noch etwas anpassen, damit das Erstellen, das Lesen und der Vergleich mit dem Originalen besser wird. Alles dazu werde ich in das Verzeichnis [author-test/preamble](https://github.com/ugroh/AGFA-LN-POS/tree/main/author-test) stellen und euch informieren. 
 
