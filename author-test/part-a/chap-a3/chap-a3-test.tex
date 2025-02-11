@@ -1,31 +1,43 @@
 % !TEX TS-program = pdflatexmk
 % !BIB program = bibtex 
-%% -- Chapter A-I (anpassen an die Realität)
-%% --
-\documentclass[%
-%,12pt		% für Korrekturen % wegmachen und Zeilenabstand größer machen
-,oneside]{book}
 
+%% -- 
+%% -- Chapter A-III
 %% --
+
+\documentclass[%
+,12pt		% für Korrekturen % wegmachen und Zeilenabstand größer machen
+,oneside]
+	{book}
+
+%% -- Für das Korrekturlesen
+%% --
+
 %\usepackage{setspace}
 %\doublespacing 
 
 %% -- Gemeinsame Pakete und Definitionen
 %% --
 \input{ln-preamble}  
-\input{ln-definitionen}
 
-%% -- Index 
+%% -- Gemeinsame Abkürzungen
 %% --
 
-\usepackage{imakeidx}
-\makeindex[columns=2, options=-s svind.ist]
+\input{ln-definitionen}
+
+%% -- Index für später
+%% --
+
+%\usepackage{imakeidx}
+%\makeindex[columns=2, options=-s svind.ist]
 
 
-%% -- Literatur
-%% -- für später
+%% -- Literatur für später
+%% -- 
 
-\usepackage[round]{natbib}
+%\usepackage[round]{natbib}
+%%\bibliographystyle{spmpsci}
+%\bibliographystyle{abbrvnat}
 
 %% --
 
@@ -38,31 +50,36 @@
 ,linktoc=all
 %,hidelinks=true
 }
-
-
-          
+        
 %% --
            
 \begin{document}
-%\tableofcontents
+
+%% -- Bitte setzen
+%% --
 
 \setcounter{chapter}{2}		%% anpassen 1/2/3 -> Chapter 2/3/4
 \setcounter{section}{1}		%% immer
+
+%% -- Das LaTeX-File
+%% --
 
 \input{chap-a3}
 
 %% -- Literatur
 %% --
 
-\RaggedRight
-\bibliographystyle{abbrvnat}
-\bibliography{ln-references} 
+% -- ln-references.bib im gleichen Verzeichnis
+%% -- oder im TeX-Baum texmf/bibtex/bib
+%% --
+%\RaggedRight
+%\bibliography{ln-references} 
 
 %% -- Index
 %% --
 
-\clearpage
-\printindex
+%\clearpage
+%\printindex
 
 %% --
 \end{document}

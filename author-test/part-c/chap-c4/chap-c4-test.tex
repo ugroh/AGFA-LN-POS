@@ -1,54 +1,94 @@
-%% -- Chapter C-IV
+% !TEX TS-program = pdflatexmk
+% !BIB program = bibtex 
+
+%% -- 
+%% -- Chapter C-IV 
 %% --
+
 \documentclass[%
-	,12pt		% zur Kontrolle mit % auskommentieren
-		]{book}
+,12pt		% für Korrekturen % wegmachen und Zeilenabstand größer machen
+,oneside]
+	{book}
+
+%% -- Für das Korrekturlesen
+%% --
+
+%\usepackage{setspace}
+%\doublespacing 
+
+%% -- Gemeinsame Pakete und Definitionen
+%% --
+\input{ln-preamble}  
+
+%% -- Gemeinsame Abkürzungen
+%% --
+
+\input{ln-definitionen}
+
+%% -- Index für später
+%% --
+
+%\usepackage{imakeidx}
+%\makeindex[columns=2, options=-s svind.ist]
+
+
+%% -- Literatur für später
+%% -- 
+
+%\usepackage[round]{natbib}
+%%\bibliographystyle{spmpsci}
+%\bibliographystyle{abbrvnat}
 
 %% --
-\usepackage{graphicx}        
-\usepackage{libertine}
 
-%% -- Für die Referenzen
+\usepackage{hyperref}
+\hypersetup{%
+,colorlinks=true 
+,linkcolor=blue
+,citecolor=blue
+,urlcolor=blue
+,linktoc=all
+%,hidelinks=true
+}
+        
 %% --
-%%  --\bibliographystyle{spmpsci}
-
-%% -- Unsere Pakete
-%% --
-\usepackage[english]{babel}		% Trennungen richtig
-\usepackage{csquotes}			% \enquote{Text} gibt die US Variante von "Text"
-\usepackage[inline,shortlabels]{enumitem}	% \begin{enumerate}[(i)] oder [(a)] 
-%% -- 					
-\usepackage{ragged2e}		% \RaggedRight = Flattersatz
-
-%% -- Theorem-Umgebungen
-%% --
-\usepackage{amsmath, amssymb, amsthm}	
-
-%% --
-\theoremstyle{plain}
-\newtheorem{theorem}{Theorem}[chapter]
-\newtheorem{proposition}[theorem]{Proposition}
-\newtheorem{corollary}[theorem]{Corollary}
-\newtheorem{lemma}[theorem]{Lemma}
-%% --
-\theoremstyle{definition}
-\newtheorem{example}[theorem]{Example}
-\newtheorem{definition}[theorem]{Definition}
-%% --
-\theoremstyle{remark}
-\newtheorem{remark}[theorem]{Remark}
-\newtheorem{remarks}[theorem]{Remarks}
-
-%% -- Eigene Definitionen
-%% --
-                     
+           
 \begin{document}
+
+%% -- Bitte setzen
+%% --
+
+\setcounter{chapter}{3}		%% anpassen 1/2/3 -> Chapter 2/3/4
+\setcounter{section}{1}		%% immer
+
+%% -- Das LaTeX-File
+%% --
 
 \input{chap-c4}
 
 %% -- Literatur
 %% --
+
+% -- ln-references.bib im gleichen Verzeichnis
+%% -- oder im TeX-Baum texmf/bibtex/bib
+%% --
 %\RaggedRight
 %\bibliography{ln-references} 
 
+%% -- Index
+%% --
+
+%\clearpage
+%\printindex
+
+%% --
 \end{document}
+
+
+
+
+
+
+
+
+

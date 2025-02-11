@@ -1,12 +1,18 @@
 % !TEX TS-program = pdflatexmk
 % !BIB program = bibtex 
-%% -- Chapter A-I (anpassen an die Realität)
+
+%% -- 
+%% -- Chapter A-I 
 %% --
+
 \documentclass[%
 ,12pt		% für Korrekturen % wegmachen und Zeilenabstand größer machen
-,oneside]{book}
+,oneside]
+	{book}
 
+%% -- Für das Korrekturlesen
 %% --
+
 %\usepackage{setspace}
 %\doublespacing 
 
@@ -14,22 +20,22 @@
 %% --
 \input{ln-preamble}  
 
-
 %% -- Gemeinsame Abkürzungen
 %% --
+
 \input{ln-definitionen}
 
 %% -- Index für später
 %% --
 
-\usepackage{imakeidx}
-\makeindex[columns=2, options=-s svind.ist]
+%\usepackage{imakeidx}
+%\makeindex[columns=2, options=-s svind.ist]
 
 
-%% -- Literatur
-%% -- für später
+%% -- Literatur für später
+%% -- 
 
-\usepackage[round]{natbib}
+%\usepackage[round]{natbib}
 %%\bibliographystyle{spmpsci}
 %\bibliographystyle{abbrvnat}
 
@@ -44,16 +50,19 @@
 ,linktoc=all
 %,hidelinks=true
 }
-
-
-          
+        
 %% --
            
 \begin{document}
-%\tableofcontents
+
+%% -- Bitte setzen
+%% --
 
 \setcounter{chapter}{0}		%% anpassen 1/2/3 -> Chapter 2/3/4
 \setcounter{section}{1}		%% immer
+
+%% -- Das LaTeX-File
+%% --
 
 \input{chap-a1}
 
@@ -69,8 +78,8 @@
 %% -- Index
 %% --
 
-\clearpage
-\printindex
+%\clearpage
+%\printindex
 
 %% --
 \end{document}
