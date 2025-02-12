@@ -1,56 +1,94 @@
-%% -- Chapter D-IV
+% !TEX TS-program = pdflatexmk
+% !BIB program = bibtex 
+
+%% -- 
+%% -- Chapter D-IV 
 %% --
-\documentclass[a4paper, 12pt]{book}
+
+\documentclass[%
+,12pt		% für Korrekturen % wegmachen und Zeilenabstand größer machen
+,oneside]
+	{book}
+
+%% -- Für das Korrekturlesen
+%% --
+
+%\usepackage{setspace}
+%\doublespacing 
+
+%% -- Gemeinsame Pakete und Definitionen
+%% --
+\input{ln-preamble}  
+
+%% -- Gemeinsame Abkürzungen
+%% --
+
+\input{ln-definitionen}
+\newcommand{\BH}{\mathcal{B}(H)}
+\newcommand*{\dm}{\mathop{}\!\mathrm{d}{m}}       	% \dx = dr, 
+
+%% -- Index für später
+%% --
+
+%\usepackage{imakeidx}
+%\makeindex[columns=2, options=-s svind.ist]
+
+
+%% -- Literatur für später
+%% -- 
+
+%\usepackage[round]{natbib}
+%%\bibliographystyle{spmpsci}
+%\bibliographystyle{abbrvnat}
 
 %% --
-\usepackage{graphicx}        % standard LaTeX graphics tool
-\usepackage{libertine}
 
-
-% see the list of further useful packages
-% in the Reference Guide
-\usepackage[english]{babel}
-\usepackage{csquotes}
-\usepackage[inline,shortlabels]{enumitem}
-\usepackage{ragged2e}
-
+\usepackage{hyperref}
+\hypersetup{%
+,colorlinks=true 
+,linkcolor=blue
+,citecolor=blue
+,urlcolor=blue
+,linktoc=all
+%,hidelinks=true
+}
+        
 %% --
-\usepackage{amsmath, amssymb, amsthm}
-
-% Theorem-Umgebungen
-\theoremstyle{plain}
-\newtheorem{theorem}{Theorem}[chapter]
-\newtheorem{proposition}[theorem]{Proposition}
-\newtheorem{corollary}[theorem]{Corollary}
-\newtheorem{lemma}[theorem]{Lemma}
-
-\theoremstyle{definition}
-\newtheorem{example}[theorem]{Example}
-\newtheorem{definition}[theorem]{Definition}
-
-\theoremstyle{remark}
-\newtheorem{remark}[theorem]{Remark}
-\newtheorem{remarks}[theorem]{Remark2}
-
-%% -- Definitionen
-\DeclareMathOperator{\Id}{Id}
-\newcommand{\WA}{$\mathrm{W}^{*}$}
-\newcommand{\CA}{$\mathrm{C}^{*}$}
-\newcommand{\Fix}{\mathrm{Fix}}
-
-%% --
-\usepackage{tikz}
-\usepackage{tikz-cd}
-                     
+           
 \begin{document}
+
+%% -- Bitte setzen
+%% --
+
+\setcounter{chapter}{3}		%% anpassen 1/2/3 -> Chapter 2/3/4
+\setcounter{section}{1}		%% immer
+
+%% -- Das LaTeX-File
+%% --
 
 \input{chap-d4}
 
 %% -- Literatur
-\RaggedRight
-\bibliography{ln-references} 
+%% --
 
+% -- ln-references.bib im gleichen Verzeichnis
+%% -- oder im TeX-Baum texmf/bibtex/bib
+%% --
+%\RaggedRight
+%\bibliography{ln-references} 
+
+%% -- Index
+%% --
+
+%\clearpage
+%\printindex
+
+%% --
 \end{document}
+
+
+
+
 
 
 

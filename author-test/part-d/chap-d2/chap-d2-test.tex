@@ -1,32 +1,43 @@
 % !TEX TS-program = pdflatexmk
 % !BIB program = bibtex 
-%% -- Chapter IV-I
-%% --
-\documentclass[%
-%,12pt		% für Korrekturen % wegmachen und Zeilenabstand größer machen
-,oneside]{book}
 
-%% -- für Korrekturlesen % entferenen
+%% -- 
+%% -- Chapter D-II 
 %% --
+
+\documentclass[%
+,12pt		% für Korrekturen % wegmachen und Zeilenabstand größer machen
+,oneside]
+	{book}
+
+%% -- Für das Korrekturlesen
+%% --
+
 %\usepackage{setspace}
 %\doublespacing 
 
 %% -- Gemeinsame Pakete und Definitionen
 %% --
 \input{ln-preamble}  
+
+%% -- Gemeinsame Abkürzungen
+%% --
+
 \input{ln-definitionen}
 
-%% -- Index - wenn alles klar ist
+%% -- Index für später
 %% --
 
 %\usepackage{imakeidx}
 %\makeindex[columns=2, options=-s svind.ist]
 
 
-%% -- Literatur - wenn alles klar ist
-%% --
+%% -- Literatur für später
+%% -- 
 
-\usepackage[round]{natbib}
+%\usepackage[round]{natbib}
+%%\bibliographystyle{spmpsci}
+%\bibliographystyle{abbrvnat}
 
 %% --
 
@@ -39,23 +50,30 @@
 ,linktoc=all
 %,hidelinks=true
 }
+        
+%% --
            
-\begin{document} 
+\begin{document}
 
-\setcounter{chapter}{1}		%% anpassen y=0/1/2/3 -> Chapter 1/2/3/4
+%% -- Bitte setzen
+%% --
+
+\setcounter{chapter}{1}		%% anpassen 1/2/3 -> Chapter 2/3/4
 \setcounter{section}{1}		%% immer
 
+%% -- Das LaTeX-File
+%% --
+
 \input{chap-d2}
-
-
 
 %% -- Literatur
 %% --
 
+% -- ln-references.bib im gleichen Verzeichnis
+%% -- oder im TeX-Baum texmf/bibtex/bib
+%% --
 %\RaggedRight
-%\nocite{davies:1976, oseledets:1984, bourbaki:2004a}
-\bibliographystyle{abbrvnat}
-\bibliography{ln-references} 
+%\bibliography{ln-references} 
 
 %% -- Index
 %% --
