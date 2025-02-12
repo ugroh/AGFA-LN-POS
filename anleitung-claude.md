@@ -22,7 +22,7 @@ Bitte nach diesen Regel jedes der folgenden PDF mit mathematischen Inhalt in ein
 
 - Doppelpunkt : in mathematischen Ausdrücken als \\colon setzen 
 
-- Stets := in mathematischen Ausdrücken als \\coloneqq
+- Stets := in mathematischen Ausdrücken als \\coloneqq und =: als \\eqqcolon setzen.
 
 - Bei Subskripts: \_a wird zu \_{a}, bei Superskripts: ^a wird zu ^{a}. Dies gilt auch für zusammengesetzte Ausdrücke und griechische Buchstaben
 
