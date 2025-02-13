@@ -4,6 +4,8 @@ Das Projekt ist es, das Buch [LN 1184](https://github.com/ugroh/AGFA-LN-POS/blob
 
 Die Vorlagen und weitere Erläuterungen finden sich auf der [Springer-Webseite](https://www.springer.com/gp/authors-editors/book-authors-editors/your-publication-journey/manuscript-preparation) bzw. im Unterverzeichnis `springer`. Weiteres für eine einheitliche Eingabe findet sich im [How2Do](https://github.com/ugroh/AGFA-LN-POS/blob/main/How2Do.pdf).
 
+Noch etwas: Es lohnt sich, einen Blick auf  [https://tex.social](https://tex.social) zu werfen.
+
 ##### Die Struktur
 
 * `AGFA-LN-POS` ist das Masterverzeichnis, unter dem sich die weiteren Verzeichnisse befinden. Im Einzelnen:
