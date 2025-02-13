@@ -4,8 +4,8 @@ import re
 def convert_citation(text):
     """
     Converts citations of formats:
-    [Author (YYYY), Note] to Author \cite[Note]{author:YYYY}
-    [Author-Author (YYYY)] to Author1 et all. \cite{author_author:YYYY}
+    [Author (YYYY), Note] to Author \citet[Note]{author:YYYY}
+    [Author-Author (YYYY)] to Author1 et all. \citet{author_author:YYYY}
     """
 
     def replace_citation_with_note(match):

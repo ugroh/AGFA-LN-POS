@@ -6,7 +6,7 @@
 %% --
 
 \documentclass[%
-,12pt		% für Korrekturen % wegmachen und Zeilenabstand größer machen
+%,12pt		% für Korrekturen % wegmachen und Zeilenabstand größer machen
 ,oneside]
 	{book}
 
@@ -14,6 +14,7 @@
 %% --
 
 %\usepackage{setspace}
+%\onehalfspacing
 %\doublespacing 
 
 %% -- Gemeinsame Pakete und Definitionen
@@ -28,21 +29,20 @@
 %% -- Index für später
 %% --
 
-%\usepackage{imakeidx}
-%\makeindex[columns=2, options=-s svind.ist]
+\usepackage{imakeidx}
+\makeindex[columns=2, options=-s svind.ist]
 
 
 %% -- Literatur für später
 %% -- 
 
-%\usepackage[round]{natbib}
-%%\bibliographystyle{spmpsci}
-%\bibliographystyle{abbrvnat}
+\usepackage[round]{natbib}
+\bibliographystyle{abbrvnat}
 
 %% --
 
 \usepackage{hyperref}
-\hypersetup{%
+\hypersetup{% 
 ,colorlinks=true 
 ,linkcolor=blue
 ,citecolor=blue
@@ -50,7 +50,7 @@
 ,linktoc=all
 %,hidelinks=true
 }
-        
+\usepackage{showkeys}  
 %% --
            
 \begin{document}
@@ -72,14 +72,14 @@
 % -- ln-references.bib im gleichen Verzeichnis
 %% -- oder im TeX-Baum texmf/bibtex/bib
 %% --
-%\RaggedRight
-%\bibliography{ln-references} 
+\RaggedRight
+\bibliography{ln-references} 
 
 %% -- Index
 %% --
 
-%\clearpage
-%\printindex
+\clearpage
+\printindex
 
 %% --
 \end{document}
