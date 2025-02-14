@@ -67,7 +67,7 @@ It is easy to see that $u^{*} \in s(|\phi|)M $.
 
 If $\Psi$ is a subset of the state space of a \CA-algebra $M$, then $\Psi$ is called \emph{faithful} if $0 \leq x\in M$ and $\psi(x) = 0$ for all $\psi\in\Psi$ implies $x = 0$.
 $\Psi$ is called \emph{subinvariant} for a positive map $T\in\L{M}$ (\resp., positive semigroup $\TT$) if $T'\psi \leq \psi$ for all $\psi\in\Psi$ (resp., $T(t)'\psi \leq \psi$ for all $T(t)\in \TT$ and $\psi\in\Psi$).
-Recall that for every positive map $T \in \L{M}$ there exists a state $\phi$ on $M$ such that $T'\phi = r(T)\phi$, where $r(T)$ denotes the spectral radius of $T$.(\citet[Theorem 2.1]{groh:1981}) %[Groh (1981), Theorem 2.1])
+Recall that for every positive map $T \in \L{M}$ there exists a state $\phi$ on $M$ such that $T'\phi = r(T)\phi$, where $r(T)$ denotes the spectral radius of $T$. (\citet[Theorem 2.1]{groh:1981}) %[Groh (1981), Theorem 2.1])
 
 Let us start our investigation with two lemmata, where $ \Fix{T} $ is the fixed space of $T$, \ie the set $ \{x\in M \colon Tx=x \}$.
 %% --
@@ -76,7 +76,7 @@ Suppose $M$ to be a \CA-algebra and $ T \in \L{M} $ an identity preserving Schwa
 
 \begin{enumerate}[(i)]
 \item 
-Let $ b \colon M \times M \to M $ be a sesquilinear map such that for all $ z \in M $ $ b(z,z) \geq 0 $.
+Let $ b \colon M \times M \to M $ be a sesquilinear map such that $ b(z,z) \geq 0 $ for all $ z \in M $.
 Then $ b(x,x) = 0 $ for some $x\in M$ if and only if $b(x,y) = 0$ and $b(y,x) = 0$ for all $y\in M$.
 
 \item 
@@ -132,13 +132,13 @@ If the closed subspace $s(|\phi|)M$ is T-invariant, then $Su^{*} = u^{*}$ and $T
 \end{lemma}
 %% --
 \begin{proof}
-(i) Define a positive semidefinite sesquilinear map $b: M\times M \to M$ by
+(i) Define a positive semidefinite sesquilinear map $b: M\times M \mapsto M$ by
 %% -- 
 \[
 b(x,y) \coloneqq T(xy^{*}) - S(x)S(y)^{*} \quad (x, y\in M).
 \]
 %% -- 
-Since $b(v^{*},v^{*}) = 0$ we obtain $b(x,v^{*}) = 0$ for all $x \in M$ (Lemma 1.1.a), hence $T(xv) = S(x)v$.
+Since $b(v^{*},v^{*}) = 0$ we obtain $b(x,v^{*}) = 0$ for all $x \in M$ (Lemma 1.1.i), hence $T(xv) = S(x)v$.
 
 (ii)
 Since $s(|\phi|)M$ is a closed right ideal, the closed face $F \coloneqq s(|\phi|)(M_{+})s(|\phi|)$ determines $s(|\phi|)M$ uniquely, \ie,
@@ -147,7 +147,7 @@ Since $s(|\phi|)M$ is a closed right ideal, the closed face $F \coloneqq s(|\phi
 s(|\phi|)M = \{x \in M \colon xx^{*} \in F\}
 \]
 %% --
-(\citet[Theorem 1.5.2]{pedersen:1979}) %[Pedersen (1979), Theorem 1.5.2].
+(\citet[Theorem 1.5.2]{pedersen:1979}). %[Pedersen (1979), Theorem 1.5.2].
 Since $T$ is a Schwarz map and $s(|\phi|)M$ is $T$-invariant, it follows $TF \subseteq F$.
 On the other hand, if $x \in s(|\phi|)M$ then $xx^{*} \in F$.
 Consequently,
