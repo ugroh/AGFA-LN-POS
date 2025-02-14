@@ -6,43 +6,38 @@
 %% --
 
 \documentclass[%
-,12pt		% für Korrekturen % wegmachen und Zeilenabstand größer machen
-,oneside]
-	{book}
+%,12pt		% für Korrekturen % wegmachen und Zeilenabstand größer machen
+,oneside]{book}
 
 %% -- Für das Korrekturlesen
 %% --
 
 %\usepackage{setspace}
+%\onehalfspacing
 %\doublespacing 
 
 %% -- Gemeinsame Pakete und Definitionen
 %% --
-\input{ln-preamble}  
+\input{../../preamble/ln-preamble}  
+\input{../../preamble/ln-definitionen}
 
-%% -- Gemeinsame Abkürzungen
-%% --
-
-\input{ln-definitionen}
-
-%% -- Index für später
+%% -- Index 
 %% --
 
 %\usepackage{imakeidx}
 %\makeindex[columns=2, options=-s svind.ist]
 
 
-%% -- Literatur für später
+%% -- Literatur 
 %% -- 
 
-%\usepackage[round]{natbib}
-%%\bibliographystyle{spmpsci}
-%\bibliographystyle{abbrvnat}
+\usepackage[round]{natbib}
+\bibliographystyle{abbrvnat}
 
 %% --
 
 \usepackage{hyperref}
-\hypersetup{%
+\hypersetup{% 
 ,colorlinks=true 
 ,linkcolor=blue
 ,citecolor=blue
@@ -50,7 +45,9 @@
 ,linktoc=all
 %,hidelinks=true
 }
-        
+
+%% -- label prüfen
+%%\usepackage{showkeys}  
 %% --
            
 \begin{document}
@@ -64,16 +61,12 @@
 %% -- Das LaTeX-File
 %% --
 
-\input{chap-b3}
+\input{chap-a3}
 
 %% -- Literatur
 %% --
-
-% -- ln-references.bib im gleichen Verzeichnis
-%% -- oder im TeX-Baum texmf/bibtex/bib
-%% --
 %\RaggedRight
-%\bibliography{ln-references} 
+%\bibliography{../../bib/ln-references} 
 
 %% -- Index
 %% --

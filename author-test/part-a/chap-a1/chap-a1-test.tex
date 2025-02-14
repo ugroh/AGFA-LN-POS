@@ -28,16 +28,15 @@
 %% -- Index für später
 %% --
 
-%\usepackage{imakeidx}
-%\makeindex[columns=2, options=-s svind.ist]
+\usepackage{imakeidx}
+\makeindex[columns=2, options=-s svind.ist]
 
 
 %% -- Literatur für später
 %% -- 
 
-%\usepackage[round]{natbib}
-%%\bibliographystyle{spmpsci}
-%\bibliographystyle{abbrvnat}
+\usepackage[round]{natbib}
+\bibliographystyle{abbrvnat}
 
 %% --
 
@@ -52,6 +51,8 @@
 }
         
 %% --
+\usepackage{showkeys}
+
            
 \begin{document}
 
@@ -68,18 +69,14 @@
 
 %% -- Literatur
 %% --
-
-% -- ln-references.bib im gleichen Verzeichnis
-%% -- oder im TeX-Baum texmf/bibtex/bib
-%% --
-%\RaggedRight
-%\bibliography{ln-references} 
+\RaggedRight
+\bibliography{../../bib/ln-references} 
 
 %% -- Index
 %% --
 
-%\clearpage
-%\printindex
+\clearpage
+\printindex
 
 %% --
 \end{document}
