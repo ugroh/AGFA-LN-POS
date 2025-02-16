@@ -54,7 +54,7 @@ Dazu die KI [Claude](http://claude.ai) nutzen:
 
 * Anmelden bei Claude und eine Session starten und am Anfang mal mit dem System etwas »spielen«
 * Claude mitteilen, dass man ein `PDF`in `LaTeX` umsetzen will und ihm dabei die [Anleitung mitgeben](https://github.com/ugroh/AGFA-LN-POS/blob/main/anleitung-claude.md), etwa mit `Copy&Paste`. Ihn aber fragen, ob er alles verstanden hat (kann man mehrmals machen)
-* Dann in das Unterverzeichnis unter `author-test/part-a/chap-ax` gehen, für das man zuständig ist und die Seiten des Kapitels mit `Copy&Paste` bei Claude einsetze`:
+* Dann in das Unterverzeichnis unter `author-test/part-a/chap-ax` gehen, für das man zuständig ist und die Seiten des Kapitels mit `Copy&Paste` bei Claude einsetzen:
 	* Die jeweilige Seite via `Copy & Paste` in die Claude-Chatseite einkopieren
 	* Abwarten, was Claude damit macht und ihm eventuell Hinweise geben, was er besser machen soll
 	* Die umgesetzte Seite in `chap-ax.tex`kopieren und einen Testlauf mit `LaTeX` machen. Eventuelle Fehler werden so seitenweise schnell erkannt und können korrigiert werden. Manchmal fehlen eventuell `\end{}` Befehle. Die kann man zwischenzeitlich am Ende der jeweiligen Seite einfügen und beim nächsten Mal, wenn diese entbehrlich sind, entfernen.

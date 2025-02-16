@@ -1,4 +1,4 @@
-##### How2Do (Stand: 2024/02/11)
+##### How2Do (Stand: 2024/02/16)
 
 ##### Struktur der Dateien
 
@@ -58,6 +58,10 @@ Damit es bei der Bearbeitung einigermaßen einheitlich zugeht, bitte ich folgend
 - Bitte prüfen, ob die Klammern dir rihtige Größe haben oder angepasst werden müssen (etwa bei Summenzeichen `\sum`). Dies bitte mittels `\left( ... \right)` machen. Gilt auch für Intervalle, etwa `[0,1]` sollte man als `\left[ 0,1 \right]`eingeben. 
 
 - Bitte momentan die Literaturzitate belassen und diese mit `[ ]` einklammern. Umwandeln kann man es dann via `\citet{engelnagel:2006}`oder `\citet[Thm. III.4.6.]{takesaki:1979}`. Wir besprechen dies separat, da hier `BibTeX `zuschlägt.
+
+##### Neu
+
+- Aufnahme des Paketes [empheq](https://ctan.org/pkg/empheq), mithilfe dessen man einfach mehrzeilige, abgesetzte mathematische Umgebungen mit Klammer u.ä. versehen kann. Beispiele dazu findet man in der Dokumentation.
 
 ##### `Overleaf`
 
