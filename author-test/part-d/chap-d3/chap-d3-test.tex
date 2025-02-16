@@ -6,14 +6,14 @@
 %% --
 
 \documentclass[%
-%,12pt		% für Korrekturen % wegmachen und Zeilenabstand größer machen
+,12pt		% für Korrekturen % wegmachen und Zeilenabstand größer machen
 ,oneside]{book}
 
 %% -- Für das Korrekturlesen
 %% --
 
-%\usepackage{setspace}
-%\onehalfspacing
+\usepackage{setspace}
+\onehalfspacing
 %\doublespacing 
 
 %% -- Gemeinsame Pakete und Definitionen
@@ -31,10 +31,11 @@
 %% -- Literatur 
 %% -- 
 
-\usepackage[round]{natbib}
+\usepackage[round]{natbib} 
 \bibliographystyle{abbrvnat}
 
 %% --
+%\usepackage[english,nospace]{varioref}
 
 \usepackage{hyperref}
 \hypersetup{% 
@@ -45,9 +46,12 @@
 ,linktoc=all
 %,hidelinks=true
 }
+%\usepackage{cleveref}
+%\crefname{rem}{Remark}{Remarks}
+
 
 %% -- label prüfen
-%%\usepackage{showkeys}  
+%\usepackage{showkeys}  
 %% --
            
 \begin{document}
