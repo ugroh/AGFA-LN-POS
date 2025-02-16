@@ -1,4 +1,4 @@
-#### AGFA-LN-POS: Neuauflage das Buches LN1184 (Stand: 2024/02/11)
+#### AGFA-LN-POS: Neuauflage das Buches LN1184 (Stand: 2024/02/16)
 
 Das Projekt ist es, das Buch [LN 1184](https://github.com/ugroh/AGFA-LN-POS/blob/main/ablage-orig/ln-orig/ln-pos-1184.pdf), das im `PDF`-Format vorhanden ist, in das `LaTeX` umzuwandeln. Um dieses strukturiert anzugehen, ist auf `GitHub` das Repository [AGFA-LN-POS](https://github.com/ugroh/AGFA-LN-POS) angelegt worden, in dem sich alles findet, was dazu erforderlich ist. Man kann sich dieses herunterladen (grüner Knopf `Code` und dort als `zip`-Datei herunterladen) oder auch einzelne Dateien (Datei anklicken und dann findet sich rechts oben das Symbol dazu). Dann kann man alles löschen, was für die persönliche Bearbeitung unerheblich ist, d.h. alles außer `author-test` (aber siehe unten).
 
@@ -15,9 +15,11 @@ Noch etwas: Es lohnt sich, einen Blick auf  [https://tex.social](https://tex.soc
 	
 	  * `ln-defintionen.tex`enthält die Abkürzungen, die für die richtige Erstellung der Vorlagen erforderlich sind (beschrieben im `How2Do`).
 	  * `ln-preamble.tex`: Hier ist alles zusammengefasst, was wir für die Testphase nutzen. 
-	  * `ln-references.bib`: Die Literaturdatenbank.
+	  
+	* Das Unterverzeichnis `bib`: Enthält die Literaturdatenbank.
+	  * `ln-references.bib`
 
-​		Dies drei Dateien in das jeweilge Arbeitsverzecinis kopieren, da diese genutzt werden.  Besser: In den lokalen `TeX`Datenbaum kopieren, üblicherweise nach `texmf/tex/latex` bzw. `bibtex/bib`	
+	Auf diese Unterverzeichnisse wird in der Testdatei `chap-xa-test.tex` verweisen und muss daher nicht in die jeweiligen Unterverzeichnisse kopiert werden. 	
 
 * `springer:` Hier finden sich die Dateien des Pakets `svmono` und `svmult`von Springer. Für die Erstellung der einzelnen Beiträge sind diese nicht erforderlich. Wichtiger wäre es, mal in die Dokumente hereinzusehen, die sich unter `springer-manuals`finden. 
 	
@@ -38,7 +40,7 @@ Noch ein Hinweis: Da einzelne Seiten konvertiert werden, ist es sinnvoll, in der
 	\newpage
 	%% -- a4-n
 
-zu strukturieren, wobei `n` die Seitennummer des PDFs ist, das man umgewandelt hat. Dann kann man relativ einfach das neue PDF mit dem Original vergleichen und Fehler finden.
+zu strukturieren, wobei `n` die Seitennummer des PDFs ist, das man umgewandelt hat. Dann kann man relativ einfach das neue PDF mit dem Original vergleichen und Fehler finden. Wenn alles klappt, dann bitte dieses löschen und auch darauf achten, dass vor einem `\begin` und nach einem `end` keine Leerzeile steht. Ich empfehle hier diese mit `%% --` zu kommentieren – macht das Lesen des Textes einfacher. 
 
 ##### Literatur zu `LaTeX`
 
