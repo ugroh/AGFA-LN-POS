@@ -44,11 +44,16 @@ where $s(|\phi|)$ denotes the support projection of $|\phi|$ in $M$.
 We refer to this as the \emph{polar decomposition} of $\phi$.
 In addition, $|\phi|$ is \emph{uniquely determined} by the following two conditions.
 %% -- 
-\begin{align*}
-	\|\phi\| &= \| |\phi| \|, \\
-	|\phi(x)|^{2} &\leq |\phi|(xx^{*}) \quad (x\in M).
-\end{align*}
+%\begin{align*}
+%	\|\phi\| &= \| |\phi| \|, \\
+%	|\phi(x)|^{2} &\leq |\phi|(xx^{*}) \quad (x\in M).
+%\end{align*}
 %% -- 
+\begin{empheq}[right={\empheqrbrace \,\text{(*)}}]{align*}
+    \|\phi\| &= \| |\phi| \| \\
+    |\phi(x)|^{2} &\leq |\phi|(xx^{*}) \quad (x\in M)
+\end{empheq}
+%% --
 For the polar decomposition of $\phi^{*}$, where $\phi^{*}(x) = \overline{\phi(x^{*}})$, we obtain
 %% -- 
 \[
@@ -188,7 +193,7 @@ Take $S$ and $T$ as in Lemma~\ref{lem:d3-1.2}\,\ref{item:d3-1.2-ii}.
 If $V_{u^{*}}$ (\resp  $V_u$) is the map $(x \mapsto xu^{*})$ (\resp  $(x \mapsto xu)$) on $M$, then $V_{u^{*}}$ is a continuous bijection from $Ms(|\phi|)$ onto $Ms(|\phi^{*}|)$ with inverse $V_u$ (because $V_u \circ V_{u^{*}} = \operatorname{Id}_{Ms(|\phi|)}$ and $V_{u^{*}} \circ V_u = \operatorname{Id}_{Ms(|\phi^{*}|)}$).
 Let $x \in M$.
 From $T(xu) = S(x)u$ we obtain $T(xu)u^{*} = S(x)uu^{*}$.
-In particular, if $Ms(|\phi^{*}|)$ is $\SS$-invariant, then
+In particular, if $Ms(|\phi^{*}|)$ is $S$-invariant, then
 %% --
 \[
 	(V_{u^{*}} \circ T \circ V_u)(x) = T(xu)u^{*} = S(x)
@@ -211,9 +216,7 @@ More concrete applications of Lemma~\ref{lem:d3-1.2} will follow.
 \end{remark}
 %% --
 We now investigate the fixed space $\Fix{R} \coloneqq \Fix{\lambda R(\lambda)}$, $\lambda \in D$, of a pseudo-resolvent $\RR$ with values in the predual of a \WA-algebra $M$.
-
-%\newpage
-
+%% --
 \begin{proposition}\label{prop:d3-1.4}
 Let $\RR$ be a pseudo-resolvent on $D = \{\lambda \in \C \colon \Re\,\lambda > 0\}$ with values in the predual $M_{*}$ of a \WA-algebra $M$ and suppose $\RR$ to be identity preserving and of Schwarz type.
 %% --
@@ -227,9 +230,7 @@ $ \Fix{\RR} $ is invariant under the involution in $M_{*}$.
 If $\psi \in \Fix{\RR} $ is self adjoint, then the positive part $\psi^{+}$ and the negative part $\psi^{-}$ of $\psi$ are elements of $ \Fix{\RR} $.
 \end{enumerate}
 \end{proposition}
-
 %% -- ln-part-d3_6 --%%
-
 \begin{proof}
 If $(\gamma - \im\alpha)R(\gamma)\psi = \psi$ then $(\lambda - \im\alpha)R(\lambda)\psi = \psi$ for all $\lambda \in D$.
 In particular, $\mu R(\mu + \im\alpha)\psi = \psi$ ($\mu \in \R_+$).
@@ -249,7 +250,7 @@ Since
 &= <\mu R(\mu)'1,|\psi|> = \| \mu R(\mu)|\psi| \|,
 \end{align*}
 %% --
-we obtain $\mu R(\mu)|\psi| = |\psi|$ by the uniqueness theorem for the absolut value mentioned above---
+we obtain $\mu R(\mu)|\psi| = |\psi|$ by the uniqueness theorem (*) above for the absolut value---
 therefore $|\psi| \in \Fix{\RR} $.
 Since
 %% --
