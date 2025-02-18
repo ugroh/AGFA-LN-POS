@@ -34,7 +34,7 @@
 
 %% -- Remarks und Examples
 %% -- 
-\spnewtheorem{remarks}[theorem]{Remarks}{\normalfont\bfseries}{\normalfont}
+\spnewtheorem{remarks}[theorem]{Remark}{\normalfont\bfseries}{\normalfont}
 \spnewtheorem{examples}[theorem]{Examples}{\normalfont\bfseries}{\normalfont}
 
 %% -- Nummer von Theorem etc. korrekt
@@ -58,7 +58,7 @@
 \let\c@definition=\c@theorem 	% Make definition share the theorem counter
 \let\c@example=\c@theorem 		% Make example share the theorem counter
 \let\c@definition=\c@theorem 	% Make definition share the theorem counter
-\let\c@examples=\c@theorem 	% Make examples share the theorem counter
+\let\c@examples=\c@theorem 		% Make examples share the theorem counter
 \let\c@lemma=\c@theorem 		% Make lemma share the theorem counter
 \let\c@corollary=\c@theorem 	% Make corollary share the theorem counter
 \let\c@proposition=\c@theorem 	% Make proposition share the theorem counter
@@ -68,8 +68,12 @@
 
 %% -- Pakete etc.
 %% -- 
-\input{./preamble/ln-preamble-final}
+\input{./preamble/ln-preamble-final}	
 \usepackage{mathtools}
+\usepackage{empheq}
+\counterwithin{equation}{section}
+
+%% --
 \usepackage{tikz}
 \usepackage{tikz-cd}
 
@@ -102,7 +106,7 @@
 	,urlcolor	= blue  %                                                              
 	,citecolor	= blue  %                                                          
 	,linkcolor	= blue	% oder black
-%  	,hidelinks 			% Vor dem Druck % entfernen
+  	,hidelinks 			% Vor dem Druck % entfernen
 	}
 	
 %% -- Stand
@@ -204,7 +208,7 @@
 \include{./part-a/chap-a3}
 \include{./part-a/chap-a4}
 \include{./part-a/appendix-a}
-%
+
 %%% -- Part-B
 \include{./part-b/part-b}
 \include{./part-b/chap-b1}
@@ -212,7 +216,7 @@
 \include{./part-b/chap-b3}
 \include{./part-b/chap-b4}
 \include{./part-b/appendix-b}
-%
+
 %%% -- Part-C
 \include{./part-c/part-c}
 \include{./part-c/chap-c1}
@@ -220,7 +224,7 @@
 \include{./part-c/chap-c3}
 \include{./part-c/chap-c4}
 \include{author/part-c/appendix-c}
-%
+
 %% -- Part-D
 \include{./part-d/part-d}
 \include{./part-d/chap-d1}
@@ -231,11 +235,12 @@
 
 \backmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\cleardoublepage  % Neue Seite für die zusätzliche Literatur
+%\cleardoublepage  % Neue Seite für die zusätzliche Literatur
 %\section*{Additional References}  % oder ein anderer passender Titel
 %\nocite{*}  % Lädt alle Einträge aus der zusätzlichen Bibliographie
 %\bibliographystyle{abbrvnat}
-%\bibliography{./bib/ln-additional}  % Beachten Sie den anderen Dateinamen
+%\bibliography{bib/ln-references} % Beachten Sie den anderen Dateinamen
+
 \cleardoublepage 
 \printindex
 

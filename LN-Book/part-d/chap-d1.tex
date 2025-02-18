@@ -1,15 +1,14 @@
 % !TEX root = ../LN-Book.tex
-%% --
+% !TEX root = chap-d1-test.tex
 %% -- Chapter D-I
-%% -- Stand: 2025/02/08
 %% --
-\setcounter{chapter}{0}
-\chapter{Basic Results on Semigroups and Operator Algebras}\label{chap:d1}
+
+\chapter{Basic Results on Semigroups and Operator Algebras}\label{chap:D-I}
 \index{Operator Algebras}
-%% --
+
 This is not a systematic introduction to the theory of strongly continuous semigroups on \CA- and \WA-algebras.
 We only prepare for the following chapters on spectral and asymptotic theory by fixing the notations and introducing some standard constructions.
-For results on strongly continuous semigroups on Banach spaces, we refer to Chapter~\ref{chap:a1}.
+For results on strongly continuous semigroups on Banach spaces, we refer to Chapter A-I, \ref{chap:a1}.
 %% --
 \section{Notations}\label{sec:d1-1}
 \index{Operator Algebras!Notations}
@@ -75,7 +74,7 @@ Note that the preadjoint semigroup
 	\TT_{*} = \{ T(t)_{*} \colon T(t) \in \TT \}
 \]
 %% --
-is weakly, hence strongly continuous on $ M_{*} $. (\citet[Chap. I, Thm. 1.6]{engelnagel:2006})
+is weakly, hence strongly continuous on $ M_{*} $. (Chapter A-I, \ref{prop:a1-1.2})
 
 \item
 We call the semigroup $ \TT $ \emph{identity preserving} if $ T(t)\1 = \1 $ and of \emph{Schwarz type} if every $ T(t) $ is a Schwarz map.
@@ -120,7 +119,7 @@ for all $ x \in M $ and $ \mu \in \R_{+} $.
 %% --
 The same result holds if $ \,\TT $ is a weak*-semigroup of Schwarz type and $ \mathcal{S} $ is a weak*-semigroup on a \WA-algebra $ M $ such that $ (*) $ is fulfilled.
 \end{theorem}
-\pagebreak
+
 \begin{proof}
 From the assumption $ (*) $ it follows that
 %% --
@@ -170,7 +169,7 @@ Then for all $ \lambda \in \C $ with $ \Re \, (\lambda) > 0 $ we have
 In particular for all $ (\mu,\alpha) \in \R_{+} \times \R $ and $ x \in M $
 %% --
 \[
-(\mu R(\mu+\I \alpha,A)x)(\mu R(\mu + \I \alpha,A)x)^{*} \leq \mu R(\mu,A)(xx^{*}).
+(\mu R(\mu+\im \alpha,A)x)(\mu R(\mu + \im \alpha,A)x)^{*} \leq \mu R(\mu,A)(xx^{*}).
 \]
 %% --
 \end{corollary}
@@ -180,15 +179,13 @@ Let $ \lambda \in \C $ with $ \Re(\lambda) > 0 $.
 Then the semigroup
 %% --
 \[
-S \coloneqq \left(e^{- \I \Im (\lambda) t }T(t) \right)_{t \geq 0}
+S \coloneqq \left(e^{- \im  (\lambda) t }T(t) \right)_{t \geq 0}
 \]
 %% --
-fulfills the assumption of{\ }Thm.\,\ref{thm:d1-2.1} and $ B \coloneqq A - \I \lambda $ is the generator of $ S $.
+fulfills the assumption of{\ }Thm.\,\ref{thm:d1-2.1} and $ B \coloneqq A - \im \lambda $ is the generator of $ S $.
 Consequently $ R(\lambda,A) = R(\Re\lambda,B) $ and the corollary follows from Thm.~\ref{thm:d1-2.1}.
 %% --
 \end{proof}
-%% --
-\pagebreak
 %% --
 \begin{remark}\label{rem:d1-2.3}
 Since 
@@ -201,7 +198,7 @@ it follows from above, that $ \TT $ is a semigroup of Schwarz-type, if and only 
 %% --
 \end{remark}
 %% --
-As in Chapter~\ref{chap:a3} the following notion will be an important tool for the spectral theory of semigroups on \CA- and \WA-algebras.
+As in Section C-III the following notion will be an important tool for the spectral theory of semigroups on \CA- and \WA-algebras.
 %% --
 \begin{definition}\label{def:d1-2.4}
 Let $E$ be a Banach space and let $D$ be a non-empty open subset of $\C$.
@@ -348,18 +345,15 @@ Furthermore, if  $ \mathcal{R} $ is a pseudo-resolvent on
 with values in $ M_{*} $ which is identity preserving and of Schwarz type such that $ R(\mu)\phi = \phi $ for some $ \mu \in \R_{+} $, then $ \mathcal{R}_{\vert s(\phi)M_{*}s(\phi)} $ has the same properties.
 
 
-\RaggedRight
-\nocite{davies:1976, oseledets:1984, bourbaki:2004a}
-\bibliographystyle{abbrvnat}
-\bibliography{../bib/ln-references} 
-%% -- Ende d1_8
+
+
 %% --
-%\section*{Notes}
+\section*{Notes}
 
-%\begin{remark}\label{rem:d1-2.1}
-%The assumption that $ \TT $ is a semigroup of Schwarz type cannot be weakened in general to $ \TT $ being a positive contraction semigroup.
-%This is demonstrated through examples in \citet{davies:1980}, where $S(t)x$ is defined as $ e^{tB}x $ for a skew-adjoint generator $ B $ and $ T(t)x = x $.
-%\end{remark}
+For that we refer to \citet{brattelirobinson:1979}, \citet{davies:1976} and the survey article of \citet{oseledets:1984}.
 
-%For that we refer to \citet{brattelirobinson:1979}, \citet{davies:1976} and the survey article of \citet{oseledets:1984}.
+%% -- References
+\RaggedRight
+\bibliographystyle{abbrvnat}
+\bibliography{bib/ln-references}
 
