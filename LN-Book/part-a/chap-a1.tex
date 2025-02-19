@@ -150,17 +150,17 @@ In that case one has
 \end{equation}
 %% --
 \item
-For every $f \in E$ and $t > 0$ the element $\int_0^t T(s)f\,ds$ belongs to $D(A)$ and one has
+For every $f \in E$ and $t > 0$ the element $\int_0^t T(s)f\ds$ belongs to $D(A)$ and one has
 %% --
 \begin{equation}\label{eq:a1-1.3}
-    A\int_0^t T(s)f \,ds = T(t)f - f  .
+    A\int_0^t T(s)f \ds = T(t)f - f  .
 \end{equation}
 %% --
 \item
 If $f \in D(A)$, then
 %% --
 \begin{equation}\label{eq:a1-1.4}
-    \int_0^t T(s)Af \,ds = T(t)f - f  .
+    \int_0^t T(s)Af \ds = T(t)f - f  .
 \end{equation}
 
 %% --
@@ -258,7 +258,7 @@ In particular,
 R(\lambda,A)^{n+1}f = \frac{(-1)^{n}}{n!}\left(\frac{d}{d\lambda}\right)^{n} R(\lambda,A)f = \int_{0}^{\infty} e^{-\lambda t}\frac{t^{n}}{n!}T(t)f \, dt
 \end{equation}
 %% --
-for every $f \in E$, $n \geq 0$ and $\lambda \in \mathbb{C}$ with $\Re\lambda > \omega$.
+for every $f \in E$, $n \geq 0$ and $\lambda \in \mathbb{C}$ with $\Re(\lambda) > \omega$.
 \end{proposition}
 %% --
 %% --
@@ -316,7 +316,7 @@ We start with the class of semigroups mentioned after Definition~\ref{def:a1-1.1
 It follows from elementary operator theory that for every bounded operator $A$ in  $\LE$ the sum
 %% --
 \[
-    \sum_{n=0}^{\infty} \frac{t^{n}A^{n}}{n!} =: e^{tA}
+    \sum_{n=0}^{\infty} \frac{t^{n}A^{n}}{n!} = \colon e^{tA}
 \]
 %% --
 exists and determines a unique uniformly continuous (semi)group $(e^{tA})_{t \in \R}$ having $A$ as its generator.
@@ -393,7 +393,7 @@ This natural domain is a dense subspace of $C_{0}(X)$, resp. $L^{p}(X,\Sigma,\mu
 Moreover, $(M_{q},D(M_{q}))$ is a closed operator.
 This is easy in case $E = C_{0}(X)$.
 
-For $E = L^{p}(X,\Sigma,\mu)$, $1 \leq p < \infty$, we consider a sequence $(f_{n}) \subset E$ such that $\lim_{n \to \infty} f_{n} = f \in E$ and $\lim_{n \to \infty} qf_{n} =: g \in E$.
+For $E = L^{p}(X,\Sigma,\mu)$, $1 \leq p < \infty$, we consider a sequence $(f_{n}) \subset E$ such that $\lim_{n \to \infty} f_{n} = f \in E$ and $\lim_{n \to \infty} qf_{n} = \colon g \in E$.
 Choose a subsequence $(f_{n(k)})_{k \in \N}$ such that $\lim_{k \to \infty} f_{n(k)}(x) = f(x)$ and $\lim_{k \to \infty} q(x)f_{n(k)}(x) = g(x)$ for $\mu$-almost every $x \in X$.
 Then $g = q \cdot f$ and $f \in D(M_{q})$, i.e.\xspace $M_{q}$ is closed.
 
@@ -434,13 +434,13 @@ Then the properties (a) and (b), resp. (a') and (b'), are equivalent.
 	$M_{q}$ generates a strongly continuous semigroup.
 
 \item 
-	$\sup\{\Re q(x): x \in X \} < \infty$.
+	$\sup\{\Re( q(x)) \colon x \in X \} < \infty$.
 
 \item[(a')] 
 	$M_{q}$ generates a uniformly continuous semigroup.
 
 \item[(b')] 
-	$\sup\{|q(x)|: x \in X \} < \infty$.
+	$\sup\{|q(x)| \colon x \in X \} < \infty$.
 \end{enumerate}
 %% --
 \end{proposition}
@@ -448,13 +448,13 @@ Then the properties (a) and (b), resp. (a') and (b'), are equivalent.
 As a consequence one computes the growth bound of a multiplication semigroup as
 %% --
 \[
-    \omega_{0} = \sup\{\Re q(x) \colon x \in X\} 
+    \omega_{0} = \sup\{\Re(q(x)) \colon x \in X\} 
 \]
 %% --
 in the case $E = C_{0}(X)$ and 
 %% --
 \[
-    \omega_{0} = \mu\text{-ess-}\sup\{\Re q(x) \colon x \in X\} 
+    \omega_{0} = \mu\text{-ess-}\sup\{\Re(q(x)) \colon x \in X\} 
 \]
 %% --
 in the case  $E = L^{p}(\mu)$.
@@ -637,7 +637,7 @@ Obviously, each function
 \]
 %% --
 is contained in $D(B)$ and is an eigenfunction of $B$ pertaining to the eigenvalue $\lambda_{n} \coloneqq -\pi^{2}n^{2}$.
-The linear hull $\text{span }\{e_{n} \colon n \in \mathbb{Z}\} =: E_{0}$ forms a subalgebra of $D(B)$ which by the Stone-Weierstrass theorem is dense in $E$.
+The linear hull $\text{span }\{e_{n} \colon n \in \mathbb{Z}\} = \colon E_{0}$ forms a subalgebra of $D(B)$ which by the Stone-Weierstrass theorem is dense in $E$.
 
 We now use $e_{n}$ to define bounded linear operators 
 %
@@ -808,19 +808,18 @@ For example, by this rescaling we may in many cases suppose without loss of gene
 Another application is the following.
 For $\lambda \in \mathbb{C}$ and $S(t) \coloneqq \exp(-\lambda t)T(t)$ the formulas \emph{(1.3)} and \emph{(1.4)} yield:
 %% --
-\begin{align}
-    e^{-\lambda t}T(t)f - f &= (\lambda-A) \int_{0}^{t} e^{-\lambda s}T(s)f \,ds \notag \\
-    \text{or} \notag \\
-    (e^{\lambda t}-T(t))f &= (\lambda-A) \int_{0}^{t} e^{\lambda(t-s)}T(s)f \,ds \quad \text{for } f \in E, \tag{3.1}
-\end{align}
+\begin{align*}
+    e^{-\lambda t}T(t)f - f &= (\lambda-A) \int_{0}^{t} e^{-\lambda s}T(s)f \ds \text{ or }\notag \\
+    (e^{\lambda t}-T(t))f &= (\lambda-A) \int_{0}^{t} e^{\lambda(t-s)}T(s)f \ds \quad \text{for } f \in E, %\tag{3.1}
+\end{align*}
 %% --
 and
 %% --
-\begin{align}
-    e^{-\lambda t}T(t)f - f &= \int_{0}^{t} e^{-\lambda s}T(s)(\lambda-A)f \,ds \notag \\
-    \text{or} \notag \\
-    (e^{\lambda t} - T(t))f &= \int_{0}^{t} e^{\lambda(t-s)}T(s)(\lambda-A)f \,ds \quad \text{for } f \in D(A). \tag{3.2}
-\end{align}
+\begin{align*}
+    e^{-\lambda t}T(t)f - f &= \int_{0}^{t} e^{-\lambda s}T(s)(\lambda-A)f \ds  \text{or}\notag \\
+    \notag \\
+    (e^{\lambda t} - T(t))f &= \int_{0}^{t} e^{\lambda(t-s)}T(s)(\lambda-A)f \ds \quad \text{for } f \in D(A). %\tag{3.2}
+\end{align*}
 %% --
 %% --
 \subsection{The Subspace Semigroup}\label{subsec:a1-3.2}
@@ -829,7 +828,7 @@ and
 %% --
 Assume $F$ to be a closed $(T(t))$-invariant or, equivalently, $R(\lambda,A)$-invariant for 
 $\lambda \in \C$, 
-$ \Re \lambda > \omega_{0}$, subspace of $E$.
+$ \Re(\lambda) > \omega_{0}$, subspace of $E$.
 Then the semigroup $(T(t)_{|})_{t \geq 0}$ of all restrictions $T(t)_{|} \coloneqq T(t)_{|\,F}$ is strongly continuous on $F$.
 If $(A,D(A))$ denotes the generator of $(T(t))_{t \geq 0}$ it follows from the $(T(t))$-invariance and closedness of $F$ that $A$ maps $D(A) \cap F$ into $F$.
 Therefore
@@ -870,9 +869,9 @@ for every $f \in D(A)$.
 Here we use the fact that every $\hat{f} \coloneqq q(f) \in D(A_{/})$ can be written as
 %% --
 \[
-    \hat{f} = \int_{0}^{\infty} e^{-\lambda s} \hat{T}(s)_{/}\hat{g} \,ds 
-    = \int_{0}^{\infty} e^{-\lambda s}q(T(s)g) \,ds 
-    = q(\int_{0}^{\infty} e^{-\lambda s}T(s)g \,ds) = q(h)
+    \hat{f} = \int_{0}^{\infty} e^{-\lambda s} \hat{T}(s)_{/}\hat{g} \ds 
+    = \int_{0}^{\infty} e^{-\lambda s}q(T(s)g) \ds 
+    = q(\int_{0}^{\infty} e^{-\lambda s}T(s)g \ds) = q(h)
 \]
 %% --
 where $h \in D(A)$ and $\lambda > \omega$ (see Prop.\,\ref{prop:a1-1}).
@@ -944,7 +943,7 @@ Since the semigroup $(T(t)')_{t \geq 0}$ is obviously \emph{weak*-continuous} in
 %% --
 \begin{align*}
     A'\phi &\coloneqq \sigma(E',E)\text{-}\lim\frac{1}{h}(T(h)'\phi-\phi) \text{ for every } \phi \text{ in the domain} \\
-    D(A') &\coloneqq \{\phi \in E': \sigma(E',E)\text{-}\lim\frac{1}{h}(T(h)'\phi-\phi) \text{ exists}\}.
+    D(A') &\coloneqq \{\phi \in E' \colon \sigma(E',E)\text{-}\lim\frac{1}{h}(T(h)'\phi-\phi) \text{ exists}\}.
 \end{align*}
 %% --
 This operator coincides with the \emph{adjoint} of the generator $(A,D(A))$, i.e.\xspace
@@ -966,7 +965,7 @@ In order to achieve this we restrict $T(t)'$ to an appropriate subspace of $E'$.
 The \emph{semigroup dual} of the Banach space $E$ with respect to the strongly continuous semigroup $(T(t))_{t \geq 0}$ is
 %% --
 \[
-    E^{*} \coloneqq \{\phi \in E': \|\cdot\|\text{-}\lim_{t \to 0} T(t)'\phi = \phi\}.
+    E^{*} \coloneqq \{\phi \in E' \colon \|\cdot\|\text{-}\lim_{t \to 0} T(t)'\phi = \phi\}.
 \]
 %% --
 The adjoint semigroup on $E^{*}$ is given by the operators
@@ -1028,17 +1027,17 @@ Since $\{\xi_{f}'(t) \colon t \in [0,1], f \in D(A), \|f\| \leq 1\}$ is bounded,
     \{\xi_{f} \colon f \in D(A), \|f\| \leq 1\}
 \]
 %% --
-is equicontinuous at $0$, i.e.\xspace, for every $\varepsilon > 0$ there exists $0 < t_{0} < 1$ such that
+is equicontinuous at $0$, i.e.\xspace, for every $\epsilon > 0$ there exists $0 < t_{0} < 1$ such that
 %% --
 \[
-    |\xi_{f}(s) - \xi_{f}(0)| = |\langle f,T(s)'\phi - \phi \rangle| < \varepsilon
+    |\xi_{f}(s) - \xi_{f}(0)| = |\langle f,T(s)'\phi - \phi \rangle| < \epsilon
 \]
 %% --
 for every $0 \leq s \leq t_{0}$ and $f \in D(A)$, $\|f\| \leq 1$.
-But this implies $\|T(s)'\phi - \phi\| < \varepsilon$ and hence $\phi \in E^{*}$.
+But this implies $\|T(s)'\phi - \phi\| < \epsilon$ and hence $\phi \in E^{*}$.
 
 Conversely, take $\psi \in E^{*}$.
-Then $\frac{1}{t}\int_{0}^{t} T(s)'\psi \,ds$, $t > 0$, belongs to $D(A')$ and norm converges to $\psi$ as $t \to 0$, i.e.\xspace $\psi$ belongs to the norm closure of $D(A')$.
+Then $\frac{1}{t}\int_{0}^{t} T(s)'\psi \ds$, $t > 0$, belongs to $D(A')$ and norm converges to $\psi$ as $t \to 0$, i.e.\xspace $\psi$ belongs to the norm closure of $D(A')$.
 
 (ii) and (iii): Since the weak* topology on $E'$ is weaker than the norm topology, it follows that $A'$ is an extension of $A^{*}$.
 Now take $\phi \in D(A')$ such that $A'\phi \in E^{*}$.
@@ -1050,18 +1049,18 @@ The assumption on $\phi$ implies the set of all derivatives
 \]
 %% --
 to be equicontinuous at $t = 0$. 
-This means that for every $\varepsilon > 0$ there exists $0 < t_o < 1$ such that $|f_f'(0) - f_f'(s)| < \varepsilon$ for every $f \in D(A)$, $\|f\| \leq 1$ and $0 < s < t_o$.
+This means that for every $\epsilon > 0$ there exists $0 < t_o < 1$ such that $|f_f'(0) - f_f'(s)| < \epsilon$ for every $f \in D(A)$, $\|f\| \leq 1$ and $0 < s < t_o$.
 %% --
 In particular,
 %% --
 \[
-    \varepsilon > |f'_f(0) - \frac{1}{s}(\xi_f(s)-\xi_f(0))| = |<f,A'\phi - \frac{1}{s}(T(s)'\phi-\phi)>| ,
+    \epsilon > |f'_f(0) - \frac{1}{s}(\xi_f(s)-\xi_f(0))| = |<f,A'\phi - \frac{1}{s}(T(s)'\phi-\phi)>| ,
 \]
 %% --
 hence
 %% --
 \[
-    \varepsilon > \|A'\phi - \frac{1}{s}(T(s)'\phi-\phi)\|
+    \epsilon > \|A'\phi - \frac{1}{s}(T(s)'\phi-\phi)\|
 \]
 %% --
 for all $0 \leq s \leq t_o$.
@@ -1419,15 +1418,15 @@ Then
 $\|u\|_{\pi} \coloneqq \inf\{\sum_{j=1}^{m} \|h_{j}\|\|k_{j}\| \colon u = \sum_{j=1}^{m}h_{j} \otimes k_{j}, h_{j} \in E, k_{j} \in F\}$ defines the \emph{greatest cross norm $\pi$} on $E \otimes F$.
 
 \item
-$\|u\|_{\varepsilon} \coloneqq \sup\{\langle u,\phi \otimes \psi\rangle \colon \phi \in E', \psi \in F', \|\phi\|, \|\psi\| \leq 1\}$ defines the 
-\emph{least cross norm $\varepsilon$} on $E \times F$. 
+$\|u\|_{\epsilon} \coloneqq \sup\{\langle u,\phi \otimes \psi\rangle \colon \phi \in E', \psi \in F', \|\phi\|, \|\psi\| \leq 1\}$ defines the 
+\emph{least cross norm $\epsilon$} on $E \times F$. 
 Here, $\langle u,\phi \otimes \psi\rangle$ denotes the canonical bilinear form on $(E \otimes F) \times (E' \otimes F')$, i.e.\xspace, $\langle\sum_{i=1}^{n} f_{i} \otimes g_{i},\phi \otimes \psi\rangle = \sum_{i=1}^{n} \langle f_{i},\phi\rangle\langle g_{i},\psi\rangle$.
 
 \item
 if $E$ and $F$ are Hilbert spaces, $\|u\|_{h} = (u|u)_{h}^{1/2}$, where the scalar product $(\cdot|\cdot)_{h}$ is defined as in (ii), defines the \emph{Hilbert norm $h$} on $E \otimes F$.
 \end{enumerate}
 %% --
-In the following we write $E \otimes_{\alpha} F$ for the tensor product of $E$ and $F$ endowed---if applicable---with one of the norms $\pi$, $\varepsilon$, $h$ just defined.
+In the following we write $E \otimes_{\alpha} F$ for the tensor product of $E$ and $F$ endowed---if applicable---with one of the norms $\pi$, $\epsilon$, $h$ just defined.
 In each case one has $\|f \otimes g\| = \|f\|\|g\|$ for $f \in E$, $g \in F$.
 
 By $E \widetilde{\otimes}_{\alpha} F$ we mean the completion of $E \otimes_{\alpha} F$. 
@@ -1438,7 +1437,7 @@ Moreover we recall how examples (i) and (ii) above fit into this pattern
     \quad L^{2}(\mu \otimes \nu) = L^{2}(\mu) \widetilde{\otimes}_{h} L^{2}(\nu),
 \]
 \[
-    C(X \otimes Y) = C(X) \widetilde{\otimes}_{\varepsilon} C(Y).
+    C(X \otimes Y) = C(X) \widetilde{\otimes}_{\epsilon} C(Y).
 \]
 %% --
 Finally, we point out that for any $S \in \LE$, $T \in \L{F} $, the mapping
@@ -1513,6 +1512,7 @@ Prop.~\ref{prop:a1-1.9}\,(ii) on p.~\pageref{prop:a1-1.9}
 one easily shows that $D_{0} \coloneqq D(A) \cap D(B)$ is a core for its generator $C$ and $Cf = Af + Bf$ for all $f \in D_{0}$.
 
 \section*{Notes}
+\addcontentsline{toc}{section}{Notes}
 \index{Notes!Semigroup Theory}
 
 For more complete information on semigroup theory we refer the reader to \citet{hillephillips:1957}, to the monographs by \citet{davies:1980}, 
