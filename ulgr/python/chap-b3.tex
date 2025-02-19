@@ -8,8 +8,8 @@
 %% --
 It is known that for a single operator $T \in \L{C_{0}(X)}$ the positivity of $T$ has influence on the spectrum of $T$, mainly on the peripheral spectrum, \ie the part of the spectrum containing all spectral values of maximal absolute value.
 This part of the spectrum is of interest because it determines the asymptotic behavior of the iterates $T^{n}$ for large $n \in \N$.
-The spectral properties indicated above were first proved by \citet{perron:1907} and \citet{frobenius:1909} for positive square matrices, \ie for positive operators on the Banach lattice $\C^{n}$.
-Later these results were extended to the infinite dimensional setting; important contributions are due to Jentzsch, Karlin, Krein, Krasnoselski'i, Lotz, Rota, Rutman, Schaefer and others (see Chapt.V of \citet{schaefer:1974}).
+The spectral properties indicated above were first proved by [Perron (1907)] and [Frobenius (1909)] for positive square matrices, \ie for positive operators on the Banach lattice $\C^{n}$.
+Later these results were extended to the infinite dimensional setting; important contributions are due to Jentzsch, Karlin, Krein, Krasnoselski'i, Lotz, Rota, Rutman, Schaefer and others (see Chapt.V of [Schaefer (1974)]).
 
 In this chapter we investigate the spectrum $\sigma(A)$ of the generator $A$ of a positive semigroup $\TT = (T(t))_{t \geq 0}$ on the Banach space $C_{0}(X)$.
 Throughout this chapter we assume that $C_{0}(X)$ is the space of all \emph{complex-valued} functions on the locally compact space $X$.
@@ -112,7 +112,7 @@ It is the generator of a positive non-nilpotent semigroup which is given by
 	
 \item 
 Taking into account that $C_{0}(\left[0,1\right[))$ as well as 
-$C_{0}(\left[0,\infty\right[)$ both are topologically (but not isometrically) isomorphic to $C(\left[0,1\right])$ (see \citet[Sec.21.5]{semadeni:1971}), one obtains from (i) and (ii) (non-positive) semigroups on $C(\left[0,1\right])$ whose generators have empty spectrum.
+$C_{0}(\left[0,\infty\right[)$ both are topologically (but not isometrically) isomorphic to $C(\left[0,1\right])$ (see [Semadeni (1971), Sec.21.5]), one obtains from (i) and (ii) (non-positive) semigroups on $C(\left[0,1\right])$ whose generators have empty spectrum.
 \end{enumerate}
 \end{examples}
 %% --
@@ -239,7 +239,7 @@ If $r$ is an eigenvalue of $T(\tau)'$ with positive eigenvector $\phi_{0}$, then
 \end{proof}
 %% --
 We use Prop.1.5 to prove an analogue of the famous Krein-Rutman result.
-For the sake of completeness we include the proof of this classical result, which states that the spectral radius of a positive operator $T$ on $C(K)$ (or more generally on an order unit space) is an eigenvalue of the adjoint $T'$ (see the Corollary of Thm.2.6 in the appendix of \citet{schaefer:1966}).
+For the sake of completeness we include the proof of this classical result, which states that the spectral radius of a positive operator $T$ on $C(K)$ (or more generally on an order unit space) is an eigenvalue of the adjoint $T'$ (see the Corollary of Thm.2.6 in the appendix of [Schaefer (1966)]).
 %% --
 \begin{theorem}\label{thm:b3-1.6}
 %	\index{Theorem!Krein-Rutman}
@@ -639,10 +639,10 @@ Our first result concerns cyclicity of the eigenvalues contained in the boundary
 	In view of the rescaling procedure we may assume $s(A) = 0$.
 	By Prop.1.5(b) there exists $\Psi \gg 0$ such that $T(t)'\Psi = \Psi$ for all $t \geq 0$.
 	Given $\im \alpha \in P\sigma_{b}(A)$ then there is $h \in C_{0}(X)$, $h \neq 0$ such that $Ah = \im\alpha h$ or $T(t)h = e^{i\alpha t}h$ for all $t$ (A-III, Cor.6.4).
-%			
-%\newpage
-%%% -- page 12
-%%%
+			
+\newpage
+%% -- page 12
+%%
 	Then we have
 	%% --
 	\begin{equation}\label{eq:b3-2.14}
@@ -1135,7 +1135,7 @@ Obviously $I$ is $\TT$-invariant.
 (b) $\implies$ (c): Given $0 < f \in E$, $x \in X$.
 By (ii) there exists $t_{0}$ such that $(T(t_{0})f)(x) = \langle T(t_{0})f,\delta_{x} \rangle > 0$
 
-(c) $\implies$ (d): Suppose that $\bigcup_{t \geq 0}\supp T(t)'\delta_{y}$ is not dense for some $y \in X$.
+(ic) $\implies$ (d): Suppose that $\bigcup_{t \geq 0}\supp T(t)'\delta_{y}$ is not dense for some $y \in X$.
 Then there exists $f_{0} \in E$, $f_{0} > 0$ such that 
 $\supp f_{0} \cap \supp T(t)'\delta_{y} = \emptyset$ for every $t \geq 0$.
 Hence $(T(t)f_{0})(y) = \langle f_{0},T(t)'\delta_{y} \rangle > 0$, that is, $y \notin \bigcup_{t\geq 0}\{x \in X : (T(t)f_{0})(x) > 0\}$.
@@ -1159,7 +1159,7 @@ $\TT$-invariant and vice versa.
 %	\index{Semigroups!Irreducible!Conditions}
 	Obviously, irreducibility of a semigroup $(T(t))_{t\geq 0}$ is implied by the following condition:
 
-\begin{enumerate}[(g)]	
+\begin{enumerate}[(a), resume]	
 \item\label{item:b3-3.1-vii}
 $T(t)f \gg 0$ whenever $f > 0$ and $t > 0$.
 \end{enumerate}
@@ -1245,7 +1245,7 @@ Bitte die Umgebung \texttt{enumerate} verwenden, siehe \TeX{}-Datei und Äquival
 	
 	The operator $Af = f'' - Vf$ on $C_{0}(\R)$, where $V$ is continuous, real-valued with $\inf V(x) > -\infty$ (see Example 2.14(a)) also generates an irreducible semigroup.
 	This can be derived from the maximum principle as follows: For $\lambda > -\inf V(x)$, $f \in C_{0}(\R)$, $g \coloneq R(\lambda,A)f$ we have $g \in C^2$ and $g'' - (\lambda + V)g = -f$.
-	If $f > 0$, then $g > 0$, hence \citet[Chap.I, Thm.3]{protterweinberger:1967} implies that $g$ is strictly positive.
+	If $f > 0$, then $g > 0$, hence [Protter-Weinberger (1967), Chap.I, Thm.3] implies that $g$ is strictly positive.
 	
 	(f) The Laplacian $\Delta$ generates an irreducible semigroup on $C_{0}(\R^n)$ as can be seen easily from A-I,2.8.
 	More general elliptic operators will be discussed below (see Ex.3.10(b)).
@@ -1411,7 +1411,7 @@ Therefore $\langle h\cdot P_{n}(h),\Psi\rangle = 0$ and we have $0 < \langle|h|,
 \end{proof}
 %% --
 The group $P\sigma(A) \cap \im\R$ need not be discrete. For example, the semigroup described in Ex.2.6(d) satisfies the assumptions of Thm.3.6 if $\frac{\alpha}{\beta}$ is irrational. In this case $P\sigma(A) = \im\alpha \Z + \im\beta \Z$ is a dense subgroup of $\im \R$. Actually one can show that for every subgroup $H$ of $\im \R$ there is an irreducible semigroup on $C(G), G \coloneqq (H_d)\,{\tilde{ }}$, such that 
-$P\sigma(A) = H)$. Here $(H_d)\,{\tilde{ }}$ denotes the dual of the abelian group $H$ equipped with the discrete topology. For details see \citet[p.62]{greiner:1982}. 
+$P\sigma(A) = H)$. Here $(H_d)\,{\tilde{ }}$ denotes the dual of the abelian group $H$ equipped with the discrete topology. For details see [Greiner (1982), p.62]. 
 
 An immediate consequence of assertion (d) of Theorem 3.6 is the following corollary. 
 %% --
@@ -1511,13 +1511,13 @@ We give some examples.
 	(Here $f_{i}'$ stands for $\partial f/\partial x_{i}$, and $f_{ij}' = \partial^{2}f/\partial x_{i}\partial x_{j}$)
 	
 	Suppose that $L_{0}$ is elliptic, $a_{ij}$, $b_{i}$, $c$ are real-valued $C^{\infty}$-functions with $\lambda_{0} \coloneq \sup c < \infty$, assume further that the closure $L$ of $L_{0}$ is the generator of a positive semigroup on $C_{0}(\Omega)$ which has compact resolvent.
-	For example this is true if $\partial\Omega$ is $C^{\infty}$ and $a_{ij} \in C^{\infty}(\overline{\Omega})$ (cf Thm.4.8.3 of \citet{fattorini:1983}).
+	For example this is true if $\partial\Omega$ is $C^{\infty}$ and $a_{ij} \in C^{\infty}(\overline{\Omega})$ (cf Thm.4.8.3 of [Fattorini (1983)]).
 	We will show that $P\sigma(A)\cap(s(A) + \im\R) = \{s(A)\}$.
 	
 	In order to apply Thm.3.6 we have to show that the corresponding semigroup $(T(t))$ is irreducible:
 	Given $0 < f \in E$ then there is $g \in D(L_{0})$ such that $0 < g \leq f$.
 	$h \coloneq R(\lambda,L)g$ is $C^{\infty}$ (Weyl's Lemma) and satisfies $L_{0}h - \lambda h = -g < 0$.
-	Assuming that $\lambda > \lambda_{0}$ then $h$ is positive, even strictly positive by the maximum principle \citet[Chap.2, Thm.6]{protterweinberger:1967}.
+	Assuming that $\lambda > \lambda_{0}$ then $h$ is positive, even strictly positive by the maximum principle [Protter-Weinberger (1967), Chap.2, Thm.6].
 	It follows from $R(\lambda,L)f \geq R(\lambda,L)g = h \gg 0$ that $(T(t))$ is irreducible.
 	
 	Next we apply Thm.3.6(d) in order to show that the spectral bound is a dominant eigenvalue.
@@ -1566,7 +1566,7 @@ We give some examples.
 In this section we have seen that the eigenvalues in the boundary spectrum of an irreducible semigroup form a subgroup of $\im \R$ (provided that $s(A) = 0$).
 We conclude this section mentioning an analogous statement for the whole boundary spectrum of Markov semigroups on $C(K)$, $K$ compact.
 It seems to be unknown if this is true for irreducible semigroups in general.
-To prove this result one uses the proof of the analogous result for a single operator (cf. \citet[Thm.7]{schaefer:1968}) as a guideline.
+To prove this result one uses the proof of the analogous result for a single operator (cf. [Schaefer (1968), Thm.7]) as a guideline.
 %% --
 \begin{theorem}\label{thm:b3-3.11}
 %	\index{Semigroups!Irreducible!Markov}
@@ -1606,7 +1606,7 @@ A complete proof of this results requires some facts of the theory of Banach lat
 \end{proof}
 %% --
 Performing a similar construction as in Ex.2.6(f) one can show that every closed cyclic subset of $\C$  which is contained in a left half­plane is the spectrum of a suitable semigroup of lattice homomor­phisms. 
-For details see \citet{derndingernagel:1979}. 
+For details see [Derndinger-Nagel (1979)]. 
 In the following we restrict ourselves to the case of compact spaces. 
 Then a semigroup of lattice homomorphisms can be described explicitly by a semi-flow $\phi$, and real-valued functions $h$ and $p$ (see B-II, Thms.3.5 \& 3.6). The function $p$ has no influence on spectral proper­ties (cf. B-II,(3.7)). Therefore we will assume that $(T(t))$ has the following form (cf. B-II,Thm.3.5): 
 %% --
@@ -1881,7 +1881,7 @@ Ex.4.3(d) shows that (a) and (b) do not exclude each other.
 		\end{aligned}
 	\end{equation}
 	%% --
-	For details see Sect.18.2 of \citet{dieudonne:1971}.
+	For details see Sect.18.2 of [Dieudonné (1971)].
 	\begin{enumerate}[(i), wide]
 	\item
 	If $\phi_{0}$ is a global flow, \ie if $\phi_{0}$ is defined on $\R \times \R^n$, then one has a corresponding (semi-)group on $C_{0}(\R^n)$.
@@ -1900,7 +1900,7 @@ Ex.4.3(d) shows that (a) and (b) do not exclude each other.
 %\newpage
 %% -- page 36  / 198
 %%
-A global flow exists if $F$ is globally Lipschitz continuous or uniformly bounded. For $\{x \in \R^n : (x|F(x)) > 0\}$ bounded in $\R^n$, a global semiflow always exists (cf. \citet[Sec.5.2]{deimling:1977}).
+A global flow exists if $F$ is globally Lipschitz continuous or uniformly bounded. For $\{x \in \R^n : (x|F(x)) > 0\}$ bounded in $\R^n$, a global semiflow always exists (cf. [Deimling (1977), Sec.5.2]).
 %% --
 	\item 
 	We do not asssume that  $\phi_0$ is globally defined.
@@ -2141,7 +2141,7 @@ In this case one can construct semi-flows associated with $(T(t))$ on $X\cup\{\i
 
 The situation is much nicer when groups of lattice homomorphisms instead of semigroups are considered.
 In this case there is an analogue of (4.1) (cf. B-II,Thm.3.14) and the spectrum can be described completely.
-For more details and the proof of the following result we refer to \citet{arendtgreiner:1984}.
+For more details and the proof of the following result we refer to [Arendt-Greiner (1984)].
 %% --
 \begin{theorem}\label{thm:b3-4.11}
 	Suppose $X$ is a locally compact space and $(T(t))_{t\in\R}$ is a group of lattice homomorphisms governed by the flow $\phi$ and the multiplicator $h$.
@@ -2173,7 +2173,7 @@ Many of the results we have presented in this chapter have analogues in the disc
 This relation may serve as a guide.
 However, only in few cases can the continuous version be deduced directly from its discrete analogue.
 Therefore we will not try to trace back the roots of every result to the discrete version.
-Instead we refer to \citet{schaefer:1974} and the notes and references given there.
+Instead we refer to [Schaefer (1974)] and the notes and references given there.
 
 Many of the results we have presented in this chapter can be extended (more or less easily) to the more general setting of Banach lattices, which include the very important examples of $L^p$-spaces.
 Others are typical for $C_{0}(X)$ and allow no extension.
@@ -2182,16 +2182,16 @@ The more general setting considered there also allows us to prove results for $C
 
 \begin{enumerate}[label=\emph{Section \arabic*:}, wide]
 \item
-Theorem~\ref{thm:b3-1.1} was stated by \citet{karlin:1959}, but a complete proof is given in \citet{derndinger:1980}.
-Proposition 1.5 is taken from \citet{greiner:1982} and Theorem 1.6 is (implicitely) contained in \citet{derndingernagel:1979}.
-A generalization to (non-lattice) ordered Banach spaces can be found in Sec.2.4 of \citet{battyrobinson:1984}.
+Theorem~\ref{thm:b3-1.1} was stated by [Karlin (1959)], but a complete proof is given in [Derndinger (1980)].
+Proposition 1.5 is taken from [Greiner (1982)] and Theorem 1.6 is (implicitely) contained in [Derndinger-Nagel (1979)].
+A generalization to (non-lattice) ordered Banach spaces can be found in Sec.2.4 of [Batty-Robinson (1984)].
 
 \item
-Lemma 2.3 dates back to Rota (see \citet{schaefer:1974}).
-Our approach follows \citet{greiner:1981}.
-The notion \enquote{(imaginary) additively cyclic} was introduced by \citet{derndinger:1980} (and {Schaefer (1980)} respectively).
+Lemma 2.3 dates back to Rota (see [Schaefer (1974)]).
+Our approach follows [Greiner (1981)].
+The notion \enquote{(imaginary) additively cyclic} was introduced by [Derndinger (1980)] (and {Schaefer (1980)} respectively).
 Derndinger proves some cyclicity results for the boundary spectrum.
-A result similar to Proposition 2.7 is given in Sec.7.4 of \citet{davies:1980}.
+A result similar to Proposition 2.7 is given in Sec.7.4 of [Davies (1980)].
 Lemma 2.8 in combination with C-III,Lemma 3.13 can be used to characterize semigroups whose spectral bound is a pole of finite algebraic multiplicity (see C-III,(3.19)).
 The hypothesis of Theorem 2.9 can be weakened, one only needs that $s(A)$ is a pole of the resolvent (see C-III,Cor.2.12).
 Further results on the cyclicity of the boundary spectrum will be given in Chapter C-III.
@@ -2205,21 +2205,21 @@ We return to Remark 2.15(b) in Section 2 of B-IV.
 \item
 The concept of irreducibility as defined in 3.1 is closely related to various other notions:
 In topological dynamics flows inducing irreducible semigroups are called \enquote{minimal flows} (cf. Example 3.4(a)).
-Moreover, \enquote{ergodicity} and \enquote{unique ergodicity} are closely related to irreducibility (see\citet{cornfeldfominsinai:1982} or \citet{krengel:1985}).
-Irreducible semigroups are discussed to some extent in \citet{davies:1980}.
+Moreover, \enquote{ergodicity} and \enquote{unique ergodicity} are closely related to irreducibility (see[ Cornfeld-Fomin-Sinai (1982)] or [Krengel (1985)]).
+Irreducible semigroups are discussed to some extent in [Davies (1980)].
 E.g. he proves a special case of Theorem 3.6.
 Proposition 3.3 will be generalized in C-III,Prop.3.3.
-Assertion (a) of Proposition 3.5 was proven by \citet{schaefer:1983} while Theorem 3.6 is taken from \citet{greiner:1982}.
-Elliptic operators (more general than Example 3.10(b)) as generators on spaces of continuous functions, were investigated by many people, \eg \citet{bonycourrègepriouret:1968}, \citet{kuhn:1985}, [Roth (1976) \& (1978)] and \citet{stewart:1974}.
+Assertion (a) of Proposition 3.5 was proven by [Schaefer (1983)] while Theorem 3.6 is taken from [Greiner (1982)].
+Elliptic operators (more general than Example 3.10(b)) as generators on spaces of continuous functions, were investigated by many people, \eg [Bony-Courrège-Priouret (1968)], [Kuhn (1985)], [Roth (1976) \& (1978)] and [Stewart (1974)].
 
 \item
-Theorem 4.1 is due to \citet{derndinger:1984}.
-The spectrum of semigroups of Markov lattice homomorphisms is investigated by \citet{derndingernagel:1979}.
+Theorem 4.1 is due to [Derndinger (1984)].
+The spectrum of semigroups of Markov lattice homomorphisms is investigated by [Derndinger-Nagel (1979)].
 In particular they prove Theorem 4.4 for Markov semigroups.
-Earlier results are due to \citet{scarpellini:1974}.
+Earlier results are due to [Scarpellini (1974)].
 We indicated briefly in Example 4.6 that there is a relationship between spectral properties of lattice semigroups and differentiable dynamics.
-For more details we refer to \citet{chiconeswanson:1981} and \citet{sackersell:1978}.
+For more details we refer to [Chicone-Swanson (1981)] and [Sacker-Sell (1978)].
 E.g., the \enquote{annular hull theorem} is a special case of Theorem 4.11(b).
-The general result 4.11 was proven by \citet{arendtgreiner:1984}.
+The general result 4.11 was proven by [Arendt-Greiner (1984)].
 
 \end{enumerate}

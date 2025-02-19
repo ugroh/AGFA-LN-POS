@@ -16,16 +16,24 @@
 %\onehalfspacing
 %\doublespacing 
 
+%% -- label prüfen
+%%\usepackage{showkeys}  
+%% --
+
 %% -- Gemeinsame Pakete und Definitionen
 %% --
+
+
+%\usepackage[arrow, matrix, curve]{xy}
+
 \input{../../preamble/ln-preamble}  
 \input{../../preamble/ln-definitionen}
 
 %% -- Index 
 %% --
 
-%\usepackage{imakeidx}
-%\makeindex[columns=2, options=-s svind.ist]
+\usepackage{imakeidx}
+\makeindex[columns=2, options=-s svind.ist]
 
 
 %% -- Literatur 
@@ -46,9 +54,7 @@
 %,hidelinks=true
 }
 
-%% -- label prüfen
-%%\usepackage{showkeys}  
-%% --
+
            
 \begin{document}
 
@@ -59,20 +65,22 @@
 \setcounter{section}{1}		%% immer
 
 %% -- Das LaTeX-File
-%% --
+%% -- 
+\tableofcontents
 
-\input{chap-a3}
+
+\input{chap-b3}
 
 %% -- Literatur
 %% --
-%\RaggedRight
-%\bibliography{../../bib/ln-references} 
+\RaggedRight
+\bibliography{../../bib/ln-references} 
 
 %% -- Index
 %% --
 
-%\clearpage
-%\printindex
+\clearpage
+\printindex
 
 %% --
 \end{document}
