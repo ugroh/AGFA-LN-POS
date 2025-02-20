@@ -1,9 +1,9 @@
 % !TEX root = ../../LN-Book.tex
 %% -- Chapter B-I final
-%% --
+%% -- Stand 2025/02/20
 
+\setcounter{chapter}{0}
 \chapter{Basic Results on \texorpdfstring{$C_{0}(X)$}{C_0(X)}}\label{chap:b1}
-%R. Nagel \& U. Schlotterbeck}
 \chaptermark{Basic Results on $C_{0}(X)$}
 
 %% --
@@ -19,7 +19,7 @@ We often write $C(X)$ instead of $C_{0}(X)$ in this situation.
 We sometimes study real-valued functions and write the corresponding real spaces as $C_{0}(X,\R)$ and 
 $C(X,\R)$, and the notations $C_{0}(X,\C)$ and $C(X,\C)$ are used if there might be confusion between both cases.
 %% --
-\section{Algebraic and Order-Structure: Ideals and Quotients}\label{sec:b1-1.1}
+\section{Algebraic and Order-Structure: Ideals and Quotients}\label{sec:b1-1}
 \index{$C_{0}(X)$!Algebraic Structure}
 \index{$C_{0}(X)$!Order Structure}
 \index{$C_{0}(X)$!Ideals}
@@ -28,11 +28,10 @@ Any space $C_{0}(X)$ is a commutative \CA-algebra under the sup-norm and the poi
 The algebraic notions of ideal, quotient, homomorphism are well known and need not be explained further.
 
 Another natural and important structure of $C_{0}(X)$ is the \emph{pointwise} ordering, under which $C_{0}(X,\R)$ is a (real) Banach lattice and $C_{0}(X,\C)$ a complex Banach lattice in the sense explained in Chapter C-I.
-\newpage
 Concerning the order structure of $C_{0}(X)$ we use the following notations.
 For a function $f$ in $C_{0}(X,\R)$
 %% --
-\begin{enumerate}[label=]
+\begin{enumerate}
 \item
 A function $ f $ is called \emph{positive}, $ f \geq 0 $, if $ f(t) \geq 0  $ for all $ t \in X $, 
 
@@ -61,7 +60,7 @@ The \emph{Riesz Representation Theorem} asserts that the dual of $C_{0}(X)$ can 
 While there is no natural algebra structure on this dual, the dual ordering (see Chapter C-I) makes $C_{0}(X)'$ into a Banach lattice.
 We will occasionally make use of the order structure of $C_{0}(X)'$, but since at least its measure theoretic interpretation is supposed to be well-known, it may suffice here to refer to Chapter C-I, Sections 3 and 7, for a more detailed discussion and to recall only some basic notations here.
 
-\noindent If $\mu$ is a linear form on $C_{0}(X,\R)$, then
+If $\mu$ is a linear form on $C_{0}(X,\R)$, then
 %% --
 \begin{enumerate}[label=]
 
@@ -145,6 +144,14 @@ The mapping $\phi$ is continuous in every point $t$ with $h(t) \neq 0$.
 Then $T$ is a lattice isomorphism if and only if there is a homeomorphism $\phi$ from $X$ onto $X$ and a bounded continuous function $h$ on $X$ such that $h(s) \geq \delta > 0$ for all $s$ and $Tf(s) = h(s)f(\phi(s))$ $(s \in X)$.
 Moreover, $T$ is an algebraic $*$-isomorphism if and only if $T$ is a lattice isomorphism and the function $h$ above is $\equiv 1$.
 \end{enumerate}
+
+\section*{Notes}
+\addcontentsline{toc}{section}{Notes}
+
+For the representation theory of commutative \CA-algebras we refer to \citet{takesaki:1979}. 
+This and the other mentioned properties like algebraic ideals, their connections with closed sets, the representation of latice or algebraic homomorpism etc. we refer to the excellent book \citet{semadeni:1971}.
+%% --
+
 
 %% --
 %\bibliographystyle{abbrvnat}

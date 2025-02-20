@@ -11,10 +11,13 @@
 
 %% -- Für das Korrekturlesen
 %% --
-
 %\usepackage{setspace}
 %\onehalfspacing
 %\doublespacing 
+
+%% -- Label prüfen
+%% --
+%\usepackage{showkeys}  
 
 %% -- Gemeinsame Pakete und Definitionen
 %% --
@@ -23,19 +26,14 @@
 
 %% -- Index 
 %% --
-
-%\usepackage{imakeidx}
-%\makeindex[columns=2, options=-s svind.ist]
-
+\usepackage{imakeidx}
+\makeindex[columns=2, options=-s svind.ist]
 
 %% -- Literatur 
 %% -- 
-
 \usepackage[round]{natbib}
-\bibliographystyle{abbrvnat}
 
 %% --
-
 \usepackage{hyperref}
 \hypersetup{% 
 ,colorlinks=true 
@@ -46,8 +44,7 @@
 %,hidelinks=true
 }
 
-%% -- label prüfen
-%%\usepackage{showkeys}  
+
 %% --
            
 \begin{document}
@@ -65,14 +62,15 @@
 
 %% -- Literatur
 %% --
-%\RaggedRight
-%\bibliography{../../bib/ln-references} 
+\RaggedRight
+\bibliographystyle{abbrvnat}
+\bibliography{../../bib/ln-references} 
 
 %% -- Index
 %% --
 
-%\clearpage
-%\printindex
+\clearpage
+\printindex
 
 %% --
 \end{document}

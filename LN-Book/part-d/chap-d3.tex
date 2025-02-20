@@ -1,14 +1,17 @@
 % !TEX root = ../LN-Book.tex
 
 %% -- Chapter D-III
+%% -- Stand 2025/02/20
 %% --
-%\setcounter{chapter}{2}		%% anpassen y=0/1/2/3 -> Chapter 1/2/3/4
 
-\chapter{Spectral Theory of Positive Semigroups on W$^{*}$-Algebras and their Preduals}\label{chap:D-III}
+\setcounter{chapter}{2}		%% anpassen y=0/1/2/3 -> Chapter 1/2/3/4
+\setcounter{section}{1}		%% immer
+%% --\texorpdfstring{$C_{0}(X)$}{C_0(X)}}
+\chapter{Spectral Theory of Positive Semigroups on \texorpdfstring{W$^{*}$}{W\textsuperscript{*}-}-Algebras and their Preduals}\label{chap:d3}
 \chaptermark{Spectral Theory on\/ \WA-algebras}
 \index{Spectral Theory on Operator Algebras}
 %% --
-Motivated by the classical results of Perron and Frobenius one expects the following spectral properties for the generator $A$ of a positive semigroup on a \CA-algebra. 
+Motivated by the classical results of Perron and Frobenius one expects the following spectral properties for the generator $A$ of a positive semigroup on a \CA-algebra.
 %% --
 \begin{quote}
 The spectral bound 
@@ -20,7 +23,7 @@ $  %  $\]
 %% -- 
 possesses a certain symmetric structure, called cyclicity.
 \end{quote}
-% --
+%% --
 Results of this type have been proved in Chapter B-III for positive semigroups on commutative \CA-algebras, however in the non-commutative case the situation is more complicated.
 While \enquote{$s(A) \in \sigma(A)$} still holds (see \citet{greinervoigtwolff:1981} or the notes of this chapter), the cyclicity of the boundary spectrum $\sigma_{b}(A)$ is true only under additional assumptions on the semigroup (\eg irreducibility, see Section 1 below).
 
@@ -113,11 +116,10 @@ hence
 But this implies $T(xx^{*}) = T(x)T(x)^{*} = xx^{*}$ and consequently, $b(x,x) = 0$.
 Hence $T(xy^{*}) = xT(y)^{*}$ for all $y\in M$ and (ii) is proved.
 \end{proof}
-%% -- 
+%% --
 \begin{lemma}\label{lem:d3-1.2}
-Let $ M $ be a % $\mathrm{W}^{*}$
 Let $M$ be a \WA-algebra, $T$ an identity preserving Schwarz map on $M$ and $S\in\L{M}$ such that $S(x)(Sx)^{*} \leq T(xx^{*})$ for every $x\in M$.
-% --
+%% --
 \begin{enumerate}[(i)]
 
 \item\label{item:d3-1.2-i}
@@ -125,9 +127,9 @@ If $v\in M$ such that $S(v^{*}) = v^{*}$ and $T(v^{*}v) = v^{*}v$, then $T(xv) =
 
 \item\label{item:d3-1.2-ii}
 Suppose there exists $\phi\in M_{*}$ with polar decomposition $\phi = u|\phi|$ such that $S_{*}\phi = \phi$ and $T_{*}|\phi| = |\phi|$.
-If the closed subspace $s(|\phi|)M$ is $ T $-invariant, then $Su^{*} = u^{*}$ and $T(u^{*}u) = u^{*}u$.
+If the closed subspace $s(|\phi|)M$ is T-invariant, then $Su^{*} = u^{*}$ and $T(u^{*}u) = u^{*}u$.
 \end{enumerate}
-% --
+%% --
 \end{lemma}
 %% --
 \begin{proof}
@@ -190,14 +192,14 @@ Take $S$ and $T$ as in Lemma~\ref{lem:d3-1.2}\,\ref{item:d3-1.2-ii}.
 If $V_{u^{*}}$ (\resp  $V_u$) is the map $(x \mapsto xu^{*})$ (\resp  $(x \mapsto xu)$) on $M$, then $V_{u^{*}}$ is a continuous bijection from $Ms(|\phi|)$ onto $Ms(|\phi^{*}|)$ with inverse $V_u$ (because $V_u \circ V_{u^{*}} = \operatorname{Id}_{Ms(|\phi|)}$ and $V_{u^{*}} \circ V_u = \operatorname{Id}_{Ms(|\phi^{*}|)}$).
 Let $x \in M$.
 From $T(xu) = S(x)u$ we obtain $T(xu)u^{*} = S(x)uu^{*}$.
-In particular, if $ M s(|\phi^{*}|) $ is $S$-invariant, then
+In particular, if $Ms(|\phi^{*}|)$ is $S$-invariant, then
 %% --
-\begin{equation*}
+\[
 	(V_{u^{*}} \circ T \circ V_u)(x) = T(xu)u^{*} = S(x)
-\end{equation*}
+\]
 %% --
 for every $x \in Ms(|\phi^{*}|)$.
-Let $T_{|}$ (\resp  $S_{|}$) be the restriction of $T$ to $Ms(|\phi|)$ (\resp of $\mathcal{S}$ to $Ms(|\phi^{*}|)$).
+Let $T_{|}$ (\resp  $S_{|}$) be the restriction of $T$ to $Ms(|\phi|)$ (\resp of $\SS$ to $Ms(|\phi^{*}|)$).
 Then the following diagram is commutative:
 %% --
 \begin{equation*}
@@ -438,7 +440,7 @@ is an eigenvector of $A$ pertaining to the eigenvalue $\im\alpha$.
 %% --
 If $\TT$ is a $C_{0}$-semigroup of Markov operators on a commutative \CA-algebra with generator $A$, it has been shown in B-III, that the boundary spectrum $\sigma(A) \cap \im\R$ of its generator is additively cyclic.
 This is no longer true in the non commutative case.
-%
+
 \begin{example}\label{ex:d3-1.10}
 For $0 \neq \lambda \in \im\R$ and $t \in \R$ let
 %% --
@@ -452,11 +454,11 @@ The semigroup of *-automorphisms $(x \mapsto u_{t}xu_{t}^{*})$ on $M_{2}(\C)$ is
 %\newpage
 It turns out that, in order to obtain a non commutative analogue of the Perron-Frobenius theorems, one has to consider semigroups which are irreducible.
 
-Recall that a semigroup $\mathcal{S}$ of positive operators on an ordered Banach space $(E,E_{+})$ is called \emph{irreducible} if no closed face of $E_{+}$, different from $\{0\}$ and $E_{+}$, is invariant under $\mathcal{S}$.
+Recall that a semigroup $\SS$ of positive operators on an ordered Banach space $(E,E_{+})$ is called \emph{irreducible} if no closed face of $E_{+}$, different from $\{0\}$ and $E_{+}$, is invariant under $\SS$.
 %Here a face $F$ in $E$ is a subcone of $E_{+}$ such that the conditions $0 \leq x \leq y$, $x \in E$, $y \in F$ imply $x \in F$ (compare Definitions 3.1 in B-III and C-III).
-In the context of \WA-algebras $M$ we call a semigroup $\mathcal{S}$ of positive maps on $M$ \emph{weak*-irreducible} if no $\sigma(M,M_{*})$-closed face of $M_{+}$ is $\mathcal{S}$-invariant.
+In the context of \WA-algebras $M$ we call a semigroup $\SS$ of positive maps on $M$ \emph{weak*-irreducible} if no $\sigma(M,M_{*})$-closed face of $M_{+}$ is $\SS$-invariant.
 
-Since the norm closed faces of $M_{*}$ and the $\sigma(M,M_{*})$-closed faces of $M$ are related by formation of polars with respect to the dual system $\langle M,M_{*} \rangle$ (see \citet[Theorem 3.6.11 and Theorem 3.10.7.]{pedersen:1979}) a semigroup $\mathcal{S}$ is (norm) irreducible on $M_{*}$ if and only if its adjoint semigroup is weak*-irreducible.
+Since the norm closed faces of $M_{*}$ and the $\sigma(M,M_{*})$-closed faces of $M$ are related by formation of polars with respect to the dual system $\langle M,M_{*} \rangle$ (see \citet[Theorem 3.6.11 and Theorem 3.10.7.]{pedersen:1979}) a semigroup $\SS$ is (norm) irreducible on $M_{*}$ if and only if its adjoint semigroup is weak*-irreducible.
 %% --
 \begin{theorem}\label{thm:d3-1.11}
 Let $\TT$ be an irreducible, identity preserving semigroup of Schwarz type with generator $A$ on the predual of a \WA-algebra and suppose $P\sigma(A) \cap \im\R \neq \emptyset$.
@@ -547,7 +549,7 @@ The other inclusion is trivial since $0 \in P\sigma(A)$.
 %\newpage
 %% -- d3-12
 %% --
-\begin{remark}\label{rem:d3-1.12}
+\begin{remarks}\label{rem:d3-1.12}
 
 \begin{enumerate}[(i), wide]
 
@@ -561,7 +563,7 @@ $\{u_{\gamma}^{k} \colon k \in \mathbb{Z}\}$
 is a complete family of eigenvectors pertaining to the eigenvalues in $H$, where $u_{\gamma} \in M$ is unitary such that $A'u_{\gamma} = \im\gamma u_{\gamma}$.
 
 \end{enumerate}
-\end{remark}
+\end{remarks}
 %% --
 \begin{proposition}\label{prop:d3-1.13}
 Suppose that $\TT$ and $M$ satisfy the assumptions of Theorem 1.10, and let $N_{*}$ be the closed linear subspace of $M_{*}$ generated by the eigenvectors of $A$ pertaining to the eigenvalues in $\im\R$.
@@ -980,7 +982,7 @@ Because of
 one part of the corollary is proved. The other follows from Lemma~\ref{lem:d3-2.2} on page \pageref{lem:d3-2.2}.
 \end{proof}
 %% --
-\begin{remark}\label{rem:d3-2.4}
+\begin{remarks}\label{rem:d3-2.4}
 \begin{enumerate}[(i), wide]
 \item
 By the results in \citet{lin:1974} a semigroup of contractions on a Banach space is uniformly ergodic if and only if $0$ is a pole of the generator with order $\leq 1$.
@@ -1003,7 +1005,7 @@ Hence there exists a central projection $z \in \widehat{M''}$ such that $J((M_{*
 Below we identify $(M_{*})^{\wedge}$ via $J$ with this translation invariant subspace.
 From the construction the following is obvious: If $T$ is an identity preserving Schwarz map with preadjoint $T_{*} \in L(M_{*})$, then $\widehat{T}$ is an identity preserving Schwarz map on $\widehat{M}$ such that $(T_{*})^{\wedge} = \widehat{T'}|(M_{*})^{\wedge}$.
 \end{enumerate}
-\end{remark}
+\end{remarks}
 %\newpage
 %% -- d3-20
 %% --
@@ -1039,7 +1041,7 @@ The consequences of this result for the asymptotic behavior of one-parameter sem
 \section*{Notes}\label{notes:d3-notes}
 \addcontentsline{toc}{section}{Notes}
 
-\begin{enumerate}[label=\emph{Section \arabic*:}, wide]
+\begin{enumerate}[label=\emph{Section \arabic*:}, wide, itemsep=1ex]
 
 \item
 The Perron-Frobenius theory for a single positive operator on a non-commutative operator algebra is worked out in \citet{albeverio:1978} and \citet{groh:1981}.
@@ -1047,7 +1049,6 @@ The limitations of the theory (in the continuous as in the discrete case)
 are explained by the example following Remark~\ref{rem:d3-1.9} on page \pageref{rem:d3-1.9} (see also \citet{groh:1982a}.%[Groh (1982a)]).
 Therefore we concentrate on irreducible semigroups.
 Our main result Theorem~\ref{thm:d3-1.11} on page \pageref{thm:d3-1.11} extends B-III, Thm.3.6 to the non-commutative setting.
-\medskip
 
 \item
 Theorem~\ref{thm:d3-2.5} on page \pageref{thm:d3-2.5} has its roots in the Niiro-Sawashima Theorem for a single irreducible positive operator on a Banach lattice (see \citet[V.5.4]{schaefer:1974}).

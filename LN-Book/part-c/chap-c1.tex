@@ -1,12 +1,16 @@
+% !TEX root = ../LN-Book.tex
+
 %% -- Chapter C-I
-%% --
-\setcounter{chapter}{0}
-\chapter{Basic Results on Banach Lattices and Positive Operators}\label{chap:c1}
-\chaptermark{Banach Lattices and Positive Operators}
+%% -- Stand: 2025/02/20
 %% --
 
+\setcounter{chapter}{0}
+\chapter{Basic Results on Banach Lattices and Positive Operators}\label{chap:c1}
+\index{Basic Results on Banach Lattices}
+\chaptermark{Banach Lattices and Positive Operators}
+%% --
 This introductory chapter is intended to give a brief exposition of those results on Banach lattices and ordered Banach spaces which are indispensable for an understanding of the subsequent chapters.
-We do not give proofs of the results, since these can easily be found in the literature (\eg, in \citet{schaefer:1974}).
+We do not give proofs of the results, since these can easily be found in the literature (\eg in \citet{schaefer:1974}).
 We rather want to give the reader, who is unfamiliar with the results or the terminology used in this book, the necessary information for an intelligent reading of the main discussions.
 Since relatively few general results on ordered Banach spaces are needed, we will primarily talk about Banach lattices.
 The scalar field will be $\R$ except for the last three sections, where complex Banach lattices will be discussed.
@@ -34,7 +38,7 @@ $ \text{(LO$_{1}$)} $ together with $ \text{(LO$_{2}$)} $ furthermore imply that
 It is easily verified that conversely any proper convex cone $ C $ with vertex $ 0 $ in $ E $ is the positive part of $ E $ with respect to a uniquely determined compatible ordering.
 
 An ordered vector space $ E $ is called a \emph{vector lattice} if any two elements $ f, g $ in $ E $ have a supremum, which is denoted by $ \sup(f,g) $ or by $ f \vee g $, and an infimum, denoted by $ \inf(f,g) $ or by $ f \wedge g $.
-It is obvious that the existence of, \eg, the supremum of any two elements in an ordered vector space implies the existence of the supremum of any finite number of elements in $ E $ and, since $ f \leq g $ is equivalent to $ -g \leq -f $ this automatically implies the existence of finite infima.
+It is obvious that the existence of, \eg the supremum of any two elements in an ordered vector space implies the existence of the supremum of any finite number of elements in $ E $ and, since $ f \leq g $ is equivalent to $ -g \leq -f $ this automatically implies the existence of finite infima.
 However, suprema (infima) of infinite majorized subsets need not exist in a vector lattice.
 If they do, then the vector lattice is called \emph{order complete} (\emph{countably order complete} or \emph{$ \sigma $-order complete} if suprema of countable majorized subsets exist).
 At any rate, the binary relations \emph{sup} and \emph{inf} in a vector lattice automatically satisfy the (infinite) distributive laws
@@ -54,7 +58,6 @@ This gives rise to the following definitions.
 \end{align*}
 %% --
 Note that the negative part of $ f $ is positive.
-
 We call two elements $ f $, $ g $ of a vector lattice \emph{orthogonal} or \emph{lattice disjoint} and write $ f \perp g $ if $ \inf(|f|,|g|) = 0 $.
 
 Apart from this, the above definitions allow us to formulate the axiom of compatibility between norm and order requested in a Banach lattice in the following short way.
@@ -71,7 +74,6 @@ With these notations we can now give the definition of a Banach lattice as follo
 By a \emph{normed vector lattice} we understand a vector lattice endowed with a lattice norm.}
 \end{quote}
 %% --
-
 There is a number of elementary, but very important formulas valid in any vector lattice, such as
 %% --
 \begin{align*}
@@ -79,8 +81,7 @@ f &= f^{+} - f^{-} & |f + g| &\leq |f| + |g| \\
 |f| &= f^{+} + f^{-} & f + g &= \sup(f,g) + \inf(f,g)
 \end{align*}
 %% --
-(see, \eg, [Schaefer (1974)]).
-
+(see, \eg \citet{schaefer:1974}).
 Let us note in passing the following consequences.
 %
 \begin{enumerate}[(i)]
@@ -91,7 +92,7 @@ The lattice operations $ (f,g) \mapsto \sup(f,g) $ and $ (f,g) \mapsto \inf(f,g)
 The positive cone is closed.
 
 \item 
-\emph{Order intervals}, \ie, sets of the form
+\emph{Order intervals}, \ie sets of the form
 %% --
 \[
 	\left[ f,g \right] = \{ h \in E \colon f \leq h \leq g \}
@@ -109,7 +110,7 @@ Instead of dwelling upon a detailed discussion of the above equalities and inequ
 In fact, we see below that any Banach lattice $ E $ is, as a vector lattice, \emph{locally} of type $ C(X) $, more exactly:
 Given any finite number $ x_{1},\ldots,x_{n} $ of elements in $ E $, there is a compact topological space $ X $ and a vector sublattice $ J $ of $ E $ which is isomorphic to $ C(X) $ and contains $ x_{1},\ldots,x_{n} $ (see Section.~\ref{sec:c1-4}).
 The above principle is an easy consequence of the following:
-In a space $ C(X) $ it is clear that a formula of the type considered need only be verified pointwise, \ie,  in $ \R $.
+In a space $ C(X) $ it is clear that a formula of the type considered need only be verified pointwise, \ie  in $ \R $.
 
 The reader may now be prepared to follow a concise presentation of the most basic facts on Banach lattices.
 %% -- 
@@ -143,10 +144,10 @@ A \emph{band} in a vector lattice $ E $ is an ideal which contains arbitrary sup
 \emph{$ B $ is a band in $ E $ if $ B $ is an ideal in $ E $ and $ \sup M $ is contained in $ B $ whenever $ M $ is contained in $ B $ and has a supremum in $ E $.}
 \end{quote}
 %% --
-Since the notions of sublattice, ideal, band are invariant under the formation of arbitrary intersections there exists, for any subset $ B $ of $ E $, a uniquely determined smallest sublattice (ideal, band) of $ E $ containing $ B $, \ie, the \emph{sublattice} (\emph{ideal}, \emph{band}) \emph{generated by} $ B $.
+Since the notions of sublattice, ideal, band are invariant under the formation of arbitrary intersections there exists, for any subset $ B $ of $ E $, a uniquely determined smallest sublattice (ideal, band) of $ E $ containing $ B $, \ie the \emph{sublattice} (\emph{ideal}, \emph{band}) \emph{generated by} $ B $.
 
 If we denote by $ B^{d} $ the set $ \{h \in E \colon \inf(|h|,|f|) = 0 \text{ for all } f \in B\} $, then $ B^{d} $ is a band for any subset $ B $ of $ E $, and $ (B^{d})^{d} = B^{dd} $ is a band containing $ B $.
-If $ E $ is a normed vector lattice (more generally, if $ E $ is archimedean ordered, see \eg, \citet{schaefer:1974}), then $ B^{dd} $ is the band generated by $ B $.
+If $ E $ is a normed vector lattice (more generally, if $ E $ is archimedean ordered, see \eg \citet{schaefer:1974}), then $ B^{dd} $ is the band generated by $ B $.
 
 If two ideals $ I $,  $ J $ of a vector lattice $ E $ have trivial intersection $ \{0\} $, then $ I $ and $ J $ are \emph{lattice disjoint}, \ie $ I \subset J^{d} $.
 Thus if $ E $ is the direct sum of two ideals $ I $,  $ J $, then one has automatically $ I = J^{d} $ and $ J = I^{d} $, hence $ I = I^{dd} $ and $ J = J^{dd} $ must be bands in this situation.
@@ -159,7 +160,7 @@ An example of a band which is not a projection band is furnished by the subspace
 The \emph{Riesz Decomposition Theorem} asserts that in an order complete vector lattice every band is a projection band.
 As a consequence, if $ E $ is order complete and $ B $ is an arbitrary subset of $ E $, then $ E $ is the direct sum of the complementary bands $ B^{d} $ and $ B^{dd} $.
 
-This theorem, which is quite easy to prove, is widely used in analysis and gives an abstract background to, \eg, the decomposition of a measure into atomic and diffuse parts (the atomic measures being those contained in the band generated by the point measures, the diffuse measures those disjoint to the latter). Or, more specifically, to the well-known decomposition of a measure on $ [a,b] $ into an atomic part and a diffuse part, which latter can in turn be decomposed into the sum of a measure which is \emph{absolutely continuous} (which means, contained in the band generated by Lebesgue measure) and a \emph{singular measure} (which means, a diffuse measure disjoint to Lebesgue measure).
+This theorem, which is quite easy to prove, is widely used in analysis and gives an abstract background to, \eg the decomposition of a measure into atomic and diffuse parts (the atomic measures being those contained in the band generated by the point measures, the diffuse measures those disjoint to the latter). Or, more specifically, to the well-known decomposition of a measure on $ [a,b] $ into an atomic part and a diffuse part, which latter can in turn be decomposed into the sum of a measure which is \emph{absolutely continuous} (which means, contained in the band generated by Lebesgue measure) and a \emph{singular measure} (which means, a diffuse measure disjoint to Lebesgue measure).
 
 A band in a normed vector lattice is necessarily closed.
 By contrast, an ideal need not be closed, but the closure of an ideal is again an ideal.
@@ -176,7 +177,7 @@ If $ E $ is a Banach lattice, then any order unit in $ E $ is an interior point 
 Every space $ C(K) $ has order units (namely, the strictly positive functions), and conversely by the Kakutani-Krein Representation Theorem (see Section~\ref{sec:c1-4}), every Banach lattice with an order unit is isomorphic to a space $ C(K) $.
 
 If an element $ u $ in the positive cone of a Banach lattice $ E $ has the property that the closed ideal generated by $ u $ is all of $ E $, then $ u $ is called a \emph{quasi-interior point} of $ E_{+} $.
-Quasi-interior points of the positive cone exist, \eg, in any separable Banach lattice.
+Quasi-interior points of the positive cone exist, \eg in any separable Banach lattice.
 If $ E = C(K) $, then the quasi-interior points and the interior points of $ E_{+} $ coincide, while the weak order units of $ E $ are the (positive) functions vanishing on a nowhere dense subset of $ K $.
 If $ E $ is a space $ L^{p}(\mu) $ with $ \sigma $-finite $ \mu $ and $ 1 \leq p < \infty $, then the weak order units and the quasi-interior points of $ E_{+} $ coincide with the functions strictly positive $ \mu $-a.e., while $ E_{+} $ does not contain any interior point.
 %% --
@@ -330,7 +331,7 @@ A linear mapping $ T $ from an ordered Banach space $ E $ into an ordered Banach
 The set of all positive linear mappings is a convex cone in the space $ \L{E,F} $ of all linear mappings from $ E $ into $ F $ defining the \emph{natural ordering} of $ \L{E,F} $.
 The linear subspace of $ \L{E,F} $ generated by the positive maps (i.e. the space of linear maps that can be written as differences of positive maps) is denoted by $ \mathcal{L}^{r}(E;F) $ and its elements are called \emph{regular} mappings.
 If $ E $ and $ F $ are Banach lattices, then any regular mapping from $ E $ into $ F $ is continuous, but  $ \mathcal{L}^{r}(E;F) $ is in general a proper subspace of the space $ \L{E,F} $ of all continuous linear mappings.
-One has coincidence of $ \mathcal{L}^{r}(E;F) $ and $ \L{E,F} $, \eg, when $ E = F $ is an order complete AM-space with unit or an AL-space.
+One has coincidence of $ \mathcal{L}^{r}(E;F) $ and $ \L{E,F} $, \eg when $ E = F $ is an order complete AM-space with unit or an AL-space.
 At any rate, if $ F $ is order complete, then $ \mathcal{L}^{r}(E;F) $ under the natural ordering is an order-complete vector lattice, and a Banach lattice under the norm
 %% --
 \[
@@ -380,13 +381,13 @@ Although the notion of a Banach lattice is intrinsically related to the real num
 Thus we define a \emph{complex Banach lattice} $ E $ to be the complexification of a real Banach lattice $ E_{\R} $ in the sense that
 %% --
 \[
-E = E_{\R} \oplus \mathrm{i}\, E_{\R}
+E = E_{\R} \oplus \im E_{\R}
 \]
 %% --
 which means more exactly $ E = E_{\R} \times E_{\R} $ with scalar multiplication 
 %
 \[
-	 (\alpha+i\beta)(x,y) = (\alpha x-\beta y,\beta x+\alpha y)  .
+	 (\alpha+\im\beta)(x,y) = (\alpha x-\beta y,\beta x+\alpha y)  .
 \]
 %
 The space $ E_{\R} $ will sometimes be called the \emph{underlying real Banach lattice} or the \emph{real part} of $ E $.
@@ -395,19 +396,19 @@ We want to extend the formation of absolute values, which is a priori defined on
 This is in fact possible by putting, for $ h = f + ig $ in $ E $,
 %% --
 \[
-	|h| = \sup\{ \Re(e^{i\theta}h) \colon 0 \leq \theta \leq 2\pi \}.
+	|h| = \sup\{ \Re\left( e^{\im\theta}h \right) \colon 0 \leq \theta \leq 2\pi \}.
 \]
 %% --
 The only problem with this definition being the existence of the right hand side without the assumption of order-completeness on $ E_{\R} $.
-But for this we just have to observe that the set $ M = \{\Re(e^{i\theta}h) \colon 0 \leq \theta \leq 2\pi\} $ is contained and order bounded in the ideal generated in $ E_{\R} $ by $ |f| + |g| $, which in turn is by the Kakutani-Krein Representation Theorem isomorphic to a space $ C_{\R}(X) $ under the pointwise ordering.
-Now the pointwise supremum of $ M $ in $ \R^{X} $ is readily seen to be a continuous function (namely, the modulus of the complex valued continuous function corresponding to $ f + ig $), so that $ M $ has a supremum in $ C_{\R}(X) = (E_{\R})_{|f|+|g|} $.
+But for this we just have to observe that the set $ M = \{\Re(e^{\im\theta}h) \colon 0 \leq \theta \leq 2\pi\} $ is contained and order bounded in the ideal generated in $ E_{\R} $ by $ |f| + |g| $, which in turn is by the Kakutani-Krein Representation Theorem isomorphic to a space $ C_{\R}(X) $ under the pointwise ordering.
+Now the pointwise supremum of $ M $ in $ \R^{X} $ is readily seen to be a continuous function (namely, the modulus of the complex valued continuous function corresponding to $ f + \im g $), so that $ M $ has a supremum in $ C_{\R}(X) = (E_{\R})_{|f|+|g|} $.
 
 Since the mapping $ f \mapsto |f| $ now has a meaning in $ E $, the definition of an ideal can be extended formally unchanged to the complex situation.
-We observe that $ |f+ig| = |f-ig| \leq |f|+|g| $ implies that any ideal $ J $ in a complex Banach lattice is conjugation invariant and itself the complexification of the ideal $ J \cap E_{\R} $ of the real part of $ E $.
+We observe that $ |f+ \im g| = |f- \im g| \leq |f|+|g| $ implies that any ideal $ J $ in a complex Banach lattice is conjugation invariant and itself the complexification of the ideal $ J \cap E_{\R} $ of the real part of $ E $.
 
 Suffice it now to say that the meaning of most of the terms introduced for real Banach lattices can be extended to the complex situation under retention (mutatis mutandis) of the corresponding results valid in the real case by either using the complex modulus or else, if the formation of suprema or infima is involved, by relating them to real parts.
 For example $ f \in E $ is called \emph{positive} if $ f = |f| $ which means that $ f $ is a positive element of $ E_{\R} $, $ E $ is called order complete if $ E_{\R} $ is order complete, and an ideal $ J $ is called a band if the real part of $ J $ is a band.
-We refer to Chapter II, Section 11 of Schaefer (1974) for a detailed discussion of this and restrict ourselves to a short discussion of linear mappings.
+We refer to Chapter II, Section 11 of \citet{schaefer:1974} for a detailed discussion of this and restrict ourselves to a short discussion of linear mappings.
 
 Let $ E $ and $ F $ be complex Banach lattices with real parts $ E_{\R} $ and $ F_{\R} $.
 Then a linear mapping $ T $ from $ E $ into $ F $ is determined by its restriction $ T_{0} $ to $ E_{\R} $, and $ T_{0} $ can be written in the form $ T_{0} = T_{1} + iT_{2} $ with real-linear mappings $ T_{j} $ from $ E_{\R} $ into $ F_{\R} $.
@@ -433,7 +434,7 @@ If either $ E $ is order-complete or $ |f| $ is a quasi-interior point in $ E_{+
 \begin{enumerate}[(i)]
 
 \item 
-$ S_{f}\bar{f} = |f| $, where $ \bar{f} = \Re f -  \mathrm{i} \cdot\Im f $,
+$ S_{f}\bar{f} = |f| $, where $ \bar{f} = \Re(f) -  \im \cdot\Im(f) $,
 
 \item 
 $ |S_{f}g| \leq |g| $ for every $ g $ in $ E $,
