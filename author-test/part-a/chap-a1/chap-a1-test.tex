@@ -6,7 +6,7 @@
 %% --
 
 \documentclass[%
-,12pt		% für Korrekturen % wegmachen und Zeilenabstand größer machen
+%,12pt		% für Korrekturen % wegmachen und Zeilenabstand größer machen
 ,oneside]
 	{book}
 
@@ -15,28 +15,24 @@
 
 %\usepackage{setspace}
 %\doublespacing 
+%% --
+%\usepackage{showkeys}
 
 %% -- Gemeinsame Pakete und Definitionen
 %% --
-\input{ln-preamble}  
+\input{../../preamble/ln-preamble}  
+\input{../../preamble/ln-definitionen}
 
-%% -- Gemeinsame Abkürzungen
+%% -- Index 
 %% --
-
-\input{ln-definitionen}
-
-%% -- Index für später
-%% --
-
 \usepackage{imakeidx}
 \makeindex[columns=2, options=-s svind.ist]
 
-
-%% -- Literatur für später
+%% -- Literatur
 %% -- 
-
+\usepackage{chapterbib}
 \usepackage[round]{natbib}
-\bibliographystyle{abbrvnat}
+
 
 %% --
 
@@ -50,10 +46,7 @@
 %,hidelinks=true
 }
         
-%% --
-\usepackage{showkeys}
-
-           
+%% --           
 \begin{document}
 
 %% -- Bitte setzen
@@ -70,6 +63,7 @@
 %% -- Literatur
 %% --
 \RaggedRight
+\bibliographystyle{abbrvnat}
 \bibliography{../../bib/ln-references} 
 
 %% -- Index

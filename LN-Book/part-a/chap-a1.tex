@@ -1,12 +1,13 @@
 % !TEX root = ../LN-Book.tex
 %% -- Chapter A-I
+%% -- Stand: 2025/02/20
 %% --
 \setcounter{chapter}{0}
 
 \chapter[Basic Results on Semigroups on Banach Spaces]{Basic Results on Semigroups on Banach Spaces}\label{chap:a1}
 %\normalsize{\hspace{2cm} R. Nagel \& U. Schlotterbeck}}
 \index{Basic Results}
-
+%% --
 Since the basic theory of one-parameter semigroups can be found in several excellent books (e.g. \citet{davies:1980}, \citet{goldstein:1985a}, \citet{pazy:1983} or \citet{hillephillips:1957}), we do not want to give a self-contained introduction to this subject here.
 It may however be useful to fix our notation, to collect briefly some important definitions and results (Section 1), to present a list of \emph{standard examples} in Section~\ref{sec:a1-2} %(Section 2) 
 and to discuss standard constructions of new semigroups from a given one in Section~\ref{sec:a1-3} on p.\,\pageref{sec:a1-3}. %(Section 3).
@@ -15,20 +16,22 @@ In the entire chapter we denote by $E$ a (real or) complex Banach space and cons
 By this we understand a subset $\{T(t) \colon  t \in \R_{+}\}$ of $\LE$, usually written as $(T(t))_{t\geq0}$, such that
 %% --
 \begin{align*}
-	T(0) &= \mathrm{Id}, \\
-	T(s+t) &= T(s) \cdot T(t) \text{ for all } s, t \in \R_{+} .
+	T(0) &= \Id, \\
+	T(s+t) &= T(s) \cdot T(t) \text{ for all $s$, $t \in \R_{+}$.}
 \end{align*}
 %% --
 In more abstract terms this means that the map $t \mapsto T(t)$ is a homomorphism from the additive semigroup $(\R_{+},+)$ into the multiplicative semigroup $(\LE,\cdot)$.
 Similarly, a one-parameter group $(T(t))_{t\in\R}$ will be a homomorphic image of the group $(\R,+)$ in $(\LE,\cdot)$.
 %% --
 \section{Standard Definitions and Results}\label{sec:a1-1}
+\index{Basic Results!Standard Definitions and Results}
+%% --
 We consider a one-parameter semigroup $(T(t))_{t \geq 0}$ on a Banach space $E$ 
 and observe that the domain $\R_{+}$ and the range $\LE$ of the (semigroup) homomorphism $\tau \colon t \mapsto T(t)$ are topological semigroups for the natural topology on $\R_{+}$ and any one of the standard operator topologies on $\LE$.
 We single out the strong operator topology on $\LE$ and require $\tau$ to be continuous.
 %% --
 \begin{definition}\label{def:a1-1.1}
-A one-parameter semigroup $(T(t))_{t\geq0}$ is called \emph{strongly continuous} if the map $t \mapsto T(t)$ is continuous for the strong operator topology on $\LE$, \eg, 
+A one-parameter semigroup $(T(t))_{t\geq0}$ is called \emph{strongly continuous} if the map $t \mapsto T(t)$ is continuous for the strong operator topology on $\LE$, \eg
 %% --
 \[
 	\lim_{t\to t_{0}} \|T(t)f - T(t_{0})f\| = 0
@@ -37,17 +40,17 @@ A one-parameter semigroup $(T(t))_{t\geq0}$ is called \emph{strongly continuous}
 for every $f \in E$ and $t$, $t_{0} \geq 0$.
 \end{definition}
 %% --
-Clearly one defines in a similar way \emph{weakly continuous}, resp.\xspace \emph{uniformly continuous} (compare A-II, Def. 1.19) semigroups, but since we concentrate on the strongly continuous case we agree on the following terminology.
+Clearly one defines in a similar way \emph{weakly continuous}, \resp \emph{uniformly continuous} (compare A-II, Def. 1.19) semigroups, but since we concentrate on the strongly continuous case we agree on the following terminology.
 %% --
 \begin{quote}
-If not stated otherwise, a \emph{semigroup } is a strongly continuous one-parameter semigroup of bounded linear operators.
+If not stated otherwise, a \emph{semigroup} is a strongly continuous one-parameter semigroup of bounded linear operators.
 \end{quote}
 %% --
 Next we collect a few elementary facts on the continuity and boundedness of one-parameter semigroups.
 %% --
 \begin{remarks}\label{rem:a1-1.2}
 %% --
-\begin{enumerate}[1., wide, labelsep=1em, itemindent=\parindent]
+\begin{enumerate}[(i), wide, labelsep=1em, itemindent=\parindent]
 
 \item 
 A one-parameter semigroup $(T(t))_{t \geq 0}$ on a Banach space $E$ is strongly continuous if and only if for any $f \in E$ it is true that $T(t)f \to f$ if $t \to 0$.
@@ -75,10 +78,10 @@ In both cases we have $\omega_{0} \leq 0$.
 
 It follows from the subsequent examples and from Def.~\ref{def:a1-1.3} that $\omega_{0}$ may be any number $ -\infty \leq \omega < +\infty$.
 Moreover the reader should observe that the infimum in Def.~\ref{def:a1-1.3} need not be attained and that $M$ may be larger than $1$ even for bounded semigroups.
-
+%% --
 \begin{examples}\label{ex:a1-1.4}
 %% --
-\begin{enumerate}[1., wide, labelsep=1em, itemindent=\parindent]
+\begin{enumerate}[(i), wide, labelsep=1em, itemindent=\parindent]
 
 \item 
 Take $E = \mathbb{C}^2$, 
@@ -115,12 +118,7 @@ We then obtain the \emph{generator} as a not necessarily everywhere defined oper
 To every semigroup $(T(t))_{t \geq 0}$ there belongs an operator $(A,D(A))$, called the \emph{generator} and defined on the \emph{domain}
 %% --
 \begin{align*}
-	D(A) \coloneqq{} & \{f \in E \colon \lim_{h\to0} \frac{T(h)f - f}{h} \text{ exists in $E$} \}
-\end{align*}
-%% --
-by
-%% --
-\begin{align*}
+	D(A) \coloneqq{} & \{f \in E \colon \lim_{h\to0} \frac{T(h)f - f}{h} \text{ exists in $E$}\} \text{ by} \\
 	Af \coloneqq{} & \lim_{h\to0} \frac{T(h)f - f}{h} \quad (f \in D(A)).
 \end{align*}
 %% --
@@ -242,7 +240,7 @@ Then $D(A^{\infty}) \coloneqq \bigcap_{n \in \N} D(A^{n})$ is dense in $E$ and a
 %% --
 \begin{example}\label{ex:a1-1.10}
 Property (iii) above does not hold for general densely defined closed operators.
-Take $E = C[0,1]$, $D(B) = C^{1}[0,1]$ and $Bf = q \cdot f'$ for some nowhere differentiable function $q \in C[0,1]$.
+Take $E = C\left[ 0,1 \right]$, $D(B) = C^{1}\left[ 0,1 \right]$ and $Bf = q \cdot f'$ for some nowhere differentiable function $q \in C\left[ 0,1 \right]$.
 Then $B$ is closed, but $D(B^{2}) = \{0\}$.
 \end{example}
 %% --
@@ -264,7 +262,7 @@ for every $f \in E$, $n \geq 0$ and $\lambda \in \mathbb{C}$ with $\Re(\lambda) 
 %% --
 \begin{remarks}\label{rem:a1-1.12}
 
-\begin{enumerate}[(i)]
+\begin{enumerate}[(i), wide, labelsep=1em, itemindent=\parindent]
 
 \item 
 For continuous Banach space valued functions such as $t \mapsto T(t)f$ we consider the Riemann integral and define 
@@ -320,11 +318,10 @@ It follows from elementary operator theory that for every bounded operator $A$ i
 \]
 %% --
 exists and determines a unique uniformly continuous (semi)group $(e^{tA})_{t \in \R}$ having $A$ as its generator.
-
 Conversely, any uniformly continuous semigroup is of this form.
 
-If the semigroup $(T(t))_{t \geq 0}$ is uniformly continuous, then $\frac{1}{t}\int_{0}^{t} T(s) \, ds$ uniformly converges to $T(0) = \mathrm{Id}$ as $t \to 0$.
-Therefore for some $t' > 0$ the operator $\frac{1}{t'}\int_{0}^{t'} T(s) \, ds$ is invertible and every $f \in E$ is of the form $f = \frac{1}{t'}\int_{0}^{t'} T(s)g \, ds$ for some $g \in E$.
+If the semigroup $(T(t))_{t \geq 0}$ is uniformly continuous, then $\frac{1}{t}\int_{0}^{t} T(s) \ds$ uniformly converges to $T(0) = \Id$ as $t \to 0$.
+Therefore for some $t' > 0$ the operator $\frac{1}{t'}\int_{0}^{t'} T(s) \ds$ is invertible and every $f \in E$ is of the form $f = \frac{1}{t'}\int_{0}^{t'} T(s)g \ds$ for some $g \in E$.
 But these elements belong to $D(A)$ by (1.3), hence $D(A) = E$.
 Since the generator $A$ is closed and everywhere defined, it must be bounded.
 
@@ -358,13 +355,13 @@ Then if  $D \neq 0$
 %% -- 
 \[
     e^{tA} = 
-        e^{ts/2} \cdot [D^{-1}2\sinh(tD/2) \cdot A + (\cosh(tD/2) - sD^{-1}\sinh(tD/2)) \cdot \mathrm{Id}] 
+        e^{ts/2} \cdot [D^{-1}2\sinh(tD/2) \cdot A + (\cosh(tD/2) - sD^{-1}\sinh(tD/2)) \cdot \Id] 
 \]
 %% --
 and if $D=0$
 %% --
 \[
-	e^{ts/2} \cdot [tA + (1 - ts/2) \cdot \mathrm{Id}] .
+	e^{ts/2} \cdot [tA + (1 - ts/2) \cdot \Id] .
 \]
 %% --
 
@@ -378,7 +375,7 @@ Many Banach spaces appearing in applications are Banach spaces of (real or) comp
 %% --
 As the most standard examples of these \enquote{function spaces}, we mention the space $C_{0}(X)$ of all continuous complex valued functions vanishing at infinity on a locally compact space $X$, or the spaces $L^{p}(X,\Sigma,\mu)$, $1 \leq p \leq \infty$, of all (equivalence classes of) $p$-integrable functions on a $\sigma$-finite measure space $(X,\Sigma,\mu)$.
 
-On these function spaces $E = C_{0}(X)$, resp. $E = L^{p}(X,\Sigma,\mu)$, there is a simple way to define \emph{multiplication operators}.
+On these function spaces $E = C_{0}(X)$, \resp $E = L^{p}(X,\Sigma,\mu)$, there is a simple way to define \emph{multiplication operators}.
 
 Take a continuous, \resp measurable function $q \colon X \to \mathbb{C}$ and define
 %% --
@@ -389,7 +386,7 @@ Take a continuous, \resp measurable function $q \colon X \to \mathbb{C}$ and def
 %% --
 and for every $f$ in the \emph{maximal} domain $D(M_{q}) \coloneqq \{g \in E \colon q \cdot g \in E\}$.
 
-This natural domain is a dense subspace of $C_{0}(X)$, resp. $L^{p}(X,\Sigma,\mu)$, for $1 \leq p < \infty$.
+This natural domain is a dense subspace of $C_{0}(X)$, \resp $L^{p}(X,\Sigma,\mu)$, for $1 \leq p < \infty$.
 Moreover, $(M_{q},D(M_{q}))$ is a closed operator.
 This is easy in case $E = C_{0}(X)$.
 
@@ -427,7 +424,7 @@ one obtains the following characterizations.
 \index{Standard Examples!Multiplication Operators}
 %% --
 Let $M_{q}$ be a multiplication operator on $E = C_{0}(X)$ or $E = L^{p}(X,\Sigma,\mu)$, $1 \leq p < \infty$.
-Then the properties (a) and (b), resp. (a') and (b'), are equivalent.
+Then the properties (a) and (b), \resp (a') and (b'), are equivalent.
 %% --
 \begin{enumerate}[(a)]
 \item 
@@ -477,8 +474,8 @@ Define $T(t)$ to be the (left) translation operator
     T(t)f(x) \coloneqq f(x+t)
 \]
 %% --
-for $x$ ,, $ t \in \R_{+}$, resp. $x, t \in \R$ and $f \in E$.
-Then $(T(t))_{t \geq 0}$ is a strongly continous semigroup, resp. group of contractions on $E$ and its generator is the first derivative $\frac{d}{dx}$ with \emph{maximal} domain.
+for $x$ ,, $ t \in \R_{+}$, \resp $x, t \in \R$ and $f \in E$.
+Then $(T(t))_{t \geq 0}$ is a strongly continous semigroup, \resp group of contractions on $E$ and its generator is the first derivative $\frac{d}{dx}$ with \emph{maximal} domain.
 In order to be more precise we have to distinguish the cases $E = C_{0}$ and $E = L^{p}$.
 %% -- 
 
@@ -513,7 +510,7 @@ Thus $f \in D(A)$ and $f' = Af$.
 The generator of the translation (semi)group on $E = L^{p}(\R_{+})$, $1 \leq p < \infty$, is
 %% --
 \begin{align*}
-    Af &\coloneqq \frac{d}{dx}f = f', \\
+    Af &\coloneqq \frac{d}{\dx}f = f', \\
     D(A) &\coloneqq \{f \in E \colon f \text{ absolutely continuous}, f' \in E\}.
 \end{align*}
 %% --
@@ -522,15 +519,15 @@ Take $f \in D(A)$ such that $\lim_{h \to 0} \frac{1}{h}(T(h)f - f) = g \in E$.
 Since integration is continuous, we obtain for every $a$, $b \in \R_{(+)}$ that
 %% --
 \begin{equation*}\label{eq:a1-2.1}
-(*) \quad \frac{1}{h}\int_{b+h}^{b} f(x) \, dx - \frac{1}{h}\int_{a+h}^{a} f(x) \, dx = \int_{a}^{b} \frac{f(x+h) - f(x)}{h} \, dx
+(*) \quad \frac{1}{h}\int_{b+h}^{b} f(x) \dx - \frac{1}{h}\int_{a+h}^{a} f(x) \dx = \int_{a}^{b} \frac{f(x+h) - f(x)}{h} \dx
 \end{equation*}
 %% --
-converges to $\int_{a}^{b} g(x) \, \dx$ as $h \to 0+$.
+converges to $\int_{a}^{b} g(x) \dx$ as $h \to 0+$.
 But for almost all $a, b$ the left hand side of $(*)$ converges to $f(b) - f(a)$.
 By redefining $f$ on a nullset we obtain
 %% --
 \[
-    f(y) = \int_{a}^{y} g(x)\,dx + f(a), \quad y \in \R_{(+)},
+    f(y) = \int_{a}^{y} g(x)\dx + f(a), \quad y \in \R_{(+)},
 \]
 %% --
 which is an absolutely continuous function whose derivative is (almost everywhere) equal to $g$.
@@ -539,11 +536,11 @@ On the other hand, let $f$ be absolutely continuous such that $f' \in L^{p}$.
 Then
 %% --
 \begin{align*}
-    \lim_{h \to 0} \int \left|\frac{f(x+h) - f(x)}{h} - f'(x)\right|^{p} \, dx 
-    &= \lim_{h \to 0} \int \left|\frac{1}{h}\int_{0}^{h} (f'(x+s) - f'(x)) \, ds\right|^{p} \, dx \\
-    &= \lim_{h \to 0} \int \left|\int_{0}^{1} (f'(x+uh) - f'(x)) \, du\right|^{p} \, dx \\
-    &\leq \lim_{h \to 0} \int \int_{0}^{1} |f'(x+uh) - f'(x)|^{p} \, du \, dx \\
-    &= \int_{0}^{1} \lim_{h \to 0} \int |f'(x+uh) - f'(x)|^{p} \, dx \, du = 0,
+    \lim_{h \to 0} \int \left|\frac{f(x+h) - f(x)}{h} - f'(x)\right|^{p} \dx 
+    &= \lim_{h \to 0} \int \left|\frac{1}{h}\int_{0}^{h} (f'(x+s) - f'(x)) \ds\right|^{p} \dx \\
+    &= \lim_{h \to 0} \int \left|\int_{0}^{1} (f'(x+uh) - f'(x)) \du\right|^{p} \dx \\
+    &\leq \lim_{h \to 0} \int \int_{0}^{1} |f'(x+uh) - f'(x)|^{p} \du \dx \\
+    &= \int_{0}^{1} \lim_{h \to 0} \int |f'(x+uh) - f'(x)|^{p} \dx \du = 0,
 \end{align*}
 %% --
 hence $f \in D(A)$.
@@ -554,37 +551,38 @@ hence $f \in D(A)$.
 %\index{Groups!Rotation}
 \index{Standard Examples!Rotation Groups}
 %% --
-On $E = C(\Gamma)$, resp. $E = L^{p}(\Gamma,m)$, $1 \leq p < \infty$, $m$ Lebesgue measure we have canonical groups defined by rotations of the unit circle $\Gamma$ with a certain period, i.e.\xspace for $0 < \tau \in \R$ the operators
+On $E = C(\Gamma)$, \resp $E = L^{p}(\Gamma,m)$, $1 \leq p < \infty$, $m$ Lebesgue measure we have canonical groups defined by rotations of the unit circle $\Gamma$ with a certain period, i.e.\xspace for $0 < \tau \in \R$ the operators
 %% --
 \[
     R_{\tau}(t)f(z) \coloneqq f(e^{2\pi it/\tau}\cdot z), \quad z \in \Gamma
 \]
 %% --
-yield a group $(R_{\tau}(t))_{t \in \R}$ having period $\tau$, i.e.\xspace $R_{\tau}(\tau) = \mathrm{Id}$.
+yield a group $(R_{\tau}(t))_{t \in \R}$ having period $\tau$, i.e.\xspace $R_{\tau}(\tau) = \Id$.
 As in Example 2.4 one shows that its generator has the form
 %% --
 \begin{align*}
-    D(A) &= \{f \in E \colon f \text{ absolutely continuous}, f' \in E\},
+    D(A) &= \{f \in E \colon f \text{ absolutely continuous}, f' \in E\}, \\
     Af(z)&= (2\pi i/\tau) \cdot z \cdot f'(z).
 \end{align*}
 %% --
-An isomorphic copy of the group $(R_{\tau}(t))_{t \in \R}$ is obtained if we consider $E = \{f \in C[0,1] \colon f(0) = f(1)\}$, resp. $E = L^{p}([0,1])$ and the group of 'periodic translations'
+An isomorphic copy of the group $(R_{\tau}(t))_{t \in \R}$ is obtained if we consider $E = \{f \in C\left[ 0,1 \right] \colon f(0) = f(1)\}$, \resp $E = L^{p}(\left[ 0,1 \right])$ and the group of \emph{periodic translations}
 %% --
 \[
-    T(t)f(x) \coloneqq f(y) \quad \text{for } y \in [0,1], y = x+t \bmod 1
+    T(t)f(x) \coloneqq f(y) \quad \text{for $y \in \left[ 0,1 \right], y = x+t \bmod 1$} 
 \]
 %% --
 with generator
 %% --
 \[
     D(A) \coloneqq \{f \in E \colon f \text{ absolutely continuous}, f' \in E\},
+    \quad Af \coloneqq f'.
 \]
 %% --
-%% --
-\[
-    Af \coloneqq f'.
-\]
-%% --
+%%% --
+%\[
+%    Af \coloneqq f'.
+%\]
+%%% --
 
 %% --
 \subsection{Nilpotent Translation Semigroups}\label{subsec:a1-2.6}
@@ -625,11 +623,11 @@ For the second derivative
 we take the domain
 %% --
 \[
-    D(B) \coloneqq \{f \in C^{2}[0,1] \colon f'(0) = f'(1) = 0\}
+    D(B) \coloneqq \{f \in C^{2}\left[ 0,1 \right] \colon f'(0) = f'(1) = 0\}
 \]
 %% --
-in the Banach space $E = C[0,1]$.
-Then $D(B)$ is dense in $C[0,1]$, but closed for the graph norm.
+in the Banach space $E = C\left[ 0,1 \right]$.
+Then $D(B)$ is dense in $C\left[ 0,1 \right]$, but closed for the graph norm.
 Obviously, each function
 %% --
 \[
@@ -675,14 +673,14 @@ and trigonometric relations show that
     k_{t}(x,y) = w_{t}(x+y) + w_{t}(x-y)
 \]
 %% --
-which is a positive function on $[0,1]^{2}$.
-Therefore $T(t)$ is a bounded operator on $C[0,1]$ with
+which is a positive function on $\left[ 0,1 \right]^{2}$.
+Therefore $T(t)$ is a bounded operator on $C\left[ 0,1 \right]$ with
 %% --
 \[
-    \|T(t)\| = \|T(t)1\| = \sup_{x \in [0,1]} \int_{0}^{1} k_{t}(x,y)dy = 1 .
+    \|T(t)\| = \|T(t)\1\| = \sup_{x \in \left[ 0,1 \right]} \int_{0}^{1} k_{t}(x,y)dy = 1 .
 \]
 %% --
-From the behavior of $T(t)$ on the dense subspace $E_{0}$ it follows that $(T(t))_{t \geq 0}$ with $T(0) = \mathrm{Id}$ is a strongly continuous semigroup on $E$ and its generator $A$ coincides with $B$ on $E_{0}$.
+From the behavior of $T(t)$ on the dense subspace $E_{0}$ it follows that $(T(t))_{t \geq 0}$ with $T(0) = \Id$ is a strongly continuous semigroup on $E$ and its generator $A$ coincides with $B$ on $E_{0}$.
 Finally, we observe that $E_{0}$ is a core for $(A,D(A))$ by Prop.1.9(ii).
 
 Consequently, $(T(t))_{t \geq 0}$ is the semigroup generated by the closure of the second derivative with domain $D(B)$.
@@ -720,7 +718,7 @@ Therefore we can apply the Fourier transformation $F$ which leaves $S(\R^{n})$ i
 %% --
 where $f \in S(\R^{n})$, $\hat{f} = Ff \in S(\R^{n})$.
 
-In other words, $F$ transforms $(T(t)|_{S(\R^{n})})_{t \geq 0}$ into a multiplication semigroup on $S(\R^{n})$ which is pointwise continuous for the usual topology of $S(\R^{n})$.
+In other words, $F$ transforms $(T(t)\vert_{ S(\R^{n})})_{t \geq 0}$ into a multiplication semigroup on $S(\R^{n})$ which is pointwise continuous for the usual topology of $S(\R^{n})$.
 The generator, i.e.\xspace, the right derivative at $0$, of this semigroup is the multiplication operator
 %% --
 \[
@@ -738,9 +736,7 @@ Its generator $A$ coincides with
 \]
 %% --
 for every $f \in S(\R^{n})$.
-
 Since $S(\R^{n})$ is $(T(t))$-invariant, we have determined the generator on a core of its domain (see Prop.1.9.ii).
-
 In particular, the above semigroup \emph{solves} the initial value problem for the \emph{heat equation}
 %% --
 \[
@@ -750,12 +746,12 @@ In particular, the above semigroup \emph{solves} the initial value problem for t
 For the analogous discussion of the unitary group on $L^{2}(\R^{n})$ generated by
 %% --
 \[
-    C \coloneqq i\Delta
+    C \coloneqq \im\Delta
 \]
 %% --
 we refer to Section IX.7 in \citet{reedsimon:1975}. %[Reed-Simon (1975]).
 
-Analogous examples to \ref{subsec:a1-2.7} are valid in $L^{p}[0,1]$, \resp to 
+Analogous examples to \ref{subsec:a1-2.7} are valid in $L^{p}\left[ 0,1 \right]$, \resp to 
 \ref{subsec:a1-2.8} in $C_{0}(\R^{n})$.
 %% --
 \section{Standard Constructions}\label{sec:a1-3}
@@ -798,7 +794,7 @@ For fixed $\lambda \in \mathbb{C}$ and $\alpha > 0$ the operators
 yield a new semigroup having generator
 %% --
 \[
-    B \coloneqq \alpha A + \lambda \mathrm{Id} \text{ with } D(B) = D(A) .
+    B \coloneqq \alpha A + \lambda \Id \text{ with } D(B) = D(A) .
 \]
 %% --
 This \emph{rescaled semigroup} enjoys most of the properties of the original semigroup and the same is true for the corresponding generators.
@@ -903,7 +899,7 @@ By 2.4 and 3.2 its generator is
 %% --
 for $f \in D(A|) \coloneqq \{f \in E \colon f \in \text{AC} \text{ with } f' \in E \text{ and } f(x) = 0 \text{ for } x \geq 1\}$.
 
-Next we identify $L^{1}([0,1])$ with the quotient space $L^{1}((-\infty,1])/I$ where
+Next we identify $L^{1}(\left[ 0,1 \right])$ with the quotient space $L^{1}((-\infty,1])/I$ where
 %% --
 \[
     I \coloneqq \{f \in L^{1}((-\infty,1]) \colon f(x) = 0 \text{ for } 0 \leq x \leq 1\} .
@@ -911,11 +907,11 @@ Next we identify $L^{1}([0,1])$ with the quotient space $L^{1}((-\infty,1])/I$ w
 %% --
 Again $I$ is invariant for the restricted semigroup $(T(t)_{|})$ and the
 %% --
-quotient semigroup $(T(t)|/)$ on $L^{1}([0,1])$ is the nilpotent translation semigroup as in Example 2.6.
+quotient semigroup $(T(t)|/)$ on $L^{1}(\left[ 0,1 \right])$ is the nilpotent translation semigroup as in Example 2.6.
 In particular it follows that the domain of its generator is
 %% --
 \[
-    D(A_{|_{/}}) = \{f \in L^{1}([0,1]) \colon f \in \text{AC} \text{ with } f' \in L^{1}([0,1]) \text{ and } f(1) = 0\}.
+    D(A_{|_{/}}) = \{f \in L^{1}(\left[ 0,1 \right]) \colon f \in \text{AC} \text{ with } f' \in L^{1}(\left[ 0,1 \right]) \text{ and } f(1) = 0\}.
 \]
 \end{example}
 %% --
@@ -1019,9 +1015,9 @@ For every $f \in D(A)$ with $\|f\| \leq 1$ we define a continuously differentiab
     t \mapsto \xi_{f}(t) \coloneqq \langle T(t)f,\phi \rangle
 \]
 %% --
-on $[0,1]$ with derivative $\xi_{f}'(t) = \langle T(t)Af,\phi \rangle = \langle T(t)f,A'\phi \rangle$.
+on $\left[ 0,1 \right]$ with derivative $\xi_{f}'(t) = \langle T(t)Af,\phi \rangle = \langle T(t)f,A'\phi \rangle$.
 
-Since $\{\xi_{f}'(t) \colon t \in [0,1], f \in D(A), \|f\| \leq 1\}$ is bounded, it follows that the set
+Since $\{\xi_{f}'(t) \colon t \in \left[ 0,1 \right], f \in D(A), \|f\| \leq 1\}$ is bounded, it follows that the set
 %% --
 \[
     \{\xi_{f} \colon f \in D(A), \|f\| \leq 1\}
@@ -1190,7 +1186,7 @@ Therefore we might call $E_{n}$ the \emph{n-th Sobolev space} and $(T_{n}(t))_{t
 \begin{remark}\label{rem:a1-19.1}
 \index{Sobolev spaces}
 \index{Semigroups!Sobolev}
-For $\lambda \in \rho(A)$ the operator $(\lambda - A)$ and the resolvent $R(\lambda,A)$ are isomorphisms from $E_{1}$ onto $E$, resp. from $E$ onto $E_{1}$ (show that $\|\cdot\|_{1}$ and $\|\cdot\|_{\lambda}$ with $\|\cdot\|_{\lambda} \coloneqq \|(\lambda - A)\cdot\|$ are equivalent).
+For $\lambda \in \rho(A)$ the operator $(\lambda - A)$ and the resolvent $R(\lambda,A)$ are isomorphisms from $E_{1}$ onto $E$, \resp from $E$ onto $E_{1}$ (show that $\|\cdot\|_{1}$ and $\|\cdot\|_{\lambda}$ with $\|\cdot\|_{\lambda} \coloneqq \|(\lambda - A)\cdot\|$ are equivalent).
 %% --
 In addition, the following diagram commutes. 
 %% --
@@ -1378,7 +1374,7 @@ To be more precise, we briefly present the most important examples for this situ
 \begin{examples}\label{ex:a1-5.1}
 \index{Tensor Product!Examples}
 %% --
-\begin{enumerate}[1., wide, labelsep=1em, itemindent=\parindent]
+\begin{enumerate}[(i), wide, labelsep=1em, itemindent=\parindent]
 
 \item
 Let $(X,\Sigma,\mu)$ and $(Y,\Omega,\nu)$ be measure spaces. 
@@ -1455,7 +1451,7 @@ We are now ready to consider semigroups induced on the tensor product.
 Let $(S(t))_{t\geq 0}$ and $(T(t))_{t\geq 0}$ be strongly continuous semigroups on Banach spaces $E$, $F$, and let $A$, $B$ be their generators. 
 Then the family $(S(t) \otimes T(t))_{t\geq 0}$ is a strongly continuous semigroup on 
 $ E \widetilde{\otimes}_{\alpha} F $.
-The closure of $A \otimes \mathrm{Id} + \mathrm{Id} \otimes B$, defined on the core $D(A) \otimes D(B)$, is its generator.
+The closure of $A \otimes \Id + \Id \otimes B$, defined on the core $D(A) \otimes D(B)$, is its generator.
 \end{proposition}
 %% --
 \begin{proof}
@@ -1466,7 +1462,7 @@ The strong continuity need only be verified at $t = 0$ and on elements of the fo
 This verification being straightforward, there remains to show that the generator of $(S(t)\otimes T(t))_{t\geq 0}$ is obtained as the closure of 
 %
 \[
-	(A \otimes \mathrm{Id} + \mathrm{Id} \otimes B,D(A) \otimes D(B)) .
+	(A \otimes \Id + \Id \otimes B,D(A) \otimes D(B)) .
 \]
 %
 To this end, let $f \in D(A)$ and $g \in D(B)$. 
@@ -1517,7 +1513,7 @@ one easily shows that $D_{0} \coloneqq D(A) \cap D(B)$ is a core for its generat
 
 For more complete information on semigroup theory we refer the reader to \citet{hillephillips:1957}, to the monographs by \citet{davies:1980}, 
 \citet{goldstein:1985a} and \citet{pazy:1983}, to the survey article by \citet{kreinkhazan:1985}, to the bibliography by 
-\citet{goldstein:1985b} and to \citet{engelnagel:2000}.
+\citet{goldstein:1985b} and to \citet{engelnagel:2006}.
 
 %% --
 \bibliographystyle{abbrvnat}
