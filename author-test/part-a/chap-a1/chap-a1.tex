@@ -3,12 +3,11 @@
 % !BIB program = bibtex
 %% --
 %% -- Chapter A-I
-%% -- Stand: 2025/02/20
+%% -- Stand: 2025-02-20
 %% --
 %\setcounter{chapter}{0}
 
-\chapter[Basic Results on Semigroups on Banach Spaces]{Basic Results on Semigroups on Banach Spaces}\label{chap:a1}
-%\normalsize{\hspace{2cm} R. Nagel \& U. Schlotterbeck}}
+\chapter{Basic Results on Semigroups on Banach Spaces}\label{chap:a1}
 \index{Basic Results}
 %% --
 Since the basic theory of one-parameter semigroups can be found in several excellent books (e.g. \citet{davies:1980}, \citet{goldstein:1985a}, \citet{pazy:1983} or \citet{hillephillips:1957}), we do not want to give a self-contained introduction to this subject here.
@@ -199,7 +198,7 @@ An operator $B$ with domain $D(B)$ on a Banach space $E$ is called \emph{closed}
 \]
 %% --
 becomes a Banach space.
-Equivalently, $(B,D(B))$ is closed if and only if its \emph{graph} $\{(f,Bf) \colon f \in D(B)\}$ is closed in $E \times E$, i.e.\xspace,
+Equivalently, $(B,D(B))$ is closed if and only if its \emph{graph} $\{(f,Bf) \colon f \in D(B)\}$ is closed in $E \times E$, \ie
 %% --
 \[
     f_{n} \in D(B), f_{n} \to f \text{ and } Bf_{n} \to g \text{ implies } f \in D(B) \text{ and } Bf = g.
@@ -210,7 +209,7 @@ Equivalently, $(B,D(B))$ is closed if and only if its \emph{graph} $\{(f,Bf) \co
 It is clear from this definition that the \emph{closedness} of an operator $B$ depends very much on the size of the domain $D(B)$.
 For example, a bounded and densely defined operator $(B,D(B))$ is closed if and only if $D(B) = E$.
 
-On the other hand it may happen that $(B,D(B))$ is not closed but has a closed \emph{extension} $(C,D(C))$, i.e.\xspace  $ D(B) \subseteq D(C)$ and $Bf = Cf$ for every $f \in D(B)$.
+On the other hand it may happen that $(B,D(B))$ is not closed but has a closed \emph{extension} $(C,D(C))$, \ie  $ D(B) \subseteq D(C)$ and $Bf = Cf$ for every $f \in D(B)$.
 In that case, $B$ is called \emph{closable}, a property which is equivalent to
 %% --
 \[
@@ -247,8 +246,6 @@ Take $E = C\left[ 0,1 \right]$, $D(B) = C^{1}\left[ 0,1 \right]$ and $Bf = q \cd
 Then $B$ is closed, but $D(B^{2}) = \{0\}$.
 \end{example}
 %% --
-
-%% --
 \begin{proposition}\label{prop:a1-1.11}
 For the generator $A$ of a strongly continous semigroup on a Banach space $E$ the following hold.
 
@@ -262,9 +259,8 @@ R(\lambda,A)^{n+1}f = \frac{(-1)^{n}}{n!}\left(\frac{d}{d\lambda}\right)^{n} R(\
 for every $f \in E$, $n \geq 0$ and $\lambda \in \mathbb{C}$ with $\Re(\lambda) > \omega$.
 \end{proposition}
 %% --
-%% --
 \begin{remarks}\label{rem:a1-1.12}
-
+%% --
 \begin{enumerate}[(i), wide, labelsep=1em, itemindent=\parindent]
 
 \item 
@@ -279,7 +275,7 @@ For continuous Banach space valued functions such as $t \mapsto T(t)f$ we consid
 Sometimes such integrals for strongly continuous semigroups are written as $\int_{a}^{b}T(t) \, dt$ but understood in the strong sense.
 
 \item 
-Since the generator $(A,D(A))$ determines the semigroup uniquely, we will speak occasionally of the growth bound of the generator instead of the semigroup, i.e.\xspace we write $\omega_{0} = \omega_{0}(A) = \omega_{0}((T(t))_{t \geq 0}$.
+Since the generator $(A,D(A))$ determines the semigroup uniquely, we will speak occasionally of the growth bound of the generator instead of the semigroup, \ie we write $\omega_{0} = \omega_{0}(A) = \omega_{0}((T(t))_{t \geq 0}$.
 
 \item 
 For one-parameter groups it might seem to be more natural to define the generator as the \emph{derivative} rather than just the \emph{right derivative} at $t = 0$.
@@ -367,11 +363,7 @@ and if $D=0$
 	e^{ts/2} \cdot [tA + (1 - ts/2) \cdot \Id] .
 \]
 %% --
-
-%% --
 \subsection{Multiplication Semigroups}\label{subsec:a1-2.3}
-%\index{Multiplication Semigroups}
-%\index{Examples!Multiplication Semigroups}
 \index{Standard Examples!Multiplication Semigroups}
 %% --
 Many Banach spaces appearing in applications are Banach spaces of (real or) complex valued functions over a set $X$.
@@ -383,7 +375,7 @@ On these function spaces $E = C_{0}(X)$, \resp $E = L^{p}(X,\Sigma,\mu)$, there 
 Take a continuous, \resp measurable function $q \colon X \to \mathbb{C}$ and define
 %% --
 \[
-    M_{q}f \coloneqq q \cdot f, \quad \text{i.e.\xspace} \quad M_{q}f(x) 
+    M_{q}f \coloneqq q \cdot f, \quad \text{\ie} \quad M_{q}f(x) 
     \coloneqq q(x) 	\cdot f(x) \quad \text{for } x \in X 
 \]
 %% --
@@ -395,7 +387,7 @@ This is easy in case $E = C_{0}(X)$.
 
 For $E = L^{p}(X,\Sigma,\mu)$, $1 \leq p < \infty$, we consider a sequence $(f_{n}) \subset E$ such that $\lim_{n \to \infty} f_{n} = f \in E$ and $\lim_{n \to \infty} qf_{n} = \colon g \in E$.
 Choose a subsequence $(f_{n(k)})_{k \in \N}$ such that $\lim_{k \to \infty} f_{n(k)}(x) = f(x)$ and $\lim_{k \to \infty} q(x)f_{n(k)}(x) = g(x)$ for $\mu$-almost every $x \in X$.
-Then $g = q \cdot f$ and $f \in D(M_{q})$, i.e.\xspace $M_{q}$ is closed.
+Then $g = q \cdot f$ and $f \in D(M_{q})$, \ie $M_{q}$ is closed.
 
 For such multiplication operators many properties can be checked quite directly.
 For example, the following statements are equivalent.
@@ -409,7 +401,6 @@ $q$ is ($\mu$-essentially) bounded.
 \end{enumerate}
 %% --
 One has $\|M_{q}\| = \|q\|_{\infty}$ in this situation.
-
 Observe that on spaces $C(K)$, $K$ compact, there are no densely defined, unbounded multiplication operators.
 
 By defining the multiplication semigroups
@@ -419,11 +410,8 @@ By defining the multiplication semigroups
 \]
 %% --
 one obtains the following characterizations.
-
 %% --
 \begin{proposition}\label{prop:a1-2.3}
-%\index{Multiplication Operators}
-%\index{Operators!Multiplication}
 \index{Standard Examples!Multiplication Operators}
 %% --
 Let $M_{q}$ be a multiplication operator on $E = C_{0}(X)$ or $E = L^{p}(X,\Sigma,\mu)$, $1 \leq p < \infty$.
@@ -462,14 +450,10 @@ It is a nice exercise to characterize those multiplication operators which gener
 
 We point out that the above results cover the cases of sequence spaces such as $c_{0}$ or $\ell^{p}$, $1 \leq p < \infty$.
 An abstract characterization of generators of multiplication semigroups will be given in C-II,Thm.5.13.
-
 %% --
 \subsection{Translation (Semi)Groups}\label{subsec:a1-2.4}
-%\index{Translation Semigroups}
-%\index{Semigroups!Translation}
 \index{Standard Examples!Translation Semigroups}
 %% --
-
 Let $E$ to be one of the following function spaces $C_{0}(\R_{+})$, $C_{0}(\R)$ or $L^{p}(\R_{+})$, $L^{p}(\R)$ for $1 \leq p < \infty$.
 Define $T(t)$ to be the (left) translation operator
 %% --
@@ -550,17 +534,15 @@ hence $f \in D(A)$.
 \end{proof}
 %% --
 \subsection{Rotation Groups}\label{subsec:a1-2.5}
-%\index{Rotation Groups}
-%\index{Groups!Rotation}
 \index{Standard Examples!Rotation Groups}
 %% --
-On $E = C(\Gamma)$, \resp $E = L^{p}(\Gamma,m)$, $1 \leq p < \infty$, $m$ Lebesgue measure we have canonical groups defined by rotations of the unit circle $\Gamma$ with a certain period, i.e.\xspace for $0 < \tau \in \R$ the operators
+On $E = C(\Gamma)$, \resp $E = L^{p}(\Gamma,m)$, $1 \leq p < \infty$, $m$ Lebesgue measure we have canonical groups defined by rotations of the unit circle $\Gamma$ with a certain period, \ie for $0 < \tau \in \R$ the operators
 %% --
 \[
     R_{\tau}(t)f(z) \coloneqq f(e^{2\pi it/\tau}\cdot z), \quad z \in \Gamma
 \]
 %% --
-yield a group $(R_{\tau}(t))_{t \in \R}$ having period $\tau$, i.e.\xspace $R_{\tau}(\tau) = \Id$.
+yield a group $(R_{\tau}(t))_{t \in \R}$ having period $\tau$, \ie $R_{\tau}(\tau) = \Id$.
 As in Example 2.4 one shows that its generator has the form
 %% --
 \begin{align*}
@@ -581,16 +563,7 @@ with generator
     \quad Af \coloneqq f'.
 \]
 %% --
-%%% --
-%\[
-%    Af \coloneqq f'.
-%\]
-%%% --
-
-%% --
 \subsection{Nilpotent Translation Semigroups}\label{subsec:a1-2.6}
-%\index{Nilpotent Translation Semigroups}
-%\index{Semigroups!Nilpotent Translation}
 \index{Standard Examples!Nilpotent Translation Semigroups}
 %% --
 Take $E = L^{p}([0,\tau],m)$ for $1 \leq p < \infty$ and define
@@ -613,8 +586,6 @@ In fact, if $f \in D(A)$, then $f$ is absolutely continuous with $f' \in E$.
 By Prop.~\ref{prop:a1-1.6}\,(i) on p.\,\pageref{prop:a1-1.6} it follows that $T(t)f$ is absolutely continuous and hence $f(\tau) = 0$.
 %% --
 \subsection{One-dimensional Diffusion Semigroup}\label{subsec:a1-2.7}
-%\index{Diffusion Semigroup}
-%\index{Semigroups!Diffusion}
 \index{Standard Examples!One-dimensional Diffusion Semigroup}
 %% --
 For the second derivative 
@@ -689,8 +660,6 @@ Finally, we observe that $E_{0}$ is a core for $(A,D(A))$ by Prop.1.9(ii).
 Consequently, $(T(t))_{t \geq 0}$ is the semigroup generated by the closure of the second derivative with domain $D(B)$.
 %% --
 \subsection{n-dimensional Diffusion Semigroup}\label{subsec:a1-2.8}
-%\index{Diffusion Semigroup!n-dimensional}
-%\index{Semigroups!Diffusion!n-dimensional}
 \index{Standard Examples!$n$-dimensionalDiffusion Semigroup}
 %% --
 On $E = L^{p}(\R^{n})$, $1 \leq p \leq \infty$, the operators
@@ -722,7 +691,7 @@ Therefore we can apply the Fourier transformation $F$ which leaves $S(\R^{n})$ i
 where $f \in S(\R^{n})$, $\hat{f} = Ff \in S(\R^{n})$.
 
 In other words, $F$ transforms $(T(t)\vert_{ S(\R^{n})})_{t \geq 0}$ into a multiplication semigroup on $S(\R^{n})$ which is pointwise continuous for the usual topology of $S(\R^{n})$.
-The generator, i.e.\xspace, the right derivative at $0$, of this semigroup is the multiplication operator
+The generator, \ie the right derivative at $0$, of this semigroup is the multiplication operator
 %% --
 \[
     B\hat{f}(x) \coloneqq -|x|^{2}\hat{f}(x) \quad (x \in \R^{n})
@@ -767,7 +736,6 @@ Although most of these constructions are rather routine, we present in the seque
 We always start with a semigroup $(T(t))_{t \geq 0}$ on a Banach space $E$, and denote its generator by $A$ on the domain $D(A)$.
 %% --
 \subsection{Similar Semigroups}\label{subsec:a1-3.0}
-%\index{Semigroups!Similar}
 \index{Standard Constructions!Similar Semigroups}
 %% --
 There is an easy way how to obtain different (but isomorphic) 
@@ -785,7 +753,6 @@ If $A$ is the generator of $(T(t))_{t \geq 0}$ then
 is the generator of $(S(t))_{t \geq 0}$.
 %% --
 \subsection{The Rescaled Semigroup}\label{subsec:a1-3.1}
-%\index{Semigroups!Rescaled}
 \index{Standard Constructions!Rescaled Semigroup}
 %% --
 For fixed $\lambda \in \mathbb{C}$ and $\alpha > 0$ the operators
@@ -822,7 +789,6 @@ and
 %% --
 %% --
 \subsection{The Subspace Semigroup}\label{subsec:a1-3.2}
-%\index{Semigroups!Subspace Semigroup}
 \index{Standard Constructions!Subspace Semigroup}
 %% --
 Assume $F$ to be a closed $(T(t))$-invariant or, equivalently, $R(\lambda,A)$-invariant for 
@@ -845,7 +811,6 @@ An $A$-invariant subspace need not necessarily be $(T(t))$-invariant:
 Take for example the translation group with $T(t)f(x) = f(x+t)$ on $E = C_{0}(\R)$ and $F \coloneqq \{f \in E \colon f(x) = 0 \text{ for } x \leq 0\}$.
 %% --
 \subsection{The Quotient Semigroup}\label{subsec:a1-3.3}
-%\index{Semigroups!Quotient}
 \index{Standard Constructions!Quotient Semigroup}
 %% --
 Let $F$ be a closed $(T(t))$-invariant subspace of $E$ and consider the quotient space $ E_{/}\coloneqq \nfrac{E}{F} $ with quotient map $q \colon E \to E_{/}$. 
@@ -875,7 +840,7 @@ Here we use the fact that every $\hat{f} \coloneqq q(f) \in D(A_{/})$ can be wri
 %% --
 where $h \in D(A)$ and $\lambda > \omega$ (see Prop.\,\ref{prop:a1-1}).
 In particular we point out that for every $\hat{f} \in D(A/)$ there exist representatives $f \in \hat{f}$ belonging to $D(A)$.
-%% ---- ab hier
+%% --
 \begin{example}\label{ex:a1-3.1}
 \index{Standard Examples!Translation Semigroup on $L^{1}$}
 %%
@@ -918,15 +883,12 @@ In particular it follows that the domain of its generator is
 \]
 \end{example}
 %% --
-%% --
 \subsection{The Adjoint Semigroup}\label{subsec:a1-3.4}
-%\index{Semigroups!Adjoint Semigroups}
 \index{Standard Constructions!Adjoint Semigroup}
 %% --
 The adjoint operators $(T(t)')_{t \geq 0}$ of a strongly continuous semigroup $(T(t))_{t \geq 0}$ on a Banach space $E$ form a semigroup on $E'$ which need, however, not be strongly continuous.
 %% --
 \begin{example}\label{ex:a1-3.2}
-\index{Example!Adjoint Semigroup}
 %% --
 Take the translation operators $T(t)f(x) = f(x+t)$ on $E = L^{1}(\R)$ (see Example 2.4) and their adjoints
 %% --
@@ -945,7 +907,7 @@ Since the semigroup $(T(t)')_{t \geq 0}$ is obviously \emph{weak*-continuous} in
     D(A') &\coloneqq \{\phi \in E' \colon \sigma(E',E)\text{-}\lim\frac{1}{h}(T(h)'\phi-\phi) \text{ exists}\}.
 \end{align*}
 %% --
-This operator coincides with the \emph{adjoint} of the generator $(A,D(A))$, i.e.\xspace
+This operator coincides with the \emph{adjoint} of the generator $(A,D(A))$, \ie
 %% --
 \[
     D(A') = \{\phi \in E' \colon \text{there exists } \psi \in E' \text{ such that } \langle f,\psi \rangle = \langle Af,\phi \rangle \text{ for all } f \in D(A)\}
@@ -985,7 +947,7 @@ In fact, since $\int_{0}^{t} T(s)'\phi \,\ds$, understood in the weak sense, is 
 \]
 %% --
 where $M \coloneqq \lim\sup_{t \to 0} \|T(t)\|$.
-In particular, $E^{*}$ separates $E$, i.e.\xspace $E^{*}$ is $\sigma(E',E)$-dense in $E'$.
+In particular, $E^{*}$ separates $E$, \ie $E^{*}$ is $\sigma(E',E)$-dense in $E'$.
 In addition the estimate of $\|\cdot\|$ given above yields
 %% --
 \[
@@ -1007,7 +969,6 @@ $D(A^{*}) = \{\phi \in D(A') \colon A'\phi \in E^{*}\}$.
 \item 
 $A^{*}$ and $A'$ coincide on $D(A^{*})$.
 \end{enumerate}
-
 \end{proposition}
 %% --
 \begin{proof}
@@ -1026,7 +987,7 @@ Since $\{\xi_{f}'(t) \colon t \in \left[ 0,1 \right], f \in D(A), \|f\| \leq 1\}
     \{\xi_{f} \colon f \in D(A), \|f\| \leq 1\}
 \]
 %% --
-is equicontinuous at $0$, i.e.\xspace, for every $\epsilon > 0$ there exists $0 < t_{0} < 1$ such that
+is equicontinuous at $0$, \ie for every $\epsilon > 0$ there exists $0 < t_{0} < 1$ such that
 %% --
 \[
     |\xi_{f}(s) - \xi_{f}(0)| = |\langle f,T(s)'\phi - \phi \rangle| < \epsilon
@@ -1036,7 +997,7 @@ for every $0 \leq s \leq t_{0}$ and $f \in D(A)$, $\|f\| \leq 1$.
 But this implies $\|T(s)'\phi - \phi\| < \epsilon$ and hence $\phi \in E^{*}$.
 
 Conversely, take $\psi \in E^{*}$.
-Then $\frac{1}{t}\int_{0}^{t} T(s)'\psi \ds$, $t > 0$, belongs to $D(A')$ and norm converges to $\psi$ as $t \to 0$, i.e.\xspace $\psi$ belongs to the norm closure of $D(A')$.
+Then $\frac{1}{t}\int_{0}^{t} T(s)'\psi \ds$, $t > 0$, belongs to $D(A')$ and norm converges to $\psi$ as $t \to 0$, \ie $\psi$ belongs to the norm closure of $D(A')$.
 
 (ii) and (iii): Since the weak* topology on $E'$ is weaker than the norm topology, it follows that $A'$ is an extension of $A^{*}$.
 Now take $\phi \in D(A')$ such that $A'\phi \in E^{*}$.
@@ -1074,7 +1035,7 @@ In other cases this construction is more interesting.
 \index{Example!Adjoint Semigroup}
 %% --
 The adjoints of the (left) translation $T(t)$ on $E = L^1(\R)$ are the (right) translations $T(t)'$ on $E' = L^\infty(\R)$.
-The largest subspace of $L^\infty(\R)$ on which these translations form a strongly-continuos semigroup with respect to the sup-norm, is the space of all bounded uniformly continuous functions on $\R$, i.e.\xspace $E^* = C_{bu}(\R)$.
+The largest subspace of $L^\infty(\R)$ on which these translations form a strongly-continuos semigroup with respect to the sup-norm, is the space of all bounded uniformly continuous functions on $\R$, \ie $E^* = C_{bu}(\R)$.
 
 Calculating $D(A')$ and $D(A^*)$ respectively, one obtains
 %% --
@@ -1101,7 +1062,7 @@ Since $E_{1}$ is invariant under $(T(t))_{t\geq 0}$, apply Prop.~\ref{prop:a1-1.
 The results of Prop.~\ref{prop:a1-1.6} imply that $T_{1}(t) \in \L{E_{1}}$ and $\|T_{1}(t)f-f\|_{1} \to 0$ as $t \to 0$ for every $f \in E_{1}$.
 Thus $(T_{1}(t))_{t\geq 0}$ is a strongly continuous semigroup on $E_{1}$ and has a generator denoted by $(A_{1},D(A_{1}))$.
 
-Using \ref{prop:a1-1.6} again we see that $A_{1}$ is the restriction of $A$ to $E_{1}$ with maximal domain, i.e.\xspace
+Using \ref{prop:a1-1.6} again we see that $A_{1}$ is the restriction of $A$ to $E_{1}$ with maximal domain, \ie
 %% --
 $D(A_{1}) = \{f \in E_{1} \colon Af \in E_{1}\} = D(A^{2})$ and
 $A_{1}f = Af$ for every $f \in D(A_{1})$.
@@ -1303,9 +1264,9 @@ $\hat{A}(f_{n}) = (Af_{n})$ for $(f_{n}) \in D(\hat{A})$ .
 %% --
 For the proof we refer to Lemma 1.4. of \citet{derndinger:1980}.
 
-Now let $\mathcal{F}$ be any filter on $\N$ finer than the Frechét filter (i.e.\xspace the filter of sets with finite complement. In most cases $F$ will be either the Frechét filter or some free ultra filter.)
+Now let $\mathcal{F}$ be any filter on $\N$ finer than the Frechét filter (\ie the filter of sets with finite complement. In most cases $F$ will be either the Frechét filter or some free ultra filter.)
 %% --
-The space of all $\mathcal{F}$-null sequences in $m(E)$, i.e.\xspace
+The space of all $\mathcal{F}$-null sequences in $m(E)$, \ie
 %% --
 \[
     c_{\mathcal{F}}(E) \coloneqq \{(f_{n}) \in m(E) \colon \mathcal{F}\text{-}\lim\|f_{n}\| = 0\}
@@ -1360,8 +1321,8 @@ We will show in A-III,4.5 that the above construction preserves and even improve
 
 %% --
 \section{The Tensor Product Semigroup}\label{sec:a1-3.7}
-\index{Tensor Product}
-\index{Tensor Product!Semigroup}
+\index{Tensor Product Semigroup}
+
 %% --
 Real- or complex-valued functions of two variables $x$, $y$ are often limits of functions of the form $\sum_{i=1}^{n} f_{i}(x)g_{i}(y)$ which, to some extent, allows one to consider the variables $x$ and $y$ separately.
 Since algebraic manipulation with these latter functions is governed by the formal rules of a tensor product, it is customary to identify (for example) the function
@@ -1375,7 +1336,6 @@ with the tensor product $f \otimes g$ and to consider limits of linear combinati
 To be more precise, we briefly present the most important examples for this situation.
 %% --
 \begin{examples}\label{ex:a1-5.1}
-\index{Tensor Product!Examples}
 %% --
 \begin{enumerate}[(i), wide, labelsep=1em, itemindent=\parindent]
 
@@ -1419,7 +1379,7 @@ $\|u\|_{\pi} \coloneqq \inf\{\sum_{j=1}^{m} \|h_{j}\|\|k_{j}\| \colon u = \sum_{
 \item
 $\|u\|_{\epsilon} \coloneqq \sup\{\langle u,\phi \otimes \psi\rangle \colon \phi \in E', \psi \in F', \|\phi\|, \|\psi\| \leq 1\}$ defines the 
 \emph{least cross norm $\epsilon$} on $E \times F$. 
-Here, $\langle u,\phi \otimes \psi\rangle$ denotes the canonical bilinear form on $(E \otimes F) \times (E' \otimes F')$, i.e.\xspace, $\langle\sum_{i=1}^{n} f_{i} \otimes g_{i},\phi \otimes \psi\rangle = \sum_{i=1}^{n} \langle f_{i},\phi\rangle\langle g_{i},\psi\rangle$.
+Here, $\langle u,\phi \otimes \psi\rangle$ denotes the canonical bilinear form on $(E \otimes F) \times (E' \otimes F')$, \ie $\langle\sum_{i=1}^{n} f_{i} \otimes g_{i},\phi \otimes \psi\rangle = \sum_{i=1}^{n} \langle f_{i},\phi\rangle\langle g_{i},\psi\rangle$.
 
 \item
 if $E$ and $F$ are Hilbert spaces, $\|u\|_{h} = (u|u)_{h}^{1/2}$, where the scalar product $(\cdot|\cdot)_{h}$ is defined as in (ii), defines the \emph{Hilbert norm $h$} on $E \otimes F$.
@@ -1486,9 +1446,8 @@ Moreover, $D(A) \otimes D(B)$ is dense in $E \widetilde{\otimes}_{\alpha} F$ and
 \end{proof}
 %% --
 \section{The Product of Commuting Semigroups}\label{sec:a1-3.8}
-%\index{Product of Semigroups}
-\index{Basic Theory!Commuting Semigroups}
-
+\index{Commuting Semigroups}
+%% --
 Let $(S(t))_{t\geq 0}$ and $(T(t))_{t\geq 0}$ be semigroups with generators $A$ and $B$, respectively on some Banach space $E$.
 It is not difficult to see that the following assertions are equivalent.
 %% --
@@ -1518,9 +1477,4 @@ For more complete information on semigroup theory we refer the reader to \citet{
 \citet{goldstein:1985a} and \citet{pazy:1983}, to the survey article by \citet{kreinkhazan:1985}, to the bibliography by 
 \citet{goldstein:1985b} and to \citet{engelnagel:2006}.
 
-%% --
-%\bibliographystyle{abbrvnat}
-%\bibliography{bib/ln-references}
-%
-%\input{./part-a/a1-references}
 
