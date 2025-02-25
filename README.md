@@ -9,7 +9,7 @@ Noch etwas: Es lohnt sich, einen Blick auf  [https://tex.social](https://tex.soc
 ##### Die Struktur
 
 * `AGFA-LN-POS` ist das Masterverzeichnis, unter dem sich die weiteren Verzeichnisse befinden. Im Einzelnen:
-	* `ablage-test:` Dies ist das Verzeichnis, das die noch nicht fertigen `TeX`-Dateien enthält. In diesem sind alle Kapitel enthalten (Reihenfolge wie im Buch) .
+	* `LN-Einzelbeitraege:` Dies ist das Verzeichnis, das die noch nicht fertigen `TeX`-Dateien enthält. In diesem sind alle Kapitel enthalten (Reihenfolge wie im Buch) . Diese Struktur ist auch auf dem `Overleaf`-System abgebildet. Bitte daher dort jeweils die relevanten bearbeiteten Beiträge einstellen. 
 	
 	* Das Unterverzeichnis `preamble` enthält die folgenden `TeX`-Dateien:
 	
@@ -20,20 +20,17 @@ Noch etwas: Es lohnt sich, einen Blick auf  [https://tex.social](https://tex.soc
 	  * `ln-references.bib`
 
 	Auf diese Unterverzeichnisse wird in der Testdatei `chap-xa-test.tex` verweisen und muss daher nicht in die jeweiligen Unterverzeichnisse kopiert werden. 	
+* `LN-PDF`: Hier findet sich, kapitelweise, die Kapitelübersicht und die sich daraus ergeben Einzelseiten für die Umwandlung. Also etwa `LN-chap-a4.pdf` als Gesamtübersicht und die einzelnen Seiten `ln-chap-a4_01.pdf` bis (hier) `ln-chap-a4_14.pdf`. Vorher waren dieses unter `part-a/chap-a4` zu finden. Diese Seiten werden - einzeln - mithilfe von `Claude` in `LaTeX` übersetzt und die umgewandelte Seite in die `TeX`-Datei `chap-a4.tex` einkopiert. Wenn diese lokal bearbeitet sind, bitte in das gemneinsame `Overlaf`-System einkopieren. 
 
 * `springer:` Hier finden sich die Dateien des Pakets `svmono` und `svmult`von Springer. Für die Erstellung der einzelnen Beiträge sind diese nicht erforderlich. Wichtiger wäre es, mal in die Dokumente hereinzusehen, die sich unter `springer-manuals`finden. 
 	
 * `literatur:` Wie der Name sagt – ergänzende Literatur zum Hineinschauen, insbesondere in den `Grätzer`.
 
-#### Der Aufbau von `author-test`
+#### Der Aufbau von `LN-Einzelbeitraege`
 
 Der Aufbau ist wie folgt (analog dann auch für die anderen Teile):
 
-* Es findet sich  in `part-a` die Kapitel `chap-a1` bis `chap-a4`– analog geht es dann weiter.
-	* In etwa `chap-a4` finden sich dann das `PDF` dieses Kapitels, `LN-chap-a4.pdf` als Gesamtübersicht und die einzelnen Seiten `ln-chap-a4_01.pdf` bis (hier) `ln-chap-a4_14.pdf`. 
-	* Diese Seiten werden - einzeln - mithilfe von `Claude` in `LaTeX` übersetzt und die umgewandelte Seite in die `TeX`-Datei `chap-a4.tex` einkopiert, überarbeitet und mittels `chap-a4-test.tex` getestet.
-
-Ist ein solches Kapitel vollständig fertig und bereinigt, so bitte als  `chap-a1.tex` an mich schicken. 
+* Es findet sich  in `part-a` die Kapitel `chap-a1` bis `chap-a4`– analog geht es dann weiter. Die einzelnen `PDF`-Seiten werden  mithilfe von `Claude` in `LaTeX` übersetzt und die umgewandelte Seite in die `TeX`-Datei `chap-a4.tex` einkopiert, überarbeitet und mittels `chap-a4-test.tex` getestet. Ist ein solches Kapitel vollständig fertig und bereinigt, so bitte als  `chap-a1.tex` an mich schicken. 
 
 Noch ein Hinweis: Da einzelne Seiten konvertiert werden, ist es sinnvoll, in der `TeX`-Datei dies mittels
 
