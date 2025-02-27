@@ -18,14 +18,23 @@
 
 %% -- Gemeinsame Pakete und Definitionen
 %% --
-\input{../../preamble/ln-preamble}  
+\input{../../preamble/ln-preamble}   
 \input{../../preamble/ln-definitionen}
-
+\newcommand*{\lnm}{LNM1184: }  
+\theoremstyle{remark}
+\newtheorem*{remark*}{Remark} 
+\newtheorem*{remarks*}{Remark}
+\newtheorem*{example*}{Example}
+\newtheorem*{corollary*}{Corollary}
+\newcommand*{\ddp}{\mathop{}\!\mathrm{d}{p}}      
+\newcommand*{\dN}{\mathop{}\!\mathrm{d}{N}}    
+\newcommand{\HO}{\mathcal{H}(O)} 		 
+\newcommand{\WO}{\mathcal{W}(O)} 		 
 %% -- Index 
 %% --
 
-%\usepackage{imakeidx}
-%\makeindex[columns=2, options=-s svind.ist]
+\usepackage{imakeidx}
+\makeindex[columns=2, options=-s svind.ist]
 
 
 %% -- Literatur 
@@ -38,7 +47,7 @@
 
 \usepackage{hyperref}
 \hypersetup{% 
-,colorlinks=true 
+,colorlinks=true  
 ,linkcolor=blue
 ,citecolor=blue
 ,urlcolor=blue
@@ -47,7 +56,7 @@
 }
 
 %% -- label prüfen
-%%\usepackage{showkeys}  
+\usepackage{showlabels}  
 %% --
            
 \begin{document}
@@ -65,14 +74,14 @@
 
 %% -- Literatur
 %% --
-%\RaggedRight
-%\bibliography{../../bib/ln-references} 
+\RaggedRight
+\bibliography{../../bib/ln-references} 
 
 %% -- Index
 %% --
 
-%\clearpage
-%\printindex
+\clearpage
+\printindex
 
 %% --
 \end{document}
