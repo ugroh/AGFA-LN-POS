@@ -5,9 +5,8 @@
 - Unter `LN-Einzelbeitraege ` finden sich die Unterverzeichnisse `part-a`bis `part-b`und darunter jeweils `chap-x1` bis `chap-x4`, `x=1/2/3/4`. In den letzteren sind die einzelnen `PDF` Seiten des jeweiligen Kapitels des Buches, die mithilfe von Claude in ein `LaTeX` Dokument umgesetzt werden sollen. Zum Testen findet man dann dort `chap-xy-test.tex` und `chap-xy.tex` zum Testen bzw. zum Speichern der umgewandelten Dateien. Bitte ausschließlich diese Struktur nutzen und nicht eigene Varianten anlegen, was nur das Leben erschwert.
 - In `./preamble` findet sich die jeweils aktuelle Version des Literaturverzeichnisses (was sicherlich noch zu überarbeiten ist) und die beiden Dateien, die für die Testphase erforderlich sind. Das `ln-definitionen.tex` beschreibe ich weiter unten. 
 - Wer `Overleaf` nutzt: Das jeweilige Unterverzeichnis inkl. der Dateien aus `./preamble` zusammen als `ZIP`-File als neues Projekt hochladen und auf Overleaf weiter bearbeiten. Wer da Probleme hat: da kann ich gern helfen. 
+  *Hinweis*: Im gemeinsamen Overleaf ist dies nicht erforderlich.
 - Und mal in die Anleitung für Claude reinsehen – da hat es noch einige Tipps. 
-
-*Hinweis*: Im gemeinsamen Overleaf ist dies nicht erforderlich.
 
 ##### Gemeinsames `LaTeX`
 
