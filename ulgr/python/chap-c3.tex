@@ -1,14 +1,19 @@
+
 %% -- Chapter C-III
 %% --
-\setcounter{chapter}{2}
-\chapter[Spectral Theory on Banach Lattices]{Spectral Theory of Positive Semigroups on Banach Lattices}\label{chap:c3}
-\chaptermark{Spectral Theory of Positive Semigroups}
+
+\chapter[Spectral Theory on Banach Lattices]{Spectral Theory of Positive Semigroups on Banach Lattices}\label{chap:cf-III}
+%% --
+
+%% --  1 / 292
 %% --
 \index{Spectral Theory}
 \index{Theory!Spectral}
 \index{Semigroups!Positive}
 \index{Banach Lattices}
-%% --
+
+
+
 In Chapter B-III we have shown that positive semigroups on spaces $C_{0}(X)$ possess several interesting spectral properties.
 Now we are going to extend many of these results to the more general setting of Banach lattices.
 We will improve some of them considerably and give the complete proof of B-III,Theorem~4.1.
@@ -69,10 +74,10 @@ By Datko's Theorem (A-IV,Theorem~1.11) the function $t \mapsto \mathrm{e}^{-\lam
 	For $\Re\,\lambda > s(A)$ we have
 	%% --
 	\begin{equation}\label{eq:c3-1.1}
-		R(\lambda,A)f = \lim_{t\to\infty} \int_{0}^t \mathrm{e}^{-\lambda s} T(s)f \,\ds \text{ for all } f \in E.
+		R(\lambda,A)f = \lim_{t\to\infty} \int_{0}^t \mathrm{e}^{-\lambda s} T(s)f \,\d s \text{ for all } f \in E.
 	\end{equation}
 	%% --
-	Moreover, the operators $\int_{0}^t \mathrm{e}^{-\lambda s} T(s) \,\ds$ tend to $R(\lambda,A)$ with respect to the operator norm as $t \to \infty$.
+	Moreover, the operators $\int_{0}^t \mathrm{e}^{-\lambda s} T(s) \,\d s$ tend to $R(\lambda,A)$ with respect to the operator norm as $t \to \infty$.
 \end{theorem}
 %% --
 
@@ -81,7 +86,7 @@ By Datko's Theorem (A-IV,Theorem~1.11) the function $t \mapsto \mathrm{e}^{-\lam
 	Then, by A-I,Proposition~1.11,
 	%% --
 	\begin{equation}\label{eq:c3-1.2}
-		R(\lambda_{0},A)^{n+1}f = \frac{1}{n!} \int_{0}^{\infty} s^n \exp(-\lambda_{0}s) T(s)f \,\ds \quad (n \in \N_{0}, f \in E)\,.
+		R(\lambda_{0},A)^{n+1}f = \frac{1}{n!} \int_{0}^{\infty} s^n \exp(-\lambda_{0}s) T(s)f \,\d s \quad (n \in \N_{0}, f \in E)\,.
 	\end{equation}
 	%% --
 	Given $\mu$ such that $s(A) < \mu < \lambda_{0}$, $f \in E_{+}$, $\phi \in E'_{+}$, then
@@ -89,18 +94,18 @@ By Datko's Theorem (A-IV,Theorem~1.11) the function $t \mapsto \mathrm{e}^{-\lam
 	\begin{equation}\label{eq:c3-1.3}
 	\begin{aligned}
 		\langle R(\mu,A)f,\phi\rangle &= \sum_{n=0}^{\infty} (\lambda_{0}-\mu)^n\langle R(\lambda_{0},A)^{n+1}f,\phi\rangle = \\
-		&= \sum_{n=0}^{\infty} \int_{0}^{\infty} \frac{1}{n!}(\lambda_{0}-\mu)^n\exp(-\lambda_{0}s)\langle T(s)f,\phi\rangle\ds = \\
-		&= \int_{0}^{\infty} \sum_{n=0}^{\infty} \frac{1}{n!}(\lambda_{0}-\mu)^n\exp(-\lambda_{0}s)\langle T(s)f,\phi\rangle\ds = \\
-		&= \int_{0}^{\infty} \exp((\lambda_{0}-\mu)s)\exp(-\lambda_{0}s)\langle T(s)f,\phi\rangle\ds = \\
-		&= \int_{0}^{\infty} \exp(-\mu s)\langle T(s)f,\phi\rangle\ds = \\ & = \lim_{t\to\infty}\left\langle \int_{0}^t \exp(-\mu s)T(s)f \ds,\phi\right\rangle\,.
+		&= \sum_{n=0}^{\infty} \int_{0}^{\infty} \frac{1}{n!}(\lambda_{0}-\mu)^n\exp(-\lambda_{0}s)\langle T(s)f,\phi\rangle\d s = \\
+		&= \int_{0}^{\infty} \sum_{n=0}^{\infty} \frac{1}{n!}(\lambda_{0}-\mu)^n\exp(-\lambda_{0}s)\langle T(s)f,\phi\rangle\d s = \\
+		&= \int_{0}^{\infty} \exp((\lambda_{0}-\mu)s)\exp(-\lambda_{0}s)\langle T(s)f,\phi\rangle\d s = \\
+		&= \int_{0}^{\infty} \exp(-\mu s)\langle T(s)f,\phi\rangle\d s = \\ & = \lim_{t\to\infty}\left\langle \int_{0}^t \exp(-\mu s)T(s)f \d s,\phi\right\rangle\,.
 	\end{aligned}
 	\end{equation}
 %% --
 	
 	Note that one can interchange summation and integration because all the integrands are positive functions.
 	
-	It follows from (1.3) that the net $(\int_{0}^t \exp(-\mu s)T(s) f \,\ds)_{t\geq 0}$ converges weakly to $R(\mu,A)f$ for $t \to \infty$.
-	Because it is monotone increasing $(f \geq 0)$, we have strong convergence (see the corollary to II.Theorem~5.9 in \citet{schaefer:1974}).
+	It follows from (1.3) that the net $(\int_{0}^t \exp(-\mu s)T(s) f \,\d s)_{t\geq 0}$ converges weakly to $R(\mu,A)f$ for $t \to \infty$.
+	Because it is monotone increasing $(f \geq 0)$, we have strong convergence (see the corollary to II.Theorem~5.9 in [Schaefer (1974)]).
 %
 %\endinput
 %\newpage
@@ -110,33 +115,33 @@ By Datko's Theorem (A-IV,Theorem~1.11) the function $t \mapsto \mathrm{e}^{-\lam
 If $\lambda = \mu + \im\nu$ with $\mu$, $\nu$ real and $\mu > s(A)$, we have for arbitrary $f \in E$, $\phi \in E'$
 %% --
 \begin{align*}
-	\left|\left\langle \int_{r}^t \mathrm{e}^{-\lambda s}T(s)f \,\ds,\phi\right\rangle\right| &\leq \int_{r}^t \mathrm{e}^{-\mu s}\langle T(s)|f|,|\phi|\rangle\ds \\
-	\text{ hence } \left\|\int_{r}^t \mathrm{e}^{-\lambda s}T(s)f \,\ds\right\| &\leq \left\|\int_{r}^t \mathrm{e}^{-\mu s}T(s)|f| \,\ds\right\| \
+	\left|\left\langle \int_{r}^t \mathrm{e}^{-\lambda s}T(s)f \,\d s,\phi\right\rangle\right| &\leq \int_{r}^t \mathrm{e}^{-\mu s}\langle T(s)|f|,|\phi|\rangle\d s \\
+	\text{ hence } \left\|\int_{r}^t \mathrm{e}^{-\lambda s}T(s)f \,\d s\right\| &\leq \left\|\int_{r}^t \mathrm{e}^{-\mu s}T(s)|f| \,\d s\right\| \
 \end{align*}
 %% --
-which shows that $\lim_{t\to\infty} \int_{0}^t \mathrm{e}^{-\lambda s}T(s)f \,\ds$ exists.
-Thus $R(\lambda,A)f = \int_{0}^{\infty} \mathrm{e}^{-\lambda s} T(s)f \,\ds$ by A-I,Proposition~1.11.
+which shows that $\lim_{t\to\infty} \int_{0}^t \mathrm{e}^{-\lambda s}T(s)f \,\d s$ exists.
+Thus $R(\lambda,A)f = \int_{0}^{\infty} \mathrm{e}^{-\lambda s} T(s)f \,\d s$ by A-I,Proposition~1.11.
 
-It remains to prove that the net $\left(\int_{0}^t \exp(-\mu s)T(s) \,\ds\right)_{t\geq 0}$ converges with respect to the operator norm.
+It remains to prove that the net $\left(\int_{0}^t \exp(-\mu s)T(s) \,\d s\right)_{t\geq 0}$ converges with respect to the operator norm.
 We fix $\mu$ such that $s(A) < \mu < \Re\, \lambda$.
 As we have seen above, the map $s \mapsto \mathrm{e}^{-\mu s}\langle T(s)f,\phi\rangle$ is Lebesgue integrable for every $(f,\phi) \in E \times E'$, thus defining a bilinear map $b \colon E \times E' \to L^1(\R _{+})$.
-Using the closed graph theorem, it is easy to see that $b$ is separately continuous, hence jointly continuous by \citet[III.Theorem~5.1]{schaefer:1966}.
+Using the closed graph theorem, it is easy to see that $b$ is separately continuous, hence jointly continuous by [Schaefer (1966), III.Theorem~5.1].
 Thus there is a constant $M$ such that
 %% --
 \begin{equation}\label{eq:c3-1.4}
-	\int_{0}^{\infty} \mathrm{e}^{-\mu s}|\langle T(s)f,\phi\rangle| \,\ds = \|b(f,\phi)\| \leq M\|f\|\|\phi\| \quad (f \in E, \phi \in E')\,.
+	\int_{0}^{\infty} \mathrm{e}^{-\mu s}|\langle T(s)f,\phi\rangle| \,\d s = \|b(f,\phi)\| \leq M\|f\|\|\phi\| \quad (f \in E, \phi \in E')\,.
 \end{equation}
 %% --
 
 Given $0 \leq t < r$ and setting $\epsilon \coloneqq \Re\, \lambda - \mu$ we have
 %% --
 \begin{align*}
-	\left|\int_{t}^r \mathrm{e}^{-\lambda s}\langle T(s)f,\phi\rangle \,\ds\right| &\leq \int_{t}^r \exp(-(\Re\,\lambda-\mu)s)\mathrm{e}^{-\lambda s}|\langle T(s)f,\phi\rangle| \,\ds \\
-	&\leq \mathrm{e}^{-\epsilon t}\int_{t}^r \mathrm{e}^{-\lambda s}|\langle T(s)f,\phi\rangle| \,\ds \leq \mathrm{e}^{-\epsilon t} M\|f\|\|\phi\|.
+	\left|\int_{t}^r \mathrm{e}^{-\lambda s}\langle T(s)f,\phi\rangle \,\d s\right| &\leq \int_{t}^r \exp(-(\Re\,\lambda-\mu)s)\mathrm{e}^{-\lambda s}|\langle T(s)f,\phi\rangle| \,\d s \\
+	&\leq \mathrm{e}^{-\epsilon t}\int_{t}^r \mathrm{e}^{-\lambda s}|\langle T(s)f,\phi\rangle| \,\d s \leq \mathrm{e}^{-\epsilon t} M\|f\|\|\phi\|.
 \end{align*}
 %% --
 
-It follows that $\left\|\int_{t}^r \mathrm{e}^{-\lambda s}T(s) \,\ds\right\| \leq M\mathrm{e}^{-\epsilon t}$, hence $\left(\int_{0}^t \mathrm{e}^{-\lambda s}T(s) \,\ds\right)_{t\geq 0}$ is a Cauchy net with respect to the operator norm.
+It follows that $\left\|\int_{t}^r \mathrm{e}^{-\lambda s}T(s) \,\d s\right\| \leq M\mathrm{e}^{-\epsilon t}$, hence $\left(\int_{0}^t \mathrm{e}^{-\lambda s}T(s) \,\d s\right)_{t\geq 0}$ is a Cauchy net with respect to the operator norm.
 \end{proof}
 
 Theorem~\ref{thm:c3-1.2} has many consequences.
@@ -186,7 +191,7 @@ By (1.5) we have $\|R(\epsilon+\im\beta ,A)\| \leq \|R(\epsilon,A)\|$ for every 
 Therefore $\lim_{\epsilon\to 0}\|\epsilon^k R(\epsilon+\im\beta ,A)\| \leq \lim_{\epsilon\to 0}\|\epsilon^k R(\epsilon,A)\| = 0$ for $k > m$.
 \end{proof}
 
-The spectrum of a positive semigroup may be empty (see B-III, Example~1.2(a)) and the spectrum of a general group may be empty as well (see \citet[Section~23.16]{hillephillips:1957}).
+The spectrum of a positive semigroup may be empty (see B-III, Example~1.2(a)) and the spectrum of a general group may be empty as well (see [Hille-Phillips (1957), Section~23.16]).
 However, for positive groups this cannot occur.
 More precisely, we have the following result
 %% --
@@ -212,7 +217,7 @@ We conclude this section by indicating possible extensions and further consequen
 \begin{enumerate}[(i), wide]
 	\item 
 	Many of the results of this section remain true for positive semigroups on ordered Banach spaces more general than Banach lattices.
-	The interested reader is referred to \citet{greinervoigtwolff:1981}.
+	The interested reader is referred to [Greiner-Voigt-Wolff (1981)].
 	
 	\item 
 	From Theorem~\ref{thm:c3-1.2} one can easily deduce that for positive semigroups on $L^1$-spaces spectral bound and growth bound coincide.
@@ -374,7 +379,7 @@ An equivalent (often quite useful) version of (2.8) is the following
 
 Obviously, the resolvent of a closed linear operator $A$ on $G$ is a pseudo-resolvent on $D = \rho(A)$.
 In general a pseudo-resolvent need not be the resolvent of an operator.
-Further information can be found in \citet{hillephillips:1957}, \citet{pazy:1983} or \citet{yosida:1974}.
+Further information can be found in [Hille-Phillips (1957)], [Pazy (1983)] or [Yosida (1974)].
 For our purposes the following examples are of particular interest
 
 %% --
@@ -469,7 +474,7 @@ Applying Pringsheim's Theorem (see Theorem~2.1 in the appendix
 %% --  9 / 300
 %% --
 %
-of \citet{schaefer:1966} to the expansion given in (2.11) one can conclude that $R$ has an extension to the halfplane $\{z \in \C  : \Re\, z > 0\}$.
+of [Schaefer (1966)] to the expansion given in (2.11) one can conclude that $R$ has an extension to the halfplane $\{z \in \C  : \Re\, z > 0\}$.
 
 This shows that without loss of generality one can assume that the domain of a positive pseudo-resolvent contains the halfplane $\{z \in \C  : \Re\, z > 0\}$.
 %% --
@@ -537,7 +542,7 @@ We will prove cyclicity of the boundary spectrum under a \emph{growth condition}
 	\begin{equation}\label{eq:c3-2.15}
 	\begin{aligned}
 	\text{(i)}\quad & \text{$\{(\lambda-s(A))R(\lambda,A) : \lambda > s(A)\}$ is bounded in $\mathcal{L}(E)$}\,.\\
-	\text{(ii)}\quad & \text{$\left\{\frac{1}{t} \int_{0}^{t} \exp(-\tau s(A))T(\tau) \diff{\tau} : t > 0\right\}$ is bounded in $\mathcal{L}(E)$}\,.
+	\text{(ii)}\quad & \text{$\left\{\frac{1}{t} \int_{0}^{t} \exp(-\tau s(A))T(\tau) \d\tau : t > 0\right\}$ is bounded in $\mathcal{L}(E)$}\,.
 	\end{aligned}
 	\end{equation}
 \end{definition}
@@ -546,7 +551,7 @@ Before proving the equivalence of the two assertions we make some remarks.
 
 (a) Since one always has $\lambda R(\lambda,A) \to \Id$ for $\lambda \to \infty$, $\{(\lambda-s(A))R(\lambda,A) : \lambda > s(A)+\epsilon\}$ is bounded for every $\epsilon > 0$.
 Thus in (2.15)(i) the essential fact is boundedness near $s(A)$.
-On the other hand, $\{\frac{1}{t} \int_{0}^{t} \exp(-\tau s(A))T(\tau) \diff{\tau} : 0 \leq t \leq T\}$ is bounded for every $T \geq 0$, hence in (2.15)(ii) the boundedness for $t \to \infty$ is important.
+On the other hand, $\{\frac{1}{t} \int_{0}^{t} \exp(-\tau s(A))T(\tau) \d\tau : 0 \leq t \leq T\}$ is bounded for every $T \geq 0$, hence in (2.15)(ii) the boundedness for $t \to \infty$ is important.
 
 (b) By Corollary~\ref{cor:c3-1.4} we have $\|R(\lambda,A)\| \geq r(R(\lambda,A)) = (\lambda-s(A))^{-1}$.
 Hence $\|R(\lambda,A)\|$ grows at least as fast as $(\lambda-s(A))^{-1}$.
@@ -556,7 +561,7 @@ Thus if (2.15)(i) is satisfied, the resolvent grows as slowly as it possibly can
 A slight modification of A-III,Example 1.3 shows that there are semigroups with slowly growing resolvent and $s(A) < \omega_0(A)$.
 
 \begin{proof} 
-To prove equivalence of (2.15)(i) and (2.15)(ii), we assume $s(A) = 0$ and write $C(t) \coloneqq \frac{1}{t} \int_{0}^{t} T(\tau) \diff{\tau}$.
+To prove equivalence of (2.15)(i) and (2.15)(ii), we assume $s(A) = 0$ and write $C(t) \coloneqq \frac{1}{t} \int_{0}^{t} T(\tau) \d\tau$.
 
 (2.15)(i) $\Rightarrow (2.15)$(ii)\quad 
 Consider $\lambda > 0$, $t > 0$ such that $\lambda t = 1$. 
@@ -572,7 +577,7 @@ Then we have
 %% --
 Now (1.1) implies 
 \[
-\textit{$\lambda R(\lambda,A) = \int_{0}^{\infty} \lambda \exp(-\lambda s)T(s) \ds \geq \mathrm{e}^{-1}C(t) = \mathrm{e}^{-1}\cdot C(\frac{1}{\lambda}) \geq 0$}\,.
+\textit{$\lambda R(\lambda,A) = \int_{0}^{\infty} \lambda \exp(-\lambda s)T(s) \d s \geq \mathrm{e}^{-1}C(t) = \mathrm{e}^{-1}\cdot C(\frac{1}{\lambda}) \geq 0$}\,.
 \]
 Thus $C(t)$ is bounded for $t \to \infty$ whenever $\lambda R(\lambda,A)$ is bounded for $\lambda \downarrow 0$.
 
@@ -581,8 +586,8 @@ Thus $C(t)$ is bounded for $t \to \infty$ whenever $\lambda R(\lambda,A)$ is bou
 Given $f \in E$, $\lambda > 0$ and $r > 0$ then integration by parts yields
 %% --
 \begin{align*}
-	\lambda \int_{0}^{r} \mathrm{e}^{-\lambda s}T(s)f \ds &= \lambda \mathrm{e}^{-\lambda r} \int_{0}^{r} T(\sigma)f \diff{\sigma} + \lambda^{2}\int_{0}^{r} s\mathrm{e}^{-\lambda s}\left(\frac{1}{s}\int_{0}^{s} T(\sigma)f \diff{\sigma}\right)\ds \\
-	\left\|\lambda \int_{0}^{r} \mathrm{e}^{-\lambda s}T(s)f \ds\right\| &\leq \left(r\lambda \mathrm{e}^{-r} + \lambda^{2}\int_{0}^{r} s\mathrm{e}^{-\lambda s} \ds\right)M\|f\| \\
+	\lambda \int_{0}^{r} \mathrm{e}^{-\lambda s}T(s)f \d s &= \lambda \mathrm{e}^{-\lambda r} \int_{0}^{r} T(\sigma)f \d\sigma + \lambda^{2}\int_{0}^{r} s\mathrm{e}^{-\lambda s}\left(\frac{1}{s}\int_{0}^{s} T(\sigma)f \d\sigma\right)\d s \\
+	\left\|\lambda \int_{0}^{r} \mathrm{e}^{-\lambda s}T(s)f \d s\right\| &\leq \left(r\lambda \mathrm{e}^{-r} + \lambda^{2}\int_{0}^{r} s\mathrm{e}^{-\lambda s} \d s\right)M\|f\| \\
 	&= (1 - \mathrm{e}^{-\lambda r})M\|f\|\,.
 \end{align*}
 %% --
@@ -768,7 +773,7 @@ Hence $\sigma_{b}(A) = \{s(A)\}$.
 \end{proof}
 
 A situation in which Corollary~\ref{cor:c3-2.13} can be applied is described in the following example.
-For more details and proofs we refer to \citet{amann:1983}.
+For more details and proofs we refer to [Amann (1983)].
 %% --
 \begin{example}\label{ex:c3-2.14}
 	\index{Domain!Bounded}
@@ -872,7 +877,7 @@ However, some of the (equivalent) assertions stated in B-III,Definition~3.1 do n
 Equivalence of the five conditions above is obtained by a slight modification of the arguments given in B-III,Definition~3.1.
 Since there are no difficulties we omit a detailed proof.
 Obviously, a semigroup is irreducible if one single operator $T(t_{0})$ is irreducible.
-In general the converse does not hold (see p.65 in \citet{greiner:1982}).
+In general the converse does not hold (see p.65 in [Greiner (1982)]).
 The situation is different when holomorphic semigroups are considered.
 Then an even stronger assertion holds. In fact irreducibility of a holomorphic semigroup implies that every single operator maps the positive elements onto quasi-interior points.
 This is the second statement of the following theorem (see also B-III,Remark~3.2).
@@ -991,11 +996,11 @@ Next we consider some concrete examples.
 	Suppose that on $E = L^{p}(\mu)$ $(1 \leq p < \infty)$ the semigroup $(T(t))$ is given by
 	%% --
 	\begin{equation}\label{eq:c3-3.1}
-		(T(t)f)(x) = \int_{X} k(t,x,y)f(y)\,\diff{\mu}(y) \quad (x \in X,\, t > 0)
+		(T(t)f)(x) = \int_{X} k(t,x,y)f(y)\,\d\mu(y) \quad (x \in X,\, t > 0)
 	\end{equation}
 	%% --
 	for some measurable function $k \colon \R _{+} \times X \times X \to \R _{+}$.
-	Then $(T(t))$ is irreducible if and only if for any two measurable sets $M$ and $N$ with $0 < \mu(M) < \infty$, $0 < \mu(N) < \infty$, $\mu(M\cap N) = 0$ there exist $t_{0} > 0$ such that $\int_{M}\int_{N} k(t_{0},x,y)\,\diff{\mu}(x)\diff{\mu}(y) > 0$\,.
+	Then $(T(t))$ is irreducible if and only if for any two measurable sets $M$ and $N$ with $0 < \mu(M) < \infty$, $0 < \mu(N) < \infty$, $\mu(M\cap N) = 0$ there exist $t_{0} > 0$ such that $\int_{M}\int_{N} k(t_{0},x,y)\,\d\mu(x)\d\mu(y) > 0$\,.
 	
 	\item 
 	Consider the first derivative on $\R $, $\R _{+}$ or $\R _{2\pi} = \Gamma$ as operator on the corresponding $L^{p}$-space (with respect to the Lebesgue measure.)
@@ -1007,7 +1012,7 @@ Next we consider some concrete examples.
 	Let $E = L^{1}[-1,0]$ and for $g \in L^{\infty}$ consider the operator $A_{g}$ given by
 	%% --
 	\begin{equation}\label{eq:c3-3.2}
-		A_{g}f \coloneqq f', \quad D(A_{g}) \coloneqq \{f \in W^{1}[-1,0] \colon f(0) = \int_{-1}^{0} f(x)g(x)\,\dx\}
+		A_{g}f \coloneqq f', \quad D(A_{g}) \coloneqq \{f \in W^{1}[-1,0] \colon f(0) = \int_{-1}^{0} f(x)g(x)\,\d x\}
 	\end{equation}
 	%% --
 	If $g \geq 0$ then $A_{g}$ generates a positive semigroup.
@@ -1049,7 +1054,7 @@ Next we consider some concrete examples.
 	An explicit calculation yields
 	%% --
 	\begin{equation}\label{eq:c3-3.5}
-		(R(\lambda,A)f)(x,v) = \int_{0}^{1} r_{\lambda}(x,x',v)f(x',v)\,\dx' \quad (\lambda > 0)
+		(R(\lambda,A)f)(x,v) = \int_{0}^{1} r_{\lambda}(x,x',v)f(x',v)\,\d x' \quad (\lambda > 0)
 	\end{equation}
 	%% --
 	where $r_{\lambda} \colon [0,1] \times [0,1] \times [-1,1] \to \R $ is given by
@@ -1097,7 +1102,7 @@ Next we consider some concrete examples.
 	Since we assumed that $\kappa$ is strictly positive, $I_{Y}$ is $K$-invariant if and only if $Y = X\times[-1,1]$ for some measurable set $X \subset [0,1]$.
 	If we assume that $X$ has positive measure and define
 	\[
-	\alpha \coloneqq \sup\{x \in [0,1] \colon \int_{0}^{x} \1_{X}(s)\,\ds = 0\}, \beta \coloneqq \inf\{x \in [0,1] \colon \int_{x}^{1} \1_{X}(s)\,\ds = 0\},
+	\alpha \coloneqq \sup\{x \in [0,1] \colon \int_{0}^{x} \1_{X}(s)\,\d s = 0\}, \beta \coloneqq \inf\{x \in [0,1] \colon \int_{x}^{1} \1_{X}(s)\,\d s = 0\},
 	\] 
 	then we have $\alpha < \beta$ and the support of the function $h \coloneqq R(\lambda,A)\1_{Y}$
 	%
@@ -1162,7 +1167,7 @@ In the following proposition we list some properties which are conse­quences of
 %\newpage
 %% --  20 / 311
 %% --
-		We have shown that $\ker A \cap E_{\R }$ is totally ordered, hence at most one-dimensional (see Proposition~3.4 of \citet{schaefer:1974}).
+		We have shown that $\ker A \cap E_{\R }$ is totally ordered, hence at most one-dimensional (see Proposition~3.4 of [Schaefer (1974)]).
 	\end{proof}
 
 In arbitrary Banach lattices it is no longer true that an irreducible semigroup has necessarily nonvoid spectrum.
@@ -1184,7 +1189,7 @@ For (fixed) positive numbers $\alpha,\beta$ such that $\frac{\alpha}{\beta}$ is 
 Next we define for a positive function $m \colon \Gamma\times\Gamma \to \R $ which is continuous on $\Gamma\times\Gamma\setminus(1,1)$ functions $m_{t}$, $t\geq 0$, as follows
 %% --
 \begin{equation}\label{eq:c3-3.10}
-	m_{t}(z,w) \coloneqq \exp(-\int_{0}^{t} m(z\cdot \mathrm{e}^{\im\alpha s},w\cdot \mathrm{e}^{\im\beta s})\,\ds)\,.
+	m_{t}(z,w) \coloneqq \exp(-\int_{0}^{t} m(z\cdot \mathrm{e}^{\im\alpha s},w\cdot \mathrm{e}^{\im\beta s})\,\d s)\,.
 \end{equation}
 %% --
 
@@ -1224,7 +1229,7 @@ Each of the following conditions on $E$ and $(T(t))$, respectively, implies that
 %
 	\item 
 	$E$ has order continuous norm and either $T(t_{0})$ or $R(\lambda_{0},A)$ is a kernel operator for some $t_{0} \geq 0$ $(\lambda_{0} \in \rho(A))$. 	
-	\footnote[1]{For a precise definition of a kernel operator we refer to Section~IV.9 of \citet{schaefer:1974} or Chapter~13 of \citet{zaanen:1983}.}
+	\footnote[1]{For a precise definition of a kernel operator we refer to Section~IV.9 of [Schaefer (1974)] or Chapter~13 of [Zaanen (1983)].}
 	\marginpar{GG: das evt in eine Fußnote: RN: ja}.
 
 	\item 
@@ -1240,7 +1245,7 @@ Each of the following conditions on $E$ and $(T(t))$, respectively, implies that
 	Moreover, from A-I,(3.1) we deduce
 	%% --
 	\begin{align*}
-		T(t)R(\lambda,A) = \mathrm{e}^{\lambda t}R(\lambda,A) - \mathrm{e}^{\lambda t}\int_{0}^{t} \mathrm{e}^{-\lambda s}T(s)\ds \leq \mathrm{e}^{\lambda t}R(\lambda,A) \ (t\geq 0, \lambda>s(A))\,.
+		T(t)R(\lambda,A) = \mathrm{e}^{\lambda t}R(\lambda,A) - \mathrm{e}^{\lambda t}\int_{0}^{t} \mathrm{e}^{-\lambda s}T(s)\d s \leq \mathrm{e}^{\lambda t}R(\lambda,A) \ (t\geq 0, \lambda>s(A))\,.
 	\end{align*}
 	%% --
 	Since the spectral radius is an isotone function on the cone of positive operators, it is enough to show that
@@ -1252,16 +1257,16 @@ Each of the following conditions on $E$ and $(T(t))$, respectively, implies that
 	
 	Using Theorem~\ref{thm:c3-3.2}(i) it is easy to see that $T(t)R(\lambda,A) = R(\lambda,A)T(t)$ is irreducible.
 	
-	The assertions (ii),(iv) and (v) now follow from the corresponding results for a single operator as presented in Sect.V.6 of \citet{schaefer:1974} (see Proposition~6.1, Theorem~6.5 Corollary and Theorem~6.5 l.c.).
-	(iii) follows from the recent result of \citet{depagter:1986} which ensures that every positive operator on a Banach lattice which is compact and irreducible has positive spectral radius.
+	The assertions (ii),(iv) and (v) now follow from the corresponding results for a single operator as presented in Sect.V.6 of [Schaefer (1974)] (see Proposition~6.1, Theorem~6.5 Corollary and Theorem~6.5 l.c.).
+	(iii) follows from the recent result of [de Pagter (1986)] which ensures that every positive operator on a Banach lattice which is compact and irreducible has positive spectral radius.
 \end{proof}
 
 The theorem can be used to prove that elliptic operators as described in Example~2.14 have non-empty spectrum.
-It is shown in \citet{amann:1983} that these operators have compact resolvent and generate irreducible semigroups.
+It is shown in [Amann (1983)] that these operators have compact resolvent and generate irreducible semigroups.
 Thus the assumption of (iii) is satisfied.
 
 Concerning the eigenvalues of an irreducible semigroup which are contained in $\sigma_{b}(A)$ all statements established for spaces $C_{0}(X)$ in B-III,Theorem~3.6 are true in the setting of Banach lattices.
-The proof can be translated without difficulties and will be omitted (see also \citet[Theorem~2.6]{greiner:1982}).
+The proof can be translated without difficulties and will be omitted (see also [Greiner (1982), Theorem~2.6]).
 
 \begin{theorem}\label{thm:c3-3.8}
 	\index{Theorem!Irreducible Semigroup Eigenvalues}
@@ -1333,9 +1338,9 @@ One can apply the theorem in order to prove that the rotation semigroup on $\Gam
 		\marginpar{GG: Was ist $\delta_{n0}$}
 		Moreover, 
 		\[
-		2\pi\cdot\delta_{n0} = \langle h^{[n]},\phi\rangle = \langle i(e_{n}),\phi\rangle = \int_{0}^{2\pi} e_{n}(\mathrm{e}^{it})\,\dt \text{ for all } n \in \Z\,,
+		2\pi\cdot\delta_{n0} = \langle h^{[n]},\phi\rangle = \langle i(e_{n}),\phi\rangle = \int_{0}^{2\pi} e_{n}(\mathrm{e}^{it})\,\d t \text{ for all } n \in \Z\,,
 		\] 
-		hence $\int_{0}^{2\pi} f(\mathrm{e}^{it})\,\dt  = \langle i(f),\phi\rangle$ for all $f \in C(\Gamma)$.
+		hence $\int_{0}^{2\pi} f(\mathrm{e}^{it})\,\d t  = \langle i(f),\phi\rangle$ for all $f \in C(\Gamma)$.
 		It follows that $(E,\phi) \cong L^{1}(\Gamma)$, and we define $j$ to be the canonical mapping from $E$ into $(E,\phi) \cong L^{1}(\Gamma)$ (see C-I,Section~4).
 		Then $j$ has dense image and is injective since $\phi$ is strictly positive (cf.\ Proposition~\ref{prop:c3-3.5}(ii)).
 		One easily verifies that the diagramm commutes.
@@ -1492,7 +1497,7 @@ The latter claim is a consequence of Proposition~\ref{prop:c3-2.11} and the foll
 	Since $P$ is a strictly positive projection $PE = \ker\,A$ is a sublattice of $E$. 
 	Actually, if $x \in PE$ \ie  $Px = x$, then $P|x| \geq |Px| = |x|$. 
 	Hence $P(|P|x|-|x||) = P^{2}|x| - P|x| = 0$ which implies that $P|x| - |x| = 0$ or $|x| \in PE$.
-	Thus we know that $\ker\,A$ is a finite dimensional sublattice of $E$ hence it is isomorphic to a space $\C ^{m}$ for some $m \in \N$ (see Section~II.4 of \citet{schaefer:1974}). 
+	Thus we know that $\ker\,A$ is a finite dimensional sublattice of $E$ hence it is isomorphic to a space $\C ^{m}$ for some $m \in \N$ (see Section~II.4 of [Schaefer (1974)]). 
 	\marginpar{Lit. is missing}
 	
 	Then there exist vectors $e_{j} \in E_{+}$ $(1\leq j\leq m)$ such that the following holds.
@@ -1620,18 +1625,18 @@ Moreover, we state a criterion ensuring the existence of a dominant eigenvalue.
 \begin{proof}
 	The resolvent equation $R(\lambda,A) = R(\lambda_{0},A)(1 - (\lambda-\lambda_{0})R(\lambda,A))$ implies that $KR(\lambda,A)$ is a compact operator for every $\lambda \in \rho(A)$. 
 	For $\lambda > s(A)$ we have $\lambda - B = (1 - KR(\lambda,A))(\lambda-A)$ and $(1 - KR(\lambda,A))^{-1}$ exists for $\lambda > s(B)$.
-	Therefore Theorem~\ref{thm:c3-1.2},XIII.13 of \citet{reedsimon:1979} 
+	Therefore Theorem~\ref{thm:c3-1.2},XIII.13 of [Reed-Simon (1979)] 
 	\marginpar{GG: Lit. is missing}
 	implies that $R(\lambda,B) = R(\lambda,A)(1 - KR(\lambda,A))^{-1}$ has only poles of finite algebraic multiplicity in $\{\lambda \in \C  : \Re\,\lambda > s(A)\}$. 
 	This proves the first claim. 
 	In order to prove the second, we denote the semigroup corresponding to $A$ and $B$ by $(T(t))$ and $(S(t))$,  respectively.
-	It follows from Proposition~\ref{prop:c3-3.3} that $(S(t))$ is irreducible and we have $S(t) = T(t) + \int_{0}^{t} T(t-s)KS(s)~\ds$ (see A-II,(1.9)). 
+	It follows from Proposition~\ref{prop:c3-3.3} that $(S(t))$ is irreducible and we have $S(t) = T(t) + \int_{0}^{t} T(t-s)KS(s)~\d s$ (see A-II,(1.9)). 
 	Iterating this identity we obtain for every $m \in \N$, $t \geq 0$
 	\begin{equation}\label{eq:c3-3.21}
 		\begin{aligned}
 		S(t) &= \sum_{n=0}^{m-1} T_{n}(t) + R_{m}(t) \ \text{ where}\\
-		T_{0}(t)&\coloneqq T(t),\  T_{n}(t) \coloneqq  \int_{0}^{t} T(t-s)KT_{n-1}(s)~\ds \textit{ for } n \in \N\,,\\
-		R_{m}(t) &\coloneqq \textit{\small $\int_{0}^{t}\int_{0}^{t_{1}} .. \int_{0}^{t_{m-1}} T(t-t_{1})KT(t_{1}-t_{2})K .. T(t_{m-1}-t_m)KS(t_{m})\dt _{m}..\dt _{1}$}\,.
+		T_{0}(t)&\coloneqq T(t),\  T_{n}(t) \coloneqq  \int_{0}^{t} T(t-s)KT_{n-1}(s)~\d s \textit{ for } n \in \N\,,\\
+		R_{m}(t) &\coloneqq \textit{\small $\int_{0}^{t}\int_{0}^{t_{1}} .. \int_{0}^{t_{m-1}} T(t-t_{1})KT(t_{1}-t_{2})K .. T(t_{m-1}-t_m)KS(t_{m})\d t _{m}..\d t _{1}$}\,.
 		\end{aligned}
 	\end{equation} \marginpar{GG: Verstehe ich nicht}
 	
@@ -1660,7 +1665,7 @@ The generator considered there is $B = (A - M) + K$, where $K$ is
 positive linear. 
 From (3.5) and (3.6) one deduces that 
 \[
-(KR(\lambda,A)f)(x,v) = \int_{0}^{1}\int_{-1}^{1} k(x,v,x',v')f(x',v')~\dx'dv'
+(KR(\lambda,A)f)(x,v) = \int_{0}^{1}\int_{-1}^{1} k(x,v,x',v')f(x',v')~\d x'dv'
 \]
 where the kernel $k$ is given by $k(x,v,x',v') \coloneqq  \kappa(x,v,v')r_{\lambda}(x,x',v')$ (cf.\ (3.5), (3.7)). 
 Using this representation of $KR(\lambda,A)$ it follows that $K$ is A-compact. 
@@ -1670,7 +1675,7 @@ In case the function $\sigma$ is continuous one can state a sufficient condition
 There exist $r \in \R $ and $g \in L^{1}([0,1]\times[-1,1])$, $g > 0$ such that $r < \inf\{\sigma(x,0) : x \in [0,1]\}$ and $Bg \geq -rg$.
 The additional assumption made in the second part of Proposition~\ref{prop:c3-3.18} is not satisfied in this example. 
 Nevertheless one can show that $s(B)$ is strictly dominant in this situation (provided that $s(B) > s(A)$). 
-For details we refer to [Greiner (1984d)] or \citet{voigt:1985} where the linear transport equation in higher dimensional spaces is discussed.
+For details we refer to [Greiner (1984d)] or [Voigt (1985)] where the linear transport equation in higher dimensional spaces is discussed.
 
 \section{Semigroups of Lattice Homomorphisms}\label{sec:c3-4}
 \index{Lattice Homomorphism}
@@ -1705,7 +1710,7 @@ In the last part of this section we discuss a spectral decomposition of positive
 %% --  30 / 321
 %% -- 
 	In fact, A-I,(3.1) implies $(\mathrm{e}^{rt} - T(r))R(r,A) \geq 0$ hence $T(t)'\psi = rR(r,A)'T(t)'|\phi| \leq r\cdot \mathrm{e}^{rt}R(r,A)'|\phi| = \mathrm{e}^{rt}\psi$.
-	Moreover, the inequality $T(t)'|\phi| \geq |\phi|$ $(t \geq 0)$ implies $T(t)'\psi = rR(r,A)'T(t)'|\phi| \geq rR(r,A)'|\phi| = \psi$ and $\psi = rR(r,A)'|\phi| = r \int_{0}^{\infty} \mathrm{e}^{-rt}T(t)'|\phi|~\dt  \geq r\int_{0}^{\infty} \mathrm{e}^{-rt}|\phi|~\dt  = |\phi|$\,.
+	Moreover, the inequality $T(t)'|\phi| \geq |\phi|$ $(t \geq 0)$ implies $T(t)'\psi = rR(r,A)'T(t)'|\phi| \geq rR(r,A)'|\phi| = \psi$ and $\psi = rR(r,A)'|\phi| = r \int_{0}^{\infty} \mathrm{e}^{-rt}T(t)'|\phi|~\d t  \geq r\int_{0}^{\infty} \mathrm{e}^{-rt}|\phi|~\d t  = |\phi|$\,.
 	$\square$
 	
 	%
@@ -1856,11 +1861,11 @@ We list some typical cases in the following corollary.
 	Moreover, $\|f\|_{o} \coloneqq  \||f|_{o}\|$ $(f \in F)$ is an equivalent norm on $F$ such that $(F,\|\cdot\|_{o})$ is a Banach lattice.
 	
 	(ii) If $T(s)$ is mean-ergodic, then we have $\ker (1 - T(s)) = PE$ where $P$ is the mean-ergodic projection, \ie $Pf = \lim_{n\to \infty}\frac{1}{n}\sum_{k=0}^{n-1}T(s)^{k}f$.
-	Obviously $P$ is positive, hence II.11.5 of \citet{schaefer:1974} implies that $PE$ is a Banach lattice (for the induced order and an equivalent norm).
+	Obviously $P$ is positive, hence II.11.5 of [Schaefer (1974)] implies that $PE$ is a Banach lattice (for the induced order and an equivalent norm).
 	%$\square$
 \end{proof}
 
-The assumptions made in Corollary~\ref{cor:c3-4.3} can be weakened slightly (cf.\ \citet{greiner:1982}). 
+The assumptions made in Corollary~\ref{cor:c3-4.3} can be weakened slightly (cf.\ [Greiner (1982)]). 
 However, one still cannot prove cyclicity of $P\sigma_{b}(A)$ for arbitrary positive semigroups.
 
 \begin{example}\label{ex:c3-4.4}
@@ -1882,7 +1887,7 @@ we define $T(t)$ on $H$ as follows.
 	\begin{aligned} 
 		T(t)([f,g]) &\coloneqq [f_t,g_t] \quad \textit{with}\\
 		f_t(z) &\coloneqq f(z \cdot \mathrm{e}^{it}) \quad (z \in \Gamma) \quad \text{and}\\
-		g_t(x) &\coloneqq g(x+t) + \frac{1}{2\pi}\int_{0}^{2\pi} f(z \cdot \mathrm{e}^{is}) \,\ds \cdot \int_{x}^{x+t} k(u) \,\du\,.
+		g_t(x) &\coloneqq g(x+t) + \frac{1}{2\pi}\int_{0}^{2\pi} f(z \cdot \mathrm{e}^{is}) \,\d s \cdot \int_{x}^{x+t} k(u) \,\d u\,.
 	\end{aligned}
 \end{equation}
 %% --
@@ -1931,9 +1936,9 @@ Since we have
 \]
 we may assume that $(f_n)$ is a sequence in $E_+$.
 
-Defining $g_n \coloneqq \int_{0}^{t} \mathrm{e}^{-\alpha s}T(s)f_n \, \ds $ we have $g_n \in D(A)$ and
+Defining $g_n \coloneqq \int_{0}^{t} \mathrm{e}^{-\alpha s}T(s)f_n \, \d s $ we have $g_n \in D(A)$ and
 \[
-(A-\alpha)g_n = (A-\alpha)\int_{0}^{t} \mathrm{e}^{-\alpha s}T(s)f_n \, \ds = \mathrm{e}^{-\alpha t}T(t)f_n - f_n = \frac{1}{r}(T(t)f_n - rf_n)\,.
+(A-\alpha)g_n = (A-\alpha)\int_{0}^{t} \mathrm{e}^{-\alpha s}T(s)f_n \, \d s = \mathrm{e}^{-\alpha t}T(t)f_n - f_n = \frac{1}{r}(T(t)f_n - rf_n)\,.
 \]
 Therefore $\lim_{n \to \infty}\|(A - \alpha) g_n\| = 0$\,. It remains to prove 
 $\liminf_{n \to \infty}\|g_n\| > 0$\,.
@@ -1944,7 +1949,7 @@ following facts.
 	Since $f_n$ is positive and the norm is additive on $E_+$,
 	we have
 	\\ 
-	$\|g_n\| = \int_{0}^{t} \mathrm{e}^{-\alpha s}\|T(s)f_n\| \, \ds$.
+	$\|g_n\| = \int_{0}^{t} \mathrm{e}^{-\alpha s}\|T(s)f_n\| \, \d s$.
 	
 	\item The inequality $\|T(t)f\| \leq \|T(t-s)\|\|T(s)f\|$ implies
 	$\|T(s)f\| \geq M^{-1}\|T(t)f\|$ for $0 \leq s \leq t$, $f \in E$ and $M \coloneqq \sup_{0 \leq s \leq t}\|T(s)\|$.
@@ -1969,7 +1974,7 @@ following facts.
 
 
 For semigroups satisfying the assumption of Proposition~\ref{prop:c3-4.5}, the spectrum $\sigma(A)$ is additively cyclic (by Theorem~\ref{thm:c3-4.2}) and $\sigma(T(t))$ is multiplicatively cyclic
-(by \citet[V.Theorem~4.4]{schaefer:1974}). Then the relation (4.7) implies that
+(by [Schaefer (1974), V.Theorem~4.4]). Then the relation (4.7) implies that
 decompositions of the spectrum by vertical lines allow a spectral
 decomposition of the semigroup (cf.\ A-III,Definition~3.1). (One simply performs a spectral decomposition of a single operator $T(t)$ ). In the
 following we will show that for positive groups (on arbitrary Banach
@@ -2056,32 +2061,32 @@ lattice $E$ with generator $A$. Given $\mu \in \rho(A) \cap \R $ and $h \in E_+$
 	$R(\mu,A)h \geq 0$\,,
 
 	\item 
-	$\left\{\int_{0}^{t} \mathrm{e}^{-\mu s}T(s)h \, \ds : t \in \R _+\right\}$ is bounded in $E$.
+	$\left\{\int_{0}^{t} \mathrm{e}^{-\mu s}T(s)h \, \d s : t \in \R _+\right\}$ is bounded in $E$.
 \end{enumerate}
 \end{lemma}
 
 \begin{proof}
 $(a)\Rightarrow(b)$: We have
-$\int_{0}^{t} \mathrm{e}^{-\mu s}T(s)h \, \ds = (Id - \mathrm{e}^{-\mu t}T(t))R(\mu,A)h$ (see A-I,(3.2)).
+$\int_{0}^{t} \mathrm{e}^{-\mu s}T(s)h \, \d s = (Id - \mathrm{e}^{-\mu t}T(t))R(\mu,A)h$ (see A-I,(3.2)).
 Since $R(\mu,A)h \geq 0$ and $T(t)$ is a positive operator we obtain
 \[
-\int_{0}^{t} \mathrm{e}^{-\mu s}T(s)h \, \ds = R(\mu,A)h - \mathrm{e}^{-\mu t}T(t)R(\mu,A)h \leq R(\mu,A)h
+\int_{0}^{t} \mathrm{e}^{-\mu s}T(s)h \, \d s = R(\mu,A)h - \mathrm{e}^{-\mu t}T(t)R(\mu,A)h \leq R(\mu,A)h
 \] 
 which implies assertion (b).
 
 $(b)\Rightarrow(a)$: The assumption implies that 
 \[
-\int_{0}^{\infty} \mathrm{e}^{-\nu s}T(s)h \, \ds \coloneqq 
-\lim_{t \to \infty} \int_{0}^{t} \mathrm{e}^{-\nu s}T(s)h \, \ds \ \text{ exists for } \ \nu > \mu\,. 
+\int_{0}^{\infty} \mathrm{e}^{-\nu s}T(s)h \, \d s \coloneqq 
+\lim_{t \to \infty} \int_{0}^{t} \mathrm{e}^{-\nu s}T(s)h \, \d s \ \text{ exists for } \ \nu > \mu\,. 
 \]
 Using that $A$ is a closed operator it follows that 
 \[
-(\nu - A)(\int_{0}^{\infty} \mathrm{e}^{-\nu s}T(s)h \, \ds) = h\,.
+(\nu - A)(\int_{0}^{\infty} \mathrm{e}^{-\nu s}T(s)h \, \d s) = h\,.
 \]
 For $\nu$
 sufficiently close to $\mu$ such that $\nu \in \rho(A) \cap \R $ we have 
 \[ 
-R(\nu,A)h = \int_{0}^{\infty} \mathrm{e}^{-\nu s}T(s)h \, \ds \geq 0\,. 
+R(\nu,A)h = \int_{0}^{\infty} \mathrm{e}^{-\nu s}T(s)h \, \d s \geq 0\,. 
 \] 
 By continuity we conclude $R(\mu,A)h \geq 0$.
 %$\square$
@@ -2155,8 +2160,8 @@ have
 %% --
 \begin{equation}\label{eq:c3-4.10}
 \begin{aligned}
-	P_{\mu}f &= \frac{1}{2\pi} \cdot \int_{-\infty}^{\infty} R(\mu+\im\tau,A)f \, \diff{\tau} - \frac{1}{2\pi} \cdot \int_{-\infty}^{\infty} R(\alpha+\im\tau,A)f \, \diff{\tau} ,\\
-	Q_{\mu}f &= \frac{1}{2\pi} \cdot \int_{-\infty}^{\infty} R(\beta+\im\tau,A)f \, \diff{\tau} - \frac{1}{2\pi} \cdot \int_{-\infty}^{\infty} R(\mu+\im\tau,A)f \, \diff{\tau} .
+	P_{\mu}f &= \frac{1}{2\pi} \cdot \int_{-\infty}^{\infty} R(\mu+\im\tau,A)f \, \d\tau - \frac{1}{2\pi} \cdot \int_{-\infty}^{\infty} R(\alpha+\im\tau,A)f \, \d\tau ,\\
+	Q_{\mu}f &= \frac{1}{2\pi} \cdot \int_{-\infty}^{\infty} R(\beta+\im\tau,A)f \, \d\tau - \frac{1}{2\pi} \cdot \int_{-\infty}^{\infty} R(\mu+\im\tau,A)f \, \d\tau .
 \end{aligned}
 \end{equation}
 %% --
@@ -2341,8 +2346,8 @@ If $\lambda$ denotes the Lebesgue measure, then
 %% --
 \begin{equation}\label{eq:c3-4.14}
 	\begin{aligned}
-		\lambda(\phi_t^{-1}(U)) &= \int_{U(-t)} 1 \, \dx  = \int_{U} 1 \circ \phi_{-t}(x) \cdot |\det D\phi_{-t}(x)| \, \dx  = \\
-		&\int_{U} |\det D\phi_{-t}(x)| \, \dx  \leq \int_{U} \mathrm{e}^{nM|t|} \, \dx  = \mathrm{e}^{nM|t|} \cdot \lambda(U).
+		\lambda(\phi_t^{-1}(U)) &= \int_{U(-t)} 1 \, \d x  = \int_{U} 1 \circ \phi_{-t}(x) \cdot |\det D\phi_{-t}(x)| \, \d x  = \\
+		&\int_{U} |\det D\phi_{-t}(x)| \, \d x  \leq \int_{U} \mathrm{e}^{nM|t|} \, \d x  = \mathrm{e}^{nM|t|} \cdot \lambda(U).
 	\end{aligned}
 \end{equation}
 %% --
@@ -2361,8 +2366,8 @@ There is another important class of differential equations, \enquote{Hamiltonian
 %% --  40 / 331
 %% --
 %
-flow corresponding to a Hamiltonian vector field preserves the volume (see \citet[Section~3.3]{abrahammarsden:1978}). Thus assertion (b) of Proposition~\ref{prop:c3-4.11}(i) is trivially satisfied.
-Further examples of flows which are measure preserving and therefore induce semigroups of lattice homomorphisms on $L^p$-spaces are billiard flows on compact convex subsets of $\R ^n$ and geodesic flows on Riemannian manifolds (see \citet{cornfeldfominsinai:1982}).
+flow corresponding to a Hamiltonian vector field preserves the volume (see [Abraham-Marsden (1978), Section~3.3]). Thus assertion (b) of Proposition~\ref{prop:c3-4.11}(i) is trivially satisfied.
+Further examples of flows which are measure preserving and therefore induce semigroups of lattice homomorphisms on $L^p$-spaces are billiard flows on compact convex subsets of $\R ^n$ and geodesic flows on Riemannian manifolds (see [Cornfeld-Fomin-Sinai (1982)]).
 
 
 
@@ -2370,68 +2375,56 @@ Further examples of flows which are measure preserving and therefore induce semi
 \section*{Notes}
 \addcontentsline{toc}{section}{Notes}
 
-Spectral theory for a single positive operator as developed in Chapter V of \citet{schaefer:1974} is an essential tool for this chapter. 
-Various results on the spectral theory of positive one-parameter semigroups can be found in Chapter 7 of \citet{davies:1980} and in the second part of \citet{battyrobinson:1984}.
+Spectral theory for a single positive operator as developed in Chapter V of [Schaefer (1974)] is an essential tool for this chapter. 
+Various results on the spectral theory of positive one-parameter semigroups can be found in Chapter 7 of [Davies (1980)] and in the second part of [Batty-Robinson (1984)].
 
 \begin{enumerate}[label=\emph{Section \arabic*:}, wide]
 \item
-That the spectral bound is always an element of the spectrum was stated by \citet{karlin:1959}, but a valid proof was given by \citet{derndinger:1980}. 
+That the spectral bound is always an element of the spectrum was stated by [Karlin (1959)], but a valid proof was given by [Derndinger (1980)]. 
 This assertion as well as assertion (b) of Theorem~\ref{thm:c3-1.1} allow generalizations in various directions.  
-They are valid for ordered Banach spaces (see \citet{greinervoigtwolff:1981} and \citet{klein:1984}) and one only needs that $A$ has positive resolvent (see \citet{kato:1982} or \citet{nussbaum:1984}). 
+They are valid for ordered Banach spaces (see [Greiner-Voigt-Wolff (1981)] and [Klein (1984)]) and one only needs that $A$ has positive resolvent (see [Kato (1982)] or [Nussbaum (1984)]). 
 Theorem~\ref{thm:c3-1.2} as well as its corollaries are also valid in ordered Banach spaces. 
-For the analogue in the theory of the Laplace transform we refer to Section~10.5 in \citet{widder:1971} and \citet{voigt:1982}.
+For the analogue in the theory of the Laplace transform we refer to Section~10.5 in [Widder (1971)] and [Voigt (1982)].
 
 \item 
 Theorem~\ref{thm:c3-2.2} is the basis for the subsequent cyclicity results. 
-Pseudoresolvents are discussed e.g. in \citet{hillephillips:1957} or \citet{yosida:1965}. 
+Pseudoresolvents are discussed e.g. in [Hille-Phillips (1957)] or [Yosida (1965)]. 
 For nonpositive semigroups the two assertions stated in Definition~\ref{def:c3-2.8} are no longer equivalent. 
-A special case of Theorem~\ref{thm:c3-2.10} was proven by\citet{derndinger:1980} while the general result is due to \citet{greiner:1981}. Instead of pseudo-resolvents on the whole $\mathcal{F}$-product Derndinger works with the semigroup on the semigroup $\mathcal{F}$-product. 
+A special case of Theorem~\ref{thm:c3-2.10} was proven by[ Derndinger (1980)] while the general result is due to [Greiner (1981)]. Instead of pseudo-resolvents on the whole $\mathcal{F}$-product Derndinger works with the semigroup on the semigroup $\mathcal{F}$-product. 
 Therefore he can only consider eigenvalues. 
-Elliptic differential operators as generators of positive semigroups are discussed by many authors, e.g., \citet{amann:1983}, \citet{fattorini:1983}, \citet{friedmann:1972} or\citet{pazy:1983}.
+Elliptic differential operators as generators of positive semigroups are discussed by many authors, e.g., [Amann (1983)], [Fattorini (1983)], [Friedmann (1972)] or[ Pazy (1983)].
 
 \item
-There exist various notions which are (more or less closely) related to irreducibility, e.g. \enquote{positivity improving} in \citet{reedsimon:1979}, \enquote{$u_0$-positivity} in [Krasnosel'skii (1964)] or \enquote{quasi-strictly positive} in \citet{karlin:1959}). \citet{sawashima:1964} uses \enquote{non-support} instead of irreducible. 
+There exist various notions which are (more or less closely) related to irreducibility, e.g. \enquote{positivity improving} in [Reed-Simon (1979)], \enquote{$u_0$-positivity} in [Krasnosel'skii (1964)] or \enquote{quasi-strictly positive} in [Karlin (1959)]). [Sawashima (1964)] uses \enquote{non-support} instead of irreducible. 
 She also discusses several modifications (\enquote{semi-non-support}, \enquote{strictly non-support}, \enquote{strongly positive}) and the interrelation between these notions. 
-The notion of irreducibility can be extended to the (non-lattice) ordered setting (see \citet{battyrobinson:1984}). 
-Assertion (b) of Theorem~\ref{thm:c3-3.2} is due to \citet{majewskirobinson:1983} while special cases can be found in Section~XIII.12 of \citet{reedsimon:1979} and in \citet{kishimotorobinson:1981}. 
-Proposition~\ref{prop:c3-3.3} is due to \citet{voigt:1984}. 
+The notion of irreducibility can be extended to the (non-lattice) ordered setting (see [Batty-Robinson (1984)]). 
+Assertion (b) of Theorem~\ref{thm:c3-3.2} is due to [Majewski-Robinson (1983)] while special cases can be found in Section~XIII.12 of [Reed-Simon (1979)] and in [Kishimoto-Robinson (1981)]. 
+Proposition~\ref{prop:c3-3.3} is due to [Voigt (1984)]. 
 Retarded equations as dicussed in Example 3.4(c) will be discussed in more detail in Section 3 of C-IV. Example 3.4(d) is a one-dimensional version of the linear transport equation. 
-The higher dimensional equation is more delicate but can be treated similarly (see e.g. \citet{greiner:1984}, \citet{kaperlekkerkerkerhejtmanek:1983}, or [Voigt (1984b)]). 
+The higher dimensional equation is more delicate but can be treated similarly (see e.g. [Greiner (1984)], [Kaper-Lekkerkerker-Hejtmanek (1983)], or [Voigt (1984b)]). 
 A special case of Proposition~\ref{prop:c3-3.5} can be found
 %
 %\endinput
 %\newpage
 %% --  41 / 332
 %% --
-in \citet{davies:1980}. 
-Theorem 3.7 and Example 3.6 are taken from \citet{schaefer:1985}. 
+in [Davies (1980)]. 
+Theorem 3.7 and Example 3.6 are taken from [Schaefer (1985)]. 
 The most interesting criterion of Theorem~\ref{thm:c3-3.7} seems to be condition (iii), since it gives a sufficient condition for the existence of eigenvalues for a sufficiently large class of semigroups. 
-For semigroups induced by measure-preserving flows Theorem~\ref{thm:c3-3.8} and Corollary~\ref{cor:c3-3.9} are proven in \citet{cornfeldfominsinai:1982}. 
-Corollary~\ref{cor:c3-3.9} is a special case of the Halmos-von Neumann Theorem which classifies irreducible semigroups having discrete spectrum (see \citet{cornfeldfominsinai:1982}, \citet{greiner:1982} and \citet{schaefer:1974} for the general result). 
+For semigroups induced by measure-preserving flows Theorem~\ref{thm:c3-3.8} and Corollary~\ref{cor:c3-3.9} are proven in [Cornfeld-Fomin-Sinai (1982)]. 
+Corollary~\ref{cor:c3-3.9} is a special case of the Halmos-von Neumann Theorem which classifies irreducible semigroups having discrete spectrum (see [Cornfeld-Fomin-Sinai (1982)], [Greiner (1982)] and [Schaefer (1974)] for the general result). 
 
-Lemma~\ref{lem:c3-3.10} is taken from [Groh (1984b)] and Theorems~\ref{thm:c3-3.12} and \ref{thm:c3-3.14} can be found (with slightly different proofs) in \citet{greiner:1981}. 
+Lemma~\ref{lem:c3-3.10} is taken from [Groh (1984b)] and Theorems~\ref{thm:c3-3.12} and \ref{thm:c3-3.14} can be found (with slightly different proofs) in [Greiner (1981)]. 
 
 \item 
-lt was \citet{derndinger:1980} who proved Theorem~\ref{thm:c3-4.2}. 
-In Corollary~\ref{cor:c3-4.3} one can replace boundedness of the semigroup by the assumption that the resolvent grows slowly (see \citet{greiner:1982}). 
+lt was [Derndinger (1980)] who proved Theorem~\ref{thm:c3-4.2}. 
+In Corollary~\ref{cor:c3-4.3} one can replace boundedness of the semigroup by the assumption that the resolvent grows slowly (see [Greiner (1982)]). 
 Example 4.4 is due to Davies and Proposition~\ref{prop:c3-4.5} to H.~Kellermann (both unpublished). 
-The spectral decomposition for positive groups as described in Theorem~\ref{thm:c3-4.8} is valid in arbitrary Banach lattices (see \citet{arendt:1982} and [Greiner (1984c)]). 
+The spectral decomposition for positive groups as described in Theorem~\ref{thm:c3-4.8} is valid in arbitrary Banach lattices (see [Arendt  (1982)] and [Greiner (1984c)]). 
 This also holds for Corollaries 4.9 and 4.10. 
 Proposition~\ref{prop:c3-4.11} and Example 4.12 indicate the relationship of positive groups to dynamical systems. 
-For example, the \enquote{Annular Hull Theorem} (see \citet{chiconeswanson:1981}) is closely related to the results of this section.
+For example, the \enquote{Annular Hull Theorem} (see [Chicone-Swanson (1981)]) is closely related to the results of this section.
 \end{enumerate}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% -- References
-\RaggedRight
-\bibliographystyle{abbrvnat}
-\bibliography{bib/ln-references}
-
-
-
-
-
-%% -- References
-%\RaggedRight
-%\bibliographystyle{abbrvnat}
-%\bibliography{../bib/ln-references}
+\endinput

@@ -42,7 +42,7 @@ and show how it is related to the \emph{spectral bound}
 of the generator $A$ and to the \emph{growth bound}
 %% -- 
 \begin{equation}\label{eq:a3-1.3}
-	\omega_{0} := \inf \{\omega \in \R  : \|T(t)\| \leq M_{\omega}\cdot \mathrm{e}^{\omega t} \text{ for all } t \geq 0 \text{ and suitable } M_{\omega}\}
+	\omega_{0} := \inf \{\omega \in \\R  : \|T(t)\| \leq M_{\omega}\cdot \mathrm{e}^{\omega t} \text{ for all } t \geq 0 \text{ and suitable } M_{\omega}\}
 \end{equation}
 %% -- 
 of the semigroup $\TT = (T(t))_{t\geq 0}$.
@@ -507,9 +507,9 @@ If we now take a circle $\Gamma$ with center $\alpha$ and sufficiently small rad
 Then the residue $P$ of $R(\cdot,A)$ at $\alpha$ is
 %% --
 \begin{align*}
-P &=  \frac{1}{2\pi\im } \int_{\Gamma} R(z,A) \, \dz = \\
-&=  \frac{1}{2\pi\im } \left[\int_{\Gamma} (\lambda_{0}-z)^{-2}R((\lambda_{0}-z)^{-1},R(\lambda_{0},A)) \, \dz  \right.
-\left.-  \int_{\Gamma}(\lambda_{0}-z)^{-1} \dz \right]\,. 
+P &=  \frac{1}{2\pi\im } \int_{\Gamma} R(z,A) \, \d z = \\
+&=  \frac{1}{2\pi\im } \left[\int_{\Gamma} (\lambda_{0}-z)^{-2}R((\lambda_{0}-z)^{-1},R(\lambda_{0},A)) \, \d z  \right.
+\left.-  \int_{\Gamma}(\lambda_{0}-z)^{-1} \d z \right]\,. 
 \end{align*}
 %\marginpar{GG: ?? use (\$\$) ??}
 %% --
@@ -1819,7 +1819,7 @@ Moreover we recall from Fourier analysis that the Fourier transformation $\phi \
 and its inverse $\Psi \mapsto \check{\Psi}$,
 %% --
 \[
-\check{\Psi}(x) \coloneqq \frac{1}{2\pi}\int_{-\infty}^{\infty}\Psi(\alpha)\mathrm{e}^{\im\alpha x} 				\diff{\alpha}
+\check{\Psi}(x) \coloneqq \frac{1}{2\pi}\int_{-\infty}^{\infty} \Psi(\alpha)\mathrm{e}^{\im\alpha x} \ \d \alpha
 \]
 %% --
 are topological isomorphisms of the Schwartz space $\mathcal{S} ( = \mathcal{S}(\R))$.
@@ -2144,8 +2144,5 @@ Matrix valued multiplication semigroups appear as solution, via Fourier transfor
 Kreiss initiated a systematic investigation (see, e.g., \citet{kreiss:1958}, \citet{kreiss:1959}, \citet{millerstrang:1966}) and the Weak Spectral Mapping Theorem~\ref{thm:a3-7.2} must have been known to him. The direct proof of the Weak Spectral Mapping Theorem~\ref{thm:a3-7.4} for polynomially bounded groups seems to be new. The result can also be deduced from the theory of spectral subspaces of group representations (see, e.g., \citet{combesdelaroche:1978}), since the Arveson spectrum of a strongly continuous one-parameter group can be identified with the spectrum of the generator (see \citet{evans:1976}). The final part of this section is taken from \citet{greiner:1985} and yields a new approach to Gearhart's characterization of the spectrum of semigroups on Hilbert spaces \citet{gearhart:1978}. Different proofs can be found in \citet{herbst:1983}, \citet{howland:1984} and \citet{pruess:1984}. 
 \end{enumerate}
 
-%% -- References
-\RaggedRight
-\bibliographystyle{abbrvnat}
-\bibliography{bib/ln-references}
+
 

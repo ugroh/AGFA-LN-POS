@@ -1,14 +1,19 @@
+
 %% -- Chapter C-III
 %% --
-\setcounter{chapter}{2}
-\chapter[Spectral Theory on Banach Lattices]{Spectral Theory of Positive Semigroups on Banach Lattices}\label{chap:c3}
-\chaptermark{Spectral Theory of Positive Semigroups}
+
+\chapter[Spectral Theory on Banach Lattices]{Spectral Theory of Positive Semigroups on Banach Lattices}\label{chap:cf-III}
+%% --
+
+%% --  1 / 292
 %% --
 \index{Spectral Theory}
 \index{Theory!Spectral}
 \index{Semigroups!Positive}
 \index{Banach Lattices}
-%% --
+
+
+
 In Chapter B-III we have shown that positive semigroups on spaces $C_{0}(X)$ possess several interesting spectral properties.
 Now we are going to extend many of these results to the more general setting of Banach lattices.
 We will improve some of them considerably and give the complete proof of B-III,Theorem~4.1.
@@ -69,10 +74,10 @@ By Datko's Theorem (A-IV,Theorem~1.11) the function $t \mapsto \mathrm{e}^{-\lam
 	For $\Re\,\lambda > s(A)$ we have
 	%% --
 	\begin{equation}\label{eq:c3-1.1}
-		R(\lambda,A)f = \lim_{t\to\infty} \int_{0}^t \mathrm{e}^{-\lambda s} T(s)f \,\ds \text{ for all } f \in E.
+		R(\lambda,A)f = \lim_{t\to\infty} \int_{0}^t \mathrm{e}^{-\lambda s} T(s)f \,\d s \text{ for all } f \in E.
 	\end{equation}
 	%% --
-	Moreover, the operators $\int_{0}^t \mathrm{e}^{-\lambda s} T(s) \,\ds$ tend to $R(\lambda,A)$ with respect to the operator norm as $t \to \infty$.
+	Moreover, the operators $\int_{0}^t \mathrm{e}^{-\lambda s} T(s) \,\d s$ tend to $R(\lambda,A)$ with respect to the operator norm as $t \to \infty$.
 \end{theorem}
 %% --
 
@@ -81,7 +86,7 @@ By Datko's Theorem (A-IV,Theorem~1.11) the function $t \mapsto \mathrm{e}^{-\lam
 	Then, by A-I,Proposition~1.11,
 	%% --
 	\begin{equation}\label{eq:c3-1.2}
-		R(\lambda_{0},A)^{n+1}f = \frac{1}{n!} \int_{0}^{\infty} s^n \exp(-\lambda_{0}s) T(s)f \,\ds \quad (n \in \N_{0}, f \in E)\,.
+		R(\lambda_{0},A)^{n+1}f = \frac{1}{n!} \int_{0}^{\infty} s^n \exp(-\lambda_{0}s) T(s)f \,\d s \quad (n \in \N_{0}, f \in E)\,.
 	\end{equation}
 	%% --
 	Given $\mu$ such that $s(A) < \mu < \lambda_{0}$, $f \in E_{+}$, $\phi \in E'_{+}$, then
@@ -89,17 +94,17 @@ By Datko's Theorem (A-IV,Theorem~1.11) the function $t \mapsto \mathrm{e}^{-\lam
 	\begin{equation}\label{eq:c3-1.3}
 	\begin{aligned}
 		\langle R(\mu,A)f,\phi\rangle &= \sum_{n=0}^{\infty} (\lambda_{0}-\mu)^n\langle R(\lambda_{0},A)^{n+1}f,\phi\rangle = \\
-		&= \sum_{n=0}^{\infty} \int_{0}^{\infty} \frac{1}{n!}(\lambda_{0}-\mu)^n\exp(-\lambda_{0}s)\langle T(s)f,\phi\rangle\ds = \\
-		&= \int_{0}^{\infty} \sum_{n=0}^{\infty} \frac{1}{n!}(\lambda_{0}-\mu)^n\exp(-\lambda_{0}s)\langle T(s)f,\phi\rangle\ds = \\
-		&= \int_{0}^{\infty} \exp((\lambda_{0}-\mu)s)\exp(-\lambda_{0}s)\langle T(s)f,\phi\rangle\ds = \\
-		&= \int_{0}^{\infty} \exp(-\mu s)\langle T(s)f,\phi\rangle\ds = \\ & = \lim_{t\to\infty}\left\langle \int_{0}^t \exp(-\mu s)T(s)f \ds,\phi\right\rangle\,.
+		&= \sum_{n=0}^{\infty} \int_{0}^{\infty} \frac{1}{n!}(\lambda_{0}-\mu)^n\exp(-\lambda_{0}s)\langle T(s)f,\phi\rangle\d s = \\
+		&= \int_{0}^{\infty} \sum_{n=0}^{\infty} \frac{1}{n!}(\lambda_{0}-\mu)^n\exp(-\lambda_{0}s)\langle T(s)f,\phi\rangle\d s = \\
+		&= \int_{0}^{\infty} \exp((\lambda_{0}-\mu)s)\exp(-\lambda_{0}s)\langle T(s)f,\phi\rangle\d s = \\
+		&= \int_{0}^{\infty} \exp(-\mu s)\langle T(s)f,\phi\rangle\d s = \\ & = \lim_{t\to\infty}\left\langle \int_{0}^t \exp(-\mu s)T(s)f \d s,\phi\right\rangle\,.
 	\end{aligned}
 	\end{equation}
 %% --
 	
 	Note that one can interchange summation and integration because all the integrands are positive functions.
 	
-	It follows from (1.3) that the net $(\int_{0}^t \exp(-\mu s)T(s) f \,\ds)_{t\geq 0}$ converges weakly to $R(\mu,A)f$ for $t \to \infty$.
+	It follows from (1.3) that the net $(\int_{0}^t \exp(-\mu s)T(s) f \,\d s)_{t\geq 0}$ converges weakly to $R(\mu,A)f$ for $t \to \infty$.
 	Because it is monotone increasing $(f \geq 0)$, we have strong convergence (see the corollary to II.Theorem~5.9 in \citet{schaefer:1974}).
 %
 %\endinput
@@ -110,33 +115,33 @@ By Datko's Theorem (A-IV,Theorem~1.11) the function $t \mapsto \mathrm{e}^{-\lam
 If $\lambda = \mu + \im\nu$ with $\mu$, $\nu$ real and $\mu > s(A)$, we have for arbitrary $f \in E$, $\phi \in E'$
 %% --
 \begin{align*}
-	\left|\left\langle \int_{r}^t \mathrm{e}^{-\lambda s}T(s)f \,\ds,\phi\right\rangle\right| &\leq \int_{r}^t \mathrm{e}^{-\mu s}\langle T(s)|f|,|\phi|\rangle\ds \\
-	\text{ hence } \left\|\int_{r}^t \mathrm{e}^{-\lambda s}T(s)f \,\ds\right\| &\leq \left\|\int_{r}^t \mathrm{e}^{-\mu s}T(s)|f| \,\ds\right\| \
+	\left|\left\langle \int_{r}^t \mathrm{e}^{-\lambda s}T(s)f \,\d s,\phi\right\rangle\right| &\leq \int_{r}^t \mathrm{e}^{-\mu s}\langle T(s)|f|,|\phi|\rangle\d s \\
+	\text{ hence } \left\|\int_{r}^t \mathrm{e}^{-\lambda s}T(s)f \,\d s\right\| &\leq \left\|\int_{r}^t \mathrm{e}^{-\mu s}T(s)|f| \,\d s\right\| \
 \end{align*}
 %% --
-which shows that $\lim_{t\to\infty} \int_{0}^t \mathrm{e}^{-\lambda s}T(s)f \,\ds$ exists.
-Thus $R(\lambda,A)f = \int_{0}^{\infty} \mathrm{e}^{-\lambda s} T(s)f \,\ds$ by A-I,Proposition~1.11.
+which shows that $\lim_{t\to\infty} \int_{0}^t \mathrm{e}^{-\lambda s}T(s)f \,\d s$ exists.
+Thus $R(\lambda,A)f = \int_{0}^{\infty} \mathrm{e}^{-\lambda s} T(s)f \,\d s$ by A-I,Proposition~1.11.
 
-It remains to prove that the net $\left(\int_{0}^t \exp(-\mu s)T(s) \,\ds\right)_{t\geq 0}$ converges with respect to the operator norm.
+It remains to prove that the net $\left(\int_{0}^t \exp(-\mu s)T(s) \,\d s\right)_{t\geq 0}$ converges with respect to the operator norm.
 We fix $\mu$ such that $s(A) < \mu < \Re\, \lambda$.
 As we have seen above, the map $s \mapsto \mathrm{e}^{-\mu s}\langle T(s)f,\phi\rangle$ is Lebesgue integrable for every $(f,\phi) \in E \times E'$, thus defining a bilinear map $b \colon E \times E' \to L^1(\R _{+})$.
 Using the closed graph theorem, it is easy to see that $b$ is separately continuous, hence jointly continuous by \citet[III.Theorem~5.1]{schaefer:1966}.
 Thus there is a constant $M$ such that
 %% --
 \begin{equation}\label{eq:c3-1.4}
-	\int_{0}^{\infty} \mathrm{e}^{-\mu s}|\langle T(s)f,\phi\rangle| \,\ds = \|b(f,\phi)\| \leq M\|f\|\|\phi\| \quad (f \in E, \phi \in E')\,.
+	\int_{0}^{\infty} \mathrm{e}^{-\mu s}|\langle T(s)f,\phi\rangle| \,\d s = \|b(f,\phi)\| \leq M\|f\|\|\phi\| \quad (f \in E, \phi \in E')\,.
 \end{equation}
 %% --
 
 Given $0 \leq t < r$ and setting $\epsilon \coloneqq \Re\, \lambda - \mu$ we have
 %% --
 \begin{align*}
-	\left|\int_{t}^r \mathrm{e}^{-\lambda s}\langle T(s)f,\phi\rangle \,\ds\right| &\leq \int_{t}^r \exp(-(\Re\,\lambda-\mu)s)\mathrm{e}^{-\lambda s}|\langle T(s)f,\phi\rangle| \,\ds \\
-	&\leq \mathrm{e}^{-\epsilon t}\int_{t}^r \mathrm{e}^{-\lambda s}|\langle T(s)f,\phi\rangle| \,\ds \leq \mathrm{e}^{-\epsilon t} M\|f\|\|\phi\|.
+	\left|\int_{t}^r \mathrm{e}^{-\lambda s}\langle T(s)f,\phi\rangle \,\d s\right| &\leq \int_{t}^r \exp(-(\Re\,\lambda-\mu)s)\mathrm{e}^{-\lambda s}|\langle T(s)f,\phi\rangle| \,\d s \\
+	&\leq \mathrm{e}^{-\epsilon t}\int_{t}^r \mathrm{e}^{-\lambda s}|\langle T(s)f,\phi\rangle| \,\d s \leq \mathrm{e}^{-\epsilon t} M\|f\|\|\phi\|.
 \end{align*}
 %% --
 
-It follows that $\left\|\int_{t}^r \mathrm{e}^{-\lambda s}T(s) \,\ds\right\| \leq M\mathrm{e}^{-\epsilon t}$, hence $\left(\int_{0}^t \mathrm{e}^{-\lambda s}T(s) \,\ds\right)_{t\geq 0}$ is a Cauchy net with respect to the operator norm.
+It follows that $\left\|\int_{t}^r \mathrm{e}^{-\lambda s}T(s) \,\d s\right\| \leq M\mathrm{e}^{-\epsilon t}$, hence $\left(\int_{0}^t \mathrm{e}^{-\lambda s}T(s) \,\d s\right)_{t\geq 0}$ is a Cauchy net with respect to the operator norm.
 \end{proof}
 
 Theorem~\ref{thm:c3-1.2} has many consequences.
@@ -537,7 +542,7 @@ We will prove cyclicity of the boundary spectrum under a \emph{growth condition}
 	\begin{equation}\label{eq:c3-2.15}
 	\begin{aligned}
 	\text{(i)}\quad & \text{$\{(\lambda-s(A))R(\lambda,A) : \lambda > s(A)\}$ is bounded in $\mathcal{L}(E)$}\,.\\
-	\text{(ii)}\quad & \text{$\left\{\frac{1}{t} \int_{0}^{t} \exp(-\tau s(A))T(\tau) \diff{\tau} : t > 0\right\}$ is bounded in $\mathcal{L}(E)$}\,.
+	\text{(ii)}\quad & \text{$\left\{\frac{1}{t} \int_{0}^{t} \exp(-\tau s(A))T(\tau) \d\tau : t > 0\right\}$ is bounded in $\mathcal{L}(E)$}\,.
 	\end{aligned}
 	\end{equation}
 \end{definition}
@@ -546,7 +551,7 @@ Before proving the equivalence of the two assertions we make some remarks.
 
 (a) Since one always has $\lambda R(\lambda,A) \to \Id$ for $\lambda \to \infty$, $\{(\lambda-s(A))R(\lambda,A) : \lambda > s(A)+\epsilon\}$ is bounded for every $\epsilon > 0$.
 Thus in (2.15)(i) the essential fact is boundedness near $s(A)$.
-On the other hand, $\{\frac{1}{t} \int_{0}^{t} \exp(-\tau s(A))T(\tau) \diff{\tau} : 0 \leq t \leq T\}$ is bounded for every $T \geq 0$, hence in (2.15)(ii) the boundedness for $t \to \infty$ is important.
+On the other hand, $\{\frac{1}{t} \int_{0}^{t} \exp(-\tau s(A))T(\tau) \d\tau : 0 \leq t \leq T\}$ is bounded for every $T \geq 0$, hence in (2.15)(ii) the boundedness for $t \to \infty$ is important.
 
 (b) By Corollary~\ref{cor:c3-1.4} we have $\|R(\lambda,A)\| \geq r(R(\lambda,A)) = (\lambda-s(A))^{-1}$.
 Hence $\|R(\lambda,A)\|$ grows at least as fast as $(\lambda-s(A))^{-1}$.
@@ -556,7 +561,7 @@ Thus if (2.15)(i) is satisfied, the resolvent grows as slowly as it possibly can
 A slight modification of A-III,Example 1.3 shows that there are semigroups with slowly growing resolvent and $s(A) < \omega_0(A)$.
 
 \begin{proof} 
-To prove equivalence of (2.15)(i) and (2.15)(ii), we assume $s(A) = 0$ and write $C(t) \coloneqq \frac{1}{t} \int_{0}^{t} T(\tau) \diff{\tau}$.
+To prove equivalence of (2.15)(i) and (2.15)(ii), we assume $s(A) = 0$ and write $C(t) \coloneqq \frac{1}{t} \int_{0}^{t} T(\tau) \d\tau$.
 
 (2.15)(i) $\Rightarrow (2.15)$(ii)\quad 
 Consider $\lambda > 0$, $t > 0$ such that $\lambda t = 1$. 
@@ -572,7 +577,7 @@ Then we have
 %% --
 Now (1.1) implies 
 \[
-\textit{$\lambda R(\lambda,A) = \int_{0}^{\infty} \lambda \exp(-\lambda s)T(s) \ds \geq \mathrm{e}^{-1}C(t) = \mathrm{e}^{-1}\cdot C(\frac{1}{\lambda}) \geq 0$}\,.
+\textit{$\lambda R(\lambda,A) = \int_{0}^{\infty} \lambda \exp(-\lambda s)T(s) \d s \geq \mathrm{e}^{-1}C(t) = \mathrm{e}^{-1}\cdot C(\frac{1}{\lambda}) \geq 0$}\,.
 \]
 Thus $C(t)$ is bounded for $t \to \infty$ whenever $\lambda R(\lambda,A)$ is bounded for $\lambda \downarrow 0$.
 
@@ -581,8 +586,8 @@ Thus $C(t)$ is bounded for $t \to \infty$ whenever $\lambda R(\lambda,A)$ is bou
 Given $f \in E$, $\lambda > 0$ and $r > 0$ then integration by parts yields
 %% --
 \begin{align*}
-	\lambda \int_{0}^{r} \mathrm{e}^{-\lambda s}T(s)f \ds &= \lambda \mathrm{e}^{-\lambda r} \int_{0}^{r} T(\sigma)f \diff{\sigma} + \lambda^{2}\int_{0}^{r} s\mathrm{e}^{-\lambda s}\left(\frac{1}{s}\int_{0}^{s} T(\sigma)f \diff{\sigma}\right)\ds \\
-	\left\|\lambda \int_{0}^{r} \mathrm{e}^{-\lambda s}T(s)f \ds\right\| &\leq \left(r\lambda \mathrm{e}^{-r} + \lambda^{2}\int_{0}^{r} s\mathrm{e}^{-\lambda s} \ds\right)M\|f\| \\
+	\lambda \int_{0}^{r} \mathrm{e}^{-\lambda s}T(s)f \d s &= \lambda \mathrm{e}^{-\lambda r} \int_{0}^{r} T(\sigma)f \d\sigma + \lambda^{2}\int_{0}^{r} s\mathrm{e}^{-\lambda s}\left(\frac{1}{s}\int_{0}^{s} T(\sigma)f \d\sigma\right)\d s \\
+	\left\|\lambda \int_{0}^{r} \mathrm{e}^{-\lambda s}T(s)f \d s\right\| &\leq \left(r\lambda \mathrm{e}^{-r} + \lambda^{2}\int_{0}^{r} s\mathrm{e}^{-\lambda s} \d s\right)M\|f\| \\
 	&= (1 - \mathrm{e}^{-\lambda r})M\|f\|\,.
 \end{align*}
 %% --
@@ -991,11 +996,11 @@ Next we consider some concrete examples.
 	Suppose that on $E = L^{p}(\mu)$ $(1 \leq p < \infty)$ the semigroup $(T(t))$ is given by
 	%% --
 	\begin{equation}\label{eq:c3-3.1}
-		(T(t)f)(x) = \int_{X} k(t,x,y)f(y)\,\diff{\mu}(y) \quad (x \in X,\, t > 0)
+		(T(t)f)(x) = \int_{X} k(t,x,y)f(y)\,\d\mu(y) \quad (x \in X,\, t > 0)
 	\end{equation}
 	%% --
 	for some measurable function $k \colon \R _{+} \times X \times X \to \R _{+}$.
-	Then $(T(t))$ is irreducible if and only if for any two measurable sets $M$ and $N$ with $0 < \mu(M) < \infty$, $0 < \mu(N) < \infty$, $\mu(M\cap N) = 0$ there exist $t_{0} > 0$ such that $\int_{M}\int_{N} k(t_{0},x,y)\,\diff{\mu}(x)\diff{\mu}(y) > 0$\,.
+	Then $(T(t))$ is irreducible if and only if for any two measurable sets $M$ and $N$ with $0 < \mu(M) < \infty$, $0 < \mu(N) < \infty$, $\mu(M\cap N) = 0$ there exist $t_{0} > 0$ such that $\int_{M}\int_{N} k(t_{0},x,y)\,\d\mu(x)\d\mu(y) > 0$\,.
 	
 	\item 
 	Consider the first derivative on $\R $, $\R _{+}$ or $\R _{2\pi} = \Gamma$ as operator on the corresponding $L^{p}$-space (with respect to the Lebesgue measure.)
@@ -1007,7 +1012,7 @@ Next we consider some concrete examples.
 	Let $E = L^{1}[-1,0]$ and for $g \in L^{\infty}$ consider the operator $A_{g}$ given by
 	%% --
 	\begin{equation}\label{eq:c3-3.2}
-		A_{g}f \coloneqq f', \quad D(A_{g}) \coloneqq \{f \in W^{1}[-1,0] \colon f(0) = \int_{-1}^{0} f(x)g(x)\,\dx\}
+		A_{g}f \coloneqq f', \quad D(A_{g}) \coloneqq \{f \in W^{1}[-1,0] \colon f(0) = \int_{-1}^{0} f(x)g(x)\,\d x\}
 	\end{equation}
 	%% --
 	If $g \geq 0$ then $A_{g}$ generates a positive semigroup.
@@ -1049,7 +1054,7 @@ Next we consider some concrete examples.
 	An explicit calculation yields
 	%% --
 	\begin{equation}\label{eq:c3-3.5}
-		(R(\lambda,A)f)(x,v) = \int_{0}^{1} r_{\lambda}(x,x',v)f(x',v)\,\dx' \quad (\lambda > 0)
+		(R(\lambda,A)f)(x,v) = \int_{0}^{1} r_{\lambda}(x,x',v)f(x',v)\,\d x' \quad (\lambda > 0)
 	\end{equation}
 	%% --
 	where $r_{\lambda} \colon [0,1] \times [0,1] \times [-1,1] \to \R $ is given by
@@ -1097,7 +1102,7 @@ Next we consider some concrete examples.
 	Since we assumed that $\kappa$ is strictly positive, $I_{Y}$ is $K$-invariant if and only if $Y = X\times[-1,1]$ for some measurable set $X \subset [0,1]$.
 	If we assume that $X$ has positive measure and define
 	\[
-	\alpha \coloneqq \sup\{x \in [0,1] \colon \int_{0}^{x} \1_{X}(s)\,\ds = 0\}, \beta \coloneqq \inf\{x \in [0,1] \colon \int_{x}^{1} \1_{X}(s)\,\ds = 0\},
+	\alpha \coloneqq \sup\{x \in [0,1] \colon \int_{0}^{x} \1_{X}(s)\,\d s = 0\}, \beta \coloneqq \inf\{x \in [0,1] \colon \int_{x}^{1} \1_{X}(s)\,\d s = 0\},
 	\] 
 	then we have $\alpha < \beta$ and the support of the function $h \coloneqq R(\lambda,A)\1_{Y}$
 	%
@@ -1184,7 +1189,7 @@ For (fixed) positive numbers $\alpha,\beta$ such that $\frac{\alpha}{\beta}$ is 
 Next we define for a positive function $m \colon \Gamma\times\Gamma \to \R $ which is continuous on $\Gamma\times\Gamma\setminus(1,1)$ functions $m_{t}$, $t\geq 0$, as follows
 %% --
 \begin{equation}\label{eq:c3-3.10}
-	m_{t}(z,w) \coloneqq \exp(-\int_{0}^{t} m(z\cdot \mathrm{e}^{\im\alpha s},w\cdot \mathrm{e}^{\im\beta s})\,\ds)\,.
+	m_{t}(z,w) \coloneqq \exp(-\int_{0}^{t} m(z\cdot \mathrm{e}^{\im\alpha s},w\cdot \mathrm{e}^{\im\beta s})\,\d s)\,.
 \end{equation}
 %% --
 
@@ -1240,7 +1245,7 @@ Each of the following conditions on $E$ and $(T(t))$, respectively, implies that
 	Moreover, from A-I,(3.1) we deduce
 	%% --
 	\begin{align*}
-		T(t)R(\lambda,A) = \mathrm{e}^{\lambda t}R(\lambda,A) - \mathrm{e}^{\lambda t}\int_{0}^{t} \mathrm{e}^{-\lambda s}T(s)\ds \leq \mathrm{e}^{\lambda t}R(\lambda,A) \ (t\geq 0, \lambda>s(A))\,.
+		T(t)R(\lambda,A) = \mathrm{e}^{\lambda t}R(\lambda,A) - \mathrm{e}^{\lambda t}\int_{0}^{t} \mathrm{e}^{-\lambda s}T(s)\d s \leq \mathrm{e}^{\lambda t}R(\lambda,A) \ (t\geq 0, \lambda>s(A))\,.
 	\end{align*}
 	%% --
 	Since the spectral radius is an isotone function on the cone of positive operators, it is enough to show that
@@ -1333,9 +1338,9 @@ One can apply the theorem in order to prove that the rotation semigroup on $\Gam
 		\marginpar{GG: Was ist $\delta_{n0}$}
 		Moreover, 
 		\[
-		2\pi\cdot\delta_{n0} = \langle h^{[n]},\phi\rangle = \langle i(e_{n}),\phi\rangle = \int_{0}^{2\pi} e_{n}(\mathrm{e}^{it})\,\dt \text{ for all } n \in \Z\,,
+		2\pi\cdot\delta_{n0} = \langle h^{[n]},\phi\rangle = \langle i(e_{n}),\phi\rangle = \int_{0}^{2\pi} e_{n}(\mathrm{e}^{it})\,\d t \text{ for all } n \in \Z\,,
 		\] 
-		hence $\int_{0}^{2\pi} f(\mathrm{e}^{it})\,\dt  = \langle i(f),\phi\rangle$ for all $f \in C(\Gamma)$.
+		hence $\int_{0}^{2\pi} f(\mathrm{e}^{it})\,\d t  = \langle i(f),\phi\rangle$ for all $f \in C(\Gamma)$.
 		It follows that $(E,\phi) \cong L^{1}(\Gamma)$, and we define $j$ to be the canonical mapping from $E$ into $(E,\phi) \cong L^{1}(\Gamma)$ (see C-I,Section~4).
 		Then $j$ has dense image and is injective since $\phi$ is strictly positive (cf.\ Proposition~\ref{prop:c3-3.5}(ii)).
 		One easily verifies that the diagramm commutes.
@@ -1625,13 +1630,13 @@ Moreover, we state a criterion ensuring the existence of a dominant eigenvalue.
 	implies that $R(\lambda,B) = R(\lambda,A)(1 - KR(\lambda,A))^{-1}$ has only poles of finite algebraic multiplicity in $\{\lambda \in \C  : \Re\,\lambda > s(A)\}$. 
 	This proves the first claim. 
 	In order to prove the second, we denote the semigroup corresponding to $A$ and $B$ by $(T(t))$ and $(S(t))$,  respectively.
-	It follows from Proposition~\ref{prop:c3-3.3} that $(S(t))$ is irreducible and we have $S(t) = T(t) + \int_{0}^{t} T(t-s)KS(s)~\ds$ (see A-II,(1.9)). 
+	It follows from Proposition~\ref{prop:c3-3.3} that $(S(t))$ is irreducible and we have $S(t) = T(t) + \int_{0}^{t} T(t-s)KS(s)~\d s$ (see A-II,(1.9)). 
 	Iterating this identity we obtain for every $m \in \N$, $t \geq 0$
 	\begin{equation}\label{eq:c3-3.21}
 		\begin{aligned}
 		S(t) &= \sum_{n=0}^{m-1} T_{n}(t) + R_{m}(t) \ \text{ where}\\
-		T_{0}(t)&\coloneqq T(t),\  T_{n}(t) \coloneqq  \int_{0}^{t} T(t-s)KT_{n-1}(s)~\ds \textit{ for } n \in \N\,,\\
-		R_{m}(t) &\coloneqq \textit{\small $\int_{0}^{t}\int_{0}^{t_{1}} .. \int_{0}^{t_{m-1}} T(t-t_{1})KT(t_{1}-t_{2})K .. T(t_{m-1}-t_m)KS(t_{m})\dt _{m}..\dt _{1}$}\,.
+		T_{0}(t)&\coloneqq T(t),\  T_{n}(t) \coloneqq  \int_{0}^{t} T(t-s)KT_{n-1}(s)~\d s \textit{ for } n \in \N\,,\\
+		R_{m}(t) &\coloneqq \textit{\small $\int_{0}^{t}\int_{0}^{t_{1}} .. \int_{0}^{t_{m-1}} T(t-t_{1})KT(t_{1}-t_{2})K .. T(t_{m-1}-t_m)KS(t_{m})\d t _{m}..\d t _{1}$}\,.
 		\end{aligned}
 	\end{equation} \marginpar{GG: Verstehe ich nicht}
 	
@@ -1660,7 +1665,7 @@ The generator considered there is $B = (A - M) + K$, where $K$ is
 positive linear. 
 From (3.5) and (3.6) one deduces that 
 \[
-(KR(\lambda,A)f)(x,v) = \int_{0}^{1}\int_{-1}^{1} k(x,v,x',v')f(x',v')~\dx'dv'
+(KR(\lambda,A)f)(x,v) = \int_{0}^{1}\int_{-1}^{1} k(x,v,x',v')f(x',v')~\d x'dv'
 \]
 where the kernel $k$ is given by $k(x,v,x',v') \coloneqq  \kappa(x,v,v')r_{\lambda}(x,x',v')$ (cf.\ (3.5), (3.7)). 
 Using this representation of $KR(\lambda,A)$ it follows that $K$ is A-compact. 
@@ -1705,7 +1710,7 @@ In the last part of this section we discuss a spectral decomposition of positive
 %% --  30 / 321
 %% -- 
 	In fact, A-I,(3.1) implies $(\mathrm{e}^{rt} - T(r))R(r,A) \geq 0$ hence $T(t)'\psi = rR(r,A)'T(t)'|\phi| \leq r\cdot \mathrm{e}^{rt}R(r,A)'|\phi| = \mathrm{e}^{rt}\psi$.
-	Moreover, the inequality $T(t)'|\phi| \geq |\phi|$ $(t \geq 0)$ implies $T(t)'\psi = rR(r,A)'T(t)'|\phi| \geq rR(r,A)'|\phi| = \psi$ and $\psi = rR(r,A)'|\phi| = r \int_{0}^{\infty} \mathrm{e}^{-rt}T(t)'|\phi|~\dt  \geq r\int_{0}^{\infty} \mathrm{e}^{-rt}|\phi|~\dt  = |\phi|$\,.
+	Moreover, the inequality $T(t)'|\phi| \geq |\phi|$ $(t \geq 0)$ implies $T(t)'\psi = rR(r,A)'T(t)'|\phi| \geq rR(r,A)'|\phi| = \psi$ and $\psi = rR(r,A)'|\phi| = r \int_{0}^{\infty} \mathrm{e}^{-rt}T(t)'|\phi|~\d t  \geq r\int_{0}^{\infty} \mathrm{e}^{-rt}|\phi|~\d t  = |\phi|$\,.
 	$\square$
 	
 	%
@@ -1882,7 +1887,7 @@ we define $T(t)$ on $H$ as follows.
 	\begin{aligned} 
 		T(t)([f,g]) &\coloneqq [f_t,g_t] \quad \textit{with}\\
 		f_t(z) &\coloneqq f(z \cdot \mathrm{e}^{it}) \quad (z \in \Gamma) \quad \text{and}\\
-		g_t(x) &\coloneqq g(x+t) + \frac{1}{2\pi}\int_{0}^{2\pi} f(z \cdot \mathrm{e}^{is}) \,\ds \cdot \int_{x}^{x+t} k(u) \,\du\,.
+		g_t(x) &\coloneqq g(x+t) + \frac{1}{2\pi}\int_{0}^{2\pi} f(z \cdot \mathrm{e}^{is}) \,\d s \cdot \int_{x}^{x+t} k(u) \,\d u\,.
 	\end{aligned}
 \end{equation}
 %% --
@@ -1931,9 +1936,9 @@ Since we have
 \]
 we may assume that $(f_n)$ is a sequence in $E_+$.
 
-Defining $g_n \coloneqq \int_{0}^{t} \mathrm{e}^{-\alpha s}T(s)f_n \, \ds $ we have $g_n \in D(A)$ and
+Defining $g_n \coloneqq \int_{0}^{t} \mathrm{e}^{-\alpha s}T(s)f_n \, \d s $ we have $g_n \in D(A)$ and
 \[
-(A-\alpha)g_n = (A-\alpha)\int_{0}^{t} \mathrm{e}^{-\alpha s}T(s)f_n \, \ds = \mathrm{e}^{-\alpha t}T(t)f_n - f_n = \frac{1}{r}(T(t)f_n - rf_n)\,.
+(A-\alpha)g_n = (A-\alpha)\int_{0}^{t} \mathrm{e}^{-\alpha s}T(s)f_n \, \d s = \mathrm{e}^{-\alpha t}T(t)f_n - f_n = \frac{1}{r}(T(t)f_n - rf_n)\,.
 \]
 Therefore $\lim_{n \to \infty}\|(A - \alpha) g_n\| = 0$\,. It remains to prove 
 $\liminf_{n \to \infty}\|g_n\| > 0$\,.
@@ -1944,7 +1949,7 @@ following facts.
 	Since $f_n$ is positive and the norm is additive on $E_+$,
 	we have
 	\\ 
-	$\|g_n\| = \int_{0}^{t} \mathrm{e}^{-\alpha s}\|T(s)f_n\| \, \ds$.
+	$\|g_n\| = \int_{0}^{t} \mathrm{e}^{-\alpha s}\|T(s)f_n\| \, \d s$.
 	
 	\item The inequality $\|T(t)f\| \leq \|T(t-s)\|\|T(s)f\|$ implies
 	$\|T(s)f\| \geq M^{-1}\|T(t)f\|$ for $0 \leq s \leq t$, $f \in E$ and $M \coloneqq \sup_{0 \leq s \leq t}\|T(s)\|$.
@@ -2056,32 +2061,32 @@ lattice $E$ with generator $A$. Given $\mu \in \rho(A) \cap \R $ and $h \in E_+$
 	$R(\mu,A)h \geq 0$\,,
 
 	\item 
-	$\left\{\int_{0}^{t} \mathrm{e}^{-\mu s}T(s)h \, \ds : t \in \R _+\right\}$ is bounded in $E$.
+	$\left\{\int_{0}^{t} \mathrm{e}^{-\mu s}T(s)h \, \d s : t \in \R _+\right\}$ is bounded in $E$.
 \end{enumerate}
 \end{lemma}
 
 \begin{proof}
 $(a)\Rightarrow(b)$: We have
-$\int_{0}^{t} \mathrm{e}^{-\mu s}T(s)h \, \ds = (Id - \mathrm{e}^{-\mu t}T(t))R(\mu,A)h$ (see A-I,(3.2)).
+$\int_{0}^{t} \mathrm{e}^{-\mu s}T(s)h \, \d s = (Id - \mathrm{e}^{-\mu t}T(t))R(\mu,A)h$ (see A-I,(3.2)).
 Since $R(\mu,A)h \geq 0$ and $T(t)$ is a positive operator we obtain
 \[
-\int_{0}^{t} \mathrm{e}^{-\mu s}T(s)h \, \ds = R(\mu,A)h - \mathrm{e}^{-\mu t}T(t)R(\mu,A)h \leq R(\mu,A)h
+\int_{0}^{t} \mathrm{e}^{-\mu s}T(s)h \, \d s = R(\mu,A)h - \mathrm{e}^{-\mu t}T(t)R(\mu,A)h \leq R(\mu,A)h
 \] 
 which implies assertion (b).
 
 $(b)\Rightarrow(a)$: The assumption implies that 
 \[
-\int_{0}^{\infty} \mathrm{e}^{-\nu s}T(s)h \, \ds \coloneqq 
-\lim_{t \to \infty} \int_{0}^{t} \mathrm{e}^{-\nu s}T(s)h \, \ds \ \text{ exists for } \ \nu > \mu\,. 
+\int_{0}^{\infty} \mathrm{e}^{-\nu s}T(s)h \, \d s \coloneqq 
+\lim_{t \to \infty} \int_{0}^{t} \mathrm{e}^{-\nu s}T(s)h \, \d s \ \text{ exists for } \ \nu > \mu\,. 
 \]
 Using that $A$ is a closed operator it follows that 
 \[
-(\nu - A)(\int_{0}^{\infty} \mathrm{e}^{-\nu s}T(s)h \, \ds) = h\,.
+(\nu - A)(\int_{0}^{\infty} \mathrm{e}^{-\nu s}T(s)h \, \d s) = h\,.
 \]
 For $\nu$
 sufficiently close to $\mu$ such that $\nu \in \rho(A) \cap \R $ we have 
 \[ 
-R(\nu,A)h = \int_{0}^{\infty} \mathrm{e}^{-\nu s}T(s)h \, \ds \geq 0\,. 
+R(\nu,A)h = \int_{0}^{\infty} \mathrm{e}^{-\nu s}T(s)h \, \d s \geq 0\,. 
 \] 
 By continuity we conclude $R(\mu,A)h \geq 0$.
 %$\square$
@@ -2155,8 +2160,8 @@ have
 %% --
 \begin{equation}\label{eq:c3-4.10}
 \begin{aligned}
-	P_{\mu}f &= \frac{1}{2\pi} \cdot \int_{-\infty}^{\infty} R(\mu+\im\tau,A)f \, \diff{\tau} - \frac{1}{2\pi} \cdot \int_{-\infty}^{\infty} R(\alpha+\im\tau,A)f \, \diff{\tau} ,\\
-	Q_{\mu}f &= \frac{1}{2\pi} \cdot \int_{-\infty}^{\infty} R(\beta+\im\tau,A)f \, \diff{\tau} - \frac{1}{2\pi} \cdot \int_{-\infty}^{\infty} R(\mu+\im\tau,A)f \, \diff{\tau} .
+	P_{\mu}f &= \frac{1}{2\pi} \cdot \int_{-\infty}^{\infty} R(\mu+\im\tau,A)f \, \d\tau - \frac{1}{2\pi} \cdot \int_{-\infty}^{\infty} R(\alpha+\im\tau,A)f \, \d\tau ,\\
+	Q_{\mu}f &= \frac{1}{2\pi} \cdot \int_{-\infty}^{\infty} R(\beta+\im\tau,A)f \, \d\tau - \frac{1}{2\pi} \cdot \int_{-\infty}^{\infty} R(\mu+\im\tau,A)f \, \d\tau .
 \end{aligned}
 \end{equation}
 %% --
@@ -2341,8 +2346,8 @@ If $\lambda$ denotes the Lebesgue measure, then
 %% --
 \begin{equation}\label{eq:c3-4.14}
 	\begin{aligned}
-		\lambda(\phi_t^{-1}(U)) &= \int_{U(-t)} 1 \, \dx  = \int_{U} 1 \circ \phi_{-t}(x) \cdot |\det D\phi_{-t}(x)| \, \dx  = \\
-		&\int_{U} |\det D\phi_{-t}(x)| \, \dx  \leq \int_{U} \mathrm{e}^{nM|t|} \, \dx  = \mathrm{e}^{nM|t|} \cdot \lambda(U).
+		\lambda(\phi_t^{-1}(U)) &= \int_{U(-t)} 1 \, \d x  = \int_{U} 1 \circ \phi_{-t}(x) \cdot |\det D\phi_{-t}(x)| \, \d x  = \\
+		&\int_{U} |\det D\phi_{-t}(x)| \, \d x  \leq \int_{U} \mathrm{e}^{nM|t|} \, \d x  = \mathrm{e}^{nM|t|} \cdot \lambda(U).
 	\end{aligned}
 \end{equation}
 %% --
@@ -2422,16 +2427,4 @@ For example, the \enquote{Annular Hull Theorem} (see \citet{chiconeswanson:1981}
 \end{enumerate}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% -- References
-\RaggedRight
-\bibliographystyle{abbrvnat}
-\bibliography{bib/ln-references}
-
-
-
-
-
-%% -- References
-%\RaggedRight
-%\bibliographystyle{abbrvnat}
-%\bibliography{../bib/ln-references}
+\endinput

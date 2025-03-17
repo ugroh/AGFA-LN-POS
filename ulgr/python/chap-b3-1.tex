@@ -1,9 +1,10 @@
+% !TEX root = chap-b3-test.tex
+
 %% -- Chapter B-III
 %% --
-\setcounter{chapter}{2}
-\chapter{Spectral Theory of Positive Semigroups on \texorpdfstring{$C_{0}(X)$}{C_0(X)}}\label{chap:b3}
+
+\chapter{Spectral Theory of Positive Semigroups on $C_{0}(X)$}\label{chap:b3}
 \index{Spectral Theory on $ C_{0}(X)$}
-%% --
 %% --
 It is known that for a single operator $T \in \L{C_{0}(X)}$ the positivity of $T$ has influence on the spectrum of $T$, mainly on the peripheral spectrum, \ie the part of the spectrum containing all spectral values of maximal absolute value.
 This part of the spectrum is of interest because it determines the asymptotic behavior of the iterates $T^{n}$ for large $n \in \N$.
@@ -318,7 +319,7 @@ Theorem~\ref{thm:b3-1.6} fails to be true for locally compact spaces as the foll
 From the explicit representation of $T(t)$,
 	%% --
 	\begin{equation}\label{eq:b3-1.17}
-		(T(t)f)(x) = (4\pi t)^{-n/2}\int_{\R^{n}} \exp(-(x-y)^{2}/4t)\cdot f(y) \, \dy \,,
+		(T(t)f)(x) = (4\pi t)^{-n/2}\int_{\R^{n}} \exp(-(x-y)^{2}/4t)\cdot f(y) \, \d y\,,
 	\end{equation}
 	%% --
 	it follows that $\lim_{t \to \infty}T(t)f = 0$ for every $f \in C_{0}(\R^{n})$ (Note that $\|T(t)f\| \leq (4\pi t)^{-n/2}\int_{\R^{n}} |f(y)|\,\d y \to 0$ provided that $f$ has compact support and that $\|T(t)\| = 1$ for all $t \geq 0$).
@@ -924,7 +925,7 @@ It is unknown whether there are positive semigroups where $\sigma_{b}(A)$ is not
 	\begin{equation}\label{eq:b3-2.20}
 		\begin{aligned}
 %\begin{empheq}[right={\empheqrbrace \,\text{(*)}}]{align*}
-		A(f,g) &\coloneqq (f',g' + \frac{1}{2\pi}\int_{0}^{2\pi} f(\theta) \, \diff{\theta}\cdot k) \\
+		A(f,g) &\coloneqq (f',g' + \frac{1}{2\pi}\int_{0}^{2\pi} f(\theta) \, \d\theta\cdot k) \\
 		D(A) &\coloneqq \{(f,g) \in E \colon f,g \in C^{1}, g' \in C_{0}(\R)\}
 %\end{empheq}
 		\end{aligned}
@@ -936,7 +937,7 @@ It is unknown whether there are positive semigroups where $\sigma_{b}(A)$ is not
 		\begin{aligned}
 			T(t)(f,g) &\coloneq (f_{t},g_{t}) \text{ with }\\
 		   f_{t}(\theta) &\coloneqq f(\theta+t), \\
-			g_{t}(x) &\coloneqq g(x+t) + \frac{1}{2\pi}\int_{0}^{2\pi} f(\theta)\,\diff{\theta}\cdot\int_{x}^{x+t} k(u) \, \du \,.
+			g_{t}(x) &\coloneqq g(x+t) + \frac{1}{2\pi}\int_{0}^{2\pi} f(\theta)\,\d\theta\cdot\int_{x}^{x+t} k(u) \, \d u\,.
 		\end{aligned}
 	\end{equation}
 	%% --
@@ -1253,7 +1254,7 @@ R(\lambda,A) &= (1 - R(\lambda,B)M_{-h})^{-1}R(\lambda,B) = \sum_{n=0}^{\infty} 
 	Suppose that the semigroup $(T(t))_{t\geq 0}$ has the following form. There exist a positive measure $\mu$ on $X$ and a positive continuous function $k : (0,\infty) \times X \times X \to \R$ such that
 %% --
 	\begin{equation}\label{eq:b3-3.1}
-		(T(t)f)(x) = \int_{X} k(t,x,y)f(y) \diff{\mu}(y) \quad (t > 0, f \in C_{0}(X), x \in X)\,.		
+		(T(t)f)(x) = \int_{X} k(t,x,y)f(y) \d\mu(y) \quad (t > 0, f \in C_{0}(X), x \in X)\,.		
 	\end{equation}	
 %% --
 	Then $(T(t))_{t\geq 0}$ is irreducible if and only if $\bigcup_{t>0}\text{supp}\{k(t,x,.)\}$ is dense in $X$ for every $x \in X$.
@@ -1543,7 +1544,7 @@ We give some examples.
 	\item 
 	We assume that the semigroup $(T(t))$ satisfies the hypotheses of Theorem~\ref{thm:b3-3.6} and that it is given by
 	\[
-	(T(t)f)(x) = \int_{X} k(t,x,y)f(y) \diff{\mu}(y)\,,
+	(T(t)f)(x) = \int_{X} k(t,x,y)f(y) \d\mu(y)\,,
 	\]
 	where $\mu$ is a positive measure and $k$ is a positive continuous function (see Example~\ref{ex:b3-3.4}(ii)).
 	We will show that $P\sigma(A)\cap(s(A) + \im\R) = \{s(A)\}$.
@@ -2311,16 +2312,3 @@ E.g., the \enquote{annular hull theorem} is a special case of Theorem~\ref{thm:b
 The general result 4.11 was proven by \citet{arendtgreiner:1984}.
 
 \end{enumerate}
-
-%% -- References
-\RaggedRight
-\bibliographystyle{abbrvnat}
-\bibliography{bib/ln-references}
-
-
-
-
-%% -- References
-%\RaggedRight
-%\bibliographystyle{abbrvnat}
-%\bibliography{bib/ln-references}
