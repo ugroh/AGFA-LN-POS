@@ -1,86 +1,77 @@
+## Anleitung zur Umwandlung von PDF-Dokumenten mit mathematischem Inhalt in LaTeX
+
 Bitte nach diesen Regel jedes der folgenden PDF mit mathematischen Inhalt in ein LaTeX-Dokument umsetzen und dabei nicht nach Deutsch übersetzen.
 
-- Bitte KEINE Korrekturen am Englischen vornehmen, selbst wenn es ein Fehler sein sollte
+### 1. Grundlegende Textformatierung
 
-- Leerzeilen bleiben stets im Text erhalten
+- Originaltext genau übernehmen, KEINE Korrekturen am Englischen vornehmen, selbst bei erkennbaren Fehlern
+- Keine Übersetzung ins Deutsche durchführen
+- Jeder neue Satz beginnt auf einer neuen Zeile ohne Leerzeile dazwischen
+- Leerzeilen aus dem Original bleiben im Text erhalten
+- Begriffe in Hochkommata oder einfachen Anführungszeichen mit `\emph{}` setzen
 
-- Jeder neue Satz beginnt auf einer neuer Zeile aber ohne eine Leerzeile dazwischen
+### 2. Mathematische Notation
 
-- Inline Mathematik stets mit $ ... $ einschließen, abgesetzte Formeln mit \\[ ... \\], wobei der mathematische Ausdruck auf einer eingerückten neuen Zeile beginnt. 
+#### 2.1 Grundformate
+- Inline-Mathematik stets mit `$ ... $` einschließen
+- Abgesetzte Formeln mit `\[ ... \]` umschließen, wobei:
+  - Vor `\[` eine neue Zeile mit `%% --` einfügen (ohne Leerzeile)
+  - Nach `\]` eine neue Zeile mit `%% --` einfügen (ohne Leerzeile)
+  - Der mathematische Ausdruck beginnt auf einer eingerückten neuen Zeile
+  - Keine Leerzeilen vor oder nach den `%% --` Markierungen
 
-- Vor \\[ eineine neue Zeile einfügen mit einem  %% -- 
+#### 2.2 Spezielle Formeln
+- Mehrzeilige mathematische Formeln mit `\begin{align*} .. \end{align*}` setzen
+- Einzeilige nummerierte Formeln mit `\begin{equation}\label{eq:c1-y.z} ... \end{equation}` setzen
+- Für Fallunterscheidungen: `cases`-Umgebung mit Einrückung von 4 Spaces verwenden
 
-- Nach \\] eine neue Zeile einfügen mit %% -- 
+#### 2.3 Mathematische Symbole und Notation
+- Doppelpunkt `:` in mathematischen Ausdrücken als `\colon` setzen
+- Definitionszeichen `:=` als `\coloneqq` und `=:` als `\eqqcolon` setzen
+- Bei Subskripts: `_a` wird zu `_{a}`, bei Superskripts: `^a` wird zu `^{a}`
+  - Dies gilt auch für zusammengesetzte Ausdrücke und griechische Buchstaben
+  - Bei Zahlen als Sub- oder Superskript immer die Zahl verwenden, also `{0}` statt `{o}`
+- Vor und nach einem mathematischen Operator eine Leerstelle einfügen (z.B. `a \to b` statt `a\to b`)
+- Häufig verwendete mathematische Operatoren mit `\DeclareMathOperator` definieren
 
-- Keine Leerzeile vor einem %% --
+### 3. Strukturelemente
 
-- Keine Leerzeile nach einem %% --
+#### 3.1 Umgebungen
+- In Leerzeilen vor `\begin{...}` ein `%% --` einsetzen (ohne Leerzeile danach)
+- In Leerzeilen nach `\end{...}` ein `%% --` einsetzen (ohne Leerzeile davor)
 
-- Mehrzeilige mathematische Formeln bitte mit \\begin{align\*} .. \\end{align\*} setzen, 
+#### 3.2 Aufzählungen
+- Aufzählungen mit `\begin{enumerate}[(x)] \item ... \end{enumerate}` setzen
+  - `x` ist `i` für numerische Aufzählungen
+  - `x` ist `a` für alphabetische Aufzählungen
+- In Aufzählungen:
+  - Jeder Satz nach `\item` beginnt auf einer neuen Zeile ohne Einrückung
+  - Mehrere Sätze innerhalb eines `\item` werden durch eine neue Zeile getrennt
 
-- Einzeilig und nummeriert mit \\begin{equation}\label{eq:nummer} . \\end{equation}.
+#### 3.3 Theoreme und spezielle Umgebungen
+- Theoreme und ähnliche Umgebungen stets mit `\label` versehen
+- Folgende Konvention für Label-Namen verwenden:
+  - Theoreme: `\label{thm:c1-y.z}`
+  - Definitionen: `\label{def:c1-y.z}`
+  - Korollare: `\label{cor:c1-y.z}`
+  - Propositionen: `\label{prop:c1-y.z}`
+  - Bemerkungen: `\label{rem:c1-y.z}`
+  - Beispiele: `\label{ex:c1-y.z}`
+  - Gleichungen: `\label{eq:c1-y.z}`
+- Dabei ist `c1` der Dokumentbezeichner und `y.z` die Nummerierung aus dem PDF
 
-- Doppelpunkt : in mathematischen Ausdrücken als \\colon setzen 
+### 4. Spezielle Elemente
 
-- Stets := in mathematischen Ausdrücken als \\coloneqq und =: als \\eqqcolon setzen.
+#### 4.1 Diagramme
+- Diagramme mit `TikZ` setzen
 
-- Bei Subskripts: \_a wird zu \_{a}, bei Superskripts: ^a wird zu ^{a}. Dies gilt auch für zusammengesetzte Ausdrücke und griechische Buchstaben
-
-- Wichtig: Bei Zahlen als Sub- oder Superskript immer die Zahl verwenden, also {0} statt {o}
-
-- Aufzählungen mit \\begin{enumerate}[(x)] \\item \\end{enumerate} setzen. Dabei ist x der Buchstabe i für Aufzählungen, die mit Zahlen nummeriert sind und es ist x der Buchstabe a für Aufzählungen, die mit Buchstaben nummeriert sind.
-
-- In Aufzählungen gilt: Jeder Satz nach \\item beginnt auf einer neuen Zeile ohne Einrückung. Mehrere Sätze innerhalb eines \\item werden durch eine neue Zeile getrennt.
-
-- Theoreme etc mit \\label versehen, etwa \\label{thm:c1-nummer}; entsprechend bei Definitionen, Corollary, Proposition, Remark, Example oder nummerierten Gleichungen. Dabei die Nummer im Format x.y ausgeben, also etwa 4.14.
-
-- Begriffe in Hochkommata oder einfachen Anführungszeichen werden mit \\emph{} gesetzt.
-
-- Leerzeilen vor %% -- entfernen
-
-- Leerzeilen nach %% -- entfernen. 
-
-- In Leerzeilen vor \\begin{...} ein %% -- einsetzen
-
-- In Leerzeilen nach \\end{...} ein %% -- einsetzen
-
-- Für Fallunterscheidungen: Verwendung von cases-Umgebung mit Einrückung von 4 Spaces.
-
-- Verwendung von \DeclareMathOperator für häufig verwendete mathematische Operatoren
-
-- Diagramme mit `Tikz` setzen
-
-- Alle griechischen Buchstaben oder mathematische Symbole in LaTeX-Code umsetzen.
-
-- Vor und nach einer mathematischen Bezeichnung bitte eine Leerstelle einfügen, also NICHT a\\tob sondern a \\to b . Analog zu allen anderen Fällen. 
-
-- Theoreme etc. werden mit einem \\label versehen. Dabei werden die Nummer des PDF verwendet und folgendes etwa Format erzeugt: \\label{thm:c1-y.z} , wobei thm bei Theoremen, cor bei Corolly etc. Anwendung findet. 
-
-- Weitere Beispiele: 
-
-- Für Definitionen: \label{def:c1-y.z}
-- Für Corollary: \label{cor:c1-y.z}
-- Für Proposition: \label{prop:c1-y.z}
-- Für Remark: \label{rem:c1-y.z}
-- Für Example: \label{ex:c1-y.z}
-- Für Gleichungen: \label{eq:c1-y.z}
-
-Dabei ist y.z für die Nummerierung, wobei die Nummer aus dem PDF genommen werden soll.
-
-- Index-Einträge:
-  - Für Sektionen, Subsektionen etc. immer dreifache Indexierung verwenden:
-    1. Direkter Eintrag des Konzepts: \index{Concept Name}
-    2. Hierarchische Einordnung: \index{Übergeordnetes Konzept!Unterkonzept}
-    3. Als Beispiel (wenn zutreffend): \index{Examples!Concept Name}
-  - Index-Einträge direkt nach \label platzieren
-  - Bei mathematischen Konzepten in Index-Einträgen mathematischen Symbole verwenden
-  - Beispiel für eine Subsektion über Matrix-Semigruppen:
-    ```latex
-    \subsection{Matrix Semigroups}\label{subsec:a1-2.2}
-    \index{Matrix Semigroups}
-    \index{Semigroups!Matrix}
-    \index{Examples!Matrix Semigroups}
-    ```
+#### 4.2 Indexeinträge
+- Für Sektionen, Subsektionen etc. immer dreifache Indexierung verwenden:
+  1. Direkter Eintrag des Konzepts: `\index{Concept Name}`
+  2. Hierarchische Einordnung: `\index{Übergeordnetes Konzept!Unterkonzept}`
+  3. Bei Beispielen: `\index{Examples!Concept Name}`
+- Index-Einträge direkt nach `\label` platzieren
+- Bei mathematischen Konzepten in Index-Einträgen mathematische Symbole verwenden
 
 
 
