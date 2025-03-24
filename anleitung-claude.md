@@ -15,8 +15,8 @@ Bitte nach diesen Regel jedes der folgenden PDF mit mathematischen Inhalt in ein
 #### 2.1 Grundformate
 - Inline-Mathematik stets mit `$ ... $` einschließen
 - Abgesetzte Formeln mit `\[ ... \]` umschließen, wobei:
-  - Vor `\[` eine neue Zeile mit `%% --` einfügen (ohne Leerzeile)
-  - Nach `\]` eine neue Zeile mit `%% --` einfügen (ohne Leerzeile)
+  - Vor `\[` eine neue Zeile mit `%% --` einfügen (ohne Leerzeile davor oder danach)
+  - Nach `\]` eine neue Zeile mit `%% --` einfügen (ohne Leerzeile davor oder danach)
   - Der mathematische Ausdruck beginnt auf einer eingerückten neuen Zeile
   - Keine Leerzeilen vor oder nach den `%% --` Markierungen
 
@@ -37,8 +37,8 @@ Bitte nach diesen Regel jedes der folgenden PDF mit mathematischen Inhalt in ein
 ### 3. Strukturelemente
 
 #### 3.1 Umgebungen
-- In Leerzeilen vor `\begin{...}` ein `%% --` einsetzen (ohne Leerzeile danach)
-- In Leerzeilen nach `\end{...}` ein `%% --` einsetzen (ohne Leerzeile davor)
+- In Leerzeilen vor `\begin{...}` ein `%% --` einsetzen (ohne Leerzeile danach oder davor)
+- In Leerzeilen nach `\end{...}` ein `%% --` einsetzen (ohne Leerzeile danach oder davor)
 
 #### 3.2 Aufzählungen
 - Aufzählungen mit `\begin{enumerate}[(x)] \item ... \end{enumerate}` setzen
@@ -51,13 +51,13 @@ Bitte nach diesen Regel jedes der folgenden PDF mit mathematischen Inhalt in ein
 #### 3.3 Theoreme und spezielle Umgebungen
 - Theoreme und ähnliche Umgebungen stets mit `\label` versehen
 - Folgende Konvention für Label-Namen verwenden:
-  - Theoreme: `\label{thm:c1-y.z}`
-  - Definitionen: `\label{def:c1-y.z}`
-  - Korollare: `\label{cor:c1-y.z}`
-  - Propositionen: `\label{prop:c1-y.z}`
-  - Bemerkungen: `\label{rem:c1-y.z}`
-  - Beispiele: `\label{ex:c1-y.z}`
-  - Gleichungen: `\label{eq:c1-y.z}`
+  - Theorem: `\label{thm:c1-y.z}`
+  - Definition: `\label{def:c1-y.z}`
+  - Corollary: `\label{cor:c1-y.z}`
+  - Proposition: `\label{prop:c1-y.z}`
+  - Remark oder Remarks: `\label{rem:c1-y.z}`
+  - Example oder Examples: `\label{ex:c1-y.z}`
+  - Equation: `\label{eq:c1-y.z}`
 - Dabei ist `c1` der Dokumentbezeichner und `y.z` die Nummerierung aus dem PDF
 
 ### 4. Spezielle Elemente
