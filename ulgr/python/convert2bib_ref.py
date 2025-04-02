@@ -76,8 +76,8 @@ if __name__ == "__main__":
         print()
 
 # Example usage:
-    with open('chap-b3.tex', 'r') as file:
+    with open('chap-b4.tex', 'r') as file:
         text = file.read()
         converted_text = convert_citation(text)
-        with open('chap-b3-bib.tex', 'w') as file:
+        with open('chap-b4-bib.tex', 'w') as file:
             file.write(converted_text)
