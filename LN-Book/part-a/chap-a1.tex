@@ -1,14 +1,15 @@
-% !TEX root = ../LN-Book.tex
+% !TEX root = chap-a1-test.tex
+% !BIB program = bibtex
 %% --
 %% -- Chapter A-I
-%% -- Stand: 2025-02-25
+%% -- Stand: 2025-02-20
 %% --
-\setcounter{chapter}{0}
-%% --
+%\setcounter{chapter}{0}
+
 \chapter{Basic Results on Semigroups on Banach Spaces}\label{chap:a1}
 \index{Basic Results}
 %% --
-Since the basic theory of one-parameter semigroups can be found in several excellent books (e.g. \citet{davies:1980}, \citet{goldstein:1985a}, \citet{pazy:1983} or \citet{hillephillips:1957}), we do not want to give a self-contained introduction to this subject here.
+Since the basic theory of one-parameter semigroups can be found in several excellent books (\eg \citet{davies:1980}, \citet{goldstein:1985a}, \citet{pazy:1983} or \citet{hillephillips:1957}), we do not want to give a self-contained introduction to this subject here.
 It may however be useful to fix our notation, to collect briefly some important definitions and results (Section 1), to present a list of \emph{standard examples} in Section~\ref{sec:a1-2} %(Section 2) 
 and to discuss standard constructions of new semigroups from a given one in Section~\ref{sec:a1-3} on p.\,\pageref{sec:a1-3}. %(Section 3).
 
@@ -48,9 +49,9 @@ If not stated otherwise, a \emph{semigroup} is a strongly continuous one-paramet
 %% --
 Next we collect a few elementary facts on the continuity and boundedness of one-parameter semigroups.
 %% --
-\begin{remarks}\label{rem:a1-1.2}
+\begin{remarks*}\label{rem:a1-1.2}
 %% --
-\begin{enumerate}[(i), wide, labelsep=1em, itemindent=\parindent]
+\begin{enumerate}[(1), wide, labelsep=1em, itemindent=\parindent]
 
 \item 
 A one-parameter semigroup $(T(t))_{t \geq 0}$ on a Banach space $E$ is strongly continuous if and only if for any $f \in E$ it is true that $T(t)f \to f$ if $t \to 0$.
@@ -59,7 +60,7 @@ A one-parameter semigroup $(T(t))_{t \geq 0}$ on a Banach space $E$ is strongly 
 For every strongly continuous semigroup there exist constants $M \geq 1$, $w \in \R$ such that $\|T(t)\| \leq M \cdot e^{wt}$ for every $t \geq 0$.
 \item If $(T(t))_{t\geq0}$ is a one-parameter semigroup such that $\|T(t)\|$ is bounded for $0 < t \leq \delta$ then it is strongly continuous if and only if $\lim_{t \to 0} T(t)f = f$ for every $f$ in a total subset of $E$.
 \end{enumerate}
-\end{remarks}
+\end{remarks*}
 %% --
 The exponential estimate from Remark~\ref{rem:a1-1.2}\,(ii) for the growth of $\|T(t)\|$ can be used to define an important characteristic of the semigroup.
 %% --
@@ -836,7 +837,7 @@ Here we use the fact that every $\hat{f} \coloneqq q(f) \in D(A_{/})$ can be wri
     = q(\int_{0}^{\infty} e^{-\lambda s}T(s)g \ds) = q(h)
 \]
 %% --
-where $h \in D(A)$ and $\lambda > \omega$ (see Proposition–\ref{prop:a1-1.6}).
+where $h \in D(A)$ and $\lambda > \omega$ (see Prop.\,\ref{prop:a1-1.6}).
 In particular we point out that for every $\hat{f} \in D(A/)$ there exist representatives $f \in \hat{f}$ belonging to $D(A)$.
 %% --
 \begin{example}\label{ex:a1-3.1}
@@ -946,7 +947,7 @@ In fact, since $\int_{0}^{t} T(s)'\phi \,\ds$, understood in the weak sense, is 
 %% --
 where $M \coloneqq \lim\sup_{t \to 0} \|T(t)\|$.
 In particular, $E^{*}$ separates $E$, \ie $E^{*}$ is $\sigma(E',E)$-dense in $E'$.
-In addition the estimate of $\|\cdot\|$ given above yields
+In addition, the estimate of $\|\cdot\|$ given above yields
 %% --
 \[
     \|T(t)^{*}\| \leq \|T(t)\| \leq M\|T(t)^{*}\| \quad \text{for all } t \geq 0.
@@ -1475,8 +1476,4 @@ For more complete information on semigroup theory we refer the reader to \citet{
 \citet{goldstein:1985a} and \citet{pazy:1983}, to the survey article by \citet{kreinkhazan:1985}, to the bibliography by 
 \citet{goldstein:1985b} and to \citet{engelnagel:2006}.
 
-%% -- References
-\RaggedRight
-\bibliographystyle{abbrvnat}
-\bibliography{bib/ln-references}
 
