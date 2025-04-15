@@ -1,6 +1,6 @@
-% !TEX root = ../LN-Book.tex
+% !TEX root = chap-d1-test.tex
 %% -- Chapter D-I
-%% -- Stand: 2025-02-20
+%% -- Stand: 2025-04-14
 %% --
 
 \chapter{Basic Results on Semigroups and Operator Algebras}\label{chap:d1}
@@ -74,7 +74,7 @@ Note that the preadjoint semigroup
 	\TT_{*} = \{ T(t)_{*} \colon T(t) \in \TT \}
 \]
 %% --
-is weakly, hence strongly continuous on $ M_{*} $. (Chapter A-I, \ref{prop:a1-1.2})
+is weakly, hence strongly continuous on $ M_{*} $. (Chapter A-I, Proposition 1.2)%\ref{prop:a1-1.2})
 
 \item
 We call the semigroup $ \TT $ \emph{identity preserving} if $ T(t)\1 = \1 $ and of \emph{Schwarz type} if every $ T(t) $ is a Schwarz map.
@@ -97,9 +97,8 @@ There exists a representation for the resolvent $ R(\lambda,A) $ given by the fo
 %% --
 where the integral exists in the norm topology.
 
-In \citet[Theorem 5]{brattelirobinson:1981} it is shown, that $\TT$ is a semigroup of Schwarz type if and only of $ \mu R(\mu,A) $ is a Schwarz map for every $\mu\in\R_{+}$.
-Here we relate the domination of two semigroups to an inequality for the corresponding resolvent operators.
-This inequality will be needed later.
+The next theorem relates the domination of two semigroups to an inequality for the corresponding resolvent operators.
+This inequality will be needed later and can be used to characterize semigroups of Schwarz type on \CA-algebras.
 %% --
 \begin{theorem}\label{thm:d1-2.1}
 Let $  \TT  = (T(t))_{t\geq0} $ be a semigroup of Schwarz type with generator $ A $ and $ \mathcal{S} = (S(t))_{t\geq0} $ a semigroup with generator $ B $ on a\, \CA-algebra $ M $.
@@ -120,7 +119,7 @@ for all $ x \in M $ and $ \mu \in \R_{+} $.
 %% --
 The same result holds if $ \,\TT $ is a weak*-semigroup of Schwarz type and $ \mathcal{S} $ is a weak*-semigroup on a \WA-algebra $ M $ such that $ (*) $ is fulfilled.
 \end{theorem}
-%% --
+
 \begin{proof}
 From the assumption $ (*) $ it follows that
 %% --
@@ -183,12 +182,12 @@ Then the semigroup
 S \coloneqq \left(e^{- \im  (\lambda) t }T(t) \right)_{t \geq 0}
 \]
 %% --
-fulfills the assumption of{\ }Theorem~\ref{thm:d1-2.1} and $ B \coloneqq A - \im \lambda $ is the generator of $ S $.
-Consequently $ R(\lambda,A) = R(\Re\lambda,B) $ and the corollary follows from Theorem~\ref{thm:d1-2.1}.
+fulfills the assumption of{\ }Thm.\,\ref{thm:d1-2.1} and $ B \coloneqq A - \im \lambda $ is the generator of $ S $.
+Consequently $ R(\lambda,A) = R(\Re\lambda,B) $ and the corollary follows from Thm.~\ref{thm:d1-2.1}.
 %% --
 \end{proof}
 %% --
-\begin{remark}\label{rem:d1-2.3}(\citet[Theorem 5]{brattelirobinson:1981})
+\begin{remark}\label{rem:d1-2.3}
 Since 
 %
 \[
@@ -348,11 +347,9 @@ with values in $ M_{*} $ which is identity preserving and of Schwarz type such t
 %% --
 \section*{Notes}
 \addcontentsline{toc}{section}{Notes}
-We refer to \citet{brattelirobinson:1981}, \citet{davies:1976} and the survey article of \citet{oseledets:1984}.
+We refer to \citet{brattelirobinson:1979}, \citet{davies:1976} and the survey article of \citet{oseledets:1984}.
 
-%% -- References
 %% -- References
 \RaggedRight
 \bibliographystyle{abbrvnat}
 \bibliography{bib/ln-references}
-
