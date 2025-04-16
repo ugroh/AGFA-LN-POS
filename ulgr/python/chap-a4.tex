@@ -1,6 +1,5 @@
 %% -- Chapter A-IV
-%% -- Stand 2025-04-14
-%% -- 
+%% -- Stand 2025-02-25
 %% --
 \chapter{Asymptotics of Semigroups on Banach Spaces}\label{chap:c4}
 \index{Asymptotics}
@@ -157,8 +156,7 @@ Furthermore, we recall that the Laplace transform exists for every $\lambda \in 
 This follows from 
 %% --
 \begin{align}\label{eq:a4-1.1}
-\int_0^t e^{-\lambda s} f(s)\, ds = &e^{-(\lambda-\mu)t} \int_{0}^{t} e^{\mu s} f(s) \, ds \\ 
-&+ (\lambda - \mu) \int_{0}^{t} e^{-(\lambda-\mu)s} \int_{0}^{s} e^{\mu r} f(r) \, dr \, ds \notag
+\int_0^t e^{-\lambda s} f(s)\, ds = &e^{-(\lambda-\mu)t} \int_{0}^{t} e^{\mu s} f(s) \, ds \\ &+ (\lambda - \mu) \int_{0}^{t} e^{-(\lambda-\mu)s} \int_{0}^{s} e^{\mu r} f(r) \, dr \, ds \notag
 \end{align}
 %% --
 Note that even boundedness of $\int_{0}^{t} e^{-\mu s}f(s) \, ds$ implies the existence of the Laplace transform for $\Re \lambda > \Re \mu$. 
@@ -932,7 +930,7 @@ For every solution $v(t,\cdot)$ of (*) we have, by Theorem \ref{thm:a4-2.4} :
 \begin{enumerate}[label=\emph{Section \arabic*:}, wide]
 
 \item The exponential growth bounds $\omega(f)$ and $\omega(A)$ as well as the characterizations \eqref{eq:a4-1.2}, \eqref{eq:a4-1.6} and Theorem \ref{thm:a4-1.3} (i) can be found in Hille-Phillips (1957).
-Growth bounds similar to $\omega_{1}(A)$ were considered first in [D'Jacenko (1976)] and in \citet[Prop.2]{zabczyk:1979}. 
+Growth bounds similar to $\omega_{1}(A)$ were considered first in [D'Jacenko (1976)] and in [Zabczyk (1979), Prop.2]. 
 Example \ref{ex:a4-1.2}(2) is taken from Wolff (1981); other \emph{counterexamples} can be found in Hille-Phillips (1957), Foias (1973), Triggiani (1975), Zabczyk (1975) and Greiner-Voigt-Wolff (1981). 
 Statements \eqref{eq:a4-1.2}, \eqref{eq:a4-1.6} and Theorem \ref{thm:a4-1.3} (i) are semigroup versions of results of classical Laplace transform theory, see Hille-Phillips (1957) and Widder (1946). 
 Theorem \ref{thm:a4-1.3} (ii) is a semigroup version of Theorem 1.2.7 and 1.2.8 in Doetsch (1950). 
@@ -966,7 +964,4 @@ For a discussion of the asymptotic behavior of the solutions of $\dot{u}(t) = A(
 
 \end{enumerate}
 
-%% -- References
-\RaggedRight
-\bibliographystyle{abbrvnat}
-\bibliography{bib/ln-references}
+

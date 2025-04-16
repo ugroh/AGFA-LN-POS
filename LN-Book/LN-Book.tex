@@ -66,6 +66,15 @@
 \let\c@remarks=\c@theorem 		% Make proposition share the theorem counter
 \makeatother
 
+\theoremstyle{plain}
+\newtheorem*{lemma*}{Lemma}
+
+\theoremstyle{definition}
+\newtheorem*{example*}{Example}
+\newtheorem*{examples*}{Examples} 
+\newtheorem*{remark*}{Remark}
+\newtheorem*{remarks*}{Remarks}
+
 %% -- Pakete etc.
 %% -- 
 \input{./preamble/ln-preamble-final}	
@@ -81,6 +90,7 @@
 %% -- Definitionen
 %% --
 \input{./preamble/ln-definitionen}
+\newcommand{\image}{\mathop{}\!\mathrm{im}\,}
 
 %% -- References
 %% --
@@ -202,6 +212,7 @@
 \tableofcontents
 %% --
  \include{./part-0/ln-symbols}
+ \printnomenclature
 %%
 \mainmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -212,7 +223,7 @@
 \include{./part-a/chap-a2}
 \include{./part-a/chap-a3}
 \include{./part-a/chap-a4}
-\include{./part-a/appendix-a}
+\include{./part-a/appendix-a} 
 
 %%% -- Part-B
 \include{./part-b/part-b}
@@ -248,6 +259,8 @@
 
 \cleardoublepage 
 \printindex
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

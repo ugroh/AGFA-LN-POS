@@ -1,6 +1,5 @@
 %% -- Chapter A-IV
-%% -- Stand 2025-04-14
-%% -- 
+%% -- Stand 2025-02-25
 %% --
 \chapter{Asymptotics of Semigroups on Banach Spaces}\label{chap:c4}
 \index{Asymptotics}
@@ -32,8 +31,7 @@ An initial value \( f \in D(A) \) is said to be \emph{stable} if the solution \(
 %% --
 converges to zero as \( t \to \infty \). 
 The semigroup is called stable if every solution converges to zero; that is, if every initial value \( f \in D(A) \) is stable.
-\\
-\noindent
+
 If the space \( E \) is finite-dimensional, then the stability of the semigroup implies exponential decay. 
 More precisely, the following statements are equivalent:
 %% --
@@ -157,8 +155,7 @@ Furthermore, we recall that the Laplace transform exists for every $\lambda \in 
 This follows from 
 %% --
 \begin{align}\label{eq:a4-1.1}
-\int_0^t e^{-\lambda s} f(s)\, ds = &e^{-(\lambda-\mu)t} \int_{0}^{t} e^{\mu s} f(s) \, ds \\ 
-&+ (\lambda - \mu) \int_{0}^{t} e^{-(\lambda-\mu)s} \int_{0}^{s} e^{\mu r} f(r) \, dr \, ds \notag
+\int_0^t e^{-\lambda s} f(s)\, ds = &e^{-(\lambda-\mu)t} \int_{0}^{t} e^{\mu s} f(s) \, ds \\ &+ (\lambda - \mu) \int_{0}^{t} e^{-(\lambda-\mu)s} \int_{0}^{s} e^{\mu r} f(r) \, dr \, ds \notag
 \end{align}
 %% --
 Note that even boundedness of $\int_{0}^{t} e^{-\mu s}f(s) \, ds$ implies the existence of the Laplace transform for $\Re \lambda > \Re \mu$. 
@@ -966,7 +963,4 @@ For a discussion of the asymptotic behavior of the solutions of $\dot{u}(t) = A(
 
 \end{enumerate}
 
-%% -- References
-\RaggedRight
-\bibliographystyle{abbrvnat}
-\bibliography{bib/ln-references}
+
