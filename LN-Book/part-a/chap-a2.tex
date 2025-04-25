@@ -1,5 +1,4 @@
-%%chap-a2
-%% -- Stand 2025-04-14
+%% Stand 2025-04-24 ulgr
 %% --
 \chapter{Characterization of Semigroups on Banach Spaces}\label{chap:a2}
 \chaptermark{Characterization of Semigroups}
@@ -28,6 +27,10 @@ The last section contains a surprising result: on certain Banach spaces (e.g., $
 %% --
 \section{The Abstract Cauchy Problem, Special Semigroups and Perturbation} \label{sec:a2-1}
 \index{Semigroups on Banach spaces!Abstract Cauchy problem}
+%% --
+\hspace{1cm}{\Large by Wolfgang Arendt}
+\vspace{.5cm}
+\newline
 %% --
 Linear differential equations in Banach spaces are intimately connected with the theory of one-parameter semigroups.
 In fact, given a closed linear operator $A$ with dense domain $D(A)$ the following statement is true (with some reservation regarding a technical detail): The abstract Cauchy problem
@@ -412,7 +415,7 @@ for all $f \in E$ and $t \geq 0$.
 \end{proposition}
 %% --
 \subsection{Holomorphic semigroups} \label{subsec:a2-1.se4}
-%\index{Holomorphic semigroups}
+\index{Holomorphic semigroups}
 \index{Semigroups!Holomorphic}
 
 We now describe a hierarchy of smoothness conditions on the semigroup, starting with the most restrictive class; namely, holomorphic semigroups.
@@ -504,7 +507,8 @@ We first consider an example.
 %% --
 \begin{example*}\label{ex:a2-1.13-kgk}(The Laplacian on $E = C_{0}(\R^{n})$ or $L^{p}(R^{n})$ $(1 \leq p < \infty)$)
 %% –
-\begin{enumerate}[(i), wide]
+\begin{enumerate}[(i), wide, labelsep=1em, itemindent=\parindent]
+%% --
 \item \label{ex:a2-1.13-kgk-1}
 Let $n = 1$.
 Then $(U(t)f)(x) = f(x+t)$ $(x \in \R)$ defines an isometric group on $E$.
@@ -590,8 +594,8 @@ On the other hand, given a strongly continuous semigroup, merely an estimate on 
 More precisely, the following holds.
 %% –
 \begin{corollary*}\label{cor:a2-1.14-kgk}
-%\index{Semigroups!Holomorphic}
-%\index{Holomorphic Semigroups}
+\index{Semigroups!Holomorphic}
+\index{Holomorphic Semigroups}
 A strongly continuous semigroup with generator $A$ is holomorphic if and only if there exist $w > \omega(A)$ and $M \geq 0$ such that one has
 \[
     \|R(w+\im\eta,A)\| \leq \frac{M}{|\eta|} \text{ for all } \quad \eta \in \R.
@@ -614,22 +618,22 @@ We now prove the following extension of Corollary \ref{cor:a2-1.13}
 
 %% –
 \begin{theorem}\label{thm:a2-1.15}
-%\index{Semigroups!Holomorphic}
+\index{Semigroups!Holomorphic}
 Let $A$ be the generator of a strongly continuous group.
 Then $A^2$ generates a holomorphic semigroup of angle $\pi/2$.
 \end{theorem}
 %% –
+
 \begin{proof}
 There exists $w \geq 0$ such that $(\pm A - w)$ generates a bounded semigroup.
 Consequently, there exists $M \geq 0$ such that $\|R(\mu,\pm A - w)\| \leq M/\Re\mu$ whenever $\Re\mu > 0$.
 
 Let $\alpha \in (0,\pi/2)$.
 There exist $r_0 \geq 0$ and $\beta \in (0,\pi/2)$ such that
-%% --
 \[
     S(\alpha+\pi/2)\setminus B(r_{0}) \subset \{ z^2 \colon z \in S(\beta) + w \}.
 \]
-%% --
+
 [In fact, the line $\{w + r(\cos\beta + \im \sin\beta) \colon r \geq 0\}$ can be parameterized by $z(t) = w + t + \im\cdot t/\varepsilon$ $(t \geq 0)$ 
 (where $\varepsilon > 0$ depends on $\beta$).
 Then $z(t)^2 = (w + t)^2 - t^2/\varepsilon^2 + i2t(w+t)/\varepsilon$.
@@ -664,7 +668,7 @@ Next we consider semigroups satisfying a less restrictive smoothness condition.
 
 \subsection{Differentiable semigroups} \label{subsec:a2-1.se5}
 \index{Semigroups!Differentiable}
-%\index{Differentiable Semigroups}
+\index{Differentiable Semigroups}
 
 Let $(T(t))_{t\geq 0}$ be a strongly continuous semigroup with generator $A$.
 Let $t_0 \geq 0$ and $f \in E$.
@@ -1262,17 +1266,13 @@ Since $D_{0}$ is dense in $E$, it follows that $S(t) = T(t)$ $(t \geq 0)$.
 \end{proof}
 %% –
 \section{Contraction Semigroups and Dissipative Operators}\label{sec:a2-2}
-\index{Contraction Semigroups}
-\index{Dissipative Operators}
-\index{Semigroups!Contraction}
-\index{Operators!Dissipative}
-%%--
-\begin{center}
-by
-
-Wolfgang Arendt
-\end{center}
-%%--
+\index{Semigroups!Contraction Semigroups}
+\index{Operators!Dissipative Operators}
+%% --
+\hspace{1cm}{\Large by Wolfgang Arendt}
+\vspace{.5cm}
+\newline
+%% --
 The Hille-Yosida theorem gives a characterization of generators in terms of the resolvent of the operator.
 However, given an operator $A$, frequently it is difficult to compute the resolvent (and its powers).
 So it is desirable to find conditions more immanent on $A$.
@@ -1338,7 +1338,7 @@ Then \eqref{eq:a2-2.5}   can be written in the form
 A [strictly] $N$-dissipative operator is simply called [strictly] \emph{dissipative} (which is in accordance with the usual nomenclature).
 %% –
 \begin{example}\label{ex:a2-2.2} 
-\begin{enumerate}[a)]
+\begin{enumerate}[a), wide]
 \item \label{ex:a2-2.2.1}
 Let $E = C[0,1]$, $f \in E$.
 Then there exists $x \in [0,1]$ such that $|f(x)| = \|f\|_{\infty}$.
@@ -1697,12 +1697,16 @@ $A$ is dissipative and $(\lambda - A)$ has dense range for some $\lambda > 0$.
 \end{theorem}
 %% –
 %% –
-\newcommand*{\inftyoo}{oo }
+%%\newcommand*{\inftyoo}{oo }
 %% –
 %%\section{Semigroups on $L^{\infty}$ and $H^{\infty}$}\label{sec:a2-3}}
 \section{Semigroups on $L^{\infty}$  and $H^{\infty}$ \label{sec:a2-3}}
 \index{Semigroups on $L^\infty$ and $H^\infty$}
 %% --
+\hspace{1cm}{\Large by Heiner Lotz}
+\vspace{.5cm}
+\newline
+%% -
 In this section we shall prove that on $L^\infty$, on $H^\infty$, and on some other classical Banach spaces every strongly continuous semigroup of operators is uniformly continuous.
 %% –
 \begin{lemma}\label{lem:a2-3.1}
@@ -1915,11 +1919,16 @@ This solves a problem raised by R.Kaufman.
 
 H. Porta and the author have shown that if a Banach space $E$ has an infinite dimensional separable quotient space and $F$ is an infinite dimensional Banach space then there always exists a closed densely defined unbounded operator from $E$ into $F$.
 \end{remark*}
-
-\section*{Notes}\label{notes:d4-notes}
+%% --
+\section*{Notes}\label{notes:a2-notes}
 \addcontentsline{toc}{section}{Notes}
 %% --
-\begin{enumerate}[label=\emph{Section \arabic*:}, wide, labelindent=0.0em]
+\begin{enumerate}[%
+,label={\Large\emph{Section \arabic*:}}
+, wide
+, labelindent=0.0em
+]
+%% --
 \item
 The abstract Cauchy problem is treated systematically in the monographs of \citet{krein:1971} and \citet{fattorini:1983}.
 We refer to these books for more details and historical notes.
@@ -1969,7 +1978,8 @@ The proof of Lemma \ref{lem:a2-3.1}  was communicated to the author by T. Coulho
 
 \end{enumerate}
 
-%% -- References
+%% -- Literatur
+%% --
 \RaggedRight
 \bibliographystyle{abbrvnat}
-\bibliography{bib/ln-references}
+\bibliography{bib/ln-references} 

@@ -1,8 +1,15 @@
-%% -- Stand 2025-04-14
+%% Stand 2025-04-24 ulgr
 %% --
-
 \chapter{Basic Results on Semigroups on Banach Spaces}\label{chap:a1}
 \index{Basic Results}
+%% --
+{\Large
+\vspace*{-.75cm}
+by \\[.25em]
+Rainer Nagel and Ulf Schlotterbeck 
+\vspace{.75cm}
+\\
+}
 %% --
 Since the basic theory of one-parameter semigroups can be found in several excellent books (\eg \citet{davies:1980}, \citet{goldstein:1985a}, \citet{pazy:1983} or \citet{hillephillips:1957}), we do not want to give a self-contained introduction to this subject here.
 It may however be useful to fix our notation, to collect briefly some important definitions and results (Section 1), to present a list of \emph{standard examples} in Section~\ref{sec:a1-2} %(Section 2) 
@@ -46,7 +53,7 @@ Next we collect a few elementary facts on the continuity and boundedness of one-
 %% --
 \begin{remarks*}\label{rem:a1-1.2}
 %% --
-\begin{enumerate}[(1), wide, labelsep=1em, itemindent=\parindent]
+\begin{enumerate}[(i), wide, labelsep=1em, itemindent=\parindent]
 
 \item 
 A one-parameter semigroup $(T(t))_{t \geq 0}$ on a Banach space $E$ is strongly continuous if and only if for any $f \in E$ it is true that $T(t)f \to f$ if $t \to 0$.
@@ -114,13 +121,15 @@ We then obtain the \emph{generator} as a not necessarily everywhere defined oper
 To every semigroup $(T(t))_{t \geq 0}$ there belongs an operator $(A,D(A))$, called the \emph{generator} and defined on the \emph{domain}
 %% --
 \begin{align*}
-	D(A) \coloneqq{} & \{f \in E \colon \lim_{h\to0} \frac{T(h)f - f}{h} \text{ exists in $E$}\} \text{ by} \\
+	D(A) \coloneqq{} & \{f \in E \colon \lim_{h\to0} \frac{T(h)f - f}{h} \text{ exists in $E$}\} \\
+    \text{ by} \\
 	Af \coloneqq{} & \lim_{h\to0} \frac{T(h)f - f}{h} \quad (f \in D(A)).
 \end{align*}
 %% --
 \end{definition}
 %% --
-\noindent Clearly, $D(A)$ is a linear subspace of $E$ and $A$ is linear from $D(A)$ into $E$.
+%\noindent 
+Clearly, $D(A)$ is a linear subspace of $E$ and $A$ is linear from $D(A)$ into $E$.
 Only in certain special cases (see \ref{subsec:a1-2.1}) the generator
 is everywhere defined and therefore bounded (use Prop.~\ref{prop:a1-1.9}\,(ii)) on p.\,\pageref{prop:a1-1.9}). %Prop.1.9(i)).
 In general, the precise extent of the domain $D(A)$ is essential for the characterization of the generator.
@@ -256,7 +265,7 @@ for every $f \in E$, $n \geq 0$ and $\lambda \in \mathbb{C}$ with $\Re(\lambda) 
 \begin{remarks}\label{rem:a1-1.12}
 %% --
 \begin{enumerate}[(i), wide, labelsep=1em, itemindent=\parindent]
-
+%% --
 \item 
 For continuous Banach space valued functions such as $t \mapsto T(t)f$ we consider the Riemann integral and define 
 %% --
@@ -1471,8 +1480,8 @@ For more complete information on semigroup theory we refer the reader to \citet{
 \citet{goldstein:1985a} and \citet{pazy:1983}, to the survey article by \citet{kreinkhazan:1985}, to the bibliography by 
 \citet{goldstein:1985b} and to \citet{engelnagel:2006}.
 
-
-%% -- References
+%% -- Literatur
+%% --
 \RaggedRight
 \bibliographystyle{abbrvnat}
-\bibliography{bib/ln-references}
+\bibliography{bib/ln-references} 

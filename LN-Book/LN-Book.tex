@@ -1,7 +1,7 @@
 % !TEX TS-program = pdflatexmk
 % !BIB program = bibtex 
 %%%%%%%%%%%%%%%%%%%% LN-Book.tex %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Stand: 2025-03-16 ulgr
+% Stand: 2025-04-24 ulgr
 %%%%%%%%%%%%%%%% Springer-Verlag %%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \documentclass[%
@@ -96,12 +96,9 @@
 %% --
 
 \usepackage{chapterbib}
-%\usepackage[round,authoryear]{natbib}
 \usepackage[square,numbers]{natbib}
-%\bibliographystyle{abbrvnat}
-
 %\bibliographystyle{spmpsci}
-%\bibliographystyle{abbrvnat}
+
 
 
 %\makeindex             % used for the subject index
@@ -110,24 +107,12 @@
 % please use the style svind.ist with
                        % your makeindex program
                        
-%% -- Für Links im PDF
-%% --
-\usepackage{hyperref}
-\hypersetup{%
-	,unicode	= false,
-	,breaklinks = true	%
-	,colorlinks	= true  %  Farbige Links false/true, für onlineversion true                                                           
-	,urlcolor	= blue  %                                                              
-	,citecolor	= blue  %                                                          
-	,linkcolor	= blue	% oder black
-%  	,hidelinks 			% Vor dem Druck % entfernen
-	}
 %% --
 %% -- https://www.uweziegenhagen.de/?p=3020	
 %% -- Stand
 %% --
 
-\date{Stand: \today}
+\date{\LARGE Stand: \today}
 
 %% -- Part A etc
 %% -- A-I etc für \chapter
@@ -145,6 +130,20 @@
 %% -- \subsection nicht ins TOC
 %% --
 \setcounter{tocdepth}{1}
+
+%% -- Für Links im PDF
+%% --
+\usepackage{hyperref}
+\hypersetup{%
+	,unicode	= false,
+	,breaklinks = true	%
+	,colorlinks	= true  %  Farbige Links false/true, für onlineversion true                                                           
+	,urlcolor	= blue  %                                                              
+	,citecolor	= blue  %                                                          
+	,linkcolor	= blue	% oder black
+	,hypertexnames=false
+%  	,hidelinks 			% Vor dem Druck % entfernen
+	}
 
 %% -- 
 %% -- nur die Dateien nutzen,
@@ -165,24 +164,24 @@
 ,./part-a/chap-a3
 ,./part-a/chap-a4
 %,./part-a/appendix-a
-%% -- Part B
-%% --
+% -- Part B
+% --
 ,./part-b/part-b
 ,./part-b/chap-b1
 ,./part-b/chap-b2
 ,./part-b/chap-b3
 ,./part-b/chap-b4
 %,./part-b/appendix-b
-%% -- Part C
-%% --
+% -- Part C
+% --
 ,./part-c/part-c
 ,./part-c/chap-c1
 ,./part-c/chap-c2
 ,./part-c/chap-c3
 ,./part-c/chap-c4
 %,./part-c/appendix-c
-%% -- Part D
-%% --
+% -- Part D
+% --
 ,./part-d/part-d
 ,./part-d/chap-d1
 ,./part-d/chap-d2
@@ -216,14 +215,14 @@
 %%
 \mainmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-%%% -- Part-A
+%% -- Part-A
 
 \include{./part-a/part-a} 
 \include{./part-a/chap-a1}
 \include{./part-a/chap-a2}
 \include{./part-a/chap-a3}
 \include{./part-a/chap-a4}
-\include{./part-a/appendix-a} 
+%\include{./part-a/appendix-a} 
 
 %%% -- Part-B
 \include{./part-b/part-b}
@@ -231,7 +230,7 @@
 \include{./part-b/chap-b2}
 \include{./part-b/chap-b3}
 \include{./part-b/chap-b4}
-\include{./part-b/appendix-b}
+%\include{./part-b/appendix-b}
 
 %%% -- Part-C
 \include{./part-c/part-c}
@@ -239,7 +238,7 @@
 \include{./part-c/chap-c2}
 \include{./part-c/chap-c3}
 \include{./part-c/chap-c4}
-\include{author/part-c/appendix-c}
+%\include{author/part-c/appendix-c}
 
 %% -- Part-D
 \include{./part-d/part-d}
@@ -251,11 +250,11 @@
 
 \backmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%\cleardoublepage  % Neue Seite für die zusätzliche Literatur
-%\section*{Additional References}  % oder ein anderer passender Titel
-%\nocite{*}  % Lädt alle Einträge aus der zusätzlichen Bibliographie
+%% -- Literatur
+%% --
+%\RaggedRight
 %\bibliographystyle{abbrvnat}
-%\bibliography{bib/ln-references} % Beachten Sie den anderen Dateinamen
+%\bibliography{bib/ln-references} 
 
 \cleardoublepage 
 \printindex

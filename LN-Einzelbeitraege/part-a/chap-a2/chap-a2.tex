@@ -1,6 +1,5 @@
-%%Stand 2025-02-26_16:12 
-%%%KGK p-A2-1; LNMp-25 A-II (Chapter 2)
-%%
+%% Stand 2025-04-24 ulgr
+%% --
 \chapter{Characterization of Semigroups on Banach Spaces}\label{chap:a2}
 \chaptermark{Characterization of Semigroups}
 \index{Semigroups on Banach spaces}
@@ -29,11 +28,15 @@ The last section contains a surprising result: on certain Banach spaces (e.g., $
 \section{The Abstract Cauchy Problem, Special Semigroups and Perturbation} \label{sec:a2-1}
 \index{Semigroups on Banach spaces!Abstract Cauchy problem}
 %% --
+\hspace{1cm}{\Large by Wolfgang Arendt}
+\vspace{.5cm}
+\newline
+%% --
 Linear differential equations in Banach spaces are intimately connected with the theory of one-parameter semigroups.
 In fact, given a closed linear operator $A$ with dense domain $D(A)$ the following statement is true (with some reservation regarding a technical detail): The abstract Cauchy problem
 %% –
 \begin{align*}
-u'(t) &= Au(t) \quad (t \geq 0) \\
+\dot{u}(t) &= Au(t) \quad (t \geq 0) \\
 u(0) &= f
 \end{align*}
 %% –
@@ -51,7 +54,7 @@ A frequent method to obtain new generators out of a given one is by perturbation
 We will have a brief look at this circle of problems at the end of this section.
 
 The results are explained and illustrated by examples.
-Proofs are only given when new aspects are presented which are not yet contained in the literature, otherwise we refer to the recent monographs \citet{davies:1980}, [Goldstein (1985a)], \citet{pazy:1983}.
+Proofs are only given when new aspects are presented which are not yet contained in the literature, otherwise we refer to the recent monographs \citet{davies:1980}, \citet{goldstein:1985a}, \citet{pazy:1983}.
 %% --
 \subsection{The abstract Cauchy problem} \label{subsec:a2-1.se1}
 %% --
@@ -59,7 +62,7 @@ Let $A$ be a closed operator on a Banach space $E$ and consider the abstract Cau
 %% –
 \begin{align*}
 \text{(ACP)} \quad \begin{cases}
-    u'(t) &= Au(t) \quad (t \geq 0) \\
+    \dot{u}(t) &= Au(t) \quad (t \geq 0) \\
     u(0) &= f
 \end{cases}
 \end{align*}
@@ -75,17 +78,16 @@ $D(A_{1}) = D(A^{2})$ given by $A_{1}f = Af$ $(f \in D(A_{1}))$ the following ho
 The following assertions are equivalent.
 %% --
 \begin{enumerate}[(a)]
-\item \label{thm:a2-1.1.1}
+\item \label{thm:a2-1.1-1}
 For every $f \in D(A)$ there exists a unique solution of (ACP).
-\item \label{thm:a2-1.1.2}
+\item \label{thm:a2-1.1-2}
 $A_{1}$ is the generator of a strongly continuous semigroup.
 \end{enumerate}
 %% --
 \end{theorem}
 %% –
-\begin{proof} \ref{thm:a2-1.1.1}   $\implies$ \ref{thm:a2-1.1.2}  
-Assume that \ref{thm:a2-1.1.1}   %% (i)
-holds; i.e., for every $f \in D(A)$ there exists a unique solution $u(\cdot,f) \in C^{1}(\left[0,\infty\right[,E)$ of (ACP).
+\begin{proof} \ref{thm:a2-1.1-1}  $\implies$ \ref{thm:a2-1.1-2}.   
+Assume that \ref{thm:a2-1.1-1} holds; i.e., for every $f \in D(A)$ there exists a unique solution $u(\cdot,f) \in C^{1}(\left[0,\infty\right),E)$ of (ACP).
 For $f \in E_{1}$ define $T_{1}(t)f = u(t,f)$.
 By the uniqueness of the solutions it follows that $T_{1}(t)$ is a linear operator on $E_{1}$ and $T_{1}(s+t) = T_{1}(s)T_{1}(t)$.
 Moreover, since $u(\cdot,f) \in C^{1}$, it follows that $t \mapsto T_{1}(t)f$ is continuous from $[0,\infty)$ into $E_{1}$.
@@ -166,15 +168,14 @@ in the norm of $E$, it follows that $Af \in D(A)$, since $A$ is closed.
 Thus $f \in D(A^{2}) = D(A_{1})$.
 We have shown that $B = A_{1}$.
 
-\ref{thm:a2-1.1.2}   $\implies$ \ref{thm:a2-1.1.1} . 
+\ref{thm:a2-1.1-2}   $\implies$ \ref{thm:a2-1.1-1} . 
 Assume that $A_{1}$ is the generator of a strongly continuous semigroup $(T_{1}(t))_{t \geq 0}$ on $E_{1}$.
 Let $f \in D(A)$ and set $u(t) = T_{1}(t)f$.
-Then $u \in C(\left[0,\infty\right[,E)$ and $Au(\cdot) \in C([0,\infty),E)$.
+Then $u \in C(\left[0,\infty\right),E)$ and $Au(\cdot) \in C([0,\infty),E)$.
 
 Moreover, $\int_{0}^{t} u(s) \ds = \int_{0}^{t} T_{1}(s) f   \ds \in D(A_{1}) = D(A^{2})$ and $A\int_{0}^{t} u(s) \ds = u(t) - u(0) = u(t) - f$ (by A-I, (1.3)).
-%%KGK \ref{??;a1-1.3}
 Consequently, $u(t) = f + \int_{0}^{t} Au(s) \ds$.
-Hence $u \in C^{1}(\left[0,\infty  \right[,E)$ and $\dot{u}(t) = Au(t)$.
+Hence $u \in C^{1}(\left[0,\infty  \right),E)$ and $\dot{u}(t) = Au(t)$.
 Thus $u$ is a solution of (ACP).
 We have shown existence.
 
@@ -186,10 +187,9 @@ Then $v(t) \in D(A)$ and $Av(t) = \int_{0}^{t} Au(s) \ds =
  \int_{0}^{t} \dot{u}(s) \ds = 
  u(t) \in D(A)$.
 Consequently, $v(t) \in D(A^{2})$ for all $t \geq 0$.
-Moreover, $\dot{v}(t) = u(t) = Av(t)$ 
-and 
-$\frac{\d{}}{\dt}Av(t) = Au(t) = A_{1}\dot{v}(t) = A^{2}v(t)$.
-Thus $v \in C^{1}(\left[0,\infty\right[,E_{1})$ and $\dot{v}(t) = A_{1}v(t)$.
+Moreover, $\dot{v}(t) = u(t) = Av(t)$ and 
+$\frac{\diff{}}{\dt}Av(t) = Au(t) = A_{1}\dot{v}(t) = A^{2}v(t)$.
+Thus $v \in C^{1}(\left[0,\infty \right),E_{1})$ and $\dot{v}(t) = A_{1}v(t)$.
 Since $v(0) = 0$, it follows that $v \equiv 0$.
 Thus $u \equiv v  \equiv 0$.
 \end{proof}
@@ -228,26 +228,26 @@ $A$ satisfies (EU), has dense domain and for every sequence $(f_{n})$ in $D(A)$ 
 \begin{proof}
 It is clear that \ref{cor:a2-1.2-1}   implies the remaining assertions.
 So assume that $A$ satisfy (EU).
-Then by Theorem~\ref{thm:a2-1.1}  , $A_{1}$ is a generator.
-If there exists $\lambda \in \rho(A)$, then $(\lambda-A)$ is an isomorphism from $E_{1}$ onto $E$ and $A$ is similar to $A_{1}$ via this isomorphism 
+Then by Theorem~\ref{thm:a2-1.1}, $A_{1}$ is a generator.
+If there exists $\lambda \in \rho(A)$, then $(\lambda-A)$ is an isomorphism from $E_{1}$ onto $E$ and $A$ is similar to $A_{1}$ via this isomorphism since 
 %% --
-since $D(A_{1}) = \{(\lambda-A)^{-1}f \colon f \in D(A)\}$ and $Af = (\lambda-A)A_{1}(\lambda-A)^{-1}f$ for all $f \in D(A)$, 
+$D(A_{1}) = \{(\lambda-A)^{-1}f \colon f \in D(A)\}$ and $Af = (\lambda-A)A_{1}(\lambda-A)^{-1}f$ for all $f \in D(A)$, 
 see A-I, 3.0.
-Thus $A$ is a generator on $E$ and we have shown that (\ref{cor:a2-1.2-2})   implies (\ref{cor:a2-1.2-1}) . 
+Thus $A$ is a generator on $E$ and we have shown that \ref{cor:a2-1.2-2} implies \ref{cor:a2-1.2-1},   
 
-If (\ref{cor:a2-1.2-3})   holds, then there exists $\lambda > s(A_{1})$ such that $(\lambda-A)D(A) = E$.
+If \ref{cor:a2-1.2-3}  holds, then there exists $\lambda > s(A_{1})$ such that $(\lambda-A)D(A) = E$.
 We show that $(\lambda-A)$ is injective.
 Then $\lambda \in \rho(A)$ since $A$ is closed.
 Assume that $\lambda f = Af$ for some $f \in D(A)$.
 Then $f \in D(A^{2}) = D(A_{1})$, and so $f = 0$ since $\lambda \in \rho(A_{1})$.
-This proves that (\ref{cor:a2-1.2-3})   implies (\ref{cor:a2-1.2-2}).  
+This proves that \ref{cor:a2-1.2-3} implies \ref{cor:a2-1.2-2}.  
 
 It remains to show that \ref{cor:a2-1.2-4}   implies \ref{cor:a2-1.2-1} . 
 Assertion \ref{cor:a2-1.2-4}   implies that for all $ t \geq 0 $ there exist bounded operators $ T(t) \in \LE $ such that $ u(t,f) = T(t)f $ if $ f \in D(A) $.
 Moreover, $ \sup_{0 \leq t \leq 1} \|T(t)\| < \infty $.
 It follows that $ T(\cdot)f $ is strongly continuous for all $ f \in E $ (since it is so for $ f \in D(A) $ and $ D(A) $ is dense).
 Let $ t > 1 $.
-There exist unique $ n \in \mathbb{N} $ and $ s \in [0,1) $ such that $ t = n + s $.
+There exist unique $ n \in \N $ and $ s \in [0,1) $ such that $ t = n + s $.
 Let $ T(t) \coloneqq T(1)^{n}T(s) $.
 From the uniqueness of the solutions it follows that $ T(t)f = u(t,f) $ for all $ t \geq 0 $ as well as $ T(t+s)f = T(s)T(t)f $ for all $ f \in D(A) $ and $ s,t \geq 0 $.
 Thus $ T $ is a semigroup.
@@ -261,9 +261,9 @@ Since $ A $ is closed this implies that $ A = B $.
 %% --
 \begin{remark}\label{rem:a2-1.3}
 It is surprising that from condition \ref{cor:a2-1.2-2}   and \ref{cor:a2-1.2-3}   in the corollary it follows automatically that $ D(A) $ is dense.
-On the other hand this condition cannot be omitted in (\ref{cor:a2-1.2-4}) . 
+On the other hand this condition cannot be omitted in \ref{cor:a2-1.2-4}.   
 In fact, consider any generator $ \tilde{A} $ and its restriction $ A $ with domain $ D(A) = \{0\} $.
-Then $ \overline{A} $ satisfies the remaining conditions in (iv) but is not a generator (if $ \dim E > 0 $).
+Then $ \overline{A} $ satisfies the remaining conditions in \ref{cor:a2-1.2-4} but is not a generator (if $ \dim E > 0 $).
 \end{remark}
 %% --
 \begin{example}\label{ex:a2-1.4}
@@ -291,7 +291,7 @@ condition \ref{cor:a2-1.2-2}   in Corollary \ref{cor:a2-1.2} .  does not hold, s
 So $ \rho(A) = \emptyset $.
 
 As a further illustration, we note that the solution of the corresponding abstract Cauchy problem for the initial value $ (f,g) \in F \times D(B) $ is given by $ u(t) = (f + tBg,g) $.
-Since $ B $ is unbounded, condition \ref{cor:a2-1.2-4}   of \ref{cor:a2-1.2}   is clearly violated.
+Since $ B $ is unbounded, condition \ref{cor:a2-1.2-4}  of Corollary \ref{cor:a2-1.2}  is clearly violated.
 \end{example}
 %% --
 \begin{remark*}\label{rem:a2-1.4-kgk} 
@@ -312,10 +312,10 @@ It follows from Cor. 1.2 that there exists a non-trivial solution for the initia
 %% --
 \subsection{One-parameter groups} \label{subsec:a2-1.se2}
 \index{One-parameter groups}
-\setcounter{theorem}{5}
 Generators of one-parameter groups can be characterized similarly by existence and uniqueness of the solutions of the associated Cauchy problem.
 However, here the assumption of continuous dependence on the initial values can be relaxed (in fact, one has no longer to assume that the continuous dependence is uniform in $t$).
 %% --
+\stepcounter{theorem}
 \begin{theorem}\label{thm:a2-1.6}
 Let $A$ be a closed densely defined operator.
 The following assertions are equivalent.
@@ -363,7 +363,7 @@ There exist $w, M \in \R$ text{such that} $(w,\infty) \subset \rho(A)$ text{and}
     \| {(\lambda - w)^{n}} R(\lambda-A)^{-n}\| \leq M 
 \]
 %% –
-for all $\lambda > w$ and $n \in \mathbb{N}$.
+for all $\lambda > w$ and $n \in \N$.
 \end{enumerate}
 \end{theorem}
 %% –
@@ -398,8 +398,8 @@ Then
 for all $f \in E$ and $t \geq 0$.
 \end{proposition}
 %% –
-Yosida's proof consists in showing that the limit in \eqref{eq:a2-1.2} exists under the hypothesis  \ref{thm:a2-1.7.2} 
-  of Theorem  \ref{thm:a2-1.7} .  (see \citet{davies:1980}, [Goldstein (1985b)] or [Pazy [1982]).
+Yosida's proof consists in showing that the limit in \eqref{eq:a2-1.2} exists under the hypothesis  \ref{thm:a2-1.7.2} of Theorem  \ref{thm:a2-1.7}  
+(see \citet{davies:1980}, \citet{goldstein:1985b} or  \citet{pazy:1982}[Pazy (1982)].
 
 The proof of Hille (see \citet{kato:1966}) is inspired by the following formula.
 %%
@@ -408,7 +408,6 @@ Let $A$ be the generator of a strongly continuous semigroup $(T(t))_{t \geq 0}$.
 Then
 %% –
 \begin{equation}\label{eq:a2-1.3}
-  ?? : \frac{t}{n} statt t/n 
     T(t)f = \lim_{n \to \infty} (Id - t/nA)^{-n} f = \lim_{n \to \infty} (n/t \cdot R(n/t,A))^{n} f
 \end{equation}
 %% –
@@ -444,7 +443,7 @@ satisfying
 \end{equation}
 %% –
 \[
-    \text{for each } \alpha_{1} \in (0,\alpha) \text{ the set } \{T(z) \colon z \in S(\alpha_{1})\} \text{ is uniformly bounded and }\\
+    \text{for each } \alpha_{1} \in (0,\alpha) \text{ the set } \{T(z) \colon z \in S(\alpha_{1})\} \text{ is uniformly bounded and }
 \]
 %% –
 \begin{equation}\label{eq:a2-1.5}
@@ -477,7 +476,7 @@ For the proof we refer to \citet{davies:1980}, for example.
 Let $A$ be the generator of a bounded holomorphic semigroup $(T(t))_{t \geq 0}$ 
 of angle $\alpha$, and let $z_{0} \in S(\alpha)$.
 Then $z_{0}A$ generates a bounded semigroup 
-$(S(t))_{t \geq 0}$ given by $S(t) = T(z_{0}t)$  $(t \geq 0)$ (where again we denote by $T$ the holomorphic extension of $(T(t))_{t \geq 0}$ on $S(\alpha)$).
+$(S(t))_{t \geq 0}$ given by $S(t) = T(z_{0}t)$  $(t \geq 0)$ (where again we denote by $\TT$ the holomorphic extension of $(T(t))_{t \geq 0}$ on $S(\alpha)$).
 \end{remark*}
 %% --
 As an application of Theorem \ref{thm:a2-1.12}  we prove the following.
@@ -508,23 +507,23 @@ We first consider an example.
 %% --
 \begin{example*}\label{ex:a2-1.13-kgk}(The Laplacian on $E = C_{0}(\R^{n})$ or $L^{p}(R^{n})$ $(1 \leq p < \infty)$)
 %% –
-\begin{enumerate}[(i), wide]
+\begin{enumerate}[(i), wide, labelsep=1em, itemindent=\parindent]
+%% --
 \item \label{ex:a2-1.13-kgk-1}
 Let $n = 1$.
 Then $(U(t)f)(x) = f(x+t)$ $(x \in \R)$ defines an isometric group on $E$.
 Its generator $A$ is given by $Af = f'$ with 
 $D(A) = \{f \in C^{1}(\R) \cap C_{0}(\R) \colon f' \in C_{0}(\R)\}$ in the case $E = C_{0}(\R)$ and 
-$D(A) = \{f \in E \cap AC(\R) \colon f' \in E\}$ in the case $E = L^{p}$ (see A-I,2.4)
-%%KGK \ref{a1-2.4}.
-Thus $A^{2}$ generates a bounded holomorphic semigroup by corollary \ref{cor:a2-1.13} . 
-
+$D(A) = \{f \in E \cap AC(\R) \colon f' \in E\}$ in the case $E = L^{p}$ (see A-I, 2.4).
+Thus $A^{2}$ generates a bounded holomorphic semigroup by Corollary \ref{cor:a2-1.13}. 
+%%-
 \item \label{ex:a2-1.13-kgk-2}
 Let $E = C_{0}(\R^{n})$ or $L^{p}(\R^{n})$ $(1 \leq p < \infty)$.
 For $i \in \{1,\ldots,n\}$ denote by $(U_{i})_{t \geq 0}$ the group given by 
 $(U_{i}(t)f)(x) = f(x_{1},\ldots,x_{i-1},x_{i}+t,\ldots,x_{n})$ $(x \in \R^{n}, t \in \R)$ 
 and by $A_{i}$ its generator.
 Since $U_{i}(t)U_{j}(s) = U_{j}(s)U_{i}(t)$ $(s,t \in \R, i,j \in \{1,\ldots,n\})$ it follows that the resolvents of $A_{i}$ commute.
-So the same is true for the resolvents of $A_{i}^{2}$ (cf. \eqref{eq:a2-1.7} and A-I,3.8)
+So the same is true for the resolvents of $A_{i}^{2}$ (cf. \eqref{eq:a2-1.7} and A-I, 3.8)
 
 Denote by $(T_{i}(t))_{t \geq 0}$ 
 the semigroup generated by $A_{i}^{2}$ $(i=1,\ldots,n)$.
@@ -543,7 +542,7 @@ and the generator is given by
 \end{example*}
 %% --
 Let $\alpha \in (0,\pi/2]$.
-A semigroup $(T(t))_{t \geq 0}$ is called holomorphic of angle $\alpha$ if it possesses an extension $T \colon S(\alpha) \to L(E)$ for some $\alpha \in (0,\pi/2]$ which satisfies all the requirements of Definition \ref{def:a2-1.11} except that it is not required to be bounded on any sector $S(\alpha_{1})$.
+A semigroup $(T(t))_{t \geq 0}$ is called \emph{holomorphic of angle} $\alpha$ if it possesses an extension $T \colon S(\alpha) \to L(E)$ for some $\alpha \in (0,\pi/2]$ which satisfies all the requirements of Definition \ref{def:a2-1.11} except that it is not required to be bounded on any sector $S(\alpha_{1})$.
 %% --
 \begin{theorem}\label{thm:a2-1.14}
 A densely defined operator $A$ is the generator of a holomorphic semigroup if and only if there exist $M > 0$ and $r \geq 0$ such that $\lambda \in \rho(A)$ and $\|R(\lambda,A)\| \leq M/|\lambda|$ whenever $\Re\lambda > 0$, $|\lambda| \geq r$.
@@ -567,19 +566,19 @@ and
 This shows that the condition of the theorem is necessary.
 Conversely, assume that the condition holds.
 Since $\|R(\lambda,A)\| \to \infty$ when $\lambda$ approaches $\sigma(A)$ (cf. Lemma  \ref{lem:a2-1.21}   below), 
-it follows that $\lambda \in \sigma(A)$ and $\|R(\lambda,A)\| \leq M/|\lambda|$ if $\Re\lambda = 0$ and $|\lambda| > r$ as well.
+it follows that $\lambda \in \rho(A)$ and $\|R(\lambda,A)\| \leq M/|\lambda|$ if $\Re\lambda = 0$ and $|\lambda| > r$ as well.
 
-Let $c = 1/2M$.
+Let $c = 1/(2M)$.
 If $\xi, \eta \in \R$ satisfy 
 $|\xi| \leq c|\eta|, |\eta| \geq r$, 
-then $\|\xi R(\im\eta,A)\| \leq \xi \cdot M/|\eta| \leq c \cdot M = 1/2$.
+then $\|\xi R(\im\eta,A)\| \leq |\xi| \cdot M/|\eta| \leq c \cdot M = 1/2$.
 Hence $R(\xi+\im\eta,A) = \sum_{n=0}^\infty (-\xi)^{n}R(\im\eta,A)^{n+1}$ exists and 
 %% –
 \begin{align*}
     \|R(\xi+\im\eta,A)\| &\leq 
     (|\xi + \im\eta|)^{-1} \cdot |\xi + \im\eta| \cdot \sum_{n=0}^\infty |\xi|^{n}M^{n+1}/|\eta|^{n+1}\\
-    &\leq  (|\xi + \im\eta|)^{-1} \cdot M (|\xi|^{2} + |\eta|^{2})^{-1/2} / \im\eta| \cdot \sum_{n=0}^\infty M^{n}c^{n}\\   
-    &\leq  (2M\cdot(c^{2}+1)^{-1/2})/|\xi+\im\eta| \\
+    &\leq  (|\xi + \im\eta|)^{-1} \cdot 2M (|\xi|^{2} + |\eta|^{2})^{1/2} / |\eta| \cdot \sum_{n=0}^\infty M^{n}c^{n}\\   
+    &\leq  (4M\cdot(c^{2}+1)^{1/2})/|\xi+\im\eta| \\
     &\leq N/|\xi+\im\eta|. 
 \end{align*}
 %% –
@@ -599,7 +598,7 @@ More precisely, the following holds.
 \index{Holomorphic Semigroups}
 A strongly continuous semigroup with generator $A$ is holomorphic if and only if there exist $w > \omega(A)$ and $M \geq 0$ such that one has
 \[
-    \|R(w+\im\eta,A)\| \leq \frac{M}{|\eta|} \text{ for all } \eta \in \im\R.
+    \|R(w+\im\eta,A)\| \leq \frac{M}{|\eta|} \text{ for all } \quad \eta \in \R.
 \]
 \end{corollary*}
 %% –
@@ -615,7 +614,7 @@ and shows that $A-w$ generates a holomorphic semigroup.
 The reverse implication is clear.
 \end{proof}
 
-We now prove the following extension of corollary \ref{cor:a2-1.13}  
+We now prove the following extension of Corollary \ref{cor:a2-1.13}  
 
 %% –
 \begin{theorem}\label{thm:a2-1.15}
@@ -645,7 +644,6 @@ Now let $\lambda \in S(\alpha+\pi/2)\setminus B(r_{0})$.
 Then there exist $\theta \in (-\beta,\beta)$ 
 and $r \geq 0$
 such that $\lambda = (re^{\im\theta}+\omega)^2$.
-\textbf{ Achtung: im Buch zweimal "- A" Claude könte aber recht haben.}
 Thus $(\lambda-A^2) = (re^{\im\theta}+w - A)(re^{\im\theta}+w + A)$.
 Hence $\lambda \in \rho(A^2)$ and $R(\lambda,A^2) = R(re^{\im\theta},A-w)R(re^{\im\theta},-A-w)$.
 We conclude that 
@@ -653,9 +651,6 @@ $|\lambda| \cdot \|R(\lambda,A^2)\| \leq |\lambda| \cdot M^2/(\cos\theta)^2r^2 \
 Thus $|\lambda| \cdot \|R(\lambda,A^2)\|$ is uniformly bounded for $\lambda \in S(\alpha+\pi/2) \setminus B(r_0)$.
 \end{proof}
 %%
-%%KGK
-%%Page A2-12
-%% -- \newpage
 %%KGK p-A2-13; LNMp-37
 %%
 %% –
@@ -677,7 +672,7 @@ Next we consider semigroups satisfying a less restrictive smoothness condition.
 
 Let $(T(t))_{t\geq 0}$ be a strongly continuous semigroup with generator $A$.
 Let $t_0 \geq 0$ and $f \in E$.
-Then the function $t \mapsto T(t)f$ is right sided differentiable at $t_0$ if and only if $T(t_0)f \in D(A)$; and in that case it is differentiable at every $s > t_0$ and the derivative is $AT(s)f$ (this follows from A-I,Proposition.I.6(ii)).
+Then the function $t \mapsto T(t)f$ is right sided differentiable at $t_0$ if and only if $T(t_0)f \in D(A)$; and in that case it is differentiable at every $s > t_0$ and the derivative is $AT(s)f$ (this follows from A-I, Proposition 1.6(ii)).
 
 %% –
 \begin{definition}\label{def:a2-1.16}
@@ -688,15 +683,12 @@ The semigroup is called \emph{differentiable} if $t_0$ can be chosen $0$.
 \end{definition}
 %% –
 
-It is not difficult to see that if $(T(t))_{t \geq 0}$ is differentiable for $t > t_{0}$, then it is $n$-times differentiable in all $s > nt_{0}$ and $T(s)E \subset D(A^n)$ ($n \in \mathbb{N}$).
+It is not difficult to see that if $(T(t))_{t \geq 0}$ is differentiable for $t > t_{0}$, then for $n \in \N$ it is $n$-times differentiable at all $s > nt_{0}$ and $T(s)E \subset D(A^n)$. 
 If $(T(t))_{t\geq 0}$ is differentiable, then the function $t \mapsto T(t)f$ from $(0,\infty)$ into $E$ is infinitely often differentiable for every $f \in E$.
 
 Generators of (eventually) differentiable semigroups can be characterized similarly as those of holomorphic semigroups by the spectral behavior of the resolvent.
 Whereas the spectrum of the generator of a holomorphic semigroup is included in a sector, the spectrum of the generator of an eventually differentiable semigroup is limited by a function of exponential growth (instead of a line).
 %%
-%%KGK
-%%Page A2-13
-%% -- \newpage
 %%KGK p-A2-14; LNMp-38
 %%
 %% –
@@ -727,7 +719,7 @@ and
 \end{theorem}
 %% –
 
-For the proofs of these two theorems we refer to \citet[Chap.3, Theorem 4.7 and 4.8]{pazy:1983}.
+For the proofs of these two theorems we refer to \citet[Chapter 3, Theorem 4.7 and 4.8]{pazy:1983}.
 
 \subsection{Norm continuous semigroups} \label{subsec:a2-1.se6}
 \index{Semigroups!Norm Continuous}
@@ -757,10 +749,6 @@ Then for every $b \in \R$ the set
 is bounded.
 \end{theorem}
 %% –
-%%
-%%KGK
-%%Page A2-14
-%% -- \newpage
 %%KGK p-A2-15; LNMp-39
 %%
 For the proof of Theorem 1.20 we use the following lemma.
@@ -784,7 +772,6 @@ Hence $r(R(\lambda,A)) = \sup \{|\lambda-\mu|^{-1} \colon \mu \in \sigma(A)\} =
 
 \begin{proof}[Proof of Theorem  \ref{thm:a2-1.20}  ]
 It is enough to show the following.
-%%KGK ersetzt: alpha durch a
 Let $a > \omega(A)$.
 Then for every $\varepsilon > 0$ there exist $n \in \N$ and $r_0 \geq 0$ such that
 %%-
@@ -799,15 +786,15 @@ Then for every $\varepsilon > 0$ there exist $n \in \N$ and $r_0 \geq 0$ such th
 \]
 %%--
 So let $\varepsilon > 0$.
-If $\Re\lambda > \omega(A)$, then by A-I,Prop.1.11,
+If $\Re\lambda > \omega(A)$, then by A-I, Proposition 1.11,
 \[
-R(\lambda,A)^{n+1} = \frac{1}{n!}\int_0^\infty e^{-\lambda t}t^nT(t) \dt (n \in \mathbb{N})
-\].
+R(\lambda,A)^{n+1} = \frac{1}{n!}\int_0^\infty e^{-\lambda t}t^nT(t) \dt (n \in \N).
+\]
 Let $t' > 0$ such that $t \mapsto T(t)$ is norm continuous on $(t',\infty)$.
 Let $w \in (\omega(A),a)$.
 There exists $M \geq 1$ such that $\|T(t)\| \leq Me^{wt}$ for all $t \geq 0$.
 Let $N \coloneqq M\cdot\int_{0}^{t'} e^{-at}e^{wt} \dt$.
-Since $\lim_{n\to\infty} c^n/n! = 0$ for all $c > 0$, there exists $n \in \mathbb{N}$ such that $N\cdot(t')^n/n! < \varepsilon^{n+1}/3$.
+Since $\lim_{n\to\infty} c^n/n! = 0$ for all $c > 0$, there exists $n \in \N$ such that $N\cdot(t')^n/n! < \varepsilon^{n+1}/3$.
 Choose $T \geq t'$ such that $\frac{1}{n!}\int_T^\infty t^ne^{-at}\|T(t)\| \dt < \varepsilon^{n+1}/3$.
 
 Since $(T(t))_{t\geq 0}$ is norm continuous for $t \geq t'$, it follows from the Riemann-Lebesgue lemma that there exists $r_{0} \geq 0$ such that 
@@ -827,12 +814,8 @@ All together we obtain for $|r| \geq r_{0}$,
 
 A complete characterization of eventually norm continuous semigroups in terms of their generator seems not to be known.
 
-Eventually norm continuous semigroups are of particular interest in spectral theory (cf. A-III,Thm.6.6).
+Eventually norm continuous semigroups are of particular interest in spectral theory (cf. A-III, Theorem 6.6).
 Moreover their asymptotic behavior is easy to describe (see A-IV, (1.8)).
-%%
-%%KGK
-%%Page A2-15
-%% -- \newpage
 %%KGK p-A2-16; LNMp-40
 %%
 Next we describe special norm continuous semigroups.
@@ -843,12 +826,12 @@ Next we describe special norm continuous semigroups.
 
 Let $(T(t))_{t\geq 0}$ be a strongly continuous semigroup and $t_0 > 0$.
 If $T(t_0)$ is compact, then it follows from the semigroup property that $T(t)$ is compact for all $t \geq t_0$.
-Moreover, $t \mapsto T(t)$ is norm continuous in every $t > t_0$.
+Moreover, $t \mapsto T(t)$ is norm continuous at every $t > t_0$.
 
 [In fact, since $T(h) \to \text{Id}$ strongly with $h \downarrow 0$, it follows that $\lim_{h \downarrow 0} T(h)f = f$ uniformly on every compact subset $K$ of $E$.
 Now let $t \geq t_0$.
 Then $K = T(t)(U)$ is compact (where $U$ denotes the unit ball of $E$).
-Hence $\lim_{h \downarrow 0} T(h+t)f = \lim_{h \downarrow 0} T(h)T(t)f$ uniformly for $f \in U$.
+Hence $\lim \limits_{h \downarrow 0} T(h+t)f = \lim \limits_{h \downarrow 0} T(h)T(t)f$ uniformly for $f \in U$.
 So the semigroup is right-sided norm continuous on $[t_0,\infty)$ and so norm continuous on $(t_0,\infty)$.]
 
 %% –
@@ -874,7 +857,7 @@ We say, $A$ has a compact resolvent if $R(\lambda,A)$ is compact for one (and he
 \index{Resolvent!Compact}
 \index{Semigroups!Compact}
 Let $(T(t))_{t\geq 0}$ be a strongly continuous semigroup and assume that its generator has a compact resolvent.
-If $t \mapsto T(t)$ is norm continuous in $t_0$, then $T(t)$ is compact for all $t \geq t_0$.
+If $t \mapsto T(t)$ is norm continuous at $t_0$, then $T(t)$ is compact for all $t \geq t_0$.
 \end{proposition}
 %% –
 \begin{proof}
@@ -915,22 +898,22 @@ The other follows from Proposition \ref{prop:a2-1.24} .
 \begin{enumerate}[(i), wide]
 \item \label{rem:a2-1.26.1}
 Generators of eventually compact semigroups do not necessarily have compact resolvent.
-Consider the nilpotent translation semigroup $(T(t))_{t\geq 0}$ on $F \coloneqq L^{1}([0,1])$ (see A-I,Ex.2.6).
-Let $E = F \otimes_{\pi} F = L([0,1] \times [0,1])$ and $S(t) = T(t) \otimes \text{Id}$ $(t \geq 0)$.
-Then $(S(t))_{t\geq 0}$ is a strongly continuous semigroup (see A-I,3.7).
+Consider the nilpotent translation semigroup $(T(t))_{t\geq 0}$ on $F \coloneqq L^{1}([0,1])$ (see A-I, Example 2.6).
+Let $E = F \widetilde{\otimes}_{\pi} F = L^{1}([0,1] \times [0,1])$ and $S(t) = T(t) \otimes \text{Id}$ $(t \geq 0)$.
+Then $(S(t))_{t\geq 0}$ is a strongly continuous semigroup (see A-I, 3.7).
 Denote by $B$ its generator.
 $(S(t))_{t\geq 0}$ is a nilpotent semigroup (so it is eventually compact), but $R(\lambda,B) = R(\lambda,A) \otimes \text{Id}$ is not compact.
 
 \item \label{rem:a2-1.26.2}
 It is obvious that a group $(T(t))_{t \in \R}$ is eventually norm continuous if and only if it is norm continuous in $0$; i.e., its generator is bounded.
 
-On the other hand, the generator of the rotation group (A-I,Ex.2.5) 
+On the other hand, the generator of the rotation group (A-I, Example 2.5) 
 has a compact resolvent.
 Hence this condition does not imply any smoothness property of the semigroup.
 \end{enumerate}
 \end{remark}
 
-Positive eventually compact semigroups have remarkable properties in the setting of the Perron-Frobenius theory (see e.g., B-III,Cor.2.12).
+Positive eventually compact semigroups have remarkable properties in the setting of the Perron-Frobenius theory (see e.g., B-III, Corollary 2.12).
 
 The following scheme indicates the relation between the different classes of semigroups defined so far:
 
@@ -948,10 +931,6 @@ This is shown by the following examples.
 \index{Semigroups!Norm Continuous}
 \index{Semigroups!Holomorphic}
 \index{Examples!Semigroup Classifications}
-%%
-%%KGK
-%%Page A2-17
-%% -- \newpage
 %%KGK p-A2-18; LNMp-42
 %%
 \begin{example}\label{ex:a2-1.27}
@@ -960,20 +939,20 @@ But it is not norm continuous and consequently not differentiable or compact.
 \end{example}
 
 \begin{example}\label{ex:a2-1.28}
-We consider multiplication semigroups (see A-I,2.3).
-Let $E = C_{0}(X)$, where $X$ is a locally compact space, or $E = L^{p}(x,\Sigma,\mu)$, where $1 \leq p < \infty$ and $(x,\Sigma,\mu)$ is a $\sigma$-finite measure space.
+We consider multiplication semigroups (see A-I, 2.3).
+Let $E = C_{0}(X)$, where $X$ is a locally compact space, or $E = L^{p}(X,\Sigma,\mu)$, where $1 \leq p < \infty$ and $(X,\Sigma,\mu)$ is a $\sigma$-finite measure space.
 Let $m \colon X \to \R$ be continuous [resp., measurable] such that $[\text{ess}]\text{-}\sup_{x \in X} \Re(m(x)) < \infty$.
 
 Then $Af = m \cdot f$ with domain $D(A) = \{f \in E : m \cdot f \in E\}$ is the generator of the semigroup $(T(t))_{t \geq 0}$ given by
 %%--
 \[
-    (T(t)f)(x) = e^{tm(x)}f(x), (t \geq 0, x \in X, f \in E )
+    (T(t)f)(x) = e^{tm(x)}f(x), \quad (t \geq 0, x \in X, f \in E )
 \]
 %%--
-Observe that $\sigma(A) = \overline{(m(X)}$ in case $E = C_{0}(X)$ 
+Observe that $\sigma(A) = \overline{m(X)}$ in case $E = C_{0}(X)$ 
 and 
 $\sigma(A) = [\text{ess}]\text{-}\text{image}(m) \coloneqq \{\lambda \in \C : \mu(\{x \in X : |m(x)-\lambda| < \epsilon\}) \neq 0 \text{ for all } \epsilon > 0\}$ 
-if $E = L^{p}$ (see A-II,2.3).
+if $E = L^{p}$ (see A-II, 2.3).
 Consequently, $s(A) = \omega(A) = [\text{ess}]\text{-}\sup_{x \in X} \Re(m(x))$.
 
 \begin{enumerate}[(i), wide]
@@ -1052,22 +1031,22 @@ defines a family $(T(z))_{z \in S(\theta)}$ of bounded operators satisfying cond
 \end{proof}
 
 \item \label{ex:a2-1.28-4}
-Choosing $X = \mathbb{N}$ and the counting measure we have $E = c_{0}$ or $\ell^{p}$.
+Choosing $X = \N$ and the counting measure we have $E = c_{0}$ or $\ell^{p}$.
 Then $A$ has a compact resolvent if 
 $\lim_{n \to \infty} |m(n)| = \infty$.
 [In fact, let $\lambda > s(A)$.
 Then $(R(\lambda,A)f)(n) = (\lambda-m(n))^{-1}f(n)$.
-Hence $R(\lambda,A)$ is compact if and only if $((\lambda-m(n))^{-1})_{n \in \mathbb{N}} \in c_{0}$.]
+Hence $R(\lambda,A)$ is compact if and only if $((\lambda-m(n))^{-1})_{n \in \N} \in c_{0}$.]
 
 The semigroup is compact if and only if it is eventually compact if and only if $\lim_{n \to \infty} \Re(m(n)) = -\infty$.
 
 \item \label{ex:a2-1.28-5}
 Now it is easy to give concrete examples.
-Again let $X = \mathbb{N}$, so that $E = c_{0}$ or $\ell^{p}$.
+Again let $X = \N$, so that $E = c_{0}$ or $\ell^{p}$.
 Let $m(n) = -n + i \cdot \exp(n^2)$.
 Then the semigroup is compact and (consequently) norm continuous for $t > 0$, but it is not eventually differentiable.
 Let $m(n) = -n + ie^{t'n}$.
-Then the semigroup is differentiable for $t > t'$ but not differentiable in $t \in [0,t')$.
+Then the semigroup is differentiable for $t > t'$ but not differentiable at $t \in [0,t')$.
 If $m(n) = -n + i \cdot n^2$, then the semigroup is differentiable but not holomorphic.
 \end{enumerate}
 \end{example}	
@@ -1079,9 +1058,6 @@ A useful way to construct new semigroups out of a given one is by additive pertu
 \index{Generators!Perturbation}
 \index{Examples!Compact Semigroups}
 %%
-%%KGK
-% %%Page A2-19
-%% -- \newpage
 %%KGK p-A2-20; LNMp-44
 %%
 \begin{theorem}\label{thm:a2-1.29}
@@ -1111,14 +1087,14 @@ Let $S_{0}(t) = T(t)$ and
     S_{n}(t)f = \int_{0}^{t} T(t-s)BS_{n-1}(s)f\, \ds \quad (f \in E)
 \end{equation}
 %%--
-for $n \in \mathbb{N}$. Then
+for $n \in \N$. Then
 %%--
 \begin{equation}\label{eq:a2-1.11}
     S(t) = \sum_{n=0}^{\infty} S_{n}(t),
 \end{equation}
 %%--
 where the series converges in the operator norm uniformly on bounded intervals.
-We refer to \citet[III.1]{davies:1980}, [Goldstein (1985a), I.6] or \citet[Chap.3]{pazy:1983} for these results.
+We refer to \citet[III.1]{davies:1980}, \citet[I.6]{goldstein:1985a} or \citet[Chapter 3]{pazy:1983} for these results.
 
 Several special properties discussed above are preserved by bounded perturbastions.
 
@@ -1134,10 +1110,11 @@ If $A$ has a compact resolvent then so has $A+B$.
 Let $t_{0} \geq 0$.
 If $(T(t))_{t \geq t_{0}}$ is norm continuous for $t > t_{0}$ and if 
 $B$ is compact, then $(S(t))_{t \geq t_{0}}$ is also norm continuous for $t > t_{0}$.
+\end{theorem}
 
 \begin{proof}
-If $(T(t))_{t \geq 0}$ is norm continuous for $t > 0$, then $S_{n}(t)$ in (\eqref{eq:a2-1.10}) is norm continuous in $t > 0$ for every $n$.
-Thus $(S(t))_{t \geq 0}$ is norm continuous in $t > 0$ by (\eqref{eq:a2-1.11}).
+If $(T(t))_{t \geq 0}$ is norm continuous for $t > 0$, then $S_{n}(t)$ in \eqref{eq:a2-1.10} is norm continuous at $t > 0$ for every $n$.
+Thus $(S(t))_{t \geq 0}$ is norm continuous at $t > 0$ by \eqref{eq:a2-1.11}.
 There exists $\lambda_{0} \in \R$ such that 
 $\|R(\lambda,A)\| \leq (2\|B\|)^{-1}$ for $\Re\lambda \geq \lambda_{0}$.
 Hence $(Id - BR(\lambda,A))^{-1}$ exists for $\Re\lambda \geq \lambda_{0}$.
@@ -1153,17 +1130,12 @@ Now if $A$ generates a holomorphic semigroup,
 \index{Perturbation Theory}
 \index{Semigroups!Product Formula}
 \index{Resolvent!Compact}
-%%
-%%KGK
-%%Page A2-20
-%% -- \newpage
 %%KGK p-A2-21; LNMp-45
 %%
 there exists $M \geq 0$ such that $\|R(\lambda_{0}+\im\eta,A)\| \leq M/|\eta|$ for all $\eta \in \R$.
-Consequently, $\|R(\lambda_{0}+\im\eta,A+B)\| \leq \|(Id-BR(\lambda_{0}+ieta,A))^{-1}\| \cdot 2M/|\eta| \leq 2M/|n|$ for all $\eta \in \R$.
-Thus $A + B$ generates a holomorphic semigroup by the Corollary \ref{cor:a2-1.14-kgk}  
-%% of Theorem~\ref{thm:a2-1.14}.
-Moreover, it follows from (\eqref{eq:a2-1.12})  that $R(\lambda,A+B)$ is compact whenever $R(\lambda,A)$  is compact.
+Consequently, $\|R(\lambda_{0}+\im\eta,A+B)\| \leq \|(Id-BR(\lambda_{0}+i\eta,A))^{-1}\| \cdot 2M/|\eta| \leq 2M/|\eta|$ for all $\eta \in \R$.
+Thus $A + B$ generates a holomorphic semigroup by the corollary of Theorem~\ref{thm:a2-1.14}.
+Moreover, it follows from \eqref{eq:a2-1.12}  that $R(\lambda,A+B)$ is compact whenever $R(\lambda,A)$  is compact.
 Consequently by Theorem~\ref{thm:a2-1.25}   and the assertion proved above, $(S(t))_{t \geq 0}$ is compact whenever $(T(t))_{t \geq 0}$ is compact.
 
 Finally assume that $B$ is compact and $t_{0} \geq 0$ such that $(T(t))_{t \geq 0}$ 
@@ -1176,7 +1148,7 @@ Then
     \lim_{h \to 0} (T(t+s-h) - T(t-s))f = 0
 \]
 %%--
-for all $f \in \overline{]BS(s)U} \eqqcolon K$.
+for all $f \in \overline{BS(s)U} \eqqcolon K$.
 
 Since $K$ is compact it follows that the limit exists uniformly in $f \in K$; i.e. 
 $\lim_{h \to 0} \|(T(t+s-h) - T(t-s))BS(s)\| = 0$.
@@ -1187,22 +1159,18 @@ It follows from the dominated convergence theorem that
 \end{equation}
 %%--
  
-Using  (\eqref{eq:a2-1.9})   we obtain $\|S(t+h) - S(t)\|$ 
-  fehlt?? :
+Using  \eqref{eq:a2-1.9}  we obtain $\|S(t+h) - S(t)\|$ 
 \begin{align*}
 \leq \|T(t+h) - T(t)\| &+ \|\int_{0}^{t+h} T(t+h-s)BS(s)\, \ds\ \hfill \\
-\text{[KGK Frage Minus oder doch Plus wie Claude???]}\\
  &- \int_{0}^{t} (T(t-s)BS(s)\, \ds\| \hfill \\
 \leq \|T(t+h) - T(t)\| &+ \|\int_{t}^{t+h} T(t+h-s)BS(s)\, \ds\| \hfill \\ 
  &+ \int_{0}^{t} \|(T(t+h-s) - T(t-s))BS(s)\|\, \ds \to 0 \hfill \\
- &\text{when}  \quad h \to 0. \hfill \\	
+ &\text{when}  \quad h \to 0. \hfill 	
 \end{align*}
 \end{proof}
-\end{theorem}
-%%----
-In C-IV,Ex.2.15 a generator $A$ of an eventually differentiable and eventually compact semigroup and a bounded operator $B$ will be given such that the semigroup generated by $A+B$ is not eventually norm continuous.
+In C-IV, Example 2.15 a generator $A$ of an eventually differentiable and eventually compact semigroup and a bounded operator $B$ will be given such that the semigroup generated by $A+B$ is not eventually norm continuous.
 
-Using Theorem~\ref{thm:a2-1.29}   we now prove a perturbation result due to [Desch-Schappacher(1984)].
+Using Theorem~\ref{thm:a2-1.29}   we now prove a perturbation result due to \newline \citet{deschschappacher:1984}.
 Instead of assuming that $B \in \mathcal{L}(E)$ we assume that $B \in \mathcal{L}(D(A))$.
 The short proof given below is due to G.Greiner.
 
@@ -1240,7 +1208,7 @@ U(A+C)U^{-1} &= U(A - \lambda+C)U^{-1} + \lambda \\
 \end{proof}
 %% --
 \begin{corollary}\label{cor:a2-1.32}
-Keeping the hypotheses and notations of Theorem \ref{thm:a2-1.31}   denote by $(S(t))_{t\geq 0}$ the semigroup generated by $A+B$.
+Keeping the hypotheses and notations of Theorem \ref{thm:a2-1.31}   denote by \\ $(S(t))_{t\geq 0}$ the semigroup generated by $A+B$.
 If $(T(t))_{t\geq 0}$ is norm continuous or compact or holomorphic, then $(S(t))_{t\geq 0}$ has the corresponding properties.
 If $B$ is compact as an operator on $D(A)$ endowed with the graph norm and if $(T(t))_{t\geq 0}$ is eventually norm continuous then so is $(S(t))_{t\geq 0}$.
 \end{corollary}
@@ -1271,10 +1239,6 @@ Let $A$ be the generator of a semigroup and $D_{0}$ a subspace of $D(A)$.
 Consider the restriction $A_{0}$ of $A$ to $D_{0}$.
 If $D_{0}$ is not a core of $A$, then there exists an infinite number of extensions of $A_{0}$ which are generators.
 \end{theorem}
-%%
-%%KGK
-%%Page A2-46
-%% -- \newpage
 %%KGK p-A2-23; LNMp-47
 %%
 \begin{proof}
@@ -1302,17 +1266,13 @@ Since $D_{0}$ is dense in $E$, it follows that $S(t) = T(t)$ $(t \geq 0)$.
 \end{proof}
 %% –
 \section{Contraction Semigroups and Dissipative Operators}\label{sec:a2-2}
-\index{Contraction Semigroups}
-\index{Dissipative Operators}
-\index{Semigroups!Contraction}
-\index{Operators!Dissipative}
-%%--
-\begin{center}
-by
-
-Wolfgang Arendt
-\end{center}
-%%--
+\index{Semigroups!Contraction Semigroups}
+\index{Operators!Dissipative Operators}
+%% --
+\hspace{1cm}{\Large by Wolfgang Arendt}
+\vspace{.5cm}
+\newline
+%% --
 The Hille-Yosida theorem gives a characterization of generators in terms of the resolvent of the operator.
 However, given an operator $A$, frequently it is difficult to compute the resolvent (and its powers).
 So it is desirable to find conditions more immanent on $A$.
@@ -1321,10 +1281,6 @@ For later purposes (see B-II and C-II) it will be useful not only to consider se
 
 So our setting is the following.
 By $E$ we denote a real Banach space throughout, and $p \colon E \to \R$ is a continuous sublinear function; i.e., $p$ satisfies
-%%
-%%KGK
-%%Page A2-x
-%% -- \newpage
 %%KGK p-A2-24; LNMp-48
 %%
 \begin{align}
@@ -1361,9 +1317,7 @@ Given the generator $A$ of a semigroup $(T(t))_{t\geq 0}$ find a condition on $A
 
 The \emph{subdifferential} $\ddp$ of $p$ at $f$ is defined by
 \begin{equation}\label{eq:a2-2.5}
-\ddp(f) = \{\phi \in E' \colon \begin{cases} &\langle g,\phi \rangle \leq p(g) \text{ for all } g \in E, \\
-&\langle f,\phi \rangle = p(f)
-\end{cases} \quad \}.
+\ddp(f) = \{\phi \in E' \colon \langle g,\phi \rangle \leq p(g) \text{ for all } g \in E, \langle f,\phi \rangle = p(f) \}.
 \end{equation}
 It follows from the Hahn-Banach theorem that $\ddp(f) \neq \emptyset$ for all $f \in E$.
 
@@ -1371,10 +1325,6 @@ It follows from the Hahn-Banach theorem that $\ddp(f) \neq \emptyset$ for all $f
 An operator $A$ on $E$ is called \emph{p-dissipative} if for all $f \in D(A)$ there exists $\phi \in \ddp(f)$ such that $\langle Af,\phi \rangle \leq 0$;
 $A$ is called \emph{strictly p-dissipative} if for all $f \in D(A)$ the inequality $\langle Af,\phi \rangle \leq 0$ holds for all $\phi \in \ddp(f)$.
 \end{definition}
-%%
-%%KGK
-%%Page A2-24
-%% -- \newpage
 %%KGK p-A2-25; LNMp-49
 %%
 For convenience we want to have a distinctive name for the norm function.
@@ -1382,13 +1332,13 @@ So we denote by $N \colon E \to \R$ the function given by $N(f) = \|f\|$ through
 Then \eqref{eq:a2-2.5}   can be written in the form
 
 \begin{equation}\label{eq:a2-2.6}
-\dN(f) = \{\phi \in E' \colon \|\phi\im\|\leq 1, \langle f,\phi \rangle = \|f\|\}.
+\dN(f) = \{\phi \in E' \colon \|\phi\|\leq 1, \langle f,\phi \rangle = \|f\|\}.
 \end{equation}
 
 A [strictly] $N$-dissipative operator is simply called [strictly] \emph{dissipative} (which is in accordance with the usual nomenclature).
 %% –
 \begin{example}\label{ex:a2-2.2} 
-\begin{enumerate}[a)]
+\begin{enumerate}[a), wide]
 \item \label{ex:a2-2.2.1}
 Let $E = C[0,1]$, $f \in E$.
 Then there exists $x \in [0,1]$ such that $|f(x)| = \|f\|_{\infty}$.
@@ -1446,10 +1396,6 @@ $p(f) \leq p(f-tAf)
 Consequently $\langle Af,\phi_{t} \rangle \leq 0$ for all $t > 0$.
 Thus $\langle Af,\phi \rangle \leq 0$.
 \end{proof}
-%%
-%%KGK
-%%Page A2-25
-%% -- \newpage
 %%KGK p-A2-26; LNMp-50
 %%
 \begin{remark}\label{rem:a2-2.4}
@@ -1498,7 +1444,7 @@ There exists a core $D$ of $A$ such that $A|_{D}$ is p-dissipative.
 \end{theorem}
 %% --
 \begin{proof}
-Assume that \ref{thm:a2-2.6.1}  ) holds.
+Assume that \ref{thm:a2-2.6.1} holds.
 Let $f \in D(A)$, $\phi \in \ddp(f)$.
 Then 
 \begin{align*}
@@ -1506,10 +1452,10 @@ Then
 	&= \lim_{t\to 0} 1/t(\langle T(t)f,\phi \rangle - p(f)) \\
 	&\leq \limsup_{t\to 0} 1/t(p(T(t)f) - p(f)) \leq 0. 
 \end{align*}
-This proves \ref{thm:a2-2.6.2}  . 
+This proves \ref{thm:a2-2.6.2} . 
 
-It is trivial that \ref{thm:a2-2.6.2}   implies \ref{thm:a2-2.6.3}  ). 
-So let us assume \ref{thm:a2-2.6.3}  . 
+It is trivial that \ref{thm:a2-2.6.2} implies \ref{thm:a2-2.6.3}. 
+So let us assume \ref{thm:a2-2.6.3} . 
 Then it follows from Corollary \ref{cor:a2-2.5}   that $A$ is p-dissipative.
 Hence by \eqref{eq:a2-2.8}   $p(\lambda R(\lambda,A)g) \leq p(g)$ for all $g \in E$, $\lambda > \omega(A)$.
 Hence $\lambda R(\lambda,A)$ is p-contractive for $\lambda > \omega(A)$.
@@ -1523,10 +1469,6 @@ T(t) = \lim_{t\to 0} (n/t\,R(n/t,A))^{n} \text{ (strongly) for } t \geq 0.
 %% --
 We have shown that for generators, p-dissipativity is equivalent to p-contractivity of the semigroup.
 Now we will consider a p-dissipative operator $A$ (which is not a generator a priori) and investigate under which additional hypotheses $A$ is the generator of a
-%%
-%%KGK
-%%Page A2-26
-%% -- \newpage
 %%KGK p-A2-27; LNMp-51
 %%
 (necessarily contractive) semigroup.
@@ -1544,7 +1486,7 @@ Then for every $t > 0$ and $g \in D(A)$ we have
 \langle Af,\phi \rangle 
 &= \frac{1}{t}(\langle f + tAf,\phi \rangle - \langle f,\phi \rangle) \leq \frac{1}{t}(p(f + tAf) - p(f)) \\
 &\leq \frac{1}{t}(p(f + tg) + tp(Af - g) - p(f)) \\
-&\leq \frac{1}{t}(p((Id - tA)(f + tg)) + tp(Af - g) - p(f)) \quad \text{(by \eqref{eq:a2-2.7}} \\ %% (2.7))
+&\leq \frac{1}{t}(p((Id - tA)(f + tg)) + tp(Af - g) - p(f)) \quad \text{(by \eqref{eq:a2-2.7}\,)} \\ %% (2.7))
 &\leq \frac{1}{t}(p(f) + tp(g - Af) + t^2p(-Ag) + tp(Af - g) - p(f)) \\
 &\leq \frac{1}{t}(2tc\|g - Af\| + t^2c\|Ag\|) \quad \text{(by (2.3))} \\
 &= 2c\|g - Af\| + tc\|Ag\|.
@@ -1583,14 +1525,10 @@ Any p-contractive operator $T$ on $E$ leaves the cone $E_{p}$ invariant (i.e. $T
 
 Conversely, given a closed proper cone $E_{+}$ on $E$, then 
 $p(f) \coloneqq \text{dist}(-f,E_{+}) = \inf\{\|f + g\| \colon g \in E_{+}\}$ defines a half-norm on $E$ such that $E_{+} = E_{p}$.
-This half-norm is called the \emph{canonical half-norm} on the ordered Banach space $(E,E_[+])$.
-The canonical half-norm is strict if and only if the cone $E_{+}$ is \emph{normal} (this is equivalent to the fact that for every $\phi \in E'$ there exist positive linear forms $\phi_{1}$ and $\phi_{2}$ on $E$ such that $\phi = \phi_{1} - \phi_{2}$ (see \citet{battyrobinson:1984} and \citet[Chap. V]{schaefer:1966}).
+This half-norm is called the \emph{canonical half-norm} on the ordered Banach space $(E,E_{+})$.
+The canonical half-norm is strict if and only if the cone $E_{+}$ is \emph{normal} (this is equivalent to the fact that for every $\phi \in E'$ there exist positive linear forms $\phi_{1}$ and $\phi_{2}$ on $E$ such that $\phi = \phi_{1} - \phi_{2}$ (see \citet{battyrobinson:1984} or \citet[Chap. V]{schaefer:1966}).
 \end{remark}
 %% –
-%%
-%%KGK
-%%Page A2-27
-%% -- \newpage
 %%KGK p-A2-28; LNMp-52
 %%
 %% –
@@ -1598,7 +1536,7 @@ The canonical half-norm is strict if and only if the cone $E_{+}$ is \emph{norma
 \index{Operators!p-dissipative}
 \index{Half-norm}
 Let $A$ be a p-dissipative operator where $p$ is a half-norm.
-If $D(A)$ is dense, then $A$ is closable (and the closure of $A$ is p-dissipative as well (by Corollary \ref{cor:a2-2.5})   ). 
+If $D(A)$ is dense, then $A$ is closable (and the closure of $A$ is p-dissipative as well (by Corollary \ref{cor:a2-2.5})). 
 \end{proposition}
 %% –
 
@@ -1640,10 +1578,10 @@ Thus \eqref{eq:a2-2.14}
 is proved.
 Now suppose that $p$ is strict.
 Then $\|\cdot\|_{p}$ is equivalent to the given norm.
-Let $\lambda > 0$ and $g \in \overline{\\Im(\lambda - A)}$.
-Then $g = \lim_{n\to\infty} (\lambda - A)f_{n}$ for some sequence $(f_{n})_{n \in \mathbb{N}} \subset D(A)$.
+Let $\lambda > 0$ and $g \in \overline{\Im(\lambda - A)}$.
+Then $g = \lim_{n\to\infty} (\lambda - A)f_{n}$ for some sequence $(f_{n})_{n \in \N} \subset D(A)$.
 It follows from \eqref{eq:a2-2.14}  
-that $(f_{n})_{n\in\mathbb{N}}$ is a Cauchy sequence.
+that $(f_{n})_{n\in\N}$ is a Cauchy sequence.
 Let $f = \lim_{n\to\infty} f_{n}$.
 Then 
 $\lim_{n\to\infty} Af_{n} 
@@ -1671,15 +1609,11 @@ $D(A)$ is dense, $A$ is p-dissipative and $\text{im}(\lambda - A) = E$ for some 
 \end{enumerate}
 \end{theorem}
 %% –
-%%
-%%KGK
-%%Page A2-28
-%% -- \newpage
 %%KGK p-A2-29; LNMp-53
 %%
 \begin{proof}
 Since $p$ is a strict half-norm we can assume that $\|f\| = \|f\|_{p}$ for all $f \in E$.
-(ref{thm:a2-2.11.1})   implies (\ref{thm:a2-2.11.2})   by Theorem \ref{thm:a2-2.6}   . 
+By Theorem \ref{thm:a2-2.6}, condition \ref{thm:a2-2.11.1} implies \ref{thm:a2-2.11.2} . 
 
 Now suppose that \ref{thm:a2-2.11.2}   holds.
 Then it follows from Lemma \ref{lem:a2-2.10}   
@@ -1696,7 +1630,7 @@ it follows that $(T(t))_{t\geq 0}$ is p-contractive.
 
 Of course, the norm function $N$ given by $N(f) = \|f\|$ is a strict half-norm.
 In the case when $p = N$, Theorem \ref{thm:a2-2.11}    
-is due to \citet{lumerandphillips:1961}.
+is due to \citet{lumerphillips:1961}.
 It turns out to be extremely useful in showing that a concrete operator is a generator.
 Because of its importance we state this special case explicitly below (including the complex case).
 Before that let us formulate Theorem \ref{thm:a2-2.11}   
@@ -1726,17 +1660,11 @@ be a seminorm on $E$ (i.e., $p(f + g) \leq p(f) + p(g)$ and $p(\lambda f) = |\la
 The subdifferential $\ddp(f)$ of $p$ in $f \in E$ is defined by
 %% --
 \begin{equation}\label{eq:a2-4.15}
-\ddp(f) = \{\phi \in E' \colon \begin{cases} \Re\langle g,\phi \rangle &\leq p(g) \text{ for all } g \in E \\ \langle f,\phi \rangle &= p(f) \end{cases} \quad \text{ and } \}.
+\ddp(f) = \{\phi \in E' \colon \Re\langle g,\phi \rangle \leq p(g) \text{ for all } g \in E \quad \text{ and } \langle f,\phi \rangle = p(f)  \}.
 \end{equation}
-%%KGK: von Uli????
-\textbf{komisch(v U)}
 %% --
 We assume in addition that $p$ is continuous.
-Then it follows from the Hahn-Banach theorem that $\d{p}(f) \neq \emptyset$ for any $f \in E$.
-%%
-%%KGK
-%%Page A2-x
-%% -- \newpage
+Then it follows from the Hahn-Banach theorem that $\diff{p}(f) \neq \emptyset$ for any $f \in E$.
 %%KGK p-A2-30; LNMp-54
 %%
 A linear operator $A$ on $E$ is called \emph{p-dissipative} if for all $f \in D(A)$ there exists $\phi \in \ddp(f)$ such that $\Re\langle Af,\phi \rangle \leq 0$.
@@ -1769,30 +1697,30 @@ $A$ is dissipative and $(\lambda - A)$ has dense range for some $\lambda > 0$.
 \end{theorem}
 %% –
 %% –
-\newcommand*{\inftyoo}{oo }
+%%\newcommand*{\inftyoo}{oo }
 %% –
 %%\section{Semigroups on $L^{\infty}$ and $H^{\infty}$}\label{sec:a2-3}}
 \section{Semigroups on $L^{\infty}$  and $H^{\infty}$ \label{sec:a2-3}}
 \index{Semigroups on $L^\infty$ and $H^\infty$}
 %% --
+\hspace{1cm}{\Large by Heiner Lotz}
+\vspace{.5cm}
+\newline
+%% -
 In this section we shall prove that on $L^\infty$, on $H^\infty$, and on some other classical Banach spaces every strongly continuous semigroup of operators is uniformly continuous.
 %% –
 \begin{lemma}\label{lem:a2-3.1}
-Let $T = (T(t))_{t\geq 0}$ be a one-parameter semigroup of operators on a Banach space $E$.
-Suppose that $s = \lim\sup_{t\to 0} \|T(t) - \Id\|$ is finite.
-If $\lim_{t\to 0} \|(T(t) - \Id)^2\| = 0$, then $T$ is uniformly continuous.
+Let\, $\TT = (T(t))_{t\geq 0}$\, be a one-parameter semigroup of operators on a Banach space $E$.
+Suppose that\, $s = \lim\sup_{t\to 0} \|T(t) - \Id\|$\, is finite.\\
+If \,$\lim_{t\to 0} \|(T(t) - \Id)^2\| = 0$, then $\TT$ is uniformly continuous.
 \end{lemma}
 %% –
 
 \begin{proof}
-The identity $2(T(t) - \Id) = T(2t) - \Id - (T(t) - \Id)^2$ shows
-%%
-%%KGK
-%%Page A2-30
-%% -- \newpage
+The identity \,$2(T(t) - \Id) = T(2t) - \Id - (T(t) - \Id)^2$\, shows
 %%KGK p-A2-31; LNMp-55
 %%
-that $2\|T(t) - \Id\| - \|(T(t) - \Id)^{2} \| \leq \|T(2t) - \Id\|$. 
+that \\ \,$2\|T(t) - \Id\| - \|(T(t) - \Id)^{2} \| \leq \|T(2t) - \Id\|$. 
 Hence $2s \leq \lim \sup_{t \downarrow 0} \|T(2t) - \Id\|$.
 Obviously, $\lim \sup_{t \downarrow 0} \|T(2t) - \Id\| = s$ and so, $2s \leq s$.
 Consequently, $s = 0$.
@@ -1803,16 +1731,16 @@ Consequently, $s = 0$.
 \begin{enumerate}[(i)]
 \item \label{rem:a2-3.1-kgk-1}
 If in Lemma \ref{lem:a2-3.1}   
-$T = (T(t))_{t \geq 0}$ is strongly continuous, in which case 
+$\TT = (T(t))_{t \geq 0}$ is strongly continuous, in which case 
 $s < \infty$, one can replace 
-$\lim_{t \to 0} \|(T(t) - \Id)^2\| = 0$ by the weaker condition $\lim \sup r(T(t) - \Id) < 1$ \citet[Lemma 2]{lotz:1985} where $r$ denotes the spectral radius.
+$\lim_{t \to 0} \|(T(t) - \Id)^2\| = 0$ by the weaker condition $\lim \sup r(T(t) - \Id) < 1$\, see \citet[Lemma 2]{lotz:1985} where $r$ denotes the spectral radius.
 %%--
 \item \label{rem:a2-3.1-kgk-2}
 The condition $s < \infty$ in Lemma \ref{lem:a2-3.1}   
 is essential as the following example shows:
 Let $f \colon \R \to \R$ be non-continuous with $f(s+t) = f(s) + f(t)$ for all $s, t \in \R$ (see \citet{hamel:1905}).
 Then $\{(t,f(t)) \colon t \in \R\}$ is dense in $\R^2$.
-Hence for the semigroups $T = (T(t))_{t \geq 0}$ on $\R^2$ with
+Hence for the semigroups $\TT = (T(t))_{t \geq 0}$ on $\R^2$ with
 %%–
 \[
 T(t) = \left( \begin{array}{cc}
@@ -1822,7 +1750,7 @@ T(t) = \left( \begin{array}{cc}
 \]
 %%–
 we have $s = \infty$.
-Therefore $T$ is not uniformly continuous.
+Therefore $\TT$ is not uniformly continuous.
 However, $(T(t) - \Id)^{2} = 0$ for all $t \geq 0$.
 \end{enumerate}
 \end{remarks*}
@@ -1852,22 +1780,18 @@ Let $x' \in E'$ and $t_n \geq 0$ be given.
 Then $\lim \|(T(t_n) - \Id)'x'\| = 0$ if and only if $\lim \langle x_n, (T(t_n) - \Id)'x' \rangle = 0$ for every bounded sequence $(x_n)$ in $E$.
 This implies the equivalence of \ref{lem:a2-3.2-1}   and \ref{lem:a2-3.2-2} . 
 In particular, \ref{lem:a2-3.2-1}   implies that $((T(t_n) - \Id)x)$ converges weakly to zero for every sequence $(t_n)$ in $[0,\infty)$ with $\lim t_n = 0$ and every $x \in E$.
-Hence $T$ is strongly continuous by Proposition 1.23 
+Hence $\TT$ is strongly continuous by Proposition 1.23 
 in \citet{davies:1980}.
 \end{proof}
 
 We recall that a Banach space $E$ is called a \emph{Grothendieck space} if every weak* convergent sequence in $E'$ converges weakly.
-%%
-%%KGK
-%%Page A2-x
-%% -- \newpage
 %%KGK p-A2-32; LNMp-56
 %%
 \begin{theorem}\label{thm:a2-3.3}
 \index{Grothendieck space}
 \index{Semigroups!Strong continuity}
 Let $E$ be a Grothendieck space.
-If $T=(T(t))_{t \geq 0}$ is a strongly continuous semigroup in $E$ then $T'' = (T(t)'')_{t \geq 0}$ is strongly continuous in $E''$.
+If \,$\TT=(T(t))_{t \geq 0}$\, is a strongly continuous semigroup in $E$ then $\TT'' = (T(t)'')_{t \geq 0}$ is strongly continuous in $E''$.
 \end{theorem}
 
 \begin{proof}
@@ -1884,18 +1808,18 @@ Recall now that a Banach space $E$ is said to have the \emph{Dunford-Pettis prop
 \begin{theorem}\label{thm:a2-3.4}
 \index{Dunford-Pettis property}
 \index{Semigroups!One-parameter}
-Let $E$ be a Banach space with the Dunford-Pettis property and let $T = (T(t))_{t \geq 0}$ be a one-parameter semigroup of operators on $E$.
-If $T'' = (T(t)'')_{t \geq 0}$ is strongly continuous in $E''$, then $T$ is uniformly continuous.
+Let $E$ be a Banach space with the Dunford-Pettis property and let \,$\TT = (T(t))_{t \geq 0}$ be a one-parameter semigroup of operators on $E$.
+If \,$\TT'' = (T(t)'')_{t \geq 0}$ is strongly continuous in $E''$, then $\TT$ is uniformly continuous.
 \end{theorem}
 
 \begin{proof}
-Suppose that $T''$ is a strongly continuous semigroup.
-Then Lemma \ref{lem:a2-3.2}   implies that $T'$ and $T$ are strongly continuous.
+Suppose that $\TT''$ is a strongly continuous semigroup.
+Then Lemma \ref{lem:a2-3.2}   implies that $\TT'$ and $\TT$ are strongly continuous.
 Hence by the uniform boundedness principle, $\lim \sup_{t \to 0} \|(T(t) - Id)\|$ is finite.
 By Lemma \ref{lem:a2-3.1}   it suffices to show that $\lim_{t \to 0} \|(T(t) - Id)^2\| = 0$.
 Let $t_{n} \geq 0$ with $\lim t_{n} = 0$ be given.
 Then there exists a bounded sequence $(x_{n})$ in $E$ and a bounded sequence $(x_{n}')$ in $E'$ such that $\|(T(t_{n}) - Id)^2\| = \langle (T(t_{n}) - Id)x_{n}, (T(t_{n}) - Id)'x_{n}' \rangle$.
-Since $T'$ and $T''$ are strongly continuous, Lemma \ref{lem:a2-3.2}   implies that $((T(t_{n}) - Id)x_{n})$ and $((T(t_{n}) - Id)'x_{n}')$ converge weakly to zero.
+Since $\TT'$ and $\TT''$ are strongly continuous, Lemma \ref{lem:a2-3.2}   implies that $((T(t_{n}) - Id)x_{n})$ and $((T(t_{n}) - Id)'x_{n}')$ converge weakly to zero.
 Since $E$ has the Dunford-Pettis property, $\lim \|(T(t_{n}) - Id)^2\| = 0$.
 Consequently, $\lim_{t \to 0} \|(T(t) - Id)^2\| = 0$.
 \end{proof}
@@ -1909,10 +1833,6 @@ An immediate consequence of Theorem \ref{thm:a2-3.3}   and Theorem \ref{thm:a2-3
 Let $E$ be a Grothendieck space with the Dunford-Pettis property.
 Then every strongly continuous semigroup of operators on $E$ is uniformly continuous.
 \end{theorem}
-%%
-%%KGK
-%%Page A2-32
-%% -- \newpage
 %%KGK p-A2-33; LNMp-57
 %%
 A compact Hausdorff space is called an \emph{F-space} if the closures of two disjoint open $F_{\sigma}$-sets are disjoint and is called a \emph{Stonean} (res., \emph{$\sigma$-Stonean}) space if the closure of every open set (res., open $F_{\sigma}$-set) is open.
@@ -1931,25 +1851,25 @@ $C(K)$, where $K$ is a compact F-space.
 $L^{\infty}(S,\Sigma,\mu)$ for any measure space $(S,\Sigma,\mu)$.
 %%--
 \item \label{thm:a2-3.6-3}
-The Banach space $B(S,\Sigma)$ of bounded $\Sigma$-measurable functions on $S$ if $\Sigma$ is a $\sigma$-algebra of subsets of $S$.
+The Banach space $B(S,\Sigma)$ of all bounded $\Sigma$-measurable functions on $S$ if \,$\Sigma$ is a \,$\sigma$-algebra of subsets of $S$.
 %%--
 \item \label{thm:a2-3.6-4}
-The Banach space $\HO$ of bounded continuous solutions of
+The Banach space $\HO$ of all bounded continuous solutions of
 %%–
 \[
 \sum_{1 \leq i \leq n} (\partial^2f/\partial x_i^2) = 0
 \]
 %%–
-on an open subset $O$ of $\R^n$.
+on an open subset $O$ of \,$\R^n$.
 %%--
 \item \label{thm:a2-3.6-5}
-The Banach space $\WO$ of bounded continuous solutions of
+The Banach space $\WO$ of all bounded continuous solutions of
 %%–
 \[
 \sum_{1 \leq i \leq n} (\partial^2f/\partial x_i^2) = (\partial f/\partial x_{n+1})
 \]
 %%–
-on an open subset $O$ of $\R^{n+1}$.
+on an open subset $O$ of \,$\R^{n+1}$.
 %%--
 \item \label{thm:a2-3.6-6}
 The Banach space $H^{\infty}(O)$ of bounded analytic functions on a finitely connected domain $O$ of the complex plane.
@@ -1958,37 +1878,33 @@ The Banach space $H^{\infty}(O)$ of bounded analytic functions on a finitely con
 
 \begin{proof}
 By Theorem \ref{thm:a2-3.5}   it suffices to show that the space listed above are Grothendieck spaces with the Dunford-Pettis property.
-\begin{enumerate}[(i), wide]
-\item 
-If $K$ is compact, then $C(K)$ has the Dunford-Pettis property [Grothendieck (1953) Théorème 4].
+
+%--
+\ref{thm:a2-3.6-1} If $K$ is compact, then $C(K)$ has the Dunford-Pettis property \citet[ Théorème 4]{grothendieck:1953}.
 If $K$ is a compact F-space, then $C(K)$ is a Grothendieck space [Seever (1958) Theorem 2.5]; the special cases for Stonean and $\sigma$-Stonean spaces are due to \citet[Théorème 9]{grothendieck:1953} and \citet{ando:1961} respectively.
 %%--
  
-\item 
-%%-- 3) 
-It is well known that every $\sigma$-order complete AM-space with unit is isometric to a space $C(K)$ where $K$ is a compact $\sigma$-Stonean space.
+\ref{thm:a2-3.6-2} and \ref{thm:a2-3.6-3} \quad It is well known that every $\sigma$-order complete AM-space with unit is isometric to a space $C(K)$ where $K$ is a compact $\sigma$-Stonean space.
 Obviously, the spaces under 
 \ref{thm:a2-3.6-2}   and \ref{thm:a2-3.6-3}   are $\sigma$-order complete AM-spaces with unit and therefore by 
 proof of \ref{thm:a2-3.6-1}   Grothendieck spaces with the Dunford-Pettis property.
 %%--
  
-\item
-%%--5) 
-%%KGK alternativ: \ref{thm:a2-3.6-4} and \ref{thm:a2-3.6-5}
+\ref{thm:a2-3.6-4} and \ref{thm:a2-3.6-5} \quad
 These spaces are order complete vector lattices.
-This follows from [Bauer (1966) pp.18-22, Standardbeispiele 1 and 2 p.55].
+This follows from \citet[pp.18-22, Standardbeispiele 1 and 2 p.55]{bauer:1966}.
 Since these spaces contain the constant functions on $O$ they are complete for the supremum-norm.
 Indeed if $(f_n)$ is a Cauchy-sequence for this norm, it is easily seen that $(f_n)$ converges in norm to $\inf_n \sup(f_k \colon n < k)$.
 Therefore these spaces are $\sigma$-order complete AM-spaces with unit and so as before Grothendieck spaces with the Dunford-Pettis property.
 %%--
-\item 
-Bourgain [(1980), Cor. 3] proves that $H^{\infty}(D)$ has the Dunford-Pettis property and in $[(1984), \text{ Proposition III.1}]$, that $H^{\infty}(D)$ is a
+
+ \ref{thm:a2-3.6-6}
+\citet[Corollary 3]{bourgain:1980} proves that $H^{\infty}(D)$ has the Dunford-Pettis property and in [Bourgain (1984), Proposition III.1], that $H^{\infty}(D)$ is a
 Grothendieck space, where $D$ is the open unit disc $\{z \colon |z| < 1\}$.
 If $O$ is a finitely connected domain and $H^{\infty}$ does not only contain the constant functions, then $H^{\infty}(O)$ is isomorphic to a finite direct sum of copies of $H^{\infty}(D)$.
 (Note that $H^{\infty}(D)$ is isomorphic to $\{f \in H^{\infty}(D) \colon f(0) = 0\}$ via the map $f \mapsto zf$.
-Then use [Grothendieck (1953),p.77 and Prop.4.4.1]).
+Then use \citet[p.77 and Proposition 4.4.1]{grothendieck:1953} ).
 Hence $H^{\infty}(O)$ is a Grothendieck space with the Dunford-Pettis property.
-\end{enumerate}
 \end{proof}
 
 \begin{remark*}[Final]\label{rem:a2-final}
@@ -2003,56 +1919,66 @@ This solves a problem raised by R.Kaufman.
 
 H. Porta and the author have shown that if a Banach space $E$ has an infinite dimensional separable quotient space and $F$ is an infinite dimensional Banach space then there always exists a closed densely defined unbounded operator from $E$ into $F$.
 \end{remark*}
-
-\section*{Notes}\label{notes:d4-notes}
+%% --
+\section*{Notes}\label{notes:a2-notes}
 \addcontentsline{toc}{section}{Notes}
 %% --
-\begin{enumerate}[label=\emph{Section \arabic*:}, wide, labelindent=0.0em]
+\begin{enumerate}[%
+,label={\Large\emph{Section \arabic*:}}
+, wide
+, labelindent=0.0em
+]
+%% --
 \item
 The abstract Cauchy problem is treated systematically in the monographs of \citet{krein:1971} and \citet{fattorini:1983}.
 We refer to these books for more details and historical notes.
-One implication of Theorem \ref{thm:a2-1.1}   is proved in [Krein (1971) (Thm. 2.11)].
+One implication of Theorem \ref{thm:a2-1.1}   is proved in \citet[Theorem 2.11]{krein:1971}.
 
-The Hille-Yosida theorem has been proved independently by \citet{hille:1948} and \citet{yosida:1948} for contraction semigroups.
-The extension to arbitrary strongly continuous semigroups is independently due to \citet{feller:1953}, \citet{miyadera:1952} and \citet{phillips:1953}.
+The Hille-Yosida Theorem has been proved independently by \citet{hille:1948} and \citet{yosida:1948} for contraction semigroups.
+The extension to arbitrary strongly continuous semigroups is independently due to \citet{feller:1953a}, \citet{miyadera:1952} and \citet{phillips:1954}.
 Thus our terminology is slightly incorrect, some authors refer to the general version as the Hille-Yosida-Phillips theorem which is slightly more correct.
 
 Holomorphic semigroups belong to the standard material of the theory of one-parameter semigroups.
 Our Theorem \ref{thm:a2-1.14}   deviates from the usual presentation since the condition on the resolvent is merely required on a half-plane.
 
 Differentiable semigroups are treated in detail in the book of \citet{pazy:1983} who discovered Theorem \ref{thm:a2-1.17}   and \ref{thm:a2-1.18} . 
-The spectral property of eventually norm continuous semigroups given in Theorem \ref{thm:a2-1.20}   is contained in [Hille-Phillips (1957) (Thm.16.4.2)] with a proof depending on Gelfand theory.
+The spectral property of eventually norm continuous semigroups given in Theorem \ref{thm:a2-1.20}   is contained in \citet[Theorem 16.4.2]{hillephillips:1957} with a proof depending on Gelfand theory.
 For norm continuous semigroups it is contained in \citet{pazy:1983} with a simpler proof.
 The elementary proof we give here is due to G. Greiner.
 
 %%\paragraph{Section 1 (continued).}
 %%\index{Semigroups!Perturbation theory}
-Theorem \ref{thm:a2-1.29}   on the perturbation by bounded operators is due to \citet{phillips:1953} who also investigated permanence of smoothness properties by this kind of perturbation.
-We also refer to [Pazy (1983) (Sec.3.1)].
+Theorem \ref{thm:a2-1.29}   on the perturbation by bounded operators is due to \citet{phillips:1954} who also investigated permanence of smoothness properties by this kind of perturbation.
+We also refer to \citet[Section 3.1]{pazy:1983}.
 
-The observation that eventually norm continuity is preserved by perturbation by a compact operator (see \ref{thm:a2-1.30}   seems to be new.
+The observation that eventually norm continuity is preserved by perturbation by a compact operator (see Theorem \ref{thm:a2-1.30}) seems to be new.
 
 The perturbation by continuous operators on the graph of the generator is due to \citet{deschschappacher:1984}.
-The short proof we give here is due to G. Greiner and has the advantage to yield the same permanence for smoothness properties as in the classical case \ref{cor:a2-1.32} . 
+The short proof we give here is due to G. Greiner and has the advantage to yield the same permanence for smoothness properties as in the classical case, see Corollary \ref{cor:a2-1.32} . 
 
-The characterization of a core as "domain of uniqueness" \ref{thm:a2-1.33}   seems to be new.
+The characterization of a core as "domain of uniqueness" given in Theorem \ref{thm:a2-1.33}   seems to be new.
 
 In this section we have presented part of the standard theory of one-parameter semigroups including some new aspects.
 A very elegant brief introduction to one-parameter semigroups is given in the treatise of \citet{kato:1966} where one can also find all the results on perturbation theory going beyond the elementary facts we discuss here.
-A complete information on the general theory can be obtained by consulting the books of \citet{davies:1980}, [Goldstein (1985a)] and \citet{pazy:1983}.
-The monograph of [Goldstein (1985a)] in particular contains a variety of examples and applications.
+A complete information on the general theory can be obtained by consulting the books of \citet{davies:1980}, \citet{goldstein:1985a} and \citet{pazy:1983}.
+The monograph of \citet{goldstein:1985a} contains a variety of examples and applications.
 
 \item
 Dissipative operators were introduced by \citet{lumerphillips:1961}.
 The analogous notion of dispersiveness is due to \citet{phillips:1962}.
 Our approach follows closely \citet{arendtchernoffkato:1982} where half-norms were introduced.
-Related previous results were obtained by \citet{calvert:1971}, \citet{hasegawa:1966}, \citet{sato:1968}, \citet{bénilanpicard:1979} and \citet{picard:1972}, where the two last consider non-linear semigroups.
-A further investigation of half-norms can be found in \citet{battyrobinson:1983} who consider ordered Banach spaces other than Banach lattices in great detail.
+Related previous results were obtained by \citet{calvert:1971a}, \citet{hasegawa:1966}, \citet{sato:1968}, \citet{benilanpicard:1979} and \citet{picard:1972}, where the two last consider non-linear semigroups.
+A further investigation of half-norms can be found in \citet{battyrobinson:1984} who consider ordered Banach spaces other than Banach lattices in great detail.
 We also refer to the historical notes given there.
 
 \item
 It had been proved by \citet{kishimotorobinson:1981} that every generator of a positive semigroup on $L^{\infty}$ is bounded.
-That every strongly continuous semigroup on $L^{\infty}$ is uniformly continuous was first shown by \citet[(1984), (1985)]{lotz:1982}.
-The proof of Lemma \ref{lem:a2-3.1}   was communicated to the author by T. Coulhon, who independently obtained a particular case (\citet{coulhon:1984}).
+That every strongly continuous semigroup on $L^{\infty}$ is uniformly continuous was first shown by \citet{lotz:1982}, \citet{lotz:1984} and \citet{lotz:1985}.
+The proof of Lemma \ref{lem:a2-3.1}  was communicated to the author by T. Coulhon, who independently obtained a particular case (\citet{coulhon:1984}) of Lotz's result..
 
 \end{enumerate}
+
+%% -- References
+%%\RaggedRight
+%%\bibliographystyle{abbrvnat}
+%%\bibliography{bib/ln-references}

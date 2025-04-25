@@ -16,17 +16,20 @@
 %\onehalfspacing
 %\doublespacing 
 
+%\usepackage{showlabels} 
+
 %% -- Gemeinsame Pakete und Definitionen
 %% --
-\input{../../preamble/ln-preamble}  
-\input{../../preamble/ln-definitionen}
+\input{LN-Einzelbeitraege/preamble/ln-preamble}  
+\input{LN-Einzelbeitraege/preamble/ln-definitionen}
+
+%%KGK
+%\input{LN-Einzelbeitraege/part-c/chap-c2/kgk-definitionen}
 
 %% -- Index 
 %% --
-
 \usepackage{imakeidx}
 \makeindex[columns=2, options=-s svind.ist]
-
 
 %% -- Literatur 
 %% -- 
@@ -46,8 +49,7 @@
 %,hidelinks=true
 }
 
-%% -- label prüfen
-%%\usepackage{showkeys}  
+ 
 %% --
            
 \begin{document}
@@ -66,7 +68,7 @@
 %% -- Literatur
 %% --
 \RaggedRight
-\bibliography{../../bib/ln-references} 
+\bibliography{LN-Einzelbeitraege/bib/ln-references} 
 
 %% -- Index
 %% --

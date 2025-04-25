@@ -1,15 +1,16 @@
-%% -- Chapter C-III
-%% -- Stand: 2025-04-14
+%% Stand 2025-04-24 ulgr
 %% --
-
-\setcounter{chapter}{2}
 \chapter[Spectral Theory on Banach Lattices]{Spectral Theory of Positive Semigroups on Banach Lattices}\label{chap:c3}
 \chaptermark{Spectral Theory of Positive Semigroups}
-%% --
 \index{Spectral Theory}
-\index{Theory!Spectral}
-\index{Semigroups!Positive}
-\index{Banach Lattices}
+%% --
+{\Large
+\vspace*{-.75cm}
+by \\[.25em]
+Günther Greiner
+\vspace{.75cm}
+\\
+}
 %% --
 In Chapter B-III we have shown that positive semigroups on spaces $C_{0}(X)$ possess several interesting spectral properties.
 Now we are going to extend many of these results to the more general setting of Banach lattices.
@@ -20,18 +21,15 @@ Throughout this chapter we will assume that $E \neq \{0\}$ is a complex Banach l
 %% --
 \section{The Spectral Bound}\label{sec:c3-1}
 \index{Spectral Bound}
-\index{Theory!Spectral Bound}
 %% --
-
 The fact that the spectral bound of a positive semigroup is always contained in the spectrum (provided that the spectrum is non-empty) is also true in the general setting of Banach lattices.
 The proof given in B-III, Theorem~1.1 for spaces $C_{0}(X)$ works in the general case too.
 Another proof is given below (cf.\ Corollary~\ref{cor:c3-1.4}).
 Furthermore, Corollary~1.3 and Proposition~1.5 of B-III are true in the setting of Banach lattices and their proofs can be carried over to the general case.
 For the sake of completeness we summarize these results in the following theorem.
-
 %% --
 \begin{theorem}\label{thm:c3-1.1}
-	\index{Positive Semigroups!Generator}
+\index{Positive Semigroups!Generator}
 	Let $A$ be the generator of a positive semigroup $(T(t))_{t \geq 0}$ on a Banach lattice $E$.
 	
 	\begin{enumerate}[(i)]
@@ -46,17 +44,11 @@ For the sake of completeness we summarize these results in the following theorem
 		\item 
 		If $T(1)$ has a positive fixed vector $h_{0}$, then $\ker(A)$ contains a positive element $h$ such that $h_{0} \in E_{|h|}$.
 
-%
-%\endinput
-%\newpage
-%% --  2 / 293
-%% --
 		\item 
 		If $T(1)'\phi_{0} = \phi_{0}$ for some $\phi_{0} \in E'_{+}$, then there exists $\phi \in D(A^*)_{+}$ with $\{f \in E \colon \langle |f|,\phi\rangle = 0\} \subseteq \{f \in E \colon \langle |f|,\phi_{0}\rangle = 0\}$ such that $A^*\phi = 0$.
 	\end{enumerate}
 \end{theorem}
 %% --
-
 The fact that $s(A)$ is always an eigenvalue of the adjoint (cf.\ B-III Theorem~1.6) is characteristic for spaces $C(K)$, $K$ compact, as can be seen byconsidering the Laplacian on $L^p(\R ^n)$, where $1 < p < \infty$, or on $C_{0}(\R ^n)$ (see B-III,Example~1.7).
 Another result which cannot be extended to arbitrary Banach lattices is that spectral bound and growth bound coincide (cf.\ B-IV,Theorem~1.4); an example is given in A-III,Example~1.3.
 Despite of this the resolvent $R(\lambda,A)$ of a positive semigroup is given as the Laplace transform of the semigroup in the half-plane $\{z \in \C  \colon \Re\, z > s(A)\}$ (even in case that $\omega_0(A) > s(A)$).
@@ -77,7 +69,6 @@ By Datko's Theorem (A-IV,Theorem~1.11) the function $t \mapsto \mathrm{e}^{-\lam
 	Moreover, the operators $\int_{0}^t \mathrm{e}^{-\lambda s} T(s) \,\ds$ tend to $R(\lambda,A)$ with respect to the operator norm as $t \to \infty$.
 \end{theorem}
 %% --
-
 \begin{proof}
 	We fix $\lambda_{0} > \omega_0(A)$.
 	Then, by A-I,Proposition~1.11,
@@ -2396,8 +2387,8 @@ Pseudoresolvents are discussed e.g. in \citet{hillephillips:1957} or \citet{yosi
 For nonpositive semigroups the two assertions stated in Definition~\ref{def:c3-2.8} are no longer equivalent. 
 A special case of Theorem~\ref{thm:c3-2.10} was proven by\citet{derndinger:1980} while the general result is due to \citet{greiner:1981}. Instead of pseudo-resolvents on the whole $\mathcal{F}$-product Derndinger works with the semigroup on the semigroup $\mathcal{F}$-product. 
 Therefore he can only consider eigenvalues. 
-Elliptic differential operators as generators of positive semigroups are discussed by many authors, e.g., \citet{amann:1983}, \citet{fattorini:1983}, \citet{friedmann:1972} or\citet{pazy:1983}.
-\marginpar{??? friedmann:1972 ???}
+Elliptic differential operators as generators of positive semigroups are discussed by many authors, e.g., \citet{amann:1983}, \citet{fattorini:1983}, \citet{friedman:1969} or\citet{pazy:1983}.
+%\marginpar{??? friedmann:1972 ???}
 
 \item
 There exist various notions which are (more or less closely) related to irreducibility, e.g. \enquote{positivity improving} in \citet{reedsimon:1979}, \enquote{$u_0$-positivity} in 
@@ -2438,15 +2429,9 @@ For example, the \enquote{Annular Hull Theorem} (see \citet{chiconeswanson:1981}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%% -- References
+
+%% -- Literatur
+%% --
 \RaggedRight
 \bibliographystyle{abbrvnat}
-\bibliography{bib/ln-references}
-
-
-
-
-%% -- References
-%\RaggedRight
-%\bibliographystyle{abbrvnat}
-%\bibliography{../bib/ln-references}
+\bibliography{bib/ln-references} 

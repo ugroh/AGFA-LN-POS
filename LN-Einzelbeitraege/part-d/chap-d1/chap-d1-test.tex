@@ -15,11 +15,13 @@
 %\usepackage{setspace}
 %\onehalfspacing
 %\doublespacing 
+%\usepackage{showlabels} 
 
 %% -- Gemeinsame Pakete und Definitionen
 %% --
-\input{../../preamble/ln-preamble}  
-\input{../../preamble/ln-definitionen}
+\input{LN-Einzelbeitraege/preamble/ln-preamble}  
+\input{LN-Einzelbeitraege/preamble/ln-definitionen}
+
 
 %% -- Index 
 %% --
@@ -32,9 +34,10 @@
 %% -- 
 
 \usepackage[square,numbers]{natbib}
+\bibliographystyle{abbrvnat}
 
+%% --
 
-%% -- 
 
 \usepackage{hyperref}
 \hypersetup{% 
@@ -46,8 +49,6 @@
 %,hidelinks=true
 }
 
-%% -- label prüfen
-%%\usepackage{showkeys}  
 %% --
            
 \begin{document}
@@ -66,8 +67,7 @@
 %% -- Literatur
 %% --
 \RaggedRight
-\bibliographystyle{abbrvnat}
-\bibliography{../../bib/ln-references} 
+\bibliography{LN-Einzelbeitraege/bib/ln-references} 
 
 %% -- Index
 %% --

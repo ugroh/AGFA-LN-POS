@@ -1,14 +1,7 @@
-%% -- Chapter B-IV
-
-%% -- Stand: 2025-04-14
+%% Stand 2025-04-24 ulgr
 %% --
-
-
-\chapter{Asymptotics of Positive Semigroups on $C_{0}(X)$}\label{chap:B-IV}
+\chapter{Asymptotics of Positive Semigroups on \texorpdfstring{$C_{0}(X)$}{C\textunderscore 0(X)}}\label{chap:b4}
 %% --
-
-
-
 In the following chapter, we examine the asymptotic behavior of positive semigroups in spaces of continuous functions.
 The first section is devoted to the various \emph{growth constants} defined in Chapter A-IV and to their coincidence for positive semigroups.
 In the second section, we treat the asymptotic behavior of positive semigroups, which do not differ \enquote{too much} from compact semigroups.
@@ -17,11 +10,15 @@ In the last section, we investigate differential delay equations by semigroup me
 In particular, we characterize the spectral bound of the solution semigroups, yielding simple conditions for stability. 
 Numerous examples conclude the chapter.
 
-\section{Stability of Positive Semigroups on $C_0(X)$}\label{sec:b4-1}
-\index{Stability!Positive Semigroups}
-\index{Positive Semigroups!Stability}
-\index{Examples!Stability of Positive Semigroups}
-
+\section{Stability of Positive Semigroups on \texorpdfstring{$C_{0}(X)$}{C\textunderscore 0(X)}}\label{sec:b4-1}
+%\index{Stability!Positive Semigroups}
+%\index{Positive Semigroups!Stability}
+%\index{Examples!Stability of Positive Semigroups}
+%% --
+\hspace{1cm}{\Large by Frank Neubrander}
+\vspace{.5cm}
+\newline
+%% --
 
 In Chapter A-IV we have seen that the long term behavior of a semigroup $(T(t))_{t \geq 0}$ is strongly connected with the existence (and growth) of the resolvent of its generator $A$ in a right halfplane.
 In particular, the exponential growth of certain semigroups is determined solely by the location of the spectrum (see A-IV,(1.7) and (1.8)).
@@ -33,7 +30,7 @@ In these cases, spectral bound $s(A)$ and growth bound $\omega_{0}(A)$ coincide 
 %% --
 holds.
 %%
-%\newpage
+%%\newpage
 %%
 
 Unfortunately, \eqref{eq:b4-1.1} does not hold for positive semigroups in general.
@@ -87,7 +84,7 @@ Then $|\langle T(t)f,\mu \rangle| = |\langle f,\mu \rangle|  \ge  0$ which contr
 For spaces $C_{0}(X)$, $X$ locally compact, the different stability concepts are no longer equivalent.
 %
 %%
-%\newpage 
+%%\newpage 
 %%
 %
 
@@ -169,7 +166,7 @@ Proof of (ii): Assume that $T(t)f = e^{\im\alpha t}f$ for every $t \geq 0$ and s
 Given $z \in X$, there exists a sequence $(t_n)$ such that $\Phi(t_n,z) \to 1$, hence
 %
 %%
-%\newpage
+%%\newpage
 %%
 %\marginpar{GG: habe $t$ durch $t_n$ ersetzt - richtig?}
 $f(z) = (e^{-\im\alpha t_n}T(t_n)f)(z) = e^{-\im\alpha t_n}f(\Phi(t_n,z)) \to 0$. Thus $f = 0$.
@@ -228,7 +225,7 @@ Then, by the holomorphy of the resolvent and by A-II, Proposition~1.11 we obtain
 %% --
 Since every element of $C_{0}(X)^*$ and $C_{0}(X)"$ is the difference of positive
 %%
-%\newpage
+%%\newpage
 %%
 elements, the equation \eqref{eq:b4-1.3} holds for every $\Phi \in C_{0}(X)^*$, $\rho \in C_{0}(X)"$. 
 This means that the net $(\int_0^r T(t)^*\Phi \, \dt)_{r > 0}$ converges weakly to $R(0,A^*)\Phi$. 
@@ -282,12 +279,16 @@ The proof given above may be used with almost no modification.
 At this point we close the discussion of the stability of positive semigroups on $C_{0}(X)$ and refer to Section 1 of C-IV and D-IV, respectively, where the stability of positive semigroups on arbitrary Banach lattices and on C*-algebras will be treated.
 %
 %%
-\newpage
+%\newpage
 %%
 %
 
 \section{Compact and Quasi-Compact Semigroups}
-
+%% --
+\hspace{1cm}{\Large by Günther Greiner}
+\vspace{.5cm}
+\newline
+%% --
 Using the Riesz-Schauder Theory for compact operators (see, \eg
 Chapter VII.4 of \citet{dunfordschwartz:1958} or Section 26 of \citet{pietsch:1978}) and the results of Chapter A-III, one can easily describe the
 asymptotic behavior of eventually compact semigroups.
@@ -344,7 +345,7 @@ spaces.
 	such that
 %
 %%
-%\newpage
+%%\newpage
 %% 
 %
 \[
@@ -412,7 +413,7 @@ We give a typical example.
 	Now \eqref{eq:b4-2.2} follows from \eqref{eq:b4-2.1} for $m = 1$.
 %
 %%
-%\newpage
+%%\newpage
 %% -- 
 %
 Applying the triangle inequality to $T(t)f = e^{rt}(Pf + (e^{-rt}T(t)f-Pf))$
@@ -474,7 +475,7 @@ general, $C(K) \not\subset B(K) \not\subset C(K)''$.
 		\end{enumerate}
 %
 %%
-%\newpage
+%%\newpage
 %% -- 
 %
 In case $G = C(K)$ these conditions are equivalent to the following.
@@ -541,7 +542,7 @@ compact operator $T : C(K) \to C(K)$ is a compact operator.
 
 %
 %%
-%\newpage
+%%\newpage
 %%  
 %
 The next result which is an immediate consequence of Theorem~\ref{thm:b4-2.1} and
@@ -614,7 +615,7 @@ $C(K)$ is given in Chapter~2 of \citet{vancasteren:1985}.
 	In fact, the first assertion is a consequence of (i) and (ii), the second follows from (i) and the semigroup property is implied by the Chapman-Kolmogorov equation (iii).
 %
 %%
-%\newpage
+%%\newpage
 %%
 %
 Moreover, the semigroup $(T(t))_{t \geq 0}$ is strongly continuous.
@@ -677,7 +678,7 @@ The first one uses the notion of the essential growth bound $\omega_{\text{ess}}
 
 %
 %%
-%\newpage 
+%%\newpage 
 %% --
 %
 \begin{proof}
@@ -724,7 +725,7 @@ The first one uses the notion of the essential growth bound $\omega_{\text{ess}}
 
 %
 %%
-%\newpage 
+%%\newpage 
 %% --
 %
 We will now show that for quasi-compact semigroups the asymptotic behavior is similar to the one stated for eventually compact semigroups in Theorem~\ref{thm:b4-2.1}. 
@@ -770,7 +771,7 @@ Thus in \eqref{eq:b4-2.5} the operators $T_j(t)$ belonging to $\lambda_j = r$ wi
     Then $r = \omega_{0}(\TT) = s(A)$ and there is a positive projection $P$ of finite rank such that for
 %
 %
-%\newpage 
+%%\newpage 
 %% --
 %
 	suitable constants $\delta > 0$, $M \geq 1$ we have
@@ -824,7 +825,7 @@ We explain this by discussing a concrete example.
     Moreover, one can show that it is quasi-compact if (and only if) $m(\infty) < 0$. In order to find 
 %
 %%
-%\newpage 
+%%\newpage 
 %% --
 %
 eigenvalues and eigenfunctions, one has to solve the ordinary differential equation $f' = mf - \lambda f$. 
@@ -869,9 +870,14 @@ It is based on a criterion given by Doeblin for operators on spaces of bounded m
 \end{proposition}
 %
 %
-\newpage
+%\newpage
 %% -- 16 / 219
 \section{A Semigroup Approach to Retarded Differential Equations}
+%% --
+\hspace{1cm}{\Large by Annette Grabosch und Ulrich Moustakas}
+\vspace{.5cm}
+\newline
+%% --
 %% --
 %\begin{center}
 %	by
@@ -914,7 +920,7 @@ With the above notations we consider the initial value problem
 \end{minipage}
 %
 %%
-\newpage
+%\newpage
 %% --  
 % --   17 / 220
 
@@ -992,7 +998,7 @@ Proceeding as in the example mentioned above we obtain
 Thus $A$ is a generator by A-II, Theorem~1.7.
 %
 %%
-%\newpage
+%%\newpage
 %% --  18 / 221
 %
 
@@ -1050,7 +1056,7 @@ since $\int_{0}^{t} T(s)g \ds  \in D(A)$,
 \end{align*}
 %
 %% --
-\newpage
+%\newpage
 %% --
 %
 Since $u(t) = (T(t)g)(0) \in D(B)$ for $t \geq 0$, the above calculation shows that $u$ is right-sided differentiable at $0$ and differentiable for $t > 0$, hence
@@ -1113,7 +1119,7 @@ Let $(S(t))_{t \geq 0}$ be a strongly continuous semigroup which is not differen
 Define $g \in E$ by $g(s)  \coloneq  \tilde{g}$ for all $s \in [-1,0]$ where $\tilde{g} \in F$ is chosen such that
 %
 %%
-%\newpage
+%%\newpage
 %% --
 %
 $t \mapsto S(t)\tilde{g}$ is not differentiable in $t' \in \mathbb{R}_+$.
@@ -1159,7 +1165,7 @@ Since $\Phi_\lambda$ is bounded, the operator $B + \Phi_\lambda$ is a generator 
 The spectrum of $A$ can now be characterized in terms of the spectrum of the operators $B + \Phi_\lambda$.
 %
 %%
-%\newpage
+%%\newpage
 %% --
 
 \begin{proposition}\label{prop:b4-3.4}
@@ -1215,7 +1221,7 @@ Indeed, if $B$ generates a bounded positive semigroup on $F$, then $\|x\|  \colo
 \end{proposition}
 %
 %%
-%\newpage
+%%\newpage
 %% --
 %
 \begin{proof} By Formula \eqref{eq:b4-3.2} we have $R(\lambda,A) = S_\lambda^{-1}R(\lambda,A_{0})$ for $\lambda > \|\Phi\|+w$, (where $S_\lambda f = f - \epsilon_\lambda \otimes R(\lambda,B)\Phi f$ for $f \in E$). 
@@ -1260,7 +1266,7 @@ On the other hand, if $\sigma(B + \Phi_\lambda) = \emptyset$ for all $\lambda \i
 We are now able to characterize the spectral bound of the generator $A$ in $E$ through spectral bounds of generators in $F$.
 %
 %%
-%\newpage
+%%\newpage
 %% --
 %
 \begin{theorem}\label{thm:b4-3.7}
@@ -1334,7 +1340,7 @@ In the general case we apply the following lemma which is due to W.\ Arendt.
 	Case 2: If $\mu < s(B+\Phi_{\mu})$ ,we show $r \in \sigma(B+\Phi_{\mu})$ for every $r \in (\mu,s(B+\Phi_{\mu})]$.
 %
 %%
-%\newpage
+%%\newpage
 %% --
 %
 Let $r \in (\mu,s(B+\Phi_{\mu})]$ and assume $r \in \rho(B+\Phi_{\mu})$. 
@@ -1385,7 +1391,7 @@ Since $\omega_{0}(A) = s(A)$ by \eqref{eq:b4-1.1}, we obtain from Corollary~\ref
 \end{example}
 %
 %%
-%\newpage
+%%\newpage
 %% --
 %
 
@@ -1443,7 +1449,7 @@ Let $0 < \tau < \infty$ and $p,q \in \mathbb{R}$ and consider the (RCP)
 	%% --
 %
 %%
-%\newpage
+%%\newpage
 %% --
 %
 Its characteristic equation (in the classical sense) is 
@@ -1514,7 +1520,7 @@ We conclude this section with two examples fitting into the above framework.
 	%% --
 %
 %
-%\newpage
+%%\newpage
 %% --
 %
 Let $F = C[0,1]$, $E = C([-1,0]\times[0,1])$ and let $\tilde{B}$ be defined by $\tilde{B}h = h''$ with domain $D(\tilde{B}) \coloneq  \{h \in C^2[0,1] \colon h'(0) = h'(1) = 0\}$.
@@ -1550,7 +1556,7 @@ Hence the solutions of \eqref{eq:b4-3.11} are uniformly exponentially stable.
 	The stability condition $h(x) < 0$ for all $x \in [0,1]$ means that the death rate has to majorize the birth rate in each spatial point to lead to extinction of the population, no matter whether the equation with or without delay is considered.
 
 \begin{example}\label{ex:b4-3.12}
-	An interesting example from cell biology is given by \citet{gyllenbergheijmans:1985}. 
+	An interesting example from cell biology is given by \citet{gyllenbergheijmans:1987}. 
 	They investigate a balance equation for the size distribution of a cell population which is structured by size. 
 	To point out the main ideas we will restrict the complex situation to the simple case of linear cell growth and refer to the original paper for details and the more general case.
 	
@@ -1567,7 +1573,7 @@ Hence the solutions of \eqref{eq:b4-3.11} are uniformly exponentially stable.
 	%% --
 %
 %%
-%\newpage
+%%\newpage
 %% --
 %
 Here $Bf  \coloneq  -f'$ on $D(B) \coloneq \{f \in L^1[a,1] \colon f \in AC[a,1], f(a) = 0\}$ and $L : F \to F$ is defined by
@@ -1637,11 +1643,11 @@ In \citet{kerscher:1986} this is pursued by showing how Theorem~\ref{thm:b4-3.7}
 
 \end{enumerate}
 
-
-%% -- References
+%% -- Literatur
+%% --
 \RaggedRight
 \bibliographystyle{abbrvnat}
-\bibliography{bib/ln-references}
+\bibliography{bib/ln-references} 
 
 
 

@@ -16,23 +16,20 @@
 %\onehalfspacing
 %\doublespacing 
 
-%% -- Gemeinsame Pakete und Definitionen
-%% --
-\input{../../preamble/ln-preamble}   
-\input{../../preamble/ln-definitionen}
-\newcommand*{\lnm}{LNM1184: }  
-\theoremstyle{remark}
-\newtheorem*{remark*}{Remark} 
-\newtheorem*{remarks*}{Remark}
-\newtheorem*{example*}{Example}
-\newtheorem*{corollary*}{Corollary}
-\newcommand*{\ddp}{\mathop{}\!\mathrm{d}{p}}      
-\newcommand*{\dN}{\mathop{}\!\mathrm{d}{N}}    
-\newcommand{\HO}{\mathcal{H}(O)} 		 
-\newcommand{\WO}{\mathcal{W}(O)} 		 
-%% -- Index 
+%% -- label prüfen
+%\usepackage{showlabels}   
 %% --
 
+%% -- Gemeinsame Pakete und Definitionen
+%% --
+\input{LN-Einzelbeitraege/preamble/ln-preamble}  
+\input{LN-Einzelbeitraege/preamble/ln-definitionen}
+
+%%KGK
+%%\input{kgk-definitionen}
+
+%% -- Index 
+%% --
 \usepackage{imakeidx}
 \makeindex[columns=2, options=-s svind.ist]
 
@@ -40,14 +37,14 @@
 %% -- Literatur 
 %% -- 
 
-\usepackage[round]{natbib}
+\usepackage[square,numbers]{natbib}
 \bibliographystyle{abbrvnat}
 
 %% --
 
 \usepackage{hyperref}
 \hypersetup{% 
-,colorlinks=true  
+,colorlinks=true 
 ,linkcolor=blue
 ,citecolor=blue
 ,urlcolor=blue
@@ -55,10 +52,7 @@
 %,hidelinks=true
 }
 
-%% -- label prüfen
-\usepackage{showlabels}  
-%% --
-           
+        
 \begin{document}
 
 %% -- Bitte setzen
@@ -75,7 +69,7 @@
 %% -- Literatur
 %% --
 \RaggedRight
-\bibliography{../../bib/ln-references} 
+\bibliography{LN-Einzelbeitraege/bib/ln-references} 
 
 %% -- Index
 %% --

@@ -1,11 +1,15 @@
-%% -- Chapter B-III
-%% -- Stand: 2025-04-14
+%% Stand 2025-04-24 ulgr
 %% --
-%% --
-\setcounter{chapter}{2}
-\chapter{Spectral Theory of Positive Semigroups on \texorpdfstring{$C_{0}(X)$}{C_0(X)}}\label{chap:b3}
+\chapter{Spectral Theory of Positive Semigroups on \texorpdfstring{$C_{0}(X)$}{C\textunderscore 0(X)}}\label{chap:b3}
 \index{Spectral Theory on $ C_{0}(X)$}
 %% --
+{\Large
+\vspace*{-.75cm}
+by \\[.25em]
+Günther Greiner
+\vspace{.75cm}
+\\
+}
 %% --
 It is known that for a single operator $T \in \L{C_{0}(X)}$ the positivity of $T$ has influence on the spectrum of $T$, mainly on the peripheral spectrum, \ie the part of the spectrum containing all spectral values of maximal absolute value.
 This part of the spectrum is of interest because it determines the asymptotic behavior of the iterates $T^{n}$ for large $n \in \N$.
@@ -816,12 +820,12 @@ Consider this matrix as generator on $\C^{4}$
 %% --
 The result is summarized in the following table $(e_{j} \coloneqq (\delta_{jk}))$.
 %% --
-\begin{table}[h!]\label{tab:table1}
+\begin{table}[ht!]\label{tab:table1}
 \begin{center}
 %	\caption{Your first table.}
 % 
 \begin{tabular}{lll|c|cccc} % <--: 1st column left, 2nd middle and 3rd right, with vertical lines in between
-		 &&& $\text{pole} \atop  \text{order}$ & $I_0$ & $I_2$ & $I_2$ & $I_3$ \\[1ex]\hline
+		 &&& $ \overset{\text{\normalsize pole}}{\text{order}}$ & $I_0$ & $I_2$ & $I_2$ & $I_3$ \\[1ex]\hline
 		$ d > 0 $, & $ f>0 $, &  $ e \ge 0 $ & 3 & $\langle e_1 \rangle$ &  $\langle e_1, e_2 \rangle$ &  $\langle e_1, e_2, e_3 \rangle$ &  $\C^4$\\
 		$ d = 0 $, & $ f > 0 $, & $ e \ge 0 $ & 2 & $\langle e_1 \rangle$ &  $\langle e_1, e_2, e_3 \rangle$ &  $\C^4$ & \\	
 		$ d = 0 $, & $ f = 0 $, & $ e > 0 $ & 2 & $\langle e_1 \rangle$ &  $\langle e_1, e_2, e_3 \rangle$ &  $\C^4$ & \\
@@ -1500,6 +1504,7 @@ However, it allows a simpler formulation.
 	By \eqref{eq:b3-3.7} the linear form $\Psi$ vanishes on $\Kern{\lambda - A}$ whenever $\lambda \neq 0$.
 	Therefore $\langle h\cdot P_{n}(h),\Psi\rangle = 0$ and we have $0 < \langle|h|,\Psi\rangle = \lim_{n\to\infty}\langle h\cdot P_{n}(h),\Psi\rangle = 0$ which is a contradiction.
 	\end{enumerate}
+%%
 \end{proof}
 %% --
 The group $P\sigma(A) \cap \im\R$ need not be discrete. 
@@ -1533,7 +1538,7 @@ Then there exists a continuous injective lattice homomorphism $j : C(\Gamma) \to
 %\newpage 
 %% -- 26 / 189
 %
-\[\large
+\[
 \begin{tikzcd}
 C(\Gamma) \arrow[r, "R_{\tau}(t)"] \arrow[d, "j"'] & C(\Gamma) \arrow[d, "j"] \\
 C_{0}(X) \arrow[r, "T(t)"'] & C_{0}(X)
@@ -2357,11 +2362,8 @@ The general result 4.11 was proven by \citet{arendtgreiner:1984}.
 
 \end{enumerate}
 
-
-
-
-
-%% -- References
+%% -- Literatur
+%% --
 \RaggedRight
 \bibliographystyle{abbrvnat}
 \bibliography{bib/ln-references}

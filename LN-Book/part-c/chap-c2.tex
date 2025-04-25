@@ -1,31 +1,17 @@
-%% Chapter C-II
-%% -- Stand: 2025-04-14
+%% Stand 2025-04-24 ulgr
 %% --
-
-\chapter{Characterization of Positive Semigroups on Banach Lattices}
-\label{chap:c2}
-\index{Positive Semigroups}
-\index{Semigroups!Positive}
-\index{Banach Lattices}
-\index{Characterization!Positive Semigroups}
-
-%\marginpar{Alternative Buch}
-%\begin{center}
-%\textsf{CHAPTER C-II}
-%
-%\textsf{C H A R A C T E R I Z A T I O N}
-%
-%\textsf{O F \quad P O S I T I V E \quad S E M I G R O U P S}
-%
-%\textsf{O N \quad B A N A C H \quad L A T T I C E S}
-%
-%by
-%
-%Wolfgang Arendt
-%\end{center}
-%
-%\marginpar{Discusion Montag}
-
+\chapter{Characterization of Positive Semigroups on Banach Lattices}\label{chap:c2}
+\chaptermark{Characterization of Positive Semigroups}
+\index{Positive Semigroups!Characterization}
+%% --
+{\Large
+\vspace*{-.75cm}
+by \\[.25em]
+Wolfgang Arendt
+\vspace{.75cm}
+\\
+}
+%% --
 In this chapter our first goal is to find conditions on a generator $A$ of a semigroup $(T(t))_{t \geq 0}$ which are equivalent to the positivity of the semigroup.
 After the preparations in A-II Section 2 this is easy if in addition we ask that the semigroup be contractive: $T(t)$ is a positive contraction for all $t \geq 0$ if and only if $A$ is dispersive (Section 1).
 For arbitrary (not necessarily contractive) semigroups a condition on the generator had been found in the case when $E = C(K)$ ($K$ compact), namely the positive minimum principle (P) (see B-II Theorem 1.6).
@@ -53,15 +39,14 @@ The results will be applied to Schrödinger operators on $L^p(\R^n)$.
 
 Finally, in Section 5 we show that $(T(t))_{t \geq 0}$ is a lattice semigroup (i.e., $|T(t) f| = T(t) |f|$ for all $t \geq 0$, $f \in E$) if and only if $A$ satisfies Kato's equality.
 This parallels the case when $E = C_{0}(X)$, but if $E$ has order continuous norm the strong form of Kato's equality can be considered (in particular, $f \in D(A)$ implies $|f| \in D(A)$ if $A$ is the generator of such a semigroup).
-
-\section{Positive Contraction Semigroups and Bounded Generators}
-\label{sec:c2-1}
-\marginpar{Globale Einstellung; zur Diskusion}
+%% --
+\section{Positive Contraction Semigroups and Bounded  
+\phantom{Gen-} Generators}\label{sec:c2-1}
 \index{Positive Contraction Semigroups}
-\index{Semigroups!Positive Contraction}
-\index{Bounded Generators}
-\index{Generators!Bounded}
-
+%\index{Semigroups!Positive Contraction}
+%\index{Bounded Generators}
+%\index{Generators!Bounded}
+%% --
 In this section we first characterize generators of positive contraction semigroups on a real Banach lattice $E$.
 For that we use the results developed in A-II, Section 2 for the canonical half-norm $N^{+} : E \to \R$ given by
 \begin{equation}\label{eq:c2-1.1}
@@ -88,7 +73,7 @@ The subdifferential of $N^{+}$ is given by
 \begin{examples}\label{ex:c2-1.1}
 \index{Examples!Subdifferentials}
 \index{Subdifferentials!Examples}
-\begin{enumerate}[(i)]
+\begin{enumerate}[(i), wide, labelsep=1em, itemindent=\parindent]
 \item \label{ex:c2-1.1-1}
 Let $E = C_{0}(X)$ (X locally compact). 
 Let $f \in E$.
@@ -182,7 +167,7 @@ So $T$ is a contraction.
 \begin{examples}\label{ex:c2-1.5}
 \index{Examples!Second Derivative Operator}
 \index{Dirichlet Boundary Condition}
-\begin{enumerate}[(i)]  %%enum:c2-1.5-beg
+\begin{enumerate}[(i), wide, labelsep=1em, itemindent=\parindent]  %%enum:c2-1.5-beg
 \item \label{ex:c2-1.5-1}
 Consider the second derivative with Dirichlet boundary condition on $E = C_{0}(0,1)$; i.e., we let $Af = f''$ with domain $D(A) = \{f \in C^{2}[0,1] : f(0) = f(1) = f''(0) = f''(1) = 0\}$.
 $A$ is dispersive. 
@@ -583,7 +568,7 @@ It follows from the proof of Theorem \ref{thm:c2-1.11}   that on a $\sigma$-orde
 \index{Generators!matrix representation}
 \index{Examples!Matrix generators}
 Let $E = \ell^p$ $(1 \leq p \leq \infty)$ or $E = c_{0}$.
-\begin{enumerate}[(i)]
+\begin{enumerate}[(i), wide, labelsep=1em, itemindent=\parindent]
 \item \label{ex:c2-1.13-1}
 An operator $A \in \LE)$ can be canonically represented by a matrix $(a_{ij})$.
 It follows from Theorem ref{thm:c2-1.11} that $e^{tA} \geq 0$ for all $t \geq 0$ if and only if $a_{ij} \geq 0$ whenever $i \neq j$.
@@ -847,7 +832,7 @@ This is Kato's inequality in the distributional sense.
 \index{Kato's inequality!ellipticity}
 \index{Elliptic operators}
 \index{Miyajima-Okasawa theorem}
-It has been proved by []\citet{miyajimaandokasawa:1984}] that 
+It has been proved by \citet{miyajimaokazawa:1984}] that 
 
  (\ref{eq:c2-Kd}) implies that $m \leq 2$ and that the principal part $\mathcal{A}_{0} = \sum_{|\alpha|=2} a_{\alpha} D^{\alpha}$ of $\mathcal{A}$ is elliptic; i.e., if we write the operator $\mathcal{A}_{0}$ in the form $\mathcal{A}_{0} = \sum_{i,j=1}^{2} b_{ij} \partial^{2}/\partial x_{i} \partial x_{j}$, then the matrix $(b_{ij}(x))$ is positive semidefinite for all $x \in \R^n$.
 \end{remark*}
@@ -990,7 +975,7 @@ It follows from Gronwall's lemma that $\langle f,T(t)'\phi \rangle \leq e^{\lamb
 \end{proof}
 
 \begin{remark}\label{rem:c2-3.7}
-\begin{enumerate}[(i)]
+\begin{enumerate}[(i), wide, labelsep=1em, itemindent=\parindent]
 \item \label{rem:c2-3.7-1}
 Using Proposition \ref{prop:c2-3.6} it is immediately clear that
 $(T(t))_{t \geq 0}$ is irreducible if and only if every positive subeigenvector
@@ -1114,7 +1099,7 @@ This implies that $T(t) \geq 0$.
 \end{proof}
 
 \begin{remark}\label{rem:c2-3.11}
-\begin{enumerate}[(i)]
+\begin{enumerate}[(i), wide, labelsep=1em, itemindent=\parindent]
 \item \label{rem:c2-3.11-1}
 The proof of Theorem \ref{thm:c2-3.8}   shows the following. 
 If $A$ is the generator of a positive semigroup and $E'$ contains strictly
@@ -1644,7 +1629,7 @@ Finally, the domination of $(S(t))_{t \geq 0}$ by $(T(t))_{t \geq 0}$ follows fr
 \end{proof}
 
 \begin{example}\label{ex:c2-4.4}
-\begin{enumerate}[(i)]
+\begin{enumerate}[(i), wide, labelsep=1em, itemindent=\parindent]
 \item \label{ex:c2-4.4-1}
 Let $E$ be a $\sigma$-order complete complex Banach lattice and $(T(t))_{t \geq 0}$ be a positive semigroup with generator $A$. 
 Let $M \in \ZE$ (the center of $E$ (see C-I, Section 9). 
@@ -2195,7 +2180,7 @@ Of course, a necessary condition is that every $S(t)$ is a regular operator.
 On an AL-space this condition is automatically satisfied.
 But \citet{kipnis:1974} gives an example of a strongly continuous semigroup on $\ell^{1}$ which is not dominated.
 On the other hand, it has been independently shown by \citet{kipnis:1974} and
-\citet{kubokawe:1975} that every contraction semigroup on an $L^{1}$-space
+\citet{kubokawa:1975} that every contraction semigroup on an $L^{1}$-space
 possesses a modulus semigroup (which is contractive as well).
 %%--
 %%KGK p-C2-35; LNMp-281
@@ -2309,7 +2294,7 @@ $T(t) = |S(t)|$ for all $t \geq 0$.
 \end{theorem}
 
 \begin{remark*}
-\begin{enumerate}[i)] \label{enum:c2-kgk.1}
+\begin{enumerate}[i), wide, labelsep=1em, itemindent=\parindent] \label{enum:c2-kgk.1}
 \item  \label{enum:c2-kgk.1-1} %% Nicht im LNM von Chlaude angelegt
 By B-II, Lemma 2.9 
 %%KGK: \ref{lem:b2-2.9} 
@@ -2413,7 +2398,7 @@ Since $D_{h}\Theta(f)$ is continuous in $h$ (in fact, $|D_{h}\Theta(f) - D_{k}\T
 \end{proof}
 
 \begin{remark}\label{rem:c2-5.7}
-\begin{enumerate}[a)]
+\begin{enumerate}[a), wide, labelsep=1em, itemindent=\parindent]
 \item \label{rem:c2-5.7-1}
 By the same argument as given in the proof one sees
 that $\Theta$ is left-sided Gateaux differentiable and
@@ -2830,7 +2815,7 @@ By Lemma~\ref{lem:c2-5.17} this is true if and only if $B \in \ZE$.
 
 \item   The notion of dispersiveness is due to \citet{phillips:1962} who uses a semi-scalar product instead of the subdifferential of the canonical half-norm.
 Our approach follows \citet{arendtchernoffkato:1982}.
-Bounded generators of positive semigroups on a special class of ordered Banach spaces (which includes Banach lattices and C*-algebras) were characterized by the positive minimum principle by \citet{evansandhancheolsen:1979}.
+Bounded generators of positive semigroups on a special class of ordered Banach spaces (which includes Banach lattices and C*-algebras) were characterized by the positive minimum principle by \citet{evanshancheolsen:1979}.
 The equivalence of \ref{thm:c2-1.11-1} and \ref{thm:c2-1.11-4}  in Theorem \ref{thm:c2-1.11}  is due to \citet{nageluhlig:1981}.
 \marginpar{Im Buch 1.10 ist Lemma}
 Theorem \ref{thm:c2-1.8}   has been obtained independently by Arendt (1984a) and van Casteren (1984).
@@ -2854,7 +2839,7 @@ This result is generalized to the spaces $L^p(\Omega)$, $\Omega \subset \R^n$ su
 \item  In this section we closely follow \citet{arendt:1984}. Theorem \ref{thm:c2-3.8}  , in a similar form but with different proof, has been obtained independently by \citet{schep:1985}.
 
  
-\item  The characterization of domination by Kato's inequality on a Hilbert space is due to \citet{simon:1977}. Further contributions are due to \citet{hessschraderuhlenbrock:1977} and \citet{kishimotorobinson:1980}. Theorem \ref{thm:c2-4.3} is due to [Arendt (1984b)]. The result on Schrödinger operators on $L^p(\R^n)$ stated in Example \ref{ex:c2-4.7} is due to \citet{kato:1986}. The case $p = 2$ was proved in \citet{kato:1973}, where the classical Kato's inequality was established. Extensive information on Schrödinger semigroups on $L^p(\R^n)$ is given in \citet{simon:1982}. Other recent results on the $L^p$-theory of Schrödinger operators are obtained by \citet{davies:1986}, \citet{okazawa:1984} and \citet{voigt:1984a}.
+\item  The characterization of domination by Kato's inequality on a Hilbert space is due to \citet{simon:1977}. Further contributions are due to \citet{hessetal:1977} and \citet{kishimotorobinson:1980}. Theorem \ref{thm:c2-4.3} is due to [Arendt (1984b)]. The result on Schrödinger operators on $L^p(\R^n)$ stated in Example \ref{ex:c2-4.7} is due to \citet{kato:1986}. The case $p = 2$ was proved in \citet{kato:1973}, where the classical Kato's inequality was established. Extensive information on Schrödinger semigroups on $L^p(\R^n)$ is given in \citet{simon:1982}. Other recent results on the $L^p$-theory of Schrödinger operators are obtained by \citet{davies:1986}, \citet{okazawa:1984} and \citet{voigt:1984a}.
 
 The existence of the modulus semigroup of semigroups with bounded, regular generator (Theorem \ref{thm:c2-4.17}) is due to \citet{derndinger:1984} (in the real case).
 
@@ -2868,7 +2853,8 @@ Local closed operators having an ideal as domain (i.e., operators satisfying con
 \end{enumerate}
 %%--
 
-%% -- References
+%% -- Literatur
+%% --
 \RaggedRight
 \bibliographystyle{abbrvnat}
-\bibliography{bib/ln-references}
+\bibliography{bib/ln-references} 

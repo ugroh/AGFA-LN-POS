@@ -1,14 +1,16 @@
-% !TEX root = chap-d3-test.tex
-%% -- Chapter D-III
-%% -- Stand: 2025-02-20
+%% Stand 2025-04-24 ulgr
 %% --
-
-\setcounter{chapter}{2}		%% anpassen y=0/1/2/3 -> Chapter 1/2/3/4
-\setcounter{section}{1}		%% immer
-%% --\texorpdfstring{$C_{0}(X)$}{C_0(X)}}
-\chapter{Spectral Theory of Positive Semigroups on \texorpdfstring{W$^{*}$}{W\textsuperscript{*}-}-Algebras and their Preduals}\label{chap:d3}
+\chapter{Spectral Theory of Positive Semigroups on \texorpdfstring{W$^{*}$}{W*}-Algebras and their Preduals}\label{chap:d3}
 \chaptermark{Spectral Theory on\/ \WA-algebras}
 \index{Spectral Theory on Operator Algebras}
+%% --
+{\Large
+\vspace*{-.75cm}
+by \\[.25em]
+Ulrich Groh
+\vspace{.75cm}
+\\
+}
 %% --
 Motivated by the classical results of Perron and Frobenius one expects the following spectral properties for the generator $A$ of a positive semigroup on a \CA-algebra.
 %% --
@@ -198,7 +200,7 @@ In particular, if $Ms(|\phi^{*}|)$ is $S$-invariant, then
 \]
 %% --
 for every $x \in Ms(|\phi^{*}|)$.
-Let $T_{|}$ (\resp  $S_{|}$) be the restriction of $T$ to $Ms(|\phi|)$ (\resp of $\SS$ to $Ms(|\phi^{*}|)$).
+Let $T_{|}$ (\resp  $S_{|}$) be the restriction of $T$ to $Ms(|\phi|)$ (\resp of $\SG$ to $Ms(|\phi^{*}|)$).
 Then the following diagram is commutative:
 %% --
 \begin{equation*}
@@ -453,11 +455,11 @@ The semigroup of *-automorphisms $(x \mapsto u_{t}xu_{t}^{*})$ on $M_{2}(\C)$ is
 %\newpage
 It turns out that, in order to obtain a non commutative analogue of the Perron-Frobenius theorems, one has to consider semigroups which are irreducible.
 
-Recall that a semigroup $\SS$ of positive operators on an ordered Banach space $(E,E_{+})$ is called \emph{irreducible} if no closed face of $E_{+}$, different from $\{0\}$ and $E_{+}$, is invariant under $\SS$.
+Recall that a semigroup $\SG$ of positive operators on an ordered Banach space $(E,E_{+})$ is called \emph{irreducible} if no closed face of $E_{+}$, different from $\{0\}$ and $E_{+}$, is invariant under $\SG$.
 %Here a face $F$ in $E$ is a subcone of $E_{+}$ such that the conditions $0 \leq x \leq y$, $x \in E$, $y \in F$ imply $x \in F$ (compare Definitions 3.1 in B-III and C-III).
-In the context of \WA-algebras $M$ we call a semigroup $\SS$ of positive maps on $M$ \emph{weak*-irreducible} if no $\sigma(M,M_{*})$-closed face of $M_{+}$ is $\SS$-invariant.
+In the context of \WA-algebras $M$ we call a semigroup $\SG$ of positive maps on $M$ \emph{weak*-irreducible} if no $\sigma(M,M_{*})$-closed face of $M_{+}$ is $\SG$-invariant.
 
-Since the norm closed faces of $M_{*}$ and the $\sigma(M,M_{*})$-closed faces of $M$ are related by formation of polars with respect to the dual system $\langle M,M_{*} \rangle$ (see \citet[Theorem 3.6.11 and Theorem 3.10.7.]{pedersen:1979}) a semigroup $\SS$ is (norm) irreducible on $M_{*}$ if and only if its adjoint semigroup is weak*-irreducible.
+Since the norm closed faces of $M_{*}$ and the $\sigma(M,M_{*})$-closed faces of $M$ are related by formation of polars with respect to the dual system $\langle M,M_{*} \rangle$ (see \citet[Theorem 3.6.11 and Theorem 3.10.7.]{pedersen:1979}) a semigroup $\SG$ is (norm) irreducible on $M_{*}$ if and only if its adjoint semigroup is weak*-irreducible.
 %% --
 \begin{theorem}\label{thm:d3-1.11}
 Let $\TT$ be an irreducible, identity preserving semigroup of Schwarz type with generator $A$ on the predual of a \WA-algebra and suppose $P\sigma(A) \cap \im\R \neq \emptyset$.
