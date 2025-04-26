@@ -1,4 +1,6 @@
-%% Stand 2025-04-24 ulgr
+%% Stand 2025-04-26 ulgr
+%% -- Kleine Korrekturen (Definition etc.
+%% -- bis Example 1.3 (a) 
 %% --
 \chapter{Asymptotics of Semigroups on Banach Spaces}\label{chap:a4}
 \index{Semigroups!Asymptotics}
@@ -21,16 +23,11 @@ In this chapter, we study the asymptotic behavior of the solutions of the initia
 %% --
 for $ t \geq 0 $, where $ A $ is the generator of a strongly continuous semigroup $ (T(t))_{t \geq 0} $ on a Banach space $ E $, and $ F(\cdot) $ is a function from $ \mathbb{R}_{+} $ into $ E $.\\
 %% --
-
-%%\noindent
-
-
 In Section 1, we investigate whether -- and at what rate -- a solution $ T(\cdot)f $ of the homogeneous problem converges to the zero solution as $ t \to \infty $. 
 In Section 2, we consider the long-term behavior of the solutions of \eqref{eq:c4-1} for different classes of forcing terms $ F $.
 %% --
 \section{Stability: Homogeneous Case}\label{sec:c4-1}
 \index{Stability!Homogeneous Case}
-\index{Semigroups!Stability}
 %% -- 
 Let $ (T(t))_{t \geq 0} $ be a semigroup on $ E $ with generator $ A $.
 An initial value $ f \in D(A) $ is said to be \emph{stable} if the solution $ t \mapsto T(t)f $ of
@@ -41,16 +38,16 @@ An initial value $ f \in D(A) $ is said to be \emph{stable} if the solution $ t 
 %% --
 converges to zero as $ t \to \infty $. 
 The semigroup is called stable if every solution converges to zero; that is, if every initial value $ f \in D(A) $ is stable.
-\\
-%%\noindent
-
 
 If the space $ E $ is finite-dimensional, then the stability of the semigroup implies exponential decay. 
 More precisely, the following statements are equivalent:
 %% --
 \begin{enumerate}[(a)]
-\item $ \|T(t)f\| \to 0 $ for every $ f \in \mathbb{C}^{n} $,
-\item $ \|T(t)\| \leq Me^{-\omega t} $ for some $M \geq 1,\ \omega > 0 $
+\item 
+$ \|T(t)f\| \to 0 $ for every $ f \in \mathbb{C}^{n} $,
+
+\item 
+$ \|T(t)\| \leq Me^{-\omega t} $ for some $M \geq 1$ and  $\omega > 0 $.
 \end{enumerate}
 %% --
 Moreover, these statements hold if and only if
@@ -60,20 +57,14 @@ s(A) = \sup\{\Re\,\lambda : \lambda \in \sigma(A)\} < 0,
 \]
 %% --
 see A-III, Corollary~1.2.
-%% --
-\goodbreak
 
-%\medskip
-%%\noindent
-
-
-As discussed in Chapter A-III, the situation becomes significantly more difficult in the infinite-dimensional case. For unbounded generators, we must distinguish between strong and generalized (mild) solutions of $\dot{u}(t) = Au(t)$, as well as between various notions of stability. 
+As discussed in Chapter A-III, the situation becomes significantly more difficult in the infinite-dimensional case. 
+For unbounded generators, we must distinguish between strong and generalized (mild) solutions of $\dot{u}(t) = Au(t)$, as well as between various notions of stability. 
 Recall that for $f \in D(A)$, the function $T(\cdot)f$ is a strong solution of (ACP) (see A-II, Corollary~1.2). 
 For an arbitrary $f \in E$, the function $T(\cdot)f$ is referred to as a generalized or mild solution of (ACP). 
 Next, we introduce several constants that characterize the growth of solutions of (ACP).
-
 %% --
-\begin{definition} ($1^{st}$ part).\label{def:a4-1.1}
+\begin{definition}($1^{st}$ part)\label{def:a4-1.1}
 Let $A$ be the generator of a strongly continuous semigroup on a Banach space $E$. 
 Then:
 %% --
@@ -85,17 +76,18 @@ Then:
 \end{definition}
 %% --
 Note that, by the Principle of Uniform Boundedness, 
+%% -- so ist es besser
 \[
-\sup\{\omega(f) : f \in E\} = \inf\{\omega : \|T(t)\| \leq Me^{\omega t} \text{ for some } M \text{ and every } t \geq 0\}.
+\sup\{\omega(f) \colon f \in E\} 
+= \inf \{ \omega \colon \|T(t)\| \leq Me^{\omega t} 
+    \text{ for some $M$ and every $t \geq 0 $.}\}
 \]
+%% --
 Hence, $\omega_0(A)$ coincides with the growth bound of the semigroup $(T(t))_{t \geq 0}$, as defined in A-I, I.3. 
 Using the constants defined above, we obtain the following stability concepts.
-
 %%\bigskip
 %%\noindent
-
-
-{\bf Definition 1.1.} ($2^{nd}$ part). 
+\begin{definition}($2^{nd}$ part). 
 The semigroup is called
 %% --
 \begin{enumerate}
@@ -104,11 +96,10 @@ The semigroup is called
 \item[(vi)] uniformly stable if $\|T(t)f\| \to 0$ as $t \to \infty$ for every $f \in E$;
 \item[(vii)] stable if $\|T(t)f\| \to 0$ as $t \to \infty$ for every $f \in D(A)$.
 \end{enumerate}
+\end{definition}
 %% --
 %%\bigskip
 %%\noindent
-
-
 The interrelation between these stability concepts is given by
 %% --
 \[
@@ -119,14 +110,29 @@ If $A$ is a bounded operator, that is, if $D(A) = E$, then (iv) $\Leftrightarrow
 However, if $A$ is unbounded, the stability notions may differ, as illustrated in the following examples.
 %%--
 \begin{example}\label{ex:a4-1.2}
-\begin{enumerate}[(a), wide]
+\begin{enumerate}[(a), wide, labelsep=1em, itemindent=\parindent]
+
 \item 
 Let $E = c_{0}$. 
-Then $A: (x_{n})_{n \in \mathbb{N}} \mapsto (-1/n \cdot x_{n})_{n \in \mathbb{N}}$ generates the semigroup $T(t)(x_{n})_{n \in \mathbb{N}} = (e^{-t/n} x_{n})_{n \in \mathbb{N}}$.
+Then 
+%% --
+\[
+A \colon (x_{n})_{n \in \mathbb{N}} \mapsto (-1/n \cdot x_{n})_{n \in \mathbb{N}}
+\] 
+%% --
+generates the semigroup 
+%% --
+\[
+T(t)(x_{n})_{n \in \mathbb{N}} = (e^{-t/n} x_{n})_{n \in \mathbb{N}}.
+\]
+%% --
 It is easy to see that $\|T(t)\|=1$ and that $\|T(t)f\|\to 0$ for every $f \in c_{0}$.
+
 Moreover, since $A$ is a bounded operator, $D(A) = E$.
 This provides an example of a (uniformly) stable but not exponentially stable semigroup.
+
 The translation semigroups generated by the first derivative on $C_0(\mathbb{R}_{+})$ or $L^{p}(\mathbb{R}_{+})$ for $1 < p < \infty$ offer further examples of (uniformly) stable but not exponentially stable semigroups.
+
 Moreover, as shown in A-II, Example~1.14, the Laplacian $\Delta$ on $C_0(\mathbb{R}^{n})$ generates a bounded holomorphic semigroup given by
 %% --
 \[
@@ -139,14 +145,11 @@ By a straightforward $(2-\epsilon)$-argument using $(4\pi t)^{-n/2}\int_{\mathbb
 %%--
 Therefore, the Laplacian on $C_0(\mathbb{R}^{n})$ (and also on $L^{p}(\mathbb{R}^{n})$ for $1 < p < \infty$, see Example~1.15 below) generates a (uniformly) stable but not exponentially stable semigroup.
 
-%%\medskip%%\noindent
-
-
-%(b) 
 \item 
 Note that the condition $0 \leq \omega_0(A) = \inf\{\omega : \|T(t)\| \leq Me^{\omega t} \text{ for all } t \geq 0\}$ does not exclude the possibility that the semigroup is exponentially stable.
 In fact, as shown in A-III, 1.3 the translation semigroup on $E \coloneqq C_0(\mathbb{R}_{+}) \cap L^{1}(\mathbb{R}_{+},e^{x}\dx)$ satisfies $\|T(t)\| = 1$, hence $\omega_0(A) = 0$. 
 For every $\lambda \in \mathbb{C}$ with $\Re\,\lambda > -1$, the resolvent of the generator is given as $R(\lambda,A)f = \int_{0}^{\infty} e^{\lambda t} T(t)f \,\dt$ for every $f \in E$.
+
 From the equation A-I, 3.2
 %% --
 \[
@@ -250,7 +253,7 @@ To prove (i), we define $b \coloneqq \inf\{\Re\,\lambda : \int_{0}^{\infty} \|e^
 A straightforward application of the lemma shows that $\omega(f) \leq b$.
 The definition of $\omega(f)$ gives the reverse inequality.
 
-\goodbreak
+%\goodbreak
 %%\medskip%%\noindent
 
 
@@ -609,7 +612,7 @@ The implications (a) $ \Rightarrow $ (b) $ \Rightarrow $ (ac) are obvious; (c) $
 \frac{\log \|T(t)\|}{t} \leq \frac{\log \|T(t')\|}{t'} + \frac{\log \|T(t)\|}{nt' + s} \quad \text{for } t = nt' + s, \quad s \in [0,t'].
 \]
 \end{proof}
-%% --
+
 %\noindent
  Other less obvious characterizations of the property ``$ \omega_0(A) < 0 $'' are given in the next theorem. 
 The equivalence of (a) and (c) is known as \emph{Datko’s Theorem}.
