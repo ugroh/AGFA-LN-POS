@@ -1,4 +1,7 @@
-%% Stand 2025-04-24 ulgr
+%% Stand 2025-04-28 gugr (Rainers Korrekturen e und mehr)
+%% Stand 2025-04-29 ulgr
+%% Definition 1.1 Part 2 korrigiert
+%% -- 
 %% --
 \chapter{Asymptotics of Semigroups on Banach Spaces}\label{chap:a4}
 \index{Semigroups!Asymptotics}
@@ -12,171 +15,201 @@ Frank Neubrander
 \\
 }
 %% --
+
 %% --
-In this chapter, we study the asymptotic behavior of the solutions of the initial value problem
+In this chapter, we study the asymptotic behavior of the solutions of the inhomogeneous initial value problem
 %% --
 \begin{equation}\label{eq:c4-1}
-\dot{u}(t) = Au(t) + F(t), \, u(0) = f \tag{*}
+\dot{u}(t) = Au(t) + F(t) \ \text{ for } \  t \geq 0 \ \text{ and } \  
+ u(0) = f \tag{*}
 \end{equation}
 %% --
-for \( t \geq 0 \), where \( A \) is the generator of a strongly continuous semigroup \( (T(t))_{t \geq 0} \) on a Banach space \( E \), and \( F(\cdot) \) is a function from \( \mathbb{R}_{+} \) into \( E \).\\
-%% --
+where $ A $ is the generator of a strongly continuous semigroup $ (T(t))_{t \geq 0} $ on a Banach space $ E $, and $ F(\cdot) $ is a function from $ \mathbb{R}_{+} $ into $ E $.
 
-\noindent
-In Section 1, we investigate whether -- and at what rate -- a solution \( T(\cdot)f \) of the homogeneous problem converges to the zero solution as \( t \to \infty \). 
-In Section 2, we consider the long-term behavior of the solutions of \eqref{eq:c4-1} for different classes of forcing terms \( F \).
+In Section 1, we investigate whether -- and at what rate -- a solution $ T(\cdot)f $ of the homogeneous problem converges to the zero solution as $ t \to \infty $. 
+In Section 2, we consider the long-term behavior of the solutions of \eqref{eq:c4-1} for different classes of forcing terms $ F $.
 %% --
 \section{Stability: Homogeneous Case}\label{sec:c4-1}
 \index{Stability!Homogeneous Case}
-\index{Semigroups!Stability}
 %% -- 
-Let \( (T(t))_{t \geq 0} \) be a semigroup on \( E \) with generator \( A \).
-An initial value \( f \in D(A) \) is said to be \emph{stable} if the solution \( t \mapsto T(t)f \) of
+Let $ (T(t))_{t \geq 0} $ be a semigroup on $ E $ with generator $ A $.
+An initial value $ f \in D(A) $ is said to be \emph{stable} if the solution $ t \mapsto T(t)f $ of
 %% --
 \begin{equation}\label{eq:c4-2}
 \dot{u}(t) = Au(t), \quad u(0) = f \tag{ACP}
 \end{equation}
 %% --
-converges to zero as \( t \to \infty \). 
-The semigroup is called stable if every solution converges to zero; that is, if every initial value \( f \in D(A) \) is stable.
-\\
-\noindent
-If the space \( E \) is finite-dimensional, then the stability of the semigroup implies exponential decay. 
-More precisely, the following statements are equivalent:
+converges to zero as $ t \to \infty $. 
+The semigroup is called stable if every solution converges to zero, \ie if every initial value $ f \in D(A) $ is stable.
+
+If the space $ E $ is finite-dimensional, then the stability of the semigroup implies exponential decay. 
+More precisely, the following statements are equivalent.
+\goodbreak
 %% --
 \begin{enumerate}[(a)]
-\item \( \|T(t)f\| \to 0 \) for every \( f \in \mathbb{C}^{n} \),
-\item \( \|T(t)\| \leq Me^{-\omega t} \) for some \(M \geq 1,\ \omega > 0 \)
+\item 
+$ \|T(t)f\| \to 0 $ for every $ f \in \mathbb{C}^{n} $\,,
+
+\item 
+$ \|T(t)\| \leq Me^{-\omega t} $ for some $M \geq 1$ and  $\omega > 0 $\,.
 \end{enumerate}
 %% --
 Moreover, these statements hold if and only if
 %% --
-\[
-s(A) = \sup\{\Re\,\lambda : \lambda \in \sigma(A)\} < 0,
-\]
+%\[
+\begin{enumerate}[(c)]
+\item 
+$s(A) = \sup\{\Re\,\lambda \colon \lambda \in \sigma(A)\} < 0$, 
+\end{enumerate}
+%\]
 %% --
 see A-III, Corollary~1.2.
-%% --
-\goodbreak
 
-\medskip
-\noindent
-As discussed in Chapter A-III, the situation becomes significantly more difficult in the infinite-dimensional case. For unbounded generators, we must distinguish between strong and generalized (mild) solutions of $\dot{u}(t) = Au(t)$, as well as between various notions of stability. 
+As discussed in Chapter A-III, the situation becomes significantly more difficult in the infinite-dimensional case. 
+For unbounded generators, we must distinguish between \emph{strong} and \emph{generalized (mild)} solutions of $\dot{u}(t) = Au(t)$, as well as between various notions of stability.
+\marginpar{RN: Referenz?}
 Recall that for $f \in D(A)$, the function $T(\cdot)f$ is a strong solution of (ACP) (see A-II, Corollary~1.2). 
 For an arbitrary $f \in E$, the function $T(\cdot)f$ is referred to as a generalized or mild solution of (ACP). 
 Next, we introduce several constants that characterize the growth of solutions of (ACP).
-
 %% --
-\begin{definition} ($1^{st}$ part).\label{def:a4-1.1}
+\begin{definition}($1^{st}$ part)\label{def:a4-1.1} 
 Let $A$ be the generator of a strongly continuous semigroup on a Banach space $E$. 
-Then:
+Then we define the following constants.
 %% --
-\begin{enumerate}[(i)]
-\item $\omega(f) \coloneqq \inf\{\omega : \|T(t)f\| \leq Me^{\omega t} \text{ for some } M \text{ and every } t \geq 0\}$ is called the exponential growth bound of $T(\cdot)f$;
-\item $\omega_{1}(A) \coloneqq \sup\{\omega(f) : f \in D(A)\}$ is called the exponential growth bound for the solutions of the Cauchy problem $\dot{u}(t) = Au(t)$;
-\item $\omega_0(A) = \sup\{\omega(f) : f \in E\}$ is called the exponential growth bound for the mild solutions of the Cauchy problem $\dot{u}(t) = Au(t)$.
+\begin{enumerate}[(i))]
+\item $\omega(f) \coloneqq \inf\{\omega \colon \|T(t)f\| \leq Me^{\omega t} \text{ for some } M \text{ and every } t \geq 0\}$ is called the \emph{exponential growth bound} of $T(\cdot)f$,
+\item $\omega_{1}(A) \coloneqq \sup\{\omega(f) \colon f \in D(A)\}$ is called the \emph{exponential growth bound for the solutions of the Cauchy problem} $\dot{u}(t) = Au(t)$,
+\item $\omega_0(A) \coloneqq \sup\{\omega(f) \colon f \in E\}$ is called the (exponential) \emph{growth bound for the mild solutions of the Cauchy problem} $\dot{u}(t) = Au(t)$.
 \end{enumerate}
 \end{definition}
 %% --
 Note that, by the Principle of Uniform Boundedness, 
+%% -- so ist es besser
 \[
-\sup\{\omega(f) : f \in E\} = \inf\{\omega : \|T(t)\| \leq Me^{\omega t} \text{ for some } M \text{ and every } t \geq 0\}.
+\sup\{\omega(f) \colon f \in E\} 
+= \inf \{ \omega \colon \|T(t)\| \leq Me^{\omega t} 
+    \text{ for some $M$ and every $t \geq 0 $.}\}
 \]
+%% --
 Hence, $\omega_0(A)$ coincides with the growth bound of the semigroup $(T(t))_{t \geq 0}$, as defined in A-I, I.3. 
 Using the constants defined above, we obtain the following stability concepts.
-
-\bigskip
-\noindent
-{\bf Definition 1.1.} ($2^{nd}$ part). 
+%%\bigskip\noindent
+% -- Damit es besser wird
+%\medskip\noindent
+%\textbf{Definition 1.1.}\quad($2^{nd}$ part). 
+\setcounter{theorem}{0}
+\begin{definition}($2^{nd}$ part)
 The semigroup is called
 %% --
-\begin{enumerate}
-\item[(iv)] uniformly exponentially stable if $\omega_0(A) < 0$;
-\item[(v)] exponentially stable if $\omega_{1}(A) < 0$;
-\item[(vi)] uniformly stable if $\|T(t)f\| \to 0$ as $t \to \infty$ for every $f \in E$;
-\item[(vii)] stable if $\|T(t)f\| \to 0$ as $t \to \infty$ for every $f \in D(A)$.
+\begin{enumerate}[(i), start=4]
+\item
+\emph{uniformly exponentially stable} if $\omega_0(A) < 0$,
+\item 
+\emph{exponentially stable} if $\omega_{1}(A) < 0$,
+\item 
+\emph{uniformly stable} if $\|T(t)f\| \to 0$ as $t \to \infty$ for every $f \in E$,
+\item 
+\emph{stable} if $\|T(t)f\| \to 0$ as $t \to \infty$ for every $f \in D(A)$.
 \end{enumerate}
+\end{definition}
 %% --
-\bigskip
-\noindent
 The interrelation between these stability concepts is given by
 %% --
 \[
-\text{(iv)} \Rightarrow \text{(v)} \Rightarrow \text{(vii)} \text{ and } \text{(iv)} \Rightarrow \text{(vi)} \Rightarrow \text{(vii)}
+\text{(iv)} \Rightarrow \text{(v)} \Rightarrow \text{(vii)} \text{ and } \text{(iv)} \Rightarrow \text{(vi)} \Rightarrow \text{(vii)}\,.
 \]
 %% --
 If $A$ is a bounded operator, that is, if $D(A) = E$, then (iv) $\Leftrightarrow$ (v) and (vi) $\Leftrightarrow$ (vii).
-However, if $A$ is unbounded, the stability notions may differ, as illustrated in the following examples.
+However, if $A$ is unbounded, all stability notions may differ, as illustrated in the following examples.
 %%--
 \begin{example}\label{ex:a4-1.2}
-\begin{enumerate}[(a), wide]
+\begin{enumerate}[(a), wide, labelsep=1em]
+
 \item 
 Let $E = c_{0}$. 
-Then $A: (x_{n})_{n \in \mathbb{N}} \mapsto (-1/n \cdot x_{n})_{n \in \mathbb{N}}$ generates the semigroup $T(t)(x_{n})_{n \in \mathbb{N}} = (e^{-t/n} x_{n})_{n \in \mathbb{N}}$.
+Then 
+%% --
+\[
+A \colon (x_{n})_{n \in \mathbb{N}} \mapsto (-1/n \cdot x_{n})_{n \in \mathbb{N}}
+\] 
+%% --
+generates the semigroup 
+%% --
+\[
+T(t)(x_{n})_{n \in \mathbb{N}} = (e^{-t/n} x_{n})_{n \in \mathbb{N}}.
+\]
+%% --
 It is easy to see that $\|T(t)\|=1$ and that $\|T(t)f\|\to 0$ for every $f \in c_{0}$.
+
 Moreover, since $A$ is a bounded operator, $D(A) = E$.
 This provides an example of a (uniformly) stable but not exponentially stable semigroup.
+
 The translation semigroups generated by the first derivative on $C_0(\mathbb{R}_{+})$ or $L^{p}(\mathbb{R}_{+})$ for $1 < p < \infty$ offer further examples of (uniformly) stable but not exponentially stable semigroups.
+
 Moreover, as shown in A-II, Example~1.14, the Laplacian $\Delta$ on $C_0(\mathbb{R}^{n})$ generates a bounded holomorphic semigroup given by
 %% --
 \[
-T(t)f(x) = (4\pi t)^{-n/2} \int_{\mathbb{R}^{n}} e^{-(x-y)^{2}/4t} f(y) \,\dy
+T(t)f(x) = (4\pi t)^{-n/2} \int_{\mathbb{R}^{n}} e^{-(x-y)^{2}/4t} f(y) \,\dy\,.
 \]
 %% --
-which cannot be exponentially stable because $0 \in \sigma(\Delta)$ ($\text{im}(\Delta) \not= C_0(\mathbb{R}^{n})$), see Corollary~1.5 below.
+It cannot be exponentially stable because $0 \in \sigma(\Delta)$ ($\textrm{im}(\Delta) \not= C_0(\mathbb{R}^{n})$), see Corollary~\ref{cor:a4-1.5} below.
 
+\marginpar{RN \& GG: ($2-\epsilon$-argument)??}
 By a straightforward $(2-\epsilon)$-argument using $(4\pi t)^{-n/2}\int_{\mathbb{R}^{n}} \exp(-y^{2}/4t) \,\dy = 1$ one can easily show that $\|T(t)f\| \to 0$ for all $f \in C_0(\mathbb{R}^{n})$ (see also B-III, Example~1.7).
 %%--
 Therefore, the Laplacian on $C_0(\mathbb{R}^{n})$ (and also on $L^{p}(\mathbb{R}^{n})$ for $1 < p < \infty$, see Example~1.15 below) generates a (uniformly) stable but not exponentially stable semigroup.
 
-%\medskip\noindent
-%(b) 
 \item 
-Note that the condition $0 \leq \omega_0(A) = \inf\{\omega : \|T(t)\| \leq Me^{\omega t} \text{ for all } t \geq 0\}$ does not exclude the possibility that the semigroup is exponentially stable.
+Note that the condition $0 \leq \omega_0(A) = \inf\{\omega\colon\|T(t)\| \leq Me^{\omega t} \text{ for all } t \geq 0\}$ does not exclude the possibility that the semigroup is exponentially stable.
 In fact, as shown in A-III, 1.3 the translation semigroup on $E \coloneqq C_0(\mathbb{R}_{+}) \cap L^{1}(\mathbb{R}_{+},e^{x}\dx)$ satisfies $\|T(t)\| = 1$, hence $\omega_0(A) = 0$. 
 For every $\lambda \in \mathbb{C}$ with $\Re\,\lambda > -1$, the resolvent of the generator is given as $R(\lambda,A)f = \int_{0}^{\infty} e^{\lambda t} T(t)f \,\dt$ for every $f \in E$.
+
 From the equation A-I, 3.2
 %% --
-\[
+\[\textstyle{
 T(t)f = e^{\lambda t}\left(f - \int_{0}^{t} e^{-\lambda s} T(s) (\lambda - A)f \,\ds\right)
-\]
+}\]
 %% --
 and from the existence of $\lim_{t \to \infty} \int_{0}^{t} e^{-\lambda s} T(s) (\lambda - A)f \,\ds$, it follows that 
 $\|T(t)f\| \leq Me^{\lambda t}$ for every $f \in D(A)$ and some constant $M$ depending on $f$. This yields $\omega_{1}(A) \le -1 < 0 = \omega_0(A)$. 
 Thus, we have a semigroup that is exponentially stable, but not uniformly exponentially stable.
 
-%\medskip\noindent
-%(c) 
+%%\medskip%%\noindent
 \item
 Rescaling this semigroup (see A-I, 3.1), we obtain a semigroup with $-1/2 = \omega_{1}(A)$ and $1/2 = \omega_0(A)$.
 Therefore, there exist exponentially stable (and hence, stable) semigroups that are not bounded, and hence, not uniformly stable.
-This example illustrates that there may be a significant difference between the long-term behavior of the semigroup $(T(t))_{t \geq 0}$ (i.e., the set of all mild solutions) and the long-term behavior of the strong solutions $\{T(\cdot)f : f \in D(A)\}$ of (ACP). 
+This example illustrates that there may be a significant difference between the long-term behavior of the semigroup $(T(t))_{t \geq 0}$ (\ie the set of all mild solutions) and the long-term behavior of the strong solutions $\{T(\cdot)f \colon f \in D(A)\}$ of (ACP). 
 \end{enumerate}
 \end{example}
 
-%\noindent
+%%%\noindent
 In the following, we characterize the exponential growth bounds $\omega(f)$, $\omega_{1}(A)$, and $\omega_0(A)$ by certain abscissas of simple or absolute convergence of the Laplace transform of $T(\cdot)f$. 
-These characterizations will serve as the main tool for showing that, for certain semigroups, the growth bounds $\omega_0(A)$ and/or $\omega_{1}(A)$ coincide with the spectral bound $s(A) = \sup\{\Re\,\lambda : \lambda \in \sigma(A)\}$.
+These characterizations will serve as the main tool for 
+\marginpar{RN: wo?}
+showing that, for certain semigroups, the growth bounds $\omega_0(A)$ and/or $\omega_{1}(A)$ coincide with the spectral bound $s(A) = \sup\{\Re\,\lambda\colon\lambda \in \sigma(A)\}$.
 
-%\bigskip\noindent
+%%%\bigskip%%\noindent
 We begin by observing that $s(A)$ can be interpreted as the abscissa of holomorphy of the Laplace transform $\lambda \mapsto \int_{0}^{\infty} e^{-\lambda t} T(t) \,\dt$ of the semigroup $(T(t))_{t \geq 0}$.
 
-%\noindent
+%%%\noindent
 Furthermore, we recall that the Laplace transform exists for every $\lambda \in \mathbb{C}$ with $\Re\,\lambda > \Re\,\mu$, provided it exists for some $\mu\in\C$.
 This follows from 
 %% --
 \begin{align}\label{eq:a4-1.1}
-\int_0^t e^{-\lambda s} f(s)\,\ds = &e^{-(\lambda-\mu)t} \int_{0}^{t} e^{\mu s} f(s) \,\ds \\ &+ (\lambda - \mu) \int_{0}^{t} e^{-(\lambda-\mu)s} \int_{0}^{s} e^{\mu r} f(r) \,\diff{r}\,\ds \notag
+\int_0^t e^{-\lambda s} f(s)\,\ds = &e^{-(\lambda-\mu)t} \int_{0}^{t} e^{\mu s} f(s) \,\ds \\ &+ (\lambda - \mu) \int_{0}^{t} e^{-(\lambda-\mu)s} \int_{0}^{s} e^{\mu r} f(r) \,\diff{r}\,\ds \,. \notag
 \end{align}
 %% --
-Note that even boundedness of $\int_{0}^{t} e^{-\mu s}f(s) \,\ds$ implies the existence of the Laplace transform for $\Re\,\lambda > \Re\,\mu$. 
+Note that even boundedness of $\left\{ \int_{0}^{t} e^{-\mu s}f(s) \,\ds \colon t > 0\right\}$ implies the existence of the Laplace transform for $\Re\,\lambda > \Re\,\mu$. 
 Therefore, the subset of $\mathbb{C}$ for which the Laplace transform exists is always a half-plane 
-$\{\lambda \in \mathbb{C} : \Re\,\lambda > \gamma\} \cup H$, where $H$ is a subset of the line $\{\lambda \in \mathbb{C} : \Re\,\lambda = \gamma\}$.
+$\{\lambda \in \mathbb{C}\colon\Re\,\lambda > \gamma\} \cup H$, where $H$ is a subset of the line $\{\lambda \in \mathbb{C}\colon\Re\,\lambda = \gamma\}$.
 
-%\bigskip\noindent
-In the following theorem, we show that the bound of the half-plane for which the Laplace transform of $T(\cdot)f$ ($f \in E$) exists absolutely, and the bound of the half-plane for which the Laplace transform of $T(\cdot)Af$ ($f \in D(A)$) exists strongly, coincide with the growth bound $\omega(f) = \inf\{\omega : \|T(t)f\| \leq Me^{\omega t} \text{ for all } t \geq 0\}$.
+%%%\bigskip%%\noindent
 
-%\bigskip\noindent
+
+In the following theorem, we show that the bound of the half-plane for which the Laplace transform of $T(\cdot)f$ ($f \in E$) exists absolutely, and the bound of the half-plane for which the Laplace transform of $T(\cdot)Af$ ($f \in D(A)$) exists strongly, coincide with the growth bound $\omega(f) = \inf\{\omega\colon\|T(t)f\| \leq Me^{\omega t} \text{ for all } t \geq 0\}$.
+
+%%%\bigskip%%\noindent
+
 \begin{theorem}\label{thm:a4-1.3}
 Let $A$ be the generator of a strongly continuous semigroup on a Banach space $E$. 
 Then, for every $f \in E$,
@@ -188,11 +221,11 @@ Then, for every $f \in E$,
 and
 %% --
 \begin{enumerate}[(i)]
-\item $\omega(f) = \inf\{\Re\,\lambda : \int_{0}^{\infty} \|T(t)f\| \,\dt \text{ exists}\}.$
+\item $\omega(f) = \inf\{\Re\,\lambda\colon\int_{0}^{\infty} \|T(t)f\| \,\dt \text{ exists}\}.$
 \end{enumerate}
 If $\ker(A) = \{0\}$, then for every $f \in D(A)$ we have 
 \begin{enumerate}
-\item[(ii)] $\omega(f) = \inf\{\Re\lambda : \int_{0}^{\infty} T(t)Af \,\dt \text{ exists as an improper Riemann integral}\}.$
+\item[(ii)] $\omega(f) = \inf\{\Re\lambda\colon\int_{0}^{\infty} T(t)Af \,\dt \text{ exists as an improper Riemann integral}\}.$
 \end{enumerate}
 %% --
 \end{theorem}
@@ -214,14 +247,12 @@ For all $t > a+n$ there exists $r \in [t-n,t]$ such that $F(r) \leq \frac{1}{n}A
 Therefore, $F(t) = F(t-r+r) \leq m \cdot F(r) \leq m \cdot \frac{A(a)}{n} < \epsilon$. 
 \qed
 
-\bigskip
-%\noindent
-To prove (i), we define $b \coloneqq \inf\{\Re\,\lambda : \int_{0}^{\infty} \|e^{-\lambda t} T(t)f\| \,\dt \text{ exists}\}$. 
+\medskip\noindent
+To prove (i) of the Theorem~\ref{thm:a4-1.3}, we define $b \coloneqq \inf\{\Re\,\lambda\colon\int_{0}^{\infty} \|^{-\lambda t} T(t)f\| \,\dt \text{ exists}\}$. 
 A straightforward application of the lemma shows that $\omega(f) \leq b$.
 The definition of $\omega(f)$ gives the reverse inequality.
 
-\goodbreak
-%\medskip\noindent
+%%\medskip%%\noindent
 It remains to prove statement (ii) of Theorem \ref{thm:a4-1.3}.
 Assume that $\ker(A) = \{0\}$ and let $f \in D(A)$, $\lambda \in \mathbb{C}$ with $\Re\,\lambda > \omega(f)$. 
 From the equation
@@ -233,10 +264,12 @@ From the equation
 it follows that $\int_{0}^{\infty} e^{-\lambda t} T(t)Af \,\dt$ exists. 
 Therefore, 
 %%--
-\[b \coloneqq \inf\{\Re\,\lambda : \int_{0}^{\infty} e^{-\lambda t}T(t)Af \,\dt \text{ exists}\} \leq \omega(f).\]
+\[b \coloneqq \inf\{\Re\,\lambda\colon\int_{0}^{\infty} e^{-\lambda t}T(t)Af \,\dt \text{ exists}\} \leq \omega(f).\]
 %%--
 
-\noindent
+%%\noindent
+
+
 Next we show that $b < 0$ implies $b = \omega(f)$. 
 Suppose $b < 0$. 
 Then, by \eqref{eq:c4-1}, $\int_{0}^{\infty} T(s)Af \,\ds$ exists. 
@@ -254,9 +287,11 @@ Now, choosing $r < 0$, $b < r < 0$, and integrating by parts, we obtain
 \end{align*}
 %% --
 From $\left\|\int_{0}^{t} e^{-r s} T(s)Af \,\ds\right\| \leq M$ for some $M$ and every $t \geq 0$ we conclude that $\|T(t)f\| \leq \tilde{M}e^{rt}$ for all $t \geq 0$ and some constant $\tilde{M}$.
-Hence, $\omega(f) \leq r$ for every $b < r < 0$; that is, $\omega(f) \leq b$.
+Hence, $\omega(f) \leq r$ for every $b < r < 0$, \ie $\omega(f) \leq b$.
 
-\noindent
+%%\noindent
+
+
 If $b \geq 0$ and $w > b$, then $\left\|\int_{0}^{t} e^{-w s} T(s)Af\,\ds\right\| \leq M$ for all $t \geq 0$. 
 By 
 \begin{align*}
@@ -265,11 +300,10 @@ T(t)f - f &= \int_{0}^{t} e^{w s} e^{-w s} T(s)Af \,\ds\\
 \end{align*}
 we obtain $\|T(t)f-f\| \leq Me^{w t} + M(e^{w t} - 1)
 \le 2Me^{wt}$. 
-Hence, $\omega(f)\le w$ for every $w > b$, i.e., $\omega(f) \leq b$.
+Hence, $\omega(f)\le w$ for every $w > b$, \ie $\omega(f) \leq b$.
 \end{proof}
-
-%\bigskip\noindent
-From \eqref{eq:a4-1.2} and the Uniform Boundedness Principle, it follows, that the growth bound $\omega_{1}(A) = \sup\{\omega(f) \colon f \in D(A)\}$ satisfies
+%%%\bigskip%%\noindent
+Finally, from \eqref{eq:a4-1.2} and the Uniform Boundedness Principle, it follows, that the growth bound $\omega_{1}(A) = \sup\{\omega(f) \colon f \in D(A)\}$ satisfies
 %% --
 \begin{align}\label{eq:a4-1.3}
 \omega_1(A) &= \inf\{\omega \colon \text{for every } f \in D(A) \text{ there exists a constant } M \text{ such that }\\
@@ -280,7 +314,9 @@ From \eqref{eq:a4-1.2} and the Uniform Boundedness Principle, it follows, that t
 \end{align}
 %% --
 
-%\bigskip\noindent
+%%%\bigskip%%\noindent
+
+
 The subsequent theorem will be of particular importance in the stability theory of positive semigroups.
 We show, that the constant $\omega_{1}(A)$ coincides with the abscissa of simple convergence of the Laplace transform of the semigroup and, with the abscissa of absolute convergence of the Laplace transform of the strong solutions of (ACP).
 
@@ -290,95 +326,113 @@ Let $A$ be the generator of a strongly continuous semigroup on a Banach space $E
 Then
 %% --
 \begin{align}\label{eq:a4-1.4}
-\omega_{1}(A) &= \inf\{\Re\,\lambda \colon \int_{0}^{\infty} e^{-\lambda t} T(t)f \,\dt \text{ exists as an improper} \\
-&\phantom{= \inf\{\Re\,\lambda \colon \int_{0}^{\infty} e^{-\lambda t} T(t)f} \text{Riemann integral for every } f \in E\} \notag \\
-&= \inf\{\Re\,\lambda \colon \int_{0}^{\infty} \|e^{-\lambda t} T(t)f\| \,\dt \text{ exists for every } f \in D(A)\}.\notag
+\omega_{1}(A) &= \inf\{\Re\,\lambda \colon \textstyle{\int_{0}^{\infty} e^{-\lambda t} T(t)f \,\dt} \text{ exists as an improper Riemann} \\
+&\phantom{= \inf\{\Re\,\lambda \colon \int_{0}^{\infty} e^{-\lambda t} T(t)f} \text{integral for every } f \in E\} \notag \\
+&= \inf\{\Re\,\lambda \colon \textstyle{\int_{0}^{\infty} \|e^{-\lambda t} T(t)f\| \,\dt} \text{ exists for every } f \in D(A)\}.\notag
 \end{align}
 \end{theorem}
 %--
 \begin{remarks*}\label{rem:a4-1.4}
 \index{Remark!Laplace transform convergence}
-(a) One can show that the abscissas of uniform, strong, and weak convergence of the Laplace transform coincide (see C-III, Theorem~I.2, last part of the proof). 
+
+\begin{enumerate}[(a), wide, labelsep=1em]
+
+\item 
+One can show that the abscissas of uniform, strong, and weak convergence of the Laplace transform coincide (see C-III, Theorem~I.2, last part of the proof). 
 Therefore, by Theorem \ref{thm:a4-1.4},
 %--
 \begin{align}\label{eq:a4-1.5}
-\omega_1(A) &= \inf \left\{ \Re\,\lambda : \text{weak-} \lim_{t \to \infty} \int_0^t e^{-\lambda s} T(s) \,\ds \text{ exists} \right\}
+\omega_1(A) &= \inf \left\{ \Re\,\lambda\colon\text{weak-} \lim_{t \to \infty} \textstyle{\int_0^t e^{-\lambda s} T(s) \,\ds} \text{ exists} \right\}
 \\
-    &= \inf \left\{ \Re\,\lambda : \text{uniform-} \lim_{t \to \infty} \int_0^t e^{-\lambda s} T(s) \,\ds \text{ exists} \right\}.\notag
+    &= \inf \left\{ \Re\,\lambda\colon\text{uniform-} \lim_{t \to \infty} \textstyle{\int_0^t e^{-\lambda s} T(s) \,\ds} \text{ exists} \right\}.\notag
 \end{align}
-%--
-\noindent
-(b) In equations \eqref{eq:a4-1.4} and \eqref{eq:a4-1.5}, the term "\(\Re\,\lambda\)" may be replaced by "\(\lambda \in \mathbb{R}\)" (use \eqref{eq:c4-1}).
+
+\item
+In Equations \eqref{eq:a4-1.4} and \eqref{eq:a4-1.5}, the term \enquote{$\Re\,\lambda$} may be replaced by \enquote{$\lambda \in \mathbb{R}$} (use \eqref{eq:c4-1}).
+\end{enumerate}
+
 \end{remarks*}
 %--
-\bigskip
-\noindent
- \textbf{Proof of Theorem \ref{thm:a4-1.4}.} The equality 
+
+%% --
+\begin{proof}(Proof of Theorem \ref{thm:a4-1.4}) 
+The equality 
  \[ 
- \omega_1(A) = \inf \left\{ \Re\,\lambda : \int_0^\infty \|e^{-\lambda t} T(t) f \| \,\dt \text{ exists for all } f \in D(A) \right\} 
+ \omega_1(A) = \inf \left\{ \Re\,\lambda\colon\int_0^\infty \|e^{-\lambda t} T(t) f \| \,\dt \text{ exists for all } f \in D(A) \right\} 
  \] 
- follows from the definition of \(\omega_1(A)\) and the lemma in the proof of Theorem \ref{thm:a4-1.3}.
+ follows from the definition of $\omega_1(A)$ and the lemma in the proof of Theorem \ref{thm:a4-1.3}.
 We prove 
-\(
-\omega_1(A) = \inf \left\{ \Re\,\lambda : \int_0^\infty e^{-\lambda s} T(s) f \,\ds \text{ exists for every } f \in E \right\}=: b. 
-\)
+$
+\omega_1(A) = \inf \left\{ \Re\,\lambda\colon\int_0^\infty e^{-\lambda s} T(s) f \,\ds \text{ exists for every } f \in E \right\}=: b. 
+$
 The identity
-\(    T(t) f = e^{\lambda t} \left\{ f - \int_0^t e^{-\lambda s} T(s) (\lambda - A) f \,\ds \right\}
-\)
+$    T(t) f = e^{\lambda t} \left\{ f - \int_0^t e^{-\lambda s} T(s) (\lambda - A) f \,\ds \right\}
+$
 yields
 \[
-\omega_1(A) \leq \inf \left\{ \Re\,\lambda : \int_0^\infty e^{-\lambda t} T(t) f \,\dt \text{ exists for every } f \in \text{im} (\lambda - A) \right\}.
+\omega_1(A) \leq \inf \left\{ \Re\,\lambda\colon\int_0^\infty e^{-\lambda t} T(t) f \,\dt \text{ exists for every } f \in \text{im} (\lambda - A) \right\}.
 \]
 Therefore,
-\(\omega_1(A) \leq b.
-\)
+$\omega_1(A) \leq b.$
 %--
-Take \(\lambda \in \mathbb{C}\) with \(\Re\,\lambda > \omega_1(A)\). 
-Then \(\int_0^\infty e^{-\lambda t} T(t) f \,\dt\) exists for every \(f \in D(A)\). 
-Define \(g := \int_0^\infty e^{-\lambda t} T(t) f \,\dt\). 
-Then \(g \in D(A)\) and \(\int_0^n e^{-\lambda t} T(t) f \,\dt = \sum_{k=0}^{n-1} e^{-\lambda k} T(k) g\). 
-Since \(\text{Re } \lambda > \omega_1(A)\), the sum converges for every \(g \in D(A)\). 
-Therefore, the integral converges as \(n \to \infty\) for every \(f \in E\).
-For every \(t \in \mathbb{R}^+\), define a bounded operator \(T_t\) by \( f \mapsto \int_0^t e^{-\lambda s} T(s) f \,\ds\). 
-As seen above, \(T_n f\) converges as \(n \to \infty\) for every \(f \in E\). 
-It follows from the Uniform Boundedness Principle that \((T_n)_{n \in \mathbb{N}}\) is uniformly bounded.
+Take $\lambda \in \mathbb{C}$ with $\Re\,\lambda > \omega_1(A)$. 
+Then $\int_0^\infty e^{-\lambda t} T(t) f \,\dt$ exists for every $f \in D(A)$. 
+Define $g := \int_0^\infty e^{-\lambda t} T(t) f \,\dt$. 
+Then $g \in D(A)$ and $\int_0^n e^{-\lambda t} T(t) f \,\dt = \sum_{k=0}^{n-1} e^{-\lambda k} T(k) g$. 
+Since $\text{Re } \lambda > \omega_1(A)$, the sum converges for every $g \in D(A)$. 
+Therefore, the integral converges as $n \to \infty$ for every $f \in E$.
+For every $t \in \mathbb{R}_+$, define a bounded operator $T_t$ by $ f \mapsto \int_0^t e^{-\lambda s} T(s) f \,\ds$. 
+As seen above, $T_n f$ converges as $n \to \infty$ for every $f \in E$. 
+It follows from the Uniform Boundedness Principle that $(T_n)_{n \in \mathbb{N}}$ is uniformly bounded.
 %%--
-\noindent
-For every \(t \in \mathbb{R}^+\), there exist \(n \in \mathbb{N}\) and \(t' \in [0,1)\) such that \(T_t = T_{t'} + e^{-\lambda t'} T(t') T_n\). 
-Since the operator families on the right side are uniformly bounded, the same is true for \((T_t f)_{t \geq 0}\). 
-Since \((T_t f)_{t \geq 0}\) converges for every \(f \in D(A)\), it follows that \((T_t f)_{t \geq 0}\) converges for every \(f \in E\). 
-Thus, \(b \leq \omega_1(A)\).
-\hfill\qed
+%%\noindent
+
+
+For every $t \in \mathbb{R}_+$, there exist $n \in \mathbb{N}$ and $t' \in [0,1)$ such that $T_t = T_{t'} + e^{-\lambda t'} T(t') T_n$. 
+Since the operator families on the right side are uniformly bounded, the same is true for $(T_t f)_{t \geq 0}$. 
+Since $(T_t f)_{t \geq 0}$ converges for every $f \in D(A)$, it follows that $(T_t f)_{t \geq 0}$ converges for every $f \in E$. 
+Thus, $b \leq \omega_1(A)$.
+\end{proof}
 
 %%--
-\medskip
-\noindent
+%\medskip
+%%\noindent
+
+
 The inequality
 \[
-    \omega_0(A) \geq \inf \left\{ \text{Re } \lambda : \int_0^\infty \|e^{-\lambda t} T(t) f \| \,\dt 
+    \omega_0(A) \geq \inf \left\{ \text{Re } \lambda\colon\int_0^\infty \|e^{-\lambda t} T(t) f \| \,\dt 
     \text{ exists for every } f \in E \right\}
 \]
-combined with the lemma of Theorem \ref{thm:a4-1.3} implies that the growth bound \(\omega_0(A)\) coincides with the abscissa of absolute convergence of the Laplace transform of \((T(t))_{t \geq 0}\); i.e.,
+combined with the lemma of Theorem \ref{thm:a4-1.3} implies that the growth bound $\omega_0(A)$ coincides with the abscissa of absolute convergence of the Laplace transform of $(T(t))_{t \geq 0}$, \ie
 \begin{equation}\label{eq:a4-1.6}
-   \omega_0(A) = \inf \left\{ \text{Re } \lambda : \int_0^\infty \|e^{-\lambda t} T(t) f \| \,\dt \text{ exists for every } f \in E \right\}.
+   \omega_0(A) = \inf \left\{ \text{Re } \lambda\colon\int_0^\infty \|e^{-\lambda t} T(t) f \| \,\dt \text{ exists for every } f \in E \right\}.
 \end{equation}
 %--
-\noindent
-As seen in A-I, Prop.1.11, if \(\int_0^\infty e^{-\lambda t} T(t) f \,\dt\) exists for every \(f \in E\), then \(\lambda \in \rho(A)\) and \(R(\lambda, A) f = \int_0^\infty e^{-\lambda t} T(t) f \,\dt\). 
+%%\noindent
+
+
+As seen in A-I, Proposition~1.11, if $\int_0^\infty e^{-\lambda t} T(t) f \,\dt$ exists for every $f \in E$, then $\lambda \in \rho(A)$ and $R(\lambda, A) f = \int_0^\infty e^{-\lambda t} T(t) f \,\dt$. 
 This and Theorem \ref{thm:a4-1.4} yield the following corollary.
 %--
-\begin{corollary} \label{cor:a4-1.5} Let \( A \) be the generator of a strongly continuous semigroup \( (T(t))_{t \geq 0} \) on a Banach space \( E \). 
+\begin{corollary} \label{cor:a4-1.5} Let $ A $ be the generator of a strongly continuous semigroup $ (T(t))_{t \geq 0} $ on a Banach space $ E $. 
 Then  
 \[
 s(A) \leq \omega_1(A) \leq \omega_0(A).
 \]
 \end{corollary}
 
-\noindent Example 1.2.(c) shows that uniform exponential stability is not equivalent to \( \sigma(A) \subset \{\lambda \in \mathbb{C} : \text{Re } \lambda \leq q < 0 \} \). 
-The following example shows that even strong solutions can be unstable when \( s(A) < 0 \), constructing a semigroup where \( s(A) < \omega_1(A) < \omega_0(A) \).
+%%\noindent
 
-\begin{example}\label{ex:a4-1.6} In A-III, Example~1.4, the semigroup \( (T(t))_{t \geq 0} \) on the Hilbert space \( E = \{(x^1, x^2, ...), x^n \in \mathbb{C}^n : \sum_{i=1}^{\infty} \|x^i\|^2 < \infty\} \), given by \( T(t) := (e^{2\pi i n t} \exp(t A_n))_{n \in \mathbb{N}} \) with  
+ Example~\ref{ex:a4-1.2}(c) shows that uniform exponential stability is not equivalent to $ \sigma(A) \subset \{\lambda \in \mathbb{C}\colon\text{Re } \lambda \leq q < 0 \} $. 
+The following example shows that even strong solutions can be unstable when $ s(A) < 0 $. We construct a semigroup where $ s(A) < \omega_1(A) < \omega_0(A) $.
 
+\begin{example}\label{ex:a4-1.6} 
+In A-III, Example~1.4, the semigroup $ (T(t))_{t \geq 0} $ on the Hilbert space $ E = \{(x^1, x^2, ...) \colon x^n \in \mathbb{C}^n\colon\sum_{j=1}^{\infty} \|x^j\|^2 < \infty\} $, given by 
+\[\textstyle{
+T(t) := (e^{2\pi i n t} \exp(t A_n))_{n \in \mathbb{N}}
+}\]
+with
 \[
 A_n =
 \begin{bmatrix}
@@ -389,10 +443,12 @@ A_n =
 0 & & & & 0
 \end{bmatrix}_{n \times n}
 \]
-has growth \( e^t \) (i.e., \( \|T(t)\| = e^t \)), so \( \omega_0(A) = 1 \) while \( A = (2\pi i n + A_n)_{n \in \mathbb{N}} \) has spectral bound \( 0 \). 
-We show that \( \omega_1(A) = \omega_0(A) \) to construct a semigroup with \( s(A) < \omega_1(A) < \omega_0(A) \). 
-Let \( e_n = n^{-1/2} (1, ..., 1) \in \mathbb{C}^n \). 
-Then,  
+has growth $ e^t $ (\ie $ \|T(t)\| = e^t $), so $ \omega_0(A) = 1 $ while $ A = (2\pi i n + A_n)_{n \in \mathbb{N}} $ has spectral bound $ 0 $. 
+We show $ \omega_1(A) = \omega_0(A) $ by constructing a semigroup with $ s(A) < \omega_1(A) < \omega_0(A) $. 
+Let $ e_n = n^{-1/2} (1, ..., 1) \in \mathbb{C}^n $. 
+
+Then,
+%% --  
 \begin{align*}
 \|\exp(&t A_n) e_n\|^2 = \\
 &= \frac{1}{n} \left\| (1 + t + \dots + \frac{t^{n-1}}{(n-1)!}, 1 + t + \dots + \frac{t^{n-2}}{(n-2)!}, \dots, 1+t, 1) \right\|^2 \\
@@ -405,10 +461,11 @@ Then,
 = \, 
 \frac{1}{n} \sum_{r=0}^{n-1} \sum_{i=0}^{2r} \frac{(2t)^i}{i!} \,  = \,  \frac{1}{n^2} \sum_{i=0}^{n-1} \frac{(2t)^i}{i!}.
 \end{align*}
-\noindent For \( 0 < q < 1 \), define \( x_q \in E \) as  
-\(
+%% --
+ For $ 0 < q < 1 $, define $ x_q \in E $ as  
+$
 x_q := (q e_1, 2q^2 e_2, ..., n q^n e_n, ...).
-\)
+$
 Then $x_q \in D(A)$ and
 %--
 \begin{align*}
@@ -419,67 +476,71 @@ Then $x_q \in D(A)$ and
 &= \frac{q^2}{1 - q^2} \sum_{i=0}^{\infty} \frac{1}{i!} (2t q^2)^i
 = \frac{q^2}{1 - q^2} e^{2t q^2}.
 \end{align*}
-
-\noindent It follows that $\omega(x_q) \geq q^2$. 
+%% -- \noindent kann man sich eraparen, wenn man nach \end{} keine Leerzeile macht, also
+%% -- und kein eingerücktes it
+It follows that $\omega(x_q) \geq q^2$. 
 Thus,
 \[
-1 = \sup \{\omega(x_q) : 0 < q < 1\} \leq \omega_1(A) \leq \omega_0(A) = 1.
+1 = \sup \{\omega(x_q)\colon0 < q < 1\} \leq \omega_1(A) \leq \omega_0(A) = 1.
 \]
-
-\noindent Rescaling the semigroup (i.e., looking at $e^{-3/2 \cdot t} T(t)$), we obtain a semigroup generator $A$ on the Hilbert space $E$ with $-3/2 = s(A)$ and $\omega_1(A) = \omega_0(A) = -1/2$. 
-On the other hand, Example 1.2.(c) produces a semigroup in a Banach space $F$ with generator $B$ such that $-1 = s(B) = \omega_1(B)$ while $\omega(B) = 0$. 
+%% --
+Rescaling the semigroup (\ie looking at $e^{-3/2 \cdot t} T(t)$), we obtain a semigroup generator $A$ on the Hilbert space $E$ with $-3/2 = s(A)$ and $\omega_1(A) = \omega_0(A) = -1/2$. 
+On the other hand, Example~\ref{ex:a4-1.2}(c) produces a semigroup in a Banach space $F$ with generator $B$ such that $-1 = s(B) = \omega_1(B)$ while $\omega_0(B) = 0$. 
 Now the operator $C := A \oplus B$ on the Banach space $E \oplus F$ is a semigroup generator for which
 \[
 s(C) = \max \{s(A), s(B)\} = -1, \quad \omega_1(C) = \max\{\omega_1(A), \omega_1(B)\} = -1/2
 \]
 \[
-\text{and} \quad \omega(C) = \max\{\omega_0(A), \omega(B)\} = 0.
+\text{and} \quad \omega_0(C) = \max\{\omega_0(A), \omega_0(B)\} = 0.
 \]
 \end{example}
-
-
-%\noindent \textbf{(1.7) Important remark:} 
-
+%% -- 
 \begin{remark}\label{rem:a4-1.7}
-For eventually norm continuous semigroups -- particularly compact, differentiable, holomorphic, or nilpotent ones -- the spectral mapping theorem 
+For eventually norm continuous semigroups---particularly compact, differentiable, holomorphic, or nilpotent ones--- the spectral mapping theorem 
+%% --
 \begin{equation}\label{eq:a4-1.7}
 \sigma(T(t)) \setminus \{0\} = e^{t \sigma(A)}
 \end{equation}
+%% --
 holds. 
 Consequently,
+%% --
 \begin{equation}\label{eq:a4-1.8}
 s(A) = \omega_1(A) = \omega_0(A)
 \end{equation}
-    is valid (Corollary \ref{cor:a4-1.5} and A-III, Corollary~6.7).
-
-\noindent Hence, if $A$ is the generator of an eventually norm continuous semigroup, then the exponential growth bounds of the strong and the mild solutions of \quad $\dot{u}(t) = A u(t)$ \quad are determined by the spectral bound
-\(s(A) = \sup\{\Re\,\lambda : \lambda \in \sigma(A)\}.\)
+%% --
+is valid (Corollary \ref{cor:a4-1.5} and A-III, Corollary~6.7).
+Hence, if $A$ is the generator of an eventually norm continuous semigroup, then the exponential growth bounds of the strong and the mild solutions of $\dot{u}(t) = A u(t)$ are determined by the spectral bound
+$s(A) = \sup\{\Re\,\lambda\colon\lambda \in \sigma(A)\}.$
 \end{remark}
 %--
 \begin{remark} In general, the growth bound $\omega_0(A)$ can be obtained using the Hille-Yosida theorem (see A-II, Theorem~1.7) as
 \begin{align}\label{eq:a4-1.9}
-\omega_0(A) = \inf \{ w : \|R(\lambda, A)^n\| \leq &M ( \Re\,\lambda - w)^{-n} \text{ for some } M \text{ and}\\
+\omega_0(A) = \inf \{ w\colon\|R(\lambda, A)^n\| \leq &M ( \Re\,\lambda - w)^{-n} \text{ for some } M \text{ and}\\
 &\text{every } n \in \mathbb{N} \text{ and } \lambda \in \mathbb{C} \text{ with } \text{Re } \lambda > w\}.\notag
 \end{align}
-\noindent In view of the difficulties involved in estimating all powers of the resolvent, this equation is of little practical use. 
+%\noindent
+ In view of the difficulties involved in estimating all powers of the resolvent, this equation is of little practical use. 
 If $A$ is the generator of a semigroup on a Hilbert space $H$, then it is shown in A-III, Corollary~7.11 that
 %--
 \begin{equation}\label{eq:a4-1.10}
- \omega_0(A) = \inf \{ w : \| R(\lambda, A) \| \leq M_w \quad \text{for } \Re\,\lambda > w \}.
+ \omega_0(A) = \inf \{ w\colon\| R(\lambda, A) \| \leq M_w \quad \text{for } \Re\,\lambda > w \}.
 \end{equation}
 \end{remark}
-\noindent Unfortunately, the identity \eqref{eq:a4-1.10} does not hold on arbitrary Banach spaces. 
+%\noindent
+ Unfortunately, the identity \eqref{eq:a4-1.10} does not hold on arbitrary Banach spaces. 
 However, as we will see in Section 1 of C-IV, the identity 
 %--
 \begin{equation}\label{eq:a4-1.11}
- s(A)=\omega_1(A) = \inf \{ w : \| R(\lambda, A) \| \leq M_w \quad \text{for } \text{Re } \lambda > w \}
+ s(A)=\omega_1(A) = \inf \{ w\colon\| R(\lambda, A) \| \leq M_w \quad \text{for } \text{Re } \lambda > w \}
 \end{equation}
-\noindent holds for every positive semigroup on a Banach lattice. 
-Consequently, for positive semigroups with $s(A) = \omega_1(A) < \omega_0(A)$ (see Example \ref{ex:a4-1.2}(2)), the identity \eqref{eq:a4-1.10} does not apply. 
+%\noindent
+ holds for every positive semigroup on a Banach lattice. 
+Consequently, for positive semigroups with $s(A) = \omega_1(A) < \omega_0(A)$ (see Example \ref{ex:a4-1.2}(b)), the identity \eqref{eq:a4-1.10} does not apply. 
 However, we can establish the following theorem.
 
 \begin{theorem}\label{thm:a4-1.9} Let $A$ be the generator of a strongly continuous semigroup $(T(t))_{t \geq 0}$ on a Banach space $E$. 
-Suppose there exist constants $a \geq 0$ and $q \geq s(A)$ such that there are $C \in \mathbb{R}_+$ and $n \in \mathbb{N}$ such that, 
+Suppose there exist constants $a \geq 0$ and $q \geq s(A)$ such that there are $C \in \mathbb{R}_+$ and some $n \in \mathbb{N}$ such that 
     \[
     \| R(\lambda, A) \| \leq C | \lambda |^{n-2}
     \]
@@ -489,7 +550,8 @@ Suppose there exist constants $a \geq 0$ and $q \geq s(A)$ such that there are $
     \sup \{ \omega(f),  f \in D(A^n)  \leq q.\]
 \end{theorem}
 
-\begin{proof} The hypothesis $\| R(\lambda, A) \| \leq C | \lambda |^{n-2}$ is invariant under rescaling. 
+\begin{proof} 
+The hypothesis $\| R(\lambda, A) \| \leq C | \lambda |^{n-2}$ is invariant under rescaling. 
 That is, the resolvent $R(\lambda, -b+A)$ of the generator $-b+A$ of the rescaled semigroup $e^{-bt} T(t)$ satisfies  
 $\| R(\lambda, -b+A) \| \leq \tilde{C} | \lambda |^{n-2}$ for every $\lambda \in \mathbb{C}$ with $\text{Re } \lambda > q-b$ and $| \text{Im } \lambda | > a+2b$ and a suitable constant $\tilde{C}$. 
 Therefore, we may assume, without loss of generality, that $b := \max(\omega_0(A), q) < 0$. 
@@ -498,128 +560,140 @@ Then, for every $f \in D(A)$ and $p' := \max\{p, q\} < 0$, the inversion formula
 \begin{equation} \label{eq:a4-1.12}
 T(t) f = \frac{1}{2\pi i} \int_{p' - i\infty}^{p' + i\infty} e^{\lambda t} R(\lambda, A) f \, d\lambda.
 \end{equation}
-\noindent (For a proof of the vector-valued version of the inversion formula one may follow \citet[p.66]{widder:1946}; also see the notes to this section.)
+%\noindent
+ (For a proof of the vector-valued version of the inversion formula one may follow \citet[p.66]{widder:1946}; also see the notes to this section.)
 By the resolvent equation we obtain 
    \[ R(\lambda, A)^n R(0, A) = \sum_{k=1}^{n} (-1)^{k+1} \lambda^{-k} R(0, A)^{n+1-k} + (-1)^n \lambda^{-n} R(\lambda, A).
    \]
-\noindent  Using that  
-\( \frac {1}{2\pi i} \int_{p' - i\infty}^{p' + i\infty} e^{\lambda t} \, \lambda^{-k} \, d\lambda = 0 \) for \( k \geq 1, p' < 0 \) and \( t > 0\), we obtain
+%\noindent
+  Using that  
+$ \frac {1}{2\pi i} \int_{p' - i\infty}^{p' + i\infty} e^{\lambda t} \, \lambda^{-k} \, d\lambda = 0 $ for $ k \geq 1, p' < 0 $ and $ t > 0$, we obtain
  \begin{equation}\label{eq:a4-1.13}
    T(t) R(0, A)^n f = (-1)^n \frac{1}{2\pi i} \int_{p' - i\infty}^{p' + i\infty} e^{\lambda t} \lambda^{-n} R(\lambda, A) f \, d\lambda
     \end{equation}
-    \noindent for every $f \in E$ and $t > 0$.
-    \noindent If $q < p'$, then, by Cauchy's Integral Theorem and since $\| R(\lambda, A) \| \leq C | \lambda |^{n-2}$, we see that the path of integration can be shifted to $\text{Re} \lambda = q$; 
-    \noindent that is,
+    %\noindent
+ for every $f \in E$ and $t > 0$.
+    %\noindent
+ If $q < p'$, then, by Cauchy's Integral Theorem and since $\| R(\lambda, A) \| \leq C | \lambda |^{n-2}$, we see that the path of integration can be shifted to $\Re \lambda = q$,
+    %\noindent
+ that is,
     \[
     T(t) R(0, A)^n f = (-1)^n \frac{1}{2\pi i} \int_{q - i\infty}^{q + i\infty} e^{\lambda t} \lambda^{-n} R(\lambda, A) f \, d\lambda.
     \]
 Therefore,  
-\(
-\| T(t) R(0,A)^n f \| \leq c' e^{q t} \| f \| \int_{-\infty}^{\infty} (q^2 + s^2)^{-1}\ds = M e^{q t} \| f \|\) 
+$
+\| T(t) R(0,A)^n f \| \leq c' e^{q t} \| f \| \int_{-\infty}^{\infty} (q^2 + s^2)^{-1}\ds = M e^{q t} \| f \|$ 
 or 
-\(
-\| T(t) f \| \leq M e^{q t} \| A^n f \|\) for \(f \in D(A^n)\).
+$
+\| T(t) f \| \leq M e^{q t} \| A^n f \|$ for $f \in D(A^n)$.
 \end{proof}
-
-
-
-\bigskip
-\noindent In view of the characterizations given in Section 1 of A-II, the semigroups occurring in the theorem are holomorphic if \( n = 1 \). 
+%% --
+In view of the characterizations given in Section~1 of A-II, the semigroups occurring in the theorem are holomorphic if $ n = 1 $. 
 In this case, one may apply \eqref{rem:a4-1.7} to obtain the stronger statement \eqref{eq:a4-1.8}.
 
-\bigskip\noindent Instead of making assumptions on the resolvent of \( A \), we now take a different view and characterize the property ``\( \omega_0(A) < 0 \)'' in terms of the semigroup \( (T(t))_{t \geq 0} \) directly.
-
-\bigskip
-\begin{proposition} \label{prop:a4-1.10} Let \( A \) be the generator of a strongly continuous semigroup \( (T(t))_{t \geq 0} \) on a Banach space $E$. 
+Instead of making assumptions on the resolvent of $ A $, we now take a different view and characterize the property \enquote{$ \omega_0(A) < 0 $} in terms of the semigroup $ (T(t))_{t \geq 0} $ directly.
+%% --
+\begin{proposition} \label{prop:a4-1.10} Let $ A $ be the generator of a strongly continuous semigroup $ (T(t))_{t \geq 0} $ on a Banach space $E$. 
 Then the following statements are equivalent:
 \begin{itemize}
-\item[(a)] \( \omega_0(A) < 0 \).
-\item[(b)] \( \lim_{t \to \infty} \| T(t) \| = 0 \).
-\item[(c)] \( \| T(t') \| < 1 \) for some \( t' > 0 \).
+\item[(a)] $ \omega_0(A) < 0 $.
+\item[(b)] $ \lim_{t \to \infty} \| T(t) \| = 0 $.
+\item[(c)] $ \| T(t') \| < 1 $ for some $ t' > 0 $.
 \end{itemize}
 \end{proposition}
 
 \begin{proof}
-The implications (a) \( \Rightarrow \) (b) \( \Rightarrow \) (ac) are obvious; (c) \( \Rightarrow \) (a) follows from  $\omega_0(A) = \lim_{t \to \infty} \frac{1}{t} \log \| T(t) \|$ (see A-I,(1.1)) and  
+The implications $(a)  \Rightarrow  (b)  \Rightarrow  (c) $ are obvious; $(c)  \Rightarrow  (a) $ follows from  $\omega_0(A) = \lim_{t \to \infty} \frac{1}{t} \log \| T(t) \|$ (see A-I,(1.1)) and  
 \[
 \displaystyle
 \frac{\log \|T(t)\|}{t} \leq \frac{\log \|T(t')\|}{t'} + \frac{\log \|T(t)\|}{nt' + s} \quad \text{for } t = nt' + s, \quad s \in [0,t'].
 \]
 \end{proof}
 
-\noindent Other less obvious characterizations of the property ``\( \omega_0(A) < 0 \)'' are given in the next theorem. 
+%\noindent
+ Other less obvious characterizations of the property ``$ \omega_0(A) < 0 $'' are given in the next theorem. 
 The equivalence of (a) and (c) is known as \emph{Datko’s Theorem}.
 
 
-\begin{theorem} \label{thm:a4-1.11} Let \( A \) be the generator of a strongly continuous semigroup \( (T(t))_{t \geq 0} \) on a Banach space \( E \). 
-Then the following statements are equivalent:
+\begin{theorem} \label{thm:a4-1.11} Let $ A $ be the generator of a strongly continuous semigroup $ (T(t))_{t \geq 0} $ on a Banach space $ E $. 
+Then the following statements are equivalent.
 \begin{itemize}
-\item[(a)] \( \omega_0(A) < 0 \).
-\item[(b)] \( s(A) < 0 \) and there is \( t_0 > 0 \) such that  
-\(
-|\lambda| < 1\) for every \( \lambda \in A\sigma (T(t_0)).\)
-\item[(c)] For every (some) \( p \geq 1 \) exists \( \int_{0}^{\infty} \| T(t) f \|^p\dt \) for every \( f \in E \).
+\item[(a)] $ \omega_0(A) < 0 $.
+\item[(b)] $ s(A) < 0 $ and there is $ t_0 > 0 $ such that  
+$
+|\lambda| < 1$ for every $ \lambda \in A\sigma (T(t_0)).$
+\item[(c)] For every (some) $ p \geq 1 $ exists $ \int_{0}^{\infty} \| T(t) f \|^p\dt $ for every $ f \in E $.
 \end{itemize}
 \end{theorem}
 
-\begin{proof} The implication ``(a) \( \Rightarrow \) (b)'' follows from \( r(T(t)) = e^{\omega_0(A) t} < 1 \) and \( s(A) \leq \omega_0(A) < 0 \). For the point and residual spectrum, the spectral mapping theorem is valid (see A-III, Theorem~6.3). The approximate point spectrum is closed, hence, the additional information in (ii)
-implies \( |\lambda| \leq r < 1 \) for some \( r \) and each \( \lambda \in A\sigma(T(t_0)) \). 
+\begin{proof} The implication ``(a) $ \Rightarrow $ (b)'' follows from $ r(T(t)) = e^{\omega_0(A) t} < 1 $ and $ s(A) \leq \omega_0(A) < 0 $. For the point and residual spectrum, the spectral mapping theorem is valid (see A-III, Theorem~6.3). The approximate point spectrum is closed, hence, the additional information in (ii)
+implies $ |\lambda| \leq r < 1 $ for some $ r $ and each $ \lambda \in A\sigma(T(t_0)) $. 
 Consequently, 
 \[
 \exp(\omega_0(A) \cdot t_0) = r(T(t_0)) \leq \max\{\exp(t_0 \cdot s(A)), r\} < 1
 \]
-or \( \omega_0(A) < 0 \). 
-This proves \textquotedblleft (b) \(\Rightarrow\) (a)\textquotedblright. 
-For a proof of the equivalence of (a) and (c) we refer to \citet{datko:1972} or \citet[Thm.4.4.1]{pazy:1983}. 
+or $ \omega_0(A) < 0 $. 
+This proves \textquotedblleft (b) $\Rightarrow$ (a)\textquotedblright. 
+For a proof of the equivalence of (a) and (c) we refer to \citet{datko:1972} or \citet[Theorem~4.4.1]{pazy:1983}. 
 \end{proof}
 
-\medskip\noindent
-Rescaling a given semigroup \( (T(t))_{t \geq 0} \), one obtains the following corollary from \eqref{eq:a4-1.1} and statement (c) of the above theorem.
+%\medskip%\noindent
 
-\medskip
+Rescaling a given semigroup $ (T(t))_{t \geq 0} $, one obtains the following corollary from \eqref{eq:a4-1.1} and statement (c) of the above theorem.
+
+%\medskip
 \begin{corollary} \label{cor:a4-1.12} 
-Let \( (T(t))_{t \geq 0} \) be a strongly continuous semigroup on a Banach space \( E \). Then the set of complex numbers \( \lambda \) for which
+Let $ (T(t))_{t \geq 0} $ be a strongly continuous semigroup on a Banach space $ E $. Then the set of complex numbers $ \lambda $ for which
 \[
-\int_{0}^{\infty} \|e^{-\lambda t} T (t) f \| \,\dt,
+\int_{0}^{\infty} \|e^{-\lambda t} T (t) f \| \,\dt 
 \]
-exists for every \( f \in E \), is an open right half-plane.
+exists for every $ f \in E $  is an open right half-plane.
 \end{corollary}
-\medskip
 
-\noindent
-In the next theorem, we give two necessary conditions for stability of \( (T(t))_{t \geq 0} \) in terms of the generator \( A \). We will see in Chapter C-IV that for positive semigroups a condition similar to statement (ii) below is even sufficient for stability of the semigroup. We emphasize that stable semigroups need not be uniformly bounded (see Example \ref{ex:a4-1.2}(3)) and that \( s(A) = \omega_0(A) = 0 \) does not imply boundedness or even stability of the semigroup (see also A-I, Example~1.4.(i)).
+%\medskip
+%\noindent
 
-\begin{theorem} \label{thm:a4-1.13} Let \( A \) be the generator of a stable semigroup \( (T(t))_{t \geq 0} \) on a Banach space \( E \). Then the following assertions hold:
+In the next theorem, we give two necessary conditions for stability of $ (T(t))_{t \geq 0} $ in terms of the generator $ A $. We will see in Chapter C-IV that for positive semigroups a condition similar to statement (ii) below is even sufficient for stability of the semigroup. 
+We emphasize that stable semigroups need not be uniformly bounded (see Example \ref{ex:a4-1.2}(c)) and that $ s(A) = \omega_0(A) = 0 $ does not imply boundedness or even stability of the semigroup (see also A-I, Example~1.4.(i)).
 
-\begin{itemize}
-    \item[(i)] \( s(A) \leq 0 \) and \( \operatorname{Re} \lambda < 0 \) for every \( \lambda \in P\sigma (A) \cup R\sigma(A) \).
-    \item[(ii)] \( \lim_{\lambda \to 0^+} \lambda R(\lambda, A) f \) exists for every \( f \in D(A) \).
+\begin{theorem} \label{thm:a4-1.13} Let $ A $ be the generator of a stable semigroup $ (T(t))_{t \geq 0} $ on a Banach space $ E $. Then the following assertions hold.
+
+\begin{itemize}[(i)]
+    \item 
+    $ s(A) \leq 0 $ and $ \operatorname{Re} \lambda < 0 $ for every $ \lambda \in P\sigma (A) \cup R\sigma(A) $\,.
+    
+    \item 
+    $ \lim_{\lambda \downarrow 0} \lambda R(\lambda, A) f $ exists for every $ f \in D(A) $\,.
 \end{itemize}
 \end{theorem}
-\medskip
+%\medskip
 
-\begin{proof} If \( (T(t))_{t \geq 0} \) is stable, then \( \|T(t) f\| \leq M_f \) for every \( f \in D(A) \). Therefore, \( s(A) \leq \omega_1(A) \leq 0 \). 
+\begin{proof} If $ (T(t))_{t \geq 0} $ is stable, then $ \|T(t) f\| \leq M_f $ for every $ f \in D(A) $. Therefore, $ s(A) \leq \omega_1(A) \leq 0 $. 
 
-\noindent Assume there is \( \lambda \in P\sigma(A) \) with \( \Re\,\lambda = 0 \). Then, by A-III, Corollary~6.4, there exists \( g \neq 0 \) such that \( T(t) g = e^{\lambda t} g \) for all \( t \geq 0 \). Since \( |e^{\lambda t}| = 1 \), this contradicts the stability of the semigroup. 
+%\noindent
+ Assume there is $ \lambda \in P\sigma(A) $ with $ \Re\,\lambda = 0 $. Then, by A-III, Corollary~6.4, there exists $ g \neq 0 $ such that $ T(t) g = e^{\lambda t} g $ for all $ t \geq 0 $. Since $ |e^{\lambda t}| = 1 $, this contradicts the stability of the semigroup. 
 
-\noindent Assume there is \( \lambda \in R\sigma(A) = P\sigma(A') \) with \( \Re\,\lambda = 0 \). Then there exists \( 0 \neq \varphi \in E' \) with \( T(t)^* \varphi = \exp(\lambda t) \varphi \) for all \( t \geq 0 \). Choose \( f \in D(A) \) such that \( \langle f, \varphi \rangle \neq 0 \). Then \( |\langle T(t) f, \varphi \rangle| = | \langle f, \varphi \rangle| > 0 \) for every \( t \geq 0 \), which contradicts the stability of the semigroup.
+%\noindent
+ Assume there is $ \lambda \in R\sigma(A) = P\sigma(A') $ with $ \Re\,\lambda = 0 $. Then there exists $ 0 \neq \varphi \in E' $ with $ T(t)^* \varphi = \exp(\lambda t) \varphi $ for all $ t \geq 0 $. Choose $ f \in D(A) $ such that $ \langle f, \varphi \rangle \neq 0 $. Then $ |\langle T(t) f, \varphi \rangle| = | \langle f, \varphi \rangle| > 0 $ for every $ t \geq 0 $, which contradicts the stability of the semigroup.
 
-\medskip
-\noindent
-(ii) From the stability of the semigroup and the identity   \(\int_{0}^{t} T(s) A f \,\ds = T(t) f - f\), we see that  
-\(\int_{0}^{\infty} T(s) A f \,\ds\) exists for every \( f \in D(A) \).  
-But \( \omega_1(A) \leq 0 \), and hence,  
-\( R(\lambda, A) A f = \int_{0}^{\infty} e^{-\lambda s} T(s) A f \,\ds \) for every \( \lambda > 0 \) (see Theorem~1.4). By a classical theorem of Laplace transform theory, (for a proof of the vector-valued version one may follow \citet[p.196]{widder:1971}), we conclude that $\lim_{\lambda \to 0+} R(\lambda,A)Af$ exists
+%\medskip
+%\noindent
+
+(ii) From the stability of the semigroup and the identity   $\int_{0}^{t} T(s) A f \,\ds = T(t) f - f$, we see that  
+$\int_{0}^{\infty} T(s) A f \,\ds$ exists for every $ f \in D(A) $.  
+But $ \omega_1(A) \leq 0 $, and hence,  
+$ R(\lambda, A) A f = \int_{0}^{\infty} e^{-\lambda s} T(s) A f \,\ds $ for every $ \lambda > 0 $ (see Theorem~1.4). By a classical theorem of Laplace transform theory, (for a proof of the vector-valued version one may follow \citet[p.196]{widder:1971}), we conclude that $\lim_{\lambda \to 0+} R(\lambda,A)Af$ exists
 and is equal to $\int_{0}^{\infty} T(s)Af \,\ds$. 
 The identity $R(\lambda,A)Af = \lambda R(\lambda,A)f - f$
 yields the existence of $\lim_{\lambda \to 0+} \lambda R(\lambda,A)f$ for every $f \in D(A)$.
 \end{proof}
 %%--
-\noindent
+%\noindent
+
 Bounded holomorphic semigroups (see A-II, Definition~1.11) satisfy
 $\|AT(t)\| \leq \frac{m}{t}$ \citet[p.33]{goldstein:1985a}, hence, $T(t)f \to 0$ as $t \to \infty$
 whenever $f \in \image A$. 
-If $\image A$ is dense (i.e., $0 \not\in R\sigma(A)$), we obtain
+If $\image A$ is dense (\ie $0 \not\in R\sigma(A)$), we obtain
 uniform stability and the following corollary.
 
 \begin{corollary}\label{cor:a4-1.14}
@@ -634,7 +708,7 @@ Then the following statements are equivalent.
 
 \begin{example}\label{ex:a4-15}
 The Laplacian $\Delta$ generates a bounded holomorphic semigroups on $L^{p}(\mathbb{R}^{n})$ for $1 \leq p < \infty$ (see the example proceeding
-Corollary~1.13 of Chap. A-II). 
+Corollary~1.13 of Chapter~A-II). 
 All solutions of $\Delta f = 0$ are either constant
 or unbounded, therefore $0 \not\in P\sigma(\Delta)$. 
 If $1 < p < \infty$, then the adjoint
@@ -645,18 +719,19 @@ that $\Delta$ generates uniformly stable semigroups on the space $L^{p}(\mathbb{
 for $1 < p < \infty$ which are, by $\image \Delta \not= L^{p}(\mathbb{R}^{n})$ and Corollary \ref{cor:a4-1.5}, not exponentially stable. \qed
 \end{example}
 %%--
-\noindent
+%\noindent
+
 As seen in Theorem \ref{thm:a4-1.4}, exponential stability can be defined by saying that the abscissa of convergence of the Laplace transform of $(T(t))_{t \geq 0}$ is less than zero. 
 This should be compared to the assertion of our final theorem.
 
 \begin{theorem}\label{thm:a4-1.16}
 Let $A$ be the generator of a strongly continuous semigroup $(T(t))_{t \geq 0}$ on a Banach space $E$. 
-The following assertions are equivalent:
+The following assertions are equivalent.
 \begin{enumerate}[(a)]
 \item $(T(t))_{t \geq 0}$ is stable.
 \item $\ker(A) = \{0\}$ and $\int_{0}^{\infty} T(t)f \,\dt$ exists for all $f \in \image A$.
 \end{enumerate}
-Furthermore the following statements are equivalent:
+Furthermore the following statements are equivalent,
 \begin{enumerate}[(a$'$)]
 \item $(T(t))_{t \geq 0}$ is stable and bounded.
 \item $(T(t))_{t \geq 0}$ is uniformly stable.
@@ -666,22 +741,30 @@ Furthermore the following statements are equivalent:
 
 \begin{proof}
 If $(T(t))_{t \geq 0}$ is stable, then, by Theorem \ref{thm:a4-1.13}, $\ker(A) = \{0\}$ and
-$\int_{0}^{t} T(s)Af \,\ds = T(t)f - f \to -f$ as $t \to \infty$. 
-Therefore, (a) implies (b).
+\[\textstyle{
+\int_{0}^{t} T(s)Af \,\ds = T(t)f - f \to -f \ \text{as} \ t \to \infty\,.
+}\]
+Therefore, $(a) \Rightarrow (b)$.
+
 On the other hand, if $\int_{0}^{t} T(s)Af \,\ds$ converges as $t \to \infty$, then, by
 the above equation, $g \coloneqq \lim_{t \to \infty} T(t)f$ exists. 
 But $\ker(A) = \{0\}$ and
 therefore $g = 0$. 
-This proves "(b) $\Rightarrow$ (a)".
-The implication "(a$'$) $\Rightarrow$ (b$'$)" is obvious. 
+This proves $(b) \Rightarrow (a)$.
+
+The implication $(a') \Rightarrow (b')$ is obvious. 
+
 If $T(t)f \to 0$ for every $f \in E$, then $\|T(t)\| \leq M$ and $0 \not\in R\sigma(A)$ (Theorem \ref{thm:a4-1.13}). 
 Therefore,
 $D \coloneqq \image A$ is dense and $\int_{0}^{\infty} T(t)f \,\dt$ exists for every $f \in D$. 
-This proves "(b$'$) $\Rightarrow$ (c$'$)". 
-We have to show that (c$'$) implies (a$'$).
-Define $G \coloneqq \{h \in E : h = \int_{0}^{\infty} T(t)g \,\dt \text{ for some } g \in D\}$. 
-We will show
-that $G$ is dense in $E$. 
+This proves $(b') \Rightarrow (c')$. 
+
+It remains to show that $(c') \Rightarrow (a')$.
+Define 
+\[\textstyle{
+G \coloneqq \{h \in E \colon h = \int_{0}^{\infty} T(t)g \,\dt \ \text{ for some } \ g \in D\}.
+}\] 
+We will show that $G$ is dense in $E$. 
 First, we notice that $g - T(s)g \in D$ whenever $g \in D$
 and $s \in \mathbb{R}_{+}$.
 Define $h_{s} = \frac{1}{s} \int_{0}^{\infty} T(t)(g - T(s)g) \,\dt = \frac{1}{s} \int_{0}^{s} T(t)g \,\dt$. 
@@ -694,43 +777,52 @@ But $\|T(t)\| \leq M$ and therefore $T(t)f \to 0$ for every $f \in E$.
 \end{proof}
 
 \begin{remark}\label{rem:a4-1.17}
-(a) If $A$ is the generator of a stable semigroup
+\begin{enumerate}[(a), wide, labelsep=1em]
+\item 
+If $A$ is the generator of a stable semigroup
 $(T(t))_{t \geq 0}$ on a Banach space $E$, then, by the previous theorem,
-$\image A \subset \{f \in E : \int_{0}^{\infty} T(t)f \,\dt \text{ exists}\} =: H$.
+\[\textstyle{
+\image A \subset \{f \in E\colon\int_{0}^{\infty} T(t)f \,\dt \text{ exists}\} =: H\,.
+}\]
 If $g \in H$, then $\int_{0}^{\infty} T(t)g \,\dt \in D(A)$ and $A \int_{0}^{\infty} T(t)g \,\dt = -g$. 
 Therefore $g \in \image A$ and we obtain that the dense subspace $\image A$ is given
 by
 \begin{equation}\label{eq:a4-1.14}
-\image A = \{f \in E : \int_{0}^{\infty} T(t)f \,\dt \text{ exists}\}
+\image A = \{f \in E\colon\int_{0}^{\infty} T(t)f \,\dt \text{ exists}\}
 \end{equation}
 in case that $A$ is the generator of a stable semigroup $(T(t))_{t \geq 0}$.
 
-\bigskip
-\noindent
-(b) If $\omega(f) < 0$ for every $f \in D(A)$, then $(T(t))$ is stable (but
-might not be exponentially stable if
-$0 = \omega_{1}(A) = \supp\{\omega(f) : f \in D(A)\}$. 
-In this case it can be seen by a
-proof similar to the one of Theorem \ref{thm:a4-1.4}, that $\sigma(A)$ has to be contained
-in the open left half-plane; i.e. $\Re\,\lambda < 0$ for $\lambda \in \sigma(A)$.
+%%\bigskip
+%\noindent
 
-\bigskip
-\noindent
-(c) If one defines a semigroup $(T(t))_{t \geq 0}$ to be weakly stable if
+\item 
+If $\omega(f) < 0$ for every $f \in D(A)$, then $(T(t))$ is stable (but
+might not be exponentially stable if
+$0 = \omega_{1}(A) = \supp\{\omega(f) \colon f \in D(A)\}$. 
+In this case it can be seen, by a
+proof similar to the one of Theorem \ref{thm:a4-1.4}, that $\sigma(A)$ has to be contained
+in the open left half-plane, \ie $\Re\,\lambda < 0$ for $\lambda \in \sigma(A)$.
+
+%%\bigskip
+%\noindent
+\item 
+If one defines a semigroup $(T(t))_{t \geq 0}$ to be weakly stable if
 $\langle T(t)f,\phi \rangle \to 0$ as $t \to \infty$ for every $f \in D(A)$ and $\phi \in E'$ or as
 weakly uniformly stable if $\langle T(t)f,\phi \rangle \to 0$ as $t \to \infty$ for every $f \in E$
-and $\phi \in E'$, then Theorem \ref{thm:a4-1.13} and \ref{thm:a4-1.16} can be reformulated in a weak form (i.e.; we replace stable by weakly stable and \emph{lim} by
+and $\phi \in E'$, then Theorem \ref{thm:a4-1.13} and \ref{thm:a4-1.16} can be reformulated in a weak form (\ie we replace stable by weakly stable and \emph{lim} by
 \emph{weak-lim}). 
 The proofs require only some obvious modifications.
 If A has a compact resolvent or if A is the generator of a bounded
 holomorphic semigroup, then weak stability implies stability. 
-In general, this is no longer true; e.g., the translation semigroup on
+In general, this is no longer true, \eg the translation semigroup on
 $L^{2}(\mathbb{R})$ is weakly uniformly stable but not stable (see also
 B-IV, Example~1.2).
+\end{enumerate}
 \end{remark}
 
-\section{STABILITY: INHOMOGENEOUS CASE}
-
+\section{Stability: Inhomogeneous Case}
+\index{Stability!Inhomogeneous Case}
+%% --
 Using the results of the first section, we now investigate the long
 term behavior of the solutions of the inhomogeneous initial value
 problem
@@ -739,21 +831,23 @@ problem
 \end{equation}
 where A is the generator of a strongly continuous semigroup on a
 Banach space E and $F(\cdot)$ is a locally integrable function from $\mathbb{R}_{+}$
-into E referred to as the forcing term. 
-A function $u(\cdot)$ is called a (strong)
-solution of \eqref{eq:a4-2.1} if $u(\cdot) \colon \mathbb{R}_{+} \to D(A)$, $u(\cdot) \in C^{1}(\mathbb{R}_{+},E)$ and \eqref{eq:a4-2.1} is satisfied for $t \geq 0$.
-The assumption that A is the generator of a semigroup $(T(t))_{t \geq 0}$
+into E referred to as the \emph{forcing term}. 
+A function $u(\cdot)$ is called a \emph{(strong) solution} of \eqref{eq:a4-2.1} if $u(\cdot) \colon \mathbb{R}_{+} \to D(A)$, 
+$u(\cdot) \in C^{1}(\mathbb{R}_{+},E)$ and \eqref{eq:a4-2.1} is satisfied for $t \geq 0$.
+The assumption that $A$ is the generator of a semigroup $(T(t))_{t \geq 0}$
 yields the uniqueness of the solution of \eqref{eq:a4-2.1}. 
 If $u(\cdot)$ is a solution of \eqref{eq:a4-2.1}, then the function $v(s) := T(t-s)u(s)$, $0 \leq s \leq t$, is
 differentiable and $v'(s) = T(t-s)F(s)$. 
 But $F(\cdot)$ is locally integrable, and by $\int_{0}^{t} T(t-s)F(s) \,\ds = v(t) - v(0) = u(t) - T(t)f$ we see
 that the solution $u(t)$ of \eqref{eq:a4-2.1} is given by
 \begin{equation}\label{eq:a4-2.2}
-u(t) = T(t)f + \int_{0}^{t} T(t-s)F(s) \,\ds
+u(t) = T(t)f + \int_{0}^{t} T(t-s)F(s) \,\ds\,.
 \end{equation}
 
-\bigskip
-\noindent{\bf Example.} \label{ex:a4-2.1}
+%%\bigskip
+%\noindent
+
+{\bf Example.} \label{ex:a4-2.1}
 Let $(T(t))_{t \geq 0}$ be a semigroup that is not eventually differentiable. 
 Then there
 exists $g \in E$ such that $t \mapsto T(t)g$ is not differentiable on $(0,\infty)$.
@@ -764,33 +858,36 @@ u(t) = \int_{0}^{t} T(t-s)T(s)g \,\ds = tT(t)g
 \end{align*}
 has to be differentiable on $\mathbb{R}_{+}$.
 
-\bigskip
-\noindent
+%%\bigskip
+%\noindent
+
 Whenever the expression \eqref{eq:a4-2.2} is well-defined, we refer to it as a  \emph{generalized} (or
 \emph{mild}) solution of \eqref{eq:a4-2.1}. 
 If $F(\cdot)$ is continuous and $f \in D(A)$, then
 the generalized solution of \eqref{eq:a4-2.1} is a strong solution if and only if
-$v(t) := \int_{0}^{t} T(t-s)F(s) \,\ds$ is differentiable (see \citet[Chap.4,2.4]{pazy:1983}Pazy (1983). 
+$v(t) := \int_{0}^{t} T(t-s)F(s) \,\ds$ is differentiable (see \citet[Chapter~4,2.4]{pazy:1983}. 
 There are several sufficient conditions on the generator A,
 the forcing term $F(\cdot)$ or the space E under which every mild solution
 is a strong solution of \eqref{eq:a4-2.1} (see \citet{travis:1979}
 \marginpar{GG: Travis (1979) ist nicht im LV!}
-or  \citet[Sec.4.2]{pazy:1983}).
+or  \citet[Section~4.2]{pazy:1983}).
 
-\bigskip
-\noindent
+%%\bigskip
+%\noindent
+
 Our aim in this section is to study the asymptotic behavior of the solutions of \eqref{eq:a4-2.1} as $t \to \infty$. 
 To that end, we consider absolutely integrable or periodic forcing terms $F(\cdot)$, and assume that the semigroup
 is uniformly stable.
 
-\noindent
+%\noindent
+
 Similar results for integrable and convergent forcing terms $F(\cdot)$ can
 be obtained if the semigroup is assumed to be uniformly  
 stable (see \citet[p.119]{pazy:1983} or \citet{neubrander:1985b}). 
 However, if the
 semigroup is positive, these results hold even under the weaker assumption of stability (see Section C-IV).
 From Theorem \ref{thm:a4-1.13}(i), we recall that for stable
-semigroups, $\image A$ is dense in E.
+semigroups $\image A$ is dense in $E$.
 
 \begin{theorem}\label{thm:a4-2.1}
 Let $A$ be the generator of a uniformly stable semigroup
@@ -813,15 +910,18 @@ We have to show that the
 third term converges to zero. 
 Take $\epsilon > 0$ and $G(s) \coloneqq F(s)-g$. 
 Then
-\begin{align*}
-\|\int_{0}^{t} T(t-s)G(s) \,\ds\| &\leq \|\int_{0}^{r} T(t-r+r-s)G(s) \,\ds\| + \|\int_{r}^{t} T(t-s)G(s) \,\ds\|\\
-&\leq \|T(t-r)\int_{0}^{r} T(r-s)G(s) \,\ds\| + M \int_{r}^{\infty} \|G(s)\| \,\ds.
+\begin{align*}\textstyle 
+\left\|\int_{0}^{t} T(t-s)G(s) \,\ds\right\| & 
+\textstyle{\leq \left\|\int_{0}^{r} T(t-r+r-s)G(s) \,\ds\right\| + \left\|\int_{r}^{t} T(t-s)G(s) \,\ds\right\|}\\
+& 
+\textstyle{\leq \left\|T(t-r)\int_{0}^{r} T(r-s)G(s) \,\ds\right\| + M \int_{r}^{\infty} \|G(s)\| \,\ds\,.}
 \end{align*}
 Since the semigroup is uniformly stable, we obtain
 $T(t-r)\int_{0}^{r} T(r-s)G(s) \,\ds \to 0$ as $t \to \infty$ for every $r \geq 0$.
 Therefore, $\|\int_{0}^{t} T(t-s)G(s) \,\ds\| \leq \epsilon$ for all sufficiently large $t$.
 \end{proof}
-\noindent
+%\noindent
+
 In the following theorem, we show that if A generates a
 uniformly stable semigroup, the forcing term $F(\cdot)$ is p-periodic,
 and $\int_{0}^{p} T(p-s)F(s) \,\ds \in \image(\Id - T(p))$, then \eqref{eq:a4-2.1}
@@ -830,7 +930,7 @@ Theorem \ref{thm:a4-1.13} and A-III, Lemma 5.3, $\image(\Id - T(p)) = E$.)
 
 \begin{lemma}\label{lem:a4-2.2}
 Let $A$ be the generator of a strongly continuous semigroup $(T(t))_{t \geq 0}$ on a Banach space $E$ and let $F(\cdot)$ be a $p$-periodic, locally integrable function, $p > 0$. 
-Then the following statements are equivalent:
+Then the following statements are equivalent.
 \begin{enumerate}[(a)]
 \item $\dot{u}(t) = Au(t) + F(t)$ admits a (unique) generalized $p$-periodic solution.
 \item There exists a (unique) $f \in E$ such that $(\Id - T(p))f = \int_{0}^{p} T(p-s)F(s) \,\ds$.
@@ -839,7 +939,7 @@ Then the following statements are equivalent:
 
 \begin{proof}
 $(a) \Rightarrow (b)$. 
-Let $f \coloneqq u(0)$ be the initial value for which (2.1) has the $p$-periodic solution. 
+Let $f \coloneqq u(0)$ be the initial value for which \eqref{eq:a4-2.1} has the $p$-periodic solution. 
 Then we have
 %% --
 \begin{align*}
@@ -852,7 +952,8 @@ for every $t \geq 0$.
 Therefore, $f = u(0) = T(p)f + \int_{0}^{p} T(p-s)F(s) \,\ds$.
 Clearly, if $u(\cdot)$ is a unique periodic solution with $u(0) = f$, then $f$ is the unique element for which $f = T(p)f + \int_{0}^{p} T(p-s)F(s) \,\ds$ holds.
 
-\medskip\noindent
+%\medskip%\noindent
+
 $(b) \Rightarrow (a)$. 
 Define $u(\cdot)$ as in \eqref{eq:a4-2.2}. 
 Then
@@ -865,25 +966,34 @@ If $f$ is unique, then, by the considerations above, the solution is unique.
 \end{proof}
 
 \begin{remark}\label{rem:a4-2.3}
-Let $A$ be the generator of a strongly continuous semigroup for which the spectral mapping theorem holds (see A-III, Sec.6), and let $F$ be a $p$-periodic forcing term.
-If $\frac{2\pi in}{p} \in \rho(A)$ for every $n \in \mathbb{Z}$, then, by Lemma \ref{lem:a4-2.2}, $\dot{u}(t) = Au(t) + F(t)$ has a unique $p$-periodic solution with initial value $(\Id - T(p))^{-1} \left(\int_{0}^{p} T(p-s)F(s) \,\ds\right)$.
+Let $A$ be the generator of a strongly continuous semigroup for which the spectral mapping theorem holds (see A-III, Section~6), and let $F$ be a $p$-periodic forcing term.
+If $\frac{2\pi in}{p} \in \rho(A)$ for every $n \in \mathbb{Z}$, then, by Lemma \ref{lem:a4-2.2}, 
+\[\textstyle{ 
+\dot{u}(t) = Au(t) + F(t)
+}\]
+has a unique $p$-periodic solution with initial value $(\Id - T(p))^{-1} \left(\int_{0}^{p} T(p-s)F(s) \,\ds\right)$.
 \end{remark}
 
-\bigskip
-\noindent
-As a consequence of Theorem \ref{thm:a4-1.13}  and A-III, Corollary~6.4, for a uniformly stable semigroup, there exists at most one $f \in E$ satisfying $(\Id-T(p))f = \int_{0}^{p} T(p-s)F(s) \,\ds$. 
+%%\bigskip
+%\noindent
+
+As a consequence of Theorem \ref{thm:a4-1.13}  and A-III, Corollary~6.4, for a uniformly stable semigroup, there exists at most one $f \in E$ satisfying \[\textstyle{
+(\Id-T(p))f = \int_{0}^{p} T(p-s)F(s) \,\ds\,.
+}\]
 This fact, together with Lemma \ref{lem:a4-2.2}, is used to prove the following theorem.
 
 
 \begin{theorem}\label{thm:a4-2.4}
-Let $A$ be the generator of a uniformly stable semigroup $(T(t))_{t \geq 0}$ and let $F(\cdot)$ be a $p$-periodic locally integrable function such that $(\Id - T(p))f = \int_{0}^{p} T(p-s)F(s) \,\ds$ for some $f \in E$. 
+Let $A$ be the generator of a uniformly stable semigroup $(T(t))_{t \geq 0}$ and let $F(\cdot)$ be a $p$-periodic locally integrable function such that \[\textstyle{
+(\Id - T(p))f = \int_{0}^{p} T(p-s)F(s) \,\ds \ \text{ for some } \ f \in E\,.
+}\]
 Then the unique $p$-periodic generalized solution
 %% --
 \[
 u(t) = T(t)f + \int_{0}^{t} T(t-s)F(s) \,\ds
 \]
 %% --
-is asymptotically stable; that is, for every generalized solution $v(\cdot)$ of \eqref{eq:a4-2.1}, 
+is asymptotically stable, \ie for every generalized solution $v(\cdot)$ of \eqref{eq:a4-2.1}, 
 \[
 \lim_{t \to \infty} \|v(t) - u(t)\| = 0.
 \]
@@ -891,11 +1001,12 @@ is asymptotically stable; that is, for every generalized solution $v(\cdot)$ of 
 
 \begin{example}\label{ex:a4-2.5}
 Let $E$ be the Banach space $C_{0}(\mathbb{R}_{+})$. 
-Then $A = \frac{d}{dx}$ with $D(A) = \{f \in E: f' \in C^{1} \text{ and } f' \in E\}$ is the generator of the uniformly stable translation semigroup $T(t)f(x) \coloneqq f(t+x)$. 
-Applying \eqref{eq:a4-1.14}, we obtain that $\image A = \{f : \int_{0}^{\infty} f(x) \,\dx \text{ exists}\}$ is dense in $C_{0}(\mathbb{R}_{+})$. 
+Then the derivative  $A = \frac{d}{dx}$ with $D(A) = \{f \in E: f' \in C^{1} \text{ and } f' \in E\}$ is the generator of the uniformly stable translation semigroup $T(t)f(x) \coloneqq f(t+x)$. 
+Applying \eqref{eq:a4-1.14}, we obtain that $\image A = \{f\colon\int_{0}^{\infty} f(x) \,\dx \text{ exists}\}$ is dense in $C_{0}(\mathbb{R}_{+})$. 
 Let $r \in \image A$ and let $F(\cdot)$ be a $p$-periodic, real-valued function.
 
-\noindent
+%\noindent
+
 We apply Theorem \ref{thm:a4-2.4}  to the initial value problem
 %% --
 \begin{equation}
@@ -909,20 +1020,21 @@ We may rewrite (*) as
 \dot{v}(t) = Av(t) + G(t), \tag{**}
 \end{equation}
 %% --
-where $v(t) = u(t,\cdot)$ and $G : \mathbb{R}_{+} \to E$ is defined by $G(t)(x) = r(x)F(x+t)$.
+where $v(t) = u(t,\cdot)$ and $G\colon\mathbb{R}_{+} \to E$ is defined by $G(t)(x) = r(x)F(x+t)$.
 Then $G$ is $p$-periodic with values in $E$ and $h_{0} \coloneqq \int_{0}^{p} T(p-t)G(t) \,\dt$ is the function $x \mapsto \left[\int_{0}^{p} T(p-t)G(t) \,\dt\right](x) = F(x)\int_{x}^{x+p} r(s) \,\ds$. 
 For the function $f = \sum_{k=0}^{\infty} T(kp)h_{0}$, given by $x \mapsto F(x)\int_{x}^{\infty} r(s) \,\ds$, it is clear that $(\Id - T(p))f = h_{0}$. 
-Therefore, (**) has a unique $p$-periodic generalized solution (Theorem \ref{thm:a4-2.4}) although $\im \mathbb{R} \subset \sigma(A)$ (compare with Remark \ref{rem:a4-2.3}).
+Therefore, (**) has a unique $p$-periodic generalized solution (Theorem \ref{thm:a4-2.4}) although $\im \mathbb{R} \subset \sigma(A)$ (compare with Remark~\ref{rem:a4-2.3}).
 
-\noindent
+%\noindent
+
 The unique $p$-periodic generalized solution $u(t,\cdot)$ is given by 
 \[
-u(t,x) = F(x+t)\int_{x+t}^{\infty} r(s)ds + F(x+t)\int_{x}^{x+t} r(s)ds = F(x+t)\int_{x}^{\infty} r(s)\,\ds.
+u(t,x) = F(x+t)\int_{x+t}^{\infty} r(s)\,\ds + F(x+t)\int_{x}^{x+t} r(s)\,\ds = F(x+t)\int_{x}^{\infty} r(s)\,\ds.
 \]
 For every solution $v(t,\cdot)$ of (*) we have, by Theorem \ref{thm:a4-2.4} :
 %% --
-\[
-\sup\{|v(t,x) - F(x+t)\int_{x}^{\infty} r(s) \,\ds| : x \in \mathbb{R}_{+}\} \to 0 \quad \text{as} \quad t \to 0.
+\[\textstyle 
+\sup\left\{\left|v(t,x) - F(x+t)\int_{x}^{\infty} r(s) \,\ds\right| \colon x \in \mathbb{R}_{+}\right\} \to 0 \quad \text{as} \quad t \to 0.
 \]
 %% --
 \end{example}
@@ -932,17 +1044,17 @@ For every solution $v(t,\cdot)$ of (*) we have, by Theorem \ref{thm:a4-2.4} :
 \addcontentsline{toc}{section}{Notes}
 %% --
 \begin{enumerate}[%
-label={\Large \emph{Section \arabic*:}}
+label={\emph{Section \arabic*:}}
 , wide
-, labelindent = 0.0em]
+, labelsep=1em]
 
 \item 
 The exponential growth bounds $\omega(f)$ and $\omega_0(A)$ as well as the characterizations \eqref{eq:a4-1.2}, \eqref{eq:a4-1.6} and Theorem \ref{thm:a4-1.3} (i) can be found in \citet{hillephillips:1957}.
-Growth bounds similar to $\omega_{1}(A)$ were considered first in \citet{djacenko:1976} and in \citet[Prop.2]{zabczyk:1979}. 
+Growth bounds similar to $\omega_{1}(A)$ were considered first in \citet{djacenko:1976} and in \citet[Proposition~2]{zabczyk:1979}. 
 Example \ref{ex:a4-1.2}(2) is taken from \citet{wolff:1981}; other \emph{counterexamples} can be found in \citet{hillephillips:1957}, \citet{foias:1973}, \citet{triggiani:1975}, 
 \marginpar{GG: Triggiani (1975a  oder b)} 
 \citet{zabczyk:1975} and \citet{greineretal:1981}. 
-Statements \eqref{eq:a4-1.2}, \eqref{eq:a4-1.6} and Theorem \ref{thm:a4-1.3} (i) are semigroup versions of results of classical Laplace transform theory, see \citet{hillephillips:1957} and \citet{widder:1946}. 
+Statements \eqref{eq:a4-1.2}, \eqref{eq:a4-1.6} and Theorem \ref{thm:a4-1.3} (i) are semigroup versions of results in classical Laplace transform theory, see \citet{hillephillips:1957} and \citet{widder:1946}. 
 Theorem \ref{thm:a4-1.3} (ii) is a semigroup version of Theorem 1.2.7 and 1.2.8 in \citet{doetsch:1950}. 
 The lemma in the proof of Theorem \ref{thm:a4-1.3} is taken from \citet{milstein:1975}. 
 Theorem \ref{thm:a4-1.4} and Corollary \ref{cor:a4-1.5} can be found in \citet{neubrander:1985a}. 
@@ -950,7 +1062,7 @@ Example \ref{ex:a4-1.6} follows Remark~2 in \citet{zabczyk:1975}.
 Statement \eqref{eq:a4-1.8} is sometimes called the \emph{spectrum determined growth assumption}, see, for example, \citet{triggiani:1975b}. 
 Theorem \ref{thm:a4-1.9} is due to \citet{slemrod:1976}. 
 The proof presented here is based on the following sharper version of the inversion formula for the Laplace transform, which improves upon the one given in \citet[p.349]{hillephillips:1957}. 
-Using \citet[p.66]{widder:1946} or \citet[p.212]{doetsch:1950}Doetsch (1950) one can establish the following theorem (see \citet{neubrander:1984b}.
+Using \citet[p.66]{widder:1946} or \citet[p.212]{doetsch:1950} one can establish the following theorem (see \citet{neubrander:1984b}.
 
 \begin{theorem}\label{thm:a4-2.6}
 Let $A$ be the generator of a strongly continuous semigroup $(T(t))_{t \geq 0}$ on a Banach space $E$. 
@@ -961,7 +1073,8 @@ T(t)f = \frac{1}{2\pi i} \int_{p-i\infty}^{p+i\infty} e^{\mu t}R(\mu,A)f \, d\mu
 \]
 %% --
 \end{theorem}
-\noindent
+%\noindent
+
 The equivalence of the statements \eqref{eq:a4-1.12}, \eqref{eq:a4-1.13} and \emph{$\omega_0(A) < 0$} were observed by many authors, see for example, \citet[p.178]{balakrishnan:1976}, 
 \marginpar{GG Balakrishnan (1976) ist nicht im LV!} 
 or \citet{benchimol:1978}. 
@@ -978,5 +1091,3 @@ Results similar to Lemma \ref{lem:a4-2.2} and Theorem \ref{thm:a4-2.4} are due t
 For a discussion of the asymptotic behavior of the solutions of $\dot{u}(t) = A(t)u(t) + F(t)$ see \citet{datko:1972} and \citet[p.172]{pazy:1983}.
 
 \end{enumerate}
-
-

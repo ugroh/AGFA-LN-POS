@@ -1,3 +1,5 @@
+%% 2025-04-28 KGK: Kommentar Zeichen "%" kurz nach eq:c2-1.7 entfernt
+%% 2025-04-27 KGK: Korrekturen von WA in Sec 1 + 2 eingearbeitet
 %% Stand 2025-04-24 ulgr
 %% --
 \chapter{Characterization of Positive Semigroups on Banach Lattices}\label{chap:c2}
@@ -13,8 +15,8 @@ Wolfgang Arendt
 }
 %% --
 In this chapter our first goal is to find conditions on a generator $A$ of a semigroup $(T(t))_{t \geq 0}$ which are equivalent to the positivity of the semigroup.
-After the preparations in A-II Section 2 this is easy if in addition we ask that the semigroup be contractive: $T(t)$ is a positive contraction for all $t \geq 0$ if and only if $A$ is dispersive (Section 1).
-For arbitrary (not necessarily contractive) semigroups a condition on the generator had been found in the case when $E = C(K)$ ($K$ compact), namely the positive minimum principle (P) (see B-II Theorem 1.6).
+After the preparations in A-II, Section 2 this is easy if in addition we ask that the semigroup be contractive: $T(t)$ is a positive contraction for all $t \geq 0$ if and only if $A$ is dispersive (Section 1).
+For arbitrary (not necessarily contractive) semigroups a condition on the generator had been found in the case when $E = C(K)$ ($K$ compact), namely the positive minimum principle (P) (see B-II, Theorem 1.6).
 One may easily reformulate this condition in arbitrary Banach lattices and show its necessity.
 However, only in special cases (for example if $A$ is bounded (see Section 1)) the positive minimum principle is sufficient for the positivity of the semigroup.
 In fact, on $L^2(\R)$ there exists a non-positive semigroup whose generator satisfies (P) (Section 3).
@@ -139,9 +141,9 @@ Let $A$ be a densely defined dispersive operator on a real Banach lattice $E$.
 If $(\lambda - A)D(A)$ is dense in $E$ for some $\lambda > 0$, then $A$ is closable and the closure $\overline{A}$ of $A$ is the generator of a positive contraction semigroup.
 \end{corollary}
 
-Theorem \ref{thm:c2-1.2}  and Corollary \ref{cor:c2-1.3}  immediately follow from A-II,Theorem 2.11 
+Theorem \ref{thm:c2-1.2}  and Corollary \ref{cor:c2-1.3}  immediately follow from A-II, Theorem 2.11 
 %%KGK; ref{thm:a2-2.11}
-and A-II Corollary 2.12 
+and A-II, Corollary 2.12 
 %%KGK: ref{cor:a2-2.12}
 if one observes the following.
 
@@ -196,7 +198,7 @@ Since the set $M = \{x \in (0,1) : f(x) > 0\}$ is open, there exists a countable
 
 First case: $p > 1$.
 Let $\phi \in \partial N^{+}(f)$. 
-Then there exists $c \geq 0$ such that $\phi(x) = c f(x)^{p-1}$ for all $x \in M$ and and $\phi(x) = 0$ if $f(x) \leq 0$ (see Example \ref{ex:c2-1.1-2} ). 
+Then there exists $c \geq 0$ such that $\phi(x) = c f(x)^{p-1}$ for all $x \in M$ and and $\phi(x) = 0$ if $f(x) \leq 0$ (see Example \ref{ex:c2-1.1}, \ref{ex:c2-1.1-2} ). 
 Thus integration by parts yields
 %% -- 
 \begin{align*}
@@ -214,7 +216,7 @@ Then $\phi \in \diff{N^{+}}(f)$ and
 \langle Af,\phi \rangle &= \sum_{n} \int_{a_{n}}^{b_{n}} f''(x) \, \dx = \sum_{n} (f'(b_{n}) - f'(a_{n})) \leq 0
 \end{align*}
 %% -- 
-since $f'(b_{n}) \leq 0$ and $f'(a_{n}) \geq 0$ for all $n$.
+since $f'(b_{n}) \leq 0$ and $f'(a_{n}) \geq 0$ for all $n \in \N$.
 
 We have shown that $A$ is dispersive. 
 As in \ref{ex:c2-1.5-1}   one shows that $(Id - A)$ is surjective. 
@@ -252,7 +254,7 @@ Moreover,
 (Id - \Delta) \text{ is an isomorphism from } \mathcal{S}(\R^{n}) \text{ onto } \mathcal{S}(\R^{n}).
 \end{equation}
 In fact, the Fourier transform $f \mapsto \hat{f}$ is a bijection from $\mathcal{S}(\R^{n})$ onto $\mathcal{S}(\R^{n})$.
-But $[(Id - \Delta)f]^{\hat{}} = M\hat{f}$ where $(Mg)(y) = (1 + \sum_{i=1}^{n} y_{i}^{2})g(y)$ $(g \in \mathcal{S}(\R^{n}))$. It follows from \eqref{eq:c2-1.3}    that $(Id - A)D(A)$ is dense in $E$. So the claim follows from Corollary. \ref{cor:c2-1.3}  .
+But $[(Id - \Delta)f]^{\hat{}} = M\hat{f}$ where $(Mg)(y) = (1 + \sum_{i=1}^{n} y_{i}^{2})g(y)$ $(g \in \mathcal{S}(\R^{n}))$. It follows from \eqref{eq:c2-1.3}    that $(Id - A)D(A)$ is dense in $E$. So the claim follows from Corollary~\ref{cor:c2-1.3}.
 \end{proof}
 
 %%Claude: \begin{enumerate}[(d)]
@@ -310,24 +312,22 @@ The following example is the analog of  \ref{ex:c2-1.5-1}   for higher dimension
 Let $\Omega \subset \R^n$ be a bounded open and connected set and $E = C_{0}(\Omega)$.
 We assume that the Dirichlet problem
 %% --
-%%claude \begin{align*}
 \begin{equation} \label{eq:c2-1.7}
 \begin{array}{lll}
 u(x) - \Delta u(x) &= 0 \quad &(x \in \Omega)\\
 u(x) &= b(x) \quad &(x \in \partial\Omega)
 \end{array}
 \end{equation}
-%%claude \end{align*}
 %% --
 has a solution $u \in C^{2}(\Omega) \cap C(\overline{\Omega})$ for every $b \in C(\partial\Omega)$.
-%For example, this is the case if the boundary $\partial\Omega$ is $C^{2}$ (see \citet[Section~2.8 and Theorem. 6.13]{gilbargtrudinger:1977}).
+For example, this is the case if the boundary $\partial\Omega$ is $C^{2}$ (see \citet[Section~2.8 and Theorem. 6.13]{gilbargtrudinger:1977}).
 Let $A$ be given by $Af = \Delta f$ on
 $D(A) = \{f \in C^{2}(\Omega) \cap C_{0}(\Omega) \colon \Delta f \in C_{0}(\Omega)\}$.
 Then $A$ is closable and the closure of $A$ is the generator of a positive contraction semigroup.
 
 \begin{proof}
 $D(A)$ is clearly dense in $E$.
-Moreover, one can show as in \ref{ex:c2-1.5-3} ) that $A$ is dispersive.
+Moreover, one can show as in \ref{ex:c2-1.5-3} that $A$ is dispersive.
 It remains to prove that $(Id - A)D(A)$ is dense in $E$.
 The space $C_{c}^{\infty}(\Omega)$ of all infinitely differentiabel functions on $\Omega$ with compact support contained in $\Omega$ is dense in $E \cap C_{c}^{\infty}(\Omega)$.
 We show that there exists $f \in D(A)$ satisfying $(Id - A)f = g$.
@@ -398,7 +398,7 @@ The other is obvious by considering point measures.]
 \begin{proposition}\label{prop:c2-1.7}
 \index{Generators!positive minimum principle}
 \index{Positive minimum principle!necessity}
-The generator of a strongly continuous positive semigroup satisfies the positive minimum principle ( \eqref{eq:c2-P}).  
+The generator of a strongly continuous positive semigroup satisfies the positive minimum principle  \eqref{eq:c2-P}.  
 \end{proposition}
 
 \begin{proof}
@@ -571,7 +571,7 @@ Let $E = \ell^p$ $(1 \leq p \leq \infty)$ or $E = c_{0}$.
 \begin{enumerate}[(i), wide, labelsep=1em, itemindent=\parindent]
 \item \label{ex:c2-1.13-1}
 An operator $A \in \LE)$ can be canonically represented by a matrix $(a_{ij})$.
-It follows from Theorem ref{thm:c2-1.11} that $e^{tA} \geq 0$ for all $t \geq 0$ if and only if $a_{ij} \geq 0$ whenever $i \neq j$.
+It follows from Theorem \ref{thm:c2-1.11} that $e^{tA} \geq 0$ for all $t \geq 0$ if and only if $a_{ij} \geq 0$ whenever $i \neq j$.
 %%--
 \item \label{ex:c2-1.13-2}
 Let $A$ be the generator of a strongly continuous contraction semigroup $(T(t))_{t \geq 0}$ on $E$.
@@ -585,9 +585,9 @@ Then it follows from Theorem \ref{thm:c2-1.8}   that the semigroup is positive i
 \index{Kato's inequality}
 \index{Inequality!Kato's}
 
-A strongly continuous semigroup on $C(K)$ $(K$ compact$)$ or a norm continuous semigroup on an arbitrary Banach lattice is positive if and only if its generator $A$ satisfies the positive minimum principle \ref{eq:c2-P} from Definition \ref{def:c2-1.6}.
-However, we will see that in general \ref{eq:c2-P} is not sufficient for the positivity of the semigroup.
-One reason seems to be that \ref{eq:c2-P} involves merely positive elements in $D(A)$ but $D(A)_{+}$ can be small if the semigroup is not positive (cf. Remark \ref{rem:c2-3.16}).
+A strongly continuous semigroup on $C(K)$ $(K$ compact$)$ or a norm continuous semigroup on an arbitrary Banach lattice is positive if and only if its generator $A$ satisfies the positive minimum principle \eqref{eq:c2-P} from Definition \ref{def:c2-1.6}.
+However, we will see that in general \eqref{eq:c2-P} is not sufficient for the positivity of the semigroup.
+One reason seems to be that \eqref{eq:c2-P} involves merely positive elements in $D(A)$ but $D(A)_{+}$ can be small if the semigroup is not positive (cf. Remark \ref{rem:c2-3.16}).
 
 Our aim in this section is to find a different condition on the generator which is necessary for the positivity of the semigroup.
 
@@ -616,16 +616,16 @@ For every $f \in E$ there exists a unique linear operator (sign $f$) on $E$ whic
 %% --
 %% --
 \begin{equation}\label{eq:c2-2.3}
-(\sign \bar{f})f = |f| \quad \text{(where } \bar{f} \coloneqq \Re f - i\Im f  \quad \text{)}.
+(\sign \bar{f})f = |f| \quad \text{(where } \bar{f} \coloneqq \Re f - i\Im f \text{)}.
 \end{equation}
 %% --
 \end{proposition}
 %%--
-The operator $(\hat{\sign} f)$ (which is non-linear in general) is defined by
+The operator $(\widehat{\sign} f)$ (which is non-linear in general) is defined by
 \marginpar{hat groesser??}
 %% --
 \begin{equation}\label{eq:c2-2.4}
-(\hat{\sign}f)g = (\sign f)g + (\Id - P_{|f|})|g|
+(\widehat{\sign}f)g = (\sign f)g + (\Id - P_{|f|})|g|
 \end{equation}
 %% --
 where for $h \in E_{+}$ we denote by $P_h$ the band projection onto the band $\{h\}^{dd}$ generated by $h$.
@@ -660,11 +660,11 @@ Then $\sign f$ is the multiplication operator defined by $m$; i.e.,
 %% --
 Moreover, 
 \[
-(\hat{\sign} f)g = m \cdot g + 1_{[f(x)=0]}|g| \quad (g \in E).
+(\widehat{\sign} f)g = m \cdot g + 1_{[f(x)=0]}|g| \quad (g \in E).
 \]
 \end{example}
 
-The operator $\hat{\sign} f$ is related to the Gateaux-derivative (B-II, Definition 3.2) 
+The operator $\widehat{\sign} f$ is related to the Gateaux-derivative (B-II, Definition 3.2) 
 %%KGK: \ref{def:b2-3.2}
 of the modulus.
 We explain this by an example.
@@ -675,7 +675,7 @@ We explain this by an example.
 \index{Examples!Gateaux-derivative}
 Let $E$ be the real or complex space $L^p(X,\Sigma,\mu)$ where $(X,\Sigma,\mu)$ is a $\sigma$-finite measure space and $1 \leq p < \infty$.
 Let $f,g \in E$ and $x \in X$.
-Then by B-II,Lemma 2.4 
+Then by B-II, Lemma 2.4 
 %%KGK: \ref{ken:b2-2.4}
 %% --
 \begin{align*}
@@ -686,10 +686,10 @@ Then by B-II,Lemma 2.4
 \end{cases}
 \end{align*}
 %% --
-If $\theta : E \to E_{+}$ denotes the modulus function given by $\theta(h) = |h|$, then it follows from the dominated convergence theorem that $\theta$ is right-sided Gateaux-differentiable and
+If $\Theta : E \to E_{+}$ denotes the modulus function given by $\Theta(h) = |h|$, then it follows from the dominated convergence theorem that $\Theta$ is right-sided Gateaux-differentiable and
 %% --
 \begin{equation}\label{eq:c2-2.6}
-D_{g}\theta(f) = \text{Re}(\hat{\sign} \bar{f})g.
+D_{g}\Theta(f) = \text{Re}(\widehat{\sign} \bar{f})g.
 \end{equation}
 %% --
 \end{example}
@@ -708,19 +708,19 @@ The positivity of the semigroup is equivalent to
 In order to deduce from \ref{eq:c2-2.7} a property for the generator $A$ it is natural trying to differentiate \ref{eq:c2-2.7} at $t = 0$.
 Let us assume for a moment that $E = L^p(X,\Sigma,\mu)$ (as in Example \ref{ex:c2-2.3}).
 Let $f \in D(A)$ and $0 \leq \phi \in D(A')$.
-Then by \ref{eq:c2-2.7}  ,
+Then by \eqref{eq:c2-2.7}  ,
 %% --
 \begin{equation}\label{eq:c2-2.8}
 \langle |T(t)f|,\phi \rangle \leq \langle T(t)|f|,\phi \rangle \quad (t \geq 0)
 \end{equation}
 %% --
 where the equality holds for $t = 0$.
-Hence the inequality remains valid if we differentiate at $0$ on both sides of \ref{eq:c2-2.8}  .
+Hence the inequality remains valid if we differentiate at $0$ on both sides of \eqref{eq:c2-2.8}  .
 Since $\phi \in D(A')$ we obtain $\diff{}/\dt|_{t=0} \langle T(t)|f|,\phi \rangle = \langle |f|,A'\phi \rangle$ on the right side.
-By \ref{eq:c2-2.6} and the chain rule B-II, Proposition 2.3 
+By \eqref{eq:c2-2.6} and the chain rule B-II, Proposition 2.3 
 %%KGK: \ref{prop:b2-2.3} 
-one obtains $\diff{}/\dt|_{t=0}|T(t)f| = \Re((\hat{\sign} \bar{f})Af)$ on the left side.
-Since $\Re((\sign \bar{f})Af) \leq \Re((\sign \bar{f})Af)$, this finally gives
+one obtains $\diff{}/\dt|_{t=0}|T(t)f| = \Re((\widehat{\sign} \bar{f})Af)$ on the left side.
+Since $\Re((\sign \bar{f})Af) \leq \Re((\widehat{\sign} \bar{f})Af)$, this finally gives
 %% --
 \begin{equation*}\label{eq:c2-K} \tag{K}
 \Re\langle(\sign \bar{f})Af,\phi \rangle \leq \langle |f|,A'\phi \rangle \quad (f \in D(A) \,, 0 \leq \phi \in D(A')) \,.
@@ -1971,7 +1971,7 @@ We show that \eqref{eq:c2-4.12} is satisfied.
 Consider the operator $A_{\max}$ on $C[-1,0]$ given by $A_{\max}f = f'$ with domain $D(A_{\max}) = C^{1}[-1,0]$.
 We know by B-II, Example 2.12 
 %%KGK: \ref{ex:b2-2.12}
-that $\Re\langle(\sign  \bar{f})Af,\phi\rangle \leq \Re\langle(\hat{\sign}  \bar{f})(Af),\phi\rangle = \langle|f|, (A_{\max})'\phi\rangle$ for all $f \in D(A_{\max})$, $0 \leq \phi \in D((A_{\max})')$.
+that $\Re\langle(\sign  \bar{f})Af,\phi\rangle \leq \Re\langle(\widehat{\sign}  \bar{f})(Af),\phi\rangle = \langle|f|, (A_{\max})'\phi\rangle$ for all $f \in D(A_{\max})$, $0 \leq \phi \in D((A_{\max})')$.
 In particular
 %% --
 \begin{equation}\label{eq:c2-4.14}
@@ -2223,6 +2223,7 @@ $|S| \leq T$ for all $T \in \LE$ such that $|Sf| \leq T|f|$ $(f \in E)$).
 \end{proposition}
 
 For the proof of the proposition we refer to \citet{arendt:1983} and \citet{depagter:1985}.
+\marginpar{LMN-bib: 84 oder 86}
 
 \begin{proposition}\label{prop:c2-5.2}
 Let $(S(t))_{t \geq 0}$ be a disjointness preserving semigroup. 
@@ -2285,7 +2286,7 @@ There exists a semigroup $(T(t))_{t \geq 0}$ with generator $A$ such
 that
 %% --
 \begin{equation}\label{eq:c2-5.5}
-f \in D(B) \text{ implies } |f| \in D(A) \text{ and } \Re((\hat{\sign}  \bar{f})Bf) = A|f|.
+f \in D(B) \text{ implies } |f| \in D(A) \text{ and } \Re((\widehat{\sign}  \bar{f})Bf) = A|f|.
 \end{equation}
 %% --
 \end{enumerate}
@@ -2323,7 +2324,7 @@ Let $E$ be a real or complex Banach lattice with order continuous norm.
 Then the modulus function $\Theta \colon E \to E$ (given by $\Theta(h) = |h|$) is right-sided Gateaux differerentiable and
 %% --
 \begin{equation}\label{eq:c2-5.6}
-D_{g}\Theta(f) = \Re((\hat{\sign}  \bar{f})g) \quad (f, g \in E).
+D_{g}\Theta(f) = \Re((\widehat{\sign}  \bar{f})g) \quad (f, g \in E).
 \end{equation}
 %% --
 \end{proposition}
@@ -2354,7 +2355,7 @@ Let $\lambda = s/t \in (0,1)$. Then $s = (1-\lambda)0 + \lambda t$. Consequently
 
 It follows from \eqref{eq:c2-5.7} that the net $(k(t)/t)_{t>0}$ is decreasing and bounded below (by $-k(-1)$, for instance). Since $E$ has order continuous norm, it follows that $D_{g}\Theta(f) = \lim_{t \to 0+} k(t)/t$ exists.
 
-It remains to show that $D_{g}\Theta(f) = \Re(\hat{\sign}  \bar{f})g$.
+It remains to show that $D_{g}\Theta(f) = \Re(\widehat{\sign}  \bar{f})g$.
 First of all denote by $P$ the band projection onto $\{f\}^{dd}$. Then it
 follows from the definition of $D_{g}\Theta(f)$ that $D_{g}\Theta(f) = PD_{g}\Theta(f) + (\Id-P)D_{g}\Theta(f) = D_{Pg}\Theta(f) + |(\Id-P)g|$. 
 Thus it remains to show that
@@ -2427,8 +2428,8 @@ Let $f \in D(B)$.
 Then $S(t)f$ is differentiable at $t$. 
 By the chain rule B-II, Proposition 2.3,
 %%KGK: \ref{prop:b2-2.3}
-$T(t)|f| = |S(t)f|$ is also differentiable and $\diff{}/\dt|_{t=0} T(t)|f| = \diff{}/\dt|_{t=0} |S(t)f| = \Re(\hat{\sign}  \bar{f})Bf$ (by  Proposition \ref{prop:c2-5.6}  .
-Hence $|f| \in D(A)$ and $A|f| = \Re(\hat{\sign}  \bar{f})Bf$.
+$T(t)|f| = |S(t)f|$ is also differentiable and $\diff{}/\dt|_{t=0} T(t)|f| = \diff{}/\dt|_{t=0} |S(t)f| = \Re(\widehat{\sign}  \bar{f})Bf$ (by  Proposition \ref{prop:c2-5.6}  .
+Hence $|f| \in D(A)$ and $A|f| = \Re(\widehat{\sign}  \bar{f})Bf$.
 
 Conversely, assume that \ref{thm:c2-5.5-2}   holds. 
 Let $s > 0, f \in E$. 
@@ -2440,7 +2441,7 @@ Since by assumption $|S(t)f| \in D(A)$ one obtains
 %% --
 \begin{align*}
 \diff{}/\dt \, \xi(t) &= -AT(s-t)|S(t)f| + T(s-t)\diff{}/\dr|_{r=t} |S(r)f|\\
-&= -AT(s-t)|S(t)f| + T(s-t)(\Re(\hat{\sign}  \overline{S(t)f})BS(t)f)\\
+&= -AT(s-t)|S(t)f| + T(s-t)(\Re(\widehat{\sign}  \overline{S(t)f})BS(t)f)\\
 &\quad \text{(by  Proposition \ref{prop:c2-5.6}   and the chain rule B-II, Proposition 2.3)
 %%KGK: ref{prop:b2-2.3}
 }\\
@@ -2480,7 +2481,7 @@ The following assertions are equivalent.
 $(T(t))_{t \geq 0}$ is a lattice semigroup.
 %%--
 \item \label{cor:c2-5.8-2}
-$f \in D(A)$ implies $|f| \in D(A)$ and $\Re((\hat{\sign}  \bar{f})Af) = A|f|$ 
+$f \in D(A)$ implies $|f| \in D(A)$ and $\Re((\widehat{\sign}  \bar{f})Af) = A|f|$ 
 %%--
 \item \label{cor:c2-5.8-3}
 $f \in D(A)$ implies $|f|,\bar{f} \in D(A)$ and $\Re((\sign  \bar{f})Af) = A|f|$ 
@@ -2493,7 +2494,7 @@ $f \in D(A)$ implies $|f|,\bar{f} \in D(A)$ and $\Re((\sign  \bar{f})Af) = A|f|$
 %%KGK: Check Claudes output
 The equivalence of \ref{cor:c2-5.8-1}   and \ref{cor:c2-5.8-2}   follows directly from Theorem \ref{thm:c2-5.5}  . 
 If \ref{cor:c2-5.8-1}   holds, then $A$ is local by  Proposition \ref{prop:c2-5.4}  .
-Thus $(\sign  \bar{f})Af = (\hat{\sign}  \bar{f})Af$ for all $f \in D(A)$ and so \ref{cor:c2-5.8-3}   holds since \ref{cor:c2-5.8-2}   is valid.
+Thus $(\sign  \bar{f})Af = (\widehat{\sign}  \bar{f})Af$ for all $f \in D(A)$ and so \ref{cor:c2-5.8-3}   holds since \ref{cor:c2-5.8-2}   is valid.
 
 Assume now that \ref{cor:c2-5.8-3}   holds. 
 Then Kato's equality implies that $Af \in \{f\}^{dd}$ whenever $f \in D(A)_{+}$. 
@@ -2538,9 +2539,9 @@ Thus Kato's equality holds and it follows from Corollary \ref{cor:c2-5.8}   that
 \index{Examples!Disjointness Preserving Semigroups}
 Let $E = L^{p}(X,\mu)$ (where $(X,\mu)$ is a $\sigma$-finite measure space and $1 \leq p < \infty$) and let $A_{0}$ be the generator of a semigroup of lattice homomorphisms. 
 Let $h \in L^{\infty}$ and $B = A_{0} + h$ (i.e., $B$ is given by $Bf = A_{0}f + h \cdot f$ for $f \in D(B) = D(A_{0})$). 
-Let $A = A_{0} + \Re  h$.
+Let $A = A_{0} + \Re \, h$.
 Since $A_{0}$ generates a semigroup of lattice homomorphisms, we have $|f| \in D(A_{0})$ whenever $f \in D(A_{0})$ and $\Re((\sign  f)A_{0}f) = A_{0}|f|$.
-Hence $\Re((\hat{\sign}  \bar{f})Bf) = \Re((\hat{\sign}  \bar{f})A_{0}f) + (\Re  h) \cdot |f|) = A_{0}|f| + (\Re  h) \cdot |f| = A|f|$ for all $f \in D(B)$. 
+Hence $\Re((\widehat{\sign}  \bar{f})Bf) = \Re((\widehat{\sign}  \bar{f})A_{0}f) + (\Re \, h) \cdot |f|) = A_{0}|f| + (\Re \, h) \cdot |f| = A|f|$ for all $f \in D(B)$. 
 Thus it follows from Theorem \ref{thm:c2-5.5}   that $B$ generates a disjointness preserving semigroup whose modulus semigroup is generated by $A$.
 \end{example}
 

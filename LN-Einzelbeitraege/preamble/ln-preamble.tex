@@ -1,5 +1,10 @@
-%% -- Stand 2025/02/14
+%% -- Stand 2025/04/30
 %% --
+
+%% -- Kein Einzug bei neumen Absatz und eine Leerzeile
+%% --               
+\usepackage[parfill]{parskip} 
+
 %% Welche Pakete verwenden wir 
 %% -- 
 \usepackage{graphicx}        
@@ -19,7 +24,9 @@
 
 %% -- Die Theorem-Umgebungen: Nummerierung nach Abschnitten
 %% --
-
+%\makeatletter
+%\def\@endtheorem{\endtrivlist}
+%\makeatother
 %% --
 \theoremstyle{plain}
 \newtheorem{theorem}{Theorem}[section]
