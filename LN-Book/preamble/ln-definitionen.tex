@@ -52,14 +52,20 @@
 
 %% --
 \newcommand{\LE}{\mathcal{L}(E)} 		% 
-\renewcommand{\L}[1]{\mathcal{L}(#1)} 	% \L{C(K)} zum Beispiel
 \newcommand{\BH}{\mathcal{B}(H)} 		% 
 \newcommand{\ZE}{\mathcal{Z}(E)} 	% \ZE  Zentrum von E
+
+\let\originalL\L
+\AtBeginDocument{%
+  \DeclareRobustCommand{\L}[1]{\mathcal{L}(#1)}%
+}
 
 
 \newcommand{\Fix}[1]{\mathop{}\mathrm{Fix}\left(#1\right)}		% \Fix{T} Fixraum
 \newcommand{\rank}{\mathop{}\!\mathrm{rank}\,}		% 
-\newcommand{\Kern}[1]{\mathop{}\mathrm{Ker}(#1)}
+\newcommand{\Kern}[1]{\mathop{}\mathrm{ker}(#1)}
+\newcommand{\Image}[1]{\mathop{}\mathrm{im}(#1)}
+\newcommand{\image}{\mathop{}\!\mathrm{im}\,}
 
 
 %% -- Enpunkt korrekt (momentan ignorieren)
@@ -68,6 +74,7 @@
 \newcommand*{\resp}{resp.\xspace}
 \newcommand*{\vs}{vs.\xspace}
 \newcommand*{\cf}{cf.\xspace}
+\newcommand*{\etc}{etc.\xspace}
 
 %% --
 \newcommand{\CA}{$\mathrm{C}^{*}$}	% C*-Algebra

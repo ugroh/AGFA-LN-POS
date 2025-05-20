@@ -34,8 +34,8 @@
 \DeclareMathOperator{\Id}{Id}
 \DeclareMathOperator{\sign}{sign}				% signum-Operator
 \newcommand{\im}{\ensuremath{\mathrm{i}}}		% imaginäre Konstante i
-\renewcommand*{\Re}{\mathop{}\!\mathrm{Re}}		% Realteil
-\renewcommand*{\Im}{\mathop{}\!\mathrm{Im}}		% Imaginärteil
+\renewcommand*{\Re}{\mathop{}\!\mathrm{Re}\,}		% Realteil
+\renewcommand*{\Im}{\mathop{}\!\mathrm{Im}\,}		% Imaginärteil
 \newcommand*{\supp}{\mathop{}\!\mathrm{supp}\,}  % Träger
 
 %% -- Differential Allgemeine Abkuerzungen
@@ -52,21 +52,21 @@
 
 %% --
 \newcommand{\LE}{\mathcal{L}(E)} 		% 
-\renewcommand{\L}[1]{\mathcal{L}(#1)} 	% \L{C(K)} zum Beispiel
 \newcommand{\BH}{\mathcal{B}(H)} 		% 
 \newcommand{\ZE}{\mathcal{Z}(E)} 	% \ZE  Zentrum von E
 
 
 \newcommand{\Fix}[1]{\mathop{}\mathrm{Fix}\left(#1\right)}		% \Fix{T} Fixraum
 \newcommand{\rank}{\mathop{}\!\mathrm{rank}\,}		% 
-\newcommand{\Kern}[1]{\mathop{}\mathrm{Ker}(#1)}
-
+\newcommand{\Kern}[1]{\mathop{}\mathrm{ker}(#1)}
+\newcommand{\Image}[1]{\mathop{}\mathrm{im}(#1)}
 
 %% -- Enpunkt korrekt (momentan ignorieren)
 \newcommand*{\eg}{e.g.,\xspace}
 \newcommand*{\ie}{i.e.,\xspace}
 \newcommand*{\resp}{resp.\xspace}
 \newcommand*{\vs}{vs.\xspace}
+\newcommand*{\etc}{etc.\xspace}
 \newcommand*{\cf}{cf.\xspace}
 
 %% --
@@ -80,23 +80,11 @@
 \newcommand*{\UG}{\mathcal{U}}	    % Implemented Semigroup
 \newcommand*{\F}{\mathcal{F}}		% F-product
        
-%% -- Angepasstes E/F und 1/3
-%% -- 1/3
+\let\originalL\L
+\AtBeginDocument{%
+  \DeclareRobustCommand{\L}[1]{\mathcal{L}(#1)}%
+}
 
-\newcommand*{\sfrac}[2]{\leavevmode\kern.1em%
-       \raise.5ex\hbox{\scriptsize #1}%
-       \kern-.1em/\kern-.15em%
-       \lower.25ex\hbox{\scriptsize #2}}
-
-\newcommand{\nfrac}[2]{\leavevmode\kern.1em%
-       \raise.5ex\hbox{\scriptsize #1}%
-       \kern-.1em/\kern-.15em%
-       \lower.25ex\hbox{\scriptsize #2}}
-       
-%% -- E/F im Textmodus, sonst \sfrac{E}{F}
-%% -- \trfac{E}{F}
-%% -- 
-\renewcommand{\tfrac}[2]{\raisebox{0.5ex}{#1}\big/\raisebox{-0.5ex}{#2}}
 %%
 
 %% -- Eins einer Algebra oder \1_{A} charakteristische Funktion
@@ -106,8 +94,8 @@
 \newcommand{\1}{\mathbbm{1}}
 
 %%KGK
-\theoremstyle{definition}
-\newtheorem*{corollary*}{Corollary}
+
+
 
 %% -- O-Spaces
 \newcommand{\HO}{\mathcal{H}(O)} 		%  für Lotz

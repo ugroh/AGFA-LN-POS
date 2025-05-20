@@ -27,16 +27,14 @@
 %% -- Index 
 %% --
 \usepackage{imakeidx}
+\makeindex
 \makeindex[columns=2, options=-s svind.ist]
+\newcommand{\idxquad}{\hspace{1em}}
 
 %% -- Literatur
-%% -- 
 \usepackage[square,numbers]{natbib}
 \bibliographystyle{abbrvnat}
-
-
 %% --
-
 \usepackage{hyperref}
 \hypersetup{%
 ,colorlinks=true 
@@ -53,7 +51,7 @@
 %% -- Bitte setzen
 %% --
 
-\setcounter{chapter}{3}		%% anpassen 1/2/3 -> Chapter 2/3/4
+\setcounter{chapter}{2}		%% anpassen 1/2/3 -> Chapter 2/3/4
 \setcounter{section}{1}		%% immer
 
 %% -- Das LaTeX-File

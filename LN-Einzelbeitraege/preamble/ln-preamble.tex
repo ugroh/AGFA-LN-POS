@@ -34,7 +34,10 @@
 \newtheorem{corollary}[theorem]{Corollary}
 \newtheorem{lemma}[theorem]{Lemma} 
 
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{corollary*}{Corollary}
 \newtheorem*{lemma*}{Lemma}
+\newtheorem*{proposition*}{Proposition}
 %% --
 \theoremstyle{definition}
 \newtheorem{example}[theorem]{Example}
@@ -43,17 +46,19 @@
 \newtheorem{remark}[theorem]{Remark}
 \newtheorem{remarks}[theorem]{Remarks}
 
+\newtheorem*{definition*}{Definition}
 \newtheorem*{example*}{Example}
 \newtheorem*{examples*}{Examples} 
 \newtheorem*{remark*}{Remark}
 \newtheorem*{remarks*}{Remarks}
+
 
 %% -- Unsere Pakete
 %% --
 \usepackage[english]{babel}					% Trennungen richtig
 \usepackage{csquotes}						% \enquote{Text} 
 \usepackage[inline,shortlabels]{enumitem}	% \begin{enumerate}[(i)] oder [(a)] 
-	\setlist{parsep=0.0em}					% etwas enger		
+	%\setlist{parsep=0.0em}					% etwas enger		
 \usepackage{ragged2e}						% \RaggedRight = Flattersatz
 %% --
 \usepackage{tikz}
@@ -62,16 +67,7 @@
 %% --
 \usepackage{comment}
 \usepackage{xspace}
-
+\usepackage{xfrac}
 %% --
-
-\usepackage{hyperref}
-\hypersetup{
-    colorlinks=true,
-    linkcolor=blue,
-    citecolor=blue,
-    urlcolor=blue,
-    linktoc=all
-}
 
 
