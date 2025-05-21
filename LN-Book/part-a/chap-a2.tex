@@ -1,3 +1,4 @@
+% !TEX root = ../LN-Book.tex
 %% KGK 2025-05-13 Korrekturen von Rainer und Wolfgang eingeaarbeitet
 %% KGK 2025-05-12 Gesperrt. entlden für Überarbeitung
 %% Stand 2025-05-08 
@@ -1951,7 +1952,6 @@ Every $\sigma$-Stonean space is an F-space.
 
 \begin{theorem}\label{thm:a2-3.6}
 \index{Semigroups!Strong continuity}
-\index{Banach spaces}
 Every strongly continuous semigroups of operators on one of the following Banach spaces is uniformly continuous
 \begin{enumerate}[\upshape (i)]
 %%--
@@ -1991,33 +1991,32 @@ The Banach space $H^{\infty}(O)$ of bounded analytic functions on a finitely con
 By Theorem \ref{thm:a2-3.5}   it suffices to show that the spaces listed above are Grothendieck spaces with the Dunford-Pettis property.
 
 %--
-\ref{thm:a2-3.6-1} If $K$ is compact, then $C(K)$ has the Dunford-Pettis property cf. \citet[Théorème 4]{grothendieck:1953}.
+\renewcommand*\descriptionlabel[1]{\normalfont{#1}}
+\begin{description}[style=standard, wide]
+
+\item[\ref{thm:a2-3.6-1}] 
+If $K$ is compact, then $C(K)$ has the Dunford-Pettis property (cf. \citet[Théorème 4]{grothendieck:1953}).
 If $K$ is a compact F-space, then $C(K)$ is a Grothendieck space cf.~\citet[Theorem 2.5]{seever:1968}. 
 The special cases for Stonean and $\sigma$-Stonean spaces are due to \citet[Théorème 9]{grothendieck:1953} and \citet{ando:1961},  respectively.
+
+\item[\ref{thm:a2-3.6-2} and \ref{thm:a2-3.6-3} ] It is well known that every $\sigma$-order complete AM-space with unit is isometric to a space $C(K)$ where $K$ is a compact $\sigma$-Stonean space.
+Obviously, the spaces under \ref{thm:a2-3.6-2}   and \ref{thm:a2-3.6-3}  are $\sigma$-order complete AM-spaces with unit and therefore, by proof of \ref{thm:a2-3.6-1}, are  Grothendieck spaces with the Dunford-Pettis property.
 %%--
- 
-\ref{thm:a2-3.6-2} and \ref{thm:a2-3.6-3} \quad It is well known that every $\sigma$-order complete AM-space with unit is isometric to a space $C(K)$ where $K$ is a compact $\sigma$-Stonean space.
-Obviously, the spaces under 
-\ref{thm:a2-3.6-2}   and \ref{thm:a2-3.6-3}  are $\sigma$-order complete AM-spaces with unit and therefore, by 
-proof of \ref{thm:a2-3.6-1}, are  Grothendieck spaces with the Dunford-Pettis property.
-%%--
- 
-\ref{thm:a2-3.6-4} and \ref{thm:a2-3.6-5} \quad
-These spaces are order complete vector lattices.
+\item[\ref{thm:a2-3.6-4} and \ref{thm:a2-3.6-5}] These spaces are order complete vector lattices.
 This follows from \citet[pp.18-22, Standardbeispiele 1 and 2 p.55]{bauer:1966}.
 Since these spaces contain the constant functions on $O$, they are complete for the supremum-norm.
 Indeed, if $(f_n)$ is a Cauchy-sequence for this norm, it is easily seen that $(f_n)$ converges in norm to $\inf_n \sup(f_k \colon n < k)$.
 Therefore these spaces are $\sigma$-order complete AM-spaces with unit and so as before Grothendieck spaces with the Dunford-Pettis property.
 %%--
+\item[\ref{thm:a2-3.6-6}] In \citet{bourgain:1982} it is shown, that $H^{\infty}(D)$ is a Grothendieck space, where $D$ is the open unit disc $\{z \colon |z| < 1\}$, and in \citet{bourgain:1984}, that this Banach space has the Dunford-Pettis property (see also the summary of Bouurgain in \citet{blei:1983}).
 
-\ref{thm:a2-3.6-6}
-\citet[Corollary 3]{bourgain:1980} proves that $H^{\infty}(D)$ has the Dunford-Pettis property and in \citet[Proposition III.1]{bourgain:1984}, that $H^{\infty}(D)$ is a
-\marginpar{!!Im Buch: Bourgain 1984???}
-Grothendieck space, where $D$ is the open unit disc $\{z \colon |z| < 1\}$.
 If $O$ is a finitely connected domain and $H^{\infty}$ does not only contain the constant functions, then $H^{\infty}(O)$ is isomorphic to a finite direct sum of copies of $H^{\infty}(D)$.
 (Note that $H^{\infty}(D)$ is isomorphic to $\{f \in H^{\infty}(D) \colon f(0) = 0\}$ via the map $f \mapsto zf$.
 Then use \citet[p.77 and Proposition 4.4.1]{grothendieck:1953} ).
 Hence $H^{\infty}(O)$ is a Grothendieck space with the Dunford-Pettis property.
+
+\end{description}
+
 \end{proof}
 
 \begin{remark*}[Final]\label{rem:a2-final}
