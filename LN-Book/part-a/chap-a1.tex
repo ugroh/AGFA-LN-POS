@@ -371,19 +371,33 @@ The above characterization of the generators of uniformly continuous semigroups 
 %% --
 \subsection{Matrix Semigroups}\label{subsec:a1-2.2}
 \index{Basic Results!Standard Examples!Matrix Semigroups}
-%% -- ulgr
+%% --
 The above considerations especially apply in the situation $E = \mathbb{C}^{n}$.
-If
-$n = 2$ and $A = (a_{ij})_{2 \times 2}$, one can derive an explicit formula for $e^{tA}$. 
+
+If $n = 2$ and 
+%
+\[
+	A = \begin{pmatrix} 
+		a &b \\ c &d 
+	\end{pmatrix} ,
+\]
+%
+define $ \delta \coloneq ad - bc = \det(A)$, $ \tau = a + b $ and $ p_{A} $ the characteristic polynomial of $ A $, \ie 
+%
+\[
+	p_{A}(t) = \det(t - A) = t^{2} - \tau \, t + \delta .
+\]
+%
+$A = (a_{ij})_{2 \times 2}$, one can derive an explicit formula for $e^{tA}$. 
 
 Let\quad
-$s \coloneqq \text{trace } A$\,,
+$\tau \coloneqq \text{trace } A$\,,
 \quad 
-$d \coloneqq \text{det } A$\,,
+$\delta \coloneqq \text{det } A$\,,
 \quad
-$D \coloneqq (s^{2}/4 - d)^{1/2}$ \quad and 
+$D \coloneqq (\tau^{2}/4 - \delta)^{1/2}$ \quad and 
 \[
-p_A(\lambda) \coloneqq \det(\lambda - A) = \lambda^2-s\cdot \lambda + d \,.
+p_{A}(t) \coloneqq \det(t - A) = t^{2} - \tau t + \delta .
 \]
 the characteristic polynomial of $A$. 
 
@@ -421,6 +435,20 @@ $\cosh(tD) = \cos(t|D|)$ and $\sinh(tD) = \sin(t|D|)$\,.
 %\item 
 %If $D^2=0$, then $\cosh(tD) = 1$ and $\frac{1}{D}\sinh(tD) = t $\,.
 \end{itemize}
+%% --
+%
+\[
+	A = 
+	\begin{pmatrix}
+	0 & 1 \\ -1 &0
+	\end{pmatrix}
+	\quad
+	\mathrm{e}^{tA} =
+	\begin{pmatrix}
+	\cos t & \sin t \\ - \sin t & \cos t
+	\end{pmatrix}
+\]
+%
 
 %% --
 \subsection{Multiplication Semigroups}\label{subsec:a1-2.3}
