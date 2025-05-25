@@ -1,7 +1,7 @@
 % !TEX root = ../LN-Book.tex
 %% --
 %% -- Finale Version
-%% -- Stand: 2025-05-22
+%% -- Stand: 2025-05-25
 %% --
 \chapter{Basic Results on Semigroups on Banach Spaces}\label{chap:a1}
 \index{Basic Results}
@@ -56,7 +56,7 @@ Next we collect a few elementary facts on the continuity and boundedness of one-
 %% --
 \begin{remarks}\label{rem:a1-1.2}
 %% --
-\begin{enumerate}[\upshape(i), wide]
+\begin{enumerate}[\upshape(i), wide, labelindent=.5em]
 
 \item 
 A one-parameter semigroup $(T(t))_{t \geq 0}$ on a Banach space $E$ is strongly continuous if and only if for any $f \in E$ it is true that $T(t)f \to f$ if $t \to 0$.
@@ -87,7 +87,7 @@ Moreover the reader should observe that the infimum in Definition ~\ref{def:a1-1
 %% --
 \begin{examples}\label{ex:a1-1.4}
 %% --
-\begin{enumerate}[\upshape(i), wide]
+\begin{enumerate}[\upshape(i), wide, labelindent=.5em]
 
 \item 
 Take 
@@ -287,7 +287,7 @@ for every $f \in E$, $n \geq 0$ and $\lambda \in \mathbb{C}$ with $\Re(\lambda) 
 %% --
 \begin{remarks}\label{rem:a1-1.12}
 %% --
-\begin{enumerate}[\upshape(i), wide]
+\begin{enumerate}[\upshape(i), wide, labelindent=.5em]
 %% --
 \item 
 For continuous Banach space valued functions such as $t \mapsto T(t)f$ we consider the Riemann integral and define 
@@ -372,84 +372,119 @@ The above characterization of the generators of uniformly continuous semigroups 
 \subsection{Matrix Semigroups}\label{subsec:a1-2.2}
 \index{Basic Results!Standard Examples!Matrix Semigroups}
 %% --
-The above considerations especially apply in the situation $E = \mathbb{C}^{n}$.
+%% --
+The above considerations especially apply in the situation $E = M_{n}(\mathbb{C})$.
+If $n = 2$ and $A \in E$, one can derive an explicit formula for $e^{tA}$. 
 
-If $n = 2$ and 
-%
+Let %
 \[
-	A = \begin{pmatrix} 
-		a &b \\ c &d 
-	\end{pmatrix} ,
+	s = \text{trace}(A), 
+	\quad 
+	d = \det(A) 
+	\quad \text{and} \quad
+	D^{2} \coloneqq \left( \frac{s^{2}}{4} - d \right).
 \]
 %
-define $ \delta \coloneq ad - bc = \det(A)$, $ \tau = a + b $ and $ p_{A} $ the characteristic polynomial of $ A $, \ie 
-%
+If $ \lambda $ is a root of the characteristic polynomial  
+%% --
 \[
-	p_{A}(t) = \det(t - A) = t^{2} - \tau \, t + \delta .
+p_A(\lambda) \coloneqq \det(\lambda - A) = \lambda^2-s\cdot \lambda + d , 
 \]
-%
-$A = (a_{ij})_{2 \times 2}$, one can derive an explicit formula for $e^{tA}$. 
+%% --
+of $ A $, then  $ \left( \lambda - s/2 \right)^{2} = D^{2} $.
+%% --
+Now we have to consider two cases.
+%% --
+\begin{description}[wide, labelindent=0em]
 
-Let\quad
-$\tau \coloneqq \text{trace } A$\,,
-\quad 
-$\delta \coloneqq \text{det } A$\,,
-\quad
-$D \coloneqq (\tau^{2}/4 - \delta)^{1/2}$ \quad and 
+\item[$ D^{2} = 0 $: ] 
+In this case $\left( \lambda - s/2 \right)^{k} = D^{k} $  for all $ (k \geq 2)$.
+%
+But this implies 
+%
 \[
-p_{A}(t) \coloneqq \det(t - A) = t^{2} - \tau t + \delta .
+	 e^{t \cdot \left( \lambda - s/2 \right)} = 1 + t( \lambda - s/2)
 \]
-the characteristic polynomial of $A$. 
-
-By the \emph{Cayley-Hamilton theorem} we have 
-\quad$p_A(A) = A^2-sA +d\Id = 0$\quad  or, equivalently, 
+%
+or
+%
 \[
-(A-s/2\Id)^2 = D^2\Id \,.
+	e^{t \lambda } = e^{t\cdot s/2}[ ( 1 - s/2) + t \cdot \lambda] .
 \]
-\begin{itemize}[\textbullet, wide]
-\item 
-If $D^2=0$, then $(A-s/2\Id)^k = 0$ for $ k \geq 2$, hence 
-$e^{t(A-s/2\Id)} = \Id + t(A-s/2\Id)$.
-\end{itemize}
-Otherwise, by iteration we obtain for every $m\in\N$
-\[
-(A-s/2\Id)^{2m} = D^{2m}\Id  
-\quad \text{and} \quad 
-(A-s/2\cdot\Id)^{2m+1} =\frac{1}{D} D^{2m+1}(A-s/2\cdot\Id)\,.
-\]
+%
+\item[$ D^{2} \neq 0 $: ]
+In this case we obtain for every $ k \in \N $
+%
+\begin{align*}
+	( \lambda - s/2 )^{2k}  &= D^{2k}, \\ 
+	( \lambda - s/2)^{2k+1} &=\frac{1}{D} \, D^{2k+1}( \lambda - s/2 ) .
+\end{align*}
+%%
 Thus  
 \begin{align*}
-e^{-t\frac{s}{2}}e^{tA} = e^{t(A-s/2\Id)} &= \sum_{k=0}^\infty \frac{t^k}{k!}(A-s/2\cdot\Id)^k = \sum_{k\ \mathrm{even}} \cdots + 
-\sum_{k\ \mathrm{odd}} \cdots = \\
-& = \cosh(tD)\Id + \frac{1}{D}\sinh(tD)(A-s/2\Id)\,.
+	e^{ -t \cdot s/2 }e^{t \lambda} & = e^{t( \lambda - s/2 )} 
+		= \sum_{k=0}^\infty \frac{t^k}{k!}( \lambda - s/2 )^k 
+		= \sum_{ \text{k even} } (\cdots) + \sum_{ \text{k odd} } (\cdots)  \\
+	&= \cosh( t D ) + \frac{1}{D} \sinh( t D )( \lambda - s/2 ) \\
+	&= \frac{ 1 }{ D } \sinh( tD )\cdot \lambda + \left( \cosh(tD) - \frac{s}{2D} \sinh(tD) \right)
 \end{align*}
-In case $A$ is a real $2 \times2$-matrix, then $D^2 = s^2/4-d$ can be positive or negative. 
-\begin{itemize}[\textbullet, wide]
-\item  
-If $D^2 > 0$, and $D$ its positive or negative root, then $\sinh(tD)$ and $\cosh(tD)$ are linear combinations of $e^{tD}$ and $e^{-tD}$.
-
-\item 
-If $D^2 < 0$, then $D = \im|D|$, and 
-$\cosh(tD) = \cos(t|D|)$ and $\sinh(tD) = \sin(t|D|)$\,.
-%
-%\item 
-%If $D^2=0$, then $\cosh(tD) = 1$ and $\frac{1}{D}\sinh(tD) = t $\,.
-\end{itemize}
 %% --
+by using the power series representation of the hyperbolic functions $ \sinh $ and $ \cosh $.
+\end{description}
+%% --
+By the \emph{Cayley-Hamilton theorem} $p_{A}(A) = 0 $  and we are therefore able to replace 
+$ \lambda $ by $ A $ and obtain, with $ \Id $ the unit matrix, 
+%% --
+\begin{equation*}\label{eq:exp-rep}
+	e^{tA} =
+	\begin{cases}
+		e^{t \cdot s/2}( \frac{1}{D} \sinh(t D) \cdot A + 
+			\left( \cosh(tD) - \frac{s}{2D} \sinh(tD) \right) \cdot \Id, & 
+									\text{if $ D \neq 0 $, } \\
+		e^{t \cdot s/2} \left[ ( 1 - s/2)\cdot \Id + t \cdot A \right], &
+									\text{if $ D = 0 $.}
+	\end{cases}
+\end{equation*}
+%% 
+In case $A$ is a real $2 \times2$-matrix and if $ D \neq 0 $, then 
+$ D^{2} = s^{2}/4 - d $ can be positive or negative. 
+%% -- 
+\begin{description}[wide,  labelindent=0em]
+
+\item[$D^2 > 0$: ]
+Since $ \sinh $  is an odd function, we can choose  $ D > 0 $ in the formula for $ e^{tA} $.
+Furthermore, $ \sinh $ and $ \cosh $ are (by definition) linear combinations of $ e^{tD} $ and 
+$ e^{-tD} $ simplifying our formula.
+
+\item[$D^2 < 0$: ] 
+In this case $D = \pm \im|D|$.
+For $ x $ real we have the following identities
 %
 \[
-	A = 
-	\begin{pmatrix}
-	0 & 1 \\ -1 &0
-	\end{pmatrix}
-	\quad
-	\mathrm{e}^{tA} =
-	\begin{pmatrix}
-	\cos t & \sin t \\ - \sin t & \cos t
-	\end{pmatrix}
+	\sinh(\im x) = \frac{1}{2}( e^{\im x} - e^{-\im x}) = \im \sin(x)
+	\quad \text{and} \quad
+	\cosh(\im x) = \frac{1}{2}( e^{ \im x} + e^{- \im x}) = \cos(x). 
 \]
 %
-
+Hence $ \sinh $ is an odd function,  $\cosh(tD) = \cos(t|D|)$ and $\sinh(tD) = \sin(t|D|)$.
+\end{description}
+%% --
+Here are some simple examples.
+%% --
+\newcommand{\ABC}{A = \begin{pmatrix}	0 & 1 \\ -1 & 0	\end{pmatrix}}
+\newcommand{\BBC}{A = \begin{pmatrix}	\cos(t) & \sin(t) \\ - \sin(t) & \cos(t) \end{pmatrix}}
+\newcommand{\CBC}{A = \begin{pmatrix}	1 & 1 \\ -1 & -1 \end{pmatrix}}
+\newcommand{\DBC}{A = \begin{pmatrix}	1+t & t \\ - t & 1-t \end{pmatrix}}
+\newcommand{\EBC}{A = \begin{pmatrix}	0 & 1 \\ 1 &0 \end{pmatrix}}
+\newcommand{\FBC}{A = \begin{pmatrix}	\cos(t) & \sinh(t) \\ \sinh(t) & \cosh(t) \end{pmatrix}}
+%% --
+\[
+  \begin{array}{lll}
+    \ABC & \implies & \BBC \\\\
+    \CBC & \implies & \DBC \\\\ 
+    \EBC & \implies & \FBC  
+  \end{array}
+\]
 %% --
 \subsection{Multiplication Semigroups}\label{subsec:a1-2.3}
 \index{Basic Results!Standard Examples!Multiplication Semigroups}
@@ -834,7 +869,7 @@ Although most of these constructions are rather routine, we present in the seque
 
 We always start with a semigroup $(T(t))_{t \geq 0}$ on a Banach space $E$, and denote its generator by $A$ on the domain $D(A)$.
 %% --
-\subsection{Similar Semigroups}\label{subsec:a1-3.0}
+\subsection{Similar Semigroups}\label{subsec:a1-3.1}
 \index{Basic Results!Standard Constructions!Similar Semigroups}
 %% --
 There is an easy way how to obtain different (but isomorphic) semigroups out of a given semigroup $(T(t))_{t \geq 0}$ on a Banach space $E$.
@@ -849,7 +884,7 @@ If $A$ is the generator of $(T(t))_{t \geq 0}$ then
 %% --
 is the generator of $(S(t))_{t \geq 0}$.
 %% --
-\subsection{The Rescaled Semigroup}\label{subsec:a1-3.1}
+\subsection{The Rescaled Semigroup}\label{subsec:a1-3.2}
 \index{Basic Results!Standard Constructions!Rescaled Semigroup}
 %% --
 For fixed $\lambda \in \mathbb{C}$ and $\alpha > 0$ the operators
@@ -885,7 +920,7 @@ and
 \end{align*}
 %% --
 %% --
-\subsection{The Subspace Semigroup}\label{subsec:a1-3.2}
+\subsection{The Subspace Semigroup}\label{subsec:a1-3.3}
 \index{Basic Results!Standard Constructions!Subspace Semigroup}
 %% --
 Assume $F$ to be a closed $(T(t))$-invariant or, equivalently, $R(\lambda,A)$-invariant for 
@@ -907,7 +942,7 @@ $A_{|}$ is a generator on $F$, then $F$ is $(T(t))$-invariant.
 An $A$-invariant subspace need not necessarily be $(T(t))$-invariant:
 Take for example the translation group with $T(t)f(x) = f(x+t)$ on $E = C_{0}(\R)$ and the subspace $F \coloneqq \{f \in E \colon f(x) = 0 \text{ for } x \leq 0\}$.
 %% --
-\subsection{The Quotient Semigroup}\label{subsec:a1-3.3}
+\subsection{The Quotient Semigroup}\label{subsec:a1-3.4}
 \index{Basic Results!Standard Constructions!Quotient Semigroup}
 %% --
 Let $F$ be a closed $(T(t))$-invariant subspace of $E$ and consider the quotient space $ E_{/}\coloneqq \sfrac{E}{F} $ with quotient map $q \colon E \to E_{/}$. 
@@ -980,7 +1015,7 @@ In particular it follows that the domain of its generator is
 \]
 \end{example*}
 %% --
-\subsection{The Adjoint Semigroup}\label{subsec:a1-3.4}
+\subsection{The Adjoint Semigroup}\label{subsec:a1-3.5}
 \index{Basic Results!Standard Constructions!Adjoint Semigroup}
 %% --
 The adjoint operators $(T(t)')_{t \geq 0}$ of a strongly continuous semigroup $(T(t))_{t \geq 0}$ on a Banach space $E$ form a semigroup on $E'$ which need, however, not be strongly continuous.
@@ -1149,7 +1184,7 @@ Calculating $D(A')$ and $D(A^*)$ respectively, one obtains
 Obviously, the function $x \mapsto |\sin x|$ belongs to $D(A')$, but not to $D(A^*)$.
 \end{example*}
 %% --
-\subsection{The Associated Sobolev Semigroups}\label{subsec:a1-3.5}
+\subsection{The Associated Sobolev Semigroups}\label{subsec:a1-3.6}
 \index{Basic Results!Standard Constructions!Associated Sobolev Semigroups}
 %% --
 Since the generator $A$ of a strongly continuous semigroup $(T(t))_{t\geq 0}$ is closed, its domain $D(A)$ becomes a Banach space for the graph norm
@@ -1212,7 +1247,7 @@ Therefore we might call $E_{n}$ the \emph{n-th Sobolev space} and $(T_{n}(t))_{t
 %% --
 \begin{remarks*}\label{rem:a1-19.1}
 %% --
-\begin{enumerate}[\upshape(i), wide]
+\begin{enumerate}[\upshape(i), wide, labelindent=.5em]
 \item
 For $\lambda \in \rho(A)$ the operator $(\lambda - A)$ and the resolvent $R(\lambda,A)$ are isomorphisms from $E_{1}$ onto $E$, \resp from $E$ onto $E_{1}$ (show that $\|\cdot\|_{1}$ and $\|\cdot\|_{\lambda}$ with $\|\cdot\|_{\lambda} \coloneqq \|(\lambda - A)\cdot\|$ are equivalent).
 %% --
@@ -1257,7 +1292,7 @@ Then $(T(t))_{t \geq 0}$ extends continuously to a strongly continuous semigroup
 \end{enumerate}
 \end{remarks*}
 %% --
-\subsection{The \texorpdfstring{$\mathcal{F}$}{F}-Product Semigroup}\label{sec:a1-3.6}
+\subsection{The \texorpdfstring{$\mathcal{F}$}{F}-Product Semigroup}\label{subsec:a1-3.7}
 \index{Basic Results!Standard Constructions!$\mathcal{F}$-Product!Semigroup}
 %% --
 It is standard in functional analysis to consider a sequence of points in a certain space as a point in a new and larger space.
@@ -1265,7 +1300,7 @@ In particular such a method can serve to convert an approximate eigenvector of a
 Occasionally we will need such a construction and refer to Section V.1 of \citet{schaefer:1974}. 
 
 If we try to adapt this construction to strongly continuous semigroups we encounter the difficulty that the semigroup extended to the larger space will not remain strongly continuous.
-An idea already used in 3.4 will help to overcome this difficulty.
+An idea already used in \ref{subsec:a1-3.4} will help to overcome this difficulty.
 
 Let $\mathcal{T} = (T(t))_{t \geq 0}$ be a strongly continuous semigroup on the Banach space $E$.
 Denote by $m(E)$ the Banach space of all bounded $E$-valued sequences endowed with the norm
@@ -1313,7 +1348,7 @@ $\hat{A}(f_{n}) = (Af_{n})$ for $(f_{n}) \in D(\hat{A})$ .
 %% --
 For the proof we refer to Lemma 1.4. of \citet{derndinger:1980}.
 
-Now let $\mathcal{F}$ be any filter on $\N$ finer than the Frechét filter (\ie the filter of sets with finite complement. In most cases $\mathcal{F}$ will be either the Frechét filter or some free ultra filter.)
+Now let $\mathcal{F}$ be any filter on $\N$ finer than the Frechét filter (\ie the filter of sets with finite complement. In most cases $\mathcal{F}$ will be either the Frechét filter or some free ultra filter).
 %% --
 The space of all $\mathcal{F}$-null sequences in $m(E)$, \ie
 %% --
@@ -1325,7 +1360,9 @@ is closed in $m(E)$ and invariant under $(\hat{T}(t))_{t \geq 0}$.
 We call the quotient spaces
 %% --
 \[
-    E_{\mathcal{F}} \coloneqq m(E)/c_{\mathcal{F}}(E) \quad \text{and} \quad E_{\mathcal{F}}^{T} \coloneqq m^{\mathcal{T}}(E)/c_{\mathcal{F}}(E)\cap m^{\mathcal{T}}(E)
+    E_{\mathcal{F}} \coloneqq m(E)/c_{\mathcal{F}}(E) 
+    \quad \text{and} \quad 
+    E_{\mathcal{F}}^{T} \coloneqq m^{\mathcal{T}}(E)/ (c_{\mathcal{F}}(E)\cap m^{\mathcal{T}}(E))
 \]
 %% --
 the \emph{$\mathcal{F}$-product of $E$} and the \emph{$ \mathcal{F} $-product of $E$ with respect to the semigroup $T$}, respectively.
@@ -1339,11 +1376,11 @@ The canonical quotient norm on $E_{\mathcal{F}}$ is given by
     \|(f_{n}) + c_{\mathcal{F}}(E)\| = \mathcal{F}\text{-}\lim \sup \|f_{n}\| .
 \]
 %% --
-We can apply Subsection~\ref{subsec:a1-3.3} in order to define the \emph{$\mathcal{F}$-product semigroup} $(T_{\mathcal{F}}(t))_{t \geq 0}$ on $E_{\mathcal{F}}^{T}$ by
+We can apply Subsection~\ref{subsec:a1-3.4} in order to define the \emph{$\mathcal{F}$-product semigroup} $(T_{\mathcal{F}}(t))_{t \geq 0}$ on $E_{\mathcal{F}}^{T}$ by
 %% --
 \[
     T_{\mathcal{F}}(t)((f_{n}) + c_{\mathcal{F}}(E)) \coloneqq (T(t)f_{n}) 
-    	+ c_{\mathcal{F}}(E)\cap m^{\mathcal{T}}(E)
+    	+ ( c_{\mathcal{F}}(E)\cap m^{\mathcal{T}}(E) )
 \]
 %% --
 Thus $T_{\mathcal{F}}(t)$ is the restriction of $T(t)_{F}$ where $T(t)_{F}$ denotes the canonical extension of $T(t)$ to the $\mathcal{F}$-product $E_{\mathcal{F}}$. 
@@ -1369,7 +1406,7 @@ In case $A$ is a bounded operator then $D(A_{\mathcal{F}}) = E_{\mathcal{F}}^{T}
 We will show in A-III,4.5 that the above construction preserves and even improves many spectral properties of the semigroup and its generator.
 
 %% --
-\subsection{The Tensor Product Semigroup}\label{sec:a1-3.7}
+\subsection{The Tensor Product Semigroup}\label{subsec:a1-3.8}
 \index{Basic Results!Standard Constructions!Tensor Product Semigroup}
 
 %% --
@@ -1386,7 +1423,7 @@ To be more precise, we briefly present the most important examples for this situ
 %% --
 \begin{examples*}\label{ex:a1-5.1}
 %% --
-\begin{enumerate}[\upshape(i), wide]
+\begin{enumerate}[\upshape(i), wide, labelindent=.5em]
 
 \item
 Let $(X,\Sigma,\mu)$ and $(Y,\Omega,\nu)$ be measure spaces. 
@@ -1420,7 +1457,7 @@ These will always be related to one of the following standard methods to define 
 Let $u \coloneqq \sum_{i=1}^{n} f_{i} \otimes g_{i}$ be an element of $E \otimes F$. 
 Then
 %% --
-\begin{enumerate}[\upshape(i), wide]
+\begin{enumerate}[\upshape(i), wide, labelindent=.5em]
 
 \item
 $\|u\|_{\pi} \coloneqq \inf\{\sum_{j=1}^{m} \|h_{j}\|\|k_{j}\| \colon u = \sum_{j=1}^{m}h_{j} \otimes k_{j}, h_{j} \in E, k_{j} \in F\}$ defines the \emph{greatest cross norm $\pi$} on $E \otimes F$.
@@ -1494,7 +1531,7 @@ to the domain of the generator.
 Moreover, $D(A) \otimes D(B)$ is dense in $E \widetilde{\otimes}_{\alpha} F$ and invariant under $(S(t)\otimes T(t))_{t\geq 0}$, hence it is a core of $A \otimes \Id + \Id \otimes B$ by Proposition~\ref{prop:a1-1.9}\,(ii).
 \end{proof}
 %% --
-\subsection{The Product of Commuting Semigroups}\label{sec:a1-3.8}
+\subsection{The Product of Commuting Semigroups}\label{subsec:a1-3.9}
 \index{Basic Results!Standard Constructions!Commuting Semigroups}
 %% --
 Let $(S(t))_{t\geq 0}$ and $(T(t))_{t\geq 0}$ be semigroups with generators $A$ and $B$, respectively on some Banach space $E$.
