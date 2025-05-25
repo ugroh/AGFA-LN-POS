@@ -1,3 +1,4 @@
+% !TEX root = ../LN-Book.tex
 %% Stand 2025-05-09 ulgr
 %% Kleinere Korrekturen
 %% --
@@ -37,7 +38,7 @@ Another natural and important structure of $C_{0}(X)$ is the \emph{pointwise} or
 Concerning the order structure of $C_{0}(X)$ we use the following notations.
 For a function $f$ in $C_{0}(X,\R)$
 %% --
-\begin{enumerate}[\upshape (i)]
+\begin{enumerate}[\upshape (i), labelindent=.5em]
 \item
 A function $ f $ is called \emph{positive, $ f \geq 0 $,} if $ f(t) \geq 0  $ for all $ t \in X $, 
 
@@ -66,7 +67,7 @@ We will occasionally make use of the order structure of $C_{0}(X)'$, but since a
 
 If $\mu$ is a linear form on $C_{0}(X,\R)$, then
 %% --
-\begin{enumerate}[label=]
+\begin{enumerate}[\upshape (i), labelindent=.5em]
 
 \item
 $\mu \geq 0$ means  $ \mu(f) \geq 0 $ for all $ f \geq 0 $;  $ \mu $ is then called \emph{positive},
@@ -86,8 +87,25 @@ We point out that strictly positive linear forms need not exist on $C_{0}(X)$, b
 The coincidence of the notions of a closed algebraic and a closed lattice ideal in $C_{0}(X)$ has of course its effect on the algebraic and the lattice theoretic notions of a homomorphism.
 The case of a homomorphism into another space $C_{0}(Y)$ will be discussed below.
 
-As for homomorphisms into the scalar field, we have essentially coincidence between the algebraic and the order theoretic meaning of this word, more exactly: A linear form $\mu \neq 0$ on $C_{0}(X)$ is a lattice homomorphism if and only if $\mu$ is, up to normalization, an algebra homomorphism (algebra homomorphisms $\neq 0$ must necessarily have norm $1$).
-Since the algebra homomorphisms $\neq 0$ on $C_{0}(X)$ are known to be the point measures (denoted by $\delta_{t}$) on $X$ and since on the other hand $\mu$ is a lattice homomorphism if and only if $|\mu(f)|$ equals $\mu(|f|)$ for all $f$, it follows that this latter condition on $\mu$ is equivalent to $\mu = \alpha\delta_{t}$ for a suitable $t$ in $X$ and a positive real number $\alpha$.
+As for homomorphisms into the scalar field, we have essentially coincidence between the algebraic and the order theoretic meaning of this word, more exactly: 
+%% --
+\begin{quote}
+\emph{A linear form $\mu \neq 0$ on $C_{0}(X)$ is a lattice homomorphism if and only if $\mu$ is, up to normalization, an algebra homomorphism }(algebra homomorphisms $\neq 0$ must necessarily have norm $1$).
+\end{quote}
+%% --
+Since the algebra homomorphisms $\neq 0$ on $C_{0}(X)$ are known to be the point measures (denoted by $\delta_{t}$) on $X$ and since on the other hand $\mu$ is a lattice homomorphism if and only if 
+%
+\[
+	|\mu(f)| =  \mu(|f|) \quad \text{for all $f$,}
+\]
+%
+it follows that this latter condition on $\mu$ is equivalent to 
+%
+\[
+	\mu = \alpha\delta_{t}
+\]
+%
+for a suitable $t$ in $X$ and a positive real number $\alpha$.
 
 This can be summarized by saying that $X$ can be canonically identified, via the map $t \to \delta_{t}$, with the subset of the dual $C_{0}(X)'$ consisting of the non-zero algebra homomorphisms, which is also the set of all normalized lattice homomorphisms.
 This identification is a topological isomorphisms with respect to the weak*-topology of $ C_{0}(X)' $.
@@ -99,7 +117,7 @@ This identification is a topological isomorphisms with respect to the weak*-topo
 %% --
 A linear mapping $T$ from $C_{0}(X,\R)$ into $C_{0}(Y,\R)$ is called
 %% --
-\begin{enumerate}[label=]
+\begin{enumerate}[\upshape (i), labelindent=.5em]
 
 \item
 \emph{positive} (notation: $T \geq 0$)  if $Tf$  is a positive whenever $ f $ is positive, 
@@ -136,7 +154,7 @@ If $T$ is, in addition, bijective, then the mapping $\phi$ in (c) is a homeomorp
 This characterization of homomorphisms carries over mutatis mutandis to situations where the conditions on $X$, $Y$ or $T$ are less restrictive.
 For later reference we explicitly state the following.
 %% --
-\begin{enumerate}[\upshape (i)]
+\begin{enumerate}[\upshape (i), wide, labelindent=.5em]
 \item 
 	Let $K$ be compact. Then $ T \in \mathcal{L}(C(K)) $ is a lattice homomorphism if and only if there is a mapping 
 $\phi$ from $K$ into $K$ and a function $h \in C(K)$ such that $Tf(s) = h(s)f(\phi(s))$ holds for all $s \in K$.

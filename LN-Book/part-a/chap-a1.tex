@@ -398,9 +398,7 @@ Now we have to consider two cases.
 \begin{description}[wide, labelindent=0em]
 
 \item[$ D^{2} = 0 $: ] 
-In this case $\left( \lambda - s/2 \right)^{k} = D^{k} $  for all $ (k \geq 2)$.
-%
-But this implies 
+Since $\left( \lambda - s/2 \right)^{k} = D^{k} $  for all $ (k \geq 2)$ this implies 
 %
 \[
 	 e^{t \cdot \left( \lambda - s/2 \right)} = 1 + t( \lambda - s/2)
@@ -454,35 +452,35 @@ $ D^{2} = s^{2}/4 - d $ can be positive or negative.
 \item[$D^2 > 0$: ]
 Since $ \sinh $  is an odd function, we can choose  $ D > 0 $ in the formula for $ e^{tA} $.
 Furthermore, $ \sinh $ and $ \cosh $ are (by definition) linear combinations of $ e^{tD} $ and 
-$ e^{-tD} $ simplifying our formula.
+$ e^{-tD} $ simplifying our formula (see below).
 
 \item[$D^2 < 0$: ] 
 In this case $D = \pm \im|D|$.
-For $ x $ real we have the following identities
+For $ z \in \C $ we have the following identities
 %
 \[
-	\sinh(\im x) = \frac{1}{2}( e^{\im x} - e^{-\im x}) = \im \sin(x)
+	\sinh(\im z) = \frac{1}{2}( e^{\im z} - e^{-\im z}) = \im \sin(z)
 	\quad \text{and} \quad
-	\cosh(\im x) = \frac{1}{2}( e^{ \im x} + e^{- \im x}) = \cos(x). 
+	\cosh(\im z) = \frac{1}{2}( e^{ \im z} + e^{- \im z}) = \cos(z). 
 \]
 %
-Hence $ \sinh $ is an odd function,  $\cosh(tD) = \cos(t|D|)$ and $\sinh(tD) = \sin(t|D|)$.
+Hence $ \sinh $ is an odd function,  $\sinh(\im |D| t ) = \im \, \sin(t|D|)$ and $\cosh(\im |D| t ) = \cos(|D| t )$.
 \end{description}
 %% --
 Here are some simple examples.
 %% --
-\newcommand{\ABC}{A = \begin{pmatrix}	0 & 1 \\ -1 & 0	\end{pmatrix}}
-\newcommand{\BBC}{A = \begin{pmatrix}	\cos(t) & \sin(t) \\ - \sin(t) & \cos(t) \end{pmatrix}}
-\newcommand{\CBC}{A = \begin{pmatrix}	1 & 1 \\ -1 & -1 \end{pmatrix}}
-\newcommand{\DBC}{A = \begin{pmatrix}	1+t & t \\ - t & 1-t \end{pmatrix}}
-\newcommand{\EBC}{A = \begin{pmatrix}	0 & 1 \\ 1 &0 \end{pmatrix}}
-\newcommand{\FBC}{A = \begin{pmatrix}	\cos(t) & \sinh(t) \\ \sinh(t) & \cosh(t) \end{pmatrix}}
+\newcommand{\ABC}{\begin{pmatrix}	0 & 1 \\ -1 & 0	\end{pmatrix}}
+\newcommand{\BBC}{\begin{pmatrix}	\cos(t) & \sin(t) \\ - \sin(t) & \cos(t) \end{pmatrix}}
+\newcommand{\CBC}{\begin{pmatrix}	1 & 1 \\ -1 & -1 \end{pmatrix}}
+\newcommand{\DBC}{\begin{pmatrix}	1+t & t \\ - t & 1-t \end{pmatrix}}
+\newcommand{\EBC}{\begin{pmatrix}	0 & 1 \\ 1 &0 \end{pmatrix}}
+\newcommand{\FBC}{\begin{pmatrix}	\cos(t) & \sinh(t) \\ \sinh(t) & \cosh(t) \end{pmatrix}}
 %% --
 \[
-  \begin{array}{lll}
-    \ABC & \implies & \BBC \\\\
-    \CBC & \implies & \DBC \\\\ 
-    \EBC & \implies & \FBC  
+  \begin{array}{lllll}
+    A= & \ABC & \implies & e^{tA}= & \BBC \\\\
+    A= & \CBC & \implies & e^{tA}= & \DBC \\\\ 
+    A= & \EBC & \implies & e^{tA}= & \FBC  
   \end{array}
 \]
 %% --
