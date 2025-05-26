@@ -49,7 +49,7 @@ for every $f \in E$ and $t$, $t_{0} \geq 0$.
 Clearly one defines in a similar way \emph{weakly continuous}, \resp \emph{uniformly continuous} (compare A-II, Definition  1.19) semigroups, but since we concentrate on the strongly continuous case we agree on the following terminology.
 %% --
 \begin{quote}
-If not stated otherwise, a \emph{semigroup} is a strong\-ly continuous one-parameter semigroup of bounded linear operators. 
+If not stated otherwise, a \emph{semigroup} is a strongly continuous one-parameter semigroup of bounded linear operators. 
 \end{quote}
 %% --
 Next we collect a few elementary facts on the continuity and boundedness of one-parameter semigroups.
@@ -62,18 +62,7 @@ Next we collect a few elementary facts on the continuity and boundedness of one-
 A one-parameter semigroup $(T(t))_{t \geq 0}$ on a Banach space $E$ is strongly continuous if and only if for any $f \in E$ it is true that $T(t)f \to f$ if $t \to 0$.
 
 \item 
-For every strongly continuous semigroup there exist constants $M \geq 1$, $w \in \R$ such that $\|T(t)\| \leq M \cdot e^{wt}$ for every $t \geq 0$.
-\item If $(T(t))_{t\geq0}$ is a one-parameter semigroup such that $\|T(t)\|$ is bounded for $0 < t \leq \delta$ then it is strongly continuous if and only if $\lim_{t \to 0} T(t)f = f$ for every $f$ in a total subset of $E$.
-\end{enumerate}
-\end{remarks}
-%% --
-The exponential estimate from Remark~\ref{rem:a1-1.2}\,(ii) for the growth of $\|T(t)\|$ can be used to define an important characteristic of the semigroup.
-%% --
-\begin{definition}\label{def:a1-1.3}
-By the \emph{growth bound} (or \emph{type}) of the semigroup $(T(t))_{t\geq0}$ we understand the number $\omega_{0}$, 
-%% --
-\begin{align*}\label{eq:a1-1.1}
-\omega_{0} \coloneqq{}& \inf\{w \in \R \colon \text{There exists } M \in \R_{+} \text{ such that } \|T(t)\| \leq Me^{wt} \text{ for } t \geq 0\} \\
+For every strongly continuous semigroup there exist constants $M \geq 1$, $w \in \R$ such that $\|T(t)\| \leq M \cdot  \mathrm{e}^{wt} \text{ for } t \geq 0\} \\
 ={}& \lim_{t\to\infty} \frac{1}{t}\log\|T(t)\| = \inf_{t>0} \frac{1}{t}\log\|T(t)\| \notag .
 \end{align*}
 %% --
@@ -95,7 +84,7 @@ Take
 	E = \mathbb{C}^{2}, \quad
 	A = \begin{pmatrix}0 & 1\\0 & 0\end{pmatrix} 
 	\quad \text{and} \quad 
-	T(t) = e^{tA} = \begin{pmatrix}1 & t\\0 & 1\end{pmatrix} .
+	T(t) =  \mathrm{e}^{tA} = \begin{pmatrix}1 & t\\0 & 1\end{pmatrix} .
 \]
 %
 Then for the $\ell^{1}$-norm on $E$ we obtain $\|T(t)\| = 1 + t$, hence $(T(t))_{t\geq0}$ is an unbounded semigroup having growth bound $\omega_{0} = 0$.
@@ -242,7 +231,7 @@ If a subspace $D_{0}$ of the domain $D(A)$ is dense in $E$ and $(T(t))$-invarian
 %
 \begin{align*}
 	D(A^{1}) &= D(A) \\
-	D(A^{n}) &= \{f \in D(A^{n-1}) \colon Af \in D(A^{n-1})\} \text{ for $ n \geq 2 $, }
+	D(A^{n}) &= \{f \in D(A^{n-1}) \colon Af \in D(A^{n-1})\} \, \text{ for $ n \geq 2 $, }
 \end{align*}
 %
 Then %
@@ -265,13 +254,13 @@ Then $B$ is closed, but $D(B^{2}) = \{0\}$.
 For the generator $A$ of a strongly continous semigroup on a Banach space $E$ the following hold.
 If %
 \[
-	 \int_{0}^{\infty} e^{-\lambda t}T(t)f \dt 
+	 \int_{0}^{\infty}  \mathrm{e}^{-\lambda t}T(t)f \dt 
 \]
 %
 exists for every $f \in E$ and some $\lambda \in \mathbb{C}$, then $\lambda \in \rho(A)$ and 
 %
 \[
-	R(\lambda,A)f = \int_{0}^{\infty} e^{-\lambda t}T(t)f  \dt.
+	R(\lambda,A)f = \int_{0}^{\infty}  \mathrm{e}^{-\lambda t}T(t)f  \dt.
 \]
 %
 In particular,
@@ -279,7 +268,7 @@ In particular,
 \begin{equation}\label{eq:a1-1.7}
 R(\lambda,A)^{n+1}f 
 	= \frac{(-1)^{n}}{n!}\left(\frac{\diff{ }}{\diff\lambda}\right)^{n} R(\lambda,A)f 
-	= \int_{0}^{\infty} e^{-\lambda t}\frac{t^{n}}{n!}T(t)f  \dt
+	= \int_{0}^{\infty}  \mathrm{e}^{-\lambda t}\frac{t^{n}}{n!}T(t)f  \dt
 \end{equation}
 %% --
 for every $f \in E$, $n \geq 0$ and $\lambda \in \mathbb{C}$ with $\Re(\lambda) > \omega_{0}$.
@@ -335,10 +324,10 @@ We start with the class of semigroups mentioned after Definition~\ref{def:a1-1.1
 It follows from elementary operator theory that for every bounded operator $A$ in  $\LE$ the sum
 %% --
 \[
-    \sum_{n=0}^{\infty} \frac{t^{n}A^{n}}{n!} = \colon e^{tA}
+    \sum_{n=0}^{\infty} \frac{t^{n}A^{n}}{n!} = \colon  \mathrm{e}^{tA}
 \]
 %% --
-exists and determines a unique uniformly continuous (semi)group $(e^{tA})_{t \in \R}$ having $A$ as its generator.
+exists and determines a unique uniformly continuous (semi)group $( \mathrm{e}^{tA})_{t \in \R}$ having $A$ as its generator.
 Conversely, any uniformly continuous semigroup is of this form.
 
 If the semigroup $(T(t))_{t \geq 0}$ is uniformly continuous, then 
@@ -363,7 +352,6 @@ is invertible and every $f \in E$ is of the form
 for some $g \in E$.
 But these elements belong to $D(A)$ by \eqref{eq:a1-1.3}, hence $D(A) = E$.
 Since the generator $A$ is closed and everywhere defined, it must be bounded.
-
 Remark that bounded operators are always generators of groups, not just semigroups.
 Moreover, the growth bound $\omega_0$ satisfies $|\omega_0| \leq \|A\|$ in this situation.
 
@@ -374,7 +362,7 @@ The above characterization of the generators of uniformly continuous semigroups 
 %% --
 %% --
 The above considerations especially apply in the situation $E = M_{n}(\mathbb{C})$.
-If $n = 2$ and $A \in E$, one can derive an explicit formula for $e^{tA}$. 
+If $n = 2$ and $A \in E$, one can derive an explicit formula for $ \mathrm{e}^{tA}$. 
 
 Let %
 \[
@@ -385,61 +373,66 @@ Let %
 	D^{2} \coloneqq \left( \frac{s^{2}}{4} - d \right).
 \]
 %
-If $ \lambda $ is a root of the characteristic polynomial  
+If   
 %% --
 \[
 p_A(\lambda) \coloneqq \det(\lambda - A) = \lambda^2-s\cdot \lambda + d , 
 \]
 %% --
-of $ A $, then  $ \left( \lambda - s/2 \right)^{2} = D^{2} $.
-%% --
+is the characteristic polynomial  of $ A $, then $ p_{A}(A) = 0 $ by \emph{Cayley-Hamilton} hence
+%
+\[
+	\left( A - s/2 \cdot \1 \right)^{2} = D^{2} \cdot \1 , 
+\]
+%
+where $ \1 $ denotes the unit matrix.
+
 Now we have to consider two cases.
 %% --
 \begin{description}[wide, labelindent=0em]
 
 \item[$ D^{2} = 0 $: ] 
-Since $\left( \lambda - s/2 \right)^{k} = D^{k} $  for all $ (k \geq 2)$ this implies 
+Then $\left( A - s/2 \cdot \1 \right)^{k} = D^{k} \cdot \1 = 0 $  for all $ (k \geq 2)$ and this implies 
 %
 \[
-	 e^{t \cdot \left( \lambda - s/2 \right)} = 1 + t( \lambda - s/2)
+	  \mathrm{e}^{t \cdot \left( A - s/2 \cdot \1 \right)} = \1 + t( A - s/2 \cdot \1)
 \]
 %
 or
 %
 \[
-	e^{t \lambda } = e^{t\cdot s/2}[ ( 1 - s/2) + t \cdot \lambda] .
+	 \mathrm{e}^{t A } =  \mathrm{e}^{t\cdot s/2} \, [ ( 1 - \frac{s}{2} \, t )\cdot \1 + t \cdot A] .
 \]
 %
 \item[$ D^{2} \neq 0 $: ]
 In this case we obtain for every $ k \in \N $
 %
 \begin{align*}
-	( \lambda - s/2 )^{2k}  &= D^{2k}, \\ 
-	( \lambda - s/2)^{2k+1} &=\frac{1}{D} \, D^{2k+1}( \lambda - s/2 ) .
+	( A - s/2 \cdot \1 )^{2k}  &= D^{2k} \cdot \1 \\ 
+	( A - s/2 \cdot \1 )^{2k+1} &=\frac{1}{D} \, D^{2k+1}( A - s/2 \cdot \1) .
 \end{align*}
 %%
-Thus  
+Thus 
 \begin{align*}
-	e^{ -t \cdot s/2 }e^{t \lambda} & = e^{t( \lambda - s/2 )} 
-		= \sum_{k=0}^\infty \frac{t^k}{k!}( \lambda - s/2 )^k 
+	 \mathrm{e}^{t( A - s/2 \cdot \1 )} 
+		& = \sum_{k=0}^\infty \frac{t^k}{k!}( A - s/2 \cdot \1 )^k 
 		= \sum_{ \text{k even} } (\cdots) + \sum_{ \text{k odd} } (\cdots)  \\
-	&= \cosh( t D ) + \frac{1}{D} \sinh( t D )( \lambda - s/2 ) \\
-	&= \frac{ 1 }{ D } \sinh( tD )\cdot \lambda + \left( \cosh(tD) - \frac{s}{2D} \sinh(tD) \right)
+	&= \cosh( t D ) \cdot \1 + \frac{1}{D} \sinh( t D )( A - s/2 \cdot \1) \\
+	&= \frac{ 1 }{ D } \sinh( tD )\cdot A + \left( \cosh(tD) - \frac{s}{2D} \sinh(tD) \right) \cdot \1.
 \end{align*}
 %% --
 by using the power series representation of the hyperbolic functions $ \sinh $ and $ \cosh $.
 \end{description}
 %% --
-By the \emph{Cayley-Hamilton theorem} $p_{A}(A) = 0 $  and we are therefore able to replace 
-$ \lambda $ by $ A $ and obtain, with $ \Id $ the unit matrix, 
+As summary  
 %% --
 \begin{equation*}\label{eq:exp-rep}
-	e^{tA} =
+	 \mathrm{e}^{tA} =
 	\begin{cases}
-		e^{t \cdot s/2}( \frac{1}{D} \sinh(t D) \cdot A + 
-			\left( \cosh(tD) - \frac{s}{2D} \sinh(tD) \right) \cdot \Id, & 
+		 \mathrm{e}^{t \cdot s/2} \, \left[ \frac{1}{D} \sinh(t D)  \cdot A + 
+			\left( \cosh(tD) - \frac{s}{2D} \sinh(tD) \right) \cdot \1 \right], & 
 									\text{if $ D \neq 0 $, } \\
-		e^{t \cdot s/2} \left[ ( 1 - s/2)\cdot \Id + t \cdot A \right], &
+		 \mathrm{e}^{t \cdot s/2} \, \left[ ( 1 - \frac{s}{2} \, t )\cdot \1 + t \cdot A \right], &
 									\text{if $ D = 0 $.}
 	\end{cases}
 \end{equation*}
@@ -450,21 +443,25 @@ $ D^{2} = s^{2}/4 - d $ can be positive or negative.
 \begin{description}[wide,  labelindent=0em]
 
 \item[$D^2 > 0$: ]
-Since $ \sinh $  is an odd function, we can choose  $ D > 0 $ in the formula for $ e^{tA} $.
-Furthermore, $ \sinh $ and $ \cosh $ are (by definition) linear combinations of $ e^{tD} $ and 
-$ e^{-tD} $ simplifying our formula (see below).
+Since $ \sinh $  is an odd function, we can choose  $ D > 0 $ in the formula for $  \mathrm{e}^{tA} $.
+Furthermore, $ \sinh $ and $ \cosh $ are (by definition) linear combinations of $  \mathrm{e}^{tD} $ and 
+$  \mathrm{e}^{-tD} $ simplifying our formula (see below).
 
 \item[$D^2 < 0$: ] 
 In this case $D = \pm \im|D|$.
 For $ z \in \C $ we have the following identities
 %
 \[
-	\sinh(\im z) = \frac{1}{2}( e^{\im z} - e^{-\im z}) = \im \sin(z)
+	\sinh(\im z) = \frac{1}{2}(  \mathrm{e}^{\im z} -  \mathrm{e}^{-\im z}) = \im \sin(z)
 	\quad \text{and} \quad
-	\cosh(\im z) = \frac{1}{2}( e^{ \im z} + e^{- \im z}) = \cos(z). 
+	\cosh(\im z) = \frac{1}{2}(  \mathrm{e}^{ \im z} +  \mathrm{e}^{- \im z}) = \cos(z). 
 \]
 %
-Hence $ \sinh $ is an odd function,  $\sinh(\im |D| t ) = \im \, \sin(t|D|)$ and $\cosh(\im |D| t ) = \cos(|D| t )$.
+Hence $ \sinh $ is an odd function,  $\sinh(\im |D| t ) = \im \, \sin(t|D|)$ and $\cosh(\im |D| t ) = \cos(|D| t )$
+
+%Diese Anmerkung verstehe ich nicht: 
+%Hence, $\frac{\sinh(tD){D} = \frac{\sin(t|D|}{|D|}$ and $\cosh(tD}=\cos(|D|t)}$ 
+
 \end{description}
 %% --
 Here are some simple examples.
@@ -478,9 +475,9 @@ Here are some simple examples.
 %% --
 \[
   \begin{array}{lllll}
-    A= & \ABC & \implies & e^{tA}= & \BBC \\\\
-    A= & \CBC & \implies & e^{tA}= & \DBC \\\\ 
-    A= & \EBC & \implies & e^{tA}= & \FBC  
+    A= & \ABC & \implies &  \mathrm{e}^{tA}= & \BBC \\\\
+    A= & \CBC & \implies &  \mathrm{e}^{tA}= & \DBC \\\\ 
+    A= & \EBC & \implies &  \mathrm{e}^{tA}= & \FBC  
   \end{array}
 \]
 %% --
@@ -660,7 +657,7 @@ hence $f \in D(A)$.
 On $E = C(\Gamma)$, \resp $E = L^{p}(\Gamma,m)$, $1 \leq p < \infty$, $m$ Lebesgue measure we have canonical groups defined by rotations of the unit circle $\Gamma$ with a certain period, \ie for $0 < \tau \in \R$ the operators
 %% --
 \[
-    R_{\tau}(t)f(z) \coloneqq f(e^{2\pi \im t/\tau}\cdot z), \quad z \in \Gamma
+    R_{\tau}(t)f(z) \coloneqq f( \mathrm{e}^{2\pi \im t/\tau}\cdot z), \quad z \in \Gamma
 \]
 %% --
 yield a group $(R_{\tau}(t))_{t \in \R}$ having period $\tau$, \ie $R_{\tau}(\tau) = \Id$.
@@ -905,16 +902,16 @@ Another application is the following.
 For $\lambda \in \mathbb{C}$ and $S(t) \coloneqq \exp(-\lambda t)T(t)$ the formulas \eqref{eq:a1-1.3} and \eqref{eq:a1-1.4} yield:
 %% --
 \begin{align*}
-    e^{-\lambda t}T(t)f - f &= (A-\lambda) \int_{0}^{t} e^{-\lambda s}T(s)f \ds \quad\text{ or }\notag \\
-    (e^{\lambda t}-T(t))f &= (\lambda-A) \int_{0}^{t} e^{\lambda(t-s)}T(s)f \ds \quad \text{for } f \in E, %\tag{3.1}
+     \mathrm{e}^{-\lambda t}T(t)f - f &= (A-\lambda) \int_{0}^{t}  \mathrm{e}^{-\lambda s}T(s)f \ds \quad\text{ or }\notag \\
+    ( \mathrm{e}^{\lambda t}-T(t))f &= (\lambda-A) \int_{0}^{t}  \mathrm{e}^{\lambda(t-s)}T(s)f \ds \quad \text{for } f \in E, %\tag{3.1}
 \end{align*}
 %% --
 and
 %% --
 \begin{align*}
-    e^{-\lambda t}T(t)f - f &= \int_{0}^{t} e^{-\lambda s}T(s)(A-\lambda)f \ds  \quad\text{or}\notag \\
+     \mathrm{e}^{-\lambda t}T(t)f - f &= \int_{0}^{t}  \mathrm{e}^{-\lambda s}T(s)(A-\lambda)f \ds  \quad\text{or}\notag \\
     \notag \\
-    (e^{\lambda t} - T(t))f &= \int_{0}^{t} e^{\lambda(t-s)}T(s)(\lambda-A)f \ds \quad \text{for } f \in D(A). %\tag{3.2}
+    ( \mathrm{e}^{\lambda t} - T(t))f &= \int_{0}^{t}  \mathrm{e}^{\lambda(t-s)}T(s)(\lambda-A)f \ds \quad \text{for } f \in D(A). %\tag{3.2}
 \end{align*}
 %% --
 %% --
@@ -963,9 +960,9 @@ for every $f \in D(A)$.
 Here we use the fact that every $\hat{f} \coloneqq q(f) \in D(A_{/})$ can be written as
 %% --
 \[
-    \hat{f} = \int_{0}^{\infty} e^{-\lambda s} \hat{T}(s)_{/}\hat{g} \ds 
-    = \int_{0}^{\infty} e^{-\lambda s}q(T(s)g) \ds 
-    = q(\int_{0}^{\infty} e^{-\lambda s}T(s)g \ds) = q(h)
+    \hat{f} = \int_{0}^{\infty}  \mathrm{e}^{-\lambda s} \hat{T}(s)_{/}\hat{g} \ds 
+    = \int_{0}^{\infty}  \mathrm{e}^{-\lambda s}q(T(s)g) \ds 
+    = q(\int_{0}^{\infty}  \mathrm{e}^{-\lambda s}T(s)g \ds) = q(h)
 \]
 %% --
 where $h \in D(A)$ and $\lambda > \omega$ (see Proposition~\ref{prop:a1-1.6}).
