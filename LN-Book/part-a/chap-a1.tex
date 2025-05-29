@@ -62,16 +62,35 @@ Next we collect a few elementary facts on the continuity and boundedness of one-
 A one-parameter semigroup $(T(t))_{t \geq 0}$ on a Banach space $E$ is strongly continuous if and only if for any $f \in E$ it is true that $T(t)f \to f$ if $t \to 0$.
 
 \item 
-For every strongly continuous semigroup there exist constants $M \geq 1$, $w \in \R$ such that $\|T(t)\| \leq M \cdot  \mathrm{e}^{wt} \text{ for } t \geq 0\} \\
-={}& \lim_{t\to\infty} \frac{1}{t}\log\|T(t)\| = \inf_{t>0} \frac{1}{t}\log\|T(t)\| \notag .
+For every strongly continuous semigroup there exist constants $ M \geq 1 $, $ \omega \in \R $, such that 
+$ \lVert T(t) \rVert \leq M \cdot \mathrm{e}^{ \omega t} $ for every $  t \geq 0 $.
+
+\item If $ T(t)_{t\geq0} $ is a one-parameter semigroup such that $ \lVert T(t) \rVert $ is bounded for
+$ 0 < t \leq \delta $ then it is strongly continuous if and only if $ \lim_{t\to0} T(t)f = f $ for every 
+$ f $ in a total subset of $ E $.
+
+\end{enumerate}
+\end{remarks}
+
+%% --
+The exponential estimate from Remark for the growth of $ \lVert T(t) \rVert $ can be used to define an important characteristic of the semigroup.
+
+
+\begin{definition}\label{ex:a1-1.4}
+By the growth bound (or type) of the semigroup $ T(t)_{t\geq0} $ we understand the number $ \omega_{0} $,
+%% --
+\begin{align*}
+	\omega_{0} & \coloneq \inf \{ \omega \in \R   \colon \text{there exists $ M \in \R_{+} $   
+ 		such that $\|T(t)\| \leq M \cdot  \mathrm{e}^{wt}$  for  $t \geq 0$} \} \\
+	={}& \lim_{t\to\infty} \frac{1}{t}\log\|T(t)\| = \inf_{t>0} \frac{1}{t}\log\|T(t)\| .
 \end{align*}
 %% --
 \end{definition}
 %% --
-Particularily important are semigroups such that for every $t \geq 0$ we have $\|T(t)\| \leq M$ (\emph{bounded semigroups}) or $\|T(t)\| \leq 1$ (\emph{contraction semigroups}).
+Particularly important are semigroups such that for every $t \geq 0$ we have $\|T(t)\| \leq M$ (\emph{bounded semigroups}) or $\|T(t)\| \leq 1$ (\emph{contraction semigroups}).
 In both cases we have $\omega_{0} \leq 0$.
 
-It follows from the subsequent examples and from Definition ~\ref{def:a1-1.3} that $\omega_{0}$ may be any number $ -\infty \leq \omega < +\infty$.
+It follows from the subsequent examples and from Definition~\ref{def:a1-1.3} that $\omega_{0}$ may be any number $ -\infty \leq \omega < +\infty$.
 Moreover the reader should observe that the infimum in Definition ~\ref{def:a1-1.3} need not be attained and that $M$ may be larger than $1$ even for bounded semigroups.
 %% --
 \begin{examples}\label{ex:a1-1.4}

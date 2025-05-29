@@ -41,6 +41,12 @@
 \spnewtheorem*{examples*}{Examples}{\normalfont\bfseries}{\normalfont}
 \spnewtheorem*{remark*}{Remark}{\normalfont\bfseries}{\normalfont}
 \spnewtheorem*{remarks*}{Remark}{\normalfont\bfseries}{\normalfont}
+\spnewtheorem*{definition*}{Definition}{\normalfont\bfseries}{\normalfont}
+
+\spnewtheorem*{theorem*}{Theorem}{\normalfont\bfseries}{\itshape}
+\spnewtheorem*{proposition*}{Proposition}{\normalfont\bfseries}{\itshape}
+\spnewtheorem*{lemma*}{Lemma}{\normalfont\bfseries}{\itshape}
+\spnewtheorem*{corollary*}{Corollary}{\normalfont\bfseries}{\itshape}
 
 %% -- Nummer von Theorem etc. korrekt
 %% --
@@ -71,13 +77,6 @@
 \let\c@remarks=\c@theorem 		% Make proposition share the theorem counter
 \makeatother
 
-\theoremstyle{plain}
-\newtheorem*{theorem*}{Theorem}
-\newtheorem*{lemma*}{Lemma}
-\newtheorem*{proposition*}{Proposition}
-
-\theoremstyle{definition}
-\newtheorem*{definition*}{Definition}
 
 
 %% -- Pakete etc.
@@ -108,7 +107,7 @@
 
 %\makeindex             % used for the subject index
 \usepackage{imakeidx}
-\makeindex[columns=2, options=-s svind.ist]                      
+\makeindex[intoc, columns=2, options=-s svind.ist]                      
 % please use the style svind.ist with
                        % your makeindex program
                        
@@ -164,15 +163,15 @@
 %%% -- Part A
 %%% --
 ,./part-a/part-a
-%,./part-a/chap-a1
-%,./part-a/chap-a2
-%,./part-a/chap-a3
+,./part-a/chap-a1
+,./part-a/chap-a2
+,./part-a/chap-a3
 %,./part-a/chap-a4
 %%,./part-a/appendix-a
 %% -- Part B
 %% --
 ,./part-b/part-b
-%,./part-b/chap-b1
+,./part-b/chap-b1
 %,./part-b/chap-b2
 %,./part-b/chap-b3
 %,./part-b/chap-b4
@@ -187,11 +186,11 @@
 %%,./part-c/appendix-c
 %% -- Part D
 %% --
-%,./part-d/part-d
-%,./part-d/chap-d1
-%,./part-d/chap-d2
-%,./part-d/chap-d3
-%,./part-d/chap-d4
+,./part-d/part-d
+,./part-d/chap-d1
+,./part-d/chap-d2
+,./part-d/chap-d3
+,./part-d/chap-d4
 %%,./part-d/appendix-d
 }
 %% --
