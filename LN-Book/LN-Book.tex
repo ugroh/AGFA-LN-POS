@@ -1,10 +1,10 @@
 % !TEX TS-program = pdflatexmk
 % !BIB program = bibtex 
 %%%%%%%%%%%%%%%%%%%% LN-Book.tex %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Stand: 2025-04-24 ulgr
+% Stand: 2025-06-01 ulgr
 %%%%%%%%%%%%%%%% Springer-Verlag %%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\documentclass[%
+\documentclass[% 
 	,graybox
 	,envcountsect			%% not working  
 %	,evvcountsame			%% -- " --
@@ -155,23 +155,23 @@
 %% --
 
 \includeonly{%
-%,./part-0/ln-dedication
-%%,./part-0/foreword
-%,./part-0/ln-preface
-%%,./part-0/acknowledgement
-%,./part-0/ln-symbols
+,./part-0/ln-dedication
+%,./part-0/foreword
+,./part-0/ln-preface
+%,./part-0/acknowledgement
+,./part-0/ln-symbols
 %%% -- Part A
 %%% --
 ,./part-a/part-a
-,./part-a/chap-a1
-,./part-a/chap-a2
-,./part-a/chap-a3
-%,./part-a/chap-a4
+,./part-a/chap-a1	%% -- final
+,./part-a/chap-a2	%% -- final
+,./part-a/chap-a3	%% -- final
+,./part-a/chap-a4
 %%,./part-a/appendix-a
 %% -- Part B
 %% --
-,./part-b/part-b
-,./part-b/chap-b1
+,./part-b/part-b	%% -- final
+,./part-b/chap-b1	%% -- final
 %,./part-b/chap-b2
 %,./part-b/chap-b3
 %,./part-b/chap-b4
@@ -179,8 +179,8 @@
 %% -- Part C
 %% --
 ,./part-c/part-c
-,./part-c/chap-c1
-%,./part-c/chap-c2
+,./part-c/chap-c1	%% -- final
+,./part-c/chap-c2	%% -- final
 %,./part-c/chap-c3
 %,./part-c/chap-c4
 %%,./part-c/appendix-c
