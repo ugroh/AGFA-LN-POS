@@ -660,11 +660,11 @@ On the other hand, let $f$ be absolutely continuous such that $f' \in L^{p}$.
 Then
 %% --
 \begin{align*}
-    \lim_{h \to 0} \int\textstyle{\left|\frac{f(x+h) - f(x)}{h} - f'(x)\right|^{p} \dx} 
-    &= \lim_{h \to 0} \int \textstyle{\left|\frac{1}{h}\int_{0}^{h} (f'(x+s) - f'(x)) \ds\right|^{p} \dx }\\
-    &= \lim_{h \to 0} \int \textstyle{\left|\int_{0}^{1} (f'(x+uh) -  \int f'(x)) \du\right|^{p} \dx }\\
-    &\leq \lim_{h \to 0}\textstyle{ \int \int_{0}^{1} |f'(x+uh) - f'(x)|^p \du \dx }\\
-    & = \textstyle{\int_{0}^{1}} \displaystyle{\lim_{h \to 0}} \textstyle{\int|f'(x+uh) - f'(x)|^{p} \dx \du = 0},
+    \lim_{h \to 0} \int{\left|\frac{f(x+h) - f(x)}{h} - f'(x)\right|^{p} \dx} 
+    &= \lim_{h \to 0} \int {\left|\frac{1}{h}\int_{0}^{h} (f'(x+s) - f'(x)) \ds\right|^{p} \dx }\\
+    &= \lim_{h \to 0} \int {\left|\int_{0}^{1} (f'(x+uh) -  \int f'(x)) \du\right|^{p} \dx }\\
+    &\leq \lim_{h \to 0}{ \int \int_{0}^{1} |f'(x+uh) - f'(x)|^p \du \dx }\\
+    & = {\int_{0}^{1}} \displaystyle{\lim_{h \to 0}} {\int|f'(x+uh) - f'(x)|^{p} \dx \du = 0},
 \end{align*}
 %% --
 hence $f \in D(A)$.

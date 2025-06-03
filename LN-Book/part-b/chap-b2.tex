@@ -1,5 +1,9 @@
-%% Stand 2025-04-24 ulgr
+% !TEX root = ../LN-Book.tex
 %% --
+%% -- Stand 2025-06-03  
+%% -- Final
+%% --
+\setcounter{chapter}{1}
 \chapter{Characterization of Positive Semigroups on \texorpdfstring{$C_{0}(X)$}{C\textunderscore 0(X)}}
 \label{chap:b2}
 \index{$C_{0}(X)$!Positive Semigroups}
@@ -30,28 +34,14 @@ We show in Section 2 that $(T(t))_{t \geq 0}$ is a lattice semigroup if and only
 
 We refer to Chapter C-II for a discussion of this identity and classical analogs for the Laplacian due to \citet{kato:1973}.
 
-%\index{Positive Semigroups}
-%\index{Semigroups!Positive}
-%\index{Lattice Semigroups}
-%\index{Semigroups!Lattice}
-%\index{Generator!Positive Semigroups}
-%\index{Generator!Lattice Semigroups}
-%\index{Kato's Equality}
-%%
-%%\newpage
-
-%%KGK p-B2-02; LNMp-123
-%%
 After the abstract characterization in Section 2 we show that every continuous semiflow on $X$ together with a cocycle defines a lattice semigroup in a canonical way, and on $C(K)$, every lattice semigroup can be so represented.
 This furnishes a wide class of examples.
 Furthermore, positive one-parameter groups on $C_{0}(X)$ (which form a particular type of lattice semigroups) are discussed.
 Their generators are similar to a derivation perturbated by a multiplication operator (Section 3).
 
 \section{Generators of Positive Semigroups on  \texorpdfstring{$C_{0}(X)$}{C\textunderscore 0(X)}} \label{sec:b2-1}
-%\index{Generators!Positive Semigroups}
-\index{Positive Semigroups!Generators}
-%\index{$C(K)$!Positive Semigroups}
-
+\index{$C(K)$!Positive Semigroups!Generators}
+%% --
 Let $X$ be a locally compact space.
 Throughout this section we denote by $C_{0}(X)$ the space of all real-valued continuous functions on $C_{0}(X)$ which vanish in infinity.
 Recall that a semigroup $(T(t))_{t \geq 0}$ on $C_{0}(X)$ is called \emph{positive} if $T(t) \geq 0$ for all $t \geq 0$.
@@ -59,7 +49,7 @@ It is easy to describe the positivity of $(T(t))_{t \geq 0}$ in terms of the res
 In fact, the resolvent is expressed by the semigroup by
 %% --
 \begin{equation}\label{eq:b2-1.1}
-R(\lambda,A) = \int_{0}^{\infty} e^{-\lambda t} T(t) \dt \quad (\lambda > \omega(A));
+R(\lambda,A) = \int_{0}^{\infty} \mathrm{e}^{-\lambda t} T(t) \dt \quad (\lambda > \omega_{0}(A));
 \end{equation}
 %% --
 and conversely, the semigroup by the resolvent via the formula
@@ -70,56 +60,51 @@ T(t) = \lim_{n \to \infty} (n/tR(n/t,A))^{n} \quad \text{strongly}
 %% --
 (cf. A-II, Proposition 1.10).
 So we obtain the following.
-
+%% --
 \begin{proposition}\label{prop:b2-1.1}
 Let $(T(t))_{t \geq 0}$ be a semigroup with generator $A$.
 The semigroup is positive if and only if $R(\lambda,A) \geq 0$ for all sufficiently large real $\lambda$.
 \end{proposition}
-
+%% --
 It is more difficult and more interesting to characterize the positivity of the semigroup by intrinsic conditions on the generator.
 This is the purpose of this section.
 As a first orientation we consider bounded generators.
 We need the following lemma.
 %%
-%%\newpage
-%%KGK p-B2-03; LNMp-124
-%%
 \begin{lemma}\label{lem:b2-1.2}
 Let $X$ be a locally compact space, $x \in X$ and $\mu$ a regular bounded Borel measure on $X$ such that $\mu(\{x\}) = 0$.
 Then $\mu \geq 0$ if and only if $\langle f,\mu \rangle \geq 0$ for all $f \in C_{0}(X)_{+}$ satisfying $f(x) = 0$.
 \end{lemma}
-
+%% --
 We omit the easy proof.
-
+%% --
 \begin{theorem}\label{thm:b2-1.3}
 Let $X$ be locally compact and $A$ be a bounded operator on $C_{0}(X)$.
 The following assertions are equivalent.
 %% --
 \begin{enumerate}[\upshape (a)]
 \item \label{thm:b2-1.3-1}
-$e^{tA} \geq 0$ $(t \geq 0)$.
+$\mathrm{e}^{tA} \geq 0$ $(t \geq 0)$.
 \item \label{thm:b2-1.3-2}
-For $0 \leq f \in C_{0}(X)$ and $x \in X$, $f(x) = 0$ implies $(Af)(x) \geq 0$.
+For  $0 \leq f \in C_{0}(X)$\, and  $x \in X$,  $f(x) = 0$ implies $(Af)(x) \geq 0$.
 \item \label{thm:b2-1.3-3}
 $A + \|A\|Id \geq 0$.
 \end{enumerate}
 \end{theorem}
 %% --
-
 \begin{proof}
 \ref{thm:b2-1.3-1} implies \ref{thm:b2-1.3-2} .
 Let $f \in C_{0}(X)_{+}$ and $x \in X$ such that $f(x) = 0$.
 Then
 %% --
 \begin{align*}
-(Af)(x) &= \lim_{t \to 0} 1/t ((e^{tA}f(x) - f(x)) \\
-&= \lim_{t \to 0} 1/t ((e^{tA}f(x)) \geq 0
+(Af)(x) &= \lim_{t \to 0} 1/t\, ((\mathrm{e}^{tA}f(x) - f(x)) \\
+&= \lim_{t \to 0} 1/t\, ((\mathrm{e}^{tA}f(x)) \geq 0
 \end{align*}
 %% --
-
 \ref{thm:b2-1.3-2} implies \ref{thm:b2-1.3-3} .
 Let $x \in X$.
-We have to show that $(Af)(x) + \|A\|f(x) \geq 0$ for all $f \in C_{0}(X)$.
+We have to show that $(Af)(x) + \|A\|f(x) \geq 0$ for all $f \in C_{0}(X)$\,.
 Let $A'\delta_{x} = \mu + c\delta_{x}$ where $\mu \in M(X)$ such that $\mu(\{x\}) = 0$ and $c \in \mathbb{R}$.
 We claim that $\mu \geq 0$.
 Let $0 \leq f \in C_{0}(X)$ such that $f(x) = 0$.
@@ -127,28 +112,38 @@ Then $\langle f,\mu \rangle = \langle f,A'\delta_{x} \rangle = (Af)(x) \geq 0$ b
 Thus $\mu \geq 0$ by Lemma \ref{lem:b2-1.2}.
 Moreover, $|c| = \|c\delta_{x}\| \leq \|c\delta_{x} + \mu\| = \|A'\delta_{x}\| \leq \|A\|$.
 Hence, for $f \in C_{0}(X)_{+}$,
-$(Af)(x) + \|A\|f(x) = \langle f, A'\delta_{x} + \|A\|\delta_{x} \rangle = \langle f, \mu + (c+\|A\|)\delta_{x} \rangle \geq 0$.
+%%$
+%%--
+\[
+(Af)(x) + \|A\|f(x) = \langle f, A'\delta_{x} + \|A\|\delta_{x} \rangle = \langle f, \mu + (c+\|A\|)\delta_{x} \rangle \geq 0.
+\]
+%%--
+%%$.
 This shows  \ref{thm:b2-1.3-2} to hold.
 
 \ref{thm:b2-1.3-3} implies \ref{thm:b2-1.3-1}.
 We have 
-$e^{tA} = e^{-t\|A\|}e^{t(A+\|A\|)} \geq e^{-t\|A\|}Id$ for all $t \geq 0$.
+$\mathrm{e}^{tA} = \mathrm{e}^{-t\|A\|}\mathrm{e}^{t(A+\|A\|)} \geq \mathrm{e}^{-t\|A\|}Id$ for all $t \geq 0$.
 \end{proof}
 
-\begin{example}\label{ex:b2-1.4}
-a) Let $B$ be a positive operator on $C_{0}(X)$ and $m \colon X \to \mathbb{R}$ be a continuous and bounded mapping.
-Let $Af = Bf - m \cdot f$ $(f \in C_{0}(X))$.
-Then $e^{tA} \geq 0$ for all $t \geq 0$.
-
-b) Let $A$ be an $n \times n$ - matrix.
-Then $e^{tA} \geq 0$ for all $t \geq 0$ if and only if $a_{ij} \geq 0$ for $i \neq j$.
-This is the linear version of Kamke's theorem (see \citet{kamke:1932}).
+\begin{example}\label{ex:b2-1.4} 
+ 
+	\begin{enumerate}[\upshape (i), wide, labelindent=.5ex] 
+		\item \label{ex:b2-1.4-1}
+		Let $B$ be a positive operator on $C_{0}(X)$ and $m \colon X \to \mathbb{R}$ be a continuous and bounded mapping.
+		Let $Af = Bf - m \cdot f$ $(f \in C_{0}(X))$.
+		Then $\mathrm{e}^{tA} \geq 0$ for all $t \geq 0$.
+		
+		\item \label{ex:b2-1.4-2}
+		Let $A$ be an $n \times n$ - matrix.
+		Then $\mathrm{e}^{tA} \geq 0$ for all $t \geq 0$ if and only if $a_{ij} \geq 0$ for $i \neq j$.
+		This is the linear version of Kamke's theorem (see \citet{kamke:1932}).
+    \end{enumerate}
 \end{example}
 
 Now we come to the actual subject of this section, the characterization of strongly continuous positive semigroups on $C(K)$.
 Here $K$
 %%
-%%\newpage
 %%KGK p-B2-04; LNMp-125
 %%
 denotes a compact space and $C(K)$ the space of all real-valued continuous functions on $K$.
@@ -158,39 +153,56 @@ We reformulate condition \ref{thm:b2-1.3-2} of Theorem~\ref{thm:b2-1.3} for unbo
 
 \begin{definition}\label{def:b2-1.5}
 An (unbounded) operator $A$ on $C(K)$ is said to satisfy the \emph{positive minimum principle} if
-\\
-$(P)$ \qquad $
-\begin{array}
-{l}\text{for every } 0 \leq f \in D(A) \text{ and } x \in K,\\
-f(x) = 0 \text{ implies } (Af)(x) \geq 0
+%% --
+
+$\text{(P)}$ \qquad $
+\begin{array}{l}
+	\text{for every } 0 \leq f \in D(A) \text{ and } x \in K,\\
+    f(x) = 0 \text{ implies } (Af)(x) \geq 0
 \end{array}$
 %%--
 \end{definition}
-
+%% --
 Our next theorem shows that the positive minimum principle characterizes the positivity of the semigroup; and in fact, the proof is very elementary.
 Using more involved arguments we will later prove a much stronger result (Theorem~\ref{thm:b2-1.13} ).
-
+%% --%% --
 \begin{theorem}\label{thm:b2-1.6}
 Let $A$ be the generator of a strongly continuous semigroup on $C(K)$.
 Then the semigroup is positive if and only if the generator $A$ satisfies the positive minimum principle $(P)$.
 \end{theorem}
-
+%%
 \begin{proof}
 The necessity of the condition is proved as "\ref{thm:b2-1.3-1} implies \ref{thm:b2-1.3-2} " in Theorem~\ref{thm:b2-1.3}.
 Assume that $(P)$ holds.
 We claim that $R(\lambda,A) \geq 0$ for sufficiently large real $\lambda$. 
 (This implies the positivity of the semigroup by Proposition~\ref{prop:b2-1.1}).
+\\
 Let $s \coloneqq \inf \{\lambda \in \R : \left[\lambda,\infty \right) \subset \rho(A)\}$.
-Then $s \leq \omega(A) < \infty$.
-Let $0 \ll u \in C(K)$.
-Then $\lambda_{0} \coloneqq \inf \{\lambda > s : R(\mu,A)u \gg 0 \text{ for all } \mu \in (\lambda,\infty)\} < \infty$ since $\lim_{\mu \to \infty} \mu R(\mu,A)u = u$.
+Then $s \leq \omega_{0}(A) < \infty$.
+\\
+Let $0~\ll~u~\in~C(K)$.
+Then 
+%%--
+%% $
+\[
+\lambda_{0} \coloneqq \inf \{\lambda > s : R(\mu,A)u \gg 0 \text{ for all } \mu \in (\lambda,\infty)\} < \infty
+\]
+%%--
+%%$ 
+since $\lim_{\mu \to \infty} \mu R(\mu,A)u = u$.
 
 We claim that $\lambda_{0} = s$.
 
 In fact, if this is not true, then $\left[\lambda_{0},\infty\right) \subset \rho(A)$ and $R(\lambda_{0},A)u \geq 0$ but $R(\lambda_{0},A)u$ is not strictly positive.
 Consequently there exists $x \in K$ such that $(R(\lambda_{0},A)u)(x) = 0$.
 Then $(P)$ implies that $A(R(\lambda_{0},A)u)(x) \geq 0$.
-Hence, $0 < u(x) = \lambda_{0}(R(\lambda_{0},A)u)(x) - A(R(\lambda_{0},A)u)(x) \leq 0$, a contradiction.
+Hence, 
+%%--
+\[
+0 < u(x) = \lambda_{0}(R(\lambda_{0},A)u)(x) - A(R(\lambda_{0},A)u)(x) \leq 0,
+\]
+%%--
+a contradiction.
 We have shown that $R(\lambda,A)u \gg 0$ for all $u \gg 0$ and $\lambda > s$.
 Since $\{u \in C(K): u \gg 0\}$ is dense in $C(K)_{+}$, it follows that $R(\lambda,A) \geq 0$ for all $\lambda > s$.
 \end{proof}
@@ -200,11 +212,10 @@ The proof of Theorem~\ref{thm:b2-1.6} shows that for the generator $A$ of a posi
 In particular, $R(\lambda,A) \geq 0$ whenever $\left[\lambda,\infty\right) \subset \rho(A)$.
 \end{remark}
 
-%\index{Positive Minimum Principle}
-%\index{Semigroups!Positive}
-%\index{Generators!Properties}
+%%\index{Positive Minimum Principle}
+%%\index{Semigroups!Positive}
+%%\index{Generators!Properties}
 %%
-%%\newpage
 %%KGK p-B2-5; LNMp-126
 %%
 If $A$ is a generator, then the positivity of the resolvent $R(\lambda,A)$ for large real $\lambda$ implies the positivity of the semigroup (by Proposition.~\ref{prop:b2-1.1}.
@@ -219,13 +230,13 @@ Then $A$ is the generator of a strongly continuous positive semigroup.
 Moreover,
 %%--
 \begin{equation}\label{eq:b2-1.3}
-    \omega(A) \leq w.
+    \omega_{0}(A) \leq w.
 \end{equation}
 %%--
 \end{theorem}
 
-\begin{proof}
-\begin{enumerate}[a)]
+\begin{proof} 
+\begin{enumerate}[\upshape (i), wide, labelindent=.5em]
 \item \label{thm:b2-1.8-1}
 Assume that $w < 0$.
 Denote by $1$ the constant-1-function.
@@ -237,10 +248,23 @@ Then $|f| \leq \|f\|1$.
 Consequently, $|R(0,A)f| \leq R(0,A)|f| \leq \|f\|R(0,A)1 = \|f\|u$.
 Hence $(R(0,A)f)(x) = 0$ for all $f \in C(K)$.
 Since $D(A) = R(0,A)C(K)$, it follows that $D(A)$ is not dense, a contradiction.
-Define $\|f\|_{0} = \inf \{\lambda > 0 : |f| \leq \lambda u\} = \|f/u\|_{\infty}$.
+Define 
+%%$
+%%-
+\[\|f\|_{0} = \inf \{\lambda > 0 : |f| \leq \lambda u\} = \|f/u\|_{\infty}.
+\]
+%%--
+%%$.
 Then $\|\cdot\|_{0}$ is an equivalent norm on $C(K)$.
 Moreover, $\|f\|_{0} \leq 1$ if and only if $f \in [-u,u]$.
-By the resolvent equation we have $\lambda R(\lambda,A)u = \lambda R(\lambda,A)R(0,A)1 = R(0,A)1 - R(\lambda,A)1 \leq R(0,A)1 = u$ for all $\lambda \geq 0$.
+By the resolvent equation we have 
+%%$
+%%--
+\[
+\lambda R(\lambda,A)u = \lambda R(\lambda,A)R(0,A)1 = R(0,A)1 - R(\lambda,A)1 \leq R(0,A)1 = u 
+\]
+%%--
+for all $\lambda \geq 0$.
 This implies that $\lambda R(\lambda,A)$ is contractive for the norm $\|\cdot\|_{0}$.
 Thus by the Hille-Yosida Theorem $A$ is the generator of a semigroup which is contractive with respect to the norm $\|\cdot\|_{0}$ and so is bounded with respect to the supremum norm on $C(K)$.
 
@@ -248,27 +272,26 @@ Thus by the Hille-Yosida Theorem $A$ is the generator of a semigroup which is co
 If $w$ is arbitrary, let $\lambda > w$ and consider $A - \lambda$.
 Then $[w-\lambda,\infty) \subset \rho(A-\lambda)$ and $R(\mu,A-\lambda) = R(\mu+\lambda,A) \geq 0$ for all $\mu \in [w-\lambda,\infty)$.
 Thus by a), $A - \lambda$ is the generator of a bounded positive semigroup.
-Consequently, $A$ is a generator as well and $\omega(A) \leq \lambda$.
+Consequently, $A$ is a generator as well and $\omega_{0}(A) \leq \lambda$.
 \end{enumerate}
 \end{proof}
-
-In Theorem~\ref{thm:b2-1.8} it is enough to assume that $R(\lambda_{n},A) \geq 0$ for some sequence $(\lambda_{n}) \subset \rho(A) \cap \R$ satisfying $\lim_{n \to \infty} \lambda_{n} = \infty$.
+%%
+In Theorem~\ref{thm:b2-1.8} it is enough to assume that $R(\lambda_{n},A) \geq 0$ for some sequence 
+ $(\lambda_{n}) \subset \rho(A) \cap \R$ satisfying $\lim_{n \to \infty} \lambda_{n} = \infty$.
 This follows from the following lemma.
 
-\index{Hille-Yosida Theorem}
-\index{Resolvent!Positivity}
-\index{Generators!Properties}
+%\index{Hille-Yosida Theorem}
+%%\index{Resolvent!Positivity}
+%%\index{Generators!Properties}
 %%
-%%\newpage
 %%KGK p-B2-06; LNMp-127
 %%
 %% --
 \begin{lemma}\label{lem:b2-1.9}
-%\index{Resolvent!monotonicity}
-%\index{Operators!resolvent monotonicity}
+%%\index{Resolvent!monotonicity}
+%%\index{Operators!resolvent monotonicity}
 Let $B$ be an operator on $C(K)$ (more generally, on a Banach lattice).
 If $\mu_{1}, \mu_{2} \in \rho(B) \cap \R$ such that $0 \leq R(\mu_{1},B)$, $0 \leq R(\mu_{2},B)$ and $\mu_{1} < \mu_{2}$, then $[\mu_{1},\mu_{2}] \subset \rho(B)$ and
-
 %% –
 \[
     0 \leq R(\mu_{2},B) \leq R(\mu,B) \leq R(\mu_{1},B) \quad \text{for all } \mu \in [\mu_{1},\mu_{2}]
@@ -277,27 +300,48 @@ If $\mu_{1}, \mu_{2} \in \rho(B) \cap \R$ such that $0 \leq R(\mu_{1},B)$, $0 \l
 \end{lemma}
 %% --
 \begin{proof}
-Let $M \coloneqq \{\mu \in \rho(B) \cap [\mu_{1},\mu_{2}] \colon [\mu,\mu_{2}] \subset \rho(B)$  and $R(\lambda,B) \geq 0 \text{ for all } \lambda \in [\mu,\mu_{2}]\}$.
-\\
-a) The set $M$ is open.
-In fact, let $\mu \in M$.
-Then for small $h > 0$ one has $R(\mu-h,B) = \sum_{n=0}^{\infty} h^{n}R(\mu,B)^{n+1} \geq 0$.
-\\
-b) $M$ is closed.
-In fact, by the resolvent equation one has for $\mu \in M$, $R(\mu_{1},B) - R(\mu,B) = (\mu - \mu_{1})R(\mu_{1},B)R(\mu,B) \geq 0$, hence $R(\mu,B) \leq R(\mu_{1},B)$.
-Consequently, $\text{dist}(\mu,\sigma(B)) \geq 1/\|R(\mu,B)\| \geq 1/\|R(\mu_{1},B)\|$ for all $\mu \in M$.
+Let 
+\begin{align*}
+M \coloneqq \{\mu \in \rho(B) & \cap [\mu_{1},\mu_{2}] \colon [\mu,\mu_{2}] \subset \rho(B) \\
+\intertext{and}
+R(\lambda,B) \geq 0 &\text{ for all } \lambda \in [\mu,\mu_{2}]\}
+\end{align*}
+%% 
+\begin{enumerate}[\upshape (i), wide, labelindent=.5em]
+	\item
+	The set $M$ is open.
+	In fact, let $\mu \in M$.
+	Then for small $h > 0$ one has \\
+	$R(\mu-h,B) = \sum_{n=0}^{\infty} h^{n}R(\mu,B)^{n+1} \geq 0$.
+    \item 
+ 	$M$ is closed.
+	In fact, by the resolvent equation one has for $\mu \in M$,  
+	%
+\[
+	R(\mu_{1},B) - R(\mu,B) = (\mu - \mu_{1})R(\mu_{1},B)R(\mu,B) \geq 0 ,
+\]
+%
+hence $R(\mu,B) \leq R(\mu_{1},B)$.
+	Consequently, 
+	%
+\[
+	\text{dist}(\mu,\sigma(B)) \geq 1/\|R(\mu,B)\| \geq 1/\|R(\mu_{1},B)\|
+\]
+%
+for all $\mu \in M$.
 This implies that $M$ is closed.
-
-The assertions a) and b) imply that $M = [\mu_{1},\mu_{2}]$.
+\end{enumerate}
+The assertions (i) and (ii) imply that $M = [\mu_{1},\mu_{2}]$.
 \end{proof}
 %% --
 \begin{remark*}\label{rem:b2-1.9-kgk1}
-\begin{enumerate}[a), wide, labelsep=1em]
+\begin{enumerate}[\upshape (i), wide, labelindent=.5em]  
+
 \item \label{rem:b2-1.9-1}
 The lemma shows in particular that the resolvent of the generator $A$ of a positive semigroup is decreasing on $(s(A),\infty)$.
 
 \item \label{rem:b2-1.9-2}
-There exists a linear operator $B$ on $\R^{n}$ such that $R(\mu,B) \geq 0$ on some interval $[\mu_{1},\mu_{2}] \subset \rho(B) \cap \R$ but $(e^{tB})_{t \geq 0}$ is not positive (see \citet{greinervoigtwolff:1981}
+There exists a linear operator $B$ on $\R^{n}$ such that $R(\mu,B) \geq 0$ on some interval $[\mu_{1},\mu_{2}] \subset \rho(B) \cap \R$ but $(\mathrm{e}^{tB})_{t \geq 0}$ is not positive (see \citet{greinervoigtwolff:1981}
 ).
 \end{enumerate}
 \end{remark*}
@@ -306,9 +350,19 @@ There exists a linear operator $B$ on $\R^{n}$ such that $R(\mu,B) \geq 0$ on so
 %% --
 \begin{remark*}\label{rem:b2-1.9-kgk2}
 Theorem \ref{thm:b2-1.8} does not hold in $C_{0}(X)$, in general.
-In fact, the operator $A$ on $C_{0}(0,1]$ given by $Af(x) = f'(x) + \alpha/x f(x)$ $(x \in (0,1])$ with domain $D(A) = \{f \in C^{1}[0,1] \colon f'(0) = f(0) = 0\}$ where $\alpha \in (0,1)$ satisfies the following: $\rho(A) = \mathbb{C}$, $R(\lambda,A) \geq 0$ for all $\lambda \in \R$.
+In fact, the operator $A$ on $C_{0}(0,1]$ given by $Af(x) = f'(x) + \alpha/x f(x)$ $(x \in (0,1])$ with domain 
+%%$
+%%--
+\[
+D(A) = \{f \in C^{1}[0,1] \colon f'(0) = f(0) = 0\} 
+\]
+%%--
+where $\alpha \in (0,1)$  satisfies the following: 
+$\rho(A) = \mathbb{C}, R(\lambda,A) \geq 0$ for all $\lambda \in \R$.
 But $A$ is not the generator of a semigroup (even if more general classes than $C_{0}$-semigroups are admitted).
-See \citet{Arendt:1985b} for this example and a general theory of resolvent positive operators.
+See \citet{arendt:1984b} 
+%% 1984b stadt 1985b laut UG
+for this example and a general theory of resolvent positive operators.
 Another example is given by \citet{battydavies:1983}.
 \end{remark*}
 %% --
@@ -323,7 +377,6 @@ p_{u}(f) = \inf\{\lambda \in \R_{+} \colon f \leq \lambda u\} = \sup_{x \in K} \
 \end{equation}
 %% –
 %%
-%%\newpage
 %%KGK p-B2-07; LNMp-128
 %%
 Then $p_{u}$ is a strict half-norm on $C(K)$ (see A-II, Section  2).
@@ -331,7 +384,7 @@ Then $p_{u}$ is a strict half-norm on $C(K)$ (see A-II, Section  2).
 Note that
 %% –
 \begin{equation}\label{eq:b2-1.5}
-p_{u}(f)u - f \geq 0 \quad (f \in C(K)).
+p_{u}(f)u - f \geq 0 \quad (f \in C(K)\,).
 \end{equation}
 %% –
 
@@ -355,8 +408,8 @@ As a consequence, every $p_{u}$-contractive bounded operator $T$ on $C(K)$ is po
 
 %% –
 \begin{proposition}\label{prop:b2-1.10}
-\index{Dissipative operators}
-\index{Half-norm!dissipative operators}
+%\index{Dissipative operators}
+%%\index{Half-norm!dissipative operators}
 Let $A$ be a densely defined operator on $C(K)$.
 Then there exists a strictly positive $u \in D(A)$.
 For any such $u$ the following assertions are equivalent.
@@ -385,7 +438,7 @@ Thus $(Au)(x) \leq 0$.
 We now show (P).
 Let $0 \leq f \in D(A)$ and $x \in K$ such that $f(x) = 0$.
 We have to show that $(Af)(x) \geq 0$.
-Since $f(x) = 0$ and $p_{u}(-f) = 0$ we have by \eqref{eq:b2-1.6} $\phi_{x} \in \ddp_{u}(-f)$.
+Since $f(x) = 0$ and $p_{u}(-f) = 0$ we have by \eqref{eq:b2-1.6}  $\phi_{x} \in \ddp_{u}(-f)$\,.
 Since $A$ is strictly $p_{u}$-dissipative we conclude that $-u(x)(Af)(x) = \langle A(-f),\phi_{x} \rangle \leq 0$.
 Hence $(Af)(x) \geq 0$.
 
@@ -400,14 +453,13 @@ Hence $(Af)(x) \leq p_{u}(f)(Au)(x) \leq 0$ (by \ref{prop:b2-1.10-2}; i.e., $\la
 
 %% –
 \begin{corollary}\label{cor:b2-1.11}
-\index{Closable operators}
-\index{Positive minimum principle!closure}
+%%\index{Closable operators}
+%%\index{Positive minimum principle!closure}
 Let $A$ be a densely defined operator on $C(K)$.
 If $A$ satisfies (P) then $A$ is closable and the closure of $A$ satisfies (P) as well.
 \end{corollary}
 %% –
 %%
-%%\newpage
 %%KGK p-B2-08; LNMp-129
 %%
 \begin{proof}[Proof of Corollary \ref{cor:b2-1.11}]
@@ -422,8 +474,8 @@ Thus $A$ is closable and its closure $\overline{A} = \overline{B} + \lambda$ sat
 
 %% –
 \begin{corollary}\label{cor:b2-1.12}
-\index{Linear operators!boundedness}
-\index{Positive minimum principle!bounded operators}
+%%\index{Linear operators!boundedness}
+%%\index{Positive minimum principle!bounded operators}
 Let $A \colon C(K) \to C(K)$ be linear.
 If $A$ satisfies (P) then $A$ is bounded and $A + \|A\|\text{Id} \geq 0$.
 \end{corollary}
@@ -440,12 +492,12 @@ It is somewhat similar to the Lumer-Phillips Theorem (A-II, Theorem 2.13).
 %%KGK: \ref{thm:a2-2.13}
 Note that, however, in contrast to the condition of dissipativity, $A + w$ satisfies (P) for any $w \in \R$ whenever (P) holds for $A$.
 Thus (P) is not a "metric" condition; that is, it does not imply any norm estimate for the semigroup.
-We also point out that, if $(T(t))_{t \geq 0}$ is a positive semigroup on $C(K)$, then in general none of the semigroups $(e^{-wt}T(t))_{t \geq 0}$ $(w \in \R)$ is contractive (see \citet{battydavies:1983} or \citet{derndinger:1983}).
+We also point out that, if $(T(t))_{t \geq 0}$ is a positive semigroup on $C(K)$, then in general none of the semigroups $(\mathrm{e}^{-wt}T(t))_{t \geq 0}$ $(w \in \R)$ is contractive (see \citet{battydavies:1983} or \citet{derndinger:1983}).
 
 %% –
 \begin{theorem}\label{thm:b2-1.13}
-\index{Generator!positive semigroup}
-\index{Positive semigroup!generator characterization}
+%%\index{Generator!positive semigroup}
+%\index{Positive semigroup!generator characterization}
 Let $A$ be a densely defined operator on $C(K)$ which satisfies (P).
 Then
 \[
@@ -474,10 +526,9 @@ Thus by A-II, Corollary 2.12
 the closure $\overline{B}$ of $B$ generates a $p_{u}$-contraction semigroup.
 Hence the
 %%
-%%\newpage
 %%KGK p-B2-09; LNMp-130
 %%
-closure $\overline{A} = \overline{B} + \mu$ of $A$ generates a positive semigroup of type $\omega(\overline{A}) \leq \lambda$.
+closure $\overline{A} = \overline{B} + \mu$ of $A$ generates a positive semigroup of type $\omega_{0}(\overline{A}) \leq \lambda$.
 If $(\lambda - A)$ is surjective, then $A = \overline{A}$.
 \end{proof}
 
@@ -485,14 +536,14 @@ The proof of Theorem \ref{thm:b2-1.13} yields estimates for the growth bound of 
 
 %% --
 \begin{corollary}\label{cor:b2-1.14}
-\index{Generator!growth bound}
-\index{Growth bound!positive semigroup}
+%%\index{Generator!growth bound}
+%%\index{Growth bound!positive semigroup}
 Let $A$ be the generator of a strongly continuous positive semigroup on $C(K)$.
 Then
 
 %% –
 \begin{equation}\label{eq:b2-1.7}
--\infty < s(A) = \omega(A) \in \sigma(A).
+-\infty < s(A) = \omega_{0}(A) \in \sigma(A).
 \end{equation}
 %% –
 Moreover,
@@ -513,8 +564,8 @@ s(A) \geq \sup\{\mu \in \R \colon Af \geq \mu f \text{ for some } 0 < f \in D(A)
 Let $s \coloneqq \inf\{\lambda \in \R \colon [\lambda,\infty) \subset \rho(A)\}$.
 Clearly, $s \leq s(A)$.
 Moreover, by Remark \ref{rem:b2-1.7}, $R(\lambda,A) \geq 0$ for all $\lambda > s$.
-Hence it follows from \eqref{eq:b2-1.3} that $\omega(A) \leq s$.
-Consequently, $s = s(A) = \omega(A)$.
+Hence it follows from \eqref{eq:b2-1.3} that $\omega_{0}(A) \leq s$.
+Consequently, $s = s(A) = \omega_{0}(A)$.
 
 Next we prove \eqref{eq:b2-1.9}.
 Let $0 < f \in D(A)$ such that $Af \geq \mu f$.
@@ -532,14 +583,14 @@ Let $\lambda > s(A)$ and $u = R(\lambda,A)1$.
 Then $u$ is strictly positive (by  Remark \ref{rem:b2-1.7}) and $Au = \lambda u - 1 \leq \lambda u$.
 This proves one inequality in \eqref{eq:b2-1.8}. 
 Assume now that $u \in D(A)$ is strictly positive such that $Au \leq \lambda u$.
-Then by the proof of Theorem \ref{thm:b2-1.13} we have $\omega(A) \leq \lambda$.
+Then by the proof of Theorem \ref{thm:b2-1.13} we have $\omega_{0}(A) \leq \lambda$.
 This proves the other inequality in \eqref{eq:b2-1.8}. 
 \end{proof}
 
 %% --
 \begin{remark}\label{rem:b2-1.15}
-%\index{Resolvent!compact}
-%\index{Krein-Rutmann theorem}
+%%\index{Resolvent!compact}
+%%\index{Krein-Rutmann theorem}
 If $A$ has compact resolvent, then by the Krein-Rutmann Theorem there exists a positive eigenvector $u$ of $A$ corresponding to a real eigenvalue.
 So the equality is valid in \eqref{eq:b2-1.9}  
 and the supremum is a maximum.
@@ -551,14 +602,13 @@ the infimum is attained, then $s(A)$ is an eigenvalue.
 \end{remark}
 %% --
 %%
-%%\newpage
 %%KGK p-B2-10; LNMp-131
 %%
 %% --
 \begin{example}\label{ex:b2-1.16}
-\index{Matrix!spectrum}
-\index{Examples!matrix spectrum}
-Let $A = (a_{ij})$ be an $n \times n$-matrix such that $a_{ij} \geq 0$ whenever $i \neq j$ (see Example \ref{ex:b2-1.4}b).
+%%\index{Matrix!spectrum}
+%%\index{Examples!matrix spectrum}
+Let $A = (a_{ij})$ be an $n \times n$-matrix such that $a_{ij} \geq 0$ whenever $i \neq j$ (see Example \ref{ex:b2-1.4}\ref{ex:b2-1.4-2}\,).
 Then by Corollary \ref{cor:b2-1.14} 
 \begin{align*}
     s(A) &= \inf\{\lambda \in \R \colon Au \leq \lambda u \text{ for some strictly positive } u\} \\
@@ -571,7 +621,7 @@ This formula is due to \citet{collatz:1942} (see also \citet[Chapter I, Exercise
 
 %% --
 \begin{corollary}\label{cor:b2-1.17}
-\index{Positive semigroup!strict positivity}
+%%\index{Positive semigroup!strict positivity}
 Let $(T(t))_{t \geq 0}$ be a strongly continuous positive semigroup on $C(K)$.
 Then $T(t)u \gg 0$ for all $u \gg 0$, $t \geq 0$.
 \end{corollary}
@@ -579,12 +629,12 @@ Then $T(t)u \gg 0$ for all $u \gg 0$, $t \geq 0$.
 \begin{proof}
 Denote by $A$ the generator of $(T(t))_{t \geq 0}$.
 Then by the proof of Theorem \ref{thm:b2-1.13} there exist $u \gg 0$ and $\lambda \in \R$ such that $A - \lambda$ is $p_{u}$-dissipative.
-This implies that $p_{u}(T(t)f) \leq e^{\lambda t}p_{u}(f)$.
+This implies that $p_{u}(T(t)f) \leq \mathrm{e}^{\lambda t}p_{u}(f)$.
 Observing that $f \gg 0$ if and only if $p_{u}(-f) < 0$ the claim follows.
 \end{proof}
 %% --
 \begin{remark}\label{rem:b2-1.18}
-\index{Positive semigroup!on $C_{0}(X)$}
+%%\index{Positive semigroup!on $C_{0}(X)$}
 Corollaries \ref{cor:b2-1.14} and \ref{cor:b2-1.17} do not hold on $C_{0}(X)$.
 For example, let $X = \left[0,1\right)$ and
 \[
@@ -595,12 +645,12 @@ For example, let $X = \left[0,1\right)$ and
 \]
 Then $(T(t))_{t \geq 0}$ is a positive semigroup on $C_{0}(X)$ and $T(t) = 0$ for all $t \geq 1$.
 The generator $A$ of $(T(t))_{t \geq 0}$ has empty spectrum, so that \eqref{eq:b2-1.7} is violated.
-However, it is still true that $s(A) = \omega(A)$ for generators of positive semigroups on $C_{0}(X)$ (see B-IV, Theorem 1.4).
+However, it is still true that $s(A) = \omega_{0}(A)$ for generators of positive semigroups on $C_{0}(X)$ (see B-IV, Theorem 1.4).
 \end{remark}
 %% --
 %% --
 \begin{remark}\label{rem:b2-1.19}
-\index{Ordered Banach space}
+%%\index{Ordered Banach space}
 So far, the results of this section do not depend on the lattice structure of $C(K)$.
 They also hold on an ordered Banach space $E$ with normal cone $E_{+}$ which has non-empty interior.
 We refer to \citet{arendtchernoffkato:1982} [Arendt-Chernoff-Kato (1982)] and to \citet{battyrobinson:1984} for this more general setting.
@@ -609,19 +659,18 @@ We refer to \citet{arendtchernoffkato:1982} [Arendt-Chernoff-Kato (1982)] and to
 Next we apply Theorem \ref{thm:b2-1.13} to prove a result on the multiplicative perturbation of a generator $A$ which is due to \citet{dorroh:1966} in the case when $A$ is dissipative.
 %% --
 \begin{theorem}\label{thm:b2-1.20}
-\index{Generator!multiplicative perturbation}
-\index{Multiplicative perturbation}
-Let $A$ be the generator of a positive semigroup on $C(K)$ and $m \in C(K)$ be strictly positive.
+%%\index{Generator!multiplicative perturbation}
+%%\index{Multiplicative perturbation}
+Let $A$ be the generator of a positive semigroup on $C(K)$ and  $m \in C(K)$ be strictly positive.
 Then the operator $m \cdot A$ given by $(m \cdot A)f = m \cdot (Af)$ on the domain $D(m \cdot A) = D(A)$ is the generator of a positive semigroup.
 Moreover,
 %% –
 \begin{equation}\label{eq:b2-1.10}
-\|m^{-1}\|_{\infty}^{-1}\, \omega(A) \leq \omega(m \cdot A) \leq \|m\|_{\infty}\, \omega(A).
+\|m^{-1}\|_{\infty}^{-1}\, \omega_{0}(A) \leq \omega_{0}(m \cdot A) \leq \|m\|_{\infty}\, \omega_{0}(A).
 \end{equation}
 \end{theorem}
 %% –
 %%
-%%\newpage
 %%KGK p-B2-11; LNMp-132
 %%
 \begin{proof}
@@ -650,15 +699,34 @@ Next we show,
 \end{equation}
 %% –
 Because of \eqref{eq:b2-1.11} we only have to show that $(I - q \cdot B)$ is surjective. 
-Note that $1 \in \rho(B)$.
-We have $(Id - q \cdot B) = (Id - B - (q-1)B) = (Id - (q-1)BR(1,B))(Id - B)$.
+Note that $1~\in~\rho(B)$.
+We have 
+%%$
+%%--
+\[(Id - q \cdot B) = (Id - B - (q-1)B) = (Id - (q-1)BR(1,B))(Id - B)
+\]
+%%--
+%%$.
 Thus it suffices to show that $Id - (q-1)BR(1,B)$ is invertible.
-The norm $\|f\|_{u} = \max\{p_{u}(f), p_{u}(-f)\} = \sup_{x \in K} |f(x)|/u(x)$ is equivalent to the supremum norm.
+The norm 
+%%$
+%%--
+\[
+\|f\|_{u} = \max\{p_{u}(f), p_{u}(-f)\} = \sup_{x \in K} |f(x)|/u(x)
+\]
+%%--
+%%$ 
+is equivalent to the supremum norm.
 Denote by $\|T\|_{u}$ the operator norm corresponding to $\|\cdot\|_{u}$ $(T \in \LE)$.
 Then it is enough to show that $\|(q-1)BR(1,B)\|_{u} = \|(q-1)(R(1,B) - I)\|_{u} < 1$.
 
 For $r \in C(K)_{+}$ denote by $M_{r}$ the multiplication operator given by $M_{r}f = r \cdot f$.
-Then $\|M_{r}\|_{u} = \sup\{\|r \cdot f\|_{u} : \|f\|_{u} \leq 1\} = \sup\{\sup_{x \in K} r(x)|f(x)|/u(x) : \|f\|_{u} \leq 1\} \leq \|r\|_{\infty}$.
+Then 
+\begin{align*}
+	    \|M_{r}\|_{u} &= \sup\{\|r \cdot f\|_{u} : \|f\|_{u} \leq 1\} \\
+	              &= \sup\{\sup_{x \in K} r(x)|f(x)|/u(x) : \|f\|_{u} \leq 1\}  \\
+	              &\leq \|r\|_{\infty}.
+\end{align*}
 Since $B$ is $p_{u}$-dissipative we have $\|R(1,B)\|_{u} \leq 1$ (by A-II, Lemma 2.10).
 %%KGK: \ref{lem:a2-2.10}
 This gives $\|(q-1)(R(1,B) - I)\|_{u} \leq \|M_{(1-q)}\|_{u}(\|R(1,B)\|_{u} + 1) \leq 2\|1 - q\|_{\infty} < 1$.
@@ -674,24 +742,23 @@ to hold.
 Let $0 \ll u \in D(A) = D(m \cdot A)$ and $Au \leq \lambda u$.
 Then $m \cdot Au \leq \|m\|_{\infty}\lambda u$.
 So \eqref{eq:b2-1.8} 
-implies that $\omega(m \cdot A) \leq \|m\|_{\infty}\omega(A)$.
+implies that $\omega_{0}(m \cdot A) \leq \|m\|_{\infty}\omega_{0}(A)$.
 This is one part of \eqref{eq:b2-1.10}. 
 %%
-%%\newpage
 %%KGK p-B2-12; LNMp-133
 %%
-The other part follows from this since $\omega(A) = \omega(m^{-1} \cdot m \cdot A) \leq \|m^{-1}\|_{\infty} \omega(m \cdot A)$.
+The other part follows from this since $\omega_{0}(A) = \omega_{0}(m^{-1} \cdot m \cdot A) \leq \|m^{-1}\|_{\infty} \omega_{0}(m \cdot A)$.
 \end{proof}
 
 In the following lemma a condition (P') is introduced which is dual to the positive minimum principle.
 
 %% --
 \begin{lemma}\label{lem:b2-1.21}
-\index{Positive minimum principle!dual}
+%%\index{Positive minimum principle!dual}
 Let $A$ be the generator of a strongly continuous positive semigroup on $C(K)$.
 Then 
 
-(P') $f \in C(K)_{+}$, $0 \leq \mu \in D(A')$, $\langle f,\mu \rangle = 0$ implies $\langle f,A'\mu \rangle \geq 0$.
+(P') \quad $f \in C(K)_{+}$,  $0 \leq \mu \in D(A')$,  $\langle f,\mu \rangle = 0$\, implies  $\langle f,A'\mu \rangle \geq 0$.
 \end{lemma}
 %% --
 
@@ -701,8 +768,8 @@ $\langle f,A'\mu \rangle = \lim_{t \to 0} \frac{1}{t} \langle T(t)f - f, \mu \ra
 
 %% --
 \begin{example}\label{ex:b2-1.22}
-\index{Generator!on interval}
-\index{Examples!generator on interval}
+%%\index{Generator!on interval}
+%%\index{Examples!generator on interval}
 Let $K = [-1,0]$.
 Let $\alpha \in \R$ and $\mu$ be a measure on $[-1,0]$ such that $\mu(\{0\}) = 0$.
 Define the operator $A$ on $C[-1,0]$ by $Af = f'$ with domain $D(A) = \{f \in C^{1}[-1,0] \colon f'(0) = \alpha f(0) + \langle f,\mu \rangle\}$.
@@ -714,7 +781,7 @@ Claim: $A$ is the generator of a positive semigroup if and only if $\mu \geq 0$.
 \begin{proof}[Proof of the claim]
 Assume that $A$ generates a positive semigroup.
 By the definition of $A$ one has $\delta_{0} \in D(A')$ and $A'\delta_{0} = \alpha\delta_{0} + \mu$.
-So it follows from (P') that $\langle f,\mu \rangle = \langle f,A'\delta_{0} \rangle \geq 0$ for all $f \in C[-1,0]_{+}$ such that $f(0) = 0$.
+So it follows from (P') that $\langle f,\mu \rangle~=~\langle f,A'\delta_{0} \rangle \geq 0$ for all $f \in C[-1,0]_{+}$ such that $f(0) = 0$.
 By Lemma \ref{lem:b2-1.2}
 this implies that $\mu \geq 0$.
 
@@ -735,18 +802,17 @@ But if $f(0) = 0$, then $Af(0) = f'(0) = \langle f,\mu \rangle \geq 0$ since $f 
 
 c) We show that $(\lambda-A)$ is bijective for $\lambda > \alpha + \|\mu\|$.
 Let $g \in C[-1,0]$.
-The solutions of the equation $\lambda f - f' = g$ $(f \in C[-1,0])$ are given by $f(x) = e^{\lambda x}[\int_{x}^{0} e^{-\lambda y} g(y) \dy + c]$ where $c \in \R$.
+The solutions of the equation $\lambda f - f' = g$ \,($f \in C[-1,0]$\,) are given by $f(x) = \mathrm{e}^{\lambda x}[\int_{x}^{0} \mathrm{e}^{-\lambda y} g(y) \dy + c]$ where $c \in \R$.
 Moreover, $f \in D(A)$ if and only if
 %% –
 \begin{equation}\label{eq:b2-1.13}
-c(\lambda - \alpha - \int_{-1}^{0} e^{\lambda x} \diff{\mu(x)}) = g(0) + \int_{-1}^{0} e^{\lambda x} \int_{x}^{0}e^{-\lambda y} g(y) \dy\diff{\mu(x)}.
+c(\lambda - \alpha - \int_{-1}^{0} \mathrm{e}^{\lambda x} \diff{\mu(x)}) = g(0) + \int_{-1}^{0} \mathrm{e}^{\lambda x} \int_{x}^{0}\mathrm{e}^{-\lambda y} g(y) \dy\diff{\mu(x)}.
 \end{equation}
 %% –
 %%
-%%\newpage
 %%KGK p-B2-13; LNMp-134
 %%
-If $\lambda > \alpha + \|\mu\|$, then $\lambda - \alpha - \int_{-1}^{0} e^{\lambda x} d\mu(x) \neq 0$ and there exists exactly one $c \in \R$ satisfying \eqref{eq:b2-1.13}.
+If $\lambda > \alpha + \|\mu\|$, then $\lambda - \alpha - \int_{-1}^{0} \mathrm{e}^{\lambda x} d\mu(x) \neq 0$ and there exists exactly one $c \in \R$ satisfying \eqref{eq:b2-1.13}.
 We have shown that $(\lambda- A)$ is bijective for $\lambda > \alpha + \|\mu\|$.
 
 By Theorem \ref{thm:b2-1.13}, it follows from a), b) and c) that $A$ generates a positive semigroup.
@@ -761,7 +827,7 @@ s(A) \leq \alpha + \|\mu\|.
 %% –
 %% --
 \begin{example}\label{ex:b2-1.23}
-\index{Examples!vector-valued functions}
+%%\index{Examples!vector-valued functions}
 Let $E = C([-1,0],\R^{n})$.
 Then $u \in E$ is given by $u = (u_{1},\ldots,u_{n})$ where $u_{i} \in C[-1,0]$ $(i=1,\ldots,n)$.
 Let $A$ be defined by $Au = u' = (u_{1}',\ldots,u_{n}')$ with domain $D(A) = \{u \in C^{1}([-1,0],\R^{n}) \colon u'(0) = Lu\}$.
@@ -785,40 +851,50 @@ L_{ij} \geq 0 \text{ for } i \neq j \text{ and } \mu_{i} \geq 0 \quad (i,j = 1,\
 \]
 %%--
 This can be proved in a similar way as the claim in Example  \ref{ex:b2-1.22} 
-(see \citet{arendt:1984a}a).
-\marginpar{bib:1984!a}
+(see \citet{arendt:1984a}).
 \end{example}
 %% --
 
 %% --
 \begin{example}\label{ex:b2-1.24}
-\index{Examples!second order operator}
+%%\index{Examples!second order operator}
 Let $A$ on $C[0,1]$ be given by $Af = f''$ with domain 
-$D(A) = \{f \in C^{2}[0,1] \colon f'(0) + \alpha f(0) = 0, f'(1) + \beta f(1) = 0\}$, where $\alpha,\beta \in \R$.
+%%--
+\[
+D(A) = \{f \in C^{2}[0,1] \colon f'(0) + \alpha f(0) = 0, f'(1) + \beta f(1) = 0\},
+\]
+%%-- 
+where $\alpha,\beta \in \R$.
 Then $A$ is the generator of positive semigroup.
 \end{example}
 %% --
 
 \begin{proof}
 The operator $A$ satisfies (P).
-In fact, let $0 \leq f \in D(A)$ and $f(a) = 0$ where $a \in [0,1]$.
+In fact, let $0 \leq f \in D(A)$ and $f(a) = 0$ where $a~\in~[0,1]$.
 If $a \in (0,1)$ then $f''(a) \geq 0$ since $f$ has a minimum in $a$.
-If $a = 0$ then $f'(0) = f'(0) + \alpha f(0) = 0$ since $f \in D(A)$.
+If $a = 0$ then 
+%%--
+\[
+f'(0) = f'(0) + \alpha f(0) = 0
+\]
+%%--
+since $f \in D(A)$.
 Consequently, $f(x) = \int_{0}^{x} (x-y)f''(y) \dy \geq 0$ for all $x \geq 0$.
 This implies $f''(0) \geq 0$.
 The argument for $a = 1$ is analoguous.
 %%
-%%\newpage
 %%KGK p-B2-14; LNMp-135
 %%
 It remains to show that $\mu - A$ is surjective for large real $\mu$.
 Let $g \in C[0,1]$.
 Let $\lambda > 0$ and 
-$k = 1/2\lambda[e^{\lambda x}\int_{x}^{1} e^{-\lambda y}g(y)\dy - e^{-\lambda x}\int_{
-%%KGK Statt 0 , x
-x}^{1} e^{\lambda y}g(y)\dy]$.
+%%--
+\[k = \frac{1}{2}\lambda\left[\mathrm{e}^{\lambda x}\int_{x}^{1} \mathrm{e}^{-\lambda y}g(y)\dy - \mathrm{e}^{-\lambda x}\int_{x}^{1} \mathrm{e}^{\lambda y}g(y)\dy\right].
+\]
+%%--$.
 Then $k \in C^{2}[0,1]$ and $\lambda^{2}k - k'' = g$.
-Let $h = ae^{\lambda x} + be^{-\lambda x}$, where $a,b \in \R$.
+Let $h = a\mathrm{e}^{\lambda x} + b\mathrm{e}^{-\lambda x}$, where $a,b \in \R$.
 Then $h \in C^{2}[0,1]$ and $\lambda^{2}h - h'' = 0$.
 Let $f = k + h$.
 Then $\lambda^{2}f - f'' = g$.
@@ -828,8 +904,7 @@ Thus there exists a solution if $\lambda$ is large enough, and $(\lambda^{2} - A
 
 \section{Lattice Semigroups on  \texorpdfstring{$C_{0}(X)$}{C\textunderscore 0(X)}}\label{sec:b2-2}
 \index{$C_{0}(X)$!Lattice semigroups}
-%\index{Semigroups!lattice}
-
+%%
 Throughout this section $X$ denotes a locally compact space and $C_{0}(X,\R)$ (resp., $C_{0}(X,\C)$) the space of all real-valued (resp., complex-valued) continuous functions on $X$ which vanish at infinity.
 If we do not want to specify the field we simply write $C_{0}(X)$.
 
@@ -848,7 +923,7 @@ The operator $T$ is a lattice homomorphism if and only if in \eqref{eq:b2-2.1} e
 
 %% --
 \begin{remark}\label{rem:b2-2.1}
-\index{Lattice homomorphism}
+%%\index{Lattice homomorphism}
 If $T$ is a lattice homomorphism on $C_{0}(X,\C)$ then $T$ leaves $C_{0}(X,\R)$ invariant and the restriction $T_{\R}$ of $T$ to $C_{0}(X,\R)$ is a lattice homomorphism.
 Conversely, the linear extension $T$ of a lattice homomorphism $T_{\R}$ on $C_{0}(X,\R)$ to $C_{0}(X,\C)$ is a lattice homomorphism (see B-I, Section 3).
 \end{remark}
@@ -858,14 +933,22 @@ A semigroup $(T(t))_{t \geq 0}$ is called \emph{lattice semigroup} if $T(t)$ is 
 In Section 3 we will give a concrete representation of lattice-semigroups which shows that there is a large variety of examples.
 This section is devoted to the characterization of lattice semigroups in terms of their generators.
 %%
-%%\newpage
 %%KGK p-B2-15; LNMp-136
 %%
 The heuristic idea is the following.
 Let $(T(t))_{t \geq 0}$ be a lattice semigroup with generator $A$.
 Let $f \in D(A)$ and assume that the modulus function $\theta$ given by $\theta(g) = |g|$ is differentiable at $f$ (in some sense which has to be made precise).
 Then one expects that a chain rule holds so that $\theta(T(t)f) = |T(t)f|$ is differentiable at $t = 0$.
-Since $|T(t)f| = T(t)|f|$, this implies $|f| \in D(A)$ and $A|f| = \diff{}/\dt_{|t=0} \theta(T(t)f) = D_{Af}\theta(f)\diff/\dt_{|t=0}T(t)f = (D_{Af}\theta(f)Af)$ (where the precise meaning of $(D_{Af}\theta(f))Af$ depends on the chain rule which we will have to establish).
+Since $|T(t)f| = T(t)|f|$, this implies $|f| \in D(A)$ and 
+%%$
+%%--
+\[
+A|f| = \diff{}/\dt_{|t=0} \theta(T(t)f) = D_{Af}\theta(f)\diff/\dt_{|t=0}T(t)f = (D_{Af}\theta(f)Af)
+\]
+%%--
+%%$
+ (where the precise meaning of $(D_{Af}\theta(f))Af$  
+ depends on the chain rule which we will have to establish).
 So we obtain an identity for the generator $A$ which corresponds exactly to the lattice property $|T(t)f| = T(t)|f|$ of the semigroup.
 We will see in C-II, Section  5 that in a Banach lattice with order continuous norm the above argument is rigorous (for all $f \in D(A)$).
 On $C_{0}(X)$ we have to use a weak form of the argument and $|f| \in D(A)$ only holds for special $f \in D(A)$ (see Corollary  \ref{cor:b2-2.8}).
@@ -875,7 +958,7 @@ For later use we formulate the following definition and proposition for a genera
 
 %% --
 \begin{definition}\label{def:b2-2.2}
-\index{Gateaux differentiability}
+%%\index{Gateaux differentiability}
 Let $G$ be a Banach space and $\theta \colon G \to G$ a mapping.
 Let $f \in G$, $u \in G$.
 Then $\theta$ is called \emph{right-sided Gateaux differentiable at} $f$ \emph{in direction} $u$ if
@@ -890,8 +973,8 @@ The mapping $\theta$ is \emph{right-sided Gateaux differentiable at} $f$ if $D_{
 
 %% --
 \begin{proposition} \label{prop:b2-2.3}
-\index{Chain rule}
-\index{Gateaux differentiability!chain rule}
+%%\index{Chain rule}
+%%\index{Gateaux differentiability!chain rule}
 (chain rule). Let $G$ be a Banach space and $k \colon \R \to G$ be right-sided differentiable at $a \in \R$ (with right derivative $k'(a)$).
 Suppose that $\theta \colon G \to G$ is a Lipschitz continuous mapping.
 If $\theta$ is right-sided Gateaux-differentiable at $k(a)$ in the direction of $k'(a)$, then $\theta \circ k \colon \R \to G$ is right-sided differentiable at $a$ and has a right derivative
@@ -904,14 +987,12 @@ If $\theta$ is right-sided Gateaux-differentiable at $k(a)$ in the direction of 
 \end{proposition}
 %% --
 %%
-%%\newpage
 %%KGK p-B2-16; LNMp-137
 %%
 \begin{proof}
 There exists $L \geq 0$ such that $\|\theta(x) - \theta(y)\| \leq L\|x - y\|$ for all $x,y \in G$.
 Then
 %% --
-%%\begin{align*}
 \[
 \begin{array}{lll}
 \lim_{t \downarrow 0} &\|1/t (\theta(k(a+t)) - \theta(k(a))) - D_{k'(a)}\theta(k(a))\| \\
@@ -921,7 +1002,6 @@ Then
 &= 0.
 \end{array}
 \]
-%%\end{align*}
 %% --
 \end{proof}
 For $z \in \C$ we let
@@ -953,20 +1033,20 @@ We identify $\C$ and $\R^2$.
 Then $\theta(x,y) = (x^2 + y^2)^{1/2}$ is differentiable in $z$ and
 %% --
 \begin{align*}
-D_{u}\theta(z) &= (
-%%\grad 
-\theta(x_{0},y_{0})|u) = 1/|z|\, ((x_{0},y_{0})|(u_{1},u_{2})) = \\
-1/|z|\, (x_{0}u_{1} + y_{0}u_{2}) &= 1/|z|\, \Re((x_{0}-iy_{0})\cdot(u_{1}+iu_{2})) = \Re[(\sign \bar{z})\cdot u],
+D_{u}\theta(z) &= (\theta(x_{0},y_{0})|u) = 1/|z|\, ((x_{0},y_{0})|(u_{1},u_{2}))  \\
+               &= 1/|z|\, (x_{0}u_{1} + y_{0}u_{2}) \\
+               &= 1/|z|\, \Re((x_{0}-iy_{0})\cdot(u_{1}+iu_{2})) \\
+               &= \Re[(\sign \bar{z})\cdot u],
 \end{align*}
 %% --
 where $u = u_{1} + iu_{2} = (u_{1},u_{2}) \in \C = \R^2$ and $(v|u)$ denotes the canonical scalar product of $v,u \in \R^2$.
 \end{proof}
 
 Let $f, g \in C_{0}(X)$.
-We denote by $(\hat{\sign} f)(g)$ the bounded Borel function given by
+We denote by $(\widehat{\sign} f)(g)$ the bounded Borel function given by
 %% --
 \begin{equation}\label{eq:b2-2.7}
-[(\hat{\sign} f)(g)](x) = \begin{cases}
+[(\widehat{\sign} f)(g)](x) \coloneqq \begin{cases}
     (\sign f(x))\cdot g(x) & \text{if } f(x) \neq 0 \\
     |g(x)| & \text{if } f(x) = 0
 \end{cases}
@@ -976,19 +1056,18 @@ We denote by $(\hat{\sign} f)(g)$ the bounded Borel function given by
 Similarly, $(\sign f)(g)$ is defined by
 %% --
 \begin{equation}\label{eq:b2-2.8}
-[(\sign f)(g)](x) = (\hat{\sign} f(x))\cdot g(x).
+[(\sign f)(g)](x) = ({\sign} f(x))\cdot g(x).
 \end{equation}
 %% --
 
 We identify the dual space of $C_{0}(X)$ with $M(X)$, the space of all bounded regular Borel measures on $X$.
 We extend the duality by setting
 %%
-%%\newpage
 %%KGK p-B2-17; LNMp-138
 %%
 %% --
 \begin{equation*}
-\langle h,\phi \rangle = \int h(x) \, d\phi(x)
+\langle h,\phi \rangle = \int h(x)   \diff\phi(x)
 \end{equation*}
 %% --
 
@@ -1000,11 +1079,10 @@ After these preparations we now can show that the lattice property $|T(t)f| = T(
 A strongly continuous semigroup $(T(t))_{t \geq 0}$ on $C_{0}(X)$ is a lattice semigroup if and only if its generator $A$ satisfies
 %% --
 \begin{equation}\label{eq:b2-2.9}
- \begin{cases}
-&\langle \Re[(\hat{\sign} \bar{f})(Af)],\phi \rangle = \langle |f|,A'\phi \rangle \\
-%%&\text{for all} $f \in D(A)$, $\phi \in D(A')$ 
-&\text{for all } f \in D(A), \phi \in D(A') 
-\end{cases} \text{(Kato's equality)}.
+\begin{array}{l}
+\langle \Re[(\widehat{\sign} \bar{f})(Af)],\phi \rangle = \langle |f|,A'\phi \rangle \\
+\text{for all } f \in D(A), \phi \in D(A') 
+\end{array} \quad \text{(Kato's equality)}.
 \end{equation}
 %% --
 \end{theorem}
@@ -1016,10 +1094,8 @@ Let $(T(t))_{t \geq 0}$ be a semigroup on $C_{0}(X)$ with generator $A$.
 Then for every $f \in D(A)$, $\phi \in M(X)$,
 %% --
 \begin{equation}\label{eq:b2-2.10}
-%\left.
-\frac{d}{dt}
-%\right
-|_{t = 0} \langle |T(t)f|,\phi \rangle = \langle \Re[(\hat{\sign} \bar{f})(Af)],\phi \rangle.
+\frac{\mathrm{d}}{\dt}
+|_{t = 0} \langle |T(t)f|,\phi \rangle = \langle \Re[(\widehat{\sign} \bar{f})(Af)],\phi \rangle.
 \end{equation}
 %% --
 \end{lemma}
@@ -1027,19 +1103,19 @@ Then for every $f \in D(A)$, $\phi \in M(X)$,
 \begin{proof}
 Let $f \in D(A)$ and $x \in X$.
 Define the function $k(t) = (T(t)f)(x)$ for all $t \geq 0$.
-Then $k$ is right-sided differentiable in $0$ with derivative $k'(0) = (Af)(x)$.
+Then $k$ is right-sided differentiable at $0$ with derivative $k'(0) = (Af)(x)$.
 It follows from the chain rule Proposition \ref{prop:b2-2.3} that
 %% --
 \begin{equation}\label{eq:b2-2.11}
 %%\left.
 \frac{\diff{}}{\dt}
 %%\right
-|_{t = 0}\, |(T(t)f)(x)| = \Re[(\hat{\sign} \bar{f})(Af)](x)
+|_{t = 0}\, |(T(t)f)(x)| = \Re[(\widehat{\sign} \bar{f})(Af)](x)
 \end{equation}
 %% --
 
-Moreover, $1/t\, |\, |T(t)f| - |f| \, | \leq 1/t\, |T(t)f - f|$.
-Thus $\sup_{0 < t \leq 1} 1/t\, \|\, |T(t)f| - |f|\, \| < \infty$; i.e., the functions $k_{t} \in C_{0}(X)$ given by
+Moreover, $\frac{1}{t} \left|\, |T(t)f| - |f| \, \right| \leq \frac{1}{t}\, |T(t)f - f|$.
+Thus $\sup_{0 < t \leq 1} \frac{1}{t}\, \|\, |T(t)f| - |f|\, \| < \infty$; i.e., the functions $k_{t} \in C_{0}(X)$ given by
 %% --
 \begin{equation}\label{eq:b2-2.12}
 k_{t}(x) = 1/t\,(|(T(t)f)(x)| - |f(x)|) \quad (x \in X)
@@ -1049,7 +1125,7 @@ are uniformly on $\left(0,1\right]$ dominated by a constant.
 The dominated convergence theorem and \eqref{eq:b2-2.11} imply that
 %% --
 \begin{align*}
-\frac{\diff{}}{\dt}|_{t=0}\, \langle |T(t)f|,\phi \rangle = \lim_{t \downarrow 0}\, \langle k_{t},\phi \rangle = \langle \Re[(\hat{\sign} \bar{f})(Af)],\phi \rangle
+\frac{\diff{}}{\dt}|_{t=0}\, \langle |T(t)f|,\phi \rangle = \lim_{t \downarrow 0}\, \langle k_{t},\phi \rangle = \langle \Re[(\widehat{\sign} \bar{f})(Af)],\phi \rangle
 \end{align*}
 %% --
 \end{proof}
@@ -1059,13 +1135,12 @@ Assume that $(T(t))_{t \geq 0}$ is a lattice semigroup.
 Let $f \in D(A)$, $\phi \in D(A')$.
 It follows from the preceding lemma that
 %%
-%%\newpage
 %%KGK p-B2-18; LNMp-139
 %%
 %% --
 %%\begin{align*}
 \[
-\langle \Re[(\hat{\sign} \bar{f})(Af)],\phi \rangle %%&
+\langle \Re[(\widehat{\sign} \bar{f})(Af)],\phi \rangle %%&
 = \left.\frac{\diff{}}{\dt}\right|_{t=0} \langle |T(t)f|,\phi \rangle = \left.\frac{\diff{}}{\dt}\right|_{t=0} \langle T(t)|f|,\phi \rangle 
 %%= \\
 %%&
@@ -1093,7 +1168,7 @@ This implies that $k(0) = k(t)$ which is \eqref{eq:b2-2.13}.
 Since $\phi \in D(A')$ we have
 %% --
 \begin{equation}\label{eq:b2-2.14}
-\lim_{h \downarrow 0}\, 1/h\, \langle g,(T(t-(s+h)) - T(t-s))\phi \rangle = - \langle g,A'T(t-s)'\phi \rangle
+\lim_{h \downarrow 0}\, 1/h\, \langle g,(T(t-(s+h)) - T(t-s))'\phi \rangle = - \langle g,A'T(t-s)'\phi \rangle
 \end{equation}
 %% --
 for all $g \in C_{0}(X)$.
@@ -1119,15 +1194,15 @@ Using this we obtain
 %%
 \begin{align*}
 \lim_{h \downarrow 0} &1/h\, (k(s+h) - k(s)) \\
-&= \lim_{h \downarrow 0} 1/h\, (\langle (T(t-(s+h))|T(s+h)f|,\phi \rangle - \langle T(t-s)|T(s+h)f|,\phi \rangle) \\
-&\qquad + \lim_{h \downarrow 0} 1/h \langle T(t-s)|T(s+h)f| - T(t-s)|T(s)f|,\phi \rangle \\
+&= \lim_{h \downarrow 0} 1/h\, (\langle T(t-(s+h))|T(s+h)f|,\phi \rangle - \langle T(t-s)|T(s+h)f|,\phi \rangle) \\
+&\qquad + \lim_{h \downarrow 0} 1/h\, \langle T(t-s)|T(s+h)f| - T(t-s)|T(s)f|,\phi \rangle \\
 &= -\langle |T(s)f|,A'T(t-s)'\phi \rangle + \lim_{t \downarrow 0} 1/h \, \langle (|T(s+h)f| -  |T(s)f| , T(t-s)'\phi \rangle .
 \end{align*}
 %%--
 By Lemma \ref{lem:b2-2.6} the last term is
 %% --
 \begin{align*}
-- \langle |T(s)f|,A'T(t-s)'\phi \rangle + \langle \Re[(\hat{\sign} \overline{T(s)f})(AT(s)f)],T(t-s)'\phi \rangle,
+- \langle |T(s)f|,A'T(t-s)'\phi \rangle + \langle \Re[(\widehat{\sign} \overline{T(s)f})(AT(s)f)],T(t-s)'\phi \rangle,
 \end{align*}
 %% --
 and this is $0$ by hypothesis.
@@ -1138,16 +1213,20 @@ We will see in Chapter C-II that the inequality $|T(t)f| \leq T(t)|f|$, which ho
 For $A = \Delta$ (the Laplacian) this is a version of the classical Kato's inequality.
 \end{remark}
 %%
-%%\newpage
 %%KGK p-B2-19; LNMp-140
 %%
 \begin{corollary}\label{cor:b2-2.8}
 Let $(T(t))_{t \geq 0}$ be a lattice semigroup on $C_{0}(X)$ with generator $A$.
-If $f \in D(A)$ and $f(x) \neq 0$ for all $x \in X$, then $|f| \in D(A)$ and $\Re[(\sign \bar{f})(Af)] = A|f|$.
+If $f \in D(A)$ and $f(x) \neq 0$ for all $x \in X$, then 
+%%--
+\[
+|f| \in D(A) \text{ and } \Re[(\sign \bar{f})(Af)] = A|f|\,.
+\]
+%%--
 \end{corollary}
 
 \begin{proof}
-If $f \in D(A)$ and $f(x) \neq 0$ for all $x \in X$, then $(\sign \bar{f})(Af) = (\sign \bar{f})(Af) \in C_{0}(X)$.
+If $f \in D(A)$ and $f(x) \neq 0$ for all $x \in X$, then $(\widehat{\sign} \bar{f})(Af) = (\sign \bar{f})(Af) \in C_{0}(X)$.
 Hence by \eqref{eq:b2-2.9}, $\langle \Re[(\sign \bar{f})(Af)],\phi \rangle = \langle |f|,A'\phi \rangle$ for all $\phi \in D(A')$.
 So the assertion follows from the following lemma.
 \end{proof}
@@ -1180,27 +1259,23 @@ Although we assume that $(T(t))_{t \geq 0}$ is a real semigroup (i.e.,\\ $T(t)C(
 In fact, if $K$ is connected, the condition in the theorem is always trivially satisfied for all $f \in C(K,\R)$.
 \end{remark*}
 
-\begin{proof}
+\begin{proof}[Proof of Theorem 2.10]
 It follows from  Corollary \ref{cor:b2-2.8} that the condition is necessary.
 So assume that the condition is satisfied.
 Since $(T(t))_{t \geq 0}$ is real, the restriction $T_{\R}(t)$ of $T(t)$ to $C(K,\R)$ $(t \geq 0)$ defines a strongly continuous semigroup.
 Its generator $A_{\R}$ is a restriction of $A$.
-Since $D(A_{\R})$ is dense in $C(K,\R)$, there exists a strictly positive
-%%
-%%\newpage
-%%KGK p-B2-20; LNMp-141
-%%
-$u \in D(A_{\R})$.
+Since $D(A_{\R})$ is dense in $C(K,\R)$, there exists a strictly positive $u \in D(A_{\R})$.
 Moreover, $\lim_{t \to 0} T(t)u = u$ uniformly.
 Thus there exists $t_{0} > 0$ such that $T(t)u$ is strictly positive for all $t \in [0,t_{0}]$.
-
+ 
 Let $f \in D(A_{\R})$.
 For $\varepsilon > 0$ let $f_{\varepsilon} \coloneqq f + i\varepsilon u$.
 Then $T(t)f_{\varepsilon} \in D(A)$ and $|T(t)f_{\varepsilon}|$ is strictly positive for all $t \in [0,t_{0}]$.
-By hypothesis, $|T(t)f_{\varepsilon}| \in D(A)$ and $\Re[(\sign \overline{T(t)f_{\varepsilon}})AT(t)f_{\varepsilon}] = A|T(t)f_{\varepsilon}|$ for all $t \in [0,t_{0}]$.
+By hypothesis, $|T(t)f_{\varepsilon}| \in D(A)$ and $\Re[(\sign T(t)\overline{f_{\varepsilon}})AT(t)f_{\varepsilon}] = A|T(t)f_{\varepsilon}|$ for all $t \in [0,t_{0}]$.
 One sees as in the proof of Theorem \ref{thm:b2-2.5} that this implies that $|T(t)f_{\varepsilon}| = T(t)|f_{\varepsilon}|$ for all $t \in [0,t_{0}]$.
 Letting $\varepsilon \to 0$ one obtains that $|T(t)f| = T(t)|f|$ $(t \in [0,t_{0}])$.
 Since $D(A)$ is dense in $C(K,\R)$ we conclude that $|T(t)f| = T(t)|f|$ for all $f \in C(K,\R)$ and all $t \in [0,t_{0}]$.
+
 Let $s > t_{0}$.
 Then $s/n \leq t_{0}$ for some $n \in \N$.
 Hence $|T(s)f| = |T(s/n)^{n}f| = T(s/n)^{n}|f| = T(s)|f|$ for all $f \in C(K,\R)$.
@@ -1211,29 +1286,35 @@ We have shown that $T_{\R}(t)$ is a lattice homomorphism for all $t \geq 0$; hen
 
 \begin{corollary}\label{cor:b2-2.11}
 Let $A$ be the generator of a lattice semigroup on $C(K,\C)$ ($K$ compact).
-Assume that $m \in C(K)$ is strictly positive.
-Then $m \cdot A$ with domain $D(m \cdot A) = D(A)$ generates a lattice semigroup.
+Assume that  $m \in C(K)$ is strictly positive.
+Then  $m \cdot A$ with domain $D(m \cdot A) = D(A)$ generates a lattice semigroup.
 \end{corollary}
 
 \begin{proof}
-By Theorem 1.20 $m \cdot A$ is the generator of a strongly continuous semigroup.
+By Theorem 1.20  $m \cdot A$ is the generator of a strongly continuous semigroup.
 It remains to show that it is a lattice semigroup.
 We use Theorem \ref{thm:b2-2.10}.
 Let $f \in D(m \cdot A) = D(A)$ such that $f(x) \neq 0$ for all $x \in K$.
-Then $\Re[(\sign \bar{f})m \cdot Af] = m \cdot \Re[(\sign \bar{f})Af] = m \cdot A|f|$.
+Then 
+%%--
+\[
+\Re[(\sign \bar{f})m \cdot Af] = m \cdot \Re[(\sign \bar{f})Af] = m \cdot A|f|.
+\]
+%%--
 \end{proof}
 
 \begin{example}\label{ex:b2-2.12}
 The operator $A_{\max}$ on the (real or complex space) $C[-1,0]$ given by $A_{\max}f = f'$ with domain $D(A_{\max}) = C^{1}[-1,0]$ satisfies Kato's equality; i.e.,
 %% --
 \begin{equation}\label{eq:b2-2.16}
-\langle \Re[(\sign \bar{f})(A_{\max}f)],\phi \rangle = \langle |f|,A'_{\max}\phi \rangle
+\langle \Re[(\widehat{\sign} \bar{f})(A_{\max}f)],\phi \rangle = \langle |f|,A'_{\max}\phi \rangle
 \end{equation}
 %% --
 $(f \in D(A_{\max}), \phi \in D(A'_{\max}))$.
 
 Moreover, $(\lambda - A_{\max})$ is surjective for $\lambda \geq 0$ (cf. Example  \ref{ex:b2-1.22}).
-Thus, since $\ker(\lambda-A_{\max}) = \C e_{\lambda}$ $(e_{\lambda}(x) = e^{\lambda x})$, Kato's equality does not have as strong consequences as the positive minimum principle (which by Theorem 1.13 would imply that $A_{\max}$ is a generator).
+Thus, since \\
+$\ker(\lambda - A_{\max}) = \C e_{\lambda}$ $(e_{\lambda}(x) = \mathrm{e}^{\lambda x})$, Kato's equality does not have as strong consequences as the positive minimum principle (which by Theorem 1.13 would imply that $A_{\max}$ is a generator).
 \end{example}
 
 \begin{proof}
@@ -1243,33 +1324,33 @@ It is not difficult to prove that the adjoint $A'_{\max}$ of $A_{\max}$ is given
 A'_{\max}\phi = \phi(0)\delta_{0} - \phi(-1)\delta_{-1} - d\phi
 \end{equation}
 %% --
-%%
-%%\newpage
-%%KGK p-B2-21; LNMp-142
-%%
 with domain $D(A'_{\max}) = BV[-1,0]$ (the space of all functions of bounded variation on $[-1,0]$).
-Here we identify $BV[-1,0] \subset L^{1}[-1,0]$ with a subspace of $C[-1,0]'$ by setting $\langle f,\phi \rangle = \int_{-1}^{0} f(x)\phi(x)\,\dx$ $(f \in C[-1,0], \phi \in BV[-1,0])$.
-For $\phi \in BV[-1,0]$, $\diff{\phi}$ denotes the linear form on $C[-1,0]$ given by $f \mapsto \int_{-1}^{0} f(x)\, \diff{\phi(x)}$.
+Here we identify $BV[-1,0] \subset L^{1}[-1,0]$ with a subspace of $C[-1,0]'$ by setting $\langle f,\phi \rangle = \int_{-1}^{0} f(x)\phi(x)\,\dx$\, $(f \in C[-1,0], \,\phi \in BV[-1,0]\,)$.
+For $\phi \in BV[-1,0]$,  $\diff{\phi}$ denotes the linear form on $C[-1,0]$ given by $f \mapsto \int_{-1}^{0} f(x)\, \diff{\phi(x)}$.
 
 We now show \eqref{eq:b2-2.16}.
 Let $f \in D(A_{\max}) = C^{1}[-1,0]$, $\phi \in D(A'_{max}) =  BV[-1,0]$.
-By Lemma \ref{lem:b2-2.4} and the chain rule (Proposition \ref{prop:b2-2.3} we have 
-$|f(x)|' \coloneqq \diff{^{+}}/\dt_{|t=x}|f(t)| = \Re[(\sign \bar{f})f'](x)$ (where $f'(x) = (\Re f)'(x) + i(\Im f)'(x)$ in the complex case).
+By Lemma \ref{lem:b2-2.4} and the chain rule (Proposition \ref{prop:b2-2.3} we have
+%%--
+\[
+|f(x)|' \coloneqq \diff{^{+}}/\dt_{|t=x}|f(t)| = \Re[(\widehat{\sign} \bar{f})f'](x)
+\]
+(where $f'(x) = (\Re f)'(x) + i(\Im f)'(x)$ in the complex case).
 Thus
 %% --
 \begin{align*}
-\langle \Re[(\sign \bar{f})Af],\phi \rangle &= \int_{-1}^{0} |f(x)|'\phi(x)\, \dx = \int_{0}^{1} \phi(x)\, \diff{|f(x)|} = \\
+\langle \Re[(\widehat{\sign} \bar{f})Af],\phi \rangle &= \int_{-1}^{0} |f(x)|'\phi(x)\, \dx = \int_{0}^{1} \phi(x)\, \diff{|f(x)|} = \\
 &= \phi(0)|f(0)| - \phi(-1)|f(-1)| - \int_{-1}^{0} |f(x)|\,\diff{\phi(x)}  \\
 &= \langle |f|,A'_{\max}\phi \rangle.
 \end{align*}
 %% --
 \end{proof}
-
+%% --
 \begin{example}\label{ex:b2-2.13}
 Let $A$ on (the real or complex) space $C[-1,0]$ be given by $Af = f'$ with domain $D(A) = \{f \in C^{1}[-1,0] : f'(0) = Lf\}$ where $L \in M[-1,0] = C[-1,0]'$.
 Then $A$ is the generator of a lattice semigroup if and only if $L = \alpha\delta_{0}$ for some $\alpha \geq 0$.
 \end{example}
-
+%% --
 \begin{proof}
 Assume that $A$ is the generator of a lattice semigroup $(T(t))_{t \geq 0}$.
 There exists $\mu \in M[-1,0]$ satisfying $\mu(\{0\}) = 0$ and $\alpha \in \R$ such that $L = \alpha\delta_{0} + \mu$.
@@ -1290,23 +1371,38 @@ Moreover, by Theorem \ref{thm:b2-2.5}, $A$ satisfies Kato's Equality \eqref{eq:b
 Since $f(0) = 0$ this implies
 %% --
 \begin{align*}
-|\langle f,\mu \rangle| &= |f'(0)| = \Re[(\hat{\sign} f)(f')](0) \\
-&= \langle \Re[\hat{(\sign} f)(Af)],\delta_{0} \rangle = \langle |f|,A'\delta_{0} \rangle \quad \text{(by \eqref{eq:b2-2.9})} \\
+|\langle f,\mu \rangle| &= |f'(0)| = \Re[(\widehat{\sign} f)(f')](0) \\
+&= \langle \Re[\widehat{(\sign} f)(Af)],\delta_{0} \rangle = \langle |f|,A'\delta_{0} \rangle \quad \text{(by \eqref{eq:b2-2.9})} \\
 &= \langle |f|,\mu \rangle.
 \end{align*}
 %% --
 
-Since $\phi(f) = f'(0) - \langle f,\mu \rangle$ defines a linear form on the space $F = \{f \in C^{1}[-1,0] : f(0) = 0\}$ which is discontinuous for the supremum norm, the space $D(A) = \ker \phi$ is dense in $F$ and consequently dense in $C_{0}[-1,0)$.
-It follows that \eqref{eq:b2-2.18} holds for all $f \in C_{0}[-1,0)$.
+Since $\phi(f) = f'(0) - \langle f,\mu \rangle$ defines a linear form on the space 
+%%--
+\[
+F = \{f \in C^{1}[-1,0] : f(0) = 0\}
+\]
+%%--
+ which is discontinuous for the supremum norm, the space $D(A) = \ker \phi$ is dense in $F$ and consequently dense in $C_{0}[-1,0)$.
+It follows that \eqref{eq:b2-2.18} holds for all $f~\in~C_{0}[-1,0)$.
 So by B-I, Section 2, there exist $\beta \geq 0$ and $x \in \left[-1,0\right)$ such that $\mu = \beta\delta_{x}$.
 Assume that $\beta \neq 0$.
 It is easy to see that there exists a real function $f \in C^{1}[-1,0]$ satisfying $f'(0) = \alpha f(0) + \beta f(x)$ and $f(0)f(x) < 0$.
-Hence $f \in D(A)$ but $\langle \Re[(\sign f)(Af)],\delta_{0} \rangle = (\sign f(0))f'(0) = (\sign f(0))(\alpha f(0) + \beta f(x))$
+Hence $f \in D(A)$ but 
+%%-- 
+\begin{align*}
+\langle \Re[(\widehat{\sign} f)(Af)],\delta_{0} \rangle 
+	&= (\sign f(0))f'(0) 
+	= (\sign f(0))(\alpha f(0) + \beta f(x))\\
 %%
-%%\newpage
 %%KGK p-B2-22; LNMp-143
 %%
-$\alpha|f(0)| + \beta(\sign f(0))f(x) \neq \alpha|f(0)| + \beta|f(x)| = \langle |f|, \alpha\delta_{0} + \beta\delta_{x} \rangle = \langle |f|,A'\delta_{0} \rangle$.
+	&= \alpha|f(0)| + \beta(\sign f(0))f(x) \\
+	&\neq \alpha|f(0)| + \beta|f(x)| 
+	= \langle |f|, \alpha\delta_{0} + \beta\delta_{x} \rangle \\ 
+	&= \langle |f|,A'\delta_{0} \rangle.
+\end{align*}
+%%--
 This contradicts \eqref{eq:b2-2.9}.
 We have shown that $\beta = 0$; i.e., $L = \alpha\delta_{0}$.
 
@@ -1316,7 +1412,7 @@ However, if $L = \alpha\delta_{0}$, then it is easy to see that $A$ generates th
 \begin{equation*}
 (T(t)f)(x) = \begin{cases}
     f(x+t) & \text{if } x+t < 0 \\
-    e^{t\alpha}f(0) & \text{if } x+t \geq 0
+    \mathrm{e}^{t\alpha}f(0) & \text{if } x+t \geq 0
 \end{cases}
 \end{equation*}
 %% --
@@ -1333,8 +1429,8 @@ On the space $C_{0}(\R)$, for example, this will enable us, to give a detailed d
 At first we consider a compact space $K$ and denote by $C(K) = C(K,\R)$ the space of all real valued continuous functions on $K$.
 The extension of the subsequent results to the complex space is obvious.
 
-A lattice homomorphism $T$ on $C(K)$ is an algebra homomorphism if and only if $T \1 = \1$ (see B-I, Section 3).
-We start by describing semigroups of algebra homomorphisms on $C(K)$.
+A lattice homomorphism $T$ on $C(K)$ is an algebra homomorphism if and only if $T \1~=~\1$ (see B-I, Section 3).
+We start by describing semigroups of algebra homomor\-phisms on $C(K)$.
 
 \begin{definition}\label{def:b2-3.1}
 A mapping $\phi \colon \left[0,\infty\right) \times K \to K$ is called \emph{semiflow} if for each $t \geq 0$ the mapping $\phi_{t}$ given by $\phi_{t}(x) = \phi(t,x)$ is continuous and
@@ -1355,7 +1451,6 @@ T(t)f = f \circ \phi_{t}.
 
 Then clearly $T(t)T(s) = T(t+s)$ $(t,s\geq 0)$; i.e., $(T(t))_{t \geq 0}$ has the
 %%
-%%\newpage
 %%KGK p-B2-23; LNMp-144
 %%
 semigroup property.
@@ -1382,10 +1477,10 @@ $(T(t))_{t \geq 0}$ is a strongly continuous semigroup on $C(K)$.
 If \ref{lem:b2-3.2-2} holds, then $t \mapsto T(t)f$ is weakly continuous for every $f \in C(K)$ (by the theorem of dominated convergence).
 This implies strong continuity (see for example \citet[Proposition 1.23]{davies:1980}.
 It remains to show that \ref{lem:b2-3.2-3} implies \ref{lem:b2-3.2-1}.
-Because of \eqref{eq:b2-3.1} it suffices to show that the restriction $\tilde{\phi}$ of $\phi$ to $[0,1] \times K$ is continuous.
+Because of \eqref{eq:b2-3.1} it suffices to show that the restriction $\widetilde{\phi}$ of $\phi$ to $[0,1] \times K$ is continuous.
 By hypothesis, the mapping $W \colon f \mapsto (t \mapsto T(t)f)$ from $C(K)$ into $C([0,1],C(K))$ is continuous.
-Identifying $C([0,1],C(K))$ canonically with $C([0,1] \times K)$ the mapping $W$ obtains the form $f \mapsto f \circ \tilde{\phi}$.
-Since $W$ is continuous, $\tilde{\phi}$ is continuous as well.
+Identifying $C([0,1],C(K))$ canonically with $C([0,1] \times K)$ the mapping $W$ obtains the form $f \mapsto f \circ \widetilde{\phi}$.
+Since $W$ is continuous, $\widetilde{\phi}$ is continuous as well.
 \end{proof}
 
 A semiflow is called \emph{continuous} if it satisfies the equivalent conditions of Lemma \ref{lem:b2-3.2}.
@@ -1427,7 +1522,6 @@ $A$ is a derivation.
 \begin{proof}
 \ref{thm:b2-3.4-1} and \ref{thm:b2-3.4-2} are equivalent by the remark at the beginning of this section.
 %%
-%%\newpage
 %%KGK p-B2-24; LNMp-145
 %%
 Assume that \ref{thm:b2-3.4-2} holds.
@@ -1481,24 +1575,27 @@ where $\phi$ is the semiflow associated with $\delta$.
 
 \begin{proof}
 Let $h = A\1$ and $\delta = A - h$.
-Then the semigroup $(T_{0}(t))_{t \geq 0}$ generated by $\delta$ is a lattice semigroup if and only if $(T(t))_{t \geq 0}$ is a lattice semigroup [since $T_{0}(t)f = \lim_{n \to \infty} (e^{-t/n \cdot h} \cdot T(\frac{t}{n}))^{n}f$ and $T(t)f = \lim_{n \to \infty} (e^{t/n \cdot h} \cdot T_{0}(\frac{t}{n}))^{n}f$ for all $t \geq 0$, $f \in C(K)$ by
+Then the semigroup $(T_{0}(t))_{t \geq 0}$ generated by $\delta$ is a lattice semigroup if and only if $(T(t))_{t \geq 0}$ is a lattice semigroup [since \\
+ $T_{0}(t)f = \lim_{n \to \infty} (\mathrm{e}^{-t/n \cdot h} \cdot T(\frac{t}{n}))^{n}f$ 
+ and 
+ $T(t)f = \lim_{n \to \infty} (\mathrm{e}^{t/n \cdot h} \cdot T_{0}(\frac{t}{n}))^{n}f$ \\
+ for all $t \geq 0$, $f \in C(K)$ by
 %%
-%%\newpage
 %%KGK p-B2-25; LNMp-146
 %%%
 %\ref{cor:a2-1.8}
-A-II, (1.8).
-Since $0 \cdot 1 = 0$ one has $T_{0}(t)1 = 1$ for all $t \geq 0$ and the equivalence of \ref{thm:b2-3.5-1} and \ref{thm:b2-3.5-2} follows with the help of Theorem \ref{thm:b2-3.4}.
+A-II, (1.8)].
+Since $\delta \1 = 0$ one has $T_{0}(t)\1 = \1$ for all $t \geq 0$ and the equivalence of \ref{thm:b2-3.5-1} and \ref{thm:b2-3.5-2} follows with the help of Theorem \ref{thm:b2-3.4}.
 
 Now assume that \ref{thm:b2-3.5-1} and \ref{thm:b2-3.5-2} hold.
 Let
 %% -
 \[
-(S(t)f) (x) = \exp \int_{0}^{t} h(\phi(s,x))ds \cdot f(\phi(t,x))
+(S(t)f) (x) = \exp\left( \int_{0}^{t} h(\phi(s,x))ds \right) \cdot f(\phi(t,x))
 \]
 %% -
-$x \in K$ $f \in C (K)$ $t \geq 0$. 
-Then one easily shows that $(S(t))_{t\geq 0}$ is a strongly continuous semigroup.
+$x \in K$\,, $f \in C (K)$\,, $t \geq 0$. 
+Then one easily shows that $(S(t))_{t\geq 0}$ is a strongly con\-tinu\-ous semigroup.
 Denote by $B$ its generator.
 For $f \in D(\delta)$ , $\frac{\diff{}}{\dt}|_{t = 0}S(t)f = h \cdot f + \delta f$.
 Hence $\delta + h \subset B$.  Since $\delta + h$ also is a generator, it follows that $\delta + h = B$.
@@ -1533,7 +1630,6 @@ In Section 1 we had obtained a very simple condition describing generators of po
 This result yields a characterization of generators of automorphism groups by "locality" and a range condition.
 By an \emph{automorphism} we understand an algebra isomorphism of $C(K)$ onto itself.
 %%
-%%\newpage
 %%KGK p-B2-26; LNMp-147
 %%
 \begin{theorem}\label{thm:b2-3.7}
@@ -1559,7 +1655,7 @@ Thus Theorem \ref{thm:b2-3.7} follows from Theorem \ref{thm:b2-1.13}.
 \begin{remark*}\label{rem:b2-3.7a}
 It is remarkable that from locality, the range condition and $\1 \in D(A)$, $A\1 = 0$ it follows that $D(A)$ actually is a subalgebra of $C(K)$ and $A$ is a derivation.
 The "order-theoretical" property of locality is in some aspects stronger than the algebraic property of being a derivation.
-For example a local, densely defined operator is closable (by (\lnm Proposition) Corollary \ref{cor:b2-1.11} ); but there exist derivations on $C[0,1]$ which are not closable (see \citet{brattelirobinson:1975}).
+For example a local, densely defined operator is closable (by Corollary \ref{cor:b2-1.11} ); but there exist derivations on $C[0,1]$ which are not closable (see \citet{brattelirobinson:1975}).
 \end{remark*}
 
 \begin{remark*}[an excursion to C*-algebras]\label{rem:b2-3.7b}
@@ -1576,7 +1672,6 @@ A strongly continuous group $T(t)_{t \in \R}$ on $\mathcal{A}_{h}$ is an automor
 Now we let $X$ be a locally compact space and consider positive groups on $C_{0}(X) = C_{0}(X,\R)$, the space of all continuous real-valued functions on $X$ which vanish at infinity.
 Our aim is to describe their generators as perturbations of generators of automorphism groups; i.e., we will extend Theorem 3.6 by allowing $X$ to be noncompact but
 %%
-%%\newpage
 %%KGK p-B2-27; LNMp-148
 %%
 restrict ourselves to positive groups (or equivalently semigroups of lattice isomorphisms).
@@ -1590,7 +1685,8 @@ A mapping $\phi \colon \R \times X \to X$ is called a \emph{flow} on $X$ if the 
 \end{align}
 %% --
 
-It follows from the definition that each $\phi_{t}$ is a homeomorphism on $X$ and $\phi_{-t} = (\phi_{t})^{-1}$.
+It follows from the definition that each $\phi_{t}$ is a homeomorphism on $X$ and  \\
+$\phi_{-t}~=~(\phi_{t})^{-1}$.
 
 A flow $\phi$ is called \emph{continuous} if it is continuous with respect to the product topology on $\R \times X$.
 
@@ -1602,7 +1698,8 @@ h_{t+s} &= h_{t} \cdot (h_{s} \circ \phi_{t}) \quad (s,t \in \R) \label{eq:b2-3.
 \end{align}
 %% --
 
-It follows from \eqref{eq:b2-3.10} and \eqref{eq:b2-3.11} that $h_{t}(x) \neq 0$ for all $x \in X$ and $1/h_{t}(x) = h_{-t}(\phi_{t}(x))$ $(t \in \R)$.
+It follows from \eqref{eq:b2-3.10} and \eqref{eq:b2-3.11} that $h_{t}(x) \neq 0$ for all $x \in X$ and 
+$1/h_{t}(x)~=~h_{-t}(\phi_{t}(x))$ $(t \in \R)$.
 The cocycle is called \emph{continuous} if the mapping $(t,x) \mapsto h_{t}(x)$ from $\R \times X$ into $\R$ is continuous with respect to the product topology on $\R \times X$.
 
 Let $\phi$ be a flow and $(h_{t})_{t \in \R}$ a cocycle of $\phi$.
@@ -1619,14 +1716,13 @@ Clearly $T(s+t) = T(s)T(t)$ for all $s,t \in \R$.
 Let $\phi \colon \R \times X \to X$ be a flow and $(h_{t})_{t \in \R}$ a cocycle of $\phi$.
 If for every $x \in X$ the mappings $t \mapsto \phi_{t}(x)$ and $t \mapsto h_{t}(x)$ are continuous, then \eqref{eq:b2-3.12} defines a strongly continuous group.
 \end{proposition}
-
+%%
 \begin{proof}
 We first note that $\|T(t)\|$ is bounded on compact intervals of $\R$.
 This follows from \citet[7.4.1]{hillephillips:1957} since $q(t) = \log\|T(t)\|$ defines a subadditive, measurable function from $\R$ into $\R$ [In fact, $\|T(t)\| = \sup_{x \in X}|h_{t}(x)|$ for $t \in \R$.
 So it follows from the assumption that $t \mapsto \|T(t)\|$ is lower semicontinuous and hence measurable].
 If $f \in C_{0}(X)$, then by hypothesis the function
 %%
-%%\newpage
 %%KGK p-B2-28; LNMp-149
 %%
 $t \mapsto h_{t}(x) f(\phi(t,x)) = (T(t) f) (x)$ is continuous on $\R$.
@@ -1639,7 +1735,7 @@ We now show that every positive group on $C_0(X)$ is of the form \eqref{eq:b2-3.
 %% –
 \begin{proposition}\label{prop:b2-3.9}
 Let $(T(t))_{t \in \R}$ be a strongly continuous group of positive operators on $C_0(X)$.
-Then there exist a continuous flow on $X$ and a continuous cocycle $(h_t)_{t \in \R}$ of $\Phi$ such that \eqref{eq:b2-3.12} holds.
+Then there exist a continuous flow $\Phi$ on $X$ and a continuous cocycle $(h_t)_{t \in \R}$ of $\Phi$ such that \eqref{eq:b2-3.12} holds.
 \end{proposition}
 %% –
 \begin{proof}
@@ -1652,12 +1748,12 @@ At first we consider the flow.
 Since we have $\Phi_{t+s} = \Phi_t \circ \Phi_s$ and every $\Phi_t$ is a homeomorphism on $X$, it is enough to establish continuity of $\Phi$ at points $(0,x_0) \in \R \times X$.
 Given a compact neighbourhood $V$ of $x_0 = \Phi (0,x_0)$, there exists a continuous function $f \colon X \to [0,1]$ satisfying $f(x_0) = 1$ and $\supp f \subset V$.
 There exists $t_0 > 0$ such that $\|T(t)f - f\| < \frac{1}{2}$ for $|t| \leq t_0$.
-Let $W \colon \{x \in X \colon |f(x)| > \frac{1}{2}\}$; then for $|t| \leq t_0$ and $x \in W$ we have $|h_t(x) \cdot f(\Phi(t,x)) - f(x)| < \frac{1}{2}$ and $|f(x)| > \frac{1}{2}$; hence $f(\phi (t,x)) > 0$.
-This implies that $\phi (t,x) \in V$ whenever $|t| \leq t_0$ and $x \in W$.
+Let $W \coloneqq \{x \in X \colon |f(x)| > \frac{1}{2}\}$; then for $|t| \leq t_0$ and $x \in W$ we have $|h_t(x) \cdot f(\Phi(t,x)) - f(x)| < \frac{1}{2}$ and $|f(x)| > \frac{1}{2}$; hence $f(\Phi (t,x)) > 0$.
+This implies that $\Phi (t,x) \in V$ whenever $|t| \leq t_0$ and $x \in W$.
 
 To prove continuity of the cocycle we first remark that by strong continuity of $(T(t))_{t \in \R}$ the mapping $(t,x) \mapsto (T(t)f) (x)$ is continuous on $\R \times X$ for every fixed $f \in C_0(X)$.
-Given compact subsets $A \subset \R , B \subset X$, the set $C \coloneqq \phi(A\times B)$ is compact; hence there exists $f \in C_0(X)$ such that $f|_{C} = 1$.
-For $(t,x) \in A \times B$ we have $h_t(x) = (T(t)f) (x)$.
+Given compact subsets $A \subset \R , B \subset X$, the set $C \coloneqq \Phi(A \times B)$ is compact; hence there exists $f \in C_0(X)$ such that $f|_{C} = 1$.
+For $(t,x) \in A \times B$ we have $h_t(x)~=~(T(t)f) (x)$.
 Thus $(t,x) \mapsto h_t(x)$ is continuous on $A \times B$.
 \end{proof}
 
@@ -1670,7 +1766,6 @@ If $(h_t)_{t \in \R}$ is a cocycle of $\phi$ such that $t \mapsto h_t (x)$ is co
 %% –
 
 %%
-%%\newpage
 %%KGK p-B2-29; LNMp-150
 %%
 This follows from Proposition \ref{prop:b2-3.8} and Proposition \ref{prop:b2-3.9} .
@@ -1678,7 +1773,7 @@ This follows from Proposition \ref{prop:b2-3.8} and Proposition \ref{prop:b2-3.9
 \begin{example}\label{ex:b2-3.11}
 Let $\phi$ be a continuous flow on $X$.
 %% --
-\begin{enumerate}[a), wide, labelsep=1em]
+\begin{enumerate}[(i), wide, labelsep=1em]
 \item \label{ex:b2-3.11-1}
 Let $p$ be a continuous function on $X$ such that $\inf_{x \in X} p(x) > 0$ and $\sup_{x \in X} p(x) < \infty$.
 Then
@@ -1693,7 +1788,7 @@ defines a continuous cocycle of $\phi$.
 For $h \in C^{b}(X)$ define
 %% --
 \begin{equation}\label{eq:b2-3.14}
-h_{t}(x) \coloneqq \exp(\int_{0}^{t} h(\phi(s,x))\, \ds).
+h_{t}(x) \coloneqq \exp\left(\int_{0}^{t} h(\phi(s,x))\, \ds \right).
 \end{equation}
 %% --
 Then $(h_{t})_{t \in \R}$ is a continuous cocycle of $\phi$ (compare \eqref{eq:b2-3.6}).
@@ -1713,7 +1808,7 @@ Let $\phi$ be a continuous flow on $X$ and $(k_{t})_{t \in \R} \subset C^{b}(X)_
 Then there exist $p \in C^{b}(X)$ satisfying $\inf_{x \in X} p(x) > 0$ and $h \in C^{b}(X)$ such that
 %% --
 \begin{equation}\label{eq:b2-3.15}
-k_{t}(x) = (p(x)/p(\phi(t,x))) \cdot \exp(\int_{0}^{t} h(\phi(s,x))\, \ds)
+k_{t}(x) = (p(x)/p(\phi(t,x))) \cdot \exp\left(\int_{0}^{t} h(\phi(s,x))\, \ds\right)
 \end{equation}
 %% --
 for all $t \in \R$, $x \in X$.
@@ -1723,7 +1818,7 @@ for all $t \in \R$, $x \in X$.
 We first note that there exist constants $M, \omega \geq 1$ such that
 %% --
 \begin{equation}\label{eq:b2-3.16}
-(Me^{(\omega-1)|t|})^{-1} \leq k_{t}(x) \leq Me^{(\omega-1)|t|} \quad \text{for all } t \in \R, x \in X.
+(M\mathrm{e}^{(\omega-1)|t|})^{-1} \leq k_{t}(x) \leq M\mathrm{e}^{(\omega-1)|t|} \quad \text{for all } t \in \R, x \in X.
 \end{equation}
 %% --
 
@@ -1731,13 +1826,12 @@ In fact, let $(T(t))_{t \in \R}$ be the group given by $T(t)f = k_{t} \cdot f \c
 Then there exist constants $M, \omega \geq 1$ such that
 %% --
 \begin{equation}\label{eq:b2-3.17}
-\|T(t)\| \leq Me^{(\omega-1)|t|}
+\|T(t)\| \leq M\mathrm{e}^{(\omega-1)|t|}
 \end{equation}
 %% --
 for all $t \in \R$.
 Since $\|T(t)\| = \sup_{x \in X} k_{t}(x)$ the right inequality of
 %%
-%%\newpage
 %%KGK p-B2-30; LNMp-151
 %%
 \eqref{eq:b2-3.16} follows.
@@ -1748,25 +1842,38 @@ So \eqref{eq:b2-3.17} also implies the first inequality in \eqref{eq:b2-3.16}.
 Now we define $p$ and $h$ by
 %% –
 \[
-p(x) \coloneqq \int_{0}^{\infty} e^{-ws}k_{s}(x) \ds, \quad
-h(x) = w - 1/p(x) \quad (x \in X).
+p(x) \coloneqq \int_{0}^{\infty} \mathrm{e}^{-ws}k_{s}(x) \ds, \quad
+h(x) \coloneqq w - 1/p(x) \quad (x \in X).
 \]
 %% –
 
 Then $p$ is a continuous function and we have 
 \begin{align*}
-(M(2w - 1))^{-1} &= \int_{0}^{\infty} e^{-ws}(Me^{(w-1)s})^{-1} \ds \\ 
+(M(2w - 1))^{-1} &= \int_{0}^{\infty} \mathrm{e}^{-ws}(M\mathrm{e}^{(w-1)s})^{-1} \ds \\ 
 &\leq p(x) \\ 
-&\leq \int_{0}^{\infty} e^{-ws}Me^{(w-1)s} \ds \\
+&\leq \int_{0}^{\infty} \mathrm{e}^{-ws}M\mathrm{e}^{(w-1)s} \ds \\
 &= M \text{ for all } x \in X.
 \end{align*}
 In particular, it follows that $h \in C^{b}(X)$.
 
-For all $x \in X$, $t \in \R$ we have $k_{t}(x) \cdot p(\phi(t,x)) = \int_{0}^{\infty} e^{-ws}k_{t+s}(x) \ds = e^{wt} \int_{t}^{\infty} e^{-ws}k_{s}(x) \ds$.
-
-Now fix $x \in X$ and define $f \colon \R \to \R$ by $f(t) \coloneqq k_{t}(x)p(\phi(t,x))/p(x) = [e^{wt}/p(x)] \cdot \int_{t}^{\infty} e^{-ws}k_{s}(x)  \ds$.
-
-The function $f$ is differentiable and satisfies the following differential equation $f'(t) = wf(t)  - k_{t}(t)/p(x)  = h(\phi(t,x))f(t)$.
+For all $x \in X$, $t \in \R$ we have 
+%%--
+\[
+k_{t}(x) \cdot p(\phi(t,x)) = \int_{0}^{\infty} \mathrm{e}^{-ws}k_{t+s}(x) \ds = \mathrm{e}^{wt} \int_{t}^{\infty} \mathrm{e}^{-ws}k_{s}(x) \ds.
+\]
+%%--
+Now fix $x \in X$ and define $f \colon \R \to \R$ by 
+%%--
+\[
+f(t) \coloneqq k_{t}(x)p(\phi(t,x))/p(x) = [\mathrm{e}^{wt}/p(x)] \cdot \int_{t}^{\infty} \mathrm{e}^{-ws}k_{s}(x)  \ds.
+\]
+%%-
+The function $f$ is differentiable and satisfies the following differential equation 
+%%--
+\[
+f'(t) = wf(t)  - k_{t}(t)/p(x)  = h(\phi(t,x))f(t).
+\]
+%%--
 Moreover $f(0) = 1$.
 Hence $f(t) = \exp(\int_{0}^{t} h(\phi(s,x)) \ds)$ for every $t \in \R$.
 This is \eqref{eq:b2-3.15}.
@@ -1777,8 +1884,8 @@ Analogously an operator $\delta$ on $C_{0}(X)$ is called a \emph{derivation} if 
 
 %% --
 \begin{proposition}\label{prop:b2-3.13}
-\index{Automorphism group}
-\index{Derivation}
+%%\index{Automorphism group}
+%%\index{Derivation}
 Let $(T_{0}(t))_{t \in \R}$ be a group on $C_{0}(X)$.
 The following assertions are equivalent:
 \begin{enumerate}[\upshape (a)]
@@ -1786,7 +1893,8 @@ The following assertions are equivalent:
 $(T_{0}(t))_{t \in \R}$ is an automorphism group.
 %%..
 \item \label{prop:b2-3.13-2}
-There exists a continuous flow $\phi$ on $X$ such that $T_{0}(t)f = f \circ \phi_{t}$  for all  $f \in C_{0}(X)$, and all $t \in \R$.
+There exists a continuous flow $\phi$ on $X$ such that $T_{0}(t)f = f \circ \phi_{t}$  for all \\
+ $f \in C_{0}(X)$, and all $t \in \R$.
 \item \label{prop:b2-3.13-3} 
 The generator of $(T_{0}(t))_{t \in \R}$ is a derivation.
 \end{enumerate}
@@ -1805,12 +1913,11 @@ If $(T_{0}(t))_{t \in \R}$ is an automorphism group with generator $\delta$ we c
 
 Now we can show that every generator of a positive group is a perturbation of a derivation.
 %%
-%%\newpage
 %%KGK p-B2-31; LNMp-152
 %%
 \begin{theorem}\label{thm:b2-3.14}
-\index{Generator!Positive Group}
-\index{Operator!Generator}
+%%\index{Generator!Positive Group}
+%%\index{Operator!Generator}
 An operator $A$ on $C_{0}(X)$ is the generator of a positive group $(T(t))_{t \in \R}$ if and only if there exist a derivation $\delta$ on $C_{0}(X)$ which is the generator of a group, a function $h \in C^{b}(X)$ and $p \in C^{b}(X)$ satisfying $\inf_{x \in X} p(x) > 0$ such that
 %% –
 \begin{equation}\label{eq:b2-3.18}
@@ -1835,7 +1942,12 @@ Conversely, let $(T(t))_{t \in \R}$ be a positive group with generator $A$.
 By Proposition \ref{prop:b2-3.9} and Lemma \ref{lem:b2-3.12} we know that there exist a continuous flow $\phi$, $0 \ll p \in C^{b}(X)$ and $h \in C^{b}(X)$ such that \eqref{eq:b2-3.19} holds.
 Let $\delta$ be the generator of the automorphism group defined by $\phi$.
 We have to show that \eqref{eq:b2-3.18} holds.
-As in Theorem \ref{thm:b2-3.5} one sees that $\delta + h$ generates the group $(S(t))_{t \in \R}$ given by $(S(t)f)(x) = \exp(\int_{0}^{t} h(\phi(s,x)) \ds) \cdot f(\phi_{t}(x))$.
+As in Theorem \ref{thm:b2-3.5} one sees that $\delta + h$ generates the group $(S(t))_{t \in \R}$ given by 
+%%--
+\[
+(S(t)f)(x) = \exp\left(\int_{0}^{t} h(\phi(s,x)) \ds \right) \cdot f(\phi_{t}(x)).
+\]
+%%--
 Hence $V\delta V^{-1} + h = V(\delta + h)V^{-1}$ generates $(VS(t)V^{-1})_{t \in \R} = (T(t))_{t \in \R}$.
 This is \eqref{eq:b2-3.18}.
 \end{proof}
@@ -1843,7 +1955,7 @@ This is \eqref{eq:b2-3.18}.
 Since every generator of a positive group is the perturbation of a derivation, we now look for examples of derivations which generate a group.
 %% –
 \begin{example}\label{ex:b2-3.15}
-\index{Examples!Derivation Generator}
+%%\index{Examples!Derivation Generator}
 Let $X = \R^{n}$.
 Consider a function $F \in C^{1}(\R^{n},\R^{n})$ such that $\sup_{x \in \R^{n}} \|DF(x)\| < \infty$ where $DF(x) \in \L{(\R^{n})}$ denotes the derivative of $F$ at $x$.
 Then there exists a continuous flow $\phi$ on $\R^{n}$ such that
@@ -1854,39 +1966,52 @@ Then there exists a continuous flow $\phi$ on $\R^{n}$ such that
 %% –
 Consider the automorphism group $(T_{o}(t))_{t \in \R}$ given by $T_{o}(t)f = f \circ \phi_{t}$
 %%
-%%\newpage
 %%KGK p-B2-32; LNMp-153
 %%
 and denote by $\delta$ its generator.
 Then 
-\[D_{o} = \{ f \in C_{0}(\R^{n}) \cap C^{1}(\R^{n}) \colon \lim_{\|x\| \to \infty} \|(grad\: f)(x)\| = 0 \}
+\[D_{0} = \{ f \in C_{0}(\R^{n}) \cap C^{1}(\R^{n}) \colon \lim_{\|x\| \to \infty} \|(grad\: f)(x)\| = 0 \}
 \]
 is a core of $\delta$ and
 %% –
 \begin{equation}\label{eq:b2-3.21}
-(\delta f)(x) = ((grad\: f)(x) | F(x)) \text{ for all } f \in D_{o}, x \in \R^{n},
+(\delta f)(x) = ((grad\: f)(x) | F(x)) \text{ for all } f \in D_{0}, x \in \R^{n},
 \end{equation}
 %% –
 where $(\cdot|\cdot)$ denotes the scalar product in $\R^{n}$
 \end{example}
 %% –
 \begin{proof}
-Let $f \in D_{o}$.
+Let $f \in D_{0}$.
 Then $g = f - (grad\: f | F) \in C_{0}(\R^{n})$ and
-$(R(1,\delta)g)(x) = \int_{0}^{\infty} e^{-t}f(\phi(x,t)) \dt - \int_{0}^{\infty} e^{-t}((gradf)(\phi(t,x)) | F(\phi(t,x))) \dt = f(x)$ by integrating by parts.
+%%--
+\[
+\begin{split}
+(R(1,\delta)g)(x) 
+&= \int_{0}^{\infty} \mathrm{e}^{-t}f(\phi(x,t)) \dt - \int_{0}^{\infty} \mathrm{e}^{-t}((gradf)(\phi(t,x)) | F(\phi(t,x))) \dt \\
+&= f(x)
+\end{split}
+\]
+%%--
+ by integrating by parts.
 Hence $f \in D(\delta)$ and $f - \delta f = g$; i.e. $\delta f = (grad\: f|F)$.
 This proves \eqref{eq:b2-3.21}.
-Next we show $T_{o}(t)D_{o} \subset D_{o}$ for all $t \geq 0$, which implies that $D_{o}$ is a core of $\delta$ by A-I, Theorem 1.9 (or A-II, Corollary 1.34). 
+Next we show $T_{o}(t)D_{0} \subset D_{0}$ for all $t \geq 0$, which implies that $D_{0}$ is a core of $\delta$ by A-I, Theorem 1.9 (or A-II, Corollary 1.34). 
 %%KGK Test: ref{cor:a2-1.34}
 Since $F \in C^{1}(\R^{n},\R^{n})$, it follows that $\phi \in C^{1}(\R \times \R^{n},\R^{n})$ (see e.g., \citet[15.2]{hirschsmale:1974}).
 Moreover for each $x \in \R^{n}$, $(D\phi_{t}(x))' = DF(\phi_{t}(x)) \cdot D\phi_{t}(x)$ and $D\phi_{0}(x) = Id$, (see \citet[p. 300]{hirschsmale:1974}; here $Id \in \L{(\R^{n})}$ denotes the identity operator.
 Hence $D\phi_{t}(x) = Id + \int_{0}^{t} DF(\phi_{s}(x)) \cdot D\phi_{s}(x) \ds$.
 Consequently $\|D\phi_{t}(x)\| \leq 1 + \int_{0}^{t}  M \cdot  \|D\phi_{s}(x)\| \ds$ for all $t \geq 0$ and $x \in \R^{n}$; where $M \coloneqq \sup_{x \in \R^{n}} \|DF(x)\| < \infty$ by hypothesis.
-Hence by Gronwall's inequality, $\|D\phi_{t}(x)\| \leq e^{Mt}$ $(t \geq 0)$ for all $x \in \R^{n}$.
-Now let $f \in D_{o}$, $t \geq 0$.
+Hence by Gronwall's inequality, $\|D\phi_{t}(x)\| \leq \mathrm{e}^{Mt}$ $(t \geq 0)$ for all $x \in \R^{n}$.
+Now let $f \in D_{0}$, $t \geq 0$.
 Then $[grad\:(f \circ \phi_{t})](x) = [(grad\:f)(\phi_{t}(x))] \cdot D\phi_{t}(x)$.
-Hence $\|[grad\:(f \circ \phi_{t})](x)\| \leq e^{Mt}\|(grad\:f)(\phi_{t}(x))\|$, and so $\lim_{\|x\| \to \infty} \|[grad\:(f \circ \phi_{t})](x)\| \leq e^{Mt} \lim_{\|x\| \to \infty} \|(grad\:f)(\phi_{t}(x))\| = 0$.
-Thus $f \circ \phi_{t} \in D_{o}$ for all $t \geq 0$.
+Hence $\|[grad\:(f \circ \phi_{t})](x)\| \leq \mathrm{e}^{Mt}\|(grad\:f)(\phi_{t}(x))\|$, and so 
+%%--
+\[
+\lim_{\|x\| \to \infty} \|[grad\:(f \circ \phi_{t})](x)\| \leq \mathrm{e}^{Mt} \lim_{\|x\| \to \infty} \|(grad\:f)(\phi_{t}(x))\| = 0.
+\]
+%%--
+Thus $f \circ \phi_{t} \in D_{0}$ for all $t \geq 0$.
 \end{proof}
 %% –
 As a second class of examples we consider derivations on $C_{0}(a,b)$.
@@ -1906,12 +2031,11 @@ with domain \\
 $D(\delta_{m}) = \{ f \in C_{0}(a,b) \colon f \text{ is differentiable at } x \text{ if } m(x) \neq 0 \text{ and } \delta_{m}f \in C_{0}(a,b) \}$ \\
 Note that $\delta_{m}$ is a derivation on $C_{0}(a,b)$.
 %%
-%%\newpage
 %%KGK p-B2-33; LNMp-154
 %%
 %% –
 \begin{definition}\label{def:b2-3.16}
-\index{Admissible Function}
+%\index{Admissible Function}
 A function $m \colon (a,b) \to \R$ is \emph{admissible} if it is continuous and the following holds.
 Whenever $a \leq c < d \leq b$ such that $m(x) \neq 0$ for $x \in (c,d)$ and $m(c) = 0$ or $c = a = -\infty$ and $m(d) = 0$ or $d = b = +\infty$, then
 %% –
@@ -1924,10 +2048,10 @@ Note: If $m$ is admissible and $a > -\infty$, then $m(a) = 0$; similary, if $b <
 Moreover every Lipschitz continuous function is admissible.
 %% –
 \begin{theorem}\label{thm:b2-3.17}
-\index{Generator!Automorphism Group}
+%\index{Generator!Automorphism Group}
 Let $m \colon (a,b) \to \R$ be a continuous function.
 The operator $\delta_{m}$ is generator of an automorphism group on $C_{0}(a,b)$ if and only if $m$ is admissible.
-In that case $D_{o}(\delta_{m}) \coloneqq \{ f \in D(\delta_{m}) \colon f \text{ is differentiable on } (a,b)\}$ is a core of $\delta_{m}$.
+In that case $D_{0}(\delta_{m}) \coloneqq \{ f \in D(\delta_{m}) \colon f \text{ is differentiable on } (a,b)\}$ is a core of $\delta_{m}$.
 
 \textup{Additional properties:} If $m$ is admissible, then the flow $\phi$ defining the group generated by $\delta_{m}$ can be described explicitely:
 The set $\{x \in (a,b) \colon m(x) \neq 0\}$ is the union of a finite or countable number of disjoint intervals $(a_{n},b_{n})$ $(n \in J)$.
@@ -1948,7 +2072,7 @@ for all $t \in \R$.
 We first prove a special case of Theorem \ref{thm:b2-3.17}.
 %% –
 \begin{proposition}\label{prop:b2-3.18}
-\index{Generator!Special Case}
+%\index{Generator!Special Case}
 Suppose that $m(x) \neq 0$ for all $x \in (a,b)$.
 Then $\delta_{m}$ is the generator of a group on $C_{0}(a,b)$ if and only if $m$ is admissible.
 In that case the group generated by $\delta_{m}$ is similar to the translation group on $C_{0}(\R)$.
@@ -1958,7 +2082,7 @@ In that case the group generated by $\delta_{m}$ is similar to the translation g
 Let $q \in C^{1}(a,b)$ such that $q'(x) = 1/m(x)$ for all $x \in (a,b)$.
 Then $q$ is a $C^{1}$-diffeomorphism from $(a,b)$ onto an interval $(a',b')$.
 By $Vf = f \circ q$ one defines an isomorphism from $C_{0}(a',b')$ onto $C_{0}(a,b)$.
-Let $B$ on $C_{0}(a',b')$ be given by $B = V^{-1}\delta_{m}V$.
+Let $B$ on $C_{0}(a',b')$ be given by $B~=~V^{-1}\delta_{m}V$.
 Then 
 \begin{align*}
 D(B) &= \{ g \in C_{0}(a',b') \colon g \circ q \in D(\delta_{m}) \} \\
@@ -1969,7 +2093,6 @@ D(B) &= \{ g \in C_{0}(a',b') \colon g \circ q \in D(\delta_{m}) \} \\
 \end{align*}
 and $Bg = V^{-1}\delta_{m}V = V^{-1}(m(g \circ q)') = V^{-1}(g' \circ q) = g'$.
 %%
-%%\newpage
 %%KGK p-B2-34; LNMp-155
 %%
 Now observe that $m$ is admissible if and only if $a' = -\infty$ and $b' = \infty$.
@@ -1988,13 +2111,19 @@ Let
 \end{equation*}
 %% –
 for all $f \in C_{0}\left[a',b'\right)$, $x \in \left[a',b'\right)$, $t \geq 0$.
-Then $(T_{1}(t))_{t \geq 0}$ is a semigroup on $C_{0}[a',b')$ with generator $B_{1}$ given by $B_{1}f = f'$ with domain $D(B_{1}) = \{ f \in C_{0}\left[a',b'\right) \cap C^{1}(a',b) \colon \lim_{x \to b'} f'(x) = 0 \}$.
+Then $(T_{1}(t))_{t \geq 0}$ is a semigroup on $C_{0}[a',b')$ with generator $B_{1}$ given by 
+$B_{1}f = f'$ with domain 
+%%--
+\[
+D(B_{1}) = \{ f \in C_{0}\left[a',b'\right) \cap C^{1}(a',b) \colon \lim_{x \to b'} f'(x) = 0 \}.
+\]
+%%-
 If we consider $B$ as an operator on $C_{0}\left[a',b'\right)$, then $B \subset B_{1}$.
 Let $f \in D(B)$.
-Then $u(t) \coloneqq T(t)f \in D(B) \subset D(B_{1})$ for all $t \geq 0$; and $\dot{u}(t) = Bu(t) = B_{1}u(t)$; $u(0) = f$.
+Then $u(t) \coloneqq T(t)f \in D(B) \subset D(B_{1})$ for all $t \geq 0$; and $\dot{u}(t) = Bu(t)~=~B_{1}u(t)$; $u(0)~=~f$.
 It follows from A-I, Theorem 1.7.  (or A-II, Corollary 1.2.)
 %%KGK \ref{cor:a2-1.2}
-that $T_{1}(t)f = u(t)$.
+that $T_{1}(t)f~=~u(t)$.
 Hence $T_{1}(t)f \in C_{0}(a',b')$ for all $t \geq 0$ and $f \in D(B)$.
 This is impossible since $a' > -\infty$.
 Similary one shows that $b' = \infty$.
@@ -2012,27 +2141,39 @@ Moreover, for every $x \in (a,b)$ the function $\phi(\cdot,x)$ is differentiable
 %% –
 Denote by $(T(t))_{t \in \R}$ the group on $C_{0}(a,b)$ given by $T(t)f = f \circ \phi_{t}$ $(t \in \R, f \in C_{0}(a,b))$ and let $A$ be its generator.
 Take $g \in C_{0}(a,b)$ and $f = R(1,A)g$.
-Then $f(x) = \int_{0}^{\infty} e^{-t}g(\phi(t,x)) \dt$, $x \in (a,b)$.
-If $m(x) = 0$ then $f(x) = \int_{0}^{\infty} e^{-t}g(x) \dt = g(x)$.
+Then $f(x) = \int_{0}^{\infty} \mathrm{e}^{-t}g(\phi(t,x)) \dt$, $x \in (a,b)$.
+If $m(x) = 0$ then $f(x) = \int_{0}^{\infty} \mathrm{e}^{-t}g(x) \dt = g(x)$.
 If $x \in (a_{n},b_{n})$ $(n \in J)$, then 
-$f(x) = \int_{0}^{\infty} e^{-t}g(q_{n}^{-1}(q_{n}(x) + t)) \dt = e^{q_{n}(x)} \int_{q_{n}(x)}^{\infty} e^{-s}g(q_{n}^{-1}(s)) \ds$.
+%%--
+\[
+f(x) = \int_{0}^{\infty} \mathrm{e}^{-t}g(q_{n}^{-1}(q_{n}(x) + t)) \dt = \mathrm{e}^{q_{n}(x)} \int_{q_{n}(x)}^{\infty} \mathrm{e}^{-s}g(q_{n}^{-1}(s)) \ds.
+\]
+%%--
 Thus $f$ is differentiable at $x$ and $f'(x) = (1/m(x))(f(x) - g(x))$.
 Consequently $f \in D(\delta_{m})$ and $\delta_{m}f = f - g$.
 This shows that $A \subset \delta_{m}$.
 In order to show the converse inclusion, let $f \in D(\delta_{m})$ and $g = f - \delta_{m}(f) \in C_{0}(a,b)$.
-Then $R(1,A)g(x) = f(x)$ if $m(x) = 0$ and $R(1,A)g(x) = \int_{0}^{\infty} e^{-t}f(\phi(t,x)) \dt - \int_{0}^{\infty} e^{-t}m(\phi(t,x))f'(\phi(t,x)) \dt = \int_{0}^{\infty} e^{-t}f(\phi(t,x)) \dt - \int_{0}^{\infty} e^{-t}\frac{\partial}{\partial t}f(\phi(t,x)) \dt$ (by \eqref{eq:b2-3.23}) $= f(x)$ by integrating by parts.
+Then $R(1,A)g(x) = f(x)$ if $m(x) = 0$ and 
+%%--
+\begin{align*}
+R(1,A)g(x) &= \int_{0}^{\infty} \mathrm{e}^{-t}f(\phi(t,x)) \dt - \int_{0}^{\infty} \mathrm{e}^{-t}m(\phi(t,x))f'(\phi(t,x)) \dt \\
+           &= \int_{0}^{\infty} \mathrm{e}^{-t}f(\phi(t,x)) \dt - \int_{0}^{\infty} \mathrm{e}^{-t}\frac{\partial}{\partial t}f(\phi(t,x)) \dt 
+           \quad \text{(by \eqref{eq:b2-3.23})} \\
+           &= f(x) 
+\end{align*}
+%%--
+by integrating by parts.
 This shows that $f = R(1,A)g \in D(A)$ and that $\delta_{m}$ is the generator of the group $(T(t))_{t \in \R}$.
-Finally we show that $T(t)D_{o}(\delta_{m}) \subset D_{o}(\delta_{m})$, which implies that $D_{o}(\delta_{m})$ is a core (by A-II, Corollary 1.34.).
+Finally we show that $T(t)D_{0}(\delta_{m}) \subset D_{0}(\delta_{m})$, which implies that $D_{0}(\delta_{m})$ is a core (by A-II, Corollary 1.34.).
 %%KGK \ref{cor:a2-1.34}
 Let $t \in \R$.
 The function $\phi_{t}(\cdot)$ is
 %%
-%%\newpage
 %%KGK p-B2-35; LNMp-156
 %%
 differentiable on $(a,b)$ and $m(x)\frac{\partial}{\partial x}\phi(t,x) = m(\phi(t,x))$ for all $x \in (a,b)$.
-Let $f \in D_{o}(\delta_{m}) = D(\delta_{m}) \cap C^{1}$, $t \in \R$.
-Then $T(t)f = f \circ \phi_{t}$ is differentiable and so in $D_{o}(\delta_{m})$.
+Let $f \in D_{0}(\delta_{m}) = D(\delta_{m}) \cap C^{1}$, $t \in \R$.
+Then $T(t)f = f \circ \phi_{t}$ is differentiable and so in $D_{0}(\delta_{m})$.
 
 Conversely, assume that $\delta_{m}$ is generator of a group $(T(t))_{t \in \R}$ on $C_{0}(a,b)$.
 Since $\delta_{m}$ is a derivation, there exists a continuous flow $(\phi_{t})_{t \in \R}$ on $(a,b)$ such that $T(t)f = f \circ \phi_{t}$ for all $f \in C_{0}(a,b)$, $t \in \R$.
@@ -2051,8 +2192,8 @@ So it follows from Proposition \ref{prop:b2-3.18} that $m'$ is admissible.
 \end{proof}
 
 \begin{remark}\label{rem:b2-3.19}
-\index{Flow!Stationary Point}
-If $\phi$ is a flow on $(a,b)$, a point $x \in (a,b)$ is called \emph{stationary} if $\phi(t,x) = x$ for all $t \in \R$.
+%\index{Flow!Stationary Point}
+If $\phi$ is a flow on $(a,b)$, a point $x \in (a,b)$ is called \emph{stationary} if $\phi(t,x) =~x$ for all $t \in \R$.
 Let $\delta$ be the generator of the group $(T(t))_{t \in \R}$ associated with $\phi$.
 Then $x \in (a,b)$ is a stationary point if and only if $(\delta f)(x) = 0$ for all $f \in D(\delta)$.
 If $m$ is an admissible function on $(a,b)$ then we have seen that $x \in (a,b)$ is a stationary point of the flow associated with $\delta_{m}$ if and only if $m(x) = 0$.
@@ -2060,11 +2201,23 @@ This does no longer hold for functions which are not admissible as the following
 \end{remark}
 %% –
 \begin{example}\label{ex:b2-3.20}
-\index{Examples!Non-admissible Flow}
+%\index{Examples!Non-admissible Flow}
 Consider the flow $\phi(t,x) = (x^{1/3} + t)^{3}$ on $\R$ and the group $(T(t))_{t \in \R}$ induced by this flow on $C_{0}(\R)$.
 One can easily see that the generator $\delta$ of $(T(t))_{t \in \R}$ is the following operator.
 Let $m(x) = 3x^{2/3}$.
-Then $(\delta f)(x) = m(x)f'(x)$ for $x \neq 0$ and $D(\delta) = \{ f \in C_{0}(\R) \colon f \text{ is differentiable in } x \neq 0 \text{ and } m(x)f'(x) \text{ has a continuous extension in } C_{0}(\R) \}$.
+Then $(\delta f)(x) = m(x)f'(x)$ for $x \neq 0$ and 
+%%--
+%%\[
+\begin{equation*}
+D(\delta) = 
+\left\{ f \in C_{0}(\R) \colon 
+\begin{aligned}
+	&f \text{ is differentiable at } x \neq 0 \text{ and } \\
+	&m(x)f'(x) \text{ has a continuous extension in } C_{0}(\R)
+\end{aligned}
+\right\}.
+\end{equation*}
+%%\]
 However the function $m$ is not admissible.
 And in fact $m(0) = 0$ but $0$ is not a stationary point of $\phi$.
 In particular, there exists a function $f \in D(\delta)$ such that $(\delta f)(0) \neq 0$.
@@ -2072,12 +2225,11 @@ In particular, there exists a function $f \in D(\delta)$ such that $(\delta f)(0
 %% –
 Next we describe an arbitrary continuous flow on an open interval.
 %%
-%%\newpage
 %%KGK p-B2-36; LNMp-157
 %%
 %% –
 \begin{proposition}\label{prop:b2-3.21}
-\index{Flow!Characterization}
+%\index{Flow!Characterization}
 Let $-\infty \leq a < b \leq \infty$.
 A mapping $\phi \colon \R \times (a,b) \to (a,b)$ defines a continuous flow if and only if there exists a finite or countable set of disjoint intervals $(a_{n},b_{n}) \subset (a,b)$ $(n \in J)$ and for every $n \in J$ there exists a homeomorphism $r_{n}$ from $(a_{n},b_{n})$ onto $(-\infty,\infty)$ such that
 %% –
@@ -2096,7 +2248,13 @@ Note: $J = \emptyset$ if and only if $\phi(t,x) = x$ for all $x \in (a,b)$ and $
 \begin{proof}
 It is not difficult to see that the construction in the proposition defines a continuous flow on $(a,b)$.
 Now let $\phi$ be a continuous flow.
-The set $K = \{ x \in (a,b) \colon \phi(t,x) = x \text{ for all } t \in \R \}$ is closed in $(a,b)$.
+The set 
+%%-- 
+\[
+K = \{ x \in (a,b) \colon \phi(t,x) = x \text{ for all } t \in \R \} 
+\]
+%%-
+is closed in $(a,b)$
 Thus $(a,b) \setminus K$ is the union of a finite or countable set of disjoint intervals $(a_{n},b_{n})$ $(n \in J)$.
 Pick $x_{n} \in (a_{n},b_{n})$ $(n \in J)$.
 Then $\alpha_{n}(t) \coloneqq \phi(t,x_{n})$ defines an injective mapping from $\R$ into $(a_{n},b_{n})$.
@@ -2105,7 +2263,15 @@ It is easy to see that $\lim_{t \to \infty} \phi(t,x_{n})$ is an element of $K$ 
 Consequently, $\alpha_{n}(\R) = (a_{n},b_{n})$ i.e., $\alpha_{n}$ is a homeomorphism from $\R$ onto $(a_{n},b_{n})$.
 Define $r_{n}$ to be the inverse of $\alpha_{n}$.
 Let $x \in (a_{n},b_{n})$.
-Then $\phi(t,x) = \phi(t, \alpha_{n}(r_{n}(x))) = \phi(t, \phi(r_{n}(x),x_{n})) = \phi(t + r_{n}(x),x_{n}) = \alpha_{n}(t + r_{n}(x)) = r_{n}^{-1}(r_{n}(x) + t)$ for all $t \in \R$.
+Then 
+%%-- 
+\begin{align*}
+\phi(t,x) &= \phi(t, \alpha_{n}(r_{n}(x))) = \phi(t, \phi(r_{n}(x),x_{n})) \\
+          &= \phi(t + r_{n}(x),x_{n}) = \alpha_{n}(t + r_{n}(x)) \\
+          &= r_{n}^{-1}(r_{n}(x) + t)	
+\end{align*}
+%%--
+for all $t \in \R$.
 This proves that $\phi$ has the desired form.
 \end{proof}
 %% –
@@ -2116,35 +2282,39 @@ This can be expressed by two facts:
 \item \label{enum:b2-3-1.1}
 $C_{c}^{1}(a,b) \coloneqq \{ f \in C^{1}(a,b) \colon f \text{ vanishes in a neighbourhood of } a \text{ and } b\}$ is contained in $D(\delta_{m})$ (this follows from the definition of $\delta_{m}$); and
 \item  \label{enum:b2-3-1.2}
-the set $D_{o}(\delta_{m})$ of all differentiable functions in $D_{o}(\delta_{m})$ is a core of $\delta_{m}$ (this follows from Theorem \ref{thm:b2-3.17}).
+the set $D_{0}(\delta_{m})$ of all differentiable functions in $D_{0}(\delta_{m})$ is a core of $\delta_{m}$ (this follows from Theorem \ref{thm:b2-3.17}).
 \end{enumerate}
 %% –
 We will show below that these two properties are characteristic for the operators $\delta_{m}$.
 For other generators of automorphism groups they can be violated dramatically as the following example shows.
 %% –
 \begin{example}\label{ex:b2-3.22}
-\index{Examples!Generator Without Differentiable Functions}
+%\index{Examples!Generator Without Differentiable Functions}
 There exists a generator $\delta$ of an automorphism group on $C_{0}(\R)$ such that $D(\delta) \cap C^{1}(\R) = \{0\}$.
 In fact, consider a strictly increasing continuous map $q$ from $\R$ onto $\R$ such that
 %%
-%%\newpage
 %%KGK p-B2-37; LNMp-158
 %%
 $q'(x) = 0$ a.e.
 Then $V \colon C_{0}(\R) \to C_{0}(\R)$ given by $Vf = f \circ q$ is an algebra isomorphism.
 Let $A$ be the generator of the translation group on $C_{0}(\R)$ and $\delta = V^{-1}AV$.
-Then $D(\delta) = \{ f \in C_{0}(\R) \colon Vf \in D(A)\} = \{f \in C_{0}(\R) \colon f \circ q \in C^{1}(\R), (f \circ q)' \in C_{0}(\R) \}$.
+Then 
+%%-- 
+\[
+D(\delta) = \{ f \in C_{0}(\R) \colon Vf \in D(A)\} = \{f \in C_{0}(\R) \colon f \circ q \in C^{1}(\R), (f \circ q)' \in C_{0}(\R) \}.
+\]
+%%--
 Let $f \in C^{1}(\R) \cap D(\delta)$.
 If $f \neq 0$, then $f$ is not constant.
 Hence there exists $x_{o} \in \R$ such that $f'(x_{o}) \neq 0$.
 Then $f$ has a continuously differentiable inverse in some open neighbourhood of $x_{o}$.
 Since $f \circ q \in C^{1}(\R)$, it follows that $q$ is continuously differentiable in some neighborhood of $q^{-1}(x_{o})$.
-This is a contradiction since $q'(y) = 0$ a.e.
+This is a contradiction since $q'(y)~=~0$~a.e.
 %% –
 \end{example}
 %% –
 \begin{theorem}\label{thm:b2-3.23}
-\index{Generator!Characterization}
+%\index{Generator!Characterization}
 Let $\delta$ be the generator of an automorphism group on $C_{0}((a,b))$, where $-\infty \leq a < b \leq \infty$.
 The following assertions are equivalent.
 \begin{enumerate}[\upshape (a)]
@@ -2152,7 +2322,7 @@ The following assertions are equivalent.
 There exists a continuous admissible function $m \colon (a,b) \to \R$ such that $\delta = \delta_{m}$.
 %%..
 \item \label{thm:b2-3.23-2}
-$C_{c}^{1}(a,b) \subset D(\delta)$ and $D_{o}(\delta) = \{ f \in D(\delta) \colon f \text{ is differentiable } \}$ is a core of $\delta$.
+$C_{c}^{1}(a,b) \subset D(\delta)$ and $D_{0}(\delta) = \{ f \in D(\delta) \colon f \text{ is differentiable } \}$ is a core of $\delta$.
 \end{enumerate}
 \end{theorem}
 %% –
@@ -2166,17 +2336,21 @@ We show that $r_{n}^{-1} \colon \R \to (a_{n},b_{n})$ is continuously differenti
 Let $x_{o} \in (a_{n},b_{n})$.
 There exists $f \in C_{c}^{1}(a,b)$ such that $f(x) = x$ in a neighborhood of $x_{o}$.
 Then $r_{n}^{-1}(r_{n}(x_{o}) + t) = f(\phi(t,x_{o})) = (T(t)f)(x_{o})$ for all $t$ in some neighborhood of $0$.
-Since $f \in D(\delta)$ it follows that the function $t \mapsto r_{n}^{-1}(r_{n}(x_{o}) + t)$ is continuously differentiable in some neighborhood of $0$ and so $r_{n}^{-1}$ is continuously differentiable in $r_{n}(x_{o})$.
+Since $f \in D(\delta)$ it follows that the function $t~\mapsto~r_{n}^{-1}(r_{n}(x_{o}) + t)$ is continuously differentiable in some neighborhood of $0$ and so $r_{n}^{-1}$ is continuously differentiable at $r_{n}(x_{o})$.
 Since $r_{n} \colon (a_{n},b_{n}) \to \R$ is surjective this proves the claim.
 Next we show $(r_{n}^{-1})'(t) \neq 0$ for all $t \in \R$.
 In fact, let $x_{o} \in (a_{n},b_{n})$ and assume that $(r_{n}^{-1})'(r_{n}(x_{o})) = 0$.
-Then for all $f \in D_{o}(\delta)$ one has $(\delta f)(x_{o}) = \frac{\partial}{\partial t}|_{t=0} f(r_{n}^{-1}(r_{n}(x_{o}) + t)) = f'(x_{o})(r_{n}^{-1})'(r_{n}(x_{o})) = 0$.
-Since $D_{o}(\delta)$ is a core of $\delta$ this implies that $\phi(t,x_{o}) = x_{o}$ for all $t \in \R$.
+Then for all $f \in D_{0}(\delta)$ one has 
+%%-- 
+\[
+(\delta f)(x_{o}) = \frac{\partial}{\partial t}|_{t=0} f(r_{n}^{-1}(r_{n}(x_{o}) + t)) = f'(x_{o})(r_{n}^{-1})'(r_{n}(x_{o})) = 0.
+\]
+%%--
+Since $D_{0}(\delta)$ is a core of $\delta$ this implies that $\phi(t,x_{o}) = x_{o}$ for all $t \in \R$.
 Hence $x_{o} \in K$, a contradiction.
 It follows that $r_{n} \colon (a_{n},b_{n}) \to \R$ is a $C^{1}$-diffeomorphism for all $n \in J$.
 
 %%
-%%\newpage
 %%KGK p-B2-38; LNMp-159
 %%
 Define $m \colon (a,b) \to \R$ by
@@ -2195,7 +2369,7 @@ Thus $\delta = \delta_{m}$.
 \end{proof}
 
 \begin{remark*}\label{rem:b2-3.24}
-\index{Admissible Function!Initial Value Problem}
+%\index{Admissible Function!Initial Value Problem}
 Let $m \colon (a,b) \to \R$ be continuous.
 Then $m$ is admissible if and only if the initial value problem
 %% –
@@ -2212,7 +2386,7 @@ As we have seen above the operators $\delta_{m}$, where $m$ is an admissible fun
 But one can obtain every such generator by a similarity transformation (see A-I,3.0) from some $\delta_{m}$.
 %% –
 \begin{theorem}\label{thm:b2-3.24}
-\index{Generator!Similarity Transformation}
+%\index{Generator!Similarity Transformation}
 Let $-\infty \leq a < b \leq \infty$.
 An operator $\delta$ on $C_{0}(a,b)$ is the generator of an automorphism group on $C_{0}(a,b)$ if and only if there exists an algebra isomorphism $V$ from $C_{0}(a,b)$ onto $C_{0}(a,b)$ and an admissible function $m \colon (a,b) \to \R$ such that $\delta = V^{-1}\delta_{m}V$.
 \end{theorem}
@@ -2234,7 +2408,6 @@ Let $\beta \colon (a,b) \to (a,b)$ be defined by
 %% –
 Then $\beta$ is a homeomorphism from $(a,b)$ onto $(a,b)$ and $\psi_{t} \coloneqq \beta^{-1} \circ \phi_{t} \circ \beta$ $(t \in \R)$ defines a continuous flow on $(a,b)$.
 %%
-%%\newpage
 %%KGK p-B2-39; LNMp-160
 %%
 Define $m \colon (a,b) \to \R$ by
@@ -2255,10 +2428,10 @@ Consequently, $\delta = V^{-1}\delta_{m}V$.
 Now we are able to describe arbitrary generators of positive groups on $C_{0}(a,b)$.
 %% –
 \begin{theorem}\label{thm:b2-3.25}
-\index{Generator!Positive Group}
+%\index{Generator!Positive Group}
 Let $-\infty \leq a < b \leq \infty$.
 An operator $A$ generates a positive group on $C_{0}(a,b)$ if and only if there exist
-\begin{enumerate}[i)]
+\begin{enumerate}[\upshape (i)]
 \item 
 a lattice isomorphism $V$ on $C_{0}(a,b)$,
 \item 
@@ -2274,8 +2447,11 @@ A = V^{-1}\delta_{m}V + h.
 %% –
 \begin{proof}
 Let $A$ be the generator of a positive group on $C_{0}(a,b)$.
-By Theorem \ref{thm:b2-3.14} there exist a continuous bounded function $p \colon (a,b) \to \R$ such that $\inf_{x \in (a,b)} p(x) > 0$ and $h \in C^{b}(a,b)$ and the generator $\delta$ of an automorphism group such that $A = M\delta M^{-1} + h$ where $M \in \L{(C_{0}(a,b))}$ is given by $Mf = p \cdot f$.
-By Theorem \ref{thm:b2-3.24} there exist an admissible continuous function $m \colon (a,b) \to \R$ and a lattice isomorphism $U \in \L{(C_{0}(a,b))}$ such that $\delta = U\delta_{m}U^{-1}$.
+By Theorem \ref{thm:b2-3.14} 
+there exist a continuous bounded function $p \colon (a,b) \to \R$ such that $\inf_{x \in (a,b)} p(x) > 0$ and $h \in C^{b}(a,b)$ 
+and the generator $\delta$ of an automorphism group such that $A~=~M\delta M^{-1}~+~h$ 
+where $M \in \L{C_{0}(a,b)}$ is given by $Mf = p \cdot f$.
+By Theorem \ref{thm:b2-3.24} there exist an admissible continuous function $m \colon (a,b) \to \R$ and a lattice isomorphism $U \in \L{C_{0}(a,b)}$ such that $\delta = U\delta_{m}U^{-1}$.
 Setting $V = MU$ we obtain $A = V\delta_{m}V^{-1} + h$.
 \end{proof}
 %% –
@@ -2286,9 +2462,8 @@ So the restriction $\phi_{0}$ of $\phi$ to $(a,b)$ is a continuous flow on $(a,b
 Conversely, if $\phi_{0}$ is a continuous flow on $(a,b)$ the extension $\phi_{0}$ to $\phi \colon \R \times [a,b] \to [a,b]$ by setting $\phi(t,a) = a$; $\phi(t,b) = b$ for all $t \in \R$ defines a continuous flow on $[a,b]$.
 This consideration allows us to extend easily the preceding results to the space $C[a,b]$.
 Let $m \colon (a,b) \to \R$ be a continuous function.
-We define the operator $\tilde{\delta}_{m}$ on $C[a,b]$ by $\widetilde{\delta}_{m}f = g$ such that
+We define the operator $\widetilde{\delta}_{m}$ on $C[a,b]$ by $\widetilde{\delta}_{m}f = g$ such that
 %%
-%%\newpage
 %%KGK p-B2-40; LNMp-161
 %%
 %% –
@@ -2310,7 +2485,7 @@ f \text{ is differentiable at } x \in (a,b) \text{ whenever } m(x) \neq 0 \\
 \]
 %% –
 \begin{theorem}\label{thm:b2-3.26}
-\index{Generator!Compact Interval}
+%\index{Generator!Compact Interval}
 Let $m$ be a continuous function on $(a,b)$.
 The operator $\tilde{\delta}_{m}$ is generator of an automorphism group on $C[a,b]$ if and only if $m$ is admissible.
 \end{theorem}
@@ -2325,7 +2500,7 @@ It is easy to verify, that the generator of this group is $\tilde{\delta}_{m}$.
 \end{proof}
 %% –
 \begin{theorem}\label{thm:b2-3.27}
-\index{Generator!Automorphism on Compact Interval}
+%\index{Generator!Automorphism on Compact Interval}
 Let $\delta$ be the generator of an automorphism group on $C[a,b]$.
 Then there exists an admissible function $m \colon (a,b) \to \R$ and an algebra isomorphism $V$ from $C[a,b]$ onto $C[a,b]$ such that $\delta = V^{-1}\tilde{\delta}_{m}V$.
 \end{theorem}
@@ -2338,9 +2513,9 @@ Then it is easy to see that $\delta = V^{-1}\tilde{\delta}_{m}V$.
 \end{proof}
 %% –
 \begin{theorem}\label{thm:b2-3.28}
-\index{Generator!Positive Group on Compact Interval}
+%\index{Generator!Positive Group on Compact Interval}
 An operator $A$ on $C[a,b]$ is the generator of a positive group on $C[a,b]$ if and only if there exist
-\begin{enumerate}[--]
+\begin{enumerate}[\upshape (i)]
 \item 
 a lattice isomorphism $V$ on $C[a,b]$
 \item 
@@ -2352,13 +2527,12 @@ and a function $h \in C[a,b]$ such that $A = V^{-1}\delta_{m}V + h$.
 
 The proof follows from Theorem \ref{thm:b2-3.14} via Theorem \ref{thm:b2-3.27} in the same way as Theorem \ref{thm:b2-3.25} (via Theorem \ref{thm:b2-3.24}).
 %%
-%%\newpage
 %%KGK p-B2-41; LNMp-172
 %%
 \section*{Notes}
 \addcontentsline{toc}{section}{Notes}
 
-\begin{enumerate}[label=\emph{Section \arabic*:}, wide, itemsep=1ex]
+\begin{enumerate}[label=\emph{Section \arabic*:}, wide]
 
 \item
 Concerning bounded generators of positive semigroups and the positive minimum principle we refer to the corresponding notes in Chapter C-II.
@@ -2367,7 +2541,6 @@ Theorem \ref{thm:b2-1.13} and its corollary are from the same source.
 In the case when $A$ is dissipative Theorem \ref{thm:b2-1.20} is due to \citet{dorroh:1966}.
 We use precisely Dorroh's arguments to verify the range condition.
 Other extensions of Dorroh's result have been given by \citet{lumer:1974} and \citet{lumer:1975}.
-\marginpar{!!Jahr 74/75}
 
 \item 
 A characterization of generators of lattice semigroups by Kato's equality is due to  \citet{nageluhlig:1981} if the underlying space has order continuous norm (see C-II, Section 5), for general Banach spaces and $C_{0}(X)$ in particular the problem has been considered in \citet{arendt:1982}.
@@ -2376,9 +2549,7 @@ Theorem \ref{thm:b2-2.10} is due to \citet{uhlig:1979}.
 \item
 The characterization of generators of lattice semigroups as perturbation of a derivation (Theorem \ref{thm:b2-3.5} and \ref{thm:b2-3.6} ) is due to \citet{derndingernagel:1979}.
 The corresponding result for positive groups on $C_{0}(X)$ (Theorem \ref{thm:b2-3.14} ) was obtained by \citet{arendtgreiner:1984}.
-\marginpar{Lin: cite wie}
 \citet{linetal:1977} [Lin-Montgomery-Sine (1977)] 
-
 consider multiplicative perturbations of a generator of an automorphism group on $C(K)$ ($K$ compact) by a function $m$ which has a finite number of zeros.
 The function $m$ is assumed to satisfy the "generalized Osgood condition" which is similar to being \emph{admissable} (in our sense) but in addition the given flow is involved in the definition.
 
@@ -2390,13 +2561,13 @@ Our approach is inspired by \citet{delaubenfels:1984} to whom Theorem \ref{thm:b
 For simplicity we confined ourselves to groups.
 \citet{uhlig:1979} determined all semi-flows on an interval.
 
-In the sequel of Batty's work (loc.cit.) a characterization of all densely defined closed derivations on $C[0,1]$ has been obtained by
-\marginpar{wie??} [Kurose] in a series of papers (1981), (1982), (1983) [\citet{kurose:1981}, \citet{kurose:1982}, \citet{kurose:1983}].
+In the sequel of Batty's work (loc.cit.) a characterization of all densely defined closed derivations on $C[0,1]$ has been obtained by [Kurose] in a series of papers \citet{kurose:1981}, \citet{kurose:1982}, \citet{kurose:1983}.
 \end{enumerate}
+%%
 
-%% -- Literatur
 %% --
-\RaggedRight
-\bibliographystyle{abbrvnat}
-\bibliography{bib/ln-references} 
+%% -- References
+ \RaggedRight
+ \bibliographystyle{abbrvnat}
+ \bibliography{bib/ln-references}
 

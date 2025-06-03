@@ -369,9 +369,9 @@ Let $A$ be the generator of a strongly continuous semigroup $ (T(t))_{t \geq 0} 
 Then
 %% --
 \begin{align}\label{eq:a4-1.4}
-\omega_{1}(A) &= \inf\{\Re\,\lambda \colon \textstyle{\int_{0}^{\infty} \mathrm{e}^{-\lambda t} T(t)f \,\dt} \text{ exists as an improper Riemann} \\
+\omega_{1}(A) &= \inf\{\Re\,\lambda \colon {\int_{0}^{\infty} \mathrm{e}^{-\lambda t} T(t)f \,\dt} \text{ exists as an improper Riemann} \\
 &\phantom{= \inf\{\Re\,\lambda \colon \int_{0}^{\infty} \mathrm{e}^{-\lambda t} T(t)f} \text{integral for every } f \in E\} \notag \\
-&= \inf\{\Re\,\lambda \colon \textstyle{\int_{0}^{\infty} \|\mathrm{e}^{-\lambda t} T(t)f\| \,\dt} \text{ exists for every } f \in D(A)\}.\notag
+&= \inf\{\Re\,\lambda \colon {\int_{0}^{\infty} \|\mathrm{e}^{-\lambda t} T(t)f\| \,\dt} \text{ exists for every } f \in D(A)\}.\notag
 \end{align}
 \end{theorem}
 %--
@@ -385,9 +385,9 @@ One can show that the abscissas of uniform, strong, and weak convergence of the 
 Therefore, by Theorem \ref{thm:a4-1.4},
 %--
 \begin{align}\label{eq:a4-1.5}
-\omega_1(A) &= \inf \left\{ \Re\,\lambda\colon\text{weak-} \lim_{t \to \infty} \textstyle{\int_0^t \mathrm{e}^{-\lambda s} T(s)  \ds} \text{ exists} \right\}
+\omega_1(A) &= \inf \left\{ \Re\,\lambda\colon\text{weak-} \lim_{t \to \infty} {\int_0^t \mathrm{e}^{-\lambda s} T(s)  \ds} \text{ exists} \right\}
 \\
-    &= \inf \left\{ \Re\,\lambda\colon\text{uniform-} \lim_{t \to \infty} \textstyle{\int_0^t \mathrm{e}^{-\lambda s} T(s)  \ds} \text{ exists} \right\}.\notag
+    &= \inf \left\{ \Re\,\lambda\colon\text{uniform-} \lim_{t \to \infty} {\int_0^t \mathrm{e}^{-\lambda s} T(s)  \ds} \text{ exists} \right\}.\notag
 \end{align}
 
 \item
@@ -468,7 +468,7 @@ The following example shows that even strong solutions can be unstable when $ s(
 %% --
 \begin{example}\label{ex:a4-1.6} 
 As in A-III, Example~1.4, consider the semigroup $ (T(t))_{t \geq 0} $ on the Hilbert space $ E = \{(x^1, x^2, ...) \colon x^n \in \C^n\colon\sum_{j=1}^{\infty} \|x^j\|^2 < \infty\} $, defined by 
-\[\textstyle{
+\[{
 T(t) := (\mathrm{e}^{2\pi i n t} \exp(t A_n))_{n \in \N}
 },\]
 where
@@ -804,7 +804,7 @@ Furthermore the following statements are equivalent,
 
 \begin{proof}
 If $(T(t))_{t \geq 0}$ is stable, then by Theorem \ref{thm:a4-1.13}, $\ker(A) = \{0\}$, and
-\[\textstyle{
+\[{
 \int_{0}^{t} T(s)Af  \ds = T(t)f - f \to -f \ \text{as} \ t \to \infty\,.
 }\]
 Hence, $(a) \Rightarrow (b)$.
@@ -844,7 +844,7 @@ Since $\|T(t)\| \leq M$, it follows that   $T(t)f \to 0$ for every $f \in E$.
 \item 
 If $A$ is the generator of a stable semigroup
 $(T(t))_{t \geq 0}$ on a Banach space $E$, then by the previous theorem,
-\[\textstyle{
+\[{
 \Image{A} \subset \{f \in E\colon\int_{0}^{\infty} T(t)f \,\dt \text{ exists}\} =: H\,.
 }\]
 If $g \in H$, then $\int_{0}^{\infty} T(t)g \,\dt \in D(A)$ and $A \int_{0}^{\infty} T(t)g \,\dt = -g$. 
@@ -970,9 +970,9 @@ Let $\epsilon > 0$ and define $G(s) \coloneqq F(s)-g$.
 Then for any $r>0$,
 \begin{align*}
 \left\|\int_{0}^{t} T(t-s)G(s)  \ds\right\| & 
-\textstyle{\leq \left\|\int_{0}^{r} T(t-r+r-s)G(s)  \ds\right\| + \left\|\int_{r}^{t} T(t-s)G(s)  \ds\right\|}\\
+{\leq \left\|\int_{0}^{r} T(t-r+r-s)G(s)  \ds\right\| + \left\|\int_{r}^{t} T(t-s)G(s)  \ds\right\|}\\
 & 
-\textstyle{\leq \left\|T(t-r)\int_{0}^{r} T(r-s)G(s)  \ds\right\| + M \int_{r}^{\infty} \|G(s)\|  \ds\,},
+{\leq \left\|T(t-r)\int_{0}^{r} T(r-s)G(s)  \ds\right\| + M \int_{r}^{\infty} \|G(s)\|  \ds\,},
 \end{align*}
 where $\|T(t)\|\le M$ for all $t\ge 0$. Since the semigroup is uniformly stable, we obtain
 $T(t-r)\int_{0}^{r} T(r-s)G(s)  \ds \to 0$ as $t \to \infty$ for every $r \geq 0$.
@@ -1046,7 +1046,7 @@ As a consequence of Theorem \ref{thm:a4-1.13}  and A-III, Corollary~6.4,  a unif
 This fact, together with Lemma \ref{lem:a4-2.2}, is used to prove the following theorem.
 %% --
 \begin{theorem}\label{thm:a4-2.4}
-Let $A$ be the generator of a uniformly stable semigroup $(T(t))_{t \geq 0}$ and let $F(\cdot)$ be a $p$-periodic, locally integrable function such that \[\textstyle{
+Let $A$ be the generator of a uniformly stable semigroup $(T(t))_{t \geq 0}$ and let $F(\cdot)$ be a $p$-periodic, locally integrable function such that \[{
 (\Id - T(p))f = \int_{0}^{p} T(p-s)F(s)  \ds \ \text{ for some } \ f \in E\,.
 }\]
 Then the unique $p$-periodic generalized solution
