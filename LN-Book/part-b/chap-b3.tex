@@ -4,8 +4,8 @@
 %% -- Final
 %% --
 \setcounter{chapter}{2}
-\chapter{Spectral Theory of Positive Semigroups on \texorpdfstring{$C_{0}(X)$}{C\textunderscore 0(X)}}\label{chap:b3}
-\index{Spectral Theory on $ C_{0}(X)$}
+\chapter{Spectral Theory of Positive Semigroups on \texorpdfstring{$C_{0}(X)$}{C\textunderscore 0(X)}}\label{chap:b3}%
+%\index{Spectral Theory on $ C_{0}(X)$}
 %% --
 {\Large
 \vspace*{-.75cm}
@@ -24,8 +24,8 @@ In this chapter we investigate the spectrum $\sigma(A)$ of the generator $A$ of 
 Throughout this chapter we assume that $C_{0}(X)$ is the space of all \emph{complex-valued} functions on the locally compact space $X$.
 In case we restrict to compact spaces we write $K$ instead of $X$.
 %% --
-\section{The Spectral Bound}\label{sec:b3-1}
-\index{Spectral Theory on $C_{0}(X)$!Spectral Bound}
+\section{The Spectral Bound}\label{sec:b3-1}%
+%\index{Spectral Theory on $C_{0}(X)$!Spectral Bound}
 %% --
 One of the basic results on the spectrum of a positive operator is the fact that its spectral radius is an element of the spectrum (\citet[V.Proposition~4.1]{schaefer:1974}).
 We begin the investigation of the spectrum of positive semigroups with the analogous result.
@@ -33,8 +33,10 @@ To that purpose we recall that the spectral bound $s(A)$ of a generator $A$ is d
 \pagebreak[1]
 %
 \begin{theorem}\label{thm:b3-1.1}
-%	\index{Theorem!Spectral Bound}
-%	\index{Spectral Bound!Properties}
+%%
+%\index{Theorem!Spectral Bound}
+%%
+%\index{Spectral Bound!Properties}
 If $A$ is the generator of a positive semigroup $\TT$ on $E = C_{0}(X)$, then $s(A) \in \sigma(A)$ unless 
 $s(A) = -\infty$\,.
 In case $X$ is compact, we always have $s(A) > -\infty$.
@@ -90,9 +92,10 @@ In case $X$ is compact, we always have $s(A) > -\infty$.
 The following examples show that the spectrum may be empty in case $X$ is not compact or if the semigroup is not positive.
 %% --
 \begin{examples}\label{ex:b3-1.2}
-	\index{Spectral Theory on $ C_{0}(X)$!Empty Spectrum}
+%
+%\index{Spectral Theory on $ C_{0}(X)$!Empty Spectrum}
 
-\begin{enumerate}[\upshape (i), wide, labelsep=.5em]	
+\begin{enumerate}[\upshape (i), wide, labelindent=.5em]	
 \item  
 Consider $X = [0,1)$ and $(T(t))$ on $C_{0}(X)$ given by
 %
@@ -168,8 +171,10 @@ A direct proof not using this fact is given in C-III, Corollary~1.4.
 \end{proof}
 %% --
 \begin{corollary}\label{cor:b3-1.4}
-%	\index{Corollary!Compact Resolvent}
-%	\index{Resolvent!Compact Case}
+%%
+%\index{Corollary!Compact Resolvent}
+%%
+%\index{Resolvent!Compact Case}
 Suppose $X$ is compact and $A$ has compact resolvent.	
 	Then there exists a real eigenvalue $\lambda_{0}$ admitting a positive eigenfunction such that 
 	$\Re\lambda \leq \lambda_{0}$ for every $\lambda \in \sigma(A)$.
@@ -202,8 +207,10 @@ However, positivity is the crucial point in its proof.
 Note that it is not just a consequence of the spectral mapping theorem for the point spectrum.
 %% --
 \begin{proposition}\label{prop:b3-1.5}
-%	\index{Proposition!Eigenvalue Properties}
-%	\index{Positive Semigroups!Eigenvalues}
+%%
+%\index{Proposition!Eigenvalue Properties}
+%%
+%\index{Positive Semigroups!Eigenvalues}
 Suppose $A$ is the generator of the positive semigroup $(T(t))_{t \geq 0}$.
 Take $\tau > 0$, $r > 0$ and let $\alpha \coloneqq \tau^{-1}\log(r)$.
 %% --	
@@ -219,7 +226,7 @@ If $r$ is an eigenvalue of $T(\tau)'$ with positive eigenvector $\phi_{0}$, then
 \begin{proof}
 	Without loss of generality we may assume $r = 1$, \ie $\alpha = 0$ and $T(\tau)h_{0} = h_{0}$.
 %% --
-	\begin{enumerate}[\upshape (i), wide, labelsep=.5em]
+	\begin{enumerate}[\upshape (i), wide, labelindent=.5em]
     \item 
 	Defining
 	%% --
@@ -249,8 +256,10 @@ We use Proposition~\ref{prop:b3-1.5} to prove an analogue of the famous Krein-Ru
 For the sake of completeness we include the proof of this classical result, stating that the spectral radius of a positive operator $T$ on $C(K)$ (or more generally on an order unit space) is an eigenvalue of the adjoint $T'$ (see the Corollary of Theorem~2.6 in the appendix of \citet{schaefer:1966}).
 %% --
 \begin{theorem}\label{thm:b3-1.6}
-%	\index{Theorem!Krein-Rutman}
-%	\index{Positive Semigroups!Krein-Rutman}	
+%%
+%\index{Theorem!Krein-Rutman}
+%%
+%\index{Positive Semigroups!Krein-Rutman}	
 	Suppose $K$ is compact and $(T(t))_{t \geq 0}$ is a positive semigroup on $C(K)$ with generator $A$.
 	Then there exists a positive probability measure $\phi \in D(A')$ such that $A'\phi = \omega_{0}(A)\phi$.
 \end{theorem}
@@ -304,8 +313,10 @@ Multiplication operators have no eigenvalues unless the multiplier is constant o
 Theorem~\ref{thm:b3-1.6} fails to be true for locally compact spaces as the following example shows.
 %% --
 \begin{example}\label{ex:b3-1.7}
-%	\index{Examples!Laplacian Semigroup}
-%	\index{Semigroups!Laplacian Example}
+%%
+%\index{Examples!Laplacian Semigroup}
+%%
+%\index{Semigroups!Laplacian Example}
 	Consider $E = C_{0}(\R^{n})$ and the semigroup $(T(t))_{t \geq 0}$ generated by the Laplacian (cf.\ A-I,2.8).
 From the explicit representation of $T(t)$,
 	%% --
@@ -319,8 +330,8 @@ From the explicit representation of $T(t)$,
 	If $\phi$ is an eigenvector of $A'$ corresponding to $s(A) = \omega_{0}(A) = 0$, we have $T(t)'\phi = \phi$ for all $t \geq 0$, hence $\langle \phi,f \rangle = \lim_{t \to \infty}\langle T(t)f,\phi \rangle = 0$ for every $f$, \ie $\phi = 0$.
 \end{example}
 %%% --
-\section{The Boundary Spectrum}\label{sec:b3-2}
-\index{Spectral Theory on $ C_{0}(X)$The Boundary Spectrum}
+\section{The Boundary Spectrum}\label{sec:b3-2}%
+%\index{Spectral Theory on $ C_{0}(X)$The Boundary Spectrum}
 %% --
 In this section we restrict our attention to the \emph{boundary spectrum} $\sigma_{b}(A)$ of a generator $A$, which, by definition, is the intersection of $\sigma(A)$ with the line $\{\lambda \in \C \colon \Re\lambda = s(A)\}$.
 Thus $\sigma_{b}(A)$ contains all spectral values of $A$ which have maximal real part.
@@ -334,8 +345,10 @@ Actually, from Theorem~\ref{thm:b3-1.1} and A-III, Proposition~2.5 it follows th
 We begin our discussion with two lemmas.
 %% --
 \begin{lemma}\label{lem:b3-2.1}
-%	\index{Lemma!Linear Operators}
-%	\index{Linear Operators!Positivity}
+%%
+%\index{Lemma!Linear Operators}
+%%
+%\index{Linear Operators!Positivity}
 	Suppose $K$, $L$ are compact and $T \colon C(K) \to C(L)$ is a linear operator satisfying $T \1_{K} = \1_{L}$.
 	Then we have $T \geq 0$ if and only if $\|T\| \leq 1$\,.
 \end{lemma}
@@ -364,8 +377,10 @@ We begin our discussion with two lemmas.
 %% --
 Before we can formulate the second lemma we have to fix some notation.
 	\begin{definition}\label{def:b3-2.2}
-%		\index{Definition!Sign Operator}
-%		\index{Operator!Sign}
+%	%
+%\index{Definition!Sign Operator}
+%	%
+%\index{Operator!Sign}
 %% -> $ \sign h $
 \begin{enumerate}[\upshape (i)]
 		
@@ -433,8 +448,10 @@ They will be used frequently in the following.
 %\end{align}
 	%% --
 \begin{lemma}\label{lem:b3-2.3}
-%	\index{Lemma!Similar Operators}
-%	\index{Operators!Similarity}
+%%
+%\index{Lemma!Similar Operators}
+%%
+%\index{Operators!Similarity}
 Let $T$ and $R$ be bounded linear operators on $C_{0}(X)$ and assume that $h \in C_{0}(X)$ has no zeros. 
 Suppose we have
 %% --
@@ -478,8 +495,10 @@ We are now able to prove a result which in some sense is the key to cyclicity re
 	These general results will be proved by reducing the problem in such a way that the following theorem can be applied.
 %% --
 \begin{theorem}\label{thm:b3-2.4}
-%	\index{Theorem!Spectral Cyclicity}
-%	\index{Cyclicity!Spectral Theorem}
+%%
+%\index{Theorem!Spectral Cyclicity}
+%%
+%\index{Cyclicity!Spectral Theorem}
 \begin{enumerate}[\upshape (i)]	
 \item
 Let $T$ be a positive linear operator on $C_{0}(X)$, let $h \in C_{0}(X)$ and $\lambda \in \C$, $|\lambda| = 1$.
@@ -545,8 +564,10 @@ Suppose $A$ is the generator of a positive semigroup, $h \in C_{0}(X)$, $\alpha,
 Before we state a first cyclicity result we give the definition and illustrate it by some examples.
 %% --
 \begin{definition}\label{def:b3-2.5}
-%		\index{Definition!Cyclic Sets}
-%		\index{Sets!Imaginary Additively Cyclic}
+%	%
+%\index{Definition!Cyclic Sets}
+%	%
+%\index{Sets!Imaginary Additively Cyclic}
 A subset $M \subset \C$ is called \emph{imaginary additively cyclic} (or simply \emph{cyclic}), if it satisfies the following condition. 
 \begin{quote}
 $\alpha + \im\beta \in M$, $\alpha,\beta \in \R$ implies that $\alpha +  \im k\beta \in M$ for every $k \in \Z$\,
@@ -580,8 +601,8 @@ For a subset $M$ of $\im \R$ we give the following equivalent conditions.
 	In the following we consider the boundary spectrum of several semigroups. 
     The notation $M_{k}$ refers to the sets just defined.
 %% --
-\begin{examples}\label{ex:b3-2.6}
-\index{Spectral Theory on $ C_{0}(X)$!Examples!Boundary Spectrum}
+\begin{examples}\label{ex:b3-2.6}%
+%\index{Spectral Theory on $ C_{0}(X)$!Examples!Boundary Spectrum}
 
 \begin{enumerate}[\upshape (i), wide, labelindent=.5em]
 \item
@@ -641,9 +662,12 @@ Our first result concerns cyclicity of the eigenvalues contained in the boundary
 	It is an almost straightforward consequence of Theorem~\ref{thm:b3-2.4}.
 	%% --
 	\begin{proposition}\label{prop:b3-2.7}
-%		\index{Proposition!Cyclicity of Eigenvalues}
-		\index{Eigenvalues!Cyclicity}
-%		\index{Boundary Spectrum!Eigenvalues}
+%	%
+%\index{Proposition!Cyclicity of Eigenvalues}
+	%
+%\index{Eigenvalues!Cyclicity}
+%	%
+%\index{Boundary Spectrum!Eigenvalues}
 		
 		Assume that for some $t_{0} > 0$ there is a strictly positive measure $\phi$ such that $T(t_{0})'\phi = \exp(s(A)t_{0})\cdot\phi$.
 		
@@ -686,8 +710,10 @@ We do not use this concrete representation of $J/I$.
 However, this shows that we stay within our setting of Banach spaces of continuous functions on locally compact spaces.
 %% --
 \begin{lemma}\label{lem:b3-2.8}
-%	\index{Lemma!Spectral Bound}
-%	\index{Spectral Bound!Properties}
+%%
+%\index{Lemma!Spectral Bound}
+%%
+%\index{Spectral Bound!Properties}
 Suppose $A$ is the generator of a positive semigroup $\TT$ such that the spectral bound $s(A)$ is a pole of the resolvent of order $k$.
 Then there is a sequence
 %% --
@@ -814,8 +840,10 @@ is the generator of a positive semigroup on
 and $s(A) = 0$ is a pole of the resolvent of order $k$ where $1 \leq k \leq n$.
 %% --
 \begin{theorem}\label{thm:b3-2.9}
-%	\index{Theorem!Cyclic Boundary Spectrum}
-%	\index{Boundary Spectrum!Cyclicity}
+%%
+%\index{Theorem!Cyclic Boundary Spectrum}
+%%
+%\index{Boundary Spectrum!Cyclicity}
 Suppose $A$ is the generator of a positive semigroup on $C_{0}(X)$ such that every point of $\sigma_{b}(A)$ is a pole of the resolvent
 Then $P\sigma_{b}(A) = \sigma_{b}(A)$ is cyclic.
 \end{theorem}
@@ -840,8 +868,10 @@ Then $P\sigma_{b}(A) = \sigma_{b}(A)$ is cyclic.
 If $A$ has compact resolvent then every point of $\sigma(A)$ is a pole of the resolvent (see A-III,3.6) hence we have
 %% --
 \begin{corollary}\label{cor:b3-2.10}
-%	\index{Corollary!Compact Resolvent}
-%	\index{Resolvent!Compact Case}
+%%
+%\index{Corollary!Compact Resolvent}
+%%
+%\index{Resolvent!Compact Case}
 If $A$ has compact resolvent, then $P\sigma_{b}(A) = \sigma_{b}(A)$ is cyclic.
 \end{corollary}
 %% --
@@ -857,8 +887,10 @@ A real spectral value $\lambda_{0}$ of a generator $A$ is called a \emph{dominan
 The assumptions of Corollary~\ref{cor:b3-2.10} do not imply that $s(A)$ is dominant, the rotation semigroup (A-III,Example~5.6) is a counterexample.
 %% --
 \begin{corollary}\label{cor:b3-2.11}
-%	\index{Corollary!Dominant Eigenvalue}
-%	\index{Eigenvalue!Strict Dominance}	
+%%
+%\index{Corollary!Dominant Eigenvalue}
+%%
+%\index{Eigenvalue!Strict Dominance}	
 	Assume that for some $t_{0} > 0$ (hence for all $t > 0$) one has 
     %% --
     \[
@@ -882,8 +914,10 @@ The assumptions of Corollary~\ref{cor:b3-2.10} do not imply that $s(A)$ is domin
 \end{proof}
 %% --
 \begin{corollary}\label{cor:b3-2.12}
-%	\index{Corollary!Compact Resolvent}
-%	\index{Resolvent!Norm Continuous Case}	
+%%
+%\index{Corollary!Compact Resolvent}
+%%
+%\index{Resolvent!Norm Continuous Case}	
 	Suppose $A$ has compact resolvent and non-empty spectrum.
 	If the corresponding semigroup is eventually norm continuous (\eg if it is holomorphic or differentiable), then there is a strictly dominant eigenvalue admitting a positive eigenfunction.
 \end{corollary}
@@ -905,7 +939,8 @@ The first one shows that there are positive semigroups with $P\sigma_{b}(A)$ bei
 It is unknown whether there are positive semigroups where $\sigma_{b}(A)$ is not cyclic.
 %% --
 \begin{example}\label{ex:b3-2.13}
-	\index{Spectral Theory on $ C_{0}(X)$!Examples!Non-cyclic Spectrum}
+%
+%\index{Spectral Theory on $ C_{0}(X)$!Examples!Non-cyclic Spectrum}
 %% --
 	Consider $E = C(\Gamma) \times C_{0}(\R) \, (\cong C_{0}(\Gamma\dot{\cup}\R))$.
 	We fix a positive function $k \in C_{0}(\R)$ with compact support.
@@ -936,10 +971,11 @@ It is unknown whether there are positive semigroups where $\sigma_{b}(A)$ is not
 \end{example}
 %% --
 \begin{example}\label{ex:b3-2.14}
-	\index{Spectral Theory on $ C_{0}(X)$!Examples!Schrödinger Operator}
+%
+%\index{Spectral Theory on $ C_{0}(X)$!Examples!Schrödinger Operator}
 
 
-\begin{enumerate}[\upshape (i), wide, labelsep=.5em]
+\begin{enumerate}[\upshape (i), wide, labelindent=.5em]
 	\item \emph{One-dimensional Schrödinger operator.}
 
 	Let $X = \R$, $E = C_{0}(X)$ and $V \colon \R \to \R$ be a continuous function such that $\inf_{x} V(x) > -\infty$.
@@ -1030,10 +1066,11 @@ Since every eigenvalue of $A_{\phi}$ is an eigenvalue of $A_{m}$ and since $\Ker
 We conclude this section with some additional remarks related to Theorem~\ref{thm:b3-2.9} and its corollaries.
 %% --
 \begin{remarks}\label{rem:b3-2.15}
-	\index{Spectral Theory on $ C_{0}(X)$Remarks!Resolvent Poles}
+%
+%\index{Spectral Theory on $ C_{0}(X)$Remarks!Resolvent Poles}
 
 	
-	\begin{enumerate}[\upshape (i), wide, labelsep=.5em]
+	\begin{enumerate}[\upshape (i), wide, labelindent=.5em]
 	\item
 	If $s(A)$ is a pole of the resolvent, then for generators of positive semigroups one has the following equivalences.
 	
@@ -1090,8 +1127,8 @@ We conclude this section with some additional remarks related to Theorem~\ref{th
 \end{enumerate}	
 \end{remarks}
 %% --
-\section{Irreducible Semigroups}
-\index{Spectral Theory on $ C_{0}(X)$!Irreducible Semigroups}
+\section{Irreducible Semigroups}%
+%\index{Spectral Theory on $ C_{0}(X)$!Irreducible Semigroups}
 %% --
 In the case of matrices it is well known that considerably stronger results are available if one considers positive matrices which are irreducible. 
 The concept of irreducibility can be extended to our setting and in many cases one can check easily whether a given semi­group has this property (see Example~\ref{ex:b3-3.4}). 
@@ -1102,8 +1139,10 @@ Moreover, in certain cases irreducibili­ty ensures that $\sigma_{b}(A)$ and $P\
 We start the discussion with several, mutually equivalent, definitions of irreducibility. 
 %% --
 \begin{definition}\label{def:b3-3.1}
-%	\index{Semigroups!Irreducible}
-%	\index{Irreducible Semigroups}
+%%
+%\index{Semigroups!Irreducible}
+%%
+%\index{Irreducible Semigroups}
 A positive semigroup $\TT = (T(t))$ on $E = C_{0}(X)$, $X$ locally compact, with generator $A$ is called \emph{irreducible} if one of the following, mutually equivalent conditions is satisfied.
 %% --
 \begin{enumerate}[\upshape (a)]
@@ -1161,7 +1200,8 @@ Hence, if $\lambda_0 \in \rho_{+}(A)$ then by A-I,3.2 every $R(\lambda_0,A)$-inv
 $\TT$-invariant and vice versa.
 %% --
 \begin{remark}\label{rem:b3-3.2}
-%	\index{Semigroups!Irreducible!Conditions}
+%%
+%\index{Semigroups!Irreducible!Conditions}
 	Obviously, irreducibility of a semigroup $(T(t))_{t\geq 0}$ is implied by the following condition.
 \begin{enumerate}[(g)]	
 \item\label{item:b3-3.1-vii}
@@ -1179,7 +1219,8 @@ More generally, irreducibility is invariant under perturbations by multiplicatio
 In fact, we have the following result. 
 %% --
 \begin{proposition}\label{prop:b3-3.3}
-	\index{Semigroups!Irreducible!Perturbation}
+%
+%\index{Semigroups!Irreducible!Perturbation}
 	Suppose $A$ generates a positive semigroup $\TT$ on $C_{0}(X)$ and let $h$ be a continuous, bounded real-valued function on $X$.
 	Then the semigroup $\mathcal{S}$ generated by $B \coloneqq A + M_{h}$ is irreducible if and only if\/ $\TT$ has this property.
 \end{proposition}
@@ -1197,7 +1238,8 @@ R(\lambda,A) &= (1 - R(\lambda,B)M_{-h})^{-1}R(\lambda,B) = \sum_{n=0}^{\infty} 
 \end{proof}
 %% --
 \begin{examples}\label{ex:b3-3.4}
-	\index{Semigroups!Irreducible!Examples}
+%
+%\index{Semigroups!Irreducible!Examples}
 	
 \begin{enumerate}[\upshape (i), wide, labelindent=.5em]
 	\item 
@@ -1277,7 +1319,7 @@ We now return to the general situation and show that irreducible semigroups poss
 \end{proposition}
 %% --
 \begin{proof} 
-\begin{enumerate}[\upshape (i), wide, labelsep=.5em]
+\begin{enumerate}[\upshape (i), wide, labelindent=.5em]
 	\item 
 	Take any $f_{0} \in C_{0}(X)$ which is positive and has compact support.
 	If $\lambda > s(A)$, then $R(\lambda,A)f_{0}$ is strictly positive (by Definition~3.1(e)), hence there exists $\epsilon > 0$ such that $R(\lambda,A)f_{0} \geq \epsilon f_{0}$.
@@ -1334,7 +1376,8 @@ In view of assertion (a) of Proposition~\ref{prop:b3-3.5} the assumption \enquot
 However, it allows a simpler formulation. 
 
 \begin{theorem}\label{thm:b3-3.6}
-	\index{Semigroups!Irreducible!Eigenvalues}
+%
+%\index{Semigroups!Irreducible!Eigenvalues}
 	Suppose $\TT = (T(t))$ is an irreducible semigroup with generator $A$ and spectral bound $s(A) = 0$.
 	Assume that there exists a positive linear form $\phi \neq 0$ such that $A'\phi = 0$. 
     (This is automatically satisfied whenever $X$ is compact (see Theorem~\ref{thm:b3-1.6}).)
@@ -1426,6 +1469,7 @@ For details see \citet[p.62]{greiner:1982}.
 An immediate consequence of assertion (iv) of Theorem~\ref{thm:b3-3.6} is the following corollary. 
 %% --
 \begin{corollary}\label{cor:b3-3.7}
+%
 %\index{Semigroups!Irreducible!Spectrum}
 Suppose $\TT$ satisfies the hypotheses of Theorem~\ref{thm:b3-3.6} and let $A$ be its generator.
 If $k$ is a bounded continuous real-valued function, $M_{k}$ the corresponding multiplication operator, then for $B \coloneq A + M_{k}$ we have $\sigma(B) + \left(P\sigma(A)\cap \im\R\right) = \sigma(B)$.
@@ -1438,8 +1482,8 @@ In case there are non-real eigenvalues in the boundary spectrum, then
 the semigroup \emph{contains} the semigroup of rotations on $\Gamma$.
 
 
-\begin{corollary}\label{cor:b3-3.8}
-\index{Semigroups!Irreducible!Rotations}
+\begin{corollary}\label{cor:b3-3.8}%
+%\index{Semigroups!Irreducible!Rotations}
 Suppose that the hypotheses of Theorem~\ref{thm:b3-3.6} are satisfied and that there is an eigenvalue $\im \alpha$ of $A$ with $\alpha > 0$.
 Let $\tau \coloneq 2\pi/\alpha$.
 Then there exists a continuous injective lattice homomorphism $j : C(\Gamma) \to C_{0}(X)$ such that the diagram commutes. 
@@ -1481,7 +1525,8 @@ There exist positive functions $f_{1}$ and $f_{2}$ such that $T(t)f_{1}$ and $T(
 This observation proves the following corollary.
 %% --
 \begin{corollary}\label{cor:b3-3.9}
-%	\index{Semigroups!Irreducible!Properties}
+%%
+%\index{Semigroups!Irreducible!Properties}
 	Suppose that the hypotheses of Theorem~\ref{thm:b3-3.6} are satisfied and that for some $t_{0} > 0$ we have $T(t_{0})f \gg 0$ whenever $f > 0$.
 	Then $P\sigma(A)\cap \im\R = \{0\}$.
 \end{corollary}
@@ -1490,7 +1535,8 @@ Corollary~\ref{cor:b3-3.9} can be applied if $T(t_{0})$ is a kernel operator wit
 We give some examples.
 
 \begin{examples}\label{ex:b3-3.10}
-	\index{Examples!Irreducible Semigroups}
+%
+%\index{Examples!Irreducible Semigroups}
 	
 	\begin{enumerate}[\upshape (i), wide, labelindent=.5em] 
 	\item 
@@ -1581,14 +1627,15 @@ It seems to be unknown if this is true for irreducible semigroups in general.
 To prove this result one uses the proof of the analogous result for a single operator (cf.\ \citet[Theorem~7]{schaefer:1968}) as a guideline.
 %% --
 \begin{theorem}\label{thm:b3-3.11}
-%	\index{Semigroups!Irreducible!Markov}
+%%
+%\index{Semigroups!Irreducible!Markov}
 	Suppose that $\TT$ is an irreducible semigroup of Markov operators on $C(K)$, $K$ compact.
 	Then $\sigma_{b}(A)$ is a (closed) subgroup of $\im \R$.
 	Hence either $\sigma_{b}(A) = \{0\}$ or $= \im\R$ or $= \im\alpha\Z$ for some $\alpha > 0$.
 \end{theorem}
 
-\section{Semigroups of Lattice Homomorphisms}
-\index{Spectral Theory on $ C_{0}(X)$!Lattice Homomorphisms}
+\section{Semigroups of Lattice Homomorphisms}%
+%\index{Spectral Theory on $ C_{0}(X)$!Lattice Homomorphisms}
 %% --
 As we have seen in Section 2 the boundary spectrum of many positive semigroups is a cyclic set.
 However, there are hardly any restrictions on the set 
@@ -1601,7 +1648,8 @@ We will show that the whole spectrum is an imaginary additively cyclic subset of
 A complete proof of this results requires some facts of the theory of Banach lattices, therefore, we postpone it to Part C (see C-III, Theorem~4.2).
 %% --
 \begin{theorem}\label{thm:b3-4.1}
-	\index{Semigroups!Lattice Homomorphisms!Spectrum}
+%
+%\index{Semigroups!Lattice Homomorphisms!Spectrum}
 	If $A$ is the generator of a semigroup of lattice homomorphisms, then $\sigma(A)$, $A\sigma(A)$ and $P\sigma(A)$ are cyclic subsets of $\C$.
 \end{theorem}
 %% --
@@ -1639,7 +1687,8 @@ Some properties of the sets $K_t$  are listed in the following lemma.
 The proof is not difficult and is left as an exercise. 
 %% --
 \begin{lemma}\label{lem:b3-4.2}
-	\index{Semiflows!Properties}
+%
+%\index{Semiflows!Properties}
 	Every $K_{t}$ $(0 \leq t \leq \infty)$ is a non-empty closed subset of $K$ which is invariant under the semiflow $\phi$.
 	Moreover, the following assertions are true.
 	\begin{enumerate}[\upshape (i)]
@@ -1686,8 +1735,8 @@ Essentially there
 are three different cases. 
 Before we state the general result (see Theorem~\ref{thm:b3-4.4}) we give some typical examples.
 %% 
-\begin{examples}\label{ex:b3-4.3}
-\index{Examples!Lattice Homomorphisms}
+\begin{examples}\label{ex:b3-4.3}%
+%\index{Examples!Lattice Homomorphisms}
 	\begin{enumerate}[\upshape (i), wide, labelindent=.5em]
 	\item 
 	Consider on $K = [0,\infty]$ the semiflow defined by $\phi(t,x) \coloneq x + t$ $(\infty + t = \infty)$.
@@ -2067,7 +2116,7 @@ We are now going to apply the results obtained so far to the special case where 
 \end{theorem}
 %% --
 \begin{proof}
-\begin{enumerate}[\upshape (i), wide, labelsep=.5em]%	
+\begin{enumerate}[\upshape (i), wide, labelindent=.5em]%	
 \item 
 	This is an immediate consequence of Theorem~\ref{thm:b3-4.4} and Proposition~\ref{prop:b3-4.8}.
 	
@@ -2210,10 +2259,10 @@ The general result 4.11 was proven by \citet{arendtgreiner:1984}.
 \end{enumerate}
 
 
-
-
-
-%% -- References
- \RaggedRight
- \bibliographystyle{abbrvnat}
- \bibliography{bib/ln-references}
+%% -- Literatur
+%% --
+{\RaggedRight
+\bibliographystyle{abbrvnat}
+\bibliography{bib/ln-references}}
+ 
+ 

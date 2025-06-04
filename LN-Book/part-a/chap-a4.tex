@@ -3,9 +3,9 @@
 %% -- Finale Version 2025-06-02
 %% -- 
 %% --
-\chapter{Asymptotics of Semigroups on Banach Spaces}\label{chap:a4}
-\index{Semigroups!Asymptotics}
-\index{Banach Spaces!Semigroups}
+\chapter{Asymptotics of Semigroups on Banach Spaces}\label{chap:a4}%
+%\index{Semigroups!Asymptotics}%
+%\index{Banach Spaces!Semigroups}
 %% --
 {\Large
 \vspace*{-.75cm}
@@ -27,8 +27,8 @@ where $ A $ is the generator of a strongly continuous semigroup $ (T(t))_{t \geq
 In Section 1, we investigate whether -- and at what rate -- a solution $ T(\cdot)f $ of the homogeneous problem converges to the zero solution as $ t \to \infty $. 
 In Section 2, we consider the long-term behavior of the solutions of \eqref{eq:c4-1} for different classes of forcing terms $ F $.
 %% --
-\section{Stability: Homogeneous Case}\label{sec:c4-1}
-\index{Stability!Homogeneous Case}
+\section{Stability: Homogeneous Case}\label{sec:c4-1}%
+%\index{Stability!Homogeneous Case}
 %% -- 
 Let $ (T(t))_{t \geq 0} $ be a semigroup on $ E $ with generator $ A $.
 An initial value $ f \in D(A) $ is said to be \emph{stable} if the solution $ t \mapsto T(t)f $ of
@@ -147,7 +147,7 @@ If $A$ is a bounded operator, that is, if $D(A) = E$, then
 However, if $A$ is unbounded, all stability notions may differ, as illustrated in the following examples.
 %%--
 \begin{example}\label{ex:a4-1.2}
-\begin{enumerate}[\upshape (i), wide, labelsep=1em]
+\begin{enumerate}[\upshape (i), wide, labelindent=.5em]
 
 \item 
 Let $E = c_{0}$. 
@@ -363,8 +363,8 @@ satisfies
 The following theorem plays a central role in the stability theory of positive semigroups.
 We show that the constant $\omega_{1}(A)$ coincides both with the abscissa of simple convergence of the Laplace transform of the semigroup and with the abscissa of absolute convergence of the Laplace transform of the strong solutions of (ACP).
 %% --
-\begin{theorem}\label{thm:a4-1.4}
-\index{Theorem!Growth bound}
+\begin{theorem}\label{thm:a4-1.4}%
+%\index{Theorem!Growth bound}
 Let $A$ be the generator of a strongly continuous semigroup $ (T(t))_{t \geq 0} $ on a Banach space $E$. 
 Then
 %% --
@@ -375,10 +375,10 @@ Then
 \end{align}
 \end{theorem}
 %--
-\begin{remarks*}\label{rem:a4-1.4}
-\index{Remark!Laplace transform convergence}
+\begin{remarks*}\label{rem:a4-1.4}%
+%\index{Remark!Laplace transform convergence}
 
-\begin{enumerate}[\upshape (i), wide, labelsep=1em]
+\begin{enumerate}[\upshape (i), wide, labelindent=.5em]
 
 \item 
 One can show that the abscissas of uniform, strong, and weak convergence of the Laplace transform coincide (see C-III, Theorem~I.2, last part of the proof). 
@@ -774,7 +774,7 @@ of the Laplacian on $L^{p}(\R^{n})$ is the Laplacian on $L^{q}(\R^{n})$, where
 $\frac{1}{p} + \frac{1}{q} = 1$. 
 Therefore, $0 \not\in P\sigma(\Delta) \cup R\sigma(\Delta)$, and by Corollary \ref{cor:a4-1.14},
 the Laplacian generates a uniformly stable semigroup on  $L^{p}(\R^{n})$
-for $1 < p < \infty$. However, since $\image \Delta \not= L^{p}(\R^{n})$, Corollary \ref{cor:a4-1.5} implies that the semigroup is not exponentially stable. \qed
+for $1 < p < \infty$. However, since $\Image{ \Delta} \not= L^{p}(\R^{n})$, Corollary \ref{cor:a4-1.5} implies that the semigroup is not exponentially stable. %\qed
 \end{example}
 %%--
 As seen in Theorem \ref{thm:a4-1.4}, exponential stability can be characterized by the condition that the abscissa of convergence of the Laplace transform of $(T(t))_{t \geq 0}$ is less than zero. 
@@ -840,7 +840,7 @@ Since $\|T(t)\| \leq M$, it follows that   $T(t)f \to 0$ for every $f \in E$.
 \end{proof}
 
 \begin{remark}\label{rem:a4-1.17}
-\begin{enumerate}[\upshape (i), wide, labelsep=1em]
+\begin{enumerate}[\upshape (i), wide, labelindent=.5em]
 \item 
 If $A$ is the generator of a stable semigroup
 $(T(t))_{t \geq 0}$ on a Banach space $E$, then by the previous theorem,
@@ -877,8 +877,8 @@ $L^{2}(\R)$ is weakly uniformly stable but not stable (see also B-IV, Example~1.
 \end{enumerate}
 \end{remark}
 %% --
-\section{Stability: Inhomogeneous Case}
-\index{Stability!Inhomogeneous Case}
+\section{Stability: Inhomogeneous Case}%
+%\index{Stability!Inhomogeneous Case}
 %% --
 Using the results of the previous section, we now investigate the long-term behavior of solutions to the inhomogeneous initial value
 problem
@@ -920,7 +920,7 @@ u(t) = \int_{0}^{t} T(t-s)T(s)g  \ds = tT(t)g,
 \end{align*}
 which would imply that $t\to T(t)g$ is 
 differentiable on $\R_{+}$, a contradiction. 
-\qed
+%\qed
 \end{example*}
 %%%
 
@@ -982,14 +982,14 @@ Therefore, $\|\int_{0}^{t} T(t-s)G(s)  \ds\| \leq \epsilon$ for all sufficiently
 
 In the following theorem, we show that if A generates a
 uniformly stable semigroup, the forcing term $F(\cdot)$ is p-periodic
-and $\int_{0}^{p} T(p-s)F(s)  \ds \in \image(\Id - T(p))$, then \eqref{eq:a4-2.1}
+and $\int_{0}^{p} T(p-s)F(s)  \ds \in \Image{(\Id - T(p))}$, then \eqref{eq:a4-2.1}
  admits a unique p-periodic mild solution that is \emph{asymptotically stable}; \ie for every generalized solution $v(\cdot)$ of \eqref{eq:a4-2.1}, 
 %% --
 \[
 \lim_{t \to \infty} \|v(t) - u(t)\| = 0.
 \]  
 (Notice that, by
-Theorem \ref{thm:a4-1.13} and A-III, Lemma 5.3, $\overline{\image(\Id - T(p))} = E$.)
+Theorem \ref{thm:a4-1.13} and A-III, Lemma 5.3, $\overline{\Image{(\Id - T(p))}} = E$.)
 %% --
 \begin{lemma}\label{lem:a4-2.2}
 Let $A$ be the generator of a strongly continuous semigroup $(T(t))_{t \geq 0}$ on a Banach space $E$, and let $F(\cdot)$ be a $p$-periodic, locally integrable function with $p > 0$. 
@@ -1046,9 +1046,13 @@ As a consequence of Theorem \ref{thm:a4-1.13}  and A-III, Corollary~6.4,  a unif
 This fact, together with Lemma \ref{lem:a4-2.2}, is used to prove the following theorem.
 %% --
 \begin{theorem}\label{thm:a4-2.4}
-Let $A$ be the generator of a uniformly stable semigroup $(T(t))_{t \geq 0}$ and let $F(\cdot)$ be a $p$-periodic, locally integrable function such that \[{
+Let $A$ be the generator of a uniformly stable semigroup $(T(t))_{t \geq 0}$ and let $F(\cdot)$ be a $p$-periodic, locally integrable function such that 
+%% --
+\[{
 (\Id - T(p))f = \int_{0}^{p} T(p-s)F(s)  \ds \ \text{ for some } \ f \in E\,.
-}\]
+}
+\]
+%% --
 Then the unique $p$-periodic generalized solution
 %% --
 \[
@@ -1125,7 +1129,7 @@ T(t)f = \frac{1}{2\pi i} \int_{p-i\infty}^{p+i\infty} \mathrm{e}^{\mu t}R(\mu,A)
 \]
 %% --
 \end{theorem}
-
+ 
 
 The equivalence of the statements \eqref{eq:a4-1.12}, \eqref{eq:a4-1.13} and \emph{$\omega_{0}(A) < 0$} were observed by many authors, see for example, \citet[p.178]{balakrishnan:1976}, 
 or \citet{benchimol:1978b}. 
@@ -1143,6 +1147,6 @@ For a discussion of the asymptotic behavior of the solutions of $\dot{u}(t) = A(
 
 %% -- Literatur
 %% --
-\RaggedRight
+{\RaggedRight
 \bibliographystyle{abbrvnat}
-\bibliography{bib/ln-references} 
+\bibliography{bib/ln-references}}
