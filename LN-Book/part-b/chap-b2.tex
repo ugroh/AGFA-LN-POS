@@ -221,7 +221,7 @@ In particular, $R(\lambda,A) \geq 0$ whenever $\left[\lambda,\infty\right) \subs
 %%
 %%KGK p-B2-5; LNMp-126
 %%
-If $A$ is a generator, then the positivity of the resolvent $R(\lambda,A)$ for large real $\lambda$ implies the positivity of the semigroup (by Proposition.~\ref{prop:b2-1.1}.
+If $A$ is a generator, then the positivity of the resolvent $R(\lambda,A)$ for large real $\lambda$ implies the positivity of the semigroup (by Proposition.~\ref{prop:b2-1.1}).
 On $C(K)$ much more is true.
 Even if $A$ is not supposed to be a generator, the existence and positivity of $R(\lambda,A)$ for large real $\lambda$ implies that $A$ is a generator (of a positive semigroup).
 This is surprising, because it means that in the case when the resolvent is positive, the norm condition on the resolvent $\sup \{|(\lambda-w)^{n}R(\lambda,A)^{n}| : n \in \mathbb{N}, \lambda \geq 0\} < \infty$ which appears in the Hille-Yosida Theorem (A-II, Theorem 1.7) is automatically fulfilled.
@@ -965,22 +965,20 @@ Conversely, the linear extension $T$ of a lattice homomorphism $T_{\R}$ on $C_{0
 A semigroup $(T(t))_{t \geq 0}$ is called \emph{lattice semigroup} if $T(t)$ is a lattice homomorphism for all $t \geq 0$.
 In Section 3 we will give a concrete representation of lattice-semigroups which shows that there is a large variety of examples.
 This section is devoted to the characterization of lattice semigroups in terms of their generators.
-%%
-%%KGK p-B2-15; LNMp-136
-%%
 The heuristic idea is the following.
 Let $(T(t))_{t \geq 0}$ be a lattice semigroup with generator $A$.
-Let $f \in D(A)$ and assume that the modulus function $\theta$ given by $\theta(g) = |g|$ is differentiable at $f$ (in some sense which has to be made precise).
-Then one expects that a chain rule holds so that $\theta(T(t)f) = |T(t)f|$ is differentiable at $t = 0$.
+
+Let $f \in D(A)$ and assume that the modulus function $\Theta$ given by $\Theta(g) = |g|$ is differentiable at $f$ (in some sense which has to be made precise).
+Then one expects that a chain rule holds so that $\Theta(T(t)f) = |T(t)f|$ is differentiable at $t = 0$.
 Since $|T(t)f| = T(t)|f|$, this implies $|f| \in D(A)$ and 
 %%$
 %%--
 \[
-A|f| = \diff{}/\dt_{|t=0} \theta(T(t)f) = D_{Af}\theta(f)\diff/\dt_{|t=0}T(t)f = (D_{Af}\theta(f)Af)
+A|f| = \diff{}/\dt_{|t=0} \Theta(T(t)f) = D_{Af}\Theta(f)\diff/\dt_{|t=0}T(t)f = (D_{Af}\Theta(f)Af)
 \]
 %%--
 %%$
- (where the precise meaning of $(D_{Af}\theta(f))Af$  
+ (where the precise meaning of $(D_{Af}\Theta(f))Af$  
  depends on the chain rule which we will have to establish).
 So we obtain an identity for the generator $A$ which corresponds exactly to the lattice property $|T(t)f| = T(t)|f|$ of the semigroup.
 We will see in C-II, Section  5 that in a Banach lattice with order continuous norm the above argument is rigorous (for all $f \in D(A)$).
@@ -993,15 +991,15 @@ For later use we formulate the following definition and proposition for a genera
 \begin{definition}\label{def:b2-2.2}
 %%
 %\index{Gateaux differentiability}
-Let $G$ be a Banach space and $\theta \colon G \to G$ a mapping.
+Let $G$ be a Banach space and $\Theta \colon G \to G$ a mapping.
 Let $f \in G$, $u \in G$.
-Then $\theta$ is called \emph{right-sided Gateaux differentiable at} $f$ \emph{in direction} $u$ if
+Then $\Theta$ is called \emph{right-sided Gateaux differentiable at} $f$ \emph{in direction} $u$ if
 %% –
 \begin{equation}\label{eq:b2-2.3}
-D_{u}\theta(f) \coloneqq \lim_{t \to 0} 1/t(\theta(f+tu) - \theta(f)) \text{ exists.}
+D_{u}\Theta(f) \coloneqq \lim_{t \to 0} 1/t(\Theta(f+tu) - \Theta(f)) \text{ exists.}
 \end{equation}
 %% –
-The mapping $\theta$ is \emph{right-sided Gateaux differentiable at} $f$ if $D_{u}\theta(f)$ exists for all directions $u \in G$; and if $\theta$ is right-sided Gateaux-differentiable at every point $f \in G$ then we call $\theta$ \emph{right-sided Gateaux differentiable}.
+The mapping $\Theta$ is \emph{right-sided Gateaux differentiable at} $f$ if $D_{u}\Theta(f)$ exists for all directions $u \in G$; and if $\Theta$ is right-sided Gateaux-differentiable at every point $f \in G$ then we call $\Theta$ \emph{right-sided Gateaux differentiable}.
 \end{definition}
 %% --
 
@@ -1012,12 +1010,12 @@ The mapping $\theta$ is \emph{right-sided Gateaux differentiable at} $f$ if $D_{
 %%
 %\index{Gateaux differentiability!chain rule}
 (chain rule). Let $G$ be a Banach space and $k \colon \R \to G$ be right-sided differentiable at $a \in \R$ (with right derivative $k'(a)$).
-Suppose that $\theta \colon G \to G$ is a Lipschitz continuous mapping.
-If $\theta$ is right-sided Gateaux-differentiable at $k(a)$ in the direction of $k'(a)$, then $\theta \circ k \colon \R \to G$ is right-sided differentiable at $a$ and has a right derivative
+Suppose that $\Theta \colon G \to G$ is a Lipschitz continuous mapping.
+If $\Theta$ is right-sided Gateaux-differentiable at $k(a)$ in the direction of $k'(a)$, then $\Theta \circ k \colon \R \to G$ is right-sided differentiable at $a$ and has a right derivative
 
 %% –
 \begin{equation}\label{eq:b2-2.4}
-(\theta \circ k)'(a) = D_{k'(a)}\theta(k(a)).
+(\Theta \circ k)'(a) = D_{k'(a)}\Theta(k(a)).
 \end{equation}
 %% –
 \end{proposition}
@@ -1026,14 +1024,14 @@ If $\theta$ is right-sided Gateaux-differentiable at $k(a)$ in the direction of 
 %%KGK p-B2-16; LNMp-137
 %%
 \begin{proof}
-There exists $L \geq 0$ such that $\|\theta(x) - \theta(y)\| \leq L\|x - y\|$ for all $x,y \in G$.
+There exists $L \geq 0$ such that $\|\Theta(x) - \Theta(y)\| \leq L\|x - y\|$ for all $x,y \in G$.
 Then
 %% --
 \[
 \begin{array}{lll}
-\lim_{t \downarrow 0} &\|1/t (\theta(k(a+t)) - \theta(k(a))) - D_{k'(a)}\theta(k(a))\| \\
-&\leq \limsup_{t \downarrow 0} \|1/t (\theta(k(a+t)) - \theta(k(a)+tk'(a)))\| \\
-&\quad + \limsup_{t \downarrow 0} \|1/t [\theta(k(a)+tk'(a)) - \theta(k(a)) - D_{k'(a)}\theta(k(a))]\| \\
+\lim_{t \downarrow 0} &\|1/t (\Theta(k(a+t)) - \Theta(k(a))) - D_{k'(a)}\Theta(k(a))\| \\
+&\leq \limsup_{t \downarrow 0} \|1/t (\Theta(k(a+t)) - \Theta(k(a)+tk'(a)))\| \\
+&\quad + \limsup_{t \downarrow 0} \|1/t [\Theta(k(a)+tk'(a)) - \Theta(k(a)) - D_{k'(a)}\Theta(k(a))]\| \\
 &\leq \limsup_{t \downarrow 0} L \cdot \|1/t (k(a+t) - k(a)-tk'(a))\| + 0 \\
 &= 0.
 \end{array}
@@ -1051,10 +1049,10 @@ For $z \in \C$ we let
 %% --
 
 \begin{lemma}\label{lem:b2-2.4}
-The function $\theta \colon \C \to \C$ given by $\theta(z) = |z|$ is right-sided Gateaux differentiable and
+The function $\Theta \colon \C \to \C$ given by $\Theta(z) = |z|$ is right-sided Gateaux differentiable and
 %% --
 \begin{equation}\label{eq:b2-2.6}
-D_{u}\theta(z) = \begin{cases}
+D_{u}\Theta(z) = \begin{cases}
     \Re[(\sign \bar{z}) \cdot u] & \text{if } z \neq 0 \\
     |u| & \text{if } z = 0
 \end{cases}
@@ -1066,10 +1064,10 @@ D_{u}\theta(z) = \begin{cases}
 If $z = 0$, relation \eqref{eq:b2-2.6} is obvious from the definiton.
 Let $z = (x_{0} + iy_{0}) \neq 0$.
 We identify $\C$ and $\R^2$.
-Then $\theta(x,y) = (x^2 + y^2)^{1/2}$ is differentiable in $z$ and
+Then $\Theta(x,y) = (x^2 + y^2)^{1/2}$ is differentiable in $z$ and
 %% --
 \begin{align*}
-D_{u}\theta(z) &= (\theta(x_{0},y_{0})|u) = 1/|z|\, ((x_{0},y_{0})|(u_{1},u_{2}))  \\
+D_{u}\Theta(z) &= (\Theta(x_{0},y_{0})|u) = 1/|z|\, ((x_{0},y_{0})|(u_{1},u_{2}))  \\
                &= 1/|z|\, (x_{0}u_{1} + y_{0}u_{2}) \\
                &= 1/|z|\, \Re((x_{0}-iy_{0})\cdot(u_{1}+iu_{2})) \\
                &= \Re[(\sign \bar{z})\cdot u],
@@ -1243,9 +1241,10 @@ By Lemma \ref{lem:b2-2.6} the last term is
 %% --
 and this is $0$ by hypothesis.
 \end{proof}
-
+%% --
 \begin{remark}\label{rem:b2-2.7}
-We will see in Chapter C-II that the inequality $|T(t)f| \leq T(t)|f|$, which holds precisely for positive semigroups, implies the inequality corresponding to \eqref{eq:b2-2.9}.
+We will see in Chapter C-II that the inequality $|T(t)f| \leq T(t)|f|$, which holds precisely for positive semigroups, implies the inequality corresponding to \eqref{eq:b2-2.9}
+if $\phi \geq 0$.
 For $A = \Delta$ (the Laplacian) this is a version of the classical Kato's inequality.
 \end{remark}
 %%
@@ -1260,7 +1259,7 @@ If $f \in D(A)$ and $f(x) \neq 0$ for all $x \in X$, then
 \]
 %%--
 \end{corollary}
-
+%% --
 \begin{proof}
 If $f \in D(A)$ and $f(x) \neq 0$ for all $x \in X$, then $(\widehat{\sign} \bar{f})(Af) = (\sign \bar{f})(Af) \in C_{0}(X)$.
 Hence by \eqref{eq:b2-2.9}, $\langle \Re[(\sign \bar{f})(Af)],\phi \rangle = \langle |f|,A'\phi \rangle$ for all $\phi \in D(A')$.
@@ -1269,27 +1268,26 @@ So the assertion follows from the following lemma.
 
 \begin{lemma}\label{lem:b2-2.9}
 Let $A$ be a densely defined closed operator on a (real or complex) Banach space $G$.
-Let $f, g \in G$ such that $\langle f,\phi \rangle = \langle g,A'\phi \rangle$ for all $\phi \in D(A')$.
+Let $f$, $g \in G$ such that $\langle f,\phi \rangle = \langle g,A'\phi \rangle$ for all $\phi \in D(A')$.
 Then $g \in D(A)$ and $Ag = f$.
 \end{lemma}
-
+%% --
 \begin{proof}
 Denote by $G(A) \coloneqq \{(h,Ah) : h \in D(A)\} \subset G \times G$ the graph of $A$.
 Assume that $(g,f) \notin G(A)$.
-%%KGK: \not\in 
 Since $G(A)$ is closed, it follows from the Hahn-Banach theorem that there exists $(\psi_{1},\psi_{2}) \in G' \times G'$ such that $\langle h,\psi_{1} \rangle + \langle Ah,\psi_{2} \rangle = 0$ for all $h \in D(A)$ and $\langle g,\psi_{1} \rangle + \langle f,\psi_{2} \rangle \neq 0$.
 By the definition of $A'$ this implies that $\psi_{2} \in D(A')$ and $A'\psi_{2} = -\psi_{1}$.
 Hence $\langle f,\psi_{2} \rangle \neq -\langle g,\psi_{1} \rangle = \langle g,A'\psi_{2} \rangle$.
 So the condition in the lemma is violated.
 \end{proof}
-
+%% --
 Next we prove a converse of Corollary \ref{cor:b2-2.8}.
-
+%% --
 \begin{theorem}\label{thm:b2-2.10}
 Let $A$ be the generator of a real semigroup $(T(t))_{t \geq 0}$ on $C(K,\C)$, where $K$ is compact.
 Then $(T(t))_{t \geq 0}$ is a lattice semigroup if and only if $f \in D(A)$, $f(x) \neq 0$ for all $x \in K$ implies $|f| \in D(A)$ and $A|f| = \Re((\sign \bar{f})Af)$.
 \end{theorem}
-
+%% --
 \begin{remark*}\label{rem:b2-2.10-KGK}
 Although we assume that $(T(t))_{t \geq 0}$ is a real semigroup (i.e.,\\ $T(t)C(K,\R) \subset C(K,\R)$ for all $t \geq 0)$, it is important for the proof that we consider the space of all complex-valued continuous functions on $K$.
 In fact, if $K$ is connected, the condition in the theorem is always trivially satisfied for all $f \in C(K,\R)$.
@@ -1302,12 +1300,18 @@ Since $(T(t))_{t \geq 0}$ is real, the restriction $T_{\R}(t)$ of $T(t)$ to $C(K
 Its generator $A_{\R}$ is a restriction of $A$.
 Since $D(A_{\R})$ is dense in $C(K,\R)$, there exists a strictly positive $u \in D(A_{\R})$.
 Moreover, $\lim_{t \to 0} T(t)u = u$ uniformly.
-Thus there exists $t_{0} > 0$ such that $T(t)u$ is strictly positive for all $t \in [0,t_{0}]$.
+Thus there exists $t_{0} > 0$ such that $T(t)u$ is strictly positive for all $t \in [0,t_{0}]$ and $ \epsilon > 0 $ small enough..
  
 Let $f \in D(A_{\R})$.
 For $\varepsilon > 0$ let $f_{\varepsilon} \coloneqq f + i\varepsilon u$.
 Then $T(t)f_{\varepsilon} \in D(A)$ and $|T(t)f_{\varepsilon}|$ is strictly positive for all $t \in [0,t_{0}]$.
-By hypothesis, $|T(t)f_{\varepsilon}| \in D(A)$ and $\Re[(\sign T(t)\overline{f_{\varepsilon}})AT(t)f_{\varepsilon}] = A|T(t)f_{\varepsilon}|$ for all $t \in [0,t_{0}]$.
+By hypothesis, $|T(t)f_{\varepsilon}| \in D(A)$ and 
+%% --
+\[
+\Re[(\sign T(t)\overline{f_{\varepsilon}})AT(t)f_{\varepsilon}] = A|T(t)f_{\varepsilon}|
+\quad \text{for all $t \in [0,t_{0}]$}.
+\]
+%% --
 One sees as in the proof of Theorem \ref{thm:b2-2.5} that this implies that $|T(t)f_{\varepsilon}| = T(t)|f_{\varepsilon}|$ for all $t \in [0,t_{0}]$.
 Letting $\varepsilon \to 0$ one obtains that $|T(t)f| = T(t)|f|$ $(t \in [0,t_{0}])$.
 Since $D(A)$ is dense in $C(K,\R)$ we conclude that $|T(t)f| = T(t)|f|$ for all $f \in C(K,\R)$ and all $t \in [0,t_{0}]$.
@@ -1327,7 +1331,7 @@ Then  $m \cdot A$ with domain $D(m \cdot A) = D(A)$ generates a lattice semigrou
 \end{corollary}
 
 \begin{proof}
-By Theorem 1.20  $m \cdot A$ is the generator of a strongly continuous semigroup.
+By Theorem 1.20, the operator  $m \cdot A$ is the generator of a strongly continuous semigroup.
 It remains to show that it is a lattice semigroup.
 We use Theorem \ref{thm:b2-2.10}.
 Let $f \in D(m \cdot A) = D(A)$ such that $f(x) \neq 0$ for all $x \in K$.
@@ -1511,7 +1515,7 @@ $(T(t))_{t \geq 0}$ is a strongly continuous semigroup on $C(K)$.
 \begin{proof}
 \ref{lem:b2-3.2-1} trivially implies \ref{lem:b2-3.2-2}.
 If \ref{lem:b2-3.2-2} holds, then $t \mapsto T(t)f$ is weakly continuous for every $f \in C(K)$ (by the theorem of dominated convergence).
-This implies strong continuity (see for example \citet[Proposition 1.23]{davies:1980}.
+This implies strong continuity (see for example \citet[Proposition 1.23]{davies:1980}).
 It remains to show that \ref{lem:b2-3.2-3} implies \ref{lem:b2-3.2-1}.
 Because of \eqref{eq:b2-3.1} it suffices to show that the restriction $\widetilde{\phi}$ of $\phi$ to $[0,1] \times K$ is continuous.
 By hypothesis, the mapping $W \colon f \mapsto (t \mapsto T(t)f)$ from $C(K)$ into $C([0,1],C(K))$ is continuous.
@@ -2616,7 +2620,8 @@ Our approach is inspired by \citet{delaubenfels:1984} to whom Theorem \ref{thm:b
 For simplicity we confined ourselves to groups.
 \citet{uhlig:1979} determined all semi-flows on an interval.
 
-In the sequel of Batty's work (loc.cit.) a characterization of all densely defined closed derivations on $C[0,1]$ has been obtained by [Kurose] in a series of papers \citet{kurose:1981}, \citet{kurose:1982}, \citet{kurose:1983}.
+In the sequel of Batty's work (loc.cit.) a characterization of all densely defined closed derivations on $C[0,1]$ has been obtained by Kurose in a series of papers 
+\citet{kurose:1981, kurose:1982, kurose:1983}.
 \end{enumerate}
 %%
 

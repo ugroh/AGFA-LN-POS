@@ -1,6 +1,8 @@
-%% Stand 2025-04-24 ulgr
+% !TEX root = ../LN-Book.tex
+%% -- 
+%% --Stand 2025-06-07 final
 %% --
-\chapter{Basic Results on Semigroups and Operator Algebras}\label{chap:d1}%
+\chapter{Basic Results on Semigroups and Operator Algebras}\label{chap:d1}
 %\index{Operator Algebras}
 %% --
 %% --
@@ -17,10 +19,10 @@ This is not a systematic introduction to the theory of strongly continuous semig
 We only prepare for the following chapters on spectral and asymptotic theory by fixing the notations and introducing some standard constructions.
 For results on strongly continuous semigroups on Banach spaces, we refer to Chapter A-I.%, \ref{chap:a1}.
 %% --
-\section{Notations}\label{sec:d1-1}%
-%\index{Operator Algebras!Notations}
+\section{Notations}\label{sec:d1-1}
+%%\index{Operator Algebras!Notations}
 %% --
-\begin{enumerate}[1., wide, labelindent=.5em]
+\begin{enumerate}[1., wide, labelsep=1em]
 
 \item
 Let $ M $ denote a \CA-algebra with unit $ \1 $, where 
@@ -74,7 +76,7 @@ It is well known that every $n$-positive contraction, for $ n \geq 2 $ and every
 As we shall see, the Schwarz inequality is crucial for our investigations.
 
 \item 
-If $ M $ is a \CA-algebra, we assume that $ \TT = (T(t))_{t \geq 0} $ is a strongly continuous semigroup (abbreviated as semigroup), while for \WA-algebras we consider weak*-semigroups, i.e. the mapping $ (t \mapsto T(t)x) $ is continuous from $ \R_{+} $ into $ (M,\sigma(M,M_{*}))$, where $ M_{*} $ is the predual of $ M $, and every $ T(t) \in \TT $ is $ \sigma(M,M_{*}) $-continuous.
+If $ M $ is a \CA-algebra, we assume that $ \TT = (T(t))_{t \geq 0} $ is a strongly continuous semigroup (abbreviated as semigroup), while for \WA-algebras we consider weak*-semigroups, \ie the mapping $ (t \mapsto T(t)x) $ is continuous from $ \R_{+} $ into $ (M,\sigma(M,M_{*}))$, where $ M_{*} $ is the predual of $ M $, and every $ T(t) \in \TT $ is $ \sigma(M,M_{*}) $-continuous.
 Note that the preadjoint semigroup
 %% --
 \[
@@ -91,7 +93,7 @@ We call the semigroup $ \TT $ \emph{identity preserving} if $ T(t)\1 = \1 $ and 
 For the notations concerning one-parameter semigroups we refer to Part A.
 In addition, we recommend to compare the results of this section with the corresponding results for commutative \CA-algebras, \ie for $ C_{0}(X) $, $ C(K) $ and $ L^\infty(\mu) $ in Part B.
 %% --
-\section{A Fundamental Inequality for the Resolvent}\label{sec:d1-2}%
+\section{A Fundamental Inequality for the Resolvent}\label{sec:d1-2}
 %\index{Operator Algebras!Inequality for the resolvent}
 %% --
 If $ \TT = (T(t))_{t \geq 0} $ is a strongly continuous semigroup of Schwarz maps on a \CA-algebra $ M $ (\resp a weak*-semigroup of Schwarz type on a \WA-algebra $ M $) with generator $ A $, then the spectral bound satisfies $ s(A) \leq 0 $.
@@ -99,7 +101,7 @@ The resolvent $ R(\lambda, A) $ exists for $ \Re(\lambda) > 0 $ and is positive 
 There exists a representation for the resolvent $ R(\lambda,A) $ given by the formula
 %% --
 \[
- 	R(\lambda,A)x = \int_{0}^\infty e^{-\lambda t} T(t)x \, \dt  \quad (x \in M)
+ 	R(\lambda,A)x = \int_{0}^\infty \mathrm{e}^{-\lambda t} T(t)x  \dt  \quad (x \in M)
 \]
 %% --
 where the integral exists in the norm topology.
@@ -150,13 +152,13 @@ Then for all $ \mu \in \R_{+} $ and $ x \in M $
 %% --
 \begin{align*}
 	 {}& \left( R(\mu,B)x  \right) \left( R(\mu,B)x \right)^{*} 
-		= \left( \int_{0}^\infty e^{-\mu r}S(r)x \dr \right)
-			\left( \int_{0}^\infty e^{-\mu t}S(t)x \dt \right)^{*}   \\
-	&\phantom{=}= \frac{1}{2} \left( \int_{0}^\infty \int_{0}^\infty e^{-\mu(r+t)} ((S(r)x)(S(t)x)^{*}  
+		= \left( \int_{0}^\infty \mathrm{e}^{-\mu r}S(r)x \dr \right)
+			\left( \int_{0}^\infty \mathrm{e}^{-\mu t}S(t)x \dt \right)^{*}   \\
+	&\phantom{=}= \frac{1}{2} \left( \int_{0}^\infty \int_{0}^\infty \mathrm{e}^{-\mu(r+t)} ((S(r)x)(S(t)x)^{*}  
 			+ (S(t)x)(S(r)x)^{*}  \dr \dt \right) \\
-	&\phantom{=}\leq \frac{1}{2} \left(\int_{0}^\infty \int_{0}^\infty e^{-\mu(r+t)} (T(r)xx^{*} + T(t)xx^{*})  			\dr \dt \right)\\
-	&\phantom{=}= \left( \int_{0}^\infty e^{-\mu s} ds \right)
-			\left( \int_{0}^\infty e^{-\mu t}T(t)xx^{*} \dt \right) 
+	&\phantom{=}\leq \frac{1}{2} \left(\int_{0}^\infty \int_{0}^\infty \mathrm{e}^{-\mu(r+t)} (T(r)xx^{*} + T(t)xx^{*})  			\dr \dt \right)\\
+	&\phantom{=}= \left( \int_{0}^\infty \mathrm{e}^{-\mu s} ds \right)
+			\left( \int_{0}^\infty \mathrm{e}^{-\mu t}T(t)xx^{*} \dt \right) 
 				= \mu^{-1}R(\mu,A)xx^{*}
 \end{align*}
 %% --
@@ -165,8 +167,8 @@ The claim is obtained by multiplying both sides by $\mu^{2} $.
 \end{proof}
 %% -- 
 \begin{corollary}\label{cor:d1-2.2}
-Let $ \TT $ be a semigroup of Schwarz maps (\resp weak*-semigroup of Schwarz maps).
-Then for all $ \lambda \in \C $ with $ \Re \, (\lambda) > 0 $ we have
+Let $ \TT $ be a semigroup of Schwarz maps \resp weak*-semigroup of Schwarz maps.
+Then for all $ \lambda \in \C $ with $ \Re  \lambda  > 0 $ we have
 %% --
 \[
 	\left( R(\lambda,A)x \right) \left( R(\lambda,A)x \right)^{*} 
@@ -176,7 +178,7 @@ Then for all $ \lambda \in \C $ with $ \Re \, (\lambda) > 0 $ we have
 In particular for all $ (\mu,\alpha) \in \R_{+} \times \R $ and $ x \in M $
 %% --
 \[
-(\mu R(\mu+\im \alpha,A)x)(\mu R(\mu + \im \alpha,A)x)^{*} \leq \mu R(\mu,A)(xx^{*}).
+(\mu R(\mu + \im \alpha,A)x)(\mu R(\mu + \im \alpha,A)x)^{*} \leq \mu R(\mu,A)(xx^{*}).
 \]
 %% --
 \end{corollary}
@@ -186,11 +188,11 @@ Let $ \lambda \in \C $ with $ \Re(\lambda) > 0 $.
 Then the semigroup
 %% --
 \[
-S \coloneqq \left(e^{- \im  (\lambda) t }T(t) \right)_{t \geq 0}
+S \coloneqq \left(\mathrm{e}^{- \im  (\lambda) t }T(t) \right)_{t \geq 0}
 \]
 %% --
-fulfills the assumption of{\ }Thm.\,\ref{thm:d1-2.1} and $ B \coloneqq A - \im \lambda $ is the generator of $ S $.
-Consequently $ R(\lambda,A) = R(\Re\lambda,B) $ and the corollary follows from Thm.~\ref{thm:d1-2.1}.
+fulfills the assumption of Theorem~\ref{thm:d1-2.1} and $ B \coloneqq A - \im \lambda $ is the generator of $ S $.
+Consequently $ R(\lambda,A) = R(\Re\lambda,B) $ and the corollary follows from Theorem~\ref{thm:d1-2.1}.
 %% --
 \end{proof}
 %% --
@@ -201,7 +203,7 @@ Since
 	T(t)x = \lim_{n} \left( \frac{n}{t} R\left(\frac{n}{t}, A\right) \right)^{n} x , \quad x \in M , 
 \]
 %
-it follows from above, that $ \TT $ is a semigroup of Schwarz-type, if and only if $ \mu R( \mu, A) $ is a Schwarz-operator for every $ \mu \in \R_{+} $.
+it follows from above, that $ \TT $ is a semigroup of Schwarz-type, if and only if $ \mu R( \mu, A) $ is a Schwarz-operator for every $ \mu \in \R_{+} $ (for this see also \citet{brattelirobinson:1981}).
 %% --
 \end{remark}
 %% --
@@ -218,7 +220,7 @@ A family $ \mathcal{R} \colon D \mapsto L(E) $ is called a \emph{pseudo-resolven
 for all $ \lambda $, $ \mu $ in $ D $ and $ R \in \mathcal{R} $.
 \end{definition}
 %% --
-If $ \mathcal{R} $ is a {pseudo-resolvent} on $ D = \{\lambda \in \C \colon \Re(\lambda) > 0\} $ with values in a \CA- or \WA-algebra, then $ \mathcal{R} $ is called of Schwarz type if
+If $ \mathcal{R} $ is a {pseudo-resolvent} on $ D = \{\lambda \in \C \colon \Re(\lambda) > 0\} $ with values in a \CA- or \WA-algebra, then $ \mathcal{R} $ is called of \emph{Schwarz type} if
 %% --
 \[
 	(R(\lambda)x)(R(\lambda)x)^{*} \leq (\Re \lambda)^{-1} R(\Re\lambda)xx^{*}
@@ -229,7 +231,7 @@ For examples and properties of a pseudo-resolvent, see C-III, 2.5.
 
 We state what will be used without further reference.
 %% --
-\begin{enumerate}[\upshape (i)]
+\begin{enumerate}[\upshape (i), wide, itemindent=.5em]
 \item 
 If $ \alpha \in \C $ and $ x \in E $ such that $ (\alpha - \lambda)R(\lambda)x = x $ for some $ \lambda \in D $, then $ (\alpha - \mu)R(\mu)x = x $ for all $ \mu \in D $ (use the \emph{resolvent equation}).
 
@@ -248,10 +250,10 @@ We call a semigroup $ \TT $ on the \emph{predual} $ M_{*} $ of a \WA-algebra $ M
 Similarly, a pseudo-resolvent $ \mathcal{R} $ on $ D = \{\lambda \in \C \colon \Re(\lambda) > 0\} $ with values in $ M_{*} $ is said to be identity preserving and of Schwarz type if $ \mathcal{R}' $ has these properties.
 \end{definition}
 %% --
-For a semigroup of contractions on a Banach space we have
+For a semigroup $ \TT $ of contractions on a Banach space we have
 %% --
 \begin{align*}
-	\Fix{T} &= \bigcap_{t \geq 0} \ker(\text{Id} - T(t)) \\ 
+	\Fix{\TT} &= \bigcap_{t \geq 0} \ker(\text{Id} - T(t)) \\ 
 			& = \ker(\Id - \lambda R(\lambda,A)) = \Fix{ (\lambda R(\lambda,A) }
 \end{align*}
 %% --
@@ -266,7 +268,7 @@ $ D = \{\lambda \in \C \colon \Re(\lambda) > 0\} $ given by
 is identity preserving.
 By Corollary \ref{cor:d1-2.2} an analogous statement holds for \emph{Schwarz type}.
 %% --
-\section{Induction and Reduction}%
+\section{Induction and Reduction}
 %\index{Operator Algebras!Induction and Reduction}
 %% --
 \begin{enumerate}[1., wide, labelindent=.5em]
@@ -309,7 +311,8 @@ If  $ \mathcal{R} $ is an identity preserving pseudo-resolvent of Schwarz type o
 It follows directly that the induced pseudo-resolvent $ \mathcal{R}_p$ has both the Schwarz type property and is identity preservation.
 
 \item
-Let $ \phi $ be a positive normal linear functional on a \WA-algebra $ M $ such that $ T_{*}\phi = \phi $ for some identity preserving Schwarz map $ T $ on $ M $ with preadjoint $ T_{*} \in L(M_{*}) $.
+Let $ \phi $ be a positive normal linear functional on a \WA-algebra $ M $ such that $ T_{*}\phi = \phi $ for some identity preserving Schwarz map $ T $ on $ M $ with preadjoint 
+$ T_{*} \in \L{M_{*}} $.
 Then $ T(s(\phi)^{\perp}) \leq s(\phi)^{\perp} $ where $ s(\phi) $ is the support projection of $ \phi $.
 
 Let 
@@ -321,8 +324,20 @@ Let
 \]
 %
 Since $ \phi $ is $ T_{*} $-invariant and $ T $ is a Schwarz map, the subspaces $ L_{\phi} $ and $ M_{\phi} $ are $ T $-invariant.
-From $ M_{\phi} = s(\phi)^{\perp}Ms(\phi)^{\perp} $ and $ T(s(\phi)^{\perp}) \leq 1 $ it follows that $ T(s(\phi)^{\perp}) \leq s(\phi)^{\perp} $.
-
+From 
+%% --
+\[ 
+M_{\phi} = s(\phi)^{\perp}Ms(\phi)^{\perp} 
+\quad \text{and} \quad 
+T(s(\phi)^{\perp}) \leq 1 
+\]
+%% --
+it follows 
+%% --
+\[ 
+T(s(\phi)^{\perp}) \leq s(\phi)^{\perp}  .
+\]
+%% --
 \end{enumerate}
 %% --
 Let $ T_{s(\phi)} $ be the induced map on $ M_{s(\phi)} $ and define
@@ -331,7 +346,13 @@ Let $ T_{s(\phi)} $ be the induced map on $ M_{s(\phi)} $ and define
 	s(\phi)M_{*}s(\phi) \coloneqq \{\psi \in M_{*} \colon \psi = s(\phi)\psi s(\phi)\}
 \]
 %% --
-where $ \langle s(\phi)\psi s(\phi),x \rangle \coloneqq \langle \psi,s(\phi)xs(\phi) \rangle $ ($ x \in M $).
+where 
+%% --
+\[ 
+\langle s(\phi)\psi s(\phi),x \rangle \coloneqq 
+    \langle \psi,s(\phi)xs(\phi) \rangle \quad  (  x \in M  ).
+\]
+%% --
 For any $\psi \in s(\phi)M_s(\phi)$ and all $x \in M$, the following equalities holds
 %% --
 \begin{align*}
@@ -354,10 +375,9 @@ with values in $ M_{*} $ which is identity preserving and of Schwarz type such t
 %% --
 \section*{Notes}
 \addcontentsline{toc}{section}{Notes}
-We refer to \citet{brattelirobinson:1979}, \citet{davies:1976} and the survey article of \citet{oseledets:1984}.
+We refer to \citet{brattelirobinson:1979}, \citet{brattelirobinson:1981}, \citet{davies:1976} and the survey article of \citet{oseledets:1984}.
 
-%% -- Literatur
-%% --
+%% -- References
 {\RaggedRight
 \bibliographystyle{abbrvnat}
 \bibliography{bib/ln-references}}

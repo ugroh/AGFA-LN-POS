@@ -32,8 +32,7 @@ Similarly, a one-parameter group $(T(t))_{t\in\R}$ will be a homomorphic image o
 \section{Standard Definitions and Results}\label{sec:a1-1}%
 %\index{Basic Results!Standard Definitions and Results}
 %% -- 
-We consider a one-parameter semigroup $(T(t))_{t \geq 0}$ on a Banach space $E$ 
-and observe that the domain $\R_{+}$ and range $\LE$ of the (semigroup) homomorphism $\tau \colon t \mapsto T(t)$ are topological semigroups for the natural topology on $\R_{+}$ and any one of the standard operator topologies on $\LE$.
+We consider a one-parameter semigroup $(T(t))_{t \geq 0}$ on a Banach space $E$ and observe that the domain $\R_{+}$ and range $\LE$ of the (semigroup) homomorphism $\tau \colon t \mapsto T(t)$ are topological semigroups for the natural topology on $\R_{+}$ and any one of the standard operator topologies on $\LE$.
 We single out the strong operator topology on $\LE$ and require $\tau$ to be continuous.
 %% --
 \begin{definition}\label{def:a1-1.1}
@@ -270,7 +269,7 @@ Then $B$ is closed, but $D(B^{2}) = \{0\}$.
 \end{example}
 %% --
 \begin{proposition}\label{prop:a1-1.11}
-For the generator $A$ of a strongly continous semigroup on a Banach space $E$ the following hold.
+For the generator $A$ of a strongly continuous semigroup on a Banach space $E$ the following hold.
 If %
 \[
 	 \int_{0}^{\infty}  \mathrm{e}^{-\lambda t}T(t)f \dt 
@@ -401,43 +400,43 @@ p_A(\lambda) \coloneqq \det(\lambda - A) = \lambda^2-s\cdot \lambda + d ,
 is the characteristic polynomial  of $ A $, then $ p_{A}(A) = 0 $ by \emph{Cayley-Hamilton} hence
 %
 \[
-	\left( A - s/2 \cdot \1 \right)^{2} = D^{2} \cdot \1 , 
+	\left( A - s/2 \cdot \Id \right)^{2} = D^{2} \cdot \Id , 
 \]
 %
-where $ \1 $ denotes the unit matrix.
+where $ \Id $ denotes the unit matrix.
 
 Now we have to consider two cases.
 %% --
 \begin{description}[wide, labelindent=0em]
 
 \item[$ D^{2} = 0 $: ] 
-Then $\left( A - s/2 \cdot \1 \right)^{k} = D^{k} \cdot \1 = 0 $  for all $ (k \geq 2)$ and this implies 
+Then $\left( A - s/2 \cdot \Id \right)^{k} = D^{k} \cdot \Id = 0 $  for all $ (k \geq 2)$ and this implies 
 %
 \[
-	  \mathrm{e}^{t \cdot \left( A - s/2 \cdot \1 \right)} = \1 + t( A - s/2 \cdot \1)
+	  \mathrm{e}^{t \cdot \left( A - s/2 \cdot \Id \right)} = \Id + t( A - s/2 \cdot \Id)
 \]
 %
 or
 %
 \[
-	 \mathrm{e}^{t A } =  \mathrm{e}^{t\cdot s/2} \, [ ( 1 - \frac{s}{2} \, t )\cdot \1 + t \cdot A] .
+	 \mathrm{e}^{t A } =  \mathrm{e}^{t\cdot s/2} \, [ ( 1 - \frac{s}{2} \, t )\cdot \Id + t \cdot A] .
 \]
 %
 \item[$ D^{2} \neq 0 $: ]
 In this case we obtain for every $ k \in \N $
 %
 \begin{align*}
-	( A - s/2 \cdot \1 )^{2k}  &= D^{2k} \cdot \1 \\ 
-	( A - s/2 \cdot \1 )^{2k+1} &=\frac{1}{D} \, D^{2k+1}( A - s/2 \cdot \1) .
+	( A - s/2 \cdot \Id )^{2k}  &= D^{2k} \cdot \Id \\ 
+	( A - s/2 \cdot \Id )^{2k+1} &=\frac{1}{D} \, D^{2k+1}( A - s/2 \cdot \Id) .
 \end{align*}
 %%
 Thus 
 \begin{align*}
-	 \mathrm{e}^{t( A - s/2 \cdot \1 )} 
-		& = \sum_{k=0}^\infty \frac{t^k}{k!}( A - s/2 \cdot \1 )^k 
+	 \mathrm{e}^{t( A - s/2 \cdot \Id )} 
+		& = \sum_{k=0}^\infty \frac{t^k}{k!}( A - s/2 \cdot \Id )^k 
 		= \sum_{ \text{k even} } (\cdots) + \sum_{ \text{k odd} } (\cdots)  \\
-	&= \cosh( t D ) \cdot \1 + \frac{1}{D} \sinh( t D )( A - s/2 \cdot \1) \\
-	&= \frac{ 1 }{ D } \sinh( tD )\cdot A + \left( \cosh(tD) - \frac{s}{2D} \sinh(tD) \right) \cdot \1.
+	&= \cosh( t D ) \cdot \Id + \frac{1}{D} \sinh( t D )( A - s/2 \cdot \Id) \\
+	&= \frac{ 1 }{ D } \sinh( tD )\cdot A + \left( \cosh(tD) - \frac{s}{2D} \sinh(tD) \right) \cdot \Id.
 \end{align*}
 %% --
 by using the power series representation of the hyperbolic functions $ \sinh $ and $ \cosh $.
@@ -449,9 +448,9 @@ As summary
 	 \mathrm{e}^{tA} =
 	\begin{cases}
 		 \mathrm{e}^{t \cdot s/2} \, \left[ \frac{1}{D} \sinh(t D)  \cdot A + 
-			\left( \cosh(tD) - \frac{s}{2D} \sinh(tD) \right) \cdot \1 \right], & 
+			\left( \cosh(tD) - \frac{s}{2D} \sinh(tD) \right) \cdot \Id \right], & 
 									\text{if $ D \neq 0 $, } \\
-		 \mathrm{e}^{t \cdot s/2} \, \left[ ( 1 - \frac{s}{2} \, t )\cdot \1 + t \cdot A \right], &
+		 \mathrm{e}^{t \cdot s/2} \, \left[ ( 1 - \frac{s}{2} \, t )\cdot \Id + t \cdot A \right], &
 									\text{if $ D = 0 $.}
 	\end{cases}
 \end{equation*}
@@ -599,7 +598,7 @@ Define $T(t)$ to be the (left) translation operator
 \]
 %% --
 for $x$, $ t \in \R_{+}$, \resp $x, t \in \R$ and $f \in E$.
-Then $(T(t))_{t \geq 0}$ is a strongly continous semigroup, \resp group of contractions on $E$ and its generator is the first derivative $\frac{\diff{}}{\dx}$ with \emph{maximal} domain.
+Then $(T(t))_{t \geq 0}$ is a strongly continuous semigroup, \resp group of contractions on $E$ and its generator is the first derivative $\frac{\diff{}}{\dx}$ with \emph{maximal} domain.
 In order to be more precise we have to distinguish the cases $E = C_{0}$ and $E = L^{p}$.
 %% -- 
 
@@ -1046,7 +1045,8 @@ on $E' = L^{\infty}(\R)$.
 Then $(T(t)')_{t \in \R}$ is a one-parameter group which is not strongly continuous on $L^{\infty}(\R)$ (take any non-trivial characteristic function).
 \end{example*}
 
-Since the semigroup $(T(t)')_{t \geq 0}$ is obviously \emph{weak*-continuous} in the sense that 
+Since the semigroup $(T(t)')_{t \geq 0}$ is 
+obviously \emph{weak*-continuous} in the sense that 
 %% --
 \[
 \lim_{t \to s} \langle f,(T(t)'-T(s)')\phi \rangle = 0
@@ -1362,7 +1362,7 @@ $\hat{A}(f_{n}) = (Af_{n})$ for $(f_{n}) \in D(\hat{A})$ .
 %% --
 For the proof we refer to Lemma 1.4. of \citet{derndinger:1980}.
 
-Now let $\mathcal{F}$ be any filter on $\N$ finer than the Frechét filter (\ie the filter of sets with finite complement. In most cases $\mathcal{F}$ will be either the Frechét filter or some free ultra filter).
+Now let $\mathcal{F}$ be any filter on $\N$ finer than the Fréchet filter (\ie the filter of sets with finite complement. In most cases $\mathcal{F}$ will be either the Frechét filter or some free ultra filter).
 %% --
 The space of all $\mathcal{F}$-null sequences in $m(E)$, \ie
 %% --
@@ -1417,7 +1417,7 @@ $A_{\mathcal{F}}((f_{n}) + c_{\mathcal{F}}(E)) = (Af_{n}) + c_{\mathcal{F}}(E)$.
 %% --
 In case $A$ is a bounded operator then $D(A_{\mathcal{F}}) = E_{\mathcal{F}}^{T} = E_{\mathcal{F}}$ and $A_{\mathcal{F}}$ is the canonical extension of $A$ to $E_{\mathcal{F}}$.
 
-We will show in A-III,4.5 that the above construction preserves and even improves many spectral properties of the semigroup and its generator.
+We will show in A-III, Section~4.2 that the above construction preserves and even improves many spectral properties of the semigroup and its generator.
 
 %% --
 \subsection{The Tensor Product Semigroup}\label{subsec:a1-3.8}%

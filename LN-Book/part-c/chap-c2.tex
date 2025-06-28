@@ -27,7 +27,7 @@ Defined on a suitable domain, $\Delta$ generates a positive semigroup on $L^p(\R
 Kato proved the following distributional inequality for the Laplacian:
 %% -- 
 \[
-\Re(\sign \bar{f}) \Delta f \leq \Delta|f|
+\Re \left( (\sign \bar{f}) \Delta f \right) \leq \Delta|f|
 \]
 %% -- 
 for all $f \in L^1_{\text{loc}}(\R^{n})$ such that $\Delta f \in L^1_{\text{loc}}(\R^{n})$.
@@ -559,7 +559,8 @@ Since $\|\mathrm{e}^{tA}\| \leq \mathrm{e}^{t\|A\|}$ $(t\geq0)$, \ref{thm:c2-1.1
 The equivalence of \ref{thm:c2-1.11-2}   and \ref{thm:c2-1.11-3}   is established by Lemma \ref{lem:c2-1.10}.
 If \ref{thm:c2-1.11-4} holds, then $\mathrm{e}^{t(A+\|A\|)} \geq 0$ $(t\geq0)$.
 Thus $\mathrm{e}^{tA} = \mathrm{e}^{-t\|A\|} \mathrm{e}^{t(A+\|A\|)} \geq 0$, $(t\geq0)$.
-We have shown that \ref{thm:c2-1.11-1}, \ref{thm:c2-1.11-2}  and \ref{thm:c2-1.11-3} are equivalent and \ref{thm:c2-1.11-4}  implies \ref{thm:c2-1.11-1} 
+We have shown that \ref{thm:c2-1.11-1}, \ref{thm:c2-1.11-2}  and \ref{thm:c2-1.11-3} are equivalent and \ref{thm:c2-1.11-4}  implies \ref{thm:c2-1.11-1}.
+
 It remains to show that \ref{thm:c2-1.11-1}  implies \ref{thm:c2-1.11-4}  .
 Since assertions \ref{thm:c2-1.11-1}   and \ref{thm:c2-1.11-4}   are satisfied for $A$ if and only if they are satisfied for $A'$, we can assume that $E$ is order complete (considering $A'$ instead of $A$ if necessary).
 Assume that \ref{thm:c2-1.11-1}   holds.
@@ -824,7 +825,7 @@ If \eqref{eq:c2-K}   and \eqref{eq:c2-2.9}   hold, then Kato's inequality holds 
 %\index{Laplacian!Kato's inequality}
 %
 %\index{Examples!Kato's inequality}
-Kato's inequality in its classical form says the following (see Kato (1973) or [Reed-Simon (1975); X.27]).
+Kato's inequality in its classical form says the following (see \citet{kato:1973} or \citet[X.27]{reedsimon:1975}).
 Let $f \in L^1_{\text{loc}}(\R^n)$ be such that the distributional Laplacian satisfies $\Delta f \in L^1_{\text{loc}}(\R^n)$.
 Then the inequality
 %% --
@@ -1389,7 +1390,12 @@ Let $B$ be the generator of a strongly continuous semigroup on a real Banach lat
 Because of (3.17) condition (K) implies that $P_{f}Bf \leq (\sign  f)Bf \leq Bf$
 whenever $f \in D(B)_{+}$.
 
-This is Kato's inequality in the strong form for positive $f \in D(B)$ and is equivalent to $(Bf)^{-} \in \{f\}^{dd} = \overline{E_f}$ $(f \in D(A)_{+})$ 
+This is Kato's inequality in the strong form for positive $f \in D(B)$ and is equivalent to 
+%% --
+\[
+(Bf)^{-} \in \{f\}^{dd} = \overline{E_f} \quad (f \in D(B)_{+})
+\]
+%% --
 (recall that $E$ has order continuous norm). By Lemma 
 \ref{lem:c2-1.10}  this again is equivalent to
 %% --
@@ -1497,16 +1503,14 @@ We say, $(T(t))_{t \geq 0}$ \emph{dominates} $(S(t))_{t \geq 0}$ if
 |S(t)f| \leq T(t)|f| \quad \text{for all } f \in E, t > 0.
 \end{equation}
 %% --
-
 We first observe that domination of the semigroup is equivalent to domination of the resolvents.
-
+%% --
 \begin{proposition}\label{prop:c2-4.1}
 The semigroup $(T(t))_{t \geq 0}$ dominates $(S(t))_{t \geq 0}$ if and only if
 %% --
 \begin{equation}\label{eq:c2-4.2}
 |R(\lambda,B)f| \leq R(\lambda,A)|f| \quad (f \in E) \quad \text{for large real }  \lambda.
 \end{equation}
-%% --
 \end{proposition}
 %% --
 \begin{proof}
@@ -1518,7 +1522,7 @@ Conversely, if \eqref{eq:c2-4.2} holds, then
 &\leq \lim_{n \to \infty} ((n/t)R(n/t,A))^{n}|f|\\
 &= T(t)|f| \quad (t \geq 0, f \in E).
 \end{align*}
-%% --
+\phantom{x}
 \end{proof}
 %%--
 %%KGK p-C2-24; LNMp-270
@@ -1533,10 +1537,10 @@ Let $(T(t))_{t \geq 0}$ be a positive semigroup with generator $A$ and $(S(t))_{
 $|S(t)f| \leq T(t)|f|$ for all $f \in E$, $t \geq 0$.
 %%--
 \item \label{thm:c2-4.2-2}
-$\Re\langle(\sign  f)Bf,\phi\rangle \leq \langle|f|,A'\phi\rangle$ for all $f \in D(B)$, $\phi \in D(A')_{+}$.
+$\Re\langle(\sign  \bar{f}) Bf,\phi\rangle \leq \langle|f|,A'\phi\rangle$ for all $f \in D(B)$, $\phi \in D(A')_{+}$.
 \end{enumerate}
 \end{theorem}
-
+%% --
 \begin{proof}
 \ref{thm:c2-4.2-1}   implies \ref{thm:c2-4.2-2}  . Let $f \in D(B)$, $\phi \in D(A')_{+}$. Then
 %% --
@@ -1586,7 +1590,7 @@ Then $B$ is closable.
 Moreover, if $(\lambda - B)D(B)$ is dense in $E$ for some $\lambda > \max\{0,s(A)\}$, then $\overline{B}$ (the closure of $B$) generates a
 semigroup which is dominated by $(T(t))_{t \geq 0}$.
 \end{theorem}
-
+%% --
 \begin{proof}
 1. We show that $B$ is closable.
 Let $u_{n} \in D(B)$ satisfy $u_{n} \to 0$ and $Bu_{n} \to v$ $(n \to \infty)$.
@@ -1793,13 +1797,13 @@ If not, then there exists $0 \neq \phi \in E' = L^{q}(\R^{n})$ such that $\langl
 By Kato's classical inequality (see Example \ref{ex:c2-2.5}) this implies that
 \[
 %%$
-(\lambda - \Delta + \Re V)|\phi| \leq \lambda|\phi| - \Re[(\sign \overline{\phi})(\lambda\phi - \Delta\phi + V\phi)] = 0
+(\lambda - \Delta + \Re V)|\phi| \leq \Re[(\sign \overline{\phi})(\lambda\phi - \Delta\phi + V\phi)] = 0
 %%$
 \] 
 (here we use that $\Delta\phi = \lambda\phi + V\phi \in L^{1}_{\text{loc}}$). 
 Hence $(\lambda - \Delta)|\phi| \leq -(\Re V)|\phi| \leq 0$. 
 Since $(\lambda - \Delta)^{-1}$ is a positive linear mapping from $\mathcal{S}(\R^{n})'$ onto $\mathcal{S}(\R^{n})'$, this implies that $\phi = 0$. 
-It follows from Theorem \ref{thm:c2-2.4}   that $\overline{B}$ is the
+It follows from Theorem \ref{thm:c2-4.3}   that $\overline{B}$ is the
 generator of a semigroup $(S(t))_{t \geq 0}$ which is dominated by the semigroup generated by $A$.
 
 If $V = \Re V \geq 0$, we may consider the real space $L^{p}(\R^{n})$. 
@@ -2032,7 +2036,7 @@ if and only if $\Re\beta \leq \alpha$ and  $|\nu| \leq \mu$.
 \end{equation}
 \end{example}
 %% --
-\begin{proof}[Proof of equation \eqref{eq:c2-4.13}]
+\begin{proof}[Proof of assertion \eqref{eq:c2-4.13}]
 We first assume that $\alpha \coloneqq \Re  \beta$ and $\mu = |\nu|$.
 We show that \eqref{eq:c2-4.12} is satisfied.
 Consider the operator $A_{\max}$ on $C[-1,0]$ given by $A_{\max}f = f'$ with domain $D(A_{\max}) = C^{1}[-1,0]$.
@@ -2475,7 +2479,7 @@ Since $D_{h}\Theta(f)$ is continuous in $h$ (in fact, $|D_{h}\Theta(f) - D_{k}\T
 
 \begin{remark}\label{rem:c2-5.7} 
 
-\begin{enumerate}\upshape (i), wide, labelindent=.5em] %%, itemindent=\parindent]
+\begin{enumerate}[\upshape (i), wide, labelindent=.5em] %%, itemindent=\parindent]
 %%
 \item \label{rem:c2-5.7-1}
 By the same argument as given in the proof one sees
@@ -2498,20 +2502,20 @@ The proof of  Proposition \ref{prop:c2-5.6}   shows that every convex function $
 (where $E$ is a Banach lattice with order continuous norm) is right- (and left-) sided Gateaux differentiable [(cf. Arendt (1982)]).
 \end{enumerate}
 \end{remark}
-
-\begin{proof}[Proof of Theorem \ref{thm:c2-5.5}  ]
+%% --
+\begin{proof}[Proof of Theorem \ref{thm:c2-5.5}]
 Assume that \ref{thm:c2-5.5-1}   holds. 
 Let $f \in D(B)$. 
 Then $S(t)f$ is differentiable at $t$. 
 By the chain rule B-II, Proposition 2.3,
 %%KGK: \ref{prop:b2-2.3}
-$T(t)|f| = |S(t)f|$ is also differentiable and $\diff{}/\dt|_{t=0} T(t)|f| = \diff{}/\dt|_{t=0} |S(t)f| = \Re(\widehat{\sign}  \bar{f})Bf$ (by  Proposition \ref{prop:c2-5.6} .
+$T(t)|f| = |S(t)f|$ is also differentiable and $\diff{}/\dt|_{t=0} T(t)|f| = \diff{}/\dt|_{t=0} |S(t)f| = \Re(\widehat{\sign}  \bar{f})Bf$ (by  Proposition \ref{prop:c2-5.6}).
 Hence $|f| \in D(A)$ and $A|f| = \Re(\widehat{\sign}  \bar{f})Bf$.
 
 Conversely, assume that \ref{thm:c2-5.5-2}   holds. 
 Let $s > 0, f \in E$. 
 We show that $|S(s)f| = T(s)|f|$. 
-This implies that $S(s)$ is disjointness preserving and $|S(s)| = T(s)$ (by Proposition \ref{prop:c2-5.1}  . 
+This implies that $S(s)$ is disjointness preserving and $|S(s)| = T(s)$ (by Proposition \ref{prop:c2-5.1}). 
 Since $D(B)$ is dense we can assume that $f \in D(B)$. 
 Let $\xi(t) = T(s-t)|S(t)f|$ $(t \in [0,s])$.
 Since by assumption $|S(t)f| \in D(A)$ one obtains
@@ -2603,14 +2607,10 @@ Let $f \in D(A)$ and $P_{+} \coloneqq P_{f^{+}}$ and $P_{-} \coloneqq P_{f^{-}}$
 Then $(P_{+})Af^{-} = (P_{-})Af^{+} = 0$ since $A$ is local. 
 Hence $(\sign  f)Af = (P_{+} - P_{-})Af = (P_{+} - P_{-})(Af^{+} + Af^{-}) = 
 (P_{+})Af^{+} + (P_{-})Af^{-} = Af^{+} + Af^{-} = A|f|$
-\end{proof}
-%%--
-%%KGK p-C2-40; LNMp-286
-%%
-%% 286 \quad \text{C-II} \quad \text{CHARACTERIZATION}
 
 Thus Kato's equality holds and it follows from Corollary \ref{cor:c2-5.8}   that $(T(t))_{t \geq 0}$ is a lattice semigroup. The other implication follows directly from Corollary  \ref{cor:c2-5.8}  .
-
+\end{proof}
+%% --
 \begin{example}\label{ex:c2-5.10}
 %
 %\index{Lattice Homomorphisms}
@@ -2960,7 +2960,7 @@ Proposition \ref{prop:c2-5.15}   had been proved in \citet{schaeferetal:1978} by
 \item  
 The characterization of generators of lattice semigroups on a Banach lattice with order continuous norm (Corollary  \ref{cor:c2-5.8}) is due to \citet{nageluhlig:1981}. An extension of this result to arbitrary Banach lattices is given by \citet{arendt:1982} from which the proof of  Proposition  \ref{prop:c2-5.6}   is taken as well.
 
-Local closed operators having an ideal as domain (\ie operators satisfying condition \ref{thm:c2-5.13-4} of Theorem \ref{thm:c2-5.13}  are investigated in detail by \citet{nakano:1950} who calls them dilatators. \citet{peetre:1959} characterizes differential operators by locality (see also \citet{luxemburg:1979}). In the context of \CA-algebras local operators are investigated by \citet{battyrobinson:1984} and \citet{battyrobinson:1985}.
+Local closed operators having an ideal as domain, \ie operators satisfying condition \ref{thm:c2-5.13-4} of Theorem \ref{thm:c2-5.13}, are investigated in detail by \citet{nakano:1950} who calls them dilatators. \citet{peetre:1959} characterizes differential operators by locality (see also \citet{luxemburg:1979}). In the context of \CA-algebras local operators are investigated by \citet{battyrobinson:1984} and \citet{battyrobinson:1985}.
 
 \end{enumerate}
 %%--

@@ -1,7 +1,9 @@
-%% Stand 2025-04-24 ulgr
+% !TEX root = ../LN-Book.tex
+%% -- 
+%% --Stand 2025-06-08 final
 %% --
 \chapter{Spectral Theory of Positive Semigroups on \texorpdfstring{W$^{*}$}{W*}-Algebras and their Preduals}\label{chap:d3}
-\chaptermark{Spectral Theory on\/ \WA-algebras}%
+\chaptermark{Spectral Theory on\/ \WA-algebras}
 %\index{Spectral Theory on Operator Algebras}
 %% --
 {\Large
@@ -25,12 +27,12 @@ $  %  $\]
 possesses a certain symmetric structure, called cyclicity.
 \end{quote}
 %% --
-Results of this type have been proved in Chapter B-III for positive semigroups on commutative \CA-algebras, however in the non-commutative case the situation is more complicated.
+Results of this type have been proved in Chapter B-III for positive semigroups on commutative \CA-algebras, however in the noncommutative case the situation is more complicated.
 While \enquote{$s(A) \in \sigma(A)$} still holds (see \citet{greinervoigtwolff:1981} or the notes of this chapter), the cyclicity of the boundary spectrum $\sigma_{b}(A)$ is true only under additional assumptions on the semigroup (\eg irreducibility, see Section 1 below).
 
-For technical reasons we consider mostly strongly continuous semigroups on the predual of a \WA-algebra $M$ or its adjoint semigroup which is a weak*-continuous semigroup on $M$.
+For technical reasons we consider mostly strongly continuous semigroups on the predual $M_{*}$of a \WA-algebra $M$ or its adjoint semigroup which is a weak*-continuous semigroup on the dual space $M'$.
 %% --
-\section{Spectral Theory for Positive Semigroups on Preduals}\label{sec:d3-1}%
+\section{Spectral Theory for Positive Semigroups on Preduals}\label{sec:d3-1}
 %\index{Spectral Theory on Operator Algebras!Spectral Theory on Preduals}
 %% --
 The aim of this section is to develop a Perron-Frobenius theory for identity preserving semigroups of Schwarz type on \WA-algebras.
@@ -49,7 +51,7 @@ where $s(|\phi|)$ denotes the support projection of $|\phi|$ in $M$.
 We refer to this as the \emph{polar decomposition} of $\phi$.
 In addition, $|\phi|$ is \emph{uniquely determined} by the following two conditions.
 %% --  
-\begin{empheq}[right={\empheqrbrace \,\text{(*)}}]{align*}
+\begin{empheq}[left={\text{(*) } \, \empheqlbrace \quad }]{align*}
     \|\phi\| &= \| |\phi| \| \\
     |\phi(x)|^{2} &\leq |\phi|(xx^{*}) \quad (x\in M)
 \end{empheq}
@@ -65,16 +67,27 @@ For the polar decomposition of the adjoint $\phi^{*}$, where $\phi^{*}(x) = \ove
 It is easy to see that $u^{*} \in s(|\phi|)M $ 
 (\citet[Theorem III.4.2 \& Proposition III.4.6]{takesaki:1979}).
 
-If $\Psi$ is a subset of the state space of a \CA-algebra $M$, then $\Psi$ is called \emph{faithful} if $0 \leq x\in M$ and $\psi(x) = 0$ for all $\psi\in\Psi$ implies $x = 0$.
-Moreover $\Psi$ is called \emph{subinvariant} for a positive map $T\in\L{M}$ (\resp., positive semigroup $\TT$) if $T'\psi \leq \psi$ for all $\psi\in\Psi$ (\resp $T(t)'\psi \leq \psi$ for all $T(t)\in \TT$ and $\psi\in\Psi$).
-Recall that for every positive map $T \in \L{M}$ there exists a state $\phi$ on $M$ such that $T'\phi = r(T)\phi$, where $r(T)$ denotes the spectral radius of $T$ (\citet[Theorem 2.1]{groh:1981}). 
+If $\Psi$ is a subset of the state space of a \CA-algebra $M$, then $\Psi$ is called \emph{faithful} if 
+%% --
+\[
+0 \leq x\in M  \text{ and }  \psi(x) = 0 \text{ for all }  \psi\in\Psi  \text{ implies }  x = 0.
+\]
+%% --
+Moreover $\Psi$ is called \emph{subinvariant} for a positive map $T\in\L{M}$ (\resp. positive semigroup $\TT$) if 
+%% --
+\[
+T'\psi \leq \psi \text{ for all } \psi\in\Psi
+\text{ (\resp $T(t)'\psi \leq \psi$ for all $T(t)\in \TT$ and $\psi\in\Psi$)}.
+\]
+%% --
+Recall that for every positive map $T \in \L{M}$ there exists a state $\phi$ on $M$ such that $T'\phi = r(T)\phi$, where $r(T)$ denotes the spectral radius of $T$ (\citet[Theorem 2.1]{groh:1981} and the notes at the end of this chapter). 
 
-Let us start our investigation with two lemmata where $ \Fix{T} $ is the fixed space of $T$, \ie the set $ \{x\in M \colon Tx=x \}$.
+Let us start our investigation with two lemmata where $ \Fix{T} $ is the fixed space of $T$, \ie the set $ \Fix{T} = \{x\in M \colon Tx=x \}$.
 %% --
 \begin{lemma}\label{lem:d3-1.1}
 Suppose $M$ to be a \CA-algebra and $ T \in \L{M} $ an identity preserving Schwarz map.
 %% --
-\begin{enumerate}[\upshape (i)]
+\begin{enumerate}[\upshape (i), wide, labelindent=.5em]
 
 \item\label{item:d3-1.1-i}
 Let $ b \colon M \times M \to M $ be a sesquilinear map such that $ b(z,z) \geq 0 $ for all $ z \in M $.
@@ -134,7 +147,9 @@ If the closed subspace $s(|\phi|)M$ is T-invariant, then $Su^{*} = u^{*}$ and $T
 \end{lemma}
 %% --
 \begin{proof}
-(i) Define a positive semidefinite sesquilinear map $b: M\times M \mapsto M$ by
+\begin{enumerate}[\upshape (i), wide, labelindent=.5em]
+\item 
+Define a positive semidefinite sesquilinear map $b: M\times M \mapsto M$ by
 %% -- 
 \[
 b(x,y) \coloneqq T(xy^{*}) - S(x)S(y)^{*} \quad (x, y\in M).
@@ -142,7 +157,7 @@ b(x,y) \coloneqq T(xy^{*}) - S(x)S(y)^{*} \quad (x, y\in M).
 %% -- 
 Since $b(v^{*},v^{*}) = 0$ we obtain $b(x,v^{*}) = 0$ for all $x \in M$,  hence $T(xv) = S(x)v$. (Lemma~\ref{lem:d3-1.1}\,\ref{item:d3-1.1-i})
 
-(ii)
+\item
 Since $s(|\phi|)M$ is a closed right ideal, the closed face $F \coloneqq s(|\phi|)(M_{+})s(|\phi|)$ determines $s(|\phi|)M$ uniquely, \ie
 %% --
 \[
@@ -186,11 +201,27 @@ Consequently,
 \]
 %% --
 and $T(u^{*}u) = u^{*}u$ by the faithfulness and $T$-invariance of $|\phi|$.
+\end{enumerate}
 \end{proof}
 %% --
 \begin{remark}\label{rem:d3-1.3}
 Take $S$ and $T$ as in Lemma~\ref{lem:d3-1.2}\,\ref{item:d3-1.2-ii}.
-If $V_{u^{*}}$ (\resp  $V_u$) is the map $(x \mapsto xu^{*})$ (\resp  $(x \mapsto xu)$) on $M$, then $V_{u^{*}}$ is a continuous bijection from $Ms(|\phi|)$ onto $Ms(|\phi^{*}|)$ with inverse $V_u$ (because $V_u \circ V_{u^{*}} = \operatorname{Id}_{Ms(|\phi|)}$ and $V_{u^{*}} \circ V_u = \operatorname{Id}_{Ms(|\phi^{*}|)}$).
+If $V_{u^{*}}$ (\resp  $V_{u}$) is the map 
+%% --
+\[
+V_{u^{*}} \colon x \mapsto xu^{*}
+\quad \text{\resp} \quad
+V_{u} \colon x \mapsto xu 
+\]
+%% --
+on $M$, then $V_{u^{*}}$ is a continuous bijection from $Ms(|\phi|)$ onto $Ms(|\phi^{*}|)$ with inverse $V_u$ because 
+%% --
+\[
+V_{u} \circ V_{u^{*}} = \Id_{Ms(|\phi|)}
+\quad \text{and} \quad 
+V_{u^{*}} \circ V_{u} = \Id_{Ms(|\phi^{*}|)} .
+\]
+%% --
 Let $x \in M$.
 From $T(xu) = S(x)u$ we obtain $T(xu)u^{*} = S(x)uu^{*}$.
 In particular, if $Ms(|\phi^{*}|)$ is $S$-invariant, then
@@ -200,6 +231,7 @@ In particular, if $Ms(|\phi^{*}|)$ is $S$-invariant, then
 \]
 %% --
 for every $x \in Ms(|\phi^{*}|)$.
+
 Let $T_{|}$ (\resp  $S_{|}$) be the restriction of $T$ to $Ms(|\phi|)$ (\resp of $\SG$ to $Ms(|\phi^{*}|)$).
 Then the following diagram is commutative:
 %% --
@@ -226,23 +258,26 @@ Let $\RR$ be a pseudo-resolvent on $D = \{\lambda \in \C \colon \Re\,\lambda > 0
 If $\alpha \in \R$ and $\psi \in M_{*}$ such that $(\gamma - \im\alpha)R(\gamma)\psi = \psi$ for some $\gamma \in D$, then $\lambda R(\lambda)|\psi| = |\psi|$ and $\lambda R(\lambda)|\psi^{*}| = |\psi^{*}|$ for all $\lambda \in D$.
 
 \item\label{item:d3-1.4-ii} 
-$ \Fix{\RR} $ is invariant under the involution in $M_{*}$.
-If $\psi \in \Fix{\RR} $ is self adjoint, then the positive part $\psi^{+}$ and the negative part $\psi^{-}$ of $\psi$ are elements of $ \Fix{\RR} $.
+$ \Fix{\RR} $ is invariant under the involution in $M_{*}$ and if $\psi \in \Fix{\RR} $ is self adjoint, then the positive part $\psi^{+}$ and the negative part $\psi^{-}$ of $\psi$ are elements of $ \Fix{\RR} $.
 \end{enumerate}
 \end{proposition}
-%% -- ln-part-d3_6 --%%
+%% -- 
 \begin{proof}
-If $(\gamma - \im\alpha)R(\gamma)\psi = \psi$ then $(\lambda - \im\alpha)R(\lambda)\psi = \psi$ for all $\lambda \in D$.
-In particular, $\mu R(\mu + \im\alpha)\psi = \psi$ ($\mu \in \R_+$).
+If $(\gamma - \im\alpha)R(\gamma)\psi = \psi$ then $(\lambda - \im\alpha)R(\lambda)\psi = \psi$ for all $\lambda \in D$ (use the resolvent equation for prove this).
+In particular, 
+%% --
+\[
+\mu R(\mu + \im\alpha)\psi = \psi \quad (\mu \in \R_{+}).
+\]
 For all $x \in M$ we obtain
 %% --
 \begin{align*}
 |\psi(x)|^2 &= |<\mu R(\mu+\im\alpha)'x,\psi>|^2 \leq \\
-&\leq \|\psi\| <(\mu R(\mu+\im\alpha)'x)(\mu R(\mu+\im\alpha)'x)^{*},\psi> \leq \\
+&\leq \|\psi\| <(\mu R(\mu+\im\alpha)'x)(\mu R(\mu+\im\alpha)'x)^{*},\psi>  \\
 &\leq \|\psi\| <\mu R(\mu)'(xx^{*}),|\psi|>
 \end{align*}
 %% --
-(D-I, Corollary 2.2).
+(see D-I, Corollary 2.2).
 Since
 %% --
 \begin{align*}
@@ -250,8 +285,9 @@ Since
 &= <\mu R(\mu)'1,|\psi|> = \| \mu R(\mu)|\psi| \|,
 \end{align*}
 %% --
-we obtain $\mu R(\mu)|\psi| = |\psi|$ by the uniqueness theorem (*) above for the absolut value---
-therefore $|\psi| \in \Fix{\RR} $.
+we obtain $\mu R(\mu)|\psi| = |\psi|$ by the uniqueness 
+theorem (*) above for the absolut value.
+Therefore $|\psi| \in \Fix{\RR} $.
 Since
 %% --
 \[
@@ -259,9 +295,30 @@ Since
 \]
 %% --
 the map $R(\mu)$ is positive.
-Consequently $(\mu+\im\alpha)R(\mu)\psi^{*} = \psi^{*}$ from which $|\psi^{*}| \in \Fix{\RR} $ follows.
-If $\phi \in \Fix{\RR} $ is selfadjoint with Jordan decomposition $\phi = \phi^{+} - \phi^{-}$, then $|\phi| = \phi^{+} + \phi^{-}$ (\citet[Theorem III.4.2.]{takesaki:1979}).
-From this we obtain that $\phi^{+}$ and $\phi^{-}$ are in $ \Fix{\RR} $.
+Consequently 
+%% --
+\[
+(\mu+\im\alpha)R(\mu)\psi^{*} = \psi^{*}
+\]
+%% --
+from which 
+%% --
+\[
+|\psi^{*}| \in \Fix{\RR} 
+\]
+%% 
+follows.
+
+If $\phi \in \Fix{\RR} $ is selfadjoint with Jordan decomposition $\phi = \phi^{+} - \phi^{-}$, then for all $ R \in \RR $
+%% --
+\begin{align*}
+\| \phi \| &= \| \phi^{+} \| + \| \phi^{-} \|  =
+    \phi^{+}(\1) + \phi^{-}(\1) = \phi^{+}(R'\1) + \phi^{-}(R'\1) \\
+    &= R(\phi^{+})(\1) + R(\phi^{-})(\1)  =
+    \| R(\phi^{+}) \| + \| R(\phi^{-}) \| 
+\end{align*}
+%% -- 
+Then by \citet[Theorem III.4.2.]{takesaki:1979} we obtain that $\phi^{+}$ and $\phi^{-}$ in $ \Fix{\RR} $.
 \end{proof}
 %% --
 \begin{corollary}\label{cor:d3-1.5}
@@ -278,7 +335,13 @@ If $\psi \in \Fix{\TT}$ is selfadjoint, then the positive part $\psi^{+}$ and th
 
 \end{corollary}
 %% --
-The proof follows immediately from Proposition~\ref{prop:d3-1.4} and the fact that $\Kern{A} = \Fix{\lambda R(\lambda,A)}$ for all $\lambda \in \C$ with $\Re\,\lambda > 0$.
+The proof follows immediately from Proposition~\ref{prop:d3-1.4} and the fact that 
+%% --
+\[ 
+\Kern{A} = \Fix{\lambda R(\lambda,A)}
+\]
+%% --
+for all $\lambda \in \C$ with $\Re\,\lambda > 0$.
 
 If $\TT$ is the semigroup of translations on $L^1(\R)$ and $A'$ the generator 
 of the adjoint weak*-semigroup, then $P\sigma(A) \cap \im\R = \emptyset$, while $P{\sigma}(A') \cap \im\R = \im\R$.
@@ -377,9 +440,28 @@ Since
 \]
 %% --
 we obtain $\mu R(\mu)'s(|\psi_{\alpha}|) = s(|\psi_{\alpha}|)$ by the faithfulness of $\Psi$.
-Hence the maps $S \coloneqq (\mu - \im\alpha)R(\mu)'$ and $T \coloneqq \mu R(\mu)'$ fulfill the assumptions of 
-Lemma~\ref{lem:d3-1.2}\,\ref{item:d3-1.2-ii} on page \pageref{lem:d3-1.2}.
-Therefore $Su_{\alpha}^{*} = u_{\alpha}^{*}$ or $(\mu-\im\alpha)R(\mu)'u_{\alpha}^{*} = u_{\alpha}^{*}$ which implies $u_{\alpha}^{*} \in D(A')$ and $A'u_{\alpha}^{*} = \im\alpha u_{\alpha}^{*}$.
+
+Hence the maps 
+%% --
+\[
+S \coloneqq (\mu - \im\alpha)R(\mu)'  
+\quad \text{and} \quad 
+T \coloneqq \mu R(\mu)'
+\]
+%% --
+fulfill the assumptions of Lemma~\ref{lem:d3-1.2}\,\ref{item:d3-1.2-ii} on page \pageref{lem:d3-1.2}.
+Therefore $Su_{\alpha}^{*} = u_{\alpha}^{*}$ or 
+%% --
+\[
+(\mu-\im\alpha)R(\mu)'u_{\alpha}^{*} = u_{\alpha}^{*}
+\]
+%% --
+which implies $u_{\alpha}^{*} \in D(A')$ and 
+%% --
+\[
+A'u_{\alpha}^{*} = \im\alpha u_{\alpha}^{*}.
+\]
+%% --
 
 If $\im\alpha \in P{\sigma}(A')$, $\alpha \in \R$, choose $0 \neq v_{\alpha}$ such that
 %% --
@@ -425,12 +507,12 @@ which proves the assertion.
 %% --
 \begin{remark}\label{rem:d3-1.9}
 From the above proof we obtain the following: If 
-$0 \neq \psi_{\alpha} \in \Kern{\im\alpha - A)$ for $ \alpha \in \R $ with polar decomposition 
-$\psi_{\alpha} = u_{\alpha}|\psi_{\alpha}|$ ($\alpha \in \R$}, 
+$0 \neq \psi_{\alpha} \in \Kern{\im\alpha - A)}$ for $ \alpha \in \R $ with polar decomposition 
+$\psi_{\alpha} = u_{\alpha}|\psi_{\alpha}|$ ($\alpha \in \R$), 
 then $A'u_{\alpha} = \im\alpha u_{\alpha}$.
 
-Conversely, if $0 \neq v_{\alpha} \in \Kern{\im\alpha - A')$, then there exists $\psi \in \Psi$ such that 
-$\psi(v_{\alpha}v_{\alpha}^{*}} \neq 0$ and the normal linear form
+Conversely, if $0 \neq v_{\alpha} \in \Kern{(\im\alpha - A')}$, then there exists $\psi \in \Psi$ such that 
+$\psi(v_{\alpha}v_{\alpha}^{*}) \neq 0$ and the normal linear form
 %% --
 \[
 \psi_{\alpha} \coloneqq (x \mapsto \psi(xv_{\alpha}^{*}))
@@ -446,7 +528,7 @@ This is no longer true in the non commutative case.
 For $0 \neq \lambda \in \im\R$ and $t \in \R$ let
 %% --
 \[
-u_{t} \coloneqq \begin{pmatrix} 1 & 0 \\ 0 & e^{\lambda t} \end{pmatrix} \in M_{2}(\C) .
+u_{t} \coloneqq \begin{pmatrix} 1 & 0 \\ 0 & \mathrm{e}^{\lambda t} \end{pmatrix} \in M_{2}(\C) .
 \]
 %% --
 The semigroup of *-automorphisms $(x \mapsto u_{t}xu_{t}^{*})$ on $M_{2}(\C)$ is identity preserving and of Schwarz type, but the spectrum of its generator is $\{0, \lambda, \lambda^{*}\}$ hence is not additively cyclic.
@@ -552,7 +634,7 @@ The other inclusion is trivial since $0 \in P\sigma(A)$.
 %% --
 \begin{remarks}\label{rem:d3-1.12}
 
-\begin{enumerate}[\upshape (i), wide]
+\begin{enumerate}[\upshape (i), wide, labelindent=.5em]
 
 \item 
 Let $\phi$ be the normal state on $M$ such that $\Fix{T} = \C . \phi$ and let $H \coloneqq P\sigma(A) \cap \im\R$.
@@ -593,17 +675,24 @@ Then $(U)^{-} = N_{*}$.
 For each $\psi \in U$ there exists $\eta \in H$ such that
 %% --
 \[
-\{T_{0}(t)\psi \colon t \in \R_{+}\} = \{e^{-\eta t}\psi \colon t \in \R_{+}\} .
+\{T_{0}(t)\psi \colon t \in \R_{+}\} = \{\mathrm{e}^{-\eta t}\psi \colon t \in \R_{+}\} .
 \]
 %% --
 Consequently this set is relatively compact in $L_{s}(N_{*})$.
-From [Schaefer (1966),III.4.5] we obtain that $G$ is compact in the strong operator topology.
+From \citet[III.4.5]{schaefer:1966} we obtain that $G$ is compact in the strong operator topology.
 
 Next choose $\psi_{1}, ..., \psi_{n} \in U$, $0 < s \in \R$ and $\delta > 0$.
-Since $T_{0}(t)\psi_{i} = e^{\eta_{i}t}\psi_{i}$ $(1 \leq i \leq n)$ for some $\eta_{i} \in H$, it follows from a theorem of Kronecker (see, \citet[Satz 6.1., p.77]{jacobs:1972}) that there exists $s < t$ such that
+Since 
 %% --
 \[
-|(1,1, ..., 1) - (e^{\eta_{1}t}, e^{\eta_{2}t}, ..., e^{\eta_{n}t})| < \delta ,
+T_{0}(t)\psi_{i} = \mathrm{e}^{\eta_{i}t}\psi_{i} 
+\quad (1 \leq i \leq n)
+\]
+%% --
+for some $\eta_{i} \in H$, it follows from a theorem of Kronecker (see, \citet[Satz 6.1., p.77]{jacobs:1972}) that there exists $s < t$ such that
+%% --
+\[
+|(1,1, ..., 1) - (\mathrm{e}^{\eta_{1}t}, \mathrm{e}^{\eta_{2}t}, ..., \mathrm{e}^{\eta_{n}t})| < \delta ,
 \]
 %% --
 hence
@@ -612,7 +701,11 @@ hence
 \sup\{\|\psi_{i} - T_{0}(t)\psi_{i}\| \colon 1 \leq i \leq n\} < \delta
 \]
 %% --
-or $\Id_{|N_{*}} \in \overline{\{T_{0}(t) \colon t>s\}} \subseteq L_{s}(N_{*})$.
+or 
+\[
+\Id_{|N_{*}} \in \overline{\{T_{0}(t) \colon t>s\}} \subseteq L_{s}(N_{*}).
+\]
+%% --
 
 Finally we prove the group property of $G$.
 Let $\mathfrak{U}$ be an ultrafilter on $\R$ such that $\lim_{\mathfrak{U}}T_{0}(t) = \Id$ in the strong operator topology.
@@ -620,9 +713,9 @@ For positive $s \in \R$ let $S \coloneqq \lim_{\mathfrak{U}}T(t-s)$.
 Then $ST_{0}(s) = T_{0}(s)S = \Id$, hence $T_{0}(s)^{-1}$ exists in $G$ for all $s \in \R_{+}$.
 From this it follows that $G$ is a group.
 \end{proof}
-
+%% --
 \begin{remark}\label{rem:d3-1.14}
-\begin{enumerate}[\upshape (i), wide]
+\begin{enumerate}[\upshape (i), wide, labelindent=.5em]
 \item Let $\kappa:\R \to G$ be given by
 %% --
 \[
@@ -644,7 +737,8 @@ For example, if $G$ is the dual of $\R_{d}$, then $P\sigma(A) \cap \im\R = \im\R
 Since the fixed space of $\kappa(t)$ is given by
 %% --
 \[
-	\Fix{\kappa(t)} = \overline{ \left(\bigcup_{k \in \mathbb{Z}} \Kern{\frac{2\pi ik}{t} - A)\right} } ,
+	\Fix{\kappa(t)} = 
+    \overline{ \left(\bigcup_{k \in \mathbb{Z}} \Kern{\frac{2\pi ik}{t} - A)} \right) } ,
 \]
 %% --
 however no $T(t) \in \TT$ is irreducible.
@@ -655,7 +749,7 @@ If $\TT$ is the irreducible semigroup of Schwarz type on the predual of $B(H)$ g
 \end{remark}
 
 %% --
-\section{Spectral Properties of Uniformly Ergodic Semigoups}\label{sec:d3-2}%
+\section{Spectral Properties of Uniformly Ergodic Semigoups}\label{sec:d3-2}
 %\index{Spectral Theory on Operator Algebras!Uniformly Ergodic Semigoups}
 %% --
 The aim of this section is the study of spectral properties of semigroups which are uniformly ergodic, identity preserving and of Schwarz type.
@@ -676,7 +770,7 @@ for all $\gamma \in D$ and $\alpha \in \R$.
 %% --
 \begin{proof}
 By D-IV, Remark 3.2.c, we may assume without loss of generality that there exists a faithful family of $\RR$-invariant normal states on $M$.
-In particular the fixed space $N$ of the adjoint pseudo-resolvent $\R\RR'$ is a \WA-subalgebra of $M$ with $\1 \in N$ (by Lemma~\ref{lem:d3-1.1}\,\ref{item:d3-1.1-ii}).
+In particular the fixed space $N$ of the adjoint pseudo-resolvent $\RR'$ is a \WA-subalgebra of $M$ with $\1 \in N$ (by Lemma~\ref{lem:d3-1.1}\,\ref{item:d3-1.1-ii}).
 Since $N$ is finite dimensional, there exist a natural number $n$ and a set $P \coloneqq \{p_{1}, .., p_{n}\}$ of minimal, mutually orthogonal projections in $N$ such that $\sum_{k=1}^{n} p_{k} = \1$.
 These projections are also mutually orthogonal in $M$ with sum $\1$.
 
@@ -785,7 +879,7 @@ Since $\bigoplus_{j=1}^{n} Mp_{j} = M$ and $\bigoplus_{j=1}^{n} L_{j} = M_{*}$, 
 and the assertion follows from Lemma~\ref{lem:d3-1.6} on page \pageref{lem:d3-1.6}.
 \end{proof}
 %% --
-Before going on let us recall the basic facts of the \emph{ultrapower} $\hat{E}$ of a Banach space $E$ with respect to some free ultrafilter $\mathfrak{U}$ on $\N $ (compare A-I,3.7).
+Before going on let us recall the basic facts of the \emph{ultrapower} $\hat{E}$ of a Banach space $E$ with respect to some free ultrafilter $\mathfrak{U}$ on $\N $ (compare A-I, 3.6).
 If $\ell^{\infty}(E)$ is the Banach space of all bounded functions on $\N $ with values in $E$, then
 %% --
 \[
@@ -804,18 +898,18 @@ By the \emph{ultrapower} $\hat{E}$ we understand the quotient space $\ell^{\inft
 \|\hat{x}\| = \lim_{\mathfrak{U}}\|x_{n}\| \, , \, (x_{n}) \in \hat{x} \in \hat{E}.
 \]
 %% --
-Moreover, for a bounded linear operator $T \in L(E)$, we denote by $\hat{T}$ the well defined operator $\hat{T}\hat{x} \coloneqq (Tx_{n}) + c_{\mathfrak{U}}(E)$, $(x_{n}) \in \hat{x}$.
+Moreover, for a bounded linear operator $T \in \LE$, we denote by $\hat{T}$ the well defined operator $\hat{T}\hat{x} \coloneqq (Tx_{n}) + c_{\mathfrak{U}}(E)$, $(x_{n}) \in \hat{x}$.
 
 It is clear by virtue of $(x \mapsto (x, x, ..) + c_{\mathfrak{U}}(E))$ that each $x \in E$ defines an element $\hat{x} \in \hat{E}$.
 This isometric embedding as well as the operator map $(T \mapsto \hat{T})$ are called canonical.
-In particular, if $\RR \colon (D \to L(E))$ is a pseudo-resolvent, then
+In particular, if $\RR \colon (D \to \LE)$ is a pseudo-resolvent, then
 %% --
 \[
 \hat{\RR} \coloneqq (\lambda \mapsto R(\lambda)^{\wedge}): D \to L(\hat{E})
 \]
 %% --
 is a pseudo-resolvent, too.
-Recall that the approximative point spectrum $A{\sigma}(T)$ is equal to the point spectrum $P{\sigma}(\hat{T})$ (see, e.g., \citet[Chapter V, §1]{schaefer:1974}).
+Recall that the approximative point spectrum $A{\sigma}(T)$ is equal to the point spectrum $P{\sigma}(\hat{T})$ (see, \eg \citet[Chapter V, §1]{schaefer:1974}).
 
 This construction gives us the possibility to characterize uniformly ergodic semigroups with finite dimensional fixed space.
 %% --
@@ -926,7 +1020,11 @@ E = \Fix{(\lambda - \im\alpha)R(\lambda)} \oplus \bigcap_{j=1}^{n} \Kern{\phi_{j
 %% --
 where both subspaces on the right are 
 $(\lambda - \im\alpha)R(\lambda)$-invariant and $1$ is a pole of 
-$(\lambda-\im\alpha)R(\lambda)|_{\Fix((\lambda-\im\alpha)R(\lambda))}$ 
+%% --
+\[
+(\lambda-\im\alpha)R(\lambda)|_{\Fix{(\lambda-\im\alpha)R(\lambda))}}
+\]
+%% --
 by the finite dimensionality of $\Fix{(\lambda - \im\alpha)R(\lambda)}$.
 
 Suppose $1$ belongs to the spectrum of $S$ where $S$ is the restriction of 
@@ -941,7 +1039,7 @@ $\bigcap_{j=1}^{n} \Kern{\phi_{j}}$ such that
 Therefore $(y_{n})$ has an accumulation point different from zero contained in
 %% --
 \[
-\Fix{(\lambda - \im\alpha)R(\lambda)} \cap (\bigcap_{j=1}^{n} \ker\phi_{j}) .
+\Fix{(\lambda - \im\alpha)R(\lambda)} \, \cap \,\left( \bigcap_{j=1}^{n} \ker\phi_{j} \right) .
 \]
 %% --
 This contradiction implies that $1$ does not belong to the spectrum of $S$.
@@ -966,7 +1064,7 @@ $\dim \Fix{(\lambda - \im\alpha)\hat{R}(\lambda,A)} < \infty$ for some (hence al
 %% --
 \begin{proof}
 Let $P_{\alpha}$ be the residue of the resolvent $R(.,A)$ in $\im\alpha$.
-Then $P_{\alpha} = \lim_{\lambda \to \im\alpha}(\lambda - \im\alpha)R(\lambda,A)$ in the operator norm of $L(E)$.
+Then $P_{\alpha} = \lim_{\lambda \to \im\alpha}(\lambda - \im\alpha)R(\lambda,A)$ in the operator norm of $\LE$.
 Since the canonical map $(T \mapsto \hat{T})$ is isometric and since $\hat{E}$ is an ultrapower, we obtain
 %% --
 \[
@@ -984,14 +1082,14 @@ one part of the corollary is proved. The other follows from Lemma~\ref{lem:d3-2.
 \end{proof}
 %% --
 \begin{remarks}\label{rem:d3-2.4}
-\begin{enumerate}[\upshape (i), wide]
+\begin{enumerate}[\upshape (i), wide, labelindent=.5em]
 \item
 By the results in \citet{lin:1974} a semigroup of contractions on a Banach space is uniformly ergodic if and only if $0$ is a pole of the generator with order $\leq 1$.
 The residue of the resolvent in $0$ and the assocciated ergodic projection are identical.
 
 \item
 Let $M$ be a \WA-algebra with predual $M_{*}$, $\mathfrak{U}$ a free ultrafilter on $\N $ and $\widehat{M}$ (\resp  $(M_{*})^{\wedge}$) the ultrapower of $M$ (\resp  $M_{*}$) with respect to $\mathfrak{U}$.
-Then it is easy to see that $c_{\mathfrak{U}}(M)$ is a two sided ideal in $\ell^{\infty}(M)$ hence $\widehat{M}$ is a \CA-algebra, but in general not a \WA-algebra.
+Then it is easy to see that $c_{\mathfrak{U}}(M)$ is a two sided ideal in $\ell^{\infty}(M)$ hence $\widehat{M}$ is a \CA-algebra, but in not a \WA-algebra.
 Note that the unit of $\widehat{M}$ is the canonical image of $1$.
 For $\hat{x} \in \hat{M}$ and $\hat{\phi} \in (M_{*})^{\wedge}$ let $J: (M_{*})^{\wedge} \to \widehat{M}'$ be defined by
 %% --
@@ -1041,25 +1139,24 @@ The consequences of this result for the asymptotic behavior of one-parameter sem
 \section*{Notes}\label{notes:d3-notes}
 \addcontentsline{toc}{section}{Notes}
 
-\begin{enumerate}[label=\emph{Section \arabic*:}, wide, itemsep=1ex, parsep=.5ex]
+\begin{enumerate}[label=\emph{Section \arabic*:}, wide, itemsep=1ex]
 
 \item
-The Perron-Frobenius theory for a single positive operator on a non-commutative operator algebra is worked out in \citet{albeverio:1978} and \citet{groh:1981}.
+The Perron-Frobenius theory for a single positive operator on a noncommutative operator algebra is worked out in \citet{albeverio:1978} and \citet{groh:1981}.
 The limitations of the theory (in the continuous as in the discrete case)
-are explained by the example following Remark~\ref{rem:d3-1.9} on page \pageref{rem:d3-1.9} (see also \citet{groh:1982a}.%[Groh (1982a)]).
+are explained by the example following Remark~\ref{rem:d3-1.9} on page \pageref{rem:d3-1.9} (see also \citet{groh:1982a}) 
 Therefore we concentrate on irreducible semigroups.
-Our main result Theorem~\ref{thm:d3-1.11} on page \pageref{thm:d3-1.11} extends B-III, Thm.3.6 to the non-commutative setting.
+Our main result Theorem~\ref{thm:d3-1.11} on page \pageref{thm:d3-1.11} extends B-III, Thm.3.6 to the noncommutative setting.
 
 \item
 Theorem~\ref{thm:d3-2.5} on page \pageref{thm:d3-2.5} has its roots in the Niiro-Sawashima Theorem for a single irreducible positive operator on a Banach lattice (see \citet[V.5.4]{schaefer:1974}).
 The analogous semigroup result on Banach lattices is due to \citet{greiner:1982}.
-The ultrapower technique in our proof is developed in \citet{groh:1984b}.
+The ultrapower technique in our proof is developed in \citet{groh:1984b}. 
 
 \end{enumerate}
 
 
-%% -- Literatur
-%% --
+%% -- References
 {\RaggedRight
 \bibliographystyle{abbrvnat}
 \bibliography{bib/ln-references}}
