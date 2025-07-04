@@ -50,7 +50,7 @@
 
 %% -- Nummer von Theorem etc. korrekt
 %% --
-
+%\usepackage[showonlyrefs]{amsmath}
 \renewcommand\thetheorem{\thesection.\arabic{theorem}}
 \renewcommand\theproposition{\thesection.\arabic{proposition}}
 \renewcommand\thedefinition{\thesection.\arabic{definition}}
@@ -82,7 +82,9 @@
 %% -- Pakete etc.
 %% -- 
 \input{./preamble/ln-preamble-final}	
-\usepackage{mathtools}
+
+\usepackage[showonlyrefs]{mathtools}
+%\usepackage{mathtools}
 \usepackage{empheq}
 \counterwithin{equation}{section}
 \usepackage{colortbl} % Füge dies in den Präambel-Bereich ein
@@ -155,43 +157,43 @@
 %% --
 
 \includeonly{%
-%,./part-0/ln-dedication
-%%,./part-0/foreword
-%,./part-0/ln-preface
-%%,./part-0/acknowledgement
-%,./part-0/ln-symbols
-%%%%%% -- Part A
-%%%%%% --
-%,./part-a/part-a
-%,./part-a/chap-a1	%% -- final
-%,./part-a/chap-a2	%% -- final
-%,./part-a/chap-a3	%% -- final
-%,./part-a/chap-a4   %% -- final
-%%%%%,./part-a/appendix-a 
-%%%%% -- Part B
+,./part-0/ln-dedication
+%,./part-0/foreword
+,./part-0/ln-preface
+%,./part-0/acknowledgement
+,./part-0/ln-symbols
+%%%%% -- Part A
 %%%%% --
-%,./part-b/part-b	  
-%,./part-b/chap-b1  %% -- final
-%,./part-b/chap-b2  %% -- final
-%,./part-b/chap-b3  %% -- final
-%,./part-b/chap-b4  %% -- final
-%%%%,./part-b/appendix-b
-%%%% -- Part C 
+,./part-a/part-a
+,./part-a/chap-a1	%% -- final
+,./part-a/chap-a2	%% -- final
+,./part-a/chap-a3	%% -- final
+,./part-a/chap-a4   %% -- final
+%%%%,./part-a/appendix-a 
+%%%% -- Part B
 %%%% --
-%,./part-c/part-c
-%,./part-c/chap-c1	%% -- final 
-%,./part-c/chap-c2	%% -- final
-%,./part-c/chap-c3
-%,./part-c/chap-c4
-%%%%%,./part-c/appendix-c
-%%%%% -- Part D
-%%%%% --
-%,./part-d/part-d
-%,./part-d/chap-d1
-%,./part-d/chap-d2
-%,./part-d/chap-d3
-%,./part-d/chap-d4
-%%,./part-d/appendix-d
+,./part-b/part-b	  
+,./part-b/chap-b1  %% -- final
+,./part-b/chap-b2  %% -- final
+,./part-b/chap-b3  %% -- final
+,./part-b/chap-b4  %% -- final
+%%%,./part-b/appendix-b
+%%% -- Part C 
+%%% --
+,./part-c/part-c
+,./part-c/chap-c1	%% -- final 
+,./part-c/chap-c2	%% -- final
+,./part-c/chap-c3
+,./part-c/chap-c4
+%%%%,./part-c/appendix-c
+%%%% -- Part D
+%%%% --
+,./part-d/part-d
+,./part-d/chap-d1
+,./part-d/chap-d2
+,./part-d/chap-d3
+,./part-d/chap-d4
+%,./part-d/appendix-d
 %%%% -- Part E
 %%%% --
 ,./part-e/part-e
