@@ -1,25 +1,23 @@
 % !TEX root = Extended_Notes_B-II.tex
+%\begin{theorem}
+%Assume (4.2) and (4.4). Then $\Delta - V$ generates a positive, irreducible semigroup on $C(\partial\Omega)$. If $V \geq 0$, then the semigroup is contractive.
+%\end{theorem}
+%
+%If $\Omega$ is of class $C^\infty$ similar results have been obtained by \citet{Es94} and \citet{En03}. Under the very general conditions here, Theorem 4.8 is due to \citet{AtE20}. There it is shown that $N_V$ is resolvent-
+%
+The generation property on $C(\overline{\Omega})$ is due to \citet{Ni11}. 
+%A major point is to show that the resolvent of the corresponding operator on $L^2(\Omega)$ leaves $C(\overline{\Omega})$ invariant. Given $f \in C(\overline{\Omega})$, $u \in H^1(\Omega)$ such that $u - \Delta u = f$, $\partial_\nu u + \beta u|_{\partial\Omega} = 0$.
+%
+%One has to show that $u \in C(\overline{\Omega})$. Nittka extends $u$ to an open set $\widetilde{\Omega}$ containing $\overline{\Omega}$ by reflecting $u$ along the graph. Then $u$ becomes the solution of an elliptic problem on $\widetilde{\Omega}$. Continuity on $\widetilde{\Omega}$, and hence on $\overline{\Omega}$, follows from the De Giorgi-Nash Theorem.
 
-
-\begin{theorem}[4.4]
-Assume (4.2) and (4.4). Then $\Delta - V$ generates a positive, irreducible semigroup on $C(\partial\Omega)$. If $V \geq 0$, then the semigroup is contractive.
-\end{theorem}
-
-If $\Omega$ is of class $C^\infty$ similar results have been obtained by Escher \cite{Es94} and Engel \cite{En03}. Under the very general conditions here, Theorem 4.8 is due to Arendt and ter Elst \cite{AtE20}. There it is shown that $N_V$ is resolvent-
-
-The generation property on $C(\overline{\Omega})$ is due to Nittka \cite{Ni11}. A major point is to show that the resolvent of the corresponding operator on $L^2(\Omega)$ leaves $C(\overline{\Omega})$ invariant. Given $f \in C(\overline{\Omega})$, $u \in H^1(\Omega)$ such that $u - \Delta u = f$, $\partial_\nu u + \beta u|_{\partial\Omega} = 0$.
-
-One has to show that $u \in C(\overline{\Omega})$. Nittka extends $u$ to an open set $\widetilde{\Omega}$ containing $\overline{\Omega}$ by reflecting $u$ along the graph. Then $u$ becomes the solution of an elliptic problem on $\widetilde{\Omega}$. Continuity on $\widetilde{\Omega}$, and hence on $\overline{\Omega}$, follows from the De Giorgi-Nash Theorem.
-
-Irreducibility is due to Arendt, ter Elst and Glück \cite{AEG20}, Theorem 4.5.
-These results have first been proved for $ \beta \geq 0 $.
-Daves \cite{Dav09} has shown how one can treat general $ \beta \in L^{\infty}( \delta \Omega ) $.
+The results on the Robin-Laplacian have first been proved for $ \beta \geq 0 $.
+\citet{Dav09} has shown how one can treat general $ \beta \in L^{\infty}(\Omega ) $.
 
 Since the semigroup is holomorphic, by C-II, Theorem 3.2 (ii), it implies that
 %% --
-\begin{equation} \tag{4.1}
+\begin{equation*}  % \tag{4.1}
 \inf_{x \in \overline{\Omega}} (T(t)f)(x) > 0
-\end{equation}
+\end{equation*}
 %% --
 for all $t > 0$ and $0 \leq f \in C(\overline{\Omega})$, $f \neq 0$.
 
@@ -31,7 +29,7 @@ It follows from (4.1) that $u_0$ is strictly positive; \ie
 	\inf_{x \in \overline{\Omega}} u_0(x) > 0,
 \]
 %% --
-a remarkable property, which has important applications to semi-linear problems, see Arendt-Daners \cite{AD25}.
+a remarkable property, which has important applications to semi-linear problems, see \citet{AD25}.
 
 The spectral bound $s(\Delta^\beta)$ determines the asymptotic behavior of the semigroup $\mathcal{T}$. 
 In fact, the following corollary follows from B-III Proposition 3.5.
@@ -45,6 +43,7 @@ for all $t \geq 0$, where $P \in \mathcal{L}(C(\overline{\Omega}))$ is given by
 \end{corollary}
 %% --
 The theorem says that the rescaled semigroup $(e^{-s(\Delta^\beta)t}T(t))_{t \geq 0}$ converges in the operator norm to the rank-1-projection $P$ exponentially fast.
+Irreducibility is due to \citet[Theorem 4.5]{AEG20}.
 %% --
 \subsection{Elliptic operators in divergence form}
 %% --
@@ -79,23 +78,27 @@ We define $A_0$ as the part of $\mathcal{A}$ in $C_0(\Omega)$; \ie
 	A_0 u &\coloneq  \mathcal{A}u.
 \end{align*}
 %% -- 
-Then Theorem 4.1 holds with $\Delta_0$ replaced by $A_0$. It is remarkable that Dirichlet regularity of $\Omega$ is the right regularity condition at the boundary, a discovery due to Stampacchia. We refer to Arendt and Bénilan \cite{ArBe99}, Section 4 for a proof of the following result.
+Then Theorem 4.1 holds with $\Delta_0$ replaced by $A_0$. It is remarkable that Dirichlet regularity of $\Omega$ is the right regularity condition at the boundary, a discovery due to Stampacchia. We refer to  \citet[Section 4]{ArBe99} for a proof of the following result.
 
 \begin{theorem}
 Assume that $\Omega \subset \R^n$ is a bounded, open, connected, Dirichlet regular set. Then $A_0$ generates a positive, irreducible, holomorphic semigroup $\mathcal{T} = (T(t))_{t \geq 0}$ on $C_0(\Omega)$. Moreover, $T(t)$ is compact for all $t > 0$.
 \end{theorem}
 
 \begin{remark*}
-The proof of holomorphy depends on Gaussian estimates, which in \cite{ArBe99} were merely known if the $b_k \in W^{1,\infty}(\Omega)$. Later, it was shown by Davies \cite{Da00} that they always hold.
+The proof of holomorphy depends on Gaussian estimates, which in \citet{ArBe99} were merely known if the $b_k \in W^{1,\infty}(\Omega)$. Later, it was shown by Davies \citet{Da00} that they always hold.
 \end{remark*}
 
-Also the results for Robin boundary conditions Theorem 4.3 and 4.4 can be extended to elliptic operators in divergence form on $C(\overline{\Omega})$; see Theorem 4.5 in Arendt, ter Elst, Glück \cite{AEG20}. It uses results of Nittka \cite{Ni11}.
+Also the results for Robin boundary conditions Theorem 4.3 and 4.4 can be extended to elliptic operators in divergence form on $C(\overline{\Omega})$; see \citet[Theorem 4.5]{AEG20}. 
+It uses results of \citet{Ni11}.
 %% --
 \subsection{Elliptic operators in non-divergence forms}
 %% --
 The techniques for elliptic operators in non-divergence form are quite different than those used in the divergence-case form. But the results are similar.
 
-Let $\Omega \subset \R^n$ be open and connected. We assume that $\Omega$ satisfies the uniform exterior cone condition. This means the following. There exists a finite, right circular cone $V$ such that for each $x \in \partial\Omega$ there exists a cone $V_x$ which is congruent to $V$ such that $V_x \cap \overline{\Omega} = \{x\}$.
+Let $\Omega \subset \R^n$ be open, bounded and connected. 
+We assume that $\Omega$ satisfies the uniform exterior cone condition. 
+This means the following. 
+There exists a finite, right circular cone $V$ such that for each $x \in \partial\Omega$ there exists a cone $V_x$ which is congruent to $V$ such that $V_x \cap \overline{\Omega} = \{x\}$.
 
 Let $a_{k\ell} = a_{\ell k} \in C(\overline{\Omega})$, $b_k \in L^\infty(\Omega)$, $c \in L^\infty(\Omega)$, $c \leq 0$ such that
 \[\sum_{k,\ell=1}^n a_{k\ell}(x)\xi_k\xi_\ell \geq \mu|\xi|^2\]
@@ -119,12 +122,12 @@ The operator $A$ generates a positive, irreducible, contractive holomorphic semi
 for some $\varepsilon > 0$, $M \geq 1$. The resolvent of $A$ is compact.
 \end{theorem}
 %% --
-This result is proved by Arendt and Schätzle \cite{AS14}, Proposition 4.7. 
+This result is proved by \citet[Prop. 4.7]{AS14}. 
 
-Positivity and irreducibility are a consequence of the Alexandrov maximum principle. For $C^2$-boundary also results on $L^p(\Omega)$ spaces are obtained by Denk, Hieber and Prüss \cite{DHP03} whose main interest lies in proving maximal regularity and establishing a bounded $H^\infty$-calculus.
+Positivity and irreducibility are a consequence of the Alexandrov maximum principle. For $C^2$-boundary also results on $L^p(\Omega)$ spaces are obtained by \citet{DHP03} whose main interest lies in proving maximal regularity and establishing a bounded $H^\infty$-calculus.
 
 However, in the situation of Theorem 4.6, without assuming merely the uniform exterior cone condition on $\Omega$, it seems not to be known whether the semigroup extends to a strongly continuous semigroup on $L^p(\Omega)$ for some $p \in [1,\infty)$.
 
-Theorem 4.6 is extended by Arendt and Schätzle \cite{AS25} to unbounded open sets which satisfy the locally uniform exterior cone condition. However, in the case of unbounded $\Omega$ the semigroup converges merely strongly to $0$ (and not exponentially fast).
+Theorem 4.6 is extended by \citet{AS25} to unbounded open sets which satisfy the locally uniform exterior cone condition. However, in the case of unbounded $\Omega$ the semigroup converges merely strongly to $0$ (and not exponentially fast).
 
-The monograph of Lunardi \cite{Lu95} is devoted to the study of holomorphic semigroups generated by elliptic operators in non-divergence form.
+The monograph of \citet{Lu95} is devoted to the study of holomorphic semigroups generated by elliptic operators in non-divergence form.
