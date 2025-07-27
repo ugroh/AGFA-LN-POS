@@ -7,7 +7,7 @@
 \documentclass[% 
 	,graybox
 	,envcountsect			%% not working  
-%	,evvcountsame			%% -- " --
+%	,evvcountsame			%% -- " -- 
 %	,envcountresetsect		%% -- " --
 %  	,sectrefs
 % 	,natbib
@@ -21,6 +21,7 @@
 %\usepackage{helvet}
 %\usepackage{courier}
 %
+\usepackage{setspace}
 \usepackage{type1cm}         
 
 \usepackage{makeidx}         % allows index generation
@@ -108,8 +109,8 @@
 
 
 %\makeindex             % used for the subject index
-\usepackage{imakeidx}
-\makeindex[intoc, columns=2, options=-s svind.ist]                      
+%\usepackage{imakeidx}
+%\makeindex[intoc, columns=2, options=-s svind.ist]                      
 % please use the style svind.ist with
                        % your makeindex program
                        
@@ -136,6 +137,15 @@
 %% -- \subsection nicht ins TOC
 %% --
 \setcounter{tocdepth}{1}
+
+\usepackage{tocloft}
+\cftpagenumbersoff{part}		% keine Seitenangabe bei Part in TOC
+
+\newcommand{\chapternopage}[1]{% keine Seitenagabe in TOC für Chapter
+  \addtocontents{toc}{\protect\cftpagenumbersoff{chapter}}% 
+  \chapter{#1}%
+  \addtocontents{toc}{\protect\cftpagenumberson{chapter}}%
+}
 
 %% -- Für Links im PDF
 %% --
@@ -198,10 +208,14 @@
 %%%% --
 ,./part-e/part-e
 %,./part-e/chap-ea1
-,./part-e/chap-eb2
+%,./part-e/chap-eb2
 %,./part-e/chap-d3
 %,./part-e/chap-d4
 %%,./part-d/appendix-d
+%%%% -- Part F Appendix
+,./part-f/part-f
+,./part-f/ln-symbols-new
+,./part-f/ln-index
 }
 %% --
 \begin{document}
@@ -224,8 +238,8 @@
 %% --
 \tableofcontents
 %% --
- \include{./part-0/ln-symbols}
- \printnomenclature
+% \include{./part-0/ln-symbols}
+% \printnomenclature
 %%
 \mainmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -269,7 +283,6 @@
 %\include{./part-d/chap-d3}
 %\include{./part-d/chap-d4}
 
-
 \backmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% -- Literatur
@@ -279,7 +292,13 @@
 %\bibliography{bib/ln-references} 
 
 \cleardoublepage 
-\printindex
+%\printindex
+\include{./part-f/part-f}
+\include{./part-f/ln-symbols-new}
+%\markboth{Subject Index}{Subject Index}
+% \printnomenclature
+\include{./part-f/ln-index}
+
 
 
 
