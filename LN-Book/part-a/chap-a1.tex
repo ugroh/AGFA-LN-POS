@@ -1570,8 +1570,9 @@ Using %Proposition~\ref{prop:a1-1.9}\,(ii).
 Proposition~\ref{prop:a1-1.9}\,(ii) on p.~\pageref{prop:a1-1.9} 
 one easily shows that $D_{0} \coloneqq D(A) \cap D(B)$ is a core for its generator $C$ and $Cf = Af + Bf$ for all $f \in D_{0}$.
 
-\section*{Notes}
-\addcontentsline{toc}{section}{Notes}
+%\section*{Notes}
+%\addcontentsline{toc}{section}{Notes}
+\sectionnopage{Notes}
 %
 %\index{Notes!Semigroup Theory}
 
@@ -1579,9 +1580,14 @@ For more complete information on semigroup theory we refer the reader to \citet{
 \citet{goldstein:1985a} and \citet{pazy:1983}, to the survey article by \citet{kreinkhazan:1985}, to the bibliography by 
 \citet{goldstein:1985b} and to \citet{engelnagel:2006}.
 
-
 %% -- Literatur
 %% --
+%\sectionnopage{References}
+%\section*{References}
+%\addcontentsline{toc}{section}{References}
+%\cftpagenumberson{section}
 {\RaggedRight
+\renewcommand{\bibsection}{}
+\sectionnopage{References}
 \bibliographystyle{abbrvnat}
 \bibliography{bib/ln-references}}
