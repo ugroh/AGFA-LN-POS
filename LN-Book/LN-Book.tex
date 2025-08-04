@@ -1,8 +1,8 @@
 % !TEX TS-program = pdflatexmk
-% !BIB program = bibtex 
+% !BIB program = bibtex  
 %%%%%%%%%%%%%%%%%%%% LN-Book.tex %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Stand: 2025-06-28 ulgr
-%%%%%%%%%%%%%%%% Springer-Verlag %%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%% Springer-Verlag %%%%%%%%%%%%%%%%%%%%%%%%%% 
 
 \documentclass[% 
 	,graybox
@@ -115,7 +115,7 @@
                        % your makeindex program
                        
 %% --
-%% -- https://www.uweziegenhagen.de/?p=3020	
+%% -- https://www.uweziegenhagen.de/?p=3020	 
 %% -- Stand
 %% --
 
@@ -171,7 +171,7 @@
 %,./part-0/foreword 
 ,./part-0/ln-preface
 %,./part-0/acknowledgement
-,./part-0/ln-symbols   
+%,./part-0/ln-symbols   
 %%%%% -- Part A
 %%%%% --
 ,./part-a/part-a
@@ -179,7 +179,6 @@
 ,./part-a/chap-a2	%% -- final
 ,./part-a/chap-a3	%% -- final
 ,./part-a/chap-a4   %% -- final
-%%%%,./part-a/appendix-a 
 %%%% -- Part B
 %%%% --
 ,./part-b/part-b	  
@@ -187,7 +186,6 @@
 ,./part-b/chap-b2  %% -- final
 ,./part-b/chap-b3  %% -- final
 ,./part-b/chap-b4  %% -- final
-%%%,./part-b/appendix-b
 %%% -- Part C 
 %%% --
 ,./part-c/part-c
@@ -195,7 +193,6 @@
 ,./part-c/chap-c2	%% -- final
 ,./part-c/chap-c3
 ,./part-c/chap-c4
-%%%%,./part-c/appendix-c
 %%%% -- Part D
 %%%% --
 ,./part-d/part-d
@@ -203,18 +200,15 @@
 ,./part-d/chap-d2
 ,./part-d/chap-d3
 ,./part-d/chap-d4
-%,./part-d/appendix-d
 %%%% -- Part E
 %%%% --
 ,./part-e/part-e
-%,./part-e/chap-ea1
-%,./part-e/chap-eb2
-%,./part-e/chap-d3
-%,./part-e/chap-d4
-%%,./part-d/appendix-d
+%,./part-e/un-chap-a1
+%,./part-e/un-chap-b1
+%,./part-e/part-e-references
 %%%% -- Part F Appendix
 ,./part-f/part-f
-,./part-f/ln-symbols-new
+,./part-f/ln-symbols
 ,./part-f/ln-index
 }
 %% --
@@ -240,6 +234,7 @@
 %% --
 % \include{./part-0/ln-symbols}
 % \printnomenclature
+%\include{./part-f/ln-symbols}
 %%
 \mainmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -278,10 +273,16 @@
 
 %% -- Part-E
 \include{./part-e/part-e}
-%\include{./part-e/chap-ea1}
-\include{./part-e/chap-eb2}
+%\include{./part-e/un-chap-a1}
+%\include{./part-e/un-chap-b1}
+%\include{./part-e/part-e-references}
+%\include{./part-e/chap-eb2}
 %\include{./part-d/chap-d3}
 %\include{./part-d/chap-d4}
+
+\include{./part-f/part-f}
+\include{./part-f/ln-symbols}
+\include{./part-f/ln-index}
 
 \backmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -293,11 +294,7 @@
 
 \cleardoublepage 
 %\printindex
-\include{./part-f/part-f}
-\include{./part-f/ln-symbols-new}
-%\markboth{Subject Index}{Subject Index}
-% \printnomenclature
-\include{./part-f/ln-index}
+
 
 
 
