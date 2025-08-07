@@ -786,7 +786,8 @@ However, some of the (equivalent) assertions stated in B-III, Definition~3.1 do 
 	%\index{Semigroup!Irreducible}
 	%\index{Banach lattice!Irreducible semigroup}
 	
-	A positive semigroup $(T(t))_{t\geq 0}$ on a Banach lattice $E$ with generator $A$ is called \emph{irreducible} if one of the following (mutually equivalent) conditions is satisfied
+	A positive semigroup $(T(t))_{t\geq 0}$ on a Banach lattice $E$ with generator $A$ is called \emph{irreducible} if one of the following (mutually equivalent) conditions is satisfied.
+    %% --
 	\begin{enumerate}[\upshape (a)]
 	\item
 	There is no $(T(t))$-invariant closed ideal except $\{0\}$ and $E$.
@@ -794,9 +795,10 @@ However, some of the (equivalent) assertions stated in B-III, Definition~3.1 do 
 	\item 
 	Given $f \in E$, $\phi \in E'$ such that $f > 0$, $\phi > 0$ then $\langle T(t_{0})f,\phi \rangle > 0$ for some $t_{0} \geq 0$.
 	
-	\item 
-	For arbitrary $f,g \in E_{+}$, $f > 0$, $g > 0$ there exists $t_{0}$ such that $\inf\{T(t_{0})f,g\} > 0$.
-	
+	%\item 
+	%For arbitrary $f,g \in E_{+}$, $f > 0$, $g > 0$ there exists $t_{0}$ such that $\inf\{T(t_{0})f,g\} > 0$.
+	% ist nicht äquivalent
+    
 	\item 
 	For some (every) $\lambda > s(A)$ there is no closed ideal other than $\{0\}$ or $E$ which is invariant under $R(\lambda,A)$.
 	
@@ -805,12 +807,12 @@ However, some of the (equivalent) assertions stated in B-III, Definition~3.1 do 
 	\end{enumerate}
 \end{definition}
 %% --
-Equivalence of the five conditions above is obtained by a slight modification of the arguments given in B-III, Definition~3.1.
-Since there are no difficulties we omit a detailed proof.
+Equivalence of the conditions above is obtained by a slight modification of the arguments given in B-III, Definition~3.1.,
+so we omit a detailed proof.
 Obviously, a semigroup is irreducible if one single operator $T(t_{0})$ is irreducible.
 In general the converse does not hold (see p.65 in \citet{greiner:1982}).
 The situation is different when holomorphic semigroups are considered.
-Then an even stronger assertion holds. In fact irreducibility of a holomorphic semigroup implies that every single operator maps the positive elements onto quasi-interior points.
+Then an even stronger assertion holds. In fact irreducibility of a holomorphic semigroup implies that every single operator maps the positive elements into quasi-interior points.
 This is the second statement of the following theorem (see also B-III, Remark~3.2).
 
 %% --
@@ -819,7 +821,7 @@ This is the second statement of the following theorem (see also B-III, Remark~3.
 	%\index{Semigroup!Holomorphic properties}
 	\begin{enumerate}[\upshape (i)]
 	\item
- 	If $(T(t))$ is an irreducible semigroup then every operator $T(t)$ is strictly positive, \ie 
+ 	If $(T(t))$ is an irreducible semigroup, then every operator $T(t)$ is strictly positive, \ie 
 	given $f > 0$, $t \geq 0$, then $T(t)f > 0$.
 	
 	\item 
@@ -840,7 +842,7 @@ This is the second statement of the following theorem (see also B-III, Remark~3.
 	Then $T(t) = T(\frac{t}{n})^{n}$ is also strictly positive.
 	
 	\item
-	We prove that for an arbitrary holomorphic positive semigroup $(T(t))_{t\geq 0}$ the following holds
+	We prove that for an arbitrary holomorphic positive semigroup $(T(t))_{t\geq 0}$ the following holds.
 	
 	Given $f > 0$, $\phi > 0$ then either $\langle T(t)f,\phi \rangle = 0$ for all $t \geq 0$ or $\langle T(t)f,\phi \rangle > 0$ for all $t > 0$.
 	
@@ -2185,7 +2187,7 @@ Further examples of flows which are measure preserving and therefore induce semi
 
 
 
-\clearpage
+%\clearpage
 \section*{Notes}
 \addcontentsline{toc}{section}{Notes}
 
