@@ -56,7 +56,7 @@ The fact that $s(A)$ is always an eigenvalue of the adjoint (\cf B-III Theorem~1
 Another result which cannot be extended to arbitrary Banach lattices is that spectral bound and growth bound coincide (\cf B-IV, Theorem~1.4); an example is given in A-III, Example~1.3.
 Despite of this, the resolvent $R(\lambda,A)$ of a positive semigroup is given as the Laplace transform of the semigroup in the half-plane $\{z \in \C  \colon \Re  z > s(A)\}$ (even in case that $\omega_0(A) > s(A)$).
 Note however, that the integral exists only as an improper Riemann integral.
-By Datko's Theorem (A-IV, Theorem~1.11) the function $t \mapsto \mathrm{e}^{-\lambda t}T(t)f$ cannot be Bochner integrable for all $f \in E$ in the case $\Re  \lambda \leq \omega_0(A)$.
+By Datko's Theorem (A-IV, Theorem~1.11) the function $t \mapsto \mathrm{e}^{-\lambda t}T(t)f$ cannot be Bochner integrable for all $f \in E$ in the case $\Re(\lambda) \leq \omega_0(A)$.
 %% --
 \begin{theorem}\label{thm:c3-1.2}
 	%%\index{Positive Semigroups!Resolvent}
@@ -107,7 +107,7 @@ which shows that $\lim_{t\to\infty} \int_{0}^t \mathrm{e}^{-\lambda s}T(s)f \ds 
 Thus, by A-I,\,Proposition~1.11 we have  $R(\lambda,A)f = \int_{0}^{\infty} \mathrm{e}^{-\lambda s} T(s)f \ds $\,. 
 
 It remains to prove that the net $\left(\int_{0}^t \exp(-\mu s)T(s) \ds \right)_{t\geq 0}$ converges with respect to the operator norm.
-We fix $\mu$ such that $s(A) < \mu < \Re  \lambda$.
+We fix $\mu$ such that $s(A) < \mu < \Re(\lambda)$.
 As we have seen above, the map $s \mapsto \mathrm{e}^{-\mu s}\langle T(s)f,\phi\rangle$ is Lebesgue integrable for every $(f,\phi) \in E \times E'$, thus defining a bilinear map $b \colon E \times E' \to L^1(\R _{+})$.
 Using the closed graph theorem, it is easy to see that $b$ is separately continuous, hence jointly continuous by \citet[III.Theorem~5.1]{schaefer:1966}.
 Thus there is a constant $M$ such that
@@ -116,7 +116,7 @@ Thus there is a constant $M$ such that
 	\int_{0}^{\infty} \mathrm{e}^{-\mu s}|\langle T(s)f,\phi\rangle| \ds  = \|b(f,\phi)\| \leq M\|f\|\|\phi\| \quad (f \in E, \phi \in E')\,.
 \end{equation}
 %% --
-Given $0 \leq t < r$ and setting $\epsilon \coloneqq \Re  \lambda - \mu$ we have
+Given $0 \leq t < r$ and setting $\epsilon \coloneqq \Re(\lambda) - \mu$ we have
 %% --
 \begin{align*}
 	\left|\int_{t}^r \mathrm{e}^{-\lambda s}\langle T(s)f,\phi\rangle \ds \right| &\leq \int_{t}^r \exp(-(\Re \lambda-\mu)s)\mathrm{e}^{-\lambda s}|\langle T(s)f,\phi\rangle| \ds  \\
@@ -133,7 +133,7 @@ In each of the following corollaries we assume that $A$ is the generator of a po
 
 %% --
 \begin{corollary}\label{cor:c3-1.3}
-If $\Re  \lambda > s(A)$, then we have
+If $\Re(\lambda) > s(A)$, then we have
 %% --
 \begin{equation}\label{eq:c3-1.5}
 	|R(\lambda,A)f| \leq R(\Re \lambda,A) |f| \quad (f \in E).
@@ -182,7 +182,7 @@ If $A$ is the generator of a positive group, then $\sigma(A)\cap\R  \neq \emptys
 \begin{proof}
 Both $A$ and $-A$ are generators of positive semigroups, hence if $\sigma(A) = \emptyset$, then $s(A) = s(-A) = -\infty$ and \eqref{eq:c3-1.5} implies that 
 \[
-\{R(\lambda,A) \colon \Re  \lambda \geq 0\} \cup \{R(\lambda,-A) \colon \Re  \lambda \geq 0\}
+\{R(\lambda,A) \colon \Re(\lambda) \geq 0\} \cup \{R(\lambda,-A) \colon \Re(\lambda) \geq 0\}
 \]
 is bounded in $\mathcal{L}(E)$, \ie  $\{R(\lambda,A) \colon \lambda \in \C \}$ is bounded.
 By Liouville's Theorem the function $\lambda \mapsto R(\lambda,A)$ is constant, hence identically zero because $\displaystyle \lim_{\lambda\to\infty}R(\lambda,A) = 0$.
@@ -448,7 +448,7 @@ This shows that without loss of generality one can assume that the domain of a p
 At first we prove the following domination property which is the extension of \eqref{eq:c3-1.5} to positive pseudo-resolvents
 %% --
 \begin{equation}\label{eq:c3-2.13}
-	|R(\lambda)f| \leq R(\Re  \lambda) |f| \ \text{ for every } \ \lambda \in \Delta , f \in E\,.
+	|R(\lambda)f| \leq R(\Re(\lambda)) |f| \ \text{ for every } \ \lambda \in \Delta , f \in E\,.
 \end{equation}
 %% --
 To do this we fix $\lambda \in \Delta$.
@@ -460,7 +460,7 @@ Therefore $R(\lambda) = \sum_{n=0}^{\infty}(r-\lambda)^{n}R(r)^{n+1}$ for $r > r
 	& =\sum_{n=0}^{\infty}(r - (r-|r-\lambda|))^{n}R(r)^{n+1}|f| = R(r - |\lambda-r|) |f|\,.
 \end{align*}
 %% --
-Since $\lim_{r \to \infty} (r - |\lambda-r|) = \Re  \lambda$, we obtain \eqref{eq:c3-2.13}.
+Since $\lim_{r \to \infty} (r - |\lambda-r|) = \Re(\lambda)$, we obtain \eqref{eq:c3-2.13}.
 
 As a consequence of \eqref{eq:c3-2.13} and the assumption $rR(r) |h| = |h|$ we have that the principal ideal $E_{|h|}$ is $\{R(\lambda)\}_{\lambda \in \Delta}$-invariant.
 Identifying, according to the Kakutani-Krein Theorem, $E_{|h|}$ with a space $C(K)$, $K$ compact, and by restricting the operators $R(\lambda)$ to $E_{|h|} \cong C(K)$, we obtain a positive pseudo-resolvent $\tilde{R} \colon \Delta \to \mathcal{L}(C(K))$.
@@ -612,7 +612,7 @@ Using the resolvent equation \eqref{eq:c3-2.8} we obtain for $r > 0$, $\epsilon 
 Since the right hand side tends to $0$ as $\epsilon \to 0$, we have $(1 - \tau R_{1}(\tau)')\phi_{1} = 0$ or
 %% --
 \begin{equation}\label{eq:c3-2.18}
-\lambda R_{1}(\lambda)'\phi_{1} = \phi_{1} \ \text{ for } \Re\lambda > 0\,.
+\lambda R_{1}(\lambda)'\phi_{1} = \phi_{1} \ \text{ for } \Re(\lambda) > 0\,.
 \end{equation} 
 %% --
 Moreover, from 
@@ -626,7 +626,7 @@ it follows that
 \begin{equation}\label{eq:c3-2.19}
 		\langle |h_{1}|,\phi_{1} \rangle > 0\,.
 \end{equation}
-for arbitrary $f_{1} \in E_{1}$, $\Re  \lambda > 0$ we have $\langle |R_{1}(\lambda)f_{1}|,\phi_{1} \rangle \leq \langle R_{1}(\Re \lambda)|f_{1}|,\phi_{1} \rangle = \langle |f_{1}|,R_{1}(\Re \lambda)'\phi_{1} \rangle = (\Re \lambda)^{-1}\langle |f_{1}|,\phi_{1} \rangle$.
+for arbitrary $f_{1} \in E_{1}$, $\Re(\lambda) > 0$ we have $\langle |R_{1}(\lambda)f_{1}|,\phi_{1} \rangle \leq \langle R_{1}(\Re \lambda)|f_{1}|,\phi_{1} \rangle = \langle |f_{1}|,R_{1}(\Re \lambda)'\phi_{1} \rangle = (\Re \lambda)^{-1}\langle |f_{1}|,\phi_{1} \rangle$.
 
 Therefore the ideal $I \coloneqq \{f_{1} \in E_{1} \colon \langle |f_{1}|,\phi_{1} \rangle = 0\}$ is invariant under $\{(R_{1}(\lambda)\}_{\Re \lambda>0}$.
 Furthermore we have (see \eqref{eq:c3-2.17}, \eqref{eq:c3-2.18}) 
@@ -644,7 +644,7 @@ Moreover, $\lambda R_{2}(\lambda+\im\beta)h_{2} = h_{2}$ (by \eqref{eq:c3-2.16} 
 
 Now we apply Proposition~\ref{prop:c3-2.7}(b) and obtain
 \begin{equation}\label{eq:c3-2.21}
-	\lambda R_{2}(\lambda+\im n\beta)h_{2}^{[n]} = h_{2}^{[n]}\ \text{ for } \ \Re\lambda > 0 , n \in \Z\,.
+	\lambda R_{2}(\lambda+\im n\beta)h_{2}^{[n]} = h_{2}^{[n]}\ \text{ for } \ \Re(\lambda) > 0 , n \in \Z\,.
 \end{equation}
 
 In particular, we have $\|R_{2}(r+\im n\beta)\| \geq \frac{1}{r}$, thus 
@@ -696,7 +696,7 @@ By Theorem~\ref{thm:c3-2.10} each set $\sigma_{b}(A_{n})$ is cyclic, hence so is
 The proof of the preceding corollary indicates a possible generalization of Theorem~\ref{thm:c3-2.10}.
 Instead of assuming that the resolvent grows slowly one merely needs that there exist a finite chain of closed $\TT$-invariant ideals as described in \eqref{eq:c3-2.22} such that the semigroups induced on the corresponding quotient spaces have slowly growing resolvents.
 
-In case that $\sigma_{b}(A)$ is cyclic one has the alternative (\cf B-III,(2.19))
+In case that $\sigma_{b}(A)$ is cyclic one has the alternative (\cf B-III,\;(2.19))
 %% --
 \[
 \text{Either $\sigma_{b}(A) = \{s(A)\}$ or else $\sigma_{b}(A)$ is an unbounded set.}
@@ -767,7 +767,7 @@ We conclude with some remarks.
 	
 	\item 
 	It is not difficult to give examples of semigroups whose resolvent do not grow slowly or cannot be reduced by a finite chain of invariant ideals as described after Corollary~\ref{cor:c3-2.12}.
-	E.g., one can take a bounded positive operator $A$ which is not nilpotent and satisfies $\sigma(A) = \{0\}$.
+	For example, one can take a bounded positive operator $A$ which is not nilpotent and satisfies $\sigma(A) = \{0\}$.
 	However, the following question is still unanswered.
 	\begin{equation*}
 		\textit{Does every positive semigroup have cyclic boundary spectrum?}
@@ -1130,7 +1130,7 @@ Each of the following conditions on $E$ and $(T(t))$, respectively, implies that
 	
 	Assertion (ii)-(f) will be proved utilizing the analogous results for a single operator.
 	In view of A-III, Proposition~2.5 we have to show that $r(R(\lambda,A)) > 0$ for some $\lambda \in \rho(A)$.
-	Moreover, from A-I,(3.1) we deduce
+	Moreover, from A-I,\;(3.1) we deduce
 	%% --
 	\begin{align*}
 		T(t)R(\lambda,A) = \mathrm{e}^{\lambda t}R(\lambda,A) - \mathrm{e}^{\lambda t}\int_{0}^{t} \mathrm{e}^{-\lambda s}T(s)\ds \leq \mathrm{e}^{\lambda t}R(\lambda,A) \ (t\geq 0, \lambda>s(A))\,.
@@ -1550,7 +1550,7 @@ In the last part of this section we discuss a spectral decomposition of positive
 		T(t)'\psi \leq \mathrm{e}^{rt}\psi \ \text{ and } \ \ T(t)'\psi \geq \psi \ (t \geq 0) \ \text{ and } \ |\phi| \leq \psi\,.
 	\end{equation}
 	%% --
-	In fact, A-I,(3.1) implies $(\mathrm{e}^{rt} - T(r))R(r,A) \geq 0$ hence 
+	In fact, A-I,\;(3.1) implies $(\mathrm{e}^{rt} - T(r))R(r,A) \geq 0$ hence 
     \[
     T(t)'\psi = rR(r,A)'T(t)'|\phi| \leq r\cdot \mathrm{e}^{rt}R(r,A)'|\phi| = \mathrm{e}^{rt}\psi\,.
     \]
@@ -1746,7 +1746,7 @@ At first we assume $r \in R(\sigma(T(t)))$.
 Then by A-III, Theorem~6.3 there exists
 $\beta \in \R $ such that $\alpha+\im\beta \in R\sigma(A)$.
 By Lemma~\ref{lem:c3-4.1} either $\alpha+\im\beta\Z \subset R\sigma(A)$
-or $\{\lambda \in \C  \colon \Re  \lambda < \alpha\} \subset R\sigma(A)$.
+or $\{\lambda \in \C  \colon \Re(\lambda) < \alpha\} \subset R\sigma(A)$.
 In both cases we have $\alpha \in \sigma(A)$.
 
 Now we assume $r \in A\sigma(T(t))$. 
@@ -1889,7 +1889,7 @@ lattice $E$ with generator $A$. Given $\mu \in \rho(A) \cap \R $ and $h \in E_+$
 %% --
 \begin{proof}
 $(a)\Rightarrow(b)$  We have
-$\int_{0}^{t} \mathrm{e}^{-\mu s}T(s)h \ds = (Id - \mathrm{e}^{-\mu t}T(t))R(\mu,A)h$ (see A-I,(3.2)).
+$\int_{0}^{t} \mathrm{e}^{-\mu s}T(s)h \ds = (Id - \mathrm{e}^{-\mu t}T(t))R(\mu,A)h$ (see A-I,\;(3.2)).
 Since $R(\mu,A)h \geq 0$ and $T(t)$ is a positive operator we obtain
 \[\textstyle
 \int_{0}^{t} \mathrm{e}^{-\mu s}T(s)h \ds = R(\mu,A)h - \mathrm{e}^{-\mu t}T(t)R(\mu,A)h \leq R(\mu,A)h
@@ -1930,8 +1930,8 @@ are $(T(t))_{t \in \R }$-invariant projection bands,
 the direct sum of them is $E$, and the spectra of the restrictions satisfy
 %% --
 \begin{align*}
-	\sigma(A_{|I_{\mu}}) &= \sigma(A) \cap \{\lambda \in \C  \colon \Re  \lambda < \mu\} ,\\
-	\sigma(A_{|J_{\mu}}) &= \sigma(A) \cap \{\lambda \in \C  \colon \Re  \lambda > \mu\} .
+	\sigma(A_{|I_{\mu}}) &= \sigma(A) \cap \{\lambda \in \C  \colon \Re(\lambda) < \mu\} ,\\
+	\sigma(A_{|J_{\mu}}) &= \sigma(A) \cap \{\lambda \in \C  \colon \Re(\lambda) > \mu\} .
 \end{align*}
 \end{theorem}
 %% --
@@ -1958,8 +1958,8 @@ of the theorem is proved.
 
 Since $I_{\mu}$ is $R(\mu,A)$-invariant, we have $\mu \in \rho(A_{|I_{\mu}})$ and
 $R(\mu,A_{|I_{\mu}}) = R(\mu,A)_{|I_{\mu}} \geq 0$. Theorem~\ref{thm:c3-1.1}(ii) then implies
-$\sigma(A|_{I_{\mu}}) \subset \{\lambda \in \C  \colon \Re  \lambda < \mu\}$. The same argument applied to $-A$ and
-$-\mu$ yields $\sigma(A_{|J_{\mu}}) \subset \{\lambda \in \C  \colon \Re  \lambda > \mu\}$. Now the assertion follows
+$\sigma(A|_{I_{\mu}}) \subset \{\lambda \in \C  \colon \Re(\lambda) < \mu\}$. The same argument applied to $-A$ and
+$-\mu$ yields $\sigma(A_{|J_{\mu}}) \subset \{\lambda \in \C  \colon \Re(\lambda) > \mu\}$. Now the assertion follows
 from A-III, Proposition~4.2.
 %$\square$
 \end{proof}
@@ -1972,7 +1972,7 @@ described above have the expected representation as an integral
 %\index{Spectral projections}
 %\index{Projections!Spectral}
 Assume that the assumptions of the theorem are satisfied, $\mu \in \rho(A) \cap \R $, $\beta > s(A)$, $\alpha < -s(-A)$. If we denote the projections corresponding to the decomposition $E = I_{\mu} \oplus J_{\mu}$ by $P_{\mu}$ and $Q_{\mu}$
-(i.e., $P_{\mu}E = \ker Q_{\mu} = I_{\mu}$, $Q_{\mu}E = \ker P_{\mu} = J_{\mu}$), then for $f \in D(A^2)$ we
+(\ie  $P_{\mu}E = \ker Q_{\mu} = I_{\mu}$, $Q_{\mu}E = \ker P_{\mu} = J_{\mu}$), then for $f \in D(A^2)$ we
 have
 %% --
 \begin{equation}\label{eq:c3-4.10}

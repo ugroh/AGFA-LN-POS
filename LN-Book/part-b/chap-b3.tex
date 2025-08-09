@@ -29,7 +29,7 @@ In case we restrict to compact spaces we write $K$ instead of $X$.
 %% --
 One of the basic results on the spectrum of a positive operator is the fact that its spectral radius is an element of the spectrum (\citet[V.Proposition~4.1]{schaefer:1974}).
 We begin the investigation of the spectrum of positive semigroups with the analogous result.
-To that purpose we recall that the spectral bound $s(A)$ of a generator $A$ is defined as the least upper bound of the real parts of all spectral values (cf.\ A-III,(1.2)).
+To that purpose we recall that the spectral bound $s(A)$ of a generator $A$ is defined as the least upper bound of the real parts of all spectral values (cf.\ A-III,\,(1.2)).
 %\pagebreak[1]
 %
 \begin{theorem}\label{thm:b3-1.1}
@@ -178,11 +178,11 @@ A direct proof not using this fact is given in C-III, Corollary~1.4.
 %\index{Resolvent!Compact Case}
 Suppose $X$ is compact and $A$ has compact resolvent.	
 	Then there exists a real eigenvalue $\lambda_{0}$ admitting a positive eigenfunction such that 
-	$\Re\lambda \leq \lambda_{0}$ for every $\lambda \in \sigma(A)$.
+	$\Re(\lambda) \leq \lambda_{0}$ for every $\lambda \in \sigma(A)$.
 \end{corollary}
 %% --
 \begin{proof}
-	From Theorem~\ref{thm:b3-1.1} we conclude that $\lambda_{0} \coloneqq s(A)$ is a real number, contained in the spectrum and obviously $\Re\lambda \leq \lambda_{0}$ for every $\lambda \in \sigma(A)$.
+	From Theorem~\ref{thm:b3-1.1} we conclude that $\lambda_{0} \coloneqq s(A)$ is a real number, contained in the spectrum and obviously $\Re(\lambda) \leq \lambda_{0}$ for every $\lambda \in \sigma(A)$.
 	Since $A$ has compact resolvent it follows that $\lambda_{0}$ is a pole of the resolvent.
 	Let $k$ be its order, then the highest coefficient in the Laurent series is given by
 	%% --
@@ -192,7 +192,7 @@ Suppose $X$ is compact and $A$ has compact resolvent.
 	%% --
 It follows from Corollary~\ref{cor:b3-1.3} that $Q$ is a positive operator.
 Since $Q \neq 0$, there exists $g \geq 0$ such that $h \coloneqq Qg > 0$.
-Moreover, by A-III,3.6., we have 
+Moreover, by A-III,\,3.6., we have 
 %
 \[
 	 (\lambda_{0} - A)h = (\lambda_{0} - A)Qg = 0 .
@@ -200,7 +200,7 @@ Moreover, by A-III,3.6., we have
 %
 \end{proof}
 % --
-The example of the rotation semigroup (A-III,Example~5.6) shows that the assumptions in Corollary~\ref{cor:b3-1.4} do not imply that $s(A)$ is dominant.
+The example of the rotation semigroup (A-III, Example~5.6) shows that the assumptions in Corollary~\ref{cor:b3-1.4} do not imply that $s(A)$ is dominant.
 Additional hypotheses ensuring this stronger property will be given below (see Corollary~\ref{cor:b3-2.11} and \ref{cor:b3-2.12}).
 
 The following result is elementary. 
@@ -305,7 +305,7 @@ which shows that the set of probability measures is $\sigma(M(K),C(K))$-compact.
 	Therefore the sequence $(\psi_{n})$ has non-zero cluster points.
 \end{proof}
 %% --
-This theorem implies that for positive semigroups on $C(K)$ the growth and spectral bounds coincide (cf.\ A-III,4.4).
+This theorem implies that for positive semigroups on $C(K)$ the growth and spectral bounds coincide (cf.\ A-III,\,4.4).
 Actually, this is true for locally compact spaces as well and can be proved directly (see B-IV, Theorem~1.4).
 Using this result one can prove Theorem~\ref{thm:b3-1.6} by applying the classical Krein-Rutman theorem to any resolvent operator $R(\lambda,A)$ for $\lambda \in \R$ sufficiently large.
 
@@ -334,7 +334,7 @@ From the explicit representation of $T(t)$,
 \section{The Boundary Spectrum}\label{sec:b3-2}%
 %\index{Spectral Theory on $ C_{0}(X)$The Boundary Spectrum}
 %% --
-In this section we restrict our attention to the \emph{boundary spectrum} $\sigma_{b}(A)$ of a generator $A$, which, by definition, is the intersection of $\sigma(A)$ with the line $\{\lambda \in \C \colon \Re\lambda = s(A)\}$.
+In this section we restrict our attention to the \emph{boundary spectrum} $\sigma_{b}(A)$ of a generator $A$, which, by definition, is the intersection of $\sigma(A)$ with the line $\{\lambda \in \C \colon \Re(\lambda) = s(A)\}$.
 Thus $\sigma_{b}(A)$ contains all spectral values of $A$ which have maximal real part.
 Note that in general the boundary spectrum is a proper subset of the topological boundary of $\sigma(A)$.
 Our aim is to prove results ensuring that $\sigma_{b}(A)$ is a cyclic set (see Definition~2.5).
@@ -657,7 +657,7 @@ Suppose $M$ is a closed cyclic subset of $\im \R$, $M = \cup_{\alpha \in S} \im\
 Our first result concerns cyclicity of the eigenvalues contained in the boundary spectrum, \ie of the set
 %% --
 	\[
-	P\sigma_{b}(A) \coloneqq P\sigma(A) \cap \sigma_{b}(A) = \{\lambda \in P\sigma(A) \colon \Re\lambda  = s(A)\}
+	P\sigma_{b}(A) \coloneqq P\sigma(A) \cap \sigma_{b}(A) = \{\lambda \in P\sigma(A) \colon \Re(\lambda)  = s(A)\}
 	\]
 	%% --
 	It is an almost straightforward consequence of Theorem~\ref{thm:b3-2.4}.
@@ -879,13 +879,13 @@ If $A$ has compact resolvent, then $P\sigma_{b}(A) = \sigma_{b}(A)$ is cyclic.
 If it is known that the boundary spectrum of a generator is cyclic and nonvoid, the following alternative holds.
 %% --
 \begin{equation}\label{eq:b3-2.19}
-\text{Either $\sigma_{b}(A) = s(A)$ or else  $\sigma_{b}(A)$ is an infinite unbounded set.}
+\text{Either $\sigma_{b}(A) = \sigma(A)$ or else  $\sigma_{b}(A)$ is an infinite unbounded set.}
 \end{equation}
 %% --
 If one can exclude the second alternative, then there is a unique spectral value having maximal real part.
-A real spectral value $\lambda_{0}$ of a generator $A$ is called a \emph{dominant} provided that $\Re\lambda < \lambda_{0}$ for every $\lambda \in \sigma(A)$, it is called \emph{strictly dominant} if for some $\delta > 0$ one has $\Re\lambda \leq \lambda_{0} - \delta$ for every $\lambda \in \sigma(A)$, $\lambda \neq \lambda_{0}$.
+A real spectral value $\lambda_{0}$ of a generator $A$ is called a \emph{dominant} provided that $\Re(\lambda) < \lambda_{0}$ for every $\lambda \in \sigma(A)$, it is called \emph{strictly dominant} if for some $\delta > 0$ one has $\Re(\lambda) \leq \lambda_{0} - \delta$ for every $\lambda \in \sigma(A)$, $\lambda \neq \lambda_{0}$.
 
-The assumptions of Corollary~\ref{cor:b3-2.10} do not imply that $s(A)$ is dominant, the rotation semigroup (A-III,Example~5.6) is a counterexample.
+The assumptions of Corollary~\ref{cor:b3-2.10} do not imply that $s(A)$ is dominant, the rotation semigroup (A-III,\,Example~5.6) is a counterexample.
 %% --
 \begin{corollary}\label{cor:b3-2.11}
 %%
@@ -906,7 +906,7 @@ The assumptions of Corollary~\ref{cor:b3-2.10} do not imply that $s(A)$ is domin
 	If $s(A)$ is not strictly dominant, then we have by Theorem~\ref{thm:b3-2.9} and A-III,Corollary~6.5 that 
     %% --
     \[
-    \{\lambda \in \sigma(A) \colon \Re\lambda > s(A) - r\}
+    \{\lambda \in \sigma(A) \colon \Re(\lambda) > s(A) - r\}
     \]
     %% -- 
     contains infinitely many eigenvalues for every $r > 0$.
@@ -927,7 +927,7 @@ The assumptions of Corollary~\ref{cor:b3-2.10} do not imply that $s(A)$ is domin
 	Since $(T(t))_{t \geq 0}$ is eventually norm continuous, 
     %% --
     \[
-    \{\lambda \in \sigma(A) \colon \Re\lambda \geq s(A)-r\}
+    \{\lambda \in \sigma(A) \colon \Re(\lambda) \geq s(A)-r\}
     \]
     %% --$$ 
     is compact for every $r > 0$ (see A-II, Theorem~1.20) and this set does not have accumulation points because $A$ has compact resolvent.
@@ -1644,7 +1644,7 @@ To prove this result one uses the proof of the analogous result for a single ope
 As we have seen in Section 2 the boundary spectrum of many positive semigroups is a cyclic set.
 However, there are hardly any restrictions on the set 
 \[
-\lambda \in \sigma(A) \colon \Re\lambda < s(A)\}\,,
+\lambda \in \{ \sigma(A) \colon \Re(\lambda) < s(A)\}\,,
 \] 
 except that it is symmetric with respect to the real axis.
 For semigroups of lattice homomorphisms the situation is quite different.
@@ -1673,7 +1673,7 @@ A complete proof of this results requires some facts of the theory of Banach lat
 Performing a similar construction as in Example~\ref{ex:b3-2.6}(vi) one can show that every closed cyclic subset of $\C$  which is contained in a left halfplane is the spectrum of a suitable semigroup of lattice homomorphisms. 
 For details see \citet{derndingernagel:1979}. 
 In the following we restrict ourselves to the case of compact spaces. 
-Then a semigroup of lattice homomorphisms can be described explicitly by a semi-flow $\phi$, and real-valued functions $h$ and $p$ (see B-II, Thms.3.5 \& 3.6). The function $p$ has no influence on spectral properties (cf.\ B-II,(3.7)). 
+Then a semigroup of lattice homomorphisms can be described explicitly by a semi-flow $\phi$, and real-valued functions $h$ and $p$ (see B-II, Thms.3.5 \& 3.6). The function $p$ has no influence on spectral properties (cf.\ B-II,\,(3.7)). 
 Therefore we will assume that $(T(t))$ has the following form (cf.\ B-II, Theorem~3.5). 
 %% --
 \begin{equation}\label{eq:b3-4.1}
@@ -1713,9 +1713,9 @@ Studying the spectrum of the semigroup given by \eqref{eq:b3-4.1} we divide the 
 %% --
 \begin{equation}\label{eq:b3-4.3}
 	\begin{aligned}
-		&\{\lambda \in \C \colon \Re\lambda < \underline{c}(h,\phi)\}\,, \\
-		&\{\lambda \in \C \colon \underline{c}(h,\phi) \leq \Re\lambda \leq \overline{c}(h,\phi)\}\,, \\
-		&\{\lambda \in \C \colon \overline{c}(h,\phi) < \Re\lambda\}.
+		&\{\lambda \in \C \colon \Re(\lambda) < \underline{c}(h,\phi)\}\,, \\
+		&\{\lambda \in \C \colon \underline{c}(h,\phi) \leq \Re(\lambda) \leq \overline{c}(h,\phi)\}\,, \\
+		&\{\lambda \in \C \colon \overline{c}(h,\phi) < \Re(\lambda)\}.
 	\end{aligned}
 \end{equation}
 %% --
@@ -1728,7 +1728,7 @@ The quantities $\underline{c}(h,\phi)$ and $\overline{c}(h,\phi)$ are defined as
 		\underline{c}_{t}(h,\phi) \coloneq \inf_{x\in K} \{\frac{1}{t}\int_{0}^{t} h(\phi(s,x)) \ds.
 \end{align}
 %% --
-It is easy to see that $\overline{c}_{t}(h,\phi) = 1/t\cdot\log\|T(t)\|$, hence in the definition of $\overline{c}(h,\phi)$, both the limit and the infimum exist and coincide with the growth bound (see A-I,(1.1)).
+It is easy to see that $\overline{c}_{t}(h,\phi) = 1/t\cdot\log\|T(t)\|$, hence in the definition of $\overline{c}(h,\phi)$, both the limit and the infimum exist and coincide with the growth bound (see A-I,\,(1.1)).
 Furthermore, $\underline{c}_{t}(h,\phi) = -\overline{c}_{t}(-h,\phi)$.
 Therefore, $\underline{c}(h,\phi)$ is well defined too.
 
@@ -1745,7 +1745,7 @@ Before we state the general result (see Theorem~\ref{thm:b3-4.4}) we give some t
 	\item 
 	Consider on $K = [0,\infty]$ the semiflow defined by $\phi(t,x) \coloneq x + t$ $(\infty + t = \infty)$.
 	Then $K_{t} = [t,\infty]$ and $K_{\infty} = \{\infty\}$.
-	The spectrum of the corresponding semigroup $T(t)f = f\circ\phi_{t}$ is $\sigma(A) = A\sigma(A) = \{\lambda \in \C \colon \Re\lambda \leq 0\}$.
+	The spectrum of the corresponding semigroup $T(t)f = f\circ\phi_{t}$ is $\sigma(A) = A\sigma(A) = \{\lambda \in \C \colon \Re(\lambda) \leq 0\}$.
 	
 	\item 
 	Consider again $K = [0,\infty]$ and define a semiflow by
@@ -1755,7 +1755,7 @@ Before we state the general result (see Theorem~\ref{thm:b3-4.4}) we give some t
 		0 & \text{if } x < t .
 	\end{cases} \quad (\infty - t = \infty)
 	\]
-	Then $K_{t} = K$ for all $t$, hence $K_{\infty} = K$ and $\sigma(A) = \{\lambda \in \C \colon \Re\lambda \leq 0\}$, $R\sigma(A) = \{\lambda \in \C \colon \Re\lambda < 0\} \cup \{0\}$.
+	Then $K_{t} = K$ for all $t$, hence $K_{\infty} = K$ and $\sigma(A) = \{\lambda \in \C \colon \Re(\lambda) \leq 0\}$, $R\sigma(A) = \{\lambda \in \C \colon \Re(\lambda) < 0\} \cup \{0\}$.
 	
 	\item 
 	Consider on $K_{1} \coloneq [-1,\infty)$ the equivalence relation $\sim$ defined by \enquote{$x \sim y$ if and only if $x,y \geq 0$ and $x - y \in \Z$}.
@@ -1773,15 +1773,15 @@ Before we state the general result (see Theorem~\ref{thm:b3-4.4}) we give some t
 	\]
 	Then $K_{t} = [-1,\frac{1}{1+t}]$, $K_{\infty} = [-1,0]$ and
 	\[
-	\sigma(A) = \{\lambda \in \C \colon \Re\lambda \leq 0\},\quad 
-	\{\lambda \in \C \colon \Re\lambda < 0\} \subsetneq A\sigma(A)\cap R\sigma(A).
+	\sigma(A) = \{\lambda \in \C \colon \Re(\lambda) \leq 0\},\quad 
+	\{\lambda \in \C \colon \Re(\lambda) < 0\} \subsetneq A\sigma(A)\cap R\sigma(A).
 	\]
 	\end{enumerate}
 \end{examples}
 %% --
 \begin{theorem}\label{thm:b3-4.4}
 	Suppose $\TT$ is a semigroup of lattice homomorphisms given by \eqref{eq:b3-4.1} with generator $A$.
-	Considering $H \coloneq \{\lambda \in \C \colon \Re\lambda < \underline{c}(h,\phi)\}$, where $\underline{c}(h,\phi)$ is given by \eqref{eq:b3-4.4}, then we have.
+	Considering $H \coloneq \{\lambda \in \C \colon \Re(\lambda) < \underline{c}(h,\phi)\}$, where $\underline{c}(h,\phi)$ is given by \eqref{eq:b3-4.4}, then we have.
 	\begin{enumerate}[\upshape (i)]
 		\item 
 		If $K_{t} \neq K_{\infty}$ for every $t < \infty$, then $H \subseteq A\sigma(A)$.
@@ -1795,7 +1795,7 @@ Before we state the general result (see Theorem~\ref{thm:b3-4.4}) we give some t
 \end{theorem}
 %% --
 \begin{proof}
-	For $\epsilon > 0$ we define $H_{\epsilon} = \{\lambda \in \C \colon \Re\lambda < \underline{c}(h,\phi)-\epsilon\}$.
+	For $\epsilon > 0$ we define $H_{\epsilon} = \{\lambda \in \C \colon \Re(\lambda) < \underline{c}(h,\phi)-\epsilon\}$.
 	Obviously it is enough to prove assertion (i), (ii) and (iii) respectively for $H_{2\epsilon}$, $\epsilon> 0$ arbitrary, instead of $H$.
 
 	(i) By the definition given in \eqref{eq:b3-4.1} there exists a $\tau > 0$ such that $\underline{c}_{t}(h,\phi) \geq \underline{c}(h,\phi) - \epsilon$ for all $t \geq \tau$.
@@ -1992,10 +1992,10 @@ Example~\ref{ex:b3-4.3}(iv) shows that (i) and (ii) do not exclude each other.
 We conclude the discussion of semi-flows associated with ordinary differential equations by remarking that the ideas of (b) and (c) can be combined to obtain semigroups for more general subsets $\Omega$.
 
 We continue the discussion of the spectrum of semigroups of lattice homomorphisms on $C(K)$ given by \eqref{eq:b3-4.1}.
-Theorem~\ref{thm:b3-4.4} gives a good description of the part contained in $\{\lambda \in \C \colon \Re\lambda < \underline{c}(h,\phi)\}$.
+Theorem~\ref{thm:b3-4.4} gives a good description of the part contained in $\{\lambda \in \C \colon \Re(\lambda) < \underline{c}(h,\phi)\}$.
 
-The half-plane $\{\lambda \in \C \colon \Re\lambda > \overline{c}(h,\phi)\}$ is always a subset of the resolvent set (see Proposition~\ref{prop:b3-4.8}(a) below).
-The description of the remaining part $\{\lambda \in \sigma(A) \colon \underline{c}(h,\phi) \leq \Re\lambda \leq \overline{c}(h,\phi)\}$ is more difficult.
+The half-plane $\{\lambda \in \C \colon \Re(\lambda) > \overline{c}(h,\phi)\}$ is always a subset of the resolvent set (see Proposition~\ref{prop:b3-4.8}(a) below).
+The description of the remaining part $\{\lambda \in \sigma(A) \colon \underline{c}(h,\phi) \leq \Re(\lambda) \leq \overline{c}(h,\phi)\}$ is more difficult.
 First we discuss some examples and then give a partial answer to this problem (see Proposition~\ref{prop:b3-4.8}(ii)-(v)).
 
 \begin{example}\label{ex:b3-4.7}
@@ -2011,7 +2011,7 @@ First we discuss some examples and then give a partial answer to this problem (s
 		The spectrum of the corresponding semigroup is given by 
 		%% --
 		\[
-		\sigma(A) = \left\{\lambda \in \C \colon h(-\pi/2) \leq \Re\lambda \leq h(\pi/2)\right\}.
+		\sigma(A) = \left\{\lambda \in \C \colon h(-\pi/2) \leq \Re(\lambda) \leq h(\pi/2)\right\}.
 		\]
 		%% --
 		
@@ -2034,7 +2034,7 @@ First we discuss some examples and then give a partial answer to this problem (s
 	Then the following assertions hold.
 	\begin{enumerate}[\upshape (i)]
 		\item 
-		$\{\lambda \in \C \colon \Re\lambda > \overline{c}(h,\phi)\} \subset \rho(A)$\,,
+		$\{\lambda \in \C \colon \Re(\lambda) > \overline{c}(h,\phi)\} \subset \rho(A)$\,,
 		
 		\item 
 		$\overline{c}(h,\phi)$ and $\underline{c}(h,\phi)$ are spectral values\,,
@@ -2053,7 +2053,7 @@ First we discuss some examples and then give a partial answer to this problem (s
 %% --
 \begin{proof}	
 	(i) and (ii): By \eqref{eq:b3-4.4} we have $\overline{c}_{t}(h,\phi) = 1/t\cdot\log\|T(t)\|$ hence $\overline{c}(h,\phi) = \omega_{0}(A)$ (cf.\ A-I, (1.1)).  
-	Consequently, we have $\{\lambda \in \C \colon \Re\lambda > \overline{c}(h,\phi)\} \subset \rho(A)$ and $\overline{c}(h,\phi) \in \sigma(A)$ by Theorem~\ref{thm:b3-1.6}.
+	Consequently, we have $\{\lambda \in \C \colon \Re(\lambda) > \overline{c}(h,\phi)\} \subset \rho(A)$ and $\overline{c}(h,\phi) \in \sigma(A)$ by Theorem~\ref{thm:b3-1.6}.
 	
 	To prove $\underline{c}(h,\phi) \in \sigma(A)$, we can assume by Theorem~\ref{thm:b3-4.4} that $K_{\infty} = K_{s}$ for some $s$ and that $\phi_{|K_{\infty}}$ is injective.
 	It is easy to see that $\underline{c}(h,\phi) = \underline{c}(h_{|K_{\infty}},\phi_{|K_{\infty}})$, moreover, we have $\sigma(A_{|I_{\infty}}) = \emptyset$ hence $\sigma(A) = \sigma(A_{/I_{\infty}})$ by A-III, Proposition~4.2.
@@ -2111,7 +2111,7 @@ We are now going to apply the results obtained so far to the special case where 
 	Suppose $\TT$ is a semigroup of Markov lattice homomorphisms on $C(K)$ governed by the semiflow $\phi$.
 	\begin{enumerate}[\upshape (i)]
 		\item 
-		If $\phi_{|K_{\infty}}$ is not injective or if $K_{t} \neq K_{\infty}$ for every $t < \infty$, then $\sigma(A) = \{\lambda \in \C \colon \Re\lambda \leq 0\}$.
+		If $\phi_{|K_{\infty}}$ is not injective or if $K_{t} \neq K_{\infty}$ for every $t < \infty$, then $\sigma(A) = \{\lambda \in \C \colon \Re(\lambda) \leq 0\}$.
 		
 		\item 
 		If $K_{\infty} = K_{s}$ for some $s$ and $\phi_{|K_{\infty}}$ is injective, then $\sigma(A)$ is a cyclic closed subset of $\im \R$.
@@ -2136,7 +2136,7 @@ We are now going to apply the results obtained so far to the special case where 
 	\phi(t,x) = \phi(t+r,x) = \phi(t+2r,x) = \cdots = \phi(t+kr,x) \quad (t \in \R_{+}, k \in \N).
 	\]
 	
-	Therefore we have for $\lambda \in \C$, $\Re\lambda > 0$, $f \in C(K)$, $x \in K$
+	Therefore we have for $\lambda \in \C$, $\Re(\lambda) > 0$, $f \in C(K)$, $x \in K$
 	%% --
 	\begin{equation}\label{eq:b3-4.15}
 		\begin{aligned}
@@ -2147,7 +2147,7 @@ We are now going to apply the results obtained so far to the special case where 
 	\end{equation}
 	%% --
 	If $0 < \beta < 2\pi/T$, then the assumption $T/2 \leq r \leq T$ implies that there exists a neighborhood $U$ of $\lambda_{0} \coloneq \im\beta$ such that the functions $\lambda \mapsto (1 - \exp(-\lambda r_{x}))^{-1}$ are uniformly bounded on $U$, by $M$ say.
-    Then from \eqref{eq:b3-4.15} we can conclude that $\|R(\lambda,A)f\| \leq M\left(\int_{0}^{r} \left|\mathrm{e}^{-\lambda t}\right|\dt\right)\|f\|$ for $\lambda \in U$, $\Re\lambda > 0$, therefore $\lambda_{0} = \im\beta \in \rho(A)$.
+    Then from \eqref{eq:b3-4.15} we can conclude that $\|R(\lambda,A)f\| \leq M\left(\int_{0}^{r} \left|\mathrm{e}^{-\lambda t}\right|\dt\right)\|f\|$ for $\lambda \in U$, $\Re(\lambda) > 0$, therefore $\lambda_{0} = \im\beta \in \rho(A)$.
 \end{enumerate}
 \end{proof}
 %% --
@@ -2167,7 +2167,7 @@ We are now going to apply the results obtained so far to the special case where 
 	In our detailed discussion of the spectrum of lattice homomorphisms we restricted ourselves to the case where the space $K$ is compact.
 	The main reason is that there is no description as given in \eqref{eq:b3-4.1} of the semigroups for locally compact spaces $X$.
 	In general, it is difficult to define a semiflow on $X$ because points may tend to infinity in a finite time.
-	But even if one can find a flow on a suitable compactification of $C$, it may be impossible to find a multiplicator.
+	But even if one can find a flow on a suitable compactification of $X$, it may be impossible to find a multiplicator.
 	This can be seen by studying the following example.
 	
 	Suppose $\phi_{1}$ is a semiflow on a compact space $K_{1}$ and $K_{0}$ is a closed $\phi_{1}$-invariant subset, $h$ a continuous function on $K_{1}$.
@@ -2230,7 +2230,7 @@ Our approach follows \citet{greiner:1981}.
 The notion \enquote{(imaginary) additively cyclic} was introduced by \citet{derndinger:1980} (and {Schaefer (1980)} respectively).
 Derndinger proves some cyclicity results for the boundary spectrum.
 A result similar to Proposition~\ref{prop:b3-2.7} is given in Section~7.4 of \citet{davies:1980}.
-Lemma~\ref{lem:b3-2.8} in combination with C-III, Lemma 3.13 can be used to characterize semigroups whose spectral bound is a pole of finite algebraic multiplicity (see C-III,(3.19)).
+Lemma~\ref{lem:b3-2.8} in combination with C-III, Lemma 3.13 can be used to characterize semigroups whose spectral bound is a pole of finite algebraic multiplicity (see C-III,\,(3.19)).
 The hypothesis of Theorem~\ref{thm:b3-2.9} can be weakened, one only needs that $s(A)$ is a pole of the resolvent (see C-III,Corollary~2.12).
 Further results on the cyclicity of the boundary spectrum will be given in Chapter C-III.
 In particular we refer to C-III, Theorems.2.10, 3.11 and 3.13.
@@ -2242,10 +2242,9 @@ We return to Remark~\ref{rem:b3-2.15}(ii) in Section 2 of B-IV.
 
 \item
 The concept of irreducibility as defined in \ref{def:b3-3.1} closely related to various other notions:
-In topological dynamics flows inducing irreducible semigroups are called \enquote{minimal flows} (cf.\ Example~\ref{ex:b3-3.4}(i)).
-Moreover, \enquote{ergodicity} and \enquote{unique ergodicity} are closely related to irreducibility (see\citet{cornfeldetal:1982} or \citet{krengel:1985}).
-Irreducible semigroups are discussed to some extent in \citet{davies:1980}.
-E.g. he proves a special case of Theorem~\ref{thm:b3-3.6}.
+In topological dynamics flows inducing irreducible semigroups are called \enquote{minimal flows} (cf.\ Example~\ref{ex:b3-3.4}\,(i)).
+Moreover, \enquote{ergodicity} and \enquote{unique ergodicity} are closely related to irreducibility (see \citet{cornfeldetal:1982} or \citet{krengel:1985}).
+Irreducible semigroups are discussed to some extent in \citet{davies:1980} where he proves a special case of Theorem~\ref{thm:b3-3.6}.
 Proposition~\ref{prop:b3-3.3} will be generalized in C-III, Proposition~3.3.
 Assertion (a) of Proposition~\ref{prop:b3-3.5} was proven by \citet{schaefer:1982} while Theorem~\ref{thm:b3-3.6} is taken from \citet{greiner:1982}.
 Elliptic operators (more general than Example~\ref{ex:b3-3.4}(ii)) as generators on spaces of continuous functions, were investigated by many people, \eg \citet{bonyetal:1968}, \citet{kuhn:1984}, \citet{roth:1976}, \citet{roth:1978} and \citet{stewart:1974}.
@@ -2257,7 +2256,7 @@ In particular they prove Theorem~\ref{thm:b3-4.4} for Markov semigroups.
 Earlier results are due to \citet{scarpellini:1974}.
 We indicated briefly in Example~\ref{ex:b3-4.6} that there is a relationship between spectral properties of lattice semigroups and differentiable dynamics.
 For more details we refer to \citet{chiconeswanson:1981} and \citet{sackersell:1978}.
-E.g., the \enquote{annular hull theorem} is a special case of Theorem~\ref{thm:b3-4.11}(ii).
+For example, the \enquote{annular hull theorem} is a special case of Theorem~\ref{thm:b3-4.11}(ii).
 The general result 4.11 was proven by \citet{arendtgreiner:1984}.
 
 \end{enumerate}

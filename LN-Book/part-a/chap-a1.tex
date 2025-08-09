@@ -100,7 +100,7 @@ Moreover the reader should observe that the infimum in Definition ~\ref{def:a1-1
 \item 
 Take 
 \[
-	E = \mathbb{C}^{2}, \quad
+	E = \C^{2}, \quad
 	A = \begin{pmatrix}0 & 1\\0 & 0\end{pmatrix} 
 	\quad \text{and} \quad 
 	T(t) =  \mathrm{e}^{tA} = \begin{pmatrix}1 & t\\0 & 1\end{pmatrix} .
@@ -119,7 +119,7 @@ T(t)f(x) \coloneqq
 	\end{cases}
 \end{align*}
 %% --
-Each $T(t)$, $t > 0$, satisfies $\|T(t)\| = 2$ as can be seen by taking $f := \1_{[0,t]}$.
+Each $T(t)$, $t > 0$, satisfies $\|T(t)\| = 2$ as can be seen by taking $f \coloneq  \1_{[0,t]}$.
 Therefore $(T(t))_{t \geq 0}$ is a strongly continuous semigroup which is bounded, hence has $\omega_{0} = 0$, but the constant $M$ in \eqref{eq:a1-1.3} cannot be chosen to be $1$.
 
 \end{enumerate}
@@ -276,7 +276,7 @@ If %
 	 \int_{0}^{\infty}  \mathrm{e}^{-\lambda t}T(t)f \dt 
 \]
 %
-exists for every $f \in E$ and some $\lambda \in \mathbb{C}$, then $\lambda \in \rho(A)$ and 
+exists for every $f \in E$ and some $\lambda \in \C$, then $\lambda \in \rho(A)$ and 
 %
 \[
 	R(\lambda,A)f = \int_{0}^{\infty}  \mathrm{e}^{-\lambda t}T(t)f  \dt.
@@ -290,7 +290,7 @@ R(\lambda,A)^{n+1}f
 	= \int_{0}^{\infty}  \mathrm{e}^{-\lambda t}\frac{t^{n}}{n!}T(t)f  \dt
 \end{equation}
 %% --
-for every $f \in E$, $n \geq 0$ and $\lambda \in \mathbb{C}$ with $\Re(\lambda) > \omega_{0}$.
+for every $f \in E$, $n \geq 0$ and $\lambda \in \C$ with $\Re(\lambda) > \omega_{0}$.
 \end{proposition}
 %% --
 \begin{remarks}\label{rem:a1-1.12}
@@ -380,7 +380,7 @@ The above characterization of the generators of uniformly continuous semigroups 
 %\index{Standard Examples!Matrix Semigroups}
 %% --
 %% --
-The above considerations especially apply in the situation $E = M_{n}(\mathbb{C})$.
+The above considerations especially apply in the situation $E = M_{n}(\C)$.
 If $n = 2$ and $A \in E$, one can derive an explicit formula for $ \mathrm{e}^{tA}$. 
 
 Let %
@@ -509,7 +509,7 @@ As the most standard examples of these \enquote{function spaces}, we mention the
 
 On these function spaces $E = C_{0}(X)$, \resp $E = L^{p}(X,\Sigma,\mu)$, there is a simple way to define \emph{multiplication operators}.
 
-Take a continuous, \resp measurable function $q \colon X \to \mathbb{C}$ and define
+Take a continuous, \resp measurable function $q \colon X \to \C$ and define
 %% --
 \[
     M_{q}f \coloneqq q \cdot f, \quad \text{\ie} \quad M_{q}f(x) 
@@ -753,11 +753,11 @@ Then $D(B)$ is dense in $C\left[ 0,1 \right]$, but closed for the graph norm.
 Obviously, each function
 %% --
 \[
-    e_{n}(x) \coloneqq \cos \pi nx, \quad n \in \mathbb{Z},
+    e_{n}(x) \coloneqq \cos \pi nx, \quad n \in \Z,
 \]
 %% --
 is contained in $D(B)$ and is an eigenfunction of $B$ pertaining to the eigenvalue $\lambda_{n} \coloneqq -\pi^{2}n^{2}$.
-The linear hull $\text{span }\{e_{n} \colon n \in \mathbb{Z}\} = \colon E_{0}$ forms a subalgebra of $D(B)$ which by the Stone-Weierstrass theorem is dense in $E$.
+The linear hull $\text{span }\{e_{n} \colon n \in \Z\} = \colon E_{0}$ forms a subalgebra of $D(B)$ which by the Stone-Weierstrass theorem is dense in $E$.
 
 We now use $e_{n}$ to define bounded linear operators 
 %% --
@@ -767,12 +767,12 @@ We now use $e_{n}$ to define bounded linear operators
 \]
 %% -- 
 satisfying $\|e_{n} \otimes e_{n}\| \leq 1$ and
-$(e_{n} \otimes e_{n})(e_{m} \otimes e_{m}) = \delta_{n,m}(e_{n} \otimes e_{n})$ for $n \in \mathbb{Z}$.
+$(e_{n} \otimes e_{n})(e_{m} \otimes e_{m}) = \delta_{n,m}(e_{n} \otimes e_{n})$ for $n \in \Z$.
 
 For $t > 0$ we define
 %% --
 \begin{align*}
-T(t) \coloneqq{}& \sum_{n \in \mathbb{Z}} \exp(-\pi^{2}n^{2}t) \cdot e_{n} \otimes e_{n} \\
+T(t) \coloneqq{}& \sum_{n \in \Z} \exp(-\pi^{2}n^{2}t) \cdot e_{n} \otimes e_{n} \\
 		={}& e_{0} \otimes e_{0} + 2\sum_{n=1}^{\infty} \exp(-\pi^{2}n^{2}t) \cdot e_{n} \otimes e_{n},
 \end{align*}
 or
@@ -785,7 +785,7 @@ or
 The Jacobi identity
 %% --
 \begin{align*}
-    w_{t}(x) &\coloneqq 1/(4\pi t)^{\frac{1}{2}} \sum_{m \in \mathbb{Z}} \exp(-(x+2m)^{2}/4t) \\
+    w_{t}(x) &\coloneqq 1/(4\pi t)^{\frac{1}{2}} \sum_{m \in \Z} \exp(-(x+2m)^{2}/4t) \\
     &= \frac{1}{2} + \sum_{n \in \N} \exp(-\pi^{2}n^{2}t) \cos\pi nx
 \end{align*}
 %% --
@@ -901,7 +901,7 @@ is the generator of $(S(t))_{t \geq 0}$.
 \subsection{The Rescaled Semigroup}\label{subsec:a1-3.2}%
 %\index{Basic Results!Standard Constructions!Rescaled Semigroup}
 %% --
-For fixed $\lambda \in \mathbb{C}$ and $\alpha > 0$ the operators
+For fixed $\lambda \in \C$ and $\alpha > 0$ the operators
 %% --
 \[
     S(t) \coloneqq \exp(\lambda t)T(\alpha t)
@@ -918,7 +918,7 @@ However, by using this procedure certain constants associated with $(T(t))_{t \g
 For example, by this rescaling we may in many cases suppose without loss of generality that the growth bound $\omega_{0}$ is zero.
 
 Another application is the following.
-For $\lambda \in \mathbb{C}$ and $S(t) \coloneqq \exp(-\lambda t)T(t)$ the formulas \eqref{eq:a1-1.3} and \eqref{eq:a1-1.4} yield:
+For $\lambda \in \C$ and $S(t) \coloneqq \exp(-\lambda t)T(t)$ the formulas \eqref{eq:a1-1.3} and \eqref{eq:a1-1.4} yield:
 %% --
 \begin{align*}
      \mathrm{e}^{-\lambda t}T(t)f - f &= (A-\lambda) \int_{0}^{t}  \mathrm{e}^{-\lambda s}T(s)f \ds \quad\text{ or }\notag \\

@@ -637,7 +637,7 @@ Let $\alpha \in (0,\pi/2]$.
 A semigroup $(T(t))_{t \geq 0}$ is called \emph{holomorphic of angle} $\alpha$ if it possesses an extension $T \colon S(\alpha) \to L(E)$ for some $\alpha \in (0,\pi/2]$ which satisfies all the requirements of Definition \ref{def:a2-1.11} except that it is not required to be bounded on any sector $S(\alpha_{1})$.
 %% --
 \begin{theorem}\label{thm:a2-1.14}
-A densely defined operator $A$ is the generator of a holomorphic semigroup if and only if there exist $M > 0$ and $r \geq 0$ such that $\lambda \in \rho(A)$ and $\|R(\lambda,A)\| \leq M/|\lambda|$ whenever $\Re\lambda > 0$, $|\lambda| \geq r$.
+A densely defined operator $A$ is the generator of a holomorphic semigroup if and only if there exist $M > 0$ and $r \geq 0$ such that $\lambda \in \rho(A)$ and $\|R(\lambda,A)\| \leq M/|\lambda|$ whenever $\Re(\lambda) > 0$, $|\lambda| \geq r$.
 \end{theorem}
 %% --
 \begin{proof}
@@ -658,7 +658,7 @@ and
 This shows that the condition of the theorem is necessary.
 Conversely, assume that the condition holds.
 Since $\|R(\lambda,A)\| \to \infty$ when $\lambda$ approaches $\sigma(A)$ (cf. Lemma  \ref{lem:a2-1.21}   below), 
-it follows that $\lambda \in \rho(A)$ and $\|R(\lambda,A)\| \leq M/|\lambda|$ if $\Re\lambda = 0$ and $|\lambda| > r$ as well.
+it follows that $\lambda \in \rho(A)$ and $\|R(\lambda,A)\| \leq M/|\lambda|$ if $\Re(\lambda) = 0$ and $|\lambda| > r$ as well.
 
 Let $c = 1/(2M)$.
 If $\xi, \eta \in \R$ satisfy 
@@ -700,11 +700,11 @@ A strongly continuous semigroup with generator $A$ is holomorphic if and only if
 \begin{proof}
 In fact, assume that the condition holds.
 Since $A-w$ is the generator of a bounded semigroup, one has 
-$\|R(\lambda,A-w)\| \leq N/\Re\lambda$ for some $N > 0$ and all $\lambda \in \C$ 
-satisfying $\Re\lambda > 0$.
+$\|R(\lambda,A-w)\| \leq N/\Re(\lambda)$ for some $N > 0$ and all $\lambda \in \C$ 
+satisfying $\Re(\lambda) > 0$.
 Consequently, for every $\alpha \in (0,\pi/2)$, 
 \[
-\|R(\lambda,A-w)\| \leq (|\lambda|/\Re\lambda)N/|\lambda| \leq N(\cos\alpha)^{-1}/|\lambda| for all \lambda \in S(\alpha) .
+\|R(\lambda,A-w)\| \leq (|\lambda|/\Re(\lambda))N/|\lambda| \leq N(\cos\alpha)^{-1}/|\lambda| for all \lambda \in S(\alpha) .
 \]
 The remaining estimate for a sector symmectric to the imaginary axis is given by the proof of Theorem \ref{thm:a2-1.14}    
 and shows that $A-w$ generates a holomorphic semigroup.
@@ -770,8 +770,8 @@ In Theorem  \ref{thm:a2-1.15}
 the assumption that $\pm A$ are generators can be relaxed.
 In fact, the proof shows the following.
 If $A$ is a densely defined operator such that 
-$\{\lambda \in \C \colon \Re\lambda > 0\} \subset \rho(\pm A - w)$ and 
-$\|R(\lambda,\pm A - w)\| \leq M/\Re\lambda$ for some $M \geq 0$, $w \geq 0$, then $A^2$ generates a holomorphic semigroup of angle $\pi/2$\,.
+$\{\lambda \in \C \colon \Re(\lambda) > 0\} \subset \rho(\pm A - w)$ and 
+$\|R(\lambda,\pm A - w)\| \leq M/\Re(\lambda)$ for some $M \geq 0$, $w \geq 0$, then $A^2$ generates a holomorphic semigroup of angle $\pi/2$\,.
 \end{remark*}
 %% –
 
@@ -802,11 +802,11 @@ Whereas the spectrum of the generator of a holomorphic semigroup is included in 
 A strongly continuous semigroup $(T(t))_{t\geq 0}$ is eventually differentiable if and only if its generator $A$ satisfies the following. \\
 There exist constants $c>0$, $b>0$, $M>0$ such that
 \[
-    \Sigma \coloneqq \{\lambda \in \C \colon c\mathrm{e}^{-b\cdot \Re\lambda} \leq |\Im\lambda|\} \subset \rho(A)
+    \Sigma \coloneqq \{\lambda \in \C \colon c\mathrm{e}^{-b\cdot \Re(\lambda)} \leq |\Im\lambda|\} \subset \rho(A)
 \]
 and
 \[
-    \|R(\lambda,A)\| \leq M\cdot|\Im\lambda| \text{ for all } \lambda \in \Sigma \text{ satisfying } \Re\lambda \leq \omega_{0}(A).
+    \|R(\lambda,A)\| \leq M\cdot|\Im\lambda| \text{ for all } \lambda \in \Sigma \text{ satisfying } \Re(\lambda) \leq \omega_{0}(A).
 \]
 \end{theorem}
 %% –
@@ -816,11 +816,11 @@ and
 A strongly continuous semigroup $(T(t))_{t\geq 0}$ is differentiable if and only if its generator $A$ satisfies the following. \\
 For all $b>0$ there exist $c>0$, $M>0$ such that
 \[
-    \Sigma \coloneqq \{\lambda \in \C \colon c\mathrm{e}^{-b\cdot \Re\lambda} \leq |\Im\lambda|\} \subset \rho(A)
+    \Sigma \coloneqq \{\lambda \in \C \colon c\mathrm{e}^{-b\cdot \Re(\lambda)} \leq |\Im\lambda|\} \subset \rho(A)
 \]
 and
 \[
-    \|R(\lambda,A)\| \leq M\cdot|\Im\lambda| \text{ for all } \lambda \in \Sigma \text{ satisfying } \Re\lambda \leq \omega_{0}(A).
+    \|R(\lambda,A)\| \leq M\cdot|\Im\lambda| \text{ for all } \lambda \in \Sigma \text{ satisfying } \Re(\lambda) \leq \omega_{0}(A).
 \]
 \end{theorem}
 %% –
@@ -848,7 +848,7 @@ Let $A$ be the generator of an eventually norm continuous semigroup.
 Then for every $b \in \R$ the set
 %%
 \[
-    \{\lambda \in \sigma(A) \colon \Re\lambda \geq b\}
+    \{\lambda \in \sigma(A) \colon \Re(\lambda) \geq b\}
 \]
 %%
 is bounded.
@@ -893,7 +893,7 @@ In fact, then we have by the lemma,
 \]
 %%--
 So let $\epsilon > 0$.
-If $\Re\lambda > \omega(A)$, then by A-I, Proposition 1.11,
+If $\Re(\lambda) > \omega(A)$, then by A-I, Proposition 1.11,
 \[
 R(\lambda,A)^{n+1} = \frac{1}{n!}\int_0^\infty \mathrm{e}^{-\lambda t}t^nT(t) \dt (n \in \N).
 \]
@@ -1045,7 +1045,7 @@ We consider multiplication semigroups (see A-I, 2.3).
 Let $E = C_{0}(X)$, where $X$ is a locally compact space, or $E = L^{p}(X,\Sigma,\mu)$, where $1 \leq p < \infty$ and $(X,\Sigma,\mu)$ is a $\sigma$-finite measure space.
 Let $m \colon X \to \R$ be continuous [resp., measurable] such that $[\text{ess}]\text{-}\sup_{x \in X} \Re(m(x)) < \infty$.
 
-Then $Af = m \cdot f$ with domain $D(A) = \{f \in E : m \cdot f \in E\}$ is the generator of the semigroup $(T(t))_{t \geq 0}$ given by
+Then $Af = m \cdot f$ with domain $D(A) = \{f \in E \colon m \cdot f \in E\}$ is the generator of the semigroup $(T(t))_{t \geq 0}$ given by
 %%--
 \[
     (T(t)f)(x) = \mathrm{e}^{tm(x)}f(x), \quad (t \geq 0, x \in X, f \in E )\, .
@@ -1055,7 +1055,7 @@ Observe that $\sigma(A) = \overline{m(X)}$ in case $E = C_{0}(X)$
 and 
 %%
 \[
-\sigma(A) = [\text{ess}]\text{-}\text{image}(m) \coloneqq \{\lambda \in \C : \mu(\{x \in X : |m(x)-\lambda| < \epsilon\}) \neq 0 \text{ for all } \epsilon > 0\}
+\sigma(A) = [\text{ess}]\text{-}\text{image}(m) \coloneqq \{\lambda \in \C \colon \mu(\{x \in X \colon |m(x)-\lambda| < \epsilon\}) \neq 0 \text{ for all } \epsilon > 0\}
 \]
 %% 
 if $E = L^{p}$ (see A-II, 2.3).
@@ -1064,12 +1064,12 @@ Consequently, $s(A) = \omega(A) = [\text{ess}]\text{-}\sup_{x \in X} \Re(m(x))$.
 \begin{enumerate}[\upshape (i), wide, labelindent=.5em]
 \item \label{ex:a2-1.28-1}
 The semigroup is norm continuous for $t > 0$ if and only if it is eventually norm continuous if and only if 
-$\{\lambda \in \sigma(A) : \Re\lambda \geq b\}$ 
+$\{\lambda \in \sigma(A) \colon \Re(\lambda) \geq b\}$ 
 is bounded for every $b \in \R$.
 Thus the property proved in Theorem~\ref{thm:a2-1.20}   characterizes generators of eventually norm continuous semigroups in the case that the semigroup consists of multiplication operators.
 %%\end{enumerate}
 \begin{proof}
-Assume that $\{\lambda \in \sigma(A) : \Re\lambda \geq b\}$ is bounded for every $b \in \R$.
+Assume that $\{\lambda \in \sigma(A) \colon \Re(\lambda) \geq b\}$ is bounded for every $b \in \R$.
 Let $t' > 0$.
 We show that the semigroup is norm continuous at $t'$.
 Take $\epsilon > 0$ and $b \in \R$ such that $2\mathrm{e}^{(t'+1)b} < \epsilon$.
@@ -1083,34 +1083,34 @@ If $\Re(m(x)) \leq b$, then
 whenever $|t-t'| \leq 1$.
 
 By hypothesis, the set 
-$H \coloneqq \{m(x) : x \in X, \Re(m(x)) \geq b\}$ 
+$H \coloneqq \{m(x) \colon x \in X, \Re(m(x)) \geq b\}$ 
 in the case $E = C_{0}(X)$ 
-and $H \coloneqq \{m(x) : \Re\lambda \geq b \text{ and for all } \eta > 0, 
-\mu(\{x \in X : |m(x)-\lambda| < \eta \}) \neq 0\}$
+and $H \coloneqq \{m(x) \colon \Re(\lambda) \geq b \text{ and for all } \eta > 0, 
+\mu(\{x \in X \colon |m(x)-\lambda| < \eta \}) \neq 0\}$
 in the case $E = L^{p}$ 
 is a bounded subset of $\C$.
 Thus $\lim_{t \to t'} |\mathrm{e}^{tz} - \mathrm{e}^{t'z}| = 0$ 
 uniformly for $z \in H$.
 Hence there exists $\delta \in \left]0,1\right]$ such that
 \[
-[\text{ess}]\text{-}\sup\{|\mathrm{e}^{tm(x)} - \mathrm{e}^{t'm(x)}| : x \in X, \Re(m(x)) > b\} < \epsilon
+[\text{ess}]\text{-}\sup\{|\mathrm{e}^{tm(x)} - \mathrm{e}^{t'm(x)}| \colon x \in X, \Re(m(x)) > b\} < \epsilon
 \] 
 whenever $|t-t'| < \delta$.
 Together with the inequality above, we obtain that 
 %%
 \[
-\|T(t) - T(t')\| = [\text{ess}]\text{-}\sup\{|\mathrm{e}^{tm(x)} - \mathrm{e}^{t'm(x)}| : x \in X\} < \epsilon
+\|T(t) - T(t')\| = [\text{ess}]\text{-}\sup\{|\mathrm{e}^{tm(x)} - \mathrm{e}^{t'm(x)}| \colon x \in X\} < \epsilon
 \]
 %% 
 whenever $|t-t'| < \delta$.
-We have shown that the semigroup is norm continuous for $t > 0$ whenever $\{\lambda \in \sigma(A) : \Re\lambda \geq b\}$ is bounded for all $b \in \R$.
+We have shown that the semigroup is norm continuous for $t > 0$ whenever $\{\lambda \in \sigma(A) \colon \Re(\lambda) \geq b\}$ is bounded for all $b \in \R$.
 \end{proof}
 
 \item \label{ex:a2-1.28-2}
 The semigroup is right-sided differentiable at a point
 $t > 0$ 
 if and only if there exists $c > 0$ such that 
-$\{\lambda \in \C : |\Im \lambda| > c \cdot \mathrm{e}^{-t\Re\lambda}\} \subset \rho(A)$.
+$\{\lambda \in \C \colon |\Im \lambda| > c \cdot \mathrm{e}^{-t\Re(\lambda)}\} \subset \rho(A)$.
 
 \begin{proof}
 The semigroup is right-sided differentiable at $t$ 
@@ -1120,9 +1120,9 @@ if and only if $\mathrm{e}^{tm} \cdot m$ is [essentially] bounded
 if and only if $\mathrm{e}^{t\Re\, m} \cdot \Im\, m$ is [essentially] bounded 
 if and only if there exists $c > 0$ such that 
 $[\text{ess}]\text{-}\text{image}(m) \subset 
-\{\lambda \in \C : \mathrm{e}^{t\Re\lambda}|\text{Im}\lambda| \leq c\}$ 
+\{\lambda \in \C \colon \mathrm{e}^{t\Re(\lambda)}|\text{Im}\lambda| \leq c\}$ 
 if and only if there exists $c > 0$ such that 
-$\{\lambda \in \C : |\text{Im}\lambda| > c \cdot \mathrm{e}^{-t\Re\lambda}\} \subset \rho(A)$.
+$\{\lambda \in \C \colon |\text{Im}\lambda| > c \cdot \mathrm{e}^{-t\Re(\lambda)}\} \subset \rho(A)$.
 \end{proof}
 
 \item \label{ex:a2-1.28-3}
@@ -1235,8 +1235,8 @@ $B$ is compact, then $(S(t))_{t \geq 0}$ is also norm continuous for $t > t_{0}$
 If $(T(t))_{t \geq 0}$ is norm continuous for $t > 0$, then $S_{n}(t)$ in \eqref{eq:a2-1.10} is norm continuous at $t > 0$ for every $n$.
 Thus $(S(t))_{t \geq 0}$ is norm continuous at $t > 0$ by \eqref{eq:a2-1.11}.
 There exists $\lambda_{0} \in \R$ such that 
-$\|R(\lambda,A)\| \leq (2\|B\|)^{-1}$ for $\Re\lambda \geq \lambda_{0}$.
-Hence $(Id~-~BR(\lambda,A))^{-1}$ exists for $\Re\lambda \geq \lambda_{0}$.
+$\|R(\lambda,A)\| \leq (2\|B\|)^{-1}$ for $\Re(\lambda) \geq \lambda_{0}$.
+Hence $(Id~-~BR(\lambda,A))^{-1}$ exists for $\Re(\lambda) \geq \lambda_{0}$.
 Since 
 %%
 \[
@@ -1249,7 +1249,7 @@ it follows that $(\lambda-(A+B))^{-1}$ exists and is given by
     R(\lambda,A+B) = R(\lambda,A)(Id-BR(\lambda,A))^{-1}
 \end{equation}
 %%--
-whenever $\Re\lambda \geq \lambda_{0}$.
+whenever $\Re(\lambda) \geq \lambda_{0}$.
 Now if $A$ generates a holomorphic semigroup, there exists $M \geq 0$ such that $\|R(\lambda_{0}+\im\eta,A)\| \leq M/|\eta|$ for all $\eta \in \R$.
 Consequently, 
 %%--
@@ -1274,7 +1274,7 @@ Then
 %%--
 for all $f \in \overline{BS(s)U} \eqqcolon K$.
 
-Since $K$ is compact it follows that the limit exists uniformly with respect to $f \in K$, i.e., 
+Since $K$ is compact it follows that the limit exists uniformly with respect to $f \in K$, \ie  
 $\lim_{h \to 0} \|(T(t+s-h) - T(t-s))BS(s)\| = 0$.
 It follows from the dominated convergence theorem that
 %%--
@@ -1673,7 +1673,7 @@ E_{p} \coloneqq \{f \in E \colon p(-f) \geq 0\}
 \] 
 %%
 on $E$.
-Any p-contractive operator $T$ on $E$ leaves the cone $E_{p}$ invariant (i.e., $T$ is positive for the corresponding ordering).
+Any p-contractive operator $T$ on $E$ leaves the cone $E_{p}$ invariant (\ie  $T$ is positive for the corresponding ordering).
 
 Conversely, given a closed proper cone $E_{+}$ on $E$, then 
 %$

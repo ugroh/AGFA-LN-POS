@@ -63,9 +63,9 @@ Considering $T(\tau)$ as operator from $E$ into $C(K)$ we denote it by $T_{0}$.
 Then $T_{0}$ is positive hence continuous (see \citet[Theorem~5.3]{schaefer:1974}).
 
 Let $j \colon C(K) = E_{h} \to E$ be the canonical inclusion.
-The spectral radii of $T(\tau) = j \circ T_{0}$ and $T_{0} \circ j$ coincide and are given by $\rho := \exp(\tau \omega_{0}(A))$.
+The spectral radii of $T(\tau) = j \circ T_{0}$ and $T_{0} \circ j$ coincide and are given by $\rho \coloneq  \exp(\tau \omega_{0}(A))$.
 By the Krein-Rutman Theorem (cf.\ the Corollary to Theorem~2.6 in the Appendix of \citet{schaefer:1966}) there exists $0 < \mu \in C(K)'$ such that $(T_{0} \circ j)'\mu = \rho \cdot \mu$.
-Then $\phi := T_{0}'\mu$ is an eigenvector of $(j \circ T_{0})'$ with eigenvalue $\rho$.
+Then $\phi \coloneq  T_{0}'\mu$ is an eigenvector of $(j \circ T_{0})'$ with eigenvalue $\rho$.
 Thus $\rho \in R\sigma(T(\tau))$ and hence $s(A) \geq \omega_{0}(A)$ by A-III, Theorem~6.2.
 
 \item
@@ -506,7 +506,7 @@ Instead of uniform stability we now require $s(A) < 0$ while the assumption on t
 %
 %\index{Asymptotic Behavior!Inhomogeneous Equations}
 Let $(T(t))_{t \geq 0}$ be a positive semigroup with $s(A) < 0$.
-Assume that the forcing term $F$ has values in $D(A)$, that it is continuous with respect to the graph norm and that $f_{0} := \|\cdot\|_{A}$-$\lim_{t \to \infty} F(t)$ exists.
+Assume that the forcing term $F$ has values in $D(A)$, that it is continuous with respect to the graph norm and that $f_{0} \coloneq  \|\cdot\|_{A}$-$\lim_{t \to \infty} F(t)$ exists.
 Then for every solution $u(\cdot)$ of \eqref{eq:c4-1.6} we have $\lim_{t \to \infty} u(t) = -A^{-1}f_{0}$.
 %%
 \footnote{Note, that the assumptions imply that \eqref{eq:c4-1.6} has a unique strong solution, see \citet[ Theorem~4.2.4]{pazy:1983}.}
@@ -595,7 +595,7 @@ Then there exists a positive projection $P$ of finite rank and suitable constant
 \end{theorem}
 %% --
 \begin{proof}
-By Theorem 2.9 of B-IV the set $\{\lambda \in \sigma(A) \colon \Re  \lambda = 0\}$ is finite and by Theorem 2.10 of C-III even imaginary additively cyclic.
+By Theorem 2.9 of B-IV the set $\{\lambda \in \sigma(A) \colon \Re(\lambda) = 0\}$ is finite and by Theorem 2.10 of C-III even imaginary additively cyclic.
 Thus it contains only the value $s(A) = 0$.
 Then by B-IV, (2.5) we have
 %% --
@@ -1207,7 +1207,7 @@ For details we refer to \citet{diekmannetal:1984}.
 %
 %\index{Population Models!Cell Division}
 Let $E = L^{1}([\frac{1}{4},1],w\,\dx)$, where the density $w$ is a continuous positive function on $[\frac{1}{4},1]$, vanishes at $x = 1$ and is strictly positive in $[\frac{1}{4},1)$.
-We consider the operator $C = A + B$ where $A$ is defined by $(Af)(x) := -xf'(x)$ on the domain $D(A) \coloneqq \{f \in AC \colon f(\frac{1}{2}) = 0\}$ and $B$ is defined by
+We consider the operator $C = A + B$ where $A$ is defined by $(Af)(x) \coloneq  -xf'(x)$ on the domain $D(A) \coloneqq \{f \in AC \colon f(\frac{1}{2}) = 0\}$ and $B$ is defined by
 %% --
 \begin{equation*}\label{eq:c4-2.12-kgk}
 Bf(x) \coloneqq \begin{cases}
@@ -1260,10 +1260,10 @@ This shows that $(S(t))$ is a semigroup of contractions on $E$.
 
 It remains to show that there is $\alpha > 0$ such that $\im\alpha \in \sigma(C)$.
 In fact, considering $\alpha \coloneqq 2\pi(\log 2)^{-1}$,  then $\im\alpha$ is an eigenvalue of $C$.
-A corresponding eigenfunction is given by $h_{1}(x) := x^{-\im\alpha}h_{0}(x)$, where $h_{0}$ is the eigenfunction corresponding to $0$ which is given by
+A corresponding eigenfunction is given by $h_{1}(x) \coloneq  x^{-\im\alpha}h_{0}(x)$, where $h_{0}$ is the eigenfunction corresponding to $0$ which is given by
 %% --
 \begin{equation}\label{eq:c4-2.15}
-h_{0}(x) := \begin{cases}
+h_{0}(x) \coloneq  \begin{cases}
     \int_{1/4}^{x} \frac{k(y)}{y} \, \dy & \text{for } \frac{1}{4} \leq x \leq \frac{1}{2}, \\
     1 & \text{for } \frac{1}{2} \leq x \leq 1.
 \end{cases}
@@ -1337,7 +1337,7 @@ The choice of \enquote{$L^{1}$-functions} instead of \enquote{C-functions} (as i
 \end{enumerate}
 \end{remarks*}
 %% --
-In order to solve \eqref{eq:c4-re} we consider on $E = L^{1}([-1,0],F)$ the differential operator $A := \frac{\diff{}}{\dx}$ with domain
+In order to solve \eqref{eq:c4-re} we consider on $E = L^{1}([-1,0],F)$ the differential operator $A \coloneq  \frac{\diff{}}{\dx}$ with domain
 %% --
 \begin{equation*}\label{eq:c4-3.0-KGK2}
 D(A):=\{f \in AC([-1,0],F) \colon f' \in E \text{ and } f(0) = \Phi(f)\}.
@@ -1746,7 +1746,7 @@ For this type of \enquote{retarding functionals} $\Phi$ we obtain a simple chara
 %\index{Tensor product operators}
 %
 %\index{Compact operators!Power}
-Let $\Phi = \psi \otimes B$ where $0 \leq \psi \in L^{\infty}[-1,0]$ and $0 \leq B \in L(F)$ such that $B^{n}$ is compact for some $n \in \mathbb{N}$.
+Let $\Phi = \psi \otimes B$ where $0 \leq \psi \in L^{\infty}[-1,0]$ and $0 \leq B \in L(F)$ such that $B^{n}$ is compact for some $n \in \N$.
 Then the following holds.
 %%--
 \begin{equation}\label{eq:c4-3.10}
@@ -1790,7 +1790,7 @@ $s(\Phi_{\lambda}) \overset{<}{ \underset{>}{=} } 1$.}
 By Corollary \ref{cor:c4-3.8} it suffices to show that the map $h \colon \lambda \mapsto s(\Phi_{\lambda}) = r(\Phi_{\lambda})$ is strictly decreasing and continuous.
 With the help of \citet[Theorem III.11.4]{schaefer:1966} and \citet[Theorem II.9.9]{schaefer:1974} it is easy to show that $\Phi_{\lambda}^{2}$ is compact and the continuity of $h$ follows by the above remark.
 It remains to show that $h$ is strictly decreasing.
-Assume $s(\Phi_{\lambda}) > 0$ for all $\lambda \in \mathbb{R}$.
+Assume $s(\Phi_{\lambda}) > 0$ for all $\lambda \in \R$.
 Since $\Phi_{\lambda}^{2}$ and $\Phi_{\mu}^{2}$ are compact, 
 $s(\Phi_{\lambda})$ and $s(\Phi_{\mu})$ are eigenvalues of $\Phi_{\lambda}$ resp.\ $\Phi_{\mu}$ with corresponding eigenfunctions $x_{\lambda}$ resp.\ $x_{\mu}$.
 In the same way $s(\Phi_{\lambda})$ and $s(\Phi_{\mu})$ are eigenvalues of $\Phi_{\lambda}'$ resp.\ $\Phi_{\mu}'$ with corresponding eigenfunctions $x_{\lambda}'$ resp.\ $x_{\mu}'$.
@@ -1941,7 +1941,7 @@ The system of differential equations corresponding to $A$ is
 %%\begin{empheq}
 \begin{equation} \label{eq:c4-3.13}
 \begin{array}{l}
-\frac{\partial}{\partial t}u_i(t,a) = - \frac{\partial}{\partial a}u_i(t,a) \quad (i=1,...,n) \quad \text{for } t\in\mathbb{R}_+, a\in[0,r]\\[2mm]
+\frac{\partial}{\partial t}u_i(t,a) = - \frac{\partial}{\partial a}u_i(t,a) \quad (i=1,...,n) \quad \text{for } t\in\R_+, a\in[0,r]\\[2mm]
 %% --
 \quad \text{with initial condition} \\[2mm]
 %% --
@@ -1949,7 +1949,7 @@ u_i(0,a) = v_i(a) \quad (i=1,...,n) \quad \text{for } a\in[0,r] \\[2mm]
 %% --
 \quad \text{and boundary condition} \\[2mm]
 %% --
-u_i(t,0) = \int_0^r [\sum_{j=1}^n \beta_{ij}(a)u_j(t,a)]\diff{a} \quad (i=1,...,n) \quad \text{for } t\in\mathbb{R}_+.
+u_i(t,0) = \int_0^r [\sum_{j=1}^n \beta_{ij}(a)u_j(t,a)]\diff{a} \quad (i=1,...,n) \quad \text{for } t\in\R_+.
 \end{array}
 \end{equation}
 %% --
@@ -2006,7 +2006,7 @@ The corresponding Cauchy problem is
 %% --
 \begin{equation} \label{eq:c4-3.14}
 \begin{array}{l}
-\frac{\partial}{\partial t}u_i(t,a) = - \frac{\partial}{\partial a}u_i(t,a) \quad (i=1,...,n) \quad \text{for } t\in\mathbb{R}_+, a\in[0,r]\\[2mm]
+\frac{\partial}{\partial t}u_i(t,a) = - \frac{\partial}{\partial a}u_i(t,a) \quad (i=1,...,n) \quad \text{for } t\in\R_+, a\in[0,r]\\[2mm]
 %% --
 \quad \text{with initial condition} \\
 %% --
@@ -2014,7 +2014,7 @@ u_i(0,a) = v_i(a) \quad (i=1,...,n) \quad \text{for } a\in[0,r] \\[2mm]
 %% --
 \quad \text{and boundary condition} \\
 %% --
-u_i(t,0) = \int_0^r [\sum_{j=1}^n \beta_{ij}(a)u_j(t,a)]\diff{a} \quad (i=1,...,n) \quad \text{for } t\in\mathbb{R}_+.
+u_i(t,0) = \int_0^r [\sum_{j=1}^n \beta_{ij}(a)u_j(t,a)]\diff{a} \quad (i=1,...,n) \quad \text{for } t\in\R_+.
 \end{array}
 \end{equation}
 %% --
