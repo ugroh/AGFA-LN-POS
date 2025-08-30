@@ -1,9 +1,9 @@
 % !TEX TS-program = pdflatexmk
-% !BIB program = bibtex  
-%%%%%%%%%%%%%%%%%%%% LN-Book.tex %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Stand: 2025-08-04 ulgr
-%%%%%%%%%%%%%%%% Springer-Verlag %%%%%%%%%%%%%%%%%%%%%%%%%% 
 
+%%%%%%%%%%%%%%%%%%%% LN-Book.tex %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Stand: 2025-08-30 ulgr
+%%%%%%%%%%%%%%%% Springer-Verlag %%%%%%%%%%%%%%%%%%%%%%%%%% 
+ 
 \documentclass[% 
 	,graybox
 	,envcountsect			%% not working  
@@ -85,10 +85,9 @@
 \input{./preamble/ln-preamble-final}	
 
 \usepackage[showonlyrefs]{mathtools}
-%\usepackage{mathtools}
 \usepackage{empheq}
 \counterwithin{equation}{section}
-\usepackage{colortbl} % Füge dies in den Präambel-Bereich ein
+\usepackage{colortbl} 
 
 %% --
 \usepackage{tikz}
@@ -102,14 +101,27 @@
 %% -- References
 %% --
 
-\usepackage{chapterbib}
+%\usepackage{chapterbib}
 \usepackage[square,numbers]{natbib}
 %\bibliographystyle{spmpsci}
 
+%\usepackage{ablatt-biblio}
+%\ExecuteBibliographyOptions{
+% 	,backref=true
+%	,backrefstyle=three
+%	,doi=false
+%	,url=false
+%	,maxcitenames = 1
+%	,maxbibnames = 10
+%	}
+%\bibliography{bib/ln-references.bib}
+%\newcommand{\citet}{\textcite}
 
 
-%\makeindex             % used for the subject index
+% used for the subject index
 %\usepackage{imakeidx}
+\usepackage{makeidx}  
+\makeindex
 %\makeindex[intoc, columns=2, options=-s svind.ist]                      
 % please use the style svind.ist with
                        % your makeindex program
@@ -292,16 +304,17 @@
 
 %% -- Literatur
 %% --
-%\RaggedRight
-%\bibliographystyle{abbrvnat}
-%\bibliography{bib/ln-references} 
+\RaggedRight
+\bibliographystyle{abbrvnat}
+\bibliography{bib/ln-references} 
+%\printbibliography
 
-\include{./part-f/part-f}
+%\include{./part-f/part-f}
 \include{./part-f/ln-symbols}
-\include{./part-f/ln-index}
+%\include{./part-f/ln-index}
 
 \cleardoublepage 
-%\printindex
+\printindex
 
 
 
