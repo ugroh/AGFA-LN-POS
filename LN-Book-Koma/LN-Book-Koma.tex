@@ -1,30 +1,30 @@
-% !TEX TS-program = pdflatexmk
-% !BIB program = 
+
 %%%%%%%%%%%%%%%%%%%% LN-Book.tex %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Stand: 2025-08-30 ulgr
+% Stand: 2025-09-04 ulgr
 %%%%%%%%%%%%%%%% Springer-Verlag %%%%%%%%%%%%%%%%%%%%%%%%%% 
  
 \documentclass[% 
-	,graybox
-	,envcountsect			%% not working  
+%	,graybox
+%	,envcountsect			%% not working  
 %	,evvcountsame			%% -- " -- 
 %	,envcountresetsect		%% -- " --
 %  	,sectrefs
 % 	,natbib
 %	,referee
-	]{svmono}
+,DIV=12
+	]{scrbook}% svmono}
 
 % choose options for [] as required from the list
 % in the Reference Guide
 
 %\usepackage{mathptmx}
 %\usepackage{helvet}
-%\usepackage{courier}
+%%\usepackage{courier}
 %
-\usepackage{setspace}
-\usepackage{type1cm}         
+%\usepackage{setspace}
+%\usepackage{type1cm}         
 
-\usepackage{makeidx}         % allows index generation
+%\usepackage{makeidx}         % allows index generation
 \usepackage{graphicx}        % standard LaTeX graphics tool
                              % when including figure files
 \usepackage{multicol}        % used for the two-column index
@@ -35,19 +35,21 @@
 
 %% -- Remarks und Examples
 %% -- 
-\spnewtheorem{remarks}[theorem]{Remarks}{\normalfont\bfseries}{\normalfont}
-\spnewtheorem{examples}[theorem]{Examples}{\normalfont\bfseries}{\normalfont}
+\usepackage{UG-Book}
 
-\spnewtheorem*{example*}{Example}{\normalfont\bfseries}{\normalfont}
-\spnewtheorem*{examples*}{Examples}{\normalfont\bfseries}{\normalfont}
-\spnewtheorem*{remark*}{Remark}{\normalfont\bfseries}{\normalfont}
-\spnewtheorem*{remarks*}{Remark}{\normalfont\bfseries}{\normalfont}
-\spnewtheorem*{definition*}{Definition}{\normalfont\bfseries}{\normalfont}
-
-\spnewtheorem*{theorem*}{Theorem}{\normalfont\bfseries}{\itshape}
-\spnewtheorem*{proposition*}{Proposition}{\normalfont\bfseries}{\itshape}
-\spnewtheorem*{lemma*}{Lemma}{\normalfont\bfseries}{\itshape}
-\spnewtheorem*{corollary*}{Corollary}{\normalfont\bfseries}{\itshape}
+%\newtheorem{remarks}[theorem]{Remarks}{\normalfont\bfseries}{\normalfont}
+%\newtheorem{examples}[theorem]{Examples}{\normalfont\bfseries}{\normalfont}
+%
+%\newtheorem*{example*}{Example}{\normalfont\bfseries}{\normalfont}
+%\newtheorem*{examples*}{Examples}{\normalfont\bfseries}{\normalfont}
+%\newtheorem*{remark*}{Remark}{\normalfont\bfseries}{\normalfont}
+%\newtheorem*{remarks*}{Remark}{\normalfont\bfseries}{\normalfont}
+%\newtheorem*{definition*}{Definition}{\normalfont\bfseries}{\normalfont}
+%
+%\newtheorem*{theorem*}{Theorem}{\normalfont\bfseries}{\itshape}
+%\newtheorem*{proposition*}{Proposition}{\normalfont\bfseries}{\itshape}
+%\newtheorem*{lemma*}{Lemma}{\normalfont\bfseries}{\itshape}
+%\newtheorem*{corollary*}{Corollary}{\normalfont\bfseries}{\itshape}
 
 %% -- Nummer von Theorem etc. korrekt
 %% --
@@ -82,9 +84,9 @@
 
 %% -- Pakete etc.
 %% -- 
-\input{./preamble/ln-preamble-final}	
+%\input{./preamble/ln-preamble-final}	
 
-\usepackage[showonlyrefs]{mathtools}
+%\usepackage[showonlyrefs]{mathtools}
 \usepackage{empheq}
 \counterwithin{equation}{section}
 \usepackage{colortbl} 
@@ -96,13 +98,13 @@
 %% -- Definitionen
 %% --
 \input{./preamble/ln-definitionen}
-
+\addbibresource{./bib/ln-references.bib}
 
 %% -- References
 %% --
 
 %\usepackage{chapterbib}
-\usepackage[square,numbers]{natbib}
+%\usepackage[square,numbers]{natbib}
 %\bibliographystyle{spmpsci}
 
 %\usepackage{ablatt-biblio}
@@ -143,8 +145,8 @@
 \renewcommand\thesubsection{\thesection.\arabic{subsection}}
 
 %% -- Wegen Überlappung im TOC
-\usepackage{tocloft} 
-\renewcommand\cftchapnumwidth{1cm}
+%\usepackage{tocloft} 
+%\renewcommand\cftchapnumwidth{1cm}
 
 %% -- \subsection nicht ins TOC
 %% --
@@ -163,6 +165,8 @@
   \addcontentsline{toc}{section}{#1}%
   \addtocontents{toc}{\protect\cftpagenumberson{section}}%
 }
+
+
 
 %% -- Für Links im PDF
 %% --
@@ -185,49 +189,49 @@
 %\doublespacing
 
 \includeonly{%
-,./part-0/ln-dedication
-,./part-0/foreword 
-,./part-0/ln-preface
+%,./part-0/ln-dedication
+%,./part-0/foreword 
+%,./part-0/ln-preface
 %,./part-0/acknowledgement
 %,./part-0/ln-symbols   
 %%%%% -- Part A
 %%%%% --
 ,./part-a/part-a
 ,./part-a/chap-a1	%% -- final
-,./part-a/chap-a2	%% -- final
-,./part-a/chap-a3	%% -- final
-,./part-a/chap-a4   %% -- final
+%,./part-a/chap-a2	%% -- final
+%,./part-a/chap-a3	%% -- final
+%,./part-a/chap-a4   %% -- final
 %%%% -- Part B
 %%%% --
-,./part-b/part-b	  
-,./part-b/chap-b1  %% -- final
-,./part-b/chap-b2  %% -- final
-,./part-b/chap-b3  %% -- final
-,./part-b/chap-b4  %% -- final
+%,./part-b/part-b	  
+%,./part-b/chap-b1  %% -- final
+%,./part-b/chap-b2  %% -- final
+%,./part-b/chap-b3  %% -- final
+%,./part-b/chap-b4  %% -- final
 %%% -- Part C 
 %%% --
-,./part-c/part-c
-,./part-c/chap-c1	%% -- final 
-,./part-c/chap-c2	%% -- final
-,./part-c/chap-c3
-,./part-c/chap-c4
+%,./part-c/part-c
+%,./part-c/chap-c1	%% -- final 
+%,./part-c/chap-c2	%% -- final
+%,./part-c/chap-c3
+%,./part-c/chap-c4
 %%%% -- Part D
 %%%% --
-,./part-d/part-d
-,./part-d/chap-d1
-,./part-d/chap-d2
-,./part-d/chap-d3
-,./part-d/chap-d4
+%,./part-d/part-d
+%,./part-d/chap-d1
+%,./part-d/chap-d2
+%,./part-d/chap-d3
+%,./part-d/chap-d4
 %%%% -- Part E
 %%%% --
-,./part-e/part-e
+%,./part-e/part-e
 %,./part-e/un-chap-a1
 %,./part-e/un-chap-b1
 %,./part-e/part-e-references
 %%%% -- Part F Appendix
-,./part-f/part-f
-,./part-f/ln-symbols
-,./part-f/ln-index
+%,./part-f/part-f
+%,./part-f/ln-symbols
+%,./part-f/ln-index
 }
 %% --
 \begin{document}
@@ -305,9 +309,9 @@
 %% -- Literatur
 %% --
 \RaggedRight
-\bibliographystyle{abbrvnat}
-\bibliography{bib/ln-references} 
-%\printbibliography
+%\bibliographystyle{abbrvnat}
+%\bibliography{bib/ln-references} 
+\printbibliography
 
 %\include{./part-f/part-f}
 \include{./part-f/ln-symbols}
