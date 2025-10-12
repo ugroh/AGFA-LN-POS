@@ -78,8 +78,6 @@
 \let\c@remarks=\c@theorem 		% Make proposition share the theorem counter
 \makeatother
 
-
-
 %% -- Pakete etc.
 %% -- 
 \input{./preamble/ln-preamble-final}	
@@ -98,30 +96,19 @@
 \input{./preamble/ln-definitionen}
 
 
-%% -- References
+%% -- Literaturverzeichnis
 %% --
-
 %\usepackage{chapterbib}
 \usepackage[square,numbers]{natbib}
-%\bibliographystyle{spmpsci}
+\usepackage[resetlabels]{multibib}
+\newcites{EN}{Updated Notes: References}
 
-%\usepackage{ablatt-biblio}
-%\ExecuteBibliographyOptions{
-% 	,backref=true
-%	,backrefstyle=three
-%	,doi=false
-%	,url=false
-%	,maxcitenames = 1
-%	,maxbibnames = 10
-%	}
-%\bibliography{bib/ln-references.bib}
-%\newcommand{\citet}{\textcite}
+\newcommand{\mycite}[2][]{\citeauthor{#2}~\citeEN[#1]{#2}}
 
+%% -- Index
+%% --
 
-% used for the subject index
 \usepackage{imakeidx}
-%\usepackage{makeidx}  
-%\makeindex
 \makeindex[intoc, columns=2, options=-s LNindex.ist]  %svind.ist]                      
 % please use the style svind.ist with
                        % your makeindex program
@@ -186,48 +173,62 @@
 
 \includeonly{%
 ,./part-0/ln-dedication
-,./part-0/foreword 
+%,./part-0/foreword 
 ,./part-0/ln-preface
 %,./part-0/acknowledgement
-%,./part-0/ln-symbols   
-%%%%% -- Part A
-%%%%% --
+,./part-0/ln-symbols   
+%% -- Part A
+%% --
 ,./part-a/part-a
 ,./part-a/chap-a1	%% -- final
 ,./part-a/chap-a2	%% -- final
 ,./part-a/chap-a3	%% -- final
 ,./part-a/chap-a4   %% -- final
-%%%% -- Part B
-%%%% --
+%% -- Part B
+%% --
 ,./part-b/part-b	  
 ,./part-b/chap-b1  %% -- final
 ,./part-b/chap-b2  %% -- final
 ,./part-b/chap-b3  %% -- final
 ,./part-b/chap-b4  %% -- final
-%%% -- Part C 
-%%% --
+%% -- Part C 
+%% --
 ,./part-c/part-c
 ,./part-c/chap-c1	%% -- final 
 ,./part-c/chap-c2	%% -- final
 ,./part-c/chap-c3
 ,./part-c/chap-c4
-%%%% -- Part D
-%%%% --
+%% -- Part D
+%% --
 ,./part-d/part-d
 ,./part-d/chap-d1
 ,./part-d/chap-d2
 ,./part-d/chap-d3
 ,./part-d/chap-d4
-%%%% -- Part E
-%%%% --
+%%%%% -- Part E
+%%%%% --
 ,./part-e/part-e
-%,./part-e/un-chap-a1
-%,./part-e/un-chap-b1
-%,./part-e/part-e-references
-%%%% -- Part F Appendix
-,./part-f/part-f
-,./part-f/ln-symbols
-,./part-f/ln-index
+%%% --
+,./part-e/chap-a1-enotes
+%,./part-e/chap-a2-enotes
+%,./part-e/chap-a3-enotes
+%,./part-e/chap-a4-enotes
+%%% --
+,./part-e/chap-b1-enotes
+%%,./part-e/chap-b2-enotes
+%%,./part-e/chap-b3-enotes
+%%,./part-e/chap-b4-enotes
+%%% --
+,./part-e/chap-c1-enotes
+%%,./part-e/chap-c2-enotes
+%%,./part-e/chap-c3-enotes
+%%,./part-e/chap-c4-enotes
+%%% --
+,./part-e/chap-d1-enotes
+,./part-e/chap-d2-enotes
+,./part-e/chap-d3-enotes
+,./part-e/chap-d4-enotes
+%%% -- Part F Appendix
 }
 %% --
 \begin{document}
@@ -250,9 +251,8 @@
 %% --
 \tableofcontents
 %% --
-% \include{./part-0/ln-symbols}
+\include{./part-0/ln-symbols}
 % \printnomenclature
-%\include{./part-f/ln-symbols}
 %%
 \mainmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -263,7 +263,6 @@
 \include{./part-a/chap-a2}
 \include{./part-a/chap-a3}
 \include{./part-a/chap-a4}
-%\include{./part-a/appendix-a} 
 
 %%% -- Part-B
 \include{./part-b/part-b}
@@ -271,7 +270,6 @@
 \include{./part-b/chap-b2}
 \include{./part-b/chap-b3}
 \include{./part-b/chap-b4}
-%\include{./part-b/appendix-b}
 
 %%% -- Part-C
 \include{./part-c/part-c}
@@ -279,7 +277,6 @@
 \include{./part-c/chap-c2}
 \include{./part-c/chap-c3}
 \include{./part-c/chap-c4}
-%\include{author/part-c/appendix-c}
 
 %% -- Part-D
 \include{./part-d/part-d}
@@ -287,41 +284,58 @@
 \include{./part-d/chap-d2}
 \include{./part-d/chap-d3}
 \include{./part-d/chap-d4}
-%\include{author/part-d/appendix-d}
 
-%% -- Part-E
-%\include{./part-e/part-e}
-%\include{./part-e/un-chap-a1}
-%\include{./part-e/un-chap-b1}
-%\include{./part-e/part-e-references}
-%\include{./part-e/chap-eb2}
-%\include{./part-d/chap-d3}
-%\include{./part-d/chap-d4}
-
-
-
-\backmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%% -- Literatur
-%% --
-\RaggedRight
+{\RaggedRight
 \bibliographystyle{abbrvnat}
-\bibliography{bib/ln-references} 
-%\printbibliography
-
-%\include{./part-f/part-f}
-\include{./part-f/ln-symbols}
-%\include{./part-f/ln-index}
+\bibliography{./bib/ln-references}}
 
 \cleardoublepage 
 \printindex
 
+%% -- Part-E
 
+\include{./part-e/part-e}
+%% --
+\chapter{Updated Notes Part A}
+	\include{./part-e/chap-a1-enotes}
+	%\include{./part-e/chap-a2-enotes}
+	%\include{./part-e/chap-a3-enotes}
+	%\include{./part-e/chap-a4-enotes}
+%% --
+\chapter{Updated Notes  Part B}
+	\include{./part-e/chap-b1-enotes}
+	%\include{./part-e/chap-b2-enotes}
+	%\include{./part-e/chap-b3-enotes}
+	%\include{./part-e/chap-b4-enotes}
+%% --
+\chapter{Updated Notes  Part C}
+	\include{./part-e/chap-c1-enotes}
+	%\include{./part-e/chap-c2-enotes}
+	%\include{./part-e/chap-c3-enotes}
+	%\include{./part-e/chap-c4-enotes}
+%% --
+\chapter{Updated Notes Part D}
+	\include{./part-e/chap-d1-enotes}
+	\include{./part-e/chap-d2-enotes}
+	\include{./part-e/chap-d3-enotes}
+	\include{./part-e/chap-d4-enotes}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\backmatter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%% -- Literatur
+%% --
+\cleardoublepage 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{\RaggedRight
+\bibliographystyleEN{abbrvnat}
+\bibliographyEN{./bib/ln-references-EN}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \end{document}
+
+
 
 
