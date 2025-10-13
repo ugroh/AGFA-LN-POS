@@ -100,6 +100,7 @@
 %% --
 %\usepackage{chapterbib}
 \usepackage[square,numbers]{natbib}
+\usepackage{doi}
 \usepackage[resetlabels]{multibib}
 \newcites{EN}{Updated Notes: References}
 
@@ -118,7 +119,7 @@
 %% -- Stand
 %% --
 
-\date{\LARGE Version \today}
+\date{\LARGE Preliminary Version \\ \today}
 
 %% -- Part A etc
 %% -- A-I etc für \chapter
@@ -205,30 +206,27 @@
 ,./part-d/chap-d2
 ,./part-d/chap-d3
 ,./part-d/chap-d4
-%%%%% -- Part E
-%%%%% --
+%% -- Part E
+%% --
 ,./part-e/part-e
-%%% --
+%% --
 ,./part-e/chap-a1-enotes
-%,./part-e/chap-a2-enotes
-%,./part-e/chap-a3-enotes
-%,./part-e/chap-a4-enotes
-%%% --
+,./part-e/chap-a2-enotes
+,./part-e/chap-a3-enotes
+,./part-e/chap-a4-enotes
+%% --
 ,./part-e/chap-b1-enotes
-%%,./part-e/chap-b2-enotes
-%%,./part-e/chap-b3-enotes
-%%,./part-e/chap-b4-enotes
-%%% --
+%,./part-e/chap-b2-enotes
+%,./part-e/chap-b3-enotes 
+%,./part-e/chap-b4-enotes
+%% --
 ,./part-e/chap-c1-enotes
-%%,./part-e/chap-c2-enotes
-%%,./part-e/chap-c3-enotes
-%%,./part-e/chap-c4-enotes
-%%% --
-,./part-e/chap-d1-enotes
-,./part-e/chap-d2-enotes
-,./part-e/chap-d3-enotes
-,./part-e/chap-d4-enotes
-%%% -- Part F Appendix
+%,./part-e/chap-c2-enotes
+%,./part-e/chap-c3-enotes
+%,./part-e/chap-c4-enotes
+%% --
+,./part-e/un-part-d
+%% -- Part F Appendix
 }
 %% --
 \begin{document}
@@ -293,7 +291,7 @@
 \printindex
 
 %% -- Part-E
-
+\setlist{$\bullet$, wide, labelindent=.25em,itemsep=.25em}	
 \include{./part-e/part-e}
 %% --
 \chapter{Updated Notes Part A}
@@ -315,10 +313,7 @@
 	%\include{./part-e/chap-c4-enotes}
 %% --
 \chapter{Updated Notes Part D}
-	\include{./part-e/chap-d1-enotes}
-	\include{./part-e/chap-d2-enotes}
-	\include{./part-e/chap-d3-enotes}
-	\include{./part-e/chap-d4-enotes}
+	\include{./part-e/un-part-d}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \backmatter
