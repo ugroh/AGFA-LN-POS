@@ -1,53 +1,44 @@
 %% --
 %% -- Updated Notes
-%% -- Stand 2025-10-13
+%% -- Stand 2025-11-08
 %% --
 \section*{Updated Notes D-I}
 \addcontentsline{toc}{section}{Updated Notes D-I}
 %% --
-An overview on positive operators on operator algebras can be found in \mycite{zbmath06128372}, but there seems to be no systematic reference for such positive 
-$C_{0}$-semigroups on operator algebras.
+An overview on positive operators on operator algebras can be found in \mycite{zbmath06128372}, but there seems to be no systematic reference for such positive $C_{0}$-semigroups on operator algebras.
 However, many papers deal with Markov semigroups (see, \eg \mycite{zbmath03762672}) or with so-called E-semigroups (see \mycite{zbmath01949821}).
 %% --
 \section*{Updated Notes D-II}
 \addcontentsline{toc}{section}{Updated Notes D-II}
 %% -- 
-\begin{enumerate}
-
-\item 
 As we have seen in Chapter A-II, Section 3, strongly continuous semigroups on commutative \WA-algebras, that is, on $L^{\infty}$, are already norm-continuous. 
-The proof depends heavily on the Grothendieck property (GP) and the Dunford-Pettis property (DPP) of these Banach spaces. 
-It was shown by \mycite{zbmath00537321} that every \WA-algebra has (GP) (see also \mycite{zbmath00125315} for an alternative proof).
+The proof depends heavily on the Grothendieck property and the Dunford-Pettis property of these Banach spaces.
+Therefore, it is natural to ask what happens in the noncommutative case.
 
-One can easily see, that \eg $\LH$ with $H$ infinite dimensional does not have (DP) by using the example in D-II.
+The positive result is that every \WA-algebra has the Grothendieck property. 
+This was shown by \mycite{zbmath00537321}.
+An alternative approach to this can be found in \mycite{zbmath00125315}.
 
-\item
-Let me recall the following: A \WA-algebra is of type I finite iff there exists Hilbert spaces $H_{j}$ of finite dimension and commutative \WA-algebras $M_{j}$ such that 
-$M = \oplus_{j} ( \L{H_{j}} \overline{\otimes} M_{j} ) $ (see \mycite[Thm. V.1.27]{zbmath01692441}).
+In contrast to this one can easily see that \eg $\LH$ with $H$ infinite dimensional does not have the Dunford-Pettis property, using example D-II-1.1.
+\mycite{zbmath00125315} showed that a \WA-algebra $M$ has the Dunford-Pettis property if and only if it is of finite type I and has a representation 
+$M = \oplus_{j} ( \L{H_{j}} \overline{\otimes} M_{j} )$ such that $\sup_{j} \dim H_{j} < \infty$ (see also \mycite[Thm. V.1.27]{zbmath01692441} for more details about this representation).
+On the other hand, in \mycite{zbmath00097659} it is shown that the predual of every finite type I \WA-algebra has the Dunford-Pettis property without further restrictions.
+Thus, as a consequence of A-II Theorem 3.5, strongly continuous semigroups have a bounded generator.
 
-In \mycite{zbmath00097659} it is shown, the predual of every finite type I \WA-algebra has the Dunford-Pettis property.
-\mycite{zbmath00125315} have shown that a \WA-algebra $M$ has (DP) iff it is finite of type I such that $ \sup_{j} \dim H_{j} < \infty$.
-
-Thus, as a consequence of A-II Theorem 3.5, in both cases strongly continuous semigroups have a bounded generator.
-
-\item
-\mycite{zbmath01495754} has shown that for sequences of completely positive maps, strong and norm convergence to the identity operator are equivalent on \WA-algebras (even on the larger class of \AW-algebras).
-Therefore, a strongly continuous $C_{0}$-semigroup of completely positive operators on a \WA-algebra is norm-continuous and thus has a bounded generator.
-
-\item 
-In \mycite{zbmath00097715} it is shown that $C(K)$ has the Grothendieck property if and only if each strongly continuous semigroup has a bounded generator. 
-
-If every strongly continuous $C_{0}$-semigroup on a noncommutative \CA-algebra $M$ has a bounded generator, then it is still true that this algebra is a Grothendieck space. 
+Surprisingly, if every strongly continuous $C_{0}$-semigroup on a \CA-algebra $M$ has a bounded generator, then $M$ is a Grothendieck space, which is shown for the commutative case in \mycite{zbmath00097715}.
 To prove this, one uses the fact that a \CA-algebra is a Grothendieck space if and only if $c_{0}$ is not a complemented subspace (see 
 \mycite[Prop. 3.1.13 and Prop. 4.2.1]{zbmath07458830}).
 
-Indeed, if $M$ is not a Grothendieck-space, we can split $M = c_{0} \oplus F$.
-Now define $S(t) = T(t) \oplus Id_{F}$ where $\{T(t)\}$ is strongly but not uniformly continuous on $c_{0}$.
+Indeed, if $M$ is not a Grothendieck space, we can split $M = c_{0} \oplus F$.
+Now define $S(t) = T(t) \oplus \operatorname{Id}_{F}$ where $\{T(t)\}$ is strongly but not uniformly continuous on $c_{0}$.
 Then $\{S(t)\}$ has an unbounded generator on $M$.
+Note that on $\L{H}$ with $H$ an infinite-dimensional Hilbert space, there always exist strongly but not uniformly continuous $C_{0}$-semigroups (see the example in D-II-1.1).
+However, this \WA-algebra is a Grothendieck space. 
 
-Note that on $\L{H}$ with $H$ an infinite-dimensional Hilbert space, there always exist strongly but not uniformly continuous $C_{0}$-semigroups (see the example in D-II).
-However, this \WA-algebra is a Grothendieck space (see again the example at the beginning of D-II).
-\end{enumerate}
+In contrast to all of the above, a strongly continuous $C_{0}$-semigroup of completely positive operators on a \WA-algebra is norm-continuous and thus has a bounded generator.
+To prove this, one can use a result of \mycite{zbmath01495754}: for sequences of completely positive maps, strong and norm convergence to the identity operator are equivalent on \WA-algebras (even on the larger class of \AW-algebras).
+
+
 %%% --
 \section*{Updated Notes D-III}
 \addcontentsline{toc}{section}{Updated Notes D-III}
@@ -73,4 +64,10 @@ A similar approach is in \mycite{zbmath06728793}.
 %% --
 As in D-III, results from \mycite{zbmath07964911} on semigroups on ordered Banach spaces with a normal cone and order unit can be applied. 
 More precise convergence results on \WA-algebras and their preduals are in \mycite{zbmath02244715}.
-Specific investigations focus on \emph{Quantum Markov semigroups and decoherence} (see, \eg, \mycite{zbmath08072228}) or on \emph{Spectral gaps and convergence to equilibrium} (see, \eg \mycite{zbmath06737571}).
+%Specific investigations focus on \emph{Quantum Markov semigroups and decoherence} (see, \eg, \mycite{zbmath08072228}) or on \emph{Spectral gaps and convergence to equilibrium} (see, \eg \mycite{zbmath06737571}).
+
+
+
+
+
+
