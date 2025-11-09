@@ -151,7 +151,7 @@
 %% --
 
 \usepackage{imakeidx}
-\makeindex[intoc, columns=2, options=-s LNindex.ist] 
+%\makeindex[intoc, columns=2, options=-s LN-index.ist] 
 %\makeindex[svind.ist]             
 % please use the style svind.ist with
                        % your makeindex program
@@ -162,7 +162,7 @@
 \hypersetup{%
 	,unicode	= false,
 	,breaklinks = true	%
-	,colorlinks	= true  %  Farbige Links false/true, für onlineversion true                                                           
+	,colorlinks	= true  %                                                          
 	,urlcolor	= blue  %                                                              
 	,citecolor	= blue  %                                                          
 	,linkcolor	= blue	% oder black
@@ -171,7 +171,7 @@
   	,pagebackref=true
 %  	,hidelinks 			% Vor dem Druck % entfernen
 	}
-
+\makeindex[intoc, columns=2, options=-s LN-index.ist] 
 %% -- 
 %% -- nur die Dateien nutzen, 
 %% -- die nicht auskommentiert sind (ohne %)
