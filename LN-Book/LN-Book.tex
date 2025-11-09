@@ -1,7 +1,7 @@
 % !TEX TS-program = pdflatexmk
 % !BIB program = bibtex
 %%%%%%%%%%%%%%%%%%%% LN-Book.tex %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Stand: 2025-08-30 ulgr
+% Stand: 2025-11-09 ulgr
 %%%%%%%%%%%%%%%% Springer-Verlag %%%%%%%%%%%%%%%%%%%%%%%%%% 
  
 \documentclass[% 
@@ -51,7 +51,6 @@
 
 %% -- Nummer von Theorem etc. korrekt
 %% --
-%\usepackage[showonlyrefs]{amsmath}
 \renewcommand\thetheorem{\thesection.\arabic{theorem}}
 \renewcommand\theproposition{\thesection.\arabic{proposition}}
 \renewcommand\thedefinition{\thesection.\arabic{definition}}
@@ -106,13 +105,7 @@
 
 \newcommand{\mycite}[2][]{\citeauthor{#2}~\citeEN[#1]{#2}}
 
-%% -- Index
-%% --
 
-\usepackage{imakeidx}
-\makeindex[intoc, columns=2, options=-s LNindex.ist]  %svind.ist]                      
-% please use the style svind.ist with
-                       % your makeindex program
                        
 %% --
 %% -- https://www.uweziegenhagen.de/?p=3020	 
@@ -152,6 +145,17 @@
   \addtocontents{toc}{\protect\cftpagenumberson{section}}%
 }
 
+
+
+%% -- Index
+%% --
+
+\usepackage{imakeidx}
+\makeindex[intoc, columns=2, options=-s LNindex.ist] 
+%\makeindex[svind.ist]             
+% please use the style svind.ist with
+                       % your makeindex program
+                       
 %% -- Für Links im PDF
 %% --
 \usepackage{hyperref}
@@ -163,6 +167,8 @@
 	,citecolor	= blue  %                                                          
 	,linkcolor	= blue	% oder black
 	,hypertexnames=false
+	,backref=page
+  	,pagebackref=true
 %  	,hidelinks 			% Vor dem Druck % entfernen
 	}
 
@@ -209,24 +215,12 @@
 %% -- Part E
 %% --
 ,./part-e/part-e
-%% --
-,./part-e/chap-a1-enotes
-,./part-e/chap-a2-enotes
-,./part-e/chap-a3-enotes
-,./part-e/chap-a4-enotes
-%% --
-,./part-e/chap-b1-enotes
-%,./part-e/chap-b2-enotes
-%,./part-e/chap-b3-enotes 
-%,./part-e/chap-b4-enotes
-%% --
-,./part-e/chap-c1-enotes
-%,./part-e/chap-c2-enotes
-%,./part-e/chap-c3-enotes
-%,./part-e/chap-c4-enotes
-%% --
+%%% --
+,./part-e/un-part-a
+,./part-e/un-part-b
+,./part-e/un-part-c
 ,./part-e/un-part-d
-%% -- Part F Appendix
+%% -- 
 }
 %% --
 \begin{document}
@@ -257,10 +251,10 @@
 %% -- Part-A
 
 \include{./part-a/part-a} 
-\include{./part-a/chap-a1}
-\include{./part-a/chap-a2}
-\include{./part-a/chap-a3}
-\include{./part-a/chap-a4}
+    \include{./part-a/chap-a1}
+    \include{./part-a/chap-a2}
+    \include{./part-a/chap-a3}
+    \include{./part-a/chap-a4}
 
 %%% -- Part-B
 \include{./part-b/part-b}
@@ -271,17 +265,17 @@
 
 %%% -- Part-C
 \include{./part-c/part-c}
-\include{./part-c/chap-c1}
-\include{./part-c/chap-c2}
-\include{./part-c/chap-c3}
-\include{./part-c/chap-c4}
+    \include{./part-c/chap-c1}
+    \include{./part-c/chap-c2}
+    \include{./part-c/chap-c3}
+    \include{./part-c/chap-c4}
 
 %% -- Part-D
 \include{./part-d/part-d}
-\include{./part-d/chap-d1}
-\include{./part-d/chap-d2}
-\include{./part-d/chap-d3}
-\include{./part-d/chap-d4}
+    \include{./part-d/chap-d1}
+    \include{./part-d/chap-d2}
+    \include{./part-d/chap-d3}
+    \include{./part-d/chap-d4}
 
 {\RaggedRight
 \bibliographystyle{abbrvnat}
@@ -293,26 +287,9 @@
 %% -- Part-E
 \setlist{$\bullet$, wide, labelindent=.25em,itemsep=.25em}	
 \include{./part-e/part-e}
-%% --
-\chapter{Updated Notes Part A}
-	\include{./part-e/chap-a1-enotes}
-	%\include{./part-e/chap-a2-enotes}
-	%\include{./part-e/chap-a3-enotes}
-	%\include{./part-e/chap-a4-enotes}
-%% --
-\chapter{Updated Notes  Part B}
-	\include{./part-e/chap-b1-enotes}
-	%\include{./part-e/chap-b2-enotes}
-	%\include{./part-e/chap-b3-enotes}
-	%\include{./part-e/chap-b4-enotes}
-%% --
-\chapter{Updated Notes  Part C}
-	\include{./part-e/chap-c1-enotes}
-	%\include{./part-e/chap-c2-enotes}
-	%\include{./part-e/chap-c3-enotes}
-	%\include{./part-e/chap-c4-enotes}
-%% --
-\chapter{Updated Notes Part D}
+	\include{./part-e/un-part-a}
+	\include{./part-e/un-part-b}
+	\include{./part-e/un-part-c}
 	\include{./part-e/un-part-d}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
