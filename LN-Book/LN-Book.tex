@@ -77,8 +77,16 @@
 \let\c@remarks=\c@theorem 		% Make proposition share the theorem counter
 \makeatother
 
+%% -- Damit alles funktioniert
+%% --
+
+\PassOptionsToPackage{colorlinks=true, linkcolor=blue,hyperindex=true, urlcolor = blue, citecolor = blue}{hyperref}
+\usepackage{imakeidx}
+\makeindex[intoc, columns=2, options=-s LN-index.ist] 
+
 %% -- Pakete etc.
 %% -- 
+
 \input{./preamble/ln-preamble-final}	
 
 \usepackage[showonlyrefs]{mathtools}
@@ -104,9 +112,7 @@
 \newcites{EN}{Updated Notes: References}
 
 \newcommand{\mycite}[2][]{\citeauthor{#2}~\citeEN[#1]{#2}}
-
-
-                       
+                    
 %% --
 %% -- https://www.uweziegenhagen.de/?p=3020	 
 %% -- Stand
@@ -150,33 +156,24 @@
 %% -- Index
 %% --
 
-\usepackage{imakeidx}
+%\usepackage{imakeidx}
 %\makeindex[intoc, columns=2, options=-s LN-index.ist] 
 %\makeindex[svind.ist]             
-% please use the style svind.ist with
-                       % your makeindex program
+
                        
 %% -- Für Links im PDF
 %% --
-\usepackage{hyperref}
-\hypersetup{%
-	,unicode	= false,
-	,breaklinks = true	%
-	,colorlinks	= true  %                                                          
-	,urlcolor	= blue  %                                                              
-	,citecolor	= blue  %                                                          
-	,linkcolor	= blue	% oder black
-	,hypertexnames=false
-	,backref=page
-  	,pagebackref=true
-%  	,hidelinks 			% Vor dem Druck % entfernen
-	}
-\makeindex[intoc, columns=2, options=-s LN-index.ist] 
-%% -- 
-%% -- nur die Dateien nutzen, 
-%% -- die nicht auskommentiert sind (ohne %)
-%% --
-%\doublespacing
+
+%\usepackage{hyperref}
+%\hypersetup{%
+%	breaklinks = true,%
+%	colorlinks = true,%
+%	linkcolor = blue,%
+%	urlcolor = blue,%
+%	citecolor = blue,%
+%	hyperindex = false,
+%   hidelinks 
+%}
 
 \includeonly{%
 ,./part-0/ln-dedication
