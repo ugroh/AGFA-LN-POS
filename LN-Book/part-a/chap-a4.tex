@@ -1,11 +1,10 @@
 % !TEX root = ../LN-Book.tex
 %% --
-%% -- Finale Version 2025-06-02
+%% -- Finale Version 2025-11-08
 %% -- 
 %% --
 \chapternopage{Asymptotics of Semigroups on Banach Spaces}\label{chap:a4}%
-\index{Semigroups!Asymptotics}%
-\index{Banach Spaces!Semigroups}
+\index{semigroup!asymptotics}
 %% --
 {\Large
 \vspace*{-.75cm}
@@ -28,7 +27,7 @@ In Section 1, we investigate whether -- and at what rate -- a solution $ T(\cdot
 In Section 2, we consider the long-term behavior of the solutions of \eqref{eq:c4-1} for different classes of forcing terms $ F $.
 %% --
 \section{Stability: Homogeneous Case}\label{sec:c4-1}%
-\index{Stability!Homogeneous Case}
+\index{stability!homogeneous abstract Cauchy problem }
 %% -- 
 Let $ (T(t))_{t \geq 0} $ be a semigroup on $ E $ with generator $ A $.
 An initial value $ f \in D(A) $ is said to be \emph{stable} if the solution $ t \mapsto T(t)f $ of
@@ -36,6 +35,7 @@ An initial value $ f \in D(A) $ is said to be \emph{stable} if the solution $ t 
 \begin{equation}\label{eq:c4-2}
 \dot{u}(t) = Au(t), \quad u(0) = f \tag{ACP}
 \end{equation}
+\index{stability!stable}
 %% --
 converges to zero as $ t \to \infty $. 
 The semigroup is called stable if every solution converges to zero, \ie if every initial value $ f \in D(A) $ is stable.
@@ -77,13 +77,15 @@ Then we define the following constants.
 \begin{enumerate}[\upshape (i)]
 \item 
 $\omega(f) \coloneqq \inf\{\omega \colon \|T(t)f\| \leq M\mathrm{e}^{\omega t} \text{ for some } M \text{ and every } t \geq 0\}$ is called the \emph{exponential growth bound} of $T(\cdot)f$,
+\index{growth bound!$\omega(f)$}
 
 \item 
 $\omega_{1}(A) \coloneqq \sup\{\omega(f) \colon f \in D(A)\}$ is called the \emph{exponential growth bound for the solutions of the Cauchy problem} $\dot{u}(t) = Au(t)$,
+\index{growth bound!$\omega_1(A)$}
 
 \item 
 $\omega_{0}(A) \coloneqq \sup\{\omega(f) \colon f \in E\}$ is called the (exponential) \emph{growth bound for the mild solutions of the Cauchy problem} $\dot{u}(t) = Au(t)$.
-
+\index{growth bound!$\omega_0(A)$}
 \end{enumerate}
 \end{definition}
 %% --
@@ -105,12 +107,15 @@ The semigroup is called
 \begin{enumerate}[\upshape (i), resume]
 \item
 \emph{uniformly exponentially stable} if $\omega_{0}(A) < 0$,
+\index{stability!exponentially stable}
 \item 
 \emph{exponentially stable} if $\omega_{1}(A) < 0$,
 \item 
 \emph{uniformly stable} if $\|T(t)f\| \to 0$ as $t \to \infty$ for every $f \in E$,
+\index{stability!uniformly stable}
 \item 
 \emph{stable} if $\|T(t)f\| \to 0$ as $t \to \infty$ for every $f \in D(A)$.
+\index{stability!stable}
 \end{enumerate}
 \end{definition}
 %% --
@@ -145,6 +150,7 @@ If $A$ is a bounded operator, that is, if $D(A) = E$, then
 \text{(iv) $\Leftrightarrow$ (v) and (vi) $\Leftrightarrow$ (vii).}
 \]
 However, if $A$ is unbounded, all stability notions may differ, as illustrated in the following examples.
+\index{stability!examples}
 %%--
 \begin{example}\label{ex:a4-1.2}
 \begin{enumerate}[\upshape (i), wide, labelindent=.5em]
@@ -224,9 +230,10 @@ This example illustrates that there may be a significant difference between the 
 In what follows, we characterize the exponential growth bounds $\omega(f)$, $\omega_{1}(A)$, and $\omega_{0}(A)$ in terms of certain abscissas of simple or absolute convergence of the Laplace transform of $T(\cdot)f$. 
 These characterizations will serve as one of the tools for 
 establishing that, for certain semigroups beyond the class of eventually norm-continuous semigroups (see A-III, Theorem 6.6), the growth bounds $\omega_{0}(A)$ and/or $\omega_{1}(A)$ coincide with the spectral bound $s(A) = \sup\{\Re(\lambda)\colon\lambda \in \sigma(A)\}$. For results of this type, see, for example, B-IV, C-IV, and D-IV.
+\index{stability!spectral bound $s(A)$}
 
 We begin by observing that $s(A)$ can be interpreted as the abscissa of holomorphy of the Laplace transform $\lambda \mapsto \int_{0}^{\infty} \mathrm{e}^{-\lambda t} T(t) \,\dt$ of the semigroup $(T(t))_{t \geq 0}$.
-
+\index{stability!abscissa of holomorphy}
 Furthermore, we recall that the Laplace transform exists for every $\lambda \in \C$ with $\Re(\lambda) > \Re\,\mu$, provided it exists for some $\mu\in\C$.
 This follows from 
 %% --
@@ -242,12 +249,13 @@ Note that even boundedness of
 %% --
 implies the existence of the Laplace transform for $\Re(\lambda) > \Re\,\mu$. 
 Therefore, the subset of $\C$ for which the Laplace transform exists is always a half-plane 
-$\{\lambda \in \C\colon\Re(\lambda) > \gamma\} \cup H$, where $H$ is a subset of the line $\{\lambda \in \C\colon\Re(\lambda) = \gamma\}$.
+$\{\lambda \in \C\colon\Re(\lambda)\allowbreak > \gamma\} \cup H$, where $H$ is a subset of the line $\{\lambda \in \C\colon\Re(\lambda) = \gamma\}$.
 
 In the following theorem, we show that the bound of the half-plane for which the Laplace transform of $T(\cdot)f$ ($f \in E$) exists absolutely, and the bound of the half-plane for which the Laplace transform of $T(\cdot)Af$ ($f \in D(A)$) exists strongly, coincide with the growth bound $\omega(f) = \inf\{\omega\colon\|T(t)f\| \leq M\mathrm{e}^{\omega t} \text{ for all } t \geq 0\}$.
-%%%%%
+
 %% --
 \begin{theorem}\label{thm:a4-1.3}
+\index{growth bound!$\omega(f)$}
 Let $A$ be the generator of a strongly continuous semigroup $ (T(t))_{t \geq 0} $ on a Banach space $E$. 
 Then, for every $f \in E$,
 %% --
@@ -316,7 +324,7 @@ Therefore,
 %%--
 Next, we show that $c < 0$ implies $c = \omega(f)$. 
 For $c < 0$, it follows from \eqref{eq:c4-1} that $\int_{0}^{\infty} T(s)Af  \ds$ exists. 
-Since $\int_{0}^{r} T(s)Af  \ds = T(r)f - f$, we see that $g \coloneqq\lim_{r \to \infty} T(r)f$ exists. 
+Since $\int_{0}^{r} T(s)Af  \ds = T(r)f - f$, it follows that \[g \coloneqq\lim_{r \to \infty} T(r)f\] exists. 
 But for every $t \geq 0$, $T(t)g = g$ which implies that $g \in \ker(A) = \{0\}$ or $g = 0$. 
 Hence, $\int_{0}^{\infty} T(s)Af  \ds = -f$.
 Now, choosing $r < 0$, $b < r < 0$, and integrating by parts, we obtain
@@ -364,7 +372,7 @@ The following theorem plays a central role in the stability theory of positive s
 We show that the constant $\omega_{1}(A)$ coincides both with the abscissa of simple convergence of the Laplace transform of the semigroup and with the abscissa of absolute convergence of the Laplace transform of the strong solutions of (ACP).
 %% --
 \begin{theorem}\label{thm:a4-1.4}%
-\index{Theorem!Growth bound}
+\index{growth bound!$\omega_1(A)$}
 Let $A$ be the generator of a strongly continuous semigroup $ (T(t))_{t \geq 0} $ on a Banach space $E$. 
 Then
 %% --
@@ -376,12 +384,14 @@ Then
 \end{theorem}
 %--
 \begin{remarks*}\label{rem:a4-1.4}%
-\index{Remark!Laplace transform convergence}
+%\index{Remark!Laplace transform convergence}
 
 \begin{enumerate}[\upshape (i), wide, labelindent=.5em]
 
 \item 
-One can show that the abscissas of uniform, strong, and weak convergence of the Laplace transform coincide (see C-III, Theorem~I.2, last part of the proof). 
+One can show that the abscissas of uniform, strong, and weak convergence of the Laplace transform%
+\index{Laplace transform} 
+coincide (see C-III, Theorem~I.2, last part of the proof). 
 Therefore, by Theorem \ref{thm:a4-1.4},
 %--
 \begin{align}\label{eq:a4-1.5}
@@ -456,13 +466,18 @@ combined with the lemma of Theorem \ref{thm:a4-1.3} implies that the growth boun
 As seen in A-I, Proposition~1.11, if $\int_0^\infty \mathrm{e}^{-\lambda t} T(t) f \,\dt$ exists for every $f \in E$, then $\lambda \in \rho(A)$ and $R(\lambda, A) f = \int_0^\infty \mathrm{e}^{-\lambda t} T(t) f \,\dt$. 
 This and Theorem \ref{thm:a4-1.4} yield the following corollary.
 %--
-\begin{corollary} \label{cor:a4-1.5} Let $ A $ be the generator of a strongly continuous semigroup $ (T(t))_{t \geq 0} $ on a Banach space $ E $. 
+\begin{corollary} \label{cor:a4-1.5}
+\index{stability!spectral bound $s(A)$}
+\index{growth bound!$\omega_1(A)$}
+\index{growth bound!$\omega_0(A)$}
+Let $ A $ be the generator of a strongly continuous semigroup $ (T(t))_{t \geq 0} $ on a Banach space $ E $. 
 Then  
 \[
 s(A) \leq \omega_1(A) \leq \omega_{0}(A).
 \]
 \end{corollary}
 %% --
+\index{stability!examples}
 Example~\ref{ex:a4-1.2}(c) shows that uniform exponential stability is not equivalent to $ \sigma(A) \subset \{\lambda \in \C\colon\text{Re } \lambda \leq q < 0 \} $. 
 The following example shows that even strong solutions can be unstable when $ s(A) < 0 $. We construct a semigroup where $ s(A) < \omega_1(A) < \omega_{0}(A) $.
 %% --
@@ -558,6 +573,7 @@ $s(A) = \sup\{\Re(\lambda)\colon\lambda \in \sigma(A)\}.$
 \omega_{0}(A) = \inf \{ w\colon\|R(\lambda, A)^n\| \leq &M ( \Re(\lambda) - w)^{-n} \text{ for some } M \text{ and}\\
 &\text{every } n \in \N \text{ and } \lambda \in \C \text{ with } \text{Re } \lambda > w\}.\notag
 \end{align}
+\index{growth bound!$\omega_0(A)$}
 %% --
 Due to the difficulty of estimating all powers of the resolvent, this characterization is of limited practical use. 
 However, if $A$ is the generator of a semigroup on a Hilbert space $H$, then it is shown in A-III, Corollary~7.11 that
@@ -580,6 +596,7 @@ Consequently, for positive semigroups with $s(A) = \omega_1(A) < \omega_{0}(A)$ 
 Nevertheless, we can establish the following theorem.
 %% --
 \begin{theorem}\label{thm:a4-1.9} 
+\index{growth bound!$\omega(f)$}
 Let $A$ be the generator of a strongly continuous semigroup $(T(t))_{t \geq 0}$ on a Banach space $E$. 
 Suppose there exist constants $a \geq 0$ and $q \geq s(A)$, and that there exist $C > 0$ and $n \in \N$ such that 
 %% --
@@ -599,7 +616,7 @@ Then
 The hypothesis $\| R(\lambda, A) \| \leq C | \lambda |^{n-2}$ is invariant under rescaling. 
 That is, the resolvent $R(\lambda, -b+A)$ of the generator $-b+A$ of the rescaled semigroup $\mathrm{e}^{-bt} T(t)$ satisfies
 $\| R(\lambda, -b+A) \| \leq \tilde{C} | \lambda |^{n-2}$ for every $\lambda \in \C$ with $\text{Re } \lambda > q-b$ and $| \text{Im } \lambda | > a+2b$, for a suitable constant $\tilde{C}$. 
-Therefore, we may assume without loss of generality that $b \coloneq  \max(\omega_{0}(A), q) < 0$. 
+Therefore, we may assume, without loss of generality, that $b \coloneq  \max(\omega_{0}(A), q) < 0$. 
 Let $\omega_{0}(A) < p < 0$, and set $p' \coloneq  \max\{p, q\} < 0$. 
 Then, for every $f \in D(A)$ , the inversion formula for the Laplace transform yields 
 \begin{equation} \label{eq:a4-1.12}
@@ -645,7 +662,9 @@ In this case, one may apply \eqref{rem:a4-1.7} to obtain the stronger statement 
 
 Rather than imposing conditions on the resolvent of $ A $, we now adopt a different perspective and characterize the property \enquote{$ \omega_{0}(A) < 0 $} directly in terms of the semigroup $ (T(t))_{t \geq 0} $.
 %% --
-\begin{proposition} \label{prop:a4-1.10} Let $ A $ be the generator of a strongly continuous semigroup $ (T(t))_{t \geq 0} $ on a Banach space $E$. 
+\begin{proposition} \label{prop:a4-1.10} 
+\index{growth bound!$\omega_0(A)$}
+Let $ A $ be the generator of a strongly continuous semigroup $ (T(t))_{t \geq 0} $ on a Banach space $E$. 
 Then the following statements are equivalent.
 \begin{enumerate}[\upshape (a)]
 \item  
@@ -671,6 +690,9 @@ Other less obvious characterizations of the property
 The equivalence of (a) and (c) is known as \emph{Datko’s Theorem}.
 %% -- 
 \begin{theorem} \label{thm:a4-1.11} 
+\index{growth bound!$\omega_0(A)$}
+\index{stability!spectral bound $s(A)$}
+\index{stability!Datko's theorem}
 Let $ A $ be the generator of a strongly continuous semigroup $ (T(t))_{t \geq 0} $ on a Banach space $ E $. 
 Then the following statements are equivalent.
 %% --
@@ -714,7 +736,9 @@ We will see in Chapter C-IV that for positive semigroups a condition similar to 
 
 It is important to note  that stable semigroups need not be uniformly bounded (see Example \ref{ex:a4-1.2}(c)) and that the equality $ s(A) = \omega_{0}(A) = 0 $ does not imply boundedness or even stability of the semigroup (see also A-I, Example~1.4.(i)).
 %% --
-\begin{theorem} \label{thm:a4-1.13} Let $ A $ be the generator of a stable semigroup $ (T(t))_{t \geq 0} $ on a Banach space $ E $. Then the following assertions hold.
+\begin{theorem} \label{thm:a4-1.13} 
+\index{stability!stable}
+Let $ A $ be the generator of a stable semigroup $ (T(t))_{t \geq 0} $ on a Banach space $ E $. Then the following assertions hold.
 %% --
 \begin{enumerate}[\upshape (i)]
     \item 
@@ -744,12 +768,14 @@ yields the existence of $\lim_{\lambda \to 0+} \lambda R(\lambda,A)f$ for every 
 \end{proof}
 %%--
 Bounded holomorphic semigroups (see A-II, Definition~1.11) satisfy the estimate
-$\|AT(t)\| \leq \frac{m}{t}$ \citet[p.33]{goldstein:1985a}, and hence $T(t)f \to 0$ as $t \to \infty$
+\[\|AT(t)\| \leq \frac{m}{t}\]
+(see \citet[p.33]{goldstein:1985a}), and hence $T(t)f \to 0$ as $t \to \infty$
 for every $f \in \Image{A}$. 
 If $\Image{A}$ is dense (\ie $0 \not\in R\sigma(A)$), then we obtain
 uniform stability and the following corollary.
 %% --
 \begin{corollary}\label{cor:a4-1.14}
+\index{stability!holomorphic semigroup}
 Let $A$ be the generator of a bounded holomorphic
 semigroup $(T(t))_{t \geq 0}$ on a Banach space $E$. 
 Then the following statements are equivalent.
@@ -781,6 +807,7 @@ As seen in Theorem \ref{thm:a4-1.4}, exponential stability can be characterized 
 This should be compared to the following result, which characterizes (uniform) stability in terms of integrability and the kernel of the generator.
 %% --
 \begin{theorem}\label{thm:a4-1.16}
+\index{stability!stable}
 Let $A$ be the generator of a strongly continuous semigroup $(T(t))_{t \geq 0}$ on a Banach space $E$. 
 The following assertions are equivalent.
 %% --
@@ -859,6 +886,7 @@ whenever $A$ generates a stable semigroup $(T(t))_{t \geq 0}$.
 If $\omega(f) < 0$ for every $f \in D(A)$, then $(T(t))$ is stable, but
 might not be exponentially stable if
 $0 = \omega_{1}(A) = \sup\{\omega(f) \colon f \in D(A)\}$. 
+\index{growth bound!$\omega_1(A)$}
 In this case, one can show--via a
 proof similar to that of Theorem \ref{thm:a4-1.4}--that the spectrum $\sigma(A)$ must be contained
 in the open left half-plane, \ie $\Re(\lambda) < 0$ for all $\lambda \in \sigma(A)$.
@@ -874,11 +902,12 @@ If A has a compact resolvent, or if A generates a bounded
 holomorphic semigroup, then weak stability implies stability. 
 In general, this implication fails; \eg the translation semigroup on
 $L^{2}(\R)$ is weakly uniformly stable but not stable (see also B-IV, Example~1.2).
+\index{stability!weakly stable}
 \end{enumerate}
 \end{remark}
 %% --
 \section{Stability: Inhomogeneous Case}%
-\index{Stability!Inhomogeneous Case}
+\index{stability!inhomogeneous abstract Cauchy problem}
 %% --
 Using the results of the previous section, we now investigate the long-term behavior of solutions to the inhomogeneous initial value
 problem
@@ -948,6 +977,7 @@ Recall from Theorem \ref{thm:a4-1.13}(i) that for stable
 semigroups, the range $\Image{A}$ is dense in $E$.
 
 \begin{theorem}\label{thm:a4-2.1}
+\index{stability!absolutely integrable forcing term}
 Let $A$ be the generator of a uniformly stable semigroup
 $(T(t))_{t \geq 0}$ on a Banach space $E$. 
 If there exists $g \in \Image{A}$ such that
@@ -983,7 +1013,8 @@ Therefore, $\|\int_{0}^{t} T(t-s)G(s)  \ds\| \leq \epsilon$ for all sufficiently
 In the following theorem, we show that if A generates a
 uniformly stable semigroup, the forcing term $F(\cdot)$ is p-periodic
 and $\int_{0}^{p} T(p-s)F(s)  \ds \in \Image{(\Id - T(p))}$, then \eqref{eq:a4-2.1}
- admits a unique p-periodic mild solution that is \emph{asymptotically stable}; \ie for every generalized solution $v(\cdot)$ of \eqref{eq:a4-2.1}, 
+ admits a unique p-periodic mild solution that is \emph{asymptotically stable}; 
+ \index{stability!asymptotically stable}\ie for every generalized solution $v(\cdot)$ of \eqref{eq:a4-2.1}, 
 %% --
 \[
 \lim_{t \to \infty} \|v(t) - u(t)\| = 0.
@@ -1046,6 +1077,7 @@ As a consequence of Theorem \ref{thm:a4-1.13}  and A-III, Corollary~6.4,  a unif
 This fact, together with Lemma \ref{lem:a4-2.2}, is used to prove the following theorem.
 %% --
 \begin{theorem}\label{thm:a4-2.4}
+\index{stability!periodic forcing term}
 Let $A$ be the generator of a uniformly stable semigroup $(T(t))_{t \geq 0}$ and let $F(\cdot)$ be a $p$-periodic, locally integrable function such that 
 %% --
 \[{
@@ -1145,13 +1177,6 @@ For a discussion of the asymptotic behavior of the solutions of $\dot{u}(t) = A(
 
 \end{enumerate}
 
-%% -- Literatur
+%\section*{References}
+%\addcontentsline{toc}{section}{References}
 %% --
-\begin{comment}
-\section*{References}
-\addcontentsline{toc}{section}{References}
-{\RaggedRight
-\renewcommand{\bibsection}{}
-\bibliographystyle{abbrvnat}
-\bibliography{bib/ln-references}}
-\end{comment}

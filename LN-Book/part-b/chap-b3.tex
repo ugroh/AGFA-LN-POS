@@ -1,11 +1,10 @@
 % !TEX root = ../LN-Book.tex
 %% --
-%% -- Stand 2025-06-03  
+%% -- Stand 2025-11-08
 %% -- Final
 %% --
 \setcounter{chapter}{2}
 \chapternopage{Spectral Theory of Positive Semigroups on \texorpdfstring{$C_{0}(X)$}{C\textunderscore 0(X)}}\label{chap:b3}%
-\index{Spectral Theory on $ C_{0}(X)$}
 %% --
 {\Large
 \vspace*{-.75cm}
@@ -25,7 +24,6 @@ Throughout this chapter we assume that $C_{0}(X)$ is the space of all \emph{comp
 In case we restrict to compact spaces we write $K$ instead of $X$.
 %% --
 \section{The Spectral Bound}\label{sec:b3-1}%
-\index{Spectral Theory on $C_{0}(X)$!Spectral Bound}
 %% --
 One of the basic results on the spectrum of a positive operator is the fact that its spectral radius is an element of the spectrum (\citet[V.Proposition~4.1]{schaefer:1974}).
 We begin the investigation of the spectrum of positive semigroups with the analogous result.
@@ -34,9 +32,8 @@ To that purpose we recall that the spectral bound $s(A)$ of a generator $A$ is d
 %
 \begin{theorem}\label{thm:b3-1.1}
 %%
-\index{Theorem!Spectral Bound}
+\index{spectral bound $s(A)$}
 %%
-\index{Spectral Bound!Properties}
 If $A$ is the generator of a positive semigroup $\TT$ on $E = C_{0}(X)$, then $s(A) \in \sigma(A)$ unless 
 $s(A) = -\infty$.
 In case $X$ is compact, we always have $s(A) > -\infty$.
@@ -94,7 +91,7 @@ The following examples show that the spectrum may be empty in case $X$ is not co
 %% --
 \begin{examples}\label{ex:b3-1.2}
 %
-\index{Spectral Theory on $ C_{0}(X)$!Empty Spectrum}
+\index{spectrum!empty}
 
 \begin{enumerate}[\upshape (i), wide, labelindent=.5em]	
 \item  
@@ -107,7 +104,7 @@ Consider $X = [0,1)$ and $(T(t))$ on $C_{0}(X)$ given by
 	\end{cases}
 \end{equation}
 %%--
-$(T(t))_{t\geq 0}$ is nilpotent (we have $T(t) = 0$ for $t \geq 1$).
+$(T(t))_{t\geq 0}$ is nilpotent\index{semigroup!nilpotent} (we have $T(t) = 0$ for $t \geq 1$).
 It follows that $\sigma(T(t)) = \{0\}$ for all $t > 0$ and by A-III, Theorem~6.2 we have $\sigma(A) = \emptyset$.
 
 \item 
@@ -117,7 +114,8 @@ The operator $A$ on $E \coloneqq C_{0}[0,\infty)$ given by
 	(Af)(x) = f'(x) - xf(x), D(A) = \{f \in E \colon f \in C^1, Af \in E\}
 \end{equation}
 %%--
-has empty spectrum.
+has empty spectrum%
+\index{spectrum!empty}.
 It is the generator of a positive non-nilpotent semigroup which is given by
 %%--
 \begin{equation}\label{eq:b3-1.9}
@@ -156,7 +154,7 @@ A direct proof not using this fact is given in C-III, Corollary~1.4.
 	%%--
 	Since $R(\lambda_1,A)$ is positive, it follows that $R(\lambda_0,A)$ is positive as well.
 	On the other hand, assuming that $R(\lambda_0,A)$ is a positive operator, then $\lambda_0$ has to be a real number (note that for $g \geq 0$ we have $f \coloneqq R(\lambda_0,A)g \geq 0$ hence $\lambda_0f - Af = g = \overline{g} = \overline{(\lambda_0 - A)f} = \overline{\lambda_0}f - Af$ ).
-	As we have shown above, $R(\lambda,A)$ is positive for $\lambda > \max\{\lambda_0,s(A)\}$ hence an application of the resolvent equation yields
+	As we have shown above, $R(\lambda,A)$ is positive for $\lambda > \max\{\lambda_0,s(A)\}$ hence an application of the resolvent equation\index{resolvent equation} yields
 	%%--
 	\begin{equation}\label{eq:b3-1.11}
 		R(\lambda_0,A) = R(\lambda,A) + (\lambda - \lambda_0)R(\lambda,A)R(\lambda_0,A) \geq R(\lambda,A) \geq 0
@@ -173,9 +171,7 @@ A direct proof not using this fact is given in C-III, Corollary~1.4.
 %% --
 \begin{corollary}\label{cor:b3-1.4}
 %%
-\index{Corollary!Compact Resolvent}
-%%
-\index{Resolvent!Compact Case}
+\index{resolvent!compact case}
 Suppose $X$ is compact and $A$ has compact resolvent.	
 	Then there exists a real eigenvalue $\lambda_{0}$ admitting a positive eigenfunction such that 
 	$\Re(\lambda) \leq \lambda_{0}$ for every $\lambda \in \sigma(A)$.
@@ -209,15 +205,15 @@ Note that it is not just a consequence of the spectral mapping theorem for the p
 %% --
 \begin{proposition}\label{prop:b3-1.5}
 %%
-\index{Proposition!Eigenvalue Properties}
-%%
-\index{Positive Semigroups!Eigenvalues}
 Suppose $A$ is the generator of the positive semigroup $(T(t))_{t \geq 0}$.
 Take $\tau > 0$, $r > 0$ and let $\alpha \coloneqq \tau^{-1}\log(r)$.
-%% --	
+%% --	\index{eigenvalue}
 \begin{enumerate}[\upshape (i)]
 \item 
-If $r$ is an eigenvalue of $T(\tau)$ with positive eigenfunction $h_{0}$, then there is a positive $h \in D(A)$ such that $Ah = \alpha h$ and $\{x \in X \colon h_{0}(x) > 0\} \subset \{x \in X \colon h(x) > 0\}$.
+If $r$ is an eigenvalue of $T(\tau)$ with positive eigenfunction
+\index{eigenvalue}
+\index{eigenfunction} 
+$h_{0}$, then there is a positive $h \in D(A)$ such that $Ah = \alpha h$ and $\{x \in X \colon h_{0}(x) > 0\} \subset \{x \in X \colon h(x) > 0\}$.
 		
 \item 
 If $r$ is an eigenvalue of $T(\tau)'$ with positive eigenvector $\phi_{0}$, then there is a positive $\phi \in D(A^*)$ such that $A^*\phi = \alpha\phi$ and $\supp\phi_{0} \subset \supp\phi$.
@@ -258,9 +254,6 @@ For the sake of completeness we include the proof of this classical result, stat
 %% --
 \begin{theorem}\label{thm:b3-1.6}
 %%
-\index{Theorem!Krein-Rutman}
-%%
-\index{Positive Semigroups!Krein-Rutman}	
 	Suppose $K$ is compact and $(T(t))_{t \geq 0}$ is a positive semigroup on $C(K)$ with generator $A$.
 	Then there exists a positive probability measure $\phi \in D(A')$ such that $A'\phi = \omega_{0}(A)\phi$.
 \end{theorem}
@@ -315,9 +308,8 @@ Theorem~\ref{thm:b3-1.6} fails to be true for locally compact spaces as the foll
 %% --
 \begin{example}\label{ex:b3-1.7}
 %%
-\index{Examples!Laplacian Semigroup}
+\index{example!Laplacian}
 %%
-\index{Semigroups!Laplacian Example}
 	Consider $E = C_{0}(\R^{n})$ and the semigroup $(T(t))_{t \geq 0}$ generated by the Laplacian (cf.\ A-I,2.8).
 From the explicit representation of $T(t)$,
 	%% --
@@ -332,9 +324,11 @@ From the explicit representation of $T(t)$,
 \end{example}
 %%% --
 \section{The Boundary Spectrum}\label{sec:b3-2}%
-\index{Spectral Theory on $ C_{0}(X)$The Boundary Spectrum}
+\index{boundary spectrum}
 %% --
-In this section we restrict our attention to the \emph{boundary spectrum} $\sigma_{b}(A)$ of a generator $A$, which, by definition, is the intersection of $\sigma(A)$ with the line $\{\lambda \in \C \colon \Re(\lambda) = s(A)\}$.
+In this section we restrict our attention to the \emph{boundary spectrum}%
+\index{spectrum!boundary} 
+$\sigma_{b}(A)$ of a generator $A$, which, by definition, is the intersection of $\sigma(A)$ with the line $\{\lambda \in \C \colon \Re(\lambda) = s(A)\}$.
 Thus $\sigma_{b}(A)$ contains all spectral values of $A$ which have maximal real part.
 Note that in general the boundary spectrum is a proper subset of the topological boundary of $\sigma(A)$.
 Our aim is to prove results ensuring that $\sigma_{b}(A)$ is a cyclic set (see Definition~2.5).
@@ -346,10 +340,6 @@ Actually, from Theorem~\ref{thm:b3-1.1} and A-III, Proposition~2.5 it follows th
 We begin our discussion with two lemmas.
 %% --
 \begin{lemma}\label{lem:b3-2.1}
-%%
-\index{Lemma!Linear Operators}
-%%
-\index{Linear Operators!Positivity}
 	Suppose $K$, $L$ are compact and $T \colon C(K) \to C(L)$ is a linear operator satisfying $T \1_{K} = \1_{L}$.
 	Then we have $T \geq 0$ if and only if $\|T\| \leq 1$.
 \end{lemma}
@@ -379,12 +369,11 @@ We begin our discussion with two lemmas.
 Before we can formulate the second lemma we have to fix some notation.
 	\begin{definition}\label{def:b3-2.2}
 %	%
-\index{Definition!Sign Operator}
+\index{sign operator}
 %	%
-\index{Operator!Sign}
 %% -> $ \sign h $
 \begin{enumerate}[\upshape (i)]
-		
+
 \item
 Given $h \in C_{0}(X)$ such that $h(x) \neq 0$ for all $x \in X$ then the operator $S_{h}$ is defined to be the multiplication operator with $ \sign h $, \ie
 		%% --
@@ -450,9 +439,7 @@ They will be used frequently in the following.
 	%% --
 \begin{lemma}\label{lem:b3-2.3}
 %%
-\index{Lemma!Similar Operators}
-%%
-\index{Operators!Similarity}
+\index{operator!similarity}
 Let $T$ and $R$ be bounded linear operators on $C_{0}(X)$ and assume that $h \in C_{0}(X)$ has no zeros. 
 Suppose we have
 %% --
@@ -497,9 +484,6 @@ We are now able to prove a result which in some sense is the key to cyclicity re
 %% --
 \begin{theorem}\label{thm:b3-2.4}
 %%
-\index{Theorem!Spectral Cyclicity}
-%%
-\index{Cyclicity!Spectral Theorem}
 \begin{enumerate}[\upshape (i)]	
 \item
 Let $T$ be a positive linear operator on $C_{0}(X)$, let $h \in C_{0}(X)$ and $\lambda \in \C$, $|\lambda| = 1$.
@@ -550,14 +534,14 @@ Suppose $A$ is the generator of a positive semigroup, $h \in C_{0}(X)$, $\alpha,
 %% --
 
 	(ii) This can be deduced easily from (i) as follows. 
-	If $Ah = (\alpha+\im\beta )h$, $A|h| = \alpha|h|$, then we have by A-III,Corollary~6.4
+	If $Ah = (\alpha+\im\beta )h$, $A|h| = \alpha|h|$, then we have by A-III, Corollary~6.4
 	%% --
 	\[
 	\mathrm{e}^{-\alpha t}T(t)h = \mathrm{e}^{\im\beta  t}h \text{ and } \mathrm{e}^{-\alpha t}T(t)|h| = |h| \text{ for every } t \geq 0.
 	\]
 	%% --
     %Hence by (a) $\mathrm{e}^{-\alpha t}T(t)h^{[n]} = \mathrm{e}^{\im n\beta t}h^{[n]}$ ($t \geq 0$, $n \in \Z$) which is equivalent to $Ah^{[n]} = (\alpha+\im n\beta)h^{[n]}$.
-	By (a) for $t \geq 0$ and $n \in \Z$ we have
+	By (i) for $t \geq 0$ and $n \in \Z$ we have
     $\mathrm{e}^{-\alpha t}T(t)h^{[n]} = \mathrm{e}^{\im n\beta t}h^{[n]}$, which is equivalent to $Ah^{[n]} = (\alpha+\im n\beta)h^{[n]}$.
 	If $h$ does not have zeros, then $\mathrm{e}^{-\alpha t}T(t) = \mathrm{e}^{-\alpha t}\mathrm{e}^{\im\beta  t}S_{h}^{-1}T(t)S_{h}$ for every $t \geq 0$ which is equivalent to the final statement of (ii).
 	\end{proof}
@@ -566,10 +550,10 @@ Before we state a first cyclicity result we give the definition and illustrate i
 %% --
 \begin{definition}\label{def:b3-2.5}
 %	%
-\index{Definition!Cyclic Sets}
+\index{cyclic}
 %	%
-\index{Sets!Imaginary Additively Cyclic}
-A subset $M \subset \C$ is called \emph{imaginary additively cyclic} (or simply \emph{cyclic}), if it satisfies the following condition. 
+\index{example!imaginary additively cyclic}
+A subset $M \subset \C$ is called \emph{imaginary additively cyclic}\index{cyclic!imaginary additively} (or simply \emph{cyclic}), if it satisfies the following condition. 
 \begin{quote}
 $\alpha + \im\beta \in M$, $\alpha,\beta \in \R$ implies that $\alpha +  \im k\beta \in M$ for every $k \in \Z$\,
 \end{quote}
@@ -603,17 +587,20 @@ For a subset $M$ of $\im \R$ we give the following equivalent conditions.
     The notation $M_{k}$ refers to the sets just defined.
 %% --
 \begin{examples}\label{ex:b3-2.6}%
-\index{Spectral Theory on $ C_{0}(X)$!Examples!Boundary Spectrum}
+\index{example!boundary spectrum}
 
 \begin{enumerate}[\upshape (i), wide, labelindent=.5em]
 \item
-For the Laplacian $\Delta$ on $\R^{n}$ or the second derivative on $[0,1]$ with Neumann boundary conditions the boundary spectrum is $M_{1}$.
+For the Laplacian%
+ \index{example!Laplacian} 
+ $\Delta$ on $\R^{n}$ or the second derivative on $[0,1]$ with Neumann boundary conditions the boundary spectrum is $M_{1}$.
 	
 \item
 The first derivative on $\R$ or $\R_{+}$ is an example where the boundary spectrum of the generator is $M_{2}$.
 	
 \item
-The rotation semigroup on $C(\Gamma)$ (see A-III,Example~5.6) with period $2\pi/\alpha$ has boundary spectrum $M_{3}$.
+The rotation semigroup%
+\index{example!rotation semigroup} on $C(\Gamma)$ (see A-III, Example~5.6) with period $2\pi/\alpha$ has boundary spectrum $M_{3}$.
 
 \item
 For the semigroup on $C(\Gamma \times \Gamma)$ given by
@@ -664,15 +651,13 @@ Our first result concerns cyclicity of the eigenvalues contained in the boundary
 	%% --
 	\begin{proposition}\label{prop:b3-2.7}
 %	%
-\index{Proposition!Cyclicity of Eigenvalues}
-	%
-\index{Eigenvalues!Cyclicity}
+\index{eigenvalue!cyclicity}
 %	%
-\index{Boundary Spectrum!Eigenvalues}
+\index{boundary spectrum!eigenvalues}
 		
 		Assume that for some $t_{0} > 0$ there is a strictly positive measure $\phi$ such that $T(t_{0})'\phi = \exp(s(A)t_{0})\cdot\phi$.
 		
-		Then $P\sigma_{b}(A)$ is imaginary additively cyclic.
+		Then $P\sigma_{b}(A)$ is imaginary additively cyclic\index{cyclic!imaginary additively}.
 	\end{proposition}
 	%% --	
 \begin{proof}
@@ -712,10 +697,9 @@ However, this shows that we stay within our setting of Banach spaces of continuo
 %% --
 \begin{lemma}\label{lem:b3-2.8}
 %%
-\index{Lemma!Spectral Bound}
-%%
-\index{Spectral Bound!Properties}
-Suppose $A$ is the generator of a positive semigroup $\TT$ such that the spectral bound $s(A)$ is a pole of the resolvent of order $k$.
+Suppose $A$ is the generator of a positive semigroup $\TT$ such that the spectral bound $s(A)$ is a pole of the resolvent%
+\index{resolvent!pole} 
+of order $k$.
 Then there is a sequence
 %% --
 \begin{equation}\label{eq:b3-2.16}
@@ -735,8 +719,8 @@ Denoting by $A_{n}$ $(n = 0,1,\ldots,k)$ the generator of the semigroup on $I_{n
 \end{lemma}
 %% --
 \begin{proof}
-	We can assume that $s(A) = 0$ and we will denote the negative coefficients of the Laurent series of $R(\cdot,A)$ at $0$ by $Q_{n}$.
-	Thus the following relations hold (see A-III,3.6),
+	We can assume that $s(A) = 0$ and we will denote the negative coefficients of the Laurent series\index{resolvent!Laurent serie} of $R(\cdot,A)$ at $0$ by $Q_{n}$.
+	Thus the following relations hold (see A-III,\,3.6),
 	%% --
 	\begin{equation}\label{eq:b3-2.17}
 	\begin{split}
@@ -756,7 +740,7 @@ Denoting by $A_{n}$ $(n = 0,1,\ldots,k)$ the generator of the semigroup on $I_{n
 	
 	Since $R(\lambda,A)$ is positive if $\lambda > 0$ (Corollary~\ref{cor:b3-1.3}), it follows from \eqref{eq:b3-2.17} that $Q_{k}$ is a positive bounded operator, hence $I_{k-1} = \{f \in E \colon Q_{k}|f| = 0\}$ is a closed ideal.
 	Since $Q_{k}$ commutes with $R(\lambda,A)$ (see \eqref{eq:b3-2.17}, it follows that $I_{k-1}$ is a $T$-invariant ideal.
-	By A-III,Corollary~4.3 the generators $A_{|I_{k-1}}$ and $A_{k}$ induced by $A$ on $I_{k-1}$ and $E/I_{k-1}$, respectively, have a pole at $0$.
+	By A-III, Corollary~4.3 the generators $A_{|I_{k-1}}$ and $A_{k}$ induced by $A$ on $I_{k-1}$ and $E/I_{k-1}$, respectively, have a pole at $0$.
 	The coefficients of the Laurent series are the operators induced by $Q_{n}$ on $E/I_{k-1}$ and $I_{k-1}$, respectively.
 	
 	Suppose that the pole order of $R(\cdot,A_{k})$ is greater than $1$, say $m$.
@@ -773,7 +757,7 @@ Denoting by $A_{n}$ $(n = 0,1,\ldots,k)$ the generator of the semigroup on $I_{n
 	So far we know that the resolvent of $A_{k}$ has a pole of order $\leq 1$.
 	Moreover, since ${Q_{k}}_{|I_{k-1}} = 0$, 
 	the resolvent of $A_{|I_{k-1}}$ has a pole of order $\leq k-1$.
-	From A-III,Corollary~4.3 it follows that the pole order of $A_{k}$ and $A_{|I_{k-1}}$ is precisely $1$ and $k-1$, respectively.
+	From A-III, Corollary~4.3 it follows that the pole order of $A_{k}$ and $A_{|I_{k-1}}$ is precisely $1$ and $k-1$, respectively.
 	The residue ${Q_{1}}_{/I_{k-1}} = \lim_{z \to 0}zR(z,A_{k})$ is positive since $R(z,A_{k}) \geq 0$ for $z > 0$ (see Corollary~\ref{cor:b3-1.3}).
 	It remains to prove that it is strictly positive. We assume $Q_{1/I_{k-1}}(|x + I_{k-1}|) = 0$ which means $Q_{1}|x| \in I_{k-1}$ hence $Q_{k}|x| = A^{k-1}Q_{1}|x| = 0$, that is, $x \in I_{k-1}$ or $x + I_{k-1} = 0$.
 	
@@ -841,10 +825,9 @@ is the generator of a positive semigroup on
 and $s(A) = 0$ is a pole of the resolvent of order $k$ where $1 \leq k \leq n$.
 %% --
 \begin{theorem}\label{thm:b3-2.9}
-%%
-\index{Theorem!Cyclic Boundary Spectrum}
-%%
-\index{Boundary Spectrum!Cyclicity}
+%% --
+\index{boundary spectrum!cyclicity}
+%% --
 Suppose $A$ is the generator of a positive semigroup on $C_{0}(X)$ such that every point of $\sigma_{b}(A)$ is a pole of the resolvent
 Then $P\sigma_{b}(A) = \sigma_{b}(A)$ is cyclic.
 \end{theorem}
@@ -866,13 +849,12 @@ Then $P\sigma_{b}(A) = \sigma_{b}(A)$ is cyclic.
 	This shows that $P\sigma_{b}(A) = \sigma(A) \cap \im\R$ is cyclic.
 \end{proof}
 %% --
-If $A$ has compact resolvent then every point of $\sigma(A)$ is a pole of the resolvent (see A-III,3.6) hence we have
+If $A$ has compact resolvent then every point of $\sigma(A)$ is a pole of the resolvent (see A-III,\,3.6) hence we have
 %% --
 \begin{corollary}\label{cor:b3-2.10}
 %%
-\index{Corollary!Compact Resolvent}
+\index{resolvent!compact case}
 %%
-\index{Resolvent!Compact Case}
 If $A$ has compact resolvent, then $P\sigma_{b}(A) = \sigma_{b}(A)$ is cyclic.
 \end{corollary}
 %% --
@@ -883,42 +865,41 @@ If it is known that the boundary spectrum of a generator is cyclic and nonvoid, 
 \end{equation}
 %% --
 If one can exclude the second alternative, then there is a unique spectral value having maximal real part.
-A real spectral value $\lambda_{0}$ of a generator $A$ is called a \emph{dominant} provided that $\Re(\lambda) < \lambda_{0}$ for every $\lambda \in \sigma(A)$, it is called \emph{strictly dominant} if for some $\delta > 0$ one has $\Re(\lambda) \leq \lambda_{0} - \delta$ for every $\lambda \in \sigma(A)$, $\lambda \neq \lambda_{0}$.
+A real spectral value $\lambda_{0}$ of a generator $A$ is called a \emph{dominant}\index{spectral value!dominant} provided that $\Re(\lambda) < \lambda_{0}$ for every $\lambda \in \sigma(A)$, it is called \emph{strictly dominant}\index{spectral value!strictly dominant}  if for some $\delta > 0$ one has $\Re(\lambda) \leq \lambda_{0} - \delta$ for every $\lambda \in \sigma(A)$, $\lambda \neq \lambda_{0}$.
 
-The assumptions of Corollary~\ref{cor:b3-2.10} do not imply that $s(A)$ is dominant, the rotation semigroup (A-III,\,Example~5.6) is a counterexample.
+The assumptions of Corollary~\ref{cor:b3-2.10} do not imply that $s(A)$ is dominant, the rotation semigroup (A-III, Example~5.6) is a counterexample.
 %% --
 \begin{corollary}\label{cor:b3-2.11}
 %%
-\index{Corollary!Dominant Eigenvalue}
+\index{eigenvalue!dominant}
 %%
-\index{Eigenvalue!Strict Dominance}	
 	Assume that for some $t_{0} > 0$ (hence for all $t > 0$) one has 
     %% --
     \[
     r_{\text{ess}}(T(t_{0})) < r(T(t_{0})), 
     \]
     %% --
-    \eg that $T(t_{0})$ is compact and $r(T(t_{0})) > 0$ (see A-III,3.7).
+    \eg that $T(t_{0})$ is compact and $r(T(t_{0})) > 0$ (see A-III,\,3.7).
 	Then $s(A)$ is a strictly dominant eigenvalue.
 \end{corollary}
 %% --
 \begin{proof}
-	If $s(A)$ is not strictly dominant, then we have by Theorem~\ref{thm:b3-2.9} and A-III,Corollary~6.5 that 
+	If $s(A)$ is not strictly dominant, then we have by Theorem~\ref{thm:b3-2.9} and A-III, Corollary~6.5 that 
     %% --
     \[
     \{\lambda \in \sigma(A) \colon \Re(\lambda) > s(A) - r\}
     \]
     %% -- 
     contains infinitely many eigenvalues for every $r > 0$.
-	From A-III,Corollary~6.4 it follows that $\{\lambda \in \sigma(T(t)) \colon |\lambda| > r\}$ contains infinitely many eigenvalues (counted according to their multiplicities) for every $r < \exp(s(A)t) = r(T(t))$.
-	This contradicts the assumption $r_{\text{ess}}(T(t)) < r(T(t))$ (see A-III,3.7).
+	From A-III, Corollary~6.4 it follows that $\{\lambda \in \sigma(T(t)) \colon |\lambda| > r\}$ contains infinitely many eigenvalues (counted according to their multiplicities) for every $r < \exp(s(A)t) = r(T(t))$.
+	This contradicts the assumption $r_{\text{ess}}(T(t)) < r(T(t))$ (see A-III,\,3.7).
 \end{proof}
 %% --
 \begin{corollary}\label{cor:b3-2.12}
 %%
-\index{Corollary!Compact Resolvent}
 %%
-\index{Resolvent!Norm Continuous Case}	
+\index{semigroup!eventually norm continuous}
+\index{semigroup!compact resolvent}	
 	Suppose $A$ has compact resolvent and non-empty spectrum.
 	If the corresponding semigroup is eventually norm continuous (\eg if it is holomorphic or differentiable), then there is a strictly dominant eigenvalue admitting a positive eigenfunction.
 \end{corollary}
@@ -941,7 +922,7 @@ It is unknown whether there are positive semigroups where $\sigma_{b}(A)$ is not
 %% --
 \begin{example}\label{ex:b3-2.13}
 %
-\index{Spectral Theory on $ C_{0}(X)$!Examples!Non-cyclic Spectrum}
+\index{example!non-cyclic point pectrum}
 %% --
 	Consider $E = C(\Gamma) \times C_{0}(\R) \, (\cong C_{0}(\Gamma\dot{\cup}\R))$.
 	We fix a positive function $k \in C_{0}(\R)$ with compact support.
@@ -973,7 +954,7 @@ It is unknown whether there are positive semigroups where $\sigma_{b}(A)$ is not
 %% --
 \begin{example}\label{ex:b3-2.14}
 %
-\index{Spectral Theory on $ C_{0}(X)$!Examples!Schrödinger Operator}
+\index{example!Schrödinger operator}
 
 
 \begin{enumerate}[\upshape (i), wide, labelindent=.5em]
@@ -998,7 +979,8 @@ It is unknown whether there are positive semigroups where $\sigma_{b}(A)$ is not
     (In fact, if $f \in C^{2}$, $f \geq 0$ and $f(x_{0}) = 0$ for some $x_{0}$, then $f'(x_{0}) = 0$.
 	Therefore the uniqueness theorem for ordinary differential equations implies that $f$ is identically zero).
 	
-\item \emph{A retarded linear differential equation.} 	
+\item \emph{A retarded linear differential equation.}
+\index{example!retarded differential equation}
 
 	Consider $E = C[-1,0]$ and define $A_{m}$ and $A_{0}$ as follows,
 	%% --
@@ -1046,7 +1028,7 @@ It follows from \eqref{eq:b3-2.25} and \eqref{eq:b3-2.26} that for $\lambda > \|
 Then the Hille-Yosida Theorem (A-II, Theorem~1.7) implies that $A_{\phi}$ generates a semigroup $(T(t))$ satisfying $\|T(t)\| \leq \exp(\|\phi\|t)$.
 Moreover, this semigroup is eventually norm continuous (see B-IV,Corollary~3.3).
 
-By B-II,Example~1.22 we have the following equivalence.
+By B-II, Example~1.22 we have the following equivalence.
 %% --
 \begin{equation}\label{eq:b3-2.29}
 	A_{\phi} \text{ generates a positive semigroup if and only if } \phi + r\delta_{0} \geq 0 \text{ for some } r \in \R.
@@ -1068,12 +1050,11 @@ We conclude this section with some additional remarks related to Theorem~\ref{th
 %% --
 \begin{remarks}\label{rem:b3-2.15}
 %
-\index{Spectral Theory on $ C_{0}(X)$Remarks!Resolvent Poles}
-
 	
 	\begin{enumerate}[\upshape (i), wide, labelindent=.5em]
 	\item
-	If $s(A)$ is a pole of the resolvent, then for generators of positive semigroups one has the following equivalences.
+	If $s(A)$ is a pole of the resolvent, then for generators of positive semigroups one has the following equivalences.%
+    \index{resolvent!pole}
 	
 	\begin{enumerate}[\upshape (a)]
 		\item 
@@ -1088,7 +1069,7 @@ We conclude this section with some additional remarks related to Theorem~\ref{th
 	In particular, if $\Kern{s(A) - A}$ contains a strictly positive function or if $\Kern{s(A) - A'}$ contains a strictly positive measure, then $s(A)$ is a first order pole.
 
 	We sketch the proof of (a) $\Leftrightarrow$ (b) assuming that $s(A) = 0$.
-	If $0$ is a first order pole, then the residue $P$ is a positive projection satisfying $PE = \Kern A$, $P'E' = \Kern A'$ (see A-III,3.6).
+	If $0$ is a first order pole, then the residue $P$ is a positive projection satisfying $PE = \Kern A$, $P'E' = \Kern A'$ (see A-III,\,3.6).
 	Thus given $0 < f \in \Kern A$ and any $0 \leq \phi \in E'$ such that $\langle f,\phi \rangle > 0$, we have for $\phi \coloneqq P'\phi$: $\langle f,\phi \rangle = \langle f, P'\phi \rangle = \langle Pf,\phi \rangle = \langle f,\phi \rangle > 0$.
 	To prove the reverse direction, we first observe that the highest coefficient $Q_{k}$ of the Laurent expansion is a positive operator.
 	Thus if $0$ is a pole of order $k \geq 2$, we choose $0 < h \in E$ such that $f \coloneqq Q_{k}h > 0$.
@@ -1120,7 +1101,7 @@ We conclude this section with some additional remarks related to Theorem~\ref{th
 	\item 
 	Stronger results than Theorem~\ref{thm:b3-2.9} will be proved in Chapter C-III.
 	Actually, assuming only that $s(A)$ is a pole of finite algebraic multiplicity one can show that $\sigma_{b}(A)$ contains only poles of finite multiplicity (C-III, Theorem~3.13).
-	In C-III,Corollary~2.12 we will show that $\sigma_{b}(A)$ is cyclic whenever $s(A)$ is a pole of the resolvent.
+	In C-III, Corollary~2.12 we will show that $\sigma_{b}(A)$ is cyclic whenever $s(A)$ is a pole of the resolvent.
 	
 	\item 
 	Example~\ref{ex:b3-2.14}(ii) can be extended to systems of functional differential equations even the infinite dimensional case.
@@ -1129,21 +1110,21 @@ We conclude this section with some additional remarks related to Theorem~\ref{th
 \end{remarks}
 %% --
 \section{Irreducible Semigroups}%
-\index{Spectral Theory on $ C_{0}(X)$!Irreducible Semigroups}
 %% --
+\index{semigroup!irreducible}
+%%
+\index{irreducible}
+%%
 In the case of matrices it is well known that considerably stronger results are available if one considers positive matrices which are irreducible. 
 The concept of irreducibility can be extended to our setting and in many cases one can check easily whether a given semi­group has this property (see Example~\ref{ex:b3-3.4}). 
 We will show that irreducible semigroups have many interesting properties. 
 For example, the spectrum $\sigma(A)$ is always non-empty, positive eigenfunctions are strictly positive and if $s(A)$ is a pole, it is algebraically (and geometri­cally) simple (see Proposition~3.5). 
-Moreover, in certain cases irreducibili­ty ensures that $\sigma_{b}(A)$ and $P\sigma_{b}(A)$ are not only cyclic subsets but \emph{subgroups} (see Theorem~\ref{thm:b3-3.6} and Theorem~\ref{thm:b3-3.11} for details). 
+Moreover, in certain cases irreducibility ensures that $\sigma_{b}(A)$ and $P\sigma_{b}(A)$ are not only cyclic subsets but \emph{subgroups} (see Theorem~\ref{thm:b3-3.6} and Theorem~\ref{thm:b3-3.11} for details). 
 
 We start the discussion with several, mutually equivalent, definitions of irreducibility. 
 %% --
 \begin{definition}\label{def:b3-3.1}
 %%
-\index{Semigroups!Irreducible}
-%%
-\index{Irreducible Semigroups}
 A positive semigroup $\TT = (T(t))$ on $E = C_{0}(X)$, $X$ locally compact, with generator $A$ is called \emph{irreducible} if one of the following, mutually equivalent conditions is satisfied.
 %% --
 \begin{enumerate}[\upshape (a)]
@@ -1200,19 +1181,19 @@ By (e), $g$ is strictly positive, thus $I$ has to be dense (it contains all func
 
 \ref{item:b3-3.1-iv} $\implies$ \ref{item:b3-3.1-i}: At first we recall that a closed linear subspace which is invariant for $R(\lambda_0,A)\ (\lambda_0 \in \rho(A))$, is invariant for $R(\lambda ,A)$
 whenever $\lambda$ and $\lambda_0$ belong to the same component of $\rho((A)$. 
-Hence, if $\lambda_0 \in \rho_{+}(A)$ then by A-I,3.2 every $R(\lambda_0,A)$-invariant subspace is 
+Hence, if $\lambda_0 \in \rho_{+}(A)$ then by A-I,\,3.2 every $R(\lambda_0,A)$-invariant subspace is 
 $\TT$-invariant and vice versa.
 %% --
 \begin{remark}\label{rem:b3-3.2}
 %%
-\index{Semigroups!Irreducible!Conditions}
+\index{semigroup!irreducible}
 	Obviously, irreducibility of a semigroup $(T(t))_{t\geq 0}$ is implied by the following condition.
 \begin{enumerate}[(g)]	
 \item\label{item:b3-3.1-vii}
 $T(t)f \gg 0$ whenever $f > 0$ and $t > 0$.
 \end{enumerate}
 %% --
-The rotation semigroup (see A-I,2.5) is irreducible but it does not satisfy condition \ref{item:b3-3.1-vii}.
+The rotation semigroup (see A-I,\,2.5) is irreducible but it does not satisfy condition \ref{item:b3-3.1-vii}.
 	However, assuming that the semigroup $(T(t))$ is holomorphic, then \ref{item:b3-3.1-vii}
 	is equivalent to irreducibility.
 	We will give a proof of this result in the more general situation of Banach lattices (see C-III, Theorem~3.2(b)).
@@ -1224,7 +1205,7 @@ In fact, we have the following result.
 %% --
 \begin{proposition}\label{prop:b3-3.3}
 %
-\index{Semigroups!Irreducible!Perturbation}
+index{semigroup!perturbation}
 	Suppose $A$ generates a positive semigroup $\TT$ on $C_{0}(X)$ and let $h$ be a continuous, bounded real-valued function on $X$.
 	Then the semigroup $\mathcal{S}$ generated by $B \coloneqq A + M_{h}$ is irreducible if and only if\/ $\TT$ has this property.
 \end{proposition}
@@ -1243,11 +1224,11 @@ R(\lambda,A) &= (1 - R(\lambda,B)M_{-h})^{-1}R(\lambda,B) = \sum_{n=0}^{\infty} 
 %% --
 \begin{examples}\label{ex:b3-3.4}
 %
-\index{Semigroups!Irreducible!Examples}
+\index{example!irreducible semigroup}
 	
 \begin{enumerate}[\upshape (i), wide, labelindent=.5em]
 	\item 
-	(cf.\ B-II,Section~3). Suppose $(T(t))_{t\geq 0}$ is governed by a continuous semiflow $\phi \colon \R_{+} \times X \to X$, \ie $T(t)f = f\circ\phi_{t}$ $(f\in C_{0}(X))$.
+	(cf.\ B-II, Section~3). Suppose $(T(t))_{t\geq 0}$ is governed by a continuous semiflow\index{semiflow} $\phi \colon \R_{+} \times X \to X$, \ie $T(t)f = f\circ\phi_{t}$ $(f\in C_{0}(X))$.
 	Then the following assertions are equivalent.
 	\begin{enumerate}[\upshape (a)]
 		\item 
@@ -1272,7 +1253,7 @@ R(\lambda,A) &= (1 - R(\lambda,B)M_{-h})^{-1}R(\lambda,B) = \sum_{n=0}^{\infty} 
 	Then $(T(t))_{t\geq 0}$ is irreducible if and only if $\bigcup_{t>0}\text{supp}\{k(t,x,.)\}$ is dense in $X$ for every $x \in X$.
 	
 	\item 
-	We consider the first derivative $Af = f'$ (cf.\ A-I,2.4). 
+	We consider the first derivative $Af = f'$ (cf.\ A-I,\,2.4). 
     If $E = C_{0}(\R)$, then the corresponding semigroup $(T(t))$ is not irreducible.
 	Note however, that there is no closed invariant ideal $I$ with $\{0\} \neq I \neq E$ which is invariant under the group $(T(t))_{t\in\R}$ generated by $A$.
 	For $E = C_{0}[0,\infty)$ and $E = C_{0}(-\infty,0)$ the corresponding semigroups are reducible (\ie not irreducible) as well.
@@ -1280,12 +1261,12 @@ R(\lambda,A) &= (1 - R(\lambda,B)M_{-h})^{-1}R(\lambda,B) = \sum_{n=0}^{\infty} 
 	It is (isomorphic to) the semigroup of rotations on the unit circle.
     
 	\item 
-	(cf.\ Example~\ref{ex:b3-2.14}(ii)) Now we consider $Af = f'$ on $E = C[-1,0]$ with $D(A_{\phi}) = \{f \in C^1 \colon f'(0) = \phi(f)\}$ where the linear functional $\phi$ satisfies $\phi + \alpha\delta_{0} \geq 0$ for some $\alpha \in \R$ (see B-II,Example~1.22).
+	(cf.\ Example~\ref{ex:b3-2.14}(ii)) Now we consider $Af = f'$ on $E = C[-1,0]$ with $D(A_{\phi}) = \{f \in C^1 \colon f'(0) = \phi(f)\}$ where the linear functional $\phi$ satisfies $\phi + \alpha\delta_{0} \geq 0$ for some $\alpha \in \R$ (see B-II, Example~1.22).
 	The corresponding semigroup is irreducible if and only if $-1 \in \supp\phi$.
 	
 	\item 
-	The second derivative $Af = f''$ generates an irreducible semigroup on $C_{0}(\R)$ and on $C_{0}(0,1)$ (cf.\ A-I,2.7).
-	With Neumann boundary conditions (or more generally, $f'(0) = \alpha_{0}f(0)$, $f'(1) = \alpha_{1}f(1)$ where $\alpha_{0}, \alpha_{1} \in \R$) the second derivative generates an irreducible semigroup on $C[0,1]$ (cf.\ A-I,2.7).
+	The second derivative $Af = f''$ generates an irreducible semigroup on $C_{0}(\R)$ and on $C_{0}(0,1)$ (cf.\ A-I,\,2.7).
+	With Neumann boundary conditions (or more generally, $f'(0) = \alpha_{0}f(0)$, $f'(1) = \alpha_{1}f(1)$ where $\alpha_{0}, \alpha_{1} \in \R$) the second derivative generates an irreducible semigroup on $C[0,1]$ (cf.\ A-I,\,2.7).
 	
 	The operator $Af = f'' - Vf$ on $C_{0}(\R)$, where $V$ is continuous, real-valued with $\inf V(x) > -\infty$ (see Example~\ref{ex:b3-2.14}(i)) also generates an irreducible semigroup.
 	This can be derived from the maximum principle as follows. 
@@ -1293,7 +1274,9 @@ R(\lambda,A) &= (1 - R(\lambda,B)M_{-h})^{-1}R(\lambda,B) = \sum_{n=0}^{\infty} 
 	If $f > 0$, then $g > 0$, hence \citet[Chap.I, Theorem~3]{protterweinberger:1967} implies that $g$ is strictly positive.
 	
 	\item 
-	The Laplacian $\Delta$ generates an irreducible semigroup on $C_{0}(\R^n)$ as can be seen easily from A-I,2.8.
+	The Laplacian%
+    \index{example!Laplacian} 
+    $\Delta$ generates an irreducible semigroup on $C_{0}(\R^n)$ as can be seen easily from A-I,\,2.8.
 	More general elliptic operators will be discussed below (see Example~\ref{ex:b3-3.10}(ii)).
 \end{enumerate}
 \end{examples}
@@ -1333,7 +1316,7 @@ We now return to the general situation and show that irreducible semigroups poss
 
 	\item 
 	Suppose $Ah = rh$ where $h \neq 0$ is positive.
-	Then $r$ has to be real and we have $T(t)h = \mathrm{e}^{rt}h$ (A-III,Corollary~6.4).
+	Then $r$ has to be real and we have $T(t)h = \mathrm{e}^{rt}h$ (A-III, Corollary~6.4).
 	For $|f| \leq n\cdot h$ $(n \in \N)$ we have
 	%% --
 	\begin{equation}\label{eq:b3-3.2}
@@ -1381,7 +1364,7 @@ However, it allows a simpler formulation.
 
 \begin{theorem}\label{thm:b3-3.6}
 %
-\index{Semigroups!Irreducible!Eigenvalues}
+\index{semigroup!irreducible}
 	Suppose $\TT = (T(t))$ is an irreducible semigroup with generator $A$ and spectral bound $s(A) = 0$.
 	Assume that there exists a positive linear form $\phi \neq 0$ such that $A'\phi = 0$. 
     (This is automatically satisfied whenever $X$ is compact (see Theorem~\ref{thm:b3-1.6}).)
@@ -1473,8 +1456,7 @@ For details see \citet[p.62]{greiner:1982}.
 An immediate consequence of assertion (iv) of Theorem~\ref{thm:b3-3.6} is the following corollary. 
 %% --
 \begin{corollary}\label{cor:b3-3.7}
-%
-\index{Semigroups!Irreducible!Spectrum}
+
 Suppose $\TT$ satisfies the hypotheses of Theorem~\ref{thm:b3-3.6} and let $A$ be its generator.
 If $k$ is a bounded continuous real-valued function, $M_{k}$ the corresponding multiplication operator, then for $B \coloneq A + M_{k}$ we have $\sigma(B) + \left(P\sigma(A)\cap \im\R\right) = \sigma(B)$.
 In particular, $s(B) + \left(P\sigma(A)\cap \im\R\right) \subset \sigma(B)$.
@@ -1487,7 +1469,7 @@ the semigroup \emph{contains} the semigroup of rotations on $\Gamma$.
 
 
 \begin{corollary}\label{cor:b3-3.8}%
-\index{Semigroups!Irreducible!Rotations}
+
 Suppose that the hypotheses of Theorem~\ref{thm:b3-3.6} are satisfied and that there is an eigenvalue $\im \alpha$ of $A$ with $\alpha > 0$.
 Let $\tau \coloneq 2\pi/\alpha$.
 Then there exists a continuous injective lattice homomorphism $j \colon C(\Gamma) \to C_{0}(X)$ such that the diagram commutes. 
@@ -1498,7 +1480,9 @@ C_{0}(X) \arrow[r, "T(t)"'] & C_{0}(X)
 \end{tikzcd}
 \]
 %% --
-Here, $(R_{\tau}(t))$ denotes the rotation semigroup of period $\tau$ (see A-I,2.5).
+Here, $(R_{\tau}(t))$ denotes the rotation semigroup%
+\index{example!rotation semigroup} 
+of period $\tau$ (see A-I,\,2.5).
 If $X$ is compact, then $j$ is a topological embedding.
 \end{corollary}
 %% --
@@ -1529,18 +1513,19 @@ There exist positive functions $f_{1}$ and $f_{2}$ such that $T(t)f_{1}$ and $T(
 This observation proves the following corollary.
 %% --
 \begin{corollary}\label{cor:b3-3.9}
-%%
-\index{Semigroups!Irreducible!Properties}
+
 	Suppose that the hypotheses of Theorem~\ref{thm:b3-3.6} are satisfied and that for some $t_{0} > 0$ we have $T(t_{0})f \gg 0$ whenever $f > 0$.
 	Then $P\sigma(A)\cap \im\R = \{0\}$.
 \end{corollary}
 %% --
-Corollary~\ref{cor:b3-3.9} can be applied if $T(t_{0})$ is a kernel operator with strictly positive kernel.
+Corollary~\ref{cor:b3-3.9} can be applied if $T(t_{0})$ is a kernel operator%
+\index{operator!kernel operator} 
+with strictly positive kernel.
 We give some examples.
 
 \begin{examples}\label{ex:b3-3.10}
 %
-\index{Examples!Irreducible Semigroups}
+\index{example!irreducible semigroup}
 	
 	\begin{enumerate}[\upshape (i), wide, labelindent=.5em] 
 	\item 
@@ -1548,6 +1533,7 @@ We give some examples.
 	\[
 	(T(t)f)(x) = \int_{X} k(t,x,y)f(y) \diff{\mu}(y)\,,
 	\]
+    \index{kernel operator}
 	where $\mu$ is a positive measure and $k$ is a positive continuous function (see Example~\ref{ex:b3-3.4}(ii)).
 	We will show that $P\sigma(A)\cap(s(A) + \im\R) = \{s(A)\}$.
 	
@@ -1567,6 +1553,7 @@ We give some examples.
 	This is impossible if $k$ is continuous.
 	
 	\item 
+    \index{example!elliptic operator}
 	Let $\Omega$ be a domain in $\R^{n}$ and define $L_{0}$ as
 	\[
 	L_{0}f \coloneq \sum_{i,j=1}^{n} a_{ij}f_{ij}'' + \sum_{i=1}^{n}b_{i}f_{i}' + cf\,,
@@ -1632,41 +1619,41 @@ To prove this result one uses the proof of the analogous result for a single ope
 %% --
 \begin{theorem}\label{thm:b3-3.11}
 %%
-\index{Semigroups!Irreducible!Markov}
-	Suppose that $\TT$ is an irreducible semigroup of Markov operators on $C(K)$, $K$ compact.
+	Suppose that $\TT$ is an irreducible semigroup of Markov operators%
+    \index{Markov operator} 
+    on $C(K)$, $K$ compact.
 	Then $\sigma_{b}(A)$ is a (closed) subgroup of $\im \R$.
 	Hence either $\sigma_{b}(A) = \{0\}$ or $= \im\R$ or $= \im\alpha\Z$ for some $\alpha > 0$.
 \end{theorem}
 
 \section{Semigroups of Lattice Homomorphisms}%
-\index{Spectral Theory on $ C_{0}(X)$!Lattice Homomorphisms}
+\index{lattice homomorphism}
+\index{semigroup!lattice homomorphism}
 %% --
-As we have seen in Section 2 the boundary spectrum of many positive semigroups is a cyclic set.
+As we have seen in Section~\ref{sec:b3-2} the boundary spectrum of many positive semigroups is a cyclic set.
 However, there are hardly any restrictions on the set 
 \[
 \lambda \in \{ \sigma(A) \colon \Re(\lambda) < s(A)\}\,,
 \] 
 except that it is symmetric with respect to the real axis.
 For semigroups of lattice homomorphisms the situation is quite different.
-We will show that the whole spectrum is an imaginary additively cyclic subset of $\C$ (see Definition~2.5).
+We will show that the whole spectrum is an imaginary additively cyclic\index{cyclic!imaginary additively} subset of $\C$ (see Definition~2.5).
 A complete proof of this results requires some facts of the theory of Banach lattices, therefore, we postpone it to Part C (see C-III, Theorem~4.2).
 %% --
 \begin{theorem}\label{thm:b3-4.1}
-%
-\index{Semigroups!Lattice Homomorphisms!Spectrum}
 	If $A$ is the generator of a semigroup of lattice homomorphisms, then $\sigma(A)$, $A\sigma(A)$ and $P\sigma(A)$ are cyclic subsets of $\C$.
 \end{theorem}
 %% --
 \begin{proof}[$1^{st}$ part of the proof]
 	We prove the assertion concerning $A\sigma(A)$ and $P\sigma(A)$.
-	Assume that $Ah = (\alpha + \im\beta)h$, $\alpha,\beta \in \R$, $h \neq 0$, then $T(t)h = \mathrm{e}^{\alpha t}\mathrm{e}^{\im\beta  t}h$ for all $t \geq 0$ (A-III,Corollary~6.4).
+	Assume that $Ah = (\alpha + \im\beta)h$, $\alpha,\beta \in \R$, $h \neq 0$, then $T(t)h = \mathrm{e}^{\alpha t}\mathrm{e}^{\im\beta  t}h$ for all $t \geq 0$ (A-III, Corollary~6.4).
 	Since $T(t)$ is a lattice homomorphism we have $T(t)|h| = |T(t)h| = \mathrm{e}^{\alpha t}|h|$ $(t \geq 0)$ or $A|h| = \alpha|h|$, hence $Ah^{[n]} = (\alpha + \im n\beta)h^{[n]}$ for all $n \in \Z$ by Theorem~\ref{thm:b3-2.4}(ii).
 	We have shown that $P\sigma(A)$ is cyclic.
 	
-	To prove that $A\sigma(A)$ is cyclic as well, one considers a semigroup $\mathcal{F}$-product $E_{\mathcal{F}}^{\TT}$ of $E$ (see A-III,4.5).
+	To prove that $A\sigma(A)$ is cyclic as well, one considers a semigroup $\mathcal{F}$-product $E_{\mathcal{F}}^{\TT}$ of $E$ (see A-III,\,4.5).
 	It is easy to see that $E_{\mathcal{F}}^{\TT}$ is a Banach lattice 
 	and $(T_{\mathcal{F}}(t))$ is a semigroup of lattice homomorphisms.
-	The proposition in A-III,3.5 implies $A\sigma(A) = P\sigma(A_{\mathcal{F}})$.
+	The proposition in A-III,\,3.5 implies $A\sigma(A) = P\sigma(A_{\mathcal{F}})$.
 	Thus the assertion follows from the cyclicity of point spectrum.
 \end{proof}
 %% --
@@ -1692,7 +1679,7 @@ The proof is not difficult and is left as an exercise.
 %% --
 \begin{lemma}\label{lem:b3-4.2}
 %
-\index{Semiflows!Properties}
+\index{semiflow}
 	Every $K_{t}$ $(0 \leq t \leq \infty)$ is a non-empty closed subset of $K$ which is invariant under the semiflow $\phi$.
 	Moreover, the following assertions are true.
 	\begin{enumerate}[\upshape (i)]
@@ -1740,7 +1727,7 @@ are three different cases.
 Before we state the general result (see Theorem~\ref{thm:b3-4.4}) we give some typical examples.
 %% 
 \begin{examples}\label{ex:b3-4.3}%
-\index{Examples!Lattice Homomorphisms}
+\index{example!lattice homomorphisms}
 	\begin{enumerate}[\upshape (i), wide, labelindent=.5em]
 	\item 
 	Consider on $K = [0,\infty]$ the semiflow defined by $\phi(t,x) \coloneq x + t$ $(\infty + t = \infty)$.
@@ -1872,7 +1859,7 @@ Before we state the general result (see Theorem~\ref{thm:b3-4.4}) we give some t
 		\end{aligned}
 	\end{equation}
 	%% --
-	It follows that the disc $D \coloneq \{\lambda \in \C \colon |\lambda| < \exp(\underbar{c}(h,\phi)-2\epsilon)\}$ has an empty intersection with $A{\sigma}(T(\tau))$ and therefore $H_{2\epsilon}\cap A_{\sigma}(A) = \emptyset$ by A-III,6.2.
+	It follows that the disc $D \coloneq \{\lambda \in \C \colon |\lambda| < \exp(\underbar{c}(h,\phi)-2\epsilon)\}$ has an empty intersection with $A{\sigma}(T(\tau))$ and therefore $H_{2\epsilon}\cap A_{\sigma}(A) = \emptyset$ by A-III,\,6.2.
 	Since every boundary point of the spectrum is an approximate eigenvalue (by A-III, Proposition~2.2(i)) we have the following alternative.
 	%% --
 	\begin{equation}\label{eq:b3-4.10}
@@ -1919,7 +1906,7 @@ Example~\ref{ex:b3-4.3}(iv) shows that (i) and (ii) do not exclude each other.
 %% --
 \begin{example}\label{ex:b3-4.6}
 	Suppose $F \colon \R^n \to \R^n$ is continuously differentiable.
-	We denote the maximal flow corresponding to the differential equation $y' = F(y)$ by $\phi_{0}$.
+	We denote the maximal flow corresponding to the differential equation\index{example!differential equation} $y' = F(y)$ by $\phi_{0}$.
 	In general, $\phi_{0}$ is only defined on an open subset of $\R \times \R^n$ which contains $\{0\} \times \R^n$.
 	For $x \in \R^n$ there exist $\underline{t}_{x}$ and $\overline{t}_{x}$ such that
 	%% --
@@ -1935,7 +1922,7 @@ Example~\ref{ex:b3-4.3}(iv) shows that (i) and (ii) do not exclude each other.
 	\begin{enumerate}[\upshape (a), wide, labelindent=.5em]
 	\item
 	If $\phi_{0}$ is a global flow, \ie if $\phi_{0}$ is defined on $\R \times \R^n$, then one has a corresponding (semi-)group on $C_{0}(\R^n)$.
-	If $F$ is differentiable, its generator is the closure of $A_{1}$ which is defined as follows (cf.\ B-II,Example~3.15).
+	If $F$ is differentiable, its generator is the closure of $A_{1}$ which is defined as follows (cf.\ B-II, Example~3.15).
 	%% --
 	\begin{equation}\label{eq:b3-4.12}
 		\begin{aligned}
@@ -2105,7 +2092,7 @@ which shows that
 In view of \eqref{eq:b3-4.13} and \eqref{eq:b3-4.14} it is not difficult to find a subsequence $k(n)$ of $\N$ such that $(\phi_{n,k(n)})$ is an approximate eigenvector of $A'$ corresponding to $\hat{h} + \im\beta$.
 \end{proof}
 %% --
-We are now going to apply the results obtained so far to the special case where $h = 0$, \ie we consider semigroups of lattice homomorphisms which are Markov operators.
+We are now going to apply the results obtained so far to the special case where $h = 0$, \ie we consider semigroups of lattice homomorphisms which are Markov operators\index{Markov operator}.
 %% --
 \begin{theorem}\label{thm:b3-4.9}
 	Suppose $\TT$ is a semigroup of Markov lattice homomorphisms on $C(K)$ governed by the semiflow $\phi$.
@@ -2180,7 +2167,7 @@ In this case there is an analogue of \eqref{eq:b3-4.1} (cf.\ B-II, Theorem~3.14)
 For more details and the proof of the following result we refer to \citet{arendtgreiner:1984}.
 %% --
 \begin{theorem}\label{thm:b3-4.11}
-	Suppose $X$ is a locally compact space and $(T(t))_{t\in\R}$ is a group of lattice homomorphisms governed by the flow $\phi$ and the multiplicator $h$.
+	Suppose $X$ is a locally compact space and $(T(t))_{t\in\R}$ is a group of lattice homomorphisms\index{lattice homomorphism!group of} governed by the flow $\phi$ and the multiplicator $h$.
 	Then we have
 	\begin{enumerate}[\upshape (i)]
 		\item 
@@ -2221,7 +2208,7 @@ The more general setting considered there also allows us to prove results for $C
 
 \item
 Theorem~\ref{thm:b3-1.1} was stated by \citet{karlin:1959}, but a complete proof is given in \citet{derndinger:1980}.
-Proposition~\ref{prop:b3-1.5}  is taken from \citet{greiner:1982} and Theorem~\ref{thm:b3-1.6} is (implicitely) contained in \citet{derndingernagel:1979}.
+Proposition~\ref{prop:b3-1.5}  is taken from \citet{greiner:1982} and Theorem~\ref{thm:b3-1.6} is (implicitly) contained in \citet{derndingernagel:1979}.
 A generalization to (non-lattice) ordered Banach spaces can be found in Section~2.4 of \citet{battyrobinson:1984}.
 
 \item
@@ -2231,7 +2218,7 @@ The notion \enquote{(imaginary) additively cyclic} was introduced by \citet{dern
 Derndinger proves some cyclicity results for the boundary spectrum.
 A result similar to Proposition~\ref{prop:b3-2.7} is given in Section~7.4 of \citet{davies:1980}.
 Lemma~\ref{lem:b3-2.8} in combination with C-III, Lemma 3.13 can be used to characterize semigroups whose spectral bound is a pole of finite algebraic multiplicity (see C-III,\,(3.19)).
-The hypothesis of Theorem~\ref{thm:b3-2.9} can be weakened, one only needs that $s(A)$ is a pole of the resolvent (see C-III,Corollary~2.12).
+The hypothesis of Theorem~\ref{thm:b3-2.9} can be weakened, one only needs that $s(A)$ is a pole of the resolvent (see C-III, Corollary~2.12).
 Further results on the cyclicity of the boundary spectrum will be given in Chapter C-III.
 In particular we refer to C-III, Theorems.2.10, 3.11 and 3.13.
 The dichotomy stated in (\ref{eq:b3-2.19})  is probably the most interesting consequence of cyclicity results.
@@ -2262,14 +2249,8 @@ The general result 4.11 was proven by \citet{arendtgreiner:1984}.
 \end{enumerate}
 
 
-%% -- Literatur
+%\section*{References}
+%\addcontentsline{toc}{section}{References}
 %% --
-\begin{comment}
-\section*{References}
-\addcontentsline{toc}{section}{References}
-{\RaggedRight
-\renewcommand{\bibsection}{}
-\bibliographystyle{abbrvnat}
-\bibliography{bib/ln-references}}
-\end{comment} 
+ 
  

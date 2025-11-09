@@ -1,11 +1,9 @@
 % !TEX root = ../LN-Book.tex
 %% -- 
-%% --Stand 2025-06-06 final
-%% --
+%% --Stand 2025-11-08
 %% --
 \chapter[Spectral Theory on Banach Lattices]{Spectral Theory of Positive Semigroups on Banach Lattices}\label{chap:c3}
 \chaptermark{Spectral Theory of Positive Semigroups}
-%%\index{Spectral Theory}
 %% --
 {\Large
 \vspace*{-.75cm}
@@ -23,7 +21,8 @@ Throughout this chapter we will assume that $E \neq \{0\}$ is a complex Banach l
 
 %% --
 \section{The Spectral Bound}\label{sec:c3-1}
-%\index{Spectral Bound}
+%% --
+\index{spectral bound $s(A)$}
 %% --
 The fact that the spectral bound of a positive semigroup is always contained in the spectrum (provided that the spectrum is non-empty) is also true in the general setting of Banach lattices.
 The proof given in B-III, Theorem~1.1 for spaces $C_{0}(X)$ works in the general case too.
@@ -32,7 +31,6 @@ Furthermore, Corollary~1.3 and Proposition~1.5 of B-III are true in the setting 
 For the sake of completeness we summarize these results in the following theorem.
 %% --
 \begin{theorem}\label{thm:c3-1.1}
-%\index{Positive Semigroups!Generator}
 Let $A$ be the generator of a positive semigroup $(T(t))_{t \geq 0}$ on a Banach lattice $E$.
 %% --	
 	\begin{enumerate}[\upshape (i)]
@@ -53,13 +51,17 @@ Let $A$ be the generator of a positive semigroup $(T(t))_{t \geq 0}$ on a Banach
 \end{theorem}
 %% --
 The fact that $s(A)$ is always an eigenvalue of the adjoint (\cf B-III Theorem~1.6) is characteristic for spaces $C(K)$, $K$ compact, as can be seen by considering the Laplacian on $L^p(\R^n)$, where $1 < p < \infty$, or on $C_{0}(\R^n)$ (see B-III, Example~1.7).
-Another result which cannot be extended to arbitrary Banach lattices is that spectral bound and growth bound coincide (\cf B-IV, Theorem~1.4); an example is given in A-III, Example~1.3.
-Despite of this, the resolvent $R(\lambda,A)$ of a positive semigroup is given as the Laplace transform of the semigroup in the half-plane $\{z \in \C  \colon \Re  z > s(A)\}$ (even in case that $\omega_0(A) > s(A)$).
+Another result which cannot be extended to arbitrary Banach lattices is that spectral bound and growth bound%
+\index{growth bound} 
+coincide (\cf B-IV, Theorem~1.4); an example is given in A-III, Example~1.3.
+Despite of this, the resolvent $R(\lambda,A)$ of a positive semigroup is given as the Laplace transform%
+\index{Laplace transform} 
+of the semigroup in the half-plane $\{z \in \C  \colon \Re  z > s(A)\}$ (even in case that $\omega_0(A) > s(A)$).
 Note however, that the integral exists only as an improper Riemann integral.
 By Datko's Theorem (A-IV, Theorem~1.11) the function $t \mapsto \mathrm{e}^{-\lambda t}T(t)f$ cannot be Bochner integrable for all $f \in E$ in the case $\Re(\lambda) \leq \omega_0(A)$.
 %% --
 \begin{theorem}\label{thm:c3-1.2}
-	%\index{Positive Semigroups!Resolvent}
+	\index{resolvent!positive semigroup}
 	Suppose $A$ is the generator of a positive semigroup $(T(t))_{t\geq 0}$\,.
 	
 	For $\Re \lambda > s(A)$ we have
@@ -158,7 +160,9 @@ It follows that $\{z \in \C  \colon |\Re  z - s(A)| < M^{-1}\} \subseteq \rho(A)
 %% --
 
 \begin{corollary}\label{cor:c3-1.5}
-Suppose that $s(A)$ is a pole of order $m$ of the resolvent $R(\lambda,A)$.
+Suppose that $s(A)$ is a pole%
+\index{resolvent!pole} 
+of order $m$ of the resolvent $R(\lambda,A)$.
 Then $m$ is a majorant for the order of any other pole on the line $s(A) + \im\R $.
 \end{corollary}
 %% --
@@ -176,6 +180,7 @@ However, for positive groups this cannot occur.
 More precisely, we have the following result
 %% --
 \begin{corollary}\label{cor:c3-1.6}
+\index{group of positive operators}
 If $A$ is the generator of a positive group, then $\sigma(A)\cap\R  \neq \emptyset$\,.
 \end{corollary}
 %% --
@@ -207,18 +212,17 @@ We conclude this section by indicating possible extensions and further consequen
 %% --
 
 \section{The Boundary Spectrum}\label{sec:c3-2}
-%\index{Boundary Spectrum}
-%\index{Spectrum!Boundary}
+\index{boundary spectrum}
 %% --
 In Chapter B-III we have seen that under suitable assumptions the boundary spectrum $\sigma_{b}(A)$, consisting of all spectral values with maximal real part is a cyclic set (\cf B-III, Definition~2.5).
 In the main theorem of this section we prove a result which is more general and which is true for arbitrary Banach lattices.
 
 We first want to extend some of the notions used in B-III to the more general setting considered here.
-If $E$ is a Banach lattice and $f,g \in E$ such that $g \in E_{|f|}$, then $(\sign  f)g$ is well-defined (\cf Section~8 of C-I).
+If $E$ is a Banach lattice and $f,g \in E$ such that $g \in E_{|f|}$, then $(\sign  f)g$ is well-defined (\cf Section~8 of C-I)%
+\index{sign operator}.
 Thus the following definition makes sense
 %% --
 \begin{definition}\label{def:c3-2.1}
-	%\index{Banach Lattices!Recursive Definition}
 	If $E$ is a Banach lattice then for $f \in E$, $n \in \Z$ we define $f^{[n]}$ recursively as follows
 	%% --
 	\begin{equation}\label{eq:c3-2.1}
@@ -255,11 +259,10 @@ The following properties are immediate consequences Definition~\ref{def:c3-2.1}
 \end{equation}
 %% --
 Next we show that B-III, Theorem~2.4 is true for arbitrary Banach lattices.
-For definition and simple properties of the signum operator $S_{h}$ see C-I, Section~8.
+For definition and simple properties of the sign operator $S_{h}$ see C-I, Section~8.
 
 %% --
 \begin{theorem}\label{thm:c3-2.2}
-	%\index{Positive Semigroups!Generator Properties}
 	Let $(T(t))_{t\geq 0}$ be a positive semigroup on a Banach lattice $E$ with generator $A$ and suppose that for $h \in E$, $\alpha,\beta \in \R $ we have
 	%% --
 	\begin{equation}\label{eq:c3-2.6}
@@ -299,6 +302,10 @@ As a first application of Theorem~\ref{thm:c3-2.2} we prove a cyclicity result f
 
 %% --
 \begin{corollary}\label{cor:c3-2.3}
+\index{cyclic!imaginary additively}
+\index{spectrum!cyclic}
+\index{spectrum!point}
+\index{cyclic!point spectrum}
 	Suppose $E$ is a Banach lattice such that the norm is strictly monotone on $E_{+}$ (\ie  $0 \leq f < g \Rightarrow \|f\| < \|g\|$).
 	If $(T(t))$ is a positive contraction semigroup on $E$ with $s(A) = 0$, then $P\sigma_{b}(A) = P\sigma(A) \cap \im\R $ is imaginary additively cyclic.
 \end{corollary}
@@ -311,16 +318,20 @@ As a first application of Theorem~\ref{thm:c3-2.2} we prove a cyclicity result f
 	Now we can apply Theorem~\ref{thm:c3-2.2} in order to obtain the desired result.
 \end{proof}
 %% --
-A more general result on cyclicity of the eigenvalues in the boundary spectrum will be proved in Corollary~\ref{cor:c3-4.3}.
+A more general result on cyclicity of the eigenvalues in the boundary spectrum%
+\index{boundary spectrum} 
+will be proved in Corollary~\ref{cor:c3-4.3}.
 In the remaining part of this section we focus our interest on the entire boundary spectrum.
-We will prove that it is cyclic provided that the resolvent $R(\lambda,A)$ does not grow too fast as $\lambda \to s(A)$.
+We will prove that it is cyclic%
+\index{cyclic} 
+provided that the resolvent $R(\lambda,A)$ does not grow too fast as $\lambda \to s(A)$.
 We start with some preparations.
 An important tool in the proof are pseudo-resolvents.
 %% --
 \begin{definition}\label{def:c3-2.4}
-	%\index{Pseudo-resolvent}
+	\index{pseudo-resolvent}
 	Let $D$ be an open (non-empty) subset of $\C $ and let $G$ be a Banach space.
-	A mapping $R \colon D \to \mathcal{L}(G)$ which satisfies
+	A mapping $R \colon D \to \mathcal{L}(G)$ which satisfies the \emph{resolvent equation}\index{resolvent equation}
 	%% --
 	\begin{equation}\label{eq:c3-2.8}
 		R(\lambda) - R(\mu) = -(\lambda - \mu)R(\lambda)R(\mu) \quad (\lambda,\mu \in D)
@@ -342,6 +353,7 @@ For our purposes the following examples are of particular interest
 
 %% --
 \begin{example}\label{ex:c3-2.5}
+\index{example!pseudo-resolvent}
 	\begin{enumerate}[\upshape (i), wide, labelindent=.5em]
 		\item 
 		Suppose $A$ is a densely defined linear operator on $G$ with $\rho(A) \neq \emptyset$ and let $G_{\F}$ be an F-product of $G$ (\cf A-I, Section~3.7).
@@ -426,15 +438,14 @@ Further properties of pseudo-resolvents are given in the following two propositi
 	\end{enumerate}
 \end{proof}
 %% --
-In the next proposition, we consider a positive pseudo-resolvent $R$ on a Banach lattice $E$, \ie  we assume that the domain $D$ of $R$ contains the positive real axis and that $R(\mu)$ is a positive operator for every $\mu > 0$.
+In the next proposition, we consider a \emph{positive positive pseudo-resolvent}%
+\index{pseudo-resolvent!positive}
+$R$ on a Banach lattice $E$, \ie  we assume that the domain $D$ of $R$ contains the positive real axis and that $R(\mu)$ is a positive operator for every $\mu > 0$.
 Applying Pringsheim's Theorem (see Theorem~2.1 in the appendix of \citet{schaefer:1966}) to the expansion given in \eqref{eq:c3-2.11} one can conclude that $R$ has an extension to the half-plane $\{z \in \C  \colon \Re  z > 0\}$.
 
 This shows that without loss of generality one can assume that the domain of a positive pseudo-resolvent contains the half-plane $\{z \in \C  \colon \Re  z > 0\}$.
 %% --
 \begin{proposition}\label{prop:c3-2.7}
-	%\index{Pseudo-resolvent!Positive}
-	%\index{Banach lattice!Pseudo-resolvent}
-	%\index{Examples!Positive pseudo-resolvent}
 	Suppose $R \colon \Delta \to \mathcal{L}(E)$ is a positive pseudo-resolvent on a Banach lattice $E$ and $\Delta \coloneqq \{z \in \C  \colon \Re  z > 0\}$.
 	
 	If for some $\beta \in \R $, $h \in E$ we have
@@ -470,7 +481,7 @@ Then we have for every $\alpha > 0$ and $f \in E$
 \alpha\tilde{R}(\alpha+\im\beta)h = h, \alpha\tilde{R}(\alpha) |h| = |h| = \1_{K}, \alpha|\tilde{R}(\alpha+\im\beta)f| \leq \alpha\tilde{R}(\alpha) |f|\,.
 \]
 %% --
-Applying B-III, Lemma 2.3 we obtain $\tilde{R}(\alpha) = S_{h}^{-1}\tilde{R}(\alpha + \im\beta)S_{h}$ for every $\alpha > 0$ and using the uniqueness theorem for holomorphic functions we obtain
+Applying B-III, Lemma~2.3 we obtain $\tilde{R}(\alpha) = S_{h}^{-1}\tilde{R}(\alpha + \im\beta)S_{h}$ for every $\alpha > 0$ and using the uniqueness theorem for holomorphic functions we obtain
 %% --
 \begin{equation}\label{eq:c3-2.14}
 \tilde{R}(z) = S_{h}^{-n}\tilde{R}(z + \im n\beta)S_{h}^{n} \ \text{ for all } \ z \in \Delta \ \text{ and } \ n \in \Z\,.
@@ -480,12 +491,12 @@ In particular, $S_{h}^{n}|h| = S_{h}^{-n}z\tilde{R}(z) |h| = z\tilde{R}(z+\im n\
 In terms of the initial space this means precisely $h^{[n]} = zR(z+\im n\beta)h^{[n]}$, and the proposition is proved.
 \end{proof}
 %% --
-We will prove cyclicity of the boundary spectrum under a \emph{growth condition} which is stated in the following definition.
+We will prove cyclicity of the boundary spectrum under a \emph{growth condition}%
+\index{growth condition} 
+which is stated in the following definition.%
+\index{resolvent!growth condition}
 
 \begin{definition}\label{def:c3-2.8}
-	\index{Generator!Positive semigroup}
-	\index{Semigroup!Spectral bound}
-	\index{Examples!Slowly growing resolvent}
 	Let $A$ be the generator of a positive semigroup $(T(t))_{t \geq 0}$ with spectral bound $s(A) > -\infty$.
 	The resolvent is said to \emph{grow slowly} if one of the following (equivalent) conditions is satisfied.
 	\begin{equation}\label{eq:c3-2.15}
@@ -558,9 +569,6 @@ Two sufficient conditions for a resolvent to grow slowly are stated in the follo
 Its simple proof is omitted.
 %% --
 \begin{proposition}\label{prop:c3-2.9}
-	\index{Resolvent!Slow growth}
-	\index{Semigroup!Resolvent growth}
-	\index{Examples!Slowly growing resolvent}
 	Suppose $(T(t))_{t\geq 0}$ is a positive semigroup with generator $A$.
 	Each of the following conditions guarantees that the resolvent grows slowly.
 	\begin{enumerate}[\upshape (i)]
@@ -576,8 +584,7 @@ In case $s(A)$ is a pole of order greater than $1$, the resolvent does not grow 
 We will treat this case in Corollary~\ref{cor:c3-2.12}
 %% --
 \begin{theorem}\label{thm:c3-2.10}
-	\index{Spectrum!Boundary}
-	\index{Semigroup!Cyclic boundary spectrum}
+	\index{cyclic!boundary spectrum}\index{spectrum!cyclic} 
 	The boundary spectrum of a positive semigroup with slowly growing resolvent is cyclic.
 \end{theorem}
 %% --
@@ -587,7 +594,7 @@ Without loss of generality we can assume that $s(A) = 0$.
 Given $\im\beta \in \sigma(A)$ $(\beta \in \R )$, then $\im\beta \in A\sigma(A)$ (A-III, Proposition~2.2) and $(\lambda-\im\beta)^{-1} \in A\sigma(R(\lambda,A))$ (A-III, Proposition~2.5).
 We consider an $\mathcal{F}$-product $E_{\mathcal{F}}$ of $E$ and for convenience write $E_{1}$ instead of $E_{\mathcal{F}}$.
 The canonical extensions of $R(\lambda,A)$ to $E_{1}$ form a positive pseudo-resolvent $\{(R_{1}(\lambda)\}_{\Re \lambda>0}$ on $E_{1}$.
-By Proposition~\ref{prop:c3-2.6}(i) and A-III,4.5 there exists $h_{1} \in E_{1}$, $h_{1} \neq 0$ such that
+By Proposition~\ref{prop:c3-2.6}(i) and A-III,\,4.5 there exists $h_{1} \in E_{1}$, $h_{1} \neq 0$ such that
 %% --
 \begin{equation}\textstyle\label{eq:c3-2.16}
 	\lambda R_{1}(\lambda+\im\beta)h_{1} = h_{1} \ \text{ for }  \Re \lambda > 0\,.
@@ -658,9 +665,9 @@ To prove cyclicity of the boundary spectrum in case $s(A)$ is a pole (of arbitra
 
 %% --
 \begin{proposition}\label{prop:c3-2.11}
-	\index{Generator!Pole properties}
-	\index{Semigroup!Spectral properties}
-	Let $A$ be the generator of a positive semigroup $\TT$ on a Banach lattice $E$ and suppose that the spectral bound $s(A)$ is a pole of the resolvent of order $k$.
+	Let $A$ be the generator of a positive semigroup $\TT$ on a Banach lattice $E$ and suppose that the spectral bound $s(A)$ is a pole of the resolvent%
+    \index{resolvent!pole} 
+    of order $k$.
 	Then there is a sequence
 	\begin{equation}\label{eq:c3-2.22}
 		I_{-1} \coloneqq \{0\} \subset I_{0} \subsetneq I_{1} \subsetneq ... \subsetneq I_{k} \coloneqq E
@@ -678,13 +685,13 @@ To prove cyclicity of the boundary spectrum in case $s(A)$ is a pole (of arbitra
 	\end{enumerate}
 \end{proposition}
 %% --
-Combining Theorem~\ref{thm:c3-2.10} and Proposition~\ref{prop:c3-2.11} one obtains the following generalization of B-III,Theorem~2.9.
+Combining Theorem~\ref{thm:c3-2.10} and Proposition~\ref{prop:c3-2.11} one obtains the following generalization of B-III, Theorem~2.9.
 In contrast with the former result we do not assume that every point of $\sigma_{b}(A)$ is a pole.
 %% --
 \begin{corollary}\label{cor:c3-2.12}
-	\index{Spectrum!Boundary cyclicity}
-	\index{Generator!Pole properties}
-	If $A$ is the generator of a positive semigroup such that $s(A)$ is a pole of the resolvent, then $\sigma_{b}(A)$ is cyclic.
+	\index{spectrum!cyclic}\index{resolvent!pole}
+	If $A$ is the generator of a positive semigroup such that $s(A)$ is a pole of the resolvent, then $\sigma_{b}(A)$ is cyclic%
+    \index{cyclic}\index{spectrum!cyclic}.
 \end{corollary}
 %% --
 \begin{proof}
@@ -696,7 +703,7 @@ By Theorem~\ref{thm:c3-2.10} each set $\sigma_{b}(A_{n})$ is cyclic, hence so is
 The proof of the preceding corollary indicates a possible generalization of Theorem~\ref{thm:c3-2.10}.
 Instead of assuming that the resolvent grows slowly one merely needs that there exist a finite chain of closed $\TT$-invariant ideals as described in \eqref{eq:c3-2.22} such that the semigroups induced on the corresponding quotient spaces have slowly growing resolvents.
 
-In case that $\sigma_{b}(A)$ is cyclic one has the alternative (\cf B-III,\;(2.19))
+In case that $\sigma_{b}(A)$ is cyclic one has the alternative (\cf B-III,\,(2.19))
 %% --
 \[
 \text{Either $\sigma_{b}(A) = \{s(A)\}$ or else $\sigma_{b}(A)$ is an unbounded set.}
@@ -706,11 +713,11 @@ Obviously one can use this fact to prove the existence of a dominant spectral va
 We give a typical example.
 %% --
 \begin{corollary}\label{cor:c3-2.13}
-	\index{Spectral value!Dominant}
-	\index{Semigroup!Norm-continuous}
+\index{semigroup!eventually norm-continuous}
 	Let $A$ be the generator of a positive, eventually norm-continuous semigroup.
 	Suppose either that the resolvent grows slowly or that $s(A)$ is a pole of the resolvent.
-	Then $s(A)$ is a dominant spectral value.
+	Then $s(A)$ is a dominant spectral value.%
+    \index{spectral bound $s(A)$!dominant}
 \end{corollary}
 %% --
 \begin{proof}
@@ -722,8 +729,7 @@ A situation in which Corollary~\ref{cor:c3-2.13} can be applied is described in 
 For more details and proofs we refer to \citet{amann:1983}.
 %% --
 \begin{example}\label{ex:c3-2.14}
-	\index{Domain!Bounded}
-	\index{Example!Bounded domain}
+	\index{example!elliptic operator}
 	Let $\Omega$ be a bounded domain in $\R ^{n}$ of class $C^{2}$.
 	
 	Assume that $\partial\Omega = \Gamma_{0}\cup\Gamma_{1}$ where $\Gamma_{0}$ and $\Gamma_{1}$ are disjoint open and closed subsets of $\partial\Omega$.
@@ -750,15 +756,15 @@ Using the results of Section 3 one can show that $\sigma(A) \neq \emptyset$ and 
 We conclude with some remarks.
 %% --
 \begin{remarks}\label{rem:c3-2.15}
-	\index{Resolvent!Growth properties}
-	\index{Semigroup!Boundary spectrum}
 \begin{enumerate}[\upshape (i), wide, labelindent=.5em]	
 	\item 
 	In the proof of Theorem~\ref{thm:c3-2.10} we did not use the assumption that $R$ is the resolvent of a semigroup.
 	In fact one can state this theorem for closed operators having positive resolvent.
-	In this case one has to assume that $\{(\lambda-s(A))R(\lambda,A) \colon s(A) < \lambda < s(A)+1\}$ is bounded in $\mathcal{L}(E)$.
+	In this case one has to assume that  
+    $\{(\lambda-s(A))R(\lambda,A) : s(A) < \lambda < s(A)+1\}$
+    is bounded in $\mathcal{L}(E)$.
 	
-	One can go even further and consider positive pseudo-resolvents $\{R(\lambda)\}_{\lambda\in D}$.
+	One can go even further and consider positive pseudo-resolvents\index{pseudo-resolvent} $\{R(\lambda)\}_{\lambda\in D}$.
 	This is also possible with respect to Corollary~\ref{cor:c3-2.12}.
 	
 	\item 
@@ -770,21 +776,18 @@ We conclude with some remarks.
 	For example, one can take a bounded positive operator $A$ which is not nilpotent and satisfies $\sigma(A) = \{0\}$.
 	However, the following question is still unanswered.
 	\begin{equation*}
-		\textit{Does every positive semigroup have cyclic boundary spectrum?}
+		\textit{Does every positive semigroup have cyclic boundary spectrum?}\index{boundary spectrum!cyclic}
 	\end{equation*}
 \end{enumerate}
 \end{remarks}
 
 \section{Irreducible Semigroups}\label{sec:c3-3}
-\index{Irreducible Semigroup}
-\index{Theory!Irreducible Semigroup}
+\index{semigroup!irreducible}
 
 The concept of irreducibility is very natural in the general setting of Banach lattices.
 However, some of the (equivalent) assertions stated in B-III, Definition~3.1 do not make sense here, others need a slightly different formulation.
 %% --
 \begin{definition}\label{def:c3-3.1}
-	\index{Semigroup!Irreducible}
-	\index{Banach lattice!Irreducible semigroup}
 	
 	A positive semigroup $(T(t))_{t\geq 0}$ on a Banach lattice $E$ with generator $A$ is called \emph{irreducible} if one of the following (mutually equivalent) conditions is satisfied.
     %% --
@@ -817,16 +820,18 @@ This is the second statement of the following theorem (see also B-III, Remark~3.
 
 %% --
 \begin{theorem}\label{thm:c3-3.2}
-	\index{Semigroup!Strictly positive}
-	\index{Semigroup!Holomorphic properties}
 	\begin{enumerate}[\upshape (i)]
 	\item
- 	If $(T(t))$ is an irreducible semigroup, then every operator $T(t)$ is strictly positive, \ie 
+ 	If $(T(t))$ is an irreducible semigroup,%
+    \index{semigroup!irreducible} 
+    then every operator $T(t)$ is strictly positive, \ie 
 	given $f > 0$, $t \geq 0$, then $T(t)f > 0$.
-	
 	\item 
-	Suppose $(T(t))_{t\geq 0}$ is a holomorphic positive semigroup.
-	If $(T(t))$ is irreducible, then $T(t)f$ is a quasi-interior point of $E_{+}$ whenever $f > 0$ and $t > 0$.
+	Suppose $(T(t))_{t\geq 0}$ is a holomorphic positive semigroup.%
+    \index{semigroup!holomorphic} 
+	If $(T(t))$ is irreducible, then $T(t)f$ is a quasi-interior point%
+    \index{quasi-interior point} 
+    of $E_{+}$ whenever $f > 0$ and $t > 0$.
 	Equivalently, given $f \in E$, $\phi \in E'$ such that $f > 0$, $\phi > 0$, then $\langle T(t)f,\phi \rangle > 0$ for all $t > 0$\,.
 	\end{enumerate}
 \end{theorem}
@@ -870,8 +875,7 @@ The next result can be used to check irreducibility for a semigroup whose genera
 
 %% --
 \begin{proposition}\label{prop:c3-3.3}
-	\index{Semigroup!Generator perturbation}
-	\index{Operator!Bounded perturbation}
+	\index{semigroup!bounded perturbation}
 	Suppose that $A$ is the generator of a positive semigroup $\TT$, further assume that $K$ is a bounded positive operator and $M$ is a bounded real multiplier (\cf C-I, Section~8).
 	Let $\mathcal{S}$ be the semigroup generated by $B \coloneqq A + K + M$.
 	
@@ -909,11 +913,9 @@ Then, by continuity, we have $KI \subset I$, \ie  $I$ is $K$-invariant.
 Next we consider some concrete examples.
 
 \begin{examples}\label{ex:c3-3.4}
-	\index{Examples!Semigroups}
-	\index{Semigroups!Examples}
-	\index{Concrete Examples}
+	\index{example!irreducible semigroups}
 	\begin{enumerate}[\upshape (i), wide, labelindent=.5em]
-	\item 
+	\item \index{example!kernel operator}
 	Suppose that on $E = L^{p}(\mu)$ $(1 \leq p < \infty)$ the semigroup $(T(t))$ is given by
 	%% --
 	\begin{equation}\label{eq:c3-3.1}
@@ -949,7 +951,9 @@ Next we consider some concrete examples.
 		\end{cases}
 	\end{equation}
 	%% --
-		$(T(t))_{t\geq 0}$ is a positive semigroup on $E$ and
+		$(T(t))_{t\geq 0}$ is a positive semigroup on $E$, describing the linear transport%
+        \index{example!transport equation} 
+        in an interval. The unbounded operator 
 	%% --
 	\begin{align*}\label{eq:c3-D0}
 		D_{0} \coloneqq \{f \in C^{1}([0,1]\times[-1,1]) \colon  
@@ -957,7 +961,9 @@ Next we consider some concrete examples.
 		& f(1,v) = f_{x}(1,v) = 0 \text{ if } v \leq 0\}
 	\end{align*}
 	%% --
-	is a core for its generator $A$ (\cf A-I, Corollary~1.34).
+	is a core%
+    \index{example!core} 
+    for its generator $A$ (\cf A-I, Corollary~1.34).
 	We have
 	%% --
 	\begin{equation}\label{eq:c3-3.4}
@@ -1030,15 +1036,13 @@ Next we consider some concrete examples.
 In the following proposition we list some properties which are consequences of irreducibility. This extends Proposition~3.5 of B-II to the setting of Banach lattices. The first assertion of the latter proposition is no longer true in the general setting (see Example~\ref{ex:c3-3.6} and Theorem~\ref{thm:c3-3.7}). 
 
 \begin{proposition}\label{prop:c3-3.5}
-	\index{Irreducibility!Properties}
-	\index{Semigroups!Irreducible Properties}
-	\index{Properties!Irreducible Semigroups}
 	
 	Suppose $A$ to be the generator of an irreducible, positive semigroup on a Banach lattice $E$.
 	Then the following assertions are true.
 	\begin{enumerate}[\upshape (i)]
 	\item 
 	Every positive eigenvector of $A$ is a quasi-interior point.
+    \index{quasi-interior point}
 	
 	\item 
 	Every positive eigenvector of $A'$ is strictly positive.
@@ -1068,9 +1072,7 @@ In arbitrary Banach lattices it is no longer true that an irreducible semigroup 
 We indicate how an irreducible semigroup having empty spectrum can be constructed.
 
 \begin{example}\label{ex:c3-3.6}
-\index{Example!Empty Spectrum}
-\index{Spectrum!Empty Example}
-\index{Irreducible Semigroup!Empty Spectrum}
+\index{example!empty spectrum}
 
 Consider the Banach lattice $E = L^{p}(\Gamma\times\Gamma)$.
 For (fixed) positive numbers $\alpha,\beta$ such that $\frac{\alpha}{\beta}$ is irrational we define a positive semigroup $(T_{0}(t))_{t\geq 0}$ as follows
@@ -1099,9 +1101,7 @@ Obviously such an estimate of $\|T(t)\|$ implies $\omega_0(A) = -\infty$, hence 
 \end{example}
 %% --
 \begin{theorem}\label{thm:c3-3.7}
-\index{Theorem!Nonvoid Spectrum}
-\index{Spectrum!Nonvoid Conditions}
-\index{Irreducible Semigroup!Spectrum}
+\index{spectrum!non-empty}
 
 Suppose that $(T(t))_{t\geq 0}$ is an irreducible, positive semigroup on the Banach lattice $E$.
 Each of the following conditions on $E$ and $(T(t))$, respectively, implies that $\sigma(A) \neq \emptyset$
@@ -1130,7 +1130,7 @@ Each of the following conditions on $E$ and $(T(t))$, respectively, implies that
 	
 	Assertion (ii)-(f) will be proved utilizing the analogous results for a single operator.
 	In view of A-III, Proposition~2.5 we have to show that $r(R(\lambda,A)) > 0$ for some $\lambda \in \rho(A)$.
-	Moreover, from A-I,\;(3.1) we deduce
+	Moreover, from A-I,\,(3.1) we deduce
 	%% --
 	\begin{align*}
 		T(t)R(\lambda,A) = \mathrm{e}^{\lambda t}R(\lambda,A) - \mathrm{e}^{\lambda t}\int_{0}^{t} \mathrm{e}^{-\lambda s}T(s)\ds \leq \mathrm{e}^{\lambda t}R(\lambda,A) \ (t\geq 0, \lambda>s(A))\,.
@@ -1157,15 +1157,15 @@ Concerning the eigenvalues of an irreducible semigroup which are contained in $\
 The proof can be translated without difficulties and will be omitted (see also \citet[Theorem~2.6]{greiner:1982}).
 
 \begin{theorem}\label{thm:c3-3.8}
-	\index{Theorem!Irreducible Semigroup Eigenvalues}
-	\index{Eigenvalues!Irreducible Semigroup}
-	\index{Irreducible Semigroup!Eigenvalues}
-	
-	Suppose $\TT$ is an irreducible semigroup on the Banach lattice $E$ and let $A$ be its generator.
+	Suppose $\TT$ is an irreducible semigroup%
+    \index{semigroup!irreducible}%
+    \index{spectrum!irreducible semigroup}
+    \index{spectrum!point}
+    on the Banach lattice $E$ and let $A$ be its generator.
 	Assume that $s(A) = 0$ and that there exists a positive linear form $\psi \in D(A')$ with $A'\psi \leq 0$\,.
 
     If $P\sigma(A)\cap \im\R $ is non-empty, then the following assertions are true.
-	\begin{enumerate}[\upshape (i]
+	\begin{enumerate}[\upshape (i)]
 		\item 
 			$P\sigma(A)\cap \im\R $ is a (additive) subgroup of $\im\R $.
 	
@@ -1185,12 +1185,12 @@ The proof can be translated without difficulties and will be omitted (see also \
 	\end{enumerate}
 \end{theorem}
 %% -- 
-One can apply the theorem in order to prove that the rotation semigroup on $\Gamma$ (\cf A-I,2.5) is the only positive periodic semigroup which is irreducible.
+One can apply the theorem in order to prove that the rotation semigroup on $\Gamma$ (\cf A-I,2.5) is the only positive periodic semigroup%
+\index{semigroup!periodic}%
+\index{example!rotation semigroup}
+which is irreducible.
 
 \begin{corollary}\label{cor:c3-3.9}
-	\index{Corollary!Positive Periodic Semigroup}
-	\index{Semigroup!Positive Periodic}
-	\index{Periodic Semigroup!Positive}
 	
 	Let $(T(t))_{t\geq 0}$ be a positive irreducible semigroup on a Banach lattice $E$ which is periodic of period $\tau$.
 	Assume that $\dim E > 1$.
@@ -1210,7 +1210,7 @@ One can apply the theorem in order to prove that the rotation semigroup on $\Gam
 \end{corollary}
 %% --
 \begin{proof}
-    By Theorem~\ref{thm:c3-3.8} and A-III, Thm~5.4 we have $R\sigma(A) = P\sigma(A) = \sigma(A) = \im\alpha\Z$ with $\alpha \coloneqq \frac{2\pi}{n\tau}$ for suitable $n \in \N$.
+    By Theorem~\ref{thm:c3-3.8} and A-III, Theorem~5.4 we have $R\sigma(A) = P\sigma(A) = \sigma(A) = \im\alpha\Z$ with $\alpha \coloneqq \frac{2\pi}{n\tau}$ for suitable $n \in \N$.
     We fix $h \in \ker(\im\alpha - A)$, $h \neq 0$.
     Then $|h| \in \ker A$ and there exists $\phi \in \ker A'$ such that $\langle|h|,\phi\rangle = 1$.
     According to the Kakutani-Krein Theorem we identify $E_{|h|}$ with $C(K)$.
@@ -1229,13 +1229,15 @@ One can apply the theorem in order to prove that the rotation semigroup on $\Gam
 \end{proof}
 %% --
 Now we are going to prove the main result of this section.
-As in the proof of Theorem~\ref{thm:c3-2.10} we will utilize pseudo-resolvents on a suitable $\mathcal{F}$-product of the Banach lattice.
+As in the proof of Theorem~\ref{thm:c3-2.10} we will utilize pseudo-resolvents%
+\index{pseudo-resolvent} 
+on a suitable $\mathcal{F}$-product%
+\index{F-product@$\mathcal{F}$-product}
+of the Banach lattice.
 To simplify the proof we isolate two lemmas.
 
 %% --
 \begin{lemma}\label{lem:c3-3.10}
-	\index{Lemma!F-product}
-	\index{F-product!Kernel Dimension}
 	
 	Let $\mathcal{F}$ be a filter on $\N$ which is finer than the Frechet filter and let $E_{\mathcal{F}}$ be the $\mathcal{F}$-product of the Banach lattice $E$.
 	Given $R \in \mathcal{L}(E)$ and denoting its canonical extension to $E_{\mathcal{F}}$ by $R_{\mathcal{F}}$ the following is true.
@@ -1264,8 +1266,6 @@ To simplify the proof we isolate two lemmas.
 
 %% --
 \begin{lemma}\label{lem:c3-3.11}
-	\index{Lemma!Banach Lattice Subspaces}
-	\index{Banach Lattice!Subspace Dimension}
 	
 	Let $E$ be a Banach lattice and let $M$, $L$ be two linear subspaces of $E$.
 	Assume that $f \in M$ implies $|f| \in L$, then $\dim L \geq \dim M$.
@@ -1283,9 +1283,8 @@ The surprising fact in the following theorem is the conclusion that every point 
 
 %% --
 \begin{theorem}\label{thm:c3-3.12}
-\index{Theorem!Boundary Spectrum}
-\index{Spectrum!Boundary Poles}
-\index{Irreducible Semigroup!Spectral Properties}
+\index{boundary spectrum!irreducible semigroup}
+\index{resolvent!pole}
 
 Let $\TT$ be an irreducible semigroup on a Banach lattice and let $A$ be its generator.
 If $s(A)$ is a pole of the resolvent, then $\sigma_{b}(A) = s(A) + \im\alpha\Z$ for some $\alpha \geq 0$.
@@ -1398,6 +1397,8 @@ If $s(A)$ is a pole of finite algebraic multiplicity, then there exists a finite
 The following theorem is an immediate consequence of \eqref{eq:c3-3.19}, Theorem~\ref{thm:c3-3.12} and A-III, Proposition~4.2.
 
 \begin{theorem}\label{thm:c3-3.14}
+\index{resolvent!pole}%
+\index{boundary spectrum}
 	Let $\TT$ be a positive semigroup on a Banach lattice with generator $A$. 
 	If $s(A)$ is a pole of finite algebraic multiplicity, then $\sigma_{b}(A)$ is a finite union of discrete subgroups (\ie  $\sigma_{b}(A) = s(A) + \cup_{k=1}^{N}\im\alpha_{k}\Z$ with $\alpha_{k} \in \R )$.
 	
@@ -1434,6 +1435,7 @@ The meaning of $r_{ess}(T(t))$ and $\omega_{ess}(\TT)$ and its properties are ex
 \end{example}
 
 \begin{corollary}\label{cor:c3-3.16}
+    \index{spectrum!essential}
 	Suppose that $\TT$ is a positive semigroup such that $\omega_{ess}(\TT) < \omega_0(\TT)$. 
 	Then $s(A) = \omega_0(\TT)$ is a strictly dominant eigenvalue.
 	If, in addition, there exists an eigenfunction which is a quasi-interior point of $E_{+}$ (\eg if $\TT$ is irreducible), then $s(A)$ is a first order pole of $R(.,A)$.
@@ -1468,6 +1470,7 @@ In the following proposition we give a condition which ensures that Theorem~\ref
 Moreover, we state a criterion ensuring the existence of a dominant eigenvalue.
 %% --
 \begin{proposition}\label{prop:c3-3.18}
+\index{spectral bound $s(A)$!dominant}
 	Suppose that $A$ is the generator of a positive semigroup and that $K \in \mathcal{L}(E)$ is a positive linear operator.
 	If $K$ is A-compact (\ie  if $KR(\lambda_{o},A)$ is compact for some $\lambda_{o} \in \rho(A))$ and if $s(A+K) > s(A)$, then $B \coloneqq  A + K$ satisfies the assumptions of Theorem~\ref{thm:c3-3.14}.
 	
@@ -1506,7 +1509,9 @@ On the other hand, assuming that $s(B)$ is not dominant, then $\dim(\ker((\mathr
 Hence, the restriction $(\mathrm{e}^{-ts(B)}S(t)_{|F})_{t \geq 0}$, $F \coloneqq  \ker(\mathrm{e}^{\tau\cdot s(B)}- S(\tau))$, contains the rotation semigroup by Corollary~\ref{cor:c3-3.9}.
 \end{proof}
 
-We conclude this section considering once again Example~\ref{ex:c3-3.4}(d).
+We conclude this section considering the linear transport equation%
+\index{example!transport equation} 
+once again, see Example~\ref{ex:c3-3.4}(d).
 The generator considered there is $B = (A - M) + K$, where $K$ is positive linear. 
 From \eqref{eq:c3-3.5} and \eqref{eq:c3-3.6} one deduces that 
 \[
@@ -1524,8 +1529,9 @@ For details we refer to \citet{greiner:1984d}  or \citet{voigt:1985} where the l
 
 
 \section{Semigroups of Lattice Homomorphisms}\label{sec:c3-4}
-\index{Lattice Homomorphism}
-\index{Theory!Lattice Homomorphism}
+\index{lattice homomorphism}
+\index{spectrum!lattice homomorphism}
+\index{semigroup!lattice homomorphisms} 
 
 In Section 2 we proved that the boundary spectrum of certain positive semigroups is a cyclic set. 
 For semigroups of lattice homomorphisms much more can be said. The whole spectrum is an imaginary additively cyclic subset of $\C $ (\cf Theorem~\ref{thm:c3-4.2}). 
@@ -1550,7 +1556,7 @@ In the last part of this section we discuss a spectral decomposition of positive
 		T(t)'\psi \leq \mathrm{e}^{rt}\psi \ \text{ and } \ \ T(t)'\psi \geq \psi \ (t \geq 0) \ \text{ and } \ |\phi| \leq \psi\,.
 	\end{equation}
 	%% --
-	In fact, A-I,\;(3.1) implies $(\mathrm{e}^{rt} - T(r))R(r,A) \geq 0$ hence 
+	In fact, A-I,\,(3.1) implies $(\mathrm{e}^{rt} - T(r))R(r,A) \geq 0$ hence 
     \[
     T(t)'\psi = rR(r,A)'T(t)'|\phi| \leq r\cdot \mathrm{e}^{rt}R(r,A)'|\phi| = \mathrm{e}^{rt}\psi\,.
     \]
@@ -1625,6 +1631,8 @@ In the last part of this section we discuss a spectral decomposition of positive
 	\end{proof}
 
 \begin{theorem}\label{thm:c3-4.2}
+    \index{semigroup!lattice homomorphisms} 
+    \index{cyclic!imaginary additively}\index{spectrum!cyclic} 
 	Let $A$ be the generator of a semigroup $(T(t))_{t \geq 0}$ of lattice homomorphisms on a Banach lattice $E$. 
 	Then $\sigma(A)$, $A\sigma(A)$ and $P\sigma(A)$ are imaginary additively cyclic subsets of $\C $.
 \end{theorem}
@@ -1635,7 +1643,10 @@ In the last part of this section we discuss a spectral decomposition of positive
 	It follows that $T(t)f = \mathrm{e}^{\lambda t}f$ $(t \geq 0)$ hence $T(t)|f| = |T(t)f| = \mathrm{e}^{\alpha t}|f|$ $(t \geq 0)$, or equivalently, $A|f| = \alpha|f|$. 
 	Now Theorem~\ref{thm:c3-2.2} is applicable and we obtain $A(f^{[n]}) = (\alpha + \im n\beta)f^{[n]}$ for all $n \in \Z$.
 	
-	To prove the assertion for $A\sigma(A)$ we consider an $\mathcal{F}$-product semigroup in order to reduce the problem to the point spectrum. 
+	To prove the assertion for $A\sigma(A)$ we consider an $\mathcal{F}$-product semigroup%
+    \index{semigroup!F-product@$\mathcal{F}$-product}%
+    \index{F-product@$\mathcal{F}$-product}
+    in order to reduce the problem to the point spectrum. 
 	We use the notation of A-I, Section~3.7. 
 	Obviously the space $m(E)$ is a Banach lattice and every operator $\hat{T}(t)$ is a lattice homomorphism. 
 	We have $|T(t)|f| - |f|| = ||T(t)f| - |f|| \leq |T(t)f - f|$ $(f \in E)$, hence $(|f_{n}|) \in m^{\TT}(E)$ whenever $(f_{n}) \in m^{\TT}(E)$. 
@@ -1720,13 +1731,10 @@ In view of Corollary~\ref{cor:c3-4.3}(i) the semigroup cannot be bounded.
 (The explicit representation \eqref{eq:c3-4.6} only allows the estimate $\|T(t)\| \leq \sqrt{2} + t \cdot \|k\|_2$ $(t\geq 0)$.)
 \end{example}
 
-In the next proposition we show that for semigroups of lattice homomorphisms on $L^1$-spaces, there is a spectral mapping theorem for the
-real part of the spectrum.
+In the next proposition we show that for semigroups of lattice homomorphisms on $L^1$-spaces, there is a spectral mapping theorem for the real part of the spectrum.
 
 \begin{proposition}\label{prop:c3-4.5}
-\index{Spectral mapping theorem}
-\index{Theorem!Spectral mapping}
-\index{Examples!Spectral mapping theorem}
+\index{spectral mapping theorem!lattice homomorphism}
 Let $(T(t))_{t \geq 0}$ be a strongly continuous semigroup
 of lattice homomorphisms on an $L^1$-space and denote by $A$ its generator.
 Then we have
@@ -1738,7 +1746,7 @@ Then we have
 \end{proposition}
 %% --
 \begin{proof}
-In view of A-III,6.2 it is enough to prove that the left hand
+In view of A-III,\,6.2 it is enough to prove that the left hand
 side contains the set on the right.
 
 Fix $t > 0$ and assume $r \in \sigma(T(t))$, $r > 0$ and let $\alpha \coloneqq \frac{1}{t} \log r$.
@@ -1801,15 +1809,17 @@ The latter assertion is a consequence of the following facts.
 For semigroups satisfying the assumption of Proposition~\ref{prop:c3-4.5}, the spectrum $\sigma(A)$ is additively cyclic (by Theorem~\ref{thm:c3-4.2}) and $\sigma(T(t))$ is multiplicatively cyclic
 (by \citet[V.Theorem~4.4]{schaefer:1974}). 
 Then the relation \eqref{eq:c3-4.7} implies that
-decompositions of the spectrum by vertical lines allow a spectral
-decomposition of the semigroup (\cf A-III, Definition~3.1) (One simply performs a spectral decomposition of a single operator $T(t)$). 
+decompositions of the spectrum by vertical lines allow a spectral decomposition%
+\index{spectral decomposition} 
+ of the semigroup (\cf A-III, Definition~3.1) (One simply performs a spectral decomposition of a single operator $T(t)$). 
 
 In the
 following we will show that for positive groups (on arbitrary Banach
 lattices) spectral decompositions of this type always exist. Moreover,
 it will turn out that the decomposition is compatible with the lattice
-structure. The proof of this result uses Kato's equality (see Section~5 of
-C-II). As a consequence of C-II, Corollary~5.8 we have the following.
+structure. The proof of this result uses Kato's equality%
+\index{Kato's equality} 
+(see Section~5 of C-II). As a consequence of C-II, Corollary~5.8 we have the following.
 
 Let $E$ be a Banach lattice with order continuous norm and $(T(t))_{t \in \R }$
 be a group of positive operators on $E$ with generator $A$.
@@ -1849,11 +1859,9 @@ g_2 \coloneqq \frac{1}{2}\cdot(g - (\text{sign } R(\mu,A)g)g)\,,
 \]
 then obviously $g = g_1 + g_2$. Moreover, $g$ is positive if and only if
 both, $g_1$ and $g_2$ are positive. We summarize these considerations in the following lemma.
-%%  bis hierher
+
 \begin{lemma}\label{lem:c3-4.6}
-\index{Positive group}
-\index{Group!Positive}
-\index{Banach lattice}
+\index{group of positive operators}
 Let $A$ be the generator of a positive group on a Banach
 lattice $E$ which has order continuous norm. Given $\mu \in \rho(A) \cap \R $, then
 every $g \in E_{\R }$ is representable as sum of two elements $g_1$ and $g_2$
@@ -1874,8 +1882,6 @@ We need another lemma. It can be formulated for arbitrary positive
 semigroups on Banach lattices.
 
 \begin{lemma}\label{lem:c3-4.7}
-\index{Positive semigroup}
-\index{Semigroup!Positive}
 Let $(T(t))_{t \geq 0}$ be a positive semigroup on a Banach
 lattice $E$ with generator $A$. Given $\mu \in \rho(A) \cap \R $ and $h \in E_+$, then the following assertions are equivalent.
 \begin{enumerate}[\upshape (a)]
@@ -1889,7 +1895,7 @@ lattice $E$ with generator $A$. Given $\mu \in \rho(A) \cap \R $ and $h \in E_+$
 %% --
 \begin{proof}
 $(a)\Rightarrow(b)$  We have
-$\int_{0}^{t} \mathrm{e}^{-\mu s}T(s)h \ds = (Id - \mathrm{e}^{-\mu t}T(t))R(\mu,A)h$ (see A-I,\;(3.2)).
+$\int_{0}^{t} \mathrm{e}^{-\mu s}T(s)h \ds = (Id - \mathrm{e}^{-\mu t}T(t))R(\mu,A)h$ (see A-I,\,(3.2)).
 Since $R(\mu,A)h \geq 0$ and $T(t)$ is a positive operator we obtain
 \[\textstyle
 \int_{0}^{t} \mathrm{e}^{-\mu s}T(s)h \ds = R(\mu,A)h - \mathrm{e}^{-\mu t}T(t)R(\mu,A)h \leq R(\mu,A)h
@@ -1919,9 +1925,8 @@ subset of the resolvent set and divides $\sigma(A)$ into disjoint sets.
 Both sets will be unbounded in general.
 
 \begin{theorem} \label{thm:c3-4.8}
-\index{Spectral decomposition}
-\index{Decomposition!Spectral}
-\index{Positive group}
+\index{group of positive operators}
+\index{spectral decomposition}
 Let $(T(t))_{t \in \R }$ be strongly continuous group of positive
 operators on a Banach lattice $E$ with order continuous norm.
 If $A$ is the generator and $\mu \in \rho(A) \cap \R $, then
@@ -1969,8 +1974,7 @@ described above have the expected representation as an integral
 'around' the spectral sets (see Corollary 3 in \citet{greiner:1984c}).
 
 \begin{corollary}\label{cor:c3-4.9}
-\index{Spectral projections}
-\index{Projections!Spectral}
+\index{spectral projection}
 Assume that the assumptions of the theorem are satisfied, $\mu \in \rho(A) \cap \R $, $\beta > s(A)$, $\alpha < -s(-A)$. If we denote the projections corresponding to the decomposition $E = I_{\mu} \oplus J_{\mu}$ by $P_{\mu}$ and $Q_{\mu}$
 (\ie  $P_{\mu}E = \ker Q_{\mu} = I_{\mu}$, $Q_{\mu}E = \ker P_{\mu} = J_{\mu}$), then for $f \in D(A^2)$ we
 have
@@ -1988,8 +1992,7 @@ We mention another consequence of Theorem~\ref{thm:c3-4.8}. Just like Propositio
 spectral mapping theorem for the real part of the spectrum.
 
 \begin{corollary}\label{cor:c3-4.10}
-\index{Spectral mapping theorem}
-\index{Positive group}
+\index{spectral mapping theorem} 
 If $(T(t))_{t \in \R }$ is a positive group on a space $L^2$ or
 $C_0(X)$ with generator $A$, then
 %% --
@@ -2001,8 +2004,11 @@ $C_0(X)$ with generator $A$, then
 %% --
 \begin{proof} 
 We borrow from the next chapter that for positive semigroups on
-spaces $L^1$, $L^2$ or $C_0(X)$ spectral bound and growth bound coincide
-(see C-IV, Theorem~1.1).
+spaces $L^1$, $L^2$ or $C_0(X)$ spectral bound%
+\index{spectral bound $s(A)$} 
+and growth bound%
+\index{growth bound} 
+coincide (see C-IV, Theorem~1.1).
 
 We only have to show that $\exp(t\rho(A) \cap \R ) \subset \rho(T(t)) \cap \R _+$.
 
@@ -2052,8 +2058,9 @@ for every Borel set $C$. A more general criterion is stated in the
 following proposition.
 
 \begin{proposition}\label{prop:c3-4.11}
-\index{Flow!Measure preserving}
-\index{Measure preserving flow}
+\index{semiflow}
+\index{semiflow!measure preserving}
+\index{example!semiflow}
 Let $X$ be a locally compact space and let $\mu$ be a
 regular, positive Borel measure on $X$. Assume that the continuous
 semiflow $\phi \colon \R _+ \times X \to X$ satisfies the condition
@@ -2075,7 +2082,9 @@ There exist constants $t_0 > 0$, $M > 0$ such that $\mu(\phi_t^{-1}(C)) \leq M \
 \end{enumerate}
 	
 \item 
-In case the conditions (a) and (b) are fulfilled, then $(T(t))_{t \geq 0}$ is a semigroup of lattice homomorphisms on $L^p(\mu)$ and $C_c(X) \cap D(A)$ is a core of the generator.
+In case the conditions (a) and (b) are fulfilled, then $(T(t))_{t \geq 0}$ is a semigroup of lattice homomorphisms on $L^p(\mu)$ and $C_c(X) \cap D(A)$ is a core%
+\index{example!core} 
+of the generator.
 \end{enumerate}
 \end{proposition}
 %% --
@@ -2125,7 +2134,8 @@ Obviously every operator $T(t)$ defined in assertion (a) of (i)
 is a lattice homomorphism. Above we pointed out that $C_c(X)$ is
 invariant under $(T(t))$, then the intersection $D(A) \cap C_c(X)$ is invariant as well. It
 is dense because the elements of the form $\int_{0}^{r} T(s)f \ds$, $f \in C_c(X)$,
-$r > 0$ belong to $C_c(X)$ and to $D(A)$. Hence $D(A) \cap C_c(X)$ is a core
+$r > 0$ belong to $C_c(X)$ and to $D(A)$. Hence $D(A) \cap C_c(X)$ is a core%
+\index{example!core} 
 (by A-I, Proposition~1.9).
 \end{enumerate}
 
@@ -2139,8 +2149,8 @@ field. Note that for continuous flows condition \eqref{eq:c3-4.12} is automatica
 is compact as the continuous image of a compact set.
 
 \begin{example}\label{ex:c3-4.12}
-\index{Differential equations}
-\index{Flow!Generated by ODE}
+\index{example!ordinary differential equation}
+\index{semiflow!generated by ODE}
 Let $F \colon \R ^n \to \R ^n$ be a $C^1$-vector field and assume that
 the derivative $DF$ is uniformly bounded on $\R ^n$. Then the ordinary
 differential equation $y' = F(y)$ possesses a global flow
@@ -2232,7 +2242,7 @@ Lemma~\ref{lem:c3-3.10} is taken from
 and Theorems~\ref{thm:c3-3.12} and \ref{thm:c3-3.14} can be found (with slightly different proofs) in \citet{greiner:1981}. 
 
 \item 
-lt was \citet{derndinger:1980} who proved Theorem~\ref{thm:c3-4.2}. 
+It was \citet{derndinger:1980} who proved Theorem~\ref{thm:c3-4.2}. 
 In Corollary~\ref{cor:c3-4.3} one can replace boundedness of the semigroup by the assumption that the resolvent grows slowly (see \citet{greiner:1982}). 
 Example 4.4 is due to Davies and Proposition~\ref{prop:c3-4.5} to H.~Kellermann (both unpublished). 
 The spectral decomposition for positive groups as described in Theorem~\ref{thm:c3-4.8} is valid in arbitrary Banach lattices (see \citet{arendt:1982} and \citet{greiner:1984c}). 
@@ -2241,13 +2251,6 @@ Proposition~\ref{prop:c3-4.11} and Example 4.12 indicate the relationship of pos
 For example, the \enquote{Annular Hull Theorem} (see \citet{chiconeswanson:1981}) is closely related to the results of this section.
 \end{enumerate}
 
-%% -- Literatur
+%\section*{References}
+%\addcontentsline{toc}{section}{References}
 %% --
-\begin{comment}
-\section*{References}
-\addcontentsline{toc}{section}{References}
-{\RaggedRight
-\renewcommand{\bibsection}{}
-\bibliographystyle{abbrvnat}
-\bibliography{bib/ln-references}}
-\end{comment}
