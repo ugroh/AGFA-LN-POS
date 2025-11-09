@@ -150,7 +150,7 @@
   \addcontentsline{toc}{section}{#1}%
   \addtocontents{toc}{\protect\cftpagenumberson{section}}%
 }
-
+ 
 
 
 %% -- Index
@@ -175,50 +175,50 @@
 %   hidelinks 
 %}
 
-\includeonly{%
-,./part-0/ln-dedication
-%,./part-0/foreword 
-,./part-0/ln-preface
-%,./part-0/acknowledgement
-,./part-0/ln-symbols   
-%% -- Part A
-%% --
-,./part-a/part-a
-,./part-a/chap-a1	%% -- final
-,./part-a/chap-a2	%% -- final
-,./part-a/chap-a3	%% -- final
-,./part-a/chap-a4   %% -- final
-%% -- Part B
-%% --
-,./part-b/part-b	  
-,./part-b/chap-b1  %% -- final
-,./part-b/chap-b2  %% -- final
-,./part-b/chap-b3  %% -- final
-,./part-b/chap-b4  %% -- final
-%% -- Part C 
-%% --
-,./part-c/part-c
-,./part-c/chap-c1	%% -- final 
-,./part-c/chap-c2	%% -- final
-,./part-c/chap-c3
-,./part-c/chap-c4
-%% -- Part D
-%% --
-,./part-d/part-d
-,./part-d/chap-d1
-,./part-d/chap-d2
-,./part-d/chap-d3
-,./part-d/chap-d4
-%% -- Part E
-%% --
-,./part-e/part-e
+%\includeonly{%
+%,./part-0/ln-dedication
+%%,./part-0/foreword 
+%,./part-0/ln-preface
+%%,./part-0/acknowledgement
+%,./part-0/ln-symbols   
+%%% -- Part A
 %%% --
-,./part-e/un-part-a
-,./part-e/un-part-b
-,./part-e/un-part-c
-,./part-e/un-part-d
-%% -- 
-}
+%,./part-a/part-a
+%,./part-a/chap-a1	%% -- final
+%,./part-a/chap-a2	%% -- final
+%,./part-a/chap-a3	%% -- final
+%,./part-a/chap-a4   %% -- final
+%%% -- Part B
+%%% --
+%,./part-b/part-b	  
+%,./part-b/chap-b1  %% -- final
+%,./part-b/chap-b2  %% -- final
+%,./part-b/chap-b3  %% -- final
+%,./part-b/chap-b4  %% -- final
+%%% -- Part C 
+%%% --
+%,./part-c/part-c
+%,./part-c/chap-c1	%% -- final 
+%,./part-c/chap-c2	%% -- final
+%,./part-c/chap-c3
+%,./part-c/chap-c4
+%%% -- Part D
+%%% --
+%,./part-d/part-d
+%,./part-d/chap-d1
+%,./part-d/chap-d2
+%,./part-d/chap-d3
+%,./part-d/chap-d4
+%%% -- Part E
+%%% --
+%,./part-e/part-e
+%%%% --
+%,./part-e/un-part-a
+%,./part-e/un-part-b
+%,./part-e/un-part-c
+%,./part-e/un-part-d
+%%% -- 
+%}
 %% --
 \begin{document}
 %% --
@@ -233,46 +233,46 @@
 %% --
 \frontmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% -- part-0
-\include{./part-0/ln-dedication}
+\input{./part-0/ln-dedication}
 %\include{./part-0/foreword}
-\include{./part-0/ln-preface}
+\input{./part-0/ln-preface}
 %\include{./part-0/acknowledgement}
 %% --
 \tableofcontents
 %% --
-\include{./part-0/ln-symbols}
+\input{./part-0/ln-symbols}
 % \printnomenclature
 %%
 \mainmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 %% -- Part-A
 
-\include{./part-a/part-a} 
-    \include{./part-a/chap-a1}
-    \include{./part-a/chap-a2}
-    \include{./part-a/chap-a3}
-    \include{./part-a/chap-a4}
+\input{./part-a/part-a} 
+    \input{./part-a/chap-a1}
+    \input{./part-a/chap-a2}
+    \input{./part-a/chap-a3}
+    \input{./part-a/chap-a4}
 
 %%% -- Part-B
-\include{./part-b/part-b}
-\include{./part-b/chap-b1}
-\include{./part-b/chap-b2}
-\include{./part-b/chap-b3}
-\include{./part-b/chap-b4}
+\input{./part-b/part-b}
+    \input{./part-b/chap-b1}
+    \input{./part-b/chap-b2}
+    \input{./part-b/chap-b3}
+    \input{./part-b/chap-b4}
 
 %%% -- Part-C
-\include{./part-c/part-c}
-    \include{./part-c/chap-c1}
-    \include{./part-c/chap-c2}
-    \include{./part-c/chap-c3}
-    \include{./part-c/chap-c4}
+\input{./part-c/part-c}
+    \input{./part-c/chap-c1}
+    \input{./part-c/chap-c2}
+    \input{./part-c/chap-c3}
+    \input{./part-c/chap-c4}
 
 %% -- Part-D
-\include{./part-d/part-d}
-    \include{./part-d/chap-d1}
-    \include{./part-d/chap-d2}
-    \include{./part-d/chap-d3}
-    \include{./part-d/chap-d4}
+\input{./part-d/part-d}
+   \input{./part-d/chap-d1}
+    \input{./part-d/chap-d2}
+    \input{./part-d/chap-d3}
+    \input{./part-d/chap-d4}
 
 {\RaggedRight
 \bibliographystyle{abbrvnat}
@@ -283,11 +283,11 @@
 
 %% -- Part-E
 \setlist{$\bullet$, wide, labelindent=.25em,itemsep=.25em}	
-\include{./part-e/part-e}
-	\include{./part-e/un-part-a}
-	\include{./part-e/un-part-b}
-	\include{./part-e/un-part-c}
-	\include{./part-e/un-part-d}
+\input{./part-e/part-e}
+	\input{./part-e/un-part-a}
+	\input{./part-e/un-part-b}
+	\input{./part-e/un-part-c}
+	\input{./part-e/un-part-d}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \backmatter
