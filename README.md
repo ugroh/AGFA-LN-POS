@@ -6,7 +6,7 @@ Die Vorlagen und weitere Erläuterungen finden sich auf der [Springer-Webseite](
 
 Noch etwas: Es lohnt sich, einen Blick auf  [https://tex.social](https://tex.social) zu werfen.
 
-##### <!--Die Struktur-->
+<!--Die Struktur-->
 
 <!--`AGFA-LN-POS` ist das Masterverzeichnis, unter dem sich die weiteren Verzeichnisse befinden. Im Einzelnen:-->
 	<!--`LN-Einzelbeitraege:` Dies ist das Verzeichnis, das die noch nicht fertigen `TeX`-Dateien enthält. In diesem sind alle Kapitel enthalten (Reihenfolge wie im Buch) . Diese Struktur ist auch auf dem `Overleaf`-System abgebildet. Bitte daher dort jeweils die relevanten bearbeiteten Beiträge einstellen.--> 
@@ -26,7 +26,7 @@ Noch etwas: Es lohnt sich, einen Blick auf  [https://tex.social](https://tex.soc
 	
 <!--`literatur:` Wie der Name sagt – ergänzende Literatur zum Hineinschauen, insbesondere in den `Grätzer`.-->
 
-#### <!--Der Aufbau von `LN-Einzelbeitraege`-->
+<!--Der Aufbau von `LN-Einzelbeitraege`-->
 
 <!--Der Aufbau ist wie folgt (analog dann auch für die anderen Teile):-->
 
@@ -42,7 +42,7 @@ Nützlich:
 
 Wer weitergehende Literatur benötigt – bitte mich anschreiben – und bitte das Dokument [How2Do](https://github.com/ugroh/AGFA-LN-POS/blob/main/How2Do.pdf) beachten
 
-#### <!--Vom `PDF` zum `LaTeX`-Dokument-->
+<!--Vom `PDF` zum `LaTeX`-Dokument-->
 
 <!--Dazu die KI [Claude](http://claude.ai) nutzen:--> 
 
@@ -57,7 +57,7 @@ Wer weitergehende Literatur benötigt – bitte mich anschreiben – und bitte d
 
 <!--Wenn man dieses systematisch macht, also bei `ax_01`anfängt, hat man nach z-Stunden das Kapitel fertig und kann sich nun um die redaktionelle Arbeit kümmern. Natürlich kann man sich auch ein anderes Kapitel vornehmen – der Ablauf ist immer der gleiche.-->
 
-##### <!--Literaturzitate, Referenzen und Index-->
+<!--Literaturzitate, Referenzen und Index-->
 
 <!--Bitte momentan die Literaturzitate belassen und diese mit `[ ]` einklammern - siehe `How2Do`-->
 <!--Bei der Überarbeitung der `LaTeX` Datei bitte die Querverweise setzen – in  `How2Do` finden sich Informationen dazu.-->
