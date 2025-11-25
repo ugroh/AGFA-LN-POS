@@ -1,74 +1,10 @@
-\documentclass{book}
-%% -- Stand: 2025-09-30
-%% -- Updated notes Standalone ulgr
-%% -- 
-\input{LN-Einzelbeitraege/preamble/ln-preamble}  
-\input{LN-Einzelbeitraege/preamble/ln-definitionen}
-%% -- Index 
-% \usepackage{imakeidx}
-% \makeindex[columns=2, options=-s svind.ist]
-
-%% -- Literaturverzeichnis
-\usepackage[square,numbers]{natbib}
-\usepackage[resetlabels]{multibib}
-\newcites{EN}{Updated Notes: References}
+% !TEX root = ../../LN-Book.tex
+%% -- Stand 2025/10/11
+%% -- Part E Updated Notes
 %% --
-\usepackage{backref}
-\usepackage{hyperref}
-\hypersetup{% 
-    colorlinks=true 
-    ,linkcolor=blue
-    ,citecolor=blue
-    ,urlcolor=blue
-    ,linktoc=all
-    ,bookmarksopen=false
-    %,backref=page
-    %,hidelinks=true
-}
-%% --
-%\usepackage{backref}
-\renewcommand*{\backref}[1]{}
-\renewcommand*{\backrefalt}[4]{%
-  \ifcase #1 %
-  \or
-    (Cited on page~#2.)%
-  \else
-    (Cited on pages~#2.)%
-  \fi
-}
-%% --    
-\setcounter{part}{4}
-\renewcommand\thepart{\Alph{part}}
-%\renewcommand\thechapter{\thepart-\Roman{chapter}}
-\renewcommand\thesection{\arabic{section}}
-\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\setlist{$\bullet$, wide, labelindent=.25em,itemsep=.25em}	
 
-%\setlist{$\bullet$, wide, labelindent=.5em,itemsep=.25em}
-\begin{document}
-
-%\begin{partbacktext}
-\part{Updated Notes Stand \today}
-%\end{partbacktext}
-\tableofcontents
+\begin{partbacktext}
+\part{Updated Notes}
+\end{partbacktext}
 \setcounter{chapter}{0}
-%% --
-\chapter{Updated Notes to Part A}
-\include{LN-Einzelbeitraege/part-e/un-a1-a4}
-\chapter{Updated Notes to Part B}
-\include{LN-Einzelbeitraege/part-e/un-b1-b4}
-\chapter{Updated Notes to Part C}
-\include{LN-Einzelbeitraege/part-e/un-c1-c4}
-\chapter{Updated Notes to Part D}
-\include{LN-Einzelbeitraege/part-e/un-d1-d4}
-
-\cleardoublepage
-%\section*{References}
-\addcontentsline{toc}{chapter}{Updated Notes References}
-{\RaggedRight
-% \bibliographystyle{abbrvnat}
-% \bibliography{LN-Einzelbeitraege/part-z/un-references}
-
-\bibliographystyleEN{abbrvnat}
-\bibliographyEN{LN-Einzelbeitraege/bib/ln-references-EN}} 
-%% --
-\end{document}
