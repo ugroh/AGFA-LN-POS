@@ -1,0 +1,55 @@
+\documentclass{book}
+%% -- Stand: 2025-09-13
+%% --
+
+%% -- Für Korrekturlesen
+%\usepackage{setspace}
+%\onehalfspacing
+%\usepackage{showlabels}   
+%% --
+
+\input{LN-Einzelbeitraege/preamble/ln-preamble}  
+\input{LN-Einzelbeitraege/preamble/ln-definitionen}
+%% -- Index
+\usepackage{imakeidx}
+\makeindex[columns=2, options=-s svind.ist]
+%% -- Literaturverzeichnis
+\usepackage[square,numbers]{natbib}
+\usepackage[resetlabels]{multibib}
+\newcites{EN}{Updated Notes: References}
+%% --\bibliographystyle{abbrvnat}
+%% --
+\usepackage{hyperref}
+\hypersetup{% 
+,colorlinks=true 
+,linkcolor=blue
+,citecolor=blue
+,urlcolor=blue
+,linktoc=all
+%,hidelinks=true
+}
+%% --      
+\begin{document}
+\tableofcontents
+\setcounter{chapter}{1}		%% anpassen 1/2/3 -> Chapter 2/3/4
+\setcounter{section}{1}		%% immer
+\input{chap-c2}
+%% -- Literatur LN
+{\RaggedRight
+\bibliographystyle{abbrvnat}
+\bibliography{LN-Einzelbeitraege/bib/ln-references}}
+\printindex
+%% --
+\clearpage
+%% --
+\input{chap-c2-enotes}
+%% -- Literatur Updated Notes
+{\RaggedRight
+\bibliographystyleEN{abbrvnat}
+\bibliographyEN{chap-c2-enotes}}
+%% --
+\cleardoublepage
+\addcontentsline{toc}{chapter}{Index}  
+\printindex
+%% --
+\end{document}

@@ -1,0 +1,149 @@
+% !TEX root = ../LN-Book.tex
+%% -- 
+%% --Stand 2025-06-08 final
+%% --
+\chapternopage{Characterization of Positive Semigroups on \texorpdfstring{W$^{*}$}{W*}-Algebras}\label{chap:d2}
+\chaptermark{Characterization of Positive Semigroups}
+%% --
+{\Large
+\vspace*{-.75cm}
+by \\[.25em]
+Ulrich Groh
+\vspace{.75cm}
+\\
+}
+%% --
+% --
+Since the positive cone of a \CA-algebra with unit has non-empty interior, many results of Chapter B-II can be applied verbatim to the characterization of the generator of positive semigroups on \CA-algebras.
+On the other hand, a concrete and detailed representation of such generators has been found only in the uniformly continuous case (see \citet{lindblad:1976}).
+A third area of active research has been the following: Which maps on \CA-algebras (in particular, which derivations) commuting with certain automorphism groups are automatically generators of strongly continuous positive semigroups.
+For more information we refer to the survey article of \citet{evans:1984}.
+%% --
+\section{Semigroups on Properly Infinite \texorpdfstring{W$^{*}$}{W*}-Algebras}
+%% --
+The aim of this section is to show that strongly continuous semigroups of Schwarz maps on properly infinite \WA-algebras are already uniformly continuous.
+In particular, our theorem is applicable to such semigroups on $B(H)$.
+
+It is worthwhile to remark that the result of  \citet{lotz:1985} on the uniform continuity of every strongly continuous semigroup on $L^{\infty}$ (see A-II, Sec.3) does not extend to arbitrary \WA-algebras.
+%% --
+\begin{example}
+Take $M = \BH$, $H$ infinite dimensional, and choose a projection $p \in M$ such that $Mp$ is topologically isomorphic to $H$.
+Therefore $M = H \oplus M_{0}$, where $M_{0} = \Kern{x \mapsto xp}$.
+Next, take a strongly, but not uniformly continuous semigroup $\TT$ on $H$ and consider the strongly continuous semigroup $\TT \oplus \Id$ on $M$.
+\end{example}
+%% --
+For results on the classification theory of \WA-algebras needed in our approach we refer to \citet[2.2]{sakai:1971} and \citet[V.1]{takesaki:1979}.
+%% --
+\begin{theorem}\label{thm:schwarz_uniform}
+Every strongly continuous one-parameter semigroup of Schwarz type on a properly infinite \WA-algebra $M$ is uniformly continuous.
+\end{theorem}
+%% --
+\begin{proof}
+Let $\TT = (T(t)_{t \geq 0})$ be strongly continuous on $M$ and suppose $\TT$ not to be uniformly continuous.
+Then there exists a sequence $(T_n)$  in  $ \TT $ and $\epsilon > 0$ such that $\|T_n - \Id\| \geq \epsilon$, 
+but $T_n \to \Id$ in the strong operator topology.
+We claim that for every sequence $(p_{k})$ of mutually orthogonal projections and all bounded sequences $(x_{k})$ 
+in $M$
+%% --
+\[
+\lim_n \|(T_n - \Id)(p_{k} x_{k} p_{k})\| = 0
+\]
+%% --
+uniformly in $k \in \N$.
+This follows from the \emph{Lemma of Phillips} (\citet{schaefer:1974}) and the fact that the sequence $(p_{k} x_{k} p_{k})$ is summable in the $s^{*}(M,M_*)$-topology (compare \citet{elliot:1972}, Lemma 2.).
+
+Let $(p_{k})$ be a sequence of mutually orthogonal projections in $M$ such that every $p_{k}$ is equivalent to $\1$ via some $u_{k} \in M$ \cite[2.2]{sakai:1971}.
+Without loss of generality we may assume $\|(T_n - \Id)(u_n)\| \leq n^{-1}$ since the semigroup $T$ is strongly continuous.
+Thus we obtained the following.
+%% --
+\begin{enumerate}[\upshape (i)]
+\item 
+$\lim_n \|(T_n - \Id)(p_{k} x_{k} p_{k})\| = 0$ uniformly in $k \in \N$ for every bounded sequence $(x_{k})$ in $M$.
+\item 
+Every projection $p_{k}$ is equivalent to $1$ via some $u_{k} \in M$.
+\item 
+$\|(T_n - \Id)u_n\| \leq n^{-1}$ for all $n \in \N$.
+\end{enumerate}
+%% --
+For the following construction see A-I,3.6 and D-II,Sec.2.
+Take
+%% --
+\begin{enumerate}[\upshape (i)]
+\item
+$\widehat{M}$ be an ultrapower of $M$,
+
+\item
+let $p \coloneq \widehat{(p_{k})} \in \widehat{M}$,
+
+\item
+let $T \coloneq \widehat{(T_{n}) }\in L(\widehat{M})$
+
+\item
+and let $u \coloneq \widehat{(u_{k})}  \in \widehat{M}$.
+
+\end{enumerate}
+%% --  
+Then $T$ is identity preserving and of Schwarz type on $\widehat{M}$.
+
+Since $u^{*}u = p$ and $uu^{*} = \1$, it follows $pu^{*} = u^{*}$ and $(uu^{*})x(uu^{*}) = x$ for all $x \in \widehat{M}$.
+Finally, $T(pxp) = pxp$ for all $x \in \widehat{M}$ which follows from (i), and $T(u^{*}) = T(pu^{*}) = pu^{*} = u^{*}$ and $T(u) = u$, which follows from (iii).
+Using the Schwarz, inequality we obtain
+%% --
+\[
+	T(uu^{*}) = T(\1) \leq \1 = uu^{*} = T(u)T(u)^{*}.
+\]
+%% --
+From D-III, Lemma 1.1., we conclude $T(ux) = uT(x)$ and $T(xu^{*}) = T(x)u^{*}$ for all $x \in \widehat{M}$.
+Hence
+%% --
+\begin{align*}
+T(x) &= T(uu^{*}xuu^{*}) = uT(u^{*}xu)u^{*} = uT(pu^{*}xup)u^{*} \\
+&= upu^{*}xupu^{*} = uu^{*}xuu^{*} = x
+\end{align*}
+%% --
+for all $x \in \widehat{M}$.
+From this we obtain that for every bounded sequence $(x_{k})$ in $M$
+%% --
+\[
+	\lim_k \|T_k x_{k} - x_{k}\| = 0
+\]
+%% --
+for some subsequence of the $T_{k}$'s and of the $x_{k}$'s.
+This conflicts with our assumption at the beginning, hence the theorem is proved.
+\end{proof}
+%% --
+
+%\section*{Notes}
+%\addcontentsline{toc}{section}{Notes}
+%% --
+
+
+%\section*{References}
+\addcontentsline{toc}{section}{References}
+%% --
+%Let $ M $ be a \WA-algebra and $ H $ be an infinite-dimensional Hilbert-space. 
+%Then the \WA-tensor product $ N \coloneq M \overline{\otimes} \BH $ is a properly infinite \WA-algebra (\citet[Thm. 2.6.6]{sakai:1971}).
+%Let $ \SG $ be the semigroup 
+%%
+%\[
+%	S(t) = T(t) \otimes \Id_{H} \quad (t \geq 0). 
+%\]
+%%
+%Then $ S(t) $ is a Schwarz-map on $ N $ and contractive (\citet[Prop. IV.5.13.]{takesaki:1979}), hence the smigroup $ \SG $ is equicontinuous in $ \L{N} $.
+%
+%Let $ x \in M $ and $  \xi \in H$.
+%Since the norm on $ N $ is a cross-norm, we obtain
+%%
+%\[
+%	\lim_{t \to 0} \| ( S(t) - \Id ) x \otimes \xi \| =
+%	\lim_{t \to 0} \| ( S(t) - \Id ) x \| \| \xi \| = 0.
+%\]
+%%
+%From \citet[III.4.5]{schaefer:1966} it follows that $ \SG $ is strongly-continuous, hence norm-continuous on $ N $ from which we conclude, that $ \TT $ is norm-continuous on $ M $.
+%% --
+%\begin{remark}
+%If $ M $ is a finite \WA-algebra of Type I, then $ M $ is a Grothendieck space and has the Dunford-Pettis property. 
+%Hence we can apply the results of \citet{lotz:1985}.
+%However, has \WA-algebra have the Dunford-Pettis property iff it is finite and of Type I (\citet{chu:1990}).
+%But is known that every \WA-algebra is a Grothendick space (\citet{pfitzner:1994}).
+%\end{remark}
