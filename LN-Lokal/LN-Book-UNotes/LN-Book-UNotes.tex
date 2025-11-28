@@ -1,0 +1,55 @@
+% !TEX TS-program = pdflatexmk
+% !BIB program = bibtex
+\documentclass{book}
+%% -- Stand: 2025-11-26
+%% -- ./ -> LN-Book-UNotes/
+%% --
+
+\input{./preamble/ln-preamble}  
+\input{./preamble/ln-definitionen}
+\setlist{$\bullet$, wide, labelindent=.5em,itemsep=.25em}
+\usepackage[square,numbers]{natbib}
+\usepackage[resetlabels]{multibib}
+\newcites{EN}{Updated Notes: References}
+
+%% --
+\usepackage{hyperref}
+\hypersetup{% 
+,colorlinks=true 
+,linkcolor=blue
+,citecolor=blue
+,urlcolor=blue
+,linktoc=all
+,bookmarksopen=false
+%,hidelinks=true
+}
+
+%% --    
+\begin{document}
+\tableofcontents
+\setcounter{chapter}{0}		%%  
+\setcounter{section}{1}		%%  
+%% --
+\include{part-e}
+\include{part-e/un-part-a.tex}
+\include{part-e/un-part-b.tex}
+\include{part-e/un-part-c.tex}
+\include{part-e/un-part-d.tex}
+%% --
+%% --
+\clearpage
+%% --
+{\RaggedRight
+\bibliographystyleEN{abbrvnat}
+\bibliographyEN{./bib/ln-references-EN}}
+%% --
+\end{document}
+
+
+
+
+
+
+
+
+

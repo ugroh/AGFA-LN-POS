@@ -1,0 +1,175 @@
+% !TEX root = ../LN-Index.tex
+%% --
+%% -- Stand 2025-11-28 
+%% --
+\chapternopage{Basic Results of Spaces \texorpdfstring{$C_{0}(X)$}{C\textunderscore 0(X)}}
+\label{chap:b1}%
+\index{CoX@$C_{0}(X)$}
+%% --
+{\Large
+\vspace*{-.75cm}
+by \\[.25em]
+Rainer Nagel and Ulf Schlotterbeck
+\vspace{.75cm}
+\\
+}
+%% --
+This part of the book is devoted to one-parameter semigroups of operators on spaces of continuous functions of type $C_{0}(X)$.
+Such spaces are Banach lattices of a very special kind.
+We treat this case separately since we feel that an intermingling with the abstract Banach lattice situation considered in Part C would have made it difficult to appreciate the easy accessibility and the pilot function of methods and results available here.
+In this chapter we fix the notation we are going to use and collect some basic facts about the spaces we are considering.
+
+If $X$ is a locally compact topological space, then $C_{0}(X)$ denotes the space of all continuous complex-valued functions on $X$ which vanish at infinity, endowed with the supremum-norm.
+If $X$ is compact, then any continuous function on $X$ \enquote{vanishes at infinity} and $C_{0}(X)$ is the space of all continuous functions on $X$.
+We often write $C(X)$ instead of $C_{0}(X)$ in this situation.
+
+We sometimes study real-valued functions and write the corresponding real spaces as $C_{0}(X,\R)$ and 
+$C(X,\R)$, and the notations $C_{0}(X,\C)$ and $C(X,\C)$ are used if there might be confusion between both cases.
+%% --
+\section{Algebraic and Order-Structure: Ideals and Quotients}\label{sec:b1-1}%
+\index{CoX@$C_{0}(X)$!Algebraic Structure}%
+\index{CoX@$C_{0}(X)$!Order Structure}%
+\index{CoX@$C_{0}(X)$!Ideals}
+%% --
+Any space $C_{0}(X)$ is a commutative \CA-algebra under the sup-norm and the pointwise multiplication, and by the \emph{Gelfand Representation Theorem} any commutative \CA-algebra can, on the other hand, be canonically represented as an algebra $C_{0}(X)$ on a suitable locally compact space $X$.
+The algebraic notions of ideal, quotient, homomorphism are well known and need not be explained further.
+
+Another natural and important structure of $C_{0}(X)$ is the \emph{pointwise} ordering under which $C_{0}(X,\R)$ is a (real) Banach lattice and $C_{0}(X,\C)$ a complex Banach lattice in the sense explained in Chapter C-I.
+Concerning the order structure of $C_{0}(X)$ we use the following notations.
+For a function $f$ in $C_{0}(X,\R)$
+%% --
+\begin{enumerate}[\upshape (i), labelindent=.5em]
+\item
+A function $ f $ is called \emph{positive, $ f \geq 0 $,} if $ f(t) \geq 0  $ for all $ t \in X $, 
+
+\item
+We write $  f > 0 $ if $ f $ is positive but does not vanish identically,
+
+\item
+We call $ f $ \emph{strictly positive, $f \gg 0$,}  if $ f(t) > 0 $ for all $ t \in X $.
+
+\end{enumerate}
+%% --
+The notion of an order ideal explained in Chapter C-I applies of course to the Banach lattices $C_{0}(X)$ and might give rise to confusion with the corresponding algebraic notion.
+
+However, since we are mainly considering closed ideals and since a closed linear subspace $I$ of $C_{0}(X)$ is a lattice ideal if and only if $I$ is an algebraic ideal, we may and will simply speak of closed ideals, without specifying whether we think of the algebraic or the order theoretic meaning of this word.
+
+An important and frequently used characterization of these objects is the following: A subspace $I$ of $C_{0}(X)$ is a closed ideal if and only if there exists a closed subset $A$ of $X$ such that a function $f$ belongs to $I$ if and only if $f$ vanishes on $A$.
+The set $A$ is of course uniquely determined by $I$ and is called the \emph{support} of $I$.
+If $I = I_{A}$ is a closed ideal with support $A$, then $I_{A}$ is naturally isomorphic to $C_{0}(X\backslash A)$ and the quotient $C_{0}(X)/I$ (under the natural quotient structure) is again a Banach algebra and a Banach lattice that can be identified canonically (via the map $f + I \to f_{|A}$) with $C_{0}(A)$.
+%% --
+\section{Linear Forms and Duality}\label{sec:b1-2}%
+\index{CoX@$C_{0}(X)$!Linear Forms}
+\index{CoX@$C_{0}(X)$!Positive linear forms}
+\index{CoX@$C_{0}(X)$!Strictly positive linear Forms}
+%% --
+The \emph{Riesz Representation Theorem} asserts that the dual of $C_{0}(X)$ can be identified in a natural way with the space of bounded regular Borel measures on $X$.
+While there is no natural algebra structure on this dual, the dual ordering (see Chapter C-I) makes $C_{0}(X)'$ into a Banach lattice.
+We will occasionally make use of the order structure of $C_{0}(X)'$, but since at least its measure theoretic interpretation is supposed to be well-known, it may suffice here to refer to Chapter C-I, Sections 3 and 7, for a more detailed discussion.
+We recall only some basic notations here.
+
+If $\mu$ is a linear form on $C_{0}(X,\R)$, then
+%% --
+\begin{enumerate}[\upshape (i), labelindent=.5em]
+
+\item
+$\mu \geq 0$ means  $ \mu(f) \geq 0 $ for all $ f \geq 0 $;  $ \mu $ is then called \emph{positive},
+
+\item
+$ \mu > 0 $ means that $ \mu $ is positive but does not vanish identically,
+
+\item
+$ \mu \gg 0 $ means that $ \mu(f) > 0 $ for any $ f > 0 $;  $ \mu $ is then called \emph{strictly positive}.
+
+\end{enumerate}
+%% -- 
+If $\mu$ is a linear form on $C_{0}(X,\C)$, then $\mu$ can be written uniquely as 
+%
+\[
+	\mu = \mu_{1} + \im \mu_{2}
+\]
+%
+where $\mu_{1}$ and $\mu_{2}$ map $C_{0}(X,\R)$ into $\R$ (decomposition into \emph{real} and \emph{imaginary parts}).
+
+We call $\mu$ \emph{positive} (\emph{strictly positive}) and use the above notations if $\mu_{2} = 0$ and $\mu_{1}$ is positive (strictly positive).
+We point out that strictly positive linear forms need not exist on $C_{0}(X)$, but if $X$ is separable, then a strictly positive linear form is obtained by summing a suitable sequence of point measures.
+
+The coincidence of the notions of a closed algebraic and a closed lattice ideal in $C_{0}(X)$ has of course its effect on the algebraic and the lattice theoretic notions of a homomorphism.
+The case of a homomorphism into another space $C_{0}(Y)$ will be discussed below.
+As for homomorphisms into the scalar field, we have essentially coincidence between the algebraic and the order theoretic meaning of this word, more exactly: 
+%% --
+\begin{quote}
+\emph{A linear form $\mu \neq 0$ on $C_{0}(X)$ is a lattice homomorphism if and only if $\mu$ is, up to normalization, an algebra homomorphism }(algebra homomorphisms $\neq 0$ must necessarily have norm $1$).
+\end{quote}
+%% --
+Since the algebra homomorphisms $\neq 0$ on $C_{0}(X)$ are known to be the point measures (denoted by $\delta_{t}$) on $X$ and since on the other hand $\mu$ is a lattice homomorphism if and only if 
+%
+\[
+	|\mu(f)| =  \mu(|f|) \quad \text{for all $f$,}
+\]
+%
+it follows that this latter condition on $\mu$ is equivalent to $\mu = \alpha\delta_{t}$ for a suitable $t$ in $X$ and a positive real number $\alpha$.
+
+This can be summarized by saying that $X$ can be canonically identified, via the map $t \to \delta_{t}$, with the subset of the dual $C_{0}(X)'$ consisting of the non-zero algebra homomorphisms, which is also the set of all normalized lattice homomorphisms.
+This identification is a topological isomorphisms with respect to the weak*-topology of $ C_{0}(X)' $.
+%% -- 
+\section{Linear Operators}\label{sec:b1-1.3}%
+\index{CoX@$C_{0}(X)$!Linear Operators}%
+\index{CoX@$C_{0}(X)$!Positive Linear Operators}%
+\index{CoX@$C_{0}(X)$!Markov Operator}%
+\index{CoX@$C_{0}(X)$!Lattice Homomorphisms}
+%% --
+A linear mapping $T$ from $C_{0}(X,\R)$ into $C_{0}(Y,\R)$ is called
+%% --
+\begin{enumerate}[\upshape (i), labelindent=.5em]
+
+\item
+\emph{positive} (notation: $T \geq 0$)  if $Tf$  is a positive whenever $ f $ is positive, 
+
+\item
+\emph{lattice homomorphism}  if $|Tf| = T|f|$  for all $ f $,
+
+\item
+\emph{Markov-operator}  if  $ X $ and $ Y $ are compact and $ T $ is a positive operator mapping $\1_{X}$ to $\1_{Y}$.
+
+\end{enumerate}
+%% --
+In the case of complex scalars, $T$ can be decomposed into real and imaginary parts.
+We call $T$ positive in this situation if the imaginary part of $T$ is $= 0$ and the real part is positive.
+The terms \emph{Markov operator} and \emph{lattice homomorphism} are defined as above.
+Note that a complex lattice homomorphism is necessarily positive, and that the \emph{complexification} of a real lattice homomorphism is a complex lattice homomorphism.
+Positive Operators are always continuous.
+
+Note that the adjoint of a Markov operator $T$ maps positive normalized measures into positive normalized measures while the adjoint of an algebra homomorphism (lattice homomorphism) maps point measures into (multiples of) point measures.
+Therefore the adjoint of a Markov lattice homomorphism as well as the adjoint of an algebra homomorphism induces a continuous map $\phi$ from $Y$ (viewed as a subset of the weak dual $C(Y)'$) into $X$ (viewed as a subset of $C(X)'$).
+
+This mapping $\phi$ determines $T$ in a natural and unique way, so that the following are equivalent assertions on a linear mapping $T$ from a space $C(X)$ into a space $C(Y)$.
+%% --
+\begin{enumerate}[\upshape (a)]
+\item 
+	$T$ is a Markov lattice homomorphism.
+\item 
+	$T$ is a Markov algebra homomorphism.
+\item 
+	There exists a continuous map $\phi$ from $Y$ into $X$ such that $Tf = f \circ \phi$ for all $f \in 	C(X)$.
+\end{enumerate}
+%% --
+If $T$ is, in addition, bijective, then the mapping $\phi$ in (c) is a homeomorphism from $Y$ onto $X$.
+This characterization of homomorphisms carries over mutatis mutandis to situations where the conditions on $X$, $Y$ or $T$ are less restrictive.
+For later reference we explicitly state the following.
+%% --
+\begin{enumerate}[\upshape (i), wide, labelindent=.5em]
+\item 
+	Let $K$ be compact. Then $ T \in \mathcal{L}(C(K)) $ is a lattice homomorphism if and only if there is a mapping 
+$\phi$ from $K$ into $K$ and a function $h \in C(K)$ such that $Tf(s) = h(s)f(\phi(s))$ holds for all $s \in K$.
+The mapping $\phi$ is continuous in every point $t$ with $h(t) \neq 0$.
+
+\item 
+	Let $X$ be locally compact and $T \in \mathcal{L}(C_{0}(X))$.
+Then $T$ is a lattice isomorphism if and only if there is a homeomorphism $\phi$ from $X$ onto $X$ and a bounded continuous function $h$ on $X$ such that $h(s) \geq \delta > 0$ for all $s$ and $Tf(s) = h(s)f(\phi(s))$ $(s \in X)$.
+Moreover, $T$ is an algebraic $*$-isomorphism if and only if $T$ is a lattice isomorphism and the function $h$ above is $\equiv \1$.
+\end{enumerate}
+
+%\section*{References}
+%\addcontentsline{toc}{section}{References}
+%% --
