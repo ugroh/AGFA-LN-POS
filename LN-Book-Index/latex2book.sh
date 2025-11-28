@@ -8,7 +8,7 @@
 autoload -U colors && colors
 
 # Hauptdatei
-MAIN_FILE="LN-Book.tex"
+MAIN_FILE="LN-Book-Index.tex"
 
 # Funktion für farbige Ausgabe
 print_status() {
@@ -45,7 +45,6 @@ clean() {
     find . -name "*.idx" -type f -delete
     find . -name "*.ind" -type f -delete
     find . -name "*.ilg" -type f -delete
-    find . -name "*.aux" -type f -delete
     print_success "Aufräumen abgeschlossen!"
 }
 
