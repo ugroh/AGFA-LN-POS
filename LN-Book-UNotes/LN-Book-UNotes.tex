@@ -2,11 +2,11 @@
 % !BIB program = bibtex
 \documentclass{book}
 %% -- Stand: 2025-11-28
-%% -- LN-Book-UNotes/ -> ./ für lokal
+%% -- ./ -> ./ für lokal
 %% --
 
-\input{LN-Book-UNotes/preamble/ln-preamble}  
-\input{LN-Book-UNotes/preamble/ln-definitionen}
+\input{./preamble/ln-preamble}  
+\input{./preamble/ln-definitionen}
 \setlist{$\bullet$, wide, labelindent=.5em,itemsep=.25em}
 \usepackage[square,numbers]{natbib}
 \usepackage[resetlabels]{multibib}
@@ -43,7 +43,7 @@
 \addcontentsline{toc}{chapter}{References} 
 {\RaggedRight
 \bibliographystyleEN{abbrvnat}
-\bibliographyEN{LN-Book-UNotes/bib/ln-references-EN}}
+\bibliographyEN{./bib/ln-references-EN}}
 %% --
 \end{document}
 
