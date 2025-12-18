@@ -62,7 +62,7 @@ A one-parameter semigroup $(T(t))_{t \geq 0}$ on a Banach space $E$ is strongly 
 
 \item 
 For every strongly continuous semigroup there exist constants $ M \geq 1 $, $ \omega \in \R $, such that 
-$ \lVert T(t) \rVert \leq M \cdot \mathrm{e}^{ \omega t} $ for every $  t \geq 0 $.
+$ \lVert T(t) \rVert \leq M \cdot \eu^{ \omega t} $ for every $  t \geq 0 $.
 
 \item If $ T(t)_{t\geq0} $ is a one-parameter semigroup such that $ \lVert T(t) \rVert $ is bounded for
 $ 0 < t \leq \delta $ then it is strongly continuous if and only if $ \lim_{t\to0} T(t)f = f $ for every 
@@ -74,12 +74,14 @@ $ f $ in a total subset of $ E $.
 The exponential estimate from Remark for the growth of $ \lVert T(t) \rVert $ can be used to define an important characteristic of the semigroup.
 %% --
 \begin{definition}\label{def:a1-1.3}
-\index{One-parameter semigroup!Growth Bound $\omega_{0}$}
-By the growth bound (or type) of the semigroup $ T(t)_{t\geq0} $ we understand the number $ \omega_{0} $,
+%%KGK
+%\index{One-parameter semigroup!Growth Bound $\omega_{0}$}
+By the \emph{growth bound} (or type) of the semigroup $ T(t)_{t\geq0} $ we understand the number $ \omega_{0} $,
+\index{growth bound}
 %% --
 \begin{align*}
 	\omega_{0} & \coloneq \inf \{ \omega \in \R   \colon \text{there exists $ M \in \R_{+} $   
- 		such that $\|T(t)\| \leq M \cdot  \mathrm{e}^{wt}$  for  $t \geq 0$} \} \\
+ 		such that $\|T(t)\| \leq M \cdot  \eu^{wt}$  for  $t \geq 0$} \} \\
 	={}& \lim_{t\to\infty} \frac{1}{t}\log\|T(t)\| = \inf_{t>0} \frac{1}{t}\log\|T(t)\| .
 \end{align*}
 %% --
@@ -101,7 +103,7 @@ Take
 	E = \C^{2}, \quad
 	A = \begin{pmatrix}0 & 1\\0 & 0\end{pmatrix} 
 	\quad \text{and} \quad 
-	T(t) =  \mathrm{e}^{tA} = \begin{pmatrix}1 & t\\0 & 1\end{pmatrix} .
+	T(t) =  \eu^{tA} = \begin{pmatrix}1 & t\\0 & 1\end{pmatrix} .
 \]
 %
 Then for the $\ell^{1}$-norm on $E$ we obtain $\|T(t)\| = 1 + t$, hence $(T(t))_{t\geq0}$ is an unbounded semigroup having growth bound $\omega_{0} = 0$.
@@ -128,7 +130,8 @@ Since for strongly continuous semigroups the functions $t \mapsto T(t)f$, $f \in
 We then obtain the \emph{generator} as a not necessarily everywhere defined operator.
 
 \begin{definition}\label{def:a1-1.5}
-\index{One-parameter semigroup!Generator}
+%%KGK
+%\index{One-parameter semigroup!Generator}
 To every semigroup $(T(t))_{t \geq 0}$ there belongs an operator $(A,D(A))$, called the \emph{generator} and defined on the \emph{domain}
 %% --
 \begin{align*}
@@ -231,6 +234,7 @@ The smallest closed extension of $(B,D(B))$ will be called the \emph{closure} $\
 In other words, the graph of $\overline{B}$ is the closure of $\{(f,Bf) \colon f \in D(B)\}$ in $E \times E$.
 
 Finally we call a subset $D_{0}$ of $D(B)$ a \emph{core} for $B$ if $D_{0}$ is $\|\cdot\|_{B}$-dense in $D(B)$.
+\index{core}
 This means that a closed operator is determined (via closure) by its restriction to a core in its domain.
 
 We now collect the fundamental topological properties of semigroup generators, their domains (see also A-II, Corollary~1.34) and their resolvents.
@@ -272,13 +276,13 @@ Then $B$ is closed, but $D(B^{2}) = \{0\}$.
 For the generator $A$ of a strongly continuous semigroup on a Banach space $E$ the following hold.
 If %
 \[
-	 \int_{0}^{\infty}  \mathrm{e}^{-\lambda t}T(t)f \dt 
+	 \int_{0}^{\infty}  \eu^{-\lambda t}T(t)f \dt 
 \]
 %
 exists for every $f \in E$ and some $\lambda \in \C$, then $\lambda \in \rho(A)$ and 
 %
 \[
-	R(\lambda,A)f = \int_{0}^{\infty}  \mathrm{e}^{-\lambda t}T(t)f  \dt.
+	R(\lambda,A)f = \int_{0}^{\infty}  \eu^{-\lambda t}T(t)f  \dt.
 \]
 %
 In particular,
@@ -286,7 +290,7 @@ In particular,
 \begin{equation}\label{eq:a1-1.7}
 R(\lambda,A)^{n+1}f 
 	= \frac{(-1)^{n}}{n!}\left(\frac{\diff{ }}{\diff\lambda}\right)^{n} R(\lambda,A)f 
-	= \int_{0}^{\infty}  \mathrm{e}^{-\lambda t}\frac{t^{n}}{n!}T(t)f  \dt
+	= \int_{0}^{\infty}  \eu^{-\lambda t}\frac{t^{n}}{n!}T(t)f  \dt
 \end{equation}
 %% --
 for every $f \in E$, $n \geq 0$ and $\lambda \in \C$ with $\Re(\lambda) > \omega_{0}$.
@@ -308,7 +312,9 @@ For continuous Banach space valued functions such as $t \mapsto T(t)f$ we consid
 Sometimes such integrals for strongly continuous semigroups are written as $\int_{a}^{b}T(t) \dt$ but understood in the strong sense.
 
 \item 
-Since the generator $(A,D(A))$ determines the semigroup $(T(t))_{t \geq 0}$ uniquely, we will speak occasionally of the growth bound of the generator instead of the semigroup, \ie we write $\omega_{0} = \omega_{0}(A) = \omega_{0}(\TT)$ where $\TT = (T(t))_{t \geq 0}$ denotes the semigroup .
+Since the generator $(A,D(A))$ determines the semigroup $(T(t))_{t \geq 0}$ uniquely, we will speak occasionally of the \emph{growth bound of the generator} instead of the semigroup, \ie we write $\omega_{0} = \omega_{0}(A) = \omega_{0}(\TT)$ where $\TT = (T(t))_{t \geq 0}$ denotes the semigroup.
+\index{growth bound!omega0@$\omega_0(A)$}
+\index{generator!growth bound}
 
 \item 
 For one-parameter groups it might seem to be more natural to define the generator as the \emph{derivative} rather than just the \emph{right derivative} at $t = 0$.
@@ -330,22 +336,24 @@ We refer to \citet[Proposition~1.14]{davies:1980} for the details.
 \end{remarks}
 %% --
 \section{Standard Examples}\label{sec:a1-2}%
-\index{Standard Examples}
+%%KGK kleinschreiben
+\index{standard example}
 %% --
 In this section we list and discuss briefly the most basic examples of semigroups together with their generators.
 These semigroups will reappear throughout this book and will be used to illustrate the theory.
 We start with the class of semigroups mentioned after Definition~\ref{def:a1-1.1} on p.~\pageref{def:a1-1.1}.
 %% --
 \subsection{Uniformly Continuous Semigroups}\label{subsec:a1-2.1}%
-\index{Standard Examples!Uniformly Continuous Semigroups}
+%%KGK kleinschreiben
+\index{standard example!uniformly continuous semigroup}
 %% --
 It follows from elementary operator theory that for every bounded operator $A$ in  $\LE$ the sum
 %% --
 \[
-    \sum_{n=0}^{\infty} \frac{t^{n}A^{n}}{n!} = \colon  \mathrm{e}^{tA}
+    \sum_{n=0}^{\infty} \frac{t^{n}A^{n}}{n!} = \colon  \eu^{tA}
 \]
 %% --
-exists and determines a unique uniformly continuous (semi)group $( \mathrm{e}^{tA})_{t \in \R}$ having $A$ as its generator.
+exists and determines a unique uniformly continuous (semi)group $( \eu^{tA})_{t \in \R}$ having $A$ as its generator.
 Conversely, any uniformly continuous semigroup is of this form.
 
 If the semigroup $(T(t))_{t \geq 0}$ is uniformly continuous, then 
@@ -376,11 +384,12 @@ Moreover, the growth bound $\omega_0$ satisfies $|\omega_0| \leq \|A\|$ in this 
 The above characterization of the generators of uniformly continuous semigroups as the bounded operators shows that these semigroups are---at least in many aspects---rather simple objects.
 %% --
 \subsection{Matrix Semigroups}\label{subsec:a1-2.2}%
-\index{Standard Examples!Matrix Semigroups}
+%%KGK kleinschreiben
+\index{standard example!matrix semigroup}
 %% --
 %% --
 The above considerations especially apply in the situation $E = M_{n}(\C)$.
-If $n = 2$ and $A \in E$, one can derive an explicit formula for $ \mathrm{e}^{tA}$. 
+If $n = 2$ and $A \in E$, one can derive an explicit formula for $ \eu^{tA}$. 
 
 Let %
 \[
@@ -413,13 +422,13 @@ Now we have to consider two cases.
 Then $\left( A - s/2 \cdot \Id \right)^{k} = D^{k} \cdot \Id = 0 $  for all $ (k \geq 2)$ and this implies 
 %
 \[
-	  \mathrm{e}^{t \cdot \left( A - s/2 \cdot \Id \right)} = \Id + t( A - s/2 \cdot \Id)
+	  \eu^{t \cdot \left( A - s/2 \cdot \Id \right)} = \Id + t( A - s/2 \cdot \Id)
 \]
 %
 or
 %
 \[
-	 \mathrm{e}^{t A } =  \mathrm{e}^{t\cdot s/2} \, [ ( 1 - \frac{s}{2} \, t )\cdot \Id + t \cdot A] .
+	 \eu^{t A } =  \eu^{t\cdot s/2} \, [ ( 1 - \frac{s}{2} \, t )\cdot \Id + t \cdot A] .
 \]
 %
 \item[$ D^{2} \neq 0 $: ]
@@ -432,7 +441,7 @@ In this case we obtain for every $ k \in \N $
 %%
 Thus 
 \begin{align*}
-	 \mathrm{e}^{t( A - s/2 \cdot \Id )} 
+	 \eu^{t( A - s/2 \cdot \Id )} 
 		& = \sum_{k=0}^\infty \frac{t^k}{k!}( A - s/2 \cdot \Id )^k 
 		= \sum_{ \text{k even} } (\cdots) + \sum_{ \text{k odd} } (\cdots)  \\
 	&= \cosh( t D ) \cdot \Id + \frac{1}{D} \sinh( t D )( A - s/2 \cdot \Id) \\
@@ -445,12 +454,12 @@ by using the power series representation of the hyperbolic functions $ \sinh $ a
 As summary  
 %% --
 \begin{equation*}\label{eq:exp-rep}
-	 \mathrm{e}^{tA} =
+	 \eu^{tA} =
 	\begin{cases}
-		 \mathrm{e}^{t \cdot s/2} \, \left[ \frac{1}{D} \sinh(t D)  \cdot A + 
+		 \eu^{t \cdot s/2} \, \left[ \frac{1}{D} \sinh(t D)  \cdot A + 
 			\left( \cosh(tD) - \frac{s}{2D} \sinh(tD) \right) \cdot \Id \right], & 
 									\text{if $ D \neq 0 $, } \\
-		 \mathrm{e}^{t \cdot s/2} \, \left[ ( 1 - \frac{s}{2} \, t )\cdot \Id + t \cdot A \right], &
+		 \eu^{t \cdot s/2} \, \left[ ( 1 - \frac{s}{2} \, t )\cdot \Id + t \cdot A \right], &
 									\text{if $ D = 0 $.}
 	\end{cases}
 \end{equation*}
@@ -461,18 +470,18 @@ $ D^{2} = s^{2}/4 - d $ can be positive or negative.
 \begin{description}[wide,  labelindent=0em]
 
 \item[$D^2 > 0$: ]
-Since $ \sinh $  is an odd function, we can choose  $ D > 0 $ in the formula for $  \mathrm{e}^{tA} $.
-Furthermore, $ \sinh $ and $ \cosh $ are (by definition) linear combinations of $  \mathrm{e}^{tD} $ and 
-$  \mathrm{e}^{-tD} $ simplifying our formula (see below).
+Since $ \sinh $  is an odd function, we can choose  $ D > 0 $ in the formula for $  \eu^{tA} $.
+Furthermore, $ \sinh $ and $ \cosh $ are (by definition) linear combinations of $  \eu^{tD} $ and 
+$  \eu^{-tD} $ simplifying our formula (see below).
 
 \item[$D^2 < 0$: ] 
 In this case $D = \pm \im|D|$.
 For $ z \in \C $ we have the following identities
 %
 \[
-	\sinh(\im z) = \frac{1}{2}(  \mathrm{e}^{\im z} -  \mathrm{e}^{-\im z}) = \im \sin(z)
+	\sinh(\im z) = \frac{1}{2}(  \eu^{\im z} -  \eu^{-\im z}) = \im \sin(z)
 	\quad \text{and} \quad
-	\cosh(\im z) = \frac{1}{2}(  \mathrm{e}^{ \im z} +  \mathrm{e}^{- \im z}) = \cos(z). 
+	\cosh(\im z) = \frac{1}{2}(  \eu^{ \im z} +  \eu^{- \im z}) = \cos(z). 
 \]
 %
 Hence $ \sinh $ is an odd function,  $\sinh(\im |D| t ) = \im \, \sin(t|D|)$ and $\cosh(\im |D| t ) = \cos(|D| t )$
@@ -493,14 +502,15 @@ Here are some simple examples.
 %% --
 \[
   \begin{array}{lllll}
-    A= & \ABC & \implies &  \mathrm{e}^{tA}= & \BBC \\\\
-    A= & \CBC & \implies &  \mathrm{e}^{tA}= & \DBC \\\\ 
-    A= & \EBC & \implies &  \mathrm{e}^{tA}= & \FBC  
+    A= & \ABC & \implies &  \eu^{tA}= & \BBC \\\\
+    A= & \CBC & \implies &  \eu^{tA}= & \DBC \\\\ 
+    A= & \EBC & \implies &  \eu^{tA}= & \FBC  
   \end{array}
 \]
 %% --
 \subsection{Multiplication Semigroups}\label{subsec:a1-2.3}%
-\index{Standard Examples!Multiplication Semigroups}
+%%KGK kleinschreiben
+\index{standard example!multiplication semigroup}
 %% --
 Many Banach spaces appearing in applications are Banach spaces of (real or) complex valued functions over a set $X$.
 %% --
@@ -588,7 +598,8 @@ We point out that the above results cover the cases of sequence spaces such as $
 An abstract characterization of generators of multiplication semigroups will be given in C-II, Theorem~5.13.
 %% --
 \subsection{Translation (Semi)Groups}\label{subsec:a1-2.4}%
-\index{Standard Examples!Translation Semigroups}
+%%KGK kleinschreiben
+\index{standard example!translation semigroup}
 %% --
 Let $E$ to be one of the following function spaces $C_{0}(\R_{+})$, $C_{0}(\R)$, $L^{p}(\R_{+})$ or $L^{p}(\R)$ for $1 \leq p < \infty$.
 Define $T(t)$ to be the (left) translation operator
@@ -670,12 +681,13 @@ hence $f \in D(A)$.
 \end{proof}
 %% --
 \subsection{Rotation Groups}\label{subsec:a1-2.5}%
-\index{Standard Examples!Rotation Groups}
+%%KGK kleinschreiben
+\index{standard example!rotation group}
 %% --
 On $E = C(\Gamma)$, \resp $E = L^{p}(\Gamma,m)$, $1 \leq p < \infty$, $m$ Lebesgue measure we have canonical groups defined by rotations of the unit circle $\Gamma$ with a certain period, \ie for $0 < \tau \in \R$ the operators
 %% --
 \[
-    R_{\tau}(t)f(z) \coloneqq f( \mathrm{e}^{2\pi \im t/\tau}\cdot z), \quad z \in \Gamma
+    R_{\tau}(t)f(z) \coloneqq f( \eu^{2\pi \im t/\tau}\cdot z), \quad z \in \Gamma
 \]
 %% --
 yield a group $(R_{\tau}(t))_{t \in \R}$ having period $\tau$, \ie $R_{\tau}(\tau) = \Id$.
@@ -711,7 +723,8 @@ with generator
 \]
 %% --
 \subsection{Nilpotent Translation Semigroups}\label{subsec:a1-2.6}%
-\index{Standard Examples!Nilpotent Translation Semigroups}
+%%KGK kleinschreiben
+\index{standard example!nilpotent translation semigroup}
 %% --
 Take $E = L^{p}([0,\tau],m)$ for $1 \leq p < \infty$ and define
 %% --
@@ -733,7 +746,8 @@ In fact, if $f \in D(A)$, then $f$ is absolutely continuous with $f' \in E$.
 By Proposition~\ref{prop:a1-1.6}\,(i), it follows that $T(t)f$ is absolutely continuous and hence $f(\tau) = 0$.
 %% --
 \subsection{One-dimensional Diffusion Semigroup}\label{subsec:a1-2.7}%
-\index{Standard Examples!One-dimensional Diffusion Semigroup}
+%%KGK kleinschreiben
+\index{standard example!one-dimensional diffusion semigroup}
 %% --
 For the second derivative 
 %% --
@@ -807,7 +821,8 @@ Finally, we observe that $E_{0}$ is a core for $(A,D(A))$ by Proposition~1.9(ii)
 Consequently, $(T(t))_{t \geq 0}$ is the semigroup generated by the closure of the second derivative with domain $D(B)$.
 %% --
 \subsection{n-dimensional Diffusion Semigroup}\label{subsec:a1-2.8}%
-\index{Standard Examples!$n$-dimensional Diffusion Semigroup}
+%%KGK kleinschreiben
+\index{standard example!$n$-dimensional diffusion semigroup}
 %% --
 On $E = L^{p}(\R^{n})$, $1 \leq p \leq \infty$, the operators
 %% --
@@ -874,7 +889,8 @@ Analogous examples to \ref{subsec:a1-2.7} are valid in $L^{p}\left[ 0,1 \right]$
 \ref{subsec:a1-2.8} in $C_{0}(\R^{n})$.
 %% --
 \section{Standard Constructions}\label{sec:a1-3}%
-\index{Standard Constructions}
+%%KGK kleinschreiben
+\index{standard construction}
 %% --
 Starting with a semigroup $(T(t))_{t \geq 0}$ on a Banach space $E$ it is possible to construct new semigroups on spaces naturally associated with $E$.
 Such constructions will be important technical devices in many of the subsequent proofs.
@@ -883,7 +899,7 @@ Although most of these constructions are rather routine, we present in the seque
 We always start with a semigroup $(T(t))_{t \geq 0}$ on a Banach space $E$, and denote its generator by $A$ on the domain $D(A)$.
 %% --
 \subsection{Similar Semigroups}\label{subsec:a1-3.1}%
-\index{Standard Constructions!Similar Semigroups}
+\index{standard construction!similar semigroup}
 %% --
 There is an easy way how to obtain different (but isomorphic) semigroups out of a given semigroup $(T(t))_{t \geq 0}$ on a Banach space $E$.
 
@@ -898,7 +914,8 @@ If $A$ is the generator of $(T(t))_{t \geq 0}$ then
 is the generator of $(S(t))_{t \geq 0}$.
 %% --
 \subsection{The Rescaled Semigroup}\label{subsec:a1-3.2}%
-\index{Standard Constructions!Rescaled Semigroup}
+%%KGK kleinschreiben
+\index{standard construction!rescaled semigroup}
 %% --
 For fixed $\lambda \in \C$ and $\alpha > 0$ the operators
 %% --
@@ -920,21 +937,22 @@ Another application is the following.
 For $\lambda \in \C$ and $S(t) \coloneqq \exp(-\lambda t)T(t)$ the formulas \eqref{eq:a1-1.3} and \eqref{eq:a1-1.4} yield:
 %% --
 \begin{align*}
-     \mathrm{e}^{-\lambda t}T(t)f - f &= (A-\lambda) \int_{0}^{t}  \mathrm{e}^{-\lambda s}T(s)f \ds \quad\text{ or }\notag \\
-    ( \mathrm{e}^{\lambda t}-T(t))f &= (\lambda-A) \int_{0}^{t}  \mathrm{e}^{\lambda(t-s)}T(s)f \ds \quad \text{for } f \in E, %\tag{3.1}
+     \eu^{-\lambda t}T(t)f - f &= (A-\lambda) \int_{0}^{t}  \eu^{-\lambda s}T(s)f \ds \quad\text{ or }\notag \\
+    ( \eu^{\lambda t}-T(t))f &= (\lambda-A) \int_{0}^{t}  \eu^{\lambda(t-s)}T(s)f \ds \quad \text{for } f \in E, %\tag{3.1}
 \end{align*}
 %% --
 and
 %% --
 \begin{align*}
-     \mathrm{e}^{-\lambda t}T(t)f - f &= \int_{0}^{t}  \mathrm{e}^{-\lambda s}T(s)(A-\lambda)f \ds  \quad\text{or}\notag \\
+     \eu^{-\lambda t}T(t)f - f &= \int_{0}^{t}  \eu^{-\lambda s}T(s)(A-\lambda)f \ds  \quad\text{or}\notag \\
     \notag \\
-    ( \mathrm{e}^{\lambda t} - T(t))f &= \int_{0}^{t}  \mathrm{e}^{\lambda(t-s)}T(s)(\lambda-A)f \ds \quad \text{for } f \in D(A). %\tag{3.2}
+    ( \eu^{\lambda t} - T(t))f &= \int_{0}^{t}  \eu^{\lambda(t-s)}T(s)(\lambda-A)f \ds \quad \text{for } f \in D(A). %\tag{3.2}
 \end{align*}
 %% --
 %% --
 \subsection{The Subspace Semigroup}\label{subsec:a1-3.3}%
-\index{Standard Constructions!Subspace Semigroup}
+%%KGK kleinschreiben
+\index{standard construction!subspace semigroup}
 %% --
 Assume $F$ to be a closed $(T(t))$-invariant or, equivalently, $R(\lambda,A)$-invariant for 
 $\lambda \in \C$, 
@@ -956,7 +974,8 @@ An $A$-invariant subspace need not necessarily be $(T(t))$-invariant:
 Take for example the translation group with $(T(t)f)(x) = f(x+t)$ on $E = C_{0}(\R)$ and the subspace $F \coloneqq \{f \in E \colon f(x) = 0 \text{ for } x \leq 0\}$.
 %% --
 \subsection{The Quotient Semigroup}\label{subsec:a1-3.4}%
-\index{Standard Constructions!Quotient Semigroup}
+%%KGK kleinschreiben
+\index{standard construction!quotient semigroup}
 %% --
 Let $F$ be a closed $(T(t))$-invariant subspace of $E$ and consider the quotient space $ E_{/}\coloneqq \sfrac{E}{F} $ with quotient map $q \colon E \to E_{/}$. 
 The quotient operators
@@ -978,16 +997,18 @@ for every $f \in D(A)$.
 Here we use the fact that every $\hat{f} \coloneqq q(f) \in D(A_{/})$ can be written as
 %% --
 \[
-    \hat{f} = \int_{0}^{\infty}  \mathrm{e}^{-\lambda s} \hat{T}(s)_{/}\hat{g} \ds 
-    = \int_{0}^{\infty}  \mathrm{e}^{-\lambda s}q(T(s)g) \ds 
-    = q\left(\int_{0}^{\infty}  \mathrm{e}^{-\lambda s}T(s)g \ds\right) = q(h)
+    \hat{f} = \int_{0}^{\infty}  \eu^{-\lambda s} \hat{T}(s)_{/}\hat{g} \ds 
+    = \int_{0}^{\infty}  \eu^{-\lambda s}q(T(s)g) \ds 
+    = q\left(\int_{0}^{\infty}  \eu^{-\lambda s}T(s)g \ds\right) = q(h)
 \]
 %% --
 where $h \in D(A)$ and $\lambda > \omega$ (see Proposition~\ref{prop:a1-1.6}).
 In particular we point out that for every $\hat{f} \in D(A_{/})$ there exist representatives $f \in \hat{f}$ belonging to $D(A)$.
 %% --
 \begin{example*}\label{ex:a1-3.1}%
-\index{Standard Examples!Translation Semigroup on $L^{1}$}
+%%KGK kleinschreiben + kuerzen
+%\index{standard example!translation semigroup on $L^{1}$}
+\index{standard example!translation semigroup}
 %%
 We start with the Banach space $E = L^{1}(\R)$ and the translation semigroup $(T(t))_{t \geq 0}$ where $T(t)f(x) \coloneqq f(x+t)$ (see Example 2.4).
 Then $L^{1}((-\infty,1])$ can be identified with the closed, $(T(t))$-invariant subspace
@@ -1029,7 +1050,9 @@ In particular it follows that the domain of its generator is
 \end{example*}
 %% --
 \subsection{The Adjoint Semigroup}\label{subsec:a1-3.5}%
-\index{Standard Constructions!Adjoint Semigroup}
+%%KGK kleinschreiben
+\index{standard construction!adjoint semigroup}
+\index{adjoint semigroup}
 %% --
 The adjoint operators $(T(t)')_{t \geq 0}$ of a strongly continuous semigroup $(T(t))_{t \geq 0}$ on a Banach space $E$ form a semigroup on $E'$ which need, however, not be strongly continuous.
 %% --
@@ -1199,7 +1222,8 @@ Obviously, the function $x \mapsto |\sin x|$ belongs to $D(A')$, but not to $D(A
 \end{example*}
 %% --
 \subsection{The Associated Sobolev Semigroups}\label{subsec:a1-3.6}%
-\index{Standard Constructions!Associated Sobolev Semigroups}
+%%KGK kleinschreiben
+\index{standard construction!associated Sobolev semigroup}
 %% --
 Since the generator $A$ of a strongly continuous semigroup $(T(t))_{t\geq 0}$ is closed, its domain $D(A)$ becomes a Banach space for the graph norm
 %% --
@@ -1307,10 +1331,13 @@ Then $(T(t))_{t \geq 0}$ extends continuously to a strongly continuous semigroup
 \end{remarks*}
 %% --
 \subsection{The \texorpdfstring{$\mathcal{F}$}{F}-Product Semigroup}\label{subsec:a1-3.7}%
-\index{Standard Constructions!fprod@$\mathcal{F}$-Product!Semigroup}
+%%KGK ????
+%\index{Standard Constructions!fprod@$\mathcal{F}$-Product!Semigroup}
+\index{standard construction!fprod@$\mathcal{F}$-Product semigroup}
 %% --
 It is standard in functional analysis to consider a sequence of points in a certain space as a point in a new and larger space.
 In particular such a method can serve to convert an approximate eigenvector of a linear operator into an eigenvector.
+\index{approximate eigenvector}
 Occasionally we will need such a construction and refer to Section V.1 of \citet{schaefer:1974}. 
 
 If we try to adapt this construction to strongly continuous semigroups we encounter the difficulty that the semigroup extended to the larger space will not remain strongly continuous.
@@ -1380,6 +1407,7 @@ We call the quotient spaces
 \]
 %% --
 the \emph{$\mathcal{F}$-product of $E$} and the \emph{$ \mathcal{F} $-product of $E$ with respect to the semigroup $T$}, respectively.
+\index{F-product@$\mathcal{F}$-product}
 
 Thus $E_{\mathcal{F}}^{T}$ can be considered as a closed linear subspace of $E_{\mathcal{F}}$. 
 We have $E_{\mathcal{F}}^{T} = E_{\mathcal{F}}$ if (and only if) $T$ has a bounded generator.
@@ -1421,7 +1449,8 @@ We will show in A-III, Section~4.2 that the above construction preserves and eve
 
 %% --
 \subsection{The Tensor Product Semigroup}\label{subsec:a1-3.8}%
-\index{Standard Constructions!Tensor Product Semigroup}
+%%KGK kleinschreiben - singular
+\index{standard construction!tensor product semigroup}
 
 %% --
 Real- or complex-valued functions of two variables $x$, $y$ are often limits of functions of the form $\sum_{i=1}^{n} f_{i}(x)g_{i}(y)$ which, to some extent, allows one to consider the variables $x$ and $y$ separately.
@@ -1546,7 +1575,8 @@ Moreover, $D(A) \otimes D(B)$ is dense in $E \widetilde{\otimes}_{\alpha} F$ and
 \end{proof}
 %% --
 \subsection{The Product of Commuting Semigroups}\label{subsec:a1-3.9}%
-\index{Standard Constructions!Commuting Semigroups}
+%%KGK kleinschreiben - singular
+\index{standard construction!commuting semigroup}
 %% --
 Let $(S(t))_{t\geq 0}$ and $(T(t))_{t\geq 0}$ be semigroups with generators $A$ and $B$, respectively on some Banach space $E$.
 It is not difficult to see that the following assertions are equivalent.

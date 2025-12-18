@@ -528,7 +528,7 @@ This is no longer true in the non commutative case.
 For $0 \neq \lambda \in \im\R$ and $t \in \R$ let
 %% --
 \[
-u_{t} \coloneqq \begin{pmatrix} 1 & 0 \\ 0 & \mathrm{e}^{\lambda t} \end{pmatrix} \in M_{2}(\C) .
+u_{t} \coloneqq \begin{pmatrix} 1 & 0 \\ 0 & \eu^{\lambda t} \end{pmatrix} \in M_{2}(\C) .
 \]
 %% --
 The semigroup of *-automorphisms $(x \mapsto u_{t}xu_{t}^{*})$ on $M_{2}(\C)$ is identity preserving and of Schwarz type, but the spectrum of its generator is $\{0, \lambda, \lambda^{*}\}$ hence is not additively cyclic.
@@ -542,6 +542,8 @@ Recall that a semigroup $\SG$ of positive operators on an ordered Banach space $
 In the context of \WA-algebras $M$ we call a semigroup $\SG$ of positive maps on $M$ \emph{weak*-irreducible} if no $\sigma(M,M_{*})$-closed face of $M_{+}$ is $\SG$-invariant.
 
 Since the norm closed faces of $M_{*}$ and the $\sigma(M,M_{*})$-closed faces of $M$ are related by formation of polars with respect to the dual system $\langle M,M_{*} \rangle$ (see \citet[Theorem 3.6.11 and Theorem 3.10.7.]{pedersen:1979}) a semigroup $\SG$ is (norm) irreducible on $M_{*}$ if and only if its adjoint semigroup is weak*-irreducible.
+%% --
+\index{irreducible semigroup}
 %% --
 \begin{theorem}\label{thm:d3-1.11}
 Let $\TT$ be an irreducible, identity preserving semigroup of Schwarz type with generator $A$ on the predual of a \WA-algebra and suppose $P\sigma(A) \cap \im\R \neq \emptyset$.
@@ -675,7 +677,7 @@ Then $(U)^{-} = N_{*}$.
 For each $\psi \in U$ there exists $\eta \in H$ such that
 %% --
 \[
-\{T_{0}(t)\psi \colon t \in \R_{+}\} = \{\mathrm{e}^{-\eta t}\psi \colon t \in \R_{+}\} .
+\{T_{0}(t)\psi \colon t \in \R_{+}\} = \{\eu^{-\eta t}\psi \colon t \in \R_{+}\} .
 \]
 %% --
 Consequently this set is relatively compact in $L_{s}(N_{*})$.
@@ -685,14 +687,14 @@ Next choose $\psi_{1}, ..., \psi_{n} \in U$, $0 < s \in \R$ and $\delta > 0$.
 Since 
 %% --
 \[
-T_{0}(t)\psi_{i} = \mathrm{e}^{\eta_{i}t}\psi_{i} 
+T_{0}(t)\psi_{i} = \eu^{\eta_{i}t}\psi_{i} 
 \quad (1 \leq i \leq n)
 \]
 %% --
 for some $\eta_{i} \in H$, it follows from a theorem of Kronecker (see, \citet[Satz 6.1., p.77]{jacobs:1972}) that there exists $s < t$ such that
 %% --
 \[
-|(1,1, ..., 1) - (\mathrm{e}^{\eta_{1}t}, \mathrm{e}^{\eta_{2}t}, ..., \mathrm{e}^{\eta_{n}t})| < \delta ,
+|(1,1, ..., 1) - (\eu^{\eta_{1}t}, \eu^{\eta_{2}t}, ..., \eu^{\eta_{n}t})| < \delta ,
 \]
 %% --
 hence

@@ -1,9 +1,11 @@
 % !TEX root = ../LN-Index.tex
 %% -- 
 %% --Stand 2025-11-28
+%% -- Stand: 2025-12-04 KGK Indexanpassung
 %% --
 \chapternopage{Basic Results on Semigroups and Operator Algebras}\label{chap:d1}
-\index{Operator Algebras}
+%%KGK kleinschreiben
+\index{operator algebra}
 %% --
 %% --
 {\Large
@@ -73,13 +75,15 @@ We call a contraction $ T \in \L{M} $ a \emph{Schwarz map} if $ T $ satisfies th
 %% --
 for all $ x \in M $.
 It is well known that every $n$-positive contraction, for $ n \geq 2 $ and every positive contraction on a commutative \CA-algebra is a Schwarz map. (\citet[Chapter IV]{takesaki:1979})
-\index{Operator Algebras!Schwarz map}
+%%KGK kleinschreiben
+\index{Schwarz map}
 As we shall see, the Schwarz inequality is crucial for our investigations.
 
 \item 
 If $ M $ is a \CA-algebra, we assume that $ \TT = (T(t))_{t \geq 0} $ is a strongly continuous semigroup (abbreviated as semigroup), while for \WA-algebras we consider weak*-semigroups, \ie the mapping $ (t \mapsto T(t)x) $ is continuous from $ \R_{+} $ into $ (M,\sigma(M,M_{*}))$, where $ M_{*} $ is the predual of $ M $, and every $ T(t) \in \TT $ is $ \sigma(M,M_{*}) $-continuous.
 Note that the preadjoint semigroup
-\index{Operator Algebras!Preadjoint Semigroup}
+%%KGK
+%\index{Operator Algebras!Preadjoint Semigroup}
 %% --
 \[
 	\TT_{*} = \{ T(t)_{*} \colon T(t) \in \TT \}
@@ -96,14 +100,15 @@ For the notations concerning one-parameter semigroups we refer to Part A.
 In addition, we recommend to compare the results of this section with the corresponding results for commutative \CA-algebras, \ie for $ C_{0}(X) $, $ C(K) $ and $ L^\infty(\mu) $ in Part B.
 %% --
 \section{A Fundamental Inequality for the Resolvent}\label{sec:d1-2}
-\index{Operator Algebras!Inequality for the resolvent}
+%%KGK
+%\index{Operator Algebras!Inequality for the resolvent}
 %% --
 If $ \TT = (T(t))_{t \geq 0} $ is a strongly continuous semigroup of Schwarz maps on a \CA-algebra $ M $ (\resp a weak*-semigroup of Schwarz type on a \WA-algebra $ M $) with generator $ A $, then the spectral bound satisfies $ s(A) \leq 0 $.
 The resolvent $ R(\lambda, A) $ exists for $ \Re(\lambda) > 0 $ and is positive for $ \lambda \in \R_{+} $.
 There exists a representation for the resolvent $ R(\lambda,A) $ given by the formula
 %% --
 \[
- 	R(\lambda,A)x = \int_{0}^\infty \mathrm{e}^{-\lambda t} T(t)x  \dt  \quad (x \in M)
+ 	R(\lambda,A)x = \int_{0}^\infty \eu^{-\lambda t} T(t)x  \dt  \quad (x \in M)
 \]
 %% --
 where the integral exists in the norm topology.
@@ -154,13 +159,13 @@ Then for all $ \mu \in \R_{+} $ and $ x \in M $
 %% --
 \begin{align*}
 	 {}& \left( R(\mu,B)x  \right) \left( R(\mu,B)x \right)^{*} 
-		= \left( \int_{0}^\infty \mathrm{e}^{-\mu r}S(r)x \dr \right)
-			\left( \int_{0}^\infty \mathrm{e}^{-\mu t}S(t)x \dt \right)^{*}   \\
-	&\phantom{=}= \frac{1}{2} \left( \int_{0}^\infty \int_{0}^\infty \mathrm{e}^{-\mu(r+t)} ((S(r)x)(S(t)x)^{*}  
+		= \left( \int_{0}^\infty \eu^{-\mu r}S(r)x \dr \right)
+			\left( \int_{0}^\infty \eu^{-\mu t}S(t)x \dt \right)^{*}   \\
+	&\phantom{=}= \frac{1}{2} \left( \int_{0}^\infty \int_{0}^\infty \eu^{-\mu(r+t)} ((S(r)x)(S(t)x)^{*}  
 			+ (S(t)x)(S(r)x)^{*}  \dr \dt \right) \\
-	&\phantom{=}\leq \frac{1}{2} \left(\int_{0}^\infty \int_{0}^\infty \mathrm{e}^{-\mu(r+t)} (T(r)xx^{*} + T(t)xx^{*})  			\dr \dt \right)\\
-	&\phantom{=}= \left( \int_{0}^\infty \mathrm{e}^{-\mu s} ds \right)
-			\left( \int_{0}^\infty \mathrm{e}^{-\mu t}T(t)xx^{*} \dt \right) 
+	&\phantom{=}\leq \frac{1}{2} \left(\int_{0}^\infty \int_{0}^\infty \eu^{-\mu(r+t)} (T(r)xx^{*} + T(t)xx^{*})  			\dr \dt \right)\\
+	&\phantom{=}= \left( \int_{0}^\infty \eu^{-\mu s} ds \right)
+			\left( \int_{0}^\infty \eu^{-\mu t}T(t)xx^{*} \dt \right) 
 				= \mu^{-1}R(\mu,A)xx^{*}
 \end{align*}
 %% --
@@ -190,7 +195,7 @@ Let $ \lambda \in \C $ with $ \Re(\lambda) > 0 $.
 Then the semigroup
 %% --
 \[
-S \coloneqq \left(\mathrm{e}^{- \im  (\lambda) t }T(t) \right)_{t \geq 0}
+S \coloneqq \left(\eu^{- \im  (\lambda) t }T(t) \right)_{t \geq 0}
 \]
 %% --
 fulfills the assumption of Theorem~\ref{thm:d1-2.1} and $ B \coloneqq A - \im \lambda $ is the generator of $ S $.
@@ -223,7 +228,8 @@ for all $ \lambda $, $ \mu $ in $ D $ and $ R \in \mathcal{R} $.
 \end{definition}
 %% --
 If $ \mathcal{R} $ is a {pseudo-resolvent} on $ D = \{\lambda \in \C \colon \Re(\lambda) > 0\} $ with values in a \CA- or \WA-algebra, then $ \mathcal{R} $ is called of \emph{Schwarz type} 
-\index{Operator Algebras!Pseudo-Resolvent of Schwarz type}
+%%KGK
+%\index{Operator Algebras!Pseudo-Resolvent of Schwarz type}
 if
 %% --
 \[
@@ -273,7 +279,8 @@ is identity preserving.
 By Corollary \ref{cor:d1-2.2} an analogous statement holds for \emph{Schwarz type}.
 %% --
 \section{Induction and Reduction}
-\index{Operator Algebras!Induction and Reduction}
+%%KGK
+%\index{Operator Algebras!Induction and Reduction}
 %% --
 \begin{enumerate}[1., wide, labelindent=.5em]
 \item

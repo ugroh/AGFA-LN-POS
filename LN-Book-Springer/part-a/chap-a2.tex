@@ -1,6 +1,7 @@
-% !TEX root = ../LN-Book.tex
+% !TEX root = ../LN-Index.tex
 %% --
-%% -- Stand 2025-11-28 
+%% --Stand 2025-11-28
+%% -- Stand: 2025-12-05 KGK Indexanpassung
 %% --
 %% --
 \setcounter{chapter}{1}
@@ -31,7 +32,9 @@ The last section contains a surprising result: on certain Banach spaces (\eg $L^
 %% --
 %\newpage
 \section{The Abstract Cauchy Problem, Special Semigroups and Perturbation} \label{sec:a2-1}%
-\index{Semigroups!Abstract Cauchy problem}
+%%KGK kleinschreiben - singular
+%%GG\index{semigroup!abstract Cauchy problem}
+\index{abstract Cauchy problem}
 %% --
 \hspace{1cm}{\Large by Wolfgang Arendt}
 \vspace{.5cm}
@@ -356,7 +359,7 @@ Let $\lambda > \omega(A)$.
 Then there exists $g \in D(A)$ such that $(\lambda-B)f = (\lambda-A)g$.
 Let $h = f - g$.
 Then $h \in \ker(\lambda-B)$.
-Define $u$ by $u(t) = \mathrm{e}^{\lambda t}h + T(t)g$.
+Define $u$ by $u(t) = \eu^{\lambda t}h + T(t)g$.
 Then $u$ is a solution $\text{ACP}(B)$ with initial value $f$.
 It follows from Corollary 1.2 that there exists a non-trivial solution for the initial value $0$.
 \end{remark*}
@@ -397,7 +400,9 @@ Since $D(A)$ is dense, this implies the strong continuity of $(T(t))_{t \in \R}$
 \end{proof}
 %%
 \subsection{The Hille-Yosida Theorem} \label{subsec:a2-1.se3}%
-\index{Semigroups!Hille-Yosida theorem}
+%%KGK kleinschreiben - singular
+\index{semigroup!Hille-Yosida theorem}
+\index{Hille-Yosida theorem|(}
 %% --
 Given an operator $A$, frequently it is easier to obtain information about its resolvent than to solve the Cauchy problem.
 Therefore the following theorem is central in the theory of one-parameter semigroups.
@@ -443,13 +448,13 @@ Let $A$ be the generator of a strongly continuous semigroup
 $(T(t))_{t \geq 0}$.
 For $\lambda > 0$ let 
 \[
-A(\lambda) = \lambda^{2} R(\lambda,A)-\lambda Id  =\lambda A R(\lambda,A).
+A(\lambda) = \lambda^{2} R(\lambda,A)-\lambda \Id  =\lambda A R(\lambda,A).
 \]
 %% --
 Then
 %% –
 \begin{equation}\label{eq:a2-1.2}
-    T(t)f = \lim_{\lambda \to \infty} \mathrm{e}^{tA(\lambda)}f
+    T(t)f = \lim_{\lambda \to \infty} \eu^{tA(\lambda)}f
 \end{equation}
 %% –
 for all $f \in E$ and $t \geq 0$.
@@ -460,19 +465,22 @@ Yosida's proof consists in showing that the limit in \eqref{eq:a2-1.2} exists un
 
 The proof of Hille (see \citet{kato:1966}) is inspired by the following formula.
 %%
+%%GG
+\index{Hille-Yosida theorem|)}
 \begin{proposition}\label{prop:a2-1.10}
 Let $A$ be the generator of a strongly continuous semigroup $(T(t))_{t \geq 0}$.
 Then
 %% –
 \begin{equation}\label{eq:a2-1.3}
-    T(t)f = \lim_{n \to \infty} (Id - t/nA)^{-n} f = \lim_{n \to \infty} (n/t \cdot R(n/t,A))^{n} f
+    T(t)f = \lim_{n \to \infty} (\Id - t/nA)^{-n} f = \lim_{n \to \infty} (n/t \cdot R(n/t,A))^{n} f
 \end{equation}
 %% –
 for all $f \in E$ and $t \geq 0$.
 \end{proposition}
 %% --
 \subsection{Holomorphic semigroups} \label{subsec:a2-1.se4}%
-\index{Semigroups!Holomorphic semigroups}
+%%KGK kleinschreiben - singular
+\index{semigroup!holomorphic semigroup}
 
 We now describe a hierarchy of smoothness conditions on the semigroup, starting with the most restrictive class; namely, holomorphic semigroups.
 The generators of these semigroups can be characterized by a particularly simple condition.
@@ -480,7 +488,7 @@ The generators of these semigroups can be characterized by a particularly simple
 For $\alpha \in (0,\pi]$ we define the sector $S(\alpha)$ in the complex plane by
 %% –
 \[
-    S(\alpha) = \{r\mathrm{e}^{\im\theta} \colon r \geq 0, \theta \in (-\alpha,\alpha)\} .
+    S(\alpha) = \{r\eu^{\im\theta} \colon r \geq 0, \theta \in (-\alpha,\alpha)\} .
 \]
 %% –
 
@@ -546,15 +554,15 @@ Then $A^{2}$ generates a bounded holomorphic semigroup of angle $\pi/2$.
 Let $0 < \alpha_{1} < \pi/2$ and $\lambda \in S(\alpha_{1} + \pi/2)$.
 There exists $r > 0$ and $\beta \in (-\beta_{1},\beta_{1})$,
 where $\beta_{1} \coloneqq (\alpha_{1} + \pi/2)/2$
-such that $\lambda = r^{2}\mathrm{e}^{i2\beta}$.
+such that $\lambda = r^{2}\eu^{i2\beta}$.
 Then 
 \[
-(\lambda - A^{2}) = (r\mathrm{e}^{\im\beta} - A)(r\mathrm{e}^{\im\beta} + A) \, .
+(\lambda - A^{2}) = (r\eu^{\im\beta} - A)(r\eu^{\im\beta} + A) \, .
 \] 
 It follows that $\lambda \in \rho(A)$ and 
 %%--
 \begin{equation}\label{eq:a2-1.7}
-    R(\lambda,A^{2}) = R(r\mathrm{e}^{\im\beta},A)R(r\mathrm{e}^{-\im\beta},-A) \, .
+    R(\lambda,A^{2}) = R(r\eu^{\im\beta},A)R(r\eu^{-\im\beta},-A) \, .
 \end{equation}
 %% –
 Since $A$ generates a bounded group, there exists a constant $N \geq 0$ such that \\ 
@@ -752,9 +760,9 @@ Choose $\beta \in (\pi/4,\pi/2)$ such that $\tan(\alpha + \pi/2) > 2\epsilon/(\e
 Now let $\lambda \in S(\alpha+\pi/2)\setminus B(r_{0})$.
 Then there exist $\theta \in (-\beta,\beta)$ 
 and $r \geq 0$
-such that $\lambda = (r\mathrm{e}^{\im\theta}+\omega)^2$.
-Thus $(\lambda-A^2) = (r\mathrm{e}^{\im\theta}+w - A)(r\mathrm{e}^{\im\theta}+w + A)$.
-Hence $\lambda \in \rho(A^2)$ and $R(\lambda,A^2) = R(r\mathrm{e}^{\im\theta},A-w)R(r\mathrm{e}^{\im\theta},-A-w)$.
+such that $\lambda = (r\eu^{\im\theta}+\omega)^2$.
+Thus $(\lambda-A^2) = (r\eu^{\im\theta}+w - A)(r\eu^{\im\theta}+w + A)$.
+Hence $\lambda \in \rho(A^2)$ and $R(\lambda,A^2) = R(r\eu^{\im\theta},A-w)R(r\eu^{\im\theta},-A-w)$.
 We conclude that 
 %%
 \[
@@ -777,7 +785,8 @@ $\|R(\lambda,\pm A - w)\| \leq M/\Re(\lambda)$ for some $M \geq 0$, $w \geq 0$, 
 %% –
 
 \subsection{Differentiable semigroups} \label{subsec:a2-1.se5}%
-\index{Semigroups!Differentiable Semigroups}
+%%KGK kleinschreiben - singular
+\index{semigroup!differentiable semigroup}
 %%
 Let $(T(t))_{t\geq 0}$ be a strongly continuous semigroup with generator $A$.
 Let $t_0 \geq 0$ and $f \in E$.
@@ -803,7 +812,7 @@ Whereas the spectrum of the generator of a holomorphic semigroup is included in 
 A strongly continuous semigroup $(T(t))_{t\geq 0}$ is eventually differentiable if and only if its generator $A$ satisfies the following. \\
 There exist constants $c>0$, $b>0$, $M>0$ such that
 \[
-    \Sigma \coloneqq \{\lambda \in \C \colon c\mathrm{e}^{-b\cdot \Re(\lambda)} \leq |\Im\lambda|\} \subset \rho(A)
+    \Sigma \coloneqq \{\lambda \in \C \colon c\eu^{-b\cdot \Re(\lambda)} \leq |\Im\lambda|\} \subset \rho(A)
 \]
 and
 \[
@@ -817,7 +826,7 @@ and
 A strongly continuous semigroup $(T(t))_{t\geq 0}$ is differentiable if and only if its generator $A$ satisfies the following. \\
 For all $b>0$ there exist $c>0$, $M>0$ such that
 \[
-    \Sigma \coloneqq \{\lambda \in \C \colon c\mathrm{e}^{-b\cdot \Re(\lambda)} \leq |\Im\lambda|\} \subset \rho(A)
+    \Sigma \coloneqq \{\lambda \in \C \colon c\eu^{-b\cdot \Re(\lambda)} \leq |\Im\lambda|\} \subset \rho(A)
 \]
 and
 \[
@@ -829,7 +838,8 @@ and
 For the proofs of these two theorems we refer to \citet[Chapter 3, Theorem 4.7 and 4.8]{pazy:1983}.
 
 \subsection{Norm continuous semigroups} \label{subsec:a2-1.se6}%
-\index{Semigroups!Norm Continuous Semigroups}
+%%KGK kleinschreiben -singular
+\index{semigroup!norm continuous semigroup}
 %% --
 Let $(T(t))_{t\geq 0}$ be a strongly continuous semigroup and $t' > 0$.
 If $\lim_{t \to t'} \|T(t) - T(t')\| = 0$, then it follows from the semigroup property, that the function $t \mapsto T(t)$ is norm continuous on the whole half line $(t',\infty)$.
@@ -896,29 +906,29 @@ In fact, then we have by the lemma,
 So let $\epsilon > 0$.
 If $\Re(\lambda) > \omega(A)$, then by A-I, Proposition 1.11,
 \[
-R(\lambda,A)^{n+1} = \frac{1}{n!}\int_0^\infty \mathrm{e}^{-\lambda t}t^nT(t) \dt (n \in \N).
+R(\lambda,A)^{n+1} = \frac{1}{n!}\int_0^\infty \eu^{-\lambda t}t^nT(t) \dt (n \in \N).
 \]
 Let $t' > 0$ such that $t \mapsto T(t)$ is norm continuous on $(t',\infty)$.
 Let $w \in (\omega(A),a)$.
-There exists $M \geq 1$ such that $\|T(t)\| \leq M\mathrm{e}^{wt}$ for all $t \geq 0$.
+There exists $M \geq 1$ such that $\|T(t)\| \leq M\eu^{wt}$ for all $t \geq 0$.
 Let 
 \[
-N \coloneqq M\cdot\int_{0}^{t'} \mathrm{e}^{-at}\mathrm{e}^{wt} \dt.
+N \coloneqq M\cdot\int_{0}^{t'} \eu^{-at}\eu^{wt} \dt.
 \]
 Since $\lim_{n\to\infty} c^n/n! = 0$ for all $c > 0$, there exists $n \in \N$ such that \\ 
 $N\cdot(t')^n/n! < \epsilon^{n+1}/3$.
-Choose $T \geq t'$ such that $\frac{1}{n!}\int_T^\infty t^n\mathrm{e}^{-at}\|T(t)\| \dt < \epsilon^{n+1}/3$.
+Choose $T \geq t'$ such that $\frac{1}{n!}\int_T^\infty t^n\eu^{-at}\|T(t)\| \dt < \epsilon^{n+1}/3$.
 
 Since $(T(t))_{t\geq 0}$ is norm continuous for $t \geq t'$, it follows from the Riemann-Lebesgue lemma that there exists $r_{0} \geq 0$ such that 
-$\|\frac{1}{n!}\int_{t'}^T t^{n}\mathrm{e}^{-irt}\mathrm{e}^{-at}T(t) \dt\| < \epsilon^{n+1}/3$ whenever $|r| \geq r_{0}$.
+$\|\frac{1}{n!}\int_{t'}^T t^{n}\eu^{-irt}\eu^{-at}T(t) \dt\| < \epsilon^{n+1}/3$ whenever $|r| \geq r_{0}$.
 
 All together we obtain for $|r| \geq r_{0}$,
 \begin{align*}
-    \|R(a+ir,A)^{n+1}\| & = \frac{1}{n!}\cdot\|\int_0^\infty \mathrm{e}^{-(a+ir)t}t^nT(t) \dt\| \\
-    & \leq \frac{1}{n!}\cdot\int_{0}^{t'} \mathrm{e}^{-at}t^n\|T(t)\| \dt \\
-    & + \frac{1}{n!}\cdot\|\int_{t'}^T t^n\mathrm{e}^{-irt}\mathrm{e}^{-at}T(t) \dt\| \\
-    & + \frac{1}{n!}\cdot\int_T^\infty \mathrm{e}^{-at}t^n\|T(t)\| \dt \\
-    & \leq \frac{1}{n!}\cdot(t')^{n}\int_{0}^{t'} \mathrm{e}^{-at}M\mathrm{e}^{wt} \dt + \frac{2}{3}\cdot\epsilon^{n+1} \\
+    \|R(a+ir,A)^{n+1}\| & = \frac{1}{n!}\cdot\|\int_0^\infty \eu^{-(a+ir)t}t^nT(t) \dt\| \\
+    & \leq \frac{1}{n!}\cdot\int_{0}^{t'} \eu^{-at}t^n\|T(t)\| \dt \\
+    & + \frac{1}{n!}\cdot\|\int_{t'}^T t^n\eu^{-irt}\eu^{-at}T(t) \dt\| \\
+    & + \frac{1}{n!}\cdot\int_T^\infty \eu^{-at}t^n\|T(t)\| \dt \\
+    & \leq \frac{1}{n!}\cdot(t')^{n}\int_{0}^{t'} \eu^{-at}M\eu^{wt} \dt + \frac{2}{3}\cdot\epsilon^{n+1} \\
     & \leq N\cdot(t')^n/n! + \frac{2}{3}\cdot\epsilon^{n+1} \\
     & \leq \epsilon^{n+1}.
 \end{align*}
@@ -932,7 +942,8 @@ Moreover their asymptotic behavior is easy to describe (see A-IV, (1.8)).
 Next we describe special norm continuous semigroups.
 %%--
 \subsection{Compact semigroups} \label{subsec:a2-1.se7}%
-\index{Semigroups!Compact Semigroups}
+%%KGK kleinschreiben - singular
+\index{semigroup!compact semigroup}
 %% --
 Let $(T(t))_{t\geq 0}$ be a strongly continuous semigroup and $t_0 > 0$.
 If $T(t_0)$ is compact, then it follows from the semigroup property that $T(t)$ is compact for all $t \geq t_0$.
@@ -968,10 +979,10 @@ If $t \mapsto T(t)$ is norm continuous at $t_0$, then $T(t)$ is compact for all 
 \end{proposition}
 %% –
 \begin{proof}
-Considering $(\mathrm{e}^{-wt}T(t))_{t\geq 0}$ for some $w > 0$ if necessary, we can assume that $\sigma(A) < 0$.
+Considering $(\eu^{-wt}T(t))_{t\geq 0}$ for some $w > 0$ if necessary, we can assume that $\sigma(A) < 0$.
 Let $S(t) \in \mathcal{L}(E)$ be given by 
 $S(t)f = \int_0^t T(s)f \ds$ $(t \geq 0)$.
-Then $AS(t)f = T(t)f - f$ for all $f \in E$, and so $S(t) = R(0,A)(Id-T(t))$ is compact for all $t \geq 0$.
+Then $AS(t)f = T(t)f - f$ for all $f \in E$, and so $S(t) = R(0,A)(\Id-T(t))$ is compact for all $t \geq 0$.
 
 Since $t \mapsto T(t)$ is norm continuous for $t \geq t_0$, one has 
 $\lim_{h \downarrow 0} \frac{1}{h}(S(t_0+h)-S(t_0)) = T(t_0)$ in the operator norm.
@@ -986,14 +997,14 @@ A strongly continuous semigroup $(T(t))_{t\geq 0}$ is compact if and only if it 
 Assume that $(T(t))_{t\geq 0}$ is compact. Then $T(\cdot)$ is norm continuous on $(0,\infty)$, and so 
 %%--
 \[
-    \int_{0}^{t} \mathrm{e}^{-ws} T(s) \ds
+    \int_{0}^{t} \eu^{-ws} T(s) \ds
 \]
 %%--
 is compact as the norm limit of linear combinations of compact operators, whenever $w > \omega_{0}(A)$.
 Since 
 %%--
 \[
-    R(w,A) = \lim_{t \to \infty} \int_{0}^{t} \mathrm{e}^{-ws} T(s) \ds
+    R(w,A) = \lim_{t \to \infty} \int_{0}^{t} \eu^{-ws} T(s) \ds
 \]
 %%--
 in the operator norm, it follows that $R(w,A)$ is compact.
@@ -1049,7 +1060,7 @@ Let $m \colon X \to \R$ be continuous [resp., measurable] such that $[\text{ess}
 Then $Af = m \cdot f$ with domain $D(A) = \{f \in E \colon m \cdot f \in E\}$ is the generator of the semigroup $(T(t))_{t \geq 0}$ given by
 %%--
 \[
-    (T(t)f)(x) = \mathrm{e}^{tm(x)}f(x), \quad (t \geq 0, x \in X, f \in E )\, .
+    (T(t)f)(x) = \eu^{tm(x)}f(x), \quad (t \geq 0, x \in X, f \in E )\, .
 \]
 %%--
 Observe that $\sigma(A) = \overline{m(X)}$ in case $E = C_{0}(X)$ 
@@ -1073,12 +1084,12 @@ Thus the property proved in Theorem~\ref{thm:a2-1.20}   characterizes generators
 Assume that $\{\lambda \in \sigma(A) \colon \Re(\lambda) \geq b\}$ is bounded for every $b \in \R$.
 Let $t' > 0$.
 We show that the semigroup is norm continuous at $t'$.
-Take $\epsilon > 0$ and $b \in \R$ such that $2\mathrm{e}^{(t'+1)b} < \epsilon$.
+Take $\epsilon > 0$ and $b \in \R$ such that $2\eu^{(t'+1)b} < \epsilon$.
 
 If $\Re(m(x)) \leq b$, then
 %%--
 \[
-    |\mathrm{e}^{tm(x)} - \mathrm{e}^{t'm(x)}| \leq \mathrm{e}^{t\Re(m(x))} + \mathrm{e}^{t'\Re(m(x))} \leq 2\mathrm{e}^{(t'+1)b} < \epsilon
+    |\eu^{tm(x)} - \eu^{t'm(x)}| \leq \eu^{t\Re(m(x))} + \eu^{t'\Re(m(x))} \leq 2\eu^{(t'+1)b} < \epsilon
 \]
 %%--
 whenever $|t-t'| \leq 1$.
@@ -1090,17 +1101,17 @@ and $H \coloneqq \{m(x) \colon \Re(\lambda) \geq b \text{ and for all } \eta > 0
 \mu(\{x \in X \colon |m(x)-\lambda| < \eta \}) \neq 0\}$
 in the case $E = L^{p}$ 
 is a bounded subset of $\C$.
-Thus $\lim_{t \to t'} |\mathrm{e}^{tz} - \mathrm{e}^{t'z}| = 0$ 
+Thus $\lim_{t \to t'} |\eu^{tz} - \eu^{t'z}| = 0$ 
 uniformly for $z \in H$.
 Hence there exists $\delta \in \left]0,1\right]$ such that
 \[
-[\text{ess}]\text{-}\sup\{|\mathrm{e}^{tm(x)} - \mathrm{e}^{t'm(x)}| \colon x \in X, \Re(m(x)) > b\} < \epsilon
+[\text{ess}]\text{-}\sup\{|\eu^{tm(x)} - \eu^{t'm(x)}| \colon x \in X, \Re(m(x)) > b\} < \epsilon
 \] 
 whenever $|t-t'| < \delta$.
 Together with the inequality above, we obtain that 
 %%
 \[
-\|T(t) - T(t')\| = [\text{ess}]\text{-}\sup\{|\mathrm{e}^{tm(x)} - \mathrm{e}^{t'm(x)}| \colon x \in X\} < \epsilon
+\|T(t) - T(t')\| = [\text{ess}]\text{-}\sup\{|\eu^{tm(x)} - \eu^{t'm(x)}| \colon x \in X\} < \epsilon
 \]
 %% 
 whenever $|t-t'| < \delta$.
@@ -1111,19 +1122,19 @@ We have shown that the semigroup is norm continuous for $t > 0$ whenever $\{\lam
 The semigroup is right-sided differentiable at a point
 $t > 0$ 
 if and only if there exists $c > 0$ such that 
-$\{\lambda \in \C \colon |\Im \lambda| > c \cdot \mathrm{e}^{-t\Re(\lambda)}\} \subset \rho(A)$.
+$\{\lambda \in \C \colon |\Im \lambda| > c \cdot \eu^{-t\Re(\lambda)}\} \subset \rho(A)$.
 
 \begin{proof}
 The semigroup is right-sided differentiable at $t$ 
 if and only if $T(t)E \subset D(A)$ 
-if and only if $\mathrm{e}^{tm} \cdot f \cdot m \in E$ for all $f \in E$ 
-if and only if $\mathrm{e}^{tm} \cdot m$ is [essentially] bounded 
-if and only if $\mathrm{e}^{t\Re\, m} \cdot \Im\, m$ is [essentially] bounded 
+if and only if $\eu^{tm} \cdot f \cdot m \in E$ for all $f \in E$ 
+if and only if $\eu^{tm} \cdot m$ is [essentially] bounded 
+if and only if $\eu^{t\Re\, m} \cdot \Im\, m$ is [essentially] bounded 
 if and only if there exists $c > 0$ such that 
 $[\text{ess}]\text{-}\text{image}(m) \subset 
-\{\lambda \in \C \colon \mathrm{e}^{t\Re(\lambda)}|\text{Im}\lambda| \leq c\}$ 
+\{\lambda \in \C \colon \eu^{t\Re(\lambda)}|\text{Im}\lambda| \leq c\}$ 
 if and only if there exists $c > 0$ such that 
-$\{\lambda \in \C \colon |\text{Im}\lambda| > c \cdot \mathrm{e}^{-t\Re(\lambda)}\} \subset \rho(A)$.
+$\{\lambda \in \C \colon |\text{Im}\lambda| > c \cdot \eu^{-t\Re(\lambda)}\} \subset \rho(A)$.
 \end{proof}
 
 \item \label{ex:a2-1.28-3}
@@ -1136,7 +1147,7 @@ Conversely, if $S(\theta + \pi/2) \subset~\rho(A)$,
 then one verifies directly that 
 %%--
 \[
-(T(z)f)(x) = \mathrm{e}^{z \cdot m(x)}f(x) \quad (f \in E, x \in X) 
+(T(z)f)(x) = \eu^{z \cdot m(x)}f(x) \quad (f \in E, x \in X) 
 \]
 %%-- 
 defines a family $(T(z))_{z \in S(\theta)}$ of bounded operators satisfying conditions (1.4) and (1.5).
@@ -1163,7 +1174,7 @@ Now it is easy to give concrete examples.
 Again let $X = \N$, so that $E = c_{0}$ or $\ell^{p}$.
 Let $m(n) = -n + i \cdot \exp(n^2)$.
 Then the semigroup is compact and (consequently) norm continuous for $t > 0$, but it is not eventually differentiable.
-Let $m(n) = -n + i\mathrm{e}^{t'n}$.
+Let $m(n) = -n + i\eu^{t'n}$.
 Then the semigroup is differentiable for $t > t'$ but not differentiable at $t \in [0,t')$.
 If $m(n) = -n + i \cdot n^2$, then the semigroup is differentiable but not holomorphic.
 \end{enumerate}
@@ -1171,7 +1182,8 @@ If $m(n) = -n + i \cdot n^2$, then the semigroup is differentiable but not holom
 
 \subsection{Perturbation of Generators} \label{subsec:a2-1.se8}
 A useful way to construct new semigroups out of a given one is by additive perturbation.%
-\index{Semigroups!Perturbation of Generators}
+%%KGK kleinschreiben - singular
+\index{semigroup!perturbation of generator}
 %% --
 \begin{theorem}\label{thm:a2-1.29}
 Let $A$ be the generator of a strongly continuous semigroup $(T(t))_{t \geq 0}$ and let $B \in \LE$.
@@ -1182,7 +1194,7 @@ It is possible to express the new semigroup $(S(t))_{t \geq 0}$ by known objects
 The product formula
 %%--
 \begin{equation}\label{eq:a2-1.8}
-    S(t)f = \lim_{n \to \infty} (T(t/n)\mathrm{e}^{t/n \cdot B})^{n}f
+    S(t)f = \lim_{n \to \infty} (T(t/n)\eu^{t/n \cdot B})^{n}f
 \end{equation}
 %%--
 holds for all $t \geq 0$ and $f \in E$.
@@ -1237,17 +1249,17 @@ If $(T(t))_{t \geq 0}$ is norm continuous for $t > 0$, then $S_{n}(t)$ in \eqref
 Thus $(S(t))_{t \geq 0}$ is norm continuous at $t > 0$ by \eqref{eq:a2-1.11}.
 There exists $\lambda_{0} \in \R$ such that 
 $\|R(\lambda,A)\| \leq (2\|B\|)^{-1}$ for $\Re(\lambda) \geq \lambda_{0}$.
-Hence $(Id~-~BR(\lambda,A))^{-1}$ exists for $\Re(\lambda) \geq \lambda_{0}$.
+Hence $(\Id~-~BR(\lambda,A))^{-1}$ exists for $\Re(\lambda) \geq \lambda_{0}$.
 Since 
 %%
 \[
-(\lambda -(A+B))f = (Id - BR(\lambda,A))(\lambda - A)f  \quad \text{ for all } \quad f \in D(A),
+(\lambda -(A+B))f = (\Id - BR(\lambda,A))(\lambda - A)f  \quad \text{ for all } \quad f \in D(A),
 \]
 %%
 it follows that $(\lambda-(A+B))^{-1}$ exists and is given by
 %%--
 \begin{equation}\label{eq:a2-1.12}
-    R(\lambda,A+B) = R(\lambda,A)(Id-BR(\lambda,A))^{-1}
+    R(\lambda,A+B) = R(\lambda,A)(\Id-BR(\lambda,A))^{-1}
 \end{equation}
 %%--
 whenever $\Re(\lambda) \geq \lambda_{0}$.
@@ -1255,7 +1267,7 @@ Now if $A$ generates a holomorphic semigroup, there exists $M \geq 0$ such that 
 Consequently, 
 %%--
 \[
-\|R(\lambda_{0}+\im\eta,A+B)\| \leq \|(Id-BR(\lambda_{0}+i\eta,A))^{-1}\| \cdot 2M/|\eta| \leq 2M/|\eta|
+\|R(\lambda_{0}+\im\eta,A+B)\| \leq \|(\Id-BR(\lambda_{0}+i\eta,A))^{-1}\| \cdot 2M/|\eta| \leq 2M/|\eta|
 \]
 %%--
 for all $\eta \in \R$\,.
@@ -1309,7 +1321,7 @@ Then $A + B$ with domain $D(A + B) = D(A)$ is the generator of a strongly contin
 Moreover, there exists a bounded operator $C$ on $E$ such that $A + B$ is similar to $A + C$.
 \end{theorem}
 \begin{proof}
-We first show that $(Id - BR(\lambda,A))$ is invertible for some $\lambda \in \C$.
+We first show that $(\Id - BR(\lambda,A))$ is invertible for some $\lambda \in \C$.
 Choose $\lambda_{0} \in \rho(A)$.
 Then $S \coloneqq (\lambda_{0}-A)BR(\lambda_{0},A) \in \mathcal{L}(E)$.
 Let $\lambda > s(A)$ be so large such that $\|SR(\lambda,A)\| < 1$.
@@ -1357,7 +1369,8 @@ $(US(t)U^{-1})_{t\geq 0}$ has $A+C$ as generator.
 \end{proof}
 %% –
 \subsection{Domains of Uniqueness} \label{subsec:a2-1.se9}%
-\index{Semigroups!Domains of Uniqueness}
+%%KGK kleinschreiben - singular
+\index{semigroup!domains of uniqueness}
 %% --
 Given a semigroup $(T(t))_{t \geq 0}$,  
 it is frequently difficult to determine the precise domain of its generator $A$.
@@ -1367,6 +1380,7 @@ This can be formulated more precisely in the following way.
 Let $D_{0}$ be a subspace of $D(A)$ and consider the restriction $A_{0}$ of $A$ to $D_{0}$.
 Under which condition on $D_{0}$ is $A$ the only extension of $A_{0}$ which is a generator?
 One~obvious condition is that $D_{0}$ is a core.
+\index{core}
 [In fact, in that case, $A$ is the closure of $A_{0}$.
 Since every generator $B$ extending $A_{0}$ is closed, it follows that $A \subset B$ and hence $A = B$ since 
 $\rho(A) \cap \rho(B) \neq \emptyset$].
@@ -1408,7 +1422,9 @@ Since $D_{0}$ is dense in $E$, it follows that $S(t) = T(t)$ $(t \geq 0)$.
 \end{proof}
 %% –
 \section{Contraction Semigroups and Dissipative Operators}\label{sec:a2-2}%
-\index{Semigroups!Contraction Semigroups and Dissipative Operators}
+%%KGK kleinschreiben -sindular
+\index{semigroup!contraction semigroup}
+\index{dissipative operator}
 %% --
 \hspace{1cm}{\Large by Wolfgang Arendt}
 \vspace{.5cm}
@@ -1462,6 +1478,7 @@ The \emph{subdifferential} $\ddp$ of $p$ at $f$ is defined by
 It follows from the Hahn-Banach theorem that $\ddp(f) \neq \emptyset$ for all $f \in E$.
 
 \begin{definition}\label{def:a2-2.1}
+\index{half-norm!p-dissipative}
 An operator $A$ on $E$ is called \emph{p-dissipative} if for all $f \in D(A)$ there exists $\phi \in \ddp(f)$ such that $\langle Af,\phi \rangle \leq 0$ 
 and $A$ is called \emph{strictly p-dissipative} if for all $f \in D(A)$ the inequality $\langle Af,\phi \rangle \leq 0$ holds for all $\phi \in \ddp(f)$.
 \end{definition}
@@ -1635,7 +1652,7 @@ Then for every $t > 0$ and $g \in D(A)$ we have
 \langle Af,\phi \rangle 
 &= \frac{1}{t}(\langle f + tAf,\phi \rangle - \langle f,\phi \rangle) \leq \frac{1}{t}(p(f + tAf) - p(f)) \\
 &\leq \frac{1}{t}(p(f + tg) + tp(Af - g) - p(f)) \\
-&\leq \frac{1}{t}(p((Id - tA)(f + tg)) + tp(Af - g) - p(f)) \quad \text{(by \eqref{eq:a2-2.7}\,)} \\ %% (2.7))
+&\leq \frac{1}{t}(p((\Id - tA)(f + tg)) + tp(Af - g) - p(f)) \quad \text{(by \eqref{eq:a2-2.7}\,)} \\ %% (2.7))
 &\leq \frac{1}{t}(p(f) + tp(g - Af) + t^2p(-Ag) + tp(Af - g) - p(f)) \\
 &\leq \frac{1}{t}(2tc\|g - Af\| + t^2c\|Ag\|) \quad \text{(by (2.3))} \\
 &= 2c\|g - Af\| + tc\|Ag\|.
@@ -1646,6 +1663,7 @@ Since $D(A)$ is dense in $E$, this implies that $\langle Af,\phi \rangle \geq 0$
 \end{proof}
 
 We now impose stronger conditions on $p$.
+\index{half-norm|(}
 A continuous sublinear function $p \colon E \to \R$ is called \emph{half-norm} if
 %%--
 \begin{equation}\label{eq:a2-2.11}
@@ -1748,7 +1766,7 @@ Thus \eqref{eq:a2-2.14}
 is proved.
 Now suppose that $p$ is strict.
 Then $\|\cdot\|_{p}$ is equivalent to the given norm.
-Let $\lambda > 0$ and $g \in \overline{\Im(\lambda - A)}$.
+Let $\lambda > 0$ and $g \in \overline{\Image{\lambda - A}}$.
 Then $g = \lim_{n\to\infty} (\lambda - A)f_{n}$ for some sequence $(f_{n})_{n \in \N} \subset D(A)$.
 It follows from \eqref{eq:a2-2.14}  
 that $(f_{n})_{n\in\N}$ is a Cauchy sequence.
@@ -1863,8 +1881,10 @@ $A$ is dissipative and $(\lambda - A)$ has dense range for some $\lambda > 0$.
 \end{enumerate}
 \end{theorem}
 %% –
+
 \section{Semigroups on \texorpdfstring{$L^{\infty}$}{L-infty}  and \texorpdfstring{$H^{\infty}$}{H-infty} \label{sec:a2-3}}%
-\index{Semigroups!On $L^\infty$ and $H^\infty$}
+%%KGK kleinschreiben
+\index{semigroup!on $L^\infty$ and $H^\infty$}
 %% --
 \hspace{1cm}{\Large by Heinrich P. Lotz}
 \vspace{.5cm}
@@ -2133,7 +2153,8 @@ We also refer to the historical notes given there.
 \item
 It had been proved by \citet{kishimotorobinson:1981} that every generator of a positive semigroup on $L^{\infty}$ is bounded.
 That every strongly continuous semigroup on $L^{\infty}$ is uniformly continuous was first shown by \citet{lotz:1982}, \citet{lotz:1984} and \citet{lotz:1985}.
-The proof of Lemma \ref{lem:a2-3.1}  was communicated to the author of this section by T. Coulhon, who independently obtained a particular case of Theorem \ref{thm:a2-3.5} (\citet{coulhon:1984}) .
+The proof of Lemma \ref{lem:a2-3.1}  was communicated to the author of this section by T. Coulhon, who independently obtained a particular case of Theorem \ref{thm:a2-3.5} (\citet{coulhon:1984}).
+\index{half-norm|)}
 
 \end{enumerate}
 

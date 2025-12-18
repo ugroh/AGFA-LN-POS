@@ -1,12 +1,12 @@
 % !TEX TS-program = pdflatexmk
 % !BIB program = bibtex
 \documentclass{book}
-%% -- Stand: 2025-11-28
-%% -- ./ -> ./ für lokal
+%% -- Stand: 2025-11-30
+%% -- LN-Book-UNotes/ -> ./ für lokal
 %% --
 
-\input{./preamble/ln-preamble}  
-\input{./preamble/ln-definitionen}
+\input{LN-Book-UNotes/preamble/ln-preamble}  
+\input{LN-Book-UNotes/preamble/ln-definitionen}
 \setlist{$\bullet$, wide, labelindent=.5em,itemsep=.25em}
 \usepackage[square,numbers]{natbib}
 \usepackage[resetlabels]{multibib}
@@ -37,13 +37,15 @@
 \include{part-e/un-part-d.tex}
 %% --
 %% --
+%% --
 \clearpage
 %% --
 \phantomsection
 \addcontentsline{toc}{chapter}{References} 
+%% --
 {\RaggedRight
 \bibliographystyleEN{abbrvnat}
-\bibliographyEN{./bib/ln-references-EN}}
+\bibliographyEN{LN-Book-UNotes/bib/ln-references-EN}}
 %% --
 \end{document}
 
