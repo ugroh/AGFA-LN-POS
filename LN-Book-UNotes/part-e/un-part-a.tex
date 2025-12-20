@@ -1,8 +1,9 @@
 %% --
 %% -- Updated Notes
-%% -- Stand 2025-11-25
+%% -- Part A
+%% -- Stand 2025-12-20
 %% --
-\chapter{Updated Notes Part A}
+\chapternopage{Updated Notes Part A}
 %% --
 \section*{Updated Notes A-I}
 \addcontentsline{toc}{section}{Updated Notes A-I}
@@ -21,7 +22,7 @@ We refer to the monographs of \mycite{zbmath02168554} and W. Arendt, H. Vogt, an
 The role of one-parameter semigroups in the theory of dynamical systems is studied in great detail in the monograph \mycite{zbmath01329917}.
 \item
 As textbooks suited for graduate courses, we recommend, \eg 
-\mycite{zbmath05051510}, \mycite{zbmath07066876}, and
+\mycite{zbmath07066876}, \mycite{zbmath05051510} and
 \mycite{zbmath06706234}.
 \item
 While all semigroups in these texts are assumed to be strongly continuous, in many situations semigroups appear---under various names---that are continuous only for some weaker topology. 
@@ -46,7 +47,7 @@ For the proof we refer to Theorem 1.2 in \mycite{zbmath07950102}, where also app
 
 \item
 For Lotz's Theorem (A-II, Theorem 3.5) to hold, the operator $A$ need not be the generator of a semigroup. 
-Indeed, if $A$ is densely defined such that the resolvent $R(\lambda,A)$ exists and $\lambda R(\lambda,A)$ is uniformly bounded for $\lambda \geq \lambda_0$, for some real $\lambda_0$ and the underlying space is $L^\infty$, then  $A$ is bounded. See Theorem 4.3.18 in~\mycite{zbmath05842872}.
+Indeed, if $A$ is densely defined such that the resolvent $R(\lambda,A)$ exists and $\lambda R(\lambda,A)$ is uniformly bounded for $\lambda \geq \lambda_0$ for some real $\lambda_0$ and the underlying space is $L^\infty$, then  $A$ is bounded. See Theorem 4.3.18 in~\mycite{zbmath05842872}.
 
 \item
 An overview on Grothendieck spaces can be found in \mycite{zbmath07458830}.
@@ -54,7 +55,7 @@ For the Dunford-Pettis property,  \mycite{zbmath03911038} remains a valuable res
 See also \mycite{zbmath00769497}.
 
 \item 
-The asymptotic behaviour of a semigroup as 
+The asymptotic behavior of a semigroup as 
 $t \rightarrow 0$ is related to various regularity properties of the semigroup (such as holomorphy, or having a bounded generator), see \mycite{zbmath06571398}  for a survey.
 
 \end{enumerate}
@@ -84,6 +85,16 @@ In contrast to the usual continuity or growth assumptions,
 \mycite[]{zbmath00763985} and \mycite[]{zbmath00858476}
 proved that the spectral mapping theorem always holds for so-called evolution semigroups.
 See also \mycite[Chapter VI, Theorem 9.18]{zbmath01354832}.
+
+\item 
+In general, the missing points in the above spectral mapping theorem have been 
+identified as the \emph{critical spectrum} of the semigroup. This leads to the 
+following refined spectral mapping theorem:
+\[
+    \sigma(T(t)) = 
+        \eu^{t \sigma(A)} \cup \sigma_{\text{crit}}(T(t)) 
+\]
+for all $t \geq 0$ (see \mycite{zbmath01496433} and \mycite{zbmath01484683}).
 
 \item
 The monograph \mycite{zbmath05030449} treats the spectral theory of semigroups in the view of functional calculus.
@@ -118,7 +129,7 @@ Then the semigroup  $(T(t))_{t\geq 0}$ is stable (\ie converges strongly to $0$ 
 An analogous result is valid for power bounded operators. 
 We refer to \mycite[Theorem~5.5.5]{zbmath05842872} or \mycite[Theorem~2.21]{zbmath05051510}. 
 While countability of the boundary spectrum  is not necessary for stability, 
-\mycite{zbmath00410037} and \mycite{zbmath0493176} characterize this property in terms of \enquote{super stability} (\ie stability of all the semigroups induced on an ultra power of the underlying Banach space).
+\mycite{zbmath00410037} and \mycite{zbmath0493176} characterize this property in terms of \enquote{super stability} (\ie stability of the semigroup induced on an ultra power of the underlying Banach space).
 
 \item
 There are more general versions of the ABLV-Theorem and its implications on the asymptotic behavior of the semigroup, see \mycite[Theorem~2.21]{zbmath01354832} and \mycite[Theorem~5.5.5]{zbmath05842872}. 

@@ -66,23 +66,17 @@
 
 %% -- Our definitions
 %% --
-
 \include{./preamble/ln-preamble-final}	
 \include{./preamble/ln-definitionen}
-
 %% -- 
-
 \usepackage[showonlyrefs]{mathtools}
 \usepackage{empheq}
-\usepackage{colortbl} 
-
 %% --
-
 \usepackage{tikz}
 \usepackage{tikz-cd}
 
-%% --
-
+%% -- References
+%% -- 
 \usepackage[square,numbers]{natbib}
 \usepackage{doi}
 \usepackage[resetlabels]{multibib}
@@ -103,30 +97,28 @@
 
 %% -- Counter Fix: Part resets Chapter
 %% --
-
 \makeatletter
 \@addtoreset{chapter}{part}
 \makeatother
 
 %% -- To prevent overlapping in TOC
 %% --
-
 \usepackage{tocloft} 
 \renewcommand\cftchapnumwidth{1cm}
 
 %% -- Exclude \subsection from TOC
 %% --
-
 \setcounter{tocdepth}{1}
 \cftpagenumbersoff{part}		%% -- no page number
 
-\newcommand{\chapternopage}[1]{%% -- no pagenumber for section
+%% -- Pagenumers
+%% --
+\newcommand{\chapternopage}[1]{%% -- no pagenumber for chapter
   \addtocontents{toc}{\protect\cftpagenumbersoff{chapter}}% 
   \chapter{#1}%
   \addtocontents{toc}{\protect\cftpagenumberson{chapter}}%
 }
-
-
+%% --
 \newcommand{\sectionnopage}[1]{%% -- Optionally omit page numbers from TOC for sections
   \addtocontents{toc}{\protect\cftpagenumbersoff{section}}% 
   \section*{#1}%
@@ -136,15 +128,12 @@
  
 %% -- Index : keep it please
 %% -- 
-
 \usepackage{makeidx} 
 %\makeindex%[intoc, columns=2, options=-s LN-index.ist]  %% -- not working 
 \makeindex         
-
-                       
+                 
 %% -- Hyperlinks
 %% --
-
 \usepackage{hyperref}
 \hypersetup{%
 	breaklinks = true,%
@@ -153,9 +142,10 @@
 	urlcolor = blue,%
 	citecolor = blue,%
 	hyperindex = true
-%   hidelinks 
+%   hidelinks 				% printing
 }
 %% -- 
+%% --
 \begin{document}
 %% --
 \author{Wolfgang Arendt, Annette Grabosch, Günther Greiner, Ulrich Groh, Heinrich P. Lotz, Ulrich Moustakas, Rainer Nagel, Frank Neubrander, Ulf Schlotterbeck}
@@ -179,11 +169,11 @@
 \tableofcontents
 %% --
 \include{./part-0/ln-symbols}
-%%
-\mainmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%% -- Part-A
+%% %% --
+\mainmatter
+%% --
 
+%% -- Part-A
 \include{./part-a/part-a} 
     \include{./part-a/chap-a1}
     \include{./part-a/chap-a2}
@@ -211,40 +201,33 @@
     \include{./part-d/chap-d3}
     \include{./part-d/chap-d4}
 
-%% -- LN Original
 %% --
-
 {\RaggedRight
 \bibliographystyle{abbrvnat}
 \bibliography{./bib/ln-references}}
-
+%% --
 \cleardoublepage 
 \printindex
-
+%% --
+%% -- End of LN Original
+%% -- Start Updated Notes
+%% --
 %% -- Part-E
 \setlist{$\bullet$, wide, labelindent=.25em,itemsep=.25em}	
-\include{./part-e/part-e}
-	\include{./part-e/un-part-a}
-	\include{./part-e/un-part-b}
-	\include{./part-e/un-part-c}
-	\include{./part-e/un-part-d}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\backmatter
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\input{./part-e/part-e}
+	\input{./part-e/un-part-a}
+	\input{./part-e/un-part-b}
+	\input{./part-e/un-part-c}
+	\input{./part-e/un-part-d}
 
 %% -- Literatur Updated Notes
 %% --
 \cleardoublepage 
-
+%% --
 {\RaggedRight
 \bibliographystyleEN{abbrvnat}
 \bibliographyEN{./bib/ln-references-EN}}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+%% --
+%% -- End of LN
+%% --
 \end{document}
-
-
-
-

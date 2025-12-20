@@ -1,17 +1,14 @@
 % !TEX TS-program = pdflatexmk
 % !BIB program = bibtex
 \documentclass{book}
-%% -- Stand: 2025-11-30
-%% -- LN-Book-UNotes/ -> ./ für lokal
+%% -- Stand: 2025-12-18
 %% --
-
-\input{LN-Book-UNotes/preamble/ln-preamble}  
-\input{LN-Book-UNotes/preamble/ln-definitionen}
+\input{./preamble/ln-preamble}  
+\input{./preamble/ln-definitionen}
 \setlist{$\bullet$, wide, labelindent=.5em,itemsep=.25em}
 \usepackage[square,numbers]{natbib}
 \usepackage[resetlabels]{multibib}
 \newcites{EN}{Updated Notes: References}
-
 %% --
 \usepackage{hyperref}
 \hypersetup{% 
@@ -23,20 +20,17 @@
 ,bookmarksopen=false
 %,hidelinks=true
 }
-
 %% --    
 \begin{document}
 \tableofcontents
 \setcounter{chapter}{0}		%%  
 \setcounter{section}{1}		%%  
 %% --
-\include{part-e}
-\include{part-e/un-part-a.tex}
-\include{part-e/un-part-b.tex}
-\include{part-e/un-part-c.tex}
-\include{part-e/un-part-d.tex}
-%% --
-%% --
+\input{part-e/part-e.tex}
+\input{part-e/un-part-a.tex}
+\input{part-e/un-part-b.tex}
+\input{part-e/un-part-c.tex}
+\input{part-e/un-part-d.tex}
 %% --
 \clearpage
 %% --
@@ -45,7 +39,7 @@
 %% --
 {\RaggedRight
 \bibliographystyleEN{abbrvnat}
-\bibliographyEN{LN-Book-UNotes/bib/ln-references-EN}}
+\bibliographyEN{./bib/ln-references-EN}}
 %% --
 \end{document}
 
