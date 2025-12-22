@@ -1,6 +1,3 @@
-% !TEX root = ../LN-Index.tex
-%% --
-%% -- Stand: 2025-11-28
 %% --
 \chapternopage{Basic Results on Semigroups on Banach Spaces}\label{chap:a1}%
 %% --
@@ -28,7 +25,6 @@ In more abstract terms this means that the map $t \mapsto T(t)$ is a homomorphis
 Similarly, a one-parameter group $(T(t))_{t\in\R}$ will be a homomorphic image of the group $(\R,+)$ in $(\LE,\cdot)$.
 %% --
 \section{Standard Definitions and Results}\label{sec:a1-1}%
-%\index{Standard Definitions and Results}
 %% -- 
 We consider a one-parameter semigroup $(T(t))_{t \geq 0}$ on a Banach space $E$ and observe that the domain $\R_{+}$ and range $\LE$ of the (semigroup) homomorphism $\tau \colon t \mapsto T(t)$ are topological semigroups for the natural topology on $\R_{+}$ and any one of the standard operator topologies on $\LE$.
 We single out the strong operator topology on $\LE$ and require $\tau$ to be continuous.
@@ -48,14 +44,13 @@ Clearly one defines in a similar way \emph{weakly continuous}, \resp \emph{unifo
 \begin{quote}
 If not stated otherwise, a \emph{semigroup} is a strongly continuous one-parameter semigroup of bounded linear operators. 
 \end{quote}
+\index{semigroup}
 %% --
 Next we collect a few elementary facts on the continuity and boundedness of one-parameter semigroups.
 %% --
 \begin{remarks}\label{rem:a1-1.2}
 %% --
 \begin{enumerate}[\upshape(i), wide, labelindent=.5em]
-%\index{One-parameter semigroups|textbf}
-%\index{One-parameter semigroups!Basic facts}
 
 \item 
 A one-parameter semigroup $(T(t))_{t \geq 0}$ on a Banach space $E$ is strongly continuous if and only if for any $f \in E$ it is true that $T(t)f \to f$ if $t \to 0$.
@@ -74,8 +69,6 @@ $ f $ in a total subset of $ E $.
 The exponential estimate from Remark for the growth of $ \lVert T(t) \rVert $ can be used to define an important characteristic of the semigroup.
 %% --
 \begin{definition}\label{def:a1-1.3}
-%%KGK
-%\index{One-parameter semigroup!Growth Bound $\omega_{0}$}
 By the \emph{growth bound} (or type) of the semigroup $ T(t)_{t\geq0} $ we understand the number $ \omega_{0} $,
 \index{growth bound}
 %% --
@@ -89,6 +82,7 @@ By the \emph{growth bound} (or type) of the semigroup $ T(t)_{t\geq0} $ we under
 %% --
 Particularly important are semigroups such that for every $t \geq 0$ we have $\|T(t)\| \leq M$ (\emph{bounded semigroups}) or $\|T(t)\| \leq 1$ (\emph{contraction semigroups}).
 In both cases we have $\omega_{0} \leq 0$.
+\index{semigroup!contraction semigroup}
 
 It follows from the subsequent examples and from Definition~\ref{def:a1-1.3} that $\omega_{0}$ may be any number $ -\infty \leq \omega < +\infty$.
 Moreover the reader should observe that the infimum in Definition ~\ref{def:a1-1.3} need not be attained and that $M$ may be larger than $1$ even for bounded semigroups.
@@ -126,12 +120,11 @@ Therefore $(T(t))_{t \geq 0}$ is a strongly continuous semigroup which is bounde
 \end{examples}
 %% --
 The most important object associated to a strongly continuous semigroup $(T(t))_{t\geq0}$ is its \emph{generator} which is obtained as the (right) derivative of the map $t \mapsto T(t)$ at $t = 0$.
+\index{generator}
 Since for strongly continuous semigroups the functions $t \mapsto T(t)f$, $f \in E$, are continuous but not always differentiable, we have to restrict our attention to those $f \in E$ for which the desired derivative exists.
 We then obtain the \emph{generator} as a not necessarily everywhere defined operator.
 
 \begin{definition}\label{def:a1-1.5}
-%%KGK
-%\index{One-parameter semigroup!Generator}
 To every semigroup $(T(t))_{t \geq 0}$ there belongs an operator $(A,D(A))$, called the \emph{generator} and defined on the \emph{domain}
 %% --
 \begin{align*}
@@ -190,6 +183,7 @@ We state this explicitly in the following theorem.
 \begin{theorem}\label{thm:a1-1.7}
 Let $(A,D(A))$ be the generator of a strongly continuous semigroup $(T(t))_{t \geq 0}$ on the Banach space $E$.
 Then the \emph{abstract Cauchy problem}
+\index{abstract Cauchy problem}
 %% --
 \begin{equation}\label{eq:a1-1.5}
 \frac{d}{\dt}\xi(t) = A\xi(t), \quad \xi(0) = f_{0}
@@ -238,6 +232,7 @@ Finally we call a subset $D_{0}$ of $D(B)$ a \emph{core} for $B$ if $D_{0}$ is $
 This means that a closed operator is determined (via closure) by its restriction to a core in its domain.
 
 We now collect the fundamental topological properties of semigroup generators, their domains (see also A-II, Corollary~1.34) and their resolvents.
+\index{resolvent}
 %% --
 \begin{proposition}\label{prop:a1-1.9}
 For the generator $A$ of a strongly continuous semigroup $(T(t))_{t \geq 0}$ the following hold.
@@ -336,7 +331,6 @@ We refer to \citet[Proposition~1.14]{davies:1980} for the details.
 \end{remarks}
 %% --
 \section{Standard Examples}\label{sec:a1-2}%
-%%KGK kleinschreiben
 \index{standard example}
 %% --
 In this section we list and discuss briefly the most basic examples of semigroups together with their generators.
@@ -344,7 +338,6 @@ These semigroups will reappear throughout this book and will be used to illustra
 We start with the class of semigroups mentioned after Definition~\ref{def:a1-1.1} on p.~\pageref{def:a1-1.1}.
 %% --
 \subsection{Uniformly Continuous Semigroups}\label{subsec:a1-2.1}%
-%%KGK kleinschreiben
 \index{standard example!uniformly continuous semigroup}
 %% --
 It follows from elementary operator theory that for every bounded operator $A$ in  $\LE$ the sum
@@ -384,7 +377,6 @@ Moreover, the growth bound $\omega_0$ satisfies $|\omega_0| \leq \|A\|$ in this 
 The above characterization of the generators of uniformly continuous semigroups as the bounded operators shows that these semigroups are---at least in many aspects---rather simple objects.
 %% --
 \subsection{Matrix Semigroups}\label{subsec:a1-2.2}%
-%%KGK kleinschreiben
 \index{standard example!matrix semigroup}
 %% --
 %% --
@@ -509,8 +501,8 @@ Here are some simple examples.
 \]
 %% --
 \subsection{Multiplication Semigroups}\label{subsec:a1-2.3}%
-%%KGK kleinschreiben
 \index{standard example!multiplication semigroup}
+\index{semigroup!multiplication semigroup}
 %% --
 Many Banach spaces appearing in applications are Banach spaces of (real or) complex valued functions over a set $X$.
 %% --
@@ -548,6 +540,7 @@ $q$ is ($\mu$-essentially) bounded.
 %% --
 One has $\|M_{q}\| = \|q\|_{\infty}$ in this situation.
 Observe that on spaces $C(K)$, $K$ compact, there are no densely defined, unbounded multiplication operators.
+\index{operator!multiplication}
 
 By defining the multiplication semigroups
 %% --
@@ -598,8 +591,9 @@ We point out that the above results cover the cases of sequence spaces such as $
 An abstract characterization of generators of multiplication semigroups will be given in C-II, Theorem~5.13.
 %% --
 \subsection{Translation (Semi)Groups}\label{subsec:a1-2.4}%
-%%KGK kleinschreiben
 \index{standard example!translation semigroup}
+\index{translation semigroup|(}
+\index{semigroup!translation semigroup}
 %% --
 Let $E$ to be one of the following function spaces $C_{0}(\R_{+})$, $C_{0}(\R)$, $L^{p}(\R_{+})$ or $L^{p}(\R)$ for $1 \leq p < \infty$.
 Define $T(t)$ to be the (left) translation operator
@@ -679,10 +673,11 @@ Then
 %% --
 hence $f \in D(A)$.
 \end{proof}
+\index{translation semigroup|)}
 %% --
 \subsection{Rotation Groups}\label{subsec:a1-2.5}%
-%%KGK kleinschreiben
 \index{standard example!rotation group}
+\index{semigroup!rotation semigroup}
 %% --
 On $E = C(\Gamma)$, \resp $E = L^{p}(\Gamma,m)$, $1 \leq p < \infty$, $m$ Lebesgue measure we have canonical groups defined by rotations of the unit circle $\Gamma$ with a certain period, \ie for $0 < \tau \in \R$ the operators
 %% --
@@ -723,8 +718,9 @@ with generator
 \]
 %% --
 \subsection{Nilpotent Translation Semigroups}\label{subsec:a1-2.6}%
-%%KGK kleinschreiben
 \index{standard example!nilpotent translation semigroup}
+\index{semigroup!nilpotent semigroup}
+\index{translation semigroup}
 %% --
 Take $E = L^{p}([0,\tau],m)$ for $1 \leq p < \infty$ and define
 %% --
@@ -746,7 +742,6 @@ In fact, if $f \in D(A)$, then $f$ is absolutely continuous with $f' \in E$.
 By Proposition~\ref{prop:a1-1.6}\,(i), it follows that $T(t)f$ is absolutely continuous and hence $f(\tau) = 0$.
 %% --
 \subsection{One-dimensional Diffusion Semigroup}\label{subsec:a1-2.7}%
-%%KGK kleinschreiben
 \index{standard example!one-dimensional diffusion semigroup}
 %% --
 For the second derivative 
@@ -821,7 +816,6 @@ Finally, we observe that $E_{0}$ is a core for $(A,D(A))$ by Proposition~1.9(ii)
 Consequently, $(T(t))_{t \geq 0}$ is the semigroup generated by the closure of the second derivative with domain $D(B)$.
 %% --
 \subsection{n-dimensional Diffusion Semigroup}\label{subsec:a1-2.8}%
-%%KGK kleinschreiben
 \index{standard example!$n$-dimensional diffusion semigroup}
 %% --
 On $E = L^{p}(\R^{n})$, $1 \leq p \leq \infty$, the operators
@@ -854,6 +848,7 @@ where $f \in \mathcal{S}(\R^{n})$, $\hat{f} = Ff \in \mathcal{S}(\R^{n})$.
 
 In other words, $F$ transforms $(T(t)\vert_{ S(\R^{n})})_{t \geq 0}$ into a multiplication semigroup on $\mathcal{S}(\R^{n})$ which is pointwise continuous for the usual topology of $\mathcal{S}(\R^{n})$.
 The generator, \ie the right derivative at $0$, of this semigroup is the multiplication operator
+\index{operator!multiplication}
 %% --
 \[
     B\hat{f}(x) \coloneqq -|x|^{2}\hat{f}(x) \quad (x \in \R^{n})
@@ -889,7 +884,6 @@ Analogous examples to \ref{subsec:a1-2.7} are valid in $L^{p}\left[ 0,1 \right]$
 \ref{subsec:a1-2.8} in $C_{0}(\R^{n})$.
 %% --
 \section{Standard Constructions}\label{sec:a1-3}%
-%%KGK kleinschreiben
 \index{standard construction}
 %% --
 Starting with a semigroup $(T(t))_{t \geq 0}$ on a Banach space $E$ it is possible to construct new semigroups on spaces naturally associated with $E$.
@@ -900,6 +894,7 @@ We always start with a semigroup $(T(t))_{t \geq 0}$ on a Banach space $E$, and 
 %% --
 \subsection{Similar Semigroups}\label{subsec:a1-3.1}%
 \index{standard construction!similar semigroup}
+
 %% --
 There is an easy way how to obtain different (but isomorphic) semigroups out of a given semigroup $(T(t))_{t \geq 0}$ on a Banach space $E$.
 
@@ -914,7 +909,6 @@ If $A$ is the generator of $(T(t))_{t \geq 0}$ then
 is the generator of $(S(t))_{t \geq 0}$.
 %% --
 \subsection{The Rescaled Semigroup}\label{subsec:a1-3.2}%
-%%KGK kleinschreiben
 \index{standard construction!rescaled semigroup}
 %% --
 For fixed $\lambda \in \C$ and $\alpha > 0$ the operators
@@ -951,8 +945,8 @@ and
 %% --
 %% --
 \subsection{The Subspace Semigroup}\label{subsec:a1-3.3}%
-%%KGK kleinschreiben
 \index{standard construction!subspace semigroup}
+\index{semigroup!subspace semigroup}
 %% --
 Assume $F$ to be a closed $(T(t))$-invariant or, equivalently, $R(\lambda,A)$-invariant for 
 $\lambda \in \C$, 
@@ -974,7 +968,6 @@ An $A$-invariant subspace need not necessarily be $(T(t))$-invariant:
 Take for example the translation group with $(T(t)f)(x) = f(x+t)$ on $E = C_{0}(\R)$ and the subspace $F \coloneqq \{f \in E \colon f(x) = 0 \text{ for } x \leq 0\}$.
 %% --
 \subsection{The Quotient Semigroup}\label{subsec:a1-3.4}%
-%%KGK kleinschreiben
 \index{standard construction!quotient semigroup}
 %% --
 Let $F$ be a closed $(T(t))$-invariant subspace of $E$ and consider the quotient space $ E_{/}\coloneqq \sfrac{E}{F} $ with quotient map $q \colon E \to E_{/}$. 
@@ -1006,8 +999,6 @@ where $h \in D(A)$ and $\lambda > \omega$ (see Proposition~\ref{prop:a1-1.6}).
 In particular we point out that for every $\hat{f} \in D(A_{/})$ there exist representatives $f \in \hat{f}$ belonging to $D(A)$.
 %% --
 \begin{example*}\label{ex:a1-3.1}%
-%%KGK kleinschreiben + kuerzen
-%\index{standard example!translation semigroup on $L^{1}$}
 \index{standard example!translation semigroup}
 %%
 We start with the Banach space $E = L^{1}(\R)$ and the translation semigroup $(T(t))_{t \geq 0}$ where $T(t)f(x) \coloneqq f(x+t)$ (see Example 2.4).
@@ -1050,9 +1041,9 @@ In particular it follows that the domain of its generator is
 \end{example*}
 %% --
 \subsection{The Adjoint Semigroup}\label{subsec:a1-3.5}%
-%%KGK kleinschreiben
 \index{standard construction!adjoint semigroup}
 \index{adjoint semigroup}
+\index{operator!adjoint}
 %% --
 The adjoint operators $(T(t)')_{t \geq 0}$ of a strongly continuous semigroup $(T(t))_{t \geq 0}$ on a Banach space $E$ form a semigroup on $E'$ which need, however, not be strongly continuous.
 %% --
@@ -1222,7 +1213,6 @@ Obviously, the function $x \mapsto |\sin x|$ belongs to $D(A')$, but not to $D(A
 \end{example*}
 %% --
 \subsection{The Associated Sobolev Semigroups}\label{subsec:a1-3.6}%
-%%KGK kleinschreiben
 \index{standard construction!associated Sobolev semigroup}
 %% --
 Since the generator $A$ of a strongly continuous semigroup $(T(t))_{t\geq 0}$ is closed, its domain $D(A)$ becomes a Banach space for the graph norm
@@ -1287,6 +1277,7 @@ Therefore we might call $E_{n}$ the \emph{n-th Sobolev space} and $(T_{n}(t))_{t
 %% --
 \begin{enumerate}[\upshape(i), wide, labelindent=.5em]
 \item
+\index{resolvent}
 For $\lambda \in \rho(A)$ the operator $(\lambda - A)$ and the resolvent $R(\lambda,A)$ are isomorphisms from $E_{1}$ onto $E$, \resp from $E$ onto $E_{1}$ (show that $\|\cdot\|_{1}$ and $\|\cdot\|_{\lambda}$ with $\|\cdot\|_{\lambda} \coloneqq \|(\lambda - A)\cdot\|$ are equivalent).
 %% --
 In addition, the following diagram commutes. 
@@ -1331,8 +1322,8 @@ Then $(T(t))_{t \geq 0}$ extends continuously to a strongly continuous semigroup
 \end{remarks*}
 %% --
 \subsection{The \texorpdfstring{$\mathcal{F}$}{F}-Product Semigroup}\label{subsec:a1-3.7}%
-%%KGK ????
-%\index{Standard Constructions!fprod@$\mathcal{F}$-Product!Semigroup}
+%
+\index{semigroup!F-product@$\mathcal{F}$-product}
 \index{standard construction!fprod@$\mathcal{F}$-Product semigroup}
 %% --
 It is standard in functional analysis to consider a sequence of points in a certain space as a point in a new and larger space.
@@ -1449,9 +1440,8 @@ We will show in A-III, Section~4.2 that the above construction preserves and eve
 
 %% --
 \subsection{The Tensor Product Semigroup}\label{subsec:a1-3.8}%
-%%KGK kleinschreiben - singular
 \index{standard construction!tensor product semigroup}
-
+\index{semigroup!tensor product semigroup}
 %% --
 Real- or complex-valued functions of two variables $x$, $y$ are often limits of functions of the form $\sum_{i=1}^{n} f_{i}(x)g_{i}(y)$ which, to some extent, allows one to consider the variables $x$ and $y$ separately.
 Since algebraic manipulation with these latter functions is governed by the formal rules of a tensor product, it is customary to identify (for example) the function
@@ -1575,7 +1565,6 @@ Moreover, $D(A) \otimes D(B)$ is dense in $E \widetilde{\otimes}_{\alpha} F$ and
 \end{proof}
 %% --
 \subsection{The Product of Commuting Semigroups}\label{subsec:a1-3.9}%
-%%KGK kleinschreiben - singular
 \index{standard construction!commuting semigroup}
 %% --
 Let $(S(t))_{t\geq 0}$ and $(T(t))_{t\geq 0}$ be semigroups with generators $A$ and $B$, respectively on some Banach space $E$.

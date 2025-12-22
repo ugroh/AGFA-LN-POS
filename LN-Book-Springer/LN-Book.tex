@@ -1,7 +1,7 @@
 % !TEX TS-program = pdflatexmk
 % !BIB program = bibtex
 %%%%%%%%%%%%%%%%%%%% LN-Book.tex %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Status: 2025-12-18 ulgr
+% Status: 2025-12-22 ulgr
 %%%%%%%%%%%%%%%% Springer-Verlag %%%%%%%%%%%%%%%%%%%%%%%%%% 
 \documentclass[%  
 	,graybox
@@ -66,8 +66,8 @@
 
 %% -- Our definitions
 %% --
-\include{./preamble/ln-preamble-final}	
-\include{./preamble/ln-definitionen}
+\input{./preamble/ln-preamble-final}	
+\input{./preamble/ln-definitionen}
 %% -- 
 \usepackage[showonlyrefs]{mathtools}
 \usepackage{empheq}
@@ -161,45 +161,45 @@
 %% --
 \frontmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% -- part-0
-\include{./part-0/ln-dedication}
-%\include{./part-0/foreword}
-\include{./part-0/ln-preface}
-%\include{./part-0/acknowledgement}
+\input{./part-0/ln-dedication}
+%\input{./part-0/foreword}
+\input{./part-0/ln-preface}
+%\input{./part-0/acknowledgement}
 %% --
 \tableofcontents
 %% --
-\include{./part-0/ln-symbols}
+\input{./part-0/ln-symbols}
 %% %% --
 \mainmatter
 %% --
 
 %% -- Part-A
-\include{./part-a/part-a} 
-    \include{./part-a/chap-a1}
-    \include{./part-a/chap-a2}
-    \include{./part-a/chap-a3}
-    \include{./part-a/chap-a4}
+\input{./part-a/part-a} 
+    \input{./part-a/chap-a1}
+    \input{./part-a/chap-a2}
+    \input{./part-a/chap-a3}
+    \input{./part-a/chap-a4}
 
 %%% -- Part-B
-\include{./part-b/part-b}
-    \include{./part-b/chap-b1}
-    \include{./part-b/chap-b2}
-    \include{./part-b/chap-b3}
-    \include{./part-b/chap-b4}
+\input{./part-b/part-b}
+    \input{./part-b/chap-b1}
+    \input{./part-b/chap-b2}
+    \input{./part-b/chap-b3}
+    \input{./part-b/chap-b4}
 
 %%% -- Part-C
-\include{./part-c/part-c}
-    \include{./part-c/chap-c1}
-    \include{./part-c/chap-c2}
-    \include{./part-c/chap-c3}
-    \include{./part-c/chap-c4}
+\input{./part-c/part-c}
+    \input{./part-c/chap-c1}
+    \input{./part-c/chap-c2}
+    \input{./part-c/chap-c3}
+    \input{./part-c/chap-c4}
 
 %% -- Part-D
-\include{./part-d/part-d}
-   \include{./part-d/chap-d1}
-    \include{./part-d/chap-d2}
-    \include{./part-d/chap-d3}
-    \include{./part-d/chap-d4}
+\input{./part-d/part-d}
+   \input{./part-d/chap-d1}
+    \input{./part-d/chap-d2}
+    \input{./part-d/chap-d3}
+    \input{./part-d/chap-d4}
 
 %% --
 {\RaggedRight

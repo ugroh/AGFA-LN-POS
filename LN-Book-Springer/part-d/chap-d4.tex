@@ -1,9 +1,5 @@
-% !TEX root = ../LN-Index.tex
-%% -- 
-%% --Stand 2025-11-28
-%% -- Stand: 2025-12-04 KGK Indexanpassung
 %% --
-\chapternopage{Asymptotics of Positive Semigroups on \texorpdfstring{C$^{*}$}{C*}- and \texorpdfstring{W$^{*}$}{W*}-Algebras}\label{chap:d4}
+\chapternopage{Asymptotics of Positive Semigroups on \texorpdfstring{C$^{*}$}{C\textsuperscript{*}}- and \texorpdfstring{W$^{*}$}{W\textsuperscript{*}}-Algebras}\label{chap:d4}
 \chaptermark{Asymptotics of Positive Semigroups}
 %% --
 {\Large
@@ -14,6 +10,8 @@ Ulrich Groh
 \\
 }
 %% --
+\index{stability|(}
+\index{semigroup!positive semigroup}
 \section{Stability of Positive Semigroups}\label{sec:d4-1}
 %% --
 As explained in A-III, Section 1, it is possible to deduce uniform exponential stability of strongly continuous semigroups from the location of the spectrum of its generator if the spectral bound $ s(A) $ and the growth bound $ \omega_{0} $ coincide.
@@ -109,6 +107,8 @@ While the growth bound $\omega_{0}$ characterizes uniform exponential stability 
 Let $E$ be a Banach space and $(T(t))_{t \geq 0}$ a semigroup on $E$.
 We call the semigroup
 %% --
+\index{stability!uniformly stable}
+\index{stability!uniformly exponentially stable}
 \begin{enumerate}[\upshape (i)]
 \item 
 \emph{uniformly exponentially stable} if $\|T(t)\| \leq M\eu^{-\omega t}$ for some $\omega$, $M > 0$ and all $t \geq 0$.
@@ -169,7 +169,10 @@ The same holds for the translation semigroup on $L^1(\R_{+})$.
 Thus Theorem 1.7 is not true for semigroups on \CA-algebras without unit or on preduals of \WA-algebras.
 For the discussion of the commutative situation we refer to B-IV, Section 1.
 \end{remark}
+%%KGK 2025-12-18 ?? stability 2x????
+\index{stability|)}
 %% --
+\index{stability|(}
 \section{Stability of Implemented Semigroups}
 %% --
 Let $H$ be a Hilbert space, $\UG = (U(t))_{t \geq 0}$ a strongly continuous semigroup on $H$ with generator $B$ and $M \subseteq \BH$ a \WA-algebra, where $\BH$ is the \WA-algebra of all bounded linear operators on $H$.
@@ -181,7 +184,6 @@ Then one can define a weak*-continuous semigroup $\TT$ on $M$ by
 \]
 %
 We call $\TT$ an \emph{implemented semigroup}.
-%%KGK kleinschreiben neu "semigroup!implemented semigroup"
 \index{implemented semigroup}%
 \index{semigroup!implemented semigroup}%
 Every map $T(t) \in \TT$ of an implemented semigroup is weak*-continuous and $n$-positive for every $n \in \N$.
@@ -240,6 +242,7 @@ is necessary and sufficient, which is in complete analogy to the classical Liapu
 Let $M$ be a \WA-algebra on a Hilbert space $H$ and let $\TT = (T(t))_{t \geq 0}$ be a weak*-semigroup on $M$ with generator $A$ implemented by the semigroup $\UG$ on $H$ with generator $B$.
 Then the following assertions are equivalent.
 %% --
+\index{stability!uniformly exponentially stable}
 \begin{enumerate}[\upshape (a)]
 
 \item\label{item:d4-2.2-a}
@@ -344,11 +347,9 @@ exists for all $x \in M$ and $\phi \in M_{*}$ (\citet[Theorem II.2.6]{takesaki:1
 Therefore, the resolvent $R(0,A)$ exists and is positive, hence $s(A) < 0$.
 \end{enumerate}
 \end{proof}
+\index{stability|)}
 %% --
 \section{Convergence of Positive Semigroups}\label{sec:d4-3}
-%%KGK kleinschreiben singular?
-%%GG\index{operator algebra!convergence of positive semigroups}
-%%KGK 2025-12-16
 \index{asymptotic behavior}
 In this section the asymptotic behavior of positive semigroups $(T(t))_{t \geq 0}$ on \WA-algebras will be described in more detail.
 Essentially we distinguish three cases.
@@ -365,7 +366,8 @@ The maps $T(t)$ behave asymptotically as a periodic group (Theorem~\ref{thm:d4-3
 \end{enumerate}
 %% --
 Much of the following is based on the theory of weakly compact operator semigroups.
-Therefore the following compactness criterium is quite useful.
+Therefore the following compactness criterium is quite useful. 
+\index{operator!weakly compact}
 %% --
 \begin{proposition}\label{prop:d4-3.1}
 Let $M$ be a \WA-algebra, $\TT$ a bounded semigroup of positive maps on $M_{*}$ and suppose that there exists a faithful family $\Phi$ of\/ $\TT$-subinvariant states in $M_{*}$.
@@ -410,15 +412,14 @@ p_{r} \coloneqq \sup\{s(|\phi|) \colon \phi \in \Fix{T}\}
 \]
 %% --
 the recurrent projection associated with $\TT$.
-%%KGK
-%\index{Operator Algebras!Recurrent rojection}%
-%\index{operator algebra!recurrent projection}%
 For a motivation of this definition compare, \eg \citet[Section 6.3]{davies:1976}.
 
 Since $T(t)|\phi| = |\phi|$ for all $\phi \in \Fix{T}$ (D-III, Cor. 1.5), we obtain $T(t)'p_{r} \geq p_{r}$ (see D-I,Sec.3.(c)).
 Let $\TT^{(r)}$ be the reduced semigroup on $p_{r}M_{*}p_{r}$ with generator $A^{(r)}$.
 Then $\TT^{(r)}$ is identity preserving and of Schwarz type.
-Similarly, if $\RR$ is a pseudo-resolvent on $D = \{\lambda \in \C \colon \Re(\lambda) > 0\}$ with values in $M_{*}$ such that $\RR$ is identity preserving and of Schwarz type, then the recurrent projection associated with $\RR$ is defined using $\Fix{\RR}$.
+Similarly, if $\RR$ is a pseudo-resolvent 
+\index{pseudo-resolvent}
+on $D = \{\lambda \in \C \colon \Re(\lambda) > 0\}$ with values in $M_{*}$ such that $\RR$ is identity preserving and of Schwarz type, then the recurrent projection associated with $\RR$ is defined using $\Fix{\RR}$.
 %% --
 \begin{remark}\label{rem:d4-3.2}
 \begin{enumerate}[\upshape (i), wide, labelindent=.5em]
@@ -859,6 +860,7 @@ Thus $ \TT $  is irreducible and uniformly ergodic on $ L^{1}(\Gamma,\dm) $  (se
 
 Now let $ \TT $  be a semigroup on a predual $ M_{*} $ of a von Neumann-algebra $ M $.
 It is called \emph{partially periodic}, if there exists a projection $ Q \in L(M_{*}) $  reducing $ T $  such that $ Q(M_{*}) \cong L^{1}(\Gamma,\dm) $  and $ T_{| \Im(Q)} $  is conjugate to a periodic semigroup on $ L^{1}(\Gamma,\dm) $.
+\index{periodic semigroup}
 
 In the main result we present a non commutative version of \citet{nagel:1984} showing that certain dynamical systems are partially periodic semigroups.
 %% --
@@ -877,6 +879,7 @@ The restriction $ T_{0} $  of $ \TT $  to $ \Im (Q) $  is irreducible and conjug
 
 \item
 The spectral bound $ s(A_{| \Kern{Q} } $  is strictly smaller than $ 0 $.
+\index{spectral bound $s(A)$}
 \end{enumerate}
 \end{proposition}
 %% --
@@ -959,6 +962,7 @@ In this section we study sufficient conditions which imply uniform ergodicity th
 We first need some preparations.
 %% --
 \begin{lemma}\label{lem:d4-4.1}
+\index{pseudo-resolvent|(}
 Let $ \RR $  be an identity preserving pseudo-resolvent of Schwarz type on $ D = \{\lambda \in \C \colon  \Re(\lambda) > 0\} $  with values in the predual of a \WA-algebra $ M $.
 If the fixed space of $ \RR $  is infinite dimensional, then there exists a sequence of states in $ \Fix{\RR} $  such that the corresponding support projections are mutually orthogonal in $ M $.
 \end{lemma}
@@ -1217,6 +1221,7 @@ This is a contradiction and it implies $ \dim \Fix{\RR'} = 1 $, hence (iv) is pr
 \end{enumerate}
 %% --
 \end{proof}
+\index{pseudo-resolvent|)}
 %% --
 The next corollary is an easy application of\/ Theorem~\ref{thm:d4-4.4} and of D-III, Proposition 2.3.
 %% --
@@ -1275,6 +1280,7 @@ Therefore $ \dim \Fix{\widehat{\mu R(\mu)}} < \infty $  in some ultrapower of $ 
 It follows from D-III, Proposition 2.3 that 0 is a pole of the resolvent of $ R(\cdot,A) $.
 Therefore $ \TT $  is uniformly ergodic.
 \end{proof}
+\index{Schwarz map|)}
 %% --
 %\clearpage
 \section*{Notes}\label{notes:d4-notes}

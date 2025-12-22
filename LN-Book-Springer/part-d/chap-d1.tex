@@ -1,10 +1,5 @@
-% !TEX root = ../LN-Index.tex
-%% -- 
-%% --Stand 2025-11-28
-%% -- Stand: 2025-12-04 KGK Indexanpassung
 %% --
 \chapternopage{Basic Results on Semigroups and Operator Algebras}\label{chap:d1}
-%%KGK kleinschreiben
 \index{operator algebra}
 %% --
 %% --
@@ -22,7 +17,6 @@ We only prepare for the following chapters on spectral and asymptotic theory by 
 For results on strongly continuous semigroups on Banach spaces, we refer to Chapter A-I.%, \ref{chap:a1}.
 %% --
 \section{Notations}\label{sec:d1-1}
-%%\index{Operator Algebras!Notations}
 %% --
 \begin{enumerate}[1., wide, labelsep=1em]
 
@@ -68,6 +62,7 @@ It is called \emph{$n$-positive} ($ n \in \N $) if $ T \otimes \text{Id}_{n} $ i
 Obviously, every n-positive map is positive.
 
 We call a contraction $ T \in \L{M} $ a \emph{Schwarz map} if $ T $ satisfies the so called \emph{Schwarz-inequality}
+\index{Schwarz map!definition}
 %% --
 \[
 	T(x)T(x)^{*} \leq T(xx^{*}) 
@@ -75,15 +70,12 @@ We call a contraction $ T \in \L{M} $ a \emph{Schwarz map} if $ T $ satisfies th
 %% --
 for all $ x \in M $.
 It is well known that every $n$-positive contraction, for $ n \geq 2 $ and every positive contraction on a commutative \CA-algebra is a Schwarz map. (\citet[Chapter IV]{takesaki:1979})
-%%KGK kleinschreiben
-\index{Schwarz map}
+\index{Schwarz map|(}
 As we shall see, the Schwarz inequality is crucial for our investigations.
 
 \item 
 If $ M $ is a \CA-algebra, we assume that $ \TT = (T(t))_{t \geq 0} $ is a strongly continuous semigroup (abbreviated as semigroup), while for \WA-algebras we consider weak*-semigroups, \ie the mapping $ (t \mapsto T(t)x) $ is continuous from $ \R_{+} $ into $ (M,\sigma(M,M_{*}))$, where $ M_{*} $ is the predual of $ M $, and every $ T(t) \in \TT $ is $ \sigma(M,M_{*}) $-continuous.
 Note that the preadjoint semigroup
-%%KGK
-%\index{Operator Algebras!Preadjoint Semigroup}
 %% --
 \[
 	\TT_{*} = \{ T(t)_{*} \colon T(t) \in \TT \}
@@ -100,8 +92,7 @@ For the notations concerning one-parameter semigroups we refer to Part A.
 In addition, we recommend to compare the results of this section with the corresponding results for commutative \CA-algebras, \ie for $ C_{0}(X) $, $ C(K) $ and $ L^\infty(\mu) $ in Part B.
 %% --
 \section{A Fundamental Inequality for the Resolvent}\label{sec:d1-2}
-%%KGK
-%\index{Operator Algebras!Inequality for the resolvent}
+\index{resolvent}
 %% --
 If $ \TT = (T(t))_{t \geq 0} $ is a strongly continuous semigroup of Schwarz maps on a \CA-algebra $ M $ (\resp a weak*-semigroup of Schwarz type on a \WA-algebra $ M $) with generator $ A $, then the spectral bound satisfies $ s(A) \leq 0 $.
 The resolvent $ R(\lambda, A) $ exists for $ \Re(\lambda) > 0 $ and is positive for $ \lambda \in \R_{+} $.
@@ -216,6 +207,7 @@ it follows from above, that $ \TT $ is a semigroup of Schwarz-type, if and only 
 %% --
 As in Section C-III the following notion will be an important tool for the spectral theory of semigroups on \CA- and \WA-algebras.
 %% --
+\index{pseudo-resolvent|(}
 \begin{definition}\label{def:d1-2.4}
 Let $E$ be a Banach space and let $D$ be a non-empty open subset of $\C$.
 A family $ \mathcal{R} \colon D \mapsto L(E) $ is called a \emph{pseudo-resolvent} on $ D $ with values in $ E $ if
@@ -228,8 +220,6 @@ for all $ \lambda $, $ \mu $ in $ D $ and $ R \in \mathcal{R} $.
 \end{definition}
 %% --
 If $ \mathcal{R} $ is a {pseudo-resolvent} on $ D = \{\lambda \in \C \colon \Re(\lambda) > 0\} $ with values in a \CA- or \WA-algebra, then $ \mathcal{R} $ is called of \emph{Schwarz type} 
-%%KGK
-%\index{Operator Algebras!Pseudo-Resolvent of Schwarz type}
 if
 %% --
 \[
@@ -279,14 +269,15 @@ is identity preserving.
 By Corollary \ref{cor:d1-2.2} an analogous statement holds for \emph{Schwarz type}.
 %% --
 \section{Induction and Reduction}
-%%KGK
-%\index{Operator Algebras!Induction and Reduction}
 %% --
 \begin{enumerate}[1., wide, labelindent=.5em]
 \item
 If $ E $ is a Banach space and $ \mathcal{S} \subseteq \LE $ is a semigroup of bounded operators, then a closed subspace $ F $ is called $ \mathcal{S} $-invariant, if $ SF \subseteq F $ for all $ S \in \mathcal{S} $.
 We call the semigroup $ \mathcal{S}_{\vert F} \coloneqq \{S_{\vert F} \colon S \in \mathcal{S} \} $ the reduced semigroup.
-Note that for a one-parameter semigroup $ \TT $ (\resp, pseudo-resolvent $ \mathcal{R} $) the reduced semigroup is again strongly continuous (\resp $ \mathcal{R}_{\vert F} $ is again a pseudo-resolvent). (Compare A-I, 3.2).
+Note that for a one-parameter semigroup $ \TT $ (\resp, pseudo-resolvent $ \mathcal{R} $) the reduced semigroup is again strongly continuous (\resp $ \mathcal{R}_{\vert F} $ is again a pseudo-resolvent). (Compare 
+%%KGK StandConst schift
+%A-I, 3.2
+A-I, 3.3).
 
 \item
 Let $ M $ be a \WA-algebra, $ p \in M $ a projection and $ S \in \L{M} $ such that 
@@ -382,6 +373,7 @@ Furthermore, if  $ \mathcal{R} $ is a pseudo-resolvent on
 \]
 %
 with values in $ M_{*} $ which is identity preserving and of Schwarz type such that $ R(\mu)\phi = \phi $ for some $ \mu \in \R_{+} $, then $ \mathcal{R}_{\vert s(\phi)M_{*}s(\phi)} $ has the same properties.
+\index{pseudo-resolvent|)}
 
 %% --
 \section*{Notes}

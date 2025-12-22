@@ -1,11 +1,8 @@
-% !TEX root = ../LN-Index.tex
-%% -- 
-%% --Stand 2025-11-28
 %% --
 \setcounter{chapter}{1}
 \chapternopage{Characterization of Positive Semigroups on Banach Lattices}\label{chap:c2}
 \chaptermark{Characterization of Positive Semigroups}%
-%\index{Positive Semigroups!Characterization}
+\index{semigroup!positive semigroup}
 %% --
 {\Large
 \vspace*{-.75cm}
@@ -24,7 +21,8 @@ In fact, on $L^{2}(\R)$ there exists a non-positive semigroup whose generator sa
 
 Looking for another condition we consider the Laplacian $\Delta$ as a prototype.
 Defined on a suitable domain, $\Delta$ generates a positive semigroup on $L^p(\R^n)$.
-Kato proved the following distributional inequality for the Laplacian:
+Kato proved the following distributional inequality for the Laplacian.
+\index{operator!Laplacian}
 %% -- 
 \[
 \Re \left( (\sign \bar{f}) \Delta f \right) \leq \Delta|f|
@@ -40,7 +38,6 @@ Finally, in Section 5 we show that $(T(t))_{t \geq 0}$ is a lattice semigroup (\
 This parallels the case when $E = C_{0}(X)$, but if $E$ has order continuous norm the strong form of Kato's equality can be considered (in particular, $f \in D(A)$ implies $|f| \in D(A)$ if $A$ is the generator of such a semigroup).
 %% --
 \section{Positive Contraction Semigroups and Bounded Generators}\label{sec:c2-1}%
-%\index{Positive Semigroups!Characterization!Positive Contraction Semigroups and Bounded Generators}
 %% --
 In this section we first characterize generators of positive contraction semigroups on a real Banach lattice $E$.
 For that we use the results developed in A-II, Section 2 for the canonical half-norm $N^{+} \colon E \to \R$ given by
@@ -50,10 +47,6 @@ N^{+}(f) = \|f^{+}\| \quad (f \in E).
 %% --
 \begin{remark*}\label{rem:c2-1.1}
 %
-%%KGK kleinschreiben
-%\index{half-norm}
-%
-%\index{Canonical half-norm}
 It is easy to see that $N^{+}(f) = \inf \{\|f+g\| \colon g \in E_{+}\} = \text{dist}(-f,E_{+})$ (cf. A-II, Remark 2.8). 
 \end{remark*}
 %% --
@@ -68,9 +61,6 @@ The subdifferential of $N^{+}$ is given by
 %% --
 \begin{examples}\label{ex:c2-1.1}
 %
-%\index{Examples!Subdifferentials}
-%
-%\index{Subdifferentials!Examples}
 \begin{enumerate}[\upshape (i), wide, labelindent=.5em]  % , itemindent=\parindent]
 %%
 \item \label{ex:c2-1.1-1}
@@ -116,9 +106,6 @@ Generators of positive contraction semigroups are characterized by the following
 \index{dissipative operator|(}
 \index{dispersive operator}
 %
-%\index{Operators!Dispersive}
-%
-%\index{Positive Contraction Semigroups!Generators}
 Let $A$ be a densely defined operator on a real Banach lattice $E$. 
 The following assertions are equivalent.
 \begin{enumerate}[\upshape (a)]
@@ -135,9 +122,6 @@ Frequently an operator is known explicitly only on a core. In that case one can 
 %% --
 \begin{corollary}\label{cor:c2-1.3}
 %
-%\index{Dispersive Operators!Closable}
-%
-%\index{Closable Operators}
 Let $A$ be a densely defined dispersive operator on a real Banach lattice $E$. 
 If $(\lambda - A)D(A)$ is dense in $E$ for some $\lambda > 0$, then $A$ is closable and the closure $\overline{A}$ of $A$ is the generator of a positive contraction semigroup.
 \end{corollary}
@@ -146,9 +130,6 @@ Theorem \ref{thm:c2-1.2}  and Corollary \ref{cor:c2-1.3}  immediately follow fro
 %% --
 \begin{lemma}\label{lem:c2-1.4}
 %
-%\index{Positive Contraction}
-%
-%\index{$N^{+}$-contractive}
 A bounded linear operator  $T$ on a Banach lattice $E$ is a positive contraction if and only if $\|(Tf)^{+}\| \leq \|f^{+}\|$ for all $f \in E$ (\ie if $T$ is $N^{+}$-contractive).
 \end{lemma}
 %% --
@@ -172,9 +153,6 @@ So $T$ is a contraction.
 %% --
 \begin{examples}\label{ex:c2-1.5}
 %
-%\index{Examples!Second Derivative Operator}
-%
-%\index{Dirichlet Boundary Condition}
 \begin{enumerate}[\upshape (i), wide, labelindent=.5em] %, itemindent=\parindent]  %%enum:c2-1.5-beg
 %%
 \item \label{ex:c2-1.5-1}
@@ -237,8 +215,6 @@ Let $D(A) = \mathcal{S}(\R^{n})$ (the Schwartz space of all infinitely different
 Then $A$ is closable and the closure of $A$ generates a positive contraction semigroup on $E$.
 %%--
 %%--
-%%KGK p-C2-05; LNMp-251
-%%
 \begin{proof}
 $A$ is dispersive. 
 In fact, let $f \in D(A)$. 
@@ -259,9 +235,6 @@ But $[(Id - \Delta)f]^{\hat{}} = M\hat{f}$ where $(Mg)(y) = (1 + \sum_{i=1}^{n} 
 %% --
 \begin{remark*}\label{rem:c2-1.2}
 %
-%\index{Closure of Laplacian}
-%
-%\index{Laplacian!Closure}
 In addition one can show that the closure $\overline{A}$ of $A$ is given by $\overline{A}f = \Delta f$ with domain $D(\overline{A}) = \{f \in E \colon \Delta f \in E\}$ where for
 $f \in C_{0}(\R^{n})$ the expression $\Delta f$ is understood in the sense of distributions. 
 Moreover, the space $C_{c}^{\infty}(\R^{n})$ (of all infinitely differentiable functions with compact support) is a core of $\overline{A}$ (cf. \ref{ex:c2-1.5-4}).
@@ -298,19 +271,12 @@ Then
 Since  \,$C_{c}^{\infty}(\R^{n})$\, is dense in \,$\mathcal{S}$\, for the topology of $\mathcal{S}$, it follows from  \eqref{eq:c2-1.3}  that \\
 $(Id~-~\Delta)C_{c}^{\infty}(\R^{n})$ is dense in $\mathcal{S}$. Hence  \eqref{eq:c2-1.5}   implies
 %%--
-%%KGK p-C2-06; LNMp-252
-%%
 that $\langle \phi, f \rangle = 0$ for all $\phi \in S$. 
 Consequently, $f = 0$.
 \end{proof}
 %% \smallskip
 \begin{remark*}\label{rem:c2-1.3}
 %
-%\index{Fourier transform}
-%
-%\index{Semigroups!examples}
-%
-%\index{Examples!Fourier transform}
 Using the Fourier transform one can show that the semigroups in example \ref{ex:c2-1.5-3}   and \ref{ex:c2-1.5-4}   are given by
 %% --
 \begin{equation}\label{eq:c2-1.6}
@@ -362,8 +328,6 @@ Let $\Omega \subset \R^{n}$ be as in \ref{ex:c2-1.5-5}   and $E = L^{p}(\Omega)$
 Define $Af = \Delta f$ on $D(A) = \{f \in C^{2}(\Omega) \cap C_{0}(\Omega) \colon \Delta f \in C_{0}(\Omega)\}$.
 Then $A$ is closable and the closure of $A$ is the generator of a positive contraction semigroup on $E$.
 %%--
-%%KGK p-C2-07; LNMp-253
-%%
 \begin{proof}
 $D(A)$ is dense and one can show in an analoguous manner as in \ref{ex:c2-1.5-4}   that $A$ is dispersive.
 We know from \ref{ex:c2-1.5-4}   that $C_{c}^{\infty}(\Omega) \subset (Id - A)D(A)$.
@@ -374,21 +338,14 @@ Thus $(Id - A)D(A)$ is dense in $E$ and the claim follows from Corollary \ref{co
 %% \bigskip
 We now turn to the problem to characterize generators of arbitrary (not necessarily contractive) positive semigroups.
 Of course, as in B-II, Section 1 
-%%KGK: \ref{sec:b2-1}
 one sees that a semigroup $(T(t))_{t \geq 0}$ is positive if and only if $R(\lambda,A) \geq 0$ for all $\lambda > \omega(A)$ where $A$ denotes the generator of $(T(t))_{t \geq 0}$.
 We are looking for an intrinsic condition on~$A$.
 
 The positive minimum principle which is characteristic for generators of strongly continuous semigroups on $C(K)$ (see 
-%%KGK: Thm\ref{thm:b2-1.6}
 B-II, Theorem 1.6) can be reformulated on an arbitrary Banach lattice $E$.
 %% --
 \begin{definition}\label{def:c2-1.6}
 %
-%\index{Positive minimum principle}
-%
-%\index{Generators!positive minimum principle}
-%
-%\index{Examples!Positive minimum principle}
 An operator $A$ on $E$ satisfies the \emph{positive minimum principle} if for all $f \in D(A)_{+}$, $\phi \in E'_{+}$,
 %% --
 \begin{equation}\label{eq:c2-P} \tag{P}
@@ -399,11 +356,7 @@ An operator $A$ on $E$ satisfies the \emph{positive minimum principle} if for al
 %% --
 \begin{remark*}\label{rem:c2-1.6}
 %
-%\index{Positive minimum principle!equivalence}
-%
-%\index{C(K)!positive minimum principle}
 It is easy to see that this definition coincides with that given in B-II, Section 1 
-%%KGK: \ref{sec:b2-1} 
 in the case when $E = C(K)$ (K compact).
 [In fact, suppose that for all $f \in D(A)_{+}$ and $x \in K$, $f(x) = 0$ implies $(Af)(x) \geq 0$.
 Let $g \in D(A)_{+}$, $\mu \in M(K)_{+}$ such that $\langle g,\mu \rangle = 0$.
@@ -416,9 +369,6 @@ The other is obvious by considering point measures.]
 %% --
 \begin{proposition}\label{prop:c2-1.7}
 %
-%\index{Generators!positive minimum principle}
-%
-%\index{Positive minimum principle!necessity}
 The generator of a strongly continuous positive semigroup satisfies the positive minimum principle  \eqref{eq:c2-P}.  
 \end{proposition}
 %%
@@ -430,15 +380,8 @@ Then $\langle Af,\phi \rangle = \lim_{t \to 0} 1/t \langle T(t)f - f, \phi \rang
 We will see that the positive minimum principle is not sufficient for the positivity of the semigroup, in general (Remark \ref{rem:c2-3.16}).
 However, the following special case is of interest.
 %%--
-%%KGK p-C2-08; LNMp-254
-%%
 \begin{theorem}\label{thm:c2-1.8}
 %
-%\index{Generators!characterization}
-%
-%\index{Semigroups!positive}
-%
-%\index{Positive minimum principle!sufficiency}
 Let $A$ be the generator of a strongly continuous semigroup $(T(t))_{t \geq 0}$ on a Banach lattice $E$.
 Assume that
 \begin{enumerate}[\upshape (i)]
@@ -454,9 +397,6 @@ If the restriction of $A$ to $D_{0}$ satisfies the positive minimum principle, t
 %% --
 \begin{remark*}\label{rem:c2-1.8-Claude}
 %
-%\index{Generators!conditions}
-%
-%\index{Positive semigroups}
 Elementary examples show that neither a) nor b) hold for generators of positive semigroups, in general.
 \end{remark*}
 %% --
@@ -464,9 +404,6 @@ The proof of Theorem \ref{thm:c2-1.8}   is based on the following proposition.
 %% --
 \begin{proposition}\label{prop:c2-1.9}
 %
-%\index{Dispersive operators}
-%
-%\index{Positive minimum principle!dispersiveness}
 Let $A$ be a densely defined dissipative operator which possesses a core $D_{0}$ such that $f \in D_{0}$ implies $|f| \in D_{0}$.
 If the restriction of $A$ to $D_{0}$ satisfies the positive minimum principle (P), then $A$ is dispersive.
 \end{proposition}
@@ -485,9 +422,7 @@ So we finally obtain, $\langle Af,\phi \rangle = \langle Af^{+},\phi \rangle - \
 %% --
 \begin{proof}[Proof of Theorem \ref{thm:c2-1.8}  ]
 %
-%\index{Generators!positive semigroups}
 The operator $A - w$ satisfies (P) 
-%%KGK:  \eqref{eq:c2-P}
 as well.
 So it follows from Proposition \ref{prop:c2-1.9}   that $A - w$ is dispersive.
 Consequently, the semigroup $(\eu^{-wt}T(t))_{t \geq 0}$, which is generated by $A - w$, is positive.
@@ -500,9 +435,6 @@ If $g \in E_{+}$, then $g \in \overline{E_{u}}$ if and only if $\lim_{n \to \inf
 %% --
 \begin{lemma}\label{lem:c2-1.10}
 %
-%\index{Positive minimum principle!reformulation}
-%
-%\index{Principal ideal}
 An operator $A$ on $E$ satisfies (P) if and only if
 %% --
 \begin{equation}\label{eq:c2-1.8}
@@ -511,8 +443,6 @@ An operator $A$ on $E$ satisfies (P) if and only if
 %% --
 \end{lemma}
 %%--
-%%KGK p-C2-09; LNMp-255
-%%
 \begin{proof}
 Let $u \in D(A)_{+}$, $g = Au$.
 Assume that $(Au)^{-} \in \overline{E}_{u}$.
@@ -534,9 +464,6 @@ Bounded generators of positive semigroups can now be characterized as follows.
 %% --
 \begin{theorem}\label{thm:c2-1.11}
 %
-%\index{Bounded generators}
-%
-%\index{Positive semigroups!Bounded generators}
 Let $A$ be a bounded operator on a Banach lattice $E$.
 The following assertions are equivalent:
 \begin{enumerate}[\upshape (a)]
@@ -580,8 +507,6 @@ Then $PAf + \lambda Pf = Pg = g^{-} < 0$.
 Since by  \eqref{eq:c2-1.9}, $[A(\Id - P)f]^{-} \in (\Id - P)E$, it follows 
 $0 > \lambda Pf + PAf = \lambda Pf + PAPf + PA(\Id-P)f \geq \lambda Pf + PAPf + P(A(\Id-P)f)^{+} \geq \lambda Pf + PAPf$.
 %%--
-%%KGK p-C2-10; LNMp-256
-%%
 Hence $0 \leq \lambda Pf < -PAPf$.
 This implies that $Pf \neq 0$ and $\lambda\|Pf\| \leq \|PAPf\| \leq \|A\|\cdot\|Pf\|$.
 Consequently $\lambda \leq \|A\|$.
@@ -589,21 +514,11 @@ Consequently $\lambda \leq \|A\|$.
 %%
 \begin{remark}\label{rem:c2-1.12}
 %
-%\index{Banach lattice!$\sigma$-order complete}
-%
-%\index{Semigroups!positivity}
-%
-%\index{Examples!$\sigma$-order complete Banach lattice}
 It follows from the proof of Theorem \ref{thm:c2-1.11}   that on a $\sigma$-order complete Banach lattice condition  \eqref{eq:c2-1.9} is equivalent to the positivity of the semigroup $(\eu^{tA})_{t \geq 0}$.
 \end{remark}
 %%
 \begin{examples}\label{ex:c2-1.13}
 %
-%\index{Semigroups!in $\ell^p$ spaces}
-%
-%\index{Generators!matrix representation}
-%
-%\index{Examples!Matrix generators}
 Let $E = \ell^p$ $(1 \leq p \leq \infty)$ or $E = c_{0}$.
 %% --
 \begin{enumerate}[\upshape (i), wide, labelindent=.5em] %%, 	 itemindent=\parindent]
@@ -623,9 +538,6 @@ Then it follows from Theorem \ref{thm:c2-1.8}   that the semigroup is positive i
 %% --
 \section{Kato's Inequality} \label{sec:c2-2}
 %
-%\index{Kato's inequality}
-%
-%\index{Inequality!Kato's}
 A strongly continuous semigroup on $C(K)$ $(K$ compact$)$ or a norm continuous semigroup on an arbitrary Banach lattice is positive if and only if its generator $A$ satisfies the positive minimum principle \eqref{eq:c2-P} from Definition \ref{def:c2-1.6}.
 However, we will see that in general \eqref{eq:c2-P} is not sufficient for the positivity of the semigroup.
 One reason seems to be that \eqref{eq:c2-P} involves merely positive elements in $D(A)$ but $D(A)_{+}$ can be small if the semigroup is not positive (cf. Remark \ref{rem:c2-3.16}).
@@ -635,16 +547,9 @@ We recall from Chapter C-I, Section 8 definition and properties of the signum op
 %% --
 \begin{proposition}\label{prop:c2-2.1}
 %
-%\index{Signum operator}
-%
-%\index{Operators!signum}
-%
-%\index{$\sigma$-order complete Banach lattice}
 Let $E$ be a $\sigma$-order complete (real or complex) Banach lattice.
 For every $f \in E$ there exists a unique linear operator (sign $f$) on $E$ which satisfies
 %%--
-%%KGK p-C2-11; LNMp-257
-%%
 %% --
 \begin{equation}\label{eq:c2-2.1}
 	|(\sign f)g| \leq |g| \quad (g \in E)
@@ -677,11 +582,6 @@ If $E$ is a real $\sigma$-order complete Banach lattice, then
 %% --
 \begin{example}\label{ex:c2-2.2}
 %
-%\index{Signum operator!in $L^p$ spaces}
-%
-%\index{$L^p$ spaces!signum operator}
-%
-%\index{Examples!Signum operator}
 Let $f \in E \coloneqq L^p(X,\Sigma,\mu)$ (real or complex) where $(X,\Sigma,\mu)$ is a $\sigma$-finite measure space and $1 \leq p \leq \infty$.
 Define
 %% --
@@ -711,15 +611,9 @@ We explain this by an example.
 %% --
 \begin{example}\label{ex:c2-2.3}
 %
-%\index{Gateaux-derivative!of modulus}
-%
-%\index{Signum operator!Gateaux-derivative}
-%
-%\index{Examples!Gateaux-derivative}
 Let $E$ be the real or complex space $L^p(X,\Sigma,\mu)$ where $(X,\Sigma,\mu)$ is a $\sigma$-finite measure space and $1 \leq p < \infty$.
 Let $f,g \in E$ and $x \in X$.
 Then by B-II, Lemma 2.4 
-%%KGK: \ref{ken:b2-2.4}
 %% --
 \begin{align*}
 \lim_{t \downarrow 0} 1/t\, (|f(x)+tg(x)|-|f(x)|) = 
@@ -738,8 +632,6 @@ D_{g}\Theta(f) = \Re(\widehat{\sign} \bar{f})g.
 \end{example}
 Later we will see that \ref{thm:c2-2.6}   holds in every Banach lattice with order continuous norm.
 %%--
-%%KGK p-C2-12; LNMp-258
-%%
 Now let $A$ be the generator of a strongly continuous positive semigroup $(T(t))_{t \geq 0}$.
 The positivity of the semigroup is equivalent to
 %% --
@@ -760,7 +652,6 @@ where the equality holds for $t = 0$.
 Hence the inequality remains valid if we differentiate at $0$ on both sides of \eqref{eq:c2-2.8}  .
 Since $\phi \in D(A')$ we obtain $\diff{}/\dt|_{t=0} \langle T(t)|f|,\phi \rangle = \langle |f|,A'\phi \rangle$ on the right side.
 By \eqref{eq:c2-2.6} and the chain rule B-II, Proposition 2.3 
-%%KGK: \ref{prop:b2-2.3} 
 one obtains $\diff{}/\dt|_{t=0}|T(t)f| = \Re((\widehat{\sign} \bar{f})Af)$ on the left side.
 Since $\Re((\sign \bar{f})Af) \leq \Re((\widehat{\sign} \bar{f})Af)$, this finally gives
 %% --
@@ -776,11 +667,6 @@ By a different proof, we now show that Kato's inequality holds for generators of
 %% --
 \begin{theorem}\label{thm:c2-2.4}
 %
-%\index{Kato's inequality!necessity}
-%
-%\index{Generators!Kato's inequality}
-%
-%\index{Positive semigroups!Kato's inequality}
 The generator $A$ of a strongly continuous positive semigroup $(T(t))_{t \geq 0}$ on a $\sigma$-order complete (real or complex) Banach lattice $E$ satisfies Kato's inequality; \ie
 %% --
 \begin{equation*}\label{eq:c2-K-2} %%\tag{K}
@@ -803,8 +689,6 @@ Then
 	&= \langle |f|, A'\phi \rangle.
 \end{align*}
 %%--
-%%KGK p-C2-13; LNMp-259
-%%
 \end{proof}
 %%
 Let $D(A')_{+} = E'_{+} \cap D(A')$. 
@@ -823,11 +707,6 @@ If \eqref{eq:c2-K}   and \eqref{eq:c2-2.9}   hold, then Kato's inequality holds 
 %% --
 \begin{example}\label{ex:c2-2.5}
 %
-%\index{Kato's inequality!classical form}
-%
-%\index{Laplacian!Kato's inequality}
-%
-%\index{Examples!Kato's inequality}
 Kato's inequality in its classical form says the following (see \citet{kato:1973} or \citet[X.27]{reedsimon:1975}).
 Let $f \in L^1_{\text{loc}}(\R^n)$ be such that the distributional Laplacian satisfies $\Delta f \in L^1_{\text{loc}}(\R^n)$.
 Then the inequality
@@ -871,8 +750,6 @@ for all $f \in C_{c}^{\infty}(\R^n)$, $0 \leq \phi \in C_{c}^{\infty}(\R^n)$, wh
 Let now $A$ be the generator of a positive semigroup $(T(t))_{t \geq 0}$ on $E \coloneqq L^p(\R^n)$ $(1 \leq p < \infty)$ or $C_{0}(\R^n)$.
 Assume that there exists a core
 %%--
-%%KGK p-C2-14; LNMp-260
-%%
 $D_{0}$ of $A$ such that $C_{c}^{\infty} \subset D_{0}$ and $Af = \mathcal{A}f$ in the sense of distributions for all $f \in D_{0}$.
 Then $\mathcal{A}$ satisfies Kato's inequality in the sense of distributions.
 
@@ -884,11 +761,6 @@ This is Kato's inequality in the distributional sense.
 
 \begin{remark*}\label{rem:c2-3.0}
 %
-%\index{Kato's inequality!ellipticity}
-%
-%\index{Elliptic operators}
-%
-%\index{Miyajima-Okasawa theorem}
 It has been proved by \citet{miyajimaokazawa:1984}] that 
 
  (\ref{eq:c2-Kd}) implies that $m \leq 2$ and that the principal part $\mathcal{A}_{0} = \sum_{|\alpha|=2} a_{\alpha} D^{\alpha}$ of $\mathcal{A}$ is elliptic; \ie if we write the operator $\mathcal{A}_{0}$ in the form $\mathcal{A}_{0} = \sum_{i,j=1}^{2} b_{ij} \partial^{2}/\partial x_{i} \partial x_{j}$, then the matrix $(b_{ij}(x))$ is positive semidefinite for all $x \in \R^n$.
@@ -899,11 +771,6 @@ Recall, for $f \in C_{0}(X)$ sign $f$ is defined as a Borel function and for any
 %%\ref{sec:b2-2}
 \begin{theorem}\label{thm:c2-2.6}
 %
-%\index{Kato's inequality!in $C_{0}(X)$}
-%
-%\index{Generators!in $C_{0}(X)$}
-%
-%\index{Positive semigroups!in $C_{0}(X)$}
 Let $X$ be a locally compact space and $A$ be the generator of a strongly continuous positive semigroup on 
 $C_{0}(X)$.
 Then
@@ -916,25 +783,13 @@ Then
 %% --
 The proof of Theorem \ref{thm:c2-2.4} can be taken over literally.
 Also the analogue of the proof given for $L^p$-spaces (preceding Theorem \ref{thm:c2-2.4})  is valid if one uses B-II, Lemma 2.6.
-%%KGK: \ref{lem:b2-2.6}
 \section{A Characterization of Generators of Positive Semigroups}\label{sec:c2-3}%
-%\index{Generators of Positive Semigroups}
 %
-%\index{Positive semigroups!characterization}
-%
-%\index{Characterization!of generators}
 In this section we confine ourselves to real Banach lattices.
 This does not mean a restriction since every positive semigroup on a complex Banach lattice leaves the real part of the space invariant.
 %%--
-%%KGK p-C2-15; LNMp-261
-%%
 \begin{remark}\label{rem:c2-3.1}
 %
-%\index{Complex Banach lattice}
-%
-%\index{Generators!on complex Banach lattice}
-%
-%\index{Semigroups!on complex Banach lattice}
 Let $(S(t))_{t \geq 0}$ be a semigroup on a complex Banach lattice $E$ with generator $A$.
 Then $S(t)E_{\R} \subset E_{\R}$ for all $t \geq 0$ if and only if
 %% --
@@ -950,36 +805,20 @@ So we introduce another condition.
 %% --
 \begin{definition}\label{def:c2-3.2}
 %
-%\index{Strictly positive set}
-%
-%\index{Positivity!strict}
-%
-%\index{Dual space!strictly positive elements}
 A subset $M'$ of $E'$ is called \emph{strictly positive} if for every $f \in E_{+}$, $\langle f,\phi \rangle = 0$ for all $\phi \in M'$ implies $f = 0$.
 Accordingly, an element $\phi$ of $E'_{+}$ is called \emph{strictly positive} if the set $\{\phi\}$ is strictly positive.
 \end{definition}
 %% --
 \begin{example}\label{ex:c2-3.3}
 %
-%\index{Strictly positive elements!in $L^p$ spaces}
-%
-%\index{$L^p$ spaces!strictly positive elements}
-%
-%\index{Examples!Strictly positive elements}
 Let $E = L^p(X,\mu)$ $(1 \leq p < \infty)$, where $(X,\mu)$ is a $\sigma$-finite measure space.
 Then $\phi \in E'
-%%Claude: _{+} 
 = L^q(X,\mu)$ (where $1/p + 1/q = 1$) is strictly positive if and only if $\phi(x) > 0$ $\mu$-a.e.
 Note that strictly positive elements of $E'$ always exist in this case.
 \end{example}
 %% --
 \begin{definition}\label{def:c2-3.4}
 %
-%\index{Subeigenvector!positive}
-%
-%\index{Positive subeigenvector}
-%
-%\index{Operators!positive subeigenvector}
 Let $B$ be an operator on a Banach lattice $F$ and let $u \in F$.
 Then $u$ is called a \emph{positive subeigenvector} of $B$ if
 \begin{enumerate}[\upshape (i)]
@@ -994,11 +833,6 @@ $Bu \leq \lambda u$ for some $\lambda \in \R$.
 %% --
 \begin{proposition}\label{prop:c2-3.5}
 %
-%\index{Subeigenvector!of adjoint generator}
-%
-%\index{Positive semigroups!subeigenvectors}
-%
-%\index{Generators!subeigenvectors of adjoint}
 Let $(T(t))_{t \geq 0}$ be a positive semigroup on a real Banach lattice with generator $A$.
 Then there exists a strictly positive set $M'$ of subeigenvectors of $A'$ (the adjoint of the generator $A$).
 Moreover, if there exist strictly positive linear forms on $E$, then there exists a strictly positive subeigenvector of $A'$.
@@ -1014,9 +848,6 @@ Then $\langle R(\lambda,A)f,\psi \rangle = 0$ for all $\psi \in N'$.
 Hence $R(\lambda,A)f = 0$ since $N'$ is strictly positive.
 Consequently, $f = 0$.
 The set $M'$ consists of
-%%--
-%%KGK p-C2-16; LNMp-262
-%%--
 subeigenvectors of $A'$. In fact, let $\psi \in N'$, $\phi = R(\lambda,A)'\psi$. Then
 $A'\phi = \lambda\phi - \psi \leq \lambda\phi$.
 \end{proof}
@@ -1085,8 +916,6 @@ There exists a core $D_{0}$ of $A$ and a strictly positive set $M'$ of subeigenv
 %% --
 \end{theorem}
 %%--
-%%KGK p-C2-17; LNMp-263
-%%
 \begin{corollary}\label{cor:c2-3.9}
 Assume in addition that $E'$ contains a strictly positive functional. 
 Then the semigroup is positive if and only if there
@@ -1146,7 +975,6 @@ $\langle(2P_{+} + P)Bf,\phi \rangle \leq \langle 2f^{+},B'\phi \rangle \leq 0$.
 Hence $\langle Bf,\psi \rangle = \langle QBf,\phi \rangle \leq 0$.
 Thus we have proved that $B|D_{0}$ is $p$-dissipative. 
 Hence $B$ is $p$-dissipative as well (by A-II, Corollary 2.5).
-%%KGK: \ref{cor:a2-2.5}
 \end{proof}
 %% --
 \begin{proof}[Proof of Theorem \ref{thm:c2-3.8}]
@@ -1186,7 +1014,6 @@ We stress that $p$ cannot be replaced by the norm (or by $N^{+}$), since in gene
 %%--
 \item  \label{rem:c2-3.11-2}
 Using Proposition \ref{prop:c2-3.10}   one can show with the help of the proof of 
-%%KGK: \ref{prop:a2-2.9}
 A-II,  Proposition 2.9 that a densely defined operator is closable whenever
 there exists a strictly positive set $M'$ of subeigenvectors of $A'$
 such that \eqref{eq:c2-K6}   holds for all $f \in D(A)$ and $\phi \in M'$.
@@ -1208,7 +1035,6 @@ On the other hand, if $A$ generates a positive semigroup, one sees by
 the obvious alterations in the proof of Theorem \ref{thm:c2-2.4}   that \eqref{eq:c2-3.6} holds for all $f \in D(A)$ and $\phi \in D(A')_{+}$. 
 
 Next we formulate the result for the space $C_{0}(X)$, where $X$ is a locally compact space (concerning the notation cf. Theorem \ref{thm:c2-2.6} and Section~2 of B-II).
-%%KGK: \ref{sec:b2-2}   
 \end{remark}
 %% --
 \begin{theorem}\label{thm:c2-3.13}
@@ -1223,8 +1049,6 @@ that
 %% --
 \end{theorem}
 %%--
-%%KGK p-C2-19; LNMp-265
-%%
 This theorem can be proved in the same way as Theorem \ref{thm:c2-3.8}  .
 %% --
 \begin{remark*}
@@ -1291,9 +1115,6 @@ Actually \eqref{eq:c2-3.9} defines a group if $d \neq 0$ and if we allow $t \in 
 It follows from \eqref{eq:c2-3.9} that the semigroup $(T_{d}(t))_{t \geq 0}$ is positive if and only if $d \geq 0$.
 
 Let us fix $d < 0$. Let $A = A_{d}$ and $T(t) = T_{d}(t)$ for $t \geq 0$. Then
-%%--
-%%KGK p-C2-20; LNMp-266
-%%
 $(T(t))_{t \geq 0}$ is a semigroup which is \emph{not positive}. Nevertheless its generator $A$ satisfies Kato's inequality. Even the equality is valid;
 \ie
 %% --
@@ -1304,15 +1125,11 @@ $(T(t))_{t \geq 0}$ is a semigroup which is \emph{not positive}. Nevertheless it
 
 \begin{proof}
 It is not difficult to see that
-%% --
-%%Claude. \begin{align*}
 \begin{equation}\label{eq:c2-3.11}
-%%\text{(3.11)} 
 \begin{array}{rl}
 D(A') &= \{\phi \in \text{AC}[0,1] \colon \phi' \in L^{q}[0,1], \phi(0) = d\phi(1)\}\\ 
 A'\phi &= -\phi' \quad \text{for all } \phi \in D(A').
 \end{array}
-%%Claude. \end{align*}
 \end{equation}
 %% --
 where $1/p + 1/q = 1$. Let $\phi \in D(A')_{+}$. 
@@ -1334,10 +1151,8 @@ The equality \eqref{eq:c2-3.10} does not hold for all $\phi \in D(A')$.
 In fact, this would imply that $|f| \in D(A)$ and $(\sign  f)Af = A|f|$ for
 all $f \in D(A)$. 
 Thus by Corollary  5.8 
-%%KGK: forward \ref{cor:c2-3.10}
 below the semigroup would be positive. 
 The reason why in this example the equality holds will be explained from a more general point of view in Section 5 (see Remark 5.12).
-%%KGK: forward ref{rem:c2-5.12}
 \end{remark}
 %% --
 Relation \eqref{eq:c2-3.10} shows that $A$ also satisfies Kato's inequality
@@ -1360,8 +1175,6 @@ It is also remarkable that there exists a dense sublattice
 of $E$ which is included in $D(A)$.
 But $D_{0}$ is not a core of $A$ (this would imply the positivity of the semigroup by Theorem \ref{thm:c2-1.8}   if $|d| \leq 1$).
 %%--
-%%KGK p-C2-21; LNMp-267
-%%
 Since $(T(t))_{t \geq 0}$ is not positive but Kato's inequality holds, it
 follows from Theorem \ref{thm:c2-3.8}   that there does not exist a strictly positive subeigenvector of $A'$. 
 In fact, even the following is true.
@@ -1420,8 +1233,6 @@ $Bf = f^{(3)}$ with domain
 D(B) = \{f \in L^{2}(\R) \colon f \in C^{2}(\R); f'' \in \text{AC}(\R) ; f,f',f'',f^{(3)} \in L^{2}(\R)\}
 \]
 %%--
-%%KGK p-C2-22; LNMp-268
-%%
 Then $B$ is the generator of a unitary group $(U(t))_{t \in \R}$. 
 In particular, $B$ is skew-adjoint, i.e. $B' = -B$.
 Moreover, we claim that
@@ -1489,8 +1300,6 @@ Let $A$ be the generator of the translation group which, in particular, is a lat
 Hence $B = A^{3}$ is local as well.
 \end{proof}
 %%--
-%%KGK p-C2-23; LNMp-269
-%%
 This example shows that even if there exists a strictly positive subeigenvector of the adjoint of the generator, Kato's inequality for positive elements alone does not suffice for the positivity of the semigroup. 
 Note also that (because of the order continuous norm) Kato's inequality holds for positive elements if and only if the positive minimum principle is satisfied (see Remark \ref{rem:c2-3.16}).
 %%--
@@ -1509,6 +1318,7 @@ We say, $(T(t))_{t \geq 0}$ \emph{dominates} $(S(t))_{t \geq 0}$ if
 \end{equation}
 %% --
 We first observe that domination of the semigroup is equivalent to domination of the resolvents.
+\index{resolvent}
 %% --
 \begin{proposition}\label{prop:c2-4.1}
 The semigroup $(T(t))_{t \geq 0}$ dominates $(S(t))_{t \geq 0}$ if and only if
@@ -1530,8 +1340,6 @@ Conversely, if \eqref{eq:c2-4.2} holds, then
 \phantom{x}
 \end{proof}
 %%--
-%%KGK p-C2-24; LNMp-270
-%%
 One can describe domination by an inequality for the generators in a manner analoguous to the characterization of positive semigroups in Section 1; however, no positive subeigenvectors are needed here.
 
 \begin{theorem}\label{thm:c2-4.2}
@@ -1601,8 +1409,6 @@ semigroup which is dominated by $(T(t))_{t \geq 0}$.
 Let $u_{n} \in D(B)$ satisfy $u_{n} \to 0$ and $Bu_{n} \to v$ $(n \to \infty)$.
 We have to
 %%--
-%%KGK p-C2-25; LNMp-271
-%%
 show that $v = 0$. 
 Considering $A - \mu$ and $B - \mu$ for some $\mu > s(A)$ instead of $A$ and $B$ we may assume that $s(A) < 0$. 
 Then there exists a strictly positive set $M' \subset E'$ such that
@@ -1615,14 +1421,12 @@ Then there exists a strictly positive set $M' \subset E'$ such that
 
 Let $\phi \in M'$ and $p$ be the seminorm given by $p(f) = \langle|f|,\phi\rangle$. 
 We show that $B$ is $p$-dissipative (see end of A-II, Section 2).
-%%KGK \ref{sec:a2-2}
 Let $f \in D(B)$, $\psi = (\sign  \bar{f})'\phi$. 
 Then it is easy to see that $\psi \in \ddp(f)$. 
 Moreover, by \eqref{eq:c2-4.4} and \eqref{eq:c2-4.5} one obtains that 
 $\Re\langle Bf,\psi\rangle = \Re\langle(\sign  \bar{f})Bf,\phi\rangle \leq \langle|f|,A'\phi\rangle \leq 0$. 
 Thus $B$ is $p$-dissipative. 
 By the proof of A-II, Proposition 2.9 
-%%KGG: \ref{prop:a2-2.9}
 one sees that $p(v) = 0$; \ie $\langle|v|,\phi\rangle = 0$.
 Since $\phi \in M'$ was arbitrary we conclude that $v = 0$.
 \index{dissipative operator|)}
@@ -1677,7 +1481,6 @@ Thus $\mu \in \rho(\overline{B})$.
 
 It follows from the hypothesis that there exists $\lambda_{1} \in \rho(\overline{B})$ such that $\lambda_{0} < \lambda_{1}$. 
 Since $R(\lambda,A) \leq R(\lambda_{1},A)$ (by B-II, Lemma 1.9)
-%%KGK \ref{lem:b2-1.9}
 , it follows from \eqref{eq:c2-4.8} that $\|R(\lambda,\overline{B})\| \leq \|R(\lambda,A)\| \leq \|R(\lambda_{1},A)\| \coloneq c$\, ; 
 hence \\
 $\text{dist}(\lambda,\sigma(\overline{B})) = r(R(\lambda,\overline{B}))^{-1} \geq \|R(\lambda,\overline{B})\|^{-1} \geq 1/c$ 
@@ -1688,10 +1491,7 @@ This implies that $\left[\lambda_{1},\infty\right) \subset \rho(\overline{B})$. 
 \begin{equation}\label{eq:c2-4.9}
 |R(\lambda,\overline{B})^{n}f| \leq R(\lambda,A)^{n}|f| \quad (f \in E, n \in \N , \lambda_{1} < \lambda).
 \end{equation}
-%% --
 %%--
-%%KGK p-C2-26; LNMp-272
-%%
 Let $w > \omega(A), \,\lambda_{1}$. 
 Then it follows from \eqref{eq:c2-4.9} that\\
 $\|(\lambda - w)^{n}R(\lambda,\overline{B})^{n}\| \leq \|(\lambda - w)^{n}R(\lambda,A)^{n}\|$ for all $\lambda > w$, $n \in \N $. 
@@ -1706,6 +1506,7 @@ Finally, the domination of $(S(t))_{t \geq 0}$ by $(T(t))_{t \geq 0}$ follows fr
 Let $E$ be a $\sigma$-order complete complex Banach lattice and $(T(t))_{t \geq 0}$ be a positive semigroup with generator $A$. 
 Let $M \in \ZE$ (the center of $E$ (see C-I, Section 9). 
 For example, if $E =$ $L^{p}(X,\mu)$ (where $(X,\mu)$ is a $\sigma$-finite measure space and $1 \leq p \leq \infty$) then $M$ is the multiplication operator defined by a function in $L^{\infty}(X,\mu)$.
+\index{operator!multiplication}
 
 Let $B = A + M$. Then $B$ generates a semigroup $(S(t))_{t \geq 0}$.
 Assume that $\Re M \leq 0$. Let $f \in D(B)$ and $\phi \in D(A')_{+}$. Then
@@ -1756,8 +1557,6 @@ where $D_{0}$ is a core of $B$.
 Condition \ref{prop:c2-4.5-2}   implies \eqref{eq:c2-4.4} (cf. Remark \ref{rem:c2-3.12}).
 \end{remark}
 %%--
-%%KGK p-C2-27; LNMp-273
-%%
 \begin{proof}[Proof of Proposition \ref{prop:c2-4.5}]
 One proves as in Theorem \ref{thm:c2-4.2}   that \ref{prop:c2-4.5-1} implies \ref{prop:c2-4.5-2}  .
 It is trivial that \ref{prop:c2-4.5-2}   implies \ref{prop:c2-4.5-3}. 
@@ -1780,6 +1579,8 @@ Here the range condition is proved by an elegant argument due to \citet{kato:198
 
 \begin{example}\label{ex:c2-4.7}
 (Schrödinger operators on $L^{p}$).
+\index{Schr\"odinger operator}
+\index{operator!Schr\"odinger}
 Let $E = L^{p}(\R^{n})$, $1 \leq p < \infty$, and $V \in L^{p}_{\text{loc}}(\R^{n})$ such that $\Re V \geq 0$.
 Define $B$ on $E$ by $Bf = \Delta f - Vf$ with domain $D(B) = C^{\infty}_{c}(\R^{n})$. 
 Then $B$ is closable and $\overline{B}$ is the generator of a semigroup $(S(t))_{t \geq 0}$ which is dominated by the diffusion semigroup (Example \ref{ex:c2-1.5}\ref{ex:c2-1.5-4} and A-I, 2.8). 
@@ -1815,9 +1616,6 @@ generator of a semigroup $(S(t))_{t \geq 0}$ which is dominated by the semigroup
 If $V = \Re V \geq 0$, we may consider the real space $L^{p}(\R^{n})$. 
 Then for every $f \in C^{\infty}_{c}$, $0 \leq \phi \in D(A')$ we have
 %%--
-%%KGK p-C2-28; LNMp-274
-%%
-%% --
 \begin{align*}
 \langle P_{(f^{+})}Bf,\phi\rangle &= \langle P_{(f^{+})}Af,\phi\rangle - \langle Vf^{+},\phi\rangle\\
 &\leq \langle P_{(f^{+})}Af,\phi\rangle\\
@@ -1890,8 +1688,6 @@ Let $m \colon X \to \R$ be a measurable function such that $m(x) \leq 0$ for all
 Let $D(m) = \{f \in E \colon f \cdot m \in E\}$. 
 Define the operator $B$ with domain $D(B) = D(A) \cap D(m)$ by $Bf = Af + m \cdot f$ $(f \in D(B))$.
 %%--
-%%KGK p-C2-29; LNMp-275
-%%
 \begin{theorem}\label{thm:c2-4.9}
 If there exists a quasi-interior subeigenvector $u$ of $A$
 such that $u \in D(m)$, then $B$ is closable and the closure $\overline{B}$ of $B$ is the generator of a positive semigroup $(S(t))_{t \geq 0}$ which is dominated by $(T(t))_{t \geq 0}$.
@@ -1909,7 +1705,6 @@ $(S(t))_{t \geq 0}$, then $s(B) \leq s(A)$.
 \begin{proof}[Proof of Lemma \ref{lem:c2-4.10}]
 Let $\lambda > s(A)$.
 Then for all $\mu > \max \{\lambda,s(B)\}$ one has $0 \leq R(\mu,A) \leq R(\lambda,A)$ 
-%%KGK: \ref{lem:b2-1.9} 
 (by B-II, Lemma 1.9), and so $\|R(\mu,B)\| \leq  \|R(\mu,A)\| \leq \|R(\lambda,A)\|$.
 Thus $\text{dist}(\mu,\sigma(B)) \geq \|R(\mu,B)\|^{-1} \geq \|R(\lambda,A)\|^{-1}$.
 This implies that $[\lambda,\infty) \subset \rho(B)$.
@@ -1955,8 +1750,6 @@ Moreover $g_{n} \in D(B)$ and $\lim_{n \to \infty} (\lambda - B)g_{n} = f + \lim
 $|(B_{n} - B)g_{n}| \leq (m_{n} - m)|g_{n}| = (m_{n} - m)|R(\lambda,B_{n})f| \leq (m_{n} - m)R(\lambda,A)|f| \leq$
 $c' (m_{n} - m)u$ for some positive constant $c'$.
 %%--
-%%KGK p-C2-30; LNMp-276
-%%
 But $\lim_{n \to \infty} (m_{n} - m)u = 0$ since $u \in D(m)$.
 Thus $g \in D(\overline{B})$ and $(\lambda - \overline{B})g = f$.
 We have shown that $E_{u} \subset (\lambda - \overline{B})D(\overline{B})$.
@@ -1972,7 +1765,6 @@ Now we want to indicate how the results of this section look like for $C_{0}(X)$
 In fact, most of them carry over with a different interpretation of \emph{``sign''} but the same proofs.
 We want to state the analogs of Theorem \ref{thm:c2-4.2}   and Theorem \ref{thm:c2-4.3}   explicitly but omit the proof.
 Here we use the notation of B-II, Section 2.
-%%KGK: ref{sec:b2-2}
 %% --
 \begin{theorem}\label{thm:c2-4.12}
 Let $E = C_{0}(X)$ where $X$ is locally compact.
@@ -2021,10 +1813,7 @@ Af = f' \text{ on } D(A) = \{f \in C^{1}([-1,0],\C) \colon f'(0) = \alpha f(0) +
 %%--
 generates a strongly continuous positive semigroup $(T(t))_{t \geq 0}$ 
 (see B-II, Example 1.22).
-%%KGK: \ref{ex:b2-1.22}
 %%--
-%%KGK p-C2-31; LNMp-277
-%%
 
 Consider the operator $B$ given by
 %%--
@@ -2047,7 +1836,6 @@ We first assume that $\alpha \coloneqq \Re  \beta$ and $\mu = |\nu|$.
 We show that \eqref{eq:c2-4.12} is satisfied.
 Consider the operator $A_{\max}$ on $C[-1,0]$ given by $A_{\max}f = f'$ with domain $D(A_{\max}) = C^{1}[-1,0]$.
 We know by B-II, Example 2.12 
-%%KGK: \ref{ex:b2-2.12}
 that \\ $\Re\langle(\sign  \bar{f})Af,\phi\rangle \leq \Re\langle(\widehat{\sign}  \bar{f})(Af),\phi\rangle = \langle|f|, (A_{\max})'\phi\rangle$ for all $f \in D(A_{\max})$, $0 \leq \phi \in D((A_{\max})')$.
 In particular
 %% --
@@ -2058,7 +1846,6 @@ In particular
 holds for all $f \in D(B)$, $0 \leq \phi \in D((A_{\max})')$.
 It is not difficult to see that $D(A') = D((A_{\max})') + \C\delta_{0}$, and since $D((A_{\max})') = BV[-1,0]$
 (see B-II, Example 2.12)
-%%KGK: \ref{ex:b2-2.12}
 this is an order direct sum.
 Thus, in view of \eqref{eq:c2-4.14}, it remains to show that
 %% --
@@ -2090,18 +1877,12 @@ We have to show that $\Re\beta \leq \alpha$ and $|\nu| \leq \mu$.
 Since $\delta_{0} \in D(A') \cap D(B')$ we have for all $f \in C[-1,0]_{+}$ satisfying $f(0) = 0$,
 \begin{align*}
 |\langle f,\nu\rangle| = |\langle f,B'\delta_{0}\rangle| &= \lim_{t \to 0+} 1/t \, |\langle S(t)f - f , \delta_{0}\rangle|\\
-%%KGK: Eignelicher Newpage
+%
 &= \lim_{t \to 0+} 1/t \, |(S(t)f)(0)|  \\
 &\leq \lim_{t \to 0+} 1/t \, ((T(t)|f|)(0) \\
 &= \lim_{t \to 0+} \langle|f|,1/t(T(t)'\delta_{0} - \delta_{0})\rangle \\
 &= \langle|f|,A'\delta_{0}\rangle = \langle|f|,\mu\rangle.
 \end{align*}
-%%\end{align*}
-%%--
-%%KGK p-C2-32; LNMp-278
-%%
-%% --
-%%\begin{align*}
 %% --
 Since $\mu(\{0\}) = \nu\{0\}) = 0$, this implies that $|\nu| \leq \mu$.
 
@@ -2164,9 +1945,6 @@ Then
 for all  $f \in C^{\infty}_{c}$, $\phi \in D(C')_{+}$  by Theorem \ref{thm:c2-4.2}  . 
 It follows from Theorem \ref{thm:c2-4.3}   that $(U(t))_{t \geq 0}$ dominates the semigroup generated by $A$.
 \end{proof}
-%%--
-%%KGK p-C2-33; LNMp-279
-%%
 \begin{example}\label{ex:c2-4.16}
 Let $A_{0}$ be the generator of a positive semigroup on an order complete Banach lattice $E$ and $M \in \ZE$.
 The semigroup generated by $A_{0} + M$ possesses a modulus semigroup. Its generator is $A_{0} + \Re M$. (This can be proved as the assertion in Example \ref{ex:c2-4.15}  .)
@@ -2214,9 +1992,6 @@ Let $f \in D(C)_{+}$. Then $\Re(Bf) = \lim_{t \to 0} 1/t(\Re(\eu^{tB}f) - f) \le
 Hence $(C + |B|)f \geq (C - \Re B)f \geq 0$ for all $f \in D(C)_{+}$.
 By Lemma \ref{lem:c2-4.18} this implies that $C + |B|$ is bounded.
 Hence $C$ is bounded as well.
-%%--
-%%KGK p-C2-34; LNMp-280
-%%
 Since $C + \|C\| \cdot \Id \geq 0$ by Theorem \ref{thm:c2-1.11}, $C$ is regular.
 Let $C = C_{0} + N$ where $C_{0} \in \mathcal{Z}(E)^{d}$ and $N \in \ZE$.
 Since $C \geq \Re B$ by what we just proved, it follows that $N \geq \Re M$.
@@ -2230,7 +2005,6 @@ Then for all $\alpha \in \R$,
 \end{align*}
 %% --
 Thus $C - \Re(\eu^{i\alpha}B)$ satisfies the positive minimum principle (P) 
-%%KGK \ref{ex:c2-P}
 for all $\alpha \in \R$.
 It follows from Theorem \ref{thm:c2-1.11} that $C - \Re(\eu^{i\alpha}B) + (\|C\|+\|B\|)\Id \geq 0$ for all $\alpha \in \R$.
 Applying the band projection onto $\ZE^{d}$ on both sides of this inequality one obtains that
@@ -2265,14 +2039,10 @@ But \citet{kipnis:1974} gives an example of a strongly continuous semigroup on $
 On the other hand, it has been independently shown by \citet{kipnis:1974} and
 \citet{kubokawa:1975} that every contraction semigroup on an $L^{1}$-space
 possesses a modulus semigroup (which is contractive as well).
-%%--
-%%KGK p-C2-35; LNMp-281
 %%
 \section{Semigroups of Disjointness Preserving Operators} \label{sec:c2-5}%
-%\index{Semigroups of Disjointness Preserving Operators}
 In this section we consider a special case of domination. 
 Recall from C-I, Section 6 
-%%KGK: \ref{sec;c1.6} 
 that a linear operator $S$ on $E$ is called \emph{lattice homomorphism} if
 %% --
 \begin{equation}\label{eq:c2-5.1}
@@ -2320,9 +2090,6 @@ Since $\text{span } E_{+} = E$, it follows that $(T(t))_{t \geq 0}$ is a semigro
 Moreover, for $f \in E_{+}$, $\lim_{t \to 0} T(t)f = \lim_{t \to 0} |S(t)f| = |f| = f$. 
 This implies that $(T(t))_{t \geq 0}$ is strongly continuous.
 \end{proof}
-%%--
-%%KGK p-C2-40; LNMp-282
-%%
 \begin{example}\label{ex:c2-5.3}
 Let $d \in \C$ and $S(t) = T_{d}(t)$ be given by \ref{eq:c2-3.8}  . 
 Then $|T_{d}(t)| = T_{|d|}(t)$ $(t \geq 0)$.
@@ -2382,7 +2149,6 @@ $T(t) = |S(t)|$ for all $t \geq 0$.
 %%
 \item  \label{enum:c2-kgk.1-1} %% Nicht im LNM von Chlaude angelegt
 By B-II, Lemma 2.9 
-%%KGK: \ref{lem:b2-2.9} 
 the relation \eqref{eq:c2-5.5} is equivalent to
 \[
 \langle\Re((\sign  \bar{f})Bf),\phi \rangle = \langle|f|,A'\phi\rangle  (f \in D(B), \phi \in D(A')).
@@ -2396,9 +2162,6 @@ without further assumptions.
 \end{remark*}
 
 The basic idea of the proof of Theorem \ref{thm:c2-5.5}   is to differentiate the equation $|S(t)f| = T(t)|f|$ (where $T(t) = |S(t)|$, cf. \eqref{eq:c2-5.3}). For
-%%--
-%%KGK p-C2-37; LNMp-283
-%%
 that we need that the modulus function is differentiable.
 If $E = L^{p}(X,\Sigma,\mu)$ $(1 \leq p < \infty)$ this had been proved in Section 2 Example 
 \ref{ex:c2-2.3}.
@@ -2453,16 +2216,12 @@ D_{h}\Theta(f) = \Re((\sign  \bar{f})h) \quad \text{whenever} \quad h \in \{f\}^
 According to the Kakutani-Krein theorem there exists a compact space
 $K$ such that $E_{|f|}$ can be identified with $C(K)$. Then by B-II,
 Lemma 2.4
-%%KGK: \ref{lem:b2-2.4} 
 %% --
 \begin{equation}\label{eq:c2-5.9}
 \lim_{t \to 0+} 1/t(|f+th| - |f|)(x) = \Re(\sign (\overline{f(x)})h(x)) \quad (x \in K).
 \end{equation}
 %% --
 Let $\phi \in E'_{+}$. Then $\phi$ restricted to $E_{|f|}$ can be identified with a regular Borel measure $\mu$ on $C(K)$.
-%%--
-%%KGK p-C2-38; LNMp-284
-%%
 So it follows from \eqref{eq:c2-5.9} and the dominated convergence theorem that
 %% --
 \begin{align*}
@@ -2515,7 +2274,6 @@ Assume that \ref{thm:c2-5.5-1}   holds.
 Let $f \in D(B)$. 
 Then $S(t)f$ is differentiable at $t$. 
 By the chain rule B-II, Proposition 2.3,
-%%KGK: \ref{prop:b2-2.3}
 $T(t)|f| = |S(t)f|$ is also differentiable and $\diff{}/\dt|_{t=0} T(t)|f| = \diff{}/\dt|_{t=0} |S(t)f| = \Re(\widehat{\sign}  \bar{f})Bf$ (by  Proposition \ref{prop:c2-5.6}).
 Hence $|f| \in D(A)$ and $A|f| = \Re(\widehat{\sign}  \bar{f})Bf$.
 
@@ -2531,7 +2289,6 @@ Since by assumption $|S(t)f| \in D(A)$ one obtains
 \diff{}/\dt \, \xi(t) &= -AT(s-t)|S(t)f| + T(s-t)\diff{}/\dr|_{r=t} |S(r)f|\\
 &= -AT(s-t)|S(t)f| + T(s-t)(\Re(\widehat{\sign}  \overline{S(t)f})BS(t)f)\\
 &\quad \text{(by  Proposition \ref{prop:c2-5.6}   and the chain rule B-II, Proposition 2.3)
-%%KGK: ref{prop:b2-2.3}
 }\\
 &= 0 \quad \text{by the assumption \ref{thm:c2-5.5-2}  }.
 \end{align*}
@@ -2551,14 +2308,9 @@ then its generator $A$ satisfies Kato's inequality.
 We now obtain from Theorem \ref{thm:c2-5.5} the semigroup consists of lattice homomorphisms (\ie the equality holds in \eqref{eq:c2-5.13}) if and only if $A$ satisfies Kato's equality. 
 \index{Kato's equality} 
 The precise statement is the following.
+\index{lattice homomorphism}
 
 \begin{corollary}\label{cor:c2-5.8}
-%
-%\index{Kato's equality}
-%
-%\index{Semigroups!Lattice}
-%
-%\index{Generators!Lattice semigroups}
 Let $A$ be the generator of a strongly continuous semigroup $(T(t))_{t \geq 0}$ on a Banach lattice $E$ with order continuous norm. 
 The following assertions are equivalent.
 %% --
@@ -2578,7 +2330,6 @@ $f \in D(A)$ implies $|f|,\bar{f} \in D(A)$ and $\Re((\sign  \bar{f})Af) = A|f|$
 \end{corollary}
 
 \begin{proof}
-%%KGK: Check Claudes output
 The equivalence of \ref{cor:c2-5.8-1}   and \ref{cor:c2-5.8-2}   follows directly from Theorem \ref{thm:c2-5.5}  . 
 If \ref{cor:c2-5.8-1}   holds, then $A$ is local by  Proposition \ref{prop:c2-5.4}  .
 Thus $(\sign  \bar{f})Af = (\widehat{\sign}  \bar{f})Af$ for all $f \in D(A)$ and so \ref{cor:c2-5.8-3}   holds since \ref{cor:c2-5.8-2}   is valid.
@@ -2592,9 +2343,6 @@ In the case when $E$ is real this result can be reformulated.
 
 \begin{corollary}\label{cor:c2-5.9}
 %
-%\index{Semigroups!Lattice!Real case}
-%
-%\index{Generators!Local}
 Let $A$ be the generator of a strongly continuous semigroup $(T(t))_{t \geq 0}$ on a real Banach lattice $E$ with order continuous norm. 
 The following assertions are equivalent.
 %% --
@@ -2621,12 +2369,6 @@ Thus Kato's equality holds and it follows from Corollary \ref{cor:c2-5.8}   that
 \index{Kato's equality} 
 %% --
 \begin{example}\label{ex:c2-5.10}
-%
-%\index{lattice Homomorphisms}
-%
-%\index{Semigroups!Lattice Homomorphisms}
-%
-%\index{Examples!Disjointness Preserving Semigroups}
 Let $E = L^{p}(X,\mu)$ (where $(X,\mu)$ is a $\sigma$-finite measure space and $1 \leq p < \infty$) and let $A_{0}$ be the generator of a semigroup of lattice homomorphisms. 
 Let $h \in L^{\infty}$ and $B = A_{0} + h$ (\ie $B$ is given by $Bf = A_{0}f + h \cdot f$ for $f \in D(B) = D(A_{0})$). 
 Let $A = A_{0} + \Re \, h$.
@@ -2639,9 +2381,6 @@ Next we describe when a disjointness preserving semigroup is positive.
 
 \begin{proposition}\label{prop:c2-5.11}
 %
-%\index{Disjointness Preserving Semigroups!Positivity}
-%
-%\index{Positive Semigroups}
 Let $E$ be a complex Banach lattice with order continuous norm and $B$ be the generator of a disjointness preserving semigroup $(S(t))_{t \geq 0}$. 
 The semigroup is positive if and only if $B$ is real and $\text{span } D(B)_{+} = D(B)$.
 \end{proposition}
@@ -2659,9 +2398,6 @@ This implies that $B = A$ since $\rho(B) \cap \rho(A) \neq \emptyset$.
 
 \begin{remark}\label{rem:c2-5.12}
 %
-%\index{Kato's Inequality!Reverse}
-%
-%\index{Disjointness Preserving Semigroups!Kato's Inequality}
 If $B$ is the generator of a disjointness preserving semigroup $(S(t))_{t \geq 0}$ on a real Banach lattice $E$ with order continuous norm then Kato's inequality holds in the reverse sense; \ie
 %% -- 
 \[
@@ -2679,10 +2415,6 @@ Then
  &= \langle |f|, B'\phi \rangle.
 \end{align*}
 \end{remark}
-%%--
-%%KGK p-C2-41; LNMp-287
-%%
-%% \section*{C-II CHARACTERIZATION 287}
 
 Finally, we come back to Corollary \ref{cor:c2-5.9}  .
 If in condition \ref{cor:c2-5.9-2}   we demand that $D(A)$ is not only a sublattice but an ideal of $E$ we obtain a characterization of multiplication semigroups.
@@ -2691,11 +2423,6 @@ Here we call a semigroup $(T(t))_{t \geq 0}$ \emph{multiplication semigroup} if 
 
 \begin{theorem}\label{thm:c2-5.13}
 %
-%\index{Multiplication semigroup}
-%
-%\index{Semigroups!Multiplication}
-%
-%\index{Characterization!Multiplication semigroups}
 Let $A$ be the generator of a strongly continuous semigroup $(T(t))_{t \geq 0}$ on a $\sigma$-order complete real or complex Banach lattice $E$.
 The following assertions are equivalent.
 \begin{enumerate}[\upshape (a)]
@@ -2721,7 +2448,6 @@ If $f \in D(A)$ then $Pf \in D(A)$ for every band projection $P$ on $E$ and $APf
 Assume that \ref{thm:c2-5.13-1}   holds and let $\lambda \in \rho(A)$.
 Since $R(\lambda,A)$ is the Laplace transform of the semigroup, it follows that $R(\lambda,A)$ is local since $T(t)$ is local for all $t \geq 0$.
 This implies $R(\lambda,A) \in \mathcal{Z}(E)$ (see C-I, Section 9).
-%%KGK: \ref{sec:c1.9}).
 
 We show that \ref{thm:c2-5.13-2}   implies \ref{thm:c2-5.13-5}  .
 Assume that $\lambda \in \rho(A)$ such that $R(\lambda,A)$ is a multiplication operator.
@@ -2756,9 +2482,6 @@ Let $f \in D(A)$ and $|g| \leq |f|$.
 Then there exists a band projection $P$ such that $Pf = g$.
 Hence $g \in D(A)$.
 We have shown
-%%--
-%%KGK p-C2-42; LNMp-288
-%%
 that $D(A)$ is an ideal.
 Assume that $\inf\{|h|,|f|\} = 0$.
 Denote by $P$ the band projection onto $\{|h|\}^{dd}$.
@@ -2770,11 +2493,6 @@ We have proved that $A$ is local.
 
 \begin{corollary}\label{cor:c2-5.14}
 %
-%\index{Multiplication semigroup}
-%
-%\index{Semigroups!Multiplication}
-%
-%\index{Real generator}
 A multiplication semigroup $(T(t))_{t \geq 0}$ on a complex Banach lattice $E$ with order continuous norm is positive if and only if its generator $A$ is real; \ie $f \in D(A)$ implies $\bar{f} \in D(A)$ and $A\bar{f} = \overline{(Af)}$ .
 \end{corollary}
 
@@ -2789,13 +2507,6 @@ The class of bounded operators which generate a lattice semigroup is very restri
 
 \begin{proposition}\label{prop:c2-5.15}
 %
-%\index{Lattice semigroup}
-%
-%\index{Semigroups!Lattice}
-%
-%\index{Center!Operator in}
-%
-%\index{Disjointness preserving operator}
 Let $E$ be a real or complex Banach lattice and $A \in \LE$. 
 The following assertions are equivalent.
 \begin{enumerate}[\upshape (a)]
@@ -2814,7 +2525,6 @@ Moreover, if $A \in \ZE$ is real, then $\eu^{tA} \geq 0$ for all $t \in \R$ .
 
 \begin{proof}
 Since $\ZE$ is a closed subalgebra of $\LE$ (see C-I, Section 9)
-%%KGK: \ref{sec:c2-9}
 , it is clear that \ref{prop:c2-5.15-1}   implies \ref{prop:c2-5.15-3} .
 Assertion \ref{prop:c2-5.15-2}  follows trivially from \ref{prop:c2-5.15-3}  .
 If \ref{prop:c2-5.15-2}   holds, then $A$ is local by  Proposition \ref{prop:c2-5.4}  .
@@ -2825,16 +2535,9 @@ The last assertion follows from the fact that $\mathcal{Z}(E)$ is isomorphic to 
 
 \begin{proposition}\label{prop:c2-5.16}
 %
-%\index{Group!Strongly continuous}
-%
-%\index{Group!Real operators}
-%
-%\index{Center!Operator in}
 Let $E$ be a complex Banach lattice.
 Every strongly continuous group $(T(t))_{t \in \R}$ of real operators contained in $\mathcal{Z}(E)$ has a bounded generator.
 \end{proposition}
-%%--
-%%KGK p-C2-43; LNMp-289
 %%
 \begin{proof}
 Let $(T(t))_{t \geq 0}$ be a strongly continuous multiplication semigroup.
@@ -2849,7 +2552,6 @@ Consequently, $\|T(t)\| = \|T(t)\|_1 \leq \eu^{\omega t}$ $(t \geq 0)$.
 
 If $(T(t))_{t \in \R}$ is a strongly continuous group contained in $\mathcal{Z}(E)$ then it follows that $\|T(t)\| \leq \eu^{\omega|t|}$ $(t \in \R)$ for some $\omega \geq 0$. 
 If in addition the operators $T(t)$ are real one obtains from the above expression for the operator norm that 
-%%Claude: $\|T(t) - Id\| = \|Id - T(t)\|$ $(t \geq 0)$.
 \[
 \eu^{- \omega t} \cdot \Id \leq T(t) \leq \eu^{\omega t} \cdot \Id \quad (t \geq 0) .
 \] 
@@ -2859,7 +2561,7 @@ Consequently, $\lim_{t \to 0}\|T(t) - Id\| = 0$.
 The assumption that the group consists of real operators is essential in Proposition \ref{prop:c2-5.16}  .
 In fact, many differential operators on $L^{2}(\R^n)$ generate a strongly continuous group which (via Fourier transformation) is similar to a multiplication group.
 A concrete example is the Laplacian (A-I, Example 2.8).
-%%KGK: \ref{ex:a1-2.8}
+\index{operator!similar}
 
 On the other hand, if $E = C(K)$ (K compact), then every strongly continous multiplication semigroup $(T(t))_{t \geq 0}$ has a bounded generator.
 
@@ -2868,11 +2570,6 @@ Then $\lim_{t \downarrow 0}\|T(t) - \Id\| =    \lim_{t \downarrow 0}\|m_t - 1\|_
 
 \begin{lemma}\label{lem:c2-5.17}
 %
-%\index{Center!Operator in}
-%
-%\index{Order continuous norm}
-%
-%\index{Banach lattice}
 Let $E$ be a real Banach lattice with order continuous norm.
 Let $A \in \LE$.
 Assume that there exists a dense sublattice $D$ of $E$ such that for all $f \in D$, $g \in E$, $f \perp g$ implies $Af \perp g$.
@@ -2890,22 +2587,12 @@ Thus $A \in \ZE$ by  Proposition \ref{prop:c2-5.15}  .
 Let $A$ be the generator of a positive semigroup and $B \in \LE$. 
 The semigroup generated by $A + B$ is positive whenever $(\eu^{tB})_{t \geq 0}$ is positive (this follows from \ref{eq:c2-1.8}).
 However this condition is not
-%%--
-%%KGK p-C2-44; LNMp-290
-%%
 necessary. [For example, let $A \in \LE$ such that $(\eu^{tA})_{t \geq 0}$ is positive and let $B = -A$.
 Then $A + B$ generates a positive semigroup, but $(\eu^{tB})_{t \geq 0}$ is positive only if $A \in \ZE$]
 The situation is different when $A$ generates a lattice semigroup.
 
 \begin{theorem}\label{thm:c2-5.18}
 %%
-%\index{Lattice semigroup}
-%%%
-%\index{Semigroups!Lattice}
-%%
-%\index{Positive semigroup}
-%%
-%\index{Semigroups!Positive}
 Let $E$ be a real Banach lattice with order continuous norm and $A$ be the generator of a lattice semigroup.
 Let $B \in \LE$.
 The semigroup generated by $A + B$ is positive if and only if $(\eu^{tB})_{t \geq 0}$ is positive.
@@ -2947,9 +2634,6 @@ It is a most elegant tool to prove essential selfadjointness of Schrödinger ope
 The relation between Kato's inequality and positivity of $(\eu^{t\Delta})_{t \geq 0}$ was pointed out by \citet{simon:1977}.
 A criterion for a form negative operator on a space $L^{2}$ to generate a positive semigroup is given by \citet{beurlingdeny:1958}, see also \citet[Vol. IV, Section XIII.12]{reedsimon:1978}.
 It was a conjecture of Nagel that some abstract version of
-%%--
-%%KGK p-C2-45; LNMp-291
-%%
 Kato's inequality characterizes the positivity of the semigroup (cf., \citet{nageluhlig:1981}). The necessity of Kato's inequality in the form given in Theorem \ref{thm:c2-2.4}   was first proved in \citet[Remark 3.10]{arendt:1982} with a different proof. 
 The proof we give here appeared in \citet{arendt:1984a}. 
 \citet{miyajimaokazawa:1984} use this inequality to show that a differential operator on which generates a positive semigroup is necessarily of order 2 and has an elliptic principal part. 

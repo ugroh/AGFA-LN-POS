@@ -1,10 +1,6 @@
-% !TEX root = ../LN-Index.tex
-%% -- 
-%% -- Stand: 2025-12-14 KGK Indexanpassung
 %% --
 \chapternopage{Asymptotics of Positive Semigroups on Banach Lattices}\label{chap:c4}%
-% Claude
-% \index{Positive Semigroups!Asymptotics}
+\index{semigroup!positive semigroup}
 %% --
 In this chapter we describe the long term behavior of positive semigroups and discuss some concrete examples in more detail.
 The first section is devoted to the stability of positive semigroups, and we give sufficient and necessary conditions which ensure that the semigroup (and the solution of the abstract Cauchy problem, respectively) converges to zero as $t \to \infty$.
@@ -13,15 +9,11 @@ In the second section we describe conditions ensuring convergence of the semigro
 Again we are interested in spectral conditions ensuring such a behavior.
 In the final section a series of examples is discussed in more detail.
 In particular we consider semigroups related to retarded equations and discuss existence of solutions, spectral properties and asymptotic behavior.
-%%KGK 2025-12-16
 \index{asymptotic behavior}
 Most of the examples are motivated by biological models.
 
 \section{Stability of Positive Semigroups on Banach Lattices}\label{c4-1} 
-% Claude
-\index{stability}
-%%KGK
-%\index{stability!positive semigroups!Banach lattices|(}
+\index{stability|(}
 %% --
 \hspace{1cm}{\Large by Günther Greiner and Frank Neubrander}
 \vspace{.5cm}
@@ -84,7 +76,6 @@ For $\alpha > s(A)$, $r > \tau$, $f \in E_{+}$ we have
 \end{align*}
 %% --
 (the last inequality follows from C-III, Theorem~1.2).
-%% KGKind
 \index{Datko's theorem}
 Now Datko's theorem (A-IV, Theorem~1.11) implies $\omega_{0}(A) < \alpha$.
 \end{enumerate}
@@ -165,12 +156,11 @@ hence all the functions $u \mapsto \log[(1 - \frac{1}{k}s(1/u))^{-k}]$, $k \in \
 It follows that $u \mapsto s(1/u) = \lim_{k\to\infty}(\log [(1 - \frac{1}{k}s(1/u))^{-k}])$ is convex as well.
 \end{proof}
 %% --
-%% KGKind
 \index{Schr\"odinger operator}
-%%GG\index{Laplacian}
 \index{operator!Schr\"odinger}
-\index{operator!Laplacian}
+\index{operator!Laplacian|(}
 One can apply the corollary to Schrödinger operators on the spaces $L^{p}(\R^{n})$, \ie operators $A = \Delta + V$ where $\Delta$ is the Laplacian and $V$ is a multiplication operator, see  \citet{simon:1982} for details.
+\index{operator!multiplication}
 In Theorem B.5.1 (l.c.) it is shown that for certain potentials $V$ the type is independent of $p \in [1,\infty)$.
 Thus the assumptions of \ref{cor:c4-1.2-1} are satisfied.
 Part \ref{cor:c4-1.2-2} of the Corollary can be applied if $q > 2$ and if $A_{1}$ has compact resolvent.
@@ -178,10 +168,7 @@ Then all operators $A_{r}$, $1 \leq r < q$ have compact resolvent and therefore 
 In particular, $s(A_{r})$ is independent of $r \in [1,q)$.
 
 As shown in A-IV, Example~1.2(2), the equality $s(A) = \omega_{0}(A)$ may not hold for positive semigroups on arbitrary Banach lattices.
-%% KGKind
 \index{abstract Cauchy problem}
-%%KGK
-%\index{stability!positive semigroups}
 However, the knowledge of $s(A)$ is still sufficient to determine the growth bound $\omega_{1}(A)$ of the strong solutions of the abstract Cauchy problem.
 In fact, combining Theorems 1.1 and 1.2 of C-III with Theorem 1.4 of A-IV we obtain the following fundamental result for the stability of positive semigroups.
 %% --
@@ -194,15 +181,6 @@ Recalling the definition of $\omega_{1}(A)$ (see A-IV, Definition~1.1) and the f
 %% --
 \begin{corollary}\label{cor:c4-1.4}
 %
-% Claude
-% \index{Exponential Stability}
-%
-% Claude
-% \index{Semigroups!Exponential Stability}
-%
-% Claude
-% \index{Cauchy Problem!Exponential Stability}
-%% KGKind
 \index{stability!exponentially stable}
 Let $(T(t))_{t\geq 0}$ be a positive semigroup on a (real or complex) Banach lattice with generator $A$.
 Each of the following conditions implies that the solutions of the abstract Cauchy problem are exponentially stable, \ie  there is $\delta > 0$ such that $\lim_{t \to \infty} e^{\delta t}T(t)f = 0$ for every $f \in D(A)$.
@@ -224,9 +202,6 @@ If \ref{cor:c4-1.4-2} is satisfied then $R(0,A) \geq 0$, hence $s(A) < 0$ by C-I
 It follows from Theorem \ref{thm:c4-1.3} that $\sup\{\omega(f) \colon f \in D(A)\} = \omega_{1}(A) < 0$.
 \end{proof}
 %% --
-%% KGKind
-%\index{eventually norm-continuous}
-\index{semigroup!eventually norm-continuous semigroup}
 In the following we give a spectral characterization of stability for eventually norm-continuous positive semigroups.
 An important tool in the proof is the following result on power bounded operators due to \citet{katznelsontzafriri:1984}.
 %% --
@@ -241,16 +216,10 @@ $\sigma(R) \cap \Gamma \subseteq \{1\}$ if and only if $ \lim_{n \to \infty} \|R
 %% --
 \begin{theorem}\label{thm:c4-1.5}
 %
-% Claude
-% \index{Stability!Norm-continuous Semigroups}
-%
-% Claude
-% \index{Semigroups!Stability of Norm-continuous}
-%
-% Claude
-% \index{Norm-continuous Semigroups!Stability}
+\index{semigroup!eventually norm-continuous semigroup}
 Let $(T(t))_{t\geq 0}$ be a positive semigroup on a Banach lattice $E$ which is bounded and eventually norm-continuous.
 The following two assertions are equivalent.
+\index{stability!uniformly stable}
 \begin{enumerate}[\upshape (a)]
     \item \label{thm:c4-1.5-1}
     $(T(t))_{t\geq 0}$ is uniformly stable;
@@ -294,7 +263,6 @@ Since the semigroup is bounded we have $\lim_{t \to \infty} \|T(t)f\| = 0$ for e
 \ref{thm:c4-1.5-1} $\Rightarrow$ \ref{thm:c4-1.5-3} is always true and follows from A-IV, Theorem~1.13.
 
 \ref{thm:c4-1.5-3} $\Rightarrow$ \ref{thm:c4-1.5-2}:  
-%% KGKind
 \index{adjoint semigroup}
 \index{semigroup!adjoint}
 The adjoint semigroup $(T(t)^*)_{t \geq 0}$ is eventually norm-continuous and boun\-ded and we have $R{\sigma}(A^*) = P{\sigma}(A^{**}) = P{\sigma}(A)$.
@@ -325,14 +293,6 @@ We begin with a generalization of Corollary \ref{cor:c4-1.4}\ref{cor:c4-1.4-2}.
 %%
 \begin{proposition}\label{prop:c4-1.6}
 %
-% Claude
-% \index{Stability Conditions}
-%
-% Claude
-% \index{Generator!Range Conditions for Stability}
-%
-% Claude
-% \index{Semigroups!Stability Conditions}
 Let $A$ be the generator of a positive semigroup on a (real or complex) Banach lattice, $D(A)_{-} \coloneqq -(D(A) \cap E_{+})$.
 Then 
 %% --
@@ -369,9 +329,6 @@ Using C-III, Theorem 1.2 we conclude that $R(\alpha,A)f \leq g$ for $\alpha > \m
 By the Uniform Boundedness Principle we know that $\{R(\alpha,A) \colon \alpha > \max\{0,s(A)\}\}$ is uniformly bounded.
 Since $\omega_{1}(A) = s(A) \in \sigma(A)$ (see Theorem \ref{thm:c4-1.3} it follows that $\omega_{1}(A) < 0$.
 \end{proof}
-%% KGKind
-%%KGK
-%\index{stability!weak uniform}
 Next we show that weak uniform stability implies uniform stability provided that $E$ is weakly sequentially complete (see C-I, Section 5) and $(\Image{A})_{+} \coloneqq A(D(A)) \cap E_{+}$ is a total subset of $E$.
 The left translations on $L^{2}(\R_{+})$ are stable.
 Hence, by A-IV Remark 1.17(a), $\Image{A} = \{f \in L^{2}(\R_{+}) \colon \int_{0}^{\infty} f(x) \, \dx \text{ exists}\}$ and we see that $(\Image{A})_{+}$ is a total subset of $L^{2}(\R_{+})$.
@@ -379,14 +336,6 @@ On the other hand, $(\Image{A})_{+} = \{0\}$ for the generator of the non stable
 
 \begin{proposition}\label{prop:c4-1.7}
 %
-% Claude
-% \index{Weak Uniform Stability}
-%
-% Claude
-% \index{Stability!Weak Uniform}
-%
-% Claude
-% \index{Semigroups!Weak Uniform Stability}
 Let $A$ be the generator of a positive semigroup $(T(t))_{t\geq 0}$ on a weakly sequentially complete Banach lattice $E$, such that $(\Image{A})_{+}$ is total in $E$.
 Then $(T(t))_{t\geq 0}$ is uniformly stable if and only if it is weakly uniformly stable.
 \end{proposition}
@@ -406,14 +355,6 @@ For positive semigroups similar properties are even sufficient for stability.
 
 \begin{lemma}\label{lem:c4-1.8}
 %
-% Claude
-% \index{Positive Semigroups!Stability Conditions}
-%
-% Claude
-% \index{Stability!Resolvent Limits}
-%
-% Claude
-% \index{Resolvent!Limits and Stability}
 Let $A$ be the generator of a positive semigroup $(T(t))_{t\geq 0}$ on a Banach lattice $E$ with $s(A) \leq 0$.
 Given $f \in E_{+}$ then $\lim_{\lambda \to 0+} R(\lambda,A)f$ exists if and only if $\lim_{t \to \infty} \int_{0}^{t} T(s)f \, \ds$ exists.
 \end{lemma}
@@ -435,19 +376,8 @@ Since both nets are monotonically increasing, the assertion follows from Dini's 
 
 \begin{proposition}\label{prop:c4-1.9}
 %
-% Claude
-% \index{Uniform Stability}
-%
-% Claude
-% \index{Semigroups!Uniform Stability}
-%
-% Claude
-% \index{Positive Semigroups!Stability Conditions}
 Let $A$ be the generator of a positive, bounded semigroup $(T(t))_{t \geq 0}$ on a Banach lattice $E$.
 If there is a subset $D \subset E_{+}$ which is total in $E$ such that $\lim_{\lambda \to 0+} R(\lambda,A)f$ exists for every $f \in D$, then $(T(t))_{t \geq 0}$ is uniformly stable.
-%% KGKIND
-%%KGK
-%\index{uniformly stable}
 \index{stability!uniformly stable}
 \end{proposition}
 %% --
@@ -477,7 +407,6 @@ where $f_{1}$, $f_{2} \in D(A^{n})_{+}$ and Theorem~1.43 in \citet{davies:1980}.
 \end{remark}
 %% --
 In the rest of this section we discuss the long term behavior of the solutions of the inhomogeneous equation
-%%KGK 2025-12-16
 \index{Cauchy problem!inhomogeneous}
 %% --
 \begin{equation}\label{eq:c4-1.6}
@@ -489,6 +418,7 @@ In case that $A$ generates a positive semigroup the assumption \emph{$\omega_{0}
 We recall that some important generators as, for example, the Laplacian on $L^{p}(\R^{n})$, $1 < p < \infty$, generate positive, stable semigroups which are not uniformly exponentially stable.
 Therefore, the weakening of the assumptions on $A$ mentioned above - \ie  replacing \emph{$\omega_{0}(A) < 0$} by \emph{positive and stable} - widens the class of equations \ref{eq:c4-1.6} for which the following stability result is applicable.
 For additional results of this kind see \citet{neubrander:1985b}.
+\index{operator!Laplacian|)}
 
 \begin{proposition}\label{prop:c4-1.11}
 \index{semigroup!stable semigroup}
@@ -586,23 +516,18 @@ while the second integral can be estimated by
 %% -- 
 It follows that the third term in \eqref{eq:c4-1.8} tends to zero.
 \end{proof}
-%%KGK
-%\index{stability!positive semigroups!Banach lattices|)}
+\index{stability|)}
 %% --
 \clearpage
 %% --
 \section{Convergence of Positive Semigroups}\label{sec:c4-2}
 %
-% Claude
-% \index{Positive Semigroups!Convergence}
-%% --
 \hspace{1cm}{\Large by Günther Greiner and Rainer Nagel}
 \vspace{.5cm}
 \newline
 %% --
 The considerations in this section are motivated by the following guideline.
 %% --
-%% KGKind
 \index{asymptotic behavior}
 \begin{quote} 
 The asymptotic behavior of a strongly continuous semigroup $(T(t))_{t \geq 0}$ is determined by the (structure, location of the) spectrum $\sigma(A)$ of the generator $A$.
@@ -619,24 +544,15 @@ At first we observe that
 $\lim_{t \to \infty} T(t)$ --- if it exists in some operator topology --- is always a projection $P$ onto the fixed space of $(T(t))_{t \geq 0}$ which coincides with the kernel of $A$.
 In case $P = 0$ we have stability which was discussed in Section~1.
 In this section we mainly consider the case $s(A) = 0 \in P{\sigma}(A)$ and show that the symmetric structure of the boundary spectrum of the generator of a positive semigroup yields interesting results.
+\index{spectrum!boundary} 
 
-%% KGKind
-%\index{quasi-compact!semigroup}
 \index{semigroup!quasi-compact semigroup}
 We begin our discussion by considering quasi-compact semigroups.
 Using the general results presented in Section 2 of B-IV and the spectral theoretical result of Chapter C-III we obtain the following.
 
 \begin{theorem}\label{thm:c4-2.1}
-%
-% Claude
-% \index{Quasi-compact Semigroups}
-%
-% Claude
-% \index{Semigroups!Quasi-compact}
-%
-% Claude
-% \index{Positive Semigroups!Quasi-compact}
 Let $(T(t))_{t \geq 0}$ be a positive semigroup on a Banach lattice $E$ which is bounded, quasi-compact and has spectral bound zero.
+\index{spectral bound $s(A)$}
 Then there exists a positive projection $P$ of finite rank and suitable constants $\delta > 0$, $M \geq 1$ such that
 %% --
 \begin{equation}\label{eq:c4-2.1}
@@ -692,6 +608,7 @@ tends to zero exponentially.
 \item \label{rem:c4-2.2-3}
 In the proof of Theorem \ref{thm:c4-2.1} we saw that a quasi-compact semigroup of positive operators having spectral bound zero is bounded if and only if the pole order at zero is one.
 This is automatically true whenever there exists a fixed vector which is a quasi-interior point of $E_{+}$.
+\index{quasi-interior point}
 Indeed, if $k$ is the order of the pole at $s(A) = 0$, then we have 
 %% --
 \[
@@ -705,6 +622,7 @@ Since $A^{k-1}P$ is positive, it vanishes on the principal ideal generated by $u
 Since this ideal is dense, we obtain $A^{k-1}P = 0$ which is a contradiction.
 
 \item  \label{rem:c4-2.2-4}
+\index{semigroup!irreducible semigroup|(}
 If $\TT = (T(t))_{t \geq 0}$ is an irreducible semigroup with $s(A) = 0$, then quasi-compactness implies boundedness of $\TT$ (This follows from \ref{rem:c4-2.2-3} and C-III, Proposition 3.5).
 Moreover, in this case the projection $P$ has the form $P = \phi \otimes h$ where $h$ 
 is a quasi-interior point of $E_{+}$ and $\phi$ is a strictly positive linear form on $E$.
@@ -718,10 +636,8 @@ It follows that the rescaled semigroup is quasi-compact, hence \ref{rem:c4-2.2-4
 \end{enumerate}
 \end{remarks}
 
-%% KGKind
 \index{population semigroup}
 \index{population!age-structured}
-%%GG
 \index{equation!population}
 The following example has a biological background, and the semigroup considered describes the time evolution of an age-structured population.
 For more details we refer to \citet{greiner:1984a} or \citet{webb:1984}.
@@ -770,13 +686,8 @@ We quote the result from \citet{lotz:1986}.
 
 \begin{proposition}\label{prop:c4-2.4}
 %
-% Claude
-% \index{Quasi-compactness}
-%
 \index{Doeblin's condition}
 %
-% Claude
-% \index{Semigroups!Doeblin's Condition}
 Let $(T(t))_{t \geq 0}$ be a bounded positive semigroup on $E = L^{p}(\mu)$, $1 < p < \infty$.
 Assume that there exist $t_{0} \geq 0$, $\phi \in E'_{+}$,\, $b < 1$ such that
 %% --
@@ -786,21 +697,11 @@ Assume that there exist $t_{0} \geq 0$, $\phi \in E'_{+}$,\, $b < 1$ such that
 %% --
 Then $(T(t))_{t \geq 0}$ is quasi-compact.
 \end{proposition}
-%% KGKind
-%\index{eventually norm-continuous}
-\index{semigroup!eventually norm-continuous semigroup}
+\index{semigroup!eventually norm-continuous semigroup|(}
 In the following result we replace quasi-compactness by eventual norm-continuity of the semigroup.
 
 \begin{theorem} \label{thm:c4-2.5}
 %
-% Claude
-% \index{Norm-continuous Semigroups}
-%
-% Claude
-% \index{Semigroups!Norm-continuous}
-%
-% Claude
-% \index{Positive Semigroups!Norm-continuous}
 Let $\TT = (T(t))_{t \geq 0}$ be a bounded, eventually norm-continuous positive semigroup with generator $A$ on a reflexive Banach lattice $E$.
 Then $Pf \coloneqq  \lim_{t \to \infty} T(t)f$ exists for every $f \in E$, and
 $P$ is a positive projection onto the fixed space $\Fix{\TT} = \Kern{A}$. 
@@ -827,7 +728,6 @@ Since power bounded operators on a reflexive Banach space are mean ergodic (\eg 
 \end{proof}
 %% --
 Strong convergence of the semigroup $\TT = (T(t))_{t \geq 0}$ implies strong convergence of the Césaro means $C(t)f \coloneqq  \frac{1}{t}\int_{0}^{t} T(s)f \, \ds$, $f \in E$ which (by definition) is \emph{mean ergodicity} of the semigroup $\TT$ (see \citet[Chap.5.1]{davies:1980}).
-%% KGKind
 \index{mean ergodicity}
 \index{semigroup!mean ergodic semigroup}
 On the other hand, an inspection of the proof of Theorem \ref{thm:c4-2.5} shows that reflexivity of the underlying space can be replaced by the assumption that $\TT$ is a mean ergodic semigroup.
@@ -846,9 +746,6 @@ for every $0 < f \in E$, we see that $\lim_{t\to\infty} T(t)$ does not exist for
 Finally we remark that in Theorem \ref{thm:c4-2.5} \enquote{eventual norm continuity} is crucial as well.
 This can be seen by considering the translation (semi-) groups on $L^{p}(\R)$.
 
-%% KGKind
-%%KGK
-%\index{semigroup!Lp-space@$L^{p}$-space}
 In the next few results we study semigroups which are not necessarily eventually norm-continuous, but restrict our attention to positive semigroups on $L^{p}$-spaces ($1 \leq p < \infty$).
 The essential tool will be the following \emph{0-2 Law} which we quote from \citet[Theorem~3.7]{greiner:1982}.
 
@@ -856,13 +753,9 @@ If $(X, \Sigma, \mu)$ is a measure space and $\TT = (T(t))_{t \geq 0}$ is a posi
 
 \begin{theorem}\label{thm:c4-2.6}
 %
-%%KGK kleinschreiben
 \index{zero-two law (0-2 Law)}
-%
 \index{semigroup!0-2 law}
 %
-% Claude
-% \index{Positive Semigroups!0-2 Law}
 Let $(T(t))_{t \geq 0}$ be a positive contraction semigroup on $L^{p}(\mu)$, $1 \leq p < \infty$, and assume that there exists a strictly positive fixed function $e \in \Kern{A}$. 
 Then the following holds. 
 \footnote{The regular operators on $L^p$-spaces form a vector lattice, thus $\sup\{T,S\},\ \inf\{T,S\}$ and $|T|$ exist.}
@@ -898,11 +791,6 @@ The \emph{0-2 Law} can be used in order to obtain results on convergence of posi
 
 \begin{corollary}\label{cor:c4-2.7}
 %
-% Claude
-% \index{Convergence of Positive Semigroups}
-%
-% Claude
-% \index{Semigroups!Convergence}
 Assume that --- in addition to the assumptions made in Theorem \ref{thm:c4-2.6} --- $P{\sigma}(A) \cap \im\R = \{0\}$.
 If we decompose $X = X_{0} \cup X_{2}$ for some $\tau > 0$ according to assertion \ref{thm:c4-2.6-1} , then $\lim_{t \to \infty} T(t)f$ exists for every $f \in L^{p}(\mu)$ vanishing $\mu$-a.e. on $X_{2}$.
 \end{corollary}
@@ -932,9 +820,7 @@ We briefly describe this situation and remind that in this context the sets $X_{
 
 \begin{example}\label{ex:c4-2.8}
 %
-%%KGK kleinschreiben + singular
-\index{Markov process}
-\index{Markov transition function}
+\index{Markov transition function|(}
 %% --
 Let $X$ be a set and $\Sigma$ be a $\sigma$-algebra of subsets of $X$.
 We consider a Markov transition function $(P_{t})_{t \geq 0}$ on $(X,\Sigma)$, \ie  each $P_{t}$ is a real-valued function on $X \times \Sigma$ such that
@@ -1004,8 +890,7 @@ tends to
 \]
 and we have weak, hence strong continuity.
 
-% KGKind
-\index{Markov transition function}
+\index{Markov transition function|)}
 Therefore a Markov transition function satisfying all the assumptions of \ref{cor:c4-2.7} induces a strongly continuous semigroup on $L^{1}(\mu)$, and, by interpolation on $L^{p}(\mu)$, it satisfies the hypotheses of Theorem \ref{thm:c4-2.6}.
 \end{example}
 
@@ -1014,17 +899,10 @@ In view of Corollary \ref{cor:c4-2.7} it is enough to show $X_{2} = \emptyset$.
 %% --
 \begin{corollary}\label{cor:c4-2.9}
 %
-% Claude
-% \index{Convergence of Positive Semigroups}
-%
-% Claude
-% \index{Semigroups!Convergence Criteria}
-%
-% Claude
-% \index{Positive Semigroups!Convergence}
 Let $(T(t))_{t \geq 0}$ be a positive semigroup of contractions on the Banach lattice $L^{1}(\mu)$ and assume that there exists a strictly positive eigenfunction $e \in \Kern{A}$.
 
 If $(T(t))_{t \geq 0}$ is eventually norm-continuous, then $\lim_{t \to \infty}T(t)f$ exists for every $f \in L^{1}(\mu)$.
+\index{semigroup!eventually norm-continuous semigroup|)}
 \end{corollary}
 %% --
 \begin{proof}
@@ -1040,11 +918,6 @@ This shows that condition (2) of Theorem \ref{thm:c4-2.6}\ref{thm:c4-2.6-1} can 
 %
 \index{irreducible semigroup}
 %
-%%KGK
-\index{semigroup!irreducible semigroup}
-%
-% Claude
-% \index{Positive Semigroups!Convergence}
 Let $(T(t))_{t\geq 0}$ be an irreducible semigroup on $L^{p}(\mu)$ satisfying the assumptions of Theorem \ref{thm:c4-2.6}.
 If $P{\sigma}(A) \cap \im\R = \{0\}$ and if there exist $0 \leq r < s$ such that $\inf\{T(r),T(s)\} > 0$, then there exists a strictly positive function $h \in L^{q}(\mu)$, $p^{-1}+q^{-1} = 1$, such that $\lim_{t \to \infty} T(t)f = \langle f,h \rangle e$ for every $f \in L^{p}(\mu)$.
 \end{corollary}
@@ -1063,7 +936,6 @@ Since Pe = e, hence $P \neq 0$, we conclude that $\Kern{A}'$ contains positive e
 Now C-III, Proposition 3.5(a)-(c) implies that $P$ has the form $P = h \otimes e$ for a strictly positive function $h \in L^{q}(\mu) = (L^{p}(\mu))'$.
 \end{proof}
 %%% --
-%% KGKind
 \index{operator!kernel}
 In a last corollary we consider the case where one operator $T(t_{0})$ is a kernel operator, \ie  $T(t_{0})$ is induced by a $\mu \otimes \mu$-measurable kernel on $X \times X$.
 The corollary is of particular interest for semigroups on spaces $\ell^{p}$, $1 \leq p < \infty$, where every positive operator is a kernel operator.
@@ -1085,11 +957,6 @@ For the proof of the following corollary we refer to
 \begin{corollary}\label{cor:c4-2.11}
 %
 \index{operator!kernel}
-% Claude
-% \index{Semigroups!Kernel Operators}
-%
-% Claude
-% \index{Convergence!Kernel Operators}
 Let $\TT = (T(t))_{t\geq 0}$ be a semigroup on $L^{p}(\mu)$ satisfying the assumptions of Theorem \ref{thm:c4-2.6} and assume that one operator $T(t_{0})$ is a kernel operator.
 Then $\lim_{t \to \infty}T(t)f$ exists for every $f \in L^{p}(\mu)$.
 \end{corollary}
@@ -1138,7 +1005,6 @@ Since $0$ was supposed to be a pole of the resolvent, we can decompose
 where $\sigma_{1} = \im\alpha\Z$, $0 < \alpha \in \R$, and $\sup\{\Re \lambda \colon \lambda \in \sigma_{2}\} < 0$.
 Moreover, for small $\epsilon > 0$, $\|R(-\epsilon+\im\lambda,A)\|$ is uniformly bounded for $\lambda \in \R$.
 
-%% KGKind
 \index{spectral decomposition}
 Next, we construct a spectral decomposition of $E$ and $\TT$ corresponding to $\sigma_{1}$ and $\sigma_{2}$ (compare A-III, Section 3).
 Since $0$ is an eigenvalue of $A$, it follows that $\TT$ has a quasi-interior fixed point $h \in E_{+}$ (use C-III, Proposition 3.5(a)).
@@ -1175,6 +1041,7 @@ $\{\lambda \in \C \colon \Re \lambda > s(A_{2}) + \epsilon\}$ with $\epsilon > 0
 \item \label{lem:c4-2.12-3}
 $E_{1}$ is a closed sublattice of $E$ and $\TT_{1}$ is a periodic, irreducible, positive semigroup on $E_{1}$.
 In particular, $(E_{1},\TT_{1})$ is isomorphic to $(L,R_{\tau}(t))$ where $L$ is a function lattice between $C(\Gamma)$ and $L^{1}(\Gamma)$ and $R_{\tau}(t)$ is the rotation group with period $\tau = 2\pi/\alpha$.
+\index{semigroup!rotation semigroup}
 \end{enumerate}
 \end{lemma}
 %% --
@@ -1188,9 +1055,7 @@ For Hilbert spaces $L^{2}(\mu)$ the property \ref{lem:c4-2.12-2} of the above le
 Therefore we obtain the following result on the behavior of $\TT$.
 %% --
 \begin{proposition}\label{prop:c4-2.13}
-%% KGKind
-%%KGK
-%\index{rotation group}
+\index{resolvent!pole}
 Let $\TT = (T(t))_{t\geq 0}$ be a bounded, irreducible, positive semigroup on a Hilbert lattice $E = L^{2}(\mu)$.
 Assume that $s(A) = 0$ is a pole of the resolvent of the generator $A$ and that $\im\alpha \in \sigma(A)$ for some $0 \neq \alpha \in \R$.
 Then $\TT$ behaves asymptotically as the rotation group $(R_{\tau}(t))_{t \geq 0}$ with period $\tau = 2\pi n/\alpha$ for some $n \in \N$ on $L^{2}(\Gamma)$.
@@ -1208,11 +1073,9 @@ The proof of this result uses interpolation for operators, mainly the Riesz Conv
 \begin{theorem}\label{thm:c4-2.14}
 %
 \index{periodic semigroup}
+\index{semigroup!irreducible semigroup|)}
 %
-%%GG\index{asymptotic behavior!Lp-space@$L^{p}$-space}
 %
-% Claude
-% \index{Semigroups!Periodic Behavior on LP-spaces}
 Let $\TT = (T(t))_{t \geq 0}$ be a bounded, irreducible positive semigroup on a Banach lattice $E = L^{p}(\mu)$, $1 \leq p < \infty$.
 Assume that $s(A) = 0$ is a pole of the resolvent of the generator $A$ and that $\im\alpha \in \sigma(A)$ for some $0 \neq \alpha \in \R$.
 Then $\TT$ behaves asymptotically as the rotation group $(R_{\tau}(t))_{t \geq 0}$ with period $\tau > 0$ on $L^{p}(\Gamma)$, \ie  we can identify $L^{p}(\Gamma)$ with a sublattice of $E$ such that for every $f \in E$ there exists $g \in L^{p}(\Gamma)$ satisfying
@@ -1273,7 +1136,6 @@ Since $(T(t))$ is bounded, we finally obtain convergence in the $L^{p}$-norm for
 %% --
 %
 \index{cell division model}
-%% KGKind
 \index{population semigroup}
 We give an example for the situation treated in Theorem \ref{thm:c4-2.14}.
 The equation we consider describes the division of a cell population.
@@ -1299,6 +1161,7 @@ k(x) > 0 \quad \text{ for } \quad \frac{1}{4} < x < \frac{1}{2} \quad \text{ and
 In the following we show that under these hypotheses and for suitable $w$ the semigroup generated by $C$ fulfills the assertions of Theorem \ref{thm:c4-2.14}.
 
 The operator $A$ generates the nilpotent semigroup $(T(t))$ defined by
+\index{semigroup!nilpotent semigroup}
 %% --
 \begin{equation*}\label{eq:c4-2.13-kgk}
 (T(t)f)(x) = \begin{cases}
@@ -1357,25 +1220,20 @@ Hence one may apply the results of this section to the rescaled semigroup $(\exp
 \newpage
 \section{A Semigroup Approach to Retarded Equations}\label{c4-3}
 %
-\index{retarded equation}
 %
 \index{equation!retarded}
 %
-% Claude
-% \index{Semigroups!Approach to\\ Retarded Equations}
 %% --
 \hspace{1cm}{\Large by Annette Grabosch und Ulrich Moustakas}
 \vspace{.5cm}
 \newline
-%% --
+\index{retarded equation|(}
+\index{retarded semigroup|(}
 As indicated by the above title of this section there is a close relationship to B-IV, Section~3.
 First, the considered Cauchy problems are \enquote{similar} to (RCP).
-%% KGKind
-%\index{derivative!first order}
 Second, there again is a correspondence to a class of semigroups generated by the first derivative.
 
 Instead of the differential equation in (RCP) we will study equations of the form
-%% KGKind
 \index{equation!retarded|(}
 %% --
 \begin{equation*}\label{eq:c4-re} \tag{RE}
@@ -1409,7 +1267,6 @@ In fact, since $1 \in \rho(B)$ we have,
 u(t) = R(1,B)\Phi(u_{t}).
 \end{equation*}
 %% --
-%% KGKind
 \index{Cauchy problem!retarded}
 Clearly, this equation is of the previous type (with a different \enquote{delay functional}).
 %%--
@@ -1418,7 +1275,6 @@ The choice of \enquote{$L^{1}$-functions} instead of \enquote{C-functions} (as i
 \end{enumerate}
 \end{remarks*}
 %% --
-%% KGKind
 \index{differential operator}
 In order to solve \eqref{eq:c4-re} we consider on $E = L^{1}([-1,0],F)$ the differential operator $A \coloneq  \frac{\diff{}}{\dx}$ with domain
 %% --
@@ -1481,10 +1337,6 @@ By using A-II, Corollary~1.8 we thus have proved the first assertion of the foll
 %% --
 \begin{theorem}\label{thm:c4-3.1}
 %
-%%KGK
-%\index{retarded equation!generator}
-%
-\index{semigroup!retarded semigroup}
 %
 The operator $A$, defined above, is the generator of a semigroup $(T(t))_{t \geq 0}$ on $E$.
 For every $f \in E$, $t \geq 0$, we have for a.e. $s \in [-1,0]$
@@ -1496,16 +1348,16 @@ For every $f \in E$, $t \geq 0$, we have for a.e. $s \in [-1,0]$
 \end{cases}
 \end{equation}
 %% --
-%% KGKind
-%%KGK
-%\index{translation property}
 Moreover, if $f \in D(A)$, then the translation property (T) (see B-IV, Theorem 3.1) is satisfied.
 \end{theorem}
 
 \begin{proof}
 Consider $E_1 \coloneqq D(A)$ endowed with the graph norm 
 and on $E_1$ the operator $A_1$ which is the restriction of $A$ to $D(A_1) \coloneqq D(A^{2})\subset E_1$.
-By (A-I, 3.5), $A_1$ generates the semigroup $(T(t)_{|D(A)})_{t \geq 0}$.
+By (
+%%KGK StandConst schift
+%A-I, 3.5
+A-I, 3.6), $A_1$ generates the semigroup $(T(t)_{|D(A)})_{t \geq 0}$.
 On $E_1$ the point evaluation is a continuous mapping and therefore the translation property can be shown as in the proof of B-IV, Theorem 3.1.
 Hence we obtain
 %% --
@@ -1532,14 +1384,6 @@ The following corollary corresponds to B-IV, Corollary~3.2 and assures the well-
 
 \begin{corollary}\label{cor:c4-3.2}
 %
-%%KGK
-%\index{retarded equation!well-posedness}
-%
-% Claude
-% \index{Well-posedness!Retarded Equations}
-%
-% Claude
-% \index{Solutions!Retarded Equations}
 For every $f \in E$ the function $u$ defined by
 %% --
 \begin{equation}\label{eq:c4-3.5}
@@ -1576,12 +1420,6 @@ The semigroup generated by $A_{0}$ is positive (use \eqref{eq:c4-re}), hence $R(
 It follows that $R(\lambda,A) \geq 0$ which is equivalent to the positivity of $(T(t))_{t \geq 0}$ (see C-II, Proposition~4.1).
 
 \begin{proposition}\label{prop:c4-3.3}
-%
-% Claude
-% \index{Positivity!Retarded equations}
-%
-%%KGK
-%\index{retarded equation!positivity}
 If $\Phi \in \L{E,F}$ is a positive operator, then the solution semigroup corresponding to \eqref{eq:c4-re} is positive.
 \end{proposition}
 %% --
@@ -1598,8 +1436,6 @@ Furthermore, we shall need the following properties.
 
 \begin{lemma}\label{lem:c4-3.4}
 %
-% Claude
-% \index{!Continuity}
 The map $h \colon \R \to \R_{+}$\,, $\lambda \mapsto s(\Phi_{\lambda})$ is continuous from the left. If $\Phi_{\lambda}$ is compact for all $\lambda \in \R$, then $h$ is continuous.
 \end{lemma}
 %% --
@@ -1613,12 +1449,6 @@ $s(\Phi_{\lambda})$ is the boundary spectrum $\sigma_b(\Phi_{\lambda})$ (see C-I
 For the operators $A_{0}$ and $A$ as defined in the beginning of this section we obtain an explicit representation of their resolvents.
 
 \begin{lemma}\label{lem:c4-3.5}
-%
-% Claude
-% \index{Resolvents!Explicit representation}
-%
-%%KGK
-%\index{retarded equation!resolvent}
 For the resolvents of the operators $A_{0}$, \resp $A$, on $E$ the following statements hold.
 %% --
 \begin{enumerate}[\upshape (i)]
@@ -1657,12 +1487,6 @@ R(\lambda,A)g = R(\lambda,A_{0})g + \epsilon_{\lambda} \otimes R(1,\Phi_{\lambda
 \end{proof}
 %% --
 \begin{proposition}\label{prop:c4-3.6}
-%
-% Claude
-% \index{Spectrum!Characterization}
-%
-%%KGK
-%\index{retarded equation!spectrum}
 For each $\lambda \in \C$ the following implications hold.
 \begin{enumerate}[\upshape (i)]
 \item \label{prop:c4-3.6-1}
@@ -1698,22 +1522,11 @@ According to the proof of \ref{lem:c4-3.5}\ref{lem:c4-3.5-2} this is equivalent 
 If $\Phi_{\lambda}$ is compact, then $\sigma(\Phi_{\lambda})\backslash\{0\} \subset P\sigma(\Phi_{\lambda})$. Thus the assertion follows from \ref{prop:c4-3.6-1} and \ref{prop:c4-3.6-2}.
 \end{proof}
 %% --
-%% KGKind
-%%KGK
-%\index{retarded equation!spectral bound}
 The previous results will now be used to characterize the spectral bound of $A$ and hence the stability of the solutions of \eqref{eq:c4-re}.
 
 \begin{theorem}\label{thm:c4-3.7}
-%
-% Claude
-% \index{Spectral bound!Characterization}
-%
-%%KGK
-%\index{retarded equation!stability}
-%
-%%GG\index{stability!retarded equations}
-%% KGKind
 \index{stability}
+\index{spectral bound $s(A)$}
 Let $A \coloneqq \frac{\diff{}}{\dt}, D(A) \coloneqq \{f \in AC([-1,0],F) \colon f' \in L^{1}([-1,0],F)$ and $f(0) = \Phi(f)\}$ be the generator of the solution semigroup on $E \coloneqq L^{1}([-1,0],F)$ corresponding to \eqref{eq:c4-re}. 
 
 If $F$ is a Banach lattice and $0 < \Phi \in \L{E,F}$, then the following assertions hold for $\lambda \in \R$.
@@ -1761,11 +1574,6 @@ Now Proposition \ref{prop:c4-3.6}\ref{prop:c4-3.6-3}  implies $\mu' \in \sigma(A
 %% --
 \begin{corollary}\label{cor:c4-3.8}
 %
-% Claude
-% \index{Spectral bound!Characterization}
-%
-%%KGK
-%\index{retarded equation!stability condition}
 Under the hypotheses of Theorem \ref{thm:c4-3.7}, suppose additionally that the mapping $h: \mu \mapsto s(\Phi_{\mu})$ is continuous from the right and strictly decreasing. Then the following equivalence holds.
 %% --
 \begin{equation}\label{eq:c4-3.9}
@@ -1790,12 +1598,6 @@ The additional statement is a consequence of the strict monotonicity of $h$.
 %% -- 
 \begin{remarks*}\label{rem:c4-3.0-kgk}
 %
-% Claude
-% \index{Retarded equations!Remarks}
-%
-% Claude
-% \index{Spectral bound!Remarks}
-%\begin{enumerate}[1.]
 \begin{enumerate}[\upshape (i), wide, labelindent=.5em] 
 \item \label{rem:c4-3.1-1}
 We note that in Proposition~\ref{prop:c4-3.6} and Theorem~\ref{thm:c4-3.7} it actually suffices that some power of $\Phi_{\lambda}$ is compact.
@@ -1805,11 +1607,8 @@ The equivalence \eqref{eq:c4-3.9} reduces the problem of determining $s(A)$ to t
 In particular, $s(A) < 0$ if and only if $s(\Phi_{0}) < 1$.
 
 \item \label{rem:c4-3.1-3}
-%% KGKind
 \index{characteristic equation}
 We call the identity\, \enquote{$s(\Phi_{\lambda}) = 1$} a \emph{generalized characteristic equation} (see also the remark following B-IV, Theorem~3.7). The usual characteristic equation (see for example  \citet[p.168ff]{hale:1977} and \citet[Section~5]{heijmans:1985b}
-%[Heijmans (1984), Sec.5]) 
-%\marginpar{KGK: Heijmans 1984 fehlt im LV}
 is an equation determining all eigenvalues of the generator $A$. 
 In fact, if $F$ is finite dimensional, the characterization of the spectral values $\lambda$ of $A$ in Proposition.~\ref{prop:c4-3.6}\ref{prop:c4-3.6-3} reduces to solving the complex equation $\det(\Id - \Phi_{\lambda}) = 0$. 
 Obviously, there is no analogous identity characterizing $\sigma(A)$ for infinite dimensional $F$. 
@@ -1820,10 +1619,6 @@ Under the assumptions of Corollary~\ref{cor:c4-3.8} (in particular if $\Phi$ is 
 %%--
 \begin{example}\label{ex:c4-3.9}
 %
-%%KGK
-%\index{retarded equation!examples}
-%
-\index{retarded semigroup}
 We give an example of a large class of operators $\Phi$ satisfying the above assumptions.
 
 For $\psi \in (L^{1}[-1,0])' = L^{\infty}[-1,0]$ and $B \in \L{F}$ we denote by $\Phi \coloneqq \psi \otimes B$ the operator defined by $\Phi(h \otimes x) = \psi(h) \cdot Bx$ for $h \in L^{1}[-1,0]$, $x \in F$.
@@ -1835,8 +1630,6 @@ Then the following holds and is stated without proof.
 
 \begin{lemma*}\label{lem:c4-3.9-kgk}
 %
-% Claude
-% \index{Retarded equations!Properties}
 The following statements hold.
 \begin{enumerate}[\upshape (i), wide,labelindent=.5em] 
 \item \label{lem:c4-3.9-kgk.1}
@@ -1851,15 +1644,8 @@ Hence the map $\mu \mapsto s(\Phi_{\mu})$ is continuous and strictly decreasing 
 \end{example}
 
 For this type of \enquote{retarding functionals} $\Phi$ we obtain a simple characterization of the spectral bound.
-%%GG\index{example!retarding functional}
 %% --
 \begin{corollary*}\label{cor:c4-3.9-kgk}
-%
-% Claude
-% \index{Tensor product operators}
-%
-% Claude
-% \index{Compact operators!Power}
 Let $\Phi = \psi \otimes B$ where $0 \leq \psi \in L^{\infty}[-1,0]$ and $0 \leq B \in L(F)$ such that $B^{n}$ is compact for some $n \in \N$.
 Then the following holds.
 %%--
@@ -1875,17 +1661,10 @@ s(A) \overset{<}{ \underset{>}{=} } \lambda \quad
 %% --
 \begin{example}\label{ex:c4-3.10}
 %
-%%KGK
-%\index{example!Dunford-Pettis property}
-%
-% Claude
-% \index{Operators!Irreducible}
-%
-% Claude
-% \index{Examples!Retarding functionals}
 Let $F$ be a Banach lattice with the Dunford-Pettis property (see \citet[Section II.9]{schaefer:1974}).
 Take for example $F = C(K)$ or $F = L^{1}(X, \Sigma, \mu)$.
 Furthermore define $E = L^{1}([-1,0],F)$ as usual and let $\{K(s) \colon s \in [-1,0]\}$ be a bounded family of positive, irreducible, weakly compact operators on $F$.
+  \index{operator!weakly compact}
 If we define $\Phi f \coloneqq \int_{-1}^{0} K(s)f(s) \, \ds$ for all $f \in E$, then (RE) has the form
 %% --
 \begin{equation}\label{eq:c4-3.11}
@@ -2011,7 +1790,6 @@ $r(\Phi_{\mu}) > r(\Phi_{\lambda})$.}
 %% --
 \end{proof}
 
-%% KGKind
 \index{equation!population}
 \index{population!equation}
 The theory developed so far can also be applied to certain population equations.
@@ -2023,17 +1801,11 @@ We adopt this setting and transform the above results, \eg $\epsilon_{\lambda}$ 
 As a concrete example we consider the following.
 
 
-%%KGK p-C4-33; LNMp-365
-%%
 
 \begin{example}\label{ex:c4-3.12}
 %
 \index{differential equation}
 %
-%%GG\index{matrix systems}
-%
-% Claude
-% \index{Irreducible operators}
 Let $F \coloneqq \C^{n}$, $E:= L^{1}([0,r],F) = \prod_{k=1}^{n} F_{k}$, $F_{k} = L^{1}[0,r]$. and define $\Phi \colon E \to \C^{n}$ by $\Phi = (v_{ij})_{{n\times n}}$ where
 %% --
 \[
@@ -2057,7 +1829,6 @@ Suppose additionally that $\Phi_{\lambda}$ is irreducible for each $\lambda$, wh
 Since $\Phi$ has finite dimensional range and hence is compact, it follows that the function $h \colon \lambda \mapsto s(\Phi_{\lambda})$ is continuous.
 Moreover one shows that $h$ is strictly decreasing by using the same arguments as in Example \ref{ex:c4-3.10} and the fact that $\Phi_{\lambda}$ is irreducible.
 
-%% KGKind
 \index{differential equation!system of}
 The system of differential equations corresponding to $A$ is
 %% --
@@ -2077,7 +1848,6 @@ u_i(t,0) = \int_0^r [\sum_{j=1}^n \beta_{ij}(a)u_j(t,a)]\diff{a} \quad (i=1,...,
 \end{equation}
 %% --
 %% \end{empheq}
-%% KGKind
 \index{asymptotic behavior}
 This system has a solution for every $(v_{1}, \ldots, v_{n}) \in D(A)$ and the asymptotic behavior is determined by the identity
 %% --
@@ -2123,13 +1893,8 @@ The second equation defines the initial state at time zero and the last equation
 %% --
 \begin{example}\label{ex:c4-3.13}
 %
-%%KGK
-%\index{example!population dynamics}
-%%KGK
-%\index{example!integral operator}
 Take $F \coloneqq L^{1}(\Omega)$ where $\Omega \subset \R^{2}$ is bounded and take \\ $E \coloneqq L^{1}([0,r], F) = L^{1}([0,r] \times \Omega)$ for some $r \in \R_{+}$.
-%% KGKind
-\index{operator!integral}
+%%FN\index{operator!integral}
 Furthermore, let $\Phi = \beta \otimes B$ where $0 < \beta \in L^{\infty}[0,r]$ and $B \in \L{F}$ is an integral operator with positive bounded kernel $k$.
 
 The corresponding Cauchy problem is
@@ -2168,6 +1933,8 @@ Let $u(t,a,x)$ denote the density of the number of individuals in a given popula
 As in Example \ref{ex:c4-3.13} the first equation in \eqref{eq:c4-3.14} corresponds to the aging process.
 The second equation fixes the initial state of the population and the last equation describes the dependence of newborns on the birth rate $\beta$ and the distribution of the population over the \enquote{area} $\Omega$\,.
 \end{quote}
+\index{retarded equation|)}
+\index{retarded semigroup|)}
 %% --
 \section*{Notes}
 \addcontentsline{toc}{section}{Notes}
@@ -2185,11 +1952,9 @@ Theorem \ref{thm:c4-1.3} as well as Propositions \ref{prop:c4-1.6}, \ref{prop:c4
 For a comprehensive discussion of the coincidence of the spectral bound $s(A)$ with other growth bounds of positive semigroups on ordered Banach spaces, see \citet{klein:1984}.
 Similar results for finite dimensional (non-lattice) ordered spaces can be found in \citet{stern:1982}.
 For general results on the convergence of the solutions of the inhomogeneous Cauchy problem we refer to \citet{pazy:1983} and the references therein.
-%% KGKind
 \index{Cauchy problem!inhomogeneous}
 
 \item%  \label{se:c4-notes-2}
-%% KGKind
 \index{semigroup!quasi-compact semigroup}
 \index{Doeblin's condition}
 For quasi-compact semigroups (as considered in Theorem \ref{thm:c4-2.1} we refer to the notes of B-IV, Section~2.
@@ -2198,12 +1963,9 @@ Further examples of this type are considered in Section~3.
 It was \citet{lotz:1986} who observed that Doeblin's condition is sufficient for quasi-com\-pactness in reflexive $L^{p}$-spaces.
 (Obviously this is false in $L^{\infty}$-spaces since in this case the identity operator satisfies Doeblin's condition.)
 
-%% KGKind
-%%KGK kleinschreiben
 \index{zero-two law (0-2 Law)}
 The 0-2 Law for certain bounded operators on $L^{1}$ was first established by Ornstein and Sucheston.
 A special case of the 0-2 Law for one-parameter semigroups (Theorem \ref{thm:c4-2.6}) was proven by \citet{winkler:1972} while the general result and its corollaries can be found in \citet{greiner:1982}.
-%% KGKind
 \index{operator!kernel}
 Corollary \ref{cor:c4-2.11} remains true when the assumption \enquote{$T(t)$ is a kernel operator} is replaced by \enquote{$T(t)$ is an irreducible Harris operator} (see \citet{lin:1983}).
 
@@ -2218,7 +1980,6 @@ The occurring phenomena are conjectured by \citet{diekmannetal:1984}.
 One of the starting points in the study of retarded equations was the book of \citet{bellmancooke:1963} on differential-difference equations.
 Initiated by Hale's semigroup approach (see B-IV, Sec.3) to retarded differential equations, \citet{dysonvillella:1979}, \citet{villellabressan:1985} and \citet{webb:1977} used such methods to investigate retarded equations.
 These similarly apply to Volterra equations, see \citet{miller:1974}, \citet{webb:1977} and to 
-%% KGKind
 \index{equation!population}
 \index{population!equation}
 age-dependent population equations, see \citet{Pruess:1981}, \citet{webb:1984}, \citet{webb:1985a}.

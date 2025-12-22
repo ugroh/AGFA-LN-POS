@@ -1,10 +1,7 @@
-% !TEX root = ../LN-Index.tex
-%% -- 
-%% -- Stand 2025-11-28
 %% --
-\chapternopage{Spectral Theory of Positive Semigroups on \texorpdfstring{W$^{*}$}{W*}-Algebras and their Preduals}\label{chap:d3}
+\chapternopage{Spectral Theory of Positive Semigroups on \texorpdfstring{W$^{*}$-Algebras}{W\textsuperscript{*}-Algebras} and their Preduals}\label{chap:d3}
 \chaptermark{Spectral Theory on\/ \WA-algebras}
-%\index{Spectral Theory on Operator Algebras}
+\index{semigroup!positive semigroup}
 %% --
 {\Large
 \vspace*{-.75cm}
@@ -33,7 +30,6 @@ While \enquote{$s(A) \in \sigma(A)$} still holds (see \citet{greinervoigtwolff:1
 For technical reasons we consider mostly strongly continuous semigroups on the predual $M_{*}$ of a \WA-algebra $M$ or its adjoint semigroup which is a weak*-continuous semigroup on the dual space $M'$.
 %% --
 \section{Spectral Theory for Positive Semigroups on Preduals}\label{sec:d3-1}
-%\index{Spectral Theory on Operator Algebras!Spectral Theory on Preduals}
 %% --
 The aim of this section is to develop a Perron-Frobenius theory for identity preserving semigroups of Schwarz type on \WA-algebras.
 However we will show in the example preceding Theorem~\ref{thm:d3-1.11} on page \pageref{thm:d3-1.11} below that the boundary spectrum is no longer cyclic.
@@ -247,6 +243,7 @@ Therefore we may deduce spectral properties of $S_{|}$ from $T_{|}$ and vice ver
 More concrete applications of Lemma~\ref{lem:d3-1.2} will follow.
 \end{remark}
 %% --
+\index{pseudo-resolvent|(}
 We now investigate the fixed space $\Fix{\RR} \coloneqq \Fix{\lambda R(\lambda)}$, $\lambda \in D$, of a pseudo-resolvent $\RR$ with values in the predual of a \WA-algebra $M$.
 %% --
 \begin{proposition}\label{prop:d3-1.4}
@@ -504,6 +501,8 @@ Consequently $\im\alpha \in P\sigma(A)$ and
 %% --
 which proves the assertion.
 \end{proof}
+\index{pseudo-resolvent|)}
+
 %% --
 \begin{remark}\label{rem:d3-1.9}
 From the above proof we obtain the following: If 
@@ -752,7 +751,6 @@ If $\TT$ is the irreducible semigroup of Schwarz type on the predual of $B(H)$ g
 
 %% --
 \section{Spectral Properties of Uniformly Ergodic Semigoups}\label{sec:d3-2}
-%\index{Spectral Theory on Operator Algebras!Uniformly Ergodic Semigoups}
 %% --
 The aim of this section is the study of spectral properties of semigroups which are uniformly ergodic, identity preserving and of Schwarz type.
 For the basic theory of uniformly ergodic semigroups on Banach spaces we refer to \citet{dunfordschwartz:1958}.
@@ -881,7 +879,10 @@ Since $\bigoplus_{j=1}^{n} Mp_{j} = M$ and $\bigoplus_{j=1}^{n} L_{j} = M_{*}$, 
 and the assertion follows from Lemma~\ref{lem:d3-1.6} on page \pageref{lem:d3-1.6}.
 \end{proof}
 %% --
-Before going on let us recall the basic facts of the \emph{ultrapower} $\hat{E}$ of a Banach space $E$ with respect to some free ultrafilter $\mathfrak{U}$ on $\N $ (compare A-I, 3.6).
+Before going on let us recall the basic facts of the \emph{ultrapower} $\hat{E}$ of a Banach space $E$ with respect to some free ultrafilter $\mathfrak{U}$ on $\N $ (compare 
+%%KGK StandConst schift
+%A-I, 3.6).
+A-I, 3.7).
 If $\ell^{\infty}(E)$ is the Banach space of all bounded functions on $\N $ with values in $E$, then
 %% --
 \[
@@ -904,6 +905,7 @@ Moreover, for a bounded linear operator $T \in \LE$, we denote by $\hat{T}$ the 
 
 It is clear by virtue of $(x \mapsto (x, x, ..) + c_{\mathfrak{U}}(E))$ that each $x \in E$ defines an element $\hat{x} \in \hat{E}$.
 This isometric embedding as well as the operator map $(T \mapsto \hat{T})$ are called canonical.
+\index{pseudo-resolvent|(}
 In particular, if $\RR \colon (D \to \LE)$ is a pseudo-resolvent, then
 %% --
 \[
@@ -915,6 +917,7 @@ Recall that the approximative point spectrum $A{\sigma}(T)$ is equal to the poin
 
 This construction gives us the possibility to characterize uniformly ergodic semigroups with finite dimensional fixed space.
 %% --
+\index{resolvent!pole|(}
 \begin{lemma}\label{lem:d3-2.2}
 Let $\RR$ be a pseudo-resolvent on $D = \{\lambda \in \C \colon \Re(\lambda) > 0\}$ such that $\|R(\mu+\im\alpha)\| \leq 1$ for all $(\mu,\alpha) \in \R_{+} \times \R$ and suppose
 %% --
@@ -1137,6 +1140,8 @@ Therefore the assertion follows from Lemma~\ref{lem:d3-2.2} on page \pageref{lem
 \end{proof} 
 %% --
 The consequences of this result for the asymptotic behavior of one-parameter semigroups will be discussed in D-IV, Section 4.
+\index{resolvent!pole|)}
+\index{pseudo-resolvent|)}
 %% --
 \section*{Notes}\label{notes:d3-notes}
 \addcontentsline{toc}{section}{Notes}

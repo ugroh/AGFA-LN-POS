@@ -1,8 +1,3 @@
-% !TEX root = ../LN-Index.tex
-%% --
-%% -- Stand 2025-11-28
-%% -- Stand: 2025-12-03 KGK Indexanpassung
-%% -- Stand: 2025-12-05 KGK Indexanpassung
 %% --
 \chapternopage{Spectral Theory}\label{chap:a3}%
 %% --
@@ -33,10 +28,7 @@ serves as a leitmotiv and suggests relations of the form
 \]
 %% --
 called \emph{spectral mapping theorem}.
-%% KGKind
 \index{spectral mapping theorem}
-%% KGKind 2025-12-16
-%\index{asymptotic behavior}
 These --- or similar --- relations will be of great use in Chapter IV and enable us to determine the asymptotic behavior of the semigroup $\TT$ by the spectrum of its generator.
 
 As motivation and also as a preliminary step, we concentrate here on the \emph{spectral radius}
@@ -97,7 +89,6 @@ we obtain for $t > 0$
 %% --
 \end{proof}
 %% --
-%% KGKind
 \index{spectral bound $s(A)$}
 \index{growth bound}
 \index{spectral mapping theorem}
@@ -127,7 +118,6 @@ are \emph{stable}, \ie they converge to zero as $t \to \infty$ if (and only if) 
 For unbounded generators the situation is much more difficult and $s(A)$ may differ drastically from $\omega_{0}(\TT)$.
 %% --
 \begin{example}\label{ex:a3-1.3}(Banach function space, \citet{greinervoigtwolff:1981})
-%%KGK "counterexample" trennen
 \index{spectral mapping theorem!counter example}%% --
 Consider the Banach space $E$ of all complex valued continuous functions on $\R_{+}$ which vanish at infinity and are integrable for $\eu^{x}\dx$, \ie 
 %% --
@@ -260,11 +250,11 @@ and hence $\omega_{0}(\TT) \geq 1$.
 On the other hand, it is easy to see that $\|T(t)\| = \eu^{t}$, hence $\omega_{0}(\TT) = 1$.
 
 
+\index{spectral bound $s(A)$}
 Finally, if we take $S(t) \coloneqq \eu^{-t/2}T(t)$, we obtain a semigroup $\mathcal{S}$ 
 having spectral bound $-\frac{1}{2}$ but satisfying $\lim_{t \to \infty} \|S(t)\| = \infty$ in contrast with Corollary~\ref{cor:a3-1.2}.
 
 These examples show that neither the conclusion of Corollary~\ref{cor:a3-1.2}, \ie \enquote{$s(A) < 0$ implies stability}, nor the \enquote{spectral mapping theorem}
-%% KGKind
 \index{spectral mapping theorem}
 %% --
 \[
@@ -278,8 +268,6 @@ A careful analysis of the general situation will be given in Section 6 below, bu
 
 %% --
 As usual, to a closed linear operator $A$ with dense domain $D(A)$ in a Banach space $E$, we associate its spectrum $\sigma(A)$, its resolvent set
-%%KGK
-%\index{resolvent!resolvent set} 
 $\rho(A)$ and its resolvent 
 \index{resolvent}
 %% --
@@ -303,7 +291,7 @@ $A - \lambda$ is not injective.
 
 \item 
 \emph{approximate point spectrum}
-\index{approximate point spectrum} 
+\index{approximate point spectrum $A\sigma$} 
 $A\sigma(A)$ the set of all $\lambda \in \C$ such that $A - \lambda$ is not injective or $(A - \lambda)D(A)$ is not closed in $E$ .
 
 \item 
@@ -312,9 +300,9 @@ $A\sigma(A)$ the set of all $\lambda \in \C$ such that $A - \lambda$ is not inje
 \end{definition}
 %% --
 \index{spectrum}
-\index{spectrum!point spectrum}
-\index{spectrum!approximate point spectrum}
-\index{spectrum!residual spectrum}
+\index{spectrum!point spectrum $P\sigma$}
+\index{spectrum!approximate point spectrum $A\sigma$}
+\index{spectrum!residual spectrum $R\sigma$}
 %% --
 From these definitions it follows that $\lambda \in P\sigma(A)$ if and only if there exists a non-zero \emph{eigenvector}%
 \index{eigenvector} 
@@ -339,9 +327,9 @@ For a closed, densely defined, linear operator $(A,D(A))$ in a Banach space $E$ 
 
 \item
 The topological boundary $\partial\sigma(A)$ of $\sigma(A)$ is contained in $A\sigma(A)$.
+\index{spectrum!boundary} 
 
 \item
-%% KGKind
 \index{adjoint operator}
 \index{operator!adjoint}
 $R\sigma(A) = P\sigma(A')$ for the adjoint operator $A'$ on $E'$.
@@ -379,8 +367,6 @@ and use the identity
 \]
 %% --
 to show that $(g_{n})_{n \in \N}$ is an approximate eigenvector corresponding to $\lambda_{0}$.
-%% KGKind
-%\index{eigenvector!approximate}
 
 \item 
 This is a simple consequence of the Hahn-Banach theorem.
@@ -459,12 +445,8 @@ On $E = L^{p}(X,\Sigma,\mu)$ analogous results are valid, but their exact formul
 \end{example}
 %% --
 \begin{example}[The Spectrum of Translation Semigroups]\label{ex:a3-2.4}
-%%KGK singular
 \index{spectral theory example!translation semigroup}
-%% KGKind
 \index{spectrum!translation semigroup}
-%%KGK
-%\index{semigroup!translation!spectrum}
 %% --
 
 We consider the translation semigroup
@@ -496,7 +478,6 @@ Using the same functions one obtains
 	\sigma(T(t)) &= \{z \in \C \colon |z| \leq 1\} \text{ for every } t > 0 .
 \end{align*}
 %% --
-%% KGkind
 \index{approximate eigenvector|(}
 \index{eigenvector!approximate|(}
 In the case of the translation group on $E = C_{0}(\R)$ one has $\sigma(A) \subset \im\R$.
@@ -514,9 +495,7 @@ The resolvent is given by
 R(\lambda,A)f(x) = \eu^{\lambda x}\int_{x}^{\infty}\eu^{-\lambda s}f(s)  \ds \quad (f \in L^{p}([0,\tau]), \lambda \in \C) .
 \]
 %% --
-%%KGK singular
 \index{spectral theory example!periodic semigroup}
-%% KGKind
 \index{periodic translation group}
 Finally, the generator of the periodic translation group from A-I,\,2.5 on
 %% -- 
@@ -538,7 +517,6 @@ In Section 5 we show that $\sigma(A) = 2\pi \im\Z$.
 We now return to the general theory and recall from Corollary~\ref{cor:a3-1.2} that it is very useful (\eg for stability theory) to be able to convert
 spectral values of the generator $A$ into spectral values of the semigroup operator $T(t)$ and vice versa.
 As shown in Examples~\ref{eq:a3-1.3} and \ref{eq:a3-1.4} this is not possible in general.
-%% KGKind
 \index{spectral mapping theorem}
 Therefore we tackle first a much easier \emph{spectral mapping theorem}: the relation between $\sigma(A)$ and $\sigma(R(\lambda_{0}))$, where $R(\lambda_{0}) \coloneqq R(\lambda_{0},A)$ for some $\lambda_{0} \in \rho(A)$.
 %% --
@@ -586,8 +564,6 @@ that $(g_{n})$ is an approximate eigenvector of $A$ to the eigenvalue $\alpha$.
 
 \item 
 First we recall the well known \emph{resolvent equation}
-%%KGK
-%\index{resolvent!equation}
 \index{resolvent equation}. 
 
 For any $z$,  $\lambda_{0} \in \rho(A)$ we have 
@@ -699,13 +675,10 @@ Unfortunately such spectral decompositions do not exist in general.
 %% --
 \begin{example}\label{ex:a3-3.2}
 %% --
-%%KGK singular
 \index{spectral theory example!rotation semigroup}
-%% KGKind
-%%KGK ergänzt "semigroup"
 \index{semigroup!rotation semigroup}
 \index{rotation semigroup}
-Take the rotation semigroup from A-I,\,2.4 on the Banach space $L^{p}(\Gamma)$, $1 \leq p < \infty$, $\tau = 2\pi$.
+Take the rotation semigroup from A-I,\,2.5 on the Banach space $L^{p}(\Gamma)$, $1 \leq p < \infty$, $\tau = 2\pi$.
 It was stated in Example~\ref{ex:a3-2.4} and will be proved in Section 5 that its generator $A$ has spectrum
 %% --
 \[
@@ -731,7 +704,6 @@ But as soon as one of these sets is bounded a corresponding spectral decompositi
 Let $\TT$ be a strongly continuous semigroup on a Banach space $E$ and assume that the spectrum $\sigma(A)$ of the generator $A$ can be decomposed into the disjoint union of two non-empty closed subsets $\sigma_{1}$ and 
 $\sigma_{2}$.
 
-%% KGKind
 \index{spectral decomposition}
 If\/ $\sigma_{1}$ is compact, then there exists a unique corresponding spectral decomposition $E = E_{1} \oplus E_{2}$ such that the restricted semigroup $\TT_{1}$ has a bounded generator.
 \end{theorem}
@@ -752,7 +724,6 @@ Since $\sigma_{1}$ is compact, the set $\tau_{1}$ is compact and does not contai
 Only in the case that $\sigma_{2}$ is unbounded, the point $0$ will be an accumulation point of $\tau_{2}$.
 Therefore $\sigma(R(\lambda_{0},A)) \cup \{0\}$ is the disjoint union of the closed sets $\tau_{1}$ and $\tau_{2} \cup \{0\}$.
 
-%% KGKind
 \index{spectral projection}
 \index{resolvent}
 \index{resolvent!series representation}
@@ -765,7 +736,6 @@ R(\lambda_{0},A)P = R(\lambda_{0},A_{1}), \quad R(\lambda_{0},A)(\Id-P) = R(\lam
 \]
 %% --
 for the generator $A_{1}$ of $T_{1} = (T(t)P)_{t \geq 0}$ and $A_{2}$ of $T_{2} = (T(t)(\Id-P))_{t \geq 0}$.
-%% KGKind
 \index{spectral mapping theorem}
 Applying the spectral mapping theorem for the resolvent (Theorem~\ref{prop:a3-2.5})
 we conclude
@@ -782,13 +752,11 @@ Therefore $R(\lambda_{0},A_{1})^{-1} = (\lambda_{0}-A_{1})$ is bounded.
 \begin{example*}
 If we do not require $\TT_{1}$ to be uniformly continuous, the above spectral decomposition need not be unique, as can be seen from the following example. 
 
-Consider a decomposition $E = E_{1} \oplus E_{2}$ and add a direct summand $E_{3}$ with a strongly continuous semigroup $T_{3}$ whose generator $A_{3}$ has empty spectrum (\eg A-I, Example 2.6).
+Consider a decomposition $E = E_{1} \oplus E_{2}$ and add a direct summand $E_{3}$ with a strongly continuous semigroup $T_{3}$ whose generator $A_{3}$ has empty spectrum (\eg A-I, 2.6).
 Then still $\sigma(A) = \sigma_{1} \cup \sigma_{2}$, but $E_{1} \oplus (E_{2} \oplus E_{3})$ and $(E_{1} \oplus E_{3}) \oplus E_{2}$ are two different spectral decompositions corresponding to $\sigma_{1}$, $\sigma_{2}$.
 \end{example*}
 %% --
 The importance of the above theorem stems from the fact that $\TT_{1}$ has a bounded generator and therefore is easy to deal with.
-%%KGK 2025-12-16
-%\index{asymptotic behavior}
 In particular the asymptotic behavior of $\TT_{1}$ can be deduced from the location of $\sigma_{1}$.
 %% --
 \begin{corollary}\label{cor:a3-3.4}
@@ -828,7 +796,6 @@ If\/ $\sigma(T(t_{0})) = \tau_{1} \cup \tau_{2}$ for two non-empty, closed, disj
 The spectral projection $P$ of $T(t_{0})$ is obtained by integrating $R(\lambda,T(t_{0}))$ (see, \eg \citet[Section VII.3]{dunfordschwartz:1958}).
 Since every $T(t)$, $t \geq 0$, commutes with $T(t_{0})$, it must commute with $R(\lambda,T(t_{0}))$, hence with $P$.
 The statement on the decomposition $\sigma(A) = \sigma_{1} \cup \sigma_{2}$ follows from the Spectral Inclusion Theorem (see \ref{prop:a3-6.2}) below.
-%% KGKind
 \index{spectral inclusion theorem}
 \end{proof}
 %% --
@@ -853,7 +820,6 @@ In Chapter IV we will try to obtain such results by exploiting information about
 %% --
 \begin{example}[Isolated singularities and poles]\label{ex:a3-3.6}%
 \index{spectral theory!isolated singularities and poles}
-%%KGKind
 \index{resolvent!isolated singularity}
 \index{resolvent!pole}
 %% --
@@ -894,7 +860,6 @@ $m_{a}$ of $\lambda_{0}$, while the \emph{geometric multiplicity}
 \index{eigenvalue!geometric multiplicity} 
 is $m_{g} \coloneqq \text{dim ker}(\lambda_{0} - A)$.
 In case $m_{a} = 1$, we call $\lambda_{0}$ an \emph{algebraically simple pole}.
-%% KGKind
 \index{resolvent!algebraically simple pole}
 \index{resolvent!essential singularity}
 If\/ $k$ is the pole order ($k = \infty$ in case of an essential singularity), we have
@@ -921,7 +886,6 @@ This is a consequence of Proposition~\ref{prop:a3-2.5}.(iii) and the well-known 
 \end{example}
 %% --
 \begin{example}[The essential spectrum]\label{subsec:a3-3.7}	%
-%% KGKind
 \index{spectrum!essential}
 \index{Fredholm domain}
 \index{Fredholm operator}
@@ -935,7 +899,6 @@ For an operator $T \in \LE$ the \emph{Fredholm domain} $\rho_{F}(T)$ is
 \end{aligned}
 \end{equation}
 %% --
-%% KGKind
 \index{operator!compact}
 An equivalent characterization of $\rho_{F}(T)$ is obtained through the \emph{Calkin algebra}%
 \index{Calkin algebra} 
@@ -967,7 +930,6 @@ r_{\text{ess}}(T - K) = r_{\text{ess}}(T) .
 %% --
 A detailed analysis of $\rho_{F}(T)$ can be found in Section IV.5.6 of \citet{kato:1966}.
 In particular we recall that the poles 
-%%KGK singular
 \index{spectral theory!isolated singularities and poles} 
 of $R(\cdot,T)$ with finite algebraic multiplicity belong to $\rho_{F}(T)$.
 Conversely, an element of the unbounded component of $\rho_{F}(T)$ either belongs to $\rho(T)$ or is a pole of finite algebraic multiplicity.
@@ -1018,18 +980,14 @@ whenever $\TT$ is generated by $A$ and $\mathcal{S}$ is generated by $A + K$ for
 
 %% --
 \section{The Spectrum of Induced Semigroups}\label{sec:a3-4}
-%%KGK singular
 \index{spectral theory!spectrum of induced semigroup}
 In the previous section we tried to decompose a semigroup into the direct sum of two, hopefully simpler objects.
 Here we present other methods to reduce the complexity of a semigroup and its generator.
-Forming subspace or quotient semigroups as in A-I,\,3.2, A-I,\,3.3 are such methods.
-But also the constructions of new semigroups on canonically associated spaces such as the dual space, see A-I,\,3.4, or the $\F$-product, see A-I,\,3.6, might be helpful.
+Forming subspace or quotient semigroups as in A-I,\,3.3, A-I,\,3.4 are such methods.
+But also the constructions of new semigroups on canonically associated spaces such as the dual space, see A-I,\,3.5, or the $\F$-product, see A-I,\,3.7, might be helpful.
 We review these constructions under the spectral theoretical point of view and collect a number of technical properties for later use.
 
 We start by studying the spectrum of subspace and quotient semigroups.
-%% KGKind
-%%KGK
-%\index{spectrum!subspace semigroup}
 \index{semigroup!subspace semigroup}
 \index{spectrum!quotient semigroup}
 To that purpose assume that the strongly continuous semigroup $\TT = (T(t))_{t \geq 0}$ leaves invariant some closed subspace $N$ of the Banach space $E$.
@@ -1038,6 +996,8 @@ The following example shows that the spectra of $A$, $A_{|}$ and $A_{/}$ may dif
 %% --
 \begin{example}\label{ex:a3-4.1}
 \index{semigroup!translation semigroup}
+\index{spectrum!translation semigroup}
+\index{spectral theory example!translation semigroup}
 %% --
 As in the example in A-I,\,3.3 we consider the translation semigroup on $E = L^{1}(\R)$ and the 
 invariant subspace 
@@ -1161,12 +1121,10 @@ by $\ell + m$.
 
 %% --
 \subsection{Spectrum of the adjoint semigroup}\label{subsec:a3-4.4}%
-%%KGK singular
 \index{spectral theory!spectrum of adjoint semigroup}
-%% KGKind
 \index{spectrum!adjoint semigroup}
 %% --
-We recall from A-I,\,3.4 that to every strongly continuous semigroup $\TT = (T(t))_{t \geq 0}$ there corresponds a strongly continuous adjoint semigroup $\TT^{*} = (T(t)^{*})_{t \geq 0}$ on the semigroup dual
+We recall from A-I,\,3.5 that to every strongly continuous semigroup $\TT = (T(t))_{t \geq 0}$ there corresponds a strongly continuous adjoint semigroup $\TT^{*} = (T(t)^{*})_{t \geq 0}$ on the semigroup dual
 %% --
 \[
 E^{*} = \{\phi \in E' \colon \lim_{t \to \infty} \|T(t)'\phi-\phi\| = 0\} .
@@ -1188,13 +1146,13 @@ $s(A) = s(A^{*})$, $\omega_{0}(A) = \omega_{0}(A^{*})$ .
 \begin{proof}
 The left part of these equalities is either well known or has been stated in 
 2.2(ii).
-The first statement of (iii) follows from (ii), while the second is an immediate consequence of the estimate $\|T(t)^{*}\| \leq \|T(t)\| \leq M\cdot\|T(t)^{*}\|$ given in A-I,\,3.4.
+The first statement of (iii) follows from (ii), while the second is an immediate consequence of the estimate $\|T(t)^{*}\| \leq \|T(t)\| \leq M\cdot\|T(t)^{*}\|$ given in A-I,\,3.5.
 
 As a sample for the remaining assertions we show that $0 \notin \sigma(A)$ if and only If\/ $0 \notin \sigma(A^{*})$:
-If\/ $A$ and therefore $A'$ is invertible, it follows from A-I,\,3.4 that $A^{*}$ is a bijection from $D(A^{*})$ onto $E^{*}$.
+If\/ $A$ and therefore $A'$ is invertible, it follows from A-I,\,3.5 that $A^{*}$ is a bijection from $D(A^{*})$ onto $E^{*}$.
 
 Conversely assume that $A^{*}$ is invertible.
-Then $A'$ must be injective by the Proposition in A-I,\,3.4.
+Then $A'$ must be injective by the Proposition in A-I,\,3.5.
 Moreover $A'(D(A'))$ contains $A^{*}(D(A^{*})) = E^{*}$ and is $\sigma(E',E)$-dense in $E'$.
 By standard duality arguments it follows that $A$ is injective with dense image.
 Next we show that $A(D(A))$ is closed: For $f \in D(A)$ choose $\phi \in D(A')$ such that $\|\phi\| \leq 1$ and $|\langle f,\phi \rangle| \geq \frac{1}{2}\|f\|$.
@@ -1216,9 +1174,7 @@ and $A(D(A))$ is closed since $A$ is closed.
 %% --
 \subsection{Spectrum of the 
 \texorpdfstring{$\mathcal{F}$-product}{F-product} semigroup}\label{subsec:a3-4.5}
-%%KGK singular
 \index{spectral theory!spectrum of $\F$-product semigroup}
-%% KGKind
 \index{spectrum!F-product semigroup@$\mathcal{F}$-product semigroup}
 \index{F-product@$\mathcal{F}$-product}
 %% --
@@ -1309,9 +1265,7 @@ A\sigma(T(t)) = P\sigma(T(t)_{\F}) .
 Note that in general $A\sigma(T(t)) \neq P\sigma(T_{\F}(t))$ (see the Examples~\ref{ex:a3-1.3} and \ref{ex:a3-1.4} in combination with Theorem~\ref{thm:a3-6.3}).
 %% --p
 \section{The Spectrum of Periodic Semigroups} \label{sec:a3-5}
-%%KGK singular
 \index{spectral theory example!periodic semigroup}
-%% KGKind
 \index{spectrum!periodic semigroup}
 %% --
 In this section we determine the spectrum of a particularly simple class of strongly continuous semigroups and thereby achieve a rather complete description of the semigroup itself.
@@ -1328,7 +1282,6 @@ The \emph{period} $\tau$ of $\TT$ is obtained as
 %
 \end{definition}
 %% --
-%% KGKind
 \index{semigroup!periodic semigroup}
 \index{periodic semigroup}
 We immediately observe that periodic semigroups are groups with inverses $T(t)^{-1} = T(n\tau-t)$ for $0 \leq t \leq n\tau$, $\tau$ the period of $\TT$.
@@ -1439,6 +1392,7 @@ where $H$ runs through all finite subsets of $\Z$, may be unbounded (see the exa
 Nevertheless the following is true.
 %% --
 \begin{theorem}\label{thm:a3-5.4}
+\index{spectral projection}
 Let $\TT = (T(t))_{t \geq 0}$ be a $\tau$-periodic semigroup on a Banach space $E$ with generator $A$ and associated spectral projections
 %% --
 \[
@@ -1515,7 +1469,6 @@ $A = \sum_{-m}^{+m} (2\pi\im n/\tau)P_{n}$ .
 \end{corollary}
 %% --
 \begin{example}\label{ex:a3-5.6} 
-%%KGK singular
 \index{spectral theory example!rotation group}
 %% --
 From A-I,\,2.5 we recall briefly the rotation group
@@ -1563,8 +1516,6 @@ s(A) = \omega_{0}(A)
 \]
 %% --
 for the spectral- and growth bounds and therefore guarantees that the location of the spectrum of $A$ determines the asymptotic behavior of $\TT$. 
-%%KGK 2025-12-16
-%\index{asymptotic behavior}
 As we have seen in Examples~\ref{ex:a3-1.3} and \ref{ex:a3-1.4} the last statement does not hold in general.
 We therefore present a detailed analysis, where and why it fails and what additional assumptions are needed for its validity.
 Before doing so, we have another look at the examples.
@@ -1575,6 +1526,8 @@ Before doing so, we have another look at the examples.
 \begin{enumerate}[\upshape (i), wide, labelindent=.5em]
 
 \item
+\index{spectral theory example!translation semigroup}
+\index{spectrum!translation semigroup}
 Take the nilpotent translation \linebreak[4] semigroup from A-I,\,2.6. Then $\sigma(A) = \emptyset$ and $\sigma(T(t)) = 0$ for every $t > 0$.
 By this trivial example and since $\eu^{z} \neq 0$ for every $z \in \C$, it is natural to read the spectral mapping theorem modulo the addition of $\{0\}$, \ie 
 %% --
@@ -1584,11 +1537,11 @@ By this trivial example and since $\eu^{z} \neq 0$ for every $z \in \C$, it is n
 %% --
 
 \item
+\index{spectral theory example!rotation group}
 The spectrum of the generator $A$ of the $\tau$-periodic rotation group $(R_{\tau}(t))_{t \geq 0}$ on $C(\Gamma)$ is $\sigma(A) = 2\pi\im /\tau\cdot\Z$ and $\exp(2\pi\im nt/\tau)$, $n \in \Z$, is an eigenvalue of $R_{\tau}(t)$ for every $t \geq 0$ (see Example~\ref{ex:a3-5.6}.
 If\/ $t/\tau$ is irrational, these eigenvalues form a dense subset of $\Gamma$.
 Since the spectrum is closed, we obtain $\sigma(T(t)) = \Gamma$ for these $t$.
 Therefore in this example the spectral mapping theorem is valid only in the following \enquote{weak} form
-%% KGKind
 \index{spectral mapping theorem!weak form}
 %% --
 \[
@@ -1665,6 +1618,7 @@ But at least this is true for some important parts of the spectrum.
 %% --
 \begin{theorem}[Spectral Mapping Theorem for Point and Residual Spectrum]\label{thm:a3-6.3}%
 \index{spectral mapping theorem!point and residual spectrum}
+\index{spectrum!residual spectrum $R\sigma$}
 %% --	
 Let $A$ be the generator of a strongly continuous semigroup $\TT = (T(t))_{t \geq 0}$.
 Then
@@ -1736,7 +1690,6 @@ Without proof (see \citet[Proposition~1.10]{greiner:1981}) we add another coroll
 Again the converse is not true as shown by Example~\ref{ex:a3-5.6}.
 %% --
 \begin{corollary}\label{cor:a3-6.5}
-%% KGKind - kein "of"
 \index{resolvent!pole}
 Assume that $\eu^{\mu t}$ is a pole of order $k$ of $R(\cdot,T(t))$ with residue $P$ and $Q$ as the $k$-th coefficient of the Laurent series.
 Then
@@ -1759,8 +1712,8 @@ Q_{n} = (t \cdot \eu^{\mu t})^{1-k} \cdot Q \circ (1/t) \int_{0}^{t} \eu^{-(\mu+
 \end{corollary}
 %% --
 From Proposition~\ref{prop:a3-6.2} and Theorem~\ref{thm:a3-6.3} it follows that the approximate point spectrum 
-\index{spectrum!approximate point spectrum}
-\index{approximate point spectrum}
+\index{spectrum!approximate point spectrum $A\sigma$}
+\index{approximate point spectrum $A\sigma$}
 is the trouble maker in the sense that not every approximate eigenvalue of $T(t)$ corresponds to an approximate eigenvalue of the generator $A$.
 Since nothing more can be said in general, we now look for additional hypotheses on the semigroup implying the spectral mapping theorem.
 
@@ -1772,8 +1725,6 @@ Both cases, and many more, are included in the following result.
 %% --
 \begin{theorem}[Spectral Mapping Theorem for Eventually Norm Continuous Semigroups]\label{thm:a3-6.6}%
 \index{spectral mapping theorem!eventually norm continuous}
-%% KGKind
-%%KGK anpassen "-"
 \index{semigroup!eventually norm-continuous semigroup}
 %% --
 Let $\TT = (T(t))_{t\geq 0}$ be an eventually norm continuous semigroup with generator $A$.
@@ -1815,6 +1766,7 @@ and
 \index{eigenvector!approximate|)}
 of $T(t_{1})$ with approximate eigenvalue $1$.
 But the semigroup $\TT$ is uniformly continuous on sets of the form $T(t_{0})V$, $V$ bounded in $E$.
+ \index{semigroup!F-product@$\mathcal{F}$-product}
 In particular, it is uniformly continuous on the sequence $(g_{n})_{n\in\N}$, which therefore defines an element $g$ in the semigroup $\F$-product $E_{\F}$.
 
 Obviously, $g$ is an eigenvector of $T_{\F}(t_{1})$ with eigenvalue $1$ and by \eqref{eq:a3-6.4} we obtain an eigenvalue $2\pi\im  n/t_{1}$ of $A_{\F}$ for some $n \in \Z$.
@@ -1827,7 +1779,6 @@ Therefore we state explicitly the spectral mapping theorem for several important
 %% --
 \begin{corollary}\label{cor:a3-6.7}
 The spectral mapping theorem \ref{thm:a3-6.6}
-%% KGKind
 \index{spectral mapping theorem}
 %%% --
 %\[
@@ -1835,6 +1786,9 @@ The spectral mapping theorem \ref{thm:a3-6.6}
 %\]
 %%% --
 holds for each of the following classes of strongly continuous semigroups.
+\index{semigroup!compact semigroup}
+\index{semigroup!differentiable semigroup}
+\index{semigroup!holomorphic semigroup}
 %% --
 \begin{enumerate}[\upshape (i)]
 \item 
@@ -1851,6 +1805,7 @@ uniformly continuous semigroups.
 \end{enumerate}
 %% --
 \end{corollary}
+
 %% --
 Another application of the above spectral mapping theorem can be made to tensor product semigroups (see A-I,\,3.8).
 Let $\TT_{1} = (T_{1}(t))_{t\geq 0}$, $\TT_{2} = (T_{2}(t))_{t\geq 0}$ be strongly continuous semigroups on Banach spaces $E_{1}$, $E_{2}$ with generator $A_{1}$, $A_{2}$.
@@ -1868,11 +1823,6 @@ If\/ $\TT_{1}$ and $\TT_{2}$ are eventually norm continuous, then
 \]
 %% --
 where $A$ is the generator of the tensor product semigroup
-%%KGK
-%\index{tensor product semigroup}
-%%KGK
-%\index{spectrum!tensor product semigroup}
-%% KGKind
 \index{semigroup!tensor product semigroup}
 %% --
 \[
@@ -1970,6 +1920,7 @@ Therefore, $x \mapsto q(x)^{-1}$ defines a bounded continuous function on $X$ wh
 
 %% --
 \begin{theorem}\label{thm:a3-7.2}
+\index{operator!matrix multiplication}
 Let $A = M_{q}$ be a matrix multiplication operator on $C_{0}(X,\C^{n})$ generating a strongly continuous semigroup $(T(t))_{t\geq 0}$, 
 %
 \[
@@ -1977,6 +1928,7 @@ Let $A = M_{q}$ be a matrix multiplication operator on $C_{0}(X,\C^{n})$ generat
 \]
 %
 Then the Weak Spectral Mapping Theorem~\ref{thm:a3-7.2} holds true, \ie 
+\index{spectral mapping theorem!weak form}
 %% --
 \[
 	\sigma(T(t)) = \overline{ \exp( t \cdot \sigma(A) ) } .
@@ -1997,11 +1949,8 @@ which proves the assertion.
 %% --
 \begin{corollary}\label{cor:a3-7.3}
 The growth bound $\omega_{0}(A)$ and the spectral bound $s(A)$ coincide for matrix multiplication semigroups\index{semigroup!matrix multiplication semigroup}.
-%% KGKind
 \index{growth bound}
 \index{spectral bound $s(A)$}
-%%KGK
-%\index{semigroup!matrix multiplication semigroup}
 \end{corollary}
 %% --
 The above results remain valid for other Banach spaces of $\C^{n}$-valued functions such as $L^{p}(X,\C^{n})$, $1 \leq p < \infty$.
@@ -2126,6 +2075,7 @@ The closure of $\text{span }\bigcup_{k\in\Z} P_{k}E$ is a $\TT$-invariant subspa
 Consider the quotient group $(T(t)_/)_{t\in\R}$ induced on $E/G$.
 The spectrum of its generator $A_{/}$ is contained in $\sigma(A)$ by Proposition~\ref{prop:a3-4.2}.(ii).
 Moreover, the spectral projection corresponding to $\sigma(A_{/}) \cap \sigma_{k}$ is the quotient operator $P_{k/}$.
+\index{spectral projection}
 Obviously $P_{k/} = 0$, hence $\sigma(A_{/}) \cap \sigma_{k} = \emptyset$ for every $k \in \Z$ and $\sigma(A_{/}) = \emptyset$.
 By Lemma~\ref{lem:a3-7.6} this implies $E/G = \{0\}$, \ie $G = E$.
 \end{proof}
@@ -2134,7 +2084,6 @@ By Lemma~\ref{lem:a3-7.6} this implies $E/G = \{0\}$, \ie $G = E$.
 %% --
 We return to the situation of the first part of the proof.
 Using \eqref{eq:a3-7.5}, the spectral projection $P_{k}$ can be transformed into
-%% KGKind
 \index{spectral projection}
 %% --
 \begin{align*}
@@ -2177,7 +2126,7 @@ Then \eqref{eq:a3-7.6} implies
 %% --
 In the rest of this section we discuss the behavior of the single spectral values $\lambda$ of $T(t)$, $t > 0$.
 The goal is a characterization of $\sigma(T(t))$ involving only properties of the generator.
-By the rescaling procedure A-I,\,3.1 we may assume $\lambda = 1$ and $t = 2\pi$.
+By the rescaling procedure A-I,\,3.2 we may assume $\lambda = 1$ and $t = 2\pi$.
 
 From the Spectral Inclusion Theorem (Proposition~\ref{prop:a3-6.2} on page \pageref{prop:a3-6.2}) we know that $1 \in \rho(T(2\pi))$ implies $\im\Z \subset \rho(A)$.
 As seen in many examples the converse does not hold and we are now looking for additional conditions.
@@ -2250,14 +2199,12 @@ Since $S$ commutes with $T(2\pi)$, it follows that $S$ is the inverse of $(1 - T
 \end{proof}
 %% --
 Based on the equivalence of (a) and (b), one can state a characterization of the spectrum of $T(t)$ in terms of the generator and its resolvent only.
+\index{resolvent}
 However, in general it is difficult to verify the summability condition stated in (b).
 
 In Hilbert spaces the boundedness of the resolvents will suffice (see Theorem~\ref{thm:a3-7.10} below).
 %% --
 \begin{lemma}\label{lem:a3-7.9}
-%% KGKind
-%%KGK
-%\index{semigroup!Hilbert space}
 Let $(T(t))_{t\geq 0}$ be a semigroup on some Hilbert space $H$ and assume $\im\Z \subset \rho(A)$ for the generator $A$.
 Then we have
 %% --
@@ -2286,7 +2233,6 @@ It follows that $\sum_{k\in\Z} \|Q_{k}f\|^{2} \leq \frac{1}{2\pi}\int_{0}^{2\pi}
 \[
 g_{k}\coloneqq (1 + \lambda R(\im k,A))f_{k}, k \in \Z .
 \]
-%% KGKind
 \index{resolvent equation}
 Using the resolvent equation and then (A-I,\,(3.1)), we obtain
 %% --
@@ -2313,12 +2259,9 @@ Here $c\coloneqq \|(1 - \eu^{-2\pi\lambda}T(2\pi))^{-1}\|\cdot\left(\int_{0}^{2\
 %% --
 \begin{theorem}\label{thm:a3-7.10}
 %
-%%KGK
-%\index{spectral mapping theorem!Hilbert space}
-%%KGK
-%\index{semigroup!on Hilbert space}
 Let $A$ be the generator of a semigroup $(T(t))_{t\geq 0}$ on some Hilbert space $H$.
 Then the following form of the spectral mapping theorem is valid.
+\index{spectral mapping theorem}
 %%
 \[
 \begin{minipage}{.85\textwidth}
@@ -2331,7 +2274,7 @@ Then the following form of the spectral mapping theorem is valid.
 %% --
 \begin{proof}
 If\/ $\eu^{\lambda t} \not\in \sigma(T(t))$, it follows from the Spectral Inclusion Theorem~\ref{prop:a3-6.2} that $\mu_{k} \not\in \sigma(A)$ for every $k \in \Z$ and from Formula (3.1) in A-I, that $\|R(\mu_{k},A)\|$ is bounded.
-For the converse inclusion it suffices to assume $t = 2\pi$ and $\lambda = 0$ (use the rescaling procedure A-I,\,3.1).
+For the converse inclusion it suffices to assume $t = 2\pi$ and $\lambda = 0$ (use the rescaling procedure A-I,\,3.2).
 Assuming that $\im\Z \subset \rho(A)$ and $\|R(\im k,A)\|$ is bounded, then $\sum_{k\in\Z} R(\im k,A)Q_{k}f$ is summable by Lemma~\ref{lem:a3-7.9}.
 Since every summable series is Cesàro-summable, condition (c) of Proposition~\ref{prop:a3-7.8} is satisfied and we conclude $1 \in \rho(T(2\pi))$.
 \end{proof}
@@ -2341,8 +2284,6 @@ As an immediate consequence we obtain an interesting characterization of the gro
 \begin{corollary}\label{cor:a3-7.11}
 %
 The growth bound 
-%%KGK
-%\index{growth bound!Hilbert space}
 of a semigroup $(T(t))_{t\geq 0}$ on a Hilbert space $H$ satisfies
 %% --
 \begin{equation}\label{eq:a3-7.9}
