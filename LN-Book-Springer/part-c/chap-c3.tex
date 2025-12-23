@@ -82,7 +82,6 @@ By Datko's Theorem (A-IV, Theorem~1.11) the function $t \mapsto \eu^{-\lambda t}
 	Given $\mu$ such that $s(A) < \mu < \lambda_{0}$, $f \in E_{+}$, $\phi \in E'_{+}$, then
 	%% --
 	\begin{equation}\label{eq:c3-1.3}
-	%\begin{aligned}
     \begin{split}
 		\langle R(\mu,A)f,\phi\rangle &= \sum_{n=0}^{\infty} (\lambda_{0}-\mu)^n\langle R(\lambda_{0},A)^{n+1}f,\phi\rangle = \\
 		&= \sum_{n=0}^{\infty} \int_{0}^{\infty} \frac{1}{n!}(\lambda_{0}-\mu)^n\exp(-\lambda_{0}s)\langle T(s)f,\phi\rangle\ds = \\
@@ -90,7 +89,6 @@ By Datko's Theorem (A-IV, Theorem~1.11) the function $t \mapsto \eu^{-\lambda t}
 		&= \int_{0}^{\infty} \exp((\lambda_{0}-\mu)s)\exp(-\lambda_{0}s)\langle T(s)f,\phi\rangle\ds = \\
 		&= \int_{0}^{\infty} \exp(-\mu s)\langle T(s)f,\phi\rangle\ds = \\ & = \lim_{t\to\infty}\left\langle \int_{0}^t \exp(-\mu s)T(s)f \ds,\phi\right\rangle\,.
     \end{split}
-	%\end{aligned}
 	\end{equation}
 %% --
 	Note that one can interchange summation and integration because all the integrands are positive functions.
@@ -230,11 +228,11 @@ Thus the following definition makes sense
 	If\/ $E$ is a Banach lattice then for $f \in E$, $n \in \Z$ we define $f^{[n]}$ recursively as follows
 	%% --
 	\begin{equation}\label{eq:c3-2.1}
-	\begin{aligned}
+	\begin{split}
 		f^{[0]} &\coloneqq |f|\,, \\
 		f^{[n]} &\coloneqq (\sign  f)f^{[n-1]} \text{ if } n > 0\,,\\
 		f^{[n]} &\coloneqq (\sign  \overline{f})f^{[n+1]} \text{ if } n < 0\,.
-	\end{aligned}
+	\end{split}
 	\end{equation}
 \end{definition}
 %% --
@@ -375,27 +373,27 @@ In the following we list several simple properties.
 We assume that $R \colon D \to \mathcal{L}(G)$ is a pseudo-resolvent on a Banach space $G$
 %% --
 \begin{equation}\label{eq:c3-2.10}
-	\begin{aligned}
+	\begin{split}
 	&\text{Given  $\lambda_{0} \in D, \mu \in \C $  there exists at most one operator  $S \in \mathcal{L}(G)$ }\\
 	&\text{ such that \quad $R(\lambda_{0}) - S = -(\lambda_{0}-\mu)R(\lambda_{0})S = -(\lambda_{0}-\mu)SR(\lambda_{0})$}\,.\\
 	&\text{ In case such an operator exists w,e have} \\
 	&\text{$R(\lambda) - S = -(\lambda-\mu)R(\lambda)S = -(\lambda-\mu)SR(\lambda)$ for all $\lambda \in D$}\,.
-	\end{aligned}
+	\end{split}
 \end{equation}
 %% -- 
 \begin{equation}\label{eq:c3-2.11}
-	\begin{aligned}
+	\begin{split}
 	&\text{Given  $\lambda_{0} \in D$,  then for  $\mu \in D$  with  $|\mu-\lambda_{0}| < \|R(\lambda_{0})\|^{-1}$}\\ 
 	&\text{ we have $ R(\mu) = \sum_{n=0}^{\infty} (\lambda_{0}-\mu)^n R(\lambda_{0})^{n+1}$ }\,.
-	\end{aligned}
+	\end{split}
 \end{equation}
 %% --
 %% --
 \begin{equation}\label{eq:c3-2.12}
-	\begin{aligned}
+	\begin{split}
 	&\text{The map $\lambda \mapsto R(\lambda)$ is a locally holomorphic function defined on  $D \subseteq \C $}\\ 
 	&\text{ with values in  $\mathcal{L}(G)$}\,.
-	\end{aligned}
+	\end{split}
 \end{equation}
 %% --
 We only sketch the proof of these assertions. \eqref{eq:c3-2.12} follows from \eqref{eq:c3-2.11} and the latter is a consequence of \eqref{eq:c3-2.10}.
@@ -503,10 +501,10 @@ which is stated in the following definition.
 	Let $A$ be the generator of a positive semigroup $(T(t))_{t \geq 0}$ with spectral bound $s(A) > -\infty$.
 	The resolvent is said to \emph{grow slowly} if one of the following (equivalent) conditions is satisfied.
 	\begin{equation}\label{eq:c3-2.15}
-	\begin{aligned}
+	\begin{split}
 	\text{(a)}\quad & \text{$\{(\lambda-s(A))R(\lambda,A) \colon \lambda > s(A)\}$ is bounded in $\mathcal{L}(E)$}\,.\\
 	\text{(b)}\quad & \text{$\left\{\frac{1}{t} \int_{0}^{t} \exp(-\tau s(A))T(\tau) \diff{\tau} \colon t > 0\right\}$ is bounded in $\mathcal{L}(E)$}\,.
-	\end{aligned}
+	\end{split}
 	\end{equation}
 \end{definition}
 %% --
@@ -739,12 +737,12 @@ For more details and proofs we refer to \citet{amann:1983}.
     On $E = L^{p}(\Omega)$ $(1 \leq p < \infty)$ we consider a differential operator $L_{p,o}$ which is defined as follows
 %% --
 \begin{equation}\label{eq:c3-2.23}
-	\begin{aligned}
+	\begin{split}
 \text{$L_{p,0}f$} &\text{$\coloneqq \sum_{i,j=1}^{n} a_{ij} f_{ij}'' + \sum_{i=1}^{n} b_{i} f_{i}' + cf$ , with domain} \\
 \text{ $D(L_{p,0})$} & \text{$\coloneqq \{f \in C^{2}(\bar{\Omega}) \colon$} 
 \text{$ f(x) = 0$ for $x \in \Gamma_{0}$}\\ 
 & \text{\phantom{aaaaaaa} and $\partial f/\partial\nu (x) + \gamma(x)f(x) = 0$ for $x \in \Gamma_{1}\}$}
-	\end{aligned}
+	\end{split}
 \end{equation}
 %% --
 Here $f_{i}'$ stands for $\partial f/\partial x_{i}$, thus $f_{ij}'' = \partial^{2}f/\partial x_{i}\partial x_{j}$.
@@ -1035,10 +1033,10 @@ Next we consider some concrete examples.
 	A weaker condition than \eqref{eq:c3-3.7} entailing irreducibility is the following.
 	%% --
 	\begin{equation}\label{eq:c3-3.8}
-		\begin{aligned}
+		\begin{split}
 		&\text{There exists } \delta > 0 \text{ such that } \kappa \text{ is strictly positive}\\
 		&\text{on the sets } [0,\delta]\times[-1,1] \text{ and } [1-\delta,1]\times[-1,1]\,.
-		\end{aligned}
+		\end{split}
 	\end{equation}
 	%% --
 	For details we refer to \citet{greiner:1984d}.
@@ -1332,11 +1330,11 @@ Moreover, $\sigma_{b}(A)$ contains only algebraically simple poles.
 	Using this fact it is easy to see that the canonical extension $P_{\mathcal{U}}$ of $P$ to the $\mathcal{U}$-product $E_{\mathcal{U}}$ of $E$ has the following form.
 	%% --
 	\begin{equation}\label{eq:c3-3.16}
-		\begin{aligned}
+		\begin{split}
 		&P_{\mathcal{U}} = \hat{\phi}\otimes\hat{u} \quad \ \text{where } \hat{u} \coloneqq (u,u,u,\ldots)+c_{\mathcal{U}}(E) \in E_{\mathcal{U}} \ \text{ and } \hat{\phi} \in (E_{\mathcal{U}})'
 		\\
 		&\text{is given by } \hat{\phi}((f_{n})+c_{\mathcal{U}}(E)) \coloneqq \lim_{\mathcal{U}}\phi(f_{n}) \ ((f_{n})+c_{\mathcal{U}}(E) \in E_{\mathcal{U}})\,.
-		\end{aligned}
+		\end{split}
 	\end{equation}
 	%% --
 	
@@ -1408,11 +1406,11 @@ Combining the lemma with Proposition~\ref{prop:c3-2.11} one obtains the followin
 If\/ $s(A)$ is a pole of finite algebraic multiplicity, then there exists a finite chain of $\TT$-invariant ideals $I_{-1} \coloneqq  \{0\} \subset I_{0}\subset ... \subset I_{N} \coloneqq  E$ $(N\in\N)$ such that the following is true.
 %% --
 \begin{equation}\label{eq:c3-3.19}
-	\begin{aligned}
+	\begin{split}
 	&\textit{For the semigroup $\TT_{n}$ on $I_{n}/I_{n-1}\, \ (0 \leq n \leq N)$ which is induced by $\TT$}
 		\\
 	& \textit{we have either $s(A_{n}) = s(A)$ and $\TT_{n}$ is irreducible or $s(A_{n}) < s(A)$}\,.
-	\end{aligned}
+	\end{split}
 \end{equation}
 %% --
 The following theorem is an immediate consequence of \eqref{eq:c3-3.19}, Theorem~\ref{thm:c3-3.12} and A-III, Proposition~4.2.
@@ -1512,11 +1510,13 @@ In order to prove the second, we denote the semigroup corresponding to $A$ and $
 It follows from Proposition~\ref{prop:c3-3.3} that $(S(t))$ is irreducible and we have $S(t) = T(t) + \int_{0}^{t} T(t-s)KS(s)\ds$ (see A-II, (1.9)). 
 Iterating this identity we obtain for every $m \in \N$, $t \geq 0$
 %% --
-\begin{align}\label{eq:c3-3.21}
-    S(t) &= \sum_{n=0}^{m-1} T_{n}(t) + R_{m}(t) \ \text{ where}\\\notag
-    T_{0}(t)&\coloneqq T(t),\  T_{n}(t) \coloneqq  \int_{0}^{t} T(t-s)KT_{n-1}(s)\ds \text{ for } n \in \N\,,\\\notag
+\begin{equation}\label{eq:c3-3.21}
+\begin{split}
+    S(t) &= \sum_{n=0}^{m-1} T_{n}(t) + R_{m}(t) \ \text{ where}\\ 
+    T_{0}(t)&\coloneqq T(t),\  T_{n}(t) \coloneqq  \int_{0}^{t} T(t-s)KT_{n-1}(s)\ds \text{ for } n \in \N\,,\\
     R_{m}(t) &\coloneqq \textit{\small $\int_{0}^{t}\int_{0}^{t_{1}} .. \int_{0}^{t_{m-1}} T(t-t_{1})KT(t_{1}-t_{2})K .. T(t_{m-1}-t_m)KS(t_{m})\dt _{m}..\dt _{1}$}\,.
-\end{align}
+\end{split}
+\end{equation}
 %% --
 We fix $0 < f \in E$, $0 < \phi \in E'$, $t > 0$. 
 By Theorem~\ref{thm:c3-3.2}(i), $S(t)f > 0$.
@@ -1626,10 +1626,10 @@ In the last part of this section we discuss a spectral decomposition of positive
 	and we obtain for the corresponding generator
 	%% --
 	\begin{equation}\label{eq:c3-4.4}
-		\begin{aligned}
+		\begin{split}
 		\|(\lambda-A_{1})f\|_{\psi} &= \lim_{t \to 0}\left\|\frac{1}{t}(\eu^{-\lambda t}T_{1}(t)f-f)\right\|_{\psi} \geq \lim_{t \to 0}\frac{1}{t}(\eu^{-t\Re \lambda}-1)\|f\|_{\psi}\\
 		&= -\Re \lambda\cdot\|f\|_{\psi} \ \text{ for } \ \Re \lambda < 0 \ \text{ and } \ f \in (E,\psi)\,.
-		\end{aligned}
+		\end{split}
 	\end{equation}
 	%% --
 	It follows from \eqref{eq:c3-4.3} and \eqref{eq:c3-4.4} that $A\sigma(T_{1}(t))\cap\{z \in \C  \colon |z| < 1\} = \emptyset$ and that $A\sigma(A_{1})\cap\{\lambda \in \C  \colon \Re \lambda < 0\} = \emptyset$. 
@@ -1745,11 +1745,11 @@ However, one still cannot prove cyclicity of $P\sigma_{b}(A)$ for arbitrary posi
     we define $T(t)$ on $H$ as follows.
     %% --
 \begin{equation}\label{eq:c3-4.6}
-	\begin{aligned} 
+	\begin{split} 
 		T(t)([f,g]) &\coloneqq [f_t,g_t] \quad \ \text{with}\\
 		f_t(z) &\coloneqq f(z \cdot \eu^{it}) \quad (z \in \Gamma) \quad \text{and}\\
 		g_t(x) &\coloneqq g(x+t) + \frac{1}{2\pi}\int_{0}^{2\pi} f(z \cdot \eu^{is}) \ds  \cdot \int_{x}^{x+t} k(u) \du \,.
-	\end{aligned}
+	\end{split}
 \end{equation}
 %% --
 Then $(T(t))_{t \geq 0}$ is a positve semigroup on $H$ and for the spectrum of
@@ -1875,10 +1875,10 @@ in case $f$ is contained in the underlying real Banach lattice $E_{\R }$.
 For $\mu \in \rho(A) \cap \R $, we can apply $R(\mu,A)$ on both sides and the substitution $f = R(\mu,A)g$ finally leads to
 %% --
 \begin{equation}\label{eq:c3-4.9}
-	\begin{aligned}
+	\begin{split}
 	(R(\mu,A)g)^+ &= \frac{1}{2}R(\mu,A) [(\text{sign } R(\mu,A)g)g + g] \\
 	(R(\mu,A)g)^- &= \frac{1}{2}R(\mu,A) [(\text{sign } R(\mu,A)g)g - g]
-	\end{aligned}
+	\end{split}
 \end{equation}
 %% --
 for all $g \in E_{\R }$. If we set 
@@ -2010,10 +2010,10 @@ Assume that the assumptions of the theorem are satisfied, $\mu \in \rho(A) \cap 
 have
 %% --
 \begin{equation}\label{eq:c3-4.10}
-\begin{aligned}
+\begin{split}
 	P_{\mu}f &= \frac{1}{2\pi} \cdot \int_{-\infty}^{\infty} R(\mu+\im\tau,A)f \diff{\tau} - \frac{1}{2\pi} \cdot \int_{-\infty}^{\infty} R(\alpha+\im\tau,A)f \diff{\tau} ,\\
 	Q_{\mu}f &= \frac{1}{2\pi} \cdot \int_{-\infty}^{\infty} R(\beta+\im\tau,A)f \diff{\tau} - \frac{1}{2\pi} \cdot \int_{-\infty}^{\infty} R(\mu+\im\tau,A)f \diff{\tau} .
-\end{aligned}
+\end{split}
 \end{equation}
 %% --
 (The integrals appearing in \eqref{eq:c3-4.10} are improper Riemann integrals.)
@@ -2207,10 +2207,10 @@ Let $U$ be an open subset of $\R ^n$, then $\phi_t^{-1}(U) = \phi_{-t}(U) =\colo
 If\/ $\lambda$ denotes the Lebesgue measure, then
 %% --
 \begin{equation}\label{eq:c3-4.14}
-	\begin{aligned}
+	\begin{split}
 		\lambda(\phi_t^{-1}(U)) &= \int_{U(-t)} 1 \dx  = \int_{U} 1 \circ \phi_{-t}(x) \cdot |\det D\phi_{-t}(x)| \dx  = \\
 		&\int_{U} |\det D\phi_{-t}(x)| \dx  \leq \int_{U} \eu^{nM|t|} \dx  = \eu^{nM|t|} \cdot \lambda(U).
-	\end{aligned}
+	\end{split}
 \end{equation}
 %% --
 Here we used \eqref{eq:c3-4.13} and the fact that the determinant of an n$\times$n-matrix

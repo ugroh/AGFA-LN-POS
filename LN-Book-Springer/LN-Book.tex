@@ -19,7 +19,7 @@
 \usepackage{newtxtext}       % 
 \usepackage[varvw]{newtxmath}       % selects Times Roman as basic font
 
-%% -- Our Remarks and Examples
+%% -- Our Remarks and Examples 
 %% -- 
 \spnewtheorem{remarks}[theorem]{Remarks}{\normalfont\bfseries}{\normalfont}
 \spnewtheorem{examples}[theorem]{Examples}{\normalfont\bfseries}{\normalfont}
@@ -30,10 +30,10 @@
 \spnewtheorem*{remarks*}{Remark}{\normalfont\bfseries}{\normalfont}
 \spnewtheorem*{definition*}{Definition}{\normalfont\bfseries}{\normalfont}
 
-\spnewtheorem*{theorem*}{Theorem}{\normalfont\bfseries}{\itshape}
+\spnewtheorem*{theorem*}{Theorem}{\normalfont\bfseries}{\itshape} 
 \spnewtheorem*{proposition*}{Proposition}{\normalfont\bfseries}{\itshape}
 \spnewtheorem*{lemma*}{Lemma}{\normalfont\bfseries}{\itshape}
-\spnewtheorem*{corollary*}{Corollary}{\normalfont\bfseries}{\itshape}
+\spnewtheorem*{corollary*}{Corollary}{\normalfont\bfseries}{\itshape} 
 
 %% -- Number of Theorem etc. correct
 %% --
@@ -49,7 +49,7 @@
 
 %% -- 
 \counterwithin{equation}{section}
-
+\counterwithin{theorem}{section}
 %% -- Continuous numbering
 %% -- 
 \makeatletter
@@ -66,8 +66,8 @@
 
 %% -- Our definitions
 %% --
-\input{./preamble/ln-preamble-final}	
-\input{./preamble/ln-definitionen}
+\input{./preamble/ln-preamble-final}	%% packages
+\input{./preamble/ln-definitionen}		%% definitions
 %% -- 
 \usepackage[showonlyrefs]{mathtools}
 \usepackage{empheq}
@@ -109,13 +109,13 @@
 %% -- Exclude \subsection from TOC
 %% --
 \setcounter{tocdepth}{1}
-\cftpagenumbersoff{part}		%% -- no page number
+\cftpagenumbersoff{part}		%% -- no page number 
 
 %% -- Pagenumers
 %% --
 \newcommand{\chapternopage}[1]{%% -- no pagenumber for chapter
   \addtocontents{toc}{\protect\cftpagenumbersoff{chapter}}% 
-  \chapter{#1}%
+  \chapter{#1}% 
   \addtocontents{toc}{\protect\cftpagenumberson{chapter}}%
 }
 %% --
@@ -161,45 +161,43 @@
 %% --
 \frontmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% -- part-0
-\input{./part-0/ln-dedication}
-%\input{./part-0/foreword}
-\input{./part-0/ln-preface}
-%\input{./part-0/acknowledgement}
+\include{./part-0/ln-dedication}
+\include{./part-0/ln-preface}
 %% --
 \tableofcontents
 %% --
-\input{./part-0/ln-symbols}
+\include{./part-0/ln-symbols}
 %% %% --
 \mainmatter
 %% --
 
 %% -- Part-A
-\input{./part-a/part-a} 
-    \input{./part-a/chap-a1}
-    \input{./part-a/chap-a2}
-    \input{./part-a/chap-a3}
-    \input{./part-a/chap-a4}
+\include{./part-a/part-a} 
+    \include{./part-a/chap-a1}
+    \include{./part-a/chap-a2}
+    \include{./part-a/chap-a3}
+    \include{./part-a/chap-a4}
 
 %%% -- Part-B
-\input{./part-b/part-b}
-    \input{./part-b/chap-b1}
-    \input{./part-b/chap-b2}
-    \input{./part-b/chap-b3}
-    \input{./part-b/chap-b4}
+\include{./part-b/part-b}
+    \include{./part-b/chap-b1}
+    \include{./part-b/chap-b2}
+    \include{./part-b/chap-b3}
+    \include{./part-b/chap-b4}
 
 %%% -- Part-C
-\input{./part-c/part-c}
-    \input{./part-c/chap-c1}
-    \input{./part-c/chap-c2}
-    \input{./part-c/chap-c3}
-    \input{./part-c/chap-c4}
+\include{./part-c/part-c}
+    \include{./part-c/chap-c1}
+    \include{./part-c/chap-c2}
+    \include{./part-c/chap-c3}
+    \include{./part-c/chap-c4}
 
 %% -- Part-D
-\input{./part-d/part-d}
-   \input{./part-d/chap-d1}
-    \input{./part-d/chap-d2}
-    \input{./part-d/chap-d3}
-    \input{./part-d/chap-d4}
+\include{./part-d/part-d}
+   \include{./part-d/chap-d1}
+    \include{./part-d/chap-d2}
+    \include{./part-d/chap-d3}
+    \include{./part-d/chap-d4}
 
 %% --
 {\RaggedRight
@@ -213,12 +211,11 @@
 %% -- Start Updated Notes
 %% --
 %% -- Part-E
-\setlist{$\bullet$, wide, labelindent=.25em,itemsep=.25em}	
-	\input{./part-e/part-e}
-	\input{./part-e/un-part-a}
-	\input{./part-e/un-part-b}
-	\input{./part-e/un-part-c}
-	\input{./part-e/un-part-d}
+	\include{./part-e/part-e}
+	\include{./part-e/un-part-a}
+	\include{./part-e/un-part-b}
+	\include{./part-e/un-part-c}
+	\include{./part-e/un-part-d}
 
 %% -- Literatur Updated Notes
 %% --

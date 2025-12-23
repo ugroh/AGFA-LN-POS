@@ -1,5 +1,6 @@
 %% --
 \setcounter{chapter}{1}
+%% --
 \chapternopage{Characterization of Semigroups on Banach Spaces}\label{chap:a2}
 \chaptermark{Characterization of Semigroups}%
 %% --
@@ -32,15 +33,19 @@ The last section contains a surprising result: on certain Banach spaces (\eg $L^
 \newline
 %% --
 Linear differential equations in Banach spaces are intimately connected with the theory of one-parameter semigroups.
-In fact, given a closed linear operator $A$ with dense domain $D(A)$ the following statement is true (with some reservation regarding a technical detail): \\
+In fact, given a closed linear operator $A$ with dense domain $D(A)$ the following statement is true (with some reservation regarding a technical detail).
+%% --
+\begin{quote}
 The abstract Cauchy problem
 %% –
 \begin{align*}
-\dot{u}(t) &= Au(t) \quad (t \geq 0) \\
-u(0) &= f 
+	\dot{u}(t) &= Au(t) \quad (t \geq 0) \\
+	u(0) &= f 
 \end{align*}
 %% –
 has a unique solution for every $f \in D(A)$ if and only if $A$ is the generator of a strongly continuous semigroup.
+\end{quote}
+%% --
 This is one characterization of generators which illustrates their important role for applications.
 The fundamental Hille-Yosida theorem gives a different characterization in terms of the resolvent and yields a powerful tool for actually proving that a given operator is the generator of a semigroup.
 
@@ -1428,6 +1433,7 @@ Since $D_{0}$ is dense in $E$, it follows that $S(t) = T(t)$ $(t \geq 0)$.
 \end{proof}
 \index{resolvent|)}
 %% –
+%% --
 \section{Contraction Semigroups and Dissipative Operators}\label{sec:a2-2}%
 \index{semigroup!contraction semigroup|(}
 \index{dissipative operator}
@@ -1456,13 +1462,13 @@ The continuity of $p$ implies that there exists a constant $c > 0$ such that
 \begin{equation}\label{eq:a2-2.3}
 	|p(f)| \leq c\|f\| \quad (f \in E).
 \end{equation}
-%% -- 1/t
+%% -- 
 Moreover, it follows from \eqref{eq:a2-2.1} and \eqref{eq:a2-2.2} that
 %% --
 \begin{equation}\label{eq:a2-2.4}
 	p(f) + p(-f) \geq p(0) = 0 \quad (f \in E).
 \end{equation}
-
+%% --
 A bounded operator $T$ on $E$ is called \emph{p-contractive} if $p(Tf) \leq p(f)$ for all $f \in E$.
 Similarly, a semigroup $(T(t))_{t\geq 0}$ is called \emph{p-contractive} if $T(t)$ is p-contractive for all $t \geq 0$.
 Of course, the most important case in this section is when $p$ is the norm function $N$ given by $N(f) = \|f\|$ $(f \in E)$.
@@ -1755,7 +1761,7 @@ Then
 \end{equation}
 
 In particular, $(\lambda-A)$ is injective for all $\lambda > 0$.
-If $p$ is strict and $A$ is closed, then $\text{im}(\lambda - A)$ is closed for all $\lambda > 0$.
+If $p$ is strict and $A$ is closed, then $\image (\lambda - A)$ is closed for all $\lambda > 0$.
 \end{lemma}
 %% –
 
@@ -1787,8 +1793,8 @@ Then
 %%
 exists.
 If $A$ is closed, this implies that $f \in D(A)$ and $Af = \lambda f - g$.
-Hence $g = (\lambda - A)f \in \text{im}(\lambda - A)$.
-We have shown that $\text{im}(\lambda - A)$ is closed.
+Hence $g = (\lambda - A)f \in \image (\lambda - A)$.
+We have shown that $\image (\lambda - A)$ is closed.
 \end{proof}
 
 The following is the main theorem of this section.
@@ -1802,7 +1808,7 @@ The following assertions are equivalent.
 $A$ is the generator of a p-contraction semigroup.
 %%--
 \item \label{thm:a2-2.11.2}
-$D(A)$ is dense, $A$ is p-dissipative and $\text{im}(\lambda - A) = E$ for some $\lambda > 0$.
+$D(A)$ is dense, $A$ is p-dissipative and $\image (\lambda - A) = E$ for some $\lambda > 0$.
 \end{enumerate}
 \end{theorem}
 %% –
@@ -1813,7 +1819,7 @@ By Theorem \ref{thm:a2-2.6}, condition \ref{thm:a2-2.11.1} implies \ref{thm:a2-2
 
 Now suppose that \ref{thm:a2-2.11.2}   holds.
 Then it follows from Lemma \ref{lem:a2-2.10}   
-that $\mu \in \rho(A)$ and $\|\mu R(\mu,A)\| \leq 1$ whenever $\mu > 0$ such that $\text{im}(\mu-A) = E$.
+that $\mu \in \rho(A)$ and $\|\mu R(\mu,A)\| \leq 1$ whenever $\mu > 0$ such that $\image (\mu-A) = E$.
 So by hypothesis $\lambda \in \rho(A)$ and 
 $\text{dist}(\lambda,\sigma(A)) \geq \|R(\lambda,A)\|^{-1} \geq \lambda$.
 Hence $(0,2\lambda) \subset \rho(A)$.
@@ -1889,7 +1895,7 @@ $A$ is dissipative and $(\lambda - A)$ has dense range for some $\lambda > 0$.
 \end{theorem}
 \index{semigroup!contraction semigroup|)}
 %% –
-
+%% --
 \section{Semigroups on \texorpdfstring{$L^{\infty}$}{L-infty}  and \texorpdfstring{$H^{\infty}$}{H-infty} \label{sec:a2-3}}%
 \index{semigroup!on $L^\infty$ and $H^\infty$|(}
 %% --

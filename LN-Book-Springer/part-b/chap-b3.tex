@@ -21,6 +21,7 @@ In this chapter we investigate the spectrum $\sigma(A)$ of the generator $A$ of 
 Throughout this chapter we assume that $C_{0}(X)$ is the space of all \emph{complex-valued} functions on the locally compact space $X$.
 In case we restrict to compact spaces we write $K$ instead of $X$.
 %% --
+%% --
 \section{The Spectral Bound}\label{sec:b3-1}%
 %% --
 One of the basic results on the spectrum of a positive operator is the fact that its spectral radius is an element of the spectrum (\citet[V.Proposition~4.1]{schaefer:1974}).
@@ -320,6 +321,7 @@ From the explicit representation of $T(t)$,
 \end{example}
 \index{resolvent!compact|)}
 %%% --
+%% --
 \section{The Boundary Spectrum}\label{sec:b3-2}%
 \index{boundary spectrum}
 %% --
@@ -402,6 +404,7 @@ They will be used frequently in the following.
 		&\text{its inverse being  } S_{\overline{h}} \text{  where  } \overline{h} \text{ is the complex conjugate of $ h $,}
 	\end{split}
 \end{equation}
+%% --
 \begin{equation}\label{eq:b3-2.6}
 	    f^{[1]} = f, f^{[0]} = |f|, f^{[-1]} = \overline{f}, |f^{[n]}| = |f| \text{  for every $n \in \Z$, }
 \end{equation}
@@ -410,33 +413,9 @@ They will be used frequently in the following.
 	\text{  for every $ n \in \Z $.} 
 \end{equation}
 %% --
-%% --
-%\begin{align*}\label{eq:b3-2.6}
-%	\begin{split}
-%		&S_{h} \text{  is a linear isometry satisfying  } |S_{h}f| = |f|, \\ 
-%		&\text{its inverse being  } S_{\overline{h}} \text{  where  } \overline{h} \text{ is the complex conjugate of $ h $,}
-%	\end{split}\\
-%	&f^{[1]} = f, f^{[0]} = |f|, f^{[-1]} = \overline{f}, |f^{[n]}| = |f| \text{  for every $n \in \Z$, }\\ 
-%	&\text{If  } h(x) \neq 0 \text{  for all  } x \in X, \text{  then  } h^{[n]} = S_{h}^{n}|h| = S_{h}^{n-1}h
-%	\text{  for every $ n \in \Z $.} 
-%\end{align*}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\begin{equation}\label{eq:b3-2.5}
-%	\begin{aligned}
-%	&S_{h} \text{  is a linear isometry satisfying  } |S_{h}f| = |f|, \text{ \phantom{aaaaaaaaaaaaaa}}\ \\ 
-%	&\text{its inverse being  } S_{\overline{h}} \text{  where  } \overline{h} \text{ is the complex conjugate of $ h $,}
-%	\end{aligned}
-%\end{equation}
-%%% --
-%\begin{align}\label{eq:b3-2.6}
-%	&f^{[1]} = f, f^{[0]} = |f|, f^{[-1]} = \overline{f}, |f^{[n]}| = |f| \text{  for every $n \in \Z$, }\\ 
-%	&\text{If  } h(x) \neq 0 \text{  for all  } x \in X, \text{  then  } h^{[n]} = S_{h}^{n}|h| = S_{h}^{n-1}h
-%	\text{  for every $ n \in \Z $.} 
-%\end{align}
-	%% --
-\begin{lemma}\label{lem:b3-2.3}
-%%
+\begin{lemma}\label{lem:b3-2.3}%
 \index{operator!similar}
+%% --
 Let $T$ and $R$ be bounded linear operators on $C_{0}(X)$ and assume that $h \in C_{0}(X)$ has no zeros. 
 Suppose we have
 %% --
@@ -1106,6 +1085,7 @@ We conclude this section with some additional remarks related to Theorem~\ref{th
 \index{resolvent!compact|)}
 
 %% --
+%% --
 \section{Irreducible Semigroups}%
 %% --
 \index{semigroup!irreducible semigroup|(}
@@ -1565,13 +1545,13 @@ We give some examples.
 	$h \coloneq R(\lambda,L)g$ is $C^{\infty}$ (Weyl's Lemma) and satisfies $L_{0}h - \lambda h = -g < 0$.
 	Assuming that $\lambda > \lambda_{0} \coloneqq \sup_x c(x)$, then $h$ is positive, even strictly positive by the maximum principle \citet[Chapter~2, Theorem~6]{protterweinberger:1967}.
 	It follows from $R(\lambda,L)f \geq R(\lambda,L)g = h \gg 0$ that $(T(t))$ is irreducible.
-	
-	Next we apply Theorem~\ref{thm:b3-3.6}(iv) in order to show that the spectral bound is a dominant eigenvalue.
+
+Next we apply Theorem~\ref{thm:b3-3.6}(iv) in order to show that the spectral bound is a dominant eigenvalue.
 	We can assume that $s(L) = 0$.
 	If $s(L)$ is not dominant, then by Theorem~\ref{thm:b3-3.6}(iv) we have
 	
 	\begin{equation}\label{eq:b3-3.12}
-		L_0h = i \alpha h, L_0|h| = 0, L_0\bar{h} = -\im\alpha \bar{h} 
+		L_{0}h = i \alpha h, L_{0}|h| = 0, L_0\bar{h} = -\im\alpha \bar{h} 
 		\text{ for some } h \ne 0, \alpha > 0.
 	\end{equation}
 %% --
@@ -1586,10 +1566,13 @@ If we define $u \coloneq |h|$ and $w \coloneq h/|h|$, then \eqref{eq:b3-3.12} re
 		L_{0}(u/w) &= \frac{1}{w}L_{0}(u) + u\sum_{i,j}a_{ij}(1/w)_{ij}'' + \sum_{i}\left(ub_{i} + \sum_{j} a_{ij}u_{j}'\right)(1/w)_{i}'~.
 		\end{split}
 	\end{equation}
+%% --
 	Observing that $(1/w)_{i}' = -w^{-2}\cdot w_{i}'$ and $(1/w)_{ij}'' = w^{-3}\cdot(2w_{i}'w_{j}' - ww_{ij}'')$, we obtain
+%% --
 		\begin{equation}\label{eq:b3-3.15}
 			L_{0}(uw) + w^{2}L_{0}(u/w) = 2wL_{0}(u) + 2u/w\cdot\sum_{ij} a_{ij}w_{i}'w_{j}'~.
 		\end{equation}
+%% --
 	This identity and \eqref{eq:b3-3.13} implies that $2u/w\cdot\sum_{ij} a_{ij}w_{i}'w_{j}' = 0$.
 	Since $u$ has no zeros and $(a_{ij})$ is positive definite, we have $\text{grad } w = (w_{i}') = 0$ in $\Omega$, hence $w = \text{const}$.
 	Then, by \eqref{eq:b3-3.13}, we have $\im \alpha uw = L_{0}(uw) = wL_{0}(u) = 0$, a contradiction.
@@ -1626,16 +1609,19 @@ To prove this result one uses the proof of the analogous result for a single ope
 \end{theorem}
 \index{irreducible semigroup|)}
 \index{semigroup!irreducible semigroup|)}
-
+%% --
+%% --
 \section{Semigroups of Lattice Homomorphisms}%
 \index{lattice homomorphism|(}
 \index{semigroup!lattice semigroup}
 %% --
 As we have seen in Section~\ref{sec:b3-2} the boundary spectrum of many positive semigroups is a cyclic set.
 However, there are hardly any restrictions on the set 
+%% --
 \[
 \lambda \in \{ \sigma(A) \colon \Re(\lambda) < s(A)\}\,,
 \] 
+%% --
 except that it is symmetric with respect to the real axis.
 For semigroups of lattice homomorphisms the situation is quite different.
 We will show that the whole spectrum is an imaginary additively cyclic 
@@ -1643,13 +1629,13 @@ subset of $\C$ (see Definition~2.5).
 A complete proof of this results requires some facts of the theory of Banach lattices, therefore, we postpone it to Part C (see C-III, Theorem~4.2).
 %% --
 \begin{theorem}\label{thm:b3-4.1}
-    \index{spectrum!cyclic}
-
-	If $A$ is the generator of a semigroup of lattice homomorphisms, then $\sigma(A)$, $A\sigma(A)$ and $P\sigma(A)$ are cyclic subsets of $\C$.
+\index{spectrum!cyclic}
+%% --
+If $A$ is the generator of a semigroup of lattice homomorphisms, then $\sigma(A)$, $A\sigma(A)$ and $P\sigma(A)$ are cyclic subsets of $\C$.
 \end{theorem}
 %% --
 \begin{proof}[$1^{st}$ part of the proof]
-	We prove the assertion concerning $A\sigma(A)$ and $P\sigma(A)$.
+We prove the assertion concerning $A\sigma(A)$ and $P\sigma(A)$.
 	Assume that $Ah = (\alpha + \im\beta)h$, $\alpha,\beta \in \R$, $h \neq 0$, then $T(t)h = \eu^{\alpha t}\eu^{\im\beta  t}h$ for all $t \geq 0$ (A-III, Corollary~6.4).
 	Since $T(t)$ is a lattice homomorphism we have $T(t)|h| = |T(t)h| = \eu^{\alpha t}|h|$ $(t \geq 0)$ or $A|h| = \alpha|h|$, hence $Ah^{[n]} = (\alpha + \im n\beta)h^{[n]}$ for all $n \in \Z$ by Theorem~\ref{thm:b3-2.4}(ii).
 	We have shown that $P\sigma(A)$ is cyclic.
@@ -1662,7 +1648,6 @@ A complete proof of this results requires some facts of the theory of Banach lat
 	Thus the assertion follows from the cyclicity of point spectrum.
 \end{proof}
 %% --
-%%KKG 2025-12-19
 \index{semiflow|(}
 Performing a similar construction as in Example~\ref{ex:b3-2.6}(vi) one can show that every closed cyclic subset of $\C$  which is contained in a left halfplane is the spectrum of a suitable semigroup of lattice homomorphisms. 
 For details see \citet{derndingernagel:1979}. 
@@ -1673,21 +1658,24 @@ Therefore we will assume that $(T(t))$ has the following form (cf.\ B-II, Theore
 \begin{equation}\label{eq:b3-4.1}
 	T(t)f = h_{t}\cdot f\circ\phi_{t} \quad (t \geq 0, f \in C(K)) 
 \end{equation}
+%% --
 where $\phi = (\phi_{t}): \R_{+} \times K \to K$ is a continuous semiflow and multipliers $h_{t}(x) \coloneq \exp\left(\int_{0}^{t} h(\phi(s,x)) \ds\right)$ $(t \geq 0, x \in K)$ for some continuous function $h \colon K \to \R$.
 In the following we will describe the spectrum of the semigroup given by \eqref{eq:b3-4.1} in terms of $\phi$ and $h$.
 At first we have to fix some notation.
 Let $K$, $\phi$, $h$ be as in \eqref{eq:b3-4.1}. 
 Then
+%% --
 \begin{equation}\label{eq:b3-4.2}
 K_{t} \coloneq \phi_{t}(K) \quad (t < \infty), \quad K_{\infty} \coloneq \bigcap_{t < \infty} K_{t}.
 \end{equation}
+%% --
 Some properties of the sets $K_t$  are listed in the following lemma.
 The proof is not difficult and is left as an exercise. 
 %% --
-\begin{lemma}\label{lem:b3-4.2}
-%
+\begin{lemma}\label{lem:b3-4.2}%
 \index{semiflow}
-	Every $K_{t}$ $(0 \leq t \leq \infty)$ is a non-empty closed subset of $K$ which is invariant under the semiflow $\phi$.
+%% --
+Every $K_{t}$ $(0 \leq t \leq \infty)$ is a non-empty closed subset of $K$ which is invariant under the semiflow $\phi$.
 	Moreover, the following assertions are true.
 	\begin{enumerate}[\upshape (i)]
 		\item 
@@ -1706,11 +1694,11 @@ We call a \emph{semiflow} $\phi$ \emph{injective (surjective)} if one and hence 
 Studying the spectrum of the semigroup given by \eqref{eq:b3-4.1} we divide the complex plane into these three sets
 %% --
 \begin{equation}\label{eq:b3-4.3}
-	\begin{aligned}
+	\begin{split}	% aligned
 		&\{\lambda \in \C \colon \Re(\lambda) < \underline{c}(h,\phi)\}\,, \\
 		&\{\lambda \in \C \colon \underline{c}(h,\phi) \leq \Re(\lambda) \leq \overline{c}(h,\phi)\}\,, \\
 		&\{\lambda \in \C \colon \overline{c}(h,\phi) < \Re(\lambda)\}.
-	\end{aligned}
+	\end{split}
 \end{equation}
 %% --
 The quantities $\underline{c}(h,\phi)$ and $\overline{c}(h,\phi)$ are defined as follows.

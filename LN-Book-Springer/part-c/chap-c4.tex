@@ -70,9 +70,9 @@ Thus $\rho \in R\sigma(T(\tau))$ and hence $s(A) \geq \omega_{0}(A)$ by A-III, T
 For $\alpha > s(A)$, $r > \tau$, $f \in E_{+}$ we have
 %% --
 \begin{align*}
-\int_{0}^{r} e^{-\alpha s}\|T(s)f\| \, \ds &= \int_{0}^{\tau} e^{-\alpha s}\|T(s)f\| \, \ds + e^{-\alpha \tau}\int_{0}^{r-\tau} e^{-\alpha s}\|T(\tau+s)f\| \, \ds \\
-&\leq \int_{0}^{\tau} e^{-\alpha s}\|T(s)f\| \, \ds + e^{-\alpha \tau}\int_{0}^{r-\tau} e^{-\alpha s}\langle T(s)f,\phi \rangle \, \ds \\
-&\leq \int_{0}^{\tau} e^{-\alpha s}\|T(s)f\| \, \ds + \|R(\alpha,A)f\|
+\int_{0}^{r} \eu^{-\alpha s}\|T(s)f\| \, \ds &= \int_{0}^{\tau} \eu^{-\alpha s}\|T(s)f\| \, \ds + \eu^{-\alpha \tau}\int_{0}^{r-\tau} \eu^{-\alpha s}\|T(\tau+s)f\| \, \ds \\
+&\leq \int_{0}^{\tau} \eu^{-\alpha s}\|T(s)f\| \, \ds + \eu^{-\alpha \tau}\int_{0}^{r-\tau} \eu^{-\alpha s}\langle T(s)f,\phi \rangle \, \ds \\
+&\leq \int_{0}^{\tau} \eu^{-\alpha s}\|T(s)f\| \, \ds + \|R(\alpha,A)f\|
 \end{align*}
 %% --
 (the last inequality follows from C-III, Theorem~1.2).
@@ -183,7 +183,7 @@ Recalling the definition of $\omega_{1}(A)$ (see A-IV, Definition~1.1) and the f
 %
 \index{stability!exponentially stable}
 Let $(T(t))_{t\geq 0}$ be a positive semigroup on a (real or complex) Banach lattice with generator $A$.
-Each of the following conditions implies that the solutions of the abstract Cauchy problem are exponentially stable, \ie  there is $\delta > 0$ such that $\lim_{t \to \infty} e^{\delta t}T(t)f = 0$ for every $f \in D(A)$.
+Each of the following conditions implies that the solutions of the abstract Cauchy problem are exponentially stable, \ie  there is $\delta > 0$ such that $\lim_{t \to \infty} \eu^{\delta t}T(t)f = 0$ for every $f \in D(A)$.
 %% --
 \begin{enumerate}[\upshape (i)]
     \item \label{cor:c4-1.4-1}
@@ -205,18 +205,17 @@ It follows from Theorem \ref{thm:c4-1.3} that $\sup\{\omega(f) \colon f \in D(A)
 In the following we give a spectral characterization of stability for eventually norm-continuous positive semigroups.
 An important tool in the proof is the following result on power bounded operators due to \citet{katznelsontzafriri:1984}.
 %% --
-%\begin{align} \label{eq:c4-1.4}
 \begin{equation}\label{eq:c4-1.4}
 \begin{minipage}{.75\linewidth}
-Let $R$ be a linear operator on a Banach space
-such that $\sup\{ \|R^{n}\| \colon n \in \N \} < \infty$. Then one has
-$\sigma(R) \cap \Gamma \subseteq \{1\}$ if and only if $ \lim_{n \to \infty} \|R^{n} - R^{n+1}\| = 0$.
+Let $R$ be a linear operator on a Banach space such that $\sup\{ \|R^{n}\| \colon n \in \N \} < \infty$. 
+Then one has $\sigma(R) \cap \Gamma \subseteq \{1\}$ if and only if 
+$ \lim_{n \to \infty} \|R^{n} - R^{n+1}\| = 0$.
 \end{minipage}
 \end{equation}
 %% --
-\begin{theorem}\label{thm:c4-1.5}
-%
+\begin{theorem}\label{thm:c4-1.5}%
 \index{semigroup!eventually norm-continuous semigroup}
+%% --
 Let $(T(t))_{t\geq 0}$ be a positive semigroup on a Banach lattice $E$ which is bounded and eventually norm-continuous.
 The following two assertions are equivalent.
 \index{stability!uniformly stable}
@@ -257,8 +256,8 @@ Thus given $g \in \Image{\Id - T(1)}$ then $g = f - T(1)f$ for some $f \in E$ he
 \|T(t)g\| = \|(T(t) - T(t+1))f\| \leq \|(T(t) - T(t+1))\| \cdot \|f\| \to 0.
 \]
 %% --
-The second assertion of \ref{eq:c4-1.5} ensures that $\text{im}(\Id - T(1))$ is dense in $E$.
-Since the semigroup is bounded we have $\lim_{t \to \infty} \|T(t)f\| = 0$ for every $f \in \overline{\text{im}(\Id - T(1))} = E$, \ie  $(T(t))$ is uniformly stable.
+The second assertion of \ref{eq:c4-1.5} ensures that $\image (\Id - T(1))$ is dense in $E$.
+Since the semigroup is bounded we have $\lim_{t \to \infty} \|T(t)f\| = 0$ for every $f \in \overline{\image (\Id - T(1))} = E$, \ie  $(T(t))$ is uniformly stable.
 
 \ref{thm:c4-1.5-1} $\Rightarrow$ \ref{thm:c4-1.5-3} is always true and follows from A-IV, Theorem~1.13.
 
@@ -321,7 +320,7 @@ hence
 For $\alpha > 0$ we have 
 %% --
 \[
-\int_{0}^{t} e^{-\alpha s}T(s)f \, \ds \leq \int_{0}^{t} T(s)f \, \ds \leq g .
+\int_{0}^{t} \eu^{-\alpha s}T(s)f \, \ds \leq \int_{0}^{t} T(s)f \, \ds \leq g .
 \]
 %% --
 Using C-III, Theorem 1.2 we conclude that $R(\alpha,A)f \leq g$ for $\alpha > \max\{0,s(A)\}$.
@@ -350,7 +349,7 @@ Since the net is monotone one obtains convergence in norm by Dini's Theorem (see
 Now uniform stability follows from A-IV, Theorem 1.16.
 \end{proof}
 %% --
-In A-IV, Theorem 1.13 we have seen that a generator $A$ of a stable semigroup satisfies necessarily $s(A) \leq 0$, $\Re \lambda < 0$ for all $\lambda \in P{\sigma}(A) \cup R{\sigma}(A)$ and, from $\lambda R(\lambda,A)f = R(\lambda,A)Af + f$ we conclude that $\lim_{\lambda \to 0+} R(\lambda,A)g$ exists for all $g \in \text{im} \, A$. 
+In A-IV, Theorem 1.13 we have seen that a generator $A$ of a stable semigroup satisfies necessarily $s(A) \leq 0$, $\Re \lambda < 0$ for all $\lambda \in P{\sigma}(A) \cup R{\sigma}(A)$ and, from $\lambda R(\lambda,A)f = R(\lambda,A)Af + f$ we conclude that $\lim_{\lambda \to 0+} R(\lambda,A)g$ exists for all $g \in \image  A$. 
 For positive semigroups similar properties are even sufficient for stability.
 
 \begin{lemma}\label{lem:c4-1.8}
@@ -364,8 +363,8 @@ In view of C-III, Theorem 1.2 we have for $\phi \in E'_{+}$:
 %% --
 \begin{align*}
 \lim_{t \to \infty}  \left\langle\int_{0}^{t} T(s)f \, \ds \,,\,\phi\right\rangle &= \sup_{t>0} \int_{0}^{t}\langle T(s)f,\phi\rangle \, \ds \\
-&= \sup_{t>0}\sup_{\lambda>0} \int_{0}^{t}e^{-\lambda s}\langle T(s)f,\phi\rangle \, \ds \\
-&= \sup_{\lambda>0}\sup_{t>0} \int_{0}^{t}e^{-\lambda s}\langle T(s)f,\phi\rangle \, \ds \\
+&= \sup_{t>0}\sup_{\lambda>0} \int_{0}^{t}\eu^{-\lambda s}\langle T(s)f,\phi\rangle \, \ds \\
+&= \sup_{\lambda>0}\sup_{t>0} \int_{0}^{t}\eu^{-\lambda s}\langle T(s)f,\phi\rangle \, \ds \\
 &= \sup_{\lambda>0} \langle R(\lambda,A)f,\phi\rangle \\
 &= \lim_{\lambda \downarrow 0} \langle R(\lambda,A)f,\phi\rangle.
 \end{align*}
@@ -436,13 +435,13 @@ u(t) = T(t)f + \int_{0}^{t} T(t-s)f_{0} \, \ds + \int_{0}^{t} T(t-s)(F(s) - f_{0
 \end{equation}
 %% --
 By the stability of the semigroup and $f \in D(A)$, the first term converges to zero as $t \to \infty$.
-Since $f_{0} \in \text{im} \, A$, the second term converges to $h \coloneqq  \int_{0}^{\infty} T(s)f_{0} \, \ds \in \text{im} \, A$ (A-IV, Theorem 1.16) and $Ah = -f_{0}$.
+Since $f_{0} \in \image  A$, the second term converges to $h \coloneqq  \int_{0}^{\infty} T(s)f_{0} \, \ds \in \image  A$ (A-IV, Theorem 1.16) and $Ah = -f_{0}$.
 Define $H(s) \coloneqq F(s) - f_{0}$, 
 $ H_{+}(s) \coloneqq (H(s))_{+} $ 
 and similarly $H_{-}(\cdot)$.
 
 We have to show that $\int_{0}^{t} T(t-s)H_{\pm}(s) \, \ds \to 0$ as $t \to \infty$.
-Again, the assumption $g_{0} \in \text{im}\, A$ is equivalent to the existence of $\int_{0}^{\infty} T(t)g_{0} \, \dt$.
+Again, the assumption $g_{0} \in \image  A$ is equivalent to the existence of $\int_{0}^{\infty} T(t)g_{0} \, \dt$.
 
 We choose a constant $M$  such that 
 %% --
@@ -491,7 +490,7 @@ u(t) = T(t)u_{0} + \int_{0}^{t} T(s)f_{0} \, \ds + \int_{0}^{t} T(s)(F(t-s)-f_{0
 %% --
 The first term tends to zero by Corollary \ref{cor:c4-1.4},  
 the second term to $R(0,A)f_{0} = -A^{-1}f_{0}$ by C-III, Theorem 1.2.
-By assumption we have $\lim_{s \to \infty}\|A(F(s)-f_{0})\| = 0$ and from Theorem \ref{thm:c4-1.3} and A-IV, (1.3) we deduce that $\|T(s)R(0,A)\| \leq Me^{-\epsilon s}$ for $s \geq 0$ and suitable constants $M \geq 1$, $\epsilon > 0$.
+By assumption we have $\lim_{s \to \infty}\|A(F(s)-f_{0})\| = 0$ and from Theorem \ref{thm:c4-1.3} and A-IV, (1.3) we deduce that $\|T(s)R(0,A)\| \leq M\eu^{-\epsilon s}$ for $s \geq 0$ and suitable constants $M \geq 1$, $\epsilon > 0$.
 Thus for the third term we have
 %% --
 \begin{align*}
@@ -504,14 +503,14 @@ The first integral can be estimated by
 \[
  \left(\sup  \left\{\|A(F(s)-f_{0})\| \colon s \in 
  \left[ t/2 , t \right] \right\} \right) 
-\cdot \int_{0}^{\infty} M \cdot e^{-\epsilon s} \, \ds
+\cdot \int_{0}^{\infty} M \cdot \eu^{-\epsilon s} \, \ds
 \]
 %% --
 while the second integral can be estimated by 
 %% --
 \[
  \left(\sup\{\|A(F(s)-f_{0})\| \colon s \geq 0\}\right)
-\cdot \int_{t/2}^{t} M \cdot e^{- \epsilon s} \, \ds.
+\cdot \int_{t/2}^{t} M \cdot \eu^{- \epsilon s} \, \ds.
 \]
 %% -- 
 It follows that the third term in \eqref{eq:c4-1.8} tends to zero.
@@ -556,7 +555,7 @@ Let $(T(t))_{t \geq 0}$ be a positive semigroup on a Banach lattice $E$ which is
 Then there exists a positive projection $P$ of finite rank and suitable constants $\delta > 0$, $M \geq 1$ such that
 %% --
 \begin{equation}\label{eq:c4-2.1}
-\|T(t) - P\| \leq M \cdot e^{-\delta t} \text{ for all } t \geq 0.
+\|T(t) - P\| \leq M \cdot \eu^{-\delta t} \text{ for all } t \geq 0.
 \end{equation}
 %% --
 \end{theorem}
@@ -570,7 +569,7 @@ Then by B-IV, (2.5) we have
 T(t) = \sum_{j=0}^{k-1} \frac{1}{j!} \cdot t^{j}A^{j}\circ P + R(t) \quad (t \geq 0),
 \end{equation*}
 %% --
-where $P$ is the residue of $R(\cdot,A)$ at $0$, $k$ is the pole order and $\|R(t)\| \leq M \cdot e^{-\delta t}$ for suitable constants $\delta > 0$, $M \geq 1$.
+where $P$ is the residue of $R(\cdot,A)$ at $0$, $k$ is the pole order and $\|R(t)\| \leq M \cdot \eu^{-\delta t}$ for suitable constants $\delta > 0$, $M \geq 1$.
 Since we assumed that $(T(t))_{t \geq 0}$ is bounded, the pole order $k$ has to be $1$.
 \end{proof}
 %% --
@@ -645,10 +644,13 @@ For more details we refer to \citet{greiner:1984a} or \citet{webb:1984}.
 \begin{example}\label{ex:c4-2.3}
 On the Banach lattice $E = L^{1}( \left[0,\infty\right))$ we consider the operator $A$ defined by
 %% --
-\begin{align}\label{eq:c4-2.2}
-Af &:= -f' - \mu f \quad \text{with domain}\\ \notag
-D(A) &:= \{f \in E \colon f \text{ absolutely continuous}, f' \in E, f(0) = \int_{0}^{\infty} \beta(a)f(a) \, \diff{a} \}.
-\end{align}
+\begin{equation}\label{eq:c4-2.2}
+\begin{split}
+	Af &:= -f' - \mu f \quad \text{with domain}\\ 
+	D(A) &:= \left\{f \in E \colon f \text{ absolutely continuous}, f' \in E  \right. \\
+	 \qquad & \left. \text{and } f(0) = \int_{0}^{\infty} \beta(a) f(a)  \diff{a} \vphantom{\}} \right\}.
+\end{split}
+\end{equation}
 %% --
 Here we assume that $\mu$ and $\beta$ are positive, measurable, bounded functions on $[0,\infty)$.
 One can show that $A$ generates a strongly continuous semigroup $\TT$ of positive operators.
@@ -660,7 +662,7 @@ We suppose in addition that $\beta$ and $\mu$ satisfy
 \end{equation}
 %% --
 The function $h$ with $h(a) \coloneqq \exp(-\int_{0}^{a} \mu(s) \, \ds)$ is differentiable, $h \in E$ and $h' = -\mu h$.
-Moreover, \ref{eq:c4-2.3} implies $\int_{0}^{\infty} \beta(a)h(a) \, \diff{a} = 1 = h(0)$.
+Moreover, \ref{eq:c4-2.2} implies $\int_{0}^{\infty} \beta(a)h(a) \, \diff{a} = 1 = h(0)$.
 Thus $h \in D(A)$ and $Ah = 0$.
 It follows that $s(A) = 0$.
 Indeed, since $s(A)$ is a pole of the resolvent, there exists a positive eigenvector $w$ of $A'$ corresponding to $s(A)$.
@@ -719,12 +721,12 @@ Then $\|T(t)f\| = \|T(t)g - T(t+1)g\| \leq \|T(t) - T(t+1)\| \cdot \|g\|$ implie
 Thus
 %% --
 \begin{equation}\label{eq:c4-2.5}
-\lim_{t \to \infty} T(t)f = 0\, \text{ for every }\, f \in \text{im}(\Id - T(1)).
+\lim_{t \to \infty} T(t)f = 0\, \text{ for every }\, f \in \image (\Id - T(1)).
 \end{equation}
 %% --
 That is, $\mathrm{im}(\Id - T(1)) \subset F$.
-Since $\Kern A = \bigcap_{t \geq 0} \Kern{\Id - T(t)} = \Kern{\Id - T(1)}$ (cf.\ A-III, Corollary~6.4), we have $\text{im}(\Id - T(1)) + \Kern{\Id - T(1)} \subset F$.
-Since power bounded operators on a reflexive Banach space are mean ergodic (\eg  see \citet[Chapter~2, Theorem~1.2]{krengel:1985}), we obtain that $\text{im}(\Id - T(1)) + \Kern{\Id - T(1)}$ is dense in $E$, hence $F = E$.
+Since $\Kern A = \bigcap_{t \geq 0} \Kern{\Id - T(t)} = \Kern{\Id - T(1)}$ (cf.\ A-III, Corollary~6.4), we have $\image (\Id - T(1)) + \Kern{\Id - T(1)} \subset F$.
+Since power bounded operators on a reflexive Banach space are mean ergodic (\eg  see \citet[Chapter~2, Theorem~1.2]{krengel:1985}), we obtain that $\image (\Id - T(1)) + \Kern{\Id - T(1)}$ is dense in $E$, hence $F = E$.
 \end{proof}
 %% --
 Strong convergence of the semigroup $\TT = (T(t))_{t \geq 0}$ implies strong convergence of the Césaro means $C(t)f \coloneqq  \frac{1}{t}\int_{0}^{t} T(s)f \, \ds$, $f \in E$ which (by definition) is \emph{mean ergodicity} of the semigroup $\TT$ (see \citet[Chap.5.1]{davies:1980}).
@@ -735,11 +737,11 @@ On the other hand, an inspection of the proof of Theorem \ref{thm:c4-2.5} shows 
 This remark also shows where to look for examples of semigroups not converging as $t \to \infty$.
 
 Consider the positive contraction $R$ defined by $(Rf)(x) \coloneqq f(x+1)$ on $E = L^{1}(\R)$.
-Then $T(t) \coloneqq e^{t(R-\Id)}$ defines a positive norm-continuous semigroup on $E$.
+Then $T(t) \coloneqq \eu^{t(R-\Id)}$ defines a positive norm-continuous semigroup on $E$.
 Since $\Kern{R - \Id} = \Fix  R = \{0\}$, but 
 \[
-\|T(t)f\| = e^{-t} \left\|\sum_{n=0}^{\infty} \frac{t^n}{n!}R^{n}f\right\| = 
-e^{-t}\sum_{n=0}^{\infty} \frac{t^n}{n!}\|R^{n}f\|= \|f\| > 0
+\|T(t)f\| = \eu^{-t} \left\|\sum_{n=0}^{\infty} \frac{t^n}{n!}R^{n}f\right\| = 
+\eu^{-t}\sum_{n=0}^{\infty} \frac{t^n}{n!}\|R^{n}f\|= \|f\| > 0
 \] 
 for every $0 < f \in E$, we see that $\lim_{t\to\infty} T(t)$ does not exist for the strong operator topology.
 
@@ -804,13 +806,13 @@ $|T(t)(\Id - T(\tau))g| \leq |T(t) - T(t+\tau)|e \to 0$ for $t \to \infty$.
 Since $\{g \in L^{p}(\mu) \colon |g| \leq e\}$ is a total subset of $E$ ($e$ is strictly positive) and $(T(t))_{t \geq 0}$ is bounded, we conclude
 %% --
 \begin{equation}\label{eq:c4-2.6}
-\lim_{t \to \infty} T(t)f = 0 \text{ for every } f \in \overline{\text{im}(\Id - T(\tau))}.
+\lim_{t \to \infty} T(t)f = 0 \text{ for every } f \in \overline{\image (\Id - T(\tau))}.
 \end{equation}
 %% --
 The assumption $P{\sigma}(A) \cap \im\R = \{0\}$ implies $\Kern{\Id - T(\tau)} = \Kern{A}$ (cf.\ A-III, Corollar 6.4), hence we have convergence on $\Kern{\Id -T(\tau)}$.
 Since $T(\tau)$ is a contraction on a reflexive Banach space, we have
 \[
-L^{p}(\mu) = \Kern{\Id - T(\tau)} \oplus \overline{\text{im}(\Id - T(\tau))} \quad \text{(see \citet [p.74]{krengel:1985})}
+L^{p}(\mu) = \Kern{\Id - T(\tau)} \oplus \overline{\image (\Id - T(\tau))} \quad \text{(see \citet [p.74]{krengel:1985})}
 \]  
 which finally proves the convergence on the whole space.
 \end{proof}
@@ -931,7 +933,7 @@ Since the regular operators on $L^{p}(\mu)$ form a vector lattice, it follows by
 Consequently, the first alternative of Theorem \ref{thm:c4-2.6} holds true with $\tau \coloneqq s-r$.
 Equivalently, we have $X_{2} = \emptyset$ and by Corollary \ref{cor:c4-2.7} $Pf \coloneqq \lim_{t \to \infty} T(t)f$ exists for every $f \in L^{p}(\mu)$.
 The limit $P$ is a positive projection satisfying $PT(t) = T(t)P = P$ for all $t \geq 0$.
-It follows that $\text{im}\,P \subset \Kern{A}$ and $\Image{P'} \subset \Kern{A}'$.
+It follows that $\image P \subset \Kern{A}$ and $\Image{P'} \subset \Kern{A}'$.
 Since Pe = e, hence $P \neq 0$, we conclude that $\Kern{A}'$ contains positive elements.
 Now C-III, Proposition 3.5(a)-(c) implies that $P$ has the form $P = h \otimes e$ for a strictly positive function $h \in L^{q}(\mu) = (L^{p}(\mu))'$.
 \end{proof}
@@ -976,7 +978,7 @@ Then $\lim_{t \to \infty}T(t)f$ exists for every $f \in L^{p}(\mu)$.
 %% --\end{proof}
 %% --
 In all the results obtained so far we had to show or to assume that $P{\sigma}(A) \cap \im\R = \{0\}$.
-This is not surprising since for an eigenvector $g \in E$ corresponding to $\im\alpha \neq 0$, $\alpha \in \R$, we have $T(t)g = e^{\im\alpha t}g$ and so $\lim_{t\to\infty} T(t)g$ does not exist.
+This is not surprising since for an eigenvector $g \in E$ corresponding to $\im\alpha \neq 0$, $\alpha \in \R$, we have $T(t)g = \eu^{\im\alpha t}g$ and so $\lim_{t\to\infty} T(t)g$ does not exist.
 Nevertheless, in some cases with $P{\sigma}(A)\cap \im\R \neq \{0\}$ one can describe the asymptotic behavior of $(T(t))_{t \geq 0}$ for large $t$.
 Instead of convergence to an equilibrium point one obtains that $T(t)f$  \enquote{converges to a periodic function}.
 
@@ -1063,7 +1065,7 @@ Then $\TT$ behaves asymptotically as the rotation group $(R_{\tau}(t))_{t \geq 0
 More precisely, we can identify $L^{2}(\Gamma)$ with a sublattice of $E$, being the range of a strictly positive projection $Q$, and we find constants $\epsilon > 0$ and $M \geq 1$ such that for every $f \in E$ we have
 %% --
 \begin{equation}\label{eq:c4-2.11}
-\|T(t)f - R_{\tau}(t)g\| \leq Me^{-\epsilon t}\|f\| \text{ for every } t \geq 0 \text{ where } g \coloneqq Qf.
+\|T(t)f - R_{\tau}(t)g\| \leq M\eu^{-\epsilon t}\|f\| \text{ for every } t \geq 0 \text{ where } g \coloneqq Qf.
 \end{equation}
 \end{proposition}
 %% --
@@ -1165,7 +1167,7 @@ The operator $A$ generates the nilpotent semigroup $(T(t))$ defined by
 %% --
 \begin{equation*}\label{eq:c4-2.13-kgk}
 (T(t)f)(x) = \begin{cases}
-    f(e^{-t}x) & \text{if } e^{-t}x \geq \frac{1}{4}, \\
+    f(\eu^{-t}x) & \text{if } \eu^{-t}x \geq \frac{1}{4}, \\
     0 & \text{otherwise}.
 \end{cases}
 \end{equation*}
@@ -1300,16 +1302,16 @@ Similarly to the special case where $F = \R$ (compare A-I, Example 2.4.(ii)), it
 %% --
 Notice that $(T_0(t))_{t \geq 0}$ is a nilpotent semigroup.
 
-Now consider the operators $S_{\lambda} \colon E \to E \colon f \mapsto \epsilon_{\lambda} \otimes \Phi(f)$, $\lambda > 0$, where $\epsilon_{\lambda}$ denotes the function $s \mapsto e^{\lambda s}$ as an element of $L^{1}[-1,0]$, 
+Now consider the operators $S_{\lambda} \colon E \to E \colon f \mapsto \epsilon_{\lambda} \otimes \Phi(f)$, $\lambda > 0$, where $\epsilon_{\lambda}$ denotes the function $s \mapsto \eu^{\lambda s}$ as an element of $L^{1}[-1,0]$, 
 and $h \otimes x \in E$ is defined by 
-\linebreak[2] 
+%\linebreak[2] 
 $(h \otimes x)(s) \coloneqq h(s) \cdot x$ for $h \in L^{1}[-1,0]$, $x \in F$ and $s \in [-1,0]$.
 Clearly 
-\linebreak[4] 
-$\|\epsilon_{\lambda}\| = 1/\lambda \cdot (1 - e^{-\lambda}) \to 0$ as $\lambda \to \infty$ and we have
+%\linebreak[4] 
+$\|\epsilon_{\lambda}\| = 1/\lambda \cdot (1 - \eu^{-\lambda}) \to 0$ as $\lambda \to \infty$ and we have
 %% --
 \[
-\|S_{\lambda}\| = \|\epsilon_{\lambda}\| \cdot \|\Phi\| = 1/\lambda \cdot (1 - e^{-\lambda}) \cdot \|\Phi\| \leq 1/\lambda \cdot \|\Phi\|\,.
+\|S_{\lambda}\| = \|\epsilon_{\lambda}\| \cdot \|\Phi\| = 1/\lambda \cdot (1 - \eu^{-\lambda}) \cdot \|\Phi\| \leq 1/\lambda \cdot \|\Phi\|\,.
 \]
 %% --
 For every $\lambda > \|\Phi\|$, the operator $(\Id - S_{\lambda})$ is an isomorphism of $E$ and it induces a bijection from $D(A)$ onto $D(A_{0})$ such that
@@ -1330,7 +1332,7 @@ and $\|R(\lambda,A_0)\| \leq 1/\lambda$ for $\lambda > 0$, we obtain for $\lambd
 %% --
 \begin{align*}
 \|R(\lambda,A)\| &\leq (1 - \|\epsilon_{\lambda}\| \cdot \|\Phi\|)^{-1} \cdot 1/\lambda = (\lambda - \lambda \cdot \|\epsilon_{\lambda}\| \cdot \|\Phi\|)^{-1} \\
-&= (\lambda - (1 - e^{-\lambda}) \cdot \|\Phi\|)^{-1} \leq (\lambda - \|\Phi\|)^{-1}.
+&= (\lambda - (1 - \eu^{-\lambda}) \cdot \|\Phi\|)^{-1} \leq (\lambda - \|\Phi\|)^{-1}.
 \end{align*}
 %% --
 By using A-II, Corollary~1.8 we thus have proved the first assertion of the following theorem.
@@ -1456,7 +1458,7 @@ For the resolvents of the operators $A_{0}$, \resp $A$, on $E$ the following sta
 For every $\lambda \in \C$ we have $\lambda \in \rho(A_{0})$ and
 %% --
 \begin{equation}\label{eq:c4-3.7}
-(R(\lambda,A_{0})g)(t) = \int_{0}^{t} e^{\lambda(t-s)}g(s)\, \ds, \quad g \in E.
+(R(\lambda,A_{0})g)(t) = \int_{0}^{t} \eu^{\lambda(t-s)}g(s)\, \ds, \quad g \in E.
 \end{equation}
 %% --
 \item \label{lem:c4-3.5-2}
@@ -1474,12 +1476,12 @@ R(\lambda,A)g = R(\lambda,A_{0})g + \epsilon_{\lambda} \otimes R(1,\Phi_{\lambda
     \item 
     %\ref{lem:c4-3.5-1}
     That $\rho(A_{0}) = \C$ follows directly from $(T_{0}(t))_{t \geq 0}$ being nilpotent (see A-III, Proposition 1.1). For $g \in E$ we obtain $R(\lambda,A_{0})g = f$ where $f$ is a solution of $\lambda f - f' = g$.
-    Thus $R(\lambda,A_{0})g(t) = \int_{0}^{t} e^{\lambda(t-s)}g(s)\, \ds + e^{\lambda t} \cdot x$ for some $x \in F$. The condition $f \in D(A_{0})$ now implies $x = 0$ and Formula \eqref{eq:c4-3.7}.
+    Thus $R(\lambda,A_{0})g(t) = \int_{0}^{t} \eu^{\lambda(t-s)}g(s)\, \ds + \eu^{\lambda t} \cdot x$ for some $x \in F$. The condition $f \in D(A_{0})$ now implies $x = 0$ and Formula \eqref{eq:c4-3.7}.
     
     \item 
     %\ref{lem:c4-3.5-2}
     The assertion $\lambda \in \rho(A)$ means that for every $g \in E$ the equation $\lambda f - f' = g$ has exactly one solution $f$ in $D(A)$. As in \ref{lem:c4-3.5-1} we have 
-    $f(t) = \int_{0}^{t} e^{\lambda(t-s)}g(s)\, \ds + e^{\lambda t} \cdot x$ for some $x \in F$ and hence
+    $f(t) = \int_{0}^{t} \eu^{\lambda(t-s)}g(s)\, \ds + \eu^{\lambda t} \cdot x$ for some $x \in F$ and hence
     $R(\lambda,A)g = f = R(\lambda,A_{0})g + \epsilon_{\lambda}  \otimes x$. 
     The condition $R(\lambda,A)g \in D(A)$ implies $x - \Phi_{\lambda}(x) = \Phi R(\lambda,A_{0})g$. 
 \end{enumerate}    
@@ -1672,7 +1674,7 @@ f(t) = \int_{-1}^{0} K(s)f(s+t) \, \ds \,, \quad t \geq 0 \,,\quad f_{0} = \psi 
 \end{equation}
 %% --
 By Corollary \ref{cor:c4-3.2}, \ \eqref{eq:c4-3.11} has a unique solution $f \in L^{1}([-1,\infty),F)$.
-For $\Phi_{\lambda}$ we obtain $\Phi_{\lambda}x = \int_{-1}^{0} e^{\lambda s}K(s)x \, \ds,\, x \in F$.
+For $\Phi_{\lambda}$ we obtain $\Phi_{\lambda}x = \int_{-1}^{0} \eu^{\lambda s}K(s)x \, \ds,\, x \in F$.
 In this case we have 
 %% --
 \[
@@ -1693,17 +1695,17 @@ In the same way $s(\Phi_{\lambda})$ and $s(\Phi_{\mu})$ are eigenvalues of $\Phi
 For $0 < x \in F$ and $0 < \mu < \lambda$ we obtain
 %% --
 \begin{align*}
-\Phi_{\mu}x &= \int_{-1}^{0} e^{\mu s}K(s)x \, \ds = \int_{-1}^{0} e^{(\mu-\lambda) s}e^{\lambda s}K(s)x \, \ds > \int_{-1}^{0} e^{\lambda s}K(s)x \, \ds = \Phi_{\lambda}x
+\Phi_{\mu}x &= \int_{-1}^{0} \eu^{\mu s}K(s)x \, \ds = \int_{-1}^{0} \eu^{(\mu-\lambda) s}\eu^{\lambda s}K(s)x \, \ds > \int_{-1}^{0} \eu^{\lambda s}K(s)x \, \ds = \Phi_{\lambda}x
 \end{align*}
 %% --
 since $K(s)$ are positive and irreducible operators.
 In particular, we have 
-\linebreak[4] 
+%\linebreak[4] 
 $\Phi_{\mu}x_{\lambda} > \Phi_{\lambda}x_{\lambda} = r(\Phi_{\lambda})x_{\lambda}$ and by evaluation $\langle\Phi_{\mu}x_{\lambda},x_{\mu}'\rangle \,>\, r(\Phi_{\lambda})\langle x_{\lambda},x_{\mu}'\rangle$.
 Thus $r(\Phi_{\mu})\langle x_{\lambda},x_{\mu}'\rangle > r(\Phi_{\lambda})\langle x_{\lambda},x_{\mu}'\rangle$.
 Since the operators $\Phi_{\lambda}$ are irreducible for each $\lambda$ (due to the irreducibility of $K(s)$)\,, $x_{\mu}'$ is a strictly positive functional on $F$.
 Hence \ $\langle x_{\lambda},x_{\mu}'\rangle \neq 0$ \ and therefore
-\linebreak[3]
+%\linebreak[3]
 $r(\Phi_{\mu}) > r(\Phi_{\lambda})$.
 \end{proof}
 %% --
@@ -1729,7 +1731,7 @@ If we define $K \in \L{F}$  as
 \[
 (Kf)(x) \coloneqq \int_{0}^{1} k(x,x')f(x') \, \dx' \ ,
 \ \text{we obtain} \quad 
-\Phi_{\lambda}f = e^{\lambda q(x)}Kf \,\, (f \in F)\,.
+\Phi_{\lambda}f = \eu^{\lambda q(x)}Kf \,\, (f \in F)\,.
 \]
 %% --
 Again we have 
@@ -1751,34 +1753,34 @@ Then
 %%$
 \[
 \Phi_{\mu}(x) = 
-e^{\mu q(x)}(Kf)(x) = 
-e^{(\mu-\lambda)q(x)}e^{\lambda q(x)}(Kf)(x) =
-e^{(\mu-\lambda)q(x)} \cdot \Phi_{\lambda}f(x)\,.
+\eu^{\mu q(x)}(Kf)(x) = 
+\eu^{(\mu-\lambda)q(x)}\eu^{\lambda q(x)}(Kf)(x) =
+\eu^{(\mu-\lambda)q(x)} \cdot \Phi_{\lambda}f(x)\,.
 \]
 %%$
 Since $q(x) \leq \epsilon$ for all $x \in [0,1]$, we obtain 
 %% --
 \[
-\Phi_{\mu}f \geq e^{(\mu-\lambda)\epsilon} \cdot \Phi_{\lambda}f
+\Phi_{\mu}f \geq \eu^{(\mu-\lambda)\epsilon} \cdot \Phi_{\lambda}f
 \]
 %% --
 and, moreover, 
 %% --
 \[
-(\Phi_{\mu})^n f \geq e^{n(\mu-\lambda)\epsilon} \cdot (\Phi_{\lambda})^n f
+(\Phi_{\mu})^n f \geq \eu^{n(\mu-\lambda)\epsilon} \cdot (\Phi_{\lambda})^n f
 \]
 %% --
 for every $n \in \N$.
 Hence 
 %% --
 \[
-\|(\Phi_{\mu})^n\| > e^{n(\mu-\lambda)\epsilon}\|(\Phi_{\lambda})^n\|
+\|(\Phi_{\mu})^n\| > \eu^{n(\mu-\lambda)\epsilon}\|(\Phi_{\lambda})^n\|
 \]
 %% --
 and consequently 
 %% --
 \[
-r(\Phi_{\mu}) \geq e^{(\mu-\lambda)\epsilon}r(\Phi_{\lambda}) .
+r(\Phi_{\mu}) \geq \eu^{(\mu-\lambda)\epsilon}r(\Phi_{\lambda}) .
 \]
 %% --
 Now 
@@ -1797,7 +1799,7 @@ We first notice that (ACP) is isomorphic (in an obvious manner) to the following
 
 For some $r \in \R_{+}$ take $E \coloneqq L^{1}([0,r], F)$ and let $A \coloneqq - \frac{\diff{}}{\dt}$ on the domain $D(A) \coloneqq \{f \in AC([0,r], F) \colon f' \in E$ and $f(0) = \Phi(f)\}$ for some $\Phi \in \L{E,F}$.
 
-We adopt this setting and transform the above results, \eg $\epsilon_{\lambda}$ has to be defined as $\epsilon_{\lambda}(s) \coloneqq e^{-\lambda s}$ instead of $e^{\lambda s}$.
+We adopt this setting and transform the above results, \eg $\epsilon_{\lambda}$ has to be defined as $\epsilon_{\lambda}(s) \coloneqq \eu^{-\lambda s}$ instead of $\eu^{\lambda s}$.
 As a concrete example we consider the following.
 
 
@@ -1816,11 +1818,11 @@ As $\Phi_{\lambda}$ we obtain the scalar matrix
 %% --
 \begin{equation*}\label{eq:c4-3.12-kgk2}
 \Phi_{\lambda} = \begin{pmatrix}
-(\int_0^r \beta_{11}(a)e^{-\lambda a}\diff{a}) & (\int_0^r \beta_{12}(a)e^{-\lambda a}\diff{a}) & \cdots & \cdot \\
+(\int_0^r \beta_{11}(a)\eu^{-\lambda a}\diff{a}) & (\int_0^r \beta_{12}(a)\eu^{-\lambda a}\diff{a}) & \cdots & \cdot \\
 \cdot & \cdot & \cdot & \cdot \\
 \cdot & \cdot & \cdot & \cdot \\
 \cdot & \cdot & \cdot & \cdot \\
-(\int_0^r \beta_{n1}(a)e^{-\lambda a}\diff{a}) & \cdots & \cdots & (\int_0^r \beta_{nn}(a)e^{-\lambda a}\diff{a})
+(\int_0^r \beta_{n1}(a)\eu^{-\lambda a}\diff{a}) & \cdots & \cdots & (\int_0^r \beta_{nn}(a)\eu^{-\lambda a}\diff{a})
 \end{pmatrix}\,. 
 \end{equation*}
 %% --
@@ -1854,11 +1856,11 @@ This system has a solution for every $(v_{1}, \ldots, v_{n}) \in D(A)$ and the a
 \[
 0 = \det
 \begin{pmatrix}\scriptstyle{
- \left(1 - \int_{0}^{r} \beta_{11}(a)e^{-\lambda a} \diff{a}\right)} 
-  & \scriptstyle{ \left(-\int_{0}^{r} \beta_{12}(a)e^{-\lambda a} \diff{a}\right)} 
+ \left(1 - \int_{0}^{r} \beta_{11}(a)\eu^{-\lambda a} \diff{a}\right)} 
+  & \scriptstyle{ \left(-\int_{0}^{r} \beta_{12}(a)\eu^{-\lambda a} \diff{a}\right)} 
   & \scriptstyle{\cdots} 
-  & \scriptstyle{ \left(-\int_{0}^{r} \beta_{1n}(a)e^{-\lambda a} \diff{a}\right)} \\
-\scriptstyle{ \left(-\int_{0}^{r} \beta_{21}(a)e^{-\lambda a} \diff{a}\right)} 
+  & \scriptstyle{ \left(-\int_{0}^{r} \beta_{1n}(a)\eu^{-\lambda a} \diff{a}\right)} \\
+\scriptstyle{ \left(-\int_{0}^{r} \beta_{21}(a)\eu^{-\lambda a} \diff{a}\right)} 
   & \scriptstyle{\ddots} 
   & \scriptstyle{\cdots}
   & \scriptstyle{\vdots} \\
@@ -1869,11 +1871,11 @@ This system has a solution for every $(v_{1}, \ldots, v_{n}) \in D(A)$ and the a
 \vdots
   & \scriptstyle{\cdots}  
   & \scriptstyle{\cdots}
-  & \scriptstyle{ \left(-\int_{0}^{r} \beta_{n-1,n}(a)e^{-\lambda a} \diff{a}\right)} \\
-\scriptstyle{ \left(-\int_{0}^{r} \beta_{n1}(a)e^{-\lambda a} \diff{a}\right)} 
+  & \scriptstyle{ \left(-\int_{0}^{r} \beta_{n-1,n}(a)\eu^{-\lambda a} \diff{a}\right)} \\
+\scriptstyle{ \left(-\int_{0}^{r} \beta_{n1}(a)\eu^{-\lambda a} \diff{a}\right)} 
   & \scriptstyle{\cdots} 
   & \scriptstyle{\cdots}
-  & \scriptstyle{ \left(1 - \int_{0}^{r} \beta_{nn}(a)e^{-\lambda a} \diff{a}\right)}
+  & \scriptstyle{ \left(1 - \int_{0}^{r} \beta_{nn}(a)\eu^{-\lambda a} \diff{a}\right)}
 \end{pmatrix}
 \]
 %% --
@@ -1920,7 +1922,7 @@ The boundedness of the integral kernel $k$ yields weak compactness of $B$ (see \
 Thus we are in the situation of Example \ref{ex:c4-3.9} and from Formula \eqref{eq:c4-3.10} we obtain the equivalence
 %% --
 \[
-s(A) \overset{<}{ \underset{>}{=} } \lambda \quad \text{if and only if} \quad \int_{0}^{r} \beta(a)e^{-\lambda a} \diff{a} \cdot s(B) \overset{<}{ \underset{>}{=} } 1\,.
+s(A) \overset{<}{ \underset{>}{=} } \lambda \quad \text{if and only if} \quad \int_{0}^{r} \beta(a)\eu^{-\lambda a} \diff{a} \cdot s(B) \overset{<}{ \underset{>}{=} } 1\,.
 \]
 %% --
 \end{example}
