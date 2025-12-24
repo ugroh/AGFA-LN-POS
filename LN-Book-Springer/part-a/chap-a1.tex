@@ -8,7 +8,6 @@
 by \\[.25em]
 Rainer Nagel and Ulf Schlotterbeck 
 \vspace{.75cm}
-\\
 }
 %% --
 Since the basic theory of one-parameter semigroups can be found in several excellent books (\eg \citet{davies:1980}, \citet{goldstein:1985a}, \citet{pazy:1983} or \citet{hillephillips:1957}), we do not want to give a self-contained introduction to this subject here.
@@ -74,11 +73,13 @@ The exponential estimate from Remark for the growth of $ \lVert T(t) \rVert $ ca
 By the \emph{growth bound} (or type) of the semigroup $ T(t)_{t\geq0} $ we understand the number $ \omega_{0} $,
 \index{growth bound}
 %% --
-\begin{align*}
+\begin{equation}\label{eq:a1-1.1}
+\begin{split}
 	\omega_{0} & \coloneq \inf \{ \omega \in \R   \colon \text{there exists $ M \in \R_{+} $   
  		such that $\|T(t)\| \leq M \cdot  \eu^{wt}$  for  $t \geq 0$} \} \\
-	={}& \lim_{t\to\infty} \frac{1}{t}\log\|T(t)\| = \inf_{t>0} \frac{1}{t}\log\|T(t)\| .
-\end{align*}
+	& = \lim_{t\to\infty} \frac{1}{t}\log\|T(t)\| = \inf_{t>0} \frac{1}{t}\log\|T(t)\| .
+\end{split}
+\end{equation}
 %% --
 \end{definition}
 %% --
@@ -87,7 +88,7 @@ In both cases we have $\omega_{0} \leq 0$.
 \index{semigroup!contraction semigroup}
 
 It follows from the subsequent examples and from Definition~\ref{def:a1-1.3} that $\omega_{0}$ may be any number $ -\infty \leq \omega < +\infty$.
-Moreover the reader should observe that the infimum in Definition ~\ref{def:a1-1.3} need not be attained and that $M$ may be larger than $1$ even for bounded semigroups.
+Moreover the reader should observe that the infimum in Definition~\ref{def:a1-1.3} need not be attained and that $M$ may be larger than $1$ even for bounded semigroups.
 %% --
 \begin{examples}\label{ex:a1-1.4}
 %% --
@@ -116,7 +117,7 @@ T(t)f(x) \coloneqq
 \end{align*}
 %% --
 Each $T(t)$, $t > 0$, satisfies $\|T(t)\| = 2$ as can be seen by taking $f \coloneq  \1_{[0,t]}$.
-Therefore $(T(t))_{t \geq 0}$ is a strongly continuous semigroup which is bounded, hence has $\omega_{0} = 0$, but the constant $M$ in \eqref{eq:a1-1.3} cannot be chosen to be $1$.
+Therefore $(T(t))_{t \geq 0}$ is a strongly continuous semigroup which is bounded, hence has $\omega_{0} = 0$, but the constant $M$ in Eq.~\eqref{eq:a1-1.1} on p.~\pageref{eq:a1-1.1} cannot be chosen to be $1$.
 
 \end{enumerate}
 \end{examples}
@@ -191,7 +192,7 @@ Then the \emph{abstract Cauchy problem}
 \frac{d}{\dt}\xi(t) = A\xi(t), \quad \xi(0) = f_{0}
 \end{equation}
 %% --
-has a unique solution $\xi \colon \R_{+} \to D(A)$ in $C^1(\R_{+},E)$ for every $f_{0} \in D(A)$.
+has for every $f_{0} \in D(A)$ a unique solution $\xi \colon \R_{+} \to D(A)$ in $C^1(\R_{+},E)$.
 In fact, this solution is given by $\xi(t) \coloneqq T(t)f_{0}$.
 \end{theorem}
 %% --
@@ -933,16 +934,16 @@ Another application is the following.
 For $\lambda \in \C$ and $S(t) \coloneqq \exp(-\lambda t)T(t)$ the formulas \eqref{eq:a1-1.3} and \eqref{eq:a1-1.4} yield:
 %% --
 \begin{align*}
-     \eu^{-\lambda t}T(t)f - f &= (A-\lambda) \int_{0}^{t}  \eu^{-\lambda s}T(s)f \ds \quad\text{ or }\notag \\
-    ( \eu^{\lambda t}-T(t))f &= (\lambda-A) \int_{0}^{t}  \eu^{\lambda(t-s)}T(s)f \ds \quad \text{for } f \in E, %\tag{3.1}
+     \eu^{-\lambda t}T(t)f - f &= (A-\lambda) \int_{0}^{t}  \eu^{-\lambda s}T(s)f \ds \quad\text{ or }  \\
+    ( \eu^{\lambda t}-T(t))f &= (\lambda-A) \int_{0}^{t}  \eu^{\lambda(t-s)}T(s)f \ds \quad \text{for } f \in E,  
 \end{align*}
 %% --
 and
 %% --
 \begin{align*}
-     \eu^{-\lambda t}T(t)f - f &= \int_{0}^{t}  \eu^{-\lambda s}T(s)(A-\lambda)f \ds  \quad\text{or}\notag \\
+     \eu^{-\lambda t}T(t)f - f &= \int_{0}^{t}  \eu^{-\lambda s}T(s)(A-\lambda)f \ds  \quad\text{or}  \\
     \notag \\
-    ( \eu^{\lambda t} - T(t))f &= \int_{0}^{t}  \eu^{\lambda(t-s)}T(s)(\lambda-A)f \ds \quad \text{for } f \in D(A). %\tag{3.2}
+    ( \eu^{\lambda t} - T(t))f &= \int_{0}^{t}  \eu^{\lambda(t-s)}T(s)(\lambda-A)f \ds \quad \text{for } f \in D(A).  
 \end{align*}
 %% --
 %% --

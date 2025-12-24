@@ -1694,7 +1694,7 @@ We call a \emph{semiflow} $\phi$ \emph{injective (surjective)} if one and hence 
 Studying the spectrum of the semigroup given by \eqref{eq:b3-4.1} we divide the complex plane into these three sets
 %% --
 \begin{equation}\label{eq:b3-4.3}
-	\begin{split}	% aligned
+	\begin{split}	 
 		&\{\lambda \in \C \colon \Re(\lambda) < \underline{c}(h,\phi)\}\,, \\
 		&\{\lambda \in \C \colon \underline{c}(h,\phi) \leq \Re(\lambda) \leq \overline{c}(h,\phi)\}\,, \\
 		&\{\lambda \in \C \colon \overline{c}(h,\phi) < \Re(\lambda)\}.
@@ -2017,27 +2017,37 @@ First we discuss some examples and then give a partial answer to this problem (s
 		\]
 	\end{enumerate}
 \end{example}
-
+%% --
 \begin{proposition}\label{prop:b3-4.8}
-	Suppose the semigroup $(T(t))_{t\geq 0}$ on $C(K)$ is given by \eqref{eq:b3-4.1} and let $\underline{c}(h,\phi)$, $\overline{c}(h,\phi)$ be defined as in \eqref{eq:b3-4.4}.
-	Then the following assertions hold.
-	\begin{enumerate}[\upshape (i)]
-		\item 
-		$\{\lambda \in \C \colon \Re(\lambda) > \overline{c}(h,\phi)\} \subset \rho(A)$\,,
+Suppose the semigroup $(T(t))_{t\geq 0}$ on $C(K)$ is given by 
+Eq.~\eqref{eq:b3-4.1} on p.~\pageref{eq:b3-4.1} and let $\underline{c}(h,\phi)$, $\overline{c}(h,\phi)$ be defined as in 
+Eq.~\eqref{eq:b3-4.4} on p.~\pageref{eq:b3-4.4}.
+Then the following assertions hold.
+%% --
+\begin{enumerate}[\upshape (i)]
+\item 
+	$\{\lambda \in \C \colon \Re(\lambda) > \overline{c}(h,\phi)\} \subset \rho(A)$\,,
 		
-		\item 
-		$\overline{c}(h,\phi)$ and $\underline{c}(h,\phi)$ are spectral values\,,
+\item 
+	$\overline{c}(h,\phi)$ and $\underline{c}(h,\phi)$ are spectral values\,,
 		
-		\item 
-		If $\phi(t,x_{0}) = x_{0}$ for every $t \geq 0$, then $h(x_{0}) \in R{\sigma}(A)$\,,
+\item 
+	If $\phi(t,x_{0}) = x_{0}$ for every $t \geq 0$, then $h(x_{0}) \in R{\sigma}(A)$\,,
 		
-		\item 
-		Assume $x_{0}$ has a finite orbit (\ie $\phi(\R_{+},x_{0}) = \phi([0,T],x_{0})$ for some $T < \infty$) and $\tau \coloneq \inf\{t > 0 \colon \phi(T+t,x_{0}) = \phi(T,x_{0})\} > 0$, \\
-		then $\hat{h}(x_{0}) + \frac{2\pi}{\tau}\im\Z \subset R{\sigma}(A)$ where $\hat{h}(x_{0}) \coloneq	\frac{1}{\tau}\int_{T}^{T+\tau}h(\phi(s,x_{0}))\ds $\,,
+\item 
+Assume $x_{0}$ has a finite orbit, \ie $\phi(\R_{+},x_{0}) = \phi([0,T],x_{0})$ for some $T < \infty$ and 
+%% --
+\[
+\tau \coloneq \inf\{t > 0 \colon \phi(T+t,x_{0}) = \phi(T,x_{0})\} > 0, 
+\]
+%% --
+then $\hat{h}(x_{0}) + \frac{2\pi}{\tau}\im\Z \subset R{\sigma}(A)$ where $\hat{h}(x_{0}) \coloneq \frac{1}{\tau}\int_{T}^{T+\tau}h(\phi(s,x_{0}))\ds $\,,
 		
-		\item 
-		If $x_{0}$ has an infinite orbit and $\hat{h} \coloneq  \lim_{t\to\infty}h(\phi(t,x_{0}))$ exists, then $\hat{h} + \im\R \subset \sigma(A)$.
-	\end{enumerate}
+\item 
+	If $x_{0}$ has an infinite orbit and 
+	$\hat{h} \coloneq  \lim_{t\to\infty}h(\phi(t,x_{0}))$ exists, 
+	then $\hat{h} + \im\R \subset \sigma(A)$.
+\end{enumerate}
 \end{proposition}
 %% --
 \begin{proof}	

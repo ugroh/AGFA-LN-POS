@@ -7,7 +7,6 @@
 by \\[.25em]
 Frank Neubrander
 \vspace{.75cm}
-\\
 }
 %% --
 \index{asymptotic behavior|(}
@@ -342,9 +341,9 @@ Now, choosing $r < 0$, $b < r < 0$, and integrating by parts, we obtain
 \begin{align*}
 -T(t)f &= \lim_{u \to \infty} \int_{t}^{u} \eu^{r s} \eu^{-r s} T(s)Af  \ds\\
 &= \lim_{u \to \infty} ( \eu^{ru}\int_0^u\eu^{-rs} T(s)Af  \ds - \eu^{rt}\int_0^t\eu^{-rs} T(s)Af  \ds\\ 
-& \qquad \qquad -r\int_t^u \eu^{rs}\int_0^s \eu^{-rv} T(v)Af\,\diff{v}  \ds
+& \qquad \qquad -r\int_t^u \eu^{rs}\int_0^s \eu^{-rv} T(v)Af \diff{v}  \ds
 ) \\
-&= - \eu^{rt}\int_0^t\eu^{-rs} T(s)Af  \ds -r\int_t^\infty \eu^{rs}\int_0^s \eu^{-rv} T(v)Af\,\diff{v}  \ds.
+&= - \eu^{rt}\int_0^t\eu^{-rs} T(s)Af  \ds -r\int_t^\infty \eu^{rs}\int_0^s \eu^{-rv} T(v)Af \diff{v}  \ds.
 \end{align*}
 %% --
 From $\left\|\int_{0}^{t} \eu^{-r s} T(s)Af  \ds\right\| \leq M$ for some $M$ and every $t \geq 0$ we conclude that $\|T(t)f\| \leq \tilde{M}\eu^{rt}$ for all $t \geq 0$ and some constant $\tilde{M}$.
@@ -373,7 +372,7 @@ satisfies
 %% --
 \begin{equation}
 \begin{split}
-\omega_1(A) &={} \inf \{ \omega \colon \text{for every  $f \in D(A)$  there exists a constant $ M $ such that  }\notag \\
+\omega_1(A) &={} \inf \{ \omega \colon \text{for every  $f \in D(A)$  there exists a constant $ M $ such that  } \\
 & \phantom{xxxxxxxx} \text{ $\|T(t)f\| \leq M\eu^{\omega t}$  for every $t \geq 0$} \} \\
 &={}
 \limsup_{t \to \infty} \frac{1}{t} \log\|T(t)R(\lambda,A)\| \quad (\lambda \in \rho(A)). 
@@ -392,8 +391,7 @@ Then
 \begin{split}
 \omega_{1}(A) &= \inf\{\Re(\lambda) \colon {\int_{0}^{\infty} \eu^{-\lambda t} T(t)f  \dt} 
 	\text{ exists as an improper Riemann integral for every } f \in E\} \\
-%&\phantom{= \inf\{\Re(\lambda) \colon \int_{0}^{\infty} \eu^{-\lambda t} T(t)f} \text{integral for every } f \in E\} \notag \\
-&= \inf\{\Re(\lambda) \colon {\int_{0}^{\infty} \|\eu^{-\lambda t} T(t)f\|  \dt} \text{ exists for every } f \in D(A)\}. %\notag
+&= \inf\{\Re(\lambda) \colon {\int_{0}^{\infty} \|\eu^{-\lambda t} T(t)f\|  \dt} \text{ exists for every } f \in D(A)\}.  
 \end{split}
 \end{equation}
 \end{theorem}
@@ -408,8 +406,7 @@ Therefore, by Theorem \ref{thm:a4-1.4},
 %--
 \begin{equation}\label{eq:a4-1.5}
 \begin{split}
-\omega_1(A) &= \inf \left\{ \Re(\lambda)\colon\text{weak-} \lim_{t \to \infty} {\int_0^t \eu^{-\lambda s} T(s)  \ds} \text{ exists} \right\}
-\\
+\omega_1(A) &= \inf \left\{ \Re(\lambda)\colon\text{weak-} \lim_{t \to \infty} {\int_0^t \eu^{-\lambda s} T(s)  \ds} \text{ exists} \right\} \\
     &= \inf \left\{ \Re(\lambda)\colon\text{uniform-} \lim_{t \to \infty} {\int_0^t \eu^{-\lambda s} T(s)  \ds} \text{ exists} \right\} .
 \end{split}
 \end{equation}
@@ -610,7 +607,7 @@ However, as we will see in Section 1 of C-IV, the identity
 %% --
 holds for every positive semigroup on a Banach lattice. 
 Consequently, for positive semigroups with $s(A) = \omega_1(A) < \omega_{0}(A)$ (see Example 
-\ref{ex:a4-1.2}~(ii)), the identity \eqref{eq:a4-1.10} is not applicable. 
+\ref{ex:a4-1.2}~(ii)), the identity Eq.\eqref{eq:a4-1.10} is not applicable. 
 Nevertheless, we can establish the following theorem.
 %% --
 \begin{theorem}\label{thm:a4-1.9}
