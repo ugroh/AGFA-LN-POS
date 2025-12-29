@@ -230,7 +230,7 @@ In that case, $B$ is called \emph{closable}, a property which is equivalent to
 The smallest closed extension of $(B,D(B))$ will be called the \emph{closure} $\overline{B}$ with domain $D(\overline{B})$.
 In other words, the graph of $\overline{B}$ is the closure of $\{(f,Bf) \colon f \in D(B)\}$ in $E \times E$.
 
-Finally we call a subset $D_{0}$ of $D(B)$ a \emph{core} for $B$ if $D_{0}$ is $\|\cdot\|_{B}$-dense in $D(B)$.
+Finally, we call a subset $D_{0}$ of $D(B)$ a \emph{core} for $B$ if $D_{0}$ is $\|\cdot\|_{B}$-dense in $D(B)$.
 \index{core}
 This means that a closed operator is determined (via closure) by its restriction to a core in its domain.
 
@@ -398,10 +398,10 @@ Let %
 If   
 %% --
 \[
-p_A(\lambda) \coloneqq \det(\lambda - A) = \lambda^2-s\cdot \lambda + d , 
+p_A(\lambda) \coloneqq \det(\lambda - A) = \lambda^2-s\cdot \lambda + d 
 \]
 %% --
-is the characteristic polynomial  of $ A $, then $ p_{A}(A) = 0 $ by \emph{Cayley-Hamilton} hence
+is the characteristic polynomial  of $ A $, then $ p_{A}(A) = 0 $ by \emph{Cayley-Hamilton}, hence
 %
 \[
 	\left( A - s/2 \cdot \Id \right)^{2} = D^{2} \cdot \Id , 
@@ -440,13 +440,13 @@ Thus
 		& = \sum_{k=0}^\infty \frac{t^k}{k!}( A - s/2 \cdot \Id )^k 
 		= \sum_{ \text{k even} } (\cdots) + \sum_{ \text{k odd} } (\cdots)  \\
 	&= \cosh( t D ) \cdot \Id + \frac{1}{D} \sinh( t D )( A - s/2 \cdot \Id) \\
-	&= \frac{ 1 }{ D } \sinh( tD )\cdot A + \left( \cosh(tD) - \frac{s}{2D} \sinh(tD) \right) \cdot \Id.
+	&= \frac{ 1 }{ D } \sinh( tD )\cdot A + \left( \cosh(tD) - \frac{s}{2D} \sinh(tD) \right) \cdot \Id
 \end{align*}
 %% --
 by using the power series representation of the hyperbolic functions $ \sinh $ and $ \cosh $.
 \end{description}
 %% --
-As summary  
+As summary we obtain
 %% --
 \begin{equation*}\label{eq:exp-rep}
 	 \eu^{tA} =
@@ -479,11 +479,9 @@ For $ z \in \C $ we have the following identities
 	\cosh(\im z) = \frac{1}{2}(  \eu^{ \im z} +  \eu^{- \im z}) = \cos(z). 
 \]
 %
-Hence $ \sinh $ is an odd function,  $\sinh(\im |D| t ) = \im \, \sin(t|D|)$ and $\cosh(\im |D| t ) = \cos(|D| t )$
-
-%Diese Anmerkung verstehe ich nicht: 
-%Hence, $\frac{\sinh(tD){D} = \frac{\sin(t|D|}{|D|}$ and $\cosh(tD}=\cos(|D|t)}$ 
-
+Hence $ \sinh $ is an odd function,  $\sinh(\im |D| t ) = \im \, \sin(t|D|)$ and 
+$\cosh(\im |D| t ) = \cos(|D| t )$.
+%% --
 \end{description}
 %% --
 Here are some simple examples.
@@ -497,9 +495,9 @@ Here are some simple examples.
 %% --
 \[
   \begin{array}{lllll}
-    A= & \ABC & \implies &  \eu^{tA}= & \BBC \\\\
-    A= & \CBC & \implies &  \eu^{tA}= & \DBC \\\\ 
-    A= & \EBC & \implies &  \eu^{tA}= & \FBC  
+    A= & \ABC & \implies &  \eu^{tA}= & \BBC , \\\\
+    A= & \CBC & \implies &  \eu^{tA}= & \DBC , \\\\ 
+    A= & \EBC & \implies &  \eu^{tA}= & \FBC  .
   \end{array}
 \]
 %% --
@@ -717,7 +715,7 @@ and the group of \emph{periodic translations}
 with generator
 %% --
 \[
-    D(A) \coloneqq \{f \in E \colon f \text{ absolutely continuous, $f' \in E$, $Af \coloneqq f'$.}\}
+    D(A) \coloneqq \{f \in E \colon f \text{ absolutely continuous, $f' \in E$, $Af \coloneqq f'$}. \}
 \]
 %% --
 \subsection{Nilpotent Translation Semigroups}\label{subsec:a1-2.6}%
@@ -735,7 +733,7 @@ Take $E = L^{p}([0,\tau],m)$ for $1 \leq p < \infty$ and define
 \]
 %% --
 Then $(T(t))_{t\geq 0}$ is a semigroup satisfying $T(t) = 0$ for $t \geq \tau$.
-Its generator is still the first derivative $A = \frac{d}{\dx}$, but with domain is 
+Its generator is still the first derivative $A = \frac{d}{\dx}$, but with domain 
 %% --
 \[
 D(A) = \{f \in E \colon f \text{ absolutely continuous}, f' \in E, f(\tau) = 0\}.
@@ -830,7 +828,7 @@ On $E = L^{p}(\R^{n})$, $1 \leq p \leq \infty$, the operators
 %% --
 for $x \in \R^{n}$, $t > 0$ and $\mu_{t}(x) \coloneqq (4\pi t)^{-n/2} \exp(-|x|^{2}/4t)$ form a strongly continuous semigroup.
 
-In fact the integral exists for every $f \in L^{p}(\R^{n})$ since $\mu_{t}$ is an element of the Schwartz space $\mathcal{S}(\R^{n})$ of all rapidly decreasing smooth functions on $\R^{n}$.
+In fact, the integral exists for every $f \in L^{p}(\R^{n})$ since $\mu_{t}$ is an element of the Schwartz space $\mathcal{S}(\R^{n})$ of all rapidly decreasing smooth functions on $\R^{n}$.
 
 Moreover,
 %% --
@@ -841,15 +839,16 @@ Moreover,
 by Young's inequality (\citet[p.28]{reedsimon:1975}). Hence $\|T(t)\| \leq 1$ for every $t > 0$.
 
 Next we observe that $\mathcal{S}(\R^{n})$ is dense in $E$ and invariant under each $T(t)$.
-Therefore we can apply the Fourier transformation $F$ which leaves $\mathcal{S}(\R^{n})$ invariant and yields
+Therefore we can apply the Fourier transformation $\mathbf{F}$ which leaves $\mathcal{S}(\R^{n})$ invariant and yields
 %% --
 \[
-    F(\mu_{t}*f) = (2\pi)^{n/2} F(\mu_{t}) \cdot F(f) = (2\pi)^{n/2} \hat{\mu}_{t}\cdot\hat{f}
+    \mathbf{F}(\mu_{t}*f) = (2\pi)^{n/2} \mathbf{F}(\mu_{t}) \cdot \mathbf{F}(f) 
+    = (2\pi)^{n/2} \hat{\mu}_{t}\cdot\hat{f}
 \]
 %% --
-where $f \in \mathcal{S}(\R^{n})$, $\hat{f} = Ff \in \mathcal{S}(\R^{n})$.
+where $f \in \mathcal{S}(\R^{n})$, $\hat{f} = \mathbf{F}f \in \mathcal{S}(\R^{n})$.
 
-In other words, $F$ transforms $(T(t)\vert_{ S(\R^{n})})_{t \geq 0}$ into a multiplication semigroup on $\mathcal{S}(\R^{n})$ which is pointwise continuous for the usual topology of $\mathcal{S}(\R^{n})$.
+In other words, $\mathbf{F}$ transforms $(T(t)\vert_{ S(\R^{n})})_{t \geq 0}$ into a multiplication semigroup on $\mathcal{S}(\R^{n})$ which is pointwise continuous for the usual topology of $\mathcal{S}(\R^{n})$.
 The generator, \ie the right derivative at $0$, of this semigroup is the multiplication operator
 \index{operator!multiplication}
 %% --
@@ -868,7 +867,7 @@ Its generator $A$ coincides with
 \]
 %% --
 for every $f \in \mathcal{S}(\R^{n})$.
-Since $\mathcal{S}(\R^{n})$ is $(T(t))$-invariant, we have determined the generator on a core of its domain (see Proposition~\ref{prop:a1-1.9}(ii).
+Since $\mathcal{S}(\R^{n})$ is $(T(t))$-invariant, we have determined the generator on a core of its domain (see Proposition~\ref{prop:a1-1.9}\,(ii).
 In particular, the above semigroup \emph{solves} the initial value problem for the \emph{heat equation}
 %% --
 \[
@@ -883,7 +882,7 @@ For the analogous discussion of the unitary group on $L^{2}(\R^{n})$ generated b
 %% --
 we refer to Section IX.7 in \citet{reedsimon:1975}. 
 
-Analogous examples to \ref{subsec:a1-2.7} are valid in $L^{p}\left[ 0,1 \right]$, \resp to 
+Examples analogous to \ref{subsec:a1-2.7} are valid in $L^{p}\left[ 0,1 \right]$, \resp to 
 \ref{subsec:a1-2.8} in $C_{0}(\R^{n})$.
 %% --
 \section{Standard Constructions}\label{sec:a1-3}%
@@ -903,7 +902,7 @@ There is an easy way how to obtain different (but isomorphic) semigroups out of 
 
 Let $V$ be an isomorphism from $E$ onto $E$.
 Then $S(t) \coloneqq VT(t)V^{-1}$, $t \geq 0$, defines a strongly continuous semigroup.
-If $A$ is the generator of $(T(t))_{t \geq 0}$ then
+If $A$ is the generator of $(T(t))_{t \geq 0}$, then
 %% --
 \[
     B \coloneqq VAV^{-1} \text{ with domain } D(B) \coloneqq \{f \in E \colon V^{-1}f \in D(A)\}
@@ -928,7 +927,7 @@ yield a new semigroup having generator
 %% --
 This \emph{rescaled semigroup} enjoys most of the properties of the original semigroup and the same is true for the corresponding generators.
 However, by using this procedure certain constants associated with $(T(t))_{t \geq 0}$ and $A$ can be normalized.
-For example, by this rescaling we may in many cases suppose without loss of generality that the growth bound $\omega_{0}$ is zero.
+For example, by this rescaling we may suppose, in many cases without loss of generality, that the growth bound $\omega_{0}$ is zero.
 
 Another application is the following.
 For $\lambda \in \C$ and $S(t) \coloneqq \exp(-\lambda t)T(t)$ the formulas \eqref{eq:a1-1.3} and \eqref{eq:a1-1.4} yield:
@@ -1069,7 +1068,7 @@ obviously \emph{weak*-continuous} in the sense that
 \lim_{t \to s} \langle f,(T(t)'-T(s)')\phi \rangle = 0
 \]
 %% --
-for every $f \in E$, $\phi \in E'$ and $s$, $t \geq 0$, it is natural to associate $(T(t)')_{t \geq 0}$ its a \emph{weak*-generator}
+for every $f \in E$, $\phi \in E'$ and $s$, $t \geq 0$, it is natural to associate $(T(t)')_{t \geq 0}$ its  \emph{weak*-generator}
 %% --
 \begin{align*}
     A'\phi &\coloneqq \sigma(E',E)\text{-}\lim\frac{1}{h}(T(h)'\phi-\phi) \text{ for every } \phi \text{ in the domain} \\
@@ -1118,7 +1117,7 @@ In fact, since $\int_{0}^{t} T(s)'\phi  \ds$, understood in the weak sense, is c
 %% --
 where $M \coloneqq \lim\sup_{t \to 0} \|T(t)\|$.
 In particular, $E^{*}$ separates $E$, \ie $E^{*}$ is $\sigma(E',E)$-dense in $E'$.
-In addition, the estimate of $\|\cdot\|$ given above yields
+In addition, the norm estimate given above yields
 %% --
 \[
     \|T(t)^{*}\| \leq \|T(t)\| \leq M\|T(t)^{*}\| \quad \text{for all } t \geq 0.
@@ -1184,13 +1183,14 @@ This means that for every $\epsilon > 0$ there exists $0 < t_o < 1$ such that $|
 In particular,
 %% --
 \[
-    \epsilon > |f'_f(0) - \frac{1}{s}(\xi_f(s)-\xi_f(0))| = |<f,A'\phi - \frac{1}{s}(T(s)'\phi-\phi)>| ,
+    \epsilon > \left\lvert f'_f(0) - \frac{1}{s}(\xi_f(s)-\xi_f(0)) \right\rvert 
+    = \left\lvert \langle f,A'\phi - \frac{1}{s}(T(s)'\phi-\phi) \rangle \right\rvert ,
 \]
 %% --
 hence
 %% --
 \[
-    \epsilon > \|A'\phi - \frac{1}{s}(T(s)'\phi-\phi)\|
+    \epsilon > \left\|A'\phi - \frac{1}{s}(T(s)'\phi-\phi) \right\|
 \]
 %% --
 for all $0 \leq s \leq t_o$.
@@ -1416,7 +1416,7 @@ We can apply Subsection~\ref{subsec:a1-3.4} in order to define the \emph{$\mathc
 %% --
 \[
     T_{\mathcal{F}}(t)((f_{n}) + c_{\mathcal{F}}(E)) \coloneqq (T(t)f_{n}) 
-    	+ ( c_{\mathcal{F}}(E)\cap m^{\mathcal{T}}(E) )
+    	+ ( c_{\mathcal{F}}(E)\cap m^{\mathcal{T}}(E) ) .
 \]
 %% --
 Thus $T_{\mathcal{F}}(t)$ is the restriction of $T(t)_{F}$ where $T(t)_{F}$ denotes the canonical extension of $T(t)$ to the $\mathcal{F}$-product $E_{\mathcal{F}}$. 
@@ -1518,7 +1518,7 @@ Moreover we recall how examples (i) and (ii) above fit into this pattern
     \quad L^{2}(\mu \otimes \nu) = L^{2}(\mu) \widetilde{\otimes}_{h} L^{2}(\nu),
 \]
 \[
-    C(X \otimes Y) = C(X) \widetilde{\otimes}_{\epsilon} C(Y).
+    C(X \times Y) = C(X) \widetilde{\otimes}_{\epsilon} C(Y).
 \]
 %% --
 Finally, we point out that for any $S \in \LE$, $T \in \L{F} $, the mapping

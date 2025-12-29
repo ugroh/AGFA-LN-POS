@@ -72,7 +72,7 @@ Moreover, $s(A) = \omega_{0}(A) \in R\sigma(A) = P\sigma(A')$ and the following 
 \end{theorem}
 %% --
 \begin{proof}
-\eqref{eq:b4-1.2} follows directly from A-III,4.4 and the results from B-II and B-III mentioned above. 
+\eqref{eq:b4-1.2} follows directly from A-III, 4.4 and the results from B-II and B-III mentioned above. 
 It remains to show the implication $(c) \Rightarrow (a)$.
 
 If $\langle T(t)f,\mu \rangle \to 0$ for every $\mu \in C(K)'$, then, by the Uniform Boundedness Principle, $\|T(t)f\| \leq M_f$ for every $f \in D(A)$. 
@@ -81,7 +81,7 @@ Using
 %% -- 
 \[
 s(A) \leq \sup \{\omega(f)\colon f \in D(A)\} = \omega_1(A)
-\text{ (see A-IV,Theorem~1.4)}
+\text{ (see A-IV, Theorem~1.4)}
 \]
 %% -- 
 we obtain that $s(A) \leq 0$. 
@@ -302,7 +302,7 @@ Applying Fatou's Lemma we obtain
 \end{aligned}
 \]
 (observe that $t \to \|T(t)'\mu\| = \sup \{\langle T(t)f,\mu \rangle \colon \|f\| \leq 1\}$ is lower semi-continuous and hence measurable). 
-Using A-IV,Theorem~1.10 we obtain $\omega_{0}(A^{*})<0$. 
+Using A-IV, Theorem~1.10 we obtain $\omega_{0}(A^{*})<0$. 
 But $\omega_{0}(A) = \omega_{0}(A^{*})$ by A-III-4.1(iii), contradicting $\omega_{0}(A) = 0$.
 \end{proof}
 
@@ -419,7 +419,7 @@ Since
 %
 \[
 	 \lim_{i\to\infty}(1-\lambda\frac{t}{i})^{-i} = \eu^{\lambda t}
-	 \quad \text{and} \quad \lim_{i\to\infty}\binom{j+i-1}{i-1}(i-\lambda t)^{-j} = \frac{1}{j!}
+	 \quad \text{and} \quad \lim_{i\to\infty}\binom{j+i-1}{i-1}\,(i-\lambda t)^{-j} = \frac{1}{j!}
 \]
 %
 for every $j \in \N$, the assertion follows from formula (1.3) of A-II.
@@ -595,7 +595,7 @@ The next result which is an immediate consequence of Theorem~\ref{thm:b4-2.1} an
 Proposition~\ref{prop:b4-2.4} is motivated by the theory of Markov processes.
 \index{Markov process}
 \index{operator!Markov}
-For a Markov operator (see B-I, Section~3) condition (b) of Proposition~\ref{prop:b4-2.4}(i) is called the strong \emph{Feller property}. 
+For a Markov operator (see B-I, Section~3) condition (b) of Proposition~\ref{prop:b4-2.4}\,(i) is called the strong \emph{Feller property}. 
 
 \begin{theorem}\label{thm:b4-2.5}
 	Let $(T(t))_{t \geq 0}$ be a semigroup of Markov operators on
@@ -606,8 +606,8 @@ For a Markov operator (see B-I, Section~3) condition (b) of Proposition~\ref{pro
 \end{theorem}
 
 \begin{proof}
-	By Proposition~\ref{prop:b4-2.4}(i), $T(t_{0})$ is weakly compact.
-	Thus, by Proposition~\ref{prop:b4-2.4}(ii),
+	By Proposition~\ref{prop:b4-2.4}\,(i), $T(t_{0})$ is weakly compact.
+	Thus, by Proposition~\ref{prop:b4-2.4}\,(ii),
 	$T(2t_{0})$ is compact, \ie  $(T(t))_{t \geq 0}$ is eventually compact.
 	Moreover,
 	by B-III, Corollary~2.11 $s(A) = 0$ is strictly dominant and a first order
@@ -687,7 +687,7 @@ implies $\limsup_{t\downarrow 0}((T(t)f)(x) - f(x)) \leq \epsilon$.
 Since $\epsilon > 0$ was arbitrary we have pointwise convergence, hence strong continuity of the semigroup.
 Finally we observe that every operator $T(t)$ defined by \eqref{eq:b4-2.4} has the
 strong Feller property since $T(t)''\1_C = P_t(.,C)$ for every Borel set
-$C \subset K$ (see Proposition~\ref{prop:b4-2.4}(i)).
+$C \subset K$ (see Proposition~\ref{prop:b4-2.4}\,(i)).
 Thus Theorem~\ref{thm:b4-2.5} can be applied in this situation.
 \end{example}
 \index{semigroup!eventually compact semigroup|)}
@@ -733,11 +733,11 @@ The first one uses the notion of the essential growth bound $\omega_{\text{ess}}
 \begin{proof}
 $(a) \Rightarrow (c)$ is obvious by the definition of quasi-compactness.
 
-$(c) \Rightarrow (b)$: Recalling the definition of the essential spectral radius from A-III, (3.6), assertion $(c)$ implies 
+$(c) \Rightarrow (b)$: Recalling the definition of the essential spectral radius from A-III,\,(3.6), assertion $(c)$ implies 
 $r_{\text{ess}}(T(t_0)) \leq \|T(t_0)\|_{\text{ess}} < 1 .$ 
-Then  $\omega_{\text{ess}}(\TT) < 0 $ by A-III, (3.10).
+Then  $\omega_{\text{ess}}(\TT) < 0 $ by A-III,\,(3.10).
 
-$(b) \Rightarrow (a)$: By A-III, (3.10) we have $r_{\text{ess}}(T(1)) < 1$. Then A-III, (3.6) implies
+$(b) \Rightarrow (a)$: By A-III,\,(3.10) we have $r_{\text{ess}}(T(1)) < 1$. Then A-III,\,(3.6) implies
 %% -- 
 \[
 \text{
@@ -796,9 +796,9 @@ However, the rate of decay cannot be chosen arbitrarily large.
 	\end{equation}
 \end{theorem}
 %% --
-\begin{proof} We have $\omega_{ess}(\TT) < 0$, hence $r_{ess}(T(1)) < 1$ (see A-III,\;(3.10)).
+\begin{proof} We have $\omega_{ess}(\TT) < 0$, hence $r_{ess}(T(1)) < 1$ (see A-III,\,(3.10)).
 
-Therefore $\{z \in \sigma(T(1)) \colon |z| \geq 1\}$ is a finite set and contains only poles of finite algebraic multiplicity (\cf A-III, (3.8)). 
+Therefore $\{z \in \sigma(T(1)) \colon |z| \geq 1\}$ is a finite set and contains only poles of finite algebraic multiplicity (\cf A-III,\,(3.8)). 
 Let $P$ denote the spectral projection of $T(1)$ corresponding to $\{z \in \sigma(T(1))\colon |z| \geq 1\}$. 
 Then A-III, Corollary~6.5 implies that $\{\lambda \in \sigma(A) \colon \Re(\lambda) \geq 0\}$ is a finite set, contains only poles of $R(\cdot,A)$ of finite algebraic multiplicity and $P = P_1+P_2+ \ldots +P_m$. 
 One can now prove the representation of $T(t)$ stated in \eqref{eq:b4-2.5} in the same way as statement \eqref{eq:b4-2.1}.
@@ -888,7 +888,7 @@ By monotonicity this equation has a unique solution $r \geq 0$ if and only if
 \end{equation}
 %% --
 In case $\alpha$, $\nu$ and $m$ satisfy \eqref{eq:b4-2.10} and $m(\infty) < 0$, then $g_r$ is a strictly positive eigenfunction of $A$ corresponding to $r \geq 0$. 
-Thus all assumptions of Corollary~\ref{cor:b4-2.11}(i) are satisfied. 
+Thus all assumptions of Corollary~\ref{cor:b4-2.11}\,(i) are satisfied. 
 In addition, the semigroup is irreducible if (and only if) the support of $\nu$ is an unbounded subset of $[0,\infty)$.
 \end{example}
 
@@ -1072,7 +1072,7 @@ The translation property \eqref{eq:b4-3.T} enables us to specify the corresponde
 %% --
 \begin{proof} Evidently $u \in C([-1,\infty),F)$ for $g \in D(A)$,
 since $\int_{0}^{t} T(s)g \ds  \in D(A)$.
-From A-I, Proposition 1.6.(iii), the definition of $D(A)$ and since $\int_{0}^{t} T(s)g \ds  \in D(A)$, we obtain
+From A-I, Proposition 1.6.\,(iii), the definition of $D(A)$ and since $\int_{0}^{t} T(s)g \ds  \in D(A)$, we obtain
 %% --
 \begin{align*}
 	(T(t)g)(0) - g(0) &= \left[A\left(\int_{0}^{t} T(s)g  \ds \right)\right](0) = \\
@@ -1269,7 +1269,7 @@ for the respective semigroups generated by $B + \Phi_\mu$ and $B + \Phi_\lambda$
 This implies $s(B + \Phi_\mu) \leq s(B + \Phi_\lambda)$. 
 The left-continuity follows by the semicontinuity of the spectrum (see \citet[Chapter~IV, Theorem~3.1]{kato:1966}). 
 If $B$ has compact resolvent, then $B + \Phi_\lambda$ has compact resolvent as well. 
-Now C-III, Theorem~1.1.(i) shows that $s(B + \Phi_\lambda)$ belongs to $\sigma(B + \Phi_\lambda)$ and is, by A-III,3.6, a pole with residue of finite rank. 
+Now C-III, Theorem~1.1.(i) shows that $s(B + \Phi_\lambda)$ belongs to $\sigma(B + \Phi_\lambda)$ and is, by A-III, 3.6, a pole with residue of finite rank. 
 This completes the proof, since spectral points of compact operators depend continuously on smooth perturbations (see \citet[VII,6.Theorem~9]{dunfordschwartz:1958}).
 \end{proof}
 %% --
@@ -1389,7 +1389,7 @@ The following assertions are equivalent:
 \begin{proof}
 We can assume that there exists $\lambda \in \R$ with $\sigma(B+\Phi_{\lambda}) \neq \emptyset$.
 
-The implication \enquote{$(a)\Rightarrow(b)$} follows immediately from Theorem~\ref{thm:b4-3.7}(i).
+The implication \enquote{$(a)\Rightarrow(b)$} follows immediately from Theorem~\ref{thm:b4-3.7}\,(i).
 
 To show \enquote{$(b)\Rightarrow(a)$}, let $s(B+\Phi_{0}) < 0$. 
 By the lemma and since $\lambda \mapsto s(B+\Phi_{\lambda})$ is non-increasing we have $s(A) = \mu = \sup\{\lambda \in \R \colon s(B+\Phi_{\lambda}) > \lambda\} < 0$. 
@@ -1397,7 +1397,7 @@ Thus the semigroup generated by $A$ is exponentially stable.
 \end{proof}
 %% --
 \begin{remark*}
-In the situation of Theorem~\ref{thm:b4-3.7}(iii) we have the stronger result that $s(A)$ and $s(B + \Phi_{0})$ have the same sign.
+In the situation of Theorem~\ref{thm:b4-3.7}\,(iii) we have the stronger result that $s(A)$ and $s(B + \Phi_{0})$ have the same sign.
 \end{remark*}
 %% --
 \begin{example}\label{ex:b4-3.9}
@@ -1534,7 +1534,7 @@ Then (3.11) takes the abstract form
 	u_0 &= \psi \in E .
 \end{align*}
 %% --
-It is well-known that $\tilde{B}$ generates a positive contraction semigroup and has compact resolvent (see A-I,2.7). 
+It is well-known that $\tilde{B}$ generates a positive contraction semigroup and has compact resolvent (see A-I, 2.7). 
 The same is true for the operator $B  \coloneq  \tilde{B} - M_d$ (see A-II, Theorem~1.29 and Theorem~1.30). 
 Thus, by the above results, the solution semigroup of \eqref{eq:b4-3.11} is positive and its asymptotic behavior can be investigated by the \enquote{undelayed} equation
 %% --
