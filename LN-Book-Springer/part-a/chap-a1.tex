@@ -15,7 +15,7 @@ It may however be useful to fix our notation, to collect briefly some important 
 and to discuss standard constructions of new semigroups from a given one in Section~\ref{sec:a1-3} on p.\,\pageref{sec:a1-3}. %(Section 3).
 
 In the entire chapter we denote by $E$ a (real or) complex Banach space and consider one-parameter semigroups of bounded linear operators $T(t)$ on $E$.
-By this we understand a subset $\{T(t) \colon  t \in \R_{+}\}$ of $\LE$, usually written as $(T(t))_{t\geq0}$, such that
+By this we understand a subset $\{T(t) \colon  t \in \R_{+}\}$ of\/ $\LE$, usually written as $(T(t))_{t\geq0}$, such that
 %% --
 \begin{align*}
 	T(0) &= \Id, \\
@@ -62,12 +62,12 @@ $ \lVert T(t) \rVert \leq M \cdot \eu^{ \omega t} $ for every $  t \geq 0 $.
 
 \item If $ T(t)_{t\geq0} $ is a one-parameter semigroup such that $ \lVert T(t) \rVert $ is bounded for
 $ 0 < t \leq \delta $ then it is strongly continuous if and only if $ \lim_{t\to0} T(t)f = f $ for every 
-$ f $ in a total subset of $ E $.
+$ f $ in a total subset of\/ $ E $.
 
 \end{enumerate}
 \end{remarks}
 %% --
-The exponential estimate from Remark for the growth of $ \lVert T(t) \rVert $ can be used to define an important characteristic of the semigroup.
+The exponential estimate from Remark for the growth of\/ $ \lVert T(t) \rVert $ can be used to define an important characteristic of the semigroup.
 %% --
 \begin{definition}\label{def:a1-1.3}
 By the \emph{growth bound} (or type) of the semigroup $ T(t)_{t\geq0} $ we understand the number $ \omega_{0} $,
@@ -138,11 +138,11 @@ To every semigroup $(T(t))_{t \geq 0}$ there belongs an operator $(A,D(A))$, cal
 %% --
 \end{definition}
 %% --
-Clearly, $D(A)$ is a linear subspace of $E$ and $A$ is linear from $D(A)$ into $E$.
+Clearly, $D(A)$ is a linear subspace of\/ $E$ and $A$ is linear from $D(A)$ into $E$.
 Only in certain special cases (see Section~\ref{subsec:a1-2.1}) the generator
 is everywhere defined and therefore bounded (use Proposition~\ref{prop:a1-1.9}\,(ii)) on p.\,\pageref{prop:a1-1.9}). 
 In general, the precise extent of the domain $D(A)$ is essential for the characterization of the generator.
-But since the domain is canonically associated to the generator of a semigroup, we shall write in most cases $A$ instead of $(A,D(A))$.
+But since the domain is canonically associated to the generator of a semigroup, we shall write in most cases $A$ instead of\/ $(A,D(A))$.
 As a first result we collect some information on the domain of the generator.
 %% --
 \begin{proposition}\label{prop:a1-1.6}
@@ -228,10 +228,10 @@ In that case, $B$ is called \emph{closable}, a property which is equivalent to
     (f_{n}) \subset D(B), f_{n} \to 0 \text{ and } Bf_{n} \to g \text{ implies } g = 0.
 \]
 %% --
-The smallest closed extension of $(B,D(B))$ will be called the \emph{closure} $\overline{B}$ with domain $D(\overline{B})$.
-In other words, the graph of $\overline{B}$ is the closure of $\{(f,Bf) \colon f \in D(B)\}$ in $E \times E$.
+The smallest closed extension of\/ $(B,D(B))$ will be called the \emph{closure} $\overline{B}$ with domain $D(\overline{B})$.
+In other words, the graph of\/ $\overline{B}$ is the closure of\/ $\{(f,Bf) \colon f \in D(B)\}$ in $E \times E$.
 
-Finally, we call a subset $D_{0}$ of $D(B)$ a \emph{core} for $B$ if $D_{0}$ is $\|\cdot\|_{B}$-dense in $D(B)$.
+Finally, we call a subset $D_{0}$ of\/ $D(B)$ a \emph{core} for $B$ if $D_{0}$ is $\|\cdot\|_{B}$-dense in $D(B)$.
 \index{core}
 This means that a closed operator is determined (via closure) by its restriction to a core in its domain.
 
@@ -402,7 +402,7 @@ If
 p_A(\lambda) \coloneqq \det(\lambda - A) = \lambda^2-s\cdot \lambda + d 
 \]
 %% --
-is the characteristic polynomial  of $ A $, then $ p_{A}(A) = 0 $ by \emph{Cayley-Hamilton}, hence
+is the characteristic polynomial  of\/ $ A $, then $ p_{A}(A) = 0 $ by \emph{Cayley-Hamilton}, hence
 %
 \[
 	\left( A - s/2 \cdot \Id \right)^{2} = D^{2} \cdot \Id , 
@@ -467,7 +467,7 @@ $ D^{2} = s^{2}/4 - d $ can be positive or negative.
 
 \item[$D^2 > 0$: ]
 Since $ \sinh $  is an odd function, we can choose  $ D > 0 $ in the formula for $  \eu^{tA} $.
-Furthermore, $ \sinh $ and $ \cosh $ are (by definition) linear combinations of $  \eu^{tD} $ and 
+Furthermore, $ \sinh $ and $ \cosh $ are (by definition) linear combinations of\/ $  \eu^{tD} $ and 
 $  \eu^{-tD} $ simplifying our formula (see below).
 
 \item[$D^2 < 0$: ] 
@@ -521,7 +521,7 @@ Take a continuous, \resp measurable function $q \colon X \to \C$ and define
 %% --
 and for every $f$ in the \emph{maximal} domain $D(M_{q}) \coloneqq \{g \in E \colon q \cdot g \in E\}$.
 
-This natural domain is a dense subspace of $C_{0}(X)$, \resp $L^{p}(X,\Sigma,\mu)$, for $1 \leq p < \infty$.
+This natural domain is a dense subspace of\/ $C_{0}(X)$, \resp $L^{p}(X,\Sigma,\mu)$, for $1 \leq p < \infty$.
 Moreover, $(M_{q},D(M_{q}))$ is a closed operator.
 This is easy in case $E = C_{0}(X)$.
 
@@ -653,7 +653,7 @@ Since integration is continuous, we obtain for every $a$, $b \in \R_{(+)}$ that
 \end{equation*}
 %% --
 converges to $\int_{a}^{b} g(x) \dx$ as $h \to 0+$.
-But for almost all $a, b$ the left hand side of $(*)$ converges to $f(b) - f(a)$.
+But for almost all $a, b$ the left hand side of\/ $(*)$ converges to $f(b) - f(a)$.
 By redefining $f$ on a nullset we obtain
 %% --
 \[
@@ -766,8 +766,8 @@ Obviously, each function
     e_{n}(x) \coloneqq \cos \pi nx, \quad n \in \Z,
 \]
 %% --
-is contained in $D(B)$ and is an eigenfunction of $B$ pertaining to the eigenvalue $\lambda_{n} \coloneqq -\pi^{2}n^{2}$.
-The linear hull $\text{span }\{e_{n} \colon n \in \Z\} = \colon E_{0}$ forms a subalgebra of $D(B)$ which by the Stone-Weierstrass theorem is dense in $E$.
+is contained in $D(B)$ and is an eigenfunction of\/ $B$ pertaining to the eigenvalue $\lambda_{n} \coloneqq -\pi^{2}n^{2}$.
+The linear hull $\text{span }\{e_{n} \colon n \in \Z\} = \colon E_{0}$ forms a subalgebra of\/ $D(B)$ which by the Stone-Weierstrass theorem is dense in $E$.
 
 We now use $e_{n}$ to define bounded linear operators 
 %% --
@@ -812,7 +812,7 @@ Therefore $T(t)$ is a bounded operator on $C\left[ 0,1 \right]$ with
     \|T(t)\| = \|T(t)\1\| = \sup_{x \in \left[ 0,1 \right]} \int_{0}^{1} k_{t}(x,y)dy = 1 .
 \]
 %% --
-From the behavior of $T(t)$ on the dense subspace $E_{0}$ it follows that $(T(t))_{t \geq 0}$ with $T(0) = \Id$ is a strongly continuous semigroup on $E$ and its generator $A$ coincides with $B$ on $E_{0}$.
+From the behavior of\/ $T(t)$ on the dense subspace $E_{0}$ it follows that $(T(t))_{t \geq 0}$ with $T(0) = \Id$ is a strongly continuous semigroup on $E$ and its generator $A$ coincides with $B$ on $E_{0}$.
 Finally, we observe that $E_{0}$ is a core for $(A,D(A))$ by Proposition~1.9(ii).
 
 Consequently, $(T(t))_{t \geq 0}$ is the semigroup generated by the closure of the second derivative with domain $D(B)$.
@@ -849,7 +849,7 @@ Therefore we can apply the Fourier transformation $\mathbf{F}$ which leaves $\ma
 %% --
 where $f \in \mathcal{S}(\R^{n})$, $\hat{f} = \mathbf{F}f \in \mathcal{S}(\R^{n})$.
 
-In other words, $\mathbf{F}$ transforms $(T(t)\vert_{ S(\R^{n})})_{t \geq 0}$ into a multiplication semigroup on $\mathcal{S}(\R^{n})$ which is pointwise continuous for the usual topology of $\mathcal{S}(\R^{n})$.
+In other words, $\mathbf{F}$ transforms $(T(t)\vert_{ S(\R^{n})})_{t \geq 0}$ into a multiplication semigroup on $\mathcal{S}(\R^{n})$ which is pointwise continuous for the usual topology of\/ $\mathcal{S}(\R^{n})$.
 The generator, \ie the right derivative at $0$, of this semigroup is the multiplication operator
 \index{operator!multiplication}
 %% --
@@ -859,7 +859,7 @@ The generator, \ie the right derivative at $0$, of this semigroup is the multipl
 %% --
 for every $f \in \mathcal{S}(\R^{n})$.
 
-Applying the inverse Fourier transformation and observing that the topology of $\mathcal{S}(\R^{n})$ is finer than the topology induced from $L^{p}(\R^{n})$, we obtain that $(T(t))_{t \geq 0}$ is a semigroup which is strongly continuous (use Remark~\ref{rem:a1-1.2}\,(iii) on p.\,\pageref{rem:a1-1.2}).
+Applying the inverse Fourier transformation and observing that the topology of\/ $\mathcal{S}(\R^{n})$ is finer than the topology induced from $L^{p}(\R^{n})$, we obtain that $(T(t))_{t \geq 0}$ is a semigroup which is strongly continuous (use Remark~\ref{rem:a1-1.2}\,(iii) on p.\,\pageref{rem:a1-1.2}).
 
 Its generator $A$ coincides with
 %% --
@@ -903,13 +903,13 @@ There is an easy way how to obtain different (but isomorphic) semigroups out of 
 
 Let $V$ be an isomorphism from $E$ onto $E$.
 Then $S(t) \coloneqq VT(t)V^{-1}$, $t \geq 0$, defines a strongly continuous semigroup.
-If $A$ is the generator of $(T(t))_{t \geq 0}$, then
+If $A$ is the generator of\/ $(T(t))_{t \geq 0}$, then
 %% --
 \[
     B \coloneqq VAV^{-1} \text{ with domain } D(B) \coloneqq \{f \in E \colon V^{-1}f \in D(A)\}
 \]
 %% --
-is the generator of $(S(t))_{t \geq 0}$.
+is the generator of\/ $(S(t))_{t \geq 0}$.
 %% --
 \subsection{The Rescaled Semigroup}\label{subsec:a1-3.2}%
 \index{standard construction!rescaled semigroup}
@@ -953,18 +953,18 @@ and
 %% --
 Assume $F$ to be a closed $(T(t))$-invariant or, equivalently, $R(\lambda,A)$-invariant for 
 $\lambda \in \C$, 
-$ \Re(\lambda) > \omega_{0}$, subspace of $E$.
+$ \Re(\lambda) > \omega_{0}$, subspace of\/ $E$.
 Then the semigroup $(T(t)_{|})_{t \geq 0}$ of all restrictions $T(t)_{|} \coloneqq T(t)_{|\,F}$ is strongly continuous on $F$.
-If $(A,D(A))$ denotes the generator of $(T(t))_{t \geq 0}$ it follows from the $(T(t))$-invariance and closedness of $F$ that $A$ maps $D(A) \cap F$ into $F$.
+If $(A,D(A))$ denotes the generator of\/ $(T(t))_{t \geq 0}$ it follows from the $(T(t))$-invariance and closedness of\/ $F$ that $A$ maps $D(A) \cap F$ into $F$.
 Therefore
 %% --
 \[
     A_{|} \coloneqq A_{| (D(A)\cap F)} \text{ with domain } D(A_{|}) \coloneqq D(A) \cap F
 \]
 %% --
-is the generator of $(T(t)_{|})$.
+is the generator of\/ $(T(t)_{|})$.
 %
-Conversely, if $F$ is a closed \emph{linear subspace} of $E$ with $A(D(A) \cap F) \subset F$ such that 
+Conversely, if $F$ is a closed \emph{linear subspace} of\/ $E$ with $A(D(A) \cap F) \subset F$ such that 
 $A_{|}$ is a generator on $F$, then $F$ is $(T(t))$-invariant.
 
 An $A$-invariant subspace need not necessarily be $(T(t))$-invariant:
@@ -973,7 +973,7 @@ Take for example the translation group with $(T(t)f)(x) = f(x+t)$ on $E = C_{0}(
 \subsection{The Quotient Semigroup}\label{subsec:a1-3.4}%
 \index{standard construction!quotient semigroup}
 %% --
-Let $F$ be a closed $(T(t))$-invariant subspace of $E$ and consider the quotient space $ E_{/}\coloneqq \sfrac{E}{F} $ with quotient map $q \colon E \to E_{/}$. 
+Let $F$ be a closed $(T(t))$-invariant subspace of\/ $E$ and consider the quotient space $ E_{/}\coloneqq \sfrac{E}{F} $ with quotient map $q \colon E \to E_{/}$. 
 The quotient operators
 %% --
 \[
@@ -981,7 +981,7 @@ The quotient operators
 \]
 %% --
 are well defined and form a strongly continuous semigroup $(T(t)_{/})_{t \geq 0}$ on $E_{/}$.
-For the generator $(A_{/},D(A_{/}))$ of $(T(t)_{/})_{t \geq 0}$ the following holds:
+For the generator $(A_{/},D(A_{/}))$ of\/ $(T(t)_{/})_{t \geq 0}$ the following holds:
 %% --
 \[
     D(A_{/}) = q(D(A)) 
@@ -1085,12 +1085,12 @@ This operator coincides with the \emph{adjoint} of the generator $(A,D(A))$, \ie
 and $A'\phi = \psi$.
 In particular, $A'$ is a closed and $\sigma(E',E)$-densely defined operator in $E'$.
 
-It follows that the resolvent $R(\lambda,A')$ of $A'$ is $R(\lambda,A)'$ 
+It follows that the resolvent $R(\lambda,A')$ of\/ $A'$ is $R(\lambda,A)'$ 
 (\citet[Theorem~III.5.30]{kato:1966}).
 In particular, the spectra $\sigma(A)$ and $\sigma(A')$ coincide.
 
 However, it is still necessary in some situations to have strong continuity for the adjoint semigroup.
-In order to achieve this we restrict $T(t)'$ to an appropriate subspace of $E'$.
+In order to achieve this we restrict $T(t)'$ to an appropriate subspace of\/ $E'$.
 %% --
 \begin{definition*}[\normalfont\citet{phillips:1954}]\label{def:a1-3.1}
 The \emph{semigroup dual} of the Banach space $E$ with respect to the strongly continuous semigroup $(T(t))_{t \geq 0}$ is
@@ -1131,7 +1131,7 @@ For the adjoint generator $A^{*}$ of a strongly continuous semigroup $(T(t))_{t 
 %% --
 \begin{enumerate}[\upshape(i)]
 \item 
-$E^{*}$ is the $\|\cdot\|$-closure of $D(A')$.
+$E^{*}$ is the $\|\cdot\|$-closure of\/ $D(A')$.
 
 \item 
 $D(A^{*}) = \{\phi \in D(A') \colon A'\phi \in E^{*}\}$.
@@ -1167,9 +1167,9 @@ for every $0 \leq s \leq t_{0}$ and $f \in D(A)$, $\|f\| \leq 1$.
 But this implies $\|T(s)'\phi - \phi\| < \epsilon$ and hence $\phi \in E^{*}$.
 
 Conversely, take $\psi \in E^{*}$.
-Then $\frac{1}{t}\int_{0}^{t} T(s)'\psi \ds$, $t > 0$, belongs to $D(A')$ and norm converges to $\psi$ as $t \to 0$, \ie $\psi$ belongs to the norm closure of $D(A')$.
+Then $\frac{1}{t}\int_{0}^{t} T(s)'\psi \ds$, $t > 0$, belongs to $D(A')$ and norm converges to $\psi$ as $t \to 0$, \ie $\psi$ belongs to the norm closure of\/ $D(A')$.
 
-(ii) and (iii): Since the weak* topology on $E'$ is weaker than the norm topology, it follows that $A'$ is an extension of $A^{*}$.
+(ii) and (iii): Since the weak* topology on $E'$ is weaker than the norm topology, it follows that $A'$ is an extension of\/ $A^{*}$.
 Now take $\phi \in D(A')$ such that $A'\phi \in E^{*}$.
 As above define the functions $\xi_{f}$. 
 The assumption on $\phi$ implies the set of all derivatives
@@ -1204,7 +1204,7 @@ In other cases this construction is more interesting.
 \begin{example*}[continued]\label{ex:a1-3.4}
 %% --
 The adjoints of the (left) translation $T(t)$ on $E = L^1(\R)$ are the (right) translations $T(t)'$ on $E' = L^\infty(\R)$.
-The largest subspace of $L^\infty(\R)$ on which these translations form a strongly-continuos semigroup with respect to the sup-norm, is the space of all bounded uniformly continuous functions on $\R$, \ie $E^* = C_{bu}(\R)$.
+The largest subspace of\/ $L^\infty(\R)$ on which these translations form a strongly-continuos semigroup with respect to the sup-norm, is the space of all bounded uniformly continuous functions on $\R$, \ie $E^* = C_{bu}(\R)$.
 
 Calculating $D(A')$ and $D(A^*)$ respectively, one obtains
 %% --
@@ -1230,7 +1230,7 @@ Since $E_{1}$ is invariant under $(T(t))_{t\geq 0}$, apply Proposition~\ref{prop
 The results of Proposition~\ref{prop:a1-1.6} imply that $T_{1}(t) \in \L{E_{1}}$ and $\|T_{1}(t)f-f\|_{1} \to 0$ as $t \to 0$ for every $f \in E_{1}$.
 Thus $(T_{1}(t))_{t\geq 0}$ is a strongly continuous semigroup on $E_{1}$ and has a generator denoted by $(A_{1},D(A_{1}))$.
 
-Using \ref{prop:a1-1.6} again we see that $A_{1}$ is the restriction of $A$ to $E_{1}$ with maximal domain, \ie
+Using \ref{prop:a1-1.6} again we see that $A_{1}$ is the restriction of\/ $A$ to $E_{1}$ with maximal domain, \ie
 %% --
 $D(A_{1}) = \{f \in E_{1} \colon Af \in E_{1}\} = D(A^{2})$ and
 $A_{1}f = Af$ for every $f \in D(A_{1})$.
@@ -1320,7 +1320,7 @@ For $\lambda \in \rho(A)$ consider the norm
     \|f\|_{-1} \coloneqq \|R(\lambda,A)f\|
 \]
 %% --
-for every $f \in E$ and define $E_{-1}$ as the completion of $E$ for $\|\cdot\|_{-1}$.
+for every $f \in E$ and define $E_{-1}$ as the completion of\/ $E$ for $\|\cdot\|_{-1}$.
 Then $(T(t))_{t \geq 0}$ extends continuously to a strongly continuous semigroup $(T_{-1}(t))_{t \geq 0}$ on $E_{-1}$ and the above diagram can be extended to the negative integers.
 \end{enumerate}
 \end{remarks*}
@@ -1369,7 +1369,7 @@ is strongly continuous and we denote its generator by $(\hat{A},D(\hat{A}))$.
 The following lemma shows that $\hat{A}$ is obtained canonically from $A$.
 %% --
 \begin{lemma*}\label{lem:a1-3.6}
-For the generator $\hat{A}$ of $(\hat{T}(t))_{t \geq 0}$ on $m^{\mathcal{T}}(E)$ one has the following properties.
+For the generator $\hat{A}$ of\/ $(\hat{T}(t))_{t \geq 0}$ on $m^{\mathcal{T}}(E)$ one has the following properties.
 %% --
 \begin{enumerate}[\upshape(i)]
 
@@ -1401,10 +1401,10 @@ We call the quotient spaces
     E_{\mathcal{F}}^{T} \coloneqq m^{\mathcal{T}}(E)/ (c_{\mathcal{F}}(E)\cap m^{\mathcal{T}}(E))
 \]
 %% --
-the \emph{$\mathcal{F}$-product of $E$} and the \emph{$ \mathcal{F} $-product of $E$ with respect to the semigroup $T$}, respectively.
+the \emph{$\mathcal{F}$-product of\/ $E$} and the \emph{$ \mathcal{F} $-product of\/ $E$ with respect to the semigroup $T$}, respectively.
 \index{F-product@$\mathcal{F}$-product}
 
-Thus $E_{\mathcal{F}}^{T}$ can be considered as a closed linear subspace of $E_{\mathcal{F}}$. 
+Thus $E_{\mathcal{F}}^{T}$ can be considered as a closed linear subspace of\/ $E_{\mathcal{F}}$. 
 We have $E_{\mathcal{F}}^{T} = E_{\mathcal{F}}$ if (and only if) $T$ has a bounded generator.
 
 The canonical quotient norm on $E_{\mathcal{F}}$ is given by
@@ -1420,10 +1420,10 @@ We can apply Subsection~\ref{subsec:a1-3.4} in order to define the \emph{$\mathc
     	+ ( c_{\mathcal{F}}(E)\cap m^{\mathcal{T}}(E) ) .
 \]
 %% --
-Thus $T_{\mathcal{F}}(t)$ is the restriction of $T(t)_{F}$ where $T(t)_{F}$ denotes the canonical extension of $T(t)$ to the $\mathcal{F}$-product $E_{\mathcal{F}}$. 
+Thus $T_{\mathcal{F}}(t)$ is the restriction of\/ $T(t)_{F}$ where $T(t)_{F}$ denotes the canonical extension of\/ $T(t)$ to the $\mathcal{F}$-product $E_{\mathcal{F}}$. 
 But note that $(T(t)_{F})_{t \geq 0}$ is not strongly continuous unless $T$ has a bounded generator.
 
-With the canonical injection $j \colon f \mapsto (f,f,f,\ldots) + c_{\mathcal{F}}(E)$ from $E$ into $E_{\mathcal{F}}^{T}$ the operators $T_{\mathcal{F}}(t)$ are extensions of $T(t)$ satisfying $\|T_{\mathcal{F}}(t)\| = \|T(t)\|$. The basic facts about the generator $(A_{\mathcal{F}},D(A_{\mathcal{F}}))$ of $(T_{\mathcal{F}}(t))_{t \geq 0}$ follow from 3.3 and are collected in the following proposition.
+With the canonical injection $j \colon f \mapsto (f,f,f,\ldots) + c_{\mathcal{F}}(E)$ from $E$ into $E_{\mathcal{F}}^{T}$ the operators $T_{\mathcal{F}}(t)$ are extensions of\/ $T(t)$ satisfying $\|T_{\mathcal{F}}(t)\| = \|T(t)\|$. The basic facts about the generator $(A_{\mathcal{F}},D(A_{\mathcal{F}}))$ of\/ $(T_{\mathcal{F}}(t))_{t \geq 0}$ follow from 3.3 and are collected in the following proposition.
 %% --
 \begin{proposition*}\label{prop:a1-3.6}
 For the generator $(A_{\mathcal{F}},D(A_{\mathcal{F}}))$ of the $\mathcal{F}$-product semigroup the following holds.
@@ -1438,7 +1438,7 @@ $A_{\mathcal{F}}((f_{n}) + c_{\mathcal{F}}(E)) = (Af_{n}) + c_{\mathcal{F}}(E)$.
 \end{enumerate}
 \end{proposition*}
 %% --
-In case $A$ is a bounded operator then $D(A_{\mathcal{F}}) = E_{\mathcal{F}}^{T} = E_{\mathcal{F}}$ and $A_{\mathcal{F}}$ is the canonical extension of $A$ to $E_{\mathcal{F}}$.
+In case $A$ is a bounded operator then $D(A_{\mathcal{F}}) = E_{\mathcal{F}}^{T} = E_{\mathcal{F}}$ and $A_{\mathcal{F}}$ is the canonical extension of\/ $A$ to $E_{\mathcal{F}}$.
 
 We will show in A-III, Section~4.2 that the above construction preserves and even improves many spectral properties of the semigroup and its generator.
 
@@ -1470,16 +1470,16 @@ If we identify for $f_{i} \in L^{p}(\mu)$, $g_{i} \in L^{p}(\nu)$ the elements $
     L^{p}(\mu) \otimes L^{p}(\nu)
 \]
 %% --
-with the (class of $\mu \times \nu$-a.e.-defined) functions
+with the (class of\/ $\mu \times \nu$-a.e.-defined) functions
 %% --
 \[
     (x,y) \mapsto \sum_{i=1}^{n} f_{i}(x)g_{i}(y) ,
 \]
 %% --
-then $L^{p}(\mu) \otimes L^{p}(\nu)$ becomes a dense subspace of $L^{p}(X\times Y,\Sigma\times\Omega,\mu\times\nu)$ for $1 \leq p < \infty$.
+then $L^{p}(\mu) \otimes L^{p}(\nu)$ becomes a dense subspace of\/ $L^{p}(X\times Y,\Sigma\times\Omega,\mu\times\nu)$ for $1 \leq p < \infty$.
 
 \item
-Similarly, let $X$,$Y$ be compact spaces. Then $C(X) \otimes C(Y)$ becomes a dense subspace of $C(X\times Y)$ by identifying, for $f \in C(X)$ and $g \in C(Y)$, $f \otimes g$ with the function
+Similarly, let $X$,$Y$ be compact spaces. Then $C(X) \otimes C(Y)$ becomes a dense subspace of\/ $C(X\times Y)$ by identifying, for $f \in C(X)$ and $g \in C(Y)$, $f \otimes g$ with the function
 %% --
 \[
     (x,y) \mapsto f(x)g(y) .
@@ -1491,7 +1491,7 @@ Similarly, let $X$,$Y$ be compact spaces. Then $C(X) \otimes C(Y)$ becomes a den
 We do not intend to go deeper into the quite sophisticated problems related to normed tensor products of general Banach spaces, but will rather confine ourselves to the discussion of certain special cases.
 These will always be related to one of the following standard methods to define a norm on the tensor product of two Banach spaces $E$, $F$.
 
-Let $u \coloneqq \sum_{i=1}^{n} f_{i} \otimes g_{i}$ be an element of $E \otimes F$. 
+Let $u \coloneqq \sum_{i=1}^{n} f_{i} \otimes g_{i}$ be an element of\/ $E \otimes F$. 
 Then
 %% --
 \begin{enumerate}[\upshape(i), wide, labelindent=.5em]
@@ -1508,10 +1508,10 @@ Here, $\langle u,\phi \otimes \psi\rangle$ denotes the canonical bilinear form o
 if $E$ and $F$ are Hilbert spaces, $\|u\|_{h} = (u|u)_{h}^{1/2}$, where the scalar product $(\cdot|\cdot)_{h}$ is defined as in (ii), defines the \emph{Hilbert norm $h$} on $E \otimes F$.
 \end{enumerate}
 %% --
-In the following we write $E \otimes_{\alpha} F$ for the tensor product of $E$ and $F$ endowed---if applicable---with one of the norms $\pi$, $\epsilon$, $h$ just defined.
+In the following we write $E \otimes_{\alpha} F$ for the tensor product of\/ $E$ and $F$ endowed---if applicable---with one of the norms $\pi$, $\epsilon$, $h$ just defined.
 In each case one has $\|f \otimes g\| = \|f\|\|g\|$ for $f \in E$, $g \in F$.
 
-By $E \widetilde{\otimes}_{\alpha} F$ we mean the completion of $E \otimes_{\alpha} F$. 
+By $E \widetilde{\otimes}_{\alpha} F$ we mean the completion of\/ $E \otimes_{\alpha} F$. 
 Moreover we recall how examples (i) and (ii) above fit into this pattern
 %% --
 \[
@@ -1537,7 +1537,7 @@ We are now ready to consider semigroups induced on the tensor product.
 Let $(S(t))_{t\geq 0}$ and $(T(t))_{t\geq 0}$ be strongly continuous semigroups on Banach spaces $E$, $F$, and let $A$, $B$ be their generators. 
 Then the family $(S(t) \otimes T(t))_{t\geq 0}$ is a strongly continuous semigroup on 
 $ E \widetilde{\otimes}_{\alpha} F $.
-The closure of $A \otimes \Id + \Id \otimes B$, defined on the core $D(A) \otimes D(B)$, is its generator.
+The closure of\/ $A \otimes \Id + \Id \otimes B$, defined on the core $D(A) \otimes D(B)$, is its generator.
 \end{proposition*}
 %% --
 \begin{proof}
@@ -1545,7 +1545,7 @@ It is immediately verified that $(S(t)\otimes T(t))_{t\geq 0}$ is in fact a semi
 $ E \widetilde{\otimes}_{\alpha} F $. 
 The strong continuity need only be verified at $t = 0$ and on elements of the form $u = f \otimes g \in E \otimes F$.
 
-This verification being straightforward, there remains to show that the generator of $(S(t)\otimes T(t))_{t\geq 0}$ is obtained as the closure of 
+This verification being straightforward, there remains to show that the generator of\/ $(S(t)\otimes T(t))_{t\geq 0}$ is obtained as the closure of 
 %
 \[
 	(A \otimes \Id + \Id \otimes B,D(A) \otimes D(B)) .
@@ -1560,12 +1560,12 @@ Then
     &= (f \otimes Bg) + (Af \otimes g) .
 \end{align*}
 %% --
-Since the elements of the form $f \otimes g$, $f \in D(A)$, $g \in D(B)$, generate the linear subspace $D(A) \otimes D(B)$ of $E \otimes_{\alpha} F$, this subspace belongs
+Since the elements of the form $f \otimes g$, $f \in D(A)$, $g \in D(B)$, generate the linear subspace $D(A) \otimes D(B)$ of\/ $E \otimes_{\alpha} F$, this subspace belongs
 %% --
 %\newpage
 %% -- a1-25
 to the domain of the generator.
-Moreover, $D(A) \otimes D(B)$ is dense in $E \widetilde{\otimes}_{\alpha} F$ and invariant under $(S(t)\otimes T(t))_{t\geq 0}$, hence it is a core of $A \otimes \Id + \Id \otimes B$ by Proposition~\ref{prop:a1-1.9}\,(ii).
+Moreover, $D(A) \otimes D(B)$ is dense in $E \widetilde{\otimes}_{\alpha} F$ and invariant under $(S(t)\otimes T(t))_{t\geq 0}$, hence it is a core of\/ $A \otimes \Id + \Id \otimes B$ by Proposition~\ref{prop:a1-1.9}\,(ii).
 \end{proof}
 %% --
 \subsection{The Product of Commuting Semigroups}\label{subsec:a1-3.9}%

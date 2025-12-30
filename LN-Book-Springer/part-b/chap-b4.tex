@@ -185,7 +185,7 @@ $f(z) = (\eu^{-\im\alpha t_n}T(t_n)f)(z) = \eu^{-\im\alpha t_n}f(\Phi(t_n,z)) \t
 At first we point out that for $f \in C_{0}(X)$ such that $f$ vanishes on the unit circle $\Gamma$, we have $\lim_{t\to\infty} \|T(t)f\| = 0$.
 Assume that $\mu$ is a bounded Borel measure such that $T(t)'\mu = \eu^{\im\alpha t}\mu$ for every $t \geq 0$ and some $\alpha \in \R$. 
 Then $\langle f,\mu \rangle = \eu^{\im\alpha t}\langle f,T(t)'\mu \rangle = \eu^{\im\alpha t}\langle T(t)f,\mu \rangle \to 0$ for every $f \in C_{0}(X)$ with $f|_\Gamma = 0$. 
-It follows that the support of $\mu$ is contained in $\Gamma$. Since $\lim_{t\to\infty} \Phi(t,z) = 1$ for every $z \in \Gamma$, we obtain for arbitrary $f \in C_{0}(X)$ that $(T(t)f)(z) \to 0$ $\mu$-a.e.. 
+It follows that the support of\/ $\mu$ is contained in $\Gamma$. Since $\lim_{t\to\infty} \Phi(t,z) = 1$ for every $z \in \Gamma$, we obtain for arbitrary $f \in C_{0}(X)$ that $(T(t)f)(z) \to 0$ $\mu$-a.e.. 
 Lebesgue's Dominated Convergence Theorem implies $\langle f,\mu \rangle = \eu^{-\im\alpha t}\langle T(t)f,\mu \rangle \to 0$ as $t \to \infty$ for every $f \in C_{0}(X)$. Thus $\mu = 0$.
 \end{enumerate}
 \end{proof}
@@ -235,7 +235,7 @@ Then, by the holomorphy of the resolvent and by A-II, Proposition~1.11 we obtain
    \langle R(0,A^*)\Phi,\rho \rangle = \sum_{n=0}^{\infty} \int_0^{\infty} \frac{1}{n!} t^n \eu^{-t}\langle T(t)^*\Phi,\rho \rangle \dt = \int_0^{\infty} \langle T(t)^*\Phi,\rho \rangle \dt
 \end{equation}
 %% --
-Since every element of $C_{0}(X)^*$ and $C_{0}(X)''$ is the difference of positive
+Since every element of\/ $C_{0}(X)^*$ and $C_{0}(X)''$ is the difference of positive
 elements, the equation \eqref{eq:b4-1.3} holds for every $\Phi \in C_{0}(X)^*$, $\rho \in C_{0}(X)''$. 
 This means that the net $(\int_0^r T(t)^*\Phi \dt)_{r > 0}$ converges weakly to $R(0,A^*)\Phi$. 
 But for positive $\Phi$ the net is monotone and therefore strongly convergent by Dini's Theorem (see \citet[II.Theorem~5.9]{schaefer:1974}). 
@@ -244,7 +244,7 @@ Hence $R(0,A^*)\Phi = \int_0^{\infty} T(t)^*\Phi \dt$ for every $\Phi \in C_{0}(
 Now we make use of the special character of the space $C_{0}(X)$. 
 For positive functions $f_1$, $f_2 \in C_{0}(X)$ we have $\sup(\|f_1\|,\|f_2\|) = \|\sup(f_1,f_2)\|$. 
 Let $\mu_1$, $\mu_2 \in C_{0}(X)'_+$ and $\epsilon  >  0$. 
-Then there are positive elements $f$, $g$ in the unit ball of $C_{0}(X)$ such that 
+Then there are positive elements $f$, $g$ in the unit ball of\/ $C_{0}(X)$ such that 
 %
 \[
 	\langle f,\mu_1 \rangle \geq \|\mu_1\| - \epsilon 
@@ -308,7 +308,7 @@ But $\omega_{0}(A) = \omega_{0}(A^{*})$ by A-III-4.1\,(iii), contradicting $\ome
 \begin{remark}\label{rem:b4-1.5}%
 If $(T(t))$ is a positive semigroup on an $\alpha$-directed ordered Banach space $E$ (see \citet{asimow:1980}, p.39), 
 \index{ordered Banach space}
-then the dual of $E$ admits a reversion of the triangle inequality, 
+then the dual of\/ $E$ admits a reversion of the triangle inequality, 
 \ie $\sum\|\mu_i\| \leq \alpha\|\sum\mu_i\|$ 
 for $\mu_i \in E'_+$, 
 and Theorem~\ref{thm:b4-1.4} remains valid (see \citet{battydavies:1983}). 
@@ -373,7 +373,7 @@ Thus
 	For simplicity we assume $\Re \lambda_{m+1} < \Re   \lambda_m$.
     \index{spectral projection}
 	Let $P$ be the spectral projection
-	of $T(t_{0})$ corresponding to the spectral set $\{z \in \sigma(T(t_{0})) :
+	of\/ $T(t_{0})$ corresponding to the spectral set $\{z \in \sigma(T(t_{0})) :
 	|z| \geq \exp(\Re \lambda_m \cdot t_{0})\}$.
 	Then $P$ reduces the semigroup and we have
 	$\sigma(T(t_{0})|_{\ker P}) \subset \{z \in \C \colon |z| < \exp(\Re \lambda_m \cdot t_{0})\}$.
@@ -390,7 +390,7 @@ We define $R_m(t)  \coloneq  T(t)(\Id -P)$ and $T_n(t)  \coloneq  T(t)P_n$ $(n \
 Then $R_m(t)$ satisfies the estimate stated in \eqref{eq:b4-2.1}, and we have $T(t) =
 \sum_{n=1}^m T_n(t) + R_m(t)$ because $P = \sum_{n=1}^m P_n$ by A-III, Corollary~6.5\,(ii).
 The family of projections $\Id -P$, $P_1$, $P_2$, .. , $P_m$ reduces the semigroup.
-Thus in order to prove the representation of $T_n(t)$ stated in
+Thus in order to prove the representation of\/ $T_n(t)$ stated in
 \eqref{eq:b4-2.1}, we only have to consider elements $f \in P_n E = \ker(\lambda_n-A)$.
 Hence we can assume $E = P_n E$, $\sigma(A) = \{\lambda_n\}$, $P_n = \Id $ and for simplification
 we drop the index $n$, \ie  $\lambda = \lambda_n$, $k = k(n)$.
@@ -425,7 +425,7 @@ for every $j \in \N$, the assertion follows from formula (1.3) of A-II.
 \end{proof}
 %% --
 Combining Theorem~2.1 with the results of Chapter B-III one can describe
-the behavior of $T(t)$ as $t \to \infty$ provided that $(T(t))_{t \geq 0}$ is a
+the behavior of\/ $T(t)$ as $t \to \infty$ provided that $(T(t))_{t \geq 0}$ is a
 positive semigroup.
 We give a typical example.
 
@@ -453,8 +453,8 @@ We give a typical example.
 	By B-III, Proposition~3.5(i) we have $r > -\infty$.
 	Moreover, by assertion (v) of the same proposition we know that $r$ is
 	an algebraically simple pole and the corresponding residue $P$ has the
-	form $P = \nu \otimes h$ for strictly positive eigenvectors $\nu$ of $A'$
-	and $h$ of $A$, respectively.
+	form $P = \nu \otimes h$ for strictly positive eigenvectors $\nu$ of\/ $A'$
+	and $h$ of\/ $A$, respectively.
     We choose $h$ such that 
 	$\|h\| = 1$.
 	Corollary~2.11 of Chapter B-III implies that $r$ is strictly
@@ -477,7 +477,7 @@ and using \eqref{eq:b4-2.2} one easily deduces \eqref{eq:b4-2.3}.
 Let us point out the following consequence of Corollary~\ref{cor:b4-2.2}.
 For every positive, non-zero initial value $f$ the solution $T(\cdot)f$
 of the abstract Cauchy problem $\dot{u} = Au$ decreases or increases
-exponentially in norm according to the sign of $r = s(A)$.
+exponentially in norm according to the sign of\/ $r = s(A)$.
 If $s(A) = 0$, then $T(\cdot)f$ tends to an equilibrium state which is
 unique up to a constant and is non-zero whenever the initial value is
 positive and non-zero.
@@ -502,13 +502,13 @@ weakly compact subsets in the dual space $M(K) = C(K)'$, due to
 		For each weak null sequence $(f_n)$ in $C(K)$, $\lim_{n\to\infty}\langle f_n,\nu \rangle = 0$ uniformly for $\nu \in D$.
 	
 		\item 
-		For each sequence $(U_n)$ of disjoint open subsets of $K$, 
+		For each sequence $(U_n)$ of disjoint open subsets of\/ $K$, 
 		$\lim_{n\to\infty}\nu(U_n) = 0$ uniformly for $\nu \in D$.
 		\end{enumerate}
 \end{proposition}
 For a proof of this result, see \eg II.9.8 in \citet{schaefer:1974}.
 We use this proposition in order to describe weakly compact operators on spaces $C(K)$.
-As usual we naturally identify the bounded Borel functions on $K$ with a subspace $B(K)$ of $M(K)' = C(K)''$, note that in
+As usual we naturally identify the bounded Borel functions on $K$ with a subspace $B(K)$ of\/ $M(K)' = C(K)''$, note that in
 general, $C(K) \not\subset B(K) \not\subset C(K)''$.
 
 \begin{proposition}\label{prop:b4-2.4}
@@ -572,7 +572,7 @@ Now condition (c) of Proposition~\ref{prop:b4-2.3} shows that $\{R'y'
 weakly compact.
 Thus $R$ is weakly compact as well.
 
-In case $G = C(K)$ the equivalence of $(a)$ and $(d)$ is a consequence of
+In case $G = C(K)$ the equivalence of\/ $(a)$ and $(d)$ is a consequence of
 two results. First, \emph{Eberlein's Theorem} states that for the weak topology in any Banach space compactness and sequential compactness are
 equivalent.
 Second, \emph{Lebesgue's Dominated Convergence Theorem} assures
@@ -672,7 +672,7 @@ to show that $\lim_{t\downarrow 0}\langle T(t)f-f,\nu\rangle = 0$ for every $f \
 Due to Lebesgue's Dominated Convergence Theorem this is true whenever
 $\lim_{t\downarrow0}(T(t)f)(x) = f(x)$ for every $f \in C(K)$, $x \in K$.
 Given $f$, $x$
-and $\epsilon > 0$ there exists an open neighborhood $U$ of $x$ such that
+and $\epsilon > 0$ there exists an open neighborhood $U$ of\/ $x$ such that
 $|f(x) - f(y)| < \epsilon$ for every $y \in U$.
 Then we have
 \begin{align*} 
@@ -774,7 +774,7 @@ More generally we have the following result.
 	
 	Since the mapping $(t,x) \mapsto T(t)x$ is jointly continuous on $\R_+ \times G$ and since $K$ is compact, the set $M_t \coloneq \{T(s)Kx \colon 0 \leq s \leq t, \|x\| \leq 1\}$ is relatively compact in $G$. Having in mind that $\int_0^t T(t-s)KS(s)x \,\ds$ $(x \in G)$ is the norm limit of Riemann sums, one observes that 
 	$(ct)^{-1}\int_0^t T(t-s)KS(s)x \,\ds$ is an element of the closed convex hull
-	 $\overline{\mathrm{co}(M_t)}$ of $M_t$, where $c \coloneq \sup \{\|S(s)\| \colon 0 \leq s \leq t\}$ and $\|x\| \leq 1$. Since $\overline{\mathrm{co}(M_t)}$ is compact (see II.4.3 in \citet{schaefer:1966}) the assertion follows.
+	 $\overline{\mathrm{co}(M_t)}$ of\/ $M_t$, where $c \coloneq \sup \{\|S(s)\| \colon 0 \leq s \leq t\}$ and $\|x\| \leq 1$. Since $\overline{\mathrm{co}(M_t)}$ is compact (see II.4.3 in \citet{schaefer:1966}) the assertion follows.
 \end{proof}
 %% --
 We will now show that for quasi-compact semigroups the asymptotic behavior is similar to the one stated for eventually compact semigroups in Theorem~\ref{thm:b4-2.1}. 
@@ -798,14 +798,14 @@ However, the rate of decay cannot be chosen arbitrarily large.
 \begin{proof} We have $\omega_{ess}(\TT) < 0$, hence $r_{ess}(T(1)) < 1$ (see A-III,\,(3.10)).
 
 Therefore $\{z \in \sigma(T(1)) \colon |z| \geq 1\}$ is a finite set and contains only poles of finite algebraic multiplicity (\cf A-III,\,(3.8)). 
-Let $P$ denote the spectral projection of $T(1)$ corresponding to $\{z \in \sigma(T(1))\colon |z| \geq 1\}$. 
-Then A-III, Corollary~6.5 implies that $\{\lambda \in \sigma(A) \colon \Re(\lambda) \geq 0\}$ is a finite set, contains only poles of $R(\cdot,A)$ of finite algebraic multiplicity and $P = P_1+P_2+ \ldots +P_m$. 
-One can now prove the representation of $T(t)$ stated in \eqref{eq:b4-2.5} in the same way as statement \eqref{eq:b4-2.1}.
+Let $P$ denote the spectral projection of\/ $T(1)$ corresponding to $\{z \in \sigma(T(1))\colon |z| \geq 1\}$. 
+Then A-III, Corollary~6.5 implies that $\{\lambda \in \sigma(A) \colon \Re(\lambda) \geq 0\}$ is a finite set, contains only poles of\/ $R(\cdot,A)$ of finite algebraic multiplicity and $P = P_1+P_2+ \ldots +P_m$. 
+One can now prove the representation of\/ $T(t)$ stated in \eqref{eq:b4-2.5} in the same way as statement \eqref{eq:b4-2.1}.
 \end{proof}
 %% --
 In case we consider positive quasi-compact semigroups on $C_{0}(X)$ one can combine Theorem~\ref{thm:b4-2.10} with the results of B-III. 
 For example, B-III, Corollary~2.11 assures that, in case there is at least one eigenvalue with nonnegative real part, the generator has a strictly dominant eigenvalue $r \in \R$. 
-Thus in \eqref{eq:b4-2.5} the operators $T_j(t)$ belonging to $\lambda_j = r$ will determine the long-term behavior of $(T(t))$. More precisely, one has the following.
+Thus in \eqref{eq:b4-2.5} the operators $T_j(t)$ belonging to $\lambda_j = r$ will determine the long-term behavior of\/ $(T(t))$. More precisely, one has the following.
 %% --
 \begin{corollary}\label{cor:b4-2.11}%
 \index{semigroup!quasi-compact semigroup}
@@ -813,7 +813,7 @@ Thus in \eqref{eq:b4-2.5} the operators $T_j(t)$ belonging to $\lambda_j = r$ wi
 Let $\TT = (T(t))_{t \geq 0}$ be a positive semigroup on $C_{0}(X)$ which is quasi-compact and let $A$ be its generator.
 \begin{enumerate}[\upshape (i)]
 	\item	
-	Let $r$ be an eigenvalue of $A$ admitting a stricly positive eigenfunction and satisfying $\Re r \geq 0$. 
+	Let $r$ be an eigenvalue of\/ $A$ admitting a stricly positive eigenfunction and satisfying $\Re r \geq 0$. 
     Then $r = \omega_{0}(\TT) = s(A)$ and there is a positive projection $P$ of finite rank such that for suitable constants $\delta > 0$, $M \geq 1$ we have
 	\begin{equation}\label{eq:b4-2.6}
 		\|\eu^{-rt}T(t) - P\| \leq M \cdot \eu^{-\delta t} \quad \text{for all} \quad t \geq 0 \text{.}
@@ -831,7 +831,7 @@ In both cases $(i)$ and $(ii)$ the estimates \eqref{eq:b4-2.3} for $\|T(t)f\|$ h
 \begin{proof}
 	\begin{enumerate}[\upshape (i), wide, labelindent=.5em]
 		\item 
-		By B-III, Corollary~2.11 we know that $s(A)$ is a strictly dominant eigenvalue of $A$. 
+		By B-III, Corollary~2.11 we know that $s(A)$ is a strictly dominant eigenvalue of\/ $A$. 
         By Theorem~\ref{thm:b4-2.10} both $s  \coloneq  s(A)$ and $r$ are poles of the resolvent. 
         Moreover, there exists a positive measure $\nu$ such that $A^*\nu = s\nu$. 
         Denoting the strictly positive eigenfunction corresponding to $r$ by $h$ we have $\langle h,\nu \rangle > 0$. 
@@ -886,9 +886,9 @@ By monotonicity this equation has a unique solution $r \geq 0$ if and only if
 	m(0) + \int_0^{\infty} \exp\left(\int_0^y m(z) \, dz\right)\diff{\nu}(y) \geq \alpha .
 \end{equation}
 %% --
-In case $\alpha$, $\nu$ and $m$ satisfy \eqref{eq:b4-2.10} and $m(\infty) < 0$, then $g_r$ is a strictly positive eigenfunction of $A$ corresponding to $r \geq 0$. 
+In case $\alpha$, $\nu$ and $m$ satisfy \eqref{eq:b4-2.10} and $m(\infty) < 0$, then $g_r$ is a strictly positive eigenfunction of\/ $A$ corresponding to $r \geq 0$. 
 Thus all assumptions of Corollary~\ref{cor:b4-2.11}\,(i) are satisfied. 
-In addition, the semigroup is irreducible if (and only if) the support of $\nu$ is an unbounded subset of $[0,\infty)$.
+In addition, the semigroup is irreducible if (and only if) the support of\/ $\nu$ is an unbounded subset of\/ $[0,\infty)$.
 \end{example}
 
 Similar examples will be discussed in the next section and in  C-IV, Section~3.
@@ -941,7 +941,7 @@ In particular, we will show in Theorem~\ref{thm:b4-3.7}, resp., Corollary~\ref{c
 
 Let $F$ be a Banach space, let $E = C([-1,0],F)$ be the Banach space of all continuous functions on $[-1,0]$ with values in $F$, normed by the supremum norm, and let $\Phi$ be a bounded linear operator from $E$ into $F$.
 For $u \in C([-1,\infty),F)$ and $t \geq 0$ we define the function $u_{t} \in E$ by $u_{t}(s) \coloneq  u(t+s)$ for all $s \in [-1,0]$.
-This is the \emph{history segment} of $u$ with length $1$ starting at $t-1$.
+This is the \emph{history segment} of\/ $u$ with length $1$ starting at $t-1$.
 Furthermore, let $B$ be the generator of a strongly continuous semigroup on $F$ such that $B - w$ generates a contraction semigroup for some $w \in \R_{+}$.
 This additional condition can always be satisfied by renorming the Banach space $F$ (see \eg \citet[Theorem~2.13]{goldstein:1985a}).
 
@@ -1002,7 +1002,7 @@ First we show that $A$ is a generator on $E$.
 D(A_{0})  \coloneq  \{f \in C^1([-1,0],F) \colon f(0) \in D(B), f'(0) = Bf(0)\} .
 \]
 %% --
-If $(S(t))_{t\geq 0}$ is the semigroup on $F$ generated by $B$ and $\omega_0$ the growth bound of $(S(t))_{t\geq 0}$, then $A_{0}$ generates the semigroup $(T_{0}(t))_{t\geq 0}$ given by
+If $(S(t))_{t\geq 0}$ is the semigroup on $F$ generated by $B$ and $\omega_0$ the growth bound of\/ $(S(t))_{t\geq 0}$, then $A_{0}$ generates the semigroup $(T_{0}(t))_{t\geq 0}$ given by
 %% --
 \[
 (T_{0}(t)f)(s) = \begin{cases}
@@ -1071,7 +1071,7 @@ The translation property \eqref{eq:b4-3.T} enables us to specify the corresponde
 %% --
 \begin{proof} Evidently $u \in C([-1,\infty),F)$ for $g \in D(A)$,
 since $\int_{0}^{t} T(s)g \ds  \in D(A)$.
-From A-I, Proposition 1.6.\,(iii), the definition of $D(A)$ and since $\int_{0}^{t} T(s)g \ds  \in D(A)$, we obtain
+From A-I, Proposition 1.6.\,(iii), the definition of\/ $D(A)$ and since $\int_{0}^{t} T(s)g \ds  \in D(A)$, we obtain
 %% --
 \begin{align*}
 	(T(t)g)(0) - g(0) &= \left[A\left(\int_{0}^{t} T(s)g  \ds \right)\right](0) = \\
@@ -1099,7 +1099,7 @@ Therefore $\dot{u}(t) = Bu(t) + \Phi(u_t)$, \ie $u$ solves \eqref{eq:b4-3.RCP}.
 In order to show uniqueness of the solution, we take $w$ to be a solution of \eqref{eq:b4-3.RCP} satisfying $w_{0} = 0$. 
 Let $x(t) \coloneq  w_t$, $t \geq 0$. 
 It is easy to see that $x(t) \in C^1([-1,0],F)$. Moreover, since $\dot{w}(0) = \dot{w}(t) = Bw(t) + \Phi(w_t)$, we obtain $x(t) \in D(A)$. 
-By the definition of $A$ we have $Ax(t) = \dot{w}_t$. 
+By the definition of\/ $A$ we have $Ax(t) = \dot{w}_t$. 
 On the other hand, $x(\cdot) \in C^1([0,\infty),E)$ and
 \[
 (\dot{x}(t))(s) = \lim_{h \to 0} 1/h \cdot (w_{t+h}(s) - w_t(s))
@@ -1117,7 +1117,8 @@ This proves $w \equiv 0$.
 \begin{enumerate}[\upshape (i), wide, labelindent=.5em]
 
 \item 
-By similar arguments the following can be proved. If $u$ is a solution of \eqref{eq:b4-3.RCP} such that $u_{0} \in D(A)$, then $x$ given by $x(t) \coloneq  u_t$ is a solution of the abstract Cauchy problem associated with the operator $A$ defined in \eqref{eq:b4-3.1}. 
+By similar arguments the following can be proved. 
+If $u$ is a solution of \eqref{eq:b4-3.RCP} such that $u_{0} \in D(A)$, then $x$ given by $x(t) \coloneq  u_t$ is a solution of the abstract Cauchy problem associated with the operator $A$ defined in \eqref{eq:b4-3.1}. 
 In this sense, \eqref{eq:b4-3.RCP} and the semigroup generated by $A$ correspond to each other.
 
 \item 
@@ -1167,16 +1168,16 @@ Let $t > 1$.
 By the translation property \eqref{eq:b4-3.T} we have $T(t)f(s) = T(t+s)f(0)$. Whenever $t + s > 0$, then Remark (ii) following Corollary~\ref{cor:b4-3.2} shows that $(T(t)f)(s) = (T(t+s)f)(0) = u(t+s)$ is differentiable from $s \in [-1,0]$ for each $f \in E$.
 
 Since $t > 1$, we thus have $T(t)f \in C^1([-1,0],F)$ for all $f \in E$. 
-The \emph{Closed Graph Theorem} yields the continuity of $T(t)$ from $E$ into $C^1$. 
-Hence $T(t)$ maps the unit ball of $E$ into a bounded set of $C^1([-1,0],F)$. 
-Again we use the assertion that $\dim F < \infty$ and obtain by the \emph{Theorem of Arzela-Ascoli} that every bounded set of $C^1([-1,0],F)$ is relatively compact in $E$. 
+The \emph{Closed Graph Theorem} yields the continuity of\/ $T(t)$ from $E$ into $C^1$. 
+Hence $T(t)$ maps the unit ball of\/ $E$ into a bounded set of\/ $C^1([-1,0],F)$. 
+Again we use the assertion that $\dim F < \infty$ and obtain by the \emph{Theorem of Arzela-Ascoli} that every bounded set of\/ $C^1([-1,0],F)$ is relatively compact in $E$. 
 Thus $T(t)$ is compact for each $t > 1$.
 \end{proof}
 %% --
 The assertion of Corollary~\ref{cor:b4-3.3} remains true if $(S(t))_{t \geq 0}$ is a compact semigroup on a (not necessarily finite dimensional) Banach space $F$ (see \citet{traviswebb:1974}).
 
 In order to describe the asymptotic behavior of the solutions of \eqref{eq:b4-3.RCP} it is enough to examine the corresponding semigroup $(T(t))_{t \geq 0}$ on $E$. 
-Indeed, Corollary~\ref{cor:b4-3.2} shows that the solutions $u$ are given by $u(t) = (T(t)g)(0)$ for all $t > 0$ and thus the long term behavior of $u$ can be deduced from that one of $(T(t))_{t \geq 0}$. 
+Indeed, Corollary~\ref{cor:b4-3.2} shows that the solutions $u$ are given by $u(t) = (T(t)g)(0)$ for all $t > 0$ and thus the long term behavior of\/ $u$ can be deduced from that one of\/ $(T(t))_{t \geq 0}$. 
 Our approach uses the characterization of the stability of the semigroup $(T(t))_{t \geq 0}$ by the location of the spectrum $\sigma(A)$ of the generator $A$ as developed in A-IV, Section~1, B-IV, Section~1 and C-IV, Section~1.
 
 We define, for $\lambda \in \C$, operators $\Phi_\lambda \in \mathcal{L}(F)$ by
@@ -1184,7 +1185,7 @@ We define, for $\lambda \in \C$, operators $\Phi_\lambda \in \mathcal{L}(F)$ by
 	\Phi_\lambda x  \coloneq  \Phi(e_\lambda \otimes x) \, , \, x \in F \, .
 \end{equation}
 Since $\Phi_\lambda$ is bounded, the operator $B + \Phi_\lambda$ is a generator on $F$. 
-The spectrum of $A$ can now be characterized in terms of the spectrum of the operators $B + \Phi_\lambda$.
+The spectrum of\/ $A$ can now be characterized in terms of the spectrum of the operators $B + \Phi_\lambda$.
 
 \begin{proposition}\label{prop:b4-3.4}
 	Take the operators $A$, $B$ and $\Phi$ as above. 
@@ -1243,7 +1244,7 @@ Hence $(T(t))_{t \geq 0}$ is a positive semigroup again by C-II, Proposition~4.1
 %% --
 \begin{remark*}
 Suppose that $\Phi$ has no mass in zero (\ie  for every $\epsilon > 0$ there exists $\delta > 0$ such that $\|\Phi f\| \leq \epsilon \|f\|$ for all $f \in E$, supp$(f) \subset [-\delta,0])$. 
-Then the positivity hypotheses in the above proposition are necessary in order to obtain positivity of $(T(t))_{t \geq 0}$ (\cf B-II,1.22 for the case $\dim F < \infty$ and \citet{kerscher:1986} for the general case).
+Then the positivity hypotheses in the above proposition are necessary in order to obtain positivity of\/ $(T(t))_{t \geq 0}$ (\cf B-II,1.22 for the case $\dim F < \infty$ and \citet{kerscher:1986} for the general case).
 \end{remark*}
 %% --
 \begin{proposition}\label{prop:b4-3.6}
@@ -1323,7 +1324,7 @@ We are now able to characterize the spectral bound of the generator $A$ in $E$ t
 	A justification for this terminology will be given in a remark following Corollary~3.8 of Chapter C-IV.
 \end{remark*}
 %% --
-The characterization \eqref{eq:b4-3.6} of $s(A)$ uses the continuity of $\lambda \mapsto s(B + \Phi_{\lambda})$. 
+The characterization \eqref{eq:b4-3.6} of\/ $s(A)$ uses the continuity of\/ $\lambda \mapsto s(B + \Phi_{\lambda})$. 
 In the general case we apply the following lemma which is due to W.~Arendt.
 %% --
 
@@ -1355,15 +1356,15 @@ If $\mu = s(B+\Phi_{\mu})$, then $\mu \in \sigma(B+\Phi_{\mu})$ by C-III, Theore
 If $\mu < s(B+\Phi_{\mu})$, we show $r \in \sigma(B+\Phi_{\mu})$ for every $r \in (\mu,s(B+\Phi_{\mu})]$.
 %% --
 Let $r \in (\mu,s(B+\Phi_{\mu})]$ and assume $r \in \rho(B+\Phi_{\mu})$. 
-By the definition of $\mu$ we have $r \in \rho(B+\Phi_{\mu+\epsilon})$ for all $\epsilon > 0$. 
+By the definition of\/ $\mu$ we have $r \in \rho(B+\Phi_{\mu+\epsilon})$ for all $\epsilon > 0$. 
 By C-III,Theorem~1.1 $R(r,B+\Phi_{\mu+\epsilon}) \geq 0$ and by the assumption $R(r,B+\Phi_{\mu}) \geq 0$ as well. 
-Now C-III,Theorem~1.1 implies $r > s(B+\Phi_{\mu})$ which yields a contradiction to the choice of $r$. 
+Now C-III,Theorem~1.1 implies $r > s(B+\Phi_{\mu})$ which yields a contradiction to the choice of\/ $r$. 
 Thus $r \in \sigma(B+\Phi_{\mu})$ for every $r \in (\mu,s(B+\Phi_{\mu})]$ and hence $\mu \in \sigma(B+\Phi_{\mu})$. 
 Consequently $s(A) \geq \mu$.
 \end{enumerate}
 
 Finally we assume $s(A) > \mu$. 
-The definition of $\mu$ yields $s(A) > s(B+\Phi_{s(A)})$. 
+The definition of\/ $\mu$ yields $s(A) > s(B+\Phi_{s(A)})$. 
 Hence $s(A) \in \rho(B+\Phi_{s(A)})$ and thus $s(A) \in \rho(A)$ by Proposition~\ref{prop:b4-3.4}. 
 This yields a contradiction, since $A$ generates a positive semigroup, hence $s(A) = \mu$.
 \end{proof}
@@ -1408,7 +1409,7 @@ Since $\omega_{0}(A) = s(A)$ by \eqref{eq:b4-1.1}, we obtain from Corollary~\ref
 \end{example}
 %% --
 The preceding considerations remain true if we consider an (arbitrary) finite time delay $\tau$ where $0 < \tau < \infty$. 
-Clearly, \eqref{eq:b4-3.RCP} can be treated as a differential equation with corresponding generator $A$ (see \eqref{eq:b4-3.1} for the definition) in $C([-\tau,0],F)$ (instead of $C([-1,0],F)$).
+Clearly, \eqref{eq:b4-3.RCP} can be treated as a differential equation with corresponding generator $A$ (see \eqref{eq:b4-3.1} for the definition) in $C([-\tau,0],F)$ (instead of\/ $C([-1,0],F)$).
 
 \begin{example}\label{ex:b4-3.10}
 	In order to illustrate the consequences of Corollary~\ref{cor:b4-3.8} we consider the the following Cauchy problem for a positive constant  $\tau > 0$.
@@ -1488,7 +1489,7 @@ If we define $u(t) \coloneq \eu^{\lambda't}$ for $t \geq 0$ then the following h
 pu(t) + qu(t-\tau) = p\eu^{\lambda't} + q\eu^{\lambda't}\eu^{-\lambda'\tau} = (p+q\eu^{-\lambda'\tau})\eu^{\lambda't} = \lambda'\eu^{\lambda't} = \dot{u}(t) .
 \]
 %% --
-Thus $u$ is a solution of $\eqref{eq:b4-3.9}_{\tau}$ which is exponentially increasing as $t \to \infty$. 
+Thus $u$ is a solution of\/ $\eqref{eq:b4-3.9}_{\tau}$ which is exponentially increasing as $t \to \infty$. 
 In particular $\eqref{eq:b4-3.9}_{\tau}$ is not stable.
 
 The precise region of stability in the scalar valued case is given, \eg in \citet{hadeler:1978}  and  \citet[p.107ff]{hale:1977}.

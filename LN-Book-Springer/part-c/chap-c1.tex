@@ -35,15 +35,15 @@ By definition, a Banach lattice is a Banach space $ (E,\|\cdot\|) $ which is end
  	and  $\lambda \geq 0$,}
 \end{align*}
 %% --
-\ie the ordering is compatible with the Banach space structure and the linear structure of $ E $.
+\ie the ordering is compatible with the Banach space structure and the linear structure of\/ $ E $.
 We elaborate this in more detail now.
 
 
 Any (real) vector space with an ordering satisfying $ \text{(LO$_{1}$)} $ and $ \text{(LO$_{2}$)} $ is called an \emph{ordered vector space}.
-The property expressed in $\text{(LO$_{1}$)}$ is sometimes called \emph{translation invariance} and implies that the ordering of an ordered vector space $ E $ is completely determined by the positive part $ E_{+} = \{f \in E \colon f \geq 0\} $ of $ E $.
+The property expressed in $\text{(LO$_{1}$)}$ is sometimes called \emph{translation invariance} and implies that the ordering of an ordered vector space $ E $ is completely determined by the positive part $ E_{+} = \{f \in E \colon f \geq 0\} $ of\/ $ E $.
 In fact, one has $ f \leq g $ if and only if $ g - f \in E_{+} $.
-$ \text{(LO$_{1}$)} $ together with $ \text{(LO$_{2}$)} $ furthermore imply that the positive part of $ E $ is a convex set and a cone with vertex $ 0 $ (often called the \emph{positive cone} of $ E $).
-It is easily verified that conversely any proper convex cone $ C $ with vertex $ 0 $ in $ E $ is the positive part of $ E $ with respect to a uniquely determined compatible ordering.
+$ \text{(LO$_{1}$)} $ together with $ \text{(LO$_{2}$)} $ furthermore imply that the positive part of\/ $ E $ is a convex set and a cone with vertex $ 0 $ (often called the \emph{positive cone} of\/ $ E $).
+It is easily verified that conversely any proper convex cone $ C $ with vertex $ 0 $ in $ E $ is the positive part of\/ $ E $ with respect to a uniquely determined compatible ordering.
 
 An ordered vector space $ E $ is called a \emph{vector lattice} if any two elements $ f $, $ g $ in $ E $ have a \emph{supremum}, which is denoted by $ \sup(f,g) $ or by $ f \vee g $, and an \emph{infimum}, denoted by $ \inf(f,g) $ or by $ f \wedge g $.
 It is obvious that the existence of, \eg the supremum of any two elements in an ordered vector space implies the existence of the supremum of any finite number of elements in $ E $ and, since $ f \leq g $ is equivalent to $ -g \leq -f $ this automatically implies the existence of finite infima.
@@ -51,12 +51,12 @@ It is obvious that the existence of, \eg the supremum of any two elements in an 
 This gives rise to the following definitions.
 %% --
 \begin{align*}
-	|f| 	& \coloneq \sup(f,-f)  \text{ is called the \emph{absolute value} of $ f $,} \\
-	f^{+}	& \coloneq \sup(f,0)   \text{ is called the \emph{positive part} of $ f $,} \\
-	f^{-}	& \coloneq \sup(-f,0)  \text{ is called the \emph{negative part} of $ f $.}
+	|f| 	& \coloneq \sup(f,-f)  \text{ is called the \emph{absolute value} of\/ $ f $,} \\
+	f^{+}	& \coloneq \sup(f,0)   \text{ is called the \emph{positive part} of\/ $ f $,} \\
+	f^{-}	& \coloneq \sup(-f,0)  \text{ is called the \emph{negative part} of\/ $ f $.}
 \end{align*}
 %% --
-Note that the negative part of $ f $ is positive.
+Note that the negative part of\/ $ f $ is positive.
 We call two elements $ f $ and $ g $ of a vector lattice \emph{orthogonal} or \emph{lattice disjoint} and write $ f \perp g $ if $ \inf(|f|,|g|) = 0 $.
 
 However, suprema (infima) of infinite majorized subsets need not exist in a vector lattice.
@@ -119,7 +119,7 @@ Any general formula relating a finite number of \emph{variables} to each other b
 \end{quote}
 %% --
 In fact, we see below that any Banach lattice $ E $ is, as a vector lattice, \emph{locally} of type $ C(X) $, more exactly:
-Given any finite number $ x_{1},\ldots,x_{n} $ of elements in $ E $, there is a compact topological space $ X $ and a vector sublattice $ J $ of $ E $ which is isomorphic to $ C(X) $ and contains $ x_{1},\ldots,x_{n} $ (see Section.~\ref{sec:c1-4}).
+Given any finite number $ x_{1},\ldots,x_{n} $ of elements in $ E $, there is a compact topological space $ X $ and a vector sublattice $ J $ of\/ $ E $ which is isomorphic to $ C(X) $ and contains $ x_{1},\ldots,x_{n} $ (see Section.~\ref{sec:c1-4}).
 The above principle is an easy consequence of the following:
 In a space $ C(X) $ it is clear that a formula of the type considered above need only be verified pointwise, \ie  in $ \R $.
 
@@ -130,8 +130,8 @@ The reader may now be prepared to follow a concise presentation of the most basi
 \index{Banach lattice!ideal}%
 \index{Banach lattice!band}
 
-The notion of a \emph{vector sublattice} of a vector lattice $ E $ is self-explanatory, but it should be pointed out that a vector subspace $ F $ of $ E $ which is a vector lattice for the ordering induced by $ E $ need not be a vector sublattice of $ E $ (formation of suprema may differ in $ E $ and in $ F $), and that a vector sublattice need not contain (or may lead to different) infinite suprema and infima.
-The following are necessary and sufficient conditions on a vector subspace $ G $ of $ E $ to be a vector sublattice.
+The notion of a \emph{vector sublattice} of a vector lattice $ E $ is self-explanatory, but it should be pointed out that a vector subspace $ F $ of\/ $ E $ which is a vector lattice for the ordering induced by $ E $ need not be a vector sublattice of\/ $ E $ (formation of suprema may differ in $ E $ and in $ F $), and that a vector sublattice need not contain (or may lead to different) infinite suprema and infima.
+The following are necessary and sufficient conditions on a vector subspace $ G $ of\/ $ E $ to be a vector sublattice.
 %% --
 \begin{enumerate}[\upshape (a)]
 	\item 
@@ -155,7 +155,7 @@ A \emph{band} in a vector lattice $ E $ is an ideal which contains arbitrary sup
 \textit{$ B $ is a band in $ E $ if $ B $ is an ideal in $ E $ and $ \sup M $ is contained in $ B $ whenever $ M $ is contained in $ B $ and has a supremum in $ E $.}
 \end{quote}
 %% --
-Since the notions of sublattice, ideal, band are invariant under the formation of arbitrary intersections, there exists, for any subset $ B $ of $ E $, a uniquely determined smallest sublattice (ideal, band) of $ E $ containing $ B $, \ie the \emph{sublattice} (\emph{ideal}, \emph{band}) \emph{generated by} $ B $.
+Since the notions of sublattice, ideal, band are invariant under the formation of arbitrary intersections, there exists, for any subset $ B $ of\/ $ E $, a uniquely determined smallest sublattice (ideal, band) of\/ $ E $ containing $ B $, \ie the \emph{sublattice} (\emph{ideal}, \emph{band}) \emph{generated by} $ B $.
 
 If we denote by $ B^{d} $ the set 
 %% --
@@ -163,7 +163,7 @@ If we denote by $ B^{d} $ the set
 \{h \in E \colon \inf(|h|,|f|) = 0 \text{ for all $f \in B$}\},
 \]
 %% --
-then $ B^{d} $ is a band for any subset $ B $ of $ E $, and $ (B^{d})^{d} = B^{dd} $ is a band containing $ B $.
+then $ B^{d} $ is a band for any subset $ B $ of\/ $ E $, and $ (B^{d})^{d} = B^{dd} $ is a band containing $ B $.
 If $ E $ is a normed vector lattice (more generally, if $ E $ is archimedean ordered, then $ B^{dd} $ is the band generated by $ B $ (see, \eg \citet{schaefer:1974}).
 
 If two ideals $ I $,  $ J $ of a vector lattice $ E $ have trivial intersection $ \{0\} $, then $ I $ and $ J $ are \emph{lattice disjoint}, \ie $ I \subset J^{d} $.
@@ -171,11 +171,11 @@ Thus if $ E $ is the direct sum of two ideals $ I $,  $ J $, then one has automa
 In general, an ideal $ I $ need not have a complementary ideal $ J $ even if $ I = I^{dd} $ is a band.
 This amounts to the same as saying that even if $ I = I^{dd} $ (which is always true if $ I $ is a band in a normed vector lattice), one need not necessarily have $ E = I + I^{d} $.
 
-An ideal $ I $ is called a \emph{projection band} if it does have a complementary ideal, and in this case the projection of $ E $ onto $ I $ with kernel $ I^{d} $ is called the \emph{band projection} belonging to $ I $.
-An example of a band which is not a projection band is furnished by the subspace of $ C([0,1]) $ consisting of the functions vanishing on $ [0,1/2] $.
+An ideal $ I $ is called a \emph{projection band} if it does have a complementary ideal, and in this case the projection of\/ $ E $ onto $ I $ with kernel $ I^{d} $ is called the \emph{band projection} belonging to $ I $.
+An example of a band which is not a projection band is furnished by the subspace of\/ $ C([0,1]) $ consisting of the functions vanishing on $ [0,1/2] $.
 
 The \emph{Riesz Decomposition Theorem} asserts that in an order complete vector lattice every band is a projection band.
-As a consequence, if $ E $ is order complete and $ B $ is an arbitrary subset of $ E $, then $ E $ is the direct sum of the complementary bands $ B^{d} $ and $ B^{dd} $.
+As a consequence, if $ E $ is order complete and $ B $ is an arbitrary subset of\/ $ E $, then $ E $ is the direct sum of the complementary bands $ B^{d} $ and $ B^{dd} $.
 
 This theorem, which is quite easy to prove, is widely used in analysis and gives an abstract background to, \eg the decomposition of a measure into atomic and diffuse parts (the atomic measures being those contained in the band generated by the point measures, the diffuse measures those disjoint to the latter). Or, more specifically, to the well-known decomposition of a measure on $ [a,b] $ into an atomic part and a diffuse part, which latter can in turn be decomposed into the sum of a measure which is \emph{absolutely continuous} (which means, contained in the band generated by Lebesgue measure) and a \emph{singular measure} (which means, a diffuse measure disjoint to Lebesgue measure).
 
@@ -189,15 +189,15 @@ The situation, where every closed ideal is a band, will be briefly discussed in 
 \index{Banach lattice!quasi-interior point}
 \index{quasi-interior point|(}
 
-An element $ u $ in the positive cone of a vector lattice $ E $ is called an \emph{order unit} if the ideal generated by $ u $ is all of $ E $.
-If the band generated by $ u $ is all of $ E $ (which is equivalent to $ \{u\}^{d} = 0 $ whenever $ E $ is archimedean, hence in particular if $ E $ is a normed vector lattice), then $ u $ is called a \emph{weak order unit} of $ E $.
-If $ E $ is a Banach lattice, then any order unit in $ E $ is an interior point of the positive cone $ E_{+} $, and conversely any interior point of $ E_{+} $ must be an order unit of $ E $.
+An element $ u $ in the positive cone of a vector lattice $ E $ is called an \emph{order unit} if the ideal generated by $ u $ is all of\/ $ E $.
+If the band generated by $ u $ is all of\/ $ E $ (which is equivalent to $ \{u\}^{d} = 0 $ whenever $ E $ is archimedean, hence in particular if $ E $ is a normed vector lattice), then $ u $ is called a \emph{weak order unit} of\/ $ E $.
+If $ E $ is a Banach lattice, then any order unit in $ E $ is an interior point of the positive cone $ E_{+} $, and conversely any interior point of\/ $ E_{+} $ must be an order unit of\/ $ E $.
 Every space $ C(K) $ has order units (namely, the strictly positive functions), and conversely by the Kakutani-Krein Representation Theorem (see Section~\ref{sec:c1-4}), every Banach lattice with an order unit is isomorphic to a space $ C(K) $.
 
-If an element $ u $ in the positive cone of a Banach lattice $ E $ has the property that the closed ideal generated by $ u $ is all of $ E $, then $ u $ is called a \emph{quasi-interior point} of $ E_{+} $.
+If an element $ u $ in the positive cone of a Banach lattice $ E $ has the property that the closed ideal generated by $ u $ is all of\/ $ E $, then $ u $ is called a \emph{quasi-interior point} of\/ $ E_{+} $.
 Quasi-interior points of the positive cone exist, \eg in any separable Banach lattice.
-If $ E = C(K) $, then the quasi-interior points and the interior points of $ E_{+} $ coincide, while the weak order units of $ E $ are the (positive) functions vanishing on a nowhere dense subset of $ K $.
-If $ E $ is a space $ L^{p}(\mu) $ with $ \sigma $-finite $ \mu $ and $ 1 \leq p < \infty $, then the weak order units and the quasi-interior points of $ E_{+} $ coincide with the functions strictly positive $ \mu $-a.e., while $ E_{+} $ does not contain any interior point, except in finite dimensions.
+If $ E = C(K) $, then the quasi-interior points and the interior points of\/ $ E_{+} $ coincide, while the weak order units of\/ $ E $ are the (positive) functions vanishing on a nowhere dense subset of\/ $ K $.
+If $ E $ is a space $ L^{p}(\mu) $ with $ \sigma $-finite $ \mu $ and $ 1 \leq p < \infty $, then the weak order units and the quasi-interior points of\/ $ E_{+} $ coincide with the functions strictly positive $ \mu $-a.e., while $ E_{+} $ does not contain any interior point, except in finite dimensions.
 %% --
 \section{Linear Forms and Duality}\label{sec:c1-3}%
 \index{Banach lattice!linear form}
@@ -207,7 +207,7 @@ A linear functional $ \phi $ on a vector lattice $ E $ is called
 \begin{enumerate}[\upshape (i)]
 
 \item
-\emph{order-bounded} if $ \phi $ is bounded on order intervals of $ E $,
+\emph{order-bounded} if $ \phi $ is bounded on order intervals of\/ $ E $,
 
 \item
 \emph{positive} if $ \phi(f) \geq 0 $ for all  $ f \geq 0 $, 
@@ -225,14 +225,14 @@ ordering given by
 \]
 %
 under which $ E^{\#} $ is an order complete vector lattice.
-In particular, positive part, negative part and absolute value exist for any order bounded functional on $ E $, the absolute value of $ \phi \in E^{\#} $ being given by
+In particular, positive part, negative part and absolute value exist for any order bounded functional on $ E $, the absolute value of\/ $ \phi \in E^{\#} $ being given by
 %% --
 \[
 	|\phi|(f) = \sup\{\phi(h) \colon |h| \leq f \text{ for $ f \in E_{+} $}\}.
 \]
 %% --
 As a consequence, one has $ |\phi(f)| \leq |\phi|(|f|) $ for all $ f $ in $ E $ whenever $ \phi $ is order bounded, and $ |\phi(f)| \leq \phi(|f|) $ if and only if $ \phi $ is positive.
-An order bounded linear functional $ \phi $ is called \emph{order-continuous} ($ \sigma $-\emph{order-continuous}) if both positive and negative part of $ \phi $ have the property that they transform any decreasing net (any decreasing sequence) with infimum $ 0 $ into a net (sequence) converging to $ 0 $ in $ \R $.
+An order bounded linear functional $ \phi $ is called \emph{order-continuous} ($ \sigma $-\emph{order-continuous}) if both positive and negative part of\/ $ \phi $ have the property that they transform any decreasing net (any decreasing sequence) with infimum $ 0 $ into a net (sequence) converging to $ 0 $ in $ \R $.
 The order-continuous ($ \sigma $-order-continuous) functionals form a band in $ E^{\#} $.
 
 In general, a vector lattice $ E $ need not admit any non-zero order-bounded linear functional.
@@ -242,7 +242,7 @@ Situations where every order-bounded functional is order-continuous will be brie
 
 If $ E $ is a Banach lattice, then the dual norm on $ E' = E^{\#} $ is a lattice norm, hence $ E' $ is an order-complete Banach lattice under the natural norm and order.
 The evaluation map from $ E $ into the second dual $ E'' $ is a lattice homomorphism (for the definition see Section~\ref{sec:c1-6}) into the band of order-continuous functionals on $ E' $.
-In particular, every dual Banach lattice $ E $ admits sufficiently many order-continuous functionals to separate the points of $ E $.
+In particular, every dual Banach lattice $ E $ admits sufficiently many order-continuous functionals to separate the points of\/ $ E $.
 %% --
 \section{AM- and AL-Spaces}\label{sec:c1-4}%
 \index{Banach lattice!AM-space}%
@@ -255,8 +255,8 @@ If the norm on a Banach lattice $ E $ satisfies
 \end{equation*}
 %% --
 then $ E $ is called an abstract M-space or an \emph{AM-space}.
-If, in addition, the unit ball of $ E $ contains a largest element $ u $, then $ u $ must be an order unit of $ E $ and $ E $ is then called an \emph{(AM)-space with unit}.
-Condition (M) in $ E $ implies that in the dual of $ E $ one has
+If, in addition, the unit ball of\/ $ E $ contains a largest element $ u $, then $ u $ must be an order unit of\/ $ E $ and $ E $ is then called an \emph{(AM)-space with unit}.
+Condition (M) in $ E $ implies that in the dual of\/ $ E $ one has
 %% --
 \begin{equation*}\label{eq:c1-3}
 	\mathrm{(L)} \quad \|f + g\| = \|f\| + \|g\| \text{ for $ f $, $ g \in E_{+}'$.} 
@@ -267,25 +267,25 @@ Thus the dual of an AM-space is an AL-space.
 
 It is quite easy to verify that, on the other hand, the dual of an AL-space is an AM-space with unit, the unit being the uniquely determined linear functional that coincides with the norm on the positive cone.
 Putting this together, one gets that the second dual of an AM-space $ E $ is an AM-space with unit.
-If $ E $ already has a unit $ u $, then $ u $ is also the unit of $ E'' $, so that the ideal of $ E'' $ generated by $ E $ is all of $ E'' $.
+If $ E $ already has a unit $ u $, then $ u $ is also the unit of\/ $ E'' $, so that the ideal of\/ $ E'' $ generated by $ E $ is all of\/ $ E'' $.
 By contrast, if $ E $ is an AL-space, then $ E $ is an ideal (even a band) in $ E'' $.
 Infinite-dimensional AL- or AM-spaces are never reflexive.
 
 The importance of AL- and AM-spaces in the general theory of Banach lattices is due to the fact that these spaces have very special concrete representations as function lattices and that, on the other hand, any general Banach lattice $ E $ is in a very intimate way connected to certain families of AL- and AM-spaces canonically associated with $ E $.
 Let us first discuss the natural representations of AM- and AL-spaces.
 
-If $ E $ is an AM-space with unit $ u $, then the set $ K $ of lattice homomorphisms from $ E $ into $ \R $ taking the value $ 1 $ on $ u $ is a non-empty, $ \sigma(E',E) $-compact subset of $ E' $ and the natural evaluation map from $ E $ into $ \R^{K} $ maps $ E $ isometrically onto the continuous real-valued functions on $ K $ (\cf  Section~\ref{sec:c1-6}).
+If $ E $ is an AM-space with unit $ u $, then the set $ K $ of lattice homomorphisms from $ E $ into $ \R $ taking the value $ 1 $ on $ u $ is a non-empty, $ \sigma(E',E) $-compact subset of\/ $ E' $ and the natural evaluation map from $ E $ into $ \R^{K} $ maps $ E $ isometrically onto the continuous real-valued functions on $ K $ (\cf  Section~\ref{sec:c1-6}).
 This is the \emph{Kakutani-Krein Representation Theorem}, which is an order-theoretic counterpart to the Gelfand Representation Theorem in the theory of commutative \CA-algebras.
-If $ E $ is an AM-space without unit, then the second dual of $ E $ has a unit and thus gives a representation of $ E $ as a closed sublattice of a space $ C(K) $.
+If $ E $ is an AM-space without unit, then the second dual of\/ $ E $ has a unit and thus gives a representation of\/ $ E $ as a closed sublattice of a space $ C(K) $.
 
-If $ E $ is an AL-space, then the representation of the dual of $ E $ as a space $ C(K) $ leads to an interpretation of the elements of the bidual of $ E $ as Radon measures on $ K $.
+If $ E $ is an AL-space, then the representation of the dual of\/ $ E $ as a space $ C(K) $ leads to an interpretation of the elements of the bidual of\/ $ E $ as Radon measures on $ K $.
 If $ E_{+} $ has a quasi-interior point $ h $, then in this interpretation $ E $ consists exactly of the measures absolutely continuous with respect to (the measure corresponding to) $ h $, thus by the \emph{Radon-Nikodym-Theorem}, $ E = L^{1}(K,h) $.
-In general, a similar argument leads to a representation of $ E $ as a space $ L^{1}(X,\mu) $ constructed over a locally compact space $ X $.
+In general, a similar argument leads to a representation of\/ $ E $ as a space $ L^{1}(X,\mu) $ constructed over a locally compact space $ X $.
 
-If $ E $ is an arbitrary Banach lattice and $ f \in E_{+} $, then the ideal $ I $ generated by $ f $ in $ E $ (which is the union of the positive multiples of the interval $ [-f,f] $) can be made into an AM-space with unit $ f $ by endowing it with the gauge function $ p_{f} $ of $ [-f,f] $.
+If $ E $ is an arbitrary Banach lattice and $ f \in E_{+} $, then the ideal $ I $ generated by $ f $ in $ E $ (which is the union of the positive multiples of the interval $ [-f,f] $) can be made into an AM-space with unit $ f $ by endowing it with the gauge function $ p_{f} $ of\/ $ [-f,f] $.
 We denote $ (I,p_{f}) $ by $ E_{f} $.
 On the other hand, if $ f' $ is a positive linear functional on $ E $, then the mapping $ q_{f'} \colon f \mapsto \langle |f|,f'\rangle $ is a semi-norm on $ E $.
-The kernel $ J $ of $ q_{f'} $ is an ideal in $ E $, and the completion of $ E/J $ with respect to the norm canonically derived from $ q_{f'} $ becomes an AL-space which we denote by $ (E,x') $.
+The kernel $ J $ of\/ $ q_{f'} $ is an ideal in $ E $, and the completion of\/ $ E/J $ with respect to the norm canonically derived from $ q_{f'} $ becomes an AL-space which we denote by $ (E,x') $.
 A good illustration for these constructions is the following.
 
 If $ E = C(K) $ and if $ \mu $ is a positive linear form (Radon measure) on $ E $, then $ (E,\mu) $ is just $ L^{1}(K,\mu) $;
@@ -339,7 +339,7 @@ This condition is satisfied if and only if any one of the following equivalent a
     Every order-continuous linear form on $ E' $ belongs to $ E $.
     
     \item 
-    No closed sublattice of $ E $ is isomorphic to $ c_{0} $.
+    No closed sublattice of\/ $ E $ is isomorphic to $ c_{0} $.
 
 \end{enumerate}
 %% --
@@ -352,19 +352,19 @@ The most important examples of non-reflexive Banach lattices with this property 
 \index{lattice homomorphism|(}
 %% --
 A linear mapping $ T $ from an ordered Banach space $ E $ into an ordered Banach space $ F $ is called \emph{positive} (notation: $ T \geq 0 $) if $ Tf \in F_{+} $ for all $ f \in E_{+} $; $ T $ is called \emph{strictly positive} if $ T \geq 0 $ and $ \{f \in E \colon T|f| = 0\} = \{0\} $.
-The set of all positive linear mappings is a convex cone in the space $ \L{E,F} $ of all linear mappings from $ E $ into $ F $ defining the \emph{natural ordering} of $ \L{E,F} $.
+The set of all positive linear mappings is a convex cone in the space $ \L{E,F} $ of all linear mappings from $ E $ into $ F $ defining the \emph{natural ordering} of\/ $ \L{E,F} $.
 
-The linear subspace of $ \L{E,F} $ generated by the positive maps (i.e. the space of linear maps that can be written as differences of positive maps) is denoted by $ \mathcal{L}^{r}(E;F) $ and its elements are called \emph{regular} mappings.
+The linear subspace of\/ $ \L{E,F} $ generated by the positive maps (i.e. the space of linear maps that can be written as differences of positive maps) is denoted by $ \mathcal{L}^{r}(E;F) $ and its elements are called \emph{regular} mappings.
 If $ E $ and $ F $ are Banach lattices, then any regular mapping from $ E $ into $ F $ is continuous, but  $ \mathcal{L}^{r}(E;F) $ is in general a proper subspace of the space $ \L{E,F} $ of all continuous linear mappings.
-One has coincidence of $ \mathcal{L}^{r}(E;F) $ and $ \L{E,F} $, \eg when $ E = F $ is an order complete AM-space with unit or an AL-space.
+One has coincidence of\/ $ \mathcal{L}^{r}(E;F) $ and $ \L{E,F} $, \eg when $ E = F $ is an order complete AM-space with unit or an AL-space.
 At any rate, if $ F $ is order complete, then $ \mathcal{L}^{r}(E;F) $ under the natural ordering is an order-complete vector lattice, and a Banach lattice under the norm
 %% --
 \[
 	T \mapsto \|T\|_{r} = \| |T| \|,
 \]
 %% --
-the right hand side denoting the operator norm of the absolute value of $ T $.
-The absolute value of $ T \in  \mathcal{L}^{r}(E;F) $, if it exists, is given by
+the right hand side denoting the operator norm of the absolute value of\/ $ T $.
+The absolute value of\/ $ T \in  \mathcal{L}^{r}(E;F) $, if it exists, is given by
 %% --
 \[
 	|T|(f) \coloneqq \sup\{ Th \colon |h| \leq f , \text{ $ f \in E_{+} $} \} . 
@@ -414,9 +414,9 @@ which means more exactly $ E = E_{\R} \times E_{\R} $ with scalar multiplication
 	 (\alpha+\im\beta)(x,y) = (\alpha x-\beta y,\beta x+\alpha y)  .
 \]
 %
-The space $ E_{\R} $ will sometimes be called the \emph{underlying real Banach lattice} or the \emph{real part} of $ E $.
+The space $ E_{\R} $ will sometimes be called the \emph{underlying real Banach lattice} or the \emph{real part} of\/ $ E $.
 The classical complex Banach spaces $ C(X) $, $ L^{p}(\mu) $ are complex Banach lattices in this sense, the underlying real Banach lattices being the corresponding (real) subspaces of real-valued functions.
-We want to extend the formation of absolute values, which is a priori defined only in the real part of $ E $, in such a way that in the classical situation $ E = C(X) $ or $ E = L^{p}(\mu) $ the usual absolute value of a function is obtained.
+We want to extend the formation of absolute values, which is a priori defined only in the real part of\/ $ E $, in such a way that in the classical situation $ E = C(X) $ or $ E = L^{p}(\mu) $ the usual absolute value of a function is obtained.
 This is in fact possible by putting, for $ h = f + ig $ in $ E $,
 %% --
 \[
@@ -432,16 +432,16 @@ M = \{\Re( \eu^{\im\theta}h) \colon 0 \leq \theta \leq 2\pi\}
 \]
 %% --
 is contained and order bounded in the ideal generated in $ E_{\R} $ by $ |f| + |g| $, which in turn is by the Kakutani-Krein Representation Theorem isomorphic to a space $ C_{\R}(X) $ under the pointwise ordering.
-Now the pointwise supremum of $ M $ in $ \R^{X} $ is readily seen to be a continuous function (namely, the modulus of the complex valued continuous function corresponding to $ f + \im g $), so that $ M $ has a supremum in $ C_{\R}(X) = (E_{\R})_{|f|+|g|} $.
+Now the pointwise supremum of\/ $ M $ in $ \R^{X} $ is readily seen to be a continuous function (namely, the modulus of the complex valued continuous function corresponding to $ f + \im g $), so that $ M $ has a supremum in $ C_{\R}(X) = (E_{\R})_{|f|+|g|} $.
 
 Since the mapping $ f \mapsto |f| $ now has a meaning in $ E $, the definition of an ideal can be extended formally unchanged to the complex situation.
 We observe that $ |f+ \im g| = |f- \im g| \leq |f|+|g| $ implies that any ideal $ J $ in a complex Banach lattice 
 \index{ordered Banach space}
-is conjugation invariant and itself the complexification of the ideal $ J \cap E_{\R} $ of the real part of $ E $.
+is conjugation invariant and itself the complexification of the ideal $ J \cap E_{\R} $ of the real part of\/ $ E $.
 
 Suffice it now to say that the meaning of most of the terms introduced for real Banach lattices can be extended to the complex situation.
 Use the complex modulus or else, if the formation of suprema or infima is involved, relate them to real parts.
-For example $ f \in E $ is called \emph{positive} if $ f = |f| $ which means that $ f $ is a positive element of $ E_{\R} $, $ E $ is called order complete if $ E_{\R} $ is order complete, and an ideal $ J $ is called a band if the real part of $ J $ is a band.
+For example $ f \in E $ is called \emph{positive} if $ f = |f| $ which means that $ f $ is a positive element of\/ $ E_{\R} $, $ E $ is called order complete if $ E_{\R} $ is order complete, and an ideal $ J $ is called a band if the real part of\/ $ J $ is a band.
 
 We refer to Chapter II, Section 11 of \citet{schaefer:1974} for a detailed discussion of this and restrict ourselves to a short discussion of linear mappings.
 
@@ -485,12 +485,12 @@ We reduce the general situation to the case just considered in the following way
 \begin{enumerate}[\upshape (1), wide, labelindent=.5em]
 
 \item 
-If $ |f| $ is quasi-interior to $ E_{+} $, then $ E_{|f|} $ is a dense subspace of $ E $ isomorphic to a space $ C(K) $, and with the above arguments one gets a uniquely determined operator $ S_{0} $ on $ E_{|f|} $ with the desired properties.
-Since (ii) implies the continuity of $ S_{0} $ for the norm induced by $ E $, $ S_{0} $ can be extended to $ E $.
+If $ |f| $ is quasi-interior to $ E_{+} $, then $ E_{|f|} $ is a dense subspace of\/ $ E $ isomorphic to a space $ C(K) $, and with the above arguments one gets a uniquely determined operator $ S_{0} $ on $ E_{|f|} $ with the desired properties.
+Since (ii) implies the continuity of\/ $ S_{0} $ for the norm induced by $ E $, $ S_{0} $ can be extended to $ E $.
 
 \item 
 If $ f $ is arbitrary, then, as above, one obtains an operator $ S_{0} $ on $ E_{|f|} $ with (i) and (ii).
-If $ E $ is order complete, an extension $ S_{f} $ of $ S_{0} $ to $ E $ satisfying (i)--(iii) is possible as soon as $ S_{0} $ can be extended to the band $ \{x\}^{dd} $ of $ E $.
+If $ E $ is order complete, an extension $ S_{f} $ of\/ $ S_{0} $ to $ E $ satisfying (i)--(iii) is possible as soon as $ S_{0} $ can be extended to the band $ \{x\}^{dd} $ of\/ $ E $.
 
 \begin{enumerate}[\textbullet, labelindent=2em]
 \item
@@ -504,7 +504,7 @@ $ S_{f}h = \sup \{ S_{f}g \colon g \in [0,h] \cap E_{|f|} \text{ for $ h \geq 0 
 \end{enumerate}
 %% --
 In general, the problem can be reduced to this situation by decomposing $ S_{0} $ into a sum of the form $ S_{0} = (S_{1} - S_{2}) + i(S_{3} - S_{4}) $ with positive operators $ S_{j} $.
-Such a decomposition of $ S_{0} $ exists since the order completeness of $ E $ implies the order completeness of $ E_{|f|} = C(K) $ and since every continuous linear operator on a space $ C(K) $ is necessarily order-bounded.
+Such a decomposition of\/ $ S_{0} $ exists since the order completeness of\/ $ E $ implies the order completeness of\/ $ E_{|f|} = C(K) $ and since every continuous linear operator on a space $ C(K) $ is necessarily order-bounded.
 \end{enumerate}
 %% --
 \section{The Center of 
@@ -539,7 +539,7 @@ If $ E $ is countably order complete, then this is equivalent to
 %% --
 The last assertion also means that $ T $ commutes with every band projection.
 
-The set of all $ T \in \LE $ satisfying the above conditions is called the \emph{center} of $ \LE $ and denoted 
+The set of all $ T \in \LE $ satisfying the above conditions is called the \emph{center} of\/ $ \LE $ and denoted 
 $ \mathcal{Z}(E) $.
 Under its natural ordering, the operator norm and the composition product is $ \mathcal{Z}(E) $ isomorphic to a Banach lattice algebra $ C(K) $ with $ K $ compact.
 
@@ -550,7 +550,7 @@ The following examples may illustrate the situation and explain why the term \em
 If $ E = L^{p}(X,\Sigma,\mu) $ ($ 1 \leq p \leq \infty $) with $ \sigma $-finite $ \mu $, then $ Z(E) $ is isomorphic to $ L^{\infty}(\mu) $ via the natural identification of a function $ f \in L^{\infty}(\mu) $ with the multiplication operator $ g \mapsto f\cdot g $ on $ E $. 
 
 \item 
-If $ X $ is locally compact, $ E = C_{0}(X) $, then similarly $ \mathcal{Z}(E) \cong C^{b}(X) $ via the identification of $ f \in C^{b}(X) $ with the mapping $ g \mapsto f\cdot g $ ($ g \in C_{0}(X) $).
+If $ X $ is locally compact, $ E = C_{0}(X) $, then similarly $ \mathcal{Z}(E) \cong C^{b}(X) $ via the identification of\/ $ f \in C^{b}(X) $ with the mapping $ g \mapsto f\cdot g $ ($ g \in C_{0}(X) $).
 \end{enumerate}
 
 
