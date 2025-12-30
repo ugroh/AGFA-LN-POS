@@ -413,17 +413,17 @@ The following conditions are equivalent.
 \item \label{thm:a2-1.7.1}
 $A$ is the generator of a strongly continuous semigroup.
 \item \label{thm:a2-1.7.2}
-There exist $w, M \in \R$ such that $(w,\infty) \subset \rho(A)$ and
+The domain  $D(A)$ of $A$ is dense in E and there exist $w$, $M \in \R$ such that $(w,\infty) \subset \rho(A)$ and
 %% –
 \[
-    \| {(\lambda - w)^{n}} R(\lambda-A)^{-n}\| \leq M 
+    \| {(\lambda - w)^{n}} (\lambda-A)^{-n}\| \leq M 
 \]
 %% –
 for all $\lambda > w$ and $n \in \N$.
 \end{enumerate}
 \end{theorem}
 %% –
-In general it is not easy to give an estimate for the powers of the resolvent in order to apply Theorem \ref{thm:a2-1.7}. 
+In general it is not easy to give an estimate for the powers of the resolvent in order to apply Theorem~\ref{thm:a2-1.7}. 
 However, there is an important case when it suffices to consider merely the resolvent.
 %% --
 \begin{corollary}\label{cor:a2-1.8}
@@ -433,11 +433,11 @@ For an operator $A$ on a Banach space $E$ the following assertions are equivalen
 \item \label{cor:a2-1.8.1}
 $A$ is the generator of a strongly continuous contraction semigroup.
 \item \label{cor:a2-1.8.2}
-$(0,\infty) \subset \rho(A)$ and $\|\lambda R(\lambda,A)\| \leq 1$ for all $\lambda > 0$.
+$A$ is dense defined, $(0,\infty) \subset \rho(A)$ and $\|\lambda R(\lambda,A)\| \leq 1$ for all $\lambda > 0$.
 \end{enumerate}
 \end{corollary}
 %% –
-The difficult part in the proof of Theorem \ref{thm:a2-1.7}   is to show that \ref{cor:a2-1.8.2}   implies \ref{cor:a2-1.8.1}  . 
+The difficult part in the proof of Theorem~\ref{thm:a2-1.7}   is to show that \ref{cor:a2-1.8.2}   implies \ref{cor:a2-1.8.1}  . 
 One has to construct the semigroup out of the resolvent.
 We mention two formulas which can be used for the proof.
 %% --
@@ -458,7 +458,7 @@ Then
 for all $f \in E$ and $t \geq 0$.
 \end{proposition}
 %% –
-Yosida's proof consists in showing that the limit in \eqref{eq:a2-1.2} exists under the hypothesis  \ref{thm:a2-1.7.2} of Theorem  \ref{thm:a2-1.7}  
+Yosida's proof consists in showing that the limit in \eqref{eq:a2-1.2} exists under the hypothesis  \ref{thm:a2-1.7.2} of Theorem~\ref{thm:a2-1.7}  
 (see \citet{davies:1980}, \citet{goldstein:1985b} or \citet{pazy:1983}).
 
 The proof of Hille (see \citet{kato:1966}) is inspired by the following formula.
@@ -539,7 +539,7 @@ Then $z_{0}A$ generates a bounded semigroup
 $(S(t))_{t \geq 0}$ given by $S(t) = T(z_{0}t)$  $(t \geq 0)$ (where again we denote by $T(z)$ the holomorphic extension of $(T(t))_{t \geq 0}$ on $S(\alpha)$).
 \end{remark*}
 %% --
-As an application of Theorem \ref{thm:a2-1.12}  we prove the following.
+As an application of Theorem~\ref{thm:a2-1.12}  we prove the following.
 %% --
 \begin{corollary}\label{cor:a2-1.13}
 Let $A$ be the generator of a bounded group.
@@ -692,7 +692,7 @@ Hence $R(\xi+\im\eta,A) = \sum_{n=0}^\infty (-\xi)^{n}R(\im\eta,A)^{n+1}$ exists
 This together with the assumption implies that there exist $N' \geq 0$ and $\alpha \in \left]0,\pi/2\right]$ such that $\lambda \in \rho(A)$ and $\|R(\lambda,A)\| \leq N'/|\lambda|$ for all $\lambda \in S(\alpha+\pi/2)$.
 \end{proof}
 %% --
-Compared with the Hille-Yosida theorem, Theorem \ref{thm:a2-1.14}   gives a very simple criterion for an operator to be the generator of a (holomorphic) semigroup.
+Compared with the Hille-Yosida theorem, Theorem~\ref{thm:a2-1.14}   gives a very simple criterion for an operator to be the generator of a (holomorphic) semigroup.
 Merely the resolvent and not its powers have to be
 estimated.
 However, the resolvent has to be known in a right half-plane instead of a right half-line.
@@ -719,7 +719,7 @@ Consequently, for every $\alpha \in (0,\pi/2)$,
 \|R(\lambda,A-w)\| \leq (|\lambda|/\Re(\lambda))N/|\lambda| \leq N(\cos\alpha)^{-1}/|\lambda| 
  \text{ for all } \lambda \in S(\alpha) .
 \]
-The remaining estimate for a sector symmectric to the imaginary axis is given by the proof of Theorem \ref{thm:a2-1.14}    
+The remaining estimate for a sector symmectric to the imaginary axis is given by the proof of Theorem\ref{thm:a2-1.14}    
 and shows that $A-w$ generates a holomorphic semigroup.
 The reverse implication is clear.
 \end{proof}
@@ -779,7 +779,7 @@ Thus $|\lambda| \cdot \|R(\lambda,A^2)\|$ is uniformly bounded for $\lambda \in 
 %%
 %% –
 \begin{remark*}\label{rem:a2-1.7-kgk}
-In Theorem  \ref{thm:a2-1.15}  
+In Theorem~\ref{thm:a2-1.15}  
 the assumption that $\pm A$ are generators can be relaxed.
 In fact, the proof shows the following.
 If $A$ is a densely defined operator such that 
@@ -793,7 +793,7 @@ $\|R(\lambda,\pm A - w)\| \leq M/\Re(\lambda)$ for some $M \geq 0$, $w \geq 0$, 
 %%
 Let $(T(t))_{t\geq 0}$ be a strongly continuous semigroup with generator $A$.
 Let $t_0 \geq 0$ and $f \in E$.
-Then the function $t \mapsto T(t)f$ is right sided differentiable at $t_0$ if and only if $T(t_0)f \in D(A)$; and in that case it is differentiable at every $s > t_0$ and the derivative is $AT(s)f$ (this follows from A-I, Proposition 1.6(ii)).
+Then the function $t \mapsto T(t)f$ is right sided differentiable at $t_0$ if and only if $T(t_0)f \in D(A)$; and in that case it is differentiable at every $s > t_0$ and the derivative is $AT(s)f$ (this follows from A-I, Proposition 1.6\,(ii)).
 
 %% –
 \begin{definition}\label{def:a2-1.16}
@@ -829,11 +829,12 @@ and
 A strongly continuous semigroup $(T(t))_{t\geq 0}$ is differentiable if and only if its generator $A$ satisfies the following. \\
 For all $b>0$ there exist $c>0$, $M>0$ such that
 \[
-    \Sigma \coloneqq \{\lambda \in \C \colon c\eu^{-b\cdot \Re(\lambda)} \leq |\Im\lambda|\} \subset \rho(A)
+    \Sigma \coloneqq \{\lambda \in \C \colon c\eu^{-b\cdot \Re(\lambda)} 
+    	\leq  \lvert \Im(\lambda) \rvert\} \subset \rho(A)
 \]
 and
 \[
-    \|R(\lambda,A)\| \leq M\cdot|\Im\lambda| \text{ for all } \lambda \in \Sigma \text{ satisfying } \Re(\lambda) \leq \omega_{0}(A).
+    \|R(\lambda,A)\| \leq M\cdot \lvert \Im(\lambda) \rvert \text{ for all } \lambda \in \Sigma \text{ satisfying } \Re(\lambda) \leq \omega_{0}(A).
 \]
 \end{theorem}
 %% –
@@ -892,7 +893,7 @@ r(R(\lambda,A)) &= \sup \left\{|\lambda-\mu|^{-1} \colon \mu \in \sigma(A)\right
 %%
 \end{proof}
 %% --
-\begin{proof}[Proof of Theorem  \ref{thm:a2-1.20}  ]
+\begin{proof}[Proof of Theorem~\ref{thm:a2-1.20}  ]
 It is enough to show the following.
 Let $a > \omega(A)$.
 Then for every $\epsilon > 0$ there exist $n \in \N$ and $r_0 \geq 0$ such that
@@ -916,21 +917,28 @@ Let $t' > 0$ such that $t \mapsto T(t)$ is norm continuous on $(t',\infty)$.
 Let $w \in (\omega(A),a)$.
 There exists $M \geq 1$ such that $\|T(t)\| \leq M\eu^{wt}$ for all $t \geq 0$.
 Let 
+%% --
 \[
 N \coloneqq M\cdot\int_{0}^{t'} \eu^{-at}\eu^{wt} \dt.
 \]
-Since $\lim_{n\to\infty} c^n/n! = 0$ for all $c > 0$, there exists $n \in \N$ such that \\ 
-$N\cdot(t')^n/n! < \epsilon^{n+1}/3$.
-Choose $T \geq t'$ such that $\frac{1}{n!}\int_T^\infty t^n\eu^{-at}\|T(t)\| \dt < \epsilon^{n+1}/3$.
+%% --
+Since $\lim_{n\to\infty} c^n/n! = 0$ for all $c > 0$, there exists $n \in \N$ such that 
+%
+\[
+	N\cdot(t')^n/n! < \epsilon^{n+1}/3 .
+\]
+%
+Choose $T \geq t'$ such that $\frac{1}{n!}\int_{t}^{\infty} t^n\eu^{-at}\|T(t)\| \dt < \epsilon^{n+1}/3$.
 
 Since $(T(t))_{t\geq 0}$ is norm continuous for $t \geq t'$, it follows from the Riemann-Lebesgue lemma that there exists $r_{0} \geq 0$ such that 
 $\|\frac{1}{n!}\int_{t'}^T t^{n}\eu^{-irt}\eu^{-at}T(t) \dt\| < \epsilon^{n+1}/3$ whenever $|r| \geq r_{0}$.
 
 All together we obtain for $|r| \geq r_{0}$,
 \begin{align*}
-    \|R(a+ir,A)^{n+1}\| & = \frac{1}{n!}\cdot\|\int_0^\infty \eu^{-(a+ir)t}t^nT(t) \dt\| \\
+    \|R(a+ir,A)^{n+1}\| & = \frac{1}{n!}\cdot 
+    	\left\|\int_0^\infty \eu^{-(a+ir)t}t^nT(t) \dt \right\| \\
     & \leq \frac{1}{n!}\cdot\int_{0}^{t'} \eu^{-at}t^n\|T(t)\| \dt \\
-    & + \frac{1}{n!}\cdot\|\int_{t'}^T t^n\eu^{-irt}\eu^{-at}T(t) \dt\| \\
+    & + \frac{1}{n!}\cdot \left\|\int_{t'}^T t^n\eu^{-irt}\eu^{-at}T(t) \dt \right\| \\
     & + \frac{1}{n!}\cdot\int_T^\infty \eu^{-at}t^n\|T(t)\| \dt \\
     & \leq \frac{1}{n!}\cdot(t')^{n}\int_{0}^{t'} \eu^{-at}M\eu^{wt} \dt + \frac{2}{3}\cdot\epsilon^{n+1} \\
     & \leq N\cdot(t')^n/n! + \frac{2}{3}\cdot\epsilon^{n+1} \\
@@ -939,7 +947,6 @@ All together we obtain for $|r| \geq r_{0}$,
 \end{proof}
 %% --
 A complete characterization of eventually norm continuous semigroups in terms of their generator seems not to be known.
-
 Eventually norm continuous semigroups are of particular interest in spectral theory (cf. A-III, Theorem 6.6).
 Moreover their asymptotic behavior is easy to describe (see A-IV,\,(1.8)).
 
@@ -1014,7 +1021,7 @@ Since
 %%--
 in the operator norm, it follows that $R(w,A)$ is compact.
 This proves one implication.
-The other follows from Proposition \ref{prop:a2-1.24} . 
+The other follows from Proposition~\ref{prop:a2-1.24} . 
 \end{proof}
 %% --
 \begin{remark}\label{rem:a2-1.26}  
@@ -1118,7 +1125,7 @@ Thus $\lim_{t \to t'} |\eu^{tz} - \eu^{t'z}| = 0$
 uniformly for $z \in H$.
 Hence there exists $\delta \in \left]0,1\right]$ such that
 \[
-[\text{ess}]\text{-}\sup\{|\eu^{tm(x)} - \eu^{t'm(x)}| \colon x \in X, \Re(m(x)) > b\} < \epsilon
+[\text{ess}]\text{-}\esssup\{|\eu^{tm(x)} - \eu^{t'm(x)}| \colon x \in X, \Re(m(x)) > b\} < \epsilon
 \] 
 whenever $|t-t'| < \delta$.
 Together with the inequality above, we obtain that 
@@ -1356,7 +1363,7 @@ Consequently, also $(1 -BR(\lambda,A))^{-1})$ exists
 where  $T = (\lambda_{0}-A)BR(\lambda,A)\, $).
 
 Let $C = (A-\lambda)B(A-\lambda)^{-1} \in \mathcal{L}(E)$.
-Then $A + C$ is the generator of a strongly continuous semigroup by Theorem \ref{thm:a2-1.29} . 
+Then $A + C$ is the generator of a strongly continuous semigroup by Theorem~\ref{thm:a2-1.29} . 
 We show that $A + B$ is similar to $A + C$.
 In fact, let $U = (1 - BR(\lambda,A))$.
 Then $U$ is an isomorphism on $E$ such that $U(D(A)) = D(A)$. Moreover,
@@ -1371,13 +1378,13 @@ U(A+C)U^{-1} &= U(A - \lambda+C)U^{-1} + \lambda \\
 \end{proof}
 %% --
 \begin{corollary}\label{cor:a2-1.32}
-Keeping the hypotheses and notations of Theorem \ref{thm:a2-1.31}   denote by \\ $(S(t))_{t\geq 0}$ the semigroup generated by $A+B$.
+Keeping the hypotheses and notations of Theorem~\ref{thm:a2-1.31}   denote by \\ $(S(t))_{t\geq 0}$ the semigroup generated by $A+B$.
 If $(T(t))_{t\geq 0}$ is norm continuous or compact or holomorphic, then $(S(t))_{t\geq 0}$ has the corresponding properties.
 If $B$ is compact as an operator on $D(A)$ endowed with the graph norm and if $(T(t))_{t\geq 0}$ is eventually norm continuous, then so is $(S(t))_{t\geq 0}$.
 \end{corollary}
 %% --
 \begin{proof}
-This follows from Theorem \ref{thm:a2-1.30}   since 
+This follows from Theorem~\ref{thm:a2-1.30}   since 
 $(US(t)U^{-1})_{t\geq 0}$ has $A+C$ as generator.
 \end{proof}
 %% –
@@ -1409,7 +1416,7 @@ If $D_{0}$ is not a core of $A$, then there exists an infinite number of extensi
 If $D_{0}$ is not dense in $D(A)$ with respect to the graph norm, then there exists a non-zero linear form $\phi$ on $D(A)$ which is continuous for the graph norm such that $\phi(f) = 0$ for all $f \in D_{0}$. 
 Let $u \in D(A)$ and $B \colon D(A) \to D(A)$ be given by $Bf = \phi(f)u$ for all $f \in D(A)$.
 Then $B$ is continuous for the graph norm.
-So by Theorem \ref{thm:a2-1.31}   the operator $A+B$ with domain $D(A)$ is a generator.
+So by Theorem~\ref{thm:a2-1.31}   the operator $A+B$ with domain $D(A)$ is a generator.
 Clearly, $A+B \neq A$ if $u \neq 0$ but $Af+Bf = Af$ for all $f \in D_{0}$.
 It is obvious that an infinite number of generators can be constructed in that way.
 \end{proof}
@@ -1816,7 +1823,7 @@ $D(A)$ is dense, $A$ is p-dissipative and $\image (\lambda - A) = E$ for some $\
 %%
 \begin{proof}
 Since $p$ is a strict half-norm, we can assume that $\|f\| = \|f\|_{p}$ for all $f \in E$.
-By Theorem \ref{thm:a2-2.6}, condition \ref{thm:a2-2.11.1} implies \ref{thm:a2-2.11.2} . 
+By Theorem~\ref{thm:a2-2.6}, condition \ref{thm:a2-2.11.1} implies \ref{thm:a2-2.11.2} . 
 
 Now suppose that \ref{thm:a2-2.11.2}   holds.
 Then it follows from Lemma \ref{lem:a2-2.10}   
@@ -1832,11 +1839,11 @@ it follows that $(T(t))_{t\geq 0}$ is p-contractive.
 \end{proof}
 
 Of course, the norm function $N$ given by $N(f) = \|f\|$ is a strict half-norm.
-In the case when $p = N$, Theorem \ref{thm:a2-2.11}    
+In the case when $p = N$, Theorem~\ref{thm:a2-2.11}    
 is due to \citet{lumerphillips:1961}.
 It turns out to be extremely useful in showing that a concrete operator is a generator.
 Because of its importance we state this special case explicitly below (including the complex case).
-Before that let us formulate Theorem \ref{thm:a2-2.11}   
+Before that let us formulate Theorem~\ref{thm:a2-2.11}   
 for the case when the operator is merely given on a core.
 
 %% –
@@ -1846,11 +1853,11 @@ If $A$ is p-dissipative and $(\lambda - A)$ has dense range for some $\lambda > 
 \end{corollary}
 %% –
 \begin{proof}
-It follows from Proposition \ref{prop:a2-2.9}  
+It follows from Proposition~\ref{prop:a2-2.9}  
 that $A$ is closable and the closure $\overline{A}$ is p-dissipative.
 Lemma \ref{lem:a2-2.10}   
 implies that $(\lambda- \overline{A})D(\overline{A}) = E$.
-So Theorem \ref{thm:a2-2.11}   
+So Theorem~\ref{thm:a2-2.11}   
 yields the desired conclusion.
 \end{proof}
 %% --
@@ -2027,7 +2034,7 @@ Since $E$ has the Dunford-Pettis property, $\lim \|(T(t_{n}) - \Id)^2\| = 0$.
 Consequently, $\lim_{t \to 0} \|(T(t) - \Id)^2\| = 0$.
 \end{proof}
 
-An immediate consequence of Theorem \ref{thm:a2-3.3}   and Theorem \ref{thm:a2-3.4}   is the following.
+An immediate consequence of Theorem~\ref{thm:a2-3.3}   and Theorem~\ref{thm:a2-3.4}   is the following.
 
 \begin{theorem}\label{thm:a2-3.5}
 Let $E$ be a Grothendieck space with the Dunford-Pettis property.
@@ -2074,7 +2081,7 @@ The Banach space $H^{\infty}(O)$ of bounded analytic functions on a finitely con
 \end{theorem}
 %% —
 \begin{proof}
-By Theorem \ref{thm:a2-3.5}   it suffices to show that the spaces listed above are Grothendieck spaces with the Dunford-Pettis property.
+By Theorem~\ref{thm:a2-3.5}   it suffices to show that the spaces listed above are Grothendieck spaces with the Dunford-Pettis property.
 %--
 \begin{description}[style=standard, wide, labelindent=.5em]
 		
@@ -2105,7 +2112,7 @@ Hence $H^{\infty}(O)$ is a Grothendieck space with the Dunford-Pettis property.
 %% --
 \begin{remark*}[Final]\label{rem:a2-final}
 %% --
-It follows from Theorem \ref{thm:a2-3.6} that on $L^{\infty}$ the infinitesimal generator of a strongly continuous semigroup is necessarily bounded.
+It follows from Theorem~\ref{thm:a2-3.6} that on $L^{\infty}$ the infinitesimal generator of a strongly continuous semigroup is necessarily bounded.
 It is not obvious that on $L^{\infty}([0,1])$ there exist closed densely defined unbounded operators.
 
 To see this let $A$ be a closed densely defined unbounded operator from $\ell^2$ into $L^{\infty}([0,1])$ with domain $D$ (such operators can easily be constructed).
@@ -2127,30 +2134,30 @@ H.\,Porta and the author have shown that if a Banach space $E$ has an infinite d
 \item
 The abstract Cauchy problem is treated systematically in the monographs of \citet{krein:1971} and \citet{fattorini:1983}.
 We refer to these books for more details and historical notes.
-One implication of Theorem \ref{thm:a2-1.1}   is proved in \citet[Theorem 2.11]{krein:1971}.
+One implication of Theorem~\ref{thm:a2-1.1}   is proved in \citet[Theorem 2.11]{krein:1971}.
 
 The Hille-Yosida Theorem has been proved independently by \citet{hille:1948} and \citet{yosida:1948} for contraction semigroups.
 The extension to arbitrary strongly continuous semigroups is independently due to \citet{feller:1953a}, \citet{miyadera:1952} and \citet{phillips:1954}.
 Thus our terminology is slightly incorrect, and some authors refer to the general version as the Hille-Yosida-Phillips theorem which is  more correct.
 
 Holomorphic semigroups belong to the standard material of the theory of one-parameter semigroups.
-Our Theorem \ref{thm:a2-1.14}   deviates from the usual presentation since the condition on the resolvent is merely required on a half-plane.
+Our Theorem~\ref{thm:a2-1.14}   deviates from the usual presentation since the condition on the resolvent is merely required on a half-plane.
 
-Differentiable semigroups are treated in detail in the book of \citet{pazy:1983} who discovered Theorem \ref{thm:a2-1.17}   and \ref{thm:a2-1.18} . 
-The spectral property of eventually norm continuous semigroups given in Theorem \ref{thm:a2-1.20}   is contained in \citet[Theorem 16.4.2]{hillephillips:1957} with a proof depending on Gelfand theory.
+Differentiable semigroups are treated in detail in the book of \citet{pazy:1983} who discovered Theorem~\ref{thm:a2-1.17}   and \ref{thm:a2-1.18} . 
+The spectral property of eventually norm continuous semigroups given in Theorem~\ref{thm:a2-1.20}   is contained in \citet[Theorem 16.4.2]{hillephillips:1957} with a proof depending on Gelfand theory.
 For norm continuous semigroups it is contained in \citet{pazy:1983} with a simpler proof.
 The elementary proof we give here is due to G. Greiner.
 
-Theorem \ref{thm:a2-1.29}   on the perturbation by bounded operators is due to \citet{phillips:1954} who also investigated permanence of smoothness properties by this kind of perturbation.
+Theorem~\ref{thm:a2-1.29}   on the perturbation by bounded operators is due to \citet{phillips:1954} who also investigated permanence of smoothness properties by this kind of perturbation.
 We also refer to \citet[Section 3.1]{pazy:1983}.
 
-The observation that eventually norm continuity is preserved by perturbation by a compact operator (see Theorem \ref{thm:a2-1.30}) seems to be new.
+The observation that eventually norm continuity is preserved by perturbation by a compact operator (see Theorem~\ref{thm:a2-1.30}) seems to be new.
 
 %% -- umgestellt nach rana 250922 ulgr
 The perturbation by operators being continuous on the graph of the generator is due to \citet{deschschappacher:1984}.
 The short proof we give here is due to G. Greiner and has the advantage to yield the same permanence for smoothness properties as in the classical case, see Corollary \ref{cor:a2-1.32} . 
 
-The characterization of a core as \enquote{domain of uniqueness} given in Theorem \ref{thm:a2-1.33}   seems to be new.
+The characterization of a core as \enquote{domain of uniqueness} given in Theorem~\ref{thm:a2-1.33}   seems to be new.
 In this section we have presented part of the standard theory of one-parameter semigroups including some new aspects.
 A very elegant brief introduction to one-parameter semigroups is given in the treatise of \citet{kato:1966} where one can also find all the results on perturbation theory going beyond the elementary facts we discuss here.
 A complete information on the general theory can be obtained by consulting the books of \citet{davies:1980}, \citet{goldstein:1985a} and \citet{pazy:1983}.
@@ -2167,7 +2174,7 @@ We also refer to the historical notes given there.
 \item
 It had been proved by \citet{kishimotorobinson:1981} that every generator of a positive semigroup on $L^{\infty}$ is bounded.
 That every strongly continuous semigroup on $L^{\infty}$ is uniformly continuous was first shown by \citet{lotz:1982}, \citet{lotz:1984} and \citet{lotz:1985}.
-The proof of Lemma \ref{lem:a2-3.1}  was communicated to the author of this section by T. Coulhon, who independently obtained a particular case of Theorem \ref{thm:a2-3.5} (\citet{coulhon:1984}).
+The proof of Lemma \ref{lem:a2-3.1}  was communicated to the author of this section by T. Coulhon, who independently obtained a particular case of Theorem~\ref{thm:a2-3.5} (\citet{coulhon:1984}).
 \index{half-norm|)}
 
 \end{enumerate}

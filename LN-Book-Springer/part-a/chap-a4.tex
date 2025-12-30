@@ -318,7 +318,7 @@ To prove part (i) of Theorem~\ref{thm:a4-1.3}, define
 A straightforward application of the lemma shows that $\omega(f) \leq b$.
 The definition of $\omega(f)$ yields the reverse inequality.
 
-It remains to prove part (ii) of Theorem \ref{thm:a4-1.3}.
+It remains to prove part (ii) of Theorem~\ref{thm:a4-1.3}.
 Assume that $\ker(A) = \{0\}$ and let $f \in D(A)$, $\lambda \in \C$ with $\Re(\lambda) > \omega(f)$. 
 From the equation
 %% --
@@ -402,7 +402,7 @@ Then
 
 \item 
 One can show that the abscissas of uniform, strong, and weak convergence of the Laplace transform coincide (see C-III, Theorem~I.2, last part of the proof). 
-Therefore, by Theorem \ref{thm:a4-1.4},
+Therefore, by Theorem~\ref{thm:a4-1.4},
 %--
 \begin{equation}\label{eq:a4-1.5}
 \begin{split}
@@ -417,12 +417,12 @@ In Equations \eqref{eq:a4-1.4} and \eqref{eq:a4-1.5}, the term \enquote{$\Re(\la
 
 \end{remarks*}
 %% --
-\begin{proof}(Proof of Theorem \ref{thm:a4-1.4}) 
+\begin{proof}(Proof of Theorem~\ref{thm:a4-1.4}) 
 The equality 
  \[ 
  \omega_1(A) = \inf \left\{ \Re(\lambda)\colon\int_0^\infty \|\eu^{-\lambda t} T(t) f \|  \dt \text{ exists for all } f \in D(A) \right\} 
  \] 
- follows from the definition of $\omega_1(A)$ and the lemma in the proof of Theorem \ref{thm:a4-1.3}.
+ follows from the definition of $\omega_1(A)$ and the lemma in the proof of Theorem~\ref{thm:a4-1.3}.
 We aim to prove that
 \[
 \omega_1(A) = \inf \left\{ \Re(\lambda)\colon\int_0^\infty \eu^{-\lambda s} T(s) f  \ds \text{ exists for every } f \in E \right\}=: b. 
@@ -466,7 +466,7 @@ The inequality
     \omega_{0}(A) \geq \inf \left\{ \Re  \lambda\colon\int_0^\infty \|\eu^{-\lambda t} T(t) f \|  \dt 
     \text{ exists for every } f \in E \right\}
 \]
-combined with the lemma of Theorem \ref{thm:a4-1.3} implies that the growth bound $\omega_{0}(A)$ coincides with the abscissa of absolute convergence of the Laplace transform of $(T(t))_{t \geq 0}$, \ie
+combined with the lemma of Theorem~\ref{thm:a4-1.3} implies that the growth bound $\omega_{0}(A)$ coincides with the abscissa of absolute convergence of the Laplace transform of $(T(t))_{t \geq 0}$, \ie
 \begin{equation}\label{eq:a4-1.6}
    \omega_{0}(A) = \inf \left\{ \Re  \lambda\colon\int_0^\infty \|\eu^{-\lambda t} T(t) f \|  \dt \text{ exists for every } f \in E \right\}.
 \end{equation}
@@ -475,7 +475,7 @@ combined with the lemma of Theorem \ref{thm:a4-1.3} implies that the growth boun
 
 
 As seen in A-I, Proposition~1.11, if $\int_0^\infty \eu^{-\lambda t} T(t) f  \dt$ exists for every $f \in E$, then $\lambda \in \rho(A)$ and $R(\lambda, A) f = \int_0^\infty \eu^{-\lambda t} T(t) f  \dt$. 
-This and Theorem \ref{thm:a4-1.4} yield the following corollary.
+This and Theorem~\ref{thm:a4-1.4} yield the following corollary.
 %--
 \begin{corollary} \label{cor:a4-1.5}
 \index{stability!spectral bound $s(A)$}
@@ -823,7 +823,7 @@ the Laplacian generates a uniformly stable semigroup on  $L^{p}(\R^{n})$
 for $1 < p < \infty$. However, since $\Image{ \Delta} \not= L^{p}(\R^{n})$, Corollary \ref{cor:a4-1.5} implies that the semigroup is not exponentially stable. %\qed
 \end{example}
 %%--
-As seen in Theorem \ref{thm:a4-1.4}, exponential stability can be characterized by the condition that the abscissa of convergence of the Laplace transform of $(T(t))_{t \geq 0}$ is less than zero. 
+As seen in Theorem~\ref{thm:a4-1.4}, exponential stability can be characterized by the condition that the abscissa of convergence of the Laplace transform of $(T(t))_{t \geq 0}$ is less than zero. 
 This should be compared to the following result, which characterizes (uniform) stability in terms of integrability and the kernel of the generator.
 %% --
 \begin{theorem}\label{thm:a4-1.16}
@@ -851,7 +851,7 @@ Furthermore the following statements are equivalent,
 \end{theorem}
 
 \begin{proof}
-If $(T(t))_{t \geq 0}$ is stable, then by Theorem \ref{thm:a4-1.13}, $\ker(A) = \{0\}$, and
+If $(T(t))_{t \geq 0}$ is stable, then by Theorem~\ref{thm:a4-1.13}, $\ker(A) = \{0\}$, and
 \[{
 \int_{0}^{t} T(s)Af  \ds = T(t)f - f \to -f \ \text{as} \ t \to \infty\,.
 }\]
@@ -864,7 +864,7 @@ Thus, $(b) \Rightarrow (a)$.
 
 The implication $(a') \Rightarrow (b')$ is immediate. 
 
-If $T(t)f \to 0$ for every $f \in E$, then $\|T(t)\| \leq M$, and $0 \not\in R\sigma(A)$ by Theorem \ref{thm:a4-1.13}. 
+If $T(t)f \to 0$ for every $f \in E$, then $\|T(t)\| \leq M$, and $0 \not\in R\sigma(A)$ by Theorem~\ref{thm:a4-1.13}. 
 Therefore,
 $D \coloneqq \Image{A}$ is dense in $E$, and for every $f \in D$, the integral $\int_{0}^{\infty} T(t)f  \dt$ exists. 
 This proves $(b') \Rightarrow (c')$. 
@@ -909,7 +909,7 @@ might not be exponentially stable if
 $0 = \omega_{1}(A) = \sup\{\omega(f) \colon f \in D(A)\}$.
 \index{growth bound!omega1@$\omega_1(A)$}
 In this case, one can show--via a
-proof similar to that of Theorem \ref{thm:a4-1.4}--that the spectrum $\sigma(A)$ must be contained
+proof similar to that of Theorem~\ref{thm:a4-1.4}--that the spectrum $\sigma(A)$ must be contained
 in the open left half-plane, \ie $\Re(\lambda) < 0$ for all $\lambda \in \sigma(A)$.
 
 \item 
@@ -996,7 +996,7 @@ Similar results for integrable and convergent forcing terms $F(\cdot)$ can
 be obtained under the assumption of uniform stability (see \citet[p.119]{pazy:1983} or \citet{neubrander:1985b}). 
 However, if the
 semigroup is positive, these results remain valid even under the weaker assumption of stability (see Section C-IV).
-Recall from Theorem \ref{thm:a4-1.13}\,(i) that for stable
+Recall from Theorem~\ref{thm:a4-1.13}\,(i) that for stable
 semigroups, the range $\Image{A}$ is dense in $E$.
 
 \begin{theorem}\label{thm:a4-2.1}
@@ -1043,7 +1043,7 @@ and $\int_{0}^{p} T(p-s)F(s)  \ds \in \Image{(\Id - T(p))}$, then \eqref{eq:a4-2
 \lim_{t \to \infty} \|v(t) - u(t)\| = 0.
 \]  
 (Notice that, by
-Theorem \ref{thm:a4-1.13} and A-III, Lemma 5.3, $\overline{\Image{(\Id - T(p))}} = E$.)
+Theorem~\ref{thm:a4-1.13} and A-III, Lemma 5.3, $\overline{\Image{(\Id - T(p))}} = E$.)
 %% --
 \begin{lemma}\label{lem:a4-2.2}
 Let $A$ be the generator of a strongly continuous semigroup $(T(t))_{t \geq 0}$ on a Banach space $E$, and let $F(\cdot)$ be a $p$-periodic, locally integrable function with $p > 0$. 
@@ -1091,7 +1091,7 @@ If $\frac{2\pi in}{p} \in \rho(A)$ for every $n \in \Z$, then, by Lemma \ref{lem
 admits a unique $p$-periodic solution with initial value $(\Id - T(p))^{-1} \left(\int_{0}^{p} T(p-s)F(s)  \ds\right)$.
 \end{remark}
 %% --
-As a consequence of Theorem \ref{thm:a4-1.13}  and A-III, Corollary~6.4,  a uniformly stable semigroup admits at most one $f \in E$ satisfying 
+As a consequence of Theorem~\ref{thm:a4-1.13}  and A-III, Corollary~6.4,  a uniformly stable semigroup admits at most one $f \in E$ satisfying 
 %% --
 \[
 (\Id-T(p))f = \int_{0}^{p} T(p-s)F(s)  \ds\,.
@@ -1125,7 +1125,7 @@ Let $E$ be the Banach space $C_{0}(\R_{+})$ of continuous functions vanishing at
 Define  $A = \frac{d}{dx}$ with domain $D(A) = \{f \in E: f' \in C^{1} \text{ and } f' \in E\}$ is the generator of the uniformly stable translation semigroup $T(t)f(x) \coloneqq f(t+x)$. 
 Applying \eqref{eq:a4-1.14}, we obtain $\Image{A} = \{f\colon\int_{0}^{\infty} f(x) \,\dx \text{ exists}\}$ is dense in $C_{0}(\R_{+})$. 
 Let $r \in \Image{A}$ and let $F(\cdot)$ be a $p$-periodic, real-valued function.
-We apply Theorem \ref{thm:a4-2.4}  to the initial value problem
+We apply Theorem~\ref{thm:a4-2.4}  to the initial value problem
 %% --
 \begin{equation}
  \frac{d}{dt} u(t,x) = \frac{d}{dx}u(t,x) + r(x)F(x+t), \quad u(0,\cdot) \in D(A). 
@@ -1141,7 +1141,7 @@ We rewrite (*) as
 where $v(t) = u(t,\cdot)$ and $G\colon\R_{+} \to E$ is defined by $G(t)(x) = r(x)F(x+t)$.
 Then $G$ is $p$-periodic with values in $E$ and $h_{0} \coloneqq \int_{0}^{p} T(p-t)G(t)  \dt$ is the function $x \mapsto \left[\int_{0}^{p} T(p-t)G(t)  \dt\right](x) = F(x)\int_{x}^{x+p} r(s)  \ds$. 
 Now define $f \coloneqq  \sum_{k=0}^{\infty} T(kp)h_{0}$, which corresponds to the function $x \mapsto F(x)\int_{x}^{\infty} r(s)  \ds$. It is then clear that $(\Id - T(p))f = h_{0}$. 
-Therefore, (**) admits a unique $p$-periodic generalized solution by Theorem \ref{thm:a4-2.4}), even though $\im \R \subset \sigma(A)$ (cf. Remark~\ref{rem:a4-2.3}).
+Therefore, (**) admits a unique $p$-periodic generalized solution by Theorem~\ref{thm:a4-2.4}), even though $\im \R \subset \sigma(A)$ (cf. Remark~\ref{rem:a4-2.3}).
 
 The unique $p$-periodic generalized solution $u(t,\cdot)$ is given explicitly by 
 %% --
@@ -1149,7 +1149,7 @@ The unique $p$-periodic generalized solution $u(t,\cdot)$ is given explicitly by
 u(t,x) = F(x+t)\int_{x+t}^{\infty} r(s) \ds + F(x+t)\int_{x}^{x+t} r(s) \ds = F(x+t)\int_{x}^{\infty} r(s) \ds.
 \]
 %% --
-Finally, for every solution $v(t,\cdot)$ of (*), Theorem \ref{thm:a4-2.4} implies that
+Finally, for every solution $v(t,\cdot)$ of (*), Theorem~\ref{thm:a4-2.4} implies that
 %% --
 \[
 \sup\left\{\left|v(t,x) - F(x+t)\int_{x}^{\infty} r(s)  \ds\right| \colon x \in \R_{+}\right\} \to 0 \quad \text{as} \quad t \to 0.
@@ -1165,17 +1165,17 @@ Finally, for every solution $v(t,\cdot)$ of (*), Theorem \ref{thm:a4-2.4} implie
 \begin{enumerate}[label=\emph{Section \arabic*:}, wide, itemsep=1ex]
 
 \item 
-The exponential growth bounds $\omega(f)$ and $\omega_{0}(A)$ as well as the characterizations \eqref{eq:a4-1.2}, \eqref{eq:a4-1.6} and Theorem \ref{thm:a4-1.3} (i) can be found in \citet{hillephillips:1957}.
+The exponential growth bounds $\omega(f)$ and $\omega_{0}(A)$ as well as the characterizations \eqref{eq:a4-1.2}, \eqref{eq:a4-1.6} and Theorem~\ref{thm:a4-1.3} (i) can be found in \citet{hillephillips:1957}.
 Growth bounds similar to $\omega_{1}(A)$ were first considered in \citet{djacenko:1976} and in \citet[Proposition~2]{zabczyk:1979}. 
 Example \ref{ex:a4-1.2}(2) is taken from \citet{wolff:1981}; other \emph{counterexamples} can be found in \citet{hillephillips:1957}, \citet{foias:1973}, \citet{triggiani:1975a}, 
 \citet{zabczyk:1975} and \citet{greineretal:1981}. 
-Statements \eqref{eq:a4-1.2}, \eqref{eq:a4-1.6} and Theorem \ref{thm:a4-1.3} (i) are semigroup versions of results in classical Laplace transform theory, see \citet{hillephillips:1957} and \citet{widder:1946}. 
-Theorem \ref{thm:a4-1.3} (ii) is a semigroup version of Theorem 1.2.7 and 1.2.8 in \citet{doetsch:1950}. 
-The lemma in the proof of Theorem \ref{thm:a4-1.3} is taken from \citet{milstein:1975}. 
-Theorem \ref{thm:a4-1.4} and Corollary \ref{cor:a4-1.5} can be found in \citet{neubrander:1985a}. 
+Statements \eqref{eq:a4-1.2}, \eqref{eq:a4-1.6} and Theorem~\ref{thm:a4-1.3} (i) are semigroup versions of results in classical Laplace transform theory, see \citet{hillephillips:1957} and \citet{widder:1946}. 
+Theorem~\ref{thm:a4-1.3} (ii) is a semigroup version of Theorem 1.2.7 and 1.2.8 in \citet{doetsch:1950}. 
+The lemma in the proof of Theorem~\ref{thm:a4-1.3} is taken from \citet{milstein:1975}. 
+Theorem~\ref{thm:a4-1.4} and Corollary \ref{cor:a4-1.5} can be found in \citet{neubrander:1985a}. 
 Example \ref{ex:a4-1.6} follows Remark~2 in \citet{zabczyk:1975}. 
 Statement \eqref{eq:a4-1.8} is sometimes called the \emph{spectrum determined growth assumption}, see, for example, \citet{triggiani:1975b}. 
-Theorem \ref{thm:a4-1.9} is due to \citet{slemrod:1976}. 
+Theorem~\ref{thm:a4-1.9} is due to \citet{slemrod:1976}. 
 The proof presented here is based on the following sharper version of the inversion formula for the Laplace transform, which improves on the one given in \citet[p.349]{hillephillips:1957}. 
 Using \citet[p.66]{widder:1946} or \citet[p.212]{doetsch:1950} one can establish the following theorem (see \citet{neubrander:1984b}.
 
@@ -1192,14 +1192,14 @@ T(t)f = \frac{1}{2\pi i} \int_{p-i\infty}^{p+i\infty} \eu^{\mu t}R(\mu,A)f \, d\
 
 The equivalence of the statements \eqref{eq:a4-1.12}, \eqref{eq:a4-1.13} and \emph{$\omega_{0}(A) < 0$} were observed by many authors, see for example, \citet[p.178]{balakrishnan:1976}, 
 or \citet{benchimol:1978b}. 
-Theorem \ref{thm:a4-1.11} is due to \citet{datko:1970};
+Theorem~\ref{thm:a4-1.11} is due to \citet{datko:1970};
 for a proof see \citet[p.116]{pazy:1983}. 
 Theorems \ref{thm:a4-1.13} and \ref{thm:a4-1.16} can be found in \citet{neubrander:1985b} and Corollary \ref{cor:a4-1.14} is due to \citet{komatsu:1969}. 
 An example of an unstable semigroup generator $A$ with $\Re \mu < 0$ for all $\mu \in \sigma(A)$ is given in \citet{datko:1983}.
 
 \item For a discussion of well-posedness of inhomogeneous Cauchy problems, we refer to \citet[p.83]{goldstein:1985a}, and \citet[p.105]{pazy:1983}. 
 Further results on the asymptotic behavior of the solutions of the inhomogeneous problem can be found in \citet{raohengartner:1974}, \citet{zaidman:1979}, \citet{pazy:1983}, and \citet{neubrander:1985b}. 
-Results similar to Lemma \ref{lem:a4-2.2} and Theorem \ref{thm:a4-2.4} are due to \citet{pruess:1984}. 
+Results similar to Lemma \ref{lem:a4-2.2} and Theorem~\ref{thm:a4-2.4} are due to \citet{pruess:1984}. 
 For a discussion of the asymptotic behavior of the solutions of $\dot{u}(t) = A(t)u(t) + F(t)$ see \citet{datko:1972} and \citet[p.172]{pazy:1983}.
 
 \end{enumerate}
