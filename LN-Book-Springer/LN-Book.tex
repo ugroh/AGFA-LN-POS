@@ -1,7 +1,7 @@
 % !TEX TS-program = pdflatexmk
 % !BIB program = bibtex 
 %%%%%%%%%%%%%%%%%%%% LN-Book.tex %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Status: 2025-12-30 ulgr
+% Status: 2026-01-07 ulgr
 %%%%%%%%%%%%%%%% Springer-Verlag %%%%%%%%%%%%%%%%%%%%%%%%%% 
 \documentclass[%  
 	,graybox
@@ -12,7 +12,7 @@
 % 	,natbib					%% -- see below
 %	,referee				%% -- not used
 	]{svmono}
-%% --
+%% -- 
 \usepackage{graphicx}         
 \usepackage{multicol}        
 \usepackage[bottom]{footmisc}
@@ -50,6 +50,9 @@
 %% -- 
 \counterwithin{equation}{section}
 \counterwithin{theorem}{section}
+\makeatletter
+\@addtoreset{section}{chapter}
+\makeatother
 %% -- Continuous numbering
 %% -- 
 \makeatletter
@@ -101,6 +104,8 @@
 \@addtoreset{chapter}{part}
 \makeatother
 
+\def\sectionmark#1{\markright{\thechapter\ Sec. \thesection\ \  #1}}
+
 %% -- To prevent overlapping in TOC
 %% --
 \usepackage{tocloft} 
@@ -123,7 +128,7 @@
   \addtocontents{toc}{\protect\cftpagenumbersoff{section}}% 
   \section*{#1}%
   \addcontentsline{toc}{section}{#1}%
-  \addtocontents{toc}{\protect\cftpagenumberson{section}}%
+  \addtocontents{toc}{\protect\cftpagenumberson{section}}% 
 }
  
 %% -- Index : keep it please
@@ -155,7 +160,7 @@
 %% --
 \subtitle{Lecture Notes in Mathematics\\ \\ 1184\\ \\Springer-Verlag\\ Berlin Heidelberg New York Tokyo}
 
-\date{\huge Status: \today}
+\date{Version 07.01.26}
 %% --
 \maketitle
 %% --

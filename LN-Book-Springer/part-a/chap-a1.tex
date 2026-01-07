@@ -1,13 +1,16 @@
 %% --
 \setcounter{chapter}{0}
+\setcounter{section}{0}
 %% --
 \chapternopage{Basic Results on Semigroups on Banach Spaces}\label{chap:a1}%
+\chaptermark{Basic Results on Banach Spaces}
 %% --
 {\Large
 \vspace*{-.75cm}
 by \\[.25em]
 Rainer Nagel and Ulf Schlotterbeck 
 \vspace{.75cm}
+\\
 }
 %% --
 Since the basic theory of one-parameter semigroups can be found in several excellent books (\eg \citet{davies:1980}, \citet{goldstein:1985a}, \citet{pazy:1983} or \citet{hillephillips:1957}), we do not want to give a self-contained introduction to this subject here.
@@ -54,14 +57,14 @@ Next we collect a few elementary facts on the continuity and boundedness of one-
 \begin{enumerate}[\upshape(i), wide, labelindent=.5em]
 
 \item 
-A one-parameter semigroup $(T(t))_{t \geq 0}$ on a Banach space $E$ is strongly continuous if and only if for any $f \in E$ it is true that $T(t)f \to f$ if $t \to 0$.
+A one-parameter semigroup $(T(t))_{t \geq 0}$ on a Banach space $E$ is strongly continuous if and only if for any $f \in E$ it is true that $T(t)f \to f$ If\/ $t \to 0$.
 
 \item 
 For every strongly continuous semigroup there exist constants $ M \geq 1 $, $ \omega \in \R $, such that 
 $ \lVert T(t) \rVert \leq M \cdot \eu^{ \omega t} $ for every $  t \geq 0 $.
 
-\item If $ T(t)_{t\geq0} $ is a one-parameter semigroup such that $ \lVert T(t) \rVert $ is bounded for
-$ 0 < t \leq \delta $ then it is strongly continuous if and only if $ \lim_{t\to0} T(t)f = f $ for every 
+\item If\/ $ T(t)_{t\geq0} $ is a one-parameter semigroup such that $ \lVert T(t) \rVert $ is bounded for
+$ 0 < t \leq \delta $ then it is strongly continuous if and only if\/ $ \lim_{t\to0} T(t)f = f $ for every 
 $ f $ in a total subset of\/ $ E $.
 
 \end{enumerate}
@@ -150,10 +153,10 @@ For the generator $A$ of a semigroup $(T(t))_{t \geq 0}$ on a Banach space~$E$ t
 %% --
 \begin{enumerate}[\upshape(i)]
 \item
-If $f \in D(A)$, then $T(t)f \in D(A)$ for every $t \geq 0$.
+If\/ $f \in D(A)$, then $T(t)f \in D(A)$ for every $t \geq 0$.
 
 \item
-The map $t \mapsto T(t)f$ is differentiable on $\R_{+}$ if and only if $f \in D(A)$.
+The map $t \mapsto T(t)f$ is differentiable on $\R_{+}$ if and only if\/ $f \in D(A)$.
 In that case one has
 %% --
 \begin{equation}\label{eq:a1-1.2}
@@ -168,7 +171,7 @@ For every $f \in E$ and $t > 0$ the element $\int_0^t T(s)f \ds$ belongs to $D(A
 \end{equation}
 %% --
 \item
-If $f \in D(A)$, then
+If\/ $f \in D(A)$, then
 %% --
 \begin{equation}\label{eq:a1-1.4}
     \int_0^t T(s)Af \ds = T(t)f - f  .
@@ -203,7 +206,7 @@ Here we only point out that the above theorem implies that a semigroup is unique
 While the generator is bounded only for uniformly continuous semigroups (see Section~\ref{sec:a1-2} below), it always enjoys a weaker but useful property.
 %% --
 \begin{definition}\label{def:a1-1.8}
-An operator $B$ with domain $D(B)$ on a Banach space $E$ is called \emph{closed} if $D(B)$ endowed with the \emph{graph norm}
+An operator $B$ with domain $D(B)$ on a Banach space $E$ is called \emph{closed} if\/ $D(B)$ endowed with the \emph{graph norm}
 %% --
 \[
     \|f\|_{B} \coloneqq \|f\| + \|Bf\|
@@ -219,7 +222,7 @@ Equivalently, $(B,D(B))$ is closed if and only if its \emph{graph} $\{(f,Bf) \co
 \end{definition}
 %% --
 It is clear from this definition that the \emph{closedness} of an operator $B$ depends very much on the size of the domain $D(B)$.
-For example, a bounded and densely defined operator $(B,D(B))$ is closed if and only if $D(B) = E$.
+For example, a bounded and densely defined operator $(B,D(B))$ is closed if and only if\/ $D(B) = E$.
 
 On the other hand it may happen that $(B,D(B))$ is not closed but has a closed \emph{extension} $(C,D(C))$, \ie  $ D(B) \subseteq D(C)$ and $Bf = Cf$ for every $f \in D(B)$.
 In that case, $B$ is called \emph{closable}, a property which is equivalent to
@@ -231,7 +234,7 @@ In that case, $B$ is called \emph{closable}, a property which is equivalent to
 The smallest closed extension of\/ $(B,D(B))$ will be called the \emph{closure} $\overline{B}$ with domain $D(\overline{B})$.
 In other words, the graph of\/ $\overline{B}$ is the closure of\/ $\{(f,Bf) \colon f \in D(B)\}$ in $E \times E$.
 
-Finally, we call a subset $D_{0}$ of\/ $D(B)$ a \emph{core} for $B$ if $D_{0}$ is $\|\cdot\|_{B}$-dense in $D(B)$.
+Finally, we call a subset $D_{0}$ of\/ $D(B)$ a \emph{core} for $B$ if\/ $D_{0}$ is $\|\cdot\|_{B}$-dense in $D(B)$.
 \index{core}
 This means that a closed operator is determined (via closure) by its restriction to a core in its domain.
 
@@ -319,7 +322,7 @@ Since the generator $(A,D(A))$ determines the semigroup $(T(t))_{t \geq 0}$ uniq
 For one-parameter groups it might seem to be more natural to define the generator as the \emph{derivative} rather than just the \emph{right derivative} at $t = 0$.
 This yields the same operator as the following result shows.
 
-The strongly continuous semigroup $(T(t))_{t \geq 0}$ with generator $A$ can be extended to a strongly continuous one-parameter group $(U(t))_{t \in \R}$ if and only if $-A$ generates a semigroup $(S(t))_{t \geq 0}$.
+The strongly continuous semigroup $(T(t))_{t \geq 0}$ with generator $A$ can be extended to a strongly continuous one-parameter group $(U(t))_{t \in \R}$ if and only if\/ $-A$ generates a semigroup $(S(t))_{t \geq 0}$.
 In that case $(U(t))_{t \in \R}$ is obtained as
 %% --
 \[
@@ -385,7 +388,7 @@ The above characterization of the generators of uniformly continuous semigroups 
 %% --
 %% --
 The above considerations especially apply in the situation $E = M_{n}(\C)$.
-If $n = 2$ and $A \in E$, one can derive an explicit formula for $ \eu^{tA}$. 
+If\/ $n = 2$ and $A \in E$, one can derive an explicit formula for $ \eu^{tA}$. 
 
 Let %
 \[
@@ -454,13 +457,13 @@ As summary we obtain
 	\begin{cases}
 		 \eu^{t \cdot s/2} \, \left[ \frac{1}{D} \sinh(t D)  \cdot A + 
 			\left( \cosh(tD) - \frac{s}{2D} \sinh(tD) \right) \cdot \Id \right], & 
-									\text{if $ D \neq 0 $, } \\
+									\text{if\/ $ D \neq 0 $, } \\
 		 \eu^{t \cdot s/2} \, \left[ ( 1 - \frac{s}{2} \, t )\cdot \Id + t \cdot A \right], &
-									\text{if $ D = 0 $.}
+									\text{if\/ $ D = 0 $.}
 	\end{cases}
 \end{equation*}
 %% 
-In case $A$ is a real $2 \times2$-matrix and if $ D \neq 0 $, then 
+In case $A$ is a real $2 \times2$-matrix and if\/ $ D \neq 0 $, then 
 $ D^{2} = s^{2}/4 - d $ can be positive or negative. 
 %% -- 
 \begin{description}[wide,  labelindent=0em]
@@ -563,7 +566,7 @@ Then the properties (a) and (b), \resp (a') and (b'), are equivalent.
 	$M_{q}$ generates a strongly continuous semigroup.
 
 \item 
-	$\sup\{\Re( q(x)) \colon x \in X \} < \infty$.
+	$\sup\{\Re(q(x)) \colon x \in X \} < \infty$.
 
 \item[\upshape (a')] 
 	$M_{q}$ generates a uniformly continuous semigroup.
@@ -740,7 +743,7 @@ Its generator is still the first derivative $A = \frac{d}{\dx}$, but with domain
 D(A) = \{f \in E \colon f \text{ absolutely continuous}, f' \in E, f(\tau) = 0\}.
 \]
 %% --
-In fact, if $f \in D(A)$, then $f$ is absolutely continuous with $f' \in E$.
+In fact, if\/ $f \in D(A)$, then $f$ is absolutely continuous with $f' \in E$.
 By Proposition~\ref{prop:a1-1.6}\,(i), it follows that $T(t)f$ is absolutely continuous and hence $f(\tau) = 0$.
 %% --
 \subsection{One-dimensional Diffusion Semigroup}\label{subsec:a1-2.7}%
@@ -903,7 +906,7 @@ There is an easy way how to obtain different (but isomorphic) semigroups out of 
 
 Let $V$ be an isomorphism from $E$ onto $E$.
 Then $S(t) \coloneqq VT(t)V^{-1}$, $t \geq 0$, defines a strongly continuous semigroup.
-If $A$ is the generator of\/ $(T(t))_{t \geq 0}$, then
+If\/ $A$ is the generator of\/ $(T(t))_{t \geq 0}$, then
 %% --
 \[
     B \coloneqq VAV^{-1} \text{ with domain } D(B) \coloneqq \{f \in E \colon V^{-1}f \in D(A)\}
@@ -955,7 +958,7 @@ Assume $F$ to be a closed $(T(t))$-invariant or, equivalently, $R(\lambda,A)$-in
 $\lambda \in \C$, 
 $ \Re(\lambda) > \omega_{0}$, subspace of\/ $E$.
 Then the semigroup $(T(t)_{|})_{t \geq 0}$ of all restrictions $T(t)_{|} \coloneqq T(t)_{|\,F}$ is strongly continuous on $F$.
-If $(A,D(A))$ denotes the generator of\/ $(T(t))_{t \geq 0}$ it follows from the $(T(t))$-invariance and closedness of\/ $F$ that $A$ maps $D(A) \cap F$ into $F$.
+If\/ $(A,D(A))$ denotes the generator of\/ $(T(t))_{t \geq 0}$ it follows from the $(T(t))$-invariance and closedness of\/ $F$ that $A$ maps $D(A) \cap F$ into $F$.
 Therefore
 %% --
 \[
@@ -964,7 +967,7 @@ Therefore
 %% --
 is the generator of\/ $(T(t)_{|})$.
 %
-Conversely, if $F$ is a closed \emph{linear subspace} of\/ $E$ with $A(D(A) \cap F) \subset F$ such that 
+Conversely, if\/ $F$ is a closed \emph{linear subspace} of\/ $E$ with $A(D(A) \cap F) \subset F$ such that 
 $A_{|}$ is a generator on $F$, then $F$ is $(T(t))$-invariant.
 
 An $A$-invariant subspace need not necessarily be $(T(t))$-invariant:
@@ -1185,7 +1188,7 @@ In particular,
 %% --
 \[
     \epsilon > \left\lvert f'_f(0) - \frac{1}{s}(\xi_f(s)-\xi_f(0)) \right\rvert 
-    = \left\lvert \langle f,A'\phi - \frac{1}{s}(T(s)'\phi-\phi) \rangle \right\rvert ,
+    = \left\lvert \left\langle f,A'\phi - \frac{1}{s}(T(s)'\phi-\phi) \right\langle \right\rvert ,
 \]
 %% --
 hence
@@ -1351,7 +1354,7 @@ It is clear that every $T(t)$ extends canonically to a bounded linear operator
     \hat{T}(t)(f_{n}) \coloneqq (T(t)f_{n})
 \]
 %% --
-on $m(E)$, but the semigroup $(\hat{T}(t))_{t \geq 0}$ is strongly continuous if and only if $T$ has a bounded generator.
+on $m(E)$, but the semigroup $(\hat{T}(t))_{t \geq 0}$ is strongly continuous if and only if\/ $T$ has a bounded generator.
 Therefore we restrict our attention to the closed, $(\hat{T}(t))$-invariant subspace
 %% --
 \[
@@ -1505,7 +1508,7 @@ $\|u\|_{\epsilon} \coloneqq \sup\{\langle u,\phi \otimes \psi\rangle \colon \phi
 Here, $\langle u,\phi \otimes \psi\rangle$ denotes the canonical bilinear form on $(E \otimes F) \times (E' \otimes F')$, \ie $\langle\sum_{i=1}^{n} f_{i} \otimes g_{i},\phi \otimes \psi\rangle = \sum_{i=1}^{n} \langle f_{i},\phi\rangle\langle g_{i},\psi\rangle$.
 
 \item
-if $E$ and $F$ are Hilbert spaces, $\|u\|_{h} = (u|u)_{h}^{1/2}$, where the scalar product $(\cdot|\cdot)_{h}$ is defined as in (ii), defines the \emph{Hilbert norm $h$} on $E \otimes F$.
+If\/ $E$ and $F$ are Hilbert spaces, $\|u\|_{h} = (u|u)_{h}^{1/2}$, where the scalar product $(\cdot|\cdot)_{h}$ is defined as in (ii), defines the \emph{Hilbert norm $h$} on $E \otimes F$.
 \end{enumerate}
 %% --
 In the following we write $E \otimes_{\alpha} F$ for the tensor product of\/ $E$ and $F$ endowed---if applicable---with one of the norms $\pi$, $\epsilon$, $h$ just defined.
@@ -1530,7 +1533,7 @@ Finally, we point out that for any $S \in \LE$, $T \in \L{F} $, the mapping
 %% --
 defined on $E \otimes F$ is linear and continuous on $E \otimes_{\alpha} F$, hence has a continuous extension to $ E \widetilde{\otimes}_{\alpha} F$. 
 This operator, as well as its continuous extension, will be denoted by $S \otimes T$ and satisfies $\|S \otimes T\| = \|S\|\|T\|$. 
-The notation $A \otimes B$ will also be used in the obvious way if $A$ and $B$ are not necessarily bounded operators on $E$ and $F$. 
+The notation $A \otimes B$ will also be used in the obvious way if\/ $A$ and $B$ are not necessarily bounded operators on $E$ and $F$. 
 We are now ready to consider semigroups induced on the tensor product.
 %% --
 \begin{proposition*}\label{prop:a1-3.7}

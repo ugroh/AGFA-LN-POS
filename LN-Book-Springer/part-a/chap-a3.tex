@@ -155,7 +155,7 @@ Moreover it is clear that $\lambda$ is an eigenvalue of\/ $A$ as soon as $\Re(\l
 \]
 %% --
 belongs to $D(A)$ and is an eigenvector of\/ $A$), hence $s(A) \geq -1$.
-For $f \in E$ and $\Re \, \lambda > -1$ 
+For $f \in E$ and $\Re(\lambda) > -1$ 
 %% --
 \[
     \|\cdot\|_{1}\text{-}\lim_{t \to \infty} \int_{0}^{t} \eu^{-\lambda s}T(s)f \, \ds
@@ -570,7 +570,7 @@ First we recall the well known \emph{resolvent equation}
 For any $z$,  $\lambda_{0} \in \rho(A)$ we have 
 %
 \[
-R(\lambda_{0},A) - R(z,A)= -(\lambda_{0}-z)R(\lambda_{0},A)R(z,A))\,.
+R(\lambda_{0},A) - R(z,A)= -(\lambda_{0}-z)R(\lambda_{0},A)R(z,A)\,.
 \]
 %
 From this it follows that 
@@ -583,7 +583,7 @@ If we now take a circle $\Gamma$ with center $\alpha$ and sufficiently small rad
 %% --
 \begin{align*}
 P &=  \frac{1}{2\pi\im } \int_{\Gamma} R(z,A)   \diff{z} = \\
-&=  \frac{1}{2\pi\im } \left[\int_{\Gamma} (\lambda_{0}-z)^{-2}R((\lambda_{0}-z)^{-1}, R(\lambda_{0},A))  \diff{z}   - 
+&=  \frac{1}{2\pi\im } \left[\int_{\Gamma} (\lambda_{0}-z)^{-2}R\left((\lambda_{0}-z)^{-1}, R(\lambda_{0},A)\right)  \diff{z}   - 
    \int_{\Gamma}(\lambda_{0}-z)^{-1} \diff{z} \right] . 
 \end{align*}
 %% --
@@ -946,7 +946,7 @@ Thus $r_{\text{ess}}(T)$ can be characterized as
 %%  --
 \begin{minipage}{.75\textwidth}
 $r_{\text{ess}}(T) $ is the smallest   $r \in \R_{+}$    such that every   
-$\lambda \in \sigma(T)$,$ |\lambda| > r $  is a pole of finite algebraic multiplicity. 
+$\lambda \in \sigma(T)$, $ |\lambda| > r $  is a pole of finite algebraic multiplicity. 
 \end{minipage}
 \end{equation}
 %% --
@@ -1252,7 +1252,7 @@ The inclusion $A\sigma(A) \subset \sigma(A_{\F})$ follows from (i).
 
 Now we show $R\sigma(A) \subset R\sigma(A_{\F})$.
 For $\lambda \in R\sigma(A)$ choose $f \in E$ such that $\|(\lambda-A)g - f\| \geq 1$ for every $g \in D(A)$.
-Then $\|(\lambda-A_{\F})g - \hat{f}\| \geq 1$ for every $\hat{g} \in D(A_{\F})$ and $\hat{f} = (f,f,\ldots) + c_{F}(E)$.
+Then $\|(\lambda-A_{\F})\hat{g} - \hat{f}\| \geq 1$ for every $\hat{g} \in D(A_{\F})$ and $\hat{f} = (f,f,\ldots) + c_{F}(E)$.
 Therefore $\lambda \in R\sigma(A_{\F})$.
 
 We now show $\rho(A) \subset \rho(A_{\F})$: Assume $\lambda \in \rho(A)$.
@@ -1371,7 +1371,7 @@ $\exp(\mu_{n}t) \in P\sigma(T(t))$ for every $t > 0$ .
 \end{enumerate}
 \end{lemma}
 %% --
-The action of\/ $A$, \resp $T(t)$ in the subspaces $P_{n}E$, $n \in \Z$, is determined by \eqref{eq:a3-5.3} and \eqref{eq:a3-5.4} \resp
+The action of\/ $A$, \resp $T(t)$ in the subspaces $P_{n}E$, $n \in \Z$, is determined by \eqref{eq:a3-5.3} and \eqref{eq:a3-5.4}.
 Moreover,
 %% --
 \[
@@ -1379,7 +1379,7 @@ Moreover,
 	=  \frac{1}{\tau}\int_{0}^{\tau} \exp((\mu_{n}-\mu_{m})s)P_{n}f  \ds = 0
 \]
 %% --
-for $n \neq m$, the subspaces $P_{n}E$ are \enquote{orthogonal}.
+for $n \neq m$, hence the subspaces $P_{n}E$ are \enquote{orthogonal}.
 Since their union is total in $E$, one expects to be able to extend the representations \eqref{eq:a3-5.3} and \eqref{eq:a3-5.4} of\/ $A$ and $T(t)$.
 This is possible if
 %% --
@@ -1389,7 +1389,7 @@ This is possible if
 %% --
 where the series should be summable for the strong operator topology.
 
-Unfortunately this is false in general since the family of projections
+Unfortunately, this is false in general since the family of projections
 %% --
 \[
 Q_{H} \coloneqq \sum_{n \in H} P_{n} ,
@@ -1419,12 +1419,12 @@ $Af = \sum_{-\infty}^{+\infty} \mu_{n}P_{n}f$ \quad if\/ $f \in D(A^{2})$ .
 \begin{proof}
 It suffices to prove the first statement. Then (i) and (ii) follow by \eqref{eq:a3-5.3} and \eqref{eq:a3-5.4}.
 
-We assume $\tau = 2\pi$ and show first that $\sum_{-\infty}^{+\infty} P_{n}f$ is summable for $f \in D(A)$: For $g \coloneqq Af$ we obtain $P_{n}g = P_{n}Af = AP_{n}f = inP_{n}f$.
+We assume $\tau = 2\pi$ and show first that $\sum_{-\infty}^{+\infty} P_{n}f$ is summable for $f \in D(A)$: For $g \coloneqq Af$ we obtain $P_{n}g = P_{n}Af = AP_{n}f = \im nP_{n}f$.
 Take $H$ to be a finite subset of\/ $\Z \setminus \{0\}$ and $\phi \in E'$. Then
 %% --
 \[
 \left|\sum_{n \in H} \langle P_{n}f,\phi \rangle\right|
-= \left|\sum_{n \in H} \frac{1}{in} \langle P_{n}g,\phi \rangle\right| 
+= \left|\sum_{n \in H} \frac{1}{\im n} \langle P_{n}g,\phi \rangle\right| 
 \leq \left(\sum_{n \in H} \frac{1}{n^2}\right)^{1/2}\left(\sum_{n \in H} |\langle P_{n}g,\phi \rangle|^{2}\right)^{1/2} .
 \]
 %% --
@@ -1692,7 +1692,7 @@ $\ker(\eu^{\mu t} - T(t)) = \overline{\mathrm{span}_{n \in \Z} \{\ker(\mu + 2\pi
 \end{enumerate}
 \end{corollary}
 %% --
-We note that an analogous statements is valid for $\ker(\mu - A')$ and $\ker(\eu^{\mu t} - T(t)')$ if we take in (ii) the $\sigma(E',E)$-closure.
+We note that an analogous statement is valid for $\ker(\mu - A')$ and $\ker(\eu^{\mu t} - T(t)')$ if we take in (ii) the $\sigma(E',E)$-closure.
 
 Without proof (see \citet[Proposition~1.10]{greiner:1981}) we add another corollary showing that poles of the resolvent of\/ $T(t)$ correspond necessarily to poles of the resolvent of the generator.
 Again the converse is not true as shown by Example~\ref{ex:a3-5.6}.
@@ -1746,7 +1746,7 @@ Then the spectral mapping theorem is valid, \ie
 %% --
 \begin{proof}
 By the previous considerations it suffices to show that $A\sigma(T(t)) \setminus \{0\} \subset \eu^{t \cdot \sigma(A)}$ for $t > 0$.
-This will be done by converting approximate eigenvectors into eigenvectors in the semigroup $\F$-product (see subsection~\ref{subsec:a3-4.5}).
+This will be done by converting approximate eigenvectors into eigenvectors in the semigroup $\F$-product (see Subsection~\ref{subsec:a3-4.5}).
 The assertion then follows from \eqref{eq:a3-6.4} and Proposition~\ref{prop:a3-4.4}\,(ii).
 
 Assume $t \mapsto T(t)$ to be norm continuous for $t \geq t_{0}$.
@@ -1786,7 +1786,7 @@ As mentioned before, this will be of great use in many applications.
 Therefore we state explicitly the spectral mapping theorem for several important classes of semigroups all of which are eventually norm continuous (cf. the diagram preceding A-II, Example~1.27).
 %% --
 \begin{corollary}\label{cor:a3-6.7}
-The spectral mapping theorem \ref{thm:a3-6.6}
+The Spectral Mapping Theorem \ref{thm:a3-6.6}
 \index{spectral mapping theorem}
 %%% --
 %\[
@@ -1871,7 +1871,7 @@ By taking $t$ sufficiently small, we conclude that $n_{t'} = 0$ for some $t' > 0
 \enquote{$\supseteq$}\quad 
 Choose $\mu \in \sigma(A_{1})$, $\lambda \in \sigma(A_{2})$.
 For every $t > 0$ there exist $\eta_{t} \in \sigma(A)$, $m_{t} \in \Z$ such that $\mu + \lambda = \eta_{t} + 2\pi \im m_{t}/t$.
-Since $\Re\,\mu + \Re(\lambda) = \Re\,\eta_{t}$ and $\{\im \eta_{t}: t > 0\}$ is bounded, 
+Since $\Re(\mu) + \Re(\lambda) = \Re(\eta_{t})$ and $\{\Im(\eta_{t}) \colon t > 0\}$ is bounded, 
 $\TT = (T_{1}(t) \otimes T_{2}(t))_{t\geq 0}$ being eventually norm continuous, it follows that $m_{t'} = 0$ for some $t' > 0$.
 \end{proof}
 %% --
@@ -1890,7 +1890,7 @@ is valid for the generator $A$ of a strongly continuous semigroup $(T(t))_{t\geq
 Among the various examples showing that \eqref{eq:a3-7.1} does not hold in general we recall the following.
 Take the Banach space $E = c_{0}$, the multiplication operator $A(x_{n})_{n\in\N} = (\im n x_{n})_{n\in\N}$ with maximal domain and the corresponding semigroup $T(t)(x_{n})_{n \in \N} = 
 (\eu^{\im nt}x_{n})_{n \in \N}$.
-Then $\sigma(A) = \{in \colon n \in \N\}$ and the spectral mapping theorem is valid only in the following weak form
+Then $\sigma(A) = \{\im n \colon n \in \N\}$ and the spectral mapping theorem is valid only in the following weak form
 %% --
 \begin{equation}\label{eq:a3-7.2}
 	\sigma(T(t)) = \overline{\exp(t\cdot\sigma(A))}, \quad t \geq 0 .
@@ -1908,7 +1908,7 @@ If\/ $\|\eu^{tq(x)}\|$ is uniformly bounded for $0 \leq t \leq 1$ and $x \in X$,
 \]
 %% --
 Since $M_{q}$ has a bounded inverse if and only if\/ $q(x)^{-1}$ exists and is uniformly bounded for $x \in X$, it follows that the eigenvalues of each matrix $q(x)$ are always contained in $\sigma(M_{q})$.
-In fact, much more can be said, in case the function is bounded.
+In fact, much more can be said in case the function is bounded.
 %% --
 \begin{lemma}\label{lem:a3-7.1}
 The spectrum of the matrix valued multiplication operator $M_{q}$, where $q \colon X \to M(n)$ is bounded, is given by $\sigma(M_{q}) = \overline{\bigcup_{x\in X} \sigma(q(x))}$.
@@ -2115,7 +2115,7 @@ g = \sum_{n\in\Z} P_{n}g\cdot \eu^{-\im n0} = \sum_{m\in\Z} \check{\phi_{0}}(0 +
 Since $\text{span }\bigcup_{k\in\Z} P_{k}E$ is dense (Lemma~\ref{lem:a3-7.7}), we conclude that
 %% --
 \begin{equation}\label{eq:a3-7.6}
-\sum_{m\in\Z} \phi_{0}(m\pi)T(m\pi) = \Id .
+\sum_{m\in\Z} \check{\phi_{0}}(m\pi)T(m\pi) = \Id .
 \end{equation}
 %% --
 As the final step we construct the inverse operator of\/ $\Id + T(\pi)$ showing that $-1 \in \rho(T(\pi))$.
@@ -2180,7 +2180,7 @@ $\im\Z \subset \rho(A)$ and the series $\sum_{k\in\Z} R(\im k,A)Q_{k}f$ is Césa
 \begin{proof}
 (a) $\Rightarrow$ (b) The Spectral Inclusion Theorem~\ref{prop:a3-6.2} implies $\im\Z \subset \rho(A)$.
 By \eqref{eq:a3-7.7} we have $R(\im k,A) = 2\pi\cdot(1-T(2\pi))^{-1}Q_{k}$.
-Since $\sum_{k\in\Z} Q_{k}f$ is Césaro-summable (towards $\frac{1}{2}(f + T(2\pi)f)$) (see \eqref{eq:a3-7.8}, it follows that $\sum_{k\in\Z} R(\im k,A)f$ is Césaro-summable as well.
+Since $\sum_{k\in\Z} Q_{k}f$ is Césaro-summable (\mbox{towards} $\frac{1}{2}(f + T(2\pi)f)$) (see \eqref{eq:a3-7.8}, it follows that $\sum_{k\in\Z} R(\im k,A)f$ is Césaro-summable as well.
 
 (b) $\Leftrightarrow$ (c) If we use A-I,\,(3.1) and integrate by parts, we obtain
 \begin{align*}
@@ -2347,7 +2347,5 @@ The final part of this section is taken from \citet{greiner:1985} and yields a n
 Different proofs can be found in \citet{herbst:1983}, \citet{howland:1984} and \citet{pruess:1984}. 
 \end{enumerate}
 
-%\section*{References}
-%\addcontentsline{toc}{section}{References}
-%% --
+
 
