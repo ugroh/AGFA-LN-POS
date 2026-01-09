@@ -41,7 +41,6 @@ clean() {
     print_status "Räume auf..."
     latexmk -c
     find . -name "*.thm" -type f -delete
-    find . -name "*.bbl" -type f -delete
     find . -name "*.idx" -type f -delete
     find . -name "*.ind" -type f -delete
     find . -name "*.ilg" -type f -delete

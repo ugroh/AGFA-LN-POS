@@ -18,7 +18,7 @@
 \usepackage[bottom]{footmisc}
 \usepackage{newtxtext}       % 
 \usepackage[varvw]{newtxmath}       % selects Times Roman as basic font
-
+ 
 %% -- Our Remarks and Examples 
 %% --  
 \spnewtheorem{remarks}[theorem]{Remarks}{\normalfont\bfseries}{\normalfont}
@@ -207,7 +207,9 @@
 %% --
 {\RaggedRight
 \bibliographystyle{abbrvnat}
-\bibliography{./bib/ln-references}}
+\bibliography{./bib/ln-references}
+%\input{LN-Book.bbl}
+}
 %% --
 \cleardoublepage 
 \printindex
@@ -228,7 +230,9 @@
 %% --
 {\RaggedRight
 \bibliographystyleEN{abbrvnat}
-\bibliographyEN{./bib/ln-references-EN}}
+\bibliographyEN{./bib/ln-references-EN}
+%\input{EN.bbl}
+}
 %% --
 %% -- End of LN
 %% --
