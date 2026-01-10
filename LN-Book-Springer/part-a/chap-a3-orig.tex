@@ -11,8 +11,8 @@ Günther Greiner and Rainer Nagel
 %% --
 \section{Introduction}%
 %% --
-In this chapter, we begin a systematic analysis of the spectrum of a strongly continuous semigroup $\TT = (T(t))_{t\geq 0}$ on a complex Banach space $E$.
-By the spectrum of the semigroup we mean the spectrum $\sigma(A)$ of its generator $A$.
+In this chapter, we start a systematic analysis of the spectrum of a strongly continuous semigroup $\TT = (T(t))_{t\geq 0}$ on a complex Banach space $E$.
+By the spectrum of the semigroup we mean the spectrum $\sigma(A)$ of the generator $A$ of\/ $\TT$.
 In particular, we are interested in the precise relations between $\sigma(A)$ and $\sigma(T(t))$.
 The heuristic formula
 %% --
@@ -20,7 +20,7 @@ The heuristic formula
 	T(t) = \eu^{tA}
 \]
 %% --
-serves as a leitmotif and suggests relations of the form
+serves as a leitmotiv and suggests relations of the form
 %% --
 \[
 \sigma(T(t)) = \eu^{t\sigma(A)} = \{ \eu^{t\lambda} \colon \lambda \in \sigma
@@ -29,16 +29,16 @@ serves as a leitmotif and suggests relations of the form
 %% --
 called \emph{spectral mapping theorem}.
 \index{spectral mapping theorem}
-These --- or similar --- relations will be of great use in Chapter IV enabling us to determine the asymptotic behavior of the semigroup $\TT$ by examining the spectrum of its generator.
+These --- or similar --- relations will be of great use in Chapter IV and enable us to determine the asymptotic behavior of the semigroup $\TT$ by the spectrum of its generator.
 
-As motivation and also as a preliminary step, we focus here on the \emph{spectral radius}
+As motivation and also as a preliminary step, we concentrate here on the \emph{spectral radius}
 \index{spectral radius}
 %% -- 
 \begin{equation}\label{eq:a3-1.1}
 	r(T(t)) \coloneq  \sup \{ |\lambda| \colon \lambda \in \sigma(T(t)) \}, \quad t \geq 0 ,
 \end{equation}
 %% -- 
-and demonstrate its relationship with the \emph{spectral bound}
+and show how it is related to the \emph{spectral bound}
 \index{spectral bound $s(A)$}
 %% -- 
 \begin{equation}\label{eq:a3-1.2}
@@ -53,7 +53,7 @@ of the generator $A$ and to the \emph{growth bound}
 \end{equation}
 %% -- 
 of the semigroup $\TT = (T(t))_{t\geq 0}$.
-(Note that we sometimes write $\omega_{0}(\TT)$ or $\omega_{0}(A)$ instead of\/ $\omega_{0}$).
+(Recall that sometimes we write $\omega_{0}(\TT)$ or $\omega_{0}(A)$ instead of\/ $\omega_{0}$).
 %
 The Examples~\ref{ex:a3-1.3} and \ref{ex:a3-1.4} below illustrate the main difficulties to be encountered.
 %% -- Examples  1.3 and 1.4
@@ -108,15 +108,15 @@ If\/ $\Re(\lambda) < 0$ for each $\lambda \in \sigma(A)$, then
 \mbox{$\lim_{t \to \infty}\|T(t)\| = 0$.}
 \end{corollary}
 %% --
-Through this corollary we have re-established Liapunov's  famous result, which assures that the solutions of the linear Cauchy problem
+Through this corollary we have re-established a famous result of Liapunov which assures that the solutions of the linear Cauchy problem
 %% --
 \[
     \dot{x}(t) = Ax(t), \quad x(0) = x_{0} \in \C^{n} \quad \text{and} \quad A = (a_{ij})_{n\times n}
 \]
 %% --
-are \emph{stable}, \ie they converge to zero as $t \to \infty$ if (and only if) the real parts of all eigenvalues of the matrix $A$ are less than zero.
+are \emph{stable}, \ie they converge to zero as $t \to \infty$ if (and only if) the real parts of all eigenvalues of the matrix $A$ are smaller than zero.
 
-The situation is much more difficult for unbounded generators, and $s(A)$ may differ drastically from $\omega_{0}(\TT)$.
+For unbounded generators the situation is much more difficult and $s(A)$ may differ drastically from $\omega_{0}(\TT)$.
 %% --
 \begin{example}\label{ex:a3-1.3}(Banach function space, \citet{greinervoigtwolff:1981})
 \index{spectral mapping theorem!counter example}%% --
