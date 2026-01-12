@@ -32,11 +32,11 @@ In Section 2, we consider the long-term behavior of the solutions of \eqref{eq:c
 %% -- 
 Let $ (T(t))_{t \geq 0} $ be a semigroup on $ E $ with generator $ A $.
 An initial value $ f \in D(A) $ is said to be \emph{stable} if the solution $ t \mapsto T(t)f $ of
-\index{stability!stable}
 %% --
 \begin{equation}\label{eq:c4-2}
 \dot{u}(t) = Au(t), \quad u(0) = f \tag{ACP}
 \end{equation}
+\index{stability!stable}
 %% --
 converges to zero as $ t \to \infty $. 
 The semigroup is called stable if every solution converges to zero, \ie if every initial value $ f \in D(A) $ is stable.
@@ -185,7 +185,7 @@ Moreover, as shown in A-II, Example~1.14, the Laplacian $\Delta$ on $C_0(\R^{n})
 T(t)f(x) = (4\pi t)^{-n/2} \int_{\R^{n}} \eu^{-|x-y|^{2}/4t} f(y)  \dy\,.
 \]
 %% --
-This semigroup is not exponentially stable because $0 \in \sigma(\Delta)$ ($\Im(\Delta) \not= C_0(\R^{n})$); see Corollary~\ref{cor:a4-1.5} below. To see that the semigroup is (uniformly) stable, observe that for every fixed $x\in\R^n$, the kernel $k_t(x,y) \coloneq  (4\pi t)^{-n/2} \eu^{-|x-y|^{2}/4t}$ defines a probability density with $\int_{\R^n} k_t(x,y) \dy\, = 1$. Hence, $\|T(t)\| \le 1$; in fact, $\|T(t)\| = 1$ since $k_t$ also forms an approximate identity. Let $f \in C_0(\R^{n})$ and $\epsilon > 0$. Then there exists a compactly supported $g \in C_0(\R^{n})$ such that $\|f-g\| \le \epsilon$. Therefore,
+This semigroup is not exponentially stable because $0 \in \sigma(\Delta)$ ($\Im(\Delta) \not= C_0(\R^{n})$); see Corollary~\ref{cor:a4-1.5} below. To see that the semigroup is (uniformly) stable, observe that for every fixed $x\in\R^n$, the kernel $k_t(x,y) \coloneq  (4\pi t)^{-n/2} \eu^{-|x-y|^{2}/4t}$ defines a probability density with $\int_{\R^n} k_t(x,y) \dy\, = 1$. Hence, $\|T(t)\| \le 1$; in fact, $\|T(t)\| = 1$ since $k_t$ also forms an approximate identity. Let $f \in C_0(\R^{n})$ and all $\epsilon > 0$. Then there exists a compactly supported $g \in C_0(\R^{n})$ such that $\|f-g\| \le \epsilon$. Therefore,
 %% --
 \[
 \|T(t)f\| \le  \|T(t)\|\|f-g\| + \|T(t)g\| \le \epsilon + (4\pi t)^{-n/2} \int_{\R^{n}} |g(y)|  \dy\, ,
@@ -513,35 +513,35 @@ A_n =
 This semigroup satisfies $ \|T(t)\| = e^t $ for all $t\ge 0$. Hence, $ \omega_{0}(A) = 1 $, while the generator $ A = (2\pi i n + A_n)_{n \in \N} $ has spectral bound $ s(A) = 0 $. 
 We first show that $ \omega_1(A) = \omega_{0}(A) $; this will later be used to construct a semigroup for which $ s(A) < \omega_1(A) < \omega_{0}(A) $. 
 Let $ e_n = n^{-1/2} (1, ..., 1) \in \C^n $. 
- 
-Then, for fixed $n$ and $t\ge 0$, 
+
+Then, for fixed $n$, 
 %% --  
 \begin{align*}
-	\|\exp(&t A_n) \cdot e_n\|^2 = \\
-	&= \frac{1}{n} \left\| (1 + t + \dots + \frac{t^{n-1}}{(n-1)!}, 1 + t + \dots + \frac{t^{n-2}}{(n-2)!}, \dots, 1+t, 1) \right\|^2 \\
-	&=
-	\frac{1}{n} \sum_{r=0}^{n-1} \left(\sum_{j=0}^{r} \frac{1}{j!} t^j \right)^2 
-	\, = \, \frac{1}{n} \sum_{r=0}^{n-1} \sum_{j,s=0}^{r} \frac{1}{j!s!} t^{j+s} 
-	= \frac{1}{n} \sum_{r=0}^{n-1} \sum_{i=0}^{2r} t^i
-	\sum_{\substack{j+s=i\\0\le j,s\le r}} \frac{1}{j!\,s!} \\
-	&\ge \frac{1}{n} \sum_{r=0}^{n-1} \sum_{i=0}^{r} \frac{(2t)^i}{i!} 
-	= \frac{1}{n} \sum_{i=0}^{n-1} (n-i)\,\frac{(2t)^i}{i!} 
-	\ge \frac{1}{n^2} \sum_{i=0}^{n-1} \frac{(2t)^i}{i!}.
+\|\exp(&t A_n) \cdot e_n\|^2 = \\
+&= \frac{1}{n} \left\| (1 + t + \dots + \frac{t^{n-1}}{(n-1)!}, 1 + t + \dots + \frac{t^{n-2}}{(n-2)!}, \dots, 1+t, 1) \right\|^2 \\
+&=
+\frac{1}{n} \sum_{r=0}^{n-1} \sum_{j,s=0}^{r} \frac{1}{j!s!} t^{j+s} \, = \,
+\frac{1}{n} \sum_{r=0}^{n-1} \left(\sum_{j=0}^{r} \frac{1}{j!} t^j \right)^2 
+\, = \, \frac{1}{n} \sum_{r=0}^{n-1} \sum_{j,s=0}^{r} \frac{1}{j!s!} t^{j+s} \\
+&= 
+\frac{1}{n} \sum_{r=0}^{n-1} \sum_{i=0}^{2r} t^i \sum_{j+s=i} \frac{1}{j!s!} \,
+= \, 
+\frac{1}{n} \sum_{r=0}^{n-1} \sum_{i=0}^{2r} \frac{(2t)^i}{i!} \,  = \,  \frac{1}{n^2} \sum_{i=0}^{n-1} \frac{(2t)^i}{i!}.
 \end{align*}
 %% --
-For $ 0 < q < 1 $, define $ x_q \in E $ as  
+ For $ 0 < q < 1 $, define $ x_q \in E $ as  
 $
-x_q :=  (q e_1, 2q^2 e_2, ..., n q^n e_n, ...).
+x_q \coloneq  (q e_1, 2q^2 e_2, ..., n q^n e_n, ...).
 $
 Then $x_q \in D(A)$ and
 %--
 \begin{align*}
-	\|T(t)x_q\|^2 & = \sum_{n=1}^{\infty} n^2 q^{2n} \| \exp(t A) e_n \|^2
-	\geq \sum_{n=1}^{\infty} n^2 q^{2n} \left(\frac{1}{n^2} \sum_{i=0}^{n-1}  \frac{1}{i!} (2t)^i \right)\\
-	&= \sum_{i=0}^{\infty} \sum_{n=i+1}^{\infty} \left( q^{2n} \frac{1}{i!} (2t)^i \right)
-	= \sum_{i=0}^{\infty} q^{2i+2} (1 - q^2)^{-1} \frac{1}{i!} (2t)^i \\
-	&= \frac{q^2}{1 - q^2} \sum_{i=0}^{\infty} \frac{1}{i!} (2t q^2)^i
-	= \frac{q^2}{1 - q^2} \eu^{2t q^2}.
+\|T(t)x_q\|^2 & = \sum_{n=1}^{\infty} q^{2n} \| \exp(t A) e_n \|^2
+\geq \sum_{n=1}^{\infty} n^2 q^{2n} \left(\frac{1}{n^2} \sum_{i=0}^{n-1}  \frac{1}{i!} (2t)^i \right)\\
+&= \sum_{i=0}^{\infty} \sum_{n=i+1}^{\infty} \left( q^{2n} \frac{1}{i!} (2t)^i \right)
+= \sum_{i=0}^{\infty} q^{2i+2} (1 - q^2)^{-1} \frac{1}{i!} (2t)^i \\
+&= \frac{q^2}{1 - q^2} \sum_{i=0}^{\infty} \frac{1}{i!} (2t q^2)^i
+= \frac{q^2}{1 - q^2} \eu^{2t q^2}.
 \end{align*}
 %% -- \noindent kann man sich ersparen, wenn man nach \end{} keine Leerzeile macht, also
 %% -- und kein eingerücktes It
