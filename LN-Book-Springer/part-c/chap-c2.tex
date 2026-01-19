@@ -170,7 +170,7 @@ f_{0}(x) = 1/2 [\eu^{x} \int_{0}^{1} \eu^{-y}g(y) \dy - \eu^{-x} \int_{0}^{1} \e
 \]
 %%
 Then $f_{0} \in C^{2}[0,1]$ and $f_{0} - f_{0}'' = g$. 
-There exist $a, b \in \R$ such that $f(x) = f_{0}(x) + a\eu^{x} + b\eu^{-x}$ defines a function $f \in C^{2}[0,1]$ satisfying $f(0) = f(1) = 0$. Since $f - f'' = f_{0} - f_{0}'' = g$ this implies that $f \in D(A)$ and $f - Af = g$. We have shown that $(Id - A)$ is surjective. It follows from Theorem 
+There exist $a, b \in \R$ such that $f(x) = f_{0}(x) + a\eu^{x} + b\eu^{-x}$ defines a function $f \in C^{2}[0,1]$ satisfying $f(0) = f(1) = 0$. Since $f - f'' = f_{0} - f_{0}'' = g$ this implies that $f \in D(A)$ and $f - Af = g$. We have shown that $(\Id - A)$ is surjective. It follows from Theorem 
 \ref{thm:c2-1.2} that $A$ is the generator of a positive contraction semigroup.
 %%-- 
 \item \label{ex:c2-1.5-2}
@@ -204,7 +204,7 @@ Then $\phi \in \diff{N^{+}}(f)$ and
 since $f'(b_{n}) \leq 0$ and $f'(a_{n}) \geq 0$ for all $n \in \N$.
 
 We have shown that $A$ is dispersive. 
-As in \ref{ex:c2-1.5-1}   one shows that $(Id - A)$ is surjective. 
+As in \ref{ex:c2-1.5-1}   one shows that $(\Id - A)$ is surjective. 
 Now the claim follows from Theorem~\ref{thm:c2-1.2}.
 \end{proof}
 %% \medskip
@@ -226,11 +226,11 @@ Since $f$ has a maximum in $x$ it follows that $\langle Af,\delta_{x} \rangle = 
 Moreover,
 %% --
 \begin{equation}\label{eq:c2-1.3}
-(Id - \Delta) \text{ is an isomorphism from } \mathcal{S}(\R^{n}) \text{ onto } \mathcal{S}(\R^{n}).
+(\Id - \Delta) \text{ is an isomorphism from } \mathcal{S}(\R^{n}) \text{ onto } \mathcal{S}(\R^{n}).
 \end{equation}
 %% --
 In fact, the Fourier transform $f \mapsto \hat{f}$ is a bijection from $\mathcal{S}(\R^{n})$ onto $\mathcal{S}(\R^{n})$.
-But $[(Id - \Delta)f]^{\hat{}} = M\hat{f}$ where $(Mg)(y) = (1 + \sum_{i=1}^{n} y_{i}^{2})g(y)$ $(g \in \mathcal{S}(\R^{n}))$. It follows from \eqref{eq:c2-1.3}    that $(Id - A)D(A)$ is dense in $E$. So the claim follows from Corollary~\ref{cor:c2-1.3}.
+But $[(\Id - \Delta)f]^{\hat{}} = M\hat{f}$ where $(Mg)(y) = (1 + \sum_{i=1}^{n} y_{i}^{2})g(y)$ $(g \in \mathcal{S}(\R^{n}))$. It follows from \eqref{eq:c2-1.3}    that $(\Id - A)D(A)$ is dense in $E$. So the claim follows from Corollary~\ref{cor:c2-1.3}.
 \end{proof}
 %% --
 \begin{remark*}\label{rem:c2-1.2}
@@ -249,16 +249,16 @@ It is easy to see that $A$ is closed.
 Let $A_{0}$ denote the restriction of\/ $A$ to $\mathcal{S} \coloneq \mathcal{S}(\R^{n})$. 
 Then $A_{0}f = \Delta f$ in the classical sense for all $f \in \mathcal{S}$.
 One can show in an analogous way as in \ref{ex:c2-1.5-2}   that $A_{0}$ is dispersive. 
-Moreover, it follows from \eqref{eq:c2-1.3} that $(Id - A_{0})D(A_{0})$ is dense. 
+Moreover, it follows from \eqref{eq:c2-1.3} that $(\Id - A_{0})D(A_{0})$ is dense. 
 Hence by Corollary \ref{cor:c2-1.3}   the closure $\overline{A_{0}}$ of\/ $A_{0}$ is the generator of a positive contraction semigroup.
 
 By construction one has $\overline{A_{0}} \subset A$. 
 We prove that $\overline{A_{0}} = A$. 
 For that it is enough to show that
 \begin{equation}\label{eq:c2-1.4}
-(Id - A) \text{ is injective.}
+(\Id - A) \text{ is injective.}
 \end{equation}
-In fact, since the restriction $(Id - \overline{A_{0}})$ of\/ $(Id - A)$ is bijective from $D(\overline{A_{0}})$ onto $E$ it follows from  \eqref{eq:c2-1.4}  that $D(\overline{A_{0}}) = D(A)$. 
+In fact, since the restriction $(\Id - \overline{A_{0}})$ of\/ $(\Id - A)$ is bijective from $D(\overline{A_{0}})$ onto $E$ it follows from  \eqref{eq:c2-1.4}  that $D(\overline{A_{0}}) = D(A)$. 
 So let us show  \eqref{eq:c2-1.4}. 
 Assume that there is $f \in E$ such that $f - \Delta f = 0$.
 Let $\phi \in C_{c}^{\infty}(\R^{n})$. 
@@ -269,7 +269,7 @@ Then
 \end{equation}
 %%
 Since  \,$C_{c}^{\infty}(\R^{n})$\, is dense in \,$\mathcal{S}$\, for the topology of\/ $\mathcal{S}$, it follows from  \eqref{eq:c2-1.3}  that \\
-$(Id~-~\Delta)C_{c}^{\infty}(\R^{n})$ is dense in $\mathcal{S}$. Hence  \eqref{eq:c2-1.5}   implies
+$(\Id~-~\Delta)C_{c}^{\infty}(\R^{n})$ is dense in $\mathcal{S}$. Hence  \eqref{eq:c2-1.5}   implies
 %%--
 that $\langle \phi, f \rangle = 0$ for all $\phi \in S$. 
 Consequently, $f = 0$.
@@ -308,9 +308,9 @@ Then $A$ is closable and the closure of\/ $A$ is the generator of a positive con
 \begin{proof}
 $D(A)$ is clearly dense in $E$.
 Moreover, one can show as in \ref{ex:c2-1.5-3} that $A$ is dispersive.
-It remains to prove that $(Id - A)D(A)$ is dense in $E$.
+It remains to prove that $(\Id - A)D(A)$ is dense in $E$.
 The space $C_{c}^{\infty}(\Omega)$ of all infinitely differentiabel functions on $\Omega$ with compact support contained in $\Omega$ is dense in $E \cap C_{c}^{\infty}(\Omega)$.
-We show that there exists $f \in D(A)$ satisfying $(Id - A)f = g$.
+We show that there exists $f \in D(A)$ satisfying $(\Id - A)f = g$.
 Let $\bar{g} \colon \R^{n} \to \R$ be given by $\bar{g}(x) = g(x)$ if\/ $x \in \Omega$ and $0$ if\/ $x \not\in \Omega$.
 Then $\bar{g} \in \mathcal{S}(\R^n)$.
 By  \eqref{eq:c2-1.3}  there exists $\bar{f} \in \mathcal{S}(\R^n)$ such that $\bar{f} - \Delta\bar{f} = \bar{g}$.
@@ -330,8 +330,8 @@ Then $A$ is closable and the closure of\/ $A$ is the generator of a positive con
 %%--
 \begin{proof}
 $D(A)$ is dense and one can show in an analogous manner as in \ref{ex:c2-1.5-4}   that $A$ is dispersive.
-We know from \ref{ex:c2-1.5-4}   that $C_{c}^{\infty}(\Omega) \subset (Id - A)D(A)$.
-Thus $(Id - A)D(A)$ is dense in $E$ and the claim follows from Corollary \ref{cor:c2-1.3}.
+We know from \ref{ex:c2-1.5-4}   that $C_{c}^{\infty}(\Omega) \subset (\Id - A)D(A)$.
+Thus $(\Id - A)D(A)$ is dense in $E$ and the claim follows from Corollary \ref{cor:c2-1.3}.
 \end{proof}
 \end{enumerate}
 \end{examples}
@@ -2476,10 +2476,10 @@ that $R(\lambda,A) \in \ZE$.
 
 It remains to show the equivalence of  \ref{thm:c2-5.13-4}   and  \ref{thm:c2-5.13-5}.
 Assume that  \ref{thm:c2-5.13-4}   holds, let $f \in D(A)$ and $P$ be a band projection.
-Then $Pf \in D(A)$ and $(Id-P)f \in D(A)$ by the assumption.
+Then $Pf \in D(A)$ and $(\Id-P)f \in D(A)$ by the assumption.
 Since $A$ is local we have 
 \[
-APf = PAPf + (Id-P)APf = PAPf = PAPf + PA(Id-P)f = PAf.
+APf = PAPf + (\Id-P)APf = PAPf = PAPf + PA(\Id-P)f = PAf.
 \]
 Conversely, assume  \ref{thm:c2-5.13-5}.
 Let $f \in D(A)$ and $|g| \leq |f|$.
@@ -2550,7 +2550,7 @@ Then
 $\|f\|_1 \coloneqq \sup_{t \geq 0}\|\eu^{-\omega t}T(t)f\|$ 
 defines an equivalent lattice norm on $E$ for which 
 $\|T(t)\|_1 \leq \eu^{\omega t}$ $(t \geq 0)$.
-Since $\mathcal{Z}(E)$ is isometrically isomorphic to a space $C(K)$ (as a Banach lattice), for an operator $S \in \mathcal{Z}(E)$ one has $\|S\| = \inf\{c > 0 \colon |S| \leq c \cdot Id\}$.
+Since $\mathcal{Z}(E)$ is isometrically isomorphic to a space $C(K)$ (as a Banach lattice), for an operator $S \in \mathcal{Z}(E)$ one has $\|S\| = \inf\{c > 0 \colon |S| \leq c \cdot \Id\}$.
 Hence the operator norm of\/ $S$ is independent of which lattice norm equivalent to the given one is considered on $E$.
 Consequently, $\|T(t)\| = \|T(t)\|_1 \leq \eu^{\omega t}$ $(t \geq 0)$.
 
@@ -2560,7 +2560,7 @@ If in addition the operators $T(t)$ are real one obtains from the above expressi
 \[
 \eu^{- \omega t} \cdot \Id \leq T(t) \leq \eu^{\omega t} \cdot \Id \quad (t \geq 0).
 \] 
-Consequently, $\lim_{t \to 0}\|T(t) - Id\| = 0$.
+Consequently, $\lim_{t \to 0}\|T(t) - \Id\| = 0$.
 \end{proof}
 %% --
 The assumption that the group consists of real operators is essential in Proposition~\ref{prop:c2-5.16}.

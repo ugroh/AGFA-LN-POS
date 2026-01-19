@@ -12,7 +12,7 @@ Nützlich:
 - [lshort](https://ctan.org/pkg/lshort-german) Eine kurze Einführung in die wesentlichen Aspekte von `LaTeX`
 - [AMS-Math](https://ctan.org/pkg/short-math-guide): Die wichtigen Punkte für die Eingabe mathematischer Texte
 
-
+`(?<!\\)Id`bei suche nach Id aber nicht \Id
 
 [U. Groh](ulgr@math.uni-tuebingen.de)
 
