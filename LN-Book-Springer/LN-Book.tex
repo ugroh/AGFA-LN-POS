@@ -13,6 +13,8 @@
 %	,referee				%% -- not used
 	]{svmono}
 %% -- 
+
+
 \usepackage{graphicx}         
 \usepackage{multicol}        
 \usepackage[bottom]{footmisc}
@@ -53,6 +55,7 @@
 \makeatletter
 \@addtoreset{section}{chapter}
 \makeatother
+
 %% -- Continuous numbering
 %% -- 
 \makeatletter
@@ -69,11 +72,16 @@
 
 %% -- Our definitions
 %% --
-\input{./preamble/ln-preamble-final}	%% packages
+\input{./preamble/ln-preamble}			%% packages
 \input{./preamble/ln-definitionen}		%% definitions
-%% -- 
+\usepackage{microtype}
+
+%% -- Math
+%% --
 \usepackage[showonlyrefs]{mathtools}
 \usepackage{empheq}
+
+%% -- Images 
 %% --
 \usepackage{tikz}
 \usepackage{tikz-cd}
@@ -104,6 +112,8 @@
 \@addtoreset{chapter}{part}
 \makeatother
 
+%% -- Running Heading
+%% --
 \def\sectionmark#1{\markright{\thechapter\ Sec. \thesection\ \  #1}}
 
 %% -- To prevent overlapping in TOC
@@ -147,7 +157,7 @@
 	urlcolor = blue,%
 	citecolor = blue,%
 	hyperindex = true
-%   hidelinks 				%% uncomment = print version
+%%   hidelinks 				%% uncomment = print version
 }
 %% -- 
 %% --
@@ -160,7 +170,7 @@
 %% --
 \subtitle{Lecture Notes in Mathematics\\ \\ 1184\\ \\Springer-Verlag\\ Berlin Heidelberg New York Tokyo}
 
-\date{\textbf{Version 21.01.26}}
+%\date{\textbf{Version 21.01.26}}
 %% --
 \maketitle
 %% --

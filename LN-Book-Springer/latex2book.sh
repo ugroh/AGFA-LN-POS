@@ -1,16 +1,15 @@
 #!/bin/zsh
+# --
+# -- Version 2025-01-21
+# --
 
-# --
-# -- Stand 2025-11-28
-# --
- 
-# Farben für Ausgaben
+# Colors for output
 autoload -U colors && colors
 
-# Hauptdatei
+# Main file
 MAIN_FILE="LN-Book.tex"
 
-# Funktion für farbige Ausgabe
+# Functions
 print_status() {
     echo "$fg[blue]>>> $1$reset_color"
 }
@@ -23,52 +22,53 @@ print_error() {
     echo "$fg[red]✗ $1$reset_color"
 }
 
-# Build-Funktion
+# Build function
 build() {
     if [[ ! -f "$MAIN_FILE" ]]; then
-        print_error "Datei nicht gefunden: $MAIN_FILE"
+        print_error "Missing: $MAIN_FILE"
         return 1
     fi
-    print_status "Starte LaTeX-Kompilierung mit latexmk..."
+    print_status "Starting LaTeX compilation with latexmk..."
     latexmk -pdf -interaction=nonstopmode $MAIN_FILE || { 
-        print_error "Kompilierung fehlgeschlagen"
+        print_error "Compilation failed"
         return 1 
     }
-    print_success "Kompilierung abgeschlossen!"
+    print_success "Finished!"
 }
 
+# Clean function
 clean() {
-    print_status "Räume auf..."
+    print_status "Cleaning temporary files..."
     latexmk -c
     find . -name "*.thm" -type f -delete
     find . -name "*.idx" -type f -delete
     find . -name "*.ind" -type f -delete
     find . -name "*.ilg" -type f -delete
     find . -name "*.aux" -type f -delete
-    print_success "Aufräumen abgeschlossen!"
+    print_success "Cleanup finished!"
 }
 
-# Watch-Funktion 
+# Watch function
 watch() {
     if ! command -v latexmk > /dev/null; then
-        print_error "latexmk ist nicht installiert."
+        print_error "latexmk not installed"
         return 1
     fi    
-    print_status "Überwache Änderungen... (Strg+C zum Beenden)"
+    print_status "Monitoring changes... (Ctrl+C to stop)"
     latexmk -pdf -pvc $MAIN_FILE
 }
 
-# Hilfe-Funktion
+# Help function
 show_help() {
-    echo "Verwendung: $0 <command>"
+    echo "Usage: $0 <command>"
     echo "Commands:"
-    echo "  build   - Kompiliert das Dokument"
-    echo "  clean   - Löscht temporäre Dateien"
-    echo "  watch   - Überwacht Änderungen und kompiliert automatisch"
-    echo "  help    - Zeigt diese Hilfe"
+    echo "  build   - Compiles the document"
+    echo "  clean   - Deletes temporary files"
+    echo "  watch   - Monitors changes and compiles automatically"
+    echo "  help    - Shows this help"
 }
 
-# Hauptlogik
+# Main part
 case "$1" in
     build)
         build
@@ -83,7 +83,7 @@ case "$1" in
         show_help
         ;;
     *)
-        print_error "Unbekannter Befehl: $1"
+        print_error "Unknown command: $1"
         show_help
         exit 1
         ;;

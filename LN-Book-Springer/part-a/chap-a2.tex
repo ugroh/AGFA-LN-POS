@@ -1594,8 +1594,8 @@ The function $p$ is convex.
 So the one-sided Gateaux-derivatives
 %% –
 \begin{align*}
-D^{+}_{g} p(f) &= \lim_{t \downarrow 0} 1/t (p(f+tg) - p(f)) \quad \text{and} \\
-D^{-}_{g} p(f) &= \lim_{t \uparrow 0} 1/t (p(f+tg) - p(f))
+D^{+}_{g} p(f) &= \lim_{t \downarrow 0} \frac{1}{t} (p(f+tg) - p(f)) \quad \text{and} \\
+D^{-}_{g} p(f) &= \lim_{t \uparrow 0} \frac{1}{t} (p(f+tg) - p(f))
 \end{align*}
 %% –
 exist and satisfy $D^{-}_{g}p(f) \leq D^{+}_{g}p(f)$ for all $f, g \in E$ (cf. \citet{moreau:1966}).
@@ -1639,9 +1639,9 @@ Assume that \ref{thm:a2-2.6.1} holds.
 Let $f \in D(A)$, $\phi \in \ddp(f)$.
 Then 
 \begin{align*}
-	\langle Af,\phi \rangle &= \lim_{t\to 0} 1/t(\langle T(t)f,\phi \rangle - \langle f,\phi \rangle) \\
-	&= \lim_{t\to 0} 1/t(\langle T(t)f,\phi \rangle - p(f)) \\
-	&\leq \limsup_{t\to 0} 1/t(p(T(t)f) - p(f)) \leq 0. 
+	\langle Af,\phi \rangle &= \lim_{t\to 0} \frac{1}{t} (\langle T(t)f,\phi \rangle - \langle f,\phi \rangle) \\
+	&= \lim_{t\to 0} \frac{1}{t} (\langle T(t)f,\phi \rangle - p(f)) \\
+	&\leq \limsup_{t\to 0} \frac{1}{t} (p(T(t)f) - p(f)) \leq 0. 
 \end{align*}
 This proves \ref{thm:a2-2.6.2} . 
 
@@ -1653,7 +1653,7 @@ Hence $\lambda R(\lambda,A)$ is p-contractive for $\lambda > \omega_{0}(A)$.
 This implies that $T(t)$ is p-contractive by the formula \eqref{eq:a2-1.3}, 
 %% –
 \[
-T(t) = \lim_{t\to 0} (n/t\,R(n/t,A))^{n} \text{ (strongly) for } t \geq 0.
+T(t) = \lim_{t\to 0} \left( \frac{n}{t} R\left( \frac{n}{t},A \right) \right)^{n} \text{ (strongly) for } t \geq 0.
 \]
 %% –
 \end{proof}
@@ -2028,7 +2028,7 @@ Let $t_{n} \geq 0$ with $\lim t_{n} = 0$ be given.
 Then there exists a bounded sequence $(x_{n})$ in $E$ and a bounded sequence $(x_{n}')$ in $E'$ such that
 %%
 \[
-\|(T(t_{n}) - \Id)^2\| - 1/n \leq \langle (T(t_{n}) - \Id)x_{n}, (T(t_{n}) - \Id)'x_{n}' \rangle\,.
+\left\|(T(t_{n}) - \Id)^2 \right\| - \frac{1}{n} \leq \langle (T(t_{n}) - \Id)x_{n}, (T(t_{n}) - \Id)'x_{n}' \rangle\,.
 \]
 %%
 Since $\TT'$ and $\TT''$ are strongly continuous, Lemma \ref{lem:a2-3.2}   implies that $((T(t_{n}) - \Id)x_{n})$ and $((T(t_{n}) - \Id)'x_{n}')$ converge weakly to zero.
