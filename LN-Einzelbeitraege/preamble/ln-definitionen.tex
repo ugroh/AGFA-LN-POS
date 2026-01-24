@@ -1,0 +1,148 @@
+%% -- Definitionen
+%% -- Stand 2025/02/14
+%% -- var-Symbole für griechisches Alphabet
+%% --  Makro zum Tauschen von Symbolen 
+%% --
+%% --
+% --  Der \cite-Befehl für die neuen Neues optionalem Argument für Details:
+%% -- \mycite{label} oder \mycite[Detail]{label}
+%% -- analog zu den ueblichen Befehlen. Einfach \cite{label} suchen lassen
+%% -- dann in \mycite umwandeln (search-replace)
+%% --
+\newcommand{\mycite}[2][]{\citeauthor{#2}~\citeEN[#1]{#2}}
+%%\newcommand{\mycite}[2][]{\citeauthor{#2}~\cite[#1]{#2}}
+%% -- var-Symbole für griechisches Alphabet
+%% --
+\AtBeginDocument{%
+\let\ORGvarepsilon=\varepsilon
+\let\varepsilon=\epsilon
+\let\epsilon=\ORGvarepsilon
+%
+\let\ORGvarrho=\varrho
+\let\varrho=\rho
+\let\rho=\ORGvarrho
+%
+\let\ORGvartheta=\vartheta
+\let\vartheta=\theta
+\let\theta=\ORGvartheta
+%
+\let\ORGvarphi=\varphi
+\let\varphi=\phi
+\let\phi=\ORGvarphi
+%
+\let\ORGvarleq=\leqslant
+\let\leqslant=\leq
+\let\leq=\ORGvarleq
+%
+\let\ORGvargeq=\geqslant
+\let\geqslant=\geq
+\let\geq=\ORGvargeq
+%
+\let\ORGvarpreccurlyeq=\preccurlyeq
+\let\preccurlyeq=\preceq
+\let\preceq=\ORGvarpreccurlyeq
+%
+\let\setminus\smallsetminus			% A - B fuer Mengen
+\renewcommand{\P}{\mathfrak{P}}		% Achtung: \P hat andere Bedeutung in LaTeX
+}
+
+
+%% -- Zahlen
+\newcommand{\N}{\mathbb{N}}		% Natuerliche Zahlen
+\newcommand{\Z}{\mathbb{Z}}		% Ganze Zahlen
+\newcommand{\Q}{\mathbb{Q}}		% Rationale Zahlen
+\newcommand{\R}{\mathbb{R}}		% Reelle Zahlen
+\newcommand{\C}{\mathbb{C}}		% Komplexe Zahlen
+\newcommand{\K}{\mathbb{K}}		% Koerperzeichen
+\newcommand{\T}{\mathbb{T}}		% Torus
+
+%% -- Operatoren					
+\DeclareMathOperator{\Id}{\operatorname{Id}}
+\DeclareMathOperator{\sign}{sign}				% signum-Operator
+\newcommand{\im}{\ensuremath{\mathrm{i}}}		
+\newcommand{\iu}{\ensuremath{\mathrm{i}}}
+\newcommand{\eu}{\ensuremath{\mathrm{e}}}
+\renewcommand*{\Re}{\mathop{}\!\mathrm{Re}\,}		% Realteil
+\renewcommand*{\Im}{\mathop{}\!\mathrm{Im}\,}		% Imaginärteil
+\newcommand*{\supp}{\mathop{}\!\mathrm{supp}\,}     % Träger
+
+%% -- Differential Allgemeine Abkuerzungen
+%% --
+\newcommand*{\diff}[1]{\mathop{}\!\mathrm{d}{#1}}	% \diff{s} = ds, 
+\newcommand*{\ds}{\mathop{}\!\mathrm{d}{s}}       	% \ds = ds, 
+\newcommand*{\dg}{\mathop{}\!\mathrm{d}{g}}       	% \dg = dg, 
+\newcommand*{\dt}{\mathop{}\!\mathrm{d}{t}}       	% \dt = dt, 
+\newcommand*{\dx}{\mathop{}\!\mathrm{d}{x}}       	% \dx = dx, 
+\newcommand*{\dy}{\mathop{}\!\mathrm{d}{y}}       	% \dy = dy, 
+\newcommand*{\dr}{\mathop{}\!\mathrm{d}{r}}       	% \dr = dr, 
+\newcommand*{\dm}{\mathop{}\!\mathrm{d}{m}}       	% \dm = dm, 
+\newcommand*{\du}{\mathop{}\!\mathrm{d}{u}}       	% \du = du, 
+
+%% --
+\newcommand{\LE}{\mathcal{L}(E)} 		% 
+\newcommand{\BH}{\mathcal{B}(H)} 		% 
+\newcommand{\ZE}{\mathcal{Z}(E)} 	% \ZE  Zentrum von E
+\newcommand{\LH}{\mathcal{L}(H)} 
+\newcommand{\BA}{\mathfrak{A}}
+
+\newcommand{\Fix}[1]{\mathop{}\mathrm{Fix}\left(#1\right)}		% \Fix{T} Fixraum
+\newcommand{\rank}{\mathop{}\!\mathrm{rank}\,}		% 
+\newcommand{\Kern}[1]{\mathop{}\mathrm{ker}(#1)}
+\newcommand{\Image}[1]{\mathop{}\mathrm{im}(#1)}
+
+%% -- Enpunkt korrekt (momentan ignorieren)
+\newcommand*{\eg}{e.g.,\xspace}
+\newcommand*{\ie}{i.e.,\xspace}
+\newcommand*{\resp}{resp.\xspace}
+\newcommand*{\vs}{vs.\xspace}
+\newcommand*{\etc}{etc.\xspace}
+\newcommand*{\cf}{cf.\xspace}
+
+%% --
+\newcommand{\CA}{$\mathrm{C}^{*}$}	% C*-Algebra
+\newcommand{\WA}{$\mathrm{W}^{*}$}	% W*-Algbera
+\newcommand{\AW}{$\mathrm{AW}^{*}$}	% AW*-Algbera
+
+%%
+\newcommand*{\TT}{\mathcal{T}}		% C_0-Semigroup
+\newcommand*{\RR}{\mathcal{R}}		% Pseudo Resolvente
+\newcommand*{\SG}{\mathcal{S}}	    % Semigroup
+\newcommand*{\UG}{\mathcal{U}}	    % Implemented Semigroup
+\newcommand*{\F}{\mathcal{F}}		% F-product
+
+       
+\let\origL\L
+\AtBeginDocument{%
+  \DeclareRobustCommand{\L}[1]{\mathcal{L}(#1)}%
+}
+
+%%
+
+%% -- Eins einer Algebra oder \1_{A} charakteristische Funktion
+%% -- 
+
+\usepackage{bbm}
+\newcommand{\1}{\mathbbm{1}}
+
+%%KGK
+
+
+
+%% -- O-Spaces
+\newcommand{\HO}{\mathcal{H}(O)} 		%  für Lotz
+\newcommand{\WO}{\mathcal{W}(O)} 		%  für Lotz
+
+%% -- Differential Allgemeine Abkuerzungen
+%% --
+
+\newcommand*{\ddp}{\mathop{}\!\mathrm{d}{p}}       	% \ddp = dp, 
+\newcommand*{\dN}{\mathop{}\!\mathrm{d}{N}}       	% \dN = dN, 
+\newcommand*{\ddt}{\mathop{}\!\mathrm\fraq{d}{dt}}   % \ddt = d/dt
+
+\newcommand*{\lnm}{LNM1184: } % \LMN-BookCode
+
+
+
+
+
+

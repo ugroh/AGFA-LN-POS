@@ -1,0 +1,64 @@
+%% --
+%% -- Updated Notes
+%% -- Stand 2025-10-07
+%% --
+\setlist{$\bullet$, wide, labelindent=.5em,itemsep=.25em}
+\section*{Updated Notes C-III}
+\addcontentsline{toc}{section}{Updated Notes}
+%% --
+\begin{enumerate}
+\item 
+%Wolfgangs Text
+
+The question whether the generator of a positive semigroup on any Banach lattice has always additively cyclic boundary spectrum is still open. 
+As in C-III (and B-III) additional assumptions, essentially on the growth of the resolvent, are needed. 
+In the analogous case of a bounded positive operator they are relaxed in \mycite{zbmath06591946}.
+
+
+\item 
+Concerning the additive cyclicity of the boundary point spectrum the situation is clearer. 
+C-III, Corollary~4.3 establishes additive cyclicity under additional assumptions, while C-III, Example~4.4 shows that the boundary point spectrum may not be additively cyclic, in general.
+If a positive semigroup is irreducible and bounded and if $s(A) = 0$,  then the boundary point spectrum $P\sigma_{b}(A)$ of its generator $A$ is a subgroup of $\im\R$. 
+This is a consequence of C-III, Theorem~3.8, see also Proposition~3.1 in   \mycite{zbmath07423250}.
+However, there exists a bounded, irreducible, positive semigroup on an $L^{1}$-space, which preserves the norm  on the positive cone, such that the  boundary spectrum 
+$\sigma_{b}(A)$ of its generator $A$ 
+is not a subgroup of $\im\R$, see Theorem~3.2 in \mycite{zbmath07423250}.
+This solves the problem formulated before  B-III, Theorem~3.11.
+
+\item 
+There is also the notion of the \emph{ergodic spectrum} $E\sigma(A)$ of a bounded semigroup $(T(t))_{t\geq 0}$ consisting of all points $s\in\R$ such that the semigroup 
+%$(\exp(-\im st)\cdot T(t))_{t\geq 0}$
+$(\mathrm{e}^{-\im st}\,T(t))_{t\geq 0}$
+is not mean ergodic. 
+If the semigroup is positive and the underlying Banach lattice has order continuous norm, then $E\sigma(A)$ is additively cyclic,
+see \mycite{zbmath00763800}. 
+This is no longer true on $C(K)$ . 
+
+\item
+Part of the results of Chapter C-III have been extended  to bounded,  uniformly eventually positive semigroups with $s(A)=0$. 
+By Theorem~4.7 in \mycite{zbmath08029955} their generator has cyclic boundary spectrum. 
+Moreover, assume that such a semigroup $(T(t))_{t\geq 0}$, defined on a  Banach lattice $E$, is \emph{persistently irreducible} (\ie if $J$ is a closed ideal such that $T(t)J \subset J$ for all $t\geq t_0$ for some  $t_0 > 0$, then $J = {0}$ or $J = E$).  
+Then the following holds. 
+If $s(A) = 0$ is a pole of the resolvent, then $P\sigma(A) = i\alpha \mathbb{Z}$ for some $\alpha \in \mathbb{R}$, see Theorem~4.3 in \mycite{zbmath08029955} .
+More information on persistently irreducible semigroups is given in \mycite{zbmath07889246}.
+
+%For eventually positive semigroups it seems to be open whether the boundary (point-) spectrum is cyclic under the conditions treated in this book. 
+%But if the orbits of an individually eventually positive semigroup are relatively weakly compact, then the boundary point spectrum is cyclic by Theorem 2.1 in \mycite{zbmath07431134}. In the same paper  a result of type Niiro-Sawashima for uniformly eventually positive operators is proved (analogous to C-III Theorem 3.12). This in turn is used for proving results on the asymptotic behaviour of uniformly eventually positive semigroups.
+
+%%%%%%%%%%%   ANFANG   auskommentiert  %%%%%%%%%%%%%%%
+\iffalse 
+jetzt kommt Claude (erstaunlich , was sie gefunden hat)
+
+The research over the last 30 years has progressively expanded our understanding of when the peripheral spectrum of positive semigroups is additively cyclic. 
+While the general question remains open, J. Glück and other researchers have identified numerous sufficient conditions (growth conditions, boundedness assumptions, irreducibility properties) and extended classical results to broader classes of operators including semigroups and eventually positive operators. 
+Glück's counterexample for irreducible operators  (see below) shows that some classical results cannot be fully generalized without additional assumptions.
+
+\item 
+In \mycite{zbmath06591946} it has been proven that under appropriate growth and regularity conditions, the peripheral point spectrum of a positive semigroup is cyclic. In addition, dimension estimates for the corresponding eigenspaces are given. In \mycite{zbmath07024808}, Glück identifies several growth conditions involving eigenvectors or the resolvent that provide new sufficient criteria for cyclicity of the peripheral spectrum. He gives an alternative proof that every (WS)-bounded positive semigroup has cyclic peripheral spectrum, and shows that for irreducible (WS)-bounded semigroups, every peripheral eigenvalue is algebraically simple. In \mycite{zbmath07423250} the author conctructs irreducible stochastic semigroups whose whose peripheral spectrum equals a finite union of discrete subgroup. 
+Thus Theorem\ref{thm:c3-3.8} which states that the peripheral point spectrum is a subgroup does not hold for the whole peripheral spectrum.
+\fi
+%%%%%%%%%%%%  ENDE  %%%%%%%%%%%%%%%
+\end{enumerate}
+%% --
+\addcontentsline{toc}{section}{Updated Notes: References}
+%% --
