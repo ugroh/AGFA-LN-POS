@@ -1,0 +1,1306 @@
+% !TEX root = ../LN-Book.tex
+%% -- 
+%% --Stand 2025-06-09 final
+%% --
+\chapternopage{Asymptotics of Positive Semigroups on \texorpdfstring{C$^{*}$}{C*}- and \texorpdfstring{W$^{*}$}{W*}-Algebras}\label{chap:d4}
+\chaptermark{Asymptotics of Positive Semigroups}
+%% --
+{\Large
+\vspace*{-.75cm}
+by \\[.25em]
+Ulrich Groh
+\vspace{.75cm}
+\\
+}
+%% --
+\section{Stability of Positive Semigroups}\label{sec:d4-1}
+%% --
+As explained in A-III, Section 1, it is possible to deduce uniform exponential stability of strongly continuous semigroups from the location of the spectrum of its generator if the spectral bound $ s(A) $ and the growth bound $ \omega_{0} $ coincide.
+In this section we prove $s(A) = \omega_{0}$ for positive semigroups on \CA-algebras and preduals of \WA-algebras.
+A more general discussion of the \enquote{$s(A) = \omega_{0}$} problem can be found in \citet{greinervoigtwolff:1981}.
+For the results of this section the existence of a unit is essential.
+%% --
+\begin{theorem}\label{thm:d4-1.1}
+Let $M$ be a \CA-algebra with unit and $\TT = (T(t))_{t \geq 0}$ a positive semigroup on $M$.
+Then
+%% --
+\[
+	-\infty < s(A) = \omega_{0} \in \sigma(A).
+\]
+%% --
+\end{theorem}
+%% --
+\begin{proof}
+For every  $t \geq 0 $ there exists $\phi_{t}$ in the state space $S(M)$ of $M$ such that
+%% --
+\[
+	T(t)'\phi_{t} = r(T(t))\phi_{t} = \exp(\omega_{0} t)\phi_{t}
+\]
+%% --
+(see, \eg \citet[2.1]{groh:1981}).
+
+Let $n \in \N$ and
+%% --
+\[
+	E_{n} \coloneqq \{\phi \in S(M) \colon T(2^{-n})\phi = \exp(\omega_{0} 2^{-n})\phi \}.
+\]
+%% --
+Then $\emptyset \neq E_{n+1} \subseteq E_{n}$,  $(n \in \N)$.
+Since $S(M)$ is $\sigma(M,M')$-compact, there exists $\phi \in \bigcap_{n \in \N} E_{n}$.
+Then $ T(t)'\phi = \exp(\omega_{0} t)\phi$ follows for all $ 0 \leq t $ because the adjoint semigroup $(T(t)')_{t \geq 0}$ is a weak*-semigroup on $M'$.
+
+Suppose $-\infty = \omega_{0}$.
+Then for $t > 0$ either $r(T(t)) = 0$ (A-III, Prop.1.1) or $T(t)'\phi = 0$, in particular $\phi(T(t)\1) = 0$.
+From this we obtain the contradiction $\phi(\1) = 0$.
+Hence $-\infty < \omega_{0}$ and $\exp(\omega_{0} t) \in \rho(T(t)')$ for every $t \in \R_{+}$.
+Thus $\omega_{0} \in \sigma(A)$ or $\omega_{0} = s(A)$.
+\end{proof}
+%% --
+\begin{remark}\label{rem:d4-1.2}
+%% --
+\begin{enumerate}[\upshape (i), wide, labelindent=.5em]
+\item
+If we consider the nilpotent translation semigroup on the \CA-algebra $C_{0}( \left[0,1\right[ )$, then $\sigma(A) = \emptyset$ and $\omega_{0} = -\infty$.
+This shows that the existence of a unit is essential.
+
+\item
+The equality $s(A) = \omega_{0}$ still holds for positive semigroups on commutative \CA-algebras without unit (see B-IV, Rem.1.2.b).
+\end{enumerate}
+\end{remark}
+%% --
+\begin{theorem}\label{thm:d4-1.3}
+Let $M$ be a \WA-algebra with predual $M_{*}$ and let $(T(t))_{t \geq 0}$ be a positive semigroup on $M_{*}$.
+Then $s(A) = \omega_{0}$.
+\end{theorem}
+%% --
+\begin{proof}
+For all $\lambda > s(A)$ and $\phi \in M_{*}$
+%% --
+\[
+R(\lambda,A)\phi = \int_{0}^{\infty} \mathrm{e}^{-\lambda t}T(s)\phi ds
+\]
+%% --
+which follows as in C-III, Section 1 or \citet[Theorem 3]{greinervoigtwolff:1981}.
+Since $\|\phi\| = \phi(\1)$ for every $\phi \in M_{*}^{+}$ and since the norm is additive on the positive cone of $M_{*}$, the integral
+%% --
+\[
+	\int_{0}^{\infty} \mathrm{e}^{\lambda t}\|T(s)\phi\|ds
+\]
+%% --
+exists for all $\phi \in M_{*}$ and all $\lambda > s(A)$.
+From this the assumption follows by A-IV,Thm.1.11.
+\end{proof}
+%% --
+\begin{corollary}\label{cor:d4-1.4}
+Let $M$ be a \CA-algebra and $(T(t))_{t \geq 0}$ a positive semigroup on $M'$.
+Then $s(A) = \omega_{0}$ holds.
+\end{corollary}
+%% --
+\noindent This follows from the fact that the bidual of a \CA-algebra is a \WA-algebra (see \citet[Theorem III.2.4.]{takesaki:1979}).
+%% --
+\begin{remark}\label{rem:d4-1.5}
+A simple modification of A-III, Example 1.4 (take $c_{0}$ instead of $\ell^2$) shows that Theorem 1.3 is no longer true for non-positive semigroups (for details see \citet[Beispiel 2.5]{grohneubrander:1981}).
+
+While the growth bound $\omega_{0}$ characterizes uniform exponential stability of the semigroup there are other (and weaker) stability concepts (cf. A-IV, Section 1).
+\end{remark}
+%% --
+\begin{definition}\label{def:d4-1.6}
+Let $E$ be a Banach space and $(T(t))_{t \geq 0}$ a semigroup on $E$.
+We call the semigroup
+%% --
+\begin{enumerate}[\upshape (i)]
+\item 
+\emph{uniformly exponentially stable} if $\|T(t)\| \leq M\mathrm{e}^{-\omega t}$ for some $\omega$, $M > 0$ and all $t \geq 0$.
+
+\item 
+\emph{uniformly stable} if $\lim_{t \to \infty} T(t) = 0$ in the strong operator topology.
+
+\item 
+\emph{weakly stable} if $\lim_{t \to \infty} T(t) = 0$ in the weak operator topology.
+\end{enumerate}
+\end{definition}
+%% --
+Surprisingly all these properties coincide for positive semigroups on C*-algebras with unit.
+%% --
+\begin{theorem}\label{thm:d4-1.7}
+Let $M$ be a C*-algebra with unit and $(T(t))_{t \geq 0}$ a positive semigroup on $M$.
+Then the following assertion are equivalent.
+%% --
+\begin{enumerate}[\upshape (a)]
+\item 
+$s(A) < 0$.
+
+\item 
+The semigroup $(T(t))_{t \geq 0}$ is uniformly exponentially stable.
+
+\item 
+The semigroup $(T(t))_{t \geq 0}$ is uniformly stable.
+
+\item 
+The semigroup $(T(t))_{t \geq 0}$ is weakly stable.
+
+\end{enumerate}
+\end{theorem}
+%% --
+\begin{proof}
+Since $s(A) = \omega_{0}$ by Theorem 1.3, it suffices to show that (d) implies (a).
+For $t > 0$ there exists $\phi \in S(M)$ such that
+%% --
+\[
+    T(t)'\phi = r(T(t))\phi .
+\]
+%% --
+Then for $x \in M$
+%% --
+\[
+    \phi(T(t)^{n}x) = (r(T(t)))^{n} \phi(x) \to 0
+\]
+%% --
+as $n \to \infty$.
+Therefore $r(T(t)) < 1$ or $\omega_{0} < 0$.
+Since $s(A) \leq \omega_{0}$ the assertion follows.
+\end{proof}
+%% --
+\begin{remark}\label{rem:d4-1.8}
+Consider the translation semigroup $(T(t))_{t \geq 0}$ on $C_{0}(\R_{+})$. 
+Then $\|T(t)\| = 1$, hence $s(A) = 1$, but $(T(t))_{t \geq 0}$ is strongly stable.
+The same holds for the translation semigroup on $L^1(\R_{+})$.
+Thus Theorem 1.7 is not true for semigroups on \CA-algebras without unit or on preduals of \WA-algebras.
+For the discussion of the commutative situation we refer to B-IV, Section 1.
+\end{remark}
+%% --
+\section{Stability of Implemented Semigroups}
+%% --
+Let $H$ be a Hilbert space, $\UG = (U(t))_{t \geq 0}$ a strongly continuous semigroup on $H$ with generator $B$ and $M \subseteq \BH$ a \WA-algebra, where $\BH$ is the \WA-algebra of all bounded linear operators on $H$.
+Suppose $\UG(t)^{*}MU(t) \subseteq M$.
+Then one can define a weak*-continuous semigroup $\TT$ on $M$ by 
+%
+\[
+	T(t)x \coloneqq U(t)^{*}xU(t) \quad (t \in \R_{+}, x \in M) .
+\]
+%
+We call $\TT$ an \emph{implemented semigroup}.
+Every map $T(t) \in \TT$ of an implemented semigroup is weak*-continuous and $n$-positive for every $n \in \N$.
+%% --
+\begin{remarks}\label{rem:d4-2.1}
+
+\begin{enumerate}[\upshape (i), wide, labelindent=.5em]
+\item\label{item:d4-2.1-i}
+Because of
+%% --
+\[
+	\|T(t)\| = \|T(t)\1\| = \|U(t)^{*}U(t)\| = \|U(t)\|^2
+\]
+%% --
+it follows that $\omega_{0}(\TT) = 2\,\omega_{0}(\UG)$.
+
+\item\label{item:d4-2.1-ii}
+If $\TT$ is an implemented semigroup, then the preadjoint semigroup is strongly continuous on $M_{*}$.
+Therefore $s(A) = \omega_{0}$ for $\TT$ by Theorem~\ref{thm:d4-1.3}.
+
+\item\label{item:d4-2.1-iii}
+Since $\UG$ is a strongly continuous semigroup on $ H $, the same is true for the adjoint semigroup 
+$\UG^{*} = \{ U(t)^{*} \colon U(t) \in \UG \}$ and its generator is given by $B^{*}$.
+In analogy to \citet[3.2.55]{brattelirobinson:1979} the following assertions for $x \in M$ are equivalent.
+%% --
+\begin{enumerate}[\upshape (a)]
+\item
+$x \in D(A)$, $ A $ the generator of $ \TT $.
+
+\item
+For $\xi \in D(B)$ it follows $x\xi \in D(B^{*})$ and the linear mapping
+%% --
+\begin{equation}
+	(\xi \mapsto x(B\xi)+B^{*}(x\xi)): D(B) \to H \tag{*}
+\end{equation}
+%% --
+has a continuous extension to $H$.
+\end{enumerate}
+\end{enumerate}
+\end{remarks}
+%% --
+%% -- d4-5
+Then for $A$ is given as the continuous extension of (*), \ie 
+ $Ax = xB + B^{*}x$ for $ x \in D(A) $
+
+In the next theorem we give some equivalent conditions for the uniform exponential stability of an implemented semigroup.
+As we shall see, the operator equality
+%% --
+\[
+yB + B^{*}y = -x \quad (x, y \in M_{+})
+\]
+%% --
+is necessary and sufficient, which is in complete analogy to the classical Liapunov stability result.
+%% --
+\begin{theorem}\label{thm:d4-2.2}
+Let $M$ be a \WA-algebra on a Hilbert space $H$ and let $\TT = (T(t))_{t \geq 0}$ be a weak*-semigroup on $M$ with generator $A$ implemented by the semigroup $\UG$ on $H$ with generator $B$.
+Then the following assertions are equivalent.
+%% --
+\begin{enumerate}[\upshape (a)]
+
+\item\label{item:d4-2.2-a}
+$\omega_{0}(\TT) = s(A) < 0$.
+
+\item\label{item:d4-2.2-b}
+The semigroup $(U(t))_{t \geq 0}$ is uniformly exponentially stable.
+
+\item\label{item:d4-2.2-c}
+There exists $0 \leq x \in D(A)$ such that $Ax = -\1$.
+
+\item\label{item:d4-2.2-d}
+There exists $0 \leq x \in D(A)$ such that $x(D(B)) \subseteq D(B^{*})$ \mbox{and $xB+B^{*}x = -\1$}.
+
+\item\label{item:d4-2.2-e}
+For every $0 \leq x \in D(A)$ there exists $0 \leq y \in D(A)$ such that $Ay = -x$.
+
+\item\label{item:d4-2.2-f}
+For every $0 \leq x \in D(A)$ there exists $0 \leq y \in D(A)$ such that $y(D(B)) \subseteq D(B^{*})$ and $yB+B^{*}y = -x$.
+
+\item\label{item:d4-2.2-g}
+$\int_{0}^{\infty} \|U(s)\xi\|^2ds$ exists for all $\xi \in H$.
+
+\item\label{item:d4-2.2-h}
+$\int_{0}^{\infty} |(T(s)x)\xi|\zeta)ds$ exists for all $\xi,\zeta \in H$ and all $x \in M$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+The equivalence of \ref{item:d4-2.2-a} and \ref{item:d4-2.2-b} follows from Remark~\ref{rem:d4-2.1}\,\ref{item:d4-2.1-i}, whereas \ref{item:d4-2.2-c} and \ref{item:d4-2.2-d}), \resp  \ref{item:d4-2.2-e} and \ref{item:d4-2.2-f} are equivalent by the Remark~\ref{rem:d4-2.1}\,\ref{item:d4-2.1-iii}
+%% --
+\begin{enumerate}[wide, labelindent=.5em]
+
+\item[(a) $\implies$ (c):] Since $s(A) < 0$ the resolvent $R(0,A)$ exists and is a positive map on $M$.
+Therefore $R(0,A)1 \in D(A)_{+}$ or $Ax = -\1$ for some $x \in D(A)_{+}$.
+%% --
+
+
+\item[(c) $\implies$ (e):] Let $x \in D(A)_{+}$ such that $Ax = -\1$.
+Then
+%% --
+\[
+T(t)x - x = \int_{0}^{t} T(s)Ax \ds = -\int_{0}^{t} T(s) \1 \ds \quad (t \geq 0),
+\]
+%% --
+hence
+%% --
+\[
+0 \leq \int_{0}^{t} T(s) \1 \ds \leq x \quad (t \in \R_{+}).
+\]
+%% --
+Since the family $(\int_{0}^{t} T(s)\1 \ds)_{t \geq 0}$ is increasing and bounded, 
+%
+\[
+	\lim_{t \to \infty} \int_{0}^{t} T(s) \1 \ds
+\]
+%
+exists in the weak operator topology on $\BH$.
+
+Since on bounded sets of $M$, the weak operator topology is equivalent to the $\sigma(M,M_{*})$-topology, for every $\phi \in M_{*}$ the integral $ \int_{0}^{\infty}\phi(T(s) \1) \ds $ exists (\citet[1.15.2.]{sakai:1971}).
+Take $x \in M_{+}$ and $\phi \in M_{*}^{+}$.
+Then $x \leq \|x\| \1$ and therefore
+%% --
+\[
+	\phi(T(s)x) \leq \|x\|\phi(T(s) \1) \quad (s \in \R_{+}).
+\]
+%% --
+Hence $\int_{0}^{\infty} \phi(T(s)x)ds$ exists.
+Since the positive cones of $M$ and $M_{*}$ are generating, $\int_{0}^{\infty}\phi(T(s)x)ds$ exists for every $x \in M$ and $\phi \in M_{*}$.
+Therefore $R(0,A)$ exists and is positive which proves (e).
+
+\item[(c) $\implies$ (g):] From the last paragraph we obtain that for all $\xi \in H$
+%% --
+\[
+\int_{0}^{\infty}\|U(s)\|^2ds = \int_{0}^{\infty}(T(s)1\xi|\xi)ds
+\]
+%% --
+exists.
+
+\item[(g) $\implies$ (h):] It follows from the polarization identity that the integral
+%% --
+\[
+\int_{0}^{\infty}(U(s)\xi|U(s)\zeta)ds
+\]
+%% --
+exists for all $\xi,\zeta \in H$.
+Using \citet[Theorem III.4.2 and Theorem II.2.6]{takesaki:1979}, we conclude as in the implication from (c) to (e) that for all $\xi,\zeta \in H$ the integral
+%% --
+\[
+\int_{0}^{\infty}((T(s)x)\xi|\zeta)ds \quad (x \in M)
+\]
+%% --
+is finite.
+
+\item[(g) $\implies$ (a):] Since the vector states are dense in the predual of $M$ and since the preadjoint semigroup of\/ $\TT$ is strongly continuous, it is easy to see that the integral
+%% --
+\[
+\int_{0}^{\infty} \phi(T(s)x)ds
+\]
+%% --
+exists for all $x \in M$ and $\phi \in M_{*}$ (\citet[Theorem II.2.6]{takesaki:1979}).
+Therefore, the resolvent $R(0,A)$ exists and is positive, hence $s(A) < 0$.
+\end{enumerate}
+\end{proof}
+%% --
+\section{Convergence of Positive Semigroups}\label{sec:d4-3}
+%\index{Convergence of Positive Semigroups}
+In this section the asymptotic behavior of positive semigroups $(T(t))_{t \geq 0}$ on \WA-algebras will be described in more detail.
+Essentially we distinguish three cases.
+%% --
+\begin{enumerate}[\upshape (i), wide, labelindent=.5em]
+\item
+The Cesàro means $\frac{1}{s}\int_{0}^{s} T(t)dt$ converge strongly to a projection $P$ onto the fixed space of $(T(t))_{t \geq 0}$ (see Proposition~\ref{prop:d4-3.3} \& \ref{prop:d4-3.4}).
+
+\item
+The maps $T(t)$ converge strongly to $P$ (see Proposition~\ref{prop:d4-3.7}, \ref{thm:d4-3.8} \&. \ref{cor:d4-3.9}).
+
+\item
+The maps $T(t)$ behave asymptotically as a periodic group (Theorem~\ref{thm:d4-3.11}).
+\end{enumerate}
+%% --
+Much of the following is based on the theory of weakly compact operator semigroups.
+Therefore the following compactness criterium is quite useful.
+%% --
+\begin{proposition}\label{prop:d4-3.1}
+Let $M$ be a \WA-algebra, $\TT$ a bounded semigroup of positive maps on $M_{*}$ and suppose that there exists a faithful family $\Phi$ of\/ $\TT$-subinvariant states in $M_{*}$.
+Then $\TT$ is relatively compact in the weak operator topology of $ \L{M_{*}} $.
+In particular, $\TT$ is strongly ergodic, \ie 
+%
+\[
+	\lim_{s \to \infty} \frac{1}{s}\int_{0}^{s} T(t)x \dt
+\]
+%
+exists for every $x$ in $M$ and yields a projection onto $\Fix{\TT}$.
+\end{proposition}
+%
+\begin{proof}
+Since the positive cone of $M_{*}$ is generating, it is enough to show that for every $0 \leq \phi \in M_{*}$ the orbit $\{T(t)\phi \colon t \in \R_{+}\}$ is relatively weak compact.
+For this we use \citet[Theorem III.5.4.(iii)]{takesaki:1979}.
+
+Let $(p_{n})_{n \in \N}$ be a decreasing sequence of projections in $M$ such that $\inf_{n} p_{n} = 0$.
+Then $\lim_{n}\phi(p_{n}) = 0$ for every $\phi \in \Phi$.
+Since
+%% --
+\[
+	(T(t)p_{n})^2 \leq T(t)p_{n}, \quad t \in \R_{+},
+\]
+%% --
+we obtain by a classical \emph{inequality of Kadison} that
+%% --
+\[
+0 \leq \phi((T(t)p_{n})^2) \leq \phi(T(t)p_{n}) \leq \phi(p_{n}),
+\]
+%% --
+hence $\lim_{n}\phi(T(t)p_{n}) = 0$ uniformly in $t \in \R_{+}$.
+Since the family $\Phi$ is faithful on $M$, it follows from \citet[Proposition III.5.3]{takesaki:1979} that $(T(t)p_{n})$ converges to zero in the $s(M,M_{*})$-topology uniformly in $t \in \R_{+}$.
+Since this topology is finer than the weak*-topology on $M$, we obtain the relative compactness of\/ $\TT$ which implies the strong ergodicity.
+\end{proof}
+%% --
+Let $\TT$ be an identity preserving semigroup of Schwarz type on the predual of a \WA-algebra $M$.
+We call
+%% --
+\[
+p_{r} \coloneqq \sup\{s(|\phi|) \colon \phi \in \Fix{T}\}
+\]
+%% --
+the recurrent projection associated with $\TT$.
+For a motivation of this definition compare, \eg \citet[Section 6.3]{davies:1976}.
+
+Since $T(t)|\phi| = |\phi|$ for all $\phi \in \Fix{T}$ (D-III, Cor. 1.5), we obtain $T(t)'p_{r} \geq p_{r}$ (see D-I,Sec.3.(c)).
+Let $\TT^{(r)}$ be the reduced semigroup on $p_{r}M_{*}p_{r}$ with generator $A^{(r)}$.
+Then $\TT^{(r)}$ is identity preserving and of Schwarz type.
+Similarly, if $\RR$ is a pseudo-resolvent on $D = \{\lambda \in \C \colon \Re(\lambda) > 0\}$ with values in $M_{*}$ such that $\RR$ is identity preserving and of Schwarz type, then the recurrent projection associated with $\RR$ is defined using $\Fix{\RR}$.
+%% --
+\begin{remark}\label{rem:d4-3.2}
+\begin{enumerate}[\upshape (i), wide, labelindent=.5em]
+
+\item\label{item:d4-3.2-i}
+Let $\phi \in M_{*}$ and $\alpha \in \R$ such that $(\mu - \im\alpha)R(\mu)\phi = \phi$ for some $\mu \in \R_{+}$.
+Since $s(|\phi|)$ and $s(|\phi^{*}|)$ are majorized by $p_{r}$ (D-III,Prop.1.4), it follows that $\phi$ and $\phi^{*}$ are in $p_{r}M_{*}p_{r}$.
+
+\item\label{item:d4-3.2-ii}
+From (i) and the observation that the family $\{|\phi| \colon \phi \in \Fix{\TT}\}$ is
+faithful on $p_{r}Mp_{r}$ and consists of $\TT^{(r)}$-invariant elements, it follows that
+%% --
+\begin{enumerate}[--]
+\item
+$P\sigma(A) \cap \im\R = P_{\sigma}(A^{(r)}) \cap \im\R$.
+
+\item
+$\Kern{(\im\alpha - A)} \subset p_{r}M_{*}p_{r}$ for all $\alpha \in \R$.
+
+\item
+The semigroup $\TT^{(r)}$ is relatively compact in the weak operator topology and therefore strongly ergodic.
+\end{enumerate}
+
+
+\item\label{item:d4-3.2-iii}
+Similarly, let $\RR$ be an identity preserving pseudo-resolvent with values in $M_{*}$ on $D = \{\lambda \in \C \colon \Re(\lambda) > 0\}$ which is of Schwarz type.
+It follows as in (b) that 
+$\Fix{(\lambda - \im\alpha)R(\lambda)}$ 
+is contained in $p_{r}M_{*}p_{r}$ for all $\lambda \in D$ and $\alpha \in \R$, where $p_{r}$ is the associated recurrent projection.
+\end{enumerate}
+\end{remark}
+%% --
+We now give a characterization of strong ergodicity of semigroups which are identity preserving and of Schwarz type.
+For this we need that the Cesàro means
+%% --
+\[
+C(s)x = \frac{1}{s}\int_{0}^{s} T(t)xdt \quad (x \in M, 0 \leq s \in \R)
+\]
+%% --
+are Schwarz maps.
+We omit the simple calculation (compare D-I,Thm.2.1).
+%% --
+\begin{proposition}\label{prop:d4-3.3}
+Let $\TT$ be an identity preserving semigroup of Schwarz type on the predual of a \WA-algebra $M$.
+Then the following assertions are equivalent.
+%% --
+\begin{enumerate}[\upshape (a)]
+\item
+$\TT$ is strongly ergodic on $M_{*}$.
+
+\item
+$\sigma(M,M_{*})\text{-}\lim_{s \to \infty} C(s)'p_{r} = 1$.
+
+\item
+$s^{*}(M,M_{*})\text{-}\lim_{s \to \infty} C(s)'p_{r} = 1$.
+\end{enumerate}
+\end{proposition}
+%% --
+\begin{proof}
+Suppose that (a) holds.
+Since $\Fix{T}$ separates $\Fix{T'}$, the fixed space of $\TT'$ is non trivial, hence $p_{r} \neq 0$ (see \citet[Chap.2, Thm.1.4]{krengel:1985}).
+Let $0 \leq \psi \in M_{*}$, then $\psi_{0} \coloneqq \lim_{s \to \infty} C(s)\psi \in \Fix{T}$ and $s(\psi_{0}) \leq p_{r}$.
+Therefore
+%% --
+\begin{align*}
+\lim_{s \to \infty} \psi(C(s)'p_{r}) &= \lim_{s \to \infty} (C(s)\psi)(p_{r})  = \psi_{0}(p_{r})  \\
+= \psi_{0}(1) &= \lim_{s \to \infty} (C(s)\psi)(1) = \psi(1)
+\end{align*}
+%% --
+which proves (b).
+
+Suppose that (b) is satisfied.
+Since $C(s)'p_{r} \leq 1$ for all $s \in \R_{+}$, we obtain (c).
+(Use that for $(x_{\alpha}) \in M_{+}$ we have $\lim_{\alpha}x_{\alpha} = 0$ in the weak*-topology if and only if $\lim_{\alpha}x_{\alpha} = 0$ in the $s^{*}(M,M_{*})$-topology.)
+
+Suppose that (c) holds.
+Since each $C(s)'$ is an identity preserving Schwarz map, we obtain for all $x \in M$
+%% --
+\begin{align*}
+	\left( C(s)'((1-p_{r})x))(C(s)'((1-p_{r})x)^{*} \right) 
+			&\leq C(s)'((1-p_{r})xx^{*}(1-p_{r}))  \\
+ 	&\leq \|x\|^2 C(s)'(1-p_{r}),
+\end{align*}
+%% --
+hence
+%% --
+\[
+s^{*}(M,M_{*})\text{-}\lim_{s \to \infty} C(s)'((1-p_{r})x) = 0.
+\]
+%% --
+In particular, we obtain for all $x \in \Fix{\TT'}$ that $x = \sigma(M,M_{*})\text{-}\lim_{s \to \infty} C(s)'x = \sigma(M,M_{*})\text{-}\lim_{s \to \infty} C(s)'(p_{r}x)$.
+
+Especially for $0 \neq x \in \Fix{\TT}$ we obtain $p_{r}xp_{r} \neq 0$.
+Since the \WA-algebra $p_{r}Mp_{r}$ is the dual of $p_{r}M_{*}p_{r}$ and since $\TT^{(r)}$ is strongly ergodic, it follows that the fixed space of\/ $\TT$ separates the points of $\Fix{\TT'}$.
+Thus $\TT$ is strongly ergodic (\citet[Chap. 2, Thm. 1.4]{krengel:1985}).
+\end{proof}
+%% --
+It follows from the result above that the semigroup in \citet{evans:1977} cannot be strongly ergodic on $\BH_{*}$ since the associated recurrent projection is zero.
+But for irreducible semigroups we have the following result.
+%% --
+\begin{proposition}\label{prop:d4-3.4}
+Let $\TT$ be an identity preserving semigroup of Schwarz type on the predual of a \WA-algebra $M$.
+Then the following assertions are equivalent.
+%% --
+\begin{enumerate}[\upshape (a)]
+\item
+$\TT$ is irreducible and $P\sigma(A) \cap \im\R \neq \emptyset$.
+
+\item
+$\TT$ is relatively compact in the weak operator topology and the fixed space of\/ $\TT$ is generated by a faithful state.
+
+\item
+$\TT$ is strongly ergodic and the fixed space of\/ $\TT$ is generated by a faithful state.
+
+\item
+The fixed space of\/ $\TT$ is generated by a faithful state.
+\end{enumerate}
+\end{proposition}
+%% --
+\begin{proof}
+Suppose (a) is satisfied.
+Since $\Fix{\TT} \neq \{0\}$, there exists a faithful normal state $\phi$ on $M$ such that $\Fix{\TT} = \C \,\phi$ (D-III, Thm.1.10.).
+Therefore $\TT$ is relatively compact in the weak operator topology by Proposition 3.1., whence (b) holds and the  implications from (b) to (c) and (c) to (d) are obvious.
+
+Suppose that (d) holds.
+Let $\phi$ be a faithful normal state on $M$ such that $\Fix{T} = \phi\C$.
+By Proposition 3.1 the semigroup $\TT$ is strongly ergodic.
+Therefore the fixed space of\/ $\TT$ separates the points of $\Fix{T'}$.
+Consequently $\Fix{T'} = \C1$.
+Thus the ergodic projection associated with $\TT$ is given by $P = 1 \otimes \phi$, \ie $P\psi = \psi(1)\phi$ for all $\psi \in M_{*}$.
+Let $F$ be a closed $\TT$-invariant face of $M_{*}^{+}$.
+If $0 \neq \psi \in F$ then
+%% --
+\[
+\lim_{s \to \infty} C(s)\psi = \psi(1)\phi \in F.
+\]
+%% --
+Hence $\phi \in F$ and therefore $F = M_{*}^{+}$ by the faithfulness of $\phi$ which proves (a).
+\end{proof}
+%% --
+The next theorem is an extension of D-III, Thm.1.10 and shows the usefulness of the theory of semitopological semigroups.
+Assume $\TT \subseteq \L{M_{*}}$ to be relatively compact in the weak operator topology. 
+Since $\TT$ is commutative its closure $\mathcal{S}  = (\TT)^{-} \subseteq L_{w}(M_{*})$ contains a unique minimal ideal $\mathcal{K}$, called the kernel of $\mathcal{S}$, which is a compact Abelian group (\citet{deleeuw:1961}, \citet{junghenn:1971} \& \citet[§ 2.4]{krengel:1985}).
+The identity $Q$ of $\mathcal{K}$ is a projection onto the closed linear span of all eigenvectors of $ A $ pertaining to the eigenvalues in $ \im \R $. 
+
+Moreover, the dual group of $\mathcal{K}$ can be identified with the subgroup of $\im\R$ generated by 
+$P\sigma(A) \cap \im \R $.
+We call $Q$ the semigroup projection associated with $\TT$.
+On the other hand, $\TT$ is always strongly ergodic with projection $P$ onto $\Fix{\TT}$.
+Obviously, the relation
+%% --
+\[
+    0 \leq P \leq Q \leq \Id 
+\]
+%% --
+holds, where the order relation is defined by the inclusion of the range spaces.
+
+There are two extreme cases.
+First, $Q = \Id$ and $ \rank (P)$.
+This corresponds to the Halmos-von Neumann Theorem in commutative ergodic theory and is discussed, at least for irreducible semigroups, in \citet{olesen:1980}.
+
+Second, $\Id > Q = P$, in particular $\rank(P) = 1$.
+This latter case will be investigated in detail for $M = \BH $, the \WA-algebra of all bounded linear operators on a Hilbert space $H$.
+But we first need some preparations.
+
+\begin{theorem}\label{thm:d4-3.5}
+Let $\TT$ be an identity preserving semigroup of Schwarz type on the predual of a \WA-algebra $M$ and suppose there exists a faithful family of\/ $\TT$-invariant states on $M$.
+Let $N$ be the $\sigma(M,M_{*})$-closed linear span of all eigenvectors of $A'$ pertaining to the eigenvalues in $\im\R$.
+If $Q$ is the semigroup projection associated with $\TT$, then the following holds.
+%% --
+\begin{enumerate}[\upshape (i)]
+\item 
+The adjoint of $Q$ is a faithful normal conditional expectation from $M$ onto the \WA-subalgebra $N$.
+
+\item 
+The restriction of $T'$ to $N$ can be embedded into a $\sigma(M,M_{*})$-continuous, one-parameter group of *-automorphisms.
+
+\item 
+If, in addition, $\TT$ is irreducible and if $\phi$ is the normal state generating the fixed space of\/ $\TT$, then $\phi|_{N}$ is a faithful normal trace.
+
+\end{enumerate}
+\end{theorem}
+%% --
+%% --
+\begin{proof}
+Consider $H \coloneqq P\sigma(A) \cap \im\R$ which is not empty by assumptions.
+From Proposition 3.1 it follows that $\TT$ is relatively compact in the weak operator topology.
+Let $K$ be the semigroup kernel of $\overline{\TT}{w} \subset L(M_{*})$ and $Q$ the unit of $K$.
+Recall that $Q\psi_{n} = \psi_{n}$ for all $\psi_{n} \in M_{*}$ such that $A\psi_{n} = n\psi_{n}$ $(n \in H)$.
+Let $\mathcal{E}$ be the family of all eigenvectors of $A'$ pertaining to the eigenvalues in $H$.
+
+Then $\mathcal{E}$ is closed with respect to the multiplication in $M$ and the formation of adjoints.
+Thus $N$ is a \WA-subalgebra of $M$, \citet[Corollary 1.7.9.]{sakai:1971}, and $\TT_{0}(t)' \coloneqq T(t)'_{|N}$ is multiplicative (for this see D-III, Lemma 1.1).
+
+Since $Q \in \overline{\TT}{w}  \subseteq L_{w}(M_{*})$, there exists an ultrafilter $\mathfrak{U}$ on $\R_{+}$ such that 
+%
+\[
+	\lim_{\mathfrak{U}}\langle T(t)\psi,x\rangle = \langle Q\psi,x\rangle
+\]
+%
+for all $x \in M$ and $\psi \in M_{*}$.
+If $n \in H$ and $\psi_{n} \in M_{*}$ such that $A\psi_{n} = n\psi_{n}$, then for all $x \in M$ we obtain
+%% --
+\[
+\langle\psi_{n},x\rangle = \langle Q\psi_{n},x\rangle = \lim_{\mathfrak{U}} \langle T(t)\psi_{n},x\rangle = (\lim_{\mathfrak{U}} \mathrm{e}^{nt})\langle\psi_{n},x\rangle,
+\]
+%% --
+hence $\lim_{\mathfrak{U}} \mathrm{e}^{nt} = 1$.
+From this it follows that for all $\psi \in M_{*}$ we have
+%% --
+\[
+\langle\psi,Q'(u_{n})\rangle = \lim_{\mathfrak{U}} \langle\psi,T(t)'u_{n}\rangle = (\lim_{\mathfrak{U}} \mathrm{e}^{nt})\langle\psi,u_{n}\rangle = \langle\psi,u_{n}\rangle.
+\]
+%% --
+Hence $N \subseteq Q'(M)$.
+
+For $\gamma$ in the dual group of $K$ and $x \in M$ we define $x_{\gamma}$ by
+%% --
+\[
+\psi(x_{\gamma}) \coloneqq \int_{K} \langle S\psi,x\rangle\langle S,\gamma \langle\mathrm{e}^{*} \dm (S) \quad (\psi \in M_{*}^{+}).
+\]
+%% --
+Then $x_{\gamma} \in M$ and $T(t)'x_{\gamma} = \langle QT(t),\gamma\rangle x_{\gamma}$.
+Therefore $x_{\gamma} \in N$.
+Thus the inclusion $Q'M \subseteq N$ is proved if we can show that $Q'M$ belongs to the $\sigma(M,M_{*})$-closed linear span of $\{x_{\gamma} \colon \gamma \in K, x \in M\}$.
+For this it is enough to show that every linear form $\psi \in M_{*}$ such that $\psi(x_{\gamma}) = 0$ for all $\gamma \in K$ satisfies $\psi(Qx) = 0$ for all $x \in M$.
+But if $\psi(x_{\gamma}) = 0$, then
+%% --
+\[
+\int_{K} \langle S\psi,x\rangle\langle S,\gamma\rangle\mathrm{e}^{*} \dm (S) = 0, \gamma \in K.
+\]
+%% --
+Since the map $(S \mapsto \psi(Sx))$ is continuous on $K$ and since the elements of $K$ form a complete orthonormal basis in $L^2(K,\dm)$, we obtain $\psi(Sx) = 0$ for all $S \in K$, in particular $\psi(Qx) = 0$ as desired.
+
+Since the range of $Q'$ is a \WA-subalgebra of $M$ it follows from \citet[Theorem III.3.4]{takesaki:1979} that $Q'$ is a completely positive, normal conditional expectation.
+This $Q'$ is faithful, \ie $\Kern{Q'} \cap M_{+} = \{0\}$ since $Q\phi = \phi$ for the faithful linear form $\phi$.
+
+Let $\phi$ be the faithful normal state generating $\Fix{T}$ and let $\UG$ be a family of unitary eigenvectors of $A'$ pertaining to the eigenvalues in $H$ (see D-III, Remark 1.11).
+If $u_{1}$, $u_{2} \in U$, then
+%% --
+\[
+\phi(u_{1}u_{2}^{*}) = \phi(T_{0}(t)'(u_{1}u_{2}^{*})) = \mathrm{e}^{(n_{1}-n_{2})t}\phi(u_{1}u_{2}^{*}).
+\]
+%% --
+Therefore
+%% --
+\[
+\phi(u_{1}u_{2}^{*}) = 
+    \begin{cases} 
+        0 & \text{if } n_{1} \neq n_{2}, \\ 
+        1 & \text{if } n_{1} = n_{2}. 
+    \end{cases}
+\]
+%% --
+Hence $\phi(u_{1}u_{2}^{*}) = \phi(u_{2}^{*}u_{1})$ from which it follows that $\tau \coloneqq \phi|_{N}$ is a faithful normal trace.
+\end{proof}
+%% --
+\begin{remarks}\label{rem:d4-3.6}
+\begin{enumerate}[\upshape (i), wide, labelindent=.5em]
+\item
+Since $QM_{*} = N_{*}$ and $Q'M = N$, where $N_{*}$ is as in D-III, Proposition 1.12, it follows from general duality theory that $(N_{*})' = N$.
+
+\item
+If $\psi \in N_{*}$, then $|\psi| \in N_{*}$.
+To see this, note that $Q\psi = \psi$ and $Q$ is an identity preserving Schwarz map.
+Then the assertion follows from D-III, Proposition 1.4.
+
+\item
+If $\psi \in N_{*}$, then $|T_{0}(t)\psi| = T_{0}(t)|\psi|$ for all $t \in \R$.
+This follows immediately from the fact that $\TT_{0}(t)'$ is a *-automorphismus on $N$.
+
+\item
+Let us add a few words concerning the structure of $N$: If $\TT$ is irreducible and $K$ is the semigroup kernel of $\TT^{-} \subseteq L_{w}(M_{*})$, then $(S \mapsto S'): K \to L((N,\sigma(N,N_{*})))$ is a representation of the compact, Abelian group $K$ as group of *-automorphism such that the fixed space is one dimensional.
+Therefore we are able to apply the results of \citet{olesen:1980}.
+There are three possibilities for $N$.
+
+\begin{enumerate}[(1)]
+\item
+$N = L^{\infty}(K,\dm)$ and $\TT|_{N}$ is the translation group on $N$.
+
+\item
+$N \cong R$ where $\RR$ is the (unique) hyperfinite factor of type II$_{1}$.
+In that case (the image of) $K$ is approximately inner on $\RR$ [l.c., Theorem 5.8].
+
+
+\item
+There exists a closed subgroup $ G $  of $ K $  such that
+%% --
+\[
+N = L^{\infty}(K/G, \dm) \otimes R
+\]
+%% --
+where $ R $  is as in (ii) and $ \dm $  the normalized Haar measure on $ K/G $  [l.c., Theorem 5.15].
+\end{enumerate}
+\end{enumerate}
+\end{remarks}
+%% --
+So far we have studied weak*-semigroups on general \WA-algebras.
+We apply now these results to weak*-semigroup on $ \BH $.
+%This is of interest in view of the results in \citet{davies:1976}.
+To do this we call a triple $ (M,\phi,\TT) $  a \WA-dynamical system if $ M $  is a \WA-algebra, $ \TT$ a weak*-semigroup of identity preserving Schwarz maps on $ M $  and $ \phi $  a faithful family of $ \TT $-invariant normal states.
+We call $ (M,\phi,\TT) $  irreducible, if the preadjoint semigroup is irreducible (alternatively, if the fixed space of $ \TT $  is one dimensional).
+%% --
+\begin{proposition}\label{prop:d4-3.7}
+Let $ (\BH,\phi,\TT) $  be a \WA-dynamical system on the \WA-algebra $ \BH $  of all bounded linear operators on a Hilbert space $ H $.
+Then the following assertions are equivalent.
+\begin{enumerate}[\upshape (a)]
+\item
+$ P\sigma(A) \cap \im\R = \{0\} $,
+
+\item
+$ \lim_{s \to \infty} T(s)_{*} = P_{*} $  in the strong operator topology on $ \L{\BH_{*}} $.
+\end{enumerate}
+\end{proposition}
+%% --
+\begin{proof}
+Obviously (b) implies (a).
+Suppose that (a) is fulfilled.
+Then the ergodic projection $ P_{*} $  of the preadjoint semigroup is equal to the associated semigroup projection.
+Consequently there exists an ultrafilter $ \mathfrak{U} $  on $ \R_{+} $  such that $ \lim_{\mathfrak{U}} T(t) = P $  in the weak operator topology.
+We claim that the convergence holds even in the strong operator topology.
+Taking this for granted it follows, since for every $ t \in \R_{+} $  $ T(t) $  is a contraction, that
+%% --
+\[
+\lim_{t \to \infty} \|T(t)_{*}\phi\| = 0
+\]
+%% --
+for all $ \phi \in \Kern{P_{*}} $.
+Since $ T(t)_{*}\psi = \psi $  for every 
+$ \psi \in \Im (P_{*}) $  and
+%% --
+\[
+\BH_{*} = \Im (P_{*}) \oplus \Kern{P_{*}}
+\]
+%% --
+the assertion is proved.
+%\end{proof}
+
+It remains to show that $ \lim_{\mathfrak{U}} T(t)_{*} = P_{*} $  in the strong operator topology.
+Choose $ 0 \leq \phi \in \BH_{*} $, $ \|\phi\| \leq 1 $  and let $ \phi_{t} \coloneqq T(t)_{*}\phi $  $ (t>0) $.
+$ \phi_{0} \coloneqq P_{*}\phi $  and let $ \{p_{i}: i \in A\} $  be an increasing net of projections of finite rank in $ \BH $  with strong limit 1.
+Since the set $ K \coloneqq \{\phi_{t}: t \geq 0\} $  is relatively compact in the $ \sigma(\BH_{*},\BH) $-topology, there exists for every $ \delta > 0 $  an index $ i_{0} \in A $  such that
+%% --
+\[
+\|(1 - p_{i})\psi(1 - p_{i})\| \leq \delta
+\]
+%% --
+for every $ \psi \in K $  and $ i \geq i_{0} $  (\citet[Theorem III.5.4.(vi)]{takesaki:1979}).
+In particular
+%% --
+\[
+|\psi(1 - p_{i})| \leq \delta, \quad \psi \in K,\, i(0) \leq i.
+\]
+%% --
+Let $ p \coloneqq p_{i(0)} $.
+Then for all $ x $  in the unit ball of $ M $  it follows that
+%% --
+\begin{align*}
+|(\phi_{t} - \phi_{0})(x)| &\leq \\
+|(\phi_{t} - \phi_{0})(pxp)| &+ |(\phi_{t} - \phi_{0})((1-p)xp)| \\
++ |(\phi_{t} - \phi_{0})(x(1-p))| &\leq 
+\leq |(\phi_{t} - \phi_{0})(pxp)| + 4\sqrt{\delta} .
+\end{align*}
+%% --
+Since the \WA-algebra $ p \BH p $  is finite dimensional, there exists $ U \in \mathfrak{U} $  such that
+%% --
+\[
+	\|(\phi_{t} - \phi_{0})|_{p \BH p}\| \leq \delta .
+\]
+%% --
+for all $ t \in U $.
+Consequently
+%% --
+\[
+\|(\phi_{t} - \phi_{0})\| \leq (\delta + 4\sqrt{\delta})
+\]
+%% --
+for all $ t \in U $.
+Therefore $ \lim_{\mathfrak{U}} T(t)_{*}\phi = P_{*}\phi $  in the strong operator topology.
+Since the positive cone of $ \BH_{*} $  is generating, the assertion is proved.
+\end{proof}
+%% --
+We show next, that for irreducible \WA-dynamical systems on $ \BH $  the above properties always hold.
+%% --
+\begin{theorem}\label{thm:d4-3.8}
+Let $ (\BH,\phi,\TT) $  be an irreducible \WA-dynamical system.
+Then
+%% --
+\[
+P\sigma(A) \cap \im\R = \{0\} .
+\]
+
+%% --
+\end{theorem}
+%% --
+\begin{proof}
+Let $ N $  be the \WA-subalgebra of $ M = \BH $  generated by the eigenvectors of $ A $  pertaining to the eigenvalues on $ \im\R $  and let $ Q $  be the faithful normal conditional expectation from $ M $  onto $ N $  (Proposition~\ref{prop:d4-3.7}).
+Since $ M $  is atomic, $ N $  is atomic (\citet{stormer:1972}).
+$ N $  is finite since there exists a finite, faithful normal trace on $ N $.
+In particular the center of $ N $  is isomorphic to $ \ell^{\infty} $.
+
+Let $ \SG $  be the restriction of $ \TT $  to the center.
+Then $ \SG $  is a weak*-semigroup such that every $ S(t) \in \SG $  is $ \sigma(\ell^{\infty},\ell^{1}) $-continuous and a *-automorphism.
+From this it follows that $ S(t) $  is induced by some continuous flow $ \kappa_{t}: \N \to \N $.
+Indeed, if $ \delta_{n}((\xi_{m})) = \xi_{n} $  $ (n \in \N, (\xi_{m}) \in \ell^{\infty}) $, then $ \delta_{n} \circ S(t) $  is a normal scalar valued *-homomorphism hence of the form $ \delta_{m} $  for some $ m = \kappa_{t}(n) $.
+But the function $ t \mapsto \kappa_{t} $  is continuous from $ \R $  into $ \N $, whence constant.
+Hence $ S(t) = \Id $.
+But the semigroup $ S $  is weak*-irreducible on the center.
+Consequently, the center is one dimensional.
+Using [Takesaki, Theorem V.1.27] we obtain $ N = B(H_{n}) $  where $ H_{n} $  is a finite dimensional Hilbert space.
+But if $ 0 \neq \im\alpha \in P\sigma(A) \cap \im\R $  then $ \im\alpha\Z \subset P\sigma(A) $  by D-III,Thm.1.10, whence $ N $  must be infinite dimensional.
+Therefore $ P\sigma(A) \cap \im\R = \{0\} $  as desired.
+\end{proof}
+%% --
+\begin{corollary}\label{cor:d4-3.9}
+If $ (\BH,\phi,T) $  is an irreducible \WA-dynamical system, then
+%% --
+\[
+	\lim_{s \to \infty} T(s) = 1 \otimes \phi
+\]
+%% --
+in the strong operator topology on $ L(\BH_{*}) $, where $ \phi $  is the unique normal state generating the fixed space of $ T_{*} $.
+\end{corollary}
+%% --
+We are now going to discuss the asymptotic behavior of positive semigroups whose generator has boundary point spectrum different from $ 0 $.
+The standard example is the following.
+%% --
+If $ \Gamma $  is the unit circle, $ \dm $  the normalized Haar measure on $ \Gamma $  and $ 0 < \tau \in \R $, then we define the maps $ T_{\tau}(t) $, $ t \in \R_{+} $, on $ L^{1}(\Gamma,m) $  by
+%% --
+\[
+(T_{\tau}(t)f)(\xi) = f(\xi\exp(\frac{2\pi i}{\tau}t)) \quad (f \in L^{1}(\Gamma,\dm), \xi \in \Gamma).
+\]
+%% --
+Then $ \TT \coloneqq (T_{\tau}(t))_{t \geq 0} $  forms a strongly continuous one parameter semigroup which is identity preserving and of Schwarz type.
+%% --
+Since $ \TT $  is periodic of period $ \tau $, it follows that 0 is a pole of the resolvent of its generator $ B $  with residuum $ P = 1 \otimes 1 $  and $ \{\frac{2\pi \im}{\tau} \cdot k: k \in \Z\} = \sigma(B) $.
+Thus $ \TT $  is irreducible and uniformly ergodic on $ L^{1}(\Gamma,\dm) $  (see A-II, Section 5).
+
+Now let $ \TT $  be a semigroup on a predual $ M_{*} $ of a von Neumann-algebra $ M $.
+It is called \emph{partially periodic}, if there exists a projection $ Q \in L(M_{*}) $  reducing $ T $  such that $ Q(M_{*}) \cong L^{1}(\Gamma,\dm) $  and $ T_{| \Im(Q)} $  is conjugate to a periodic semigroup on $ L^{1}(\Gamma,\dm) $.
+
+In the main result we present a non commutative version of \citet{nagel:1984} showing that certain dynamical systems are partially periodic semigroups.
+%% --
+\begin{proposition}\label{prop:d4-3.10}
+Let $ \TT $  be an irreducible, identity preserving semigroup of Schwarz type with generator $ A $  on the predual of a \WA-algebra $ M $.
+
+If $ \TT $  is uniformly ergodic, then $ \sigma(A) \cap \im\R = P\sigma(A) \cap \im\R = \im\alpha\Z $  for some $ \alpha \in \R $.
+If additionally $ \sigma(A) \cap \im\R \neq \{0\} $, there exists a strictly positive projection $ Q $  on $ M_{*} $  which is identity preserving and completely positive such that
+%% --
+\begin{enumerate}[\upshape (i)]
+\item
+$ Q $  reduces $ \TT $  and $ Q(M_{*}) \cong L^{1}(\Gamma) $, $ \Gamma $  being the one dimensional torus.
+
+\item
+The restriction $ T_{0} $  of $ \TT $  to $ \Im (Q) $  is irreducible and conjugate to a rotation semigroup of period $ \tau = \frac{2\pi}{\alpha} $  on $ \Gamma $.
+
+\item
+The spectral bound $ s(A_{| \Kern{Q} } $  is strictly smaller than $ 0 $.
+\end{enumerate}
+\end{proposition}
+%% --
+\begin{proof}
+By D-III, Thm.1.11 and D-III, Thm.2.5 it follows that
+%% --
+\[
+\sigma(A) \cap \im\R = P\sigma(A) \cap \im\R = \im\alpha\Z
+\]
+%% --
+for some $ \alpha \in \R $.
+Suppose $ \alpha \neq 0 $.
+Since $ \sigma(A) + \im\alpha\Z = \sigma(A) $  and since every $ n \in \im\alpha\Z $  is isolated, it follows that there exists $ \delta > 0 $  such that
+%% --
+\[
+\sigma(A) \setminus \im\alpha\Z \subseteq \{\lambda \in \C \colon  \Re(\lambda) \leq \delta\}.
+\]
+%% --
+Let $ \{u_{\alpha}^{k}: k \in \Z\} $  be a family of unitary eigenvectors of $ A' $  pertaining to the eigenvalues in $ \im\R $.
+Then $ Q'(M) $  is a commutative \WA-algebra.
+For $ \tau \coloneqq \frac{2\pi}{\alpha} $, we obtain $ T(\tau)u_{\alpha}^{k} = u_{\alpha}^{k} $, hence $ T|_{\Im (Q)} $  is periodic.
+From the Halmos-von Neumann theorem (see \citet[Thm. III.7.11]{schaefer:1974})
+it follows that $ T|_{\Im (Q)} $  is conjugate to the rotation semigroup of period $ \tau $  on $ L^{1}(\Gamma,m) $.
+\end{proof}
+%% --
+Using this proposition we obtain the following theorem.
+%% --
+\begin{theorem}\label{thm:d4-3.11}
+Let $ T = (T(t))_{t \geq 0} $  be a uniformly ergodic, identity preserving semigroup of Schwarz type on the predual of a \WA-algebra $ M $  and suppose 
+%
+\[
+	\sigma(A) \cap \im\R \neq \{0\} .
+\]
+%
+Then there exists a partially periodic, identity preserving semigroup $ S = (S(t))_{t \geq 0} $  of Schwarz type on $ M_{*} $  such that
+%% --
+\[
+\lim_{t \to \infty} (T(t) - S(t)) = 0
+\]
+%% --
+in the strong operator topology.
+\end{theorem}
+%% --
+\begin{proof}
+Let $ \phi $  be the normal state on $ M $  generating the fixed space of $ \TT $.
+Let $ \SG = (S(t))_{t \geq 0} $  where $ S(t) \coloneqq T(t) \circ Q $  and $ Q $  is as in 2.6.
+Obviously, $ \SG $  is partially periodic and $ \phi \in \Fix{\SG} $.
+Let $ H_{\phi} $  be the GNS-Hilbert space pertaining to $ \phi $.
+Since $ \phi $  is fixed under $ \TT $, $ \SG $  and $ Q $,  these objects have a canonical extension to $ H_{\phi} $  (in the following denoted by the same symbols).
+If $ H_{0} \coloneqq \Kern{Q} \subseteq H_{\phi} $,  then it is easy to see that $ H_{0} $  is invariant under the extension to $ H_{\phi} $  and for the multiplication maps we defined in D-III, Remark 1.3.
+
+Consequently, using the results in \citet{grohkuemmerer:1982}, it follows that there exists $ c \in \R $  such that for all $ \gamma $  near $ 0 $  and all $ \beta \in \R $ :
+%% --
+\begin{equation}
+\|R(\gamma + \im\beta A_{0})\| \leq c \tag{*} ,
+\end{equation}
+%% --
+where $ A_{0} \coloneqq A_{|\Kern{Q}} $  (the norm taken in $ L(H_{\phi}) $ ).
+Using the result in A-III, Cor.7.11 it follows that
+%% --
+\[
+\lim_{t \to \infty} \|T(t)|_{H_{0}}\| = 0.
+\]
+%% --
+Since the $ s(M,M_{*}) $-topology on the unit ball of $ M $  is nothing else than the restriction of the norm topology on $ H_{\phi} $, we obtain
+%% --
+\[
+s(M,M_{*})\text{-}\lim_{t \to \infty} (T(t)' - S(t)')(x) = 0
+\]
+%% --
+uniformly on $ M_{1} $.
+From this the assertion follows.
+\end{proof}
+%% --
+\section{Uniform Ergodic Theorems}
+%% --
+As we have seen, uniformly ergodic semigroups have strong spectral properties.
+In this section we study sufficient conditions which imply uniform ergodicity thereby generalizing results of 
+\citet{groh:1984b}.
+We first need some preparations.
+%% --
+\begin{lemma}\label{lem:d4-4.1}
+Let $ \RR $  be an identity preserving pseudo-resolvent of Schwarz type on $ D = \{\lambda \in \C \colon  \Re(\lambda) > 0\} $  with values in the predual of a \WA-algebra $ M $.
+If the fixed space of $ \RR $  is infinite dimensional, then there exists a sequence of states in $ \Fix{\RR} $  such that the corresponding support projections are mutually orthogonal in $ M $.
+\end{lemma}
+%% --
+\begin{proof}
+Let $ \Phi = \{\phi \in \Fix{\RR}: \phi \text{ state on $ M $}\} $  and let $ p = \sup\{s(\phi): \phi \in \Phi\} $.
+Since $ \lambda R(\lambda)\phi = \phi $  for all $ \phi \in \Phi $  and $ \lambda \in D $,  it follows $ \mu R(\mu)(\1 - s(\phi)) = (\1 - s(\phi)) $.
+Hence $ \mu R(\mu)(\1 - p) = (\1 -p ) $  for all $ \mu \in \R_{+} $.
+
+Let $ \RR_{1} $  be the induced pseudo-resolvent on $ pM_{*}p $  (D-I, Section 3.3).
+Then the family $ \Phi $  is faithful on $ M_{p} $  and contained in the fixed space of $ \RR_{1} $.
+The adjoint $ \mu R_{1}(\mu)' $  is an identity preserving Schwarz map.
+Consequently it follows from D-III, Lemma 1.1.(ii) and the $ \sigma(M_{p},(M_{p})_{*}) $-continuity of $ \mu R_{1}(\mu)' $  that $ \Fix{R_{1}'} $  is a \WA-subalgebra of $ M_{p} $  and by D-III, Lemma 1.5, $ \dim \Fix{\RR} \leq \dim \Fix{R_{1}'} $.
+
+If $ \Fix{\RR} $  is infinite dimensional, let $ (p_{n}) $  be a sequence of mutually orthogonal projections in 
+$ \Fix{ R_{1}' } \subseteq M_{p} $  and choose a sequence $ (\phi_{n}) $  in $ \Phi $  such that $ \phi_{n}(p_{n}) \neq 0 $.
+For $ n \in \N $  let $ \psi_{n} $  be the normal state
+%% -- 
+\[
+\psi_{n}(x) = \phi_{n}(p_{n})^{-1}\phi_{n}(p_{n}xp_{n})
+\]
+%% --
+on $ M $.
+Because of $ s(\psi_{n}) \leq p_{n} \leq p $, the support projections of the $ \psi_{n} $'s are mutually orthogonal in $ M $.
+For $ \mu \in \R_{+} $  and $ x \in M $  we obtain
+%% --
+\[
+\begin{aligned}
+\langle x,\mu R(\mu)\psi_{n}\rangle &= \phi_{n}(p_{n})^{-1}\langle\mu p_{n}(R(\mu)'x)p_{n},\phi_{n}\rangle = \\
+&= \phi_{n}(p_{n})^{-1}\langle\mu p_{n}p(R(\mu)p'x)p_{n},\phi_{n}\rangle = \\
+&= \phi_{n}(p_{n})^{-1}\langle\mu p_{n}(pR_{1}(\mu)'xp)p_{n},\phi_{n}\rangle = \\
+&= \phi_{n}(p_{n})^{-1}\langle\mu(p_{n}R_{1}(\mu)'xp_{n}),\phi_{n}\rangle = \\
+&= \phi_{n}(p_{n})^{-1}\phi_{n}(x) = \psi_{n}(x).
+\end{aligned}
+\]
+%% --
+Therefore $ \psi_{n} \in \Fix{\RR} $  for all $ n \in \N $.
+\end{proof}
+%% --
+\begin{remark}\label{rem:d4-4.2}
+\begin{enumerate}[\upshape (i), wide, labelindent=.5em]
+\item
+If $ \dim \Fix{\RR} \geq 2 $  then the Jordan decomposition of self adjoint linear functionals implies that at least two states in $ \Fix{\RR} $  have orthogonal support (compare D-III, Theorem 1.10.(i)).
+
+\item
+If $ \RR $  is a pseudo-resolvent with values in a \WA-algebra such that $ \Fix{\RR'} $  is contained in $ M_{*} $,  then by D-III, Lemma 1.2, there exists a sequence of normal states in $ \Fix{\RR'} $  with orthogonal supports in $ M $.
+\end{enumerate}
+\end{remark}
+%% --
+\begin{lemma}\label{lem:d4-4.3}
+Let $ \RR $  be an identity preserving pseudo-resolvent of Schwarz type on $ D = \{\lambda \in \C \colon  \Re(\lambda) > 0\} $  with values in the predual of a \WA-algebra $ M $.
+If the fixed space of the canonical extension $ \widehat{\RR} $  of\/ $ \RR $  to some ultrapower of\/ $ M_{*} $  is infinite dimensional, then there exists a sequence $ (z_{n}) $  in $ M_{1}^{+} $  and a sequence of states $ (\phi_{n}) $  in $ M_{*} $  such that
+%% --
+\begin{enumerate}[\upshape (i)]
+
+\item\label{item:d4-4.3-i}
+$ \lim_{n} z_{n} = 0 $  in the $ s^{*}(M,M_{*}) $-topology,
+
+\item\label{item:d4-4.3-ii}
+$ \lim_{n} \|(\Id - \lambda R(\lambda))\phi_{n}\| = 0 $  for all $ \lambda \in D $,
+
+\item\label{item:d4-4.3-iii}
+$ \phi_{n}(z_{n}) \geq \frac{1}{2} $  for all $ n \in \N $. 
+\end{enumerate}
+\end{lemma}
+%% --
+\begin{proof}
+Let $ (M_{*})^{\wedge} $  be the ultrapower of $ M_{*} $  with respect to some free ultrafilter $ \mathfrak{U} $  on $ \N $.
+Since $ (M_{*})^{\wedge} $  is the predual of a \WA-subalgebra of $ \widehat{M} $  
+(see D-III, Remark 2.4.(ii)), there exists a sequence of states $ (\hat{\psi}_{n}) $  in $ \Fix{\RR}^{\wedge} $  such that the corresponding support projections are mutually orthogonal in $ \widehat{M} $  (Lemma 4.1).
+For every $ n \in \N $  let $ (\psi_{n,k}) $  be a representing sequence of states, 
+%% --
+\[
+\phi \coloneqq \sum_{n,k} 2^{-(n+k+1)} \psi_{n,k}
+\]
+%% --
+and 
+%% --
+\[
+p \coloneqq \sup\{s(\psi_{n,k}): n,k=1,\ldots\}
+\]
+%% --
+in $ M $.
+Then $ \phi $  is a normal state on $ M $  which is faithful on the \WA-algebra $ M_{p} $.
+Since 
+%% --
+\[
+1 = \langle\psi_{n,k},s(\psi_{n,k})\rangle = \psi_{n,k}(p) \quad (n,k \in \N) ,
+\]
+%% --
+it follows $ \hat{\psi}_{n}(\hat{p}) = 1 $  where $ \hat{p} $  is the canonical image of $ p $  in $ \widehat{M} $.
+But this implies $ s(\hat{\psi}_{n}) \leq \hat{p} $  in $ \widehat{M} $.
+
+Since $ \widehat{M}_{1}^{+} $  is $ \sigma(\widehat{M},\widehat{M}') $-dense in $ (\widehat{M}'')_{1}^{+} $  (Kaplansky's Density Theorem \citet[1.9.1]{sakai:1971} and \citet[1.8.9 and 1.8.12]{sakai:1971}), there exists for all $ n \in \N $  a net $ (z_{n,\gamma}) $  in $ \widehat{M}_{1}^{+} $  such that
+%% --
+\[
+\sigma(\widehat{M}'',\widehat{M}')\text{-}\lim_{\gamma} \hat{z}_{n,\gamma} = s(\hat{\psi}_{n}).
+\]
+%% --
+From \citet[1.7.8]{sakai:1971} and the above considerations, we obtain that the net $ (p\hat{z}_{n,\gamma}\hat{p}) $  converges to $ s(\hat{\psi}_{n}) $  in the $ \sigma(\widehat{M}'',\widehat{M}') $-topology.
+Therefore we may assume $ \hat{z}_{n,\gamma} \in (\widehat{M}_{p}')_{1}^{+} $.
+
+In the following we denote by $ \hat{\phi} $  the canonical image of $ \phi $  in $ (M_{*})^{\wedge} $.
+
+Since the projections $ s(\hat{\psi}_{n}) $  are mutually orthogonal, there exists a real sequence $ (r_{n}) $, $ 0 < r_{n} < 1 $, $ \lim_{n} r_{n} = 0 $  and $ \hat{\phi}(s(\hat{\psi}_{n})) \leq \frac{1}{2}r_{n} $.
+For all $ n \in \N $  choose $ \hat{z}_{n} \in (\widehat{M}_{p}')_{1}^{+} $  such that
+%% --
+\begin{align*}
+|\langle\hat{\phi},s(\hat{\psi}_{n}) - \hat{z}_{n}\rangle| &\leq \frac{1}{2}r_{n}, \\
+|\langle\hat{\psi}_{n},s(\hat{\psi}_{n}) - \hat{z}_{n}\rangle| &\leq \frac{1}{2}r_{n}.
+\end{align*}
+%% --
+Hence $ \hat{\phi}(\hat{z}_{n}) \leq r_{n} $  and $ \hat{\psi}_{n}(\hat{z}_{n}) \geq \frac{1}{2} $  for all $ n \in \N $.
+For every $ n \in \N $  let $ (z_{n,k}) \in \hat{z}_{n} $  be a representing sequence in $ (M_{p})_{1}^{+} = p(M_{1}^{+})p $  (note that $ {M}_{\hat{p}} = \widehat{M_{p}} $ ) and fix $ \mu \in \R_{+} $.
+Since $ \mu R(\mu)'\hat{\psi}_{n} = \hat{\psi}_{n} $, $ \hat{\phi}(\hat{z}_{n}) \leq r_{n} $  and $ \hat{\psi}_{n}(\hat{z}_{n}) \geq \frac{1}{2} $,  there exists for all $ n \in \N $  an element $ U_{n} \in \mathfrak{U} $  such that for all $ k \in U_{n} $ and we obtain
+%% --
+\begin{enumerate}[label=(\roman*$^{\prime}$)]
+\item
+$ \phi(z_{n,k}) \leq r_{n} $,
+
+\item
+$ \|(Id - \mu R(\mu))\psi_{n,k}\| \leq r_{n} $,
+
+\item
+$ \psi_{n,k}(z_{n,k}) \geq \frac{1}{2} $. 
+\end{enumerate}
+%% --
+Inductively we find a sequence $ (z_{n}) $  in $ (M_{p})_{1}^{+} $  and a sequence of states $ (\phi_{n}) $  in $ M_{*} $  such that for all $ n \in \N $ 
+%% --
+\begin{enumerate}[label=(\roman*$^{\prime\prime}$)]
+\item
+$ \lim_{n} \phi_{n}(z_{n}) = 0 $, 
+
+\item%\label{item:d4-4.3-ii}
+$ \lim_{n} \|(Id - \mu R(\mu))\phi_{n}\| = 0 $, 
+
+\item
+$ \phi_{n}(z_{n}) \geq \frac{1}{2} $.
+\end{enumerate}
+%% --
+But $ \phi $  is faithful on $ M_{p} $.
+Therefore condition \ref{item:d4-4.3-ii} implies that $ \lim_{n} z_{n} = 0 $  in the $ s^{*}(M_{p},(M_{p})_{*}) $-topology (\citet[Proposition III.5.4]{takesaki:1979}).
+Since 
+%
+\[
+	s^{*}(M_{p},(M_{p})_{*}) = s^{*}(M,M_{*})|_{M_{p}} ,
+\]
+%
+(i) follows immediately from \ref{item:d4-4.3-ii}.
+Using the resolvent equation for $ \RR $  it is easy to see that \ref{item:d4-4.3-ii} implies
+%% --
+\[
+\lim_{n} \|(Id - \lambda R(\lambda))\phi_{n}\| = 0
+\]
+%% --
+for all $ \lambda \in D $  and the proof is complete.
+\end{proof}
+%% --
+Without further comments, we will now use following facts.
+%% --
+\begin{enumerate}[(1)]
+\item
+A sequence $ (\phi_{n}) $  in $ M'_{+} $  converges in the $ \sigma(M',M) $-topology if and only if it converges in $ \sigma(M',M'') $-topology (\citet{akemann:1972}).
+
+\item
+We can decompose $ \phi \in M'_{+} $  into its normal and singular part $ \phi = \phi^{(n)} + \phi^{(s)} $, $ 0 \leq \phi^{(n)} \in M_{*} $, $ 0 \leq \phi^{(s)} \in M_*^{\perp} $  and $ \|\phi\| = \|\phi^{(n)}\| + \|\phi^{(s)}\| $  (\citet[Theorem III.2.14]{takesaki:1979}).
+
+\item
+If $ (\phi_{k}) $  is a sequence in $ M_{*} $  converging to zero in the $ \sigma(M_{*},M) $-topology and if $ (x_{n}) $  is a sequence in $ M $  converging to zero in the $ s^{*}(M,M_{*}) $-topology, then $ \lim_{n} \phi_{k}(x_{n}) = 0 $  uniformly in $ k \in \N $  (\citet[Lemma III.5.5]{takesaki:1979}).
+\end{enumerate}
+%% --
+\begin{theorem}\label{thm:d4-4.4}
+Let $ \RR $  be an identity preserving pseudo-resolvent on 
+%
+\[
+	D = \{\lambda \in \C \colon  \Re(\lambda) > 0\} 
+\]
+%
+with values in a \WA-algebra $ M $  which is of Schwarz type and let $ \RR' $  br its adjoint pseudo-resolvent.
+Any one of the following conditions implies $ \dim \Fix{\widehat{\RR}} < \infty $  in some ultrapower of $ M $.
+%% --
+\begin{enumerate}[\upshape (i)]
+\item
+The fixed space of $ \RR' $  is finite dimensional.
+
+\item
+$ \lim_{\mu \to 0} \mu R(\mu) = P $  exists in the strong operator topology and $ \rank (P) < \infty $.
+
+\item
+The fixed space of\/ $ \RR' $  is contained in $ M_{*} $.
+
+\item
+Every map $ \mu R(\mu) $, $ \mu \in \R_{+} $, is irreducible on $ M $.
+\end{enumerate}
+\end{theorem}
+%% --
+\begin{proof}
+Suppose that the dimension of the fixed space of\/ 
+$ (\RR')^{\wedge} $  in some ultrapower $ (M')^{\wedge} $  of $ M' $  is infinite dimensional.
+Since $ M' $ is the predual of the \WA-algebra $ M'' $  and $ \RR'' $  is identity preserving (since $ R''\1 = R\1 = \1 $ ) and of Schwarz type (because $ \mu R''(\mu) = (\mu R(\mu))'' $  is a Schwarz map for all $ \mu \in \R_{+} $ ), we can apply Lemma~\ref{lem:d4-4.3}.
+
+%Suppose that the fixed space of the canonical extension of $ \RR' $  to some ultrapower of $ M' $  is infinite dimensional.
+Thus we may choose a sequence of states $ (\phi_{k}) $  in $ M' $  and a sequence $ (z_{k}) $  in $ (M'')_{1}$, $ 0 \leq z_{k} $,  satisfying (i)--(ii) of Lemma 4.3.
+Remark~(3) above implies that no subsequence of $ (\phi_{k}) $  can converge in the $ \sigma(M',M'') $-topology.
+%% --
+\begin{enumerate}[\upshape (i), wide, labelindent=.5em]
+\item
+If $ \phi $  is a $ \sigma(M',M) $-accumulation point of $ (\phi_{k}) $, then $ \phi \in \Fix{\RR'} $.
+Since $ \Fix{\RR'} $  is finite dimensional, the set of accumulation points of the sequence $ (\phi_{k}) $  is metrizable in the $ \sigma(M',M) $-topology.
+Hence there exists a sequence $ (k(n)) $  of natural numbers such that 
+%% --
+\[
+    \sigma(M',M)\text{-}\lim_{n} \phi_{k(n)} = \phi .
+\]
+%% --
+Consequently, by Remark (1) above, 
+%% --
+\[ 
+    \sigma(M',M'')\text{-}\lim_{n} \phi_{k(n)}= \phi .
+\]
+%% --
+But this leads to a contradiction proving (i).
+
+\item
+Since $ \dim \Fix{\RR} = \dim \Fix{\RR'} = \rank(P) < \infty $, (ii) follows from (i).
+
+\item
+Suppose that the fixed space of $ R' $  is infinite dimensional.
+Since $ \Fix{\RR'} \subseteq M_{*} $,  there exists a sequence of states $ (\psi_{n}) $  in $ \Fix{\RR'} $  with mutually orthogonal support projections in $ M $  (Lemma~\ref{lem:d4-4.1}).
+Since every $ \sigma(M',M) $-accumulation point of the $ \psi_{n} $'s belongs to $ \Fix{\RR'} $, hence is normal, the sequence $ (\psi_{n}) $  is relatively $ \sigma(M_{*},M) $-compact.
+
+By Eberlein's theorem, we may assume that this sequence is weakly convergent (\citet{schaefer:1966}).
+By the orthogonality of the $ s(\psi_{n}) $'s this sequence converges to zero in the $ s^{*}(M,M_{*}) $-topology, hence $ \lim_{n} \psi_{k}(s(\psi_{n})) = 0 $  uniformly in $ k \in \N $, a contradiction.
+Consequently $ \dim \Fix{\RR} < \infty $  and (iii) is proved.
+
+\item
+We prove $ \dim \Fix{\RR'} = 1 $  and apply (i) once again and need the following observation: If $ \psi $  is a faithful state on $ M $,  then the normal part is faithful too.
+Indeed, if $ 0 \neq x \in M $  such that $ \psi^{(n)}(x) = 0 $,  choose a projection $ 0 \neq p \in M $  such that $ \psi^{(n)}(p) = \psi^{(s)}(p) = 0 $ (use \citet[Theorem III.3.8]{takesaki:1979}). 
+Hence $ \psi(p) = 0 $  which conflicts with the faithfulness of $ \psi $.
+
+If $ 2 \leq \dim \Fix{\RR'} $  there are states $ \psi_{1} $  and $ \psi_{2} $  in $ \Fix{\RR'} $  such that the corresponding support projections are orthogonal in $ M'' $  (Remark~\ref{rem:d4-4.2}).
+Since every $ \RR' $-invariant state $ \psi $  is faithful on $ M $, $ \psi_{i}^{(n)} \neq 0 $  (otherwise the norm closed face $ \{\psi(x) = 0: x \in M_{+}\} $  would
+be non trivial and $ \mu R(\mu) $-invariant).
+The support projections of the $ \psi_{i}^{(n)} $'s in $ M'' $  are orthogonal (since $ \psi_{1}^{(n)} \leq \psi_{i} $ ) and different from zero.
+Let $ (z_{\gamma}) $  be a net in $ M_{1}^{+} $  such that
+%% --
+\[
+	\sigma(M'',M')\text{-}\lim_{\gamma} z_{\gamma} = s(\psi_{1}^{(n)}).
+\]
+%% --
+Then $ \lim_{\gamma} \psi_{1}^{(n)}(z_{\gamma}) = 1 $  but $ \lim_{\gamma} \psi_{2}^{(n)}(z_{\gamma}) = 0 $.
+Let $ z $  be a $ \sigma(M,M_{*}) $-accumulation point of $ (z_{\gamma}) $  in $ M_{+} $.
+Since every $ \psi_{i}^{(n)} $  is normal, $ \psi_{1}^{(n)}(z) = 1 $  but $ \psi_{2}^{(n)}(z) = 0 $.
+The first condition implies $ z \neq 0 $  while the second shows that $ \psi_{2}^{(n)} $  cannot be faithful.
+This is a contradiction and it implies $ \dim \Fix{\RR'} = 1 $, hence (iv) is proved.
+\end{enumerate}
+%% --
+\end{proof}
+%% --
+The next corollary is an easy application of\/ Theorem~\ref{thm:d4-4.4} and of D-III, Proposition 2.3.
+%% --
+\begin{corollary}\label{cor:d4-4.5}
+Let $ \TT $  be an identity preserving semigroup of Schwarz type on the predual of a \WA-algebra $ M $.
+Then the following assertions are equivalent.
+%% --
+\begin{enumerate}[\upshape (a)]
+\item
+$ \TT $  is uniformly ergodic with finite dimensional fixed space.
+
+\item
+The adjoint weak*-semigroup is strongly ergodic with finite dimensional fixed space.
+
+\item
+Every $ \TT'' $-invariant state is normal.
+\end{enumerate}
+\end{corollary}
+%% -- 
+\begin{proof}
+If (a) is fulfilled, then the semigroup $ \TT $  is strongly ergodic on $ M_{*} $.
+Since
+%% --
+\[
+\dim \Fix{\TT} = \dim \Fix{\TT'} < \infty,
+\]
+%% --
+there exist normal states $ \phi_{1},\ldots,\phi_{n} $  in $ \Fix{\TT} $  and $ x_{1},\ldots,x_{k} $  in $ \Fix{\TT'} $  such that $ \phi_{n}(x_{m}) = \delta_{n,m} $  $ (1 \leq n, m \leq k) $.
+Then 
+%% --
+\[
+P = \sum_{i=1}^{k} \phi_{i} \otimes x_{i} 
+\]
+%% --
+is the associated ergodic projection.
+If $ (C(s))_{s>0} $  is the family of Cesàro means of $ \TT $, then
+%% --
+\[
+\lim_{s \to \infty} C(s)''(\psi) = \sum_{i=1}^{k} \phi_{i}(\psi)x_{i} \in M_{*}
+\]
+%% --
+for every $ \psi \in M' $.
+Hence $ \Fix{\TT''} \subseteq M_{*} $  which implies (c).
+
+If (c) is fulfilled, then $ \Fix{\TT'} = \Fix{\TT''} $.
+Therefore the fixed space of $ \TT' $  separates the points of $ \Fix{\TT''} $, hence $ \TT' $  is strongly ergodic on $ M $  (\citet[Chap.2, Thm.1.4]{krengel:1985}).
+
+If (b) holds, then
+%% --
+\[
+P = \lim_{\mu \to 0} \mu R(\mu,A')
+\]
+%% --
+exists in the strong operator topology with $ A' $  is the generator of $ \TT' $.
+Therefore $ \dim \Fix{\widehat{\mu R(\mu)}} < \infty $  in some ultrapower of $ M $  (Theorem~\ref{thm:d4-4.4}).
+It follows from D-III, Proposition 2.3 that 0 is a pole of the resolvent of $ R(\cdot,A) $.
+Therefore $ \TT $  is uniformly ergodic.
+\end{proof}
+%% --
+%\clearpage
+\section*{Notes}\label{notes:d4-notes}
+\addcontentsline{toc}{section}{Notes}
+%% --
+\begin{enumerate}[label=\emph{Section \arabic*:}, wide, itemsep=1ex]
+\item
+The stability concepts appearing in Theorem~\ref{thm:d4-1.7} coincide not only for positive semigroups on \CA-algebras but on any order unit Banach space.
+We refer to \citet{battyrobinson:1984} for this more general setting and to B-IV, Section 1 for the analogous results on $ C_{0}(X) $.
+
+
+\item
+Theorem~\ref{thm:d4-2.2} generalizes the Liapunov stability theorem from the matrix algebra $ B(\C^{n}) $  to arbitrary \WA-algebras.
+For the algebra $ \BH $  it is due to \citet{milstein:1975} and in the general form to \citet{grohneubrander:1981}.
+
+
+\item
+From the many papers dealing more or less explicitly with the asymptotic behavior of semigroups on operator algebras we quote \citet{frigerioverri:1982} and \citet{watanabe:1982}.
+The background for our ergodic theorems (Proposition~\ref{prop:d4-3.3} \& \ref{prop:d4-3.4}) can be found best in \citet{krengel:1985}.
+The \enquote{automatic} convergence theorem for an irreducible \WA-dynamical system on $ \BH $  stated in Corollary~\ref{cor:d4-3.9} is the continuous version of a result in \citet{groh:1984c}.
+Finally, the characterization of convergence towards a periodic semigroup through spectral properties of the generator---Theorem~\ref{thm:d4-3.11}---is due to \citet{nagel:1984} in the commutative case, \ie in $ L^{1}(\mu) $ (see also C-IV, Thm.2.14).
+%\medskip
+
+\item
+Again we refer to \citet{krengel:1985} for the (uniform) ergodic theory for a single operator or a one-parameter semigroup on a Banach space.
+The characterization given in Corollary~\ref{cor:d4-4.5} for positive semigroups on \WA-algebras is based on a sophisticated use of ultrapower techniques and has its discrete forerunners in \citet{lotz:1981} and 
+\citet{groh:1984b}.
+%\medskip
+\end{enumerate}
+
+%% -- Literatur
+%% --
+\section*{References}
+\addcontentsline{toc}{section}{References}
+{\RaggedRight
+\renewcommand{\bibsection}{}
+\bibliographystyle{abbrvnat}
+\bibliography{bib/ln-references}}
+

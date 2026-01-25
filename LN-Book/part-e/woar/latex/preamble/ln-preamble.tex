@@ -1,0 +1,73 @@
+%% -- Stand 2025/04/30
+%% --
+
+%% -- Kein Einzug bei neumen Absatz und eine Leerzeile
+%% --               
+\usepackage[parfill]{parskip} 
+
+%% Welche Pakete verwenden wir 
+%% -- 
+\usepackage{graphicx}        
+\usepackage{libertine}
+
+%% -- Nummerierung Abschnittsweise
+%% --
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+
+%% -- AMS-math und mathtools
+%% --
+\usepackage{amsmath, amssymb, amsthm}	
+\usepackage[showonlyrefs]{mathtools}
+\usepackage{empheq}
+\counterwithin{equation}{section}
+
+%% -- Die Theorem-Umgebungen: Nummerierung nach Abschnitten
+%% --
+%\makeatletter
+%\def\@endtheorem{\endtrivlist}
+%\makeatother
+%% --
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma} 
+
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{proposition*}{Proposition}
+%% --
+\theoremstyle{definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{examples}[theorem]{Examples} 
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{remarks}[theorem]{Remarks}
+
+\newtheorem*{definition*}{Definition}
+\newtheorem*{example*}{Example}
+\newtheorem*{examples*}{Examples} 
+\newtheorem*{remark*}{Remark}
+\newtheorem*{remarks*}{Remarks}
+
+
+%% -- Unsere Pakete
+%% --
+\usepackage[english]{babel}					% Trennungen richtig
+\usepackage{csquotes}						% \enquote{Text} 
+\usepackage[inline,shortlabels]{enumitem}	% \begin{enumerate}[(i)] oder [(a)] 
+	%\setlist{parsep=0.0em}					% etwas enger		
+\usepackage{ragged2e}						% \RaggedRight = Flattersatz
+%% --
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usetikzlibrary{matrix,arrows.meta,calc}
+%% --
+\usepackage{comment}
+\usepackage{xspace}
+\usepackage{xfrac}
+%% --
+
+

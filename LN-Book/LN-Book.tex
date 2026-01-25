@@ -1,0 +1,315 @@
+% !TEX TS-program = pdflatexmk
+% !BIB program = bibtex  
+%%%%%%%%%%%%%%%%%%%% LN-Book.tex %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Stand: 2025-08-04 ulgr
+%%%%%%%%%%%%%%%% Springer-Verlag %%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\documentclass[% 
+	,graybox
+	,envcountsect			%% not working  
+%	,evvcountsame			%% -- " -- 
+%	,envcountresetsect		%% -- " --
+%  	,sectrefs
+% 	,natbib
+%	,referee
+	]{svmono}
+
+% choose options for [] as required from the list
+% in the Reference Guide
+
+%\usepackage{mathptmx}
+%\usepackage{helvet}
+%\usepackage{courier}
+%
+\usepackage{setspace}
+\usepackage{type1cm}         
+
+\usepackage{makeidx}         % allows index generation
+\usepackage{graphicx}        % standard LaTeX graphics tool
+                             % when including figure files
+\usepackage{multicol}        % used for the two-column index
+\usepackage[bottom]{footmisc}% places footnotes at page bottom
+
+\usepackage{newtxtext}       % 
+\usepackage[varvw]{newtxmath}       % selects Times Roman as basic font
+
+%% -- Remarks und Examples
+%% -- 
+\spnewtheorem{remarks}[theorem]{Remarks}{\normalfont\bfseries}{\normalfont}
+\spnewtheorem{examples}[theorem]{Examples}{\normalfont\bfseries}{\normalfont}
+
+\spnewtheorem*{example*}{Example}{\normalfont\bfseries}{\normalfont}
+\spnewtheorem*{examples*}{Examples}{\normalfont\bfseries}{\normalfont}
+\spnewtheorem*{remark*}{Remark}{\normalfont\bfseries}{\normalfont}
+\spnewtheorem*{remarks*}{Remark}{\normalfont\bfseries}{\normalfont}
+\spnewtheorem*{definition*}{Definition}{\normalfont\bfseries}{\normalfont}
+
+\spnewtheorem*{theorem*}{Theorem}{\normalfont\bfseries}{\itshape}
+\spnewtheorem*{proposition*}{Proposition}{\normalfont\bfseries}{\itshape}
+\spnewtheorem*{lemma*}{Lemma}{\normalfont\bfseries}{\itshape}
+\spnewtheorem*{corollary*}{Corollary}{\normalfont\bfseries}{\itshape}
+
+%% -- Nummer von Theorem etc. korrekt
+%% --
+%\usepackage[showonlyrefs]{amsmath}
+\renewcommand\thetheorem{\thesection.\arabic{theorem}}
+\renewcommand\theproposition{\thesection.\arabic{proposition}}
+\renewcommand\thedefinition{\thesection.\arabic{definition}}
+\renewcommand\thelemma{\thesection.\arabic{lemma}}
+\renewcommand\thecorollary{\thesection.\arabic{corollary}}
+\renewcommand\theremark{\thesection.\arabic{remark}}
+\renewcommand\theremarks{\thesection.\arabic{remarks}}
+\renewcommand\theexample{\thesection.\arabic{example}}
+\renewcommand\theexamples{\thesection.\arabic{examples}}
+
+\counterwithin{equation}{section}
+
+%% -- Durchgehende Nummerierung
+%% -- 
+\makeatletter
+\let\c@definition=\c@theorem 	% Make definition share the theorem counter
+\let\c@example=\c@theorem 		% Make example share the theorem counter
+\let\c@definition=\c@theorem 	% Make definition share the theorem counter
+\let\c@examples=\c@theorem 		% Make examples share the theorem counter
+\let\c@lemma=\c@theorem 		% Make lemma share the theorem counter
+\let\c@corollary=\c@theorem 	% Make corollary share the theorem counter
+\let\c@proposition=\c@theorem 	% Make proposition share the theorem counter
+\let\c@remark=\c@theorem 		% Make proposition share the theorem counter
+\let\c@remarks=\c@theorem 		% Make proposition share the theorem counter
+\makeatother
+
+
+
+%% -- Pakete etc.
+%% -- 
+\input{./preamble/ln-preamble-final}	
+
+\usepackage[showonlyrefs]{mathtools}
+%\usepackage{mathtools}
+\usepackage{empheq}
+\counterwithin{equation}{section}
+\usepackage{colortbl} % Füge dies in den Präambel-Bereich ein
+
+%% --
+\usepackage{tikz}
+\usepackage{tikz-cd}
+
+%% -- Definitionen
+%% --
+\input{./preamble/ln-definitionen}
+
+
+%% -- References
+%% --
+
+\usepackage{chapterbib}
+\usepackage[square,numbers]{natbib}
+%\bibliographystyle{spmpsci}
+
+
+
+%\makeindex             % used for the subject index
+%\usepackage{imakeidx}
+%\makeindex[intoc, columns=2, options=-s svind.ist]                      
+% please use the style svind.ist with
+                       % your makeindex program
+                       
+%% --
+%% -- https://www.uweziegenhagen.de/?p=3020	 
+%% -- Stand
+%% --
+
+\date{\LARGE Stand: \today}
+
+%% -- Part A etc
+%% -- A-I etc für \chapter
+%% -- 1. für \section etc
+%% --
+\renewcommand\thepart{\Alph{part}}
+\renewcommand\thechapter{\thepart-\Roman{chapter}}
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+
+%% -- Wegen Überlappung im TOC
+\usepackage{tocloft} 
+\renewcommand\cftchapnumwidth{1cm}
+
+%% -- \subsection nicht ins TOC
+%% --
+\setcounter{tocdepth}{1}
+
+\usepackage{tocloft}
+\cftpagenumbersoff{part}		% keine Seitenangabe bei Part in TOC
+
+\newcommand{\chapternopage}[1]{% keine Seitenagabe in TOC für Chapter
+  \addtocontents{toc}{\protect\cftpagenumbersoff{chapter}}% 
+  \chapter{#1}%
+  \addtocontents{toc}{\protect\cftpagenumberson{chapter}}%
+}
+
+\newcommand{\sectionnopage}[1]{% keine Seitenangabe in TOC für Section
+  \addtocontents{toc}{\protect\cftpagenumbersoff{section}}% 
+  \section*{#1}%
+  \addcontentsline{toc}{section}{#1}%
+  \addtocontents{toc}{\protect\cftpagenumberson{section}}%
+}
+
+%% -- Für Links im PDF
+%% --
+\usepackage{hyperref}
+\hypersetup{%
+	,unicode	= false,
+	,breaklinks = true	%
+	,colorlinks	= true  %  Farbige Links false/true, für onlineversion true                                                           
+	,urlcolor	= blue  %                                                              
+	,citecolor	= blue  %                                                          
+	,linkcolor	= blue	% oder black
+	,hypertexnames=false
+%  	,hidelinks 			% Vor dem Druck % entfernen
+	}
+
+%% -- 
+%% -- nur die Dateien nutzen, 
+%% -- die nicht auskommentiert sind (ohne %)
+%% --
+
+\includeonly{%
+,./part-0/ln-dedication
+%,./part-0/foreword 
+,./part-0/ln-preface
+%,./part-0/acknowledgement
+%,./part-0/ln-symbols   
+%%%%% -- Part A
+%%%%% --
+,./part-a/part-a
+,./part-a/chap-a1	%% -- final
+,./part-a/chap-a2	%% -- final
+,./part-a/chap-a3	%% -- final
+,./part-a/chap-a4   %% -- final
+%%%% -- Part B
+%%%% --
+,./part-b/part-b	  
+,./part-b/chap-b1  %% -- final
+,./part-b/chap-b2  %% -- final
+,./part-b/chap-b3  %% -- final
+,./part-b/chap-b4  %% -- final
+%%% -- Part C 
+%%% --
+,./part-c/part-c
+,./part-c/chap-c1	%% -- final 
+,./part-c/chap-c2	%% -- final
+,./part-c/chap-c3
+,./part-c/chap-c4
+%%%% -- Part D
+%%%% --
+,./part-d/part-d
+,./part-d/chap-d1
+,./part-d/chap-d2
+,./part-d/chap-d3
+,./part-d/chap-d4
+%%%% -- Part E
+%%%% --
+,./part-e/part-e
+%,./part-e/un-chap-a1
+%,./part-e/un-chap-b1
+%,./part-e/part-e-references
+%%%% -- Part F Appendix
+,./part-f/part-f
+,./part-f/ln-symbols
+,./part-f/ln-index
+}
+%% --
+\begin{document}
+%% --
+\author{Wolfgang Arendt, Annette Grabosch, Günther Greiner, Ulrich Groh, Heinrich P. Lotz, Ulrich Moustakas, Rainer Nagel, Frank Neubrander, Ulf Schlotterbeck}
+%% --
+\title{One-parameter Semigroups of Positive Operators\\
+		{\large{Edited by R. Nagel}}}
+%% --
+\subtitle{Lecture Notes in Mathematics\\ \\ 1184\\ \\Springer-Verlag\\ Berlin Heidelberg New York Tokyo}
+%% --
+\maketitle
+%% --
+\frontmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% -- part-0
+\include{./part-0/ln-dedication}
+%\include{./part-0/foreword}
+\include{./part-0/ln-preface}
+%\include{./part-0/acknowledgement}
+%% --
+\tableofcontents
+%% --
+% \include{./part-0/ln-symbols}
+% \printnomenclature
+%\include{./part-f/ln-symbols}
+%%
+\mainmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%% -- Part-A
+
+\include{./part-a/part-a} 
+\include{./part-a/chap-a1}
+\include{./part-a/chap-a2}
+\include{./part-a/chap-a3}
+\include{./part-a/chap-a4}
+%\include{./part-a/appendix-a} 
+
+%%% -- Part-B
+\include{./part-b/part-b}
+\include{./part-b/chap-b1}
+\include{./part-b/chap-b2}
+\include{./part-b/chap-b3}
+\include{./part-b/chap-b4}
+%\include{./part-b/appendix-b}
+
+%%% -- Part-C
+\include{./part-c/part-c}
+\include{./part-c/chap-c1}
+\include{./part-c/chap-c2}
+\include{./part-c/chap-c3}
+\include{./part-c/chap-c4}
+%\include{author/part-c/appendix-c}
+
+%% -- Part-D
+\include{./part-d/part-d}
+\include{./part-d/chap-d1}
+\include{./part-d/chap-d2}
+\include{./part-d/chap-d3}
+\include{./part-d/chap-d4}
+%\include{author/part-d/appendix-d}
+
+%% -- Part-E
+%\include{./part-e/part-e}
+%\include{./part-e/un-chap-a1}
+%\include{./part-e/un-chap-b1}
+%\include{./part-e/part-e-references}
+%\include{./part-e/chap-eb2}
+%\include{./part-d/chap-d3}
+%\include{./part-d/chap-d4}
+
+
+
+\backmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% -- Literatur
+%% --
+%\RaggedRight
+%\bibliographystyle{abbrvnat}
+%\bibliography{bib/ln-references} 
+
+\include{./part-f/part-f}
+\include{./part-f/ln-symbols}
+\include{./part-f/ln-index}
+
+\cleardoublepage 
+%\printindex
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
+
+
