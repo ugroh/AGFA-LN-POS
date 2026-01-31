@@ -166,7 +166,7 @@ Let $g \in E$.
 Define 
 %%--
 \[
-f_{0}(x) = 1/2 [\eu^{x} \int_{0}^{1} \eu^{-y}g(y) \dy - \eu^{-x} \int_{0}^{1} \eu^{y}g(y) \dy].
+f_{0}(x) = \frac{1}{2} \left[\eu^{x} \int_{0}^{1} \eu^{-y}g(y) \dy - \eu^{-x} \int_{0}^{1} \eu^{y}g(y) \dy \right].
 \]
 %%
 Then $f_{0} \in C^{2}[0,1]$ and $f_{0} - f_{0}'' = g$. 
@@ -338,7 +338,7 @@ Thus $(\Id - A)D(A)$ is dense in $E$ and the claim follows from Corollary \ref{c
 %% \bigskip
 We now turn to the problem to characterize generators of arbitrary (not necessarily contractive) positive semigroups.
 Of course, as in B-II, Section 1 
-one sees that a semigroup $(T(t))_{t \geq 0}$ is positive if and only if\/ $R(\lambda,A) \geq 0$ for all $\lambda > \omega(A)$ where $A$ denotes the generator of\/ $(T(t))_{t \geq 0}$.
+one sees that a semigroup $(T(t))_{t \geq 0}$ is positive if and only if\/ $R(\lambda,A) \geq 0$ for all $\lambda > \omega_{0}(A)$ where $A$ denotes the generator of\/ $(T(t))_{t \geq 0}$.
 We are looking for an intrinsic condition on~$A$.
 
 The positive minimum principle which is characteristic for generators of strongly continuous semigroups on $C(K)$ (see 
@@ -584,12 +584,12 @@ If\/ $E$ is a real $\sigma$-order complete Banach lattice, then
 \begin{example}\label{ex:c2-2.2}
 %
 Let $f \in E \coloneqq L^p(X,\Sigma,\mu)$ (real or complex) where $(X,\Sigma,\mu)$ is a $\sigma$-finite measure space and $1 \leq p \leq \infty$.
-Define
+Define  
 %% --
 \begin{align*}
 	m(x) = 
 	\begin{cases}
-    	f(x)/|f(x)| & \text{if } f(x) \neq 0 \\
+    	\mfrac{f(x)}{ \lvert f(x) \rvert} & \text{if }  f(x)   \neq 0 \\  
     	0 & \text{if } f(x) = 0.
 	\end{cases}
 \end{align*}
@@ -602,7 +602,7 @@ Then $\sign f$ is the multiplication operator defined by $m$; \ie
 %% --
 Moreover, 
 \[
-	(\widehat{\sign} f)g = m \cdot g + 1_{[f(x)=0]}|g| \quad (g \in E).
+	(\widehat{\sign} f)g = m \cdot g + \1_{[f(x)=0]}|g| \quad (g \in E).
 \]
 \end{example}
 %% --
@@ -766,7 +766,7 @@ It has been proved by \citet{miyajimaokazawa:1984}] that (\ref{eq:c2-Kd}) implie
 \end{remark*}
 
 Finally we formulate Theorem~\ref{thm:c2-2.4}   for the space $E \coloneq C_{0}(X)$ ($X$ locally compact) (which is not $\sigma$-order complete unless $X$ is $\sigma$-Stonian).
-Recall, that for $f \in C_{0}(X)$, \mbox{$\sign f$} is defined as a Borel function and for any bounded Borel function $g$ on $X$ and any $\phi \in M(X) = C_{0}(X)'$, we let $\langle g,\phi \rangle = \int g(x) d\phi(x)$ (see B-II, Section 2).
+Recall, that for $f \in C_{0}(X)$, \mbox{$\sign f$} is defined as a Borel function and for any bounded Borel function $g$ on $X$ and any $\phi \in M(X) = C_{0}(X)'$, we let $\langle g,\phi \rangle = \int g(x) \diff{\phi}(x)$ (see B-II, Section 2).
 %% --
 \begin{theorem}\label{thm:c2-2.6}
 %
@@ -1139,8 +1139,8 @@ Hence for $f \in D(A)$,
 %% --
 \begin{align*}
 \langle(\sign  f)Af,\phi\rangle &= \langle(\sign  f)f',\phi\rangle = \langle|f|',\phi\rangle\\
-&= \int_{0}^{1} |f|'(x) \, \phi(x) \,\ dx\\
-&= |f(1)|\phi(1) - |f(0)|\phi(0) - \int_{0}^{1} |f(x)| \, \phi'(x) \, \dx\\
+&= \int_{0}^{1} |f|'(x) \, \phi(x) \dx\\
+&= |f(1)|\phi(1) - |f(0)|\phi(0) - \int_{0}^{1} |f(x)| \, \phi'(x) \dx\\
 &= |f(1)|\phi(1) - |f(0)|\phi(0) + \langle|f|,A'\phi\rangle\\
 &= \langle|f|,A'\phi\rangle
 \end{align*}
@@ -1360,7 +1360,8 @@ $\Re\langle(\sign  \bar{f}) Bf,\phi\rangle \leq \langle|f|,A'\phi\rangle$ for al
 \ref{thm:c2-4.2-1}   implies \ref{thm:c2-4.2-2}. Let $f \in D(B)$, $\phi \in D(A')_{+}$. Then
 %% --
 \begin{align*}
-\Re\langle(\sign  \bar{f})Bf, \phi\rangle &= \Re  \langle(\sign  \bar{f})\lim_{t \to 0}1/t(S(t)f - f),\phi\rangle\\
+\Re\langle(\sign  \bar{f})Bf, \phi\rangle &= 
+\Re \langle(\sign  \bar{f})\lim_{t \to 0}1/t(S(t)f - f),\phi\rangle\\
 &= \langle\lim_{t \to 0}1/t(\Re\langle(\sign  \bar{f}) S(t)f\rangle - |f|),\phi\rangle\\
 &\leq \lim_{t \to 0}\langle 1/t(|S(t)f| - |f|),\phi\rangle\\
 &\leq \lim_{t \to 0}\langle 1/t(T(t)|f| - |f|),\phi\rangle = \langle|f|,A'\phi\rangle.
@@ -1494,7 +1495,7 @@ This implies that $\left[\lambda_{1},\infty\right) \subset \rho(\overline{B})$. 
 |R(\lambda,\overline{B})^{n}f| \leq R(\lambda,A)^{n}|f| \quad (f \in E, n \in \N , \lambda_{1} < \lambda).
 \end{equation}
 %%--
-Let $w > \omega(A), \,\lambda_{1}$. 
+Let $w > \omega_{0}(A), \,\lambda_{1}$. 
 Then it follows from \eqref{eq:c2-4.9} that\\
 $\|(\lambda - w)^{n}R(\lambda,\overline{B})^{n}\| \leq \|(\lambda - w)^{n}R(\lambda,A)^{n}\|$ for all $\lambda > w$, $n \in \N $. 
 So by the Hille-Yosida theorem, $\overline{B}$ is the generator of a semigroup $(S(t))_{t \geq 0}$. 
@@ -1743,7 +1744,7 @@ In that case \eqref{eq:c2-4.11} implies that $(S(t))_{t \geq 0}$ is dominated by
 (by Proposition~\ref{prop:c2-4.5}).
 
 Now we show that $(\lambda - \overline{B})D(\overline{B})$ is dense in $E$.
-Let $m_{n} = \sup \{m, -n1_{X}\}$ $(n \in \N )$ and $B_{n} = A + m_{n}$.
+Let $m_{n} = \sup \{m, -n \1_{X}\}$ $(n \in \N )$ and $B_{n} = A + m_{n}$.
 Then $B_{n}$ is the generator of a positive semigroup and it follows from Proposition~\ref{prop:c2-4.8}   that $0 \leq R(\lambda,B_{n+1}) \leq R(\lambda,B_{n}) \leq R(\lambda,A)$ for all $n \in \N $, $\lambda > s(A)$.
 (Note that $s(B_{n}) \leq s(A)$ by Lemma \ref{lem:c2-4.10}   ).
 Let $0 \leq f \in E_{u}$ and $g_{n} = R(\lambda,B_{n})f$.
@@ -1886,7 +1887,7 @@ Since $\delta_{0} \in D(A') \cap D(B')$ we have for all $f \in C[-1,0]_{+}$ sati
 &= \langle|f|,A'\delta_{0}\rangle = \langle|f|,\mu\rangle.
 \end{align*}
 %% --
-Since $\mu(\{0\}) = \nu\{0\}) = 0$, this implies that $|\nu| \leq \mu$.
+Since $\mu\{0\} = \nu\{0\} = 0$, this implies that $|\nu| \leq \mu$.
 
 Moreover, for arbitrary $f \in C[-1,0]_{+}$ we have
 %% --
@@ -1897,7 +1898,7 @@ Moreover, for arbitrary $f \in C[-1,0]_{+}$ we have
 \end{align*}
 %% --
 Consequently, $(\Re(\beta))\delta_{0} + \Re(\nu) \leq \alpha\delta_{0} + \mu$.
-This implies $\Re(\beta) \leq \alpha$ since $\mu(\{0\}) = \nu\{0\}) = 0$.
+This implies $\Re(\beta) \leq \alpha$ since $\mu \{0\}  = \nu\{0\}  = 0$.
 \end{proof}
 %%
 \begin{remark*}
@@ -1966,8 +1967,8 @@ If\/ $Af \geq 0$ for all $f \in D(A)_{+}$, then $A$ is bounded.
 \end{lemma}
 %%
 \begin{proof}[Proof of Lemma \ref{lem:c2-4.18}]
-There exists $M \geq 1$ such that $\|R(\lambda,A)\| \leq M/\lambda$ for all $\lambda \geq$ $\omega(A)+1$.
-Fix $\mu \geq \omega(A)+1$.
+There exists $M \geq 1$ such that $\|R(\lambda,A)\| \leq M/\lambda$ for all $\lambda \geq$ $\omega_{0}(A)+1$.
+Fix $\mu \geq \omega_{0}(A)+1$.
 Then $AR(\mu,A)Af = \mu R(\mu,A)Af - Af = \mu^{2}R(\mu,A)f - \mu f - Af$; hence $0 \leq Af \leq \mu^{2}R(\mu,A)f$ whenever $f \in D(A)_{+}$.
 Thus $\|Af\| \leq c\|f\|$ for all $f \in D(A)_{+}$ (where $c \coloneq \mu^{2}\|R(\mu,A)\|$).
 Consequently,
@@ -1975,7 +1976,7 @@ Consequently,
 \[
 \|(\lambda R(\lambda,A) - \Id)f\| = \|AR(\lambda,A)f\| \leq c\|R(\lambda,A)f\| \leq (Mc/\lambda)\|f\| 
 \]
-for all $f \in E_{+}$ and all $ \lambda \geq \omega(A)+1$. 
+for all $f \in E_{+}$ and all $ \lambda \geq \omega_{0}(A)+1$. 
 Hence
 \[
 \|(\lambda R(\lambda,A) - \Id)g\| \leq Mc/\lambda(\|g^{+}\| + \|g^{-}\|) \leq (2Mc/\lambda)\|g\| \quad \text{for all} \quad g \in E\,.
@@ -2001,19 +2002,19 @@ Let $f \in E_{+}$, $\phi \in E'_{+}$ satisfy $\langle f,\phi \rangle = 0$.
 Then for all $\alpha \in \R$,
 %% --
 \begin{align*}
-\langle \Re(\eu^{i\alpha}B)f,\phi \rangle &= \lim_{t \to 0}1/t \langle \Re(\eu^{i\alpha}\eu^{tB})f,\phi \rangle \\
+\langle \Re(\eu^{\im \alpha}B)f,\phi \rangle &= \lim_{t \to 0}1/t \langle \Re(\eu^{\im \alpha}\eu^{tB})f,\phi \rangle \\
 &\leq \lim_{t \to 0}1/t \langle \eu^{tC}f,\phi \rangle \\
 &= \langle Cf,\phi \rangle.
 \end{align*}
 %% --
-Thus $C - \Re(\eu^{i\alpha}B)$ satisfies the positive minimum principle (P) 
+Thus $C - \Re(\eu^{\im \alpha}B)$ satisfies the positive minimum principle (P) 
 for all $\alpha \in \R$.
-It follows from Theorem~\ref{thm:c2-1.11} that $C - \Re(\eu^{i\alpha}B) + (\|C\|+\|B\|)\Id \geq 0$ for all $\alpha \in \R$.
+It follows from Theorem~\ref{thm:c2-1.11} that $C - \Re(\eu^{\im \alpha}B) + (\|C\|+\|B\|)\Id \geq 0$ for all $\alpha \in \R$.
 Applying the band projection onto $\ZE^{d}$ on both sides of this inequality one obtains that
 \[
-|B_{0}| = \sup_{\alpha \in \R}\Re(\eu^{i\alpha}B) \leq C_{0} 
+|B_{0}| = \sup_{\alpha \in \R}\Re(\eu^{\im \alpha}B) \leq C_{0} 
 \]
-(since $|T| = \sup_{\alpha \in \R}\Re(\eu^{i\alpha}T)$ for all $T \in \mathcal{L}^{r}(E)$, see C-I, Section 7).
+(since $|T| = \sup_{\alpha \in \R}\Re(\eu^{\im \alpha}T)$ for all $T \in \mathcal{L}^{r}(E)$, see C-I, Section 7).
 We have proved that $\Re(M) \leq N$ and $|B_{0}| \leq C_{0}$.
 This implies that
 \[

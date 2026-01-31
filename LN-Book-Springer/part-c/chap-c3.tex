@@ -1233,9 +1233,9 @@ which is irreducible.
     For the monomials $e_{n}(z) \coloneqq z^{n}$ $(n \in \Z)$ we have $i(e_{n}) = h^{[n]}$ thus $i$ has dense image in $E$ (by A-III, Theorem~5.4).
     Moreover, 
     \[
-    \langle h^{[n]},\phi\rangle = \langle i(e_{n}),\phi\rangle = \int_{0}^{2\pi} e_{n}(\eu^{it})\dt  =2\pi\cdot\delta_{n0}\  \text{ for all } n \in \Z\,,
+    \langle h^{[n]},\phi\rangle = \langle i(e_{n}),\phi\rangle = \int_{0}^{2\pi} e_{n}(\eu^{\im t})\dt  =2\pi\cdot\delta_{n0}\  \text{ for all } n \in \Z\,,
     \] 
-    hence $\int_{0}^{2\pi} f(\eu^{it})\dt   = \langle i(f),\phi\rangle$ for all $f \in C(\Gamma)$.
+    hence $\int_{0}^{2\pi} f(\eu^{\im t})\dt   = \langle i(f),\phi\rangle$ for all $f \in C(\Gamma)$.
     It follows that $(E,\phi) \cong L^{1}(\Gamma)$, and we define $j$ to be the canonical mapping from $E$ into $(E,\phi) \cong L^{1}(\Gamma)$ (see C-I, Section~4).
     Then $j$ has dense image and is injective since $\phi$ is strictly positive (\cf Proposition~\ref{prop:c3-3.5}\,(ii)).
     One easily verifies that the diagram commutes.
@@ -1748,8 +1748,8 @@ However, one still cannot prove cyclicity of\/ $P\sigma_{b}(A)$ for arbitrary po
 \begin{equation}\label{eq:c3-4.6}
 	\begin{split} 
 		T(t)([f,g]) &\coloneqq [f_t,g_t] \quad \ \text{with}\\
-		f_t(z) &\coloneqq f(z \cdot \eu^{it}) \quad (z \in \Gamma) \quad \text{and}\\
-		g_t(x) &\coloneqq g(x+t) + \frac{1}{2\pi}\int_{0}^{2\pi} f(z \cdot \eu^{is}) \ds  \cdot \int_{x}^{x+t} k(u) \du \,.
+		f_t(z) &\coloneqq f(z \cdot \eu^{\im t}) \quad (z \in \Gamma) \quad \text{and}\\
+		g_t(x) &\coloneqq g(x+t) + \frac{1}{2\pi}\int_{0}^{2\pi} f(z \cdot \eu^{\im s}) \ds  \cdot \int_{x}^{x+t} k(u) \du \,.
 	\end{split}
 \end{equation}
 %% --
