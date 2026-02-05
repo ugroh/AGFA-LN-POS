@@ -1212,14 +1212,18 @@ which is irreducible.
     \index{lattice homomorphism}
 	such that the diagram commutes for all $t\geq 0$.
 	Hereby, $j\circ i$ is the canonical inclusion of\/ $C(\Gamma)$ in $L^{1}(\Gamma)$\,.
-	%% -- tikz
-	\[ 
-	\begin{tikzcd}
-		C(\Gamma) \arrow[r, "i"] \arrow[d, "R_\tau(t)"'] & E  \arrow[r, "j"] \arrow[d, "T(t)"'] & L^1(\Gamma) \arrow[d, "R_\tau(t)"] \\
-		C_(\Gamma) \arrow[r, "i"'] & E \arrow[r, "j"'] & L^{1}(\Gamma)
-	\end{tikzcd}
-	\]
-	%% --
+%% -- tikz
+\begin{center}
+\includegraphics[width=0.5\textwidth]{./tikz-images/tikz-chap-c3-a.pdf}
+\end{center}
+%% --
+% 	\[ 
+% 	\begin{tikzcd}
+% 		C(\Gamma) \arrow[r, "i"] \arrow[d, "R_\tau(t)"'] & E  \arrow[r, "j"] \arrow[d, "T(t)"'] & L^1(\Gamma) \arrow[d, "R_\tau(t)"] \\
+% 		C_(\Gamma) \arrow[r, "i"'] & E \arrow[r, "j"'] & L^{1}(\Gamma)
+% 	\end{tikzcd}
+% 	\]
+% 	%% --
 \end{corollary}
 %% --
 \begin{proof}
@@ -1602,12 +1606,15 @@ In the last part of this section we discuss a spectral decomposition of positive
 		T_{1}(t)\circ q_{\psi} = q_{\psi}\circ T(t) \ (t \geq 0)\,.
 	\end{equation}
 	%% -- tikz
-	\[
-	\begin{tikzcd}
-		E \arrow[r, "T(t)"] \arrow[d, "q_\psi"'] & E \arrow[d, "q_\psi"] \\
-		(E,\psi) \arrow[r, "T_1(t)"'] & (E,\psi))
-	\end{tikzcd}
-	\]
+\begin{center}
+\includegraphics[width=0.4\textwidth]{./tikz-images/tikz-chap-c3-b.pdf}
+\end{center}
+% 	\[
+% 	\begin{tikzcd}
+% 		E \arrow[r, "T(t)"] \arrow[d, "q_\psi"'] & E \arrow[d, "q_\psi"] \\
+% 		(E,\psi) \arrow[r, "T_1(t)"'] & (E,\psi))
+% 	\end{tikzcd}
+% 	\]
 	%% --
 	Denoting by $A_{1}$ the generator of\/ $(T_{1}(t))$ we have $R\sigma(A_{1}) \subset R\sigma(A)$.
 	Indeed, assuming $A_{1}^*x = \lambda x$ then $T_{1}(t)'x = \eu^{\lambda t}x$, hence  $T(t)'q_{\psi}'(x) = \eu^{\lambda t}q_{\psi}'(x)$ (by \eqref{eq:c3-4.2}) or equivalently, $A^*(q_{\psi}'(x)) = q_{\psi}'(x)$. 
