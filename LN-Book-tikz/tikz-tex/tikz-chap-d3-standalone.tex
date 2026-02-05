@@ -1,0 +1,21 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,matrix,cd}
+\usepackage{varwidth}
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{varwidth}{\linewidth}
+%% --
+\begin{equation*}
+\begin{tikzcd}[column sep=large, row sep=large, scale=1.5]
+Ms(|\phi|) \arrow[r, "T_{|}"] \arrow[d, "V_u"'] & Ms(|\phi|) \arrow[d, "V_{u^{*}}"] \\
+Ms(|\phi^{*}|) \arrow[r, "S_{|}"'] & Ms(|\phi^{*}|)
+\end{tikzcd}
+\end{equation*}
+%% --
+\end{varwidth}
+
+\end{document}

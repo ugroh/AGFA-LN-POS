@@ -1,0 +1,16 @@
+\begin{tikzpicture}[
+  node distance=2cm,
+  myarrow/.style={-{Stealth[length=6pt]}, thick}
+]
+% Knoten
+\node (iv) at (0,0) {(iv)};
+\node (v) at (2,1) {(v)};
+\node (vi) at (2,-1) {(vi)};
+\node (vii) at (4,0) {(vii)};
+% Pfeile
+\draw[myarrow] (iv) -- (v);
+\draw[myarrow] (iv) -- (vi);
+\draw[myarrow] (v) -- (vii);
+\draw[myarrow] (vi) -- (vii);
+%%
+\end{tikzpicture}
