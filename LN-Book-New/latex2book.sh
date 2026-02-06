@@ -1,13 +1,14 @@
 #!/bin/zsh
 # --
-# -- Version 2025-01-21
+# -- Version 2025-02-06 (biblatex/biber)
 # --
 
 # Colors for output
 autoload -U colors && colors
 
 # Main file
-MAIN_FILE="LN-Book.tex"
+MAIN_FILE="LN-Book-New.tex"
+MAIN_BASE="LN-Book-New"
 
 # Functions
 print_status() {
@@ -28,23 +29,52 @@ build() {
         print_error "Missing: $MAIN_FILE"
         return 1
     fi
-    print_status "Starting LaTeX compilation with latexmk..."
-    latexmk -pdf -interaction=nonstopmode $MAIN_FILE || { 
-        print_error "Compilation failed"
+    
+    # First LaTeX run
+    print_status "First LaTeX compilation..."
+    pdflatex -interaction=nonstopmode $MAIN_FILE || { 
+        print_error "First compilation failed"
         return 1 
     }
-    print_success "Finished!"
+    print_success "First LaTeX run finished!"
+    
+    # Run biber (without .tex extension!)
+    print_status "Running biber..."
+    biber $MAIN_BASE || {
+        print_error "biber failed"
+        return 1
+    }
+    print_success "biber finished!"
+    
+    # Final LaTeX runs
+    print_status "Final LaTeX compilation..."
+    pdflatex -interaction=nonstopmode $MAIN_FILE || { 
+        print_error "Final compilation failed"
+        return 1 
+    }
+    pdflatex -interaction=nonstopmode $MAIN_FILE || { 
+        print_error "Final compilation failed"
+        return 1 
+    }
+    print_success "Build completed successfully!"
 }
 
 # Clean function
 clean() {
     print_status "Cleaning temporary files..."
-    latexmk -c
     find . -name "*.thm" -type f -delete
     find . -name "*.idx" -type f -delete
     find . -name "*.ind" -type f -delete
     find . -name "*.ilg" -type f -delete
     find . -name "*.aux" -type f -delete
+    find . -name "*.bcf" -type f -delete
+    find . -name "*.sync*" -type f -delete
+    find . -name "*.log" -type f -delete
+    find . -name "*.out" -type f -delete
+    find . -name "*.fls" -type f -delete
+    find . -name "*.run.xml" -type f -delete
+    find . -name "*.toc" -type f -delete
+    find . -name "*.fdb_latexmk" -type f -delete
     print_success "Cleanup finished!"
 }
 
@@ -62,7 +92,7 @@ watch() {
 show_help() {
     echo "Usage: $0 <command>"
     echo "Commands:"
-    echo "  build   - Compiles the document"
+    echo "  build   - First run → biber → final runs"
     echo "  clean   - Deletes temporary files"
     echo "  watch   - Monitors changes and compiles automatically"
     echo "  help    - Shows this help"

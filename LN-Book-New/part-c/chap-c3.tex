@@ -1,4 +1,5 @@
 %% --
+\setcounter{section}{0}
 \chapter[Spectral Theory on Banach Lattices]{Spectral Theory of Positive Semigroups on Banach Lattices}\label{chap:c3}
 \chaptermark{Spectral Theory of Positive Semigroups}
 \index{semigroup!positive semigroup}
@@ -93,7 +94,7 @@ By Datko's Theorem (A-IV, Theorem~1.11) the function $t \mapsto \eu^{-\lambda t}
 	Note that one can interchange summation and integration because all the integrands are positive functions.
 	
 	It follows from \eqref{eq:c3-1.3} at the net $(\int_{0}^t \eu^{-\mu s}T(s) f \ds )_{t\geq 0}$ converges weakly to $R(\mu,A)f$ for $t \to \infty$.
-	Because it is monotone increasing $(f \geq 0)$, we have strong convergence (see the corollary to II.Theorem~5.9 in \citet{schaefer:1974}).
+	Because it is monotone increasing $(f \geq 0)$, we have strong convergence (see the corollary to II.Theorem~5.9 in \textcite{schaefer:1974}).
 
 If\/ $\lambda = \mu + \im\nu$ with $\mu$, $\nu$ real and $\mu > s(A)$, we have for arbitrary $f \in E$, $\phi \in E'$
 %% --
@@ -108,7 +109,7 @@ Thus, by A-I,\,Proposition~1.11 we have  $R(\lambda,A)f = \int_{0}^{\infty} \eu^
 It remains to prove that the net $\left(\int_{0}^t \exp(-\mu s)T(s) \ds \right)_{t\geq 0}$ converges with respect to the operator norm.
 We fix $\mu$ such that $s(A) < \mu < \Re(\lambda)$.
 As we have seen above, the map $s \mapsto \eu^{-\mu s}\langle T(s)f,\phi\rangle$ is Lebesgue integrable for every $(f,\phi) \in E \times E'$, thus defining a bilinear map $b \colon E \times E' \to L^1(\R _{+})$.
-Using the closed graph theorem, it is easy to see that $b$ is separately continuous, hence jointly continuous by \citet[III.Theorem~5.1]{schaefer:1966}.
+Using the closed graph theorem, it is easy to see that $b$ is separately continuous, hence jointly continuous by \textcite[III.Theorem~5.1]{schaefer:1966}.
 Thus there is a constant $M$ such that
 %% --
 \begin{equation}\label{eq:c3-1.4}
@@ -172,7 +173,7 @@ Therefore
 \]
 \end{proof}
 %% --
-The spectrum of a positive semigroup may be empty (see B-III, Example~1.2(i)) and the spectrum of a general group may be empty as well (see \citet[Section~23.16]{hillephillips:1957}).
+The spectrum of a positive semigroup may be empty (see B-III, Example~1.2(i)) and the spectrum of a general group may be empty as well (see \textcite[Section~23.16]{hillephillips:1957}).
 However, for positive groups this cannot occur.
 More precisely, we have the following result
 %% --
@@ -199,7 +200,7 @@ We conclude this section by indicating possible extensions and further consequen
 	\item 
 	Many of the results of this section remain true for positive semigroups on ordered Banach spaces more general than Banach lattices.
     \index{ordered Banach space}
-	The interested reader is referred to \citet{greinervoigtwolff:1981}.
+	The interested reader is referred to \textcite{greinervoigtwolff:1981}.
 	
 	\item 
 	From Theorem~\ref{thm:c3-1.2} one can easily deduce that for positive semigroups on $L^1$-spaces spectral bound and growth bound coincide.
@@ -348,7 +349,7 @@ An equivalent (often quite useful) version of \eqref{eq:c3-2.8} is the following
 %% --
 Obviously, the resolvent of a closed linear operator $A$ on $G$ is a pseudo-resolvent on $D = \rho(A)$.
 In general a pseudo-resolvent need not be the resolvent of an operator.
-Further information can be found in \citet{hillephillips:1957}, \citet{pazy:1983} or \citet{yosida:1965}.
+Further information can be found in \textcite{hillephillips:1957}, \textcite{pazy:1983} or \textcite{yosida:1965}.
 For our purposes the following examples are of particular interest
 
 %% --
@@ -441,7 +442,7 @@ Further properties of pseudo-resolvents are given in the following two propositi
 %% --
 In the next proposition, we consider a \emph{positive positive pseudo-resolvent}
 $R$ on a Banach lattice $E$, \ie  we assume that the domain $D$ of\/ $R$ contains the positive real axis and that $R(\mu)$ is a positive operator for every $\mu > 0$.
-Applying Pringsheim's Theorem (see Theorem~2.1 in the appendix of \citet{schaefer:1966}) to the expansion given in \eqref{eq:c3-2.11} one can conclude that $R$ has an extension to the half-plane $\{z \in \C  \colon \Re  z > 0\}$.
+Applying Pringsheim's Theorem (see Theorem~2.1 in the appendix of \textcite{schaefer:1966}) to the expansion given in \eqref{eq:c3-2.11} one can conclude that $R$ has an extension to the half-plane $\{z \in \C  \colon \Re  z > 0\}$.
 
 This shows that without loss of generality one can assume that the domain of a positive pseudo-resolvent contains the half-plane $\{z \in \C  \colon \Re  z > 0\}$.
 %% --
@@ -727,7 +728,7 @@ Hence $\sigma_{b}(A) = \{s(A)\}$.
 \end{proof}
 %% --
 A situation in which Corollary~\ref{cor:c3-2.13} can be applied is described in the following example.
-For more details and proofs we refer to \citet{amann:1983}.
+For more details and proofs we refer to \textcite{amann:1983}.
 %% --
 \begin{example}\label{ex:c3-2.14}
 	Let $\Omega$ be a bounded domain in $\R ^{n}$ of class $C^{2}$.
@@ -817,7 +818,7 @@ However, some of the (equivalent) assertions stated in B-III, Definition~3.1 do 
 Equivalence of the conditions above is obtained by a slight modification of the arguments given in B-III, Definition~3.1.,
 so we omit a detailed proof.
 Obviously, a semigroup is irreducible if one single operator $T(t_{0})$ is irreducible.
-In general the converse does not hold (see p.65 in \citet{greiner:1982}).
+In general the converse does not hold (see p.65 in \textcite{greiner:1982}).
 The situation is different when holomorphic semigroups are considered.
 Then an even stronger assertion holds. In fact irreducibility of a holomorphic semigroup implies that every single operator maps the positive elements into quasi-interior points.
 This is the second statement of the following theorem (see also B-III, Remark~3.2).
@@ -1038,7 +1039,7 @@ Next we consider some concrete examples.
 		\end{split}
 	\end{equation}
 	%% --
-	For details we refer to \citet{greiner:1984d}.
+	For details we refer to \textcite{greiner:1984d}.
 	\end{enumerate}	
 \end{examples}
 	
@@ -1075,7 +1076,7 @@ In the following proposition we list some properties which are consequences of i
     Then for $f \in \ker A$, $f$ real, \ie  $f = \overline{f}$, we have that $f^{+}$ and $f^{-}$ are elements of\/ $\ker A$.
     Hence the principal ideals generated by $f^{+}$ and $f^{-}$ are $T$-invariant.
     Since these ideals are orthogonal, the irreducibility of\/ $T$ implies that either $f^{+}$ or $f^{-}$ is zero.
-    We have shown that $\ker A \cap E_{\R }$ is totally ordered, hence at most one-dimensional (see Proposition~3.4 of \citet{schaefer:1974}).
+    We have shown that $\ker A \cap E_{\R }$ is totally ordered, hence at most one-dimensional (see Proposition~3.4 of \textcite{schaefer:1974}).
 \end{proof}
 %% --
 In arbitrary Banach lattices it is no longer true that an irreducible semigroup has necessarily nonvoid spectrum.
@@ -1126,7 +1127,7 @@ Each of the following conditions on $E$ and $(T(t))$, respectively, implies that
 	\item 
 	$E$ has order continuous norm and either $T(t_{0})$ or $R(\lambda_{0},A)$ is a kernel operator for some $t_{0} \geq 0$ $(\lambda_{0} \in \rho(A))$. 	
     \index{operator!kernel}
-	\footnote[1]{For a precise definition of a kernel operator we refer to Section~IV.9 of \citet{schaefer:1974} or Chapter~13 of \citet{zaanen:1983}.}
+	\footnote[1]{For a precise definition of a kernel operator we refer to Section~IV.9 of \textcite{schaefer:1974} or Chapter~13 of \textcite{zaanen:1983}.}
 
 	\item 
 	$E$ is reflexive and there exist $t_{0} > 0$, $h \in E_{+}$ such that $T(t_{0})E \subset E_{h}$\,.
@@ -1154,16 +1155,16 @@ Each of the following conditions on $E$ and $(T(t))$, respectively, implies that
 	
 	Using Theorem~\ref{thm:c3-3.2}\,(i) it is easy to see that $T(t)R(\lambda,A) = R(\lambda,A)T(t)$ is irreducible.
 	
-	The assertions (ii),(iv) and (v) now follow from the corresponding results for a single operator as presented in Sect.V.6 of \citet{schaefer:1974} (see Proposition~6.1, Theorem~6.5 Corollary and Theorem~6.5 l.c.).
-	(iii) follows from the recent result of \citet{depagter:1986} which ensures that every positive operator on a Banach lattice which is compact and irreducible has positive spectral radius.
+	The assertions (ii),(iv) and (v) now follow from the corresponding results for a single operator as presented in Sect.V.6 of \textcite{schaefer:1974} (see Proposition~6.1, Theorem~6.5 Corollary and Theorem~6.5 l.c.).
+	(iii) follows from the recent result of \textcite{depagter:1986} which ensures that every positive operator on a Banach lattice which is compact and irreducible has positive spectral radius.
 \end{proof}
 %% --
 The theorem can be used to prove that elliptic operators as described in Example~2.14 have non-empty spectrum.
-It is shown in \citet{amann:1983} that these operators have compact resolvent and generate irreducible semigroups.
+It is shown in \textcite{amann:1983} that these operators have compact resolvent and generate irreducible semigroups.
 Thus the assumption of (iii) is satisfied.
 
 Concerning the eigenvalues of an irreducible semigroup which are contained in $\sigma_{b}(A)$ all statements established for spaces $C_{0}(X)$ in B-III, Theorem~3.6 are true in the setting of Banach lattices.
-The proof can be translated without difficulties and will be omitted (see also \citet[Theorem~2.6]{greiner:1982}).
+The proof can be translated without difficulties and will be omitted (see also \textcite[Theorem~2.6]{greiner:1982}).
 
 \begin{theorem}\label{thm:c3-3.8}
 	Suppose $\TT$ is an irreducible semigroup
@@ -1381,7 +1382,7 @@ The latter claim is a consequence of Proposition~\ref{prop:c3-2.11} and the foll
 	Since $P$ is a strictly positive projection $PE = \ker A$ is a sublattice of\/ $E$. 
 	Actually, if\/ $x \in PE$ \ie  $Px = x$, then $P|x| \geq |Px| = |x|$. 
 	Hence $P(|P|x|-|x||) = P^{2}|x| - P|x| = 0$ which implies that $P|x| - |x| = 0$ or $|x| \in PE$.
-	Thus we know that $\ker A$ is a finite dimensional sublattice of\/ $E$ hence it is isomorphic to a space $\C ^{m}$ for some $m \in \N$ (see Section~II.4 of \citet{schaefer:1974}). 
+	Thus we know that $\ker A$ is a finite dimensional sublattice of\/ $E$ hence it is isomorphic to a space $\C ^{m}$ for some $m \in \N$ (see Section~II.4 of \textcite{schaefer:1974}). 
 	
 	Then there exist vectors $e_{j} \in E_{+}$ $(1\leq j\leq m)$ such that the following holds.
 	%% --
@@ -1392,7 +1393,7 @@ The latter claim is a consequence of Proposition~\ref{prop:c3-2.11} and the foll
 	We have $T(t)e_{k} = e_{k}$ hence the closed ideal generated by $e_{k}$ is $\TT$-invariant. 
 	We denote this ideal $J_{k}$ and define $J\coloneqq  J_{1}\oplus J_{2}\oplus .. \oplus J_{m}$.
 	The ideal $J$ is closed 
-    (see \citet[III Theorem~1.2]{schaefer:1974}, $\TT$-invariant and we have $PE = \ker A \subset J$. 
+    (see \textcite[III Theorem~1.2]{schaefer:1974}, $\TT$-invariant and we have $PE = \ker A \subset J$. 
 	Then $P_{/J} = 0$ hence the spectral bound $s(A_{/J})$
 	is strictly less than zero (by Theorem~\ref{thm:c3-1.1}\,(i)). 
 	Moreover, the residue corresponding to the resolvent of\/ $\TT_{k}$, we denote it $P_{k}$, is the restriction of\/ $P$ to $J_{k}$.
@@ -1505,7 +1506,7 @@ Moreover, we state a criterion ensuring the existence of a dominant eigenvalue.
 \begin{proof}
 The resolvent equation $R(\lambda,A) = R(\lambda_{0},A)(1 - (\lambda-\lambda_{0})R(\lambda,A))$ implies that $KR(\lambda,A)$ is a compact operator for every $\lambda \in \rho(A)$. 
 For $\lambda > s(A)$ we have $\lambda - B = (1 - KR(\lambda,A))(\lambda-A)$ and $(1 - KR(\lambda,A))^{-1}$ exists for $\lambda > s(B)$.
-Therefore \citet[Theorem XIII.13]{reedsimon:1979} 
+Therefore \textcite[Theorem XIII.13]{reedsimon:1979} 
 implies that $R(\lambda,B) = R(\lambda,A)(1 - KR(\lambda,A))^{-1}$ has only poles of finite algebraic multiplicity in $\{\lambda \in \C  \colon \Re(\lambda) > s(A)\}$. 
 This proves the first claim.
 
@@ -1554,7 +1555,7 @@ In case the function $\sigma$ is continuous one can state a sufficient condition
 There exist $r \in \R $ and $g \in L^{1}([0,1]\times[-1,1])$, $g > 0$ such that $r < \inf\{\sigma(x,0) \colon x \in [0,1]\}$ and $Bg \geq -rg$.
 The additional assumption made in the second part of Proposition~\ref{prop:c3-3.18} is not satisfied in this example. 
 Nevertheless one can show that $s(B)$ is strictly dominant in this situation (provided that $s(B) > s(A)$). 
-For details we refer to \citet{greiner:1984d}  or \citet{voigt:1985} where the linear transport equation in higher dimensional spaces is discussed.
+For details we refer to \textcite{greiner:1984d}  or \textcite{voigt:1985} where the linear transport equation in higher dimensional spaces is discussed.
 
 
 \section{Semigroups of Lattice Homomorphisms}\label{sec:c3-4}
@@ -1736,11 +1737,11 @@ We list some typical cases in the following corollary.
 	Moreover, $\|f\|_{o} \coloneqq  \||f|_{o}\|$ $(f \in F)$ is an equivalent norm on $F$ such that $(F,\|\cdot\|_{o})$ is a Banach lattice.
 	
 	(ii) If\/ $T(s)$ is mean-ergodic, then we have $\ker (1 - T(s)) = PE$ where $P$ is the mean-ergodic projection, \ie $Pf = \lim_{n\to \infty}\frac{1}{n}\sum_{k=0}^{n-1}T(s)^{k}f$.
-	Obviously $P$ is positive, hence II.11.5 of \citet{schaefer:1974} implies that $PE$ is a Banach lattice (for the induced order and an equivalent norm).
+	Obviously $P$ is positive, hence II.11.5 of \textcite{schaefer:1974} implies that $PE$ is a Banach lattice (for the induced order and an equivalent norm).
 	%$\square$
 \end{proof}
 %% --
-The assumptions made in Corollary~\ref{cor:c3-4.3} can be weakened slightly (\cf \citet{greiner:1982}). 
+The assumptions made in Corollary~\ref{cor:c3-4.3} can be weakened slightly (\cf \textcite{greiner:1982}). 
 However, one still cannot prove cyclicity of\/ $P\sigma_{b}(A)$ for arbitrary positive semigroups.
 
 \begin{example}\label{ex:c3-4.4}
@@ -1844,7 +1845,7 @@ The latter assertion is a consequence of the following facts.
 \end{proof}
 %% --
 For semigroups satisfying the assumption of Proposition~\ref{prop:c3-4.5}, the spectrum $\sigma(A)$ is additively cyclic (by Theorem~\ref{thm:c3-4.2}) and $\sigma(T(t))$ is multiplicatively cyclic
-(by \citet[V.Theorem~4.4]{schaefer:1974}). 
+(by \textcite[V.Theorem~4.4]{schaefer:1974}). 
 Then the relation \eqref{eq:c3-4.7} implies that
 decompositions of the spectrum by vertical lines allow a spectral decomposition%
 \index{spectral decomposition} 
@@ -2012,7 +2013,7 @@ from A-III, Proposition~4.2.
 
 The spectral projections corresponding to the spectral decomposition
 described above have the expected representation as an integral
-'around' the spectral sets (see Corollary 3 in \citet{greiner:1984c}).
+'around' the spectral sets (see Corollary 3 in \textcite{greiner:1984c}).
 
 \begin{corollary}\label{cor:c3-4.9}
 \index{spectral projection}
@@ -2233,8 +2234,8 @@ In general, existence of a global flow does not ensure that one can
 associate a semigroup of bounded linear operators on $L^p(\R ^n)$, even if
 the vector field is $C^{\infty}$. For example the differential equation
 $y' = \sin(y^2)$ does not induce a semigroup on $L^p(\R )$.
-There is another important class of differential equations, \emph{Hamiltonian differential equations}, which do induce semigroups of lattice homomorphisms on $L^p$-spaces. In fact, Liouville's Theorem states that the flow corresponding to a Hamiltonian vector field preserves the volume (see \citet[Section~3.3]{abraham:1978}). Thus assertion (b) of Proposition~\ref{prop:c3-4.11}\,(i) is trivially satisfied.
-Further examples of flows which are measure preserving and therefore induce semigroups of lattice homomorphisms on $L^p$-spaces are billiard flows on compact convex subsets of\/ $\R ^n$ and geodesic flows on Riemannian manifolds (see \citet{cornfeldetal:1982}).
+There is another important class of differential equations, \emph{Hamiltonian differential equations}, which do induce semigroups of lattice homomorphisms on $L^p$-spaces. In fact, Liouville's Theorem states that the flow corresponding to a Hamiltonian vector field preserves the volume (see \textcite[Section~3.3]{abraham:1978}). Thus assertion (b) of Proposition~\ref{prop:c3-4.11}\,(i) is trivially satisfied.
+Further examples of flows which are measure preserving and therefore induce semigroups of lattice homomorphisms on $L^p$-spaces are billiard flows on compact convex subsets of\/ $\R ^n$ and geodesic flows on Riemannian manifolds (see \textcite{cornfeldetal:1982}).
 \index{lattice homomorphism|)}
 
 
@@ -2243,48 +2244,56 @@ Further examples of flows which are measure preserving and therefore induce semi
 \section*{Notes}
 \addcontentsline{toc}{section}{Notes}
 
-Spectral theory for a single positive operator as developed in Chapter V of \citet{schaefer:1974} is an essential tool for this chapter. 
-Various results on the spectral theory of positive one-parameter semigroups can be found in Chapter~7 of \citet{davies:1980} and in the second part of \citet{battyrobinson:1984}.
+Spectral theory for a single positive operator as developed in Chapter V of \textcite{schaefer:1974} is an essential tool for this chapter. 
+Various results on the spectral theory of positive one-parameter semigroups can be found in Chapter~7 of \textcite{davies:1980} and in the second part of \textcite{battyrobinson:1984}.
 
 \begin{enumerate}[label=\emph{Section \arabic*:}, wide, itemsep=1ex]
 \item
-That the spectral bound is always an element of the spectrum was stated by \citet{karlin:1959}, but a valid proof was given by \citet{derndinger:1980}. 
+That the spectral bound is always an element of the spectrum was stated by \textcite{karlin:1959}, but a valid proof was given by \textcite{derndinger:1980}. 
 This assertion as well as assertion (b) of Theorem~\ref{thm:c3-1.1} allow generalizations in various directions.  
-They are valid for ordered Banach spaces (see \citet{greinervoigtwolff:1981} and \citet{klein:1984}) and one only needs that $A$ has positive resolvent (see \citet{kato:1982} or \citet{nussbaum:1984}). 
+They are valid for ordered Banach spaces (see \textcite{greinervoigtwolff:1981} and \textcite{klein:1984}) and one only needs that $A$ has positive resolvent (see \textcite{kato:1982} or \textcite{nussbaum:1984}). 
 Theorem~\ref{thm:c3-1.2} as well as its corollaries are also valid in ordered Banach spaces. 
-For the analogue in the theory of the Laplace transform we refer to Section~10.5 in \citet{widder:1971} and \citet{voigt:1982}.
+For the analogue in the theory of the Laplace transform we refer to Section~10.5 in \textcite{widder:1971} and \textcite{voigt:1982}.
 
 \item 
 Theorem~\ref{thm:c3-2.2} is the basis for the subsequent cyclicity results. 
-Pseudoresolvents are discussed \eg in \citet{hillephillips:1957} or \citet{yosida:1965}. 
+Pseudoresolvents are discussed \eg in \textcite{hillephillips:1957} or \textcite{yosida:1965}. 
 For nonpositive semigroups the two assertions stated in Definition~\ref{def:c3-2.8} are no longer equivalent. 
-A special case of Theorem~\ref{thm:c3-2.10} was proven by\citet{derndinger:1980} while the general result is due to \citet{greiner:1981}. Instead of pseudo-resolvents on the whole $\mathcal{F}$-product Derndinger works with the semigroup on the semigroup $\mathcal{F}$-product. 
+A special case of Theorem~\ref{thm:c3-2.10} was proven by\textcite{derndinger:1980} while the general result is due to \textcite{greiner:1981}. Instead of pseudo-resolvents on the whole $\mathcal{F}$-product Derndinger works with the semigroup on the semigroup $\mathcal{F}$-product. 
 Therefore he can only consider eigenvalues. 
-Elliptic differential operators as generators of positive semigroups are discussed by many authors, \eg  \citet{amann:1983}, \citet{fattorini:1983}, \citet{friedman:1969} or \citet{pazy:1983}.
+Elliptic differential operators as generators of positive semigroups are discussed by many authors, \eg  \textcite{amann:1983}, \textcite{fattorini:1983}, \textcite{friedman:1969} or \textcite{pazy:1983}.
 
 \item
-There exist various notions which are (more or less closely) related to irreducibility, \eg \enquote{positivity improving} in \citet{reedsimon:1979}, \enquote{$u_0$-positivity} in 
-\citet{krasnoselskii:1964} or \enquote{quasi-strictly positive} in \citet{karlin:1959}). \citet{sawashima:1964} uses \enquote{non-support} instead of irreducible. 
+There exist various notions which are (more or less closely) related to irreducibility, \eg \enquote{positivity improving} in \textcite{reedsimon:1979}, \enquote{$u_0$-positivity} in 
+\textcite{krasnoselskii:1964} or \enquote{quasi-strictly positive} in \textcite{karlin:1959}). \textcite{sawashima:1964} uses \enquote{non-support} instead of irreducible. 
 She also discusses several modifications (\enquote{semi-non-support}, \enquote{strictly non-support}, \enquote{strongly positive}) and the interrelation between these notions. 
-The notion of irreducibility can be extended to the (non-lattice) ordered setting (see \citet{battyrobinson:1984}). 
-Assertion (b) of Theorem~\ref{thm:c3-3.2} is due to \citet{majewskirobinson:1983} while special cases can be found in Section~XIII.12 of \citet{reedsimon:1979} and in \citet{kishimotorobinson:1981}. 
-Proposition~\ref{prop:c3-3.3} is due to \citet{voigt:1984a}. 
+The notion of irreducibility can be extended to the (non-lattice) ordered setting (see \textcite{battyrobinson:1984}). 
+Assertion (b) of Theorem~\ref{thm:c3-3.2} is due to \textcite{majewskirobinson:1983} while special cases can be found in Section~XIII.12 of \textcite{reedsimon:1979} and in \textcite{kishimotorobinson:1981}. 
+Proposition~\ref{prop:c3-3.3} is due to \textcite{voigt:1984a}. 
 Retarded equations as dicussed in Example 3.4\,(iii) will be discussed in more detail in Section 3 of C-IV. Example 3.4\,(iv) is a one-dimensional version of the linear transport equation. 
-The higher dimensional equation is more delicate but can be treated similarly (see \eg \citet{greiner:1984b}, \citet{kaperetal:1983a}, or \citet{voigt:1984b}). 
-A special case of Proposition~\ref{prop:c3-3.5} can be found in \citet{davies:1980}. 
-Theorem~\ref{thm:c3-3.7} and Example~\ref{ex:c3-3.6} are taken from \citet{schaefer:1985}. 
+The higher dimensional equation is more delicate but can be treated similarly (see \eg \textcite{greiner:1984b}, \textcite{kaperetal:1983a}, or \textcite{voigt:1984b}). 
+A special case of Proposition~\ref{prop:c3-3.5} can be found in \textcite{davies:1980}. 
+Theorem~\ref{thm:c3-3.7} and Example~\ref{ex:c3-3.6} are taken from \textcite{schaefer:1985}. 
 The most interesting criterion of Theorem~\ref{thm:c3-3.7} seems to be condition (iii), since it gives a sufficient condition for the existence of eigenvalues for a sufficiently large class of semigroups. 
-For semigroups induced by measure-preserving flows Theorem~\ref{thm:c3-3.8} and Corollary~\ref{cor:c3-3.9} are proven in \citet{cornfeldetal:1982}. 
-Corollary~\ref{cor:c3-3.9} is a special case of the Halmos-von Neumann Theorem which classifies irreducible semigroups having discrete spectrum (see \citet{cornfeldetal:1982}, \citet{greiner:1982} and \citet{schaefer:1974} for the general result). 
+For semigroups induced by measure-preserving flows Theorem~\ref{thm:c3-3.8} and Corollary~\ref{cor:c3-3.9} are proven in \textcite{cornfeldetal:1982}. 
+Corollary~\ref{cor:c3-3.9} is a special case of the Halmos-von Neumann Theorem which classifies irreducible semigroups having discrete spectrum (see \textcite{cornfeldetal:1982}, \textcite{greiner:1982} and \textcite{schaefer:1974} for the general result). 
 
-Lemma~\ref{lem:c3-3.10} is taken from \citet{groh:1984b} and Theorems~\ref{thm:c3-3.12} and \ref{thm:c3-3.14} can be found (with slightly different proofs) in \citet{greiner:1981}. 
+Lemma~\ref{lem:c3-3.10} is taken from \textcite{groh:1984b} and Theorems~\ref{thm:c3-3.12} and \ref{thm:c3-3.14} can be found (with slightly different proofs) in \textcite{greiner:1981}. 
 
 \item 
-It was \citet{derndinger:1980} who proved Theorem~\ref{thm:c3-4.2}. 
-In Corollary~\ref{cor:c3-4.3} one can replace boundedness of the semigroup by the assumption that the resolvent grows slowly (see \citet{greiner:1982}). 
+It was \textcite{derndinger:1980} who proved Theorem~\ref{thm:c3-4.2}. 
+In Corollary~\ref{cor:c3-4.3} one can replace boundedness of the semigroup by the assumption that the resolvent grows slowly (see \textcite{greiner:1982}). 
 Example~\ref{ex:c3-4.4} is due to Davies and Proposition~\ref{prop:c3-4.5} to H.~Kellermann (both unpublished). 
-The spectral decomposition for positive groups as described in Theorem~\ref{thm:c3-4.8} is valid in arbitrary Banach lattices (see \citet{arendt:1982} and \citet{greiner:1984c}). 
+The spectral decomposition for positive groups as described in Theorem~\ref{thm:c3-4.8} is valid in arbitrary Banach lattices (see \textcite{arendt:1982} and \textcite{greiner:1984c}). 
 This also holds for Corollaries~\ref{cor:c3-4.9} and  \ref{cor:c3-4.10}. 
 Proposition~\ref{prop:c3-4.11} and Example~\ref{ex:c3-4.12} indicate the relationship of positive groups to dynamical systems. 
-For example, the \enquote{Annular Hull Theorem} (see \citet{chiconeswanson:1981}) is closely related to the results of this section.
+For example, the \enquote{Annular Hull Theorem} (see \textcite{chiconeswanson:1981}) is closely related to the results of this section.
 \end{enumerate}
+%% --
+%% -- References 
+%% --
+\section*{References}
+\addcontentsline{toc}{section}{References}
+{\RaggedRight
+  \printbibliography[heading=none]
+ }

@@ -1,5 +1,5 @@
 %% --
-\setcounter{chapter}{0}
+\setcounter{section}{0}
 %% --
 \chapternopage{Basic Results on Semigroups and Operator Algebras}\label{chap:d1}
 \index{operator algebra}
@@ -50,13 +50,13 @@ $
 $
 %
 is called the state space of\/ $ M $. 
-For the theory of \CA-algebras and related notions see \citet{pedersen:1979}.
+For the theory of \CA-algebras and related notions see \textcite{pedersen:1979}.
 
 \item
 We say that $ M $ is a \WA-algebra if there exists a Banach space $ M_{*} $ such that its dual $ (M_{*})' $ is (isomorphic to) $ M $.
 We call $ M_{*} $ the \emph{predual} of\/ $ M $ and $ \phi \in M_{*} $ a \emph{normal linear functional}.
-It is known that $ M_{*} $ is unique. %(\citet[1.13.3]{sakai:1971})
-For this and other properties of\/ $M_{*} $, see \citet[Chapter III]{takesaki:1979}.
+It is known that $ M_{*} $ is unique. %(\textcite[1.13.3]{sakai:1971})
+For this and other properties of\/ $M_{*} $, see \textcite[Chapter III]{takesaki:1979}.
 
 \item
 A map $ T \in \L{M} $ is called \emph{positive} (in symbols $ T \geq 0 $) if\/ $ T(M_{+}) \subseteq M_{+} $.
@@ -71,7 +71,7 @@ We call a contraction $ T \in \L{M} $ a \emph{Schwarz map} if\/ $ T $ satisfies 
 \]
 %% --
 for all $ x \in M $.
-It is well known that every $n$-positive contraction, for $ n \geq 2 $ and every positive contraction on a commutative \CA-algebra is a Schwarz map. (\citet[Chapter IV]{takesaki:1979})
+It is well known that every $n$-positive contraction, for $ n \geq 2 $ and every positive contraction on a commutative \CA-algebra is a Schwarz map. (\textcite[Chapter IV]{takesaki:1979})
 \index{Schwarz map|(}
 As we shall see, the Schwarz inequality is crucial for our investigations.
 
@@ -162,7 +162,7 @@ Then for all $ \mu \in \R_{+} $ and $ x \in M $
 				= \mu^{-1}R(\mu,A)xx^{*}
 \end{align*}
 %% --
-where the handling of the integral is justified by \citet[Chap. V, §8, n° 4, Proposition 9]{bourbaki:1955}.
+where the handling of the integral is justified by \textcite[Chap. V, §8, n° 4, Proposition 9]{bourbaki:1955}.
 The claim is obtained by multiplying both sides by $\mu^{2} $. 
 \end{proof}
 %% -- 
@@ -203,7 +203,7 @@ Since
 	T(t)x = \lim_{n} \left( \frac{n}{t} R\left(\frac{n}{t}, A\right) \right)^{n} x , \quad x \in M , 
 \]
 %
-it follows from above, that $ \TT $ is a semigroup of Schwarz-type, if and only if\/ $ \mu R( \mu, A) $ is a Schwarz-operator for every $ \mu \in \R_{+} $ (for this see also \citet{brattelirobinson:1981}).
+it follows from above, that $ \TT $ is a semigroup of Schwarz-type, if and only if\/ $ \mu R( \mu, A) $ is a Schwarz-operator for every $ \mu \in \R_{+} $ (for this see also \textcite{brattelirobinson:1981}).
 %% --
 \end{remark}
 %% --
@@ -380,8 +380,12 @@ with values in $ M_{*} $ which is identity preserving and of Schwarz type such t
 %% --
 \section*{Notes}
 \addcontentsline{toc}{section}{Notes}
-We refer to \citet{brattelirobinson:1979}, \citet{brattelirobinson:1981}, \citet{davies:1976} and the survey article of \citet{oseledets:1984}.
-
-%\section*{References}
-%\addcontentsline{toc}{section}{References}
+We refer to \textcite{brattelirobinson:1979}, \textcite{brattelirobinson:1981}, \textcite{davies:1976} and the survey article of \textcite{oseledets:1984}.
 %% --
+%% -- References 
+%% --
+\section*{References}
+\addcontentsline{toc}{section}{References}
+{\RaggedRight
+  \printbibliography[heading=none]
+ }

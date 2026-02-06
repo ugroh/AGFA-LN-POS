@@ -1,5 +1,4 @@
 % !TEX TS-program = pdflatexmk
-% !BIB program = bibtex 
 %%%%%%%%%%%%%%%%%%%% LN-Book.tex %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Status: 2026-02-03 ulgr
 %%%%%%%%%%%%%%%% Springer-Verlag %%%%%%%%%%%%%%%%%%%%%%%%%% 
@@ -50,11 +49,15 @@
 \renewcommand\theexamples{\thesection.\arabic{examples}}
 
 %% -- 
+% Reset all theorem-like counters per section
+%% -- 
 \counterwithin{equation}{section}
 \counterwithin{theorem}{section}
 \makeatletter
 \@addtoreset{section}{chapter}
 \makeatother
+
+
 
 %% -- Continuous numbering
 %% -- 
@@ -89,23 +92,27 @@
 %% -- References
 %% -- 
 %\usepackage{chapterbib}
-\usepackage[square,numbers]{natbib}
-\usepackage{doi}
-\usepackage[resetlabels]{multibib}
+%\usepackage[square,numbers]{natbib}
+%\usepackage{doi}
+%\usepackage[resetlabels]{multibib}
+
+\usepackage{./preamble/ln-biblatex}
+\addbibresource{./bib/ln-references.bib}
+\addbibresource{./bib/ln-references-EN.bib}
 
 %% -- Updated Notes
 %% --
-\newcites{EN}{Updated Notes: References}	
-\newcommand{\mycite}[2][]{\citeauthor{#2}~\citeEN[#1]{#2}}
+%%\newcites{EN}{Updated Notes: References}	
+%\newcommand{\mycite}[2][]{\citeauthor{#2}~\cite[#1]{#2}}
                     
 %% -- Part A etc
 %% -- A-I etc for \chapter
 %% -- 1. for \section etc
 %% --
-\renewcommand\thepart{\Alph{part}}
-\renewcommand\thechapter{\thepart-\Roman{chapter}}
-\renewcommand\thesection{\arabic{section}}
-\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+%\renewcommand\thepart{\Alph{part}}
+%\renewcommand\thechapter{\thepart-\Roman{chapter}}
+%\renewcommand\thesection{\arabic{section}}
+%\renewcommand\thesubsection{\thesection.\arabic{subsection}}
 
 %% -- Counter Fix: Part resets Chapter
 %% --
@@ -141,7 +148,9 @@
   \addcontentsline{toc}{section}{#1}%
   \addtocontents{toc}{\protect\cftpagenumberson{section}}% 
 }
- 
+
+%% --
+\usepackage{tabularx}
 %% -- Index : keep it please
 %% -- 
 \usepackage{makeidx} 
@@ -175,14 +184,14 @@
 \maketitle
 %% --
 \frontmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% -- part-0
+%% -- part-0
 \include{./part-0/ln-dedication}
 \include{./part-0/ln-preface}
 %% --
 \tableofcontents
 %% --
 \include{./part-0/ln-symbols}
-%% %% --
+% %% --
 \mainmatter
 %% --
 
@@ -192,22 +201,22 @@
     \include{./part-a/chap-a2}
     \include{./part-a/chap-a3}
     \include{./part-a/chap-a4}
-
-%%% -- Part-B
+%
+%%%% -- Part-B
 \include{./part-b/part-b}
     \include{./part-b/chap-b1}
     \include{./part-b/chap-b2}
     \include{./part-b/chap-b3}
     \include{./part-b/chap-b4}
-
-%%% -- Part-C
+%
+%%%% -- Part-C
 \include{./part-c/part-c}
     \include{./part-c/chap-c1}
     \include{./part-c/chap-c2}
     \include{./part-c/chap-c3}
     \include{./part-c/chap-c4}
-
-%% -- Part-D
+%
+%%% -- Part-D
 \include{./part-d/part-d}
    \include{./part-d/chap-d1}
     \include{./part-d/chap-d2}
@@ -215,12 +224,12 @@
     \include{./part-d/chap-d4}
 
 %% --
-{\RaggedRight
-\bibliographystyle{abbrvnat}
-\bibliography{./bib/ln-references}
+%{\RaggedRight
+%\bibliographystyle{abbrvnat}
+%\bibliography{./bib/ln-references}
 %\phantomsection
 %\input{LN-Book.bbl}
-}
+%}
 %% --
 %\cleardoublepage 
 %\printindex
@@ -237,14 +246,14 @@
 
 %% -- Literatur Updated Notes
 %% --
-\cleardoublepage 
+%\cleardoublepage 
 %% --
-{\RaggedRight
-\bibliographystyleEN{abbrvnat}
-\bibliographyEN{./bib/ln-references-EN}
+%{\RaggedRight
+%\bibliographystyleEN{abbrvnat}
+%\bibliographyEN{./bib/ln-references-EN}
 %\phantomsection
 %\input{EN.bbl}
-}
+%}
 %% --
 \cleardoublepage 
 \printindex
