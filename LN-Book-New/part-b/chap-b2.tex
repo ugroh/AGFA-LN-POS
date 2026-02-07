@@ -170,11 +170,9 @@ The necessity of the condition is proved as "\ref{thm:b2-1.3-1} implies \ref{thm
 Assume that $(P)$ holds.
 We claim that $R(\lambda,A) \geq 0$ for sufficiently large real $\lambda$. 
 (This implies the positivity of the semigroup by Proposition~\ref{prop:b2-1.1}).
-\\
+
 Let $s \coloneqq \inf \{\lambda \in \R \colon \left[\lambda,\infty \right) \subset \rho(A)\}$.
-Then $s \leq \omega_{0}(A) < \infty$.
-\\
-Let $0~\ll~u~\in~C(K)$.
+Then $s \leq \omega_{0}(A) < \infty$ and let $0~\ll~u~\in~C(K)$.
 Then 
 %%--
 %% $
@@ -1219,7 +1217,7 @@ Although we assume that $(T(t))_{t \geq 0}$ is a real semigroup (\ie \\ $T(t)C(K
 In fact, if\/ $K$ is connected, the condition in the theorem is always trivially satisfied for all $f \in C(K,\R)$.
 \end{remark*}
 
-\begin{proof}[Proof of Theorem 2.10]
+\begin{proof}[Proof of Theorem \ref{thm:b2-2.10}]
 It follows from  Corollary \ref{cor:b2-2.8} that the condition is necessary.
 So assume that the condition is satisfied.
 Since $(T(t))_{t \geq 0}$ is real, the restriction $T_{\R}(t)$ of\/ $T(t)$ to $C(K,\R)$ $(t \geq 0)$ defines a strongly continuous semigroup.
@@ -1279,8 +1277,13 @@ The operator $A_{\max}$ on the (real or complex space) $C[-1,0]$ given by $A_{\m
 $(f \in D(A_{\max}), \phi \in D(A'_{\max}))$.
 
 Moreover, $(\lambda - A_{\max})$ is surjective for $\lambda \geq 0$ (cf. Example  \ref{ex:b2-1.22}).
-Thus, since \\
-$\Kern{\lambda - A_{\max}} = \C e_{\lambda}$ $(e_{\lambda}(x) = \eu^{\lambda x})$, Kato's equality does not have as strong consequences as the positive minimum principle (which by Theorem 1.13 would imply that $A_{\max}$ is a generator).
+Thus, since 
+%% --
+\[
+	\Kern{\lambda - A_{\max}} = \C e_{\lambda} \, (e_{\lambda}(x) = \eu^{\lambda x}), 
+\]
+%% --
+Kato's equality does not have as strong consequences as the positive minimum principle (which by Theorem 1.13 would imply that $A_{\max}$ is a generator).
 \end{example}
 \index{Kato's equality|)} 
 

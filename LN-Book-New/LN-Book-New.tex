@@ -1,15 +1,9 @@
 % !TEX TS-program = pdflatexmk
 %%%%%%%%%%%%%%%%%%%% LN-Book.tex %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Status: 2026-02-03 ulgr
+% Status: 2026-02-07 ulgr
 %%%%%%%%%%%%%%%% Springer-Verlag %%%%%%%%%%%%%%%%%%%%%%%%%% 
 \documentclass[%  
 	,graybox
-%	,envcountsect			%% not working  
-%	,evvcountsame			%% -- " -- 
-%	,envcountresetsect		%% -- " -- 
-%  	,sectrefs				%% -- not used
-% 	,natbib					%% -- see below
-%	,referee				%% -- not used
 	]{svmono}
 %% -- 
 
@@ -56,7 +50,7 @@
 \makeatletter
 \@addtoreset{section}{chapter}
 \makeatother
-
+%\counterwithin{theorem}{chapter}
 
 
 %% -- Continuous numbering
@@ -122,12 +116,14 @@
 
 %% -- Running Heading
 %% --
-\def\sectionmark#1{\markright{\thechapter.\thesection\ \  #1}}
+%\def\sectionmark#1{\markright{\thechapter.\thesection\ \  #1}}
+\def\sectionmark#1{\markright{\thesection\ \  #1}}
 
 %% -- To prevent overlapping in TOC
 %% --
 \usepackage{tocloft} 
 \renewcommand\cftchapnumwidth{1cm}
+\setlength{\cftbeforechapskip}{3pt plus 1pt minus 1pt}
 
 %% -- Exclude \subsection from TOC
 %% --
