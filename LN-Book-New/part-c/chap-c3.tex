@@ -23,7 +23,7 @@ Throughout this chapter, we will assume that $E \neq \{0\}$ is a complex Banach 
 \index{spectral bound $s(A)$}
 %% --
 The fact that the spectral bound of a positive semigroup is always contained in the spectrum (provided the latter  is non-empty) also holds true in the general setting of Banach lattices.
-The proof given in Part-II, Chapter 3,  Theorem~1.1 for spaces $C_{0}(X)$ works in the general case too.
+The proof given in Part-II, Theorem~\ref{thm:b3-1.1} for spaces $C_{0}(X)$ works in the general case too.
 Another proof is given below (\cf Corollary~\ref{cor:c3-1.4}).
 Furthermore, Corollary~1.3 and Proposition~1.5 of Part-II, Chapter 3are true in the setting of Banach lattices and their proofs can be extended to the general case.
 For the sake of completeness we summarize these results in the following theorem.
@@ -51,7 +51,7 @@ Let $A$ be the generator of a positive semigroup $(T(t))_{t \geq 0}$ on a Banach
 The fact that $s(A)$ is always an eigenvalue of the adjoint (\cf Part-II, Chapter 3Theorem~1.6) is characteristic for spaces $C(K)$, $K$ compact, as can be seen by considering the Laplacian on $L^p(\R^n)$, where $1 < p < \infty$, or on $C_{0}(\R^n)$ (see Part-II, Chapter 3,  Example~1.7).
 Another result which cannot be extended to arbitrary Banach lattices is that spectral bound and growth bound%
 \index{growth bound} 
-coincide (\cf Part-II, Chapter 4,  Theorem~1.4); an example is given in Part-I, Chapter 3,  Example~1.3.
+coincide (\cf Part-II, Theorem~\ref{thm:b4-1.4}); an example is given in Part-I, Chapter 3,  Example~1.3.
 Despite of this, the resolvent $R(\lambda,A)$ of a positive semigroup is given as the Laplace transform%
 \index{Laplace transform} 
 \index{resolvent}
@@ -260,7 +260,7 @@ The following properties are immediate consequences Definition~\ref{def:c3-2.1}
 	(\alpha f)^{[n]} = \alpha(\alpha/|\alpha|)^{n-1}f^{[n]} \text{ for } n \in \Z, \alpha \in \C , \alpha \neq 0.
 \end{equation}
 %% --
-Next we show that Part-II, Chapter 3,  Theorem~2.4 is true for arbitrary Banach lattices.
+Next we show that Part-II, Theorem~\ref{thm:b3-2.4} is true for arbitrary Banach lattices.
 For definition and simple properties of the sign operator $S_{h}$ see Chapter~\ref{sec:c1-8}.
 
 %% --
@@ -292,14 +292,14 @@ S_{h}D(A) = D(A) \text{ and } A + \im\beta \Id = S_{h}^{-1}AS_{h}\,.
 	By the Kakutani-Krein Theorem (Chapter~\ref{sec:c1-4}) we can identify $E_{|h|}$ with a space $C(K)$, $K$ compact.
 	Then the restrictions $\overline{T}(t) \coloneq T(t)|_{E_{|h|}}$ are positive operators on $C(K)$ satisfying $\overline{T}(t)|\overline{h}| = |\overline{h}|$ and $\overline{T}(t)\overline{h} = \eu^{\im\beta  t}\overline{h}$.
 	
-	From Part-II, Chapter 3,  Theorem~2.4(i) we conclude $\overline{T}(t)\overline{h}^{[n]} = \eu^{\im\beta  t}\overline{h}^{[n]}$ for all $t \geq 0$, $n \in \Z$.
+	From Part-II, Theorem~\ref{thm:b3-2.4}(i) we conclude $\overline{T}(t)\overline{h}^{[n]} = \eu^{\im\beta  t}\overline{h}^{[n]}$ for all $t \geq 0$, $n \in \Z$.
 	Translating this back to $T(t)$ and $E$ this means precisely $T(t)h^{[n]} = \eu^{\im n\beta}h^{[n]}$, hence $h^{[n]} \in D(A)$ and $Ah^{[n]} = \im  n\beta h^{[n]}$.
 	
-	Moreover, by Part-II, Chapter 3,  Theorem~2.4(i) we have $\eu^{\im\beta  t}\overline{T}(t) = S_{h}^{-1}\overline{T}(t)S_{h}$.
+	Moreover, by Part-II, Theorem~\ref{thm:b3-2.4}(i) we have $\eu^{\im\beta  t}\overline{T}(t) = S_{h}^{-1}\overline{T}(t)S_{h}$.
 	If\/ $|h|$ is a quasi-interior point, this relation extends by continuity from the dense subspace $E_{|h|}$ to the whole space $E$, \ie  we have $\eu^{\im\beta  t}T(t) = S_{h}^{-1}T(t)S_{h}$ for all $t \geq 0$.
 \end{proof}
 %% --
-In the proof above we could not apply assertion (ii) of Part-II, Chapter 3,  Theorem~2.4 because the semigroup $(\overline{T}(t))$ on $E_{|h|} \cong C(K)$ need not be strongly continuous with respect to the sup-norm.
+In the proof above we could not apply assertion (ii) of Part-II, Theorem~\ref{thm:b3-2.4} because the semigroup $(\overline{T}(t))$ on $E_{|h|} \cong C(K)$ need not be strongly continuous with respect to the sup-norm.
 
 As a first application of Theorem~\ref{thm:c3-2.2} we prove a cyclicity result for the point spectrum of contraction semigroups on a class of Banach lattices which includes the $L^p$-spaces.
 
@@ -687,7 +687,7 @@ To prove cyclicity of the boundary spectrum in case $s(A)$ is a pole (of arbitra
 	\end{enumerate}
 \end{proposition}
 %% --
-Combining Theorem~\ref{thm:c3-2.10} and Proposition~\ref{prop:c3-2.11} one obtains the following generalization of Part-II, Chapter 3,  Theorem~2.9.
+Combining Theorem~\ref{thm:c3-2.10} and Proposition~\ref{prop:c3-2.11} one obtains the following generalization of Part-II, Theorem~\ref{thm:b3-2.9}.
 In contrast with the former result we do not assume that every point of\/ $\sigma_{b}(A)$ is a pole.
 %% --
 \begin{corollary}\label{cor:c3-2.12}
@@ -1163,7 +1163,7 @@ The theorem can be used to prove that elliptic operators as described in Example
 It is shown in \textcite{amann:1983} that these operators have compact resolvent and generate irreducible semigroups.
 Thus the assumption of (iii) is satisfied.
 
-Concerning the eigenvalues of an irreducible semigroup which are contained in $\sigma_{b}(A)$ all statements established for spaces $C_{0}(X)$ in Part-II, Chapter 3,  Theorem~3.6 are true in the setting of Banach lattices.
+Concerning the eigenvalues of an irreducible semigroup which are contained in $\sigma_{b}(A)$ all statements established for spaces $C_{0}(X)$ in Part-II, Theorem~\ref{thm:b3-3.6} are true in the setting of Banach lattices.
 The proof can be translated without difficulties and will be omitted (see also \textcite[Theorem~2.6]{greiner:1982}).
 
 \begin{theorem}\label{thm:c3-3.8}
@@ -1232,7 +1232,7 @@ which is irreducible.
     We fix $h \in \ker(\im\alpha - A)$, $h \neq 0$.
     Then $|h| \in \ker A$ and there exists $\phi \in \ker A'$ such that $\langle|h|,\phi\rangle = 1$.
     According to the Kakutani-Krein Theorem we identify $E_{|h|}$ with $C(K)$.
-    Then $h$ is a unimodular function onto $\Gamma$ (use the argument given in the proof of Part-II, Chapter 3,  Theorem~3.6(iii)).
+    Then $h$ is a unimodular function onto $\Gamma$ (use the argument given in the proof of Part-II, Theorem~\ref{thm:b3-3.6}(iii)).
     
     We define $i \colon C(\Gamma) \to E$ by $i(f) \coloneqq f\circ h \in C(K) \cong E_{h} \subset E$, then $i$ is injective.
     For the monomials $e_{n}(z) \coloneqq z^{n}$ $(n \in \Z)$ we have $i(e_{n}) = h^{[n]}$ thus $i$ has dense image in $E$ (by Part-I, Chapter 3,  Theorem~5.4).
