@@ -11,7 +11,7 @@
 \usepackage{graphicx}          
 \usepackage{multicol}        
 \usepackage[bottom]{footmisc}
-\usepackage{newtxtext}       % 
+\usepackage{newtxtext}       %  
 \usepackage[varvw]{newtxmath}       % selects Times Roman as basic font
  
 %% -- Our Remarks and Examples 
@@ -19,7 +19,7 @@
 \spnewtheorem{remarks}[theorem]{Remarks}{\normalfont\bfseries}{\normalfont}
 \spnewtheorem{examples}[theorem]{Examples}{\normalfont\bfseries}{\normalfont}
 
-\spnewtheorem*{example*}{Example}{\normalfont\bfseries}{\normalfont}
+\spnewtheorem*{example*}{Example}{\normalfont\bfseries}{\normalfont} 
 \spnewtheorem*{examples*}{Examples}{\normalfont\bfseries}{\normalfont}
 \spnewtheorem*{remark*}{Remark}{\normalfont\bfseries}{\normalfont} 
 \spnewtheorem*{remarks*}{Remark}{\normalfont\bfseries}{\normalfont} 
@@ -113,11 +113,31 @@
 \makeatletter
 \@addtoreset{chapter}{part}
 \makeatother
-
+ 
 %% -- Running Heading
 %% --
-%\def\sectionmark#1{\markright{\thechapter.\thesection\ \  #1}}
-\def\sectionmark#1{\markright{\thesection\ \  #1}}
+
+%\makeatletter
+%\def\ps@headings{%
+%    \def\@oddhead{\hfill Part~\thepart\ Chapter~\thechapter: \rightmark\quad\thepage}%
+%    \def\@evenhead{\thepage\quad\leftmark\hfill}%
+%    \def\@oddfoot{}%
+%    \def\@evenfoot{}%
+%}
+%\makeatother
+%\pagestyle{headings}
+%\def\sectionmark#1{\markright{Part-\thepart \thechapter.\thesection\ \  #1}}
+%\def\sectionmark#1{\markright{Section~\thechapter.\thesection \quad #1}}
+
+%\def\chaptermark#1{%
+%    \markright{Part~\thepart \quad Chapter~\thechapter \quad #1}%
+%}
+
+%\def\chaptermark#1{%
+%    \markright{Chapter~\thechapter}%
+%}
+%\def\chaptermark#1{\markleft{Part~\thepart \quad Chapter~\thechapter \quad #1}}
+%\def\sectionmark#1{\markright{Chapter \thechapter\ Section \thesection\ \quad  #1}}
 
 %% -- To prevent overlapping in TOC
 %% --
@@ -151,7 +171,19 @@
 %% -- 
 \usepackage{makeidx} 
 %\makeindex%[intoc, columns=2, options=-s LN-index.ist]  %% -- not working 
-\makeindex         
+\makeindex     
+
+%% -- page numbering
+%% --
+\usepackage{ifthen}
+
+\newcommand{\mypageref}[1]{%
+  \ifthenelse{\pageref{#1}=\thepage}{}{on page~\pageref{#1}}%
+}
+
+\newcommand{\myeqpageref}[1]{%
+  \ref{#1}\ifthenelse{\pageref{#1}=\thepage}{}{ on page~\pageref{#1}}%
+}    
                  
 %% -- Hyperlinks
 %% --
@@ -163,6 +195,7 @@
 	urlcolor = blue,%
 	citecolor = blue,%
 	hyperindex = true,
+	hypertexnames=false
 	% hidelinks 				%% uncomment = print version
 }
 %% -- 
@@ -179,7 +212,7 @@
 %% --
 \maketitle
 %% --
-\frontmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frontmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 %% -- part-0
 \include{./part-0/ln-dedication}
 \include{./part-0/ln-preface}
@@ -197,14 +230,14 @@
     \include{./part-a/chap-a2}
     \include{./part-a/chap-a3}
     \include{./part-a/chap-a4}
-%
-%%%% -- Part-B
+
+%%% -- Part-B
 \include{./part-b/part-b}
     \include{./part-b/chap-b1}
     \include{./part-b/chap-b2}
     \include{./part-b/chap-b3}
     \include{./part-b/chap-b4}
-%
+
 %%%% -- Part-C
 \include{./part-c/part-c}
     \include{./part-c/chap-c1}
@@ -220,17 +253,6 @@
     \include{./part-d/chap-d4}
 
 %% --
-%{\RaggedRight
-%\bibliographystyle{abbrvnat}
-%\bibliography{./bib/ln-references}
-%\phantomsection
-%\input{LN-Book.bbl}
-%}
-%% --
-%\cleardoublepage 
-%\printindex
-%% --
-%% -- End of LN Original
 %% -- Start Updated Notes
 %% --
 %% -- Part-E
@@ -240,16 +262,6 @@
 	\include{./part-e/un-part-c}
 	\include{./part-e/un-part-d}
 
-%% -- Literatur Updated Notes
-%% --
-%\cleardoublepage 
-%% --
-%{\RaggedRight
-%\bibliographystyleEN{abbrvnat}
-%\bibliographyEN{./bib/ln-references-EN}
-%\phantomsection
-%\input{EN.bbl}
-%}
 %% --
 \cleardoublepage 
 \printindex

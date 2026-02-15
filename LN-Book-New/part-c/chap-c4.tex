@@ -13,7 +13,7 @@ In particular we consider semigroups related to retarded equations and discuss e
 \index{asymptotic behavior}
 Most of the examples are motivated by biological models.
 
-\section{Stability of Positive Semigroups on Banach Lattices}\label{c4-1} 
+\section{Stability of Positive Semigroups on Banach Lattices}\label{sec:c4-1} 
 \index{stability|(}
 %% --
 \hspace{1cm}{\Large by Günther Greiner and Frank Neubrander}
@@ -44,7 +44,7 @@ s(A) = \omega_{1}(A) = \omega_{0}(A) \in \sigma(A) .
 \end{theorem}
 %% --
 \begin{proof}
-We know that $s(A) \leq \omega_{1}(A) \leq \omega_{0}(A)$ (see Part-I, Chapter 4,  Corollary 1.5) and $s(A) \in \sigma(A)$ (see Part-III, Chapter 3,  Corollary 1.4).
+We know that $s(A) \leq \omega_{1}(A) \leq \omega_{0}(A)$ (see Part-I, Chapter 4,  Corollary 1.5) and $s(A) \in \sigma(A)$ (see Corollary~\ref{cor:c3-1.4} ).
 Thus we have to show $s(A) = \omega_{0}(A)$.
 
 \begin{enumerate}[\upshape (i), wide, labelindent=.5em]
@@ -76,7 +76,7 @@ For $\alpha > s(A)$, $r > \tau$, $f \in E_{+}$ we have
 &\leq \int_{0}^{\tau} \eu^{-\alpha s}\|T(s)f\| \, \ds + \|R(\alpha,A)f\|
 \end{align*}
 %% --
-(the last inequality follows from Part-III, Chapter 3,  Theorem~1.2).
+(the last inequality follows from Theorem~\ref{thm:c3-1.2}).
 \index{Datko's theorem}
 Now Datko's theorem (Part-I, Chapter 4,  Theorem~1.11) implies $\omega_{0}(A) < \alpha$.
 \end{enumerate}
@@ -136,16 +136,16 @@ If\/ $p = 1$, $q \geq 2$ and $s(r)$ independent of\/ $r \in [p,q]$, then $s(r) =
 \begin{proof}
 Once it is shown that both functions $u \mapsto s(1/u)$ and $u \mapsto \omega_{0}(1/u)$ are convex on $[\frac{1}{q},\frac{1}{p}]$, the assertion follows from  Theorem~\ref{thm:c4-1.1} and the relation $s(r) \leq \omega_{0}(r)$ for every $r$.
 
-Since $\omega_{0}(u) = \log r(T_{u}(1))$ (see Part-I, Chapter 3, \,(1.4)), \eqref{eq:c4-1.2} implies that $u \mapsto \omega_0(1/u)$ is a convex function.
-By Part-III, Chapter 3,  Theorem~1.1 we have $r(R(k,A_{u})) = (k-s(u))^{-1}$ for $k \in \N$ sufficiently large.
-The assumption \eqref{eq:c4-1.3} implies that 
+Since $\omega_{0}(u) = \log r(T_{u}(1))$ (see Part-I, Chapter 3, \,(1.4)), Eq.~\eqref{eq:c4-1.2} implies that $u \mapsto \omega_0(1/u)$ is a convex function.
+By Theorem~\ref{thm:c3-1.1} we have $r(R(k,A_{u})) = (k-s(u))^{-1}$ for $k \in \N$ sufficiently large.
+The assumption Eq.~\eqref{eq:c4-1.3} implies that 
 %% --
 \[
 R(\lambda,A_{r})_{|L^{r} \cap L^{s}} = R(\lambda,A_{s})_{|L^{r} \cap L^{s}}
 \]
 %% --
 for $r$, $s \in [p,q]$ and $\lambda \in \C$ with $\Re(\lambda)$ large enough.
-Hence by \eqref{eq:c4-1.2}, the mapping  $u \mapsto \log [r(R(k,A_{1/u}))]$ is a convex function for large $k \in \N$.
+Hence by Eq.~\eqref{eq:c4-1.2}, the mapping  $u \mapsto \log [r(R(k,A_{1/u}))]$ is a convex function for large $k \in \N$.
 We have
 %% --
 \begin{align*}
@@ -199,7 +199,7 @@ Each of the following conditions implies that the solutions of the abstract Cauc
 In case of a real Banach lattice we consider the complexification (see Section 7 of Part-3, Chapter 1 ).
 Note that both, the hypotheses and the statement remain preserved.
 Since $s(A) \in \sigma(A)$ assertion \ref{cor:c4-1.4-1} implies $s(A) < 0$.
-If \ref{cor:c4-1.4-2} is satisfied then $R(0,A) \geq 0$, hence $s(A) < 0$ by Part-III, Chapter 3,  Theorem 1.1\,(ii)).
+If \ref{cor:c4-1.4-2} is satisfied then $R(0,A) \geq 0$, hence $s(A) < 0$ by Theorem~\ref{thm:c3-1.1} \,(ii)).
 It follows from Theorem~\ref{thm:c4-1.3} that $\sup\{\omega(f) \colon f \in D(A)\} = \omega_{1}(A) < 0$.
 \end{proof}
 %% --
@@ -302,7 +302,7 @@ Then
 \end{proposition}
 %% --
 \begin{proof}
-If\/ $\omega_{1}(A) < 0$, then $s(A) < 0$ (Part-I, Chapter 4,  Corollary 1.5), hence $A^{-1} = -R(0,A) \leq 0$ by Part-III, Chapter 3,  Theorem 1.1.
+If\/ $\omega_{1}(A) < 0$, then $s(A) < 0$ (Part-I, Chapter 4,  Corollary 1.5), hence $A^{-1} = -R(0,A) \leq 0$ by Theorem~\ref{thm:c3-1.1} .
 
 If\/ $E_{+} \subset \Image{A(D(A)_{-})}$, then, for every $f \in E_{+}$, there exists $-g \in D(A)_{+}$ such that $Ag = -f$.
 We have 
@@ -324,7 +324,7 @@ For $\alpha > 0$ we have
 \int_{0}^{t} \eu^{-\alpha s}T(s)f \, \ds \leq \int_{0}^{t} T(s)f \, \ds \leq g .
 \]
 %% --
-Using Part-III, Chapter 3,  Theorem 1.2 we conclude that $R(\alpha,A)f \leq g$ for $\alpha > \max\{0,s(A)\}$.
+Using Theorem~\ref{thm:c3-1.2}  we conclude that $R(\alpha,A)f \leq g$ for $\alpha > \max\{0,s(A)\}$.
 
 By the Uniform Boundedness Principle we know that $\{R(\alpha,A) \colon \alpha > \max\{0,s(A)\}\}$ is uniformly bounded.
 Since $\omega_{1}(A) = s(A) \in \sigma(A)$ (see Theorem~\ref{thm:c4-1.3}) it follows that $\omega_{1}(A) < 0$.
@@ -360,7 +360,7 @@ Given $f \in E_{+}$ then $\lim_{\lambda \to 0+} R(\lambda,A)f$ exists if and onl
 \end{lemma}
 %% --
 \begin{proof}
-In view of Part-III, Chapter 3,  Theorem 1.2 we have for $\phi \in E'_{+}$:
+In view of Theorem~\ref{thm:c3-1.2}  we have for $\phi \in E'_{+}$:
 %% --
 \begin{align*}
 \lim_{t \to \infty}  \left\langle\int_{0}^{t} T(s)f \, \ds \,,\,\phi\right\rangle &= \sup_{t>0} \int_{0}^{t}\langle T(s)f,\phi\rangle \, \ds \\
@@ -425,7 +425,7 @@ For additional results of this kind see \textcite{neubrander:1985b}.
 %% --
 Let $A$ be the generator of a positive, stable semigroup $(T(t))_{t \geq 0}$ on a Banach lattice $E$.
 Let $F(\cdot)$ be a locally integrable function from $\R_{+}$ into $E$.
-If there are $G(\cdot) \in C_{0}(\R_{+},\R_{+})$, $f_{0} \in  \Image{A}$ and $g_{0} \in \Image{A_{+}}$ such that $|F(s) - f_{0}| \leq G(s)g_{0}$ for every $s \geq 0$, then every mild solution $u(\cdot)$ of \eqref{eq:c4-1.6} converges as $t \to \infty$ and $\lim_{t \to \infty} u(t) = -h$ where $h \in D(A)$ with $Ah = -f_{0}$.
+If there are $G(\cdot) \in C_{0}(\R_{+},\R_{+})$, $f_{0} \in  \Image{A}$ and $g_{0} \in \Image{A_{+}}$ such that $|F(s) - f_{0}| \leq G(s)g_{0}$ for every $s \geq 0$, then every mild solution $u(\cdot)$ of Eq.~\eqref{eq:c4-1.6} converges as $t \to \infty$ and $\lim_{t \to \infty} u(t) = -h$ where $h \in D(A)$ with $Ah = -f_{0}$.
 \end{proposition}
 %% --
 \begin{proof}
@@ -477,20 +477,20 @@ Instead of uniform stability we now require $s(A) < 0$ while the assumption on t
 \begin{proposition}\label{prop:c4-1.12}
 Let $(T(t))_{t \geq 0}$ be a positive semigroup with $s(A) < 0$.
 Assume that the forcing term $F$ has values in $D(A)$, that it is continuous with respect to the graph norm and that $f_{0} \coloneq  \|\cdot\|_{A}$-$\lim_{t \to \infty} F(t)$ exists.
-Then for every solution $u(\cdot)$ of \eqref{eq:c4-1.6} we have $\lim_{t \to \infty} u(t) = -A^{-1}f_{0}$.
+Then for every solution $u(\cdot)$ of Eq.~\eqref{eq:c4-1.6} we have $\lim_{t \to \infty} u(t) = -A^{-1}f_{0}$.
 %%
-\footnote{Note, that the assumptions imply that \eqref{eq:c4-1.6} has a unique strong solution, see \textcite[ Theorem~4.2.4]{pazy:1983}.}
+\footnote{Note, that the assumptions imply that Eq.~\eqref{eq:c4-1.6} has a unique strong solution, see \textcite[ Theorem~4.2.4]{pazy:1983}.}
 \end{proposition}
 %% --
 \begin{proof}
-The solution of \eqref{eq:c4-1.6} is given by
+The solution of Eq.~\eqref{eq:c4-1.6} is given by
 %% --
 \begin{equation}\label{eq:c4-1.8}
 u(t) = T(t)u_{0} + \int_{0}^{t} T(s)f_{0} \, \ds + \int_{0}^{t} T(s)(F(t-s)-f_{0}) \, \ds\,.
 \end{equation}
 %% --
 The first term tends to zero by Corollary \ref{cor:c4-1.4},  
-the second term to $R(0,A)f_{0} = -A^{-1}f_{0}$ by Part-III, Chapter 3,  Theorem 1.2.
+the second term to $R(0,A)f_{0} = -A^{-1}f_{0}$ by Theorem~\ref{thm:c3-1.2} .
 By assumption we have $\lim_{s \to \infty}\|A(F(s)-f_{0})\| = 0$ and from Theorem~\ref{thm:c4-1.3} and Part-I, Chapter 4, \,(1.3) we deduce that $\|T(s)R(0,A)\| \leq M\eu^{-\epsilon s}$ for $s \geq 0$ and suitable constants $M \geq 1$, $\epsilon > 0$.
 Thus for the third term we have
 %% --
@@ -514,7 +514,7 @@ while the second integral can be estimated by
 \cdot \int_{t/2}^{t} M \cdot \eu^{- \epsilon s} \, \ds.
 \]
 %% -- 
-It follows that the third term in \eqref{eq:c4-1.8} tends to zero.
+It follows that the third term in Eq.~\eqref{eq:c4-1.8} tends to zero.
 \end{proof}
 \index{stability|)}
 %% --
@@ -624,15 +624,15 @@ Since this ideal is dense, we obtain $A^{k-1}P = 0$ which is a contradiction.
 
 \item  \label{rem:c4-2.2-4}
 \index{semigroup!irreducible semigroup|(}
-If\/ $\TT = (T(t))_{t \geq 0}$ is an irreducible semigroup with $s(A) = 0$, then quasi-compactness implies boundedness of\/ $\TT$ (This follows from \ref{rem:c4-2.2-3} and Part-III, Chapter 3,  Proposition 3.5).
+If\/ $\TT = (T(t))_{t \geq 0}$ is an irreducible semigroup with $s(A) = 0$, then quasi-compactness implies boundedness of\/ $\TT$ (This follows from \ref{rem:c4-2.2-3} and Proposition~\ref{prop:c3-3.5} ).
 Moreover, in this case the projection $P$ has the form $P = \phi \otimes h$ where $h$ 
 is a quasi-interior point of\/ $E_{+}$ and $\phi$ is a strictly positive linear form on $E$.
-This also is a consequence of Part-III, Chapter 3,  Proposition~3.5.
+This also is a consequence of Proposition~\ref{prop:c3-3.5} .
 
 \item  \label{rem:c4-2.2-5}
 If\/ $\TT = (T(t))_{t \geq 0}$ is irreducible and eventually compact, then the rescaled semigroup $(\exp(-\omega_0(\TT)t)T(t))$ satisfies the assumptions of Theorem~\ref{thm:c4-2.1}.
 
-Indeed, by Part-III, Chapter 3,  Theorem~3.7 we know that $\omega_0(\TT) > -\infty$, while $\omega_{ess}(\TT) = -\infty$.
+Indeed, by Theorem~\ref{thm:c3-3.7} we know that $\omega_0(\TT) > -\infty$, while $\omega_{ess}(\TT) = -\infty$.
 It follows that the rescaled semigroup is quasi-compact, hence \ref{rem:c4-2.2-4} is applicable.
 \end{enumerate}
 \end{remarks}
@@ -664,7 +664,7 @@ We suppose in addition that $\beta$ and $\mu$ satisfy
 \end{equation}
 %% --
 The function $h$ with $h(a) \coloneqq \exp(-\int_{0}^{a} \mu(s) \, \ds)$ is differentiable, $h \in E$ and $h' = -\mu h$.
-Moreover, Eq.~\eqref{eq:c4-2.3} implies 
+Moreover, Eq.~Eq.~\eqref{eq:c4-2.3} implies 
 %
 \[
 	 \int_{0}^{\infty} \beta(a)h(a) \, \diff{a} = 1 = h(0) .
@@ -682,11 +682,11 @@ s(A)\langle h,w \rangle = \langle h,A'w \rangle = \langle Ah,w \rangle = 0
 %% --
 which implies $s(A) = 0$.
 
-Consequently the semigroup generated by $A$ satisfies all the assumptions of Theorem~\ref{thm:c4-2.1} provided that $\mu$ and $\beta$ satisfy \eqref{eq:c4-2.3} (the boundedness of the semigroup follows from Remark \ref{rem:c4-2.2}\,\ref{rem:c4-2.2-3}).
+Consequently the semigroup generated by $A$ satisfies all the assumptions of Theorem~\ref{thm:c4-2.1} provided that $\mu$ and $\beta$ satisfy Eq.~\eqref{eq:c4-2.3} (the boundedness of the semigroup follows from Remark \ref{rem:c4-2.2}\,\ref{rem:c4-2.2-3}).
 
 It is not difficult to see that (up to a constant) $h$ is the unique eigenfunction of\/ $A$ corresponding to $0$.
 Thus the projection $P$ has the form $P = v \otimes h$ for a suitable positive $v \in L^{\infty}(\left[0,\infty\right))$.
-For more general generators of the type \eqref{eq:c4-2.2} we refer to Part-III, Chapter 4,  Section~3.
+For more general generators of the type Eq.~\eqref{eq:c4-2.2} we refer to Part-III, Chapter 4,  Section~3.
 \end{example}
 Clearly, quasi-compactness was essential in the above example as well as in Theorem~\ref{thm:c4-2.1}.
 For spaces $C_{0}(X)$ we proved in Part-II, Chapter 4,  Theorem 2.12 that Doeblin's condition is sufficient for quasi-compactness.
@@ -720,7 +720,7 @@ $P$ is a positive projection onto the fixed space $\Fix{\TT} = \Kern{A}$.
 In view of Theorem~\ref{thm:c4-1.5} it suffices to consider the case $s(A) = 0 \in P{\sigma}(A)$.
 We define $F \coloneqq \{f \in E \colon \lim_{t \to \infty} T(t)f \text{ exists}\}$.
 Then $F$ is closed since $(T(t))_{t \geq 0}$ is bounded and obviously $\Kern{A} \subset F$.
-Since $\sigma(A) \cap \im\R$ is cyclic and bounded (see Part-III, Chapter 3,  Theorem~2.10 and Part-I, Chapter 2,  Theorem 1.20 resp.), we have $\sigma(A) \cap \im\R = \{0\}$.
+Since $\sigma(A) \cap \im\R$ is cyclic and bounded (see Theorem~\ref{thm:c3-2.10} and Part-I, Chapter 2,  Theorem 1.20 resp.), we have $\sigma(A) \cap \im\R = \{0\}$.
 Since the spectral mapping theorem holds (cf.\ Part-I, Chapter 3,  Theorem~6.6), we conclude $\sigma(T(t)) \cap \Gamma = \{1\}$ for all $t \geq 0$.
 Then (\refeq{eq:c4-1.4}) implies $\lim_{n \to \infty} \|T(n) - T(n+1)\| = 0$, hence $\lim_{t \to \infty}\|T(t) - T(t+1)\| = 0$.
 Take $f = g - T(1)g$.
@@ -947,7 +947,7 @@ Equivalently, we have $X_{2} = \emptyset$ and by Corollary \ref{cor:c4-2.7} $Pf 
 The limit $P$ is a positive projection satisfying $PT(t) = T(t)P = P$ for all $t \geq 0$.
 It follows that $\Image{P} \subset \Kern{A}$ and $\Image{P'} \subset \Kern{A'}$.
 Since Pe = e, hence $P \neq 0$, we conclude that $\Kern{A'}$ contains positive elements.
-Now Part-III, Chapter 3,  Proposition 3.5(i)-(iii) implies that $P$ has the form $P = h \otimes e$ for a strictly positive function $h \in L^{q}(\mu) = (L^{p}(\mu))'$.
+Now Proposition~\ref{prop:c3-3.5} (i)-(iii) implies that $P$ has the form $P = h \otimes e$ for a strictly positive function $h \in L^{q}(\mu) = (L^{p}(\mu))'$.
 \end{proof}
 %%% --
 \index{operator!kernel}
@@ -991,7 +991,7 @@ First we note that $\Kern{A} = \Fix{\TT}$ is a sublattice of $L^p(\mu)$\,, hence
 Since $T(t_0)_{\vert \Kern{A}} = \Id$  we conclude that  $\Kern{A} \cong \ell^p_I$\,.  
 Thus $L^p(\mu)$ contains an orthogonal system $\{e_j \in \Kern{A} \colon j \in I\}$  of atoms such that $\sup_{j \in I} e_j = e$\,.
 The closed principal ideal $E_j$ generated by $e_j$ in  $L^p(\mu)$ is $(T(t))$-invariant and the restriction of $(T(t))_{t \geq 0}$  to this ideal yields an irreducible semigroup $(T_j(t))_{t \geq 0}$ having generator $A_j$. 
-From Part-III, Chapter 3,  Corollary~3.9 we conclude that  $P\sigma(A_j) \cap \im\R = {0}$\,. 
+From Corollary~\ref{cor:c3-3.9}  we conclude that  $P\sigma(A_j) \cap \im\R = {0}$\,. 
 It follows that $T_j(t_0)$ is an irreducible kernel operator, hence by (2.9) all the assumptions of Corollary~2.10 are satisfied
 Thus we have convergence on the the principal ideal $E_j$\,. 
 Since the semigroup is bounded and the union of these ideals is total in  $L^p(\mu)$  we have convergence on the whole space.
@@ -1005,14 +1005,14 @@ Nevertheless, in some cases with $P{\sigma}(A)\cap \im\R \neq \{0\}$ one can des
 Instead of convergence to an equilibrium point one obtains that $T(t)f$  \enquote{converges to a periodic function}.
 
 To that purpose we consider a bounded, irreducible semigroup $\TT = (T(t))_{t \geq 0}$ of positive operators on some Banach lattice $E$ having order continuous norm.
-Under the assumption that the spectral bound $s(A) = 0$ is a pole of the resolvent, we can apply Part-III, Chapter 3,  Theorem~3.12.
+Under the assumption that the spectral bound $s(A) = 0$ is a pole of the resolvent, we can apply Theorem~\ref{thm:c3-3.12}.
 In particular, if\/ $0$ is not the only point in the boundary spectrum $\sigma(A)\cap \im\R$, we obtain that
 %% --
 \begin{equation*}\label{eq:c4-2.9-kgk}
 \sigma(A)\cap \im\R = P{\sigma}(A)\cap \im\R = \im\alpha\Z \text{ for some } 0 < \alpha \in \R.
 \end{equation*}
 %% --
-Therefore the assumptions of Part-III, Chapter 3,  Theorem~3.8 are satisfied and formula Part-III, Chapter 3, \,(3.13) implies
+Therefore the assumptions of Theorem~\ref{thm:c3-3.8} are satisfied and formula Part-III, Chapter 3, \,(3.13) implies
 %% --
 \begin{equation}\label{eq:c4-2.10}
 \rho(A) = \rho(A) + \im\alpha\Z \quad \text{and} \quad \|R(\lambda,A)\| = \|R(\lambda+\im\alpha k,A)\|
@@ -1031,7 +1031,7 @@ Moreover, for small $\epsilon > 0$, $\|R(-\epsilon+\im\lambda,A)\|$ is uniformly
 
 \index{spectral decomposition}
 Next, we construct a spectral decomposition of\/ $E$ and $\TT$ corresponding to $\sigma_{1}$ and $\sigma_{2}$ (compare Part-I, Chapter 3,  Section 3).
-Since $0$ is an eigenvalue of\/ $A$, it follows that $\TT$ has a quasi-interior fixed point $h \in E_{+}$ (use Part-III, Chapter 3,  Proposition 3.5(i)).
+Since $0$ is an eigenvalue of\/ $A$, it follows that $\TT$ has a quasi-interior fixed point $h \in E_{+}$ (use Proposition~\ref{prop:c3-3.5} (i)).
 Hence, $\{T(t)f \colon t \geq 0\}$ is contained in the weakly compact (see Part-III, Chapter 1,  Section 5) order interval $[-h,h]$ whenever $|f| \leq h$.
 Since $h$ is a quasi-interior point and $\TT$ is bounded, it follows that $\TT$ is relatively compact for the weak operator topology on $\LE$.
 
@@ -1070,9 +1070,9 @@ In particular, $(E_{1},\TT_{1})$ is isomorphic to $(L,R_{\tau}(t))$ where $L$ is
 \end{lemma}
 %% --
 \begin{proof}
-\ref{lem:c4-2.12-1} has been derived above while \ref{lem:c4-2.12-2} follows immediately from \eqref{eq:c4-2.10}.
+\ref{lem:c4-2.12-1} has been derived above while \ref{lem:c4-2.12-2} follows immediately from Eq.~\eqref{eq:c4-2.10}.
 The properties of\/ $\TT_{1}$ mentioned in \ref{lem:c4-2.12-3} have been stated above.
-Hence the representation of\/ $\TT_{1}$ as a rotation group follows from Part-III, Chapter 3,  Corollary~3.9.
+Hence the representation of\/ $\TT_{1}$ as a rotation group follows from Corollary~\ref{cor:c3-3.9} .
 \end{proof}
 %% --
 For Hilbert spaces $L^{2}(\mu)$ the property \ref{lem:c4-2.12-2} of the above lemma and Part-I, Chapter 3,  Corollary~7.11 imply that the growth bound $\omega_{0}(A_{2})$ is less than zero.
@@ -1196,7 +1196,7 @@ The operator $A$ generates the nilpotent semigroup $(T(t))$ defined by
 %% --
 We have $(R(\lambda,A)f)(x) = x^{-\lambda}\int_{1/4}^{x} y^{\lambda-1}f(y) \, \dy$ $(f \in E, x \in [\frac{1}{4},1])$, hence $A$ has compact resolvent.
 Since $B$ is bounded and positive, $C$ is the generator of a positive semigroup $(S(t))$ having compact resolvent as well.
-Using Part-III, Chapter 3,  Proposition~3.3 one can show that $(S(t))$ is irreducible.
+Using Proposition~\ref{prop:c3-3.3}  one can show that $(S(t))$ is irreducible.
 Indeed, the non-trivial $(T(t))$-ideals are of the form $I_{s} = \{f \in E \colon f \text{ vanishes on } [\frac{1}{4},s]\}$ with $s$ satisfying $\frac{1}{4} < s < 1$.
 Since none of these ideals is invariant under $B$, the semigroup $(S(t))$ is irreducible.
 
@@ -1242,7 +1242,7 @@ This semigroup satisfies $\|T_{\phi}(t)\| \leq \exp(t \cdot s(A))$ and has spect
 Hence one may apply the results of this section to the rescaled semigroup $(\exp(-t \cdot s(A))T_{\phi}(t))_{t \geq 0}$, thus obtaining convergence of\/ $(T(t))_{t \geq 0}$ for the weaker topology on $E$ which is induced by $(E,\phi)$.
 
 \newpage
-\section{A Semigroup Approach to Retarded Equations}\label{c4-3}
+\section{A Semigroup Approach to Retarded Equations}\label{sec:c4-3}
 %
 %
 \index{equation!retarded}
@@ -1270,8 +1270,8 @@ u_0 &= g.
 We use the following setting: Let $F$ be a Banach space, consider $E \coloneqq L^{1}([-1,0],F)$ and take $\Phi \in \L{E,F}$.
 For $u \in L^{1}_{\mathrm{loc}}([-1,\infty),F)$ we denote by $u_t \in E$ the function given by $u_t(s) \coloneqq u(t+s)$, $t \geq 0$, $s \in [-1,0]$.
 
-By a solution of \eqref{eq:c4-re} with initial function $g \in E$ we understand a function $u \in L^{1}_{\mathrm{loc}}([-1,\infty),F)$ which satisfies equation \eqref{eq:c4-re}.
-The problem \eqref{eq:c4-re} is called \emph{well-posed} if for each $g \in E$ there exists exactly one solution.
+By a solution of Eq.~\eqref{eq:c4-re} with initial function $g \in E$ we understand a function $u \in L^{1}_{\mathrm{loc}}([-1,\infty),F)$ which satisfies equation Eq.~\eqref{eq:c4-re}.
+The problem Eq.~\eqref{eq:c4-re} is called \emph{well-posed} if for each $g \in E$ there exists exactly one solution.
 %% --
 \begin{remarks*}
 \begin{enumerate}[\upshape (i), wide, labelindent=.5em] 
@@ -1283,7 +1283,7 @@ u(t) &= Bu(t) + \Phi(u_t), t \geq 0,\\
 u_0 &= g,
 \end{align*}
 %% --
-(where $B$ is the generator of a bounded semigroup on $F$) seems to be in better analogy to the retarded Cauchy problem of Part-II, Chapter 4,  Section~3 and can be reduced to an equation of the type \eqref{eq:c4-re}.
+(where $B$ is the generator of a bounded semigroup on $F$) seems to be in better analogy to the retarded Cauchy problem of Part-II, Chapter 4,  Section~3 and can be reduced to an equation of the type Eq.~\eqref{eq:c4-re}.
 
 In fact, since $1 \in \rho(B)$ we have,
 %% --
@@ -1295,12 +1295,12 @@ u(t) = R(1,B)\Phi(u_{t}).
 Clearly, this equation is of the previous type (with a different \enquote{delay functional}).
 %%--
 \item \label{rem:c4-kgk-2}
-The choice of \enquote{$L^{1}$-functions} instead of \enquote{C-functions} (as in the case of (RCP)) enforces the solutions of \eqref{eq:c4-re} to yield a strongly continuous semigroup of operators (on the space $E$ of initial functions) as in Part-II, Chapter 4,  Section 3.
+The choice of \enquote{$L^{1}$-functions} instead of \enquote{C-functions} (as in the case of (RCP)) enforces the solutions of Eq.~\eqref{eq:c4-re} to yield a strongly continuous semigroup of operators (on the space $E$ of initial functions) as in Part-II, Chapter 4,  Section 3.
 \end{enumerate}
 \end{remarks*}
 %% --
 \index{differential operator}
-In order to solve \eqref{eq:c4-re} we consider on $E = L^{1}([-1,0],F)$ the differential operator $A \coloneq  \frac{\diff{}}{\dx}$ with domain
+In order to solve Eq.~\eqref{eq:c4-re} we consider on $E = L^{1}([-1,0],F)$ the differential operator $A \coloneq  \frac{\diff{}}{\dx}$ with domain
 %% --
 \begin{equation*}\label{eq:c4-3.0-KGK2}
 D(A):=\{f \in AC([-1,0],F) \colon f' \in E \text{ and } f(0) = \Phi(f)\}.
@@ -1345,7 +1345,7 @@ For every $\lambda > \|\Phi\|$, the operator $(\Id - S_{\lambda})$ is an isomorp
 Since $A_{0}$ generates a semigroup of contractions, $\lambda - A_{0}$ is invertible for each $\lambda > 0$.
 This yields the invertibility of\/ $\lambda - A$ for each $\lambda \geq \|\Phi\|$.
 
-In order to obtain an estimate on $\|R(\lambda,A)\|$ we use Formula \eqref{eq:c4-3.2}.
+In order to obtain an estimate on $\|R(\lambda,A)\|$ we use Formula Eq.~\eqref{eq:c4-3.2}.
 Since 
 \[ 
 \|R(1,S_{\lambda})\| = \|\sum_{n=0}^{\infty} S_{\lambda}^n\| \leq \sum_{n=0}^{\infty} \|\epsilon_{\lambda}\|^n \cdot \|\Phi\|^n = (1-\|\epsilon_{\lambda}\| \cdot \|\Phi\|)^{-1}
@@ -1392,16 +1392,16 @@ Hence we obtain
 \end{cases};
 \end{equation}
 %% --
-\ie \eqref{eq:c4-3.3} is valid for $f \in D(A)$.
-It remains to show \eqref{eq:c4-3.3} for all $f \in E$.
+\ie Eq.~\eqref{eq:c4-3.3} is valid for $f \in D(A)$.
+It remains to show Eq.~\eqref{eq:c4-3.3} for all $f \in E$.
 Let $t \in \R_+$ and $s \in [-t,0]$.
-For $t + s > 0$ the equality follows immediately by the continuity of\/ $\Phi$ from \eqref{eq:c4-3.4}.
+For $t + s > 0$ the equality follows immediately by the continuity of\/ $\Phi$ from Eq.~\eqref{eq:c4-3.4}.
 For the case $t + s \leq 0$ we consider $g \in L^{\infty}[-1,0]$ with supp $g \subset [-1,-t]$.
-Comparing \eqref{eq:c4-3.1} and \eqref{eq:c4-3.4} we see that $\langle(T(t)-T_0(t))f,g\rangle = 0$ for all $f \in D(A)$, and hence for all $f \in E$.
+Comparing Eq.~\eqref{eq:c4-3.1} and Eq.~\eqref{eq:c4-3.4} we see that $\langle(T(t)-T_0(t))f,g\rangle = 0$ for all $f \in D(A)$, and hence for all $f \in E$.
 Consequently $(T(t)-T_{0}(t))f = 0$ a.e. on $[-1,-t]$ which shows $(T(t)f)(s) = f(t+s)$ for a.e. $s \in [-1,-t]$.
 \end{proof}
 %% --
-The following corollary corresponds to Part-II, Chapter 4,  Corollary~3.2 and assures the well-posed\-ness of \eqref{eq:c4-re}.
+The following corollary corresponds to Part-II, Chapter 4,  Corollary~3.2 and assures the well-posed\-ness of Eq.~\eqref{eq:c4-re}.
 
 \begin{corollary}\label{cor:c4-3.2}
 %
@@ -1414,16 +1414,16 @@ u(t) \coloneqq  \begin{cases}
 \end{cases}
 \end{equation}
 %% --
-is the unique solution of \eqref{eq:c4-re}, in particular \eqref{eq:c4-re} is well-posed.
+is the unique solution of Eq.~\eqref{eq:c4-re}, in particular Eq.~\eqref{eq:c4-re} is well-posed.
 If\/ $f \in D(A)$, then $u(t) = (T(t)f)(0)$ for $t > 0$.
 \end{corollary}
 %% --
 \begin{proof}
-As in the proof of Part-II, Chapter 4,  Corollary 3.2 we have $u_t = T(t)f$ for $t \geq 0$ since $u_t(s) = u(t+s) = (T(t)f)(s)$ by the definition of\/ $u$ and by formula \eqref{eq:c4-3.3}.
+As in the proof of Part-II, Chapter 4,  Corollary 3.2 we have $u_t = T(t)f$ for $t \geq 0$ since $u_t(s) = u(t+s) = (T(t)f)(s)$ by the definition of\/ $u$ and by formula Eq.~\eqref{eq:c4-3.3}.
 Thus $u(t) = \Phi(T(t)f) = \Phi(u_t)$ if\/ $t \geq 0$.
 Also by the definition of\/ $u$, we have $u_{0} = f$.
 It remains to show uniqueness.
-Let $w$ be a solution of \eqref{eq:c4-re} with initial function $w_{0} = 0$.
+Let $w$ be a solution of Eq.~\eqref{eq:c4-re} with initial function $w_{0} = 0$.
 Then
 \begin{align*}
 \|w(t)\|_F & = \|\Phi(w_{t})\| \leq \|\Phi\| \cdot  \|w_{t}\|_{E} =  \|\Phi\| \cdot \int_{-1}^{0} \|w_{t}(s)\_{F}\| \, \ds \\
@@ -1433,15 +1433,15 @@ Then
 By Gronwall's lemma $\|w(t)\|_F \leq 0$, thus $w(t) = 0$.
 \end{proof}
 %% --
-Now we turn to the aspect of positivity in \eqref{eq:c4-re}. We assume $F$ to be a Banach lattice and let $E$ inherit the canonical ordering from $F$ making it a Banach lattice again. Additionally, let $\Phi$ be positive.
+Now we turn to the aspect of positivity in Eq.~\eqref{eq:c4-re}. We assume $F$ to be a Banach lattice and let $E$ inherit the canonical ordering from $F$ making it a Banach lattice again. Additionally, let $\Phi$ be positive.
 
 The first observation is that $A$ generates a positive semigroup.
-Indeed, it follows from equation \eqref{eq:c4-3.2}, that $R(\lambda,A) = R(1,S_\lambda)R(\lambda,A_{0})$ for $\lambda > \omega$. Since $S_\lambda$ is a positive operator, we have $R(1,S_\lambda) \geq 0$.
-The semigroup generated by $A_{0}$ is positive (use \eqref{eq:c4-re}), hence $R(\lambda,A_{0}) \geq 0$.
-It follows that $R(\lambda,A) \geq 0$ which is equivalent to the positivity of\/ $(T(t))_{t \geq 0}$ (see Part-III, Chapter 2,  Proposition~4.1).
+Indeed, it follows from equation Eq.~\eqref{eq:c4-3.2}, that $R(\lambda,A) = R(1,S_\lambda)R(\lambda,A_{0})$ for $\lambda > \omega$. Since $S_\lambda$ is a positive operator, we have $R(1,S_\lambda) \geq 0$.
+The semigroup generated by $A_{0}$ is positive (use Eq.~\eqref{eq:c4-re}), hence $R(\lambda,A_{0}) \geq 0$.
+It follows that $R(\lambda,A) \geq 0$ which is equivalent to the positivity of\/ $(T(t))_{t \geq 0}$ (see Proposition~\ref{prop:c2-4.1} ).
 
 \begin{proposition}\label{prop:c4-3.3}
-If\/ $\Phi \in \L{E,F}$ is a positive operator, then the solution semigroup corresponding to \eqref{eq:c4-re} is positive.
+If\/ $\Phi \in \L{E,F}$ is a positive operator, then the solution semigroup corresponding to Eq.~\eqref{eq:c4-re} is positive.
 \end{proposition}
 %% --
 For the following considerations concerning spectral poperties of the semigroup we always suppose $\Phi$ to be positive. Furthermore, we define operators $\Phi_{\lambda} \in \L{F}$, $\lambda \in \R$, by
@@ -1465,7 +1465,7 @@ If\/ $\Phi_{\lambda}$ is compact for all $\lambda \in \R$, then $h$ is continuou
 As indicated above, $h$ is decreasing. Hence continuity from the left follows from the upper semicontinuity of the spectrum (see \textcite[Chapter IV, Theorem~3.1]{kato:1976}).
 
 Now take $\lambda \in \R$ with $s(\Phi_{\lambda}) > 0$ (if\/ $s( \Phi_{\lambda}) = 0$, then continuity in $\lambda$ is trivial by the continuity from the left and the monotonicity). Since $\Phi_{\lambda}$ is positive and bounded, we know that 
-$s(\Phi_{\lambda})$ is the boundary spectrum $\sigma_b(\Phi_{\lambda})$ (see Part-III, Chapter 3,  Corollary 2.12) of\/ $\Phi_{\lambda}$. Moreover, $s(\Phi_{\lambda})$ is a pole of the resolvent with residue of finite rank. Such spectral sets vary continuously under smooth perturbations of\/ $\Phi_{\lambda}$ (see \textcite[VII.6, Theorem 9]{dunfordschwartz:1958}), thus $\lambda \mapsto s(\Phi_{\lambda})$ is continuous.
+$s(\Phi_{\lambda})$ is the boundary spectrum $\sigma_b(\Phi_{\lambda})$ (see Corollary~\ref{cor:c3-2.12} ) of\/ $\Phi_{\lambda}$. Moreover, $s(\Phi_{\lambda})$ is a pole of the resolvent with residue of finite rank. Such spectral sets vary continuously under smooth perturbations of\/ $\Phi_{\lambda}$ (see \textcite[VII.6, Theorem 9]{dunfordschwartz:1958}), thus $\lambda \mapsto s(\Phi_{\lambda})$ is continuous.
 \end{proof}
 %% --
 For the operators $A_{0}$ and $A$ as defined in the beginning of this section we obtain an explicit representation of their resolvents.
@@ -1496,7 +1496,7 @@ R(\lambda,A)g = R(\lambda,A_{0})g + \epsilon_{\lambda} \otimes R(1,\Phi_{\lambda
     \item 
     %\ref{lem:c4-3.5-1}
     That $\rho(A_{0}) = \C$ follows directly from $(T_{0}(t))_{t \geq 0}$ being nilpotent (see Part-I, Chapter 3,  Proposition 1.1). For $g \in E$ we obtain $R(\lambda,A_{0})g = f$ where $f$ is a solution of\/ $\lambda f - f' = g$.
-    Thus $R(\lambda,A_{0})g(t) = \int_{0}^{t} \eu^{\lambda(t-s)}g(s)\, \ds + \eu^{\lambda t} \cdot x$ for some $x \in F$. The condition $f \in D(A_{0})$ now implies $x = 0$ and Formula \eqref{eq:c4-3.7}.
+    Thus $R(\lambda,A_{0})g(t) = \int_{0}^{t} \eu^{\lambda(t-s)}g(s)\, \ds + \eu^{\lambda t} \cdot x$ for some $x \in F$. The condition $f \in D(A_{0})$ now implies $x = 0$ and Formula Eq.~\eqref{eq:c4-3.7}.
     
     \item 
     %\ref{lem:c4-3.5-2}
@@ -1505,7 +1505,7 @@ R(\lambda,A)g = R(\lambda,A_{0})g + \epsilon_{\lambda} \otimes R(1,\Phi_{\lambda
     $R(\lambda,A)g = f = R(\lambda,A_{0})g + \epsilon_{\lambda}  \otimes x$. 
     The condition $R(\lambda,A)g \in D(A)$ implies $x - \Phi_{\lambda}(x) = \Phi R(\lambda,A_{0})g$. 
 \end{enumerate}    
-    Hence, $x = R(1,\Phi_{\lambda})\Phi R(\lambda,A_{0})g$ if\/ $1 \in \rho(\Phi_{\lambda})$ and thus \eqref{eq:c4-3.8} follows.
+    Hence, $x = R(1,\Phi_{\lambda})\Phi R(\lambda,A_{0})g$ if\/ $1 \in \rho(\Phi_{\lambda})$ and thus Eq.~\eqref{eq:c4-3.8} follows.
 \end{proof}
 %% --
 \begin{proposition}\label{prop:c4-3.6}
@@ -1544,12 +1544,12 @@ According to the proof of \ref{lem:c4-3.5}\,\ref{lem:c4-3.5-2} this is equivalen
 If\/ $\Phi_{\lambda}$ is compact, then $\sigma(\Phi_{\lambda})\backslash\{0\} \subset P\sigma(\Phi_{\lambda})$. Thus the assertion follows from \ref{prop:c4-3.6-1} and \ref{prop:c4-3.6-2}.
 \end{proof}
 %% --
-The previous results will now be used to characterize the spectral bound of\/ $A$ and hence the stability of the solutions of \eqref{eq:c4-re}.
+The previous results will now be used to characterize the spectral bound of\/ $A$ and hence the stability of the solutions of Eq.~\eqref{eq:c4-re}.
 
 \begin{theorem}\label{thm:c4-3.7}
 \index{stability}
 \index{spectral bound $s(A)$}
-Let $A \coloneqq \frac{\diff{}}{\dt}, D(A) \coloneqq \{f \in AC([-1,0],F) \colon f' \in L^{1}([-1,0],F)$ and $f(0) = \Phi(f)\}$ be the generator of the solution semigroup on $E \coloneqq L^{1}([-1,0],F)$ corresponding to \eqref{eq:c4-re}. 
+Let $A \coloneqq \frac{\diff{}}{\dt}, D(A) \coloneqq \{f \in AC([-1,0],F) \colon f' \in L^{1}([-1,0],F)$ and $f(0) = \Phi(f)\}$ be the generator of the solution semigroup on $E \coloneqq L^{1}([-1,0],F)$ corresponding to Eq.~\eqref{eq:c4-re}. 
 
 If\/ $F$ is a Banach lattice and $0 < \Phi \in \L{E,F}$, then the following assertions hold for $\lambda \in \R$.
 \begin{enumerate}[\upshape (i)]
@@ -1574,13 +1574,13 @@ If\/ $s(\Phi_{\lambda}) > 1$, then $s(A) > \lambda$.
 \item% 
 %\ref{thm:c4-3.7-1} 
 Suppose $r \coloneqq s(A) \geq \lambda$. 
-The positivity of\/ $(T(t))_{t \geq 0}$ implies $r \in \sigma(A)$ (see Part-III, Chapter 3,  Theorem 1.1.(i)) and by Proposition~\ref{prop:c4-3.6}\,\ref{prop:c4-3.6-1}  this implies $1 \in \sigma(\Phi_r)$, so that $s(\Phi_{r)} \geq 1$. 
+The positivity of\/ $(T(t))_{t \geq 0}$ implies $r \in \sigma(A)$ (see Theorem~\ref{thm:c3-1.1} .(i)) and by Proposition~\ref{prop:c4-3.6}\,\ref{prop:c4-3.6-1}  this implies $1 \in \sigma(\Phi_r)$, so that $s(\Phi_{r)} \geq 1$. 
 Since $r \geq \lambda$, this yields $s(\Phi_{\lambda}) \geq s(\Phi_{r}) \geq 1$.
 
 \item 
 %\ref{thm:c4-3.7-2} 
 Let $s(\Phi_{\lambda}) = 1$. 
-Since $1 \in \sigma(\Phi_{\lambda})$ (see Part-III, Chapter 3,  Theorem 1.1(i)), $\lambda \in \sigma(A)$ by Proposition~\ref{prop:c4-3.6}\,\ref{prop:c4-3.6-3} whence $s(A) \geq \lambda$. 
+Since $1 \in \sigma(\Phi_{\lambda})$ (see Theorem~\ref{thm:c3-1.1} (i)), $\lambda \in \sigma(A)$ by Proposition~\ref{prop:c4-3.6}\,\ref{prop:c4-3.6-3} whence $s(A) \geq \lambda$. 
 If\/ $r \coloneqq s(A)$, we deduce as in the proof of \ref{thm:c4-3.7-1} that $s(\Phi_{r}) \geq 1$. 
 Now $r > \lambda$ would imply $s(\Phi_{\lambda}) > s(\Phi_{r}) \geq 1$ (by the strict monotonicity of\/ $\lambda \mapsto s(\Phi_{\lambda})$), a contradiction. Hence we conclude $s(A) = r = \lambda$.
 
@@ -1625,7 +1625,7 @@ The additional statement is a consequence of the strict monotonicity of\/ $h$.
 We note that in Proposition~\ref{prop:c4-3.6} and Theorem~\ref{thm:c4-3.7} it actually suffices that some power of\/ $\Phi_{\lambda}$ is compact.
 
 \item \label{rem:c4-3.1-2}
-The equivalence \eqref{eq:c4-3.9} reduces the problem of determining $s(A)$ to the determination of the spectral bounds of the operators $\Phi_{\lambda}$ on the \enquote{smaller} Banach space $F$.
+The equivalence Eq.~\eqref{eq:c4-3.9} reduces the problem of determining $s(A)$ to the determination of the spectral bounds of the operators $\Phi_{\lambda}$ on the \enquote{smaller} Banach space $F$.
 In particular, $s(A) < 0$ if and only if\/ $s(\Phi_{0}) < 1$.
 
 \item \label{rem:c4-3.1-3}
@@ -1634,8 +1634,8 @@ We call the identity\, \enquote{$s(\Phi_{\lambda}) = 1$} a \emph{generalized cha
 is an equation determining all eigenvalues of the generator $A$. 
 In fact, if\/ $F$ is finite dimensional, the characterization of the spectral values $\lambda$ of\/ $A$ in Proposition.~\ref{prop:c4-3.6}\,\ref{prop:c4-3.6-3} reduces to solving the complex equation $\det(\Id - \Phi_{\lambda}) = 0$. 
 Obviously, there is no analogous identity characterizing $\sigma(A)$ for infinite dimensional $F$. 
-However, in order to determine the long term behavior of the solutions of \eqref{eq:c4-re}, it is often enough to know the spectral bound $s(A)$. 
-Under the assumptions of Corollary~\ref{cor:c4-3.8} (in particular if\/ $\Phi$ is positive) formula \eqref{eq:c4-3.9} gives a tool to reduce this problem to the determination of the real solution of\/ $s(\Phi_{\lambda}) = 1$.
+However, in order to determine the long term behavior of the solutions of Eq.~\eqref{eq:c4-re}, it is often enough to know the spectral bound $s(A)$. 
+Under the assumptions of Corollary~\ref{cor:c4-3.8} (in particular if\/ $\Phi$ is positive) formula Eq.~\eqref{eq:c4-3.9} gives a tool to reduce this problem to the determination of the real solution of\/ $s(\Phi_{\lambda}) = 1$.
 \end{enumerate}
 \end{remarks*}
 %%--
@@ -1693,7 +1693,7 @@ If we define $\Phi f \coloneqq \int_{-1}^{0} K(s)f(s) \, \ds$ for all $f \in E$,
 f(t) = \int_{-1}^{0} K(s)f(s+t) \, \ds \,, \quad t \geq 0 \,,\quad f_{0} = \psi \in E\,.
 \end{equation}
 %% --
-By Corollary \ref{cor:c4-3.2}, \ \eqref{eq:c4-3.11} has a unique solution $f \in L^{1}([-1,\infty),F)$.
+By Corollary \ref{cor:c4-3.2}, \ Eq.~\eqref{eq:c4-3.11} has a unique solution $f \in L^{1}([-1,\infty),F)$.
 For $\Phi_{\lambda}$ we obtain $\Phi_{\lambda}x = \int_{-1}^{0} \eu^{\lambda s}K(s)x \, \ds,\, x \in F$.
 In this case we have 
 %% --
@@ -1739,7 +1739,7 @@ Let $F = L^{1}[0,1]$,\, $E = L^{1}([-1,0], F)$ and define an operator $\Phi \col
 %% --
 Here $q$ is a continuously differentiable function with strictly positive derivative satisfying $-1 \leq q(x) \leq \epsilon < 0$ for all $x \in [0,1]$ and $k$ is a bounded, measurable, strictly positive kernel.
 
-Then \eqref{eq:c4-re} has the form
+Then Eq.~\eqref{eq:c4-re} has the form
 %% --
 \begin{equation} \label{eq:c4-3.12}
 \quad f(t)(x) = \int_{0}^{1} k(x,x')f(t+q(x))(x') \, \dx', \quad t \geq 0, f_{0} = \psi \in E.
@@ -1904,7 +1904,7 @@ whose unique real solution $\lambda$ is $s(A)$.
 The infinite dimensional problem of determining $s(A)$ is therefore reduced to solving a one-dimensional equation.
 \end{example}
 
-The differential equation \eqref{eq:c4-3.13} may be interpreted as follows.
+The differential equation Eq.~\eqref{eq:c4-3.13} may be interpreted as follows.
 \begin{quote}
 Consider $n$ populations and let $r$ be the maximal age of an individual.
 Further let $u_{i}(t,a)$ denote the density of the number of members of the population $i$ with respect to age $a$ at time $t$.
@@ -1939,7 +1939,7 @@ From Theorem~\ref{thm:c4-3.1} we conclude that for every $v \in D(A)$ there exis
 The boundedness of the integral kernel $k$ yields weak compactness of\/ $B$ (see \textcite[Section II.5]{schaefer:1974} and thus compactness of\/ $B^{2}$ by the Dunford-Pettis-Property of\/ $L^{1}(\Omega)$ (see \textcite[Chapter II, Theorem.9.9]{schaefer:1974}).
 \index{equation!retarded|)}
 
-Thus we are in the situation of Example \ref{ex:c4-3.9} and from Formula \eqref{eq:c4-3.10} we obtain the equivalence
+Thus we are in the situation of Example \ref{ex:c4-3.9} and from Formula Eq.~\eqref{eq:c4-3.10} we obtain the equivalence
 %% --
 \[
 s(A) \overset{<}{ \underset{>}{=} } \lambda \quad \text{if and only if} \quad \int_{0}^{r} \beta(a)\eu^{-\lambda a} \diff{a} \cdot s(B) \overset{<}{ \underset{>}{=} } 1\,.
@@ -1952,7 +1952,7 @@ Again we can find a biological interpretation.
 \index{population!age-structured}
 \begin{quote}
 Let $u(t,a,x)$ denote the density of the number of individuals in a given population with respect to age $a$ and position $x$ at time $t$.
-As in Example \ref{ex:c4-3.13} the first equation in \eqref{eq:c4-3.14} corresponds to the aging process.
+As in Example \ref{ex:c4-3.13} the first equation in Eq.~\eqref{eq:c4-3.14} corresponds to the aging process.
 The second equation fixes the initial state of the population and the last equation describes the dependence of newborns on the birth rate $\beta$ and the distribution of the population over the \enquote{area} $\Omega$\,.
 \end{quote}
 \index{retarded equation|)}
@@ -1965,7 +1965,7 @@ The second equation fixes the initial state of the population and the last equat
 
 \item%\label{se:c4-notes-1}
 Coincidence of spectral and growth bounds for $L^{1}$-spaces was proven by \textcite{derndinger:1980}.
-For $L^{2}$-spaces the result is due to \textcite{greinerNagel:1983}.
+For $L^{2}$-spaces the result is due to \textcite{greinernagel:1983}.
 For the result on AM-spaces we refer to Remark~1.1 of Part-II, Chapter 4 and the corresponding notes.
 
 Interpolation techniques in order to obtain results on arbitrary $L^{p}$-spaces were used by \textcite{voigt:1985}.
@@ -1991,7 +1991,7 @@ A special case of the 0-2 Law for one-parameter semigroups (Theorem~\ref{thm:c4-
 \index{operator!kernel}
 Corollary \ref{cor:c4-2.11} remains true when the assumption \enquote{$T(t)$ is a kernel operator} is replaced by \enquote{$T(t)$ is an irreducible Harris operator} (see \textcite{lin:1974}).
 
-It is well-known that semigroups play an important role in probability theory (\eg see \textcite{dynkin:1965}, \textcite{Feller:1952} and \textcite{hillephillips:1957}).
+It is well-known that semigroups play an important role in probability theory (\eg see \textcite{dynkin:1965}, \textcite{feller:1952} and \textcite{hillephillips:1957}).
 A more detailed discussion than Example \ref{ex:c4-2.8} is given in Chapter~2 of \textcite{vancasteren:1985}.
 
 Convergence to periodic solutions is investigated in \textcite{kerschernagel:1984} and \textcite{nagel:1984} where Proposition~\ref{prop:c4-2.13} is proved.
@@ -2004,7 +2004,7 @@ Initiated by Hale's semigroup approach (see Part-II, Chapter 4,  Sec.3) to retar
 These similarly apply to Volterra equations, see \textcite{miller:1974}, \textcite{webb:1977} and to 
 \index{equation!population}
 \index{population!equation}
-age-dependent population equations, see \textcite{Pruess:1981}, \textcite{webb:1984}, \textcite{webb:1985a}.
+age-dependent population equations, see \textcite{pruess:1981}, \textcite{webb:1984}, \textcite{webb:1985a}.
 Recently, the aspect of positivity has led to statements on the asymptotic behavior of solutions of retarded equations.
 In this context the investigation of population equations by \textcite{greiner:1984}, \textcite{heijmans:1985a} and \textcite{webb:1985b} should be mentioned.
 

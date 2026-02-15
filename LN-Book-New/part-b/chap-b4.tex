@@ -5,9 +5,9 @@
 In the following chapter, we examine the asymptotic behavior%
 \index{asymptotic behavior} 
 of positive semigroups in spaces of continuous functions.
-The first section is devoted to the various \emph{growth constants} defined in Part-I, Chapter 4 and to their coincidence for positive semigroups.
+The first section is devoted to the various \emph{growth constants} defined in Part-I, Chapter~\ref{chap:a4} and to their coincidence for positive semigroups.
 In the second section, we treat the asymptotic behavior of positive semigroups, which do not differ \enquote{too much} from compact semigroups.
-Properties such as eventual compactness or quasi-compactness allow us to describe the long term behavior of the semigroup by using the results from Part-I, Chapter 3 and Part-II, Chapter 3on the spectrum of the generator.
+Properties such as eventual compactness or quasi-compactness allow us to describe the long term behavior of the semigroup by using the results from Part-I, Chapter~\ref{chap:a1} and Chapter~\ref{chap:b2} on the spectrum of the generator.
 In the last section, we investigate differential delay equations by semigroup methods. 
 In particular, we characterize the spectral bound of the solution semigroups, yielding simple conditions for stability. 
 Numerous examples conclude the chapter.
@@ -21,8 +21,8 @@ Numerous examples conclude the chapter.
 %% --
 \index{stability|(}
 
-In Part-I, Chapter 4 we have seen that the long term behavior of a semigroup $(T(t))_{t \geq 0}$ is strongly connected with the existence (and growth) of the resolvent of its generator $A$ in a right halfplane.
-In particular, the exponential growth of certain semigroups is determined solely by the location of the spectrum (see Part-I, Chapter 4, \;(1.7) and (1.8)).
+In Part-I, Chapter~\ref{chap:a4} we have seen that the long term behavior of a semigroup $(T(t))_{t \geq 0}$ is strongly connected with the existence (and growth) of the resolvent of its generator $A$ in a right halfplane.
+In particular, the exponential growth of certain semigroups is determined solely by the location of the spectrum (see Part-I, Remark~\ref{rem:a4-1.7}).
 In these cases, spectral bound%
 \index{spectral bound $s(A)$} 
 $s(A)$ and growth bound%
@@ -36,8 +36,8 @@ $\omega_{0}(A)$ coincide and the equality
 holds.
 %%
 
-Unfortunately, \eqref{eq:b4-1.1} does not hold for positive semigroups in general.
-In Part-I, Chapter 4,  Example 1.2\,(ii), we have seen that for the generator $A$ of the (positive) translation semigroup on the Banach lattice $C_{0}(\R_+) \cap L^1(\R_+,e^x \diff{x})$ the strict inequality 
+Unfortunately, Eq.~\eqref{eq:b4-1.1} does not hold for positive semigroups in general.
+In Example~\ref{ex:a4-1.2}\,(ii), we have seen that for the generator $A$ of the (positive) translation semigroup on the Banach lattice $C_{0}(\R_+) \cap L^1(\R_+,e^x \diff{x})$ the strict inequality 
 \index{growth bound!omega1@$\omega_1(A)$}
 \index{growth bound!omega0@$\omega_0(A)$}
 %% -- 
@@ -46,12 +46,12 @@ In Part-I, Chapter 4,  Example 1.2\,(ii), we have seen that for the generator $A
 \]
 %% -- 
 is valid.
-However, for positive semigroups on certain nice Banach lattices, \eqref{eq:b4-1.1} is true.
+However, for positive semigroups on certain nice Banach lattices, Eq.~\eqref{eq:b4-1.1} is true.
 One of these nice Banach lattices is $C_{0}(X)$. 
 This will be proved in Theorem~\ref{thm:b4-1.4}.
 
-For compact $X$, \eqref{eq:b4-1.1} was already proved in Part-II, Chapter 2,  Corollary~1.14 and Part-II, Chapter 3,  Theorem~1.6 respectively. 
-Actually, much more is true and for positive semigroups on $C(K)$, $K$ compact, all stability concepts mentioned in Part-I, Chapter 4 are mutually equivalent.
+For compact $X$, Eq.~\eqref{eq:b4-1.1} was already proved in Corollary~\ref{cor:b2-1.14} and Theorem~\ref{thm:b3-1.6} respectively. 
+Actually, much more is true and for positive semigroups on $C(K)$, $K$ compact, all stability concepts mentioned in Part-I, Chapter~\ref{chap:a4} are mutually equivalent.
 
 \begin{theorem}\label{thm:b4-1.1}%
 Let $A$ be the generator of a positive semigroup $(T(t))_{t \geq 0}$ on $C(K)$, $K$ compact. Then
@@ -71,7 +71,7 @@ Moreover, $s(A) = \omega_{0}(A) \in R\sigma(A) = P\sigma(A')$ and the following 
 \end{theorem}
 %% --
 \begin{proof}
-\eqref{eq:b4-1.2} follows directly from Part-I, Chapter 3,  4.4 and the results from Part-II, Chapter 2 and Chapter 3 mentioned above. 
+Eq.~\eqref{eq:b4-1.2} follows directly from Section~\ref{subsec:a3-4.4} and the results from Chapter~\ref{chap:b2} and Chapter~\ref{chap:b3} mentioned above. 
 It remains to show the implication $(c) \Rightarrow (a)$.
 
 If\/ $\langle T(t)f,\mu \rangle \to 0$ for every $\mu \in C(K)'$, then, by the Uniform Boundedness Principle, $\|T(t)f\| \leq M_f$ for every $f \in D(A)$. 
@@ -80,12 +80,12 @@ Using
 %% -- 
 \[
 s(A) \leq \sup \{\omega(f)\colon f \in D(A)\} = \omega_1(A)
-\text{ (see Part-I, Chapter 4,  Theorem~1.4)}
+\text{ (see Part-I, Theorem~\ref{thm:a4-1.4})}
 \]
 %% -- 
 we obtain that $s(A) \leq 0$. 
 Suppose $0 = s(A)$. 
-From Part-II, Chapter 3, Theorem~1.6 it follows that $s(A) \in P\sigma(A')$, hence there is $0 < \mu \in C(K)'$ such that $T(t)'\mu = \mu$ for $t \geq 0$. 
+From Theorem~\ref{thm:b3-1.6} it follows that $s(A) \in P\sigma(A')$, hence there is $0 < \mu \in C(K)'$ such that $T(t)'\mu = \mu$ for $t \geq 0$. 
 Since $D(A)$ is dense, there exists $f \in D(A)$ such that $\langle f,\mu \rangle \neq 0$. 
 Then $|\langle T(t)f,\mu \rangle| = |\langle f,\mu \rangle|  \ge  0$ which contradicts the weak stability. Therefore, $s(A) < 0$.
 \end{proof}
@@ -98,7 +98,7 @@ For spaces $C_{0}(X)$, $X$ locally compact, the different stability concepts are
 %
 \begin{enumerate}[\upshape (i), wide, labelindent=.5em]
 \item
-The left-translation semigroup on $C_{0}(\R_+)$ or the semigroup generated by the Laplacian on $C_{0}(\R^n)$, see Part-II, Chapter 3,  Example~1.7, are uniformly stable but not exponentially stable.
+The left-translation semigroup on $C_{0}(\R_+)$ or the semigroup generated by the Laplacian on $C_{0}(\R^n)$, see Example~\ref{ex:b3-1.7}, are uniformly stable but not exponentially stable.
 \index{operator!Laplacian}
 
 \item 
@@ -120,7 +120,7 @@ Thus Lebesgue's Dominated Convergence Theorem implies
 %% -- 
 
 \item 
-Finally we give an example of a positive semigroup on $C_{0}(X)$ which is not weakly stable, but satisfies $\Re (P\sigma(A) \cup R\sigma(A)) < 0$. (Compare with Part-I, Chapter 4,  Corollary~1.14).
+Finally we give an example of a positive semigroup on $C_{0}(X)$ which is not weakly stable, but satisfies $\Re (P\sigma(A) \cup R\sigma(A)) < 0$. (Compare with Part-I, Corollary~\ref{cor:a4-1.14}).
 
 Consider in the space $\C\backslash\{0\}$ a flow $\Phi$ having the following properties.%
 \index{semiflow}
@@ -176,7 +176,7 @@ Thus $\lim_{t\to\infty} \langle T(t)f,\delta_z \rangle$ does not exist for every
 
 
 \item
-Assume that $T(t)f = \eu^{\im\alpha t}f$ for every $t \geq 0$ and some $\alpha \in \R$ (\cf Part-I, Chapter 3,  Corollary~6.4). 
+Assume that $T(t)f = \eu^{\im\alpha t}f$ for every $t \geq 0$ and some $\alpha \in \R$ (\cf Part-I, Corollary~\ref{cor:a3-6.4}). 
 Given $z \in X$, there exists a sequence $(t_n)$ such that $\Phi(t_n,z) \to 1$, hence
 $f(z) = (\eu^{-\im\alpha t_n}T(t_n)f)(z) = \eu^{-\im\alpha t_n}f(\Phi(t_n,z)) \to 0$. Thus $f = 0$.
 
@@ -222,7 +222,7 @@ Rescaling the semigroup we may assume $\omega_{0}(A) = 0$,
 since in case $\omega_{0}(A) = -\infty$, then $\sigma(A) = \emptyset$, hence $s(A) = -\infty$.
 
 Suppose $0 \notin \sigma(A) = \sigma(A^*)$. 
-Then, by the holomorphy of the resolvent and by Part-I, Chapter 2,  Proposition~1.11 we obtain
+Then, by the holomorphy of the resolvent and by Part-I, Definition~\ref{def:a2-1.11} we obtain
 %% --
 \[
    R(0,A^*)\Phi = \sum_{n=0}^{\infty} R(1,A^*)^{n+1}\Phi = \sum_{n=0}^{\infty} \int_0^{\infty} \frac{1}{n!} t^n \eu^{-t}T(t)^*\Phi \dt
@@ -236,7 +236,7 @@ Then, by the holomorphy of the resolvent and by Part-I, Chapter 2,  Proposition~
 \end{equation}
 %% --
 Since every element of\/ $C_{0}(X)^*$ and $C_{0}(X)''$ is the difference of positive
-elements, the equation \eqref{eq:b4-1.3} holds for every $\Phi \in C_{0}(X)^*$, $\rho \in C_{0}(X)''$. 
+elements, the equation Eq.~\eqref{eq:b4-1.3} holds for every $\Phi \in C_{0}(X)^*$, $\rho \in C_{0}(X)''$. 
 This means that the net $(\int_0^r T(t)^*\Phi \dt)_{r > 0}$ converges weakly to $R(0,A^*)\Phi$. 
 But for positive $\Phi$ the net is monotone and therefore strongly convergent by Dini's Theorem (see \textcite[II.Theorem~5.9]{schaefer:1974}). 
 Hence $R(0,A^*)\Phi = \int_0^{\infty} T(t)^*\Phi \dt$ for every $\Phi \in C_{0}(X)^*$.
@@ -258,7 +258,7 @@ For $h \coloneq \sup(f,g)$ we obtain $\|h\| \leq 1$ and
 	 \|\mu_1 + \mu_2\| \geq \langle h,\mu_1 + \mu_2 \rangle \geq \langle f,\mu_1 \rangle + \langle g,\mu_2 \rangle \geq \|\mu_1\| + \|\mu_2\| - 2\epsilon .
 \]
 %
-Hence $\|\mu_1 + \mu_2\| = \|\mu_1\| + \|\mu_2\|$ for $\mu_1$, $\mu_2 \in C_{0}(X)'_+$ (see also Part-3, Chapter 1 ).
+Hence $\|\mu_1 + \mu_2\| = \|\mu_1\| + \|\mu_2\|$ for $\mu_1$, $\mu_2 \in C_{0}(X)'_+$ (see also Part-III, Chapter~\ref{chap:c1}).
 
 Approximating the integral by Riemann sums one obtains 
 %% -- 
@@ -301,8 +301,8 @@ Applying Fatou's Lemma we obtain
 \end{aligned}
 \]
 (observe that $t \to \|T(t)'\mu\| = \sup \{\langle T(t)f,\mu \rangle \colon \|f\| \leq 1\}$ is lower semi-continuous and hence measurable). 
-Using Part-I, Chapter 4,  Theorem~1.10 we obtain $\omega_{0}(A^{*})<0$. 
-But $\omega_{0}(A) = \omega_{0}(A^{*})$ by Part-I, Chapter 3 4.1\,(iii), contradicting $\omega_{0}(A) = 0$.
+Using Part-I, Proposition~\ref{prop:a4-1.10} we obtain $\omega_{0}(A^{*})<0$. 
+But $\omega_{0}(A) = \omega_{0}(A^{*})$ by Part-I, Proposition~\ref{prop:a3-4.4}\,(iii), contradicting $\omega_{0}(A) = 0$.
 \end{proof}
 
 \begin{remark}\label{rem:b4-1.5}%
@@ -315,11 +315,11 @@ and Theorem~\ref{thm:b4-1.4} remains valid (see \textcite{battydavies:1983}).
 The proof given above may be used with almost no modification.
 \end{remark}
 
-At this point we close the discussion of the stability of positive semigroups on $C_{0}(X)$ and refer to Section 1 of Part-3, Chapter 4  and Part-IV, Chapter 4,  respectively, where the stability of positive semigroups on arbitrary Banach lattices and on C*-algebras will be treated.
+At this point we close the discussion of the stability of positive semigroups on $C_{0}(X)$ and refer to Part-III, Section~\ref{sec:c4-1} and Part-IV, Section~\ref{sec:d4-4}  respectively, where the stability of positive semigroups on arbitrary Banach lattices and on \CA-algebras will be treated.
 \index{stability|)}
 %% --
 %% --
-\section{Compact and Quasi-Compact Semigroups}
+\section{Compact and Quasi-Compact Semigroups}\label{sec:b4-2}
 \index{semigroup!compact semigroup}
 \index{operator!compact|(}
 \index{semigroup!eventually compact semigroup|(}
@@ -329,7 +329,7 @@ At this point we close the discussion of the stability of positive semigroups on
 \newline
 %% --
 Using the Riesz-Schauder Theory for compact operators (see, \eg
-Chapter~VII.4 in \textcite{dunfordschwartz:1958} or Section 26 of \textcite{pietsch:1978}) and the results of Part-I, Chapter 3,  one can easily describe the
+Chapter~VII.4 in \textcite{dunfordschwartz:1958} or Section 26 of \textcite{pietsch:1978}) and the results of Chapter~\ref{chap:a3},  one can easily describe the
 asymptotic behavior of \emph{eventually compact semigroups}.
 Since no positivity is involved, we state the fundamental result for arbitrary Banach
 spaces.
@@ -367,9 +367,9 @@ Thus
     is a finite set and contains only
 	poles of finite algebraic multiplicity.
 	Thus the first assertion
-	follows from Part-I, Chapter 3,  Corollary~6.5.
+	follows from Part-I, Corollary~\ref{cor:a3-6.5}.
 	To prove the remaining assertion we fix $m \in \N$ and apply the spectral
-	decomposition as described in Section 3 of Part-I, Chapter 3.
+	decomposition as described in Section~\ref{sec:a3-3}.
 	For simplicity we assume $\Re(\lambda_{m+1}) < \Re(\lambda_m)$.
     \index{spectral projection}
 	Let $P$ be the spectral projection
@@ -387,11 +387,11 @@ Thus
 \]
 %% --
 We define $R_m(t)  \coloneq  T(t)(\Id -P)$ and $T_n(t)  \coloneq  T(t)P_n$ $(n \in \N)$.
-Then $R_m(t)$ satisfies the estimate stated in \eqref{eq:b4-2.1}, and we have $T(t) =
-\sum_{n=1}^m T_n(t) + R_m(t)$ because $P = \sum_{n=1}^m P_n$ by Part-I, Chapter 3,  Corollary~6.5\,(ii).
+Then $R_m(t)$ satisfies the estimate stated in Eq.~\eqref{eq:b4-2.1}, and we have $T(t) =
+\sum_{n=1}^m T_n(t) + R_m(t)$ because $P = \sum_{n=1}^m P_n$ by Part-I, Corollary~\ref{cor:a3-6.5}\,(ii).
 The family of projections $\Id -P$, $P_1$, $P_2$, .. , $P_m$ reduces the semigroup.
 Thus in order to prove the representation of\/ $T_n(t)$ stated in
-\eqref{eq:b4-2.1}, we only have to consider elements $f \in P_n E = \ker(\lambda_n-A)$.
+Eq.~\eqref{eq:b4-2.1}, we only have to consider elements $f \in P_n E = \ker(\lambda_n-A)$.
 Hence we can assume $E = P_n E$, $\sigma(A) = \{\lambda_n\}$, $P_n = \Id $ and for simplification
 we drop the index $n$, \ie  $\lambda = \lambda_n$, $k = k(n)$.
 Then $A$ is a bounded operator satisfying $(\lambda - A)^k = 0$ and its resolvent is given by
@@ -418,7 +418,7 @@ Since
 \quad \text{and} \quad \lim_{i\to\infty}\binom{j+i-1}{i-1}\,(i-\lambda t)^{-j} = \frac{1}{j!}
 \]
 %
-for every $j \in \N$, the assertion follows from formula (1.3) of Part-I, Chapter 2.
+for every $j \in \N$, the assertion follows from formula~\eqref{eq:a2-1.7} on p.~\pageref{eq:a2-1.7}
 \end{proof}
 %
 \ifnum 0=1 
@@ -436,12 +436,12 @@ Since
 	 \quad \text{and} \quad \lim_{i\to\infty}\binom{j+i-1}{i-1}\,(i-\lambda t)^{-j} = \frac{1}{j!}
 \]
 %
-for every $j \in \N$, the assertion follows from formula (1.3) of Part-I, Chapter 2.
+for every $j \in \N$, the assertion follows from 
+formula~\eqref{eq:a2-1.3} on p.~\pageref{eq:a2-1.3} of Part-I.
 \fi
 %% --
-Combining Theorem~2.1 with the results of Part-II, Chapter 3one can describe
-the behavior of\/ $T(t)$ as $t \to \infty$ provided that $(T(t))_{t \geq 0}$ is a
-positive semigroup.
+Combining Theorem~\ref{thm:b4-2.1} with the results of Chapter~\ref{chap:b3} one can describe
+the behavior of\/ $T(t)$ as $t \to \infty$ provided that $(T(t))_{t \geq 0}$ is a positive semigroup.
 We give a typical example.
 
 \begin{corollary}\label{cor:b4-2.2}
@@ -465,14 +465,14 @@ We give a typical example.
 %% --
 \begin{proof}
 	We take $r  \coloneq  s(A)$.
-	By Part-II, Chapter 3,  Proposition~3.5(i) we have $r > -\infty$.
+	By Proposition~\ref{prop:b3-3.5}(i) we have $r > -\infty$.
 	Moreover, by assertion (v) of the same proposition we know that $r$ is
 	an algebraically simple pole and the corresponding residue $P$ has the
 	form $P = \nu \otimes h$ for strictly positive eigenvectors $\nu$ of\/ $A'$
 	and $h$ of\/ $A$, respectively.
     We choose $h$ such that 
 	$\|h\| = 1$.
-	Corollary~2.11 of Part-II, Chapter 3implies that $r$ is strictly
+	Corollary~\ref{cor:b3-2.11} of Chapter~\ref{chap:b3} implies that $r$ is strictly
 	dominant, \ie enumerating the eigenvalues as described in Theorem~\ref{thm:b4-2.1} we
 	have 
 %%
@@ -480,13 +480,13 @@ We give a typical example.
 	\Re(\lambda_2) < \lambda_1 = r 
 \]
 %%
-Now \eqref{eq:b4-2.2} follows from \eqref{eq:b4-2.1} for $m = 1$.
+Now Eq.~\eqref{eq:b4-2.2} follows from Eq.~\eqref{eq:b4-2.1} for $m = 1$.
 Applying the triangle inequality to %
 \[
 	 T(t)f = \eu^{rt}\left(Pf + (\eu^{-rt}T(t)f-Pf)\right) 
 \]
 %
-and using \eqref{eq:b4-2.2} one easily deduces \eqref{eq:b4-2.3}.
+and using Eq.~\eqref{eq:b4-2.2} one easily deduces Eq.~\eqref{eq:b4-2.3}.
 \end{proof}
 %% --
  out the following consequence of Corollary~\ref{cor:b4-2.2}.
@@ -609,7 +609,7 @@ The next result which is an immediate consequence of Theorem~\ref{thm:b4-2.1} an
 Proposition~\ref{prop:b4-2.4} is motivated by the theory of Markov processes.
 \index{Markov process}
 \index{operator!Markov}
-For a Markov operator (see Part-II, Chapter 1,  Section~3) condition (b) of Proposition~\ref{prop:b4-2.4}\,(i) is called the strong \emph{Feller property}. 
+For a Markov operator (see Section~\ref{sec:b1-3} condition (b) of Proposition~\ref{prop:b4-2.4}\,(i) is called the strong \emph{Feller property}. 
 
 \begin{theorem}\label{thm:b4-2.5}
 	Let $(T(t))_{t \geq 0}$ be a semigroup of Markov operators on
@@ -624,8 +624,8 @@ For a Markov operator (see Part-II, Chapter 1,  Section~3) condition (b) of Prop
 	Thus, by Proposition~\ref{prop:b4-2.4}\,(ii),
 	$T(2t_{0})$ is compact, \ie  $(T(t))_{t \geq 0}$ is eventually compact.
 	Moreover,
-	by Part-II, Chapter 3,  Corollary~2.11 $s(A) = 0$ is strictly dominant and a first order
-	pole of the resolvent by Part-II, Chapter 3,  Remark~2.15\,(i).
+	by Corollary~\ref{cor:b3-2.11} $s(A) = 0$ is strictly dominant and a first order
+	pole of the resolvent by Remark~\ref{rem:b3-2.15}\,(i).
 	The assertion now follows
 	easily from Theorem~\ref{thm:b4-2.1}.
 \end{proof}
@@ -699,7 +699,7 @@ Then we have
 Since $P_t(x,U) \leq 1$ and $\lim_{t\downarrow0} P_t(x,U) = 1 = P_t(x,K)$, this estimate
 implies $\limsup_{t\downarrow 0}((T(t)f)(x) - f(x)) \leq \epsilon$.
 Since $\epsilon > 0$ was arbitrary we have pointwise convergence, hence strong continuity of the semigroup.
-Finally we observe that every operator $T(t)$ defined by \eqref{eq:b4-2.4} has the
+Finally we observe that every operator $T(t)$ defined by Eq.~\eqref{eq:b4-2.4} has the
 strong Feller property since $T(t)''\1_C = P_t(.,C)$ for every Borel set
 $C \subset K$ (see Proposition~\ref{prop:b4-2.4}\,(i)).
 Thus Theorem~\ref{thm:b4-2.5} can be applied in this situation.
@@ -727,7 +727,7 @@ For $T \in \mathcal{L}(G)$ we define
 %% --
 Quasi-compactness can be characterized in many ways.
 Two of them are stated in the following proposition.
-The first one uses the notion of the essential growth bound $\omega_{\text{ess}}(\TT)$ of a semigroup $\TT$ as introduced in Part-I, Chapter 3, 3.7.\index{growth bound!essential}
+The first one uses the notion of the essential growth bound $\omega_{\text{ess}}(\TT)$ of a semigroup $\TT$ as introduced in Eq.~\eqref{eq:a3-3.7} on p.~\pageref{eq:a3-3.7}.\index{growth bound!essential}
 %% --
 \begin{proposition}\label{prop:b4-2.8}
 	For a strongly continuous semigroup $\TT = (T(t))_{t \geq 0}$
@@ -747,11 +747,18 @@ The first one uses the notion of the essential growth bound $\omega_{\text{ess}}
 \begin{proof}
 $(a) \Rightarrow (c)$ is obvious by the definition of quasi-compactness.
 
-$(c) \Rightarrow (b)$: Recalling the definition of the essential spectral radius from Part-I, Chapter 3, \,(3.6), assertion $(c)$ implies 
+$(c) \Rightarrow (b)$: Recalling the definition of the essential spectral radius from 
+ Eq.~\eqref{eq:a3-3.6} on p.~\pageref{eq:a3-3.6},
+assertion $(c)$ implies 
 $r_{\text{ess}}(T(t_0)) \leq \|T(t_0)\|_{\text{ess}} < 1 .$ 
-Then  $\omega_{\text{ess}}(\TT) < 0 $ by Part-I, Chapter 3, \,(3.10).
+Then  $\omega_{\text{ess}}(\TT) < 0 $ by  
+Eq.~\eqref{eq:a3-3.10} on p.~\pageref{eq:a3-3.10}).
 
-$(b) \Rightarrow (a)$: By Part-I, Chapter 3, \,(3.10) we have $r_{\text{ess}}(T(1)) < 1$. Then Part-I, Chapter 3, \,(3.6) implies
+$(b) \Rightarrow (a)$: By 
+ Eq.~\eqref{eq:a3-3.10} on p.~\pageref{eq:a3-3.10}
+we have $r_{\text{ess}}(T(1)) < 1$. 
+Then 
+ Eq.~\eqref{eq:a3-3.6} on p.~\pageref{eq:a3-3.6}
 %% -- 
 \[
 \text{
@@ -793,7 +800,7 @@ More generally we have the following result.
 \end{proof}
 %% --
 We will now show that for quasi-compact semigroups the asymptotic behavior is similar to the one stated for eventually compact semigroups in Theorem~\ref{thm:b4-2.1}. 
-One obtains a representation as in \eqref{eq:b4-2.1} with a remainder of exponential decay. 
+One obtains a representation as in Eq.~\eqref{eq:b4-2.1} with a remainder of exponential decay. 
 However, the rate of decay cannot be chosen arbitrarily large.
 %% --
 \begin{theorem}\label{thm:b4-2.10}
@@ -810,17 +817,18 @@ However, the rate of decay cannot be chosen arbitrarily large.
 	\end{equation}
 \end{theorem}
 %% --
-\begin{proof} We have $\omega_{ess}(\TT) < 0$, hence $r_{ess}(T(1)) < 1$ (see Part-I, Chapter 3, \,(3.10)).
+\begin{proof} We have $\omega_{ess}(\TT) < 0$, hence $r_{ess}(T(1)) < 1$ (see  Eq~\eqref{eq:a3-3.10} on p.~\pageref{eq:a3-3.10}).
 
-Therefore $\{z \in \sigma(T(1)) \colon |z| \geq 1\}$ is a finite set and contains only poles of finite algebraic multiplicity (\cf Part-I, Chapter 3, \,(3.8)). 
+Therefore $\{z \in \sigma(T(1)) \colon |z| \geq 1\}$ is a finite set and contains only poles of finite algebraic multiplicity 
+(\cf Eq~\eqref{eq:a3-3.8} on p.~\pageref{eq:a3-3.8}). 
 Let $P$ denote the spectral projection of\/ $T(1)$ corresponding to $\{z \in \sigma(T(1))\colon |z| \geq 1\}$. 
-Then Part-I, Chapter 3,  Corollary~6.5 implies that $\{\lambda \in \sigma(A) \colon \Re(\lambda) \geq 0\}$ is a finite set, contains only poles of\/ $R(\cdot,A)$ of finite algebraic multiplicity and $P = P_1+P_2+ \ldots +P_m$. 
-One can now prove the representation of\/ $T(t)$ stated in \eqref{eq:b4-2.5} in the same way as statement \eqref{eq:b4-2.1}.
+Then Part-I, Corollary~\ref{cor:a3-6.5} implies that $\{\lambda \in \sigma(A) \colon \Re(\lambda) \geq 0\}$ is a finite set, contains only poles of\/ $R(\cdot,A)$ of finite algebraic multiplicity and $P = P_1+P_2+ \ldots +P_m$. 
+One can now prove the representation of\/ $T(t)$ stated in Eq.~\eqref{eq:b4-2.5} in the same way as statement Eq.~\eqref{eq:b4-2.1}.
 \end{proof}
 %% --
-In case we consider positive quasi-compact semigroups on $C_{0}(X)$ one can combine Theorem~\ref{thm:b4-2.10} with the results of Part-II, Chapter 3. 
-For example, Part-II, Chapter 3,  Corollary~2.11 assures that, in case there is at least one eigenvalue with nonnegative real part, the generator has a strictly dominant eigenvalue $r \in \R$. 
-Thus in \eqref{eq:b4-2.5} the operators $T_j(t)$ belonging to $\lambda_j = r$ will determine the long-term behavior of\/ $(T(t))$. More precisely, one has the following.
+In case we consider positive quasi-compact semigroups on $C_{0}(X)$ one can combine Theorem~\ref{thm:b4-2.10} with the results of Chapter~\ref{chap:b3}. 
+For example, Corollary~\ref{cor:b3-2.11} assures that, in case there is at least one eigenvalue with nonnegative real part, the generator has a strictly dominant eigenvalue $r \in \R$. 
+Thus in Eq.~\eqref{eq:b4-2.5} the operators $T_j(t)$ belonging to $\lambda_j = r$ will determine the long-term behavior of\/ $(T(t))$. More precisely, one has the following.
 %% --
 \begin{corollary}\label{cor:b4-2.11}%
 \index{semigroup!quasi-compact semigroup}
@@ -840,13 +848,13 @@ Let $\TT = (T(t))_{t \geq 0}$ be a positive semigroup on $C_{0}(X)$ which is qua
 		\|\exp(-\omega_{0}(\TT)t) \cdot T(t) - \nu \otimes h\| \leq M \cdot \eu^{-\delta t} \quad \text{for all} \quad t \geq 0 \text{.}
 	\end{equation}
 \end{enumerate}
-In both cases $(i)$ and $(ii)$ the estimates \eqref{eq:b4-2.3} for $\|T(t)f\|$ hold true (in case $(i)$ one has to replace $|\int f \diff{\nu}|$ by $\|Pf\|$).
+In both cases $(i)$ and $(ii)$ the estimates Eq.~\eqref{eq:b4-2.3} for $\|T(t)f\|$ hold true (in case $(i)$ one has to replace $|\int f \diff{\nu}|$ by $\|Pf\|$).
 \end{corollary}
 %% --
 \begin{proof}
 	\begin{enumerate}[\upshape (i), wide, labelindent=.5em]
 		\item 
-		By Part-II, Chapter 3,  Corollary~2.11 we know that $s(A)$ is a strictly dominant eigenvalue of\/ $A$. 
+		By Corollary~\ref{cor:b3-2.11} we know that $s(A)$ is a strictly dominant eigenvalue of\/ $A$. 
         By Theorem~\ref{thm:b4-2.10} both $s  \coloneq  s(A)$ and $r$ are poles of the resolvent. 
         Moreover, there exists a positive measure $\nu$ such that $A^*\nu = s\nu$. 
         Denoting the strictly positive eigenfunction corresponding to $r$ by $h$ we have $\langle h,\nu \rangle > 0$. 
@@ -856,10 +864,12 @@ In both cases $(i)$ and $(ii)$ the estimates \eqref{eq:b4-2.3} for $\|T(t)f\|$ h
 	s\langle h,\nu \rangle = \langle h,A^*\nu \rangle = \langle Ah,\nu \rangle = r\langle h,\nu \rangle
 \]
 %
-implies $r = s$. By Part-II, Chapter 3,  Remark~2.15 we know that $s$ is a first order pole of the resolvent. Since $s$ is strictly dominant, \eqref{eq:b4-2.6} follows from \eqref{eq:b4-2.5}.
+implies $r = s$. 
+By Remark~\ref{rem:b3-2.15} we know that $s$ is a first order pole of the resolvent. Since $s$ is strictly dominant, Eq.~\eqref{eq:b4-2.6} follows from Eq.~\eqref{eq:b4-2.5}.
 
-		\item 
-		can be proved in the same way as Corollary~\ref{cor:b4-2.2}. We omit the details.
+\item 
+can be proved in the same way as Corollary~\ref{cor:b4-2.2}. 
+We omit the details.
 	\end{enumerate}
 \end{proof}
 %% --
@@ -891,7 +901,7 @@ Any solution has (up to a constant) the following form
 We assume that $m(\infty) < 0$ and $r \geq 0$. 
 Then $g_r$ is differentiable with $g_r, g_r' \in C_{0}(X)$. 
 Thus, $g_r \in D(A)$ if and only if\/ $g_r'(0) = \alpha g(0) - \int_0^{\infty} g_r(y) \diff{\nu}(y)$. 
-Inserting \eqref{eq:b4-2.9}, then this condition becomes
+Inserting Eq.~\eqref{eq:b4-2.9}, then this condition becomes
 %% -- 
 \[
 m(0) - r = \alpha - \int_0^{\infty} \eu^{-ry} \cdot \exp\left(\int_{0}^{y}  m(z) \,\diff{z}\right)\diff{\nu}(y) .
@@ -901,12 +911,12 @@ By monotonicity this equation has a unique solution $r \geq 0$ if and only if
 	m(0) + \int_0^{\infty} \exp\left(\int_0^y m(z) \, dz\right)\diff{\nu}(y) \geq \alpha .
 \end{equation}
 %% --
-In case $\alpha$, $\nu$ and $m$ satisfy \eqref{eq:b4-2.10} and $m(\infty) < 0$, then $g_r$ is a strictly positive eigenfunction of\/ $A$ corresponding to $r \geq 0$. 
+In case $\alpha$, $\nu$ and $m$ satisfy Eq.~\eqref{eq:b4-2.10} and $m(\infty) < 0$, then $g_r$ is a strictly positive eigenfunction of\/ $A$ corresponding to $r \geq 0$. 
 Thus all assumptions of Corollary~\ref{cor:b4-2.11}\,(i) are satisfied. 
 In addition, the semigroup is irreducible if (and only if) the support of\/ $\nu$ is an unbounded subset of\/ $[0,\infty)$.
 \end{example}
 
-Similar examples will be discussed in the next section and in  Part-III, Chapter 4,  Section~3.
+Similar examples will be discussed in the next section and in  Part-III, Section~\ref{sec:c4-3}.
 
 We finally give a criterion for quasi-compactness of positive semigroups on spaces $C(K)$. 
 It is based on a criterion given by Doeblin for operators on spaces of bounded measurable functions and can be easily deduced from  Proposition~3 in \textcite{lotz:1981}.
@@ -932,8 +942,7 @@ Then $\TT$ is quasi-compact.
 \end{proposition}
 %% --
 %% --
-\section{A Semigroup Approach to Retarded Differential 
-Equations}
+\section{A Semigroup Approach to Retarded Differential Equations}\label{sec:b4-3}
 %% --
 \hspace{1cm}{\Large by Annette Grabosch und Ulrich Moustakas}
 \vspace{.5cm}
@@ -947,7 +956,7 @@ Equations}
 The aim of this section is to put into evidence the connection between retarded differential equations and one-parameter semigroups.
 Special emphasis will lie, as the general theme of this chapter suggests, on positive solutions of such equations and on their asymptotic behavior.
 \index{asymptotic behavior}
-Scalar examples were already considered in Part-II, Chapter 3,  Example~2.14, Part-II, Chapter 2,  Example~1.21, Part-II, Chapter 2, Example~1.23, Part-II, Chapter 2,  Example~2.11 and Part-II, Chapter 4,  Example~2.12.
+Scalar examples were already considered in Example~\ref{ex:b3-2.14}, Example~\ref{ex:b2-1.22}, Example~\ref{ex:b2-1.23}, Example~\ref{ex:b2-2.12} and Example~\ref{ex:b4-2.12}.
 In this section, we will treat \emph{retarded differential equations}, also called \emph{delay differential equations}, with values in arbitrary Banach spaces.
 A slight modification of the methods used in the scalar case will also work in this setting.
 The main question is whether or how a time delay affects the qualitative behavior of the solution of an abstract Cauchy problem.
@@ -984,7 +993,7 @@ A function $u \in C([-1,\infty),F)$ is a \emph{solution} of \eqref{eq:b4-3.RCP} 
 	$u(t) \in D(B)$ for $t \geq 0$,
     
 	\item 
-	\eqref{eq:b4-3.RCP} is satisfied for $t \geq 0$.
+	 \eqref{eq:b4-3.RCP} is satisfied for $t \geq 0$.
 \end{enumerate}
 
 To \eqref{eq:b4-3.RCP} we associate the following operator $A$ on the Banach space $E$.
@@ -1000,7 +1009,7 @@ Let $A$ be defined as
 First we show that $A$ is a generator on $E$.
 %% --
 \begin{theorem}\label{thm:b4-3.1}
-	The operator $A$ defined in \eqref{eq:b4-3.1} is the generator of a strongly continuous semigroup $(T(t))_{t\geq 0}$ on $E$ satisfying the \emph{translation property}
+	The operator $A$ defined in Eq.~\eqref{eq:b4-3.1} is the generator of a strongly continuous semigroup $(T(t))_{t\geq 0}$ on $E$ satisfying the \emph{translation property}
 	%% --
 \begin{equation*}\label{eq:b4-3.T} \tag{T}
     (T(t)f)(s) = 
@@ -1012,7 +1021,7 @@ First we show that $A$ is a generator on $E$.
 \end{theorem}
 %% --
 \begin{proof} 
-We argue as in Part-II, Chapter 3,  Example~2.14.(b) and consider the operator $A_{0}f  \coloneq  f'$ on the domain 
+We argue as in Example~\ref{ex:b3-2.14}\,(b) and consider the operator $A_{0}f  \coloneq  f'$ on the domain 
 %% --
 \[
 D(A_{0})  \coloneq  \left\{f \in C^1([-1,0],F) \colon f(0) \in D(B), f'(0) = Bf(0)\right\} .
@@ -1041,7 +1050,7 @@ Moreover, $S_{\lambda}$ induces a bijection from $D(A)$ onto $D(A_{0})$ such tha
 Proceeding as in the example mentioned above we obtain
 %% --
 \[\|R(\lambda,A)\| \leq (\lambda - \omega_0)\cdot(\lambda - \|\Phi\| - \omega_0)^{-1}\cdot(\lambda - \omega_0)^{-1} \leq (\lambda - \|\Phi\| - \omega_0)^{-1}.\]
-Thus $A$ is a generator by Part-I, Chapter 2,  Theorem~1.7.
+Thus $A$ is a generator by Part-I, Theorem~\ref{thm:a2-1.7}.
 
 It suffices to show the translation property \eqref{eq:b4-3.T} for $f \in D(A)$ only.
 To that purpose, we treat two cases separately.
@@ -1072,7 +1081,7 @@ As in the first case we show that the map $k \colon [0,t] \to F , r \mapsto [T(r
 Thus $f(t+s) = k(0) = k(t) = T(t)f(s)$.
 \end{proof}
 %% --
-The translation property \eqref{eq:b4-3.T} enables us to specify the correspondence between the semigroup $(T(t))_{t\geq 0}$ generated by the operator in \eqref{eq:b4-3.1} and the solution of the retarded Cauchy problem \eqref{eq:b4-3.RCP}.
+The translation property \eqref{eq:b4-3.T} enables us to specify the correspondence between the semigroup $(T(t))_{t\geq 0}$ generated by the operator in Eq.~\eqref{eq:b4-3.1} and the solution of the retarded Cauchy problem \eqref{eq:b4-3.RCP}.
 %% --
 \begin{corollary}\label{cor:b4-3.2}
 	For $g \in D(A)$ define $u \colon [-1,\infty) \to F$ by
@@ -1087,7 +1096,7 @@ The translation property \eqref{eq:b4-3.T} enables us to specify the corresponde
 %% --
 \begin{proof} Evidently $u \in C([-1,\infty),F)$ for $g \in D(A)$,
 since $\int_{0}^{t} T(s)g \ds  \in D(A)$.
-From Part-I, Chapter 1,  Proposition 1.6.\,(iii), the definition of\/ $D(A)$ and since $\int_{0}^{t} T(s)g \ds  \in D(A)$, we obtain
+From Part-I, Proposition~\ref{prop:a1-1.6}\,(iii), the definition of\/ $D(A)$ and since $\int_{0}^{t} T(s)g \ds  \in D(A)$, we obtain
 %% --
 \begin{align*}
 	(T(t)g)(0) - g(0) &= \left[A\left(\int_{0}^{t} T(s)g  \ds \right)\right](0) = \\
@@ -1112,7 +1121,7 @@ u_t(s) = u(t+s) =
 %% --
 Therefore $\dot{u}(t) = Bu(t) + \Phi(u_t)$, \ie $u$ solves \eqref{eq:b4-3.RCP}.
 
-In order to show uniqueness of the solution, we take $w$ to be a solution of \eqref{eq:b4-3.RCP} satisfying $w_{0} = 0$. 
+In order to show uniqueness of the solution, we take $w$ to be a solution of  \eqref{eq:b4-3.RCP} satisfying $w_{0} = 0$. 
 Let $x(t) \coloneq  w_t$, $t \geq 0$. 
 It is easy to see that $x(t) \in C^1([-1,0],F)$. Moreover, since $\dot{w}(0) = \dot{w}(t) = Bw(t) + \Phi(w_t)$, we obtain $x(t) \in D(A)$. 
 By the definition of\/ $A$ we have $Ax(t) = \dot{w}_t$. 
@@ -1134,7 +1143,7 @@ This proves $w \equiv 0$.
 
 \item 
 By similar arguments the following can be proved. 
-If\/ $u$ is a solution of \eqref{eq:b4-3.RCP} such that $u_{0} \in D(A)$, then $x$ given by $x(t) \coloneq  u_t$ is a solution of the abstract Cauchy problem associated with the operator $A$ defined in \eqref{eq:b4-3.1}. 
+If\/ $u$ is a solution of \eqref{eq:b4-3.RCP} such that $u_{0} \in D(A)$, then $x$ given by $x(t) \coloneq  u_t$ is a solution of the abstract Cauchy problem associated with the operator $A$ defined in Eq.~\eqref{eq:b4-3.1}. 
 In this sense, \eqref{eq:b4-3.RCP} and the semigroup generated by $A$ correspond to each other.
 
 \item 
@@ -1158,7 +1167,7 @@ Hence
 u(t) - S(t)u(0) = \int_0^t S(t-s)\Phi(u_s) \,\ds.
 \]
 %% --
-Let $(S(t))_{t \geq 0}$ be a strongly continuous semigroup which is not differentiable (for examples see Part-I, Chapter 2,   1.28). 
+Let $(S(t))_{t \geq 0}$ be a strongly continuous semigroup which is not differentiable (see  Part-I, Example~\ref{ex:a2-1.28}). 
 Define $g \in E$ by $g(s)  \coloneq  \tilde{g}$ for all $s \in [-1,0]$ where $\tilde{g} \in F$ is chosen such that
 $t \mapsto S(t)\tilde{g}$ is not differentiable in $t' \in \R_+$.
 
@@ -1194,7 +1203,7 @@ The assertion of Corollary~\ref{cor:b4-3.3} remains true if\/ $(S(t))_{t \geq 0}
 
 In order to describe the asymptotic behavior of the solutions of \eqref{eq:b4-3.RCP} it is enough to examine the corresponding semigroup $(T(t))_{t \geq 0}$ on $E$. 
 Indeed, Corollary~\ref{cor:b4-3.2} shows that the solutions $u$ are given by $u(t) = (T(t)g)(0)$ for all $t > 0$ and thus the long term behavior of\/ $u$ can be deduced from that one of\/ $(T(t))_{t \geq 0}$. 
-Our approach uses the characterization of the stability of the semigroup $(T(t))_{t \geq 0}$ by the location of the spectrum $\sigma(A)$ of the generator $A$ as developed in Part-I, Chapter 4,  Section~1, Part-II, Chapter 4,  Section~1 and Part-III, Chapter 4,  Section~1.
+Our approach uses the characterization of the stability of the semigroup $(T(t))_{t \geq 0}$ by the location of the spectrum $\sigma(A)$ of the generator $A$ as developed in Part-I, Section~\ref{sec:a4-1},  Section~\ref{sec:b4-1} and Section~\ref{sec:c4-1}.
 
 We define, for $\lambda \in \C$, operators $\Phi_\lambda \in \mathcal{L}(F)$ by
 \begin{equation}\label{eq:b4-3.3}
@@ -1251,16 +1260,16 @@ Indeed, if\/ $B$ generates a bounded positive semigroup on $F$, then $\|x\|  \co
 	If\/ $\Phi \in \mathcal{L}(E,F)$ is a positive operator and if\/ $B$ generates a positive semigroup on $F$, then the semigroup $(T(t))_{t \geq 0}$ on $E$ generated by $Af  \coloneq  f'$ with domain $D(A)  \coloneq  \{f \in C^1 \colon f(0) \in D(B), f'(0) = Bf(0) + \Phi f\}$ is positive.
 \end{proposition}
 %% --
-\begin{proof} By Formula \eqref{eq:b4-3.2} we have $R(\lambda,A) = S_\lambda^{-1}R(\lambda,A_{0})$ for $\lambda > \|\Phi\|+w$, (where $S_\lambda f = f - \epsilon_\lambda \otimes R(\lambda,B)\Phi f$ for $f \in E$). 
-Thus the fact that $R(\lambda,A_{0})$ is positive (Part-III, Chapter 2,  Proposition~4.1) reduces the problem to showing that $S_\lambda^{-1}$ is a positive operator for $\lambda > \|\Phi\|+w$.
+\begin{proof} By Formula Eq.~\eqref{eq:b4-3.2} we have $R(\lambda,A) = S_\lambda^{-1}R(\lambda,A_{0})$ for $\lambda > \|\Phi\|+w$, (where $S_\lambda f = f - \epsilon_\lambda \otimes R(\lambda,B)\Phi f$ for $f \in E$). 
+Thus the fact that $R(\lambda,A_{0})$ is positive (Part-III, Proposition~\ref{prop:c2-4.1}) reduces the problem to showing that $S_\lambda^{-1}$ is a positive operator for $\lambda > \|\Phi\|+w$.
 
 Since $S_\lambda = \Id  - \epsilon_\lambda \otimes R(\lambda,B)\Phi$ and $\|\epsilon_\lambda \otimes R(\lambda,B)\Phi\| \leq (\lambda-w)^{-1} \cdot \|\Phi\| < 1$ we see that $S_\lambda^{-1} = \sum_{n=0}^{\infty}(\epsilon_\lambda \otimes R(\lambda,B)\Phi)^n$ is positive. 
-Hence $(T(t))_{t \geq 0}$ is a positive semigroup again by Part-III, Chapter 2,  Proposition~4.1.
+Hence $(T(t))_{t \geq 0}$ is a positive semigroup again by Part-III, Proposition~\ref{prop:c2-4.1}.
 \end{proof}
 %% --
 \begin{remark*}
 Suppose that $\Phi$ has no mass in zero (\ie  for every $\epsilon > 0$ there exists $\delta > 0$ such that $\|\Phi f\| \leq \epsilon \|f\|$ for all $f \in E$, supp$(f) \subset [-\delta,0])$. 
-Then the positivity hypotheses in the above proposition are necessary in order to obtain positivity of\/ $(T(t))_{t \geq 0}$ (\cf Part-II, Chapter 2, 1.22 for the case $\dim F < \infty$ and \textcite{kerscher:1986} for the general case).
+Then the positivity hypotheses in the above proposition are necessary in order to obtain positivity of\/ $(T(t))_{t \geq 0}$ (\cf Example~\ref{ex:b2-1.22} for the case $\dim F < \infty$ and \textcite{kerscher:1986} for the general case).
 \end{remark*}
 %% --
 \begin{proposition}\label{prop:b4-3.6}
@@ -1274,18 +1283,18 @@ Then the positivity hypotheses in the above proposition are necessary in order t
 	\end{equation}
 \end{proposition}
 %% --
-\begin{proof} (\cf also Part-III, Chapter 4,  Lemma 3.4). 
+\begin{proof} (\cf also Part-III, Lemma~\ref{lem:c4-3.4}). 
 For $\lambda \leq \mu$ we have $0 \leq \Phi_\mu \leq \Phi_\lambda$ and hence 
 %% --
 \[
 0 \leq R(t, B +\Phi_\mu) \leq R(t,B+\Phi_\mu) , (t\geq 0) , 
 \]
 %% --
-for the respective semigroups generated by $B + \Phi_\mu$ and $B + \Phi_\lambda$ (see Part-I, Chapter 2,  Section~1). 
+for the respective semigroups generated by $B + \Phi_\mu$ and $B + \Phi_\lambda$ (see Part-I, Section~\ref{sec:a2-1}). 
 This implies $s(B + \Phi_\mu) \leq s(B + \Phi_\lambda)$. 
 The left-continuity follows by the semicontinuity of the spectrum (see \textcite[Chapter~IV, Theorem~3.1]{kato:1976}). 
 If\/ $B$ has compact resolvent, then $B + \Phi_\lambda$ has compact resolvent as well. 
-Now Part-III, Chapter 3,  Theorem~1.1.(i) shows that $s(B + \Phi_\lambda)$ belongs to $\sigma(B + \Phi_\lambda)$ and is, by Part-I, Chapter 3,  3.6, a pole with residue of finite rank. 
+Now Part-III, Theorem~\ref{thm:c3-1.1}.(i) shows that $s(B + \Phi_\lambda)$ belongs to $\sigma(B + \Phi_\lambda)$ and is, by Eq.~\eqref{eq:a3-3.6} on p.~\pageref{eq:a3-3.6}, a pole with residue of finite rank. 
 This completes the proof, since spectral points of compact operators depend continuously on smooth perturbations (see \textcite[VII,6.Theorem~9]{dunfordschwartz:1958}).
 \end{proof}
 %% --
@@ -1319,7 +1328,7 @@ We are now able to characterize the spectral bound of the generator $A$ in $E$ t
 	If\/ $\lambda > s(B + \Phi_{\lambda})$, then $\mu > s(B + \Phi_{\mu})$ for all $\mu \geq \lambda$ by Proposition~\ref{prop:b4-3.6}.  
 	Therefore, $\mu \in \rho(B + \Phi_{\mu})$ for all $\mu \geq \lambda$. 
 	By Proposition~\ref{prop:b4-3.4} this implies $\mu \in \rho(A)$ for all $\mu \geq \lambda$. 
-	Since $s(A) \in \sigma(A)$ by Part-III, Chapter 3,  Theorem~1.1.\,(i), we obtain $\lambda > s(A)$.
+	Since $s(A) \in \sigma(A)$ by Part-III, Theorem~\ref{thm:c3-1.1}.\,(i), we obtain $\lambda > s(A)$.
 	
     \item 
 	If\/ $\lambda = s(B + \Phi_{\lambda})$, then again $\lambda \in \sigma(B + \Phi_{\lambda})$ whence we obtain from Proposition~\ref{prop:b4-3.4} that $\lambda \in \sigma(A)$ and therefore $\lambda \leq s(A)$. 
@@ -1336,11 +1345,11 @@ We are now able to characterize the spectral bound of the generator $A$ in $E$ t
 %% --
 \begin{remark*}
 \index{characteristic equation}
-	We call \eqref{eq:b4-3.5} the \emph{generalized characteristic equation} corresponding to \eqref{eq:b4-3.RCP}. 
-	A justification for this terminology will be given in a remark following Corollary~3.8 of Part-III, Chapter 4.
+	We call Eq.~\eqref{eq:b4-3.5} the \emph{generalized characteristic equation} corresponding to \eqref{eq:b4-3.RCP}. 
+	A justification for this terminology will be given in a remark following Part-III, Corollary~\ref{cor:c4-3.8}.
 \end{remark*}
 %% --
-The characterization \eqref{eq:b4-3.6} of\/ $s(A)$ uses the continuity of\/ $\lambda \mapsto s(B + \Phi_{\lambda})$. 
+The characterization Eq.~\eqref{eq:b4-3.6} of\/ $s(A)$ uses the continuity of\/ $\lambda \mapsto s(B + \Phi_{\lambda})$. 
 In the general case we apply the following lemma which is due to W.~Arendt.
 %% --
 
@@ -1366,15 +1375,15 @@ Take now $\lambda \in \R$ with $\sigma(B+\Phi_{\lambda}) \neq \emptyset$ and sho
 %% --
 \begin{enumerate}[label={Case~\arabic*: }, wide, labelindent=0em]
 \item 
-If\/ $\mu = s(B+\Phi_{\mu})$, then $\mu \in \sigma(B+\Phi_{\mu})$ by Part-III, Chapter 3,  Theorem~1.1.
+If\/ $\mu = s(B+\Phi_{\mu})$, then $\mu \in \sigma(B+\Phi_{\mu})$ by Part-III, Theorem~\ref{thm:c3-1.1}.
 
 \item 
 If\/ $\mu < s(B+\Phi_{\mu})$, we show $r \in \sigma(B+\Phi_{\mu})$ for every $r \in (\mu,s(B+\Phi_{\mu})]$.
 %% --
 Let $r \in (\mu,s(B+\Phi_{\mu})]$ and assume $r \in \rho(B+\Phi_{\mu})$. 
 By the definition of\/ $\mu$ we have $r \in \rho(B+\Phi_{\mu+\epsilon})$ for all $\epsilon > 0$. 
-By Part-III, Chapter 3, Theorem~1.1 $R(r,B+\Phi_{\mu+\epsilon}) \geq 0$ and by the assumption $R(r,B+\Phi_{\mu}) \geq 0$ as well. 
-Now Part-III, Chapter 3, Theorem~1.1 implies $r > s(B+\Phi_{\mu})$ which yields a contradiction to the choice of\/ $r$. 
+By Part-III, Theorem~\ref{thm:c3-1.1} $R(r,B+\Phi_{\mu+\epsilon}) \geq 0$ and by the assumption $R(r,B+\Phi_{\mu}) \geq 0$ as well. 
+Now Part-III, Theorem~\ref{thm:c3-1.1} implies $r > s(B+\Phi_{\mu})$ which yields a contradiction to the choice of\/ $r$. 
 Thus $r \in \sigma(B+\Phi_{\mu})$ for every $r \in (\mu,s(B+\Phi_{\mu})]$ and hence $\mu \in \sigma(B+\Phi_{\mu})$. 
 Consequently $s(A) \geq \mu$.
 \end{enumerate}
@@ -1417,15 +1426,15 @@ In the situation of Theorem~\ref{thm:b4-3.7}\,(iii) we have the stronger result 
 \end{remark*}
 %% --
 \begin{example}\label{ex:b4-3.9}
-(see also Part-III, Chapter 2,  Example~4.14). Take $E = C([-1,0],\C)$, $\alpha \in \C$ and $\mu \in M[-1,0]_{+}$ such that $\mu(\{0\}) = 0$. 
+(see also Part-III, Example~\ref{ex:c2-4.14}). Take $E = C([-1,0],\C)$, $\alpha \in \C$ and $\mu \in M[-1,0]_{+}$ such that $\mu(\{0\}) = 0$. 
 Then the operator $A$ given by $Af = f'$ on $D(A) = \{f \in C^1([-1,0],\C) \colon f'(0) = \alpha f(0) + \langle f,\mu\rangle\}$ generates a strongly continuous semigroup $(T(t))_{t\geq0}$. 
 In fact, this follows from Theorem~\ref{thm:b4-3.1} if we put $F = \C$, $\Phi = \mu$ and $B$ the multiplication by $\alpha$. 
 Moreover $\Phi_{0}$ is the multiplication by $<f_{0}\langle\Phi\rangle = \|\Phi\|$ (notice $\Phi\geq0$) and $s(B + \Phi_{0}) = \alpha + \|\Phi\|$. 
-Since $\omega_{0}(A) = s(A)$ by \eqref{eq:b4-1.1}, we obtain from Corollary~\ref{cor:b4-3.8} that $A$ generates a uniformly exponentially stable semigroup if and only if\/ $\alpha + \|\Phi\| < 0$.
+Since $\omega_{0}(A) = s(A)$ by Eq.~\eqref{eq:b4-1.1}, we obtain from Corollary~\ref{cor:b4-3.8} that $A$ generates a uniformly exponentially stable semigroup if and only if\/ $\alpha + \|\Phi\| < 0$.
 \end{example}
 %% --
 The preceding considerations remain true if we consider an (arbitrary) finite time delay $\tau$ where $0 < \tau < \infty$. 
-Clearly, \eqref{eq:b4-3.RCP} can be treated as a differential equation with corresponding generator $A$ (see \eqref{eq:b4-3.1} for the definition) in $C([-\tau,0],F)$ (instead of\/ $C([-1,0],F)$).
+Clearly, \eqref{eq:b4-3.RCP} can be treated as a differential equation with corresponding generator $A$ (see Eq.~\eqref{eq:b4-3.1} for the definition) in $C([-\tau,0],F)$ (instead of\/ $C([-1,0],F)$).
 
 \begin{example}\label{ex:b4-3.10}
 	In order to illustrate the consequences of Corollary~\ref{cor:b4-3.8} we consider the the following Cauchy problem for a positive constant  $\tau > 0$.
@@ -1440,7 +1449,7 @@ Clearly, \eqref{eq:b4-3.RCP} can be treated as a differential equation with corr
 	where $B$ is the generator of a positive semigroup on $F$, $\sigma(B) \neq \emptyset$ and $S \in \mathcal{L}(F)$ is positive.
 	
 	Using the above terminology, we have $\Phi f = S(f(-\tau))$ for all $f \in E$, hence $\Phi_{0} = S$. 
-	By Corollary~\ref{cor:b4-3.8} the solution semigroup corresponding to the retarded differential equation \eqref{eq:b4-3.7} is exponentially stable if and only if the semigroup generated by $B + S$ is exponentially stable.
+	By Corollary~\ref{cor:b4-3.8} the solution semigroup corresponding to the retarded differential equation Eq.~\eqref{eq:b4-3.7} is exponentially stable if and only if the semigroup generated by $B + S$ is exponentially stable.
 	
 	But the semigroup generated by $B + S$ is the solution semigroup of the \enquote{undelayed} Cauchy problem
 	%% --
@@ -1456,7 +1465,7 @@ Clearly, \eqref{eq:b4-3.RCP} can be treated as a differential equation with corr
 More precisely, we obtain the following corollary.
 %% --
 \begin{corollary*}
-    The solution of \eqref{eq:b4-3.7} is exponentially stable for every $\tau > 0$ if and only if the solution of \eqref{eq:b4-3.8} is exponentially stable.
+    The solution of Eq.~\eqref{eq:b4-3.7} is exponentially stable for every $\tau > 0$ if and only if the solution of Eq.~\eqref{eq:b4-3.8} is exponentially stable.
 \end{corollary*}
 %% --	
 In other words, the corollary states that for these delay equations of \enquote{positive-type}, 
@@ -1491,7 +1500,7 @@ We consider the case where the Cauchy problem without delay
 is asymptotically stable, \ie we choose $0 < p < 1$ and $q + p < 0$.
 
 \textbf{Claim}.
-	\textit{For every} $0 < \lambda' < p$ \textit{there exists} $\tau > 0$ \textit{such that} $\eu^{\lambda't}$ \textit{is a solution of} $\eqref{eq:b4-3.9}_{\tau}$.
+	\textit{For every} $0 < \lambda' < p$ \textit{there exists} $\tau > 0$ \textit{such that} $\eu^{\lambda't}$ \textit{is a solution of} $Eq.~\eqref{eq:b4-3.9}_{\tau}$.
 
 Consider the map $g \colon \R\times(\R_{+}\setminus\{0\}) \to \R$ defined by $g(\lambda,\tau) \coloneqq p + \eu^{-\lambda\tau}q$.
 This function is continuous in $\lambda$ and $\tau$ and increasing in $\lambda$.
@@ -1505,8 +1514,8 @@ If we define $u(t) \coloneq \eu^{\lambda't}$ for $t \geq 0$ then the following h
 pu(t) + qu(t-\tau) = p\eu^{\lambda't} + q\eu^{\lambda't}\eu^{-\lambda'\tau} = (p+q\eu^{-\lambda'\tau})\eu^{\lambda't} = \lambda'\eu^{\lambda't} = \dot{u}(t) .
 \]
 %% --
-Thus $u$ is a solution of\/ $\eqref{eq:b4-3.9}_{\tau}$ which is exponentially increasing as $t \to \infty$. 
-In particular $\eqref{eq:b4-3.9}_{\tau}$ is not stable.
+Thus $u$ is a solution of\/ Eq.~\eqref{eq:b4-3.9}$_{\tau}$ which is exponentially increasing as $t \to \infty$ and 
+in particular is not stable.
 
 The precise region of stability in the scalar valued case is given, \eg in \textcite{hadeler:1978}  and  \textcite[p.107ff]{hale:1977}.
 
@@ -1514,7 +1523,7 @@ The precise region of stability in the scalar valued case is given, \eg in \text
 \begin{remark*}
 	Consider the case $F = C(L)$ ($L$ compact).
 	Then $E = C([-1,0] \times L)$ and $(T(t))_{t\geq0}$ is a positive semigroup on $C(K)$ where $K = [-1,0] \times L$ is compact. 
-	Thus, spectral bound and growth bound of the semigroup generator coincide (see \eqref{eq:b4-1.1}). 
+	Thus, spectral bound and growth bound of the semigroup generator coincide (see Eq.~\eqref{eq:b4-1.1}). 
 	This yields a statement analogous to Corollary~\ref{cor:b4-3.8} for uniform exponential stability.
 \end{remark*}
 %%% --
@@ -1550,9 +1559,9 @@ Then (3.11) takes the abstract form
 	u_0 &= \psi \in E .
 \end{align*}
 %% --
-It is well-known that $\tilde{B}$ generates a positive contraction semigroup and has compact resolvent (see Part-I, Chapter 1,  2.7). 
-The same is true for the operator $B  \coloneq  \tilde{B} - M_d$ (see Part-I, Chapter 2,  Theorem~1.29 and Theorem~1.30). 
-Thus, by the above results, the solution semigroup of \eqref{eq:b4-3.11} is positive and its asymptotic behavior can be investigated by the \enquote{undelayed} equation
+It is well-known that $\tilde{B}$ generates a positive contraction semigroup and has compact resolvent (see Part-I, Section~\ref{subsec:a1-2.7}). 
+The same is true for the operator $B  \coloneq  \tilde{B} - M_d$ (see Part-I, Theorems~\ref{thm:a2-1.29} and \ref{thm:a2-1.30}). 
+Thus, by the above results, the solution semigroup of Eq.~\eqref{eq:b4-3.11} is positive and its asymptotic behavior can be investigated by the \enquote{undelayed} equation
 %% --
 \[
 \dot{u}(t) = (\tilde{B} + M_h)u(t) , \text{ where } h \coloneq  b - d .
@@ -1560,12 +1569,12 @@ Thus, by the above results, the solution semigroup of \eqref{eq:b4-3.11} is posi
 %% --
 Let $h(x) < 0$ for all $x \in [0,1]$.
 Then $s(\tilde{B} + M_h) \leq \max\{h(x) \colon x \in [0,1]\} < 0$. 
-Hence the solutions of \eqref{eq:b4-3.11} are uniformly exponentially stable.
+Hence the solutions of Eq.~\eqref{eq:b4-3.11} are uniformly exponentially stable.
 \end{example}
 
 %\noindent
 \textbf{Interpretation}.\quad
-	The solution $u$ of \eqref{eq:b4-3.11} can be interpreted as the density of a population, distributed over an \enquote{area} $[0,1]$.
+	The solution $u$ of Eq.~\eqref{eq:b4-3.11} can be interpreted as the density of a population, distributed over an \enquote{area} $[0,1]$.
     \index{equation!population}
 	The operator $\frac{\partial^2}{\partial x^2}$ describes the internal migration of the population and the functions $b$ and $d$ are the \enquote{place specific} birth- resp.\ death rates of the population members. 
 	The time delay $1$ stands for the gestation period. 
@@ -1611,9 +1620,9 @@ It is easy to verify that $L$ is positive and bounded, and that $B$ is the gener
 \]
 %% --
 Furthermore $B$ has compact resolvent. 
-Define $\Phi f  \coloneq  L(f(-r))$ for $f \in E$ such that \eqref{eq:b4-3.12} can be written as retarded Cauchy problem \eqref{eq:b4-3.RCP}.
+Define $\Phi f  \coloneq  L(f(-r))$ for $f \in E$ such that Eq.~\eqref{eq:b4-3.12} can be written as retarded Cauchy problem \eqref{eq:b4-3.RCP}.
 
-As before (see Formula \eqref{eq:b4-3.3}) $\Phi_{\lambda}$ is defined by $\Phi_{\lambda}x  \coloneq  \Phi(e_{\lambda}\otimes x)$ for $x \in F$. 
+As before (see Formula Eq.~\eqref{eq:b4-3.3}) $\Phi_{\lambda}$ is defined by $\Phi_{\lambda}x  \coloneq  \Phi(e_{\lambda}\otimes x)$ for $x \in F$. 
 Gyllenberg and Heijmans have shown that $s(B + \Phi_{\lambda}) > -\infty$. 
 Thus we can apply Theorem~\ref{thm:b4-3.7} and obtain that $s(A) = \lambda$ if and only if\/ $\lambda = s(B + \Phi_{\lambda})$.
 \end{example}
@@ -1642,13 +1651,13 @@ The notion \emph{quasi-compact} for a single operator dates back to \textcite{eb
 Quasi-compactness for strongly continuous semigroups and its relationship to uniform ergodicity is investigated in \textcite{lin:1975}. 
 Proposition~\ref{prop:b4-2.9} is due to \textcite{voigt:1980}, a special case was proven by \textcite{vidav:1970}. 
 Corollaries~\ref{cor:b4-2.2} and \ref{cor:b4-2.11} can be found in   \textcite{greiner:1984}.
-The criterion stated in \eqref{eq:b4-2.12} is known as \emph{Doeblin's condition} (see, \eg \textcite{yosidakakutani:1941}). It is sufficient and
+The criterion stated in Eq.~\eqref{eq:b4-2.12} is known as \emph{Doeblin's condition} (see, \eg \textcite{yosidakakutani:1941}). It is sufficient and
 necessary for quasi-compactness of the Markov operators. 
 A new proof of this result is given in \textcite{lotz:1981}.
 
 \item The standard reference to retarded differential equations is \textcite{hale:1977}, where it is shown that the solutions of \eqref{eq:b4-3.RCP}, with values in a finite dimensional space $F$, yield an operator semigroup. 
 The extension to arbitrary Banach spaces $F$ was first made by \textcite{traviswebb:1974}. 
-\textcite{plant:1977} showed the translation property \eqref{eq:b4-3.T} for the solution semigroup. 
+\textcite{plant:1977} showed the translation property \eqref{eq:b4-3.T}for the solution semigroup. 
 Among the many papers pursuing this functional analytic investigation of partial differential equations with delay we quote \textcite{diblasioetal:1984} and \textcite{kunischschappacher:1983}.
 
 Our approach is essentially due to \textcite{kerscher:1986}. 
@@ -1656,7 +1665,7 @@ We show that the first derivative with an appropriate domain is the generator of
 Due to the translation property this semigroup yields the solutions of \eqref{eq:b4-3.RCP}.
 
 The aspect of positivity in \eqref{eq:b4-3.RCP} and its influence on the stability of the solutions was first studied in Section 4 of \textcite{kerschernagel:1984}. 
-In \textcite{kerscher:1986} this is pursued by showing how Theorem~\ref{thm:b4-3.7} in combination with the domination of semigroups (see Part-III, Chapter 2,  Section~4) can be used to derive many of the known \enquote{stability independent of the delay}- results (\eg  \textcite{cookeferreira:1983}).
+In \textcite{kerscher:1986} this is pursued by showing how Theorem~\ref{thm:b4-3.7} in combination with the domination of semigroups (see Part-III, Section~\ref{sec:c3-4} can be used to derive many of the known \enquote{stability independent of the delay}- results (\eg  \textcite{cookeferreira:1983}).
 \end{enumerate}
 %% --
 %% -- References 

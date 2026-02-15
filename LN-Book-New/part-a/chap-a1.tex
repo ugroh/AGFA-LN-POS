@@ -1,3 +1,4 @@
+% !TEX root = ../LN-Book-New.tex
 %% --
 \setcounter{section}{0}
 %% --
@@ -13,8 +14,8 @@ Rainer Nagel and Ulf Schlotterbeck
 }
 %% --
 Since the basic theory of one-parameter semigroups can be found in several excellent books (\eg \textcite{davies:1980}, \textcite{goldstein:1985a}, \textcite{pazy:1983} or \textcite{hillephillips:1957}), we do not want to give a self-contained introduction to this subject here.
-It may however be useful to fix our notation, to collect briefly some important definitions and results (Section 1), to present a list of \emph{standard examples} in Section~\ref{sec:a1-2} %(Section 2) 
-and to discuss standard constructions of new semigroups from a given one in Section~\ref{sec:a1-3} on p.\,\pageref{sec:a1-3}. %(Section 3).
+It may however be useful to fix our notation, to collect briefly some important definitions and results (ection~\ref{sec:a1-1}), to present a list of \emph{standard examples} in Section~\ref{sec:a1-2} %(Section 2) 
+and to discuss standard constructions of new semigroups from a given one in Section~\ref{sec:a1-3}.
 
 In the entire chapter we denote by $E$ a (real or) complex Banach space and consider one-parameter semigroups of bounded linear operators $T(t)$ on $E$.
 By this we understand a subset $\{T(t) \colon  t \in \R_{+}\}$ of\/ $\LE$, usually written as $(T(t))_{t\geq0}$, such that
@@ -42,7 +43,7 @@ A one-parameter semigroup $(T(t))_{t\geq0}$ is called \emph{strongly continuous}
 for every $f \in E$ and $t_{0} \geq 0$.
 \end{definition}
 %% --
-Clearly one defines in a similar way \emph{weakly continuous}, \resp \emph{uniformly continuous} (compare Part-I, Chapter 2,  Definition  1.19) semigroups, but since we concentrate on the strongly continuous case we agree on the following terminology.
+Clearly one defines in a similar way \emph{weakly continuous}, \resp \emph{uniformly continuous} (compare Definition~\ref{def:a2-1.19}) semigroups, but since we concentrate on the strongly continuous case we agree on the following terminology.
 %% --
 \begin{quote}
 If not stated otherwise, a \emph{semigroup} is a strongly continuous one-parameter semigroup of bounded linear operators. 
@@ -121,7 +122,7 @@ Each $T(t)$, $t > 0$, satisfies $\|T(t)\| = 2$ as can be seen by taking $f \colo
 Therefore $(T(t))_{t \geq 0}$ is a strongly continuous semigroup which is bounded, hence has $\omega_{0} = 0$, but the constant $M$ in Eq.~\eqref{eq:a1-1.1} on p.~\pageref{eq:a1-1.1} cannot be chosen to be $1$.
 
 \end{enumerate}
-\end{examples}
+\end{examples} 
 %% --
 The most important object associated to a strongly continuous semigroup $(T(t))_{t\geq0}$ is its \emph{generator} which is obtained as the (right) derivative of the map $t \mapsto T(t)$ at $t = 0$.
 \index{generator}
@@ -141,7 +142,7 @@ To every semigroup $(T(t))_{t \geq 0}$ there belongs an operator $(A,D(A))$, cal
 %% --
 Clearly, $D(A)$ is a linear subspace of\/ $E$ and $A$ is linear from $D(A)$ into $E$.
 Only in certain special cases (see Section~\ref{subsec:a1-2.1}) the generator
-is everywhere defined and therefore bounded (use Proposition~\ref{prop:a1-1.9}\,(ii)) on p.\,\pageref{prop:a1-1.9}). 
+is everywhere defined and therefore bounded (use Proposition~\ref{prop:a1-1.9}\,(ii). 
 In general, the precise extent of the domain $D(A)$ is essential for the characterization of the generator.
 But since the domain is canonically associated to the generator of a semigroup, we shall write in most cases $A$ instead of\/ $(A,D(A))$.
 As a first result we collect some information on the domain of the generator.
@@ -182,7 +183,7 @@ The domain $D(A)$ is dense in $E$.
 %% --
 \end{proposition}
 %% --
-The identity \eqref{eq:a1-1.2} is of great importance and shows how semigroups are related to certain Cauchy problems.
+The identity Eq.~\eqref{eq:a1-1.2} is of great importance and shows how semigroups are related to certain Cauchy problems.
 We state this explicitly in the following theorem.
 %% --
 \begin{theorem}\label{thm:a1-1.7}
@@ -190,7 +191,7 @@ Let $(A,D(A))$ be the generator of a strongly continuous semigroup $(T(t))_{t \g
 Then the \emph{abstract Cauchy problem}
 \index{abstract Cauchy problem}
 %% --
-\begin{equation}\label{eq:a1-1.5}
+\begin{equation}\label{eq:a1-1.5.ACP} \tag{ACP}
 \frac{d}{\dt}\xi(t) = A\xi(t), \quad \xi(0) = f_{0}
 \end{equation}
 %% --
@@ -198,7 +199,7 @@ has for every $f_{0} \in D(A)$ a unique solution $\xi \colon \R_{+} \to D(A)$ in
 In fact, this solution is given by $\xi(t) \coloneqq T(t)f_{0}$.
 \end{theorem}
 %% --
-For more on the relation of semigroups to abstract Cauchy problems we refer to Part-I, Chapter 2,  Section~1.
+For more on the relation of semigroups to abstract Cauchy problems we refer to Section~\ref{sec:a2-1}.
 Here we only point out that the above theorem implies that a semigroup is uniquely determined by its generator.
 
 While the generator is bounded only for uniformly continuous semigroups (see Section~\ref{sec:a1-2} below), it always enjoys a weaker but useful property.
@@ -206,9 +207,11 @@ While the generator is bounded only for uniformly continuous semigroups (see Sec
 \begin{definition}\label{def:a1-1.8}
 An operator $B$ with domain $D(B)$ on a Banach space $E$ is called \emph{closed} if\/ $D(B)$ endowed with the \emph{graph norm}
 %% --
-\[
-    \|f\|_{B} \coloneqq \|f\| + \|Bf\|
-\]
+%\[
+\begin{equation*}\label{eq:a1-1.8}
+	\|f\|_{B} \coloneqq \|f\| + \|Bf\|
+\end{equation*} 
+%\]
 %% --
 becomes a Banach space.
 Equivalently, $(B,D(B))$ is closed if and only if its \emph{graph} $\{(f,Bf) \colon f \in D(B)\}$ is closed in $E \times E$, \ie
@@ -236,7 +239,7 @@ Finally, we call a subset $D_{0}$ of\/ $D(B)$ a \emph{core} for $B$ if\/ $D_{0}$
 \index{core}
 This means that a closed operator is determined (via closure) by its restriction to a core in its domain.
 
-We now collect the fundamental topological properties of semigroup generators, their domains (see also Part-I, Chapter 2,  Corollary~1.34) and their resolvents.
+We now collect the fundamental topological properties of semigroup generators, their domains (see also Corollary~\ref{cor:a2-1.34} ) and their resolvents.
 \index{resolvent}
 %% --
 \begin{proposition}\label{prop:a1-1.9}
@@ -340,7 +343,7 @@ We refer to \textcite[Proposition~1.14]{davies:1980} for the details.
 %% --
 In this section we list and discuss briefly the most basic examples of semigroups together with their generators.
 These semigroups will reappear throughout this book and will be used to illustrate the theory.
-We start with the class of semigroups mentioned after Definition~\ref{def:a1-1.1} on p.~\pageref{def:a1-1.1}.
+We start with the class of semigroups mentioned after Definition~\ref{def:a1-1.1}.
 %% --
 \subsection{Uniformly Continuous Semigroups}\label{subsec:a1-2.1}%
 \index{standard example!uniformly continuous semigroup}
@@ -374,7 +377,7 @@ is invertible and every $f \in E$ is of the form
 \]
 %
 for some $g \in E$.
-But these elements belong to $D(A)$ by Equation~\eqref{eq:a1-1.3} on p.~\pageref{eq:a1-1.3}, hence $D(A) = E$.
+But these elements belong to $D(A)$ by Eq.~\eqref{eq:a1-1.3} on p.~\pageref{eq:a1-1.3}, hence $D(A) = E$.
 Since the generator $A$ is closed and everywhere defined, it must be bounded.
 Remark that bounded operators are always generators of groups, not just semigroups.
 Moreover, the growth bound $\omega_0$ satisfies $|\omega_0| \leq \|A\|$ in this situation.
@@ -591,7 +594,7 @@ in the case  $E = L^{p}(\mu)$.
 It is a nice exercise to characterize those multiplication operators which generate strongly continuous groups.
 
 We point out that the above results cover the cases of sequence spaces such as $c_{0}$ or $\ell^{p}$, $1 \leq p < \infty$.
-An abstract characterization of generators of multiplication semigroups will be given in Part-III, Chapter 2,  Theorem~5.13.
+An abstract characterization of generators of multiplication semigroups will be given in Part-III, Theorem~\ref{thm:c2-5.13}.
 %% --
 \subsection{Translation (Semi)Groups}\label{subsec:a1-2.4}%
 \index{standard example!translation semigroup}
@@ -814,7 +817,7 @@ Therefore $T(t)$ is a bounded operator on $C\left[ 0,1 \right]$ with
 \]
 %% --
 From the behavior of\/ $T(t)$ on the dense subspace $E_{0}$ it follows that $(T(t))_{t \geq 0}$ with $T(0) = \Id$ is a strongly continuous semigroup on $E$ and its generator $A$ coincides with $B$ on $E_{0}$.
-Finally, we observe that $E_{0}$ is a core for $(A,D(A))$ by Proposition~1.9(ii).
+Finally, we observe that $E_{0}$ is a core for $(A,D(A))$ by Proposition~\ref{prop:a1-1.9}\,(ii).
 
 Consequently, $(T(t))_{t \geq 0}$ is the semigroup generated by $B$.
 %% --
@@ -860,7 +863,7 @@ The generator, \ie the right derivative at $0$, of this semigroup is the multipl
 %% --
 for every $f \in \mathcal{S}(\R^{n})$.
 
-Applying the inverse Fourier transformation and observing that the topology of\/ $\mathcal{S}(\R^{n})$ is finer than the topology induced from $L^{p}(\R^{n})$, we obtain that $(T(t))_{t \geq 0}$ is a semigroup which is strongly continuous (use Remark~\ref{rem:a1-1.2}\,(iii) on p.\,\pageref{rem:a1-1.2}).
+Applying the inverse Fourier transformation and observing that the topology of\/ $\mathcal{S}(\R^{n})$ is finer than the topology induced from $L^{p}(\R^{n})$, we obtain that $(T(t))_{t \geq 0}$ is a semigroup which is strongly continuous (use Remark~\ref{rem:a1-1.2}\,(iii)).
 
 Its generator $A$ coincides with
 %% --
@@ -884,8 +887,7 @@ For the analogous discussion of the unitary group on $L^{2}(\R^{n})$ generated b
 %% --
 we refer to Section IX.7 in \textcite{reedsimon:1975}. 
 
-Examples analogous to \ref{subsec:a1-2.7} are valid in $L^{p}\left[ 0,1 \right]$, \resp to 
-\ref{subsec:a1-2.8} in $C_{0}(\R^{n})$.
+Examples analogous to Section~\ref{subsec:a1-2.7} are valid in $L^{p}\left[ 0,1 \right]$, \resp to Section~\ref{subsec:a1-2.8} in $C_{0}(\R^{n})$.
 %% --
 \section{Standard Constructions}\label{sec:a1-3}%
 \index{standard construction}
@@ -932,20 +934,25 @@ However, by using this procedure certain constants associated with $(T(t))_{t \g
 For example, by this rescaling we may suppose, in many cases without loss of generality, that the growth bound $\omega_{0}$ is zero.
 
 Another application is the following.
-For $\lambda \in \C$ and $S(t) \coloneqq \exp(-\lambda t)T(t)$ the formulas \eqref{eq:a1-1.3} and \eqref{eq:a1-1.4} yield:
+For $\lambda \in \C$ and $S(t) \coloneqq \exp(-\lambda t)T(t)$ the formulas Eq.~\eqref{eq:a1-1.3} and Eq.~\eqref{eq:a1-1.4} on p.~\pageref{eq:a1-1.4} yield:
 %% --
-\begin{align*}
-     \eu^{-\lambda t}T(t)f - f &= (A-\lambda) \int_{0}^{t}  \eu^{-\lambda s}T(s)f \ds \quad\text{ or }  \\
+\begin{equation}\label{eq:a1-3.1}
+\begin{split}
+     \eu^{-\lambda t}T(t)f - f &= (A-\lambda) \int_{0}^{t}  \eu^{-\lambda s}T(s)f \ds \\
+     \text{ or }  \\
     ( \eu^{\lambda t}-T(t))f &= (\lambda-A) \int_{0}^{t}  \eu^{\lambda(t-s)}T(s)f \ds \quad \text{for } f \in E,  
-\end{align*}
+\end{split}
+\end{equation}
 %% --
 and
 %% --
-\begin{align*}
-     \eu^{-\lambda t}T(t)f - f &= \int_{0}^{t}  \eu^{-\lambda s}T(s)(A-\lambda)f \ds  \quad\text{or}  \\
-    \notag \\
+\begin{equation}\label{eq:a1-3.2}
+\begin{split}
+     \eu^{-\lambda t}T(t)f - f &= \int_{0}^{t}  \eu^{-\lambda s}T(s)(A-\lambda)f \ds  \\
+     \text{or}  \\
     ( \eu^{\lambda t} - T(t))f &= \int_{0}^{t}  \eu^{\lambda(t-s)}T(s)(\lambda-A)f \ds \quad \text{for } f \in D(A).  
-\end{align*}
+\end{split}
+\end{equation}
 %% --
 %% --
 \subsection{The Subspace Semigroup}\label{subsec:a1-3.3}%
@@ -1007,7 +1014,7 @@ In particular we point out that for every $\hat{f} \in D(A_{/})$ there exist rep
 \begin{example*}\label{ex:a1-3.1}%
 \index{standard example!translation semigroup}
 %%
-We start with the Banach space $E = L^{1}(\R)$ and the translation semigroup $(T(t))_{t \geq 0}$ where $T(t)f(x) \coloneqq f(x+t)$ (see Example 2.4).
+We start with the Banach space $E = L^{1}(\R)$ and the translation semigroup $(T(t))_{t \geq 0}$ where $T(t)f(x) \coloneqq f(x+t)$ (see Example~\ref{subsec:a1-2.4}).
 Then $L^{1}((-\infty,1])$ can be identified with the closed, $(T(t))$-invariant subspace
 %% --
 \[
@@ -1022,7 +1029,7 @@ There we obtain the subspace semigroup
 %% --
 where $f \in L^{1}((-\infty,1])$, $-\infty < x \leq 1$ and $t \geq 0$.
 
-By 2.4 and 3.2 its generator is
+By Section~\ref{subsec:a1-2.4} and Section~\ref{subsec:a1-3.2} its generator is
 %% --
 \[
     A_{|}f \coloneqq f'
@@ -1038,7 +1045,7 @@ Next we identify $L^{1}(\left[ 0,1 \right])$ with the quotient space $L^{1}((-\i
 %% --
 Again $I$ is invariant for the restricted semigroup $(T(t)_{|})$ and the
 %% --
-quotient semigroup $(T(t)_{|_{/}})$ on $L^{1}(\left[ 0,1 \right])$ is the nilpotent translation semigroup as in Example 2.6.
+quotient semigroup $(T(t)_{|_{/}})$ on $L^{1}(\left[ 0,1 \right])$ is the nilpotent translation semigroup as in Section~\ref{subsec:a1-2.6}.
 In particular it follows that the domain of its generator is
 %% --
 \[
@@ -1055,7 +1062,7 @@ The adjoint operators $(T(t)')_{t \geq 0}$ of a strongly continuous semigroup $(
 %% --
 \begin{example*}\label{ex:a1-3.2}
 %% --
-Take the translation operators $T(t)f(x) = f(x+t)$ on $E = L^{1}(\R)$ (see Example 2.4) and their adjoints
+Take the translation operators $T(t)f(x) = f(x+t)$ on $E = L^{1}(\R)$ (see Section~\ref{subsec:a1-2.4}) and their adjoints
 %% --
 \[
     T(t)'f(x) = f(x-t)
@@ -1188,7 +1195,7 @@ In particular,
 %% --
 \[
     \epsilon > \left\lvert f'_f(0) - \frac{1}{s}(\xi_f(s)-\xi_f(0)) \right\rvert 
-    = \left\lvert \left\langle f,A'\phi - \frac{1}{s}(T(s)'\phi-\phi) \right\langle \right\rvert ,
+    = \left\lvert \left\langle f,A'\phi - \frac{1}{s}(T(s)'\phi-\phi) \right\rangle \right\rvert ,
 \]
 %% --
 hence
@@ -1233,7 +1240,7 @@ Since $E_{1}$ is invariant under $(T(t))_{t\geq 0}$, apply Proposition~\ref{prop
 The results of Proposition~\ref{prop:a1-1.6} imply that $T_{1}(t) \in \L{E_{1}}$ and $\|T_{1}(t)f-f\|_{1} \to 0$ as $t \to 0$ for every $f \in E_{1}$.
 Thus $(T_{1}(t))_{t\geq 0}$ is a strongly continuous semigroup on $E_{1}$ and has a generator denoted by $(A_{1},D(A_{1}))$.
 
-Using \ref{prop:a1-1.6} again we see that $A_{1}$ is the restriction of\/ $A$ to $E_{1}$ with maximal domain, \ie
+Using Proposition~\ref{prop:a1-1.6} again we see that $A_{1}$ is the restriction of\/ $A$ to $E_{1}$ with maximal domain, \ie
 %% --
 $D(A_{1}) = \{f \in E_{1} \colon Af \in E_{1}\} = D(A^{2})$ and
 $A_{1}f = Af$ for every $f \in D(A_{1})$.
@@ -1244,43 +1251,7 @@ It is now possible to repeat this construction in order to obtain Banach spaces 
 \includegraphics[width=0.8\textwidth]{./tikz-images/tikz-chap-a1-a.pdf}
 \end{center}
 %% --
-% \scalebox{0.95}{
-% \begin{tikzpicture}[>=stealth]
-%     % Knoten direkt definieren
-%     \node (E1) at (0,6) {$E$};
-%     \node (E2) at (0,3) {$E_1$};
-%     \node (E3) at (0,0) {$E_2$};
-%     \node (E4) at (0,-3) {$\ldots$};
-%     
-%     \node (F1) at (6,6) {$E$};
-%     \node (F2) at (6,3) {$E_1 = D(A)$};
-%     \node (F3) at (6,0) {$E_2 = D(A_1) = D(A^2)$};
-%     \node (F4) at (6,-3) {$\ldots$};
-%     
-%     % Horizontale Pfeile
-%     \draw[thick,->] (E1) -- node[above] {$T(t)$} (F1);
-%     \draw[thick,->] (E2) -- node[above] {$T_1(t)$} (F2);
-%     \draw[thick,->] (E3) -- node[above] {$T_2(t)$} (F3);
-%     
-%     % Vertikale Pfeile links
-%     \draw[thick,->] (E2) -- node[left] {$i_1$} (E1);
-%     \draw[thick,->] (E3) -- node[left] {$i_2$} (E2);
-%     \draw[thick,->] (E4) -- node[left] {$i_3$} (E3);
-%     
-%     % Vertikale Pfeile rechts
-%     \draw[thick,->] (F2) -- node[right] {$i_1$} (F1);
-%     \draw[thick,->] (F3) -- node[right] {$i_2$} (F2);
-%     \draw[thick,->] (F4) -- node[right] {$i_3$} (F3);
-%     
-%     % Diagonale Pfeile
-%     \draw[thick,->] (E2) -- node[above, sloped] {$A$} (F1);
-%     \draw[thick,->] (E3) -- node[above, sloped] {$A_1$} (F2);
-%     \draw[thick,->] (E4) -- node[above, sloped] {$A_1$} (F3);
-% \end{tikzpicture}
-% }
-%\end{center}
-%% --
-For the translation semigroup on $L^{p}(\R)$ (see 2.3) the above construction leads to the usual \emph{Sobolev spaces}.
+For the translation semigroup on $L^{p}(\R)$ (see Section~\ref{subsec:a1-2.4}) the above construction leads to the usual \emph{Sobolev spaces}.
 Therefore we might call $E_{n}$ the \emph{n-th Sobolev space} and $(T_{n}(t))_{t \geq 0}$ the \emph{n-th Sobolev semigroup} associated to $E$ and $(T(t))_{t \geq 0}$.
 %% --
 \begin{remarks*}\label{rem:a1-19.1}
@@ -1294,28 +1265,6 @@ In addition, the following diagram commutes.
 %% -- tikz
 \begin{center}
 \includegraphics[width=0.6\textwidth]{./tikz-images/tikz-chap-a1-b.pdf}
-% \begin{tikzpicture}[
-%     >=stealth,
-%     every node/.style={transform shape}
-% ]
-%     % Matrix mit optimiertem Spacing
-%     \matrix (m) [
-%         matrix of math nodes,
-%         row sep=3em,    
-%         column sep=4em,
-%         nodes={anchor=center}
-%     ] {
-%         E    & & E \\
-%         E_{1}  & & E_{1} \\
-%     };
-%     % Pfeile als Pfad mit verbesserter Positionierung
-%     \path[->]
-%         (m-1-1) edge node[above] {$T(t)$} (m-1-3)
-%         (m-2-1) edge node[above] {$T_{1}(t)$} (m-2-3)
-%         (m-1-1) edge node[left] {$\lambda-A$} (m-2-1)
-%         (m-1-3) edge node[right] {$R(\lambda,A)$} (m-2-3);
-%     
-% \end{tikzpicture}
 \end{center}
 %% 
 Therefore all Sobolev semigroups $(E_{n}, T_{n}(t))_{t \geq 0}$, $n \in \N$, are isomorphic.
@@ -1343,7 +1292,7 @@ In particular such a method can serve to convert an approximate eigenvector of a
 Occasionally we will need such a construction and refer to Section V.1 of \textcite{schaefer:1974}. 
 
 If we try to adapt this construction to strongly continuous semigroups we encounter the difficulty that the semigroup extended to the larger space will not remain strongly continuous.
-An idea already used in \ref{subsec:a1-3.4} will help to overcome this difficulty.
+An idea already used in Section\ref{subsec:a1-3.4} will help to overcome this difficulty.
 
 Let $\mathcal{T} = (T(t))_{t \geq 0}$ be a strongly continuous semigroup on the Banach space $E$.
 Denote by $m(E)$ the Banach space of all bounded $E$-valued sequences endowed with the norm
@@ -1358,7 +1307,7 @@ It is clear that every $T(t)$ extends canonically to a bounded linear operator
     \hat{T}(t)(f_{n}) \coloneqq (T(t)f_{n})
 \]
 %% --
-on $m(E)$, but the semigroup $(\hat{T}(t))_{t \geq 0}$ is strongly continuous if and only if\/ $T$ has a bounded generator.
+on $m(E)$, but the semigroup $(\hat{T}(t))_{t \geq 0}$ is strongly continuous if and only if\/ $\TT$ has a bounded generator.
 Therefore we restrict our attention to the closed, $(\hat{T}(t))$-invariant subspace
 %% --
 \[
@@ -1408,11 +1357,11 @@ We call the quotient spaces
     E_{\mathcal{F}}^{T} \coloneqq m^{\mathcal{T}}(E)/ (c_{\mathcal{F}}(E)\cap m^{\mathcal{T}}(E))
 \]
 %% --
-the \emph{$\mathcal{F}$-product of\/ $E$} and the \emph{$ \mathcal{F} $-product of\/ $E$ with respect to the semigroup $T$}, respectively.
+the \emph{$\mathcal{F}$-product of\/ $E$} and the \emph{$ \mathcal{F} $-product of\/ $E$ with respect to the semigroup $\TT$}, respectively.
 \index{F-product@$\mathcal{F}$-product}
 
 Thus $E_{\mathcal{F}}^{T}$ can be considered as a closed linear subspace of\/ $E_{\mathcal{F}}$. 
-We have $E_{\mathcal{F}}^{T} = E_{\mathcal{F}}$ if (and only if) $T$ has a bounded generator.
+We have $E_{\mathcal{F}}^{T} = E_{\mathcal{F}}$ if (and only if) $\TT$ has a bounded generator.
 
 The canonical quotient norm on $E_{\mathcal{F}}$ is given by
 %% --
@@ -1420,7 +1369,7 @@ The canonical quotient norm on $E_{\mathcal{F}}$ is given by
     \|(f_{n}) + c_{\mathcal{F}}(E)\| = \mathcal{F}\text{-}\lim \sup \|f_{n}\| .
 \]
 %% --
-We can apply Subsection~\ref{subsec:a1-3.4} in order to define the \emph{$\mathcal{F}$-product semigroup} $(T_{\mathcal{F}}(t))_{t \geq 0}$ on $E_{\mathcal{F}}^{T}$ by
+We can apply Section~\ref{subsec:a1-3.4} in order to define the \emph{$\mathcal{F}$-product semigroup} $(T_{\mathcal{F}}(t))_{t \geq 0}$ on $E_{\mathcal{F}}^{T}$ by
 %% --
 \[
     T_{\mathcal{F}}(t)((f_{n}) + c_{\mathcal{F}}(E)) \coloneqq (T(t)f_{n}) 
@@ -1428,7 +1377,7 @@ We can apply Subsection~\ref{subsec:a1-3.4} in order to define the \emph{$\mathc
 \]
 %% --
 Thus $T_{\mathcal{F}}(t)$ is the restriction of\/ $T(t)_{F}$ where $T(t)_{F}$ denotes the canonical extension of\/ $T(t)$ to the $\mathcal{F}$-product $E_{\mathcal{F}}$. 
-But note that $(T(t)_{F})_{t \geq 0}$ is not strongly continuous unless $T$ has a bounded generator.
+But note that $(T(t)_{F})_{t \geq 0}$ is not strongly continuous unless $\TT$ has a bounded generator.
 
 With the canonical injection $j \colon f \mapsto (f,f,f,\ldots) + c_{\mathcal{F}}(E)$ from $E$ into $E_{\mathcal{F}}^{T}$ the operators $T_{\mathcal{F}}(t)$ are extensions of\/ $T(t)$ satisfying $\|T_{\mathcal{F}}(t)\| = \|T(t)\|$. The basic facts about the generator $(A_{\mathcal{F}},D(A_{\mathcal{F}}))$ of\/ $(T_{\mathcal{F}}(t))_{t \geq 0}$ follow from 3.3 and are collected in the following proposition.
 %% --
@@ -1447,8 +1396,7 @@ $A_{\mathcal{F}}((f_{n}) + c_{\mathcal{F}}(E)) = (Af_{n}) + c_{\mathcal{F}}(E)$.
 %% --
 In case $A$ is a bounded operator then $D(A_{\mathcal{F}}) = E_{\mathcal{F}}^{T} = E_{\mathcal{F}}$ and $A_{\mathcal{F}}$ is the canonical extension of\/ $A$ to $E_{\mathcal{F}}$.
 
-We will show in Part-I, Chapter 3,  Section~4.2 that the above construction preserves and even improves many spectral properties of the semigroup and its generator.
-
+We will show in Section~\ref{subsec:a3-4.5} that the above construction preserves and even improves many spectral properties of the semigroup and its generator.
 %% --
 \subsection{The Tensor Product Semigroup}\label{subsec:a1-3.8}%
 \index{standard construction!tensor product semigroup}
@@ -1596,8 +1544,7 @@ $R(\mu,A)R(\mu,B) = R(\mu,B)R(\mu,A)$ for all $\mu \in \rho(A) \cap \rho(B)$.
 %% --
 In that case $U(t) = S(t)T(t)$ $(t \geq 0)$ defines a semigroup $(U(t))_{t\geq 0}$.
 Using %Proposition~\ref{prop:a1-1.9}\,(ii).
-Proposition~\ref{prop:a1-1.9}\,(ii) on p.~\pageref{prop:a1-1.9} 
-one easily shows that $D_{0} \coloneqq D(A) \cap D(B)$ is a core for its generator $C$ and $Cf = Af + Bf$ for all $f \in D_{0}$.
+Proposition~\ref{prop:a1-1.9}\,(ii) one easily shows that $D_{0} \coloneqq D(A) \cap D(B)$ is a core for its generator $C$ and $Cf = Af + Bf$ for all $f \in D_{0}$.
 
 \section*{Notes}
 \addcontentsline{toc}{section}{Notes}
