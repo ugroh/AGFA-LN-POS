@@ -20,8 +20,8 @@ Most of the examples are motivated by biological models.
 \vspace{.5cm}
 \newline
 %% --
-In Section~1 of Part-II, Chapter 4 we have seen that the growth bound of a positive semigroup on spaces $C_{0}(X)$ coincides with the spectral bound of the generator $A$, which is --- for positive semigroups --- an element of the spectrum of\/ $A$.
-Now, using the results of Part-I, Chapter 3,  Part-I, Chapter 4,  Part-II, Section~\ref{sec:b4-1} and Part-III, Chapter 3,  it can be shown that this is valid for positive semigroups on AM- , AL- and Hilbert spaces.
+In Section~1 of Part-II, Chapter~\ref{chap:b4} we have seen that the growth bound of a positive semigroup on spaces $C_{0}(X)$ coincides with the spectral bound of the generator $A$, which is --- for positive semigroups --- an element of the spectrum of\/ $A$.
+Now, using the results of Part-I, Chapter 3,  Part-I, Chapter 4,  Part-II, Section~\ref{sec:b4-1} and Chapter~\ref{chap:c4},  it can be shown that this is valid for positive semigroups on AM- , AL- and Hilbert spaces.
 
 \begin{theorem}\label{thm:c4-1.1}
 Let $A$ be the generator of a positive semigroup $(T(t))_{t \geq 0}$ on a Banach lattice $E$ such that $s(A) > -\infty$.
@@ -50,8 +50,8 @@ Thus we have to show $s(A) = \omega_{0}(A)$.
 \begin{enumerate}[\upshape (i), wide, labelindent=.5em]
 \item 
 %\ref{thm:c4-1.1-1} 
-For AM-spaces the proof given in Section 1 of Part-II, Chapter 4 works (cf.\ Part-II, Remark~\ref{rem:b4-1.5}.).
-Since for positive semigroups we always have $\|R(\lambda,A)\| \leq \|R(\Re(\lambda), A)\|$ ($\Re(\lambda) > s(A)$) (see Part-III, Chapter 3,  Corollar~1.3), the assertion for $L^{2}$-spaces follows from Part-I, Chapter 3,  Corollary~7.11.
+For AM-spaces the proof given in Section 1 of Part-II, Chapter~\ref{chap:b4} works (cf.\ Part-II, Remark~\ref{rem:b4-1.5}.).
+Since for positive semigroups we always have $\|R(\lambda,A)\| \leq \|R(\Re(\lambda), A)\|$ ($\Re(\lambda) > s(A)$) (see   Corollar~\ref{cor:c3-1.3}), the assertion for $L^{2}$-spaces follows from Part-I, Chapter 3,  Corollary~7.11.
 If\/ $E$ is an $L^{1}$-space the assumptions of  \ref{thm:c4-1.1-3} are satisfied.
 
 \item 
@@ -243,7 +243,7 @@ $0 \notin \text{P}\sigma(A)$ (\ie  $\Kern{A} = \{0\}$).
 
 \ref{thm:c4-1.5-2} $\Rightarrow$ \ref{thm:c4-1.5-1}:  In case $\omega_{0}(A) < 0$ one trivially has \ref{thm:c4-1.5-1}.
 Therefore we can assume $\omega_{0}(A) = 0$.
-By Corollary~2.13 and Proposition~2.9 of Part-III, Chapter 3,  we have $\sigma(A) \cap \im\R = \{0\}$.
+By Corollary~\ref{cor:c3-2.13} and Proposition~\ref{prop:c3-2.9},  we have $\sigma(A) \cap \im\R = \{0\}$.
 Since the spectral mapping theorem holds (cf.\ Theorem~6.6 and Theorem~6.3 of Part-I, Chapter 3) we have
 %% --
 \begin{equation}\label{eq:c4-1.5}
@@ -281,7 +281,7 @@ That $\Kern\Delta = \{0\}$ can be deduced from the following two facts.
 \begin{enumerate}[\upshape (i), wide, labelindent=.5em]
 \item 
 Since the semigroup consists of contractions and since the norm is strictly monotone on $E_{+}$, it follows that $\Kern\Delta$ is a sublattice.
-Thus irreducibility of the semigroup (see Part-I, Chapter 1,  2.8 and Part-III, Chapter 3,  Example~3.4\,(i)) implies that $\dim \Kern\Delta \leq 1$.
+Thus irreducibility of the semigroup (see Part-I, Chapter 1, 2.8 and Example~\ref{ex:c3-3.4}\,(i)) implies that $\dim \Kern\Delta \leq 1$.
 
 \item 
 The semigroup commutes with the translations on $\R^{n}$, hence $\Kern\Delta$ is invariant under translations.
@@ -549,7 +549,7 @@ In this section we mainly consider the case $s(A) = 0 \in P{\sigma}(A)$ and show
 
 \index{semigroup!quasi-compact semigroup}
 We begin our discussion by considering quasi-compact semigroups.
-Using the general results presented in Section 2 of Part-II, Chapter 4 and the spectral theoretical result of Part-III, Chapter 3 we obtain the following.
+Using the general results presented in Section 2 of Part-II, Chapter~\ref{chap:b4} and the spectral theoretical result of Chapter~\ref{chap:c3} we obtain the following.
 
 \begin{theorem}\label{thm:c4-2.1}
 Let $(T(t))_{t \geq 0}$ be a positive semigroup on a Banach lattice $E$ which is bounded, quasi-compact and has spectral bound zero.
@@ -563,9 +563,9 @@ Then there exists a positive projection $P$ of finite rank and suitable constant
 \end{theorem}
 %% --
 \begin{proof}
-By Theorem 2.10 of Part-II, Chapter 4 the set $\{\lambda \in \sigma(A) \colon \Re(\lambda) = 0\}$ is finite and by Theorem 2.10 of Part-3, Chapter 3  even imaginary additively cyclic.
+By Theorem 2.10 of Part-II, Chapter~\ref{chap:b4} the set $\{\lambda \in \sigma(A) \colon \Re(\lambda) = 0\}$ is finite and by Theorem 2.10 of Part-3, Chapter 3  even imaginary additively cyclic.
 Thus it contains only the value $s(A) = 0$.
-Then by Part-II, Chapter 4, \,(2.5) we have
+Then by Part-II, Chapter~\ref{chap:b4}, \,(2.5) we have
 %% --
 \begin{equation*}\label{eq:c4-2.1-kgk}
 T(t) = \sum_{j=0}^{k-1} \frac{1}{j!} \cdot t^{j}A^{j}\circ P + R(t) \quad (t \geq 0),
@@ -1014,7 +1014,7 @@ In particular, if\/ $0$ is not the only point in the boundary spectrum $\sigma(A
 \sigma(A)\cap \im\R = P{\sigma}(A)\cap \im\R = \im\alpha\Z \text{ for some } 0 < \alpha \in \R.
 \end{equation*}
 %% --
-Therefore the assumptions of Theorem~\ref{thm:c3-3.8} are satisfied and formula Part-III, Chapter 3, \,(3.13) implies
+Therefore the assumptions of Theorem~\ref{thm:c3-3.8} are satisfied and formula \eqref{eq:c3-3.13} on p.~\pageref{eq:c3-3.13} implies
 %% --
 \begin{equation}\label{eq:c4-2.10}
 \rho(A) = \rho(A) + \im\alpha\Z \quad \text{and} \quad \|R(\lambda,A)\| = \|R(\lambda+\im\alpha k,A)\|
@@ -1968,7 +1968,7 @@ The second equation fixes the initial state of the population and the last equat
 \item%\label{se:c4-notes-1}
 Coincidence of spectral and growth bounds for $L^{1}$-spaces was proven by \textcite{derndinger:1980}.
 For $L^{2}$-spaces the result is due to \textcite{greinernagel:1983}.
-For the result on AM-spaces we refer to Remark~1.1 of Part-II, Chapter 4 and the corresponding notes.
+For the result on AM-spaces we refer to Remark~1.1 of Part-II, Chapter~\ref{chap:b4} and the corresponding notes.
 
 Interpolation techniques in order to obtain results on arbitrary $L^{p}$-spaces were used by \textcite{voigt:1985}.
 He proved Corollary \ref{cor:c4-1.2}\,\ref{cor:c4-1.2-1}.
@@ -2002,7 +2002,7 @@ The occurring phenomena are conjectured by \textcite{diekmannetal:1984}.
 
 \item% \label{se:c4-notes-3}
 One of the starting points in the study of retarded equations was the book of \textcite{bellmancooke:1963} on differential-difference equations.
-Initiated by Hale's semigroup approach (see Part-II, Chapter 4,  Sec.3) to retarded differential equations, \textcite{dysonvillella:1979}, \textcite{villellabressan:1985} and \textcite{webb:1977} used such methods to investigate retarded equations.
+Initiated by Hale's semigroup approach (see Part-II, Chapter~\ref{chap:b4},  Sec.3) to retarded differential equations, \textcite{dysonvillella:1979}, \textcite{villellabressan:1985} and \textcite{webb:1977} used such methods to investigate retarded equations.
 These similarly apply to Volterra equations, see \textcite{miller:1974}, \textcite{webb:1977} and to 
 \index{equation!population}
 \index{population!equation}
