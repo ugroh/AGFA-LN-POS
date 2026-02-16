@@ -64,7 +64,7 @@ Let $j \colon C(K) = E_{h} \to E$ be the canonical inclusion.
 The spectral radii of\/ $T(\tau) = j \circ T_{0}$ and $T_{0} \circ j$ coincide and are given by $\rho \coloneq  \exp(\tau \omega_{0}(A))$.
 By the Krein-Rutman Theorem (cf.\ the Corollary to Theorem~2.6 in the Appendix of \textcite{schaefer:1966}) there exists $0 < \mu \in C(K)'$ such that $(T_{0} \circ j)'\mu = \rho \cdot \mu$.
 Then $\phi \coloneq  T_{0}'\mu$ is an eigenvector of\/ $(j \circ T_{0})'$ with eigenvalue $\rho$.
-Thus $\rho \in R\sigma(T(\tau))$ and hence $s(A) \geq \omega_{0}(A)$ by Part-I, Chapter 3,  Theorem~6.2.
+Thus $\rho \in R\sigma(T(\tau))$ and hence $s(A) \geq \omega_{0}(A)$ by Part-I, Theorem~\ref{thm:a3-6.2}.
 
 \item
 %\ref{thm:c4-1.1-3} 
@@ -78,7 +78,7 @@ For $\alpha > s(A)$, $r > \tau$, $f \in E_{+}$ we have
 %% --
 (the last inequality follows from Theorem~\ref{thm:c3-1.2}).
 \index{Datko's theorem}
-Now Datko's theorem (Part-I, Chapter 4,  Theorem~1.11) implies $\omega_{0}(A) < \alpha$.
+Now Datko's theorem (Part-I, Theorem~\ref{thm:a4-1.11}) implies $\omega_{0}(A) < \alpha$.
 \end{enumerate}
 \end{proof}
 For $L^{p}$-spaces, $p \neq 1$, $2$, $\infty$, it is not known whether spectral- and growth bound of an arbitrary positive semigroup coincide.
@@ -239,7 +239,7 @@ $0 \notin \text{P}\sigma(A)$ (\ie  $\Kern{A} = \{0\}$).
 \end{theorem}
 %% --
 \begin{proof}
-\ref{thm:c4-1.5-1} $\Rightarrow$ \ref{thm:c4-1.5-2} was proven in Part-I, Chapter 4,  Theorem~1.12 in a more general setting.
+\ref{thm:c4-1.5-1} $\Rightarrow$ \ref{thm:c4-1.5-2} was proven in Part-I, Theorem~\ref{thm:a4-1.12} in a more general setting.
 
 \ref{thm:c4-1.5-2} $\Rightarrow$ \ref{thm:c4-1.5-1}:  In case $\omega_{0}(A) < 0$ one trivially has \ref{thm:c4-1.5-1}.
 Therefore we can assume $\omega_{0}(A) = 0$.
@@ -260,14 +260,14 @@ Thus given $g \in \Image{\Id - T(1)}$ then $g = f - T(1)f$ for some $f \in E$ he
 The second assertion of \ref{eq:c4-1.5} ensures that $\Image{\Id - T(1)}$ is dense in $E$.
 Since the semigroup is bounded, we have $\lim_{t \to \infty} \|T(t)f\| = 0$ for every $f \in \overline{\Image{\Id - T(1)}} = E$, \ie  $(T(t))$ is uniformly stable.
 
-\ref{thm:c4-1.5-1} $\Rightarrow$ \ref{thm:c4-1.5-3} is always true and follows from Part-I, Chapter 4,  Theorem~1.13.
+\ref{thm:c4-1.5-1} $\Rightarrow$ \ref{thm:c4-1.5-3} is always true and follows from Part-I, Theorem~\ref{thm:a4-1.13}.
 
 \ref{thm:c4-1.5-3} $\Rightarrow$ \ref{thm:c4-1.5-2}:  
 \index{adjoint semigroup}
 \index{semigroup!adjoint}
 The adjoint semigroup $(T(t)^*)_{t \geq 0}$ is eventually norm-continuous and boun\-ded and we have $R{\sigma}(A^*) = P{\sigma}(A^{**}) = P{\sigma}(A)$.
 Thus the implication \enquote{\ref{thm:c4-1.5-2} $\Rightarrow$ \ref{thm:c4-1.5-1}} can be applied and we obtain that $(T(t)^*)_{t \geq 0}$ is stable.
-Then Part-I, Chapter 4,  Theorem~1.13 yields $0 \notin P{\sigma}(A^*) = R{\sigma}(A)$.
+Then Part-I, Theorem~\ref{thm:a4-1.13} yields $0 \notin P{\sigma}(A^*) = R{\sigma}(A)$.
 \end{proof}
 % --
 As an application of Theorem~\ref{thm:c4-1.5}  we consider the Laplacian as generator on $L^{p}(\R^{n})$, $1 \leq p < \infty$, (see Part-I, Chapter 1,  2.8).
@@ -342,15 +342,15 @@ Then $(T(t))_{t\geq 0}$ is uniformly stable if and only if it is weakly uniforml
 %% --
 \begin{proof}
 If\/ $(T(t))_{t\geq 0}$ is weakly uniformly stable, then $(T(t))$ is bounded by the Uniform Boundedness Principle.
-Using the weak version of Part-I, Chapter 4,  Theorem~1.14, 
+Using the weak version of Part-I, Theorem~\ref{thm:a4-1.14}, 
 $\int_{0}^{\infty} \langle T(t)f,\phi \rangle \, \dt$ exists for every $f \in (\Image{A})_{+}$ and $\phi \in E'_{+}$.
 It follows that the net $(\int_{0}^{r} T(t)f \, \dt)_{r\geq 0}$ is weakly Cauchy.
 Hence $\sigma(E',E)$-$\lim_{r \to \infty} \int_{0}^{r} T(t)f \, \dt$ exists for every $f \in (\Image{A})_{+}$.
 Since the net is monotone, one obtains convergence in norm by Dini's Theorem (see \textcite [II. Theorem~5.9]{schaefer:1974}).
-Now uniform stability follows from Part-I, Chapter 4,  Theorem 1.16.
+Now uniform stability follows from Part-I, Theorem~\ref{thm:a4-1.16}.
 \end{proof}
 %% --
-In Part-I, Chapter 4,  Theorem 1.13 we have seen that a generator $A$ of a stable semigroup satisfies necessarily $s(A) \leq 0$, $\Re(\lambda) < 0$ for all $\lambda \in P{\sigma}(A) \cup R{\sigma}(A)$ and from $\lambda R(\lambda,A)f = R(\lambda,A)Af + f$ we conclude that $\lim_{\lambda \to 0+} R(\lambda,A)g$ exists for all $g \in \Image{A}$. 
+In Part-I, Theorem~\ref{thm:a4-1.13} we have seen that a generator $A$ of a stable semigroup satisfies necessarily $s(A) \leq 0$, $\Re(\lambda) < 0$ for all $\lambda \in P{\sigma}(A) \cup R{\sigma}(A)$ and from $\lambda R(\lambda,A)f = R(\lambda,A)Af + f$ we conclude that $\lim_{\lambda \to 0+} R(\lambda,A)g$ exists for all $g \in \Image{A}$. 
 For positive semigroups similar properties are even sufficient for stability.
 
 \begin{lemma}\label{lem:c4-1.8}
@@ -383,7 +383,7 @@ If there is a subset $D \subset E_{+}$ which is total in $E$ such that $\lim_{\l
 %% --
 \begin{proof}
 By Lemma \ref{lem:c4-1.8} $\int_{0}^{\infty} T(t)f \, \dt$ exists for every $f$ in the linear hull of\/ $D$.
-But $D$ is total, $(T(t))_{t \geq 0}$ is bounded and hence, by Part-I, Chapter 4,  Theorem~1.16, uniformly stable.
+But $D$ is total, $(T(t))_{t \geq 0}$ is bounded and hence, by Part-I, Theorem~\ref{thm:a4-1.16}, uniformly stable.
 \end{proof}
 
 \begin{remark}\label{rem:c4-1.10}
@@ -436,7 +436,7 @@ u(t) = T(t)f + \int_{0}^{t} T(t-s)f_{0} \, \ds + \int_{0}^{t} T(t-s)(F(s) - f_{0
 \end{equation}
 %% --
 By the stability of the semigroup and $f \in D(A)$, the first term converges to zero as $t \to \infty$.
-Since $f_{0} \in \Image{A}$, the second term converges to $h \coloneqq  \int_{0}^{\infty} T(s)f_{0} \, \ds \in \Image{A}$ (Part-I, Chapter 4,  Theorem 1.16) and $Ah = -f_{0}$.
+Since $f_{0} \in \Image{A}$, the second term converges to $h \coloneqq  \int_{0}^{\infty} T(s)f_{0} \, \ds \in \Image{A}$ (Part-I, Theorem~\ref{thm:a4-1.16}) and $Ah = -f_{0}$.
 Define $H(s) \coloneqq F(s) - f_{0}$, 
 $ H_{+}(s) \coloneqq (H(s))_{+} $ 
 and similarly $H_{-}(\cdot)$.
@@ -722,8 +722,8 @@ $P$ is a positive projection onto the fixed space $\Fix{\TT} = \Kern{A}$.
 In view of Theorem~\ref{thm:c4-1.5} it suffices to consider the case $s(A) = 0 \in P{\sigma}(A)$.
 We define $F \coloneqq \{f \in E \colon \lim_{t \to \infty} T(t)f \text{ exists}\}$.
 Then $F$ is closed since $(T(t))_{t \geq 0}$ is bounded and obviously $\Kern{A} \subset F$.
-Since $\sigma(A) \cap \im\R$ is cyclic and bounded (see Theorem~\ref{thm:c3-2.10} and Part-I, Chapter 2,  Theorem 1.20 resp.), we have $\sigma(A) \cap \im\R = \{0\}$.
-Since the spectral mapping theorem holds (cf.\ Part-I, Chapter 3,  Theorem~6.6), we conclude $\sigma(T(t)) \cap \Gamma = \{1\}$ for all $t \geq 0$.
+Since $\sigma(A) \cap \im\R$ is cyclic and bounded (see Theorem~\ref{thm:c3-2.10} and Part-I, Theorem~\ref{thm:a2-1.20} resp.), we have $\sigma(A) \cap \im\R = \{0\}$.
+Since the spectral mapping theorem holds (cf.\ Part-I, Theorem~\ref{thm:a3-6.6}), we conclude $\sigma(T(t)) \cap \Gamma = \{1\}$ for all $t \geq 0$.
 Then (\refeq{eq:c4-1.4}) implies $\lim_{n \to \infty} \|T(n) - T(n+1)\| = 0$, hence $\lim_{t \to \infty}\|T(t) - T(t+1)\| = 0$.
 Take $f = g - T(1)g$.
 Then 
