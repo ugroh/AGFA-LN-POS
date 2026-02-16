@@ -73,7 +73,7 @@ By Datko's Theorem (Part-I, Theorem~\ref{thm:a4-1.11}) the function $t \mapsto \
 %% --
 \begin{proof}
 	We fix $\lambda_{0} > \omega_0(A)$.
-	Then, by Part-I, Chapter 1,  Proposition~1.11,
+	Then, by Part-I, Proposition~\ref{prop:a1-1.11},
 	%% --
 	\begin{equation}\label{eq:c3-1.2}
 		R(\lambda_{0},A)^{n+1}f = \frac{1}{n!} \int_{0}^{\infty} s^n \exp(-\lambda_{0}s) T(s)f \ds  \quad (n \in \N_{0}, f \in E)\,.
@@ -592,7 +592,7 @@ We will treat this case in Corollary~\ref{cor:c3-2.12}
 \begin{proof}
 Without loss of generality we can assume that $s(A) = 0$.
 
-Given $\im\beta \in \sigma(A)$ $(\beta \in \R )$, then $\im\beta \in A\sigma(A)$ (Part-I, Chapter 3,  Proposition~2.2) and $(\lambda-\im\beta)^{-1} \in A\sigma(R(\lambda,A))$ (Part-I, Chapter 3,  Proposition~2.5).
+Given $\im\beta \in \sigma(A)$ $(\beta \in \R )$, then $\im\beta \in A\sigma(A)$ (Part-I, Proposition~\ref{prop:a3-2.2}) and $(\lambda-\im\beta)^{-1} \in A\sigma(R(\lambda,A))$ (Part-I, Proposition~\ref{prop:a3-2.5}).
 We consider an $\mathcal{F}$-product $E_{\mathcal{F}}$ of\/ $E$ and for convenience write $E_{1}$ instead of\/ $E_{\mathcal{F}}$.
 \index{semigroup!F-product@$\mathcal{F}$-product}
 The canonical extensions of\/ $R(\lambda,A)$ to $E_{1}$ form a positive pseudo-resolvent $\{(R_{1}(\lambda)\}_{\Re(\lambda)>0}$ on $E_{1}$.
@@ -697,7 +697,7 @@ In contrast with the former result we do not assume that every point of\/ $\sigm
 \end{corollary}
 %% --
 \begin{proof}
-Considering the sequence of ideals as described in Proposition~\ref{prop:c3-2.11} and the corresponding generators $A_{n}$ $(0 \leq n \leq k)$, then we have by Part-I, Chapter 3,  Proposition~4.2 that $\sigma_{b}(A) = \cup_{n=1}^{k} \sigma_{b}(A_{n})$.
+Considering the sequence of ideals as described in Proposition~\ref{prop:c3-2.11} and the corresponding generators $A_{n}$ $(0 \leq n \leq k)$, then we have by Part-I, Proposition~\ref{prop:a3-4.2} that $\sigma_{b}(A) = \cup_{n=1}^{k} \sigma_{b}(A_{n})$.
 
 By Theorem~\ref{thm:c3-2.10} each set $\sigma_{b}(A_{n})$ is cyclic, hence so is $\sigma_{b}(A)$.
 \end{proof}
@@ -1139,7 +1139,7 @@ Each of the following conditions on $E$ and $(T(t))$, respectively, implies that
 	(i) is proved in Part-II, Proposition~\ref{prop:b3-3.5}(i).
 	
 	Assertion (ii)-(f) will be proved utilizing the analogous results for a single operator.
-	In view of Part-I, Chapter 3,  Proposition~2.5 we have to show that $r(R(\lambda,A)) > 0$ for some $\lambda \in \rho(A)$.
+	In view of Part-I, Proposition~\ref{prop:a3-2.5} we have to show that $r(R(\lambda,A)) > 0$ for some $\lambda \in \rho(A)$.
 	Moreover, from Part-I, Chapter 1, \,(1.3) we deduce
 	%% --
 	\begin{align*}
@@ -1359,7 +1359,7 @@ Moreover, $\sigma_{b}(A)$ contains only algebraically simple poles.
 	This is a contradiction by Lemma~\ref{lem:c3-3.11}.
 \end{proof}
 %% --
-In view of Part-I, Chapter 3,  Proposition~4.2 the result above has consequences for semigroups which can be reduced (by considering restrictions to invariant ideals or quotients) to semigroups which satisfy the hypothesis of Theorem~\ref{thm:c3-3.12}. 
+In view of Part-I, Proposition~\ref{prop:a3-4.2} the result above has consequences for semigroups which can be reduced (by considering restrictions to invariant ideals or quotients) to semigroups which satisfy the hypothesis of Theorem~\ref{thm:c3-3.12}. 
 Semigroups having this property are precisely those for which $s(A)$ is a pole of the resolvent of finite algebraic multiplicity. 
 The latter claim is a consequence of Proposition~\ref{prop:c3-2.11} and the following lemma.
 
@@ -1417,7 +1417,7 @@ If\/ $s(A)$ is a pole of finite algebraic multiplicity, then there exists a fini
 	\end{split}
 \end{equation}
 %% --
-The following theorem is an immediate consequence of Eq.~\eqref{eq:c3-3.19}, Theorem~\ref{thm:c3-3.12} and Part-I, Chapter 3,  Proposition~4.2.
+The following theorem is an immediate consequence of Eq.~\eqref{eq:c3-3.19}, Theorem~\ref{thm:c3-3.12} and Part-I, Proposition~\ref{prop:a3-4.2}.
 
 \begin{theorem}\label{thm:c3-3.14}
 \index{resolvent!pole}%
@@ -1642,7 +1642,7 @@ In the last part of this section we discuss a spectral decomposition of positive
 	\end{equation}
 	%% --
 	It follows from Eq.~\eqref{eq:c3-4.3} and Eq.~\eqref{eq:c3-4.4} that $A\sigma(T_{1}(t))\cap\{z \in \C  \colon |z| < 1\} = \emptyset$ and that $A\sigma(A_{1})\cap\{\lambda \in \C  \colon \Re(\lambda) < 0\} = \emptyset$. 
-	Since the toplogical boundary of the spectrum is always contained in the approximate point spectrum (see Part-I, Chapter 3,  Proposition~2.2) and 
+	Since the toplogical boundary of the spectrum is always contained in the approximate point spectrum (see Part-I, Proposition~\ref{prop:a3-2.2}) and 
     \index{approximate point spectrum $A\sigma$}
     $R\sigma(T(t))\backslash\{0\} = \exp(tR\sigma(A))$ (see Part-I, Theorem~\ref{thm:a3-6.3}), precisely one of the following two cases occurs.
 	\begin{enumerate}[\upshape (A)]
@@ -2007,7 +2007,7 @@ Since $I_{\mu}$ is $R(\mu,A)$-invariant, we have $\mu \in \rho(A_{|I_{\mu}})$ an
 $R(\mu,A_{|I_{\mu}}) = R(\mu,A)_{|I_{\mu}} \geq 0$. Theorem~\ref{thm:c3-1.1}\,(ii) then implies
 $\sigma(A|_{I_{\mu}}) \subset \{\lambda \in \C  \colon \Re(\lambda) < \mu\}$. The same argument applied to $-A$ and
 $-\mu$ yields $\sigma(A_{|J_{\mu}}) \subset \{\lambda \in \C  \colon \Re(\lambda) > \mu\}$. Now the assertion follows
-from Part-I, Chapter 3,  Proposition~4.2.
+from Part-I, Proposition~\ref{prop:a3-4.2}.
 %$\square$
 \end{proof}
 
@@ -2179,7 +2179,7 @@ invariant under $(T(t))$, then the intersection $D(A) \cap C_c(X)$ is invariant 
 is dense because the elements of the form $\int_{0}^{r} T(s)f \ds$, $f \in C_c(X)$,
 $r > 0$ belong to $C_c(X)$ and to $D(A)$. Hence $D(A) \cap C_c(X)$ is a core%
 \index{core} 
-(by Part-I, Chapter 1,  Proposition~1.9).
+(by Part-I, Proposition~\ref{prop:a1-1.9}).
 \end{enumerate}
 
 \end{proof}
