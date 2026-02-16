@@ -136,7 +136,7 @@ If\/ $p = 1$, $q \geq 2$ and $s(r)$ independent of\/ $r \in [p,q]$, then $s(r) =
 \begin{proof}
 Once it is shown that both functions $u \mapsto s(1/u)$ and $u \mapsto \omega_{0}(1/u)$ are convex on $[\frac{1}{q},\frac{1}{p}]$, the assertion follows from  Theorem~\ref{thm:c4-1.1} and the relation $s(r) \leq \omega_{0}(r)$ for every $r$.
 
-Since $\omega_{0}(u) = \log r(T_{u}(1))$ (see Part-I, Chapter 3, \,(1.4)), Eq.~\eqref{eq:c4-1.2} implies that $u \mapsto \omega_0(1/u)$ is a convex function.
+Since $\omega_{0}(u) = \log r(T_{u}(1))$ (see Eq.~\eqref{eq:a3-1.4} on p.~\pageref{eq:a3-1.4}), Eq.~\eqref{eq:c4-1.2} implies that $u \mapsto \omega_0(1/u)$ is a convex function.
 By Theorem~\ref{thm:c3-1.1} we have $r(R(k,A_{u})) = (k-s(u))^{-1}$ for $k \in \N$ sufficiently large.
 The assumption Eq.~\eqref{eq:c4-1.3} implies that 
 %% --
@@ -491,7 +491,7 @@ u(t) = T(t)u_{0} + \int_{0}^{t} T(s)f_{0} \, \ds + \int_{0}^{t} T(s)(F(t-s)-f_{0
 %% --
 The first term tends to zero by Corollary \ref{cor:c4-1.4},  
 the second term to $R(0,A)f_{0} = -A^{-1}f_{0}$ by Theorem~\ref{thm:c3-1.2} .
-By assumption we have $\lim_{s \to \infty}\|A(F(s)-f_{0})\| = 0$ and from Theorem~\ref{thm:c4-1.3} and Part-I, Chapter 4, \,(1.3) we deduce that $\|T(s)R(0,A)\| \leq M\eu^{-\epsilon s}$ for $s \geq 0$ and suitable constants $M \geq 1$, $\epsilon > 0$.
+By assumption we have $\lim_{s \to \infty}\|A(F(s)-f_{0})\| = 0$ and from Theorem~\ref{thm:c4-1.3} and Part-I, Chapter 4, (1.3) we deduce that $\|T(s)R(0,A)\| \leq M\eu^{-\epsilon s}$ for $s \geq 0$ and suitable constants $M \geq 1$, $\epsilon > 0$.
 Thus for the third term we have
 %% --
 \begin{align*}
@@ -534,7 +534,7 @@ The asymptotic behavior of a strongly continuous semigroup $(T(t))_{t \geq 0}$ i
 %The asymptotic behavior of a strongly continuous semigroup $(T(t))_{t \geq 0}$ is determined by the (structure, location of the) spectrum $\sigma(A)$ of the generator $A$.
 \end{quote}
 %% --
-Unfortunately, this principle does not hold in general, \eg  there are semigroups with spectral bound less than zero and growth bound greater than zero (see Part-I, Chapter 3,  Example 1.3 \& 1.4).
+Unfortunately, this principle does not hold in general, \eg  there are semigroups with spectral bound less than zero and growth bound greater than zero (see Part-I, Example~\ref{ex:a3-1.3} \& \ref{ex:a3-1.4}).
 In order to prove results in the above direction we have to assume additional hypotheses on the semigroup.
 Positivity may serve to this purpose.
 For example, the norm convergence to zero, \ie  $\lim_{t \to \infty} \|T(t)\| = 0$ for a positive semigroup on certain Banach lattices, is characterized by the condition $s(A) < 0$ (see Theorem~\ref{thm:c4-1.1}).
@@ -565,7 +565,7 @@ Then there exists a positive projection $P$ of finite rank and suitable constant
 \begin{proof}
 By Theorem 2.10 of Part-II, Chapter~\ref{chap:b4} the set $\{\lambda \in \sigma(A) \colon \Re(\lambda) = 0\}$ is finite and by Theorem 2.10 of Part-3, Chapter 3  even imaginary additively cyclic.
 Thus it contains only the value $s(A) = 0$.
-Then by Part-II, Chapter~\ref{chap:b4}, \,(2.5) we have
+Then by Part-II, Chapter~\ref{chap:b4}, (2.5) we have
 %% --
 \begin{equation*}\label{eq:c4-2.1-kgk}
 T(t) = \sum_{j=0}^{k-1} \frac{1}{j!} \cdot t^{j}A^{j}\circ P + R(t) \quad (t \geq 0),
@@ -1146,7 +1146,8 @@ The Riesz Convexity Theorem yields the following estimate for the operator norm:
 %% --
 Since $0$ is a pole with residue $P$, the spectral radius of the operator $R(1,A)(1-P)$ is less than $1$.
 Thus the right hand side of the inequality tends to $0$ as $n \to \infty$.
-It follows that $r_{ess}(R(1,A_{2})) < 1$, hence $1$ is a pole of the resolvent of\/ $R(1,A_{2})$, or equivalently, $0$ is a pole of\/ $R(\cdot,A_{2})$ (see Part-I, Chapter 3,  Proposition.2.5).
+It follows that $r_{ess}(R(1,A_{2})) < 1$, hence $1$ is a pole of the resolvent of\/ $R(1,A_{2})$, or equivalently, $0$ is a pole of\/ $R(\cdot,A_{2})$ (see 
+Part-I, Proposition~\ref{prop:a3-2.5}).
 
 Now we can apply Proposition~\ref{prop:c4-2.13} and obtain a projection $Q$ such that 
 %% --
@@ -1264,7 +1265,7 @@ Instead of the differential equation in (RCP) we will study equations of the for
 %% --
 \begin{equation*}\label{eq:c4-re} \tag{RE}
 \begin{split} 
-u(t) &= \Phi(u_t), \, t \geq 0,\\
+u(t) &= \Phi(u_t),  t \geq 0,\\
 u_0 &= g.
 \end{split}
 \end{equation*}
@@ -1315,7 +1316,7 @@ To this end we first consider the operator $A_0 f \coloneqq f'$ with domain
 D(A_0) \coloneqq \{f \in E \colon f \in AC([-1,0],F), f' \in E \text{ and } f(0) = 0\}.
 \end{equation*}
 %% --
-Similarly to the special case where $F = \R$ (compare Part-I, Chapter 1,  Example 2.4.(ii)), it can be seen that the operator $A_0$ generates a strongly continuous semigroup $(T_0(t))_{t\geq 0}$ given by
+Similarly to the special case where $F = \R$ (compare Part-I, Example~\ref{subsec:a1-2.4}.\,(ii)), it can be seen that the operator $A_0$ generates a strongly continuous semigroup $(T_0(t))_{t\geq 0}$ given by
 %% --
 \begin{equation}\label{eq:c4-3.1}
 (T_0(t)f)(s) = \begin{cases}
@@ -1634,7 +1635,7 @@ In particular, $s(A) < 0$ if and only if\/ $s(\Phi_{0}) < 1$.
 \index{characteristic equation}
 We call the identity\, \enquote{$s(\Phi_{\lambda}) = 1$} a \emph{generalized characteristic equation} (see also the remark following Part-II, Theorem~\ref{thm:b4-3.7}). The usual characteristic equation (see for example  \textcite[p.168ff]{hale:1977} and \textcite[Section~5]{heijmans:1985b}
 is an equation determining all eigenvalues of the generator $A$. 
-In fact, if\/ $F$ is finite dimensional, the characterization of the spectral values $\lambda$ of\/ $A$ in Proposition.~\ref{prop:c4-3.6}\,\ref{prop:c4-3.6-3} reduces to solving the complex equation $\det(\Id - \Phi_{\lambda}) = 0$. 
+In fact, if\/ $F$ is finite dimensional, the characterization of the spectral values $\lambda$ of\/ $A$ in Proposition~\ref{prop:c4-3.6}\,\ref{prop:c4-3.6-3} reduces to solving the complex equation $\det(\Id - \Phi_{\lambda}) = 0$. 
 Obviously, there is no analogous identity characterizing $\sigma(A)$ for infinite dimensional $F$. 
 However, in order to determine the long term behavior of the solutions of Eq.~\eqref{eq:c4-re}, it is often enough to know the spectral bound $s(A)$. 
 Under the assumptions of Corollary~\ref{cor:c4-3.8} (in particular if\/ $\Phi$ is positive) formula Eq.~\eqref{eq:c4-3.9} gives a tool to reduce this problem to the determination of the real solution of\/ $s(\Phi_{\lambda}) = 1$.

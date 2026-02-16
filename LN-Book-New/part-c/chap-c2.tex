@@ -50,14 +50,14 @@ N^{+}(f) = \|f^{+}\| \quad (f \in E).
 It is easy to see that $N^{+}(f) = \inf \{\|f+g\| \colon g \in E_{+}\} = \text{dist}(-f,E_{+})$ (cf. Part-I, Remark~\ref{rem:a2-2.8}). 
 \end{remark*}
 %% --
-It is obvious that $N^{+}$ is a strict half-norm (see Part-I, Chapter 2, \,(2.12) ). 
+It is obvious that $N^{+}$ is a strict half-norm (see Part-I, Corollary~\ref{cor:a2-2.12}). 
 
 The subdifferential of\/ $N^{+}$ is given by
 \begin{equation}\label{eq:c2-1.2}
 	\partial N^{+}(f) = \{\phi \in E'_{+} \colon \|\phi\| \leq 1, \langle f,\phi \rangle = \|f^{+}\|\}
 \end{equation}
 %% --
-(this follows from the definition, see Part-I, Chapter 2, \,(2.5)). 
+(this follows from the definition, seePart-I, Corollary~\ref{cor:a2-2.5}). 
 %% --
 \begin{examples}\label{ex:c2-1.1}
 %
@@ -912,7 +912,7 @@ The semigroup is positive if and only if its generator $A$ satisfies the followi
 There exists a core $D_{0}$ of\/ $A$ and a strictly positive set $M'$ of subeigenvectors of\/ $A'$ such that
 %% --
 \begin{equation}\label{eq:c2-K4} \tag{K}
-\langle(\sign f) Af,\phi \rangle \leq \langle|f|,A'\phi\rangle \quad \text{for all } f \in D_{0} \, , \, \phi \in M'.
+\langle(\sign f) Af,\phi \rangle \leq \langle|f|,A'\phi\rangle \quad \text{for all } f \in D_{0} \, ,  \phi \in M'.
 \end{equation}
 %% --
 \end{theorem}
@@ -1181,7 +1181,7 @@ follows from Theorem~\ref{thm:c2-3.8}   that there does not exist a strictly pos
 In fact, even the following is true.
 %% --
 \begin{equation} \label{eq:c2-3.16} 
-0 \leq \phi \in D(A'), \, A'\phi \leq \mu\phi \text{ for some } \mu \in \R \text{ implies } \phi = 0.
+0 \leq \phi \in D(A'),  A'\phi \leq \mu\phi \text{ for some } \mu \in \R \text{ implies } \phi = 0.
 \end{equation}
 %% --
 \begin{proof}
@@ -1202,7 +1202,7 @@ It follows from Gronwall's lemma that $\psi \leq 0$. Hence $\phi = \psi = 0$.
 Let $B$ be the generator of a strongly continuous semigroup on a real Banach lattice with order continuous norm. Assume that the following two conditions hold.
 %% --
 \begin{align}
-\langle(\sign  f)Bf,\phi\rangle &\leq \langle|f|,B'\phi\rangle \quad (f \in D(B), \, \phi \in D(B')_{+}). \label{eq:c2-3.17-K} \tag{K}\\
+\langle(\sign  f)Bf,\phi\rangle &\leq \langle|f|,B'\phi\rangle \quad (f \in D(B),  \phi \in D(B')_{+}). \label{eq:c2-3.17-K} \tag{K}\\
 (D(B')_{+})^{-\sigma(E',E)} &= E'_{+}. \label{eq:c2-3.17}
 \end{align}
 %% --
@@ -1219,7 +1219,7 @@ This is Kato's inequality in the strong form for positive $f \in D(B)$ and is eq
 \ref{lem:c2-1.10}  this again is equivalent to
 %% --
 \begin{equation}\label{eq:c2-P2} \tag{P}
-0 \leq f \in D(B), \, \phi \in E'_{+}, \, \langle f,\phi \rangle = 0 \text{ implies } \langle Bf,\phi \rangle \geq 0.
+0 \leq f \in D(B),  \phi \in E'_{+},  \langle f,\phi \rangle = 0 \text{ implies } \langle Bf,\phi \rangle \geq 0.
 \end{equation}
 %% --
 It is easy to see that the operator $A$ in the example satisfies conditions Eq.~\eqref{eq:c2-3.17-K}  and Eq.~\eqref{eq:c2-3.17}. Thus the positive minimum principle (P) is not sufficient for the positivity of the semigroup.
@@ -1309,7 +1309,8 @@ Note also that (because of the order continuous norm) Kato's inequality holds fo
 %%--
 Frequently it is useful to be able to compare two semigroups on a
 Banach lattice with respect to the ordering (for example, in order to
-decide whether a semigroup is stable (see Part-I, Chapter 4 and Example \ref{ex:c2-4.14}   ).
+decide whether a semigroup is stable (see Part-I, Chapter~\ref{chap:a4} and 
+Example~\ref{ex:c2-4.14}   ).
 
 In this section we assume that $E$ is a $\sigma$-order complete complex Banach lattice. 
 Let $(T(t))_{t \geq 0}$ be a positive semigroup with generator $A$ and $(S(t))_{t \geq 0}$ a semigroup with generator $B$. 
@@ -1495,7 +1496,7 @@ This implies that $\left[\lambda_{1},\infty\right) \subset \rho(\overline{B})$. 
 |R(\lambda,\overline{B})^{n}f| \leq R(\lambda,A)^{n}|f| \quad (f \in E, n \in \N , \lambda_{1} < \lambda).
 \end{equation}
 %%--
-Let $w > \omega_{0}(A), \,\lambda_{1}$. 
+Let $w > \omega_{0}(A), \lambda_{1}$. 
 Then it follows from Eq.~\eqref{eq:c2-4.9} that\\
 $\|(\lambda - w)^{n}R(\lambda,\overline{B})^{n}\| \leq \|(\lambda - w)^{n}R(\lambda,A)^{n}\|$ for all $\lambda > w$, $n \in \N $. 
 So by the Hille-Yosida theorem, $\overline{B}$ is the generator of a semigroup $(S(t))_{t \geq 0}$. 
@@ -1586,7 +1587,7 @@ Here the range condition is proved by an elegant argument due to \textcite{kato:
 \index{operator!Schr\"odinger}
 Let $E = L^{p}(\R^{n})$, $1 \leq p < \infty$, and $V \in L^{p}_{\text{loc}}(\R^{n})$ such that $\Re(V) \geq 0$.
 Define $B$ on $E$ by $Bf = \Delta f - Vf$ with domain $D(B) = C^{\infty}_{c}(\R^{n})$. 
-Then $B$ is closable and $\overline{B}$ is the generator of a semigroup $(S(t))_{t \geq 0}$ which is dominated by the diffusion semigroup (Example \ref{ex:c2-1.5}\,\ref{ex:c2-1.5-4} and Part-I, Chapter 1,  2.8). 
+Then $B$ is closable and $\overline{B}$ is the generator of a semigroup $(S(t))_{t \geq 0}$ which is dominated by the diffusion semigroup (Example \ref{ex:c2-1.5}\,\ref{ex:c2-1.5-4} and Part-I, Section~\ref{subsec:a1-2.8}). 
 If\/ $V \geq 0$, then $(S(t))_{t \geq 0}$ is positive.
 \end{example}
 
@@ -2563,7 +2564,7 @@ Consequently, $\lim_{t \to 0}\|T(t) - \Id\| = 0$.
 %% --
 The assumption that the group consists of real operators is essential in Proposition~\ref{prop:c2-5.16}.
 In fact, many differential operators on $L^{2}(\R^n)$ generate a strongly continuous group which (via Fourier transformation) is similar to a multiplication group.
-A concrete example is the Laplacian (Part-I, Chapter 1,  Example 2.8).
+A concrete example is the Laplacian (Part-I, Section~\ref{subsec:a1-2.8}).
 \index{operator!similar}
 
 On the other hand, if\/ $E = C(K)$ (K compact), then every strongly continous multiplication semigroup $(T(t))_{t \geq 0}$ has a bounded generator.

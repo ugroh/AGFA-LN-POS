@@ -104,7 +104,7 @@ If\/ $\lambda = \mu + \im\nu$ with $\mu$, $\nu$ real and $\mu > s(A)$, we have f
 \end{align*}
 %% --
 which shows that $\lim_{t\to\infty} \int_{0}^t \eu^{-\lambda s}T(s)f \ds $ exists.
-Thus, by Part-I, Chapter 1, \,Proposition~1.11 we have  $R(\lambda,A)f = \int_{0}^{\infty} \eu^{-\lambda s} T(s)f \ds $\,. 
+Thus, by  Part-I, Proposition~\ref{prop:a1-1.11} we have  $R(\lambda,A)f = \int_{0}^{\infty} \eu^{-\lambda s} T(s)f \ds $\,. 
 
 It remains to prove that the net $\left(\int_{0}^t \exp(-\mu s)T(s) \ds \right)_{t\geq 0}$ converges with respect to the operator norm.
 We fix $\mu$ such that $s(A) < \mu < \Re(\lambda)$.
@@ -524,7 +524,7 @@ Before proving the equivalence of the two assertions we make some remarks.
 
     \item 
     We do not assume in Definition~\ref{def:c3-2.8} that spectral bound and growth bound coincide.
-    A slight modification of Part-I, Chapter 3,  Example 1.3 shows that there are semigroups with slowly growing resolvent and $s(A) < \omega_0(A)$.
+    A slight modification of Part-I, Example~\ref{ex:a3-1.3} shows that there are semigroups with slowly growing resolvent and $s(A) < \omega_0(A)$.
 \end{enumerate}
 \end{remarks*}
 %% --
@@ -596,7 +596,7 @@ Given $\im\beta \in \sigma(A)$ $(\beta \in \R )$, then $\im\beta \in A\sigma(A)$
 We consider an $\mathcal{F}$-product $E_{\mathcal{F}}$ of\/ $E$ and for convenience write $E_{1}$ instead of\/ $E_{\mathcal{F}}$.
 \index{semigroup!F-product@$\mathcal{F}$-product}
 The canonical extensions of\/ $R(\lambda,A)$ to $E_{1}$ form a positive pseudo-resolvent $\{(R_{1}(\lambda)\}_{\Re(\lambda)>0}$ on $E_{1}$.
-By Proposition~\ref{prop:c3-2.6}\,(i) and Part-I, Chapter 3, \,4.5 there exists $h_{1} \in E_{1}$, $h_{1} \neq 0$ such that
+By Proposition~\ref{prop:c3-2.6}\,(i) and Part-I, Chapter 3, 4.5 there exists $h_{1} \in E_{1}$, $h_{1} \neq 0$ such that
 %% --
 \begin{equation}\textstyle\label{eq:c3-2.16}
 	\lambda R_{1}(\lambda+\im\beta)h_{1} = h_{1} \ \text{ for }  \Re(\lambda) > 0\,.
@@ -901,7 +901,7 @@ We recall that a closed subspace $I \subset E$ is invariant for a semigroup gene
 %%KGK StandConst schift
 %Part-I, Chapter 1, 3.3
 %%GG
-Part-I, Chapter 1, \,3.3).
+Part-I, Chapter 1, 3.3).
 Now let $I$ be a closed ideal of\/ $E$.
 
 $(b)\Rightarrow (a)$.
@@ -1140,7 +1140,7 @@ Each of the following conditions on $E$ and $(T(t))$, respectively, implies that
 	
 	Assertion (ii)-(f) will be proved utilizing the analogous results for a single operator.
 	In view of Part-I, Proposition~\ref{prop:a3-2.5} we have to show that $r(R(\lambda,A)) > 0$ for some $\lambda \in \rho(A)$.
-	Moreover, from Part-I, Chapter 1, \,(1.3) we deduce
+	Moreover, from Part-I, Chapter 1, (1.3) we deduce
 	%% --
 	\begin{align*}
 		T(t)R(\lambda,A) = \eu^{\lambda t}R(\lambda,A) - \eu^{\lambda t}\int_{0}^{t} \eu^{-\lambda s}T(s)\ds \leq \eu^{\lambda t}R(\lambda,A) \ (t\geq 0, \lambda>s(A))\,.
@@ -1195,7 +1195,7 @@ The proof can be translated without difficulties and will be omitted (see also \
 	\end{enumerate}
 \end{theorem}
 %% -- 
-One can apply the theorem in order to prove that the rotation semigroup on $\Gamma$ (\cf Part-I, Chapter 1, \,2.5) is the only positive periodic semigroup%
+One can apply the theorem in order to prove that the rotation semigroup on $\Gamma$ (\cf Part-I, Chapter 1, 2.5) is the only positive periodic semigroup%
 \index{semigroup!periodic semigroup}%
 \index{rotation semigroup}%
 \index{semigroup!rotation semigroup}
@@ -1511,7 +1511,7 @@ implies that $R(\lambda,B) = R(\lambda,A)(1 - KR(\lambda,A))^{-1}$ has only pole
 This proves the first claim.
 
 In order to prove the second, we denote the semigroup corresponding to $A$ and $B$ by $(T(t))$ and $(S(t))$,  respectively.
-It follows from Proposition~\ref{prop:c3-3.3} that $(S(t))$ is irreducible and we have $S(t) = T(t) + \int_{0}^{t} T(t-s)KS(s)\ds$ (see Part-I, Chapter 2, \,(1.9)). 
+It follows from Proposition~\ref{prop:c3-3.3} that $(S(t))$ is irreducible and we have $S(t) = T(t) + \int_{0}^{t} T(t-s)KS(s)\ds$ (see Eq.~\eqref{eq:a2-1.9} on p.~\pageref{eq:a2-1.9}). 
 Iterating this identity we obtain for every $m \in \N$, $t \geq 0$
 %% --
 \begin{equation}\label{eq:c3-3.21}
@@ -1586,7 +1586,7 @@ In the last part of this section we discuss a spectral decomposition of positive
 		T(t)'\psi \leq \eu^{rt}\psi \ \text{ and } \ \ T(t)'\psi \geq \psi \ (t \geq 0) \ \text{ and } \ |\phi| \leq \psi\,.
 	\end{equation}
 	%% --
-	In fact, Part-I, Chapter 1, \,(1.3) implies $(\eu^{rt} - T(r))R(r,A) \geq 0$ hence 
+	In fact, Part-I, Chapter 1, (1.3) implies $(\eu^{rt} - T(r))R(r,A) \geq 0$ hence 
     \[
     T(t)'\psi = rR(r,A)'T(t)'|\phi| \leq r\cdot \eu^{rt}R(r,A)'|\phi| = \eu^{rt}\psi\,.
     \]
@@ -1784,7 +1784,7 @@ Then we have
 \end{proposition}
 %% --
 \begin{proof}
-In view of Part-I, Chapter 3, \,6.2 it is enough to prove that the left hand
+In view of Part-I, Chapter 3, 6.2 it is enough to prove that the left hand
 side contains the set on the right.
 
 Fix $t > 0$ and assume $r \in \sigma(T(t))$, $r > 0$ and let $\alpha \coloneqq \frac{1}{t} \log r$.
@@ -1936,7 +1936,7 @@ lattice $E$ with generator $A$. Given $\mu \in \rho(A) \cap \R $ and $h \in E_+$
 %% --
 \begin{proof}
 $(a)\Rightarrow(b)$  We have
-$\int_{0}^{t} \eu^{-\mu s}T(s)h \ds = (\Id - \eu^{-\mu t}T(t))R(\mu,A)h$ (see Part-I, Chapter 1, \,(3.2)).
+$\int_{0}^{t} \eu^{-\mu s}T(s)h \ds = (\Id - \eu^{-\mu t}T(t))R(\mu,A)h$ (see Part-I, Chapter 1, (3.2)).
 %
 Since $R(\mu,A)h \geq 0$ and $T(t)$ is a positive operator we obtain
 \[\textstyle
