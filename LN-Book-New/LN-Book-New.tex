@@ -117,27 +117,16 @@
 %% -- Running Heading
 %% --
 
-%\makeatletter
-%\def\ps@headings{%
-%    \def\@oddhead{\hfill Part~\thepart\ Chapter~\thechapter: \rightmark\quad\thepage}%
-%    \def\@evenhead{\thepage\quad\leftmark\hfill}%
-%    \def\@oddfoot{}%
-%    \def\@evenfoot{}%
-%}
-%\makeatother
-%\pagestyle{headings}
-%\def\sectionmark#1{\markright{Part-\thepart \thechapter.\thesection\ \  #1}}
-%\def\sectionmark#1{\markright{Section~\thechapter.\thesection \quad #1}}
+\makeatletter
 
-%\def\chaptermark#1{%
-%    \markright{Part~\thepart \quad Chapter~\thechapter \quad #1}%
-%}
-
-%\def\chaptermark#1{%
-%    \markright{Chapter~\thechapter}%
-%}
-%\def\chaptermark#1{\markleft{Part~\thepart \quad Chapter~\thechapter \quad #1}}
-%\def\sectionmark#1{\markright{Chapter \thechapter\ Section \thesection\ \quad  #1}}
+% LINKE Seite: Part-I Chapter 1 Titel
+\def\@evenhead{\runheadsize\rmfamily\upshape
+                \rlap{\thepage}\hfil
+                Part~\thepart\hspace{.75em} \leftmark}
+% RECHTE Seite (ungerade): "Section 1.2 Standard Examples"
+\def\@oddhead{\runheadsize\rmfamily\upshape
+               \rightmark\hfil\llap{\thepage}}
+\makeatother
 
 %% -- To prevent overlapping in TOC
 %% --

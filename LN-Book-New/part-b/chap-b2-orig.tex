@@ -166,7 +166,7 @@ Then the semigroup is positive if and only if the generator $A$ satisfies the po
 \end{theorem}
 %%
 \begin{proof}
-The necessity of the condition is proved as "\ref{thm:b2-1.3-1} implies \ref{thm:b2-1.3-2}" in Theorem~\ref{thm:b2-1.3}.
+The necessity of the condition is proved as "\ref{thm:b2-1.3-1} implies \ref{thm:b2-1.3-2} " in Theorem~\ref{thm:b2-1.3}.
 Assume that $(P)$ holds.
 We claim that $R(\lambda,A) \geq 0$ for sufficiently large real $\lambda$. 
 (This implies the positivity of the semigroup by Proposition~\ref{prop:b2-1.1}).
@@ -652,7 +652,7 @@ Moreover,
 %% –
 \begin{proof}
 We can assume that $\|m\|_{\infty} \leq 1$ (in fact, if\/ $B \coloneqq (m/\|m\|_{\infty}) \cdot A$ is the generator of a positive semigroup, then by 
-Part-I,~Eq.~\eqref{eq:a1-3.2} on p.~\pageref{eq:a1-3.2}, the operator $m \cdot A = \|m\|_{\infty}B$ also generates a positive semigroup).
+Eq.~\eqref{eq:a1-3.2} on p.~\pageref{eq:a1-3.2}, the operator $m \cdot A = \|m\|_{\infty}B$ also generates a positive semigroup).
 The assertion of the theorem holds for $A$ if and only if it is valid for $A - w$ $(w \in \R)$.
 So by the proof of Theorem~\ref{thm:b2-1.13} we can assume that there exists $0 \ll u \in C(K)$ such that $A$ is $p_{u}$-dissipative.
 We first show the following. Let $0 \ll q \in C(K)$.
@@ -959,12 +959,11 @@ Then
 %% --
 \[
 \begin{array}{lll}
-\lim_{t \downarrow 0} &\|\frac{1}{t} (\Theta(k(a+t)) - \Theta(k(a))) - D_{k'(a)}\Theta(k(a))\| \\
-&\leq \limsup_{t \downarrow 0} \|\frac{1}{t} (\Theta(k(a+t)) - \Theta(k(a)+tk'(a)))\| \\
-&\quad + \limsup_{t \downarrow 0} \|\frac{1}{t} [\Theta(k(a)+tk'(a)) - \Theta(k(a)) - D_{k'(a)}\Theta(k(a))]\| \\
-&\leq \limsup_{t \downarrow 0} L \cdot \|\frac{1}{t} (k(a+t) - k(a)-tk'(a))\| + 0 \\
+\lim_{t \downarrow 0} &\|1/t (\Theta(k(a+t)) - \Theta(k(a))) - D_{k'(a)}\Theta(k(a))\| \\
+&\leq \limsup_{t \downarrow 0} \|1/t (\Theta(k(a+t)) - \Theta(k(a)+tk'(a)))\| \\
+&\quad + \limsup_{t \downarrow 0} \|1/t [\Theta(k(a)+tk'(a)) - \Theta(k(a)) - D_{k'(a)}\Theta(k(a))]\| \\
+&\leq \limsup_{t \downarrow 0} L \cdot \|1/t (k(a+t) - k(a)-tk'(a))\| + 0 \\
 &= 0.
-
 \end{array}
 \]
 \phantom{x}
@@ -999,9 +998,9 @@ We identify $\C$ and $\R^2$.
 Then $\Theta(x,y) = (x^2 + y^2)^{1/2}$ is differentiable in $z$ and
 %% --
 \begin{align*}
-D_{u}\Theta(z) &= (\Theta(x_{0},y_{0})|u) = \frac{1}{|z|}\, ((x_{0},y_{0})|(u_{1},u_{2}))  \\
-               &= \frac{1}{|z|}\, (x_{0}u_{1} + y_{0}u_{2}) \\
-               &= \frac{1}{|z|}\, \Re((x_{0}-iy_{0})\cdot(u_{1}+iu_{2})) \\
+D_{u}\Theta(z) &= (\Theta(x_{0},y_{0})|u) = 1/|z|\, ((x_{0},y_{0})|(u_{1},u_{2}))  \\
+               &= 1/|z|\, (x_{0}u_{1} + y_{0}u_{2}) \\
+               &= 1/|z|\, \Re((x_{0}-iy_{0})\cdot(u_{1}+iu_{2})) \\
                &= \Re[(\sign \bar{z})\cdot u],
 \end{align*}
 %% --
@@ -1082,7 +1081,7 @@ Moreover, $\frac{1}{t} \left|\, |T(t)f| - |f| \, \right| \leq \frac{1}{t}\, |T(t
 Thus $\sup_{0 < t \leq 1} \frac{1}{t}\, \|\, |T(t)f| - |f|\, \| < \infty$; \ie  the functions $k_{t} \in C_{0}(X)$ given by
 %% --
 \begin{equation}\label{eq:b2-2.12}
-k_{t}(x) = \frac{1}{t}\,(|(T(t)f)(x)| - |f(x)|) \quad (x \in X)
+k_{t}(x) = 1/t\,(|(T(t)f)(x)| - |f(x)|) \quad (x \in X)
 \end{equation}
 %% --
 are uniformly on $\left(0,1\right]$ dominated by a constant.
@@ -1129,14 +1128,14 @@ This implies that $k(0) = k(t)$ which is Eq.~\eqref{eq:b2-2.13}.
 Since $\phi \in D(A')$ we have
 %% --
 \begin{equation}\label{eq:b2-2.14}
-\lim_{h \downarrow 0}\, \frac{1}{h}\, \langle g,(T(t-(s+h)) - T(t-s))'\phi \rangle = - \langle g,A'T(t-s)'\phi \rangle
+\lim_{h \downarrow 0}\, 1/h\, \langle g,(T(t-(s+h)) - T(t-s))'\phi \rangle = - \langle g,A'T(t-s)'\phi \rangle
 \end{equation}
 %% --
 for all $g \in C_{0}(X)$.
 Consequently,
 %% --
 \begin{equation*}
-\overline{\lim}_{h \downarrow 0}\, \frac{1}{h}\, \|(T(t-(s+h)) - T(t-s))'\phi\| < \infty
+\overline{\lim}_{h \downarrow 0}\, 1/h\, \|(T(t-(s+h)) - T(t-s))'\phi\| < \infty
 \end{equation*}
 %% --
 by the uniform boundedness principle.
@@ -1144,7 +1143,7 @@ Hence, since $\lim_{h \downarrow 0}\, |T(s+h)f| = |T(s)f|$, Eq.~\eqref{eq:b2-2.1
 %% --
 \begin{equation}\label{eq:b2-2.15}
 \begin{split}
-\lim_{h \downarrow 0}\, \frac{1}{h}\, \langle |T(s+h)f|,(T(t-(s+h)) - T(t-s))'\phi \rangle \\
+\lim_{h \downarrow 0}\, 1/h\, \langle |T(s+h)f|,(T(t-(s+h)) - T(t-s))'\phi \rangle \\
 = - \langle |T(s)f|,A'T(t-s)'\phi \rangle
 \end{split}
 \end{equation}
@@ -1154,10 +1153,10 @@ Using this we obtain
 %% --
 %%
 \begin{align*}
-\lim_{h \downarrow 0} & \frac{1}{h}\, (k(s+h) - k(s)) \\
-&= \lim_{h \downarrow 0}  \frac{1}{h}\, (\langle T(t-(s+h))|T(s+h)f|,\phi \rangle - \langle T(t-s)|T(s+h)f|,\phi \rangle) \\
-&\qquad + \lim_{h \downarrow 0}  \frac{1}{h}\, \langle T(t-s)|T(s+h)f| - T(t-s)|T(s)f|,\phi \rangle \\
-&= -\langle |T(s)f|,A'T(t-s)'\phi \rangle + \lim_{t \downarrow 0}  \frac{1}{h} \, \langle (|T(s+h)f| -  |T(s)f| , T(t-s)'\phi \rangle .
+\lim_{h \downarrow 0} &1/h\, (k(s+h) - k(s)) \\
+&= \lim_{h \downarrow 0} 1/h\, (\langle T(t-(s+h))|T(s+h)f|,\phi \rangle - \langle T(t-s)|T(s+h)f|,\phi \rangle) \\
+&\qquad + \lim_{h \downarrow 0} 1/h\, \langle T(t-s)|T(s+h)f| - T(t-s)|T(s)f|,\phi \rangle \\
+&= -\langle |T(s)f|,A'T(t-s)'\phi \rangle + \lim_{t \downarrow 0} 1/h \, \langle (|T(s+h)f| -  |T(s)f| , T(t-s)'\phi \rangle .
 \end{align*}
 %%--
 By Lemma \ref{lem:b2-2.6} the last term is
@@ -1257,7 +1256,7 @@ Then  $m \cdot A$ with domain $D(m \cdot A) = D(A)$ generates a lattice semigrou
 \end{corollary}
 
 \begin{proof}
-By Theorem~\ref{thm:b2-1.20}, the operator  $m \cdot A$ is the generator of a strongly continuous semigroup.
+By Theorem 1.20, the operator  $m \cdot A$ is the generator of a strongly continuous semigroup.
 It remains to show that it is a lattice semigroup.
 We use Theorem~\ref{thm:b2-2.10}.
 Let $f \in D(m \cdot A) = D(A)$ such that $f(x) \neq 0$ for all $x \in K$.
@@ -1285,9 +1284,7 @@ Thus, since
 	\Kern{\lambda - A_{\max}} = \C e_{\lambda} \, (e_{\lambda}(x) = \eu^{\lambda x}), 
 \]
 %% --
-Kato's equality does not have as strong consequences as the positive minimum principle (which by Theorem~\ref{thm:b2-1.13}
-%%1.13
-would imply that $A_{\max}$ is a generator).
+Kato's equality does not have as strong consequences as the positive minimum principle (which by Theorem 1.13 would imply that $A_{\max}$ is a generator).
 \end{example}
 \index{Kato's equality|)} 
 
@@ -1925,7 +1922,7 @@ Then there exists a continuous flow $\phi$ on $\R^{n}$ such that
 \frac{\partial}{\partial t} \phi(t,x) = F(\phi(t,x)) \text{ for all } t \in \R, x \in \R^{n}
 \end{equation}
 %% –
-Consider the automorphism group $(T_{0}(t))_{t \in \R}$ given by $T_{0}(t)f = f \circ \phi_{t}$
+Consider the automorphism group $(T_{o}(t))_{t \in \R}$ given by $T_{o}(t)f = f \circ \phi_{t}$
 and denote by $\delta$ its generator.
 Then 
 \[D_{0} = \{ f \in C_{0}(\R^{n}) \cap C^{1}(\R^{n}) \colon \lim_{\|x\| \to \infty} \|(\mathrm{grad}\: f)(x)\| = 0 \}
@@ -1956,7 +1953,7 @@ Then $g = f - (\mathrm{grad}\: f | F) \in C_{0}(\R^{n})$ and
 Hence $f \in D(\delta)$ and $f - \delta f = g$; \ie $\delta f = (\mathrm{grad}\: f|F)$.
 This proves Eq.~\eqref{eq:b2-3.21}.
 
-Next we show $T_{0}(t)D_{0} \subset D_{0}$ for all $t \geq 0$, which implies that $D_{0}$ is a core of\/ $\delta$ by Part-I, Proposition~\ref{prop:a1-1.9} (or Part-I, Corollary~\ref{cor:a2-1.34}).
+Next we show $T_{o}(t)D_{0} \subset D_{0}$ for all $t \geq 0$, which implies that $D_{0}$ is a core of\/ $\delta$ by Part-I, Proposition~\ref{prop:a1-1.9} (or Part-I, Corollary~\ref{cor:a2-1.34}). 
 \index{core}
 Since $F \in C^{1}(\R^{n},\R^{n})$, it follows that $\phi \in C^{1}(\R \times \R^{n},\R^{n})$ (see \eg \textcite[15.2]{hirschsmale:1974}).
 Moreover for each $x \in \R^{n}$, $(D\phi_{t}(x))' = DF(\phi_{t}(x)) \cdot D\phi_{t}(x)$ and $D\phi_{0}(x) = \Id$, (see \textcite[p. 300]{hirschsmale:1974}); here $\Id \in \L{\R^{n}}$ denotes the identity operator.
@@ -2156,10 +2153,10 @@ Thus $(T(t)f)(c) = f(c)$ for all $f \in D(\delta_{m})$ and $t \in \R$.
 This shows that $\phi(t,c) = c$ for all $t \in \R$.
 Consequently $\phi_{t}(a,c) \subset (a,c)$ for all $t \in \R$.
 Similary $\phi_{t}(d,b) \subset (d,b)$ for all $t \in \R$.
-Thus the space $E_{0} \coloneqq \{f \in C_{0}(a,b) \colon f \text{ vanishes off } (c,d)\}$ is invariant under the group $(T(t))_{t \in \R}$.
-We denote the group restricted to $E_{0}$ by $(T_{0}(t))_{t \in \R}$ and by $A_{0}$ its generator.
-Then $D(A_{0}) = \{f \in E_{0} \cap D(\delta_{m}) \colon \delta_{m}f \in E_{0}\}$.
-Identifying $E_{0}$ with $C_{0}(c,d)$ we obtain $A_{0} = \delta_{m'}$, where $m'$ denotes the restriction of\/ $m$ to $(c,d)$.
+Thus the space $E_{o} \coloneqq \{f \in C_{0}(a,b) \colon f \text{ vanishes off } (c,d)\}$ is invariant under the group $(T(t))_{t \in \R}$.
+We denote the group restricted to $E_{o}$ by $(T_{o}(t))_{t \in \R}$ and by $A_{o}$ its generator.
+Then $D(A_{o}) = \{f \in E_{o} \cap D(\delta_{m}) \colon \delta_{m}f \in E_{o}\}$.
+Identifying $E_{o}$ with $C_{0}(c,d)$ we obtain $A_{o} = \delta_{m'}$, where $m'$ denotes the restriction of\/ $m$ to $(c,d)$.
 So it follows from Proposition~\ref{prop:b2-3.18} that $m'$ is admissible.
 %% –
 \end{proof}
@@ -2273,9 +2270,9 @@ D(\delta) = \{ f \in C_{0}(\R) \colon Vf \in D(A)\} = \{f \in C_{0}(\R) \colon f
 %%--
 Let $f \in C^{1}(\R) \cap D(\delta)$.
 If\/ $f \neq 0$, then $f$ is not constant.
-Hence there exists $x_{0} \in \R$ such that $f'(x_{0}) \neq 0$.
-Then $f$ has a continuously differentiable inverse in some open neighbourhood of\/ $x_{0}$.
-Since $f \circ q \in C^{1}(\R)$, it follows that $q$ is continuously differentiable in some neighborhood of\/ $q^{-1}(x_{0})$.
+Hence there exists $x_{o} \in \R$ such that $f'(x_{o}) \neq 0$.
+Then $f$ has a continuously differentiable inverse in some open neighbourhood of\/ $x_{o}$.
+Since $f \circ q \in C^{1}(\R)$, it follows that $q$ is continuously differentiable in some neighborhood of\/ $q^{-1}(x_{o})$.
 This is a contradiction since $q'(y)~=~0$~a.e.
 %% –
 \end{example}
@@ -2301,21 +2298,21 @@ Let $(T(t))_{t \in \R}$ be the group generated by $\delta$ and $\phi$ the contin
 We can assume that $\phi$ is of the form given in Proposition~\ref{prop:b2-3.21}.
 Let $n \in J$.
 We show that $r_{n}^{-1} \colon \R \to (a_{n},b_{n})$ is continuously differentiable.
-Let $x_{0} \in (a_{n},b_{n})$.
-There exists $f \in C_{c}^{1}(a,b)$ such that $f(x) = x$ in a neighborhood of\/ $x_{0}$.
-Then $r_{n}^{-1}(r_{n}(x_{0}) + t) = f(\phi(t,x_{0})) = (T(t)f)(x_{0})$ for all $t$ in some neighborhood of\/ $0$.
-Since $f \in D(\delta)$ it follows that the function $t~\mapsto~r_{n}^{-1}(r_{n}(x_{0}) + t)$ is continuously differentiable in some neighborhood of\/ $0$ and so $r_{n}^{-1}$ is continuously differentiable at $r_{n}(x_{0})$.
+Let $x_{o} \in (a_{n},b_{n})$.
+There exists $f \in C_{c}^{1}(a,b)$ such that $f(x) = x$ in a neighborhood of\/ $x_{o}$.
+Then $r_{n}^{-1}(r_{n}(x_{o}) + t) = f(\phi(t,x_{o})) = (T(t)f)(x_{o})$ for all $t$ in some neighborhood of\/ $0$.
+Since $f \in D(\delta)$ it follows that the function $t~\mapsto~r_{n}^{-1}(r_{n}(x_{o}) + t)$ is continuously differentiable in some neighborhood of\/ $0$ and so $r_{n}^{-1}$ is continuously differentiable at $r_{n}(x_{o})$.
 Since $r_{n} \colon (a_{n},b_{n}) \to \R$ is surjective this proves the claim.
 Next we show $(r_{n}^{-1})'(t) \neq 0$ for all $t \in \R$.
-In fact, let $x_{0} \in (a_{n},b_{n})$ and assume that $(r_{n}^{-1})'(r_{n}(x_{0})) = 0$.
+In fact, let $x_{o} \in (a_{n},b_{n})$ and assume that $(r_{n}^{-1})'(r_{n}(x_{o})) = 0$.
 Then for all $f \in D_{0}(\delta)$ one has 
 %%-- 
 \[
-(\delta f)(x_{0}) = \frac{\partial}{\partial t}_{|_{t=0}} f(r_{n}^{-1}(r_{n}(x_{0}) + t)) = f'(x_{0})(r_{n}^{-1})'(r_{n}(x_{0})) = 0.
+(\delta f)(x_{0}) = \frac{\partial}{\partial t}_{|_{t=0}} f(r_{n}^{-1}(r_{n}(x_{o}) + t)) = f'(x_{o})(r_{n}^{-1})'(r_{n}(x_{o})) = 0.
 \]
 %%--
-Since $D_{0}(\delta)$ is a core of\/ $\delta$ this implies that $\phi(t,x_{0}) = x_{0}$ for all $t \in \R$.
-Hence $x_{0} \in K$, a contradiction.
+Since $D_{0}(\delta)$ is a core of\/ $\delta$ this implies that $\phi(t,x_{o}) = x_{o}$ for all $t \in \R$.
+Hence $x_{o} \in K$, a contradiction.
 It follows that $r_{n} \colon (a_{n},b_{n}) \to \R$ is a $C^{1}$-diffeomorphism for all $n \in J$.
 
 Define $m \colon (a,b) \to \R$ by
@@ -2348,7 +2345,7 @@ This is not difficult to see.
 \end{remark*}
 %% –
 As we have seen above the operators $\delta_{m}$, where $m$ is an admissible function, do not exhaust all generators of automorphism groups.
-But one can obtain every such generator by a similarity transformation (see Part-I,~Eq.~\eqref{eq:a1-3.1} on p.~\pageref{eq:a1-3.1}) from some $\delta_{m}$.
+But one can obtain every such generator by a similarity transformation (see Eq.~\eqref{eq:a1-3.1} on p.~\pageref{eq:a1-3.1}) from some $\delta_{m}$.
 %% –
 \begin{theorem}\label{thm:b2-3.24}
 %
@@ -2467,9 +2464,9 @@ Then there exists an admissible function $m \colon (a,b) \to \R$ and an algebra 
 \end{theorem}
 %% –
 \begin{proof}
-The restriction $\delta_{0}$ of\/ $\delta$ to $C_{0}(a,b)$ is the generator of an automorphism group.
-Thus by Theorem~\ref{thm:b2-3.24} there exists a continuous admissible function $m \colon (a,b) \to \R$ and an algebra isomorphism $V_{0}$ from $C_{0}(a,b)$ onto $C_{0}(a,b)$ such that $\delta_{0} = V_{0}^{-1}\delta_{m}V_{0}$.
-Let $V$ be the unique algebra isomorphism on $C[a,b]$ which extends $V_{0}$.
+The restriction $\delta_{o}$ of\/ $\delta$ to $C_{0}(a,b)$ is the generator of an automorphism group.
+Thus by Theorem~\ref{thm:b2-3.24} there exists a continuous admissible function $m \colon (a,b) \to \R$ and an algebra isomorphism $V_{o}$ from $C_{0}(a,b)$ onto $C_{0}(a,b)$ such that $\delta_{o} = V_{o}^{-1}\delta_{m}V_{o}$.
+Let $V$ be the unique algebra isomorphism on $C[a,b]$ which extends $V_{o}$.
 Then it is easy to see that $\delta = V^{-1}\tilde{\delta}_{m}V$.
 \end{proof}
 %% –
