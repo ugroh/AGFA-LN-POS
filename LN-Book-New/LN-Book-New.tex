@@ -114,117 +114,9 @@
 \@addtoreset{chapter}{part}
 \makeatother
 
-%% --
-%\makeatletter
-%
-%% ========================================
-%% NORMALE HEADINGS (für Part/Chapter/Section)
-%% ========================================
-%\def\ps@headings{%
-%  \let\@oddfoot\@empty\let\@evenfoot\@empty
-%  \def\@evenhead{\runheadsize\rmfamily\upshape
-%                  \rlap{\thepage}\hfil
-%                  Part~\thepart\hspace{.75em}\leftmark}%
-%  \def\@oddhead{\runheadsize\rmfamily\upshape
-%                 \rightmark\hfil\llap{\thepage}}%
-%}
-
-%% ========================================
-%% SPEZIAL-HEADINGS (für List of Symbols, Index etc.)
-%% ========================================
-%\def\ps@special{%
-%  \let\@oddfoot\@empty\let\@evenfoot\@empty
-%  \let\@evenhead\@empty
-%  \let\@oddhead\@empty
-%}
-
-%% ========================================
-%% HELPER-BEFEHL für Spezial-Kapitel
-%% ========================================
-%\newcommand{%\specialchapheader}[1]{%
-%  \pagestyle{special}%
-%  #1%
-%}
-%\newcommand{%\specialchapheader}[2]{%  <- 2 Argumente!
-%  \markboth{#2}{#2}%
-%  \pagestyle{special}%
-%  #1%
-%}
-%
-% Standard: normale Headings
-%\pagestyle{headings}
-%
-%\makeatother
-%\makeatletter
-%\renewcommand{\ps@headings}{%
-%  \let\@mkboth\markboth
-%  \let\@oddfoot\@empty\let\@evenfoot\@empty
-%  \def\@evenhead{\runheadsize\rmfamily\upshape
-%                  \rlap{\thepage}\hfil
-%                  Part~\thepart\hspace{.75em}\leftmark}%
-%  \def\@oddhead{\runheadsize\rmfamily\upshape
-%                 \rightmark\hfil\llap{\thepage}}%
-%  \def\chaptermark##1{\markboth{{\if@chapnum
-%      \thechapter\thechapterend\hskip\betweenumberspace\fi ##1}}{{\if@chapnum
-%      \thechapter\thechapterend\hskip\betweenumberspace\fi ##1}}}%
-%  \def\sectionmark##1{\markright{{\ifnum\c@secnumdepth>\z@
-%      \thesection\seccounterend\hskip\betweenumberspace\fi ##1}}}%
-%}
-%\pagestyle{headings}
-%\makeatother
- 
-%% -- Running Heading Text
+%% -- Headings
 %% --
 
-%\makeatletter
-%
-%% Normaler pagestyle mit deinen Headings
-%\def\ps@headings{%
-%  \let\@oddfoot\@empty\let\@evenfoot\@empty
-%  \def\@evenhead{\runheadsize\rmfamily\upshape\rlap{\thepage}\hfil
-%                  Part~\thepart\hspace{.75em}\leftmark}%
-%  \def\@oddhead{\runheadsize\rmfamily\upshape\rightmark\hfil\llap{\thepage}}%
-%}
-%
-%% Spezial-pagestyle (für List of Symbols, Index etc.)
-%\def\ps@special{%
-%  \let\@oddfoot\@empty\let\@evenfoot\@empty
-%  \def\@evenhead{\runheadsize\rmfamily\upshape\rlap{\thepage}\hfil}%
-%  \def\@oddhead{\runheadsize\rmfamily\upshape\hfil\llap{\thepage}}%
-%}
-%
-%\newcommand{%\specialchapheader}[2]{%
-%  \markboth{#2}{#2}%
-%  \pagestyle{special}%
-%  #1%
-%}
-%
-%\pagestyle{headings}
-%
-%\makeatother
-
-%\makeatletter
-%\newcommand{\restoreheadings}{%
-%  \def\@evenhead{\runheadsize\rmfamily\upshape
-%                  \rlap{\thepage}\hfil
-%                  Part~\thepart\hspace{.75em}\leftmark}%
-%  \def\@oddhead{\runheadsize\rmfamily\upshape
-%                 \rightmark\hfil\llap{\thepage}}%
-%  \pagestyle{headings}%
-%}
-%\makeatother
-
-%\makeatletter
-%
-%% LINKE Seite: Part-I Chapter 1 Titel
-%\def\@evenhead{\runheadsize\rmfamily\upshape
-%                \rlap{\thepage}\hfil
-%                Part~\thepart\hspace{.75em} \leftmark}
-%% RECHTE Seite (ungerade): "Section 1.2 Standard Examples"
-%\def\@oddhead{\runheadsize\rmfamily\upshape
-%               \rightmark\hfil\llap{\thepage}}
-%\makeatother
-%% ---
 \makeatletter
 
 % NORMALE HEADINGS (für Part/Chapter/Section)
@@ -278,49 +170,6 @@
 \makeatother
 
 
-
-%% -- Running Headings UNotes
-%% --
-
-%\makeatletter
-%\newcommand{\notesheader}{%
-%  \def\@evenhead{\runheadsize\rmfamily\upshape
-%                  \rlap{\thepage}\hfil
-%                  Updated Notes}%
-%  \def\@oddhead{\runheadsize\rmfamily\upshape
-%                 Updated Notes\hfil\llap{\thepage}}%
-%}
-%\makeatother
-
-%% -- Generisch Running Header
-%% --
-%\makeatletter
-%\newcommand{%\specialchapheader}[2]{%
-%  % #1 = Befehl (z.B. \chapter*, \printindex)
-%  % #2 = Header-Text (z.B. "List of Symbols")
-%  \def\ps@headings{%
-%    \let\@oddfoot\@empty\let\@evenfoot\@empty%
-%    \def\@evenhead{\runheadsize\rmfamily\upshape\rlap{\thepage}\hfil #2}%
-%    \def\@oddhead{\runheadsize\rmfamily\upshape #2\hfil\llap{\thepage}}%
-%  }%
-%  \pagestyle{headings}%
-%  #1%
-%}
-%\makeatother
-
-%%% -- Running Heading Index
-%%% --
-%\makeatletter
-%\newcommand{\specialindex}{%
-%  \def\ps@headings{%
-%    \let\@oddfoot\@empty\let\@evenfoot\@empty%
-%    \def\@evenhead{\runheadsize\rmfamily\upshape\rlap{\thepage}\hfil Index}%
-%    \def\@oddhead{\runheadsize\rmfamily\upshape Index\hfil\llap{\thepage}}%
-%  }%
-%  \pagestyle{headings}%
-%  \printindex%
-%}
-%\makeatother
 
 %% -- To prevent overlapping in TOC
 %% --
