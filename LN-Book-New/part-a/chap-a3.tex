@@ -73,7 +73,7 @@ for every $t \geq 0$.
 \end{proposition}
 %% --
 \begin{proof}
-From Eq.~\eqref{eq:a1-1.1} on p.~\pageref{eq:a1-1.1} we know that
+From Eq.~\eqref{eq:a1-1.1} we know that
 %% --
 \[
     \omega_{0}(\TT) = \lim_{t \to \infty} \frac{1}{t} \log \|T(t)\| .
@@ -1315,7 +1315,7 @@ for $\mu \notin 2\pi\im /\tau\cdot\Z$.
 \end{lemma}
 %% --
 \begin{proof}
-From the basic identities Eq.~\eqref{eq:a1-3.1} and Eq.~\eqref{eq:a1-3.2} on p.~\pageref{eq:a1-3.2} for $t = \tau$, it follows that $(\mu - A)$ has a left and right inverse if\/ $\mu \neq 2\pi\im n/\tau$, $n \in \Z$, and that the inverse is given by the above expression.
+From the basic identities Eq.~\eqref{eq:a1-3.1} and Eq.~\eqref{eq:a1-3.2} for $t = \tau$, it follows that $(\mu - A)$ has a left and right inverse if\/ $\mu \neq 2\pi\im n/\tau$, $n \in \Z$, and that the inverse is given by the above expression.
 \end{proof}
 %% --
 The representation of\/ $R(\mu,A)$ given in Proposition~\ref{prop:a1-1.11} shows that the resolvent of the generator of a periodic semigroup is a meromorphic function having only poles of order one and the residues
@@ -1609,7 +1609,7 @@ More precisely we have the following inclusions.
 \end{proposition}
 %% --
 \begin{proof}
-Since $\eu^{\lambda t} - T(t) = (\lambda - A)\int_{0}^{t} \eu^{\lambda(t-s)}T(s) \, \ds$ (see Eq.~\eqref{eq:a1-3.1} on p.~\pageref{eq:a1-3.1}), it follows that $(\eu^{\lambda t} - T(t))$ is not bijective if\/ $(\lambda - A)$ fails to be bijective proving the main inclusion.
+Since $\eu^{\lambda t} - T(t) = (\lambda - A)\int_{0}^{t} \eu^{\lambda(t-s)}T(s) \, \ds$ (see Eq.~\eqref{eq:a1-3.1}), it follows that $(\eu^{\lambda t} - T(t))$ is not bijective if\/ $(\lambda - A)$ fails to be bijective proving the main inclusion.
 
 The inclusion Eq.~\eqref{eq:a3-6.1} becomes evident from the following proof of Eq.~\eqref{eq:a3-6.2}. Take $\lambda \in A\sigma(A)$ and an associated approximate eigenvector $(f_{n}) \subset D(A)$.
 Then
@@ -2148,7 +2148,7 @@ Henceforth we assume $\im\Z \subset \rho(A)$ and define for $k \in \Z$
 Q_{k}\coloneqq \frac{1}{2\pi}\int_{0}^{2\pi} \eu^{-\im ks}T(s)\ds = \frac{1}{2\pi}(1 - T(2\pi))R(\im k,A)
 \end{equation}
 %% --
-(\cf Formula Eq.~\eqref{eq:a1-3.1} on p.~\pageref{eq:a1-3.1}).
+(\cf Formula Eq.~\eqref{eq:a1-3.1}).
 
 Our approach is based on Fejér's Theorem (for Banach space valued functions).
 Let us recall this result.
@@ -2185,7 +2185,7 @@ $\im\Z \subset \rho(A)$ and the series $\sum_{k\in\Z} R(\im k,A)Q_{k}f$ is Césa
 By Eq.~\eqref{eq:a3-7.7} we have $R(\im k,A) = 2\pi\cdot(1-T(2\pi))^{-1}Q_{k}$.
 Since $\sum_{k\in\Z} Q_{k}f$ is Césaro-summable (\mbox{towards} $\frac{1}{2}(f + T(2\pi)f)$) (see Eq.~\eqref{eq:a3-7.8}), it follows that $\sum_{k\in\Z} R(\im k,A)f$ is Césaro-summable as well.
 
-(b) $\Leftrightarrow$ (c) If we use Eq.~\eqref{eq:a1-3.1} on p.~\pageref{eq:a1-3.1} and integrate by parts, we obtain
+(b) $\Leftrightarrow$ (c) If we use Eq.~\eqref{eq:a1-3.1} and integrate by parts, we obtain
 \begin{align*}
 R(\im k,A)Q_{k}f &= \frac{1}{2\pi}\int_{0}^{2\pi} \eu^{-\im ks} T(s)R(\im k,A)f \ds \\
 &= \frac{1}{2\pi}\int_{0}^{2\pi} \left[R(\im k,A)f - \int_{0}^{s} \eu^{-\im kt} T(t)f \dt\right] \ds \\
@@ -2252,7 +2252,7 @@ It follows that $\sum_{k\in\Z} \|Q_{k}f\|^{2} \leq \frac{1}{2\pi}\int_{0}^{2\pi}
 g_{k}\coloneqq (1 + \lambda R(\im k,A))f_{k}, k \in \Z .
 \]
 \index{resolvent equation}
-Using the resolvent equation and then (Eq.~\eqref{eq:a1-3.1} on p.~\pageref{eq:a1-3.1}), we obtain
+Using the resolvent equation and then (Eq.~\eqref{eq:a1-3.1}), we obtain
 %% --
 \[
 R(\im k,A)f_{k} = R(\lambda + \im k,A)g_{k} = [1 - \eu^{-2\pi\lambda}T(2\pi)]^{-1}\int_{0}^{2\pi} \eu^{-\lambda s}\eu^{-\im ks}T(s)g_{k} \ds .
@@ -2291,7 +2291,7 @@ Then the following form of the spectral mapping theorem is valid.
 \end{theorem}
 %% --
 \begin{proof}
-If\/ $\eu^{\lambda t} \not\in \sigma(T(t))$, it follows from the Spectral Inclusion Proposition~\ref{prop:a3-6.2} that $\mu_{k} \not\in \sigma(A)$ for every $k \in \Z$ and from Formula \eqref{eq:a1-3.1} on p.~\pageref{eq:a1-3.1},  that $\|R(\mu_{k},A)\|$ is bounded.
+If\/ $\eu^{\lambda t} \not\in \sigma(T(t))$, it follows from the Spectral Inclusion Proposition~\ref{prop:a3-6.2} that $\mu_{k} \not\in \sigma(A)$ for every $k \in \Z$ and from Formula \eqref{eq:a1-3.1},  that $\|R(\mu_{k},A)\|$ is bounded.
 For the converse inclusion it suffices to assume $t = 2\pi$ and $\lambda = 0$ (use the rescaling procedure Section~\ref{subsec:a1-3.2}).
 Assuming that $\im\Z \subset \rho(A)$ and $\|R(\im k,A)\|$ is bounded, then $\sum_{k\in\Z} R(\im k,A)Q_{k}f$ is summable by Lemma~\ref{lem:a3-7.9}.
 Since every summable series is Cesàro-summable, condition (c) of Proposition~\ref{prop:a3-7.8} is satisfied and we conclude $1 \in \rho(T(2\pi))$.
