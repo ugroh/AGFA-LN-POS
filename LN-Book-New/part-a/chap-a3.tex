@@ -685,7 +685,7 @@ Unfortunately such spectral decompositions do not exist in general.
 \index{semigroup!rotation semigroup}
 \index{rotation semigroup}
 Take the rotation semigroup from Section~\ref{subsec:a1-2.5} on the Banach space $L^{p}(\Gamma)$, $1 \leq p < \infty$, $\tau = 2\pi$.
-It was stated in Example~\ref{ex:a3-2.4} and will be proved inSection~\ref{sec:a3-5} that its generator $A$ has spectrum
+It was stated in Example~\ref{ex:a3-2.4} and will be proved in Section~\ref{sec:a3-5} that its generator $A$ has spectrum
 %% --
 \[
 \sigma(A) = P\sigma(A) = \im\Z
@@ -693,8 +693,7 @@ It was stated in Example~\ref{ex:a3-2.4} and will be proved inSection~\ref{sec:a
 %% --
 where $\epsilon_{k}(z) \coloneqq z^{k}$ spans the eigenspace corresponding to $\im k$, $k \in \Z$.
 
-Now, $\sigma(A)$ is the disjoint union of 
-$\sigma_{1} \coloneqq \{0,\im ,2\im, \ldots\}$ 
+Now, $\sigma(A)$ is the disjoint union of $\sigma_{1} \coloneqq \{0,\im ,2\im, \ldots\}$ 
 and $\sigma_{2} \coloneqq \{-\im, -2\im, \ldots\}$.
 By a result of M. Riesz there is no projection $P \in \L{L^{1}(\Gamma)}$ satisfying $P\epsilon_{k} = \epsilon_{k}$ for $k \geq 0$, $P\epsilon_{k} = 0$ for $k < 0$ , hence there is no spectral decomposition of\/ $L^{1}(\Gamma)$ corresponding to $\sigma_{1}$, $\sigma_{2}$ (\textcite[p.165]{lindenstraustzafriri:1979}).
 
@@ -819,7 +818,7 @@ Therefore we have constants $m$, $M$ with $m \le 1 \le M $ such that
 %% --
 \begin{align*}
 	\|T(t)f\| &\leq M \cdot \eu^{\beta t}\|f\| \quad \text{for } f \in E_{2} , \\
-	\|T(t)f\| &\geq m \cdot \eu^{-\beta t}\|f\| \quad \text{for } f \in E_{1} .
+	\|T(t)f\| &\geq m \cdot \eu^{\beta t}\|f\| \quad \text{for } f \in E_{1} .
 \end{align*}
 %% --
 As nice as they might look, results of this type are unsatisfactory. We need information on the semigroup in order to estimate its asymptotic behavior.
@@ -1492,15 +1491,15 @@ on $E = C(\Gamma)$, \resp $E = L^{p}(\Gamma,m)$ for $1 \leq p < \infty$.
 The spectrum of the generator\quad
 $Af(z) = (2\pi\im /\tau)z \cdot f'(z)$\quad
 %% --
-is \quad $\sigma(A) = (2\pi\im /\tau)\cdot\Z$.
+is \quad $\sigma(A) = (2\pi\im /\tau) \cdot\Z$.
 The eigenfunctions $\epsilon_{n}(z) \coloneqq z^{n}$ yield the projections
 %% --
 \[
-P_{n} = (1/2\pi\im )\cdot\epsilon_{-(n+1)} \otimes \epsilon_{n}, \text{ \ie }
+P_{n} = \frac{1}{2\pi \iu} \cdot\epsilon_{-(n+1)} \otimes \epsilon_{n}, \text{ \ie }
 \]
 %% --
 \[
-P_{n}f(z) = (1/2\pi\im )\cdot(\int_{\Gamma} f(w)w^{-(n+1)} \, \diff{w})\cdot z^{n} .
+P_{n}f(z) = \frac{1}{2\pi \iu}  \cdot \left( \int_{\Gamma} f(w)w^{-(n+1)} \, \diff{w} \right)\cdot z^{n} .
 \]
 %% --
 It is left as an exercise to compute the norms of\/ $Q_{m} \coloneqq \sum_{-m}^{+m} P_{n}$ in $L^{p}(\Gamma,m)$ for various $p$ and then check the assertions of Theorem~\ref{thm:a3-5.4}.
@@ -2202,7 +2201,7 @@ is Césaro summable.
 Hence $\sum_{k\in\Z} R(\im k,A)Q_{k}f$ is Césaro-summable if and only if\/ $\sum_{k\in\Z} R(\im k,A)f$ is.
 
 (b) $\Rightarrow$ (a) We have $Q_{k} = \frac{1}{2\pi}(1 - T(2\pi))R(\im k,A)$.
-Furthermore we know by Eq.~\eqref{eq:a3-7.7} and Eq.~\eqref{eq:a3-7.8} on the previous page that $\sum_{k\in\Z} Q_{k}f$ is Césaro-summable towards $\frac{1}{2}(f + T(2\pi)f)$.
+Furthermore we know by Eq.~\eqref{eq:a3-7.7} and Eq.~\eqref{eq:a3-7.8}  that $\sum_{k\in\Z} Q_{k}f$ is Césaro-summable towards $\frac{1}{2}(f + T(2\pi)f)$.
 If we define $S \colon E \to E$ by $Sf \coloneqq \frac{1}{2}f + \frac{1}{2\pi}\cdot C_{1}\text{-}\sum_k R(\im k,A)f$, then we have
 \begin{align*}
 (1 - T(2\pi))Sf &= \frac{1}{2}(f - T(2\pi)f) + \frac{1}{2\pi}\cdot C_{1}\text{-}\sum_k (1 - T(2\pi))R(\im k,A)f \\
@@ -2281,7 +2280,7 @@ Then the following form of the spectral mapping theorem is valid.
 \begin{minipage}{.85\textwidth}
 	$ \eu^{\lambda t} \in \sigma(T(t))\setminus\{0\} $ if and only if either 
 	$\mu_{k}\coloneqq \lambda + 2\pi\im  k/t \in \sigma(A)$ for some  $k \in \Z$
-	or  if\/ $(\|R(\mu_{k},A)\|)_{k\in\Z}$ is unbounded.
+	otherwise  if\/ $(\|R(\mu_{k},A)\|)_{k\in\Z}$ is unbounded.
 \end{minipage}
 \]
 \end{theorem}
@@ -2305,7 +2304,7 @@ of a semigroup $(T(t))_{t\geq 0}$ on a Hilbert space $H$ satisfies
 \end{equation}
 \end{corollary}
 %% --
-The Example~\ref{ex:a3-1.3} above in combination with Corollary~\ref{cor:c3-1.3} shows that Eq.~\eqref{eq:a3-7.9} on p.~\pageref{eq:a3-7.9} is not valid in arbitrary Banach spaces.
+The Example~\ref{ex:a3-1.3} above in combination with Corollary~\ref{cor:c3-1.3} shows that Eq.~\myeqpageref{eq:a3-7.9} is not valid in arbitrary Banach spaces.
 %% -- Notes
 %% --
 \newpage
