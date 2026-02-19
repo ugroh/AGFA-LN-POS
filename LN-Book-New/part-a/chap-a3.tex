@@ -73,7 +73,7 @@ for every $t \geq 0$.
 \end{proposition}
 %% --
 \begin{proof}
-From Eq.~\eqref{eq:a1-1.1} we know that
+From Eq.~\myeqpageref{eq:a1-1.1} we know that
 %% --
 \[
     \omega_{0}(\TT) = \lim_{t \to \infty} \frac{1}{t} \log \|T(t)\| .
@@ -845,7 +845,7 @@ The coefficients $U_{n}$ are bounded linear operators given by
 where $\Gamma = \{z \in \C \colon |z - \lambda_{0}| = \delta/2\}$.
 The coefficient $U_{-1}$ is the spectral projection corresponding to the spectral set $\{\lambda_{0}\}$ (see Definition~\ref{def:a3-3.1}).
 It is called the \emph{residue} of\/ $R(\cdot,A)$ at $\lambda_{0}$ and will be denoted by $P$.
-From Eq.~\eqref{eq:a3-3.1} one deduces
+From Eq.~\myeqpageref{eq:a3-3.1} one deduces
 %% --
 \begin{equation*}\label{eq:a3-3.2}
 U_{-(n+1)} = (A - \lambda_{0})^{n} \circ P 
@@ -855,7 +855,7 @@ U_{-(n+1)} \circ U_{-(m+1)} = U_{-(n+m+1)} \text{ for } n, m \geq 0 .
 %% --
 If there exists $k > 0$ such that $U_{-k} \neq 0$ while $U_{-n} = 0$ for all $n > k$, the point $\lambda_{0}$ is called a \emph{pole of} $R(\cdot,A)$ \emph{of order} $k$, otherwise it is called an \emph{essential singularity}. 
 \index{eigenvalue!essential singularity}
-In view of Eq.~\eqref{eq:a3-3.2} this is true if\/ $U_{-k} \neq 0$ and $U_{-(k+1)} = 0$.
+In view of Eq.~\myeqpageref{eq:a3-3.2} this is true if\/ $U_{-k} \neq 0$ and $U_{-(k+1)} = 0$.
 In this case one can retrieve $U_{-k}$ as
 %% --
 \begin{equation}\label{eq:a3-3.3}
@@ -960,7 +960,7 @@ Now, if\/ $\TT = (T(t))_{t \geq 0}$ is a strongly continuous semigroup, then VII
 \end{equation}
 %% --
 is well defined (possibly $-\infty$).
-By the definition of\/ $\omega_{\text{ess}}(\TT)$ and Eq.~\eqref{eq:a3-3.6} we have
+By the definition of\/ $\omega_{\text{ess}}(\TT)$ and Eq.~\myeqpageref{eq:a3-3.6} we have
 %% --
 \begin{equation}\label{eq:a3-3.10}
 r_{\text{ess}}(T(t)) = \exp(t\omega_{\text{ess}}(\TT)), \quad t \geq 0 .
@@ -1123,7 +1123,7 @@ If\/ $R(\cdot,A)_{|}$ has a pole in $\mu$ of order $\ell$, then $U_{-(\ell+1)|} 
 Similarly, it follows that $U_{-(m+1)}E \subset N$ if\/ $R(\cdot,A)_{/}$ has a pole in $\mu$ of order $m$.
 Therefore $U_{-(\ell+1)} \circ U_{-(m+1)} = 0$.
 
-The relations Eq.~\eqref{eq:a3-3.2} imply $U_{-(m+\ell+1)} = 0$, hence the pole order of\/ $R(\cdot,A)$ is dominated 
+The relations Eq.~\myeqpageref{eq:a3-3.2} imply $U_{-(m+\ell+1)} = 0$, hence the pole order of\/ $R(\cdot,A)$ is dominated 
 by $\ell + m$.
 \end{enumerate}
 \end{proof}
@@ -1315,7 +1315,7 @@ for $\mu \notin 2\pi\im /\tau\cdot\Z$.
 \end{lemma}
 %% --
 \begin{proof}
-From the basic identities Eq.~\eqref{eq:a1-3.1} and Eq.~\eqref{eq:a1-3.2} for $t = \tau$, it follows that $(\mu - A)$ has a left and right inverse if\/ $\mu \neq 2\pi\im n/\tau$, $n \in \Z$, and that the inverse is given by the above expression.
+From the basic identities Eq.~\myeqpageref{eq:a1-3.1} and Eq.~\myeqpageref{eq:a1-3.2} for $t = \tau$, it follows that $(\mu - A)$ has a left and right inverse if\/ $\mu \neq 2\pi\im n/\tau$, $n \in \Z$, and that the inverse is given by the above expression.
 \end{proof}
 %% --
 The representation of\/ $R(\mu,A)$ given in Proposition~\ref{prop:a1-1.11} shows that the resolvent of the generator of a periodic semigroup is a meromorphic function having only poles of order one and the residues
@@ -1335,14 +1335,14 @@ Another way of looking at $P_{n}$ is given by saying that $P_{n}$ is the n-th Fo
 From this it follows that no non-zero $\phi \in E'$ vanishes on all $P_{n}E$ simultaneously.
 By the Hahn-Banach theorem we conclude that $\text{span } \cup_{n \in \Z} P_{n}E$ is dense in $E$.
 
-Since $P_{n}E \subset D(A)$, we obtain again from Eq.~\eqref{eq:a1-3.1} that
+Since $P_{n}E \subset D(A)$, we obtain again from Eq.~\myeqpageref{eq:a1-3.1} that
 %% --
 \begin{equation}\label{eq:a3-5.3}
 AP_{n}f = \mu_{n}P_{n}f
 \end{equation}
 %% --
 for every $f \in E$, $n \in \Z$.
-This and Eq.~\eqref{eq:a1-3.2} imply
+This and Eq.~\myeqpageref{eq:a1-3.2} imply
 %% --
 \begin{equation}\label{eq:a3-5.4}
 T(t)P_{n}f = \exp(\mu_{n}t) \cdot P_{n}f
@@ -1374,7 +1374,7 @@ $\exp(\mu_{n}t) \in P\sigma(T(t))$ for every $t > 0$ .
 \end{enumerate}
 \end{lemma}
 %% --
-The action of\/ $A$, \resp $T(t)$ in the subspaces $P_{n}E$, $n \in \Z$, is determined by Eq.~\eqref{eq:a3-5.3} and Eq.~\eqref{eq:a3-5.4}.
+The action of\/ $A$, \resp $T(t)$ in the subspaces $P_{n}E$, $n \in \Z$, is determined by Eq.~\myeqpageref{eq:a3-5.3} and Eq.~\myeqpageref{eq:a3-5.4}.
 Moreover,
 %% --
 \[
@@ -1383,7 +1383,7 @@ Moreover,
 \]
 %% --
 for $n \neq m$, hence the subspaces $P_{n}E$ are \enquote{orthogonal}.
-Since their union is total in $E$, one expects to be able to extend the representations Eq.~\eqref{eq:a3-5.3} and Eq.~\eqref{eq:a3-5.4} of\/ $A$ and $T(t)$.
+Since their union is total in $E$, one expects to be able to extend the representations Eq.~\myeqpageref{eq:a3-5.3} and Eq.~\myeqpageref{eq:a3-5.4} of\/ $A$ and $T(t)$.
 This is possible if
 %% --
 \[
@@ -1420,7 +1420,7 @@ $Af = \sum_{-\infty}^{+\infty} \mu_{n}P_{n}f$ \quad if\/ $f \in D(A^{2})$ .
 \end{theorem}
 %% --
 \begin{proof}
-It suffices to prove the first statement. Then (i) and (ii) follow by Eq.~\eqref{eq:a3-5.3} and Eq.~\eqref{eq:a3-5.4}.
+It suffices to prove the first statement. Then (i) and (ii) follow by Eq.~\myeqpageref{eq:a3-5.3} and Eq.~\myeqpageref{eq:a3-5.4}.
 
 We assume $\tau = 2\pi$ and show first that $\sum_{-\infty}^{+\infty} P_{n}f$ is summable for $f \in D(A)$: For $g \coloneqq Af$ we obtain $P_{n}g = P_{n}Af = AP_{n}f = \im nP_{n}f$.
 Take $H$ to be a finite subset of\/ $\Z \setminus \{0\}$ and $\phi \in E'$. Then
@@ -1609,9 +1609,9 @@ More precisely we have the following inclusions.
 \end{proposition}
 %% --
 \begin{proof}
-Since $\eu^{\lambda t} - T(t) = (\lambda - A)\int_{0}^{t} \eu^{\lambda(t-s)}T(s) \, \ds$ (see Eq.~\eqref{eq:a1-3.1}), it follows that $(\eu^{\lambda t} - T(t))$ is not bijective if\/ $(\lambda - A)$ fails to be bijective proving the main inclusion.
+Since $\eu^{\lambda t} - T(t) = (\lambda - A)\int_{0}^{t} \eu^{\lambda(t-s)}T(s) \, \ds$ (see Eq.~\myeqpageref{eq:a1-3.1}), it follows that $(\eu^{\lambda t} - T(t))$ is not bijective if\/ $(\lambda - A)$ fails to be bijective proving the main inclusion.
 
-The inclusion Eq.~\eqref{eq:a3-6.1} becomes evident from the following proof of Eq.~\eqref{eq:a3-6.2}. Take $\lambda \in A\sigma(A)$ and an associated approximate eigenvector $(f_{n}) \subset D(A)$.
+The inclusion Eq.~\myeqpageref{eq:a3-6.1} becomes evident from the following proof of Eq.~\myeqpageref{eq:a3-6.2}. Take $\lambda \in A\sigma(A)$ and an associated approximate eigenvector $(f_{n}) \subset D(A)$.
 Then
 %% --
 \[
@@ -1621,7 +1621,7 @@ g_{n} \coloneqq \eu^{\lambda t}f_{n} - T(t)f_{n} = \int_{0}^{t} \eu^{\lambda(t-s
 converges to zero as $n \to \infty$.
 Consequently, $\eu^{\lambda t} \in A\sigma(T(t))$ and, in fact, the same approximate eigenvector $(f_{n})$ does the job for all $t \geq 0$.
 
-For the proof of Eq.~\eqref{eq:a3-6.3} we take $\lambda \in R\sigma(A)$ and observe that $(\eu^{\lambda t} - T(t))f = (\lambda - A)(\int_{0}^{t} \eu^{\lambda(t-s)}T(s)f \, \ds) \in (\lambda - A)D(A)$ for every $f \in E$.
+For the proof of Eq.~\myeqpageref{eq:a3-6.3} we take $\lambda \in R\sigma(A)$ and observe that $(\eu^{\lambda t} - T(t))f = (\lambda - A)(\int_{0}^{t} \eu^{\lambda(t-s)}T(s)f \, \ds) \in (\lambda - A)D(A)$ for every $f \in E$.
 \end{proof}
 %% --
 As we know from the Examples~\ref{ex:a3-6.1}, the converse inclusions do not hold in general, \ie not every spectral value of a semigroup operator $T(t)$ comes---via the exponential map---from a spectral value of the generator.
@@ -1644,7 +1644,7 @@ Then
 \end{theorem}
 %% --
 \begin{proof}
-For the proof of Eq.~\eqref{eq:a3-6.4},  take $t_{0} > 0$ and $0 \neq \lambda \in P\sigma(T(t_{0}))$.
+For the proof of Eq.~\myeqpageref{eq:a3-6.4},  take $t_{0} > 0$ and $0 \neq \lambda \in P\sigma(T(t_{0}))$.
 
 After rescaling the semigroup $\TT = (T(t))_{t \geq 0}$ to the semigroup
 %% --
@@ -1662,7 +1662,7 @@ G \coloneqq \{g \in E \colon T(t_{0})g = g\}
 is non trivial.
 The restricted semigroup $T_{|}$ is periodic with period $\tau \leq t_{0}$ and the spectrum of its generator $A_{|}$ contains at least one eigenvalue $\mu = 2\pi\im n/t_{0}$ for some $n \in \Z$ (see Lemma~\ref{lem:a3-5.3}).
 Since every eigenvalue of\/ $A_{|}$ is an eigenvalue of\/ $A$, we obtain that $1 \in \exp(t_{0} \cdot P\sigma(A))$.
-The converse inclusion has been proved in Eq.~\eqref{eq:a3-6.1}.
+The converse inclusion has been proved in Eq.~\myeqpageref{eq:a3-6.1}.
 
 In fact, even more can be said: Let $g \in G$ be an eigenvector of\/ $T(t_{0})$ corresponding to the eigenvalue $\lambda = 1$.
 For each $n \in \Z$ define
@@ -1674,9 +1674,9 @@ g_{n} \coloneqq P_{n}g = 1/t_{0} \cdot \int_{0}^{t_{0}} \exp(-2\pi\im ns/t_{0})T
 as in Section~\ref{sec:a3-5}.
 If\/ $g_{n} \ne 0$, then $g_{n}$ is an eigenvector of\/ $A_{|}$, hence of\/ $A$ with eigenvalue $2\pi\im n/t_{0}$ as soon as $g_{n}$ is distinct from zero.
 Since $D(A_{|})$ is dense in $G$ it follows from Theorem~\ref{thm:a3-5.4} that this holds for at least one $n \in \Z$.
-And from the proof of Eq.~\eqref{eq:a3-6.1} we know that this $g_{n}$ is in fact an eigenvector for each $T(t)$, $t \geq 0$.
+And from the proof of Eq.~\myeqpageref{eq:a3-6.1} we know that this $g_{n}$ is in fact an eigenvector for each $T(t)$, $t \geq 0$.
 
-Since $R\sigma(A) = P\sigma(A^{*})$ and $R\sigma(T(t)) = P\sigma(T(t)^{*})$ (see Proposition~\ref{prop:a3-4.4}) the assertion Eq.~\eqref{eq:a3-6.5}  follows from Eq.~\eqref{eq:a3-6.4} .
+Since $R\sigma(A) = P\sigma(A^{*})$ and $R\sigma(T(t)) = P\sigma(T(t)^{*})$ (see Proposition~\ref{prop:a3-4.4}) the assertion Eq.~\myeqpageref{eq:a3-6.5}  follows from Eq.~\myeqpageref{eq:a3-6.4} .
 \end{proof}
 %% --
 Note that the proof is essentially an application of the structure theorem for periodic semigroups as given in Theorem~\ref{thm:a3-5.4}.
@@ -1729,7 +1729,7 @@ is the trouble maker in the sense that not every approximate eigenvalue of\/ $T(
 Since nothing more can be said in general, we now look for additional hypotheses on the semigroup implying the spectral mapping theorem.
 
 As a simple example we assume $T(t_{0})$ to be compact for some $t_{0} > 0$.
-Then $\sigma(T(t)) \setminus \{0\} = P\sigma(T(t)) \setminus \{0\}$ for $t \geq t_{0}$ and the spectral mapping theorem is valid by Eq.~\eqref{eq:a3-6.4}.
+Then $\sigma(T(t)) \setminus \{0\} = P\sigma(T(t)) \setminus \{0\}$ for $t \geq t_{0}$ and the spectral mapping theorem is valid by Eq.~\myeqpageref{eq:a3-6.4}.
 A different class of semigroups verifying the spectral mapping theorem is given by the uniformly continuous semigroups (compare Corollary~\ref{cor:a3-1.2}).
 
 Both cases, and many more, are included in the following result.
@@ -1750,7 +1750,7 @@ Then the spectral mapping theorem is valid, \ie
 \begin{proof}
 By the previous considerations it suffices to show that $A\sigma(T(t)) \setminus \{0\} \subset \eu^{t \cdot \sigma(A)}$ for $t > 0$.
 This will be done by converting approximate eigenvectors into eigenvectors in the semigroup $\F$-product (see Subsection~\ref{subsec:a3-4.5}).
-The assertion then follows from Eq.~\eqref{eq:a3-6.4} and Proposition~\ref{prop:a3-4.4}\,(ii).
+The assertion then follows from Eq.~\myeqpageref{eq:a3-6.4} and Proposition~\ref{prop:a3-4.4}\,(ii).
 
 Assume $t \mapsto T(t)$ to be norm continuous for $t \geq t_{0}$.
 Moreover it suffices to consider $1 \in A\sigma(T(t_{1}))$ for some $t_{1} > 0$, \ie we have a normalized sequence $(f_{n})_{n\in\N} \subset E$ such that
@@ -1780,7 +1780,7 @@ But the semigroup $\TT$ is uniformly continuous on sets of the form $T(t_{0})V$,
  \index{semigroup!F-product@$\mathcal{F}$-product}
 In particular, it is uniformly continuous on the sequence $(g_{n})_{n\in\N}$, which therefore defines an element $g$ in the semigroup $\F$-product $E_{\F}$.
 
-Obviously, $g$ is an eigenvector of\/ $T_{\F}(t_{1})$ with eigenvalue $1$ and by Eq.~\eqref{eq:a3-6.4} we obtain an eigenvalue $2\pi\im  n/t_{1}$ of\/ $A_{\F}$ for some $n \in \Z$.
+Obviously, $g$ is an eigenvector of\/ $T_{\F}(t_{1})$ with eigenvalue $1$ and by Eq.~\myeqpageref{eq:a3-6.4} we obtain an eigenvalue $2\pi\im  n/t_{1}$ of\/ $A_{\F}$ for some $n \in \Z$.
 The coincidence of\/ $\sigma(A)$ and $\sigma(A_{\F})$ proves the assertion.
 \end{proof}
 %% --
@@ -1890,7 +1890,7 @@ In the previous section we showed under which hypotheses a spectral mapping theo
 %% --
 is valid for the generator $A$ of a strongly continuous semigroup $(T(t))_{t\geq 0}$.
 
-Among the various examples showing that Eq.~\eqref{eq:a3-7.1} does not hold in general we recall the following.
+Among the various examples showing that Eq.~\myeqpageref{eq:a3-7.1} does not hold in general we recall the following.
 Take the Banach space $E = c_{0}$, the multiplication operator $A(x_{n})_{n\in\N} = (\im n x_{n})_{n\in\N}$ with maximal domain and the corresponding semigroup $T(t)(x_{n})_{n \in \N} = 
 (\eu^{\im nt}x_{n})_{n \in \N}$.
 Then $\sigma(A) = \{\im n \colon n \in \N\}$ and the spectral mapping theorem is valid only in the following weak form
@@ -2029,7 +2029,7 @@ If\/ $E \neq \{0\}$, then $\sigma(A) \neq \emptyset$.
 \end{lemma}
 %% --
 \begin{proof}
-If\/ $\sigma(A) = \emptyset$, then Eq.~\eqref{eq:a3-7.3} implies $T(\phi) = 0$ whenever $\check{\phi}$ has compact support.
+If\/ $\sigma(A) = \emptyset$, then Eq.~\myeqpageref{eq:a3-7.3} implies $T(\phi) = 0$ whenever $\check{\phi}$ has compact support.
 Since these functions form a dense subspace of\/ $\mathcal{S}$, we conclude that $T(\phi) = 0$ for all $\phi \in \mathcal{S}$.
 Choosing an approximate identity $(\psi_{n})_{n\in\N} \subset \mathcal{D}$, we obtain
 %% --
@@ -2048,7 +2048,7 @@ In view of the rescaling procedure it suffices to prove this when $-1 \in \rho(T
 	\text{There exists } \epsilon > 0 \text{ such that } \bigcup_{k\in\Z} \im\,[2k+1-2\epsilon,2k+1+2\epsilon] \subset 	\rho(A) .
 \end{equation}
 %% --
-Assume now that Eq.~\eqref{eq:a3-7.4} holds.
+Assume now that Eq.~\myeqpageref{eq:a3-7.4} holds.
 Then each of the sets 
 \[
 	\sigma_{k}\coloneqq \{\im\alpha \in \sigma(A) \colon \alpha \in [2k-1,2k+1]\}
@@ -2061,14 +2061,14 @@ If we choose $\phi_{0} \in \mathcal{D}$ such that
 	\phi_{0}(x) & = 1 \quad \text{for $x \in [-1 + 2\epsilon,1 - 2\epsilon]$}, 
 \end{align*}
 %% --
-it follows from Eq.~\eqref{eq:a3-7.3} and the integral representation of\/ $P_{k}$ (cf.\ Eq.~\eqref{eq:a3-3.1}) that $P_{0} = T(\check{\phi_{0}})$.
+it follows from Eq.~\myeqpageref{eq:a3-7.3} and the integral representation of\/ $P_{k}$ (cf.\ Eq.~\myeqpageref{eq:a3-3.1}) that $P_{0} = T(\check{\phi_{0}})$.
 
 More generally, since %
 \[
 	\left(\eu^{\im 2k}\check{\phi_{0}}\right){\hat{ }}\,(\alpha) = \phi_{0}(\alpha-2k) ,
 \]
 %
-the assertions Eq.~\eqref{eq:a3-7.3} and Eq.~\eqref{eq:a3-7.4} imply
+the assertions Eq.~\myeqpageref{eq:a3-7.3} and Eq.~\myeqpageref{eq:a3-7.4} imply
 %% --
 \begin{equation}\label{eq:a3-7.5}
 P_{k} = \int_{-\infty}^{\infty} \eu^{\im 2ks}\check{\phi_{0}}(s)T(s)\ds \text{ for } k \in \Z .
@@ -2095,7 +2095,7 @@ By Lemma~\ref{lem:a3-7.6} this implies $E/G = \{0\}$, \ie $G = E$.
 \begin{proof}[Proof of Theorem~\ref{thm:a3-7.4} ($ 2^{\text{nd}} $ part)]
 %% --
 We return to the situation of the first part of the proof.
-Using Eq.~\eqref{eq:a3-7.5}, the spectral projection $P_{k}$ can be transformed into
+Using Eq.~\myeqpageref{eq:a3-7.5}, the spectral projection $P_{k}$ can be transformed into
 \index{spectral projection}
 %% --
 \begin{align*}
@@ -2125,7 +2125,7 @@ As the final step we construct the inverse operator of\/ $\Id + T(\pi)$ showing 
 We define $\psi_{0}(\alpha) \coloneqq \phi_{0}(\alpha)\cdot(1 + \eu^{\im\pi\alpha})^{-1}$, $\alpha \in \R$.
 Then we have $\psi_{0} \in \mathcal{S}$ and $\psi_{0}\cdot(1 + \eu^{\im\pi\cdot}) = \phi_{0}$,
 hence $\check{\psi_{0}}(x) + \check{\psi_{0}}(x + \pi) = \check{\phi_{0}}(x)$ for all $x \in \R$.
-Then Eq.~\eqref{eq:a3-7.6} implies
+Then Eq.~\myeqpageref{eq:a3-7.6} implies
 %% --
 \begin{align*}
 \Id &= \sum_{m\in\Z} \check{\phi_{0}}(m\pi)T(m\pi) \\
@@ -2148,7 +2148,7 @@ Henceforth we assume $\im\Z \subset \rho(A)$ and define for $k \in \Z$
 Q_{k}\coloneqq \frac{1}{2\pi}\int_{0}^{2\pi} \eu^{-\im ks}T(s)\ds = \frac{1}{2\pi}(1 - T(2\pi))R(\im k,A)
 \end{equation}
 %% --
-(\cf Formula Eq.~\eqref{eq:a1-3.1}).
+(\cf Formula Eq.~\myeqpageref{eq:a1-3.1}).
 
 Our approach is based on Fejér's Theorem (for Banach space valued functions).
 Let us recall this result.
@@ -2182,10 +2182,10 @@ $\im\Z \subset \rho(A)$ and the series $\sum_{k\in\Z} R(\im k,A)Q_{k}f$ is Césa
 %% --
 \begin{proof}
 (a) $\Rightarrow$ (b) The Spectral Inclusion Proposition~\ref{prop:a3-6.2} implies $\im\Z \subset \rho(A)$.
-By Eq.~\eqref{eq:a3-7.7} we have $R(\im k,A) = 2\pi\cdot(1-T(2\pi))^{-1}Q_{k}$.
-Since $\sum_{k\in\Z} Q_{k}f$ is Césaro-summable (\mbox{towards} $\frac{1}{2}(f + T(2\pi)f)$) (see Eq.~\eqref{eq:a3-7.8}), it follows that $\sum_{k\in\Z} R(\im k,A)f$ is Césaro-summable as well.
+By Eq.~\myeqpageref{eq:a3-7.7} we have $R(\im k,A) = 2\pi\cdot(1-T(2\pi))^{-1}Q_{k}$.
+Since $\sum_{k\in\Z} Q_{k}f$ is Césaro-summable (\mbox{towards} $\frac{1}{2}(f + T(2\pi)f)$) (see Eq.~\myeqpageref{eq:a3-7.8}), it follows that $\sum_{k\in\Z} R(\im k,A)f$ is Césaro-summable as well.
 
-(b) $\Leftrightarrow$ (c) If we use Eq.~\eqref{eq:a1-3.1} and integrate by parts, we obtain
+(b) $\Leftrightarrow$ (c) If we use Eq.~\myeqpageref{eq:a1-3.1} and integrate by parts, we obtain
 \begin{align*}
 R(\im k,A)Q_{k}f &= \frac{1}{2\pi}\int_{0}^{2\pi} \eu^{-\im ks} T(s)R(\im k,A)f \ds \\
 &= \frac{1}{2\pi}\int_{0}^{2\pi} \left[R(\im k,A)f - \int_{0}^{s} \eu^{-\im kt} T(t)f \dt\right] \ds \\
@@ -2201,7 +2201,7 @@ is Césaro summable.
 Hence $\sum_{k\in\Z} R(\im k,A)Q_{k}f$ is Césaro-summable if and only if\/ $\sum_{k\in\Z} R(\im k,A)f$ is.
 
 (b) $\Rightarrow$ (a) We have $Q_{k} = \frac{1}{2\pi}(1 - T(2\pi))R(\im k,A)$.
-Furthermore we know by Eq.~\eqref{eq:a3-7.7} and Eq.~\eqref{eq:a3-7.8}  that $\sum_{k\in\Z} Q_{k}f$ is Césaro-summable towards $\frac{1}{2}(f + T(2\pi)f)$.
+Furthermore we know by Eq.~\myeqpageref{eq:a3-7.7} and Eq.~\myeqpageref{eq:a3-7.8}  that $\sum_{k\in\Z} Q_{k}f$ is Césaro-summable towards $\frac{1}{2}(f + T(2\pi)f)$.
 If we define $S \colon E \to E$ by $Sf \coloneqq \frac{1}{2}f + \frac{1}{2\pi}\cdot C_{1}\text{-}\sum_k R(\im k,A)f$, then we have
 \begin{align*}
 (1 - T(2\pi))Sf &= \frac{1}{2}(f - T(2\pi)f) + \frac{1}{2\pi}\cdot C_{1}\text{-}\sum_k (1 - T(2\pi))R(\im k,A)f \\
@@ -2252,7 +2252,7 @@ It follows that $\sum_{k\in\Z} \|Q_{k}f\|^{2} \leq \frac{1}{2\pi}\int_{0}^{2\pi}
 g_{k}\coloneqq (1 + \lambda R(\im k,A))f_{k}, k \in \Z .
 \]
 \index{resolvent equation}
-Using the resolvent equation and then (Eq.~\eqref{eq:a1-3.1}), we obtain
+Using the resolvent equation and then (Eq.~\myeqpageref{eq:a1-3.1}), we obtain
 %% --
 \[
 R(\im k,A)f_{k} = R(\lambda + \im k,A)g_{k} = [1 - \eu^{-2\pi\lambda}T(2\pi)]^{-1}\int_{0}^{2\pi} \eu^{-\lambda s}\eu^{-\im ks}T(s)g_{k} \ds .

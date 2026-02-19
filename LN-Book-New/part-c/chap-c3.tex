@@ -97,7 +97,7 @@ By Datko's Theorem (Part-I, Theorem~\ref{thm:a4-1.11}) the function $t \mapsto \
 %% --
 	Note that one can interchange summation and integration because all the integrands are positive functions.
 	
-	It follows from Eq.~\eqref{eq:c3-1.3} at the net $(\int_{0}^t \eu^{-\mu s}T(s) f \ds )_{t\geq 0}$ converges weakly to $R(\mu,A)f$ for $t \to \infty$.
+	It follows from Eq.~\myeqpageref{eq:c3-1.3} at the net $(\int_{0}^t \eu^{-\mu s}T(s) f \ds )_{t\geq 0}$ converges weakly to $R(\mu,A)f$ for $t \to \infty$.
 	Because it is monotone increasing $(f \geq 0)$, we have strong convergence (see the corollary to II.Theorem~5.9 in \textcite{schaefer:1974}).
 
 If\/ $\lambda = \mu + \im\nu$ with $\mu$, $\nu$ real and $\mu > s(A)$, we have for arbitrary $f \in E$, $\phi \in E'$
@@ -151,7 +151,7 @@ We have $s(A) \in \sigma(A)$ unless $s(A) = -\infty$.
 \end{corollary}
 %% --
 \begin{proof}
-Assume that $s(A) > -\infty$ and $s(A) \notin \sigma(A)$, then it follows from Eq.~\eqref{eq:c3-1.5} that $\{R(\lambda,A) \colon \Re(\lambda) > s(A)\}$ is uniformly bounded in $\mathcal{L}(E)$, by $M$ say. 
+Assume that $s(A) > -\infty$ and $s(A) \notin \sigma(A)$, then it follows from Eq.~\myeqpageref{eq:c3-1.5} that $\{R(\lambda,A) \colon \Re(\lambda) > s(A)\}$ is uniformly bounded in $\mathcal{L}(E)$, by $M$ say. 
 Then
 \[
 \{z \in \C  \colon \Re\{z\} = s(A)\} \subseteq \rho(A) \text{ and } 
@@ -170,7 +170,7 @@ Then $m$ is a majorant for the order of any other pole on the line $s(A) + \im\R
 %% --
 \begin{proof}
 Without loss of generality we may assume that $s(A) = 0$.
-By Eq.~\eqref{eq:c3-1.5} we have $\|R(\epsilon+\im\beta ,A)\| \leq \|R(\epsilon,A)\|$ for every $\beta \in \R $, $\epsilon > 0$.
+By Eq.~\myeqpageref{eq:c3-1.5} we have $\|R(\epsilon+\im\beta ,A)\| \leq \|R(\epsilon,A)\|$ for every $\beta \in \R $, $\epsilon > 0$.
 Therefore 
 \[
 \lim_{\epsilon\to 0}\|\epsilon^k R(\epsilon+\im\beta ,A)\| \leq \lim_{\epsilon\to 0}\|\epsilon^k R(\epsilon,A)\| = 0 \text{ for } k > m\,.
@@ -187,7 +187,7 @@ If\/ $A$ is the generator of a positive group, then $\sigma(A)\cap\R  \neq \empt
 \end{corollary}
 %% --
 \begin{proof}
-Both $A$ and $-A$ are generators of positive semigroups, hence if\/ $\sigma(A) = \emptyset$, then $s(A) = s(-A) = -\infty$ and Eq.~\eqref{eq:c3-1.5} implies that 
+Both $A$ and $-A$ are generators of positive semigroups, hence if\/ $\sigma(A) = \emptyset$, then $s(A) = s(-A) = -\infty$ and Eq.~\myeqpageref{eq:c3-1.5} implies that 
 \[
 \{R(\lambda,A) \colon \Re(\lambda) \geq 0\} \cup \{R(\lambda,-A) \colon \Re(\lambda) \geq 0\}
 \]
@@ -291,7 +291,7 @@ S_{h}D(A) = D(A) \text{ and } A + \im\beta \Id = S_{h}^{-1}AS_{h}\,.
 %% --
 \begin{proof}
 	Without loss of generality we may assume that $\alpha = 0$.
-	Then the assumption Eq.~\eqref{eq:c3-2.6} implies that $T(t)|h| = |h|$ and $T(t)h = \eu^{\im\beta t}h$ for $t \geq 0$ (see Part-I, Corollary~\ref{cor:a3-6.4}).
+	Then the assumption Eq.~\myeqpageref{eq:c3-2.6} implies that $T(t)|h| = |h|$ and $T(t)h = \eu^{\im\beta t}h$ for $t \geq 0$ (see Part-I, Corollary~\ref{cor:a3-6.4}).
 	In particular, the principal ideal $E_{|h|}$ is invariant under every operator $T(t)$.
 	By the Kakutani-Krein Theorem (Section~\ref{sec:c1-4}) we can identify $E_{|h|}$ with a space $C(K)$, $K$ compact.
 	Then the restrictions $\overline{T}(t) \coloneq T(t)|_{E_{|h|}}$ are positive operators on $C(K)$ satisfying $\overline{T}(t)|\overline{h}| = |\overline{h}|$ and $\overline{T}(t)\overline{h} = \eu^{\im\beta  t}\overline{h}$.
@@ -345,7 +345,7 @@ An important tool in the proof are pseudo-resolvents.
 	is called a \emph{pseudo-resolvent} on $G$.
 \end{definition}
 %% --
-An equivalent (often quite useful) version of Eq.~\eqref{eq:c3-2.8} is the following
+An equivalent (often quite useful) version of Eq.~\myeqpageref{eq:c3-2.8} is the following
 %% --
 \begin{equation}\label{eq:c3-2.9}
 	(1 - (\lambda - \mu)R(\lambda))(1 - (\mu - \lambda)R(\mu)) = 1 \quad (\lambda,\mu \in D)
@@ -400,8 +400,8 @@ We assume that $R \colon D \to \mathcal{L}(G)$ is a pseudo-resolvent on a Banach
 	\end{split}
 \end{equation}
 %% --
-We only sketch the proof of these assertions. Eq.~\eqref{eq:c3-2.12} follows from Eq.~\eqref{eq:c3-2.11} and the latter is a consequence of Eq.~\eqref{eq:c3-2.10}.
-The identity stated in Eq.~\eqref{eq:c3-2.10} can be rewritten as follows
+We only sketch the proof of these assertions. Eq.~\myeqpageref{eq:c3-2.12} follows from Eq.~\myeqpageref{eq:c3-2.11} and the latter is a consequence of Eq.~\myeqpageref{eq:c3-2.10}.
+The identity stated in Eq.~\myeqpageref{eq:c3-2.10} can be rewritten as follows
 %% --
 \[
 (\Id-(\lambda_{0}-\mu)R(\lambda_{0}))(\Id-(\mu-\lambda_{0})S) = \Id = (\Id-(\mu-\lambda_{0})S)(\Id-(\lambda_{0}-\mu)R(\lambda_{0}))\,.
@@ -409,7 +409,7 @@ The identity stated in Eq.~\eqref{eq:c3-2.10} can be rewritten as follows
 %% --
 Thus $S = (\mu-\lambda_{0})^{-1}(1 - (1-(\lambda_{0}-\mu)R(\lambda_{0}))^{-1})$ has to be unique.
 
-It follows from Eq.~\eqref{eq:c3-2.11} and Eq.~\eqref{eq:c3-2.12} that every pseudo-resolvent has a unique maximal extension.
+It follows from Eq.~\myeqpageref{eq:c3-2.11} and Eq.~\myeqpageref{eq:c3-2.12} that every pseudo-resolvent has a unique maximal extension.
 Further properties of pseudo-resolvents are given in the following two propositions.
 
 %% --
@@ -427,26 +427,26 @@ Further properties of pseudo-resolvents are given in the following two propositi
 	\begin{enumerate}[\upshape (i), wide, labelindent=.5em]
 		\item 
         Suppose that $(\lambda-\alpha)R(\lambda)x = x$ for some fixed $\lambda \in D$, $x \in G$.
-		Then using Eq.~\eqref{eq:c3-2.8} we have for $\mu \in D$ 
+		Then using Eq.~\myeqpageref{eq:c3-2.8} we have for $\mu \in D$ 
         \[
         (\mu-\alpha)(\mu-\lambda)R(\mu)R(\lambda)x = (\lambda-\alpha)(R(\lambda)x - R(\mu)x) = x - (\lambda-\alpha)R(\mu)x\,.
         \]
 		It follows that $(\mu-\alpha)R(\mu)x = x$ for all $\mu \in D$.
 		
 		\item 
-        If there exists an extension, then $\|R(\lambda_{n})\|$ is bounded for every sequence $(\lambda_{n})$ converging to $\mu$ by Eq.~\eqref{eq:c3-2.12}.
+        If there exists an extension, then $\|R(\lambda_{n})\|$ is bounded for every sequence $(\lambda_{n})$ converging to $\mu$ by Eq.~\myeqpageref{eq:c3-2.12}.
 		On the other hand assuming that $\|R(\lambda_{n})\|$ is bounded by $M$ for a fixed sequence $(\lambda_{n}) \subset D$ with $\lambda_{n} \to \mu$ $(M \geq 0)$, we have
 		\[
 		\|R(\lambda_{n}) - R(\lambda_{m})\| = |\lambda_{n}-\lambda_{m}| \|R(\lambda_{n})R(\lambda_{m})\| \leq M^2|\lambda_{n}-\lambda_{m}|
         \]
         which shows that $(R(\lambda_{n}))$ is a Cauchy sequence in $\mathcal{L}(G)$, hence $S \coloneq \lim_{n\to\infty}R(\lambda_{n})$ exists.
-		The assertion now follows from Eq.~\eqref{eq:c3-2.10} and Eq.~\eqref{eq:c3-2.11}.
+		The assertion now follows from Eq.~\myeqpageref{eq:c3-2.10} and Eq.~\myeqpageref{eq:c3-2.11}.
 	\end{enumerate}
 \end{proof}
 %% --
 In the next proposition, we consider a \emph{positive positive pseudo-resolvent}
 $R$ on a Banach lattice $E$, \ie  we assume that the domain $D$ of\/ $R$ contains the positive real axis and that $R(\mu)$ is a positive operator for every $\mu > 0$.
-Applying Pringsheim's Theorem (see Theorem~2.1 in the appendix of \textcite{schaefer:1966}) to the expansion given in Eq.~\eqref{eq:c3-2.11} one can conclude that $R$ has an extension to the half-plane $\{z \in \C  \colon \Re\{z\} > 0\}$.
+Applying Pringsheim's Theorem (see Theorem~2.1 in the appendix of \textcite{schaefer:1966}) to the expansion given in Eq.~\myeqpageref{eq:c3-2.11} one can conclude that $R$ has an extension to the half-plane $\{z \in \C  \colon \Re\{z\} > 0\}$.
 
 This shows that without loss of generality one can assume that the domain of a positive pseudo-resolvent contains the half-plane $\{z \in \C  \colon \Re\{z\} > 0\}$.
 %% --
@@ -461,7 +461,7 @@ This shows that without loss of generality one can assume that the domain of a p
 \end{proposition}
 %% --
 \begin{proof}
-At first we prove the following domination property which is the extension of Eq.~\eqref{eq:c3-1.5} to positive pseudo-resolvents
+At first we prove the following domination property which is the extension of Eq.~\myeqpageref{eq:c3-1.5} to positive pseudo-resolvents
 %% --
 \begin{equation}\label{eq:c3-2.13}
 	|R(\lambda)f| \leq R(\Re(\lambda)) |f| \ \text{ for every } \ \lambda \in \Delta , f \in E\,.
@@ -476,9 +476,9 @@ Therefore $R(\lambda) = \sum_{n=0}^{\infty}(r-\lambda)^{n}R(r)^{n+1}$ for $r > r
 	& =\sum_{n=0}^{\infty}(r - (r-|r-\lambda|))^{n}R(r)^{n+1}|f| = R(r - |\lambda-r|) |f|\,.
 \end{align*}
 %% --
-Since $\lim_{r \to \infty} (r - |\lambda-r|) = \Re(\lambda)$, we obtain Eq.~\eqref{eq:c3-2.13}.
+Since $\lim_{r \to \infty} (r - |\lambda-r|) = \Re(\lambda)$, we obtain Eq.~\myeqpageref{eq:c3-2.13}.
 
-As a consequence of Eq.~\eqref{eq:c3-2.13} and the assumption $rR(r) |h| = |h|$ we have that the principal ideal $E_{|h|}$ is $\{R(\lambda)\}_{\lambda \in \Delta}$-invariant.
+As a consequence of Eq.~\myeqpageref{eq:c3-2.13} and the assumption $rR(r) |h| = |h|$ we have that the principal ideal $E_{|h|}$ is $\{R(\lambda)\}_{\lambda \in \Delta}$-invariant.
 Identifying, according to the Kakutani-Krein Theorem, $E_{|h|}$ with a space $C(K)$, $K$ compact, and by restricting the operators $R(\lambda)$ to $E_{|h|} \cong C(K)$, we obtain a positive pseudo-resolvent $\tilde{R} \colon \Delta \to \mathcal{L}(C(K))$.
 Then we have for every $\alpha > 0$ and $f \in E$
 %% --
@@ -518,13 +518,13 @@ Before proving the equivalence of the two assertions we make some remarks.
     \item 
     Since one always has \quad $\lambda R(\lambda,A) \to \Id$\quad for \quad $\lambda \to \infty$, 
     the set \quad $\{(\lambda-s(A))R(\lambda,A) \colon \lambda > s(A)+\epsilon\}$ is bounded for every $\epsilon > 0$. 
-    Thus in Eq.~\eqref{eq:c3-2.15}(a) the essential fact is boundedness near $s(A)$. 
-    On the other hand, the set of operators $\{\frac{1}{t} \int_{0}^{t} \exp(-\tau s(A))T(\tau) \diff{\tau} \colon 0 \leq t \leq t_{0} \}$ is bounded for every $t_{0} \geq 0$, hence in Eq.~\eqref{eq:c3-2.15}(b) the boundedness for $t \to \infty$ is important.
+    Thus in Eq.~\myeqpageref{eq:c3-2.15}(a) the essential fact is boundedness near $s(A)$. 
+    On the other hand, the set of operators $\{\frac{1}{t} \int_{0}^{t} \exp(-\tau s(A))T(\tau) \diff{\tau} \colon 0 \leq t \leq t_{0} \}$ is bounded for every $t_{0} \geq 0$, hence in Eq.~\myeqpageref{eq:c3-2.15}(b) the boundedness for $t \to \infty$ is important.
 
     \item 
     By Corollary~\ref{cor:c3-1.4} we have $\|R(\lambda,A)\| \geq r(R(\lambda,A)) = (\lambda-s(A))^{-1}$. 
     Hence $\|R(\lambda,A)\|$ grows at least as fast as $(\lambda-s(A))^{-1}$. 
-    Thus if Eq.~\eqref{eq:c3-2.15}(a) is satisfied, the resolvent grows as slowly as it possibly can for $\lambda \to s(A)$.
+    Thus if Eq.~\myeqpageref{eq:c3-2.15}(a) is satisfied, the resolvent grows as slowly as it possibly can for $\lambda \to s(A)$.
 
     \item 
     We do not assume in Definition~\ref{def:c3-2.8} that spectral bound and growth bound coincide.
@@ -533,7 +533,7 @@ Before proving the equivalence of the two assertions we make some remarks.
 \end{remarks*}
 %% --
 \begin{proof} 
-To prove equivalence of Eq.~\eqref{eq:c3-2.15}(a) and Eq.~\eqref{eq:c3-2.15}(b), we assume $s(A) = 0$ and write $C(t) \coloneqq \frac{1}{t} \int_{0}^{t} T(\tau) \diff{\tau}$.
+To prove equivalence of Eq.~\myeqpageref{eq:c3-2.15}(a) and Eq.~\myeqpageref{eq:c3-2.15}(b), we assume $s(A) = 0$ and write $C(t) \coloneqq \frac{1}{t} \int_{0}^{t} T(\tau) \diff{\tau}$.
 
 \upshape(a) $\Rightarrow$ \upshape(b): \quad 
 Consider $\lambda > 0$, $t > 0$ such that $\lambda t = 1$. 
@@ -547,7 +547,7 @@ Then we have
 \end{cases}
 \]
 %% --
-Now Eq.~\eqref{eq:c3-1.1} implies 
+Now Eq.~\myeqpageref{eq:c3-1.1} implies 
 \[\textstyle
 \lambda R(\lambda,A) = \int_{0}^{\infty} \lambda \exp(-\lambda s)T(s) \ds \geq \eu^{-1}C(t) = \eu^{-1}\cdot C(\frac{1}{\lambda}) \geq 0\,.
 \]
@@ -567,7 +567,7 @@ It follows that
 \end{align*}
 %% --
 
-Letting $r \to \infty$, we obtain by Eq.~\eqref{eq:c3-1.1} $\|\lambda R(\lambda,A)f\| \leq M\|f\|$ $(f \in E, \lambda > 0)$ hence $\|\lambda R(\lambda,A)\| \leq M$
+Letting $r \to \infty$, we obtain by Eq.~\myeqpageref{eq:c3-1.1} $\|\lambda R(\lambda,A)f\| \leq M\|f\|$ $(f \in E, \lambda > 0)$ hence $\|\lambda R(\lambda,A)\| \leq M$
 \end{proof}
 %% -- 
 Two sufficient conditions for a resolvent to grow slowly are stated in the following proposition.
@@ -606,7 +606,7 @@ By Proposition~\ref{prop:c3-2.6}\,(i) and Part-I, Section~\ref{subsec:a3-4.5} th
 	\lambda R_{1}(\lambda+\im\beta)h_{1} = h_{1} \ \text{ for }  \Re(\lambda) > 0\,.
 \end{equation}
 %% --
-By Eq.~\eqref{eq:c3-2.13} we have
+By Eq.~\myeqpageref{eq:c3-2.13} we have
 %% --
 \begin{equation}\label{eq:c3-2.17}\textstyle
 	|h_{1}| = |\tau R_{1}(\tau+\im\beta)h_{1}| \leq \tau R_{1}(\tau)|h_{1}| \ (r > 0)\,.
@@ -616,7 +616,7 @@ Next, we choose any $\phi \in E_{1}'$ such that $\langle  h_{1},\phi \rangle \ne
 Since $\|R_{1}(\lambda)'\| = \|R_{1}(\lambda)\| = \|R(\lambda,A)\|$, the assumption of slow growth implies that $\{\lambda R_{1}(\lambda)'\phi \colon \lambda > 0\}$ is bounded in $E_{1}'$, hence $\sigma(E_{1}',E_{1})$-relatively compact by \emph{Alaoglu's Theorem}.
 Thus, there exist $\phi_{1} \in \cap_{\epsilon>0}\{\tau R_{1}(\tau)'\phi \colon 0<\tau<\epsilon\}^{-\sigma(E'_1,E_1)}$.
 
-Using the resolvent equation Eq.~\eqref{eq:c3-2.8} we obtain for $r > 0$, $\epsilon > 0$
+Using the resolvent equation Eq.~\myeqpageref{eq:c3-2.8} we obtain for $r > 0$, $\epsilon > 0$
 %% --
 \[
 (1 - \tau R_{1}(\tau)')\epsilon R_{1}(\epsilon)'\phi = \epsilon(\tau-\epsilon)^{-1}(\tau R_{1}(\tau)'\phi - \epsilon R_{1}(\epsilon)'\phi)\,.
@@ -642,7 +642,7 @@ it follows that
 for arbitrary $f_{1} \in E_{1}$, $\Re(\lambda) > 0$ we have $\langle |R_{1}(\lambda)f_{1}|,\phi_{1} \rangle \leq \langle R_{1}(\Re(\lambda))|f_{1}|,\phi_{1} \rangle = \langle |f_{1}|,R_{1}(\Re(\lambda))'\phi_{1} \rangle = (\Re(\lambda))^{-1}\langle |f_{1}|,\phi_{1} \rangle$.
 
 Therefore the ideal $I \coloneqq \{f_{1} \in E_{1} \colon \langle |f_{1}|,\phi_{1} \rangle = 0\}$ is invariant under $\{(R_{1}(\lambda)\}_{\Re(\lambda)>0}$.
-Furthermore we have (see Eq.~\eqref{eq:c3-2.17}, Eq.~\eqref{eq:c3-2.18}) 
+Furthermore we have (see Eq.~\myeqpageref{eq:c3-2.17}, Eq.~\myeqpageref{eq:c3-2.18}) 
 \begin{align*}
 	\langle |rR_{1}(r)|h_{1}| - |h_{1}||,\phi_{1} \rangle &= \langle rR_{1}(r)|h_{1}| - |h_{1}|,\phi_{1} \rangle = \\
 	& = \langle |h_{1}|,rR_{1}(r)'\phi_{1} - \phi_{1} \rangle = 0\ 
@@ -652,8 +652,8 @@ which implies
 rR_{1}(r)|h_{1}| - |h_{1}| \in I \ \text{ for } \ r > 0)\,.
 \end{equation}
 Denote by $E_{2}$ the quotient space $E_{1}/I$ and by $\{(R_{2}(\lambda)\}_{\Re(\lambda)>0}$ the pseudo-resolvent on $E_{2}$ induced by $\{(R_{1}(\lambda)\}_{\Re(\lambda)>0}$ in the canonical way. 
-Then $h_{2} \coloneqq h_{1} + I \neq 0$ (by Eq.~\eqref{eq:c3-2.19}.
-Moreover, $\lambda R_{2}(\lambda+\im\beta)h_{2} = h_{2}$ (by Eq.~\eqref{eq:c3-2.16} and $\lambda R_{2}(\lambda)|h_{2}| = |h_{2}|$ (by Eq.~\eqref{eq:c3-2.20} and Proposition~\ref{prop:c3-2.6}\,(i)).
+Then $h_{2} \coloneqq h_{1} + I \neq 0$ (by Eq.~\myeqpageref{eq:c3-2.19}.
+Moreover, $\lambda R_{2}(\lambda+\im\beta)h_{2} = h_{2}$ (by Eq.~\myeqpageref{eq:c3-2.16} and $\lambda R_{2}(\lambda)|h_{2}| = |h_{2}|$ (by Eq.~\myeqpageref{eq:c3-2.20} and Proposition~\ref{prop:c3-2.6}\,(i)).
 
 Now we apply Proposition~\ref{prop:c3-2.7}(b) and obtain
 \begin{equation}\label{eq:c3-2.21}
@@ -708,9 +708,9 @@ By Theorem~\ref{thm:c3-2.10} each set $\sigma_{b}(A_{n})$ is cyclic, hence so is
 \end{proof}
 %% --
 The proof of the preceding corollary indicates a possible generalization of Theorem~\ref{thm:c3-2.10}.
-Instead of assuming that the resolvent grows slowly one merely needs that there exist a finite chain of closed $\TT$-invariant ideals as described in Eq.~\eqref{eq:c3-2.22} such that the semigroups induced on the corresponding quotient spaces have slowly growing resolvents.
+Instead of assuming that the resolvent grows slowly one merely needs that there exist a finite chain of closed $\TT$-invariant ideals as described in Eq.~\myeqpageref{eq:c3-2.22} such that the semigroups induced on the corresponding quotient spaces have slowly growing resolvents.
 
-In case that $\sigma_{b}(A)$ is cyclic one has the alternative (\cf Eq.~\eqref{eq:b3-2.19})
+In case that $\sigma_{b}(A)$ is cyclic one has the alternative (\cf Eq.~\myeqpageref{eq:b3-2.19})
 %% --
 \[
 \text{Either $\sigma_{b}(A) = \{s(A)\}$ or else $\sigma_{b}(A)$ is an unbounded set.}
@@ -1035,7 +1035,7 @@ Next we consider some concrete examples.
 	Since we assumed that $I_{Y}$ is $R(\lambda,A)$-invariant, we have $h \in I_{Y}$, \ie  $\supp h \subset Y = X\times[-1,1]$.
 	Obviously, this is true only if\/ $Y = [0,1]\times[-1,1]$ or $I_{Y} = E$.
 	
-	A weaker condition than Eq.~\eqref{eq:c3-3.7} entailing irreducibility is the following.
+	A weaker condition than Eq.~\myeqpageref{eq:c3-3.7} entailing irreducibility is the following.
 	%% --
 	\begin{equation}\label{eq:c3-3.8}
 		\begin{split}
@@ -1286,7 +1286,7 @@ To simplify the proof we isolate two lemmas.
     Obviously, $(g_{n})$ is a normalized approximate eigenvector of\/ $R$ and so is every subsequence of\/ $(g_{n})$.
     In particular, for $k \in \N$ the sequence $(g_{n+k})_{n\geq 1}$ is a normalized approximate eigenvector of\/ $R$.
     Then the elements $\hat{g}^{k} \in E_{\mathcal{F}}$ given by $\hat{g}^{k} \coloneqq ((g_{n+k})_{n\geq 1} + c_{\mathcal{F}}(E))$ are normalized eigenvectors of\/ $R_{\mathcal{F}}$ corresponding to $\alpha$.
-    As a consequence of Eq.~\eqref{eq:c3-3.14} we obtain
+    As a consequence of Eq.~\myeqpageref{eq:c3-3.14} we obtain
     $\|\hat{g}^{k} - \hat{g}^{m}\| = \mathcal{F}\text{-}\lim\sup\|g_{n+k} - g_{n+m}\| \geq \epsilon$ provided that $k \neq m$.
     This shows that the unit ball in $\ker(\alpha - R_{\mathcal{F}})$ is not relatively compact, hence $\ker(\alpha - R_{\mathcal{F}})$ has to be infinite dimensional.
 \end{proof}
@@ -1327,7 +1327,7 @@ Moreover, $\sigma_{b}(A)$ contains only algebraically simple poles.
 	Assuming first that every element of\/ $\sigma_{b}(A)$ is an eigenvalue of\/ $A$, one can conclude the following.
 	By Theorem~\ref{thm:c3-3.8}\,(i) we know that $\sigma_{b}(A)$ is an additive subgroup of\/ $\im\R $.
 	Since it is a closed subset and $0$ is an isolated point, it follows that $\sigma_{b}(A) = \im\alpha\Z$ for some $\alpha \geq 0$.
-	Moreover, as a consequence of Eq.~\eqref{eq:c3-3.13}, for every $k \in \Z$ we obtain
+	Moreover, as a consequence of Eq.~\myeqpageref{eq:c3-3.13}, for every $k \in \Z$ we obtain
 	%% --
 	\begin{equation}\label{eq:c3-3.15}
 		R(\lambda+\im k\alpha,A) = S_{h}^{-k}\circ R(\lambda,A)\circ S_{h}^{k} \quad (\lambda \in \rho(A),\, k \in \Z).
@@ -1335,7 +1335,7 @@ Moreover, $\sigma_{b}(A)$ contains only algebraically simple poles.
 	%% --
 	
 	By Proposition~\ref{prop:c3-3.5}\,(iv) $0$ is an algebraically simple pole.
-	Then Eq.~\eqref{eq:c3-3.15} implies that every point $\im k\alpha$ has the same property.
+	Then Eq.~\myeqpageref{eq:c3-3.15} implies that every point $\im k\alpha$ has the same property.
 	
 	We now show that every element $\im\beta$ is an eigenvalue of\/ $A$.
 	By Proposition~\ref{prop:c3-3.5}\,(iv) the residue of\/ $R(\cdot,A)$ in $\lambda = 0$ has the form $P = \phi\otimes u$ with $\phi(u) = 1$.
@@ -1364,7 +1364,7 @@ Moreover, $\sigma_{b}(A)$ contains only algebraically simple poles.
 	%% --
 	This implies that $M \cap I = \{0\}$. 
 	Hence the canonical image $M_/$ of\/ $M$ in the quotient space $E_{\mathcal{U}/{I}}$ is infinite dimensional as well. 
-	By Eq.~\eqref{eq:c3-3.16} and Eq.~\eqref{eq:c3-3.17} the absolute value of an element $\tilde{f} \in M_/$ is a scalar multiple of\/ $\tilde{u} \coloneqq \hat{u} + I$. 
+	By Eq.~\myeqpageref{eq:c3-3.16} and Eq.~\myeqpageref{eq:c3-3.17} the absolute value of an element $\tilde{f} \in M_/$ is a scalar multiple of\/ $\tilde{u} \coloneqq \hat{u} + I$. 
 	This is a contradiction by Lemma~\ref{lem:c3-3.11}.
 \end{proof}
 %% --
@@ -1426,7 +1426,7 @@ If\/ $s(A)$ is a pole of finite algebraic multiplicity, then there exists a fini
 	\end{split}
 \end{equation}
 %% --
-The following theorem is an immediate consequence of Eq.~\eqref{eq:c3-3.19}, Theorem~\ref{thm:c3-3.12} and Part-I, Proposition~\ref{prop:a3-4.2}.
+The following theorem is an immediate consequence of Eq.~\myeqpageref{eq:c3-3.19}, Theorem~\ref{thm:c3-3.12} and Part-I, Proposition~\ref{prop:a3-4.2}.
 
 \begin{theorem}\label{thm:c3-3.14}
 \index{resolvent!pole}%
@@ -1520,7 +1520,7 @@ implies that $R(\lambda,B) = R(\lambda,A)(1 - KR(\lambda,A))^{-1}$ has only pole
 This proves the first claim.
 
 In order to prove the second, we denote the semigroup corresponding to $A$ and $B$ by $(T(t))$ and $(S(t))$,  respectively.
-It follows from Proposition~\ref{prop:c3-3.3} that $(S(t))$ is irreducible and we have $S(t) = T(t) + \int_{0}^{t} T(t-s)KS(s)\ds$ (see Eq.~\eqref{eq:a2-1.9}). 
+It follows from Proposition~\ref{prop:c3-3.3} that $(S(t))$ is irreducible and we have $S(t) = T(t) + \int_{0}^{t} T(t-s)KS(s)\ds$ (see Eq.~\myeqpageref{eq:a2-1.9}). 
 Iterating this identity we obtain for every $m \in \N$, $t \geq 0$
 %% --
 \begin{equation}\label{eq:c3-3.21}
@@ -1534,7 +1534,7 @@ Iterating this identity we obtain for every $m \in \N$, $t \geq 0$
 We fix $0 < f \in E$, $0 < \phi \in E'$, $t > 0$. 
 By Theorem~\ref{thm:c3-3.2}\,(i), $S(t)f > 0$.
 Since $K$ is irreducible, there exists $m \in \N$ such that $\langle K^{m}f,\phi\rangle > 0$. 
-Thus the integrand appearing in the the representation Eq.~\eqref{eq:c3-3.21} of\/ $\langle R_{m}(t)f,\phi\rangle$ is non-zero at $t_{1}=t_{2}= .. =t_{m-1}=t$, $t_{m}= t$.
+Thus the integrand appearing in the the representation Eq.~\myeqpageref{eq:c3-3.21} of\/ $\langle R_{m}(t)f,\phi\rangle$ is non-zero at $t_{1}=t_{2}= .. =t_{m-1}=t$, $t_{m}= t$.
 
 Since the integrand is positive and continuous, we conclude
 \begin{equation}\label{eq:c3-3.22}%\textstyle
@@ -1550,13 +1550,13 @@ We conclude this section considering the linear transport equation%
 \index{transport equation} 
 once again, see Example~\ref{ex:c3-3.4}\,(iv).
 The generator considered there is $B = (A - M) + K$, where $K$ is positive linear. 
-From Eq.~\eqref{eq:c3-3.5} and Eq.~\eqref{eq:c3-3.6} one deduces that 
+From Eq.~\myeqpageref{eq:c3-3.5} and Eq.~\myeqpageref{eq:c3-3.6} one deduces that 
 %% --
 \[
 (KR(\lambda,A)f)(x,v) = \int_{0}^{1}\int_{-1}^{1} k(x,v,x',v')f(x',v')\dx'dv'
 \]
 %% --
-where the kernel $k$ is given by $k(x,v,x',v') \coloneqq  \kappa(x,v,v')r_{\lambda}(x,x',v')$ (\cf Eq.~\eqref{eq:c3-3.5}, Eq.~\eqref{eq:c3-3.7}). 
+where the kernel $k$ is given by $k(x,v,x',v') \coloneqq  \kappa(x,v,v')r_{\lambda}(x,x',v')$ (\cf Eq.~\myeqpageref{eq:c3-3.5}, Eq.~\myeqpageref{eq:c3-3.7}). 
 Using this representation of\/ $KR(\lambda,A)$ it follows that $K$ is A-compact. 
 Moreover for $\lambda$ sufficiently large one has $R(\lambda,A-M) = R(\lambda,A)(1 - MR(\lambda,A))^{-1}$ which shows that $K$ is also $(A-M)$-compact. 
 In order to apply Theorem~\ref{thm:c3-3.14} one needs $s(B) > s(A-M)$ (see Proposition~\ref{prop:c3-3.18}) which is difficult to verify. 
@@ -1609,7 +1609,7 @@ In the last part of this section we discuss a spectral decomposition of positive
     \psi = rR(r,A)'|\phi| = r \int_{0}^{\infty} \eu^{-rt}T(t)'|\phi|\dt  \geq r\int_{0}^{\infty} \eu^{-rt}|\phi|\dt  = |\phi|\,.
     \]
     %% --
-	Now, considering the AL-space $(E,\psi)$ (see Section~\ref{sec:c1-4}) the first inequality of Eq.~\eqref{eq:c3-4.1} implies that $(T(t))_{t \geq 0}$ induces a strongly continuous semigroup $(T_{1}(t))_{t \geq 0}$ on $(E,\psi)$.
+	Now, considering the AL-space $(E,\psi)$ (see Section~\ref{sec:c1-4}) the first inequality of Eq.~\myeqpageref{eq:c3-4.1} implies that $(T(t))_{t \geq 0}$ induces a strongly continuous semigroup $(T_{1}(t))_{t \geq 0}$ on $(E,\psi)$.
 	That is we have
 	%% --
 	\begin{equation}\label{eq:c3-4.2}
@@ -1628,11 +1628,11 @@ In the last part of this section we discuss a spectral decomposition of positive
 % 	\]
 	%% --
 	Denoting by $A_{1}$ the generator of\/ $(T_{1}(t))$ we have $R\sigma(A_{1}) \subset R\sigma(A)$.
-	Indeed, assuming $A_{1}^*x = \lambda x$ then $T_{1}(t)'x = \eu^{\lambda t}x$, hence  $T(t)'q_{\psi}'(x) = \eu^{\lambda t}q_{\psi}'(x)$ (by Eq.~\eqref{eq:c3-4.2}) or equivalently, $A^*(q_{\psi}'(x)) = q_{\psi}'(x)$. 
+	Indeed, assuming $A_{1}^*x = \lambda x$ then $T_{1}(t)'x = \eu^{\lambda t}x$, hence  $T(t)'q_{\psi}'(x) = \eu^{\lambda t}q_{\psi}'(x)$ (by Eq.~\myeqpageref{eq:c3-4.2}) or equivalently, $A^*(q_{\psi}'(x)) = q_{\psi}'(x)$. 
 	Thus it remains to show that either $\im\alpha\Z$ or $\{\lambda \in \C  \colon \Re(\lambda) < 0 \}$ is contained in $R\sigma(A_{1})$. 
 	
 	Obviously, $(T_{1}(t))$ is a semigroup of lattice homomorphisms as well. 
-	The second inequality of Eq.~\eqref{eq:c3-4.1} implies
+	The second inequality of Eq.~\myeqpageref{eq:c3-4.1} implies
 	%% --
 	\begin{equation}\label{eq:c3-4.3}
 	\|T_{1}(t)f\|_{\psi} = \langle|T_{1}(t)f|,\psi\rangle = \langle|f|,T_{1}(t)'\psi\rangle \geq \langle|f|,\psi\rangle = \|f\|_{\psi}\,.
@@ -1651,7 +1651,7 @@ In the last part of this section we discuss a spectral decomposition of positive
 		\end{split}
 	\end{equation}
 	%% --
-	It follows from Eq.~\eqref{eq:c3-4.3} and Eq.~\eqref{eq:c3-4.4} that $A\sigma(T_{1}(t))\cap\{z \in \C  \colon |z| < 1\} = \emptyset$ and that $A\sigma(A_{1})\cap\{\lambda \in \C  \colon \Re(\lambda) < 0\} = \emptyset$. 
+	It follows from Eq.~\myeqpageref{eq:c3-4.3} and Eq.~\myeqpageref{eq:c3-4.4} that $A\sigma(T_{1}(t))\cap\{z \in \C  \colon |z| < 1\} = \emptyset$ and that $A\sigma(A_{1})\cap\{\lambda \in \C  \colon \Re(\lambda) < 0\} = \emptyset$. 
 	Since the toplogical boundary of the spectrum is always contained in the approximate point spectrum (see Part-I, Proposition~\ref{prop:a3-2.2}) and 
     \index{approximate point spectrum $A\sigma$}
     $R\sigma(T(t))\backslash\{0\} = \exp(tR\sigma(A))$ (see Part-I, Theorem~\ref{thm:a3-6.3}), precisely one of the following two cases occurs.
@@ -1667,7 +1667,7 @@ In the last part of this section we discuss a spectral decomposition of positive
 	Thus we only have to analyze case (A). 
 	In this case each operator $T_{1}(t)$ is an invertible lattice homomorphism hence a lattice isomorphism. 
 	It follows that $T_{1}(t)'$ is a lattice isomorphism as well. 
-	The third inequality in Eq.~\eqref{eq:c3-4.1} implies that $\phi$ can be considered as an element of\/ $(E,\psi)'$ and $T(t)'\phi = \eu^{\im\alpha t}\phi$ $(t \geq 0)$ implies $T_{1}(t)'\phi = \eu^{\im\alpha t}\phi$. 
+	The third inequality in Eq.~\myeqpageref{eq:c3-4.1} implies that $\phi$ can be considered as an element of\/ $(E,\psi)'$ and $T(t)'\phi = \eu^{\im\alpha t}\phi$ $(t \geq 0)$ implies $T_{1}(t)'\phi = \eu^{\im\alpha t}\phi$. 
 	Furthermore, we have
 	$T_{1}(t)'|\phi| = |T_{1}(t)'\phi| = |\eu^{\im\alpha t}\phi|$ or equivalently $A_{1}^*|\phi| = 0$.
 	Now we can apply 
@@ -1741,7 +1741,7 @@ We list some typical cases in the following corollary.
 	Thus we have to show that $F_{\R } = F\cap\mathbb{E}_{\R }$ is a sublattice. 
 	Given $f \in F_{\R }$, then $Tf = f$ hence $|f| \leq T|f|$. 
 	Iterating this inequality we obtain $|f| \leq T|f| \leq T^{2}|f| \leq T^{3}|f| \leq \dots\,.$ 
-	By Eq.~\eqref{eq:c3-4.5} $|f|_{o} \coloneqq  \lim_{n\to \infty} T^{n}|f|$ exists and we have $T|f|_{o} = \lim_{n\to \infty} T^{n+1}|f| = |f|_{o}$, \ie $|f|_{o} \in F_{\R }$.
+	By Eq.~\myeqpageref{eq:c3-4.5} $|f|_{o} \coloneqq  \lim_{n\to \infty} T^{n}|f|$ exists and we have $T|f|_{o} = \lim_{n\to \infty} T^{n+1}|f| = |f|_{o}$, \ie $|f|_{o} \in F_{\R }$.
 	And, for $g \in F_{\R }$ satisfying $\pm f \leq g$, we have $|f|_{o} \leq g$ thus $|f|_{o} = \sup_{F}\{f,-f\}$. 
 	Moreover, $\|f\|_{o} \coloneqq  \||f|_{o}\|$ $(f \in F)$ is an equivalent norm on $F$ such that $(F,\|\cdot\|_{o})$ is a Banach lattice.
 	
@@ -1773,7 +1773,7 @@ However, one still cannot prove cyclicity of\/ $P\sigma_{b}(A)$ for arbitrary po
 Then $(T(t))_{t \geq 0}$ is a positve semigroup on $H$ and for the spectrum of
 the generator we obtain $\sigma(A) = i\R $, $P\sigma(A) = i\R \backslash\{0\}$.
 In view of Corollary~\ref{cor:c3-4.3}\,(i) the semigroup cannot be bounded.
-(The explicit representation Eq.~\eqref{eq:c3-4.6} only allows the estimate $\|T(t)\| \leq \sqrt{2} + t \cdot \|k\|_2$ $(t\geq 0)$.)
+(The explicit representation Eq.~\myeqpageref{eq:c3-4.6} only allows the estimate $\|T(t)\| \leq \sqrt{2} + t \cdot \|k\|_2$ $(t\geq 0)$.)
 \end{example}
 
 In the next proposition we show that for semigroups of lattice homomorphisms on $L^1$-spaces, there is a spectral mapping theorem for the real part of the spectrum.
@@ -1855,7 +1855,7 @@ The latter assertion is a consequence of the following facts.
 %% --
 For semigroups satisfying the assumption of Proposition~\ref{prop:c3-4.5}, the spectrum $\sigma(A)$ is additively cyclic (by Theorem~\ref{thm:c3-4.2}) and $\sigma(T(t))$ is multiplicatively cyclic
 (by \textcite[V.Theorem~4.4]{schaefer:1974}). 
-Then the relation Eq.~\eqref{eq:c3-4.7} implies that
+Then the relation Eq.~\myeqpageref{eq:c3-4.7} implies that
 decompositions of the spectrum by vertical lines allow a spectral decomposition%
 \index{spectral decomposition} 
  of the semigroup (\cf Part-I, Definition~\ref{def:a3-3.1}) (One simply performs a spectral decomposition of a single operator $T(t)$). 
@@ -2040,7 +2040,7 @@ have
 \end{split}
 \end{equation}
 %% --
-(The integrals appearing in Eq.~\eqref{eq:c3-4.10} are improper Riemann integrals.)
+(The integrals appearing in Eq.~\myeqpageref{eq:c3-4.10} are improper Riemann integrals.)
 \end{corollary}
 We mention another consequence of Theorem~\ref{thm:c3-4.8}. Just like Proposition~\ref{prop:c3-4.5} it is a
 spectral mapping theorem for the real part of the spectrum.
@@ -2175,7 +2175,7 @@ operator on $L^p(\mu)$ and $\|T(t)\| \leq M^{1/p}$ for $0 \leq t \leq t_0$. Sinc
 semiflow, we have $T(0) = \Id $ and $T(t+s) = T(s)T(t)$ $(0 \leq s,\,t < \infty)$. 
 \end{enumerate}
 %% --
-It remains to prove strong continuity. Since $\phi$ is continuous and Eq.~\eqref{eq:c3-4.12}
+It remains to prove strong continuity. Since $\phi$ is continuous and Eq.~\myeqpageref{eq:c3-4.12}
 holds, we know that $T(t)(C_c(X)) \subset C_c(X)$ and that $T(t)f$ tends to $f$
 uniformly as $t \to 0$ provided that $f \in C_c(X)$. It follows that
 $\lim_{t \to 0}\|T(t)f - f\|_p = 0$ for $f \in C_c(X)$. Since $C_c(X)$ is dense in
@@ -2199,7 +2199,7 @@ Proposition~\ref{prop:c3-4.11} can be used to prove that flows corresponding to 
 ordinary differential equations on $\R ^n$ generate strongly continuous
 semigroups on $L^p(\R ^n)$ (where $\R ^n$ is equipped with the Lebesgue
 measure). One has to impose conditions on the corresponding vector
-field. Note that for continuous flows condition Eq.~\eqref{eq:c3-4.12} is automatically satisfied because for a compact $K \subset X$ the set $\phi_t^{-1}(K) = \phi_{-t}(K)$
+field. Note that for continuous flows condition Eq.~\myeqpageref{eq:c3-4.12} is automatically satisfied because for a compact $K \subset X$ the set $\phi_t^{-1}(K) = \phi_{-t}(K)$
 is compact as the continuous image of a compact set.
 
 \begin{example}\label{ex:c3-4.12}
@@ -2237,7 +2237,7 @@ If\/ $\lambda$ denotes the Lebesgue measure, then
 	\end{split}
 \end{equation}
 %% --
-Here we used Eq.~\eqref{eq:c3-4.13} and the fact that the determinant of an n$\times$n-matrix
+Here we used Eq.~\myeqpageref{eq:c3-4.13} and the fact that the determinant of an n$\times$n-matrix
 $B$ satisfies $|\det B| \leq \|B\|^n$\,.
 \end{example}
 
