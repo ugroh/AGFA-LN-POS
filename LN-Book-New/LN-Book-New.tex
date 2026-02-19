@@ -159,6 +159,26 @@
   \def\@oddhead{\runheadsize\rmfamily\upshape Updated Notes\hfil\llap{\thepage}}%
 }
 
+\newcommand{\notesheaderone}{%
+  \def\@evenhead{\runheadsize\rmfamily\upshape\rlap{\thepage}\hfil Updated Notes Part I}%
+  \def\@oddhead{\runheadsize\rmfamily\upshape Updated Notes Part I\hfil\llap{\thepage}}%
+}
+
+\newcommand{\notesheadertwo}{%
+  \def\@evenhead{\runheadsize\rmfamily\upshape\rlap{\thepage}\hfil Updated Notes Part II}%
+  \def\@oddhead{\runheadsize\rmfamily\upshape Updated Notes Part II\hfil\llap{\thepage}}%
+}
+
+\newcommand{\notesheaderthree}{%
+  \def\@evenhead{\runheadsize\rmfamily\upshape\rlap{\thepage}\hfil Updated Notes Part III}%
+  \def\@oddhead{\runheadsize\rmfamily\upshape Updated Notes Part III\hfil\llap{\thepage}}%
+}
+
+\newcommand{\notesheaderfour}{%
+  \def\@evenhead{\runheadsize\rmfamily\upshape\rlap{\thepage}\hfil Updated Notes Part IV}%
+  \def\@oddhead{\runheadsize\rmfamily\upshape Updated Notes Part IV\hfil\llap{\thepage}}%
+}
+
 % Spezial-Header: Index
 \newcommand{\indexheader}{%
   \def\@evenhead{\runheadsize\rmfamily\upshape\rlap{\thepage}\hfil Index}%
@@ -214,7 +234,7 @@
 }
 
 \newcommand{\myeqpageref}[1]{%
-  \ref{#1}\ifthenelse{\pageref{#1}=\thepage}{}{ on p.~\pageref{#1}}%
+  \eqref{#1}\ifthenelse{\pageref{#1}=\thepage}{}{ on p.~\pageref{#1}}%
 }    
 
 %\usepackage{mleftright}
