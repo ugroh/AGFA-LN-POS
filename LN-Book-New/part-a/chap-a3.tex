@@ -2233,13 +2233,18 @@ whenever\quad $(f_{k})_{k\in\Z} \in \ell^{2}(H)$ .
 %% --
 \begin{proof}
 (i) We consider the Hilbert space $L^{2}([0,2\pi],H)$ and obtain
+%% --
 \begin{align*}
 0 &\leq \left\|T(\cdot)f - \sum_{k=-n}^{n} Q_{k}f\cdot \eu^{\im k\cdot}\right\|^{2} \\
-&= \int_{0}^{2\pi} \|T(s)f\|^{2} \ds - \int_{0}^{2\pi} \sum_{k=-n}^{n} (T(s)f|\eu^{\im ks}Q_{k}f) \ds - \\
-&\quad \int_{0}^{2\pi} \sum_{k=-n}^{n} (\eu^{\im ks}Q_{k}f|T(s)f) \ds + \int_{0}^{2\pi} \left(\sum_{k=-n}^{n} \eu^{\im ks}Q_{k}f|\sum_{\ell=-n}^{n} \eu^{\im \ell s}Q_{\ell}f\right) \ds \\
-&= \int_{0}^{2\pi} \|T(s)f\|^{2} \ds - 2\pi\sum_{k=-n}^{n} \|Q_{k}f\|^{2} 
-\text{ (use Eq.~\eqref{eq:a3-7.5} on p.~\pageref{eq:a3-7.5}} .
+&= \int_{0}^{2\pi} \|T(s)f\|^{2} \ds 
+   - \int_{0}^{2\pi} \sum_{k=-n}^{n} (T(s)f \,\vert\, \eu^{\im ks}Q_{k}f) \ds \\
+&\quad - \int_{0}^{2\pi} \sum_{k=-n}^{n} (\eu^{\im ks}Q_{k}f  \,\vert\, T(s)f) \ds \\
+&\quad + \int_{0}^{2\pi} \left(\sum_{k=-n}^{n} \eu^{\im ks}Q_{k}f
+        \,\bigg\vert\,  \sum_{\ell=-n}^{n} \eu^{\im \ell s}Q_{\ell}f\right) \ds \\
+&= \int_{0}^{2\pi} \|T(s)f\|^{2} \ds - 2\pi\sum_{k=-n}^{n} \|Q_{k}f\|^{2}
+   \quad \text{(use Eq.~\myeqpageref{eq:a3-7.5})}.
 \end{align*}
+%% --
 It follows that $\sum_{k\in\Z} \|Q_{k}f\|^{2} \leq \frac{1}{2\pi}\int_{0}^{2\pi} \|T(s)f\|^{2} \ds < \infty$.
 
 (ii) Fix $\lambda > 0$ sufficiently large and set 

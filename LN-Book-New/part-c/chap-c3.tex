@@ -1,3 +1,4 @@
+% !TEX root = ../LN-Book-New.tex
 %% --
 \setcounter{section}{0}
 \chapter[Spectral Theory on Banach Lattices]{Spectral Theory of Positive Semigroups on Banach Lattices}\label{chap:c3}
@@ -26,7 +27,9 @@ Throughout this chapter, we will assume that $E \neq \{0\}$ is a complex Banach 
 The fact that the spectral bound of a positive semigroup is always contained in the spectrum (provided the latter  is non-empty) also holds true in the general setting of Banach lattices.
 The proof given in Part-II, Theorem~\ref{thm:b3-1.1} for spaces $C_{0}(X)$ works in the general case too.
 Another proof is given below (\cf Corollary~\ref{cor:c3-1.4}).
-Furthermore, Corollary~1.3 and Proposition~1.5 of Part-II, Chapter~\ref{chap:b3} are true in the setting of Banach lattices and their proofs can be extended to the general case.
+Furthermore, 
+Part-II, Corollary~\ref{cor:b3-1.3} and Proposition~\ref{prop:b3-1.5} 
+are true in the setting of Banach lattices and their proofs can be extended to the general case.
 For the sake of completeness we summarize these results in the following theorem.
 %% --
 \begin{theorem}\label{thm:c3-1.1}
@@ -56,7 +59,7 @@ coincide (\cf Part-II, Theorem~\ref{thm:b4-1.4}); an example is given in Part-I,
 Despite of this, the resolvent $R(\lambda,A)$ of a positive semigroup is given as the Laplace transform%
 \index{Laplace transform} 
 \index{resolvent}
-of the semigroup in the half-plane $\{z \in \C  \colon \Re  z > s(A)\}$ (even in case that $\omega_0(A) > s(A)$).
+of the semigroup in the half-plane $\{z \in \C  \colon \Re\{z\} > s(A)\}$ (even in case that $\omega_0(A) > s(A)$).
 Note however, that the integral exists only as an improper Riemann integral.
 By Datko's Theorem (Part-I, Theorem~\ref{thm:a4-1.11}) the function $t \mapsto \eu^{-\lambda t}T(t)f$ cannot be Bochner integrable for all $f \in E$ in the case $\Re(\lambda) \leq \omega_0(A)$.
 %% --
@@ -151,10 +154,10 @@ We have $s(A) \in \sigma(A)$ unless $s(A) = -\infty$.
 Assume that $s(A) > -\infty$ and $s(A) \notin \sigma(A)$, then it follows from Eq.~\eqref{eq:c3-1.5} that $\{R(\lambda,A) \colon \Re(\lambda) > s(A)\}$ is uniformly bounded in $\mathcal{L}(E)$, by $M$ say. 
 Then
 \[
-\{z \in \C  \colon \Re  z = s(A)\} \subseteq \rho(A) \text{ and } 
-\|R(z,A)\| \leq M \text{ for } z  \text{ with } \Re z = s(A)\,.
+\{z \in \C  \colon \Re\{z\} = s(A)\} \subseteq \rho(A) \text{ and } 
+\|R(z,A)\| \leq M \text{ for } z  \text{ with } \Re\{z\} = s(A)\,.
 \]
-It follows that $\{z \in \C  \colon |\Re  z - s(A)| < M^{-1}\} \subseteq \rho(A)$, which is absurd by the definition of\/ $s(A)$.
+It follows that $\{z \in \C  \colon |\Re\{z\} - s(A)| < M^{-1}\} \subseteq \rho(A)$, which is absurd by the definition of\/ $s(A)$.
 \end{proof}
 %% --
 
@@ -217,11 +220,11 @@ We conclude this section by indicating possible extensions and further consequen
 \index{boundary spectrum}
 \index{spectrum!boundary|(} 
 %% --
-In Part-II, Chapter~\ref{chap:b3}we have seen that under suitable assumptions the boundary spectrum $\sigma_{b}(A)$, consisting of all spectral values with maximal real part is a cyclic set (\cf Part-II, Definition~\ref{def:b3-2.5}).
+In Part-II, Chapter~\ref{chap:b3} we have seen that under suitable assumptions the boundary spectrum $\sigma_{b}(A)$, consisting of all spectral values with maximal real part is a cyclic set (\cf Part-II, Definition~\ref{def:b3-2.5}).
 In the main theorem of this section we prove a result which is more general and which is true for arbitrary Banach lattices.
 
 We first want to extend some of the notions used in Part-II, Chapter~\ref{chap:b3} to the more general setting considered here.
-If\/ $E$ is a Banach lattice and $f,g \in E$ such that $g \in E_{|f|}$, then $(\sign  f)g$ is well-defined (\cf Section~8 of Part-3, Chapter 1 )%
+If\/ $E$ is a Banach lattice and $f,g \in E$ such that $g \in E_{|f|}$, then $(\sign  f)g$ is well-defined (\cf Section~\ref{sec:c1-8})%
 \index{sign operator}.
 Thus the following definition makes sense
 %% --
@@ -359,9 +362,9 @@ For our purposes the following examples are of particular interest
 	\begin{enumerate}[\upshape (i), wide, labelindent=.5em]
         \index{F-product@$\mathcal{F}$-product}
 		\item 
-		Suppose $A$ is a densely defined linear operator on $G$ with $\rho(A) \neq \emptyset$ and let $G_{\F}$ be an $\F$-product of\/ $G$ (\cf Part-I, Section~\ref{sec:a1-3}.7).
+		Suppose $A$ is a densely defined linear operator on $G$ with $\rho(A) \neq \emptyset$ and let $G_{\F}$ be an $\F$-product of\/ $G$ (\cf Part-I, Section~\ref{subsec:a1-3.7}).
 		Then the canonical extensions $R(\lambda,A)_{\F}$ of\/ $R(\lambda,A)$ form a pseudo-resolvent $R_{\F}$ on $G_{\F}$ with $\rho(A)$ as domain of definition.
-		If\/ $A$ is unbounded, then $0 \in A\sigma(R(\lambda,A))$ hence $0 \in P\sigma(R_{\F}(\lambda,A))$ (\cf Part-I, Section~\ref{sec:a3-4}.2).
+		If\/ $A$ is unbounded, then $0 \in A\sigma(R(\lambda,A))$ hence $0 \in P\sigma(R_{\F}(\lambda,A))$ (\cf Part-I, Proposition~\ref{prop:a3-4.2}).
 		It follows that $R_{\F}$ is not the resolvent of an operator on $G$.
 		
 		\item 
@@ -443,12 +446,12 @@ Further properties of pseudo-resolvents are given in the following two propositi
 %% --
 In the next proposition, we consider a \emph{positive positive pseudo-resolvent}
 $R$ on a Banach lattice $E$, \ie  we assume that the domain $D$ of\/ $R$ contains the positive real axis and that $R(\mu)$ is a positive operator for every $\mu > 0$.
-Applying Pringsheim's Theorem (see Theorem~2.1 in the appendix of \textcite{schaefer:1966}) to the expansion given in Eq.~\eqref{eq:c3-2.11} one can conclude that $R$ has an extension to the half-plane $\{z \in \C  \colon \Re  z > 0\}$.
+Applying Pringsheim's Theorem (see Theorem~2.1 in the appendix of \textcite{schaefer:1966}) to the expansion given in Eq.~\eqref{eq:c3-2.11} one can conclude that $R$ has an extension to the half-plane $\{z \in \C  \colon \Re\{z\} > 0\}$.
 
-This shows that without loss of generality one can assume that the domain of a positive pseudo-resolvent contains the half-plane $\{z \in \C  \colon \Re  z > 0\}$.
+This shows that without loss of generality one can assume that the domain of a positive pseudo-resolvent contains the half-plane $\{z \in \C  \colon \Re\{z\} > 0\}$.
 %% --
 \begin{proposition}\label{prop:c3-2.7}
-	Suppose $R \colon \Delta \to \mathcal{L}(E)$ is a positive pseudo-resolvent on a Banach lattice $E$ and $\Delta \coloneqq \{z \in \C  \colon \Re  z > 0\}$.
+	Suppose $R \colon \Delta \to \mathcal{L}(E)$ is a positive pseudo-resolvent on a Banach lattice $E$ and $\Delta \coloneqq \{z \in \C  \colon \Re\{z\} > 0\}$.
 	
 	If for some $\beta \in \R $, $h \in E$ we have
 	$\lambda R(\lambda+\im\beta)h = h$ and $\lambda R(\lambda)|h| = |h|$ $(\lambda \in \Delta)$, then
@@ -532,7 +535,7 @@ Before proving the equivalence of the two assertions we make some remarks.
 \begin{proof} 
 To prove equivalence of Eq.~\eqref{eq:c3-2.15}(a) and Eq.~\eqref{eq:c3-2.15}(b), we assume $s(A) = 0$ and write $C(t) \coloneqq \frac{1}{t} \int_{0}^{t} T(\tau) \diff{\tau}$.
 
-Eq.~\eqref{eq:c3-2.15}(a) $\Rightarrow$ Eq.~\eqref{eq:c3-2.15}(b)\quad 
+\upshape(a) $\Rightarrow$ \upshape(b): \quad 
 Consider $\lambda > 0$, $t > 0$ such that $\lambda t = 1$. 
 Then we have
 %% --
@@ -550,7 +553,7 @@ Now Eq.~\eqref{eq:c3-1.1} implies
 \]
 Thus $C(t)$ is bounded for $t \to \infty$ whenever $\lambda R(\lambda,A)$ is bounded for $\lambda \downarrow 0$.
 
-Eq.~\eqref{eq:c3-2.15}(b) $\Rightarrow$ Eq.~\eqref{eq:c3-2.15}(a)\quad
+\upshape(b) $\Rightarrow$ \upshape(a):\quad
  Let $M \coloneqq \sup\{\|C(t)\| \colon t > 0\}$.
 Given $f \in E$, $\lambda > 0$ and $r > 0$ then integration by parts yields
 %% --
@@ -597,7 +600,7 @@ Given $\im\beta \in \sigma(A)$ $(\beta \in \R )$, then $\im\beta \in A\sigma(A)$
 We consider an $\mathcal{F}$-product $E_{\mathcal{F}}$ of\/ $E$ and for convenience write $E_{1}$ instead of\/ $E_{\mathcal{F}}$.
 \index{semigroup!F-product@$\mathcal{F}$-product}
 The canonical extensions of\/ $R(\lambda,A)$ to $E_{1}$ form a positive pseudo-resolvent $\{(R_{1}(\lambda)\}_{\Re(\lambda)>0}$ on $E_{1}$.
-By Proposition~\ref{prop:c3-2.6}\,(i) and Part-I, Chapter 3, 4.5 there exists $h_{1} \in E_{1}$, $h_{1} \neq 0$ such that
+By Proposition~\ref{prop:c3-2.6}\,(i) and Part-I, Section~\ref{subsec:a3-4.5} there exists $h_{1} \in E_{1}$, $h_{1} \neq 0$ such that
 %% --
 \begin{equation}\textstyle\label{eq:c3-2.16}
 	\lambda R_{1}(\lambda+\im\beta)h_{1} = h_{1} \ \text{ for }  \Re(\lambda) > 0\,.
@@ -664,8 +667,9 @@ In particular, we have $\|R_{2}(r+\im n\beta)\| \geq \frac{1}{r}$, thus
 This finally implies that $ \im n\beta \in \sigma(A)$ for $n \in \Z$.
 \end{proof}
 %% --
-To prove cyclicity of the boundary spectrum in case $s(A)$ is a pole (of arbitrary order), one applies Part-II, Lemma~\ref{lem:b3-2.8} to reduce the problem to the case of first order poles. Actually, Part-II, Lemma~\ref{lem:b3-2.8} is true for arbitrary Banach lattices and the proof given in Part-II, Chapter~\ref{chap:b3}works in the general case as well. For completeness we recall this result. 
-
+To prove cyclicity of the boundary spectrum in case $s(A)$ is a pole (of arbitrary order), one applies Part-II, Lemma~\ref{lem:b3-2.8} to reduce the problem to the case of first order poles. 
+Actually, Part-II, Lemma~\ref{lem:b3-2.8} is true for arbitrary Banach lattices and the proof given in Part-II, Chapter~\ref{chap:b3} works in the general case as well. 
+For completeness we recall this result. 
 %% --
 \begin{proposition}\label{prop:c3-2.11}
 	Let $A$ be the generator of a positive semigroup $\TT$ on a Banach lattice $E$ and suppose that the spectral bound $s(A)$ is a pole of the resolvent%
@@ -756,7 +760,7 @@ We assume that $L_{p,0}$ is elliptic and that all coefficients are real-valued s
 Then $L_{p,0}$ is closable and its closure $L_{p}$ is the generator of a holomorphic semigroup of positive operators.
 Moreover, the resolvent is compact.
 Thus Corollary~\ref{cor:c3-2.13} is applicable and one obtains that $s(A)$ is strictly dominant provided that $\sigma(A) \neq \emptyset$.
-Using the results of Section 3 one can show that $\sigma(A) \neq \emptyset$ and that $s(A)$ is an algebraically simple eigenvalue (see Theorem~\ref{thm:c3-3.7} and Proposition~\ref{prop:c3-3.5}).
+Using the results of Section~\ref{sec:c3-3} one can show that $\sigma(A) \neq \emptyset$ and that $s(A)$ is an algebraically simple eigenvalue (see Theorem~\ref{thm:c3-3.7} and Proposition~\ref{prop:c3-3.5}).
 \end{example}
 %% --
 We conclude with some remarks.
@@ -777,7 +781,7 @@ We conclude with some remarks.
 	
 	\item 
     \index{quasi-interior point|(}
-	If\/ $s(A)$ is a pole, then the criteria stated in Part-II, Remark~\ref{rem:b3-2.15}(i) for $s(A)$ to be a first order pole are valid in the setting of arbitrary Banach lattices as well.
+	If\/ $s(A)$ is a pole, then the criteria stated in Part-II, Remark~\ref{rem:b3-2.15}\,(a) for $s(A)$ to be a first order pole are valid in the setting of arbitrary Banach lattices as well.
 	In particular, one has a first order pole provided that $\ker(s(A) - A)$ contains a quasi-interior point or in case that $\ker(s(A) - A')$ contains a strictly positive linear form.
 	
 	\item 
@@ -861,7 +865,7 @@ This is the second statement of the following theorem (see also Part-II, Remark~
 	
 	Given $f > 0$, $\phi > 0$ then either $\langle T(t)f,\phi \rangle = 0$ for all $t \geq 0$ or $\langle T(t)f,\phi \rangle > 0$ for all $t > 0$.
 	
-	Then it follows from Definition~\ref{def:c3-3.1}\,(ii) that for irreducible semigroups always the second case occurs.
+	Then it follows from Definition~\ref{def:c3-3.1}\,(b) that for irreducible semigroups always the second case occurs.
 	
 	Assume that $\langle T(t_{0})f,\phi \rangle = 0$ for some $t_{0} > 0$.
 	
@@ -877,7 +881,7 @@ This is the second statement of the following theorem (see also Part-II, Remark~
 	$0 \leq \langle T(t_{0}-t_{m})g_{n}^{+},\phi \rangle \leq \langle T(t_{0}-t_{m})f_{m},\phi \rangle = \langle T(t_{0})f,\phi \rangle = 0$.
 	
 	Thus the function $t \mapsto \langle T(t)g_{n}^{+},\phi \rangle$ is identically zero by the uniqueness theorem for analytic functions.
-	Since $f = \lim_{n\to\infty}g_{n}^{+}$, we have $\langle T(t)h,\phi \rangle = 0$ for all $t \in \R _{+}$.
+	Since $f = \lim_{n\to\infty}g_{n}^{+}$, we have $\langle T(t)f,\phi \rangle = 0$ for all $t \in \R _{+}$.
 \end{enumerate}
 \end{proof}
 \index{quasi-interior point|)}
@@ -902,11 +906,7 @@ The next result can be used to check irreducibility for a semigroup whose genera
 \end{proposition}
 %% --
 \begin{proof}
-We recall that a closed subspace $I \subset E$ is invariant for a semigroup generated by $C$ if and only if\/ $C(D(C)\cap I) \subset I$ and the restriction $C_{|I}$ of\/ $C$ with domain $D_{|I} \coloneqq D(C)\cap I$ generates a semigroup on $I$ (see 
-%%KGK StandConst schift
-%Part-I, Chapter 1, 3.3
-%%GG
-Part-I, Chapter 1, 3.3).
+We recall that a closed subspace $I \subset E$ is invariant for a semigroup generated by $C$ if and only if\/ $C(D(C)\cap I) \subset I$ and the restriction $C_{|I}$ of\/ $C$ with domain $D_{|I} \coloneqq D(C)\cap I$ generates a semigroup on $I$ (see Part-I, Section~\ref{subsec:a1-3.3}).
 Now let $I$ be a closed ideal of\/ $E$.
 
 $(b)\Rightarrow (a)$.
@@ -942,8 +942,8 @@ Next we consider some concrete examples.
 	
 	\item 
 	Consider the first derivative on $\R $, $\R _{+}$ or $\R _{2\pi} = \Gamma$ as operator on the corresponding $L^{p}$-space (with respect to the Lebesgue measure.)
-	Then the statements made in Part-II, Example~\ref{ex:b3-3.4}(c) are true.
-	The same is true for Part-II, Example~\ref{ex:b3-3.4}(iii) and (v) (second order differential operator) when the corresponding $L^{p}$-spaces are considered.
+	Then the statements made in Part-II, Example~\ref{ex:b3-3.4}(iii) are true.
+	The same is true for Part-II, Example~\ref{ex:b3-3.4}(v) and (vi) (second order differential operator) when the corresponding $L^{p}$-spaces are considered.
 	
 	\item 
 	Let $E = L^{1}[-1,0]$ and for $g \in L^{\infty}$ consider the operator $A_{g}$ given by
@@ -1048,7 +1048,9 @@ Next we consider some concrete examples.
 	\end{enumerate}	
 \end{examples}
 	
-In the following proposition we list some properties which are consequences of irreducibility. This extends Proposition~3.5 of Part-II, Chapter~\ref{chap:b2} to the setting of Banach lattices. The first assertion of the latter proposition is no longer true in the general setting (see Example~\ref{ex:c3-3.6} and Theorem~\ref{thm:c3-3.7}). 
+In the following proposition we list some properties which are consequences of irreducibility. 
+This extends Theorem~\ref{thm:b2-3.5} to the setting of Banach lattices. 
+The first assertion of the latter proposition is no longer true in the general setting (see Example~\ref{ex:c3-3.6} and Theorem~\ref{thm:c3-3.7}). 
 
 \begin{proposition}\label{prop:c3-3.5}
     \index{spectrum!irreducible semigroup}
@@ -1143,9 +1145,9 @@ Each of the following conditions on $E$ and $(T(t))$, respectively, implies that
 \begin{proof}
 	(i) is proved in Part-II, Proposition~\ref{prop:b3-3.5}(i).
 	
-	Assertion (ii)-(f) will be proved utilizing the analogous results for a single operator.
+	Assertion (ii)-(v) will be proved utilizing the analogous results for a single operator.
 	In view of Part-I, Proposition~\ref{prop:a3-2.5} we have to show that $r(R(\lambda,A)) > 0$ for some $\lambda \in \rho(A)$.
-	Moreover, from Part-I, Chapter 1, (1.3) we deduce
+	Moreover, from Eq.~\myeqpageref{eq:a1-1.3} we deduce
 	%% --
 	\begin{align*}
 		T(t)R(\lambda,A) = \eu^{\lambda t}R(\lambda,A) - \eu^{\lambda t}\int_{0}^{t} \eu^{-\lambda s}T(s)\ds \leq \eu^{\lambda t}R(\lambda,A) \ (t\geq 0, \lambda>s(A))\,.
@@ -1164,9 +1166,9 @@ Each of the following conditions on $E$ and $(T(t))$, respectively, implies that
 	(iii) follows from the recent result of \textcite{depagter:1986} which ensures that every positive operator on a Banach lattice which is compact and irreducible has positive spectral radius.
 \end{proof}
 %% --
-The theorem can be used to prove that elliptic operators as described in Example~2.14 have non-empty spectrum.
+The theorem can be used to prove that elliptic operators as described in Example~\ref{ex:c3-2.14} have non-empty spectrum.
 It is shown in \textcite{amann:1983} that these operators have compact resolvent and generate irreducible semigroups.
-Thus the assumption of (iii) is satisfied.
+Thus the assumption (iii) is satisfied.
 
 Concerning the eigenvalues of an irreducible semigroup which are contained in $\sigma_{b}(A)$ all statements established for spaces $C_{0}(X)$ in Part-II, Theorem~\ref{thm:b3-3.6} are true in the setting of Banach lattices.
 The proof can be translated without difficulties and will be omitted (see also \textcite[Theorem~2.6]{greiner:1982}).
@@ -1200,13 +1202,15 @@ The proof can be translated without difficulties and will be omitted (see also \
 	\end{enumerate}
 \end{theorem}
 %% -- 
-One can apply the theorem in order to prove that the rotation semigroup on $\Gamma$ (\cf Part-I, Chapter 1, 2.5) is the only positive periodic semigroup%
+One can apply the theorem in order to prove that the rotation semigroup on $\Gamma$ 
+ is the only positive periodic semigroup
+which is irreducible (\cf Part-I, Section~\ref{subsec:a1-2.5}).%
 \index{semigroup!periodic semigroup}%
 \index{rotation semigroup}%
 \index{semigroup!rotation semigroup}
 \index{periodic semigroup}
 
-which is irreducible.
+
 
 \begin{corollary}\label{cor:c3-3.9}
 	
@@ -1568,8 +1572,9 @@ For details we refer to \textcite{greiner:1984d}  or \textcite{voigt:1985} where
 \index{spectrum!lattice semigroup}
 \index{semigroup!lattice semigroup} 
 
-In Section 2 we proved that the boundary spectrum of certain positive semigroups is a cyclic set. 
-For semigroups of lattice homomorphisms much more can be said. The whole spectrum is an imaginary additively cyclic subset of\/ $\C $ (\cf Theorem~\ref{thm:c3-4.2}). 
+In Section~\ref{sec:c3-2} we proved that the boundary spectrum of certain positive semigroups is a cyclic set. 
+For semigroups of lattice homomorphisms much more can be said. 
+The whole spectrum is an imaginary additively cyclic subset of\/ $\C $ (\cf Theorem~\ref{thm:c3-4.2}). 
 This result can be used to derive cyclicity results for the eigenvalues in the boundary spectrum of positive semigroups (\cf Corollary~\ref{cor:c3-4.3}). 
 In the last part of this section we discuss a spectral decomposition of positive groups (\cf Theorem~\ref{thm:c3-4.8}).
 
@@ -1591,7 +1596,7 @@ In the last part of this section we discuss a spectral decomposition of positive
 		T(t)'\psi \leq \eu^{rt}\psi \ \text{ and } \ \ T(t)'\psi \geq \psi \ (t \geq 0) \ \text{ and } \ |\phi| \leq \psi\,.
 	\end{equation}
 	%% --
-	In fact, Part-I, Chapter 1, (1.3) implies $(\eu^{rt} - T(r))R(r,A) \geq 0$ hence 
+	In fact, Eq.~\myeqpageref{eq:a1-1.3} implies $(\eu^{rt} - T(r))R(r,A) \geq 0$ hence 
     \[
     T(t)'\psi = rR(r,A)'T(t)'|\phi| \leq r\cdot \eu^{rt}R(r,A)'|\phi| = \eu^{rt}\psi\,.
     \]
@@ -1688,15 +1693,14 @@ In the last part of this section we discuss a spectral decomposition of positive
     \index{semigroup!F-product@$\mathcal{F}$-product}%
     \index{F-product@$\mathcal{F}$-product}
     in order to reduce the problem to the point spectrum. 
-	We use the notation of Part-I, Section~\ref{sec:a1-3}.7. 
+	We use the notation of Part-I, Section~\ref{subsec:a1-3.7}. 
 	Obviously the space $m(E)$ is a Banach lattice and every operator $\hat{T}(t)$ is a lattice homomorphism. 
 	We have $|T(t)|f| - |f|| = ||T(t)f| - |f|| \leq |T(t)f - f|$ $(f \in E)$, hence $(|f_{n}|) \in m^{\TT}(E)$ whenever $(f_{n}) \in m^{\TT}(E)$. 
 	This proves that $m^{\TT}(E)$ is a sublattice, hence a Banach lattice as well. 
 	Obviously, $c_{\mathcal{F}}(E)\cap m^{\TT}(E)$ is an order ideal. 
 	Thus $E_{\mathcal{F}}^{\TT}$ is a Banach lattice and $(T_{\mathcal{F}}(t))$ is a semigroup of lattice homomorphisms. 
-	It follows that $P\sigma(A_{\mathcal{F}})$ is cyclic, hence $A\sigma(A)$ is cyclic by Part-I, Section~\ref{sec:a3-4}.2.
-	
-	Cyclicity of the entire spectrum follows from the cyclicity of\/ $A\sigma(A)$ and Lemma~\ref{lem:c3-4.1}.
+	It follows that $P\sigma(A_{\mathcal{F}})$ is cyclic, hence $A\sigma(A)$ is cyclic by Part-I, Proposition~\ref{prop:a3-4.2}.
+Cyclicity of the entire spectrum follows from the cyclicity of\/ $A\sigma(A)$ and Lemma~\ref{lem:c3-4.1}.
 \end{proof}
 
 One can use Theorem~\ref{thm:c3-4.2} in order to prove cyclicity for the eigenvalues in the boundary spectrum of positive semigroups. 
@@ -1750,7 +1754,7 @@ The assumptions made in Corollary~\ref{cor:c3-4.3} can be weakened slightly (\cf
 However, one still cannot prove cyclicity of\/ $P\sigma_{b}(A)$ for arbitrary positive semigroups.
 
 \begin{example}\label{ex:c3-4.4}
-	At first we recall Example~2.13 of Part-2, Chapter 3. 
+	At first we recall Part-II, Example~\ref{ex:b3-2.13}. 
 	There we constructed a bounded semigroup on $C(\Gamma)\times C_{0}(\R )$ such that $P\sigma_{b}(A) = \{\im k \colon k \in \Z, k \neq 0\}$.
 
     Let us perform the same construction on the Hilbert space
@@ -1789,7 +1793,7 @@ Then we have
 \end{proposition}
 %% --
 \begin{proof}
-In view of Part-I, Chapter 3, 6.2 it is enough to prove that the left hand
+In view of Part-I, Proposition~\ref{prop:a3-6.2} it is enough to prove that the left hand
 side contains the set on the right.
 
 Fix $t > 0$ and assume $r \in \sigma(T(t))$, $r > 0$ and let $\alpha \coloneqq \frac{1}{t} \log r$.
@@ -1856,13 +1860,14 @@ decompositions of the spectrum by vertical lines allow a spectral decomposition%
 \index{spectral decomposition} 
  of the semigroup (\cf Part-I, Definition~\ref{def:a3-3.1}) (One simply performs a spectral decomposition of a single operator $T(t)$). 
 
-In the
-following we will show that for positive groups (on arbitrary Banach
-lattices) spectral decompositions of this type always exist. Moreover,
+In the following we will show that for positive groups (on arbitrary Banach
+lattices) spectral decompositions of this type always exist. 
+Moreover,
 it will turn out that the decomposition is compatible with the lattice
-structure. The proof of this result uses Kato's equality
+structure. 
+The proof of this result uses Kato's equality (see Section~\ref{sec:c2-5}).% 
 \index{Kato's equality} 
-(see Section~5 of Part-3, Chapter 2 ). As a consequence of Corollary~\ref{cor:c2-5.8}  we have the following.
+As a consequence of Corollary~\ref{cor:c2-5.8}  we have the following.
 
 Let $E$ be a Banach lattice with order continuous norm and $(T(t))_{t \in \R }$
 be a group of positive operators on $E$ with generator $A$.
@@ -1941,7 +1946,8 @@ lattice $E$ with generator $A$. Given $\mu \in \rho(A) \cap \R $ and $h \in E_+$
 %% --
 \begin{proof}
 $(a)\Rightarrow(b)$  We have
-$\int_{0}^{t} \eu^{-\mu s}T(s)h \ds = (\Id - \eu^{-\mu t}T(t))R(\mu,A)h$ (see Part-I, Chapter 1, (3.2)).
+$\int_{0}^{t} \eu^{-\mu s}T(s)h \ds = (\Id - \eu^{-\mu t}T(t))R(\mu,A)h$ 
+(see Eq.~\myeqpageref{eq:a1-3.2}).
 %
 Since $R(\mu,A)h \geq 0$ and $T(t)$ is a positive operator we obtain
 \[\textstyle
@@ -2086,7 +2092,7 @@ follows that $E^*$ is a sublattice of\/ $C_0(X)'$ which is isomorphic to $M_b(X)
 $L^1$-space. 
 The argument given for the $L^2$-space yields
 $\sigma(T(t)^*) \cap \R _+ = \exp(t\sigma(A^*) \cap \R )$ for every $t \geq 0$. 
-Thus the assertion follows from Part-I, Section~\ref{sec:a3-4}.1.
+Thus the assertion follows from Part-I, Section~\ref{subsec:a3-4.4}.
 \end{proof}
 
 We conclude by describing a general situation of lattice semigroups. 
@@ -2215,8 +2221,8 @@ $\|D\phi_t(x)\| \leq \eu^{M|t|}$  for all  $x \in \R ^n$, $t \in \R$  where
 \end{equation}
 %% --
 
-All these properties were proven in Example~3.15 of Part-II, Chapter~\ref{chap:b2}.
-We will show that $\phi$ satisfies condition (b) of Proposition~\ref{prop:c3-4.11}\,(i),
+All these properties were proven in Part-II, Example~\ref{ex:b2-3.15}.
+We will show that $\phi$ satisfies condition (b) of Proposition~\ref{prop:c3-4.11},
 hence it induces a strongly continuous (semi-)group of lattice homomorphisms
 on $L(\R ^n)$ $(1 \leq p < \infty)$ via $T(t)f = f \circ \phi_t$.
 This is done using the change of variables formula as follows.
@@ -2226,7 +2232,7 @@ If\/ $\lambda$ denotes the Lebesgue measure, then
 %% --
 \begin{equation}\label{eq:c3-4.14}
 	\begin{split}
-		\lambda(\phi_t^{-1}(U)) &= \int_{U(-t)} 1 \dx  = \int_{U} 1 \circ \phi_{-t}(x) \cdot |\det D\phi_{-t}(x)| \dx  = \\
+		\lambda(\phi_t^{-1}(U)) &= \int_{U(-t)} \1 \dx  = \int_{U} \1 \circ \phi_{-t}(x) \cdot |\det D\phi_{-t}(x)| \dx  = \\
 		&\int_{U} |\det D\phi_{-t}(x)| \dx  \leq \int_{U} \eu^{nM|t|} \dx  = \eu^{nM|t|} \cdot \lambda(U).
 	\end{split}
 \end{equation}
@@ -2255,7 +2261,7 @@ Various results on the spectral theory of positive one-parameter semigroups can 
 \begin{enumerate}[label=\emph{Section \arabic*:}, wide, itemsep=1ex]
 \item
 That the spectral bound is always an element of the spectrum was stated by \textcite{karlin:1959}, but a valid proof was given by \textcite{derndinger:1980}. 
-This assertion as well as assertion (b) of Theorem~\ref{thm:c3-1.1} allow generalizations in various directions.  
+This assertion as well as assertion \upshape(ii) of Theorem~\ref{thm:c3-1.1} allow generalizations in various directions.  
 They are valid for ordered Banach spaces (see \textcite{greinervoigtwolff:1981} and \textcite{klein:1984}) and one only needs that $A$ has positive resolvent (see \textcite{kato:1982} or \textcite{nussbaum:1984}). 
 Theorem~\ref{thm:c3-1.2} as well as its corollaries are also valid in ordered Banach spaces. 
 For the analogue in the theory of the Laplace transform we refer to Section~10.5 in \textcite{widder:1971} and \textcite{voigt:1982}.
@@ -2273,9 +2279,11 @@ There exist various notions which are (more or less closely) related to irreduci
 \textcite{krasnoselskii:1964} or \enquote{quasi-strictly positive} in \textcite{karlin:1959}). \textcite{sawashima:1964} uses \enquote{non-support} instead of irreducible. 
 She also discusses several modifications (\enquote{semi-non-support}, \enquote{strictly non-support}, \enquote{strongly positive}) and the interrelation between these notions. 
 The notion of irreducibility can be extended to the (non-lattice) ordered setting (see \textcite{battyrobinson:1984}). 
-Assertion (b) of Theorem~\ref{thm:c3-3.2} is due to \textcite{majewskirobinson:1983} while special cases can be found in Section~XIII.12 of \textcite{reedsimon:1979} and in \textcite{kishimotorobinson:1981}. 
+Assertion \upshape(ii) of Theorem~\ref{thm:c3-3.2} is due to \textcite{majewskirobinson:1983} while special cases can be found in Section~XIII.12 of \textcite{reedsimon:1979} and in \textcite{kishimotorobinson:1981}. 
 Proposition~\ref{prop:c3-3.3} is due to \textcite{voigt:1984a}. 
-Retarded equations as dicussed in Example 3.4\,(iii) will be discussed in more detail in Section 3 of Part-3, Chapter 4  Example 3.4\,(iv) is a one-dimensional version of the linear transport equation. 
+Retarded equations as dicussed in Example~\ref{ex:c3-3.4}\,(iii) will be discussed in more detail in 
+Part-III, Section~\ref{sec:c4-3}.
+Example~\ref{ex:c3-3.4}\,(iv) is a one-dimensional version of the linear transport equation. 
 The higher dimensional equation is more delicate but can be treated similarly (see \eg \textcite{greiner:1984b}, \textcite{kaperetal:1983a}, or \textcite{voigt:1984b}). 
 A special case of Proposition~\ref{prop:c3-3.5} can be found in \textcite{davies:1980}. 
 Theorem~\ref{thm:c3-3.7} and Example~\ref{ex:c3-3.6} are taken from \textcite{schaefer:1985}. 

@@ -129,16 +129,29 @@ The most important object associated to a strongly continuous semigroup $(T(t))_
 \index{generator}
 Since for strongly continuous semigroups the functions $t \mapsto T(t)f$, $f \in E$, are continuous but not always differentiable, we have to restrict our attention to those $f \in E$ for which the desired derivative exists.
 We then obtain the \emph{generator} as a not necessarily everywhere defined operator.
-
+%% --
+% \begin{definition}\label{def:a1-1.5}
+% To every semigroup $(T(t))_{t \geq 0}$ there belongs an operator $(A,D(A))$, called the \emph{generator} and defined on the \emph{domain}
+% %% --
+% \begin{align*}
+% 	D(A) \coloneqq{} & \left\{ \, f \in E \colon \lim_{h\to0} \frac{T(h)f - f}{h} 
+% 	\text{ exists in $E$ } \right\} \text{ by} \\
+% 	Af \coloneqq{} & \lim_{h\to0} \frac{T(h)f - f}{h} \quad (f \in D(A)).
+% \end{align*}
+% %% --
+% \end{definition}
+%% --
 \begin{definition}\label{def:a1-1.5}
-To every semigroup $(T(t))_{t \geq 0}$ there belongs an operator $(A,D(A))$, called the \emph{generator} and defined on the \emph{domain}
-%% --
+To every semigroup $(T(t))_{t \geq 0}$ there belongs an operator $(A,D(A))$, 
+called the \emph{generator}, defined on the \emph{domain}
 \begin{align*}
-	D(A) \coloneqq{} & \left\{ \, f \in E \colon \lim_{h\to0} \frac{T(h)f - f}{h} 
-	\text{ exists in $E$ } \right\} \text{ by} \\
-	Af \coloneqq{} & \lim_{h\to0} \frac{T(h)f - f}{h} \quad (f \in D(A)).
+    D(A) &\coloneqq \left\{ f \in E \colon \lim_{h\to0} \frac{T(h)f - f}{h} 
+             \text{ exists in } E \right\}
 \end{align*}
-%% --
+by
+\begin{align*}
+    Af &\coloneqq \lim_{h\to0} \frac{T(h)f - f}{h} \quad (f \in D(A)).
+\end{align*}
 \end{definition}
 %% --
 Clearly, $D(A)$ is a linear subspace of\/ $E$ and $A$ is linear from $D(A)$ into $E$.
