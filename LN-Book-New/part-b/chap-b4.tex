@@ -213,7 +213,7 @@ Let $A$ be the generator of a positive semigroup on $C_{0}(X)$.
 Then
 %% --
 \[
-   s(A) = \omega_1(A) = \omega_{0}(A) \in \sigma(A) .
+   s(A) = \omega_1(A) = \omega_{0}(A).% \in \sigma(A) .
 \]
 %% --
 \end{theorem}
@@ -1430,7 +1430,8 @@ In the situation of Theorem~\ref{thm:b4-3.7}\,(iii) we have the stronger result 
 (see also Part-III, Example~\ref{ex:c2-4.14}). Take $E = C([-1,0],\C)$, $\alpha \in \C$ and $\mu \in M[-1,0]_{+}$ such that $\mu(\{0\}) = 0$. 
 Then the operator $A$ given by $Af = f'$ on $D(A) = \{f \in C^1([-1,0],\C) \colon f'(0) = \alpha f(0) + \langle f,\mu\rangle\}$ generates a strongly continuous semigroup $(T(t))_{t\geq0}$. 
 In fact, this follows from Theorem~\ref{thm:b4-3.1} if we put $F = \C$, $\Phi = \mu$ and $B$ the multiplication by $\alpha$. 
-Moreover $\Phi_{0}$ is the multiplication by $<f_{0}\langle\Phi\rangle = \|\Phi\|$ (notice $\Phi\geq0$) and $s(B + \Phi_{0}) = \alpha + \|\Phi\|$. 
+Moreover $\Phi_{0}$ is the multiplication by $ \langle \epsilon_{0}, \Phi \rangle = \|\Phi\|$ (notice 
+$\Phi\geq 0$) and $s(B + \Phi_{0}) = \alpha + \|\Phi\|$. 
 Since $\omega_{0}(A) = s(A)$ by Eq.~\myeqpageref{eq:b4-1.1}, we obtain from Corollary~\ref{cor:b4-3.8} that $A$ generates a uniformly exponentially stable semigroup if and only if\/ $\alpha + \|\Phi\| < 0$.
 \end{example}
 %% --
