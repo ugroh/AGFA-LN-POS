@@ -1,3 +1,4 @@
+% !TEX root = ../LN-Book-New.tex
 %% --
 \setcounter{section}{0}
 \chapternopage{Asymptotics of Positive Semigroups on \texorpdfstring{C$^{*}$}{C\textsuperscript{*}}- and \texorpdfstring{W$^{*}$}{W\textsuperscript{*}}-Algebras}\label{chap:d4}
@@ -16,7 +17,7 @@ Ulrich Groh
 \index{semigroup!positive semigroup}
 \section{Stability of Positive Semigroups}\label{sec:d4-1}
 %% --
-As explained in Part-I, Chapter 3,  Section 1, it is possible to deduce uniform exponential stability of strongly continuous semigroups from the location of the spectrum of its generator if the spectral bound $ s(A) $ and the growth bound $ \omega_{0} $ coincide.
+As explained in Part-I, Section~\ref{sec:a3-1}, it is possible to deduce uniform exponential stability of strongly continuous semigroups from the location of the spectrum of its generator if the spectral bound $ s(A) $ and the growth bound $ \omega_{0} $ coincide.
 In this section we prove $s(A) = \omega_{0}$ for positive semigroups on \CA-algebras with unit and preduals of \WA-algebras.
 A more general discussion of the \enquote{$s(A) = \omega_{0}$} problem can be found in \textcite{greinervoigtwolff:1981}.
 For the results of this section the existence of a unit is essential.
@@ -51,7 +52,7 @@ Since $S(M)$ is $\sigma(M,M')$-compact, there exists $\phi \in \bigcap_{n \in \N
 Then $ T(t)'\phi = \exp(\omega_{0} t)\phi$ follows for all $ 0 \leq t $ because the adjoint semigroup $(T(t)')_{t \geq 0}$ is a weak*-semigroup on $M'$.
 
 Suppose $-\infty = \omega_{0}$.
-Then for $t > 0$ either $r(T(t)) = 0$ (Part-I, Chapter 3,  Proposition~1.1) or $T(t)'\phi = 0$, in particular $\phi(T(t)\1) = 0$.
+Then for $t > 0$ either $r(T(t)) = 0$  or $T(t)'\phi = 0$, in particular $\phi(T(t)\1) = 0$ (Part-I, Proposition~\ref{prop:a3-1.1}).
 From this we obtain the contradiction $\phi(\1) = 0$.
 Hence $-\infty < \omega_{0}$ and $\exp(\omega_{0} t) \in \rho(T(t)')$ for every $t \in \R_{+}$.
 Thus $\omega_{0} \in \sigma(A)$ or $\omega_{0} = s(A)$.
@@ -65,7 +66,8 @@ If we consider the nilpotent translation semigroup on the \CA-algebra $C_{0}( \l
 This shows that the existence of a unit is essential.
 
 \item
-The equality $s(A) = \omega_{0}$ still holds for positive semigroups on commutative \CA-algebras without unit (see Part-II, Chapter~\ref{chap:b4},  Remark~1.2.b).
+The equality $s(A) = \omega_{0}$ still holds for positive semigroups on commutative \CA-algebras without unit 
+(see Part-II, Theorem~\ref{thm:b3-1.1}).
 \end{enumerate}
 \end{remark}
 %% --
@@ -102,7 +104,7 @@ Then $s(A) = \omega_{0}$ holds.
 \begin{remark}\label{rem:d4-1.5}
 A simple modification of Part-I, Chapter 3,  Example 1.4 (take $c_{0}$ instead of\/ $\ell^2$) shows that Theorem 1.3 is no longer true for non-positive semigroups (for details see \textcite[Beispiel 2.5]{grohneubrander:1981}).
 
-While the growth bound $\omega_{0}$ characterizes uniform exponential stability of the semigroup there are other (and weaker) stability concepts (\cf Part-I, Chapter 4,  Section 1).
+While the growth bound $\omega_{0}$ characterizes uniform exponential stability of the semigroup there are other (and weaker) stability concepts (\cf Part-I, Section~\ref{sec:a4-1}).
 \end{remark}
 %% --
 \begin{definition}\label{def:d4-1.6}
@@ -319,7 +321,7 @@ Therefore $R(0,A)$ exists and is positive which proves (e).
 \item[(c) $\implies$ (g):] From the last paragraph we obtain that for all $\xi \in H$
 %% --
 \[
-\int_{0}^{\infty}\|U(s)\|^2ds = \int_{0}^{\infty}(T(s)\1\xi|\xi)ds
+\int_{0}^{\infty}\|U(s)\|^2ds = \int_{0}^{\infty}(T(s)\1\xi \,|\, \xi)ds
 \]
 %% --
 exists.
@@ -327,14 +329,14 @@ exists.
 \item[(g) $\implies$ (h):] It follows from the polarization identity that the integral
 %% --
 \[
-\int_{0}^{\infty}(U(s)\xi|U(s)\eta)ds
+\int_{0}^{\infty}(U(s)\xi \,|\, U(s)\eta)ds
 \]
 %% --
 exists for all $\xi,\eta \in H$.
 Using \textcite[Theorem III.4.2 and Theorem II.2.6]{takesaki:1979}, we conclude as in the implication from (c) to (e) that for all $\xi,\eta \in H$ the integral
 %% --
 \[
-\int_{0}^{\infty}((T(s)x)\xi|\eta)ds \quad (x \in M)
+\int_{0}^{\infty}((T(s)x)\xi \,|\, \eta)ds \quad (x \in M)
 \]
 %% --
 is finite.
@@ -416,7 +418,7 @@ p_{r} \coloneqq \sup\{s(|\phi|) \colon \phi \in \Fix{T}\}
 the recurrent projection associated with $\TT$.
 For a motivation of this definition compare, \eg \textcite[Section 6.3]{davies:1976}.
 
-Since $T(t)|\phi| = |\phi|$ for all $\phi \in \Fix{T}$ (Corollary~\ref{cor:d3-1.5}), we obtain $T(t)'p_{r} \geq p_{r}$ (see Section~\ref{sec:d1-3}\,(c)).
+Since $T(t)|\phi| = |\phi|$ for all $\phi \in \Fix{T}$ (Corollary~\ref{cor:d3-1.5}), we obtain $T(t)'p_{r} \geq p_{r}$ (see Section~\ref{sec:d1-3}\,(3)).
 Let $\TT^{(r)}$ be the reduced semigroup on $p_{r}M_{*}p_{r}$ with generator $A^{(r)}$.
 Then $\TT^{(r)}$ is identity preserving and of Schwarz type.
 Similarly, if\/ $\RR$ is a pseudo-resolvent 
@@ -870,13 +872,24 @@ The standard example is the following.
 If\/ $ \Gamma $  is the unit circle, $ \dm $  the normalized Haar measure on $ \Gamma $  and $ 0 < \tau \in \R $, then we define the maps $ T_{\tau}(t) $, $ t \in \R_{+} $, on $ L^{1}(\Gamma,m) $  by
 %% --
 \[
-(T_{\tau}(t)f)(\xi) = f(\xi \exp(\frac{2\pi \im}{\tau}t) ) \quad (f \in L^{1}(\Gamma,\dm), \xi \in \Gamma).
+(T_{\tau}(t)f)(\xi) = f\left( \exp\left(\frac{2\pi \im \, t }{\tau} \right) \cdot \xi \right) \quad (f \in L^{1}(\Gamma,\dm), \xi \in \Gamma).
 \]
 %% --
+%
+%\[
+%(T_{\tau}(t)f)(\xi) = f\!\left(\xi\exp\!\left(\frac{2\pi\im}{\tau}t\right)\right)
+%\quad (f \in L^{1}(\Gamma,\dm),\ \xi \in \Gamma).
+%\]
+%
 Then $ \TT \coloneqq (T_{\tau}(t))_{t \geq 0} $  forms a strongly continuous one parameter semigroup which is identity preserving and of Schwarz type.
 %% --
-Since $ \TT $  is periodic of period $ \tau $, it follows that 0 is a pole of the resolvent of its generator $ B $  with residuum $ P = \1 \otimes \1 $  and $ \{\frac{2\pi \im}{\tau} \cdot k: k \in \Z\} = \sigma(B) $.
-Thus $ \TT $  is irreducible and uniformly ergodic on $ L^{1}(\Gamma,\dm) $  (see Part-I, Chapter 2,  Section 5).
+Since $ \TT $  is periodic of period $ \tau $, it follows that 0 is a pole of the resolvent of its generator $ B $  with residuum $ P = \1 \otimes \1 $  and %
+\[
+	\left\{\frac{2\pi \im}{\tau} \cdot k: k \in \Z \right\} = \sigma(B) .
+\]
+%
+Thus $ \TT $  is irreducible and uniformly ergodic on $ L^{1}(\Gamma,\dm) $  
+(see Part-I, Section~\ref{subsec:a1-2.5}).
 
 Now let $ \TT $  be a semigroup on a predual $ M_{*} $ of a von Neumann-algebra $ M $.
 It is called \emph{partially periodic}, if there exists a projection $ Q \in L(M_{*}) $  reducing $ \TT $  such that $ Q(M_{*}) \cong L^{1}(\Gamma,\dm) $  and $ \TT_{| \Image{Q}} $  is conjugate to a periodic semigroup on $ L^{1}(\Gamma,\dm) $.
@@ -1076,7 +1089,7 @@ Since
 it follows $ \hat{\psi}_{n}(\hat{p}) = 1 $  where $ \hat{p} $  is the canonical image of\/ $ p $  in $ \widehat{M} $.
 But this implies $ s(\hat{\psi}_{n}) \leq \hat{p} $  in $ \widehat{M} $.
 
-Since $ \widehat{M}_{1}^{+} $  is $ \sigma(\widehat{M},\widehat{M}') $-dense in $ (\widehat{M}'')_{1}^{+} $  (Kaplansky's Density Theorem \textcite[1.9.1]{sakai:1971} and \textcite[1.8.9 and 1.8.12]{sakai:1971}), there exists for all $ n \in \N $  a net $ (z_{n,\gamma}) $  in $ \widehat{M}_{1}^{+} $  such that
+Since $ \widehat{M}_{1}^{+} $  is $ \sigma(\widehat{M},\widehat{M}') $-dense in $ (\widehat{M}'')_{1}^{+} $  (Kaplansky's Density Theorem, see \textcite[1.9.1]{sakai:1971} and \textcite[1.8.9 and 1.8.12]{sakai:1971}), there exists for all $ n \in \N $  a net $ (z_{n,\gamma}) $  in $ \widehat{M}_{1}^{+} $  such that
 %% --
 \[
 \sigma(\widehat{M}'',\widehat{M}')\text{-}\lim_{\gamma} \hat{z}_{n,\gamma} = s(\hat{\psi}_{n}).
