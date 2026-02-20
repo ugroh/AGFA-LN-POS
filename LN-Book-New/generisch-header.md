@@ -1,4 +1,8 @@
 ```
+sed -i '' 's/ on p\.~\\pageref{eq:[^}]*}//g' part-*/*.tex
+
+sed -i '' 's/Eq\.~\\eqref{\([^}]*\)}/Eq.~\\myeqpageref{\1}/g' part-*/*.tex
+grep -rn "Eq\.~\\\\eqref" part-*/*.tex
 
 \makeatletter
 \newcommand{%\specialchapheader}[2]{%
