@@ -17,18 +17,18 @@ Ulrich Groh
 Motivated by the classical results of Perron and Frobenius one expects the following spectral properties for the generator $A$ of a positive semigroup on a \CA-algebra.
 %% --
 \begin{quote}
-The spectral bound 
+\textit{The spectral bound 
 $s(A) \coloneqq \sup\{\Re(\lambda) \colon \lambda \in \sigma(A)\}$ belongs to the spectrum $\sigma(A)$ and the boundary spectrum
 %% -- 
 $  % $\[
 \sigma_{b}(A) \coloneqq \sigma(A) \cap \{s(A)+\im\R\}
 $  %  $\]
 %% -- 
-possesses a certain symmetric structure, called cyclicity.
+possesses a certain symmetric structure, called cyclicity.}
 \end{quote}
 %% --
 Results of this type have been proved in Part-II, Chapter~\ref{chap:b3} for positive semigroups on commutative \CA-algebras, however in the noncommutative case the situation is more complicated.
-While \enquote{$s(A) \in \sigma(A)$} still holds (see \textcite{greinervoigtwolff:1981} or the notes of this chapter), the cyclicity of the boundary spectrum $\sigma_{b}(A)$ is true only under additional assumptions on the semigroup (\eg irreducibility, see Section 1 below).
+While \enquote{$s(A) \in \sigma(A)$} still holds (see \textcite{greinervoigtwolff:1981} or the notes of this chapter), the cyclicity of the boundary spectrum $\sigma_{b}(A)$ is true only under additional assumptions on the semigroup (\eg irreducibility, see Section~\ref{sec:d3-1}).
 
 For technical reasons we consider mostly strongly continuous semigroups on the predual $M_{*}$ of a \WA-algebra $M$ or its adjoint semigroup which is a weak*-continuous semigroup on the dual space $M'$.
 %% --
@@ -106,7 +106,7 @@ Since the positive cone $M^{*}_{+}$ is generating, assertion (i) is proved.
 
 (ii) Since $T$ is positive,  it follows that $T(x)^{*} = T(x^{*})$ for all $x \in M$.
 Hence $\Fix{T}$ is a self adjoint subspace of\/ $M$, \ie invariant under the involution on $M$.
-For every $x$, $ y \in M $ define
+For every $x$ and $ y \in M $ define
 %% -- 
 \[
 	b(x,y) \coloneqq T(xy^{*}) - T(x)T(y)^{*}.
@@ -154,7 +154,7 @@ Define a positive semidefinite sesquilinear map $b: M\times M \mapsto M$ by
 b(x,y) \coloneqq T(xy^{*}) - S(x)S(y)^{*} \quad (x, y\in M).
 \]
 %% -- 
-Since $b(v^{*},v^{*}) = 0$ we obtain $b(x,v^{*}) = 0$ for all $x \in M$,  hence $T(xv) = S(x)v$. (Lemma~\ref{lem:d3-1.1}\,\ref{item:d3-1.1-i})
+Since $b(v^{*},v^{*}) = 0$ we obtain $b(x,v^{*}) = 0$ for all $x \in M$,  hence $T(xv) = S(x)v$ by Lemma~\ref{lem:d3-1.1}\,\ref{item:d3-1.1-i}.
 
 \item
 Since $s(|\phi|)M$ is a closed right ideal, the closed face $F \coloneqq s(|\phi|)(M_{+})s(|\phi|)$ determines $s(|\phi|)M$ uniquely, \ie
@@ -540,7 +540,6 @@ u_{t} \coloneqq \begin{pmatrix} 1 & 0 \\ 0 & \eu^{\lambda t} \end{pmatrix} \in M
 The semigroup of *-automorphisms $(x \mapsto u_{t}xu_{t}^{*})$ on $M_{2}(\C)$ is identity preserving and of Schwarz type, but the spectrum of its generator is $\{0, \lambda, \lambda^{*}\}$ hence is not additively cyclic.
 \end{example*}
 %% --
-%\newpage
 It turns out that, in order to obtain a non commutative analogue of the Perron-Frobenius theorems, one has to consider semigroups which are irreducible.
 
 Recall that a semigroup $\SG$ of positive operators on an ordered Banach space $(E,E_{+})$ is called \emph{irreducible} if no closed face of\/ $E_{+}$, different from $\{0\}$ and $E_{+}$, is invariant under $\SG$.
@@ -667,10 +666,10 @@ Then
 \begin{enumerate}[\upshape (i)]
 
 \item 
-$G \coloneqq (\TT_{0})^{-} \subseteq L_{s}(N_{*})$ is a compact, Abelian group in the strong operator topology.
+$G \coloneqq (\TT_{0})^{-} \subseteq \mathcal{L}_{s}(N_{*})$ is a compact, Abelian group in the strong operator topology.
 
 \item 
-$\Id_{| N_{{*}}} \in \overline{\{T_{0}(t) \colon t>s\}} \subseteq L_{s}(N_{*})$ for all $0<s \in \R$.
+$\Id_{| N_{{*}}} \in \overline{\{T_{0}(t) \colon t>s\}} \subseteq \mathcal{L}_{s}(N_{*})$ for all $0<s \in \R$.
 \end{enumerate}
 \end{proposition}
 %% --
@@ -756,7 +755,7 @@ Since the fixed space of\/ $\kappa(t)$ is given by
 however no $T(t) \in \TT$ is irreducible.
 
 \item 
-If\/ $\TT$ is the irreducible semigroup of Schwarz type on the predual of\/ $B(H)$ given in \textcite{evans:1977}, then $P\sigma(A) \cap \im\R = \emptyset$.
+If\/ $\TT$ is the irreducible semigroup of Schwarz type on the predual of\/ $\BH$ given in \textcite{evans:1977}, then $P\sigma(A) \cap \im\R = \emptyset$.
 \end{enumerate}
 \end{remark}
 
@@ -890,7 +889,7 @@ Since $\bigoplus_{j=1}^{n} Mp_{j} = M$ and $\bigoplus_{j=1}^{n} L_{j} = M_{*}$, 
 and the assertion follows from Lemma~\ref{lem:d3-1.6}).
 \end{proof}
 %% --
-Before going on let us recall the basic facts of the \emph{ultrapower} $\hat{E}$ of a Banach space $E$ with respect to some free ultrafilter $\mathfrak{U}$ on $\N $ (compare Part-I, Chapter 1,  3.7).
+Before going on let us recall the basic facts of the \emph{ultrapower} $\hat{E}$ of a Banach space $E$ with respect to some free ultrafilter $\mathfrak{U}$ on $\N $ (compare Part-I, Section~\ref{subsec:a3-3.7}).
 If\/ $\ell^{\infty}(E)$ is the Banach space of all bounded functions on $\N $ with values in $E$, then
 %% --
 \[
@@ -1122,7 +1121,7 @@ It turns out that $J((M_{*})^{\wedge})$ is a translation invariant subspace of\/
 Hence there exists a central projection $z \in \widehat{M''}$ such that $J((M_{*})^{\wedge}) = \widehat{M''}z$ (\textcite[Proposition 2.2]{groh:1984b}).
 
 Below we identify $(M_{*})^{\wedge}$ via $J$ with this translation invariant subspace.
-From the construction the following is obvious: If\/ $T$ is an identity preserving Schwarz map with preadjoint $T_{*} \in L(M_{*})$, then $\widehat{T}$ is an identity preserving Schwarz map on $\widehat{M}$ such that $(T_{*})^{\wedge} = \widehat{T'}|(M_{*})^{\wedge}$.
+From the construction the following is obvious: If\/ $T$ is an identity preserving Schwarz map with preadjoint $T_{*} \in L(M_{*})$, then $\widehat{T}$ is an identity preserving Schwarz map on $\widehat{M}$ such that $(T_{*})^{\wedge} = \widehat{(T)}{}'_{\vert (M_{*})^{\wedge}}$.
 \end{enumerate}
 \end{remarks}
 %\newpage

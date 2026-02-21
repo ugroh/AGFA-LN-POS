@@ -423,7 +423,7 @@ p_A(\lambda) \coloneqq \det(\lambda - A) = \lambda^2-s\cdot \lambda + d
 is the characteristic polynomial  of\/ $ A $, then $ p_{A}(A) = 0 $ by \emph{Cayley-Hamilton}, hence
 %
 \[
-	\left( A - s/2 \cdot \Id \right)^{2} = D^{2} \cdot \Id , 
+	\left( A - \frac{s}{2} \cdot \Id \right)^{2} = D^{2} \cdot \Id , 
 \]
 %
 where $ \Id $ denotes the unit matrix.
@@ -433,32 +433,32 @@ Now we have to consider two cases.
 \begin{description}[wide, labelindent=0em]
 
 \item[$ D^{2} = 0 $: ] 
-Then $\left( A - s/2 \cdot \Id \right)^{k} = D^{k} \cdot \Id = 0 $  for all $ (k \geq 2)$ and this implies 
+Then $\left( A - \frac{s}{2}  \cdot \Id \right)^{k} = D^{k} \cdot \Id = 0 $  for all $ (k \geq 2)$ and this implies 
 %
 \[
-	  \eu^{t \cdot \left( A - s/2 \cdot \Id \right)} = \Id + t( A - s/2 \cdot \Id)
+	  \eu^{t \cdot \left( A - s/2  \cdot \Id \right)} = \Id + t \left(  A - \frac{s}{2}  \cdot \Id \right)
 \]
 %
 or
 %
 \[
-	 \eu^{t A } =  \eu^{t\cdot s/2} \, [ ( 1 - \frac{s}{2} \, t )\cdot \Id + t \cdot A] .
+	 \eu^{t A } =  \eu^{t\cdot s/2} \, \left[ \left( 1 - \frac{s}{2} \, t \right )\cdot \Id + t \cdot A \right] .
 \]
 %
 \item[$ D^{2} \neq 0 $: ]
 In this case we obtain for every $ k \in \N $
 %
 \begin{align*}
-	( A - s/2 \cdot \Id )^{2k}  &= D^{2k} \cdot \Id \\ 
-	( A - s/2 \cdot \Id )^{2k+1} &=\frac{1}{D} \, D^{2k+1}( A - s/2 \cdot \Id) .
+	\left( A - \frac{s}{2} \cdot \Id \right)^{2k}  &= D^{2k} \cdot \Id \\ 
+	\left( A - \frac{s}{2}  \cdot \Id \right)^{2k+1} &=\frac{1}{D} \, D^{2k+1}\left( A - \frac{s}{2} \cdot \Id \right) .
 \end{align*}
 %%
 Thus 
 \begin{align*}
-	 \eu^{t( A - s/2 \cdot \Id )} 
-		& = \sum_{k=0}^\infty \frac{t^k}{k!}( A - s/2 \cdot \Id )^k 
+	 \eu^{t( A - 1/2  \cdot \Id )} 
+		& = \sum_{k=0}^\infty \frac{t^k}{k!}\left( A - \frac{s}{2}  \cdot \Id \right)^k 
 		= \sum_{ \text{k even} } (\cdots) + \sum_{ \text{k odd} } (\cdots)  \\
-	&= \cosh( t D ) \cdot \Id + \frac{1}{D} \sinh( t D )( A - s/2 \cdot \Id) \\
+	&= \cosh( t D ) \cdot \Id + \frac{1}{D} \sinh( t D ) \left( A - \frac{s}{2}  \cdot \Id \right) \\
 	&= \frac{ 1 }{ D } \sinh( tD )\cdot A + \left( \cosh(tD) - \frac{s}{2D} \sinh(tD) \right) \cdot \Id
 \end{align*}
 %% --
@@ -479,7 +479,7 @@ As summary we obtain
 \end{equation*}
 %% 
 In case $A$ is a real $2 \times2$-matrix and if\/ $ D \neq 0 $, then 
-$ D^{2} = s^{2}/4 - d $ can be positive or negative. 
+$ D^{2} = \frac{s^{2}}{4} - d $ can be positive or negative. 
 %% -- 
 \begin{description}[wide,  labelindent=0em]
 
@@ -706,7 +706,7 @@ On $E = C(\Gamma)$, \resp $E = L^{p}(\Gamma,m)$, $1 \leq p < \infty$, $m$ Lebesg
 \]
 %% --
 yield a group $(R_{\tau}(t))_{t \in \R}$ having period $\tau$, \ie $R_{\tau}(\tau) = \Id$.
-As in Example~\ref{subsec:a1-2.4} one shows that its generator has the form
+As in Section~\ref{subsec:a1-2.4} one shows that its generator has the form
 %% --
 \begin{align*}
     D(A) &= \{f \in E \colon f \text{ absolutely continuous}, f' \in E\}, \\

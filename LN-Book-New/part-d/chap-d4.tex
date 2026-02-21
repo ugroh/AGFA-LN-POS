@@ -102,9 +102,9 @@ Then $s(A) = \omega_{0}$ holds.
 \noindent This follows from the fact that the bidual of a \CA-algebra is a \WA-algebra (see \textcite[Theorem III.2.4.]{takesaki:1979}).
 %% --
 \begin{remark}\label{rem:d4-1.5}
-A simple modification of Part-I, Chapter 3,  Example 1.4 (take $c_{0}$ instead of\/ $\ell^2$) shows that Theorem 1.3 is no longer true for non-positive semigroups (for details see \textcite[Beispiel 2.5]{grohneubrander:1981}).
+A simple modification of Part-I, Example~\ref{ex:a3-1.4} (take $c_{0}$ instead of\/ $\ell^2$) shows that Theorem~\ref{thm:d4-1.3} is no longer true for non-positive semigroups (for details see \textcite[Beispiel 2.5]{grohneubrander:1981}).
 
-While the growth bound $\omega_{0}$ characterizes uniform exponential stability of the semigroup there are other (and weaker) stability concepts (\cf Part-I, Section~\ref{sec:a4-1}).
+While the growth bound $\omega_{0}$ characterizes uniform exponentially stability of the semigroup there are other (and weaker) stability concepts (\cf Part-I, Section~\ref{sec:a4-1}).
 \end{remark}
 %% --
 \begin{definition}\label{def:d4-1.6}
@@ -360,10 +360,10 @@ Essentially we distinguish three cases.
 %% --
 \begin{enumerate}[\upshape (i), wide, labelindent=.5em]
 \item
-The Cesàro means $\frac{1}{s}\int_{0}^{s} T(t)dt$ converge strongly to a projection $P$ onto the fixed space of\/ $(T(t))_{t \geq 0}$ (see Proposition~\ref{prop:d4-3.3} \& \ref{prop:d4-3.4}).
+The Cesàro means $\frac{1}{s}\int_{0}^{s} T(t)dt$ converge strongly to a projection $P$ onto the fixed space of\/ $(T(t))_{t \geq 0}$ (see Propositions~\ref{prop:d4-3.3} \& \ref{prop:d4-3.4}).
 
 \item
-The maps $T(t)$ converge strongly to $P$ (see Proposition~\ref{prop:d4-3.7}, \ref{thm:d4-3.8} \&. \ref{cor:d4-3.9}).
+The maps $T(t)$ converge strongly to $P$ (see Propositions~\ref{prop:d4-3.7}, \ref{thm:d4-3.8} \&. \ref{cor:d4-3.9}).
 
 \item
 The maps $T(t)$ behave asymptotically as a periodic group (Theorem~\ref{thm:d4-3.11}).
@@ -619,51 +619,56 @@ If, in addition, $\TT$ is irreducible and if\/ $\phi$ is the normal state genera
 %% --
 %% --
 \begin{proof}
-Consider $H \coloneqq P\sigma(A) \cap \im\R$ which is not empty by assumptions.
+Consider $\Gamma \coloneqq P\sigma(A) \cap \im\R$ which is not empty by assumptions.
 From Proposition 3.1 it follows that $\TT$ is relatively compact in the weak operator topology.
-Let $K$ be the semigroup kernel of\/ $\overline{\TT}{w} \subset L(M_{*})$ and $Q$ the unit of\/ $K$.
-Recall that $Q\psi_{n} = \psi_{n}$ for all $\psi_{n} \in M_{*}$ such that $A\psi_{n} = n\psi_{n}$ $(n \in H)$.
+Let $K$ be the semigroup kernel of\/ $\overline{\TT}{w} \subset \mathcal{L}{(M_{*})}$ and $Q$ the unit of\/ $K$.
+Recall that $Q\psi_{\gamma} = \psi_{\gamma}$ for all $\psi_{\gamma} \in M_{*}$ such that $A\psi_{\gamma} = \gamma\psi_{\gamma}$ $(\gamma \in \Gamma)$.
 Let $\mathcal{E}$ be the family of all eigenvectors of\/ $A'$ pertaining to the eigenvalues in $H$.
 
 Then $\mathcal{E}$ is closed with respect to the multiplication in $M$ and the formation of adjoints.
 Thus $N$ is a \WA-subalgebra of\/ $M$, \textcite[Corollary 1.7.9.]{sakai:1971}, and $\TT_{0}(t)' \coloneqq T(t)'_{|N}$ is multiplicative (for this see Lemma~\ref{lem:d3-1.1}).
 
-Since $Q \in \overline{\TT}{w}  \subseteq L_{w}(M_{*})$, there exists an ultrafilter $\mathfrak{U}$ on $\R_{+}$ such that 
+Since $Q \in \overline{\TT}  \subseteq L_{w}(M_{*})$, there exists an ultrafilter $\mathfrak{U}$ on $\R_{+}$ such that 
 %
 \[
-	\lim_{\mathfrak{U}}\langle T(t)\psi,x\rangle = \langle Q\psi,x\rangle
+	\lim_{\mathfrak{U}} \, \langle T(t)\psi,x\rangle = \langle Q\psi,x\rangle
 \]
 %
 for all $x \in M$ and $\psi \in M_{*}$.
-If\/ $n \in H$ and $\psi_{n} \in M_{*}$ such that $A\psi_{n} = n\psi_{n}$, then for all $x \in M$ we obtain
+If\/ $\gamma \in \Gamma$ and $\psi_{\gamma} \in M_{*}$ such that $A\psi_{\gamma} = \gamma\psi_{\gamma}$, then for all $x \in M$ we obtain
 %% --
 \[
-\langle\psi_{n},x\rangle = \langle Q\psi_{n},x\rangle = \lim_{\mathfrak{U}} \langle T(t)\psi_{n},x\rangle = (\lim_{\mathfrak{U}} \eu^{nt})\langle\psi_{n},x\rangle,
+\langle \psi_{\gamma} ,x \rangle = \langle Q\psi_{\gamma},x \rangle = \lim_{\mathfrak{U}} \langle T(t)\psi_{\gamma},x \rangle = 
+(\lim_{\mathfrak{U}} \eu^{\gamma}) \langle \psi_{\gamma}, x \rangle,
 \]
 %% --
-hence $\lim_{\mathfrak{U}} \eu^{nt} = 1$.
+hence $\lim_{\mathfrak{U}} \eu^{\gamma t} = 1$.
 From this it follows that for all $\psi \in M_{*}$ we have
 %% --
 \[
-\langle\psi,Q'(u_{n})\rangle = \lim_{\mathfrak{U}} \langle\psi,T(t)'u_{n}\rangle = (\lim_{\mathfrak{U}} \eu^{nt})\langle\psi,u_{n}\rangle = \langle\psi,u_{n}\rangle.
+\langle\psi,Q'(u_{n})\rangle = \lim_{\mathfrak{U}} \langle\psi,T(t)'u_{\gamma}\rangle 
+= (\lim_{\mathfrak{U}} \eu^{\gamma t})\langle\psi,u_{\gamma}\rangle 
+ \langle\psi,u_{\gamma}\rangle.
 \]
 %% --
 Hence $N \subseteq Q'(M)$.
 
-For $\gamma$ in the dual group of\/ $K$ and $x \in M$ we define $x_{\gamma}$ by
+For $\alpha$ in the dual group of\/ $K$ and $x \in M$ we define $x_{\alpha}$ by
 %% --
 \[
-\psi(x_{\gamma}) \coloneqq \int_{K} \langle S\psi,x\rangle\langle S,\gamma \langle\eu^{*} \dm (S) \quad (\psi \in M_{*}^{+}).
+\psi(x_{\alpha}) \coloneqq \int_{K} 
+	\langle S\psi ,x \rangle \, \overline{\langle S,\gamma \rangle}  \dm(S) \quad (\psi \in M_{*}^{+}).
 \]
 %% --
-Then $x_{\gamma} \in M$ and $T(t)'x_{\gamma} = \langle QT(t),\gamma\rangle x_{\gamma}$.
-Therefore $x_{\gamma} \in N$.
+Then $x_{\alpha} \in M$ and $T(t)'x_{\alpha} = \langle QT(t),\alpha\rangle x_{\alpha}$.
+Therefore $x_{\alpha} \in N$.
+
 Thus the inclusion $Q'M \subseteq N$ is proved if we can show that $Q'M$ belongs to the $\sigma(M,M_{*})$-closed linear span of\/ $\{x_{\gamma} \colon \gamma \in K, x \in M\}$.
 For this it is enough to show that every linear form $\psi \in M_{*}$ such that $\psi(x_{\gamma}) = 0$ for all $\gamma \in K$ satisfies $\psi(Qx) = 0$ for all $x \in M$.
 But if\/ $\psi(x_{\gamma}) = 0$, then
 %% --
 \[
-\int_{K} \langle S\psi,x\rangle\langle S,\gamma\rangle\eu^{*} \dm (S) = 0, \gamma \in K.
+\int_{K} \langle S\psi,x \rangle \, \overline{\langle S,\gamma \rangle} \dm (S) = 0, \gamma \in K.
 \]
 %% --
 Since the map $(S \mapsto \psi(Sx))$ is continuous on $K$ and since the elements of\/ $K$ form a complete orthonormal basis in $L^2(K,\dm)$, we obtain $\psi(Sx) = 0$ for all $S \in K$, in particular $\psi(Qx) = 0$ as desired.
@@ -706,7 +711,7 @@ If\/ $\psi \in N_{*}$, then $|T_{0}(t)\psi| = T_{0}(t)|\psi|$ for all $t \in \R$
 This follows immediately from the fact that $T_{0}(t)'$ is a *-automorphismus on $N$.
 
 \item
-Let us add a few words concerning the structure of\/ $N$: If\/ $\TT$ is irreducible and $K$ is the semigroup kernel of\/ $\TT^{-} \subseteq L_{w}(M_{*})$, then $(S \mapsto S'): K \to L((N,\sigma(N,N_{*})))$ is a representation of the compact, Abelian group $K$ as group of *-automorphism such that the fixed space is one dimensional.
+Let us add a few words concerning the structure of\/ $N$: If\/ $\TT$ is irreducible and $K$ is the semigroup kernel of\/ $\TT^{-} \subseteq L_{w}(M_{*})$, then $(S \mapsto S'): K \to \mathcal{L}((N,\sigma(N,N_{*})))$ is a representation of the compact, Abelian group $K$ as group of *-automorphism such that the fixed space is one dimensional.
 Therefore we are able to apply the results of \textcite{olesen:1980}.
 There are three possibilities for $N$.
 %% --
@@ -772,8 +777,17 @@ the assertion is proved.
 %\end{proof}
 
 It remains to show that $ \lim_{\mathfrak{U}} T(t)_{*} = P_{*} $  in the strong operator topology.
-Choose $ 0 \leq \phi \in \BH_{*} $, $ \|\phi\| \leq 1 $  and let $ \phi_{t} \coloneqq T(t)_{*}\phi $  $ (t>0) $.
-$ \phi_{0} \coloneqq P_{*}\phi $  and let $ \{p_{i}: i \in A\} $  be an increasing net of projections of finite rank in $ \BH $  with strong limit $\1$.
+Choose $ 0 \leq \phi \in \BH_{*} $, $ \|\phi\| \leq 1 $  and let 
+%
+\[
+	\phi_{t} \coloneqq 
+	\begin{cases}
+	T(t)_{*}\phi ,	&   t > 0 , \\
+	P_{*}\phi	,	&   t = 0, 
+	\end{cases} 
+\]
+%
+Tand let $ \{p_{i}: i \in A\} $  be an increasing net of projections of finite rank in $ \BH $  with strong limit $\1$.
 
 Since the set $ K \coloneqq \{\phi_{t}: t \geq 0\} $  is relatively compact in the $ \sigma(\BH_{*},\BH) $-topology, there exists for every $ \delta > 0 $  an index $ i_{0} \in A $  such that
 %% --
@@ -785,7 +799,7 @@ for every $ \psi \in K $  and $ i \geq i_{0} $  (\textcite[Theorem III.5.4.(vi)]
 In particular
 %% --
 \[
-|\psi(\1 - p_{i})| \leq \delta, \quad \psi \in K,\, i(0) \leq i.
+|\psi(\1 - p_{i})| \leq \delta, \quad \psi \in K,\, i_{0} \leq i.
 \]
 %% --
 Let $ p \coloneqq p_{i_{0}} $.
@@ -803,7 +817,7 @@ Then for all $ x $  in the unit ball of\/ $ M $  it follows that
 Since the \WA-algebra $ p \BH p $  is finite dimensional, there exists $ U \in \mathfrak{U} $  such that
 %% --
 \[
-	\|(\phi_{t} - \phi_{0})|_{p \BH p}\| \leq \delta .
+	\|(\phi_{t} - \phi_{0})\vert_{p \BH p} \| \leq \delta .
 \]
 %% --
 for all $ t \in U $.
@@ -941,7 +955,7 @@ it follows that $ \TT|_{\Image{Q}} $  is conjugate to the rotation semigroup of 
 Using this proposition we obtain the following theorem.
 %% --
 \begin{theorem}\label{thm:d4-3.11}
-Let $ \TT = (T(t))_{t \geq 0} $  be a uniformly ergodic, identity preserving semigroup of Schwarz type on the predual of a \WA-algebra $ M $  and suppose 
+Let $ \TT = (T(t))_{t \geq 0} $  be an irreducible uniformly ergodic, identity preserving semigroup of Schwarz type on the predual of a \WA-algebra $ M $  and suppose 
 %
 \[
 	\sigma(A) \cap \im\R \neq \{0\} .
@@ -971,7 +985,8 @@ Consequently, using the results in \textcite{grohkuemmerer:1982}, it follows tha
 \end{equation}
 %% --
 where $ A_{0} \coloneqq A_{|\Kern{Q}} $  (the norm taken in $ L(H_{\phi}) $ ).
-Using the result in Part-I, Chapter 3,  Corollary~7.11 it follows that
+Using the result in 
+Part-I, Corollary~\ref{cor:a3-7.11} it follows that
 %% --
 \[
 \lim_{t \to \infty} \|T(t)|_{H_{0}}\| = 0.
@@ -983,7 +998,7 @@ Since the $ s(M,M_{*}) $-topology on the unit ball of\/ $ M $  is nothing else t
 s(M,M_{*})\text{-}\lim_{t \to \infty} (T(t)' - S(t)')(x) = 0
 \]
 %% --
-uniformly on $ M_{1} $.
+uniformly on $ M_{1} $, the unit ball of $M$.
 From this the assertion follows.
 \end{proof}
 %% --
@@ -1065,7 +1080,7 @@ $ \phi_{n}(z_{n}) \geq \frac{1}{2} $  for all $ n \in \N $.
 \begin{proof}
 Let $ (M_{*})^{\wedge} $  be the ultrapower of\/ $ M_{*} $  with respect to some free ultrafilter $ \mathfrak{U} $  on $ \N $.
 Since $ (M_{*})^{\wedge} $  is the predual of a \WA-subalgebra of\/ $ \widehat{M} $  
-(see Remark~\ref{rem:d3-2.4}.(ii)), there exists a sequence of states $ (\hat{\psi}_{n}) $  in $ \Fix{\RR}^{\wedge} $  such that the corresponding support projections are mutually orthogonal in $ \widehat{M} $  (Lemma~\ref{lem:d4-4.1}).
+(see Remark~\ref{rem:d3-2.4}.(ii)), there exists a sequence of states $ (\widehat{\psi}_{n}) $  in $ \Fix{\RR}^{\wedge} $  such that the corresponding support projections are mutually orthogonal in $ \widehat{M} $  (Lemma~\ref{lem:d4-4.1}).
 For every $ n \in \N $  let $ (\psi_{n,k}) $  be a representing sequence of states, 
 %% --
 \[
@@ -1086,36 +1101,36 @@ Since
 1 = \langle\psi_{n,k},s(\psi_{n,k})\rangle = \psi_{n,k}(p) \quad (n,k \in \N) ,
 \]
 %% --
-it follows $ \hat{\psi}_{n}(\hat{p}) = 1 $  where $ \hat{p} $  is the canonical image of\/ $ p $  in $ \widehat{M} $.
-But this implies $ s(\hat{\psi}_{n}) \leq \hat{p} $  in $ \widehat{M} $.
+it follows $ \widehat{\psi}_{n}(\widehat{p}) = 1 $  where $ \widehat{p} $  is the canonical image of\/ $ p $  in $ \widehat{M} $.
+But this implies $ s(\widehat{\psi}_{n}) \leq \widehat{p} $  in $ \widehat{M} $.
 
 Since $ \widehat{M}_{1}^{+} $  is $ \sigma(\widehat{M},\widehat{M}') $-dense in $ (\widehat{M}'')_{1}^{+} $  (Kaplansky's Density Theorem, see \textcite[1.9.1]{sakai:1971} and \textcite[1.8.9 and 1.8.12]{sakai:1971}), there exists for all $ n \in \N $  a net $ (z_{n,\gamma}) $  in $ \widehat{M}_{1}^{+} $  such that
 %% --
 \[
-\sigma(\widehat{M}'',\widehat{M}')\text{-}\lim_{\gamma} \hat{z}_{n,\gamma} = s(\hat{\psi}_{n}).
+\sigma(\widehat{M}'',\widehat{M}')\text{-}\lim_{\gamma} \widehat{z}_{n,\gamma} = s(\widehat{\psi}_{n}).
 \]
 %% --
-From \textcite[1.7.8]{sakai:1971} and the above considerations, we obtain that the net $ (p\hat{z}_{n,\gamma}\hat{p}) $  converges to $ s(\hat{\psi}_{n}) $  in the $ \sigma(\widehat{M}'',\widehat{M}') $-topology.
-Therefore we may assume $ \hat{z}_{n,\gamma} \in (\widehat{M}_{p}')_{1}^{+} $.
+From \textcite[1.7.8]{sakai:1971} and the above considerations, we obtain that the net $ (p\widehat{z}_{n,\gamma}\widehat{p}) $  converges to $ s(\widehat{\psi}_{n}) $  in the $ \sigma(\widehat{M}'',\widehat{M}') $-topology.
+Therefore we may assume $ \widehat{z}_{n,\gamma} \in (\widehat{M}_{p}')_{1}^{+} $.
 
-In the following we denote by $ \hat{\phi} $  the canonical image of\/ $ \phi $  in $ (M_{*})^{\wedge} $.
+In the following we denote by $ \widehat{\phi} $  the canonical image of\/ $ \phi $  in $ (M_{*})^{\wedge} $.
 
-Since the projections $ s(\hat{\psi}_{n}) $  are mutually orthogonal, there exists a real sequence $ (r_{n}) $, $ 0 < r_{n} < 1 $, $ \lim_{n} r_{n} = 0 $  and $ \hat{\phi}(s(\hat{\psi}_{n})) \leq \frac{1}{2}r_{n} $.
-For all $ n \in \N $  choose $ \hat{z}_{n} \in (\widehat{M}_{p}')_{1}^{+} $  such that
+Since the projections $ s(\widehat{\psi}_{n}) $  are mutually orthogonal, there exists a real sequence $ (r_{n}) $, $ 0 < r_{n} < 1 $, $ \lim_{n} r_{n} = 0 $  and $ \widehat{\phi}(s(\widehat{\psi}_{n})) \leq \frac{1}{2}r_{n} $.
+For all $ n \in \N $  choose $ \widehat{z}_{n} \in (\widehat{M}_{p}')_{1}^{+} $  such that
 %% --
 \begin{align*}
-|\langle\hat{\phi},s(\hat{\psi}_{n}) - \hat{z}_{n}\rangle| &\leq \frac{1}{2}r_{n}, \\
-|\langle\hat{\psi}_{n},s(\hat{\psi}_{n}) - \hat{z}_{n}\rangle| &\leq \frac{1}{2}r_{n}.
+|\langle\widehat{\phi},s(\widehat{\psi}_{n}) - \widehat{z}_{n}\rangle| &\leq \frac{1}{2}r_{n}, \\
+|\langle\widehat{\psi}_{n},s(\widehat{\psi}_{n}) - \widehat{z}_{n}\rangle| &\leq \frac{1}{2}r_{n}.
 \end{align*}
 %% --
-Hence $ \hat{\phi}(\hat{z}_{n}) \leq r_{n} $  and $ \hat{\psi}_{n}(\hat{z}_{n}) \geq \frac{1}{2} $  for all $ n \in \N $.
-For every $ n \in \N $  let $ (z_{n,k}) \in \hat{z}_{n} $  be a representing sequence in $ (M_{p})_{1}^{+} = p(M_{1}^{+})p $  (note that $ {M}_{\hat{p}} = \widehat{M_{p}} $ ) and fix $ \mu \in \R_{+} $.
+Hence $ \widehat{\phi}(\widehat{z}_{n}) \leq r_{n} $  and $ \widehat{\psi}_{n}(\widehat{z}_{n}) \geq \frac{1}{2} $  for all $ n \in \N $.
+For every $ n \in \N $  let $ (z_{n,k}) \in \widehat{z}_{n} $  be a representing sequence in $ (M_{p})_{1}^{+} = p(M_{1}^{+})p $  (note that $ {M}_{\widehat{p}} = \widehat{M_{p}} $ ) and fix $ \mu \in \R_{+} $.
 Since 
 %% --
 \[
-\text{$\mu R(\mu)'\hat{\psi}_{n} = \hat{\psi}_{n}$, 
-$\hat{\phi}(\hat{z}_{n}) \leq r_{n}$ and 
-$\hat{\psi}_{n}(\hat{z}_{n}) \geq \frac{1}{2}$, }
+\text{$\mu R(\mu)'\widehat{\psi}_{n} = \widehat{\psi}_{n}$, 
+$\widehat{\phi}(\widehat{z}_{n}) \leq r_{n}$ and 
+$\widehat{\psi}_{n}(\widehat{z}_{n}) \geq \frac{1}{2}$, }
 \]
 %% --
 there exists for all $ n \in \N $  an element $ U_{n} \in \mathfrak{U} $  such that for all $ k \in U_{n} $ and we obtain
@@ -1182,7 +1197,7 @@ Let $ \RR $  be an identity preserving pseudo-resolvent on
 	D = \{\lambda \in \C \colon  \Re(\lambda) > 0\} 
 \]
 %
-with values in a \WA-algebra $ M $  which is of Schwarz type and let $ \RR' $  br its adjoint pseudo-resolvent.
+with values in a \WA-algebra $ M $  which is of Schwarz type and let $ \RR' $  be its adjoint pseudo-resolvent.
 Any one of the following conditions implies $ \dim \Fix{\widehat{\RR}} < \infty $  in some ultrapower of\/ $ M $.
 %% --
 \begin{enumerate}[\upshape (i)]
@@ -1245,7 +1260,7 @@ For this we need the following observation: If\/ $ \psi $  is a faithful state o
 Indeed, if\/ $ 0 \neq x \in M $  such that $ \psi^{(n)}(x) = 0 $,  choose a projection $ 0 \neq p \in M $  such that $ \psi^{(n)}(p) = \psi^{(s)}(p) = 0 $ (use \textcite[Theorem III.3.8]{takesaki:1979}). 
 Hence $ \psi(p) = 0 $  which conflicts with the faithfulness of\/ $ \psi $.
 
-If\/ $ 2 \leq \dim (\Fix{\RR'}) $  there are states $ \psi_{1} $  and $ \psi_{2} $  in $ \Fix{\RR'} $  such that the corresponding support projections are orthogonal in $ M'' $  (Remark~\ref{rem:d4-4.2} on p.~\ref{rem:d4-4.2}).
+If\/ $ 2 \leq \dim (\Fix{\RR'}) $  there are states $ \psi_{1} $  and $ \psi_{2} $  in $ \Fix{\RR'} $  such that the corresponding support projections are orthogonal in $ M'' $  (Remark~\ref{rem:d4-4.2}).
 Since every $ \RR' $-invariant state $ \psi $  is faithful on $ M $, $ \psi_{i}^{(n)} \neq 0 $  (otherwise the norm closed face $ \{\psi(x) = 0: x \in M_{+}\} $  would
 be non trivial and $ \mu R(\mu) $-invariant).
 The support projections of the $ \psi_{i}^{(n)} $'s in $ M'' $  are orthogonal (since $ \psi_{1}^{(n)} \leq \psi_{i} $ ) and different from zero.
@@ -1335,13 +1350,13 @@ We refer to \textcite{battyrobinson:1984} for this more general setting and to P
 
 
 \item
-Theorem~\ref{thm:d4-2.2} generalizes the Liapunov stability theorem from the matrix algebra $ B(\C^{n}) $  to arbitrary \WA-algebras.
+Theorem~\ref{thm:d4-2.2} generalizes the Liapunov stability theorem from the matrix algebra $ M_{n}(\C) $  to arbitrary \WA-algebras.
 For the algebra $ \BH $  it is due to \textcite{milstein:1975} and in the general form to \textcite{grohneubrander:1981}.
 
 
 \item
 From the many papers dealing more or less explicitly with the asymptotic behavior of semigroups on operator algebras we quote \textcite{frigerioverri:1982} and \textcite{watanabe:1982}.
-The background for our ergodic theorems (Proposition~\ref{prop:d4-3.3} \& \ref{prop:d4-3.4}) can be found best in \textcite{krengel:1985}.
+The background for our ergodic theorems (Propositions~\ref{prop:d4-3.3} \& \ref{prop:d4-3.4}) can be found best in \textcite{krengel:1985}.
 The \enquote{automatic} convergence theorem for an irreducible \WA-dynamical system on $ \BH $  stated in Corollary~\ref{cor:d4-3.9} is the continuous version of a result in \textcite{groh:1984c}.
 Finally, the characterization of convergence towards a periodic semigroup through spectral properties of the generator---Theorem~\ref{thm:d4-3.11}---is due to \textcite{nagel:1984} in the commutative case, \ie in $ L^{1}(\mu) $ (see also Part-III, Theorem~\ref{thm:c4-2.14}).
 %\medskip
