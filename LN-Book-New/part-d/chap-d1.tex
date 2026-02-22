@@ -119,8 +119,8 @@ If
 	(S(t)x)(S(t)x)^{*} \leq T(t)(xx^{*}) \tag{*}
 \end{equation}
 %% --
-for all $ x \in M $ and $ t \in \R_{+} $. 
-Then 
+for all $ x \in M $ and $ t \in \R_{+} $.
+Then  
 %% --
 \[
 	\left( \mu R(\mu,B)x \right) \left( \mu R(\mu,B)x \right)^{*} \leq \mu R(\mu,A)xx^{*}
@@ -214,7 +214,7 @@ As in Part-III, Section~\ref{sec:c3-3}  the following notion will be an importan
 \index{pseudo-resolvent|(}
 \begin{definition}\label{def:d1-2.4}
 Let $E$ be a Banach space and let $D$ be a non-empty open subset of\/ $\C$.
-A family $ \mathcal{R} \colon D \mapsto L(E) $ is called a \emph{pseudo-resolvent} on $ D $ with values in $ E $ if
+A family $ \mathcal{R} \colon D \mapsto \LE $ is called a \emph{pseudo-resolvent} on $ D $ with values in $ E $ if
 %% --
 \begin{align*}
 	R(\lambda) - R(\mu) &= -(\lambda - \mu)R(\lambda)R(\mu) &&\text{(Resolvent Equation)}
@@ -227,7 +227,7 @@ If\/ $ \mathcal{R} $ is a {pseudo-resolvent} on $ D = \{\lambda \in \C \colon \R
 if
 %% --
 \[
-	(R(\lambda)x)(R(\lambda)x)^{*} \leq (\Re \lambda)^{-1} R(\Re(\lambda))xx^{*}
+	(R(\lambda)x)(R(\lambda)x)^{*} \leq (\Re (\lambda) )^{-1} R(\Re(\lambda))xx^{*}
 \]
 %% --
 and \emph{identity preserving} if\/ $ \lambda R(\lambda)\1 = \1 $ for all $ \lambda \in D $ and $ R \in \mathcal{R} $.
@@ -280,7 +280,7 @@ If\/ $ E $ is a Banach space and $ \mathcal{S} \subseteq \LE $ is a semigroup of
 We call the semigroup $ \mathcal{S}_{\vert F} \coloneqq \{S_{\vert F} \colon S \in \mathcal{S} \} $ the reduced semigroup.
 Note that for a one-parameter semigroup $ \TT $ (\resp pseudo-resolvent $ \mathcal{R} $) the reduced semigroup is again strongly continuous (\resp $ \mathcal{R}_{\vert F} $ is again a pseudo-resolvent) (see Part-I, Section~\ref{subsec:a1-3.3}).
 
-\item
+\item\label{item:d1-3.2}
 Let $ M $ be a \WA-algebra, $ p \in M $ a projection and $ S \in \L{M} $ such that 
 %
 \[
@@ -335,7 +335,7 @@ M_{\phi} = s(\phi)^{\perp}Ms(\phi)^{\perp}
 T(s(\phi)^{\perp}) \leq \1 
 \]
 %% --
-it follows 
+and \eqref{item:d1-3.2} above it follows 
 %% --
 \[ 
 T(s(\phi)^{\perp}) \leq s(\phi)^{\perp}  .
