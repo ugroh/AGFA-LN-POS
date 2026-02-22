@@ -63,7 +63,7 @@ The subdifferential of\/ $N^{+}$ is given by
 %% --
 \begin{examples}\label{ex:c2-1.1}
 %
-\begin{enumerate}[\upshape (i), wide, labelindent=.5em]  % , itemindent=\parindent]
+\begin{enumerate}[\upshape (i), wide, labelindent=.25em]  % , itemindent=\parindent]
 %%
 \item \label{ex:c2-1.1-1}
 Let $E = C_{0}(X)$ (X locally compact). 
@@ -155,7 +155,7 @@ So $T$ is a contraction.
 %% --
 \begin{examples}\label{ex:c2-1.5}
 %
-\begin{enumerate}[\upshape (i), wide, labelindent=.5em] %, itemindent=\parindent]  %%enum:c2-1.5-beg
+\begin{enumerate}[\upshape (i), wide, labelindent=.25em] %, itemindent=\parindent]  %%enum:c2-1.5-beg
 %%
 \item \label{ex:c2-1.5-1}
 Consider the second derivative with Dirichlet boundary condition on $E = C_{0}(0,1)$; \ie we let $Af = f''$ with domain $D(A) = \{f \in C^{2}[0,1] \colon f(0) = f(1) = f''(0) = f''(1) = 0\}$.
@@ -172,8 +172,8 @@ f_{0}(x) = \frac{1}{2} \left[\eu^{x} \int_{0}^{1} \eu^{-y}g(y) \dy - \eu^{-x} \i
 \]
 %%
 Then $f_{0} \in C^{2}[0,1]$ and $f_{0} - f_{0}'' = g$. 
-There exist $a, b \in \R$ such that $f(x) = f_{0}(x) + a\eu^{x} + b\eu^{-x}$ defines a function $f \in C^{2}[0,1]$ satisfying $f(0) = f(1) = 0$. Since $f - f'' = f_{0} - f_{0}'' = g$ this implies that $f \in D(A)$ and $f - Af = g$. We have shown that $(\Id - A)$ is surjective. It follows from Theorem 
-\ref{thm:c2-1.2} that $A$ is the generator of a positive contraction semigroup.
+There exist $a, b \in \R$ such that $f(x) = f_{0}(x) + a\eu^{x} + b\eu^{-x}$ defines a function $f \in C^{2}[0,1]$ satisfying $f(0) = f(1) = 0$. Since $f - f'' = f_{0} - f_{0}'' = g$ this implies that $f \in D(A)$ and $f - Af = g$. We have shown that $(\Id - A)$ is surjective. It follows from 
+Theorem~\ref{thm:c2-1.2} that $A$ is the generator of a positive contraction semigroup.
 %%-- 
 \item \label{ex:c2-1.5-2}
 Let $E = L^{p}[0,1]$ $(1 \leq p < \infty)$ and $A$ be given by $Af = f''$ on $D(A) = \{f \in E \colon f \in C^{1}[0,1], f' \in AC[0,1], f'' \in L^{p}[0,1], f(0) = f(1) = 0\}$. 
@@ -523,7 +523,7 @@ It follows from the proof of Theorem~\ref{thm:c2-1.11}   that on a $\sigma$-orde
 %
 Let $E = \ell^p$ $(1 \leq p \leq \infty)$ or $E = c_{0}$.
 %% --
-\begin{enumerate}[\upshape (i), wide, labelindent=.5em] %%, 	 itemindent=\parindent]
+\begin{enumerate}[\upshape (i), wide, labelindent=.25em] %%, 	 itemindent=\parindent]
 %%
 \item \label{ex:c2-1.13-1}
 An operator $A \in \LE)$ can be canonically represented by a matrix $(a_{ij})$. 
@@ -757,12 +757,12 @@ Then $\mathcal{A}$ satisfies Kato's inequality in the sense of distributions.
 In fact, let $0 \leq \phi \in C_{c}^{\infty}(\R^n)$.
 Then $\langle Af,\phi \rangle = \langle \mathcal{A}f,\phi \rangle = \langle f,\mathcal{A}^{*}\phi \rangle$ for all $f \in D_{0}$.
 Since $D_{0}$ is a core of\/ $A$, this implies that $\phi \in D(A')$ and $A'\phi = \mathcal{A}^{*}\phi$.
-Thus (\ref{eq:c2-K})   gives $\Re\langle(\sign \bar{f})\mathcal{A}f,\phi \rangle = \Re\langle(\sign \bar{f})Af),\phi \rangle \leq \langle |f|,A'\phi \rangle = \langle |f|,\mathcal{A}^{*}\phi \rangle = \langle \mathcal{A}|f|,\phi \rangle$ for all $f \in D_{0}$, $0 \leq \phi \in C_{c}^{\infty}(\R^n)$.
+Thus (\myeqpageref{eq:c2-K})   gives $\Re\langle(\sign \bar{f})\mathcal{A}f,\phi \rangle = \Re\langle(\sign \bar{f})Af),\phi \rangle \leq \langle |f|,A'\phi \rangle = \langle |f|,\mathcal{A}^{*}\phi \rangle = \langle \mathcal{A}|f|,\phi \rangle$ for all $f \in D_{0}$, $0 \leq \phi \in C_{c}^{\infty}(\R^n)$.
 This is Kato's inequality in the distributional sense.
 
 \begin{remark*}\label{rem:c2-3.0}
 %
-It has been proved by \textcite{miyajimaokazawa:1984}] that (\ref{eq:c2-Kd}) implies that $m \leq 2$ and that the principal part $\mathcal{A}_{0} = \sum_{|\alpha|=2} a_{\alpha} D^{\alpha}$ of\/ $\mathcal{A}$ is elliptic; \ie if we write the operator $\mathcal{A}_{0}$ in the form $\mathcal{A}_{0} = \sum_{i,j=1}^{2} b_{ij} \partial^{2}/\partial x_{i} \partial x_{j}$, then the matrix $(b_{ij}(x))$ is positive semidefinite for all $x \in \R^n$.
+It has been proved by \textcite{miyajimaokazawa:1984}] that (\myeqpageref{eq:c2-Kd}) implies that $m \leq 2$ and that the principal part $\mathcal{A}_{0} = \sum_{|\alpha|=2} a_{\alpha} D^{\alpha}$ of\/ $\mathcal{A}$ is elliptic; \ie if we write the operator $\mathcal{A}_{0}$ in the form $\mathcal{A}_{0} = \sum_{i,j=1}^{2} b_{ij} \partial^{2}/\partial x_{i} \partial x_{j}$, then the matrix $(b_{ij}(x))$ is positive semidefinite for all $x \in \R^n$.
 \end{remark*}
 
 Finally we formulate Theorem~\ref{thm:c2-2.4}   for the space $E \coloneq C_{0}(X)$ ($X$ locally compact) (which is not $\sigma$-order complete unless $X$ is $\sigma$-Stonian).
@@ -886,7 +886,7 @@ It follows from Gronwall's lemma that $\langle f,T(t)'\phi \rangle \leq \eu^{\la
 \end{proof}
 %% --
 \begin{remark}\label{rem:c2-3.7}
-\begin{enumerate}[\upshape (i), wide, labelindent=.5em]%%, itemindent=\parindent]
+\begin{enumerate}[\upshape (i), wide, labelindent=.25em]%%, itemindent=\parindent]
 %%
 \item \label{rem:c2-3.7-1}
 Using Proposition~\ref{prop:c2-3.6} it is immediately clear that
@@ -971,7 +971,7 @@ One has trivially
 \langle(P_{+} + P_{-} + P) Bf,\phi \rangle = \langle f,B'\phi \rangle.
 \end{equation}
 %% --
-Addition of Eq.~\myeqpageref{eq:c2-3.4} and (\ref{eq:c2-K6})   gives
+Addition of Eq.~\myeqpageref{eq:c2-3.4} and (\myeqpageref{eq:c2-K6})   gives
 $\langle(2P_{+} + P)Bf,\phi \rangle \leq \langle 2f^{+},B'\phi \rangle \leq 0$.
 Hence $\langle Bf,\psi \rangle = \langle QBf,\phi \rangle \leq 0$.
 Thus we have proved that $B|D_{0}$ is $p$-dissipative. 
@@ -1002,7 +1002,7 @@ This implies that $T(t) \geq 0$.
 %% --
 \begin{remark}\label{rem:c2-3.11} ~ 
 %% --
-\begin{enumerate}[\upshape (i), wide, labelindent=.5em]%%, itemindent=\parindent]
+\begin{enumerate}[\upshape (i), wide, labelindent=.25em]%%, itemindent=\parindent]
 %%
 \item \label{rem:c2-3.11-1}
 The proof of Theorem~\ref{thm:c2-3.8}   shows the following. 
@@ -1215,8 +1215,7 @@ This is Kato's inequality in the strong form for positive $f \in D(B)$ and is eq
 (Bf)^{-} \in \{f\}^{dd} = \overline{E_f} \quad (f \in D(B)_{+})
 \]
 %% --
-(recall that $E$ has order continuous norm). By Lemma 
-\ref{lem:c2-1.10}  this again is equivalent to
+(recall that $E$ has order continuous norm). By Lemma~\ref{lem:c2-1.10}  this again is equivalent to
 %% --
 \begin{equation}\label{eq:c2-P2} \tag{P}
 0 \leq f \in D(B),  \phi \in E'_{+},  \langle f,\phi \rangle = 0 \text{ implies } \langle Bf,\phi \rangle \geq 0.
@@ -1505,7 +1504,7 @@ Finally, the domination of\/ $(S(t))_{t \geq 0}$ by $(T(t))_{t \geq 0}$ follows 
 \end{proof}
 
 \begin{example}\label{ex:c2-4.4} 
-\begin{enumerate}[\upshape (i), wide, labelindent=.5em] %%, itemindent=\parindent]
+\begin{enumerate}[\upshape (i), wide, labelindent=.25em] %%, itemindent=\parindent]
 %%
 \item \label{ex:c2-4.4-1}
 Let $E$ be a $\sigma$-order complete complex Banach lattice and $(T(t))_{t \geq 0}$ be a positive semigroup with generator $A$. 
@@ -1663,8 +1662,7 @@ Then for $f \in D(B)_{+}$, $\phi \in D(A')_{+}$,
 &= \langle f, A'\phi\rangle.
 \end{align*}
 %% --
-So~\ref{prop:c2-4.8-2}   holds. 
-\ref{prop:c2-4.8-3}   is proved similarly.
+So~\ref{prop:c2-4.8-2}   holds and~\ref{prop:c2-4.8-3}   is proved similarly.
 
 Now assume~\ref{prop:c2-4.8-2}. 
 Let $\lambda > \max \{s(A), s(B)\}$. Let $g \in E_{+}$, $\psi \in E'_{+}$.
@@ -2158,7 +2156,7 @@ $T(t) = |S(t)|$ for all $t \geq 0$.
 \end{theorem}
 
 \begin{remark*} 
-\begin{enumerate}[\upshape (i), wide, labelindent=.5em] %%, itemindent=\parindent] \label{enum:c2-kgk.1}
+\begin{enumerate}[\upshape (i), wide, labelindent=.25em] %%, itemindent=\parindent] \label{enum:c2-kgk.1}
 %%
 \item  \label{enum:c2-kgk.1-1} %% Nicht im LNM von Chlaude angelegt
 By Part-II, Lemma~\ref{lem:b2-2.9} the relation Eq.~\myeqpageref{eq:c2-5.5} is equivalent to
@@ -2252,7 +2250,7 @@ Since $D_{h}\Theta(f)$ is continuous in $h$ (in fact, $|D_{h}\Theta(f) - D_{k}\T
 
 \begin{remark}\label{rem:c2-5.7} 
 
-\begin{enumerate}[\upshape (i), wide, labelindent=.5em] %%, itemindent=\parindent]
+\begin{enumerate}[\upshape (i), wide, labelindent=.25em] %%, itemindent=\parindent]
 %%
 \item \label{rem:c2-5.7-1}
 By the same argument as given in the proof one sees

@@ -50,7 +50,7 @@ s(A) = \omega_{1}(A) = \omega_{0}(A) \in \sigma(A) .
 We know that $s(A) \leq \omega_{1}(A) \leq \omega_{0}(A)$ (see Part-I, Corollary~\ref{cor:a4-1.5}) and $s(A) \in \sigma(A)$ (see Corollary~\ref{cor:c3-1.4} ).
 Thus we have to show $s(A) = \omega_{0}(A)$.
 
-\begin{enumerate}[\upshape (i), wide, labelindent=.5em]
+\begin{enumerate}[\upshape (i), wide, labelindent=.25em]
 \item 
 For AM-spaces the proof given in Section 1 of Part-II, Chapter~\ref{chap:b4} works (cf.\ Part-II, Remark~\ref{rem:b4-1.5}.).
 Since for positive semigroups we always have $\|R(\lambda,A)\| \leq \|R(\Re(\lambda), A)\|$ ($\Re(\lambda) > s(A)$) (see   Corollar~\ref{cor:c3-1.3}), the assertion for $L^{2}$-spaces follows from Part-I, Corollary~\ref{cor:a3-7.11}.
@@ -284,7 +284,7 @@ Hence $\Delta$ generates a stable semigroup on $L^{p}(\R^{n})$ for $1 < p < \inf
 
 That $\Kern\Delta = \{0\}$ can be deduced from the following two facts.
 %% --
-\begin{enumerate}[\upshape (i), wide, labelindent=.5em]
+\begin{enumerate}[\upshape (i), wide, labelindent=.25em]
 \item 
 Since the semigroup consists of contractions and since the norm is strictly monotone on $E_{+}$, it follows that $\Kern\Delta$ is a sublattice.
 Thus irreducibility of the semigroup (see Part-I, Section~\ref{subsec:a1-2.8} and Example~\ref{ex:c3-3.4}\,(i)) implies that $\dim \Kern\Delta \leq 1$.
@@ -422,7 +422,7 @@ In the rest of this section we discuss the long term behavior of the solutions o
 where the forcing term $F(t)$ converges to some $f_{0} \in E$ as $t \to \infty$.
 In case that $A$ generates a positive semigroup the assumption \emph{$\omega_{0}(A) < 0$}, which is needed to prove the next proposition for arbitrary generators (see \textcite[ Theorem~4.4.4]{pazy:1983}), can be replaced by the \emph{stability} of the semigroup.
 We recall that some important generators as, for example, the Laplacian on $L^{p}(\R^{n})$, $1 < p < \infty$, generate positive, stable semigroups which are not uniformly exponentially stable.
-Therefore, the weakening of the assumptions on $A$ mentioned above - \ie  replacing \emph{$\omega_{0}(A) < 0$} by \emph{positive and stable} - widens the class of equations~\ref{eq:c4-1.6} for which the following stability result is applicable.
+Therefore, the weakening of the assumptions on $A$ mentioned above - \ie  replacing \emph{$\omega_{0}(A) < 0$} by \emph{positive and stable} - widens the class of equations~\myeqpageref{eq:c4-1.6} for which the following stability result is applicable.
 For additional results of this kind see \textcite{neubrander:1985b}.
 \index{operator!Laplacian|)}
 
@@ -435,7 +435,7 @@ If there are $G(\cdot) \in C_{0}(\R_{+},\R_{+})$, $f_{0} \in  \Image{A}$ and $g_
 \end{proposition}
 %% --
 \begin{proof}
-Recall that every solution of~\ref{eq:c4-1.6} satisfies
+Recall that every solution of Eq.~\myeqpageref{eq:c4-1.6} satisfies
 %% --
 \begin{equation}\label{eq:c4-1.7}
 u(t) = T(t)f + \int_{0}^{t} T(t-s)f_{0} \, \ds + \int_{0}^{t} T(t-s)(F(s) - f_{0}) \, \ds.
@@ -537,7 +537,7 @@ The considerations in this section are motivated by the following guideline.
 %% --
 \index{asymptotic behavior}
 \begin{quote} 
-The asymptotic behavior of a strongly continuous semigroup $(T(t))_{t \geq 0}$ is determined by the structure and location of the spectrum $\sigma(A)$ of the generator $A$.
+\textit{The asymptotic behavior of a strongly continuous semigroup $(T(t))_{t \geq 0}$ is determined by the structure and location of the spectrum $\sigma(A)$ of the generator $A$.}
 %The asymptotic behavior of a strongly continuous semigroup $(T(t))_{t \geq 0}$ is determined by the (structure, location of the) spectrum $\sigma(A)$ of the generator $A$.
 \end{quote}
 %% --
@@ -587,19 +587,19 @@ Since we assumed that $(T(t))_{t \geq 0}$ is bounded, the pole order $k$ has to 
 Before discussing a concrete example we formulate some remarks related to Theorem~\ref{thm:c4-2.1}.
 %% --
 \begin{remarks}\label{rem:c4-2.2}
-\begin{enumerate}[\upshape (i), wide, labelindent=.5em]
+\begin{enumerate}[\upshape (i), wide, labelindent=.25em]
 
 \item \label{rem:c4-2.2-1}
 If one has a positive semigroup\, $\TT = (T(t))_{t \geq 0}$\,  satisfying
 %% --
 \[
-\omega_{ess}(\TT) <  \omega_0(\TT), 
+\omega_{ess}(\TT) <  \omega_0(\TT) \eqqcolon \omega_0, 
 \]
 %% -- 
 then the rescaled semigroup with 
 %% --
 \[
-\widehat{T}(t) \coloneqq \exp(-\omega_0(\TT)t)T(t)
+\widehat{T}(t) \coloneqq \eu^{-\omega_0 \, t }T(t)
 \]
 %% --
 is quasi-compact and has spectral bound zero.
@@ -1299,7 +1299,7 @@ By a solution of \myeqpageref{eq:c4-re} with initial function $g \in E$ we under
 The problem \myeqpageref{eq:c4-re} is called \emph{well-posed} if for each $g \in E$ there exists exactly one solution.
 %% --
 \begin{remarks*}
-\begin{enumerate}[\upshape (i), wide, labelindent=.5em] 
+\begin{enumerate}[\upshape (i), wide, labelindent=.25em] 
 \item \label{rem:c4-kgk-1}
 The equation
 %% --
@@ -1518,7 +1518,7 @@ R(\lambda,A)g = R(\lambda,A_{0})g + \epsilon_{\lambda} \otimes R(1,\Phi_{\lambda
 \end{lemma}
 %% --
 \begin{proof}
-\begin{enumerate}[\upshape (i), wide, labelindent=.5em] 
+\begin{enumerate}[\upshape (i), wide, labelindent=.25em] 
     \item 
     %\ref{lem:c4-3.5-1}
     That $\rho(A_{0}) = \C$ follows directly from $(T_{0}(t))_{t \geq 0}$ being nilpotent (see Part-I, Proposition~\ref{prop:a3-1.1}). For $g \in E$ we obtain $R(\lambda,A_{0})g = f$ where $f$ is a solution of\/ $\lambda f - f' = g$.
@@ -1552,7 +1552,7 @@ $\lambda \in \sigma(A)$ if and only if\/ $1 \in \sigma(\Phi_{\lambda})$.
 \end{proposition}
 %% --
 \begin{proof}
-\begin{enumerate}[\upshape (i), wide, labelindent=.5em] 
+\begin{enumerate}[\upshape (i), wide, labelindent=.25em] 
 \item 
 %\ref{prop:c4-3.6-1} 
 This implication follows immediately from Lemma~\ref{lem:c4-3.5}\,(ii).
@@ -1596,7 +1596,7 @@ If\/ $s(\Phi_{\lambda}) > 1$, then $s(A) > \lambda$.
 \end{theorem}
 
 \begin{proof}
-\begin{enumerate}[\upshape (i), wide, labelindent=.5em] 
+\begin{enumerate}[\upshape (i), wide, labelindent=.25em] 
 \item% 
 %\ref{thm:c4-3.7-1} 
 Suppose $r \coloneqq s(A) \geq \lambda$. 
@@ -1646,7 +1646,7 @@ The additional statement is a consequence of the strict monotonicity of\/ $h$.
 %% -- 
 \begin{remarks*}\label{rem:c4-3.0-kgk}
 %
-\begin{enumerate}[\upshape (i), wide, labelindent=.5em] 
+\begin{enumerate}[\upshape (i), wide, labelindent=.25em] 
 \item \label{rem:c4-3.1-1}
 We note that in Proposition~\ref{prop:c4-3.6} and Theorem~\ref{thm:c4-3.7} it actually suffices that some power of\/ $\Phi_{\lambda}$ is compact.
 
@@ -1679,7 +1679,7 @@ Then the following holds and is stated without proof.
 \begin{lemma*}\label{lem:c4-3.9-kgk}
 %
 The following statements hold.
-\begin{enumerate}[\upshape (i), wide,labelindent=.5em] 
+\begin{enumerate}[\upshape (i), wide,labelindent=.25em] 
 \item \label{lem:c4-3.9-kgk.1}
 If\/ $B$ is compact, then $\Phi$ is compact. 
 If\/ $B$ is surjective, then $\Phi(D(A_{0}))$ $= F$.
