@@ -80,14 +80,14 @@ Then $s(A) = \omega_{0}$.
 For all $\lambda > s(A)$ and $\phi \in M_{*}$
 %% --
 \[
-R(\lambda,A)\phi = \int_{0}^{\infty} \eu^{-\lambda t}T(s)\phi ds
+R(\lambda,A)\phi = \int_{0}^{\infty} \eu^{-\lambda t}T(s)\phi \ds
 \]
 %% --
 which follows as in Part-III, Section~\ref{sec:c3-1} or \textcite[Theorem 3]{greinervoigtwolff:1981}.
 Since $\|\phi\| = \phi(\1)$ for every $\phi \in M_{*}^{+}$ and since the norm is additive on the positive cone of\/ $M_{*}$, the integral
 %% --
 \[
-	\int_{0}^{\infty} \eu^{\lambda t}\|T(s)\phi\|ds
+	\int_{0}^{\infty} \eu^{\lambda t}\|T(s)\phi\| \ds
 \]
 %% --
 exists for all $\phi \in M_{*}$ and all $\lambda > s(A)$.
@@ -148,7 +148,7 @@ The semigroup $(T(t))_{t \geq 0}$ is weakly stable.
 \end{theorem}
 %% --
 \begin{proof}
-Since $s(A) = \omega_{0}$ by Theorem 1.3, it suffices to show that (d) implies (a).
+Since $s(A) = \omega_{0}$ by Theorem~\ref{thm:d4-1.3}, it suffices to show that (d) implies (a).
 For $t > 0$ there exists $\phi \in S(M)$ such that
 %% --
 \[
@@ -170,10 +170,9 @@ Since $s(A) \leq \omega_{0}$ the assertion follows.
 Consider the translation semigroup $(T(t))_{t \geq 0}$ on $C_{0}(\R_{+})$. 
 Then {$\|T(t)\| = 1$}, hence $s(A) = 1$, but $(T(t))_{t \geq 0}$ is strongly stable.
 The same holds for the translation semigroup on $L^1(\R_{+})$.
-Thus Theorem 1.7 is not true for semigroups on \CA-algebras without unit or on preduals of \WA-algebras.
+Thus Theorem~\ref{thm:d4-1.7} is not true for semigroups on \CA-algebras without unit or on preduals of \WA-algebras.
 For the discussion of the commutative situation we refer to Part-II, Section~\ref{sec:b4-1}.
 \end{remark}
-%%KGK 2025-12-18 ?? stability 2x????
 \index{stability|)}
 %% --
 \index{stability|(}
@@ -229,9 +228,7 @@ has a continuous extension to $H$.
 \end{enumerate}
 \end{remarks}
 %% --
-%% -- d4-5
-Then for $A$ is given as the continuous extension of (*), \ie 
- $Ax = xB + B^{*}x$ for $ x \in D(A) $
+Then $A$ is given as the continuous extension of (*), \ie  $Ax = xB + B^{*}x$ for $ x \in D(A) $
 
 In the next theorem we give some equivalent conditions for the uniform exponential stability of an implemented semigroup.
 As we shall see, the operator equality
@@ -268,10 +265,10 @@ For every $0 \leq x \in D(A)$ there exists $0 \leq y \in D(A)$ such that $Ay = -
 For every $0 \leq x \in D(A)$ there exists $0 \leq y \in D(A)$ such that $y(D(B)) \subseteq D(B^{*})$ and $yB+B^{*}y = -x$.
 
 \item\label{item:d4-2.2-g}
-$\int_{0}^{\infty} \|U(s)\xi\|^2ds$ exists for all $\xi \in H$.
+$\int_{0}^{\infty} \|U(s)\xi\|^2 \ds$ exists for all $\xi \in H$.
 
 \item\label{item:d4-2.2-h}
-$\int_{0}^{\infty} |(T(s)x)\xi|\eta)ds$ exists for all $\xi$, $\eta \in H$ and all $x \in M$.
+$\int_{0}^{\infty} |(T(s)x)\xi|\eta) \ds$ exists for all $\xi$, $\eta \in H$ and all $x \in M$.
 \end{enumerate}
 \end{theorem}
 
@@ -314,14 +311,14 @@ Then $x \leq \|x\| \1$ and therefore
 	\phi(T(s)x) \leq \|x\|\phi(T(s) \1) \quad (s \in \R_{+}).
 \]
 %% --
-Hence $\int_{0}^{\infty} \phi(T(s)x)ds$ exists.
-Since the positive cones of\/ $M$ and $M_{*}$ are generating, $\int_{0}^{\infty}\phi(T(s)x)ds$ exists for every $x \in M$ and $\phi \in M_{*}$.
+Hence $\int_{0}^{\infty} \phi(T(s)x) \ds$ exists.
+Since the positive cones of\/ $M$ and $M_{*}$ are generating, $\int_{0}^{\infty}\phi(T(s)x) \ds$ exists for every $x \in M$ and $\phi \in M_{*}$.
 Therefore $R(0,A)$ exists and is positive which proves (e).
 
 \item[(c) $\implies$ (g):] From the last paragraph we obtain that for all $\xi \in H$
 %% --
 \[
-\int_{0}^{\infty}\|U(s)\|^2ds = \int_{0}^{\infty}(T(s)\1\xi \,|\, \xi)ds
+\int_{0}^{\infty}\|U(s)\|^2ds = \int_{0}^{\infty}(T(s)\1\xi \,|\, \xi) \ds
 \]
 %% --
 exists.
@@ -329,14 +326,14 @@ exists.
 \item[(g) $\implies$ (h):] It follows from the polarization identity that the integral
 %% --
 \[
-\int_{0}^{\infty}(U(s)\xi \,|\, U(s)\eta)ds
+\int_{0}^{\infty}(U(s)\xi \,|\, U(s)\eta) \ds
 \]
 %% --
 exists for all $\xi,\eta \in H$.
 Using \textcite[Theorem III.4.2 and Theorem II.2.6]{takesaki:1979}, we conclude as in the implication from (c) to (e) that for all $\xi,\eta \in H$ the integral
 %% --
 \[
-\int_{0}^{\infty}((T(s)x)\xi \,|\, \eta)ds \quad (x \in M)
+\int_{0}^{\infty}((T(s)x)\xi \,|\, \eta) \ds \quad (x \in M)
 \]
 %% --
 is finite.
@@ -344,7 +341,7 @@ is finite.
 \item[(g) $\implies$ (a):] Since the vector states are dense in the predual of\/ $M$ and since the preadjoint semigroup of\/ $\TT$ is strongly continuous, it is easy to see that the integral
 %% --
 \[
-\int_{0}^{\infty} \phi(T(s)x)ds
+\int_{0}^{\infty} \phi(T(s)x) \ds
 \]
 %% --
 exists for all $x \in M$ and $\phi \in M_{*}$ (\textcite[Theorem II.2.6]{takesaki:1979}).
@@ -412,13 +409,13 @@ Let $\TT$ be an identity preserving semigroup of Schwarz type on the predual of 
 We call
 %% --
 \[
-p_{r} \coloneqq \sup\{s(|\phi|) \colon \phi \in \Fix{T}\}
+p_{r} \coloneqq \sup\{s(|\phi|) \colon \phi \in \Fix{\TT}\}
 \]
 %% --
 the recurrent projection associated with $\TT$.
 For a motivation of this definition compare, \eg \textcite[Section 6.3]{davies:1976}.
 
-Since $T(t)|\phi| = |\phi|$ for all $\phi \in \Fix{T}$ (Corollary~\ref{cor:d3-1.5}), we obtain $T(t)'p_{r} \geq p_{r}$ (see Section~\ref{sec:d1-3}\,(3)).
+Since $T(t)|\phi| = |\phi|$ for all $\phi \in \Fix{\TT}$ (Corollary~\ref{cor:d3-1.5}), we obtain $T(t)'p_{r} \geq p_{r}$ (see Section~\ref{sec:d1-3}\,(3)).
 Let $\TT^{(r)}$ be the reduced semigroup on $p_{r}M_{*}p_{r}$ with generator $A^{(r)}$.
 Then $\TT^{(r)}$ is identity preserving and of Schwarz type.
 Similarly, if\/ $\RR$ is a pseudo-resolvent 
@@ -460,7 +457,7 @@ We now give a characterization of strong ergodicity of semigroups which are iden
 For this we need that the Cesàro means
 %% --
 \[
-C(s)x = \frac{1}{s}\int_{0}^{s} T(t)xdt \quad (x \in M, 0 \leq s \in \R)
+C(s)x = \frac{1}{s}\int_{0}^{s} T(t)x \dt \quad (x \in M, 0 \leq s \in \R)
 \]
 %% --
 are Schwarz maps.
@@ -484,8 +481,8 @@ $s^{*}(M,M_{*})\text{-}\lim_{s \to \infty} C(s)'p_{r} = \1$.
 %% --
 \begin{proof}
 Suppose that (a) holds.
-Since $\Fix{T}$ separates $\Fix{T'}$, the fixed space of\/ $\TT'$ is non trivial, hence $p_{r} \neq 0$ (see \textcite[Chap.2, Theorem1.4]{krengel:1985}).
-Let $0 \leq \psi \in M_{*}$, then $\psi_{0} \coloneqq \lim_{s \to \infty} C(s)\psi \in \Fix{T}$ and $s(\psi_{0}) \leq p_{r}$.
+Since $\Fix{\TT}$ separates $\Fix{\TT'}$, the fixed space of\/ $\TT'$ is non trivial, hence $p_{r} \neq 0$ (see \textcite[Chap.2, Theorem1.4]{krengel:1985}).
+Let $0 \leq \psi \in M_{*}$, then $\psi_{0} \coloneqq \lim_{s \to \infty} C(s)\psi \in \Fix{\TT}$ and $s(\psi_{0}) \leq p_{r}$.
 Therefore
 %% --
 \begin{align*}
@@ -553,7 +550,7 @@ Since $\Fix{\TT} \neq \{0\}$, there exists a faithful normal state $\phi$ on $M$
 Therefore $\TT$ is relatively compact in the weak operator topology by Proposition 3.1., whence (b) holds and the  implications from (b) to (c) and (c) to (d) are obvious.
 
 Suppose that (d) holds.
-Let $\phi$ be a faithful normal state on $M$ such that $\Fix{T} = \phi\C$.
+Let $\phi$ be a faithful normal state on $M$ such that $\Fix{\TT} = \phi\C$.
 By Proposition 3.1 the semigroup $\TT$ is strongly ergodic.
 Therefore the fixed space of\/ $\TT$ separates the points of\/ $\Fix{T'}$.
 Consequently $\Fix{T'} = \C.\1$.
@@ -577,10 +574,10 @@ Since $\TT$ is commutative its closure
 \]
 %% --
 contains a unique minimal ideal $\mathcal{K}$, called the kernel of\/ $\mathcal{S}$, which is a compact Abelian group (\textcite{deleeuw:1961}, \textcite{junghenn:1971} \& \textcite[§ 2.4]{krengel:1985}).
-The identity $Q$ of\/ $\mathcal{K}$ is a projection onto the closed linear span of all eigenvectors of\/ $ A $ pertaining to the eigenvalues in $ \im \R $. 
+The identity $Q$ of\/ $\mathcal{K}$ is a projection onto the closed linear span of all eigenvectors of\/ $ A $ pertaining to the eigenvalues in $ \iu  \R $. 
 
 Moreover, the dual group of\/ $\mathcal{K}$ can be identified with the subgroup of\/ $\im\R$ generated by 
-$P\sigma(A) \cap \im \R $.
+$P\sigma(A) \cap \iu  \R $.
 We call $Q$ the semigroup projection associated with $\TT$.
 On the other hand, $\TT$ is always strongly ergodic with projection $P$ onto $\Fix{\TT}$.
 Obviously, the relation
@@ -619,8 +616,8 @@ If, in addition, $\TT$ is irreducible and if\/ $\phi$ is the normal state genera
 %% --
 %% --
 \begin{proof}
-Consider $\Omega \coloneqq P\sigma(A) \cap \im\R$ which is not empty by assumptions.
-From Proposition 3.1 it follows that $\TT$ is relatively compact in the weak operator topology.
+Consider $\Omega \coloneqq P\sigma(A) \cap \iu  \R$ which is not empty by assumptions.
+From Proposition~\ref{prop:d4-3.1} it follows that $\TT$ is relatively compact in the weak operator topology.
 Let $K$ be the semigroup kernel of\/ $\overline{\TT}{w} \subset \mathcal{L}{(M_{*})}$ and $Q$ the unit of\/ $K$.
 Recall that $Q\psi_{\eta} = \psi_{\eta}$ for all $\psi_{\eta} \in M_{*}$ such that $A\psi_{\eta} = \eta\psi_{\eta}$ $(\eta \in \Omega)$.
 Let $\mathcal{E}$ be the family of all eigenvectors of\/ $A'$ pertaining to the eigenvalues in $\Omega$.
@@ -676,7 +673,7 @@ Since the map $(S \mapsto \psi(Sx))$ is continuous on $K$ and since the elements
 Since the range of\/ $Q'$ is a \WA-subalgebra of\/ $M$ it follows from \textcite[Theorem III.3.4]{takesaki:1979} that $Q'$ is a completely positive, normal conditional expectation.
 This $Q'$ is faithful, \ie $\Kern{Q'} \cap M_{+} = \{0\}$ since $Q\phi = \phi$ for the faithful linear form $\phi$.
 
-Let $\phi$ be the faithful normal state generating $\Fix{T}$ and let $\UG$ be a family of unitary eigenvectors of\/ $A'$ pertaining to the eigenvalues in $\Omega$ (see Remark~\ref{rem:d3-1.12}).
+Let $\phi$ be the faithful normal state generating $\Fix{\TT}$ and let $\UG$ be a family of unitary eigenvectors of\/ $A'$ pertaining to the eigenvalues in $\Omega$ (see Remark~\ref{rem:d3-1.12}).
 If\/ $u_{1}$, $u_{2} \in U$, then
 %% --
 \[
@@ -886,7 +883,7 @@ The standard example is the following.
 If\/ $ H $  is the unit circle, $ \dm $  the normalized Haar measure on $ H $  and $ 0 < \tau \in \R $, then we define the maps $ T_{\tau}(t) $, $ t \in \R_{+} $, on $ L^{1}(H,m) $  by
 %% --
 \[
-(T_{\tau}(t)f)(\xi) = f\mleft( \exp\mleft(\frac{2\pi \im \, t }{\tau} \mright) \cdot \xi \mright) \quad (f \in L^{1}(H,\dm), \xi \in H).
+(T_{\tau}(t)f)(\xi) = f\mleft( \exp\mleft(\frac{2\pi \iu  \, t }{\tau} \mright) \cdot \xi \mright) \quad (f \in L^{1}(H,\dm), \xi \in H).
 \]
 %% --
 %
@@ -921,7 +918,7 @@ If additionally $ \sigma(A) \cap \im\R \neq \{0\} $, there exists a strictly pos
 $ Q $  reduces $ \TT $  and $ Q(M_{*}) \cong L^{1}(H) $, $ H $  being the one dimensional torus.
 
 \item
-The restriction $ T_{0} $  of\/ $ \TT $  to $ \Image{Q} $  is irreducible and conjugate to a rotation semigroup of period $ \tau = \frac{2\pi}{\gamma} $  on $ H $.
+The restriction $ \TT_{0} $  of\/ $ \TT $  to $ \Image{Q} $  is irreducible and conjugate to a rotation semigroup of period $ \tau = \frac{2\pi}{\gamma} $  on $ H $.
 
 \item
 The spectral bound $ s(A_{| \Kern{Q} }) $  is strictly smaller than $ 0 $.
