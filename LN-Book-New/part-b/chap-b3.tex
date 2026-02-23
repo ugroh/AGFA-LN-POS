@@ -1,3 +1,4 @@
+% !TEX root = ../LN-Book-New.tex
 %% --
 \setcounter{section}{0}
 \chapternopage{Spectral Theory of Positive Semigroups on \texorpdfstring{$C_{0}(X)$}{C\textsubscript{0}(X)}}\label{chap:b3}%
@@ -27,7 +28,7 @@ In case we restrict to compact spaces we write $K$ instead of\/ $X$.
 %% --
 One of the basic results on the spectrum of a positive operator is the fact that its spectral radius is an element of the spectrum (\textcite[V.Proposition~4.1]{schaefer:1974}).
 We begin the investigation of the spectrum of positive semigroups with the analogous result.
-To that purpose we recall that the spectral bound $s(A)$ of a generator $A$ is defined as the least upper bound of the real parts of all spectral values (\cf Eq.~\myeqpageref{eq:b3-1.2} ).
+To that purpose we recall that the spectral bound $s(A)$ of a generator $A$ is defined as the least upper bound of the real parts of all spectral values (\cf Eq.~\myeqpageref{eq:a3-1.2}).
 %\pagebreak[1]
 %
 \begin{theorem}\label{thm:b3-1.1}%%
@@ -150,8 +151,14 @@ A direct proof not using this fact is given in Part-III, Corollary~\ref{cor:c3-1
 	\end{equation}
 	%%--
 	Since $R(\lambda_1,A)$ is positive, it follows that $R(\lambda_0,A)$ is positive as well.
-	On the other hand, assuming that $R(\lambda_0,A)$ is a positive operator, then $\lambda_0$ has to be a real number (note that for $g \geq 0$ we have $f \coloneqq R(\lambda_0,A)g \geq 0$ hence $\lambda_0f - Af = g = \overline{g} = \overline{(\lambda_0 - A)f} = \overline{\lambda_0}f - Af$ ).
-	As we have shown above, $R(\lambda,A)$ is positive for $\lambda > \max\{\lambda_0,s(A)\}$ hence an application of the resolvent equation\index{resolvent equation} yields
+	On the other hand, assuming that $R(\lambda_0,A)$ is a positive operator, then $\lambda_0$ has to be a real number.
+	Note that for $g \geq 0$ we have $f \coloneqq R(\lambda_0,A)g \geq 0$ hence 
+	%
+\[
+	\lambda_0f - Af = g = \overline{g} = \overline{(\lambda_0 - A)f} = \overline{\lambda_0}f - Af .
+\]
+%
+As we have shown above, $R(\lambda,A)$ is positive for $\lambda > \max\{\lambda_0,s(A)\}$ hence an application of the resolvent equation\index{resolvent equation} yields
 	%%--
 	\begin{equation}\label{eq:b3-1.11}
 		R(\lambda_0,A) = R(\lambda,A) + (\lambda - \lambda_0)R(\lambda,A)R(\lambda_0,A) \geq R(\lambda,A) \geq 0
@@ -185,7 +192,7 @@ Suppose $X$ is compact and $A$ has compact resolvent.
 	%% --
 It follows from Corollary~\ref{cor:b3-1.3} that $Q$ is a positive operator.
 Since $Q \neq 0$, there exists $g \geq 0$ such that $h \coloneqq Qg > 0$.
-Moreover, by Eq.~\myeqpageref{eq:a3-3.6}, we have 
+Moreover, by Example~\ref{ex:a3-3.6}, we have 
 %
 \[
 	 (\lambda_{0} - A)h = (\lambda_{0} - A)Qg = 0 .
@@ -297,7 +304,7 @@ which shows that the set of probability measures is $\sigma(M(K),C(K))$-compact.
 	Therefore the sequence $(\psi_{n})$ has non-zero cluster points.
 \end{proof}
 %% --
-This theorem implies that for positive semigroups on $C(K)$ the growth and spectral bounds coincide (\cf Part-I, Proposition~\ref{prop:a3-4.4}).
+This theorem implies that for positive semigroups on $C(K)$ the growth and spectral bounds coincide (\cf Part-I, Section~\ref{sec:a4-1}).
 Actually, this is true for locally compact spaces as well and can be proved directly (see Theorem~\ref{thm:b4-1.4}).
 Using this result one can prove Theorem~\ref{thm:b3-1.6} by applying the classical Krein-Rutman theorem to any resolvent operator $R(\lambda,A)$ for $\lambda \in \R$ sufficiently large.
 
@@ -451,9 +458,9 @@ In particular, the spectra (and point spectra, resp.) of\/ $T$ and $R$ coincide.
 	|T_{1}f| = |M_{\tilde{h}}^{-1}\tilde{R}M_{\tilde{h}}f| = |\tilde{R}M_{\tilde{h}}f| \leq \tilde{T}|M_{\tilde{h}}f| = \tilde{T}|f| \text{ for all } f.
 	\end{equation}
 	%% --
-	Hence we have $\|T_{1}\| \leq \|\tilde{T}\| = 1$ (by Eq.~\myeqpageref{eq:b3-2.11}, Eq.~\myeqpageref{eq:b3-2.9}, Eq.~\myeqpageref{eq:b3-2.1}.
+	Hence we have $\|T_{1}\| \leq \|\tilde{T}\| = 1$ (by Eq.~\myeqpageref{eq:b3-2.11}, Eq.~\myeqpageref{eq:b3-2.9}, Eq.~\myeqpageref{eq:b3-2.1}).
 	Then it follows from Lemma~\ref{lem:b3-2.1} that $T_{1}$ is a positive operator.
-	Thus Eq.~\myeqpageref{eq:b3-2.11} implies that $0 \leq T_{1} \leq \tilde{T}$ and therefore $\|\tilde{T} - T_{1}\| = \|(\tilde{T} - T_{1})\1\| = 0$ (by Eq.~\myeqpageref{eq:b3-2.10}, Eq.~\myeqpageref{eq:b3-2.9}, Eq.~\myeqpageref{eq:b3-2.1}.
+	Thus Eq.~\myeqpageref{eq:b3-2.11} implies that $0 \leq T_{1} \leq \tilde{T}$ and therefore $\|\tilde{T} - T_{1}\| = \|(\tilde{T} - T_{1})\1\| = 0$ (by Eq.~\myeqpageref{eq:b3-2.10}, Eq.~\myeqpageref{eq:b3-2.9}, Eq.~\myeqpageref{eq:b3-2.1}).
 \end{proof}
 %% --
 We are now able to prove a result which in some sense is the key to cyclicity results for the spectrum.
@@ -505,7 +512,7 @@ Suppose $A$ is the generator of a positive semigroup, $h \in C_{0}(X)$, $\alpha,
 		= \lambda^{n} \cdot S_{\tilde{h}}^{n}\tilde{h} = \lambda^{n} \cdot \tilde{h}^{[n]}
 	\end{equation*}
 	%% --
-	(see Eq.~\myeqpageref{eq:b3-2.7} and Eq.~\myeqpageref{eq:b3-2.12}, which is precisely $Th^{[n]} = \lambda^{n}h^{[n]}$ for all $n \in \Z$.
+	(see Eq.~\myeqpageref{eq:b3-2.7} and Eq.~\myeqpageref{eq:b3-2.12}), which is precisely $Th^{[n]} = \lambda^{n}h^{[n]}$ for all $n \in \Z$.
 	
 	If\/ $h$ does not have zeros, then $\overline{E_{h}} = E$, hence $T = \tilde{T}$, $h = \tilde{h}$ and the remaining assertion follows from Eq.~\myeqpageref{eq:b3-2.12}.
 %% --
@@ -577,7 +584,7 @@ The first derivative on $\R$ or $\R_{+}$ is an example where the boundary spectr
 	
 \item
 The rotation semigroup%
-\index{rotation semigroup} on $C(\Gamma)$ (see Part-I, Example~\ref{ex:a3-5.6} ) with period $2\pi/\alpha$ has boundary spectrum $M_{3}$.
+\index{rotation semigroup} on $C(\Gamma)$ (see Part-I, Example~\ref{ex:a3-5.6}) with period $2\pi/\alpha$ has boundary spectrum $M_{3}$.
 
 \item
 For the semigroup on $C(\Gamma \times \Gamma)$ given by
@@ -658,7 +665,7 @@ Given $\im \alpha \in P\sigma_{b}(A)$ then there is $h \in C_{0}(X)$, $h \neq 0$
 \end{proof}
 %% --
 Concerning the hypothesis $T(t_{0})'\phi = \exp(s(A)t_{0})\cdot\phi \gg 0$ we recall that in case $X$ is compact there are always positive linear forms such that $T(t)'\phi = \eu^{s(A)t}\phi$ (see Theorem~\ref{thm:b3-1.6}).
-If the semigroup is irreducible, then one also has $\phi \gg 0$ (see Section~3 below).
+If the semigroup is irreducible, then one also has $\phi \gg 0$ (see Section~\ref{sec:b3-3} below).
 
 In a second result we consider semigroups having compact resolvent.
 An important step of the proof is isolated as a lemma.
@@ -688,13 +695,14 @@ Denoting by $A_{n}$ $(n = 0,1,\ldots,k)$ the generator of the semigroup on $I_{n
     $s(A_{0}) < s(A)$\,,
     
     \item 
-    If\/ $n \geq 1$, then $s(A_{n}) = s(A)$ is a first order pole of the resolvent $R(\cdot,A_{n})$. The corresponding residue is a strictly positive operator.
+    If\/ $n \geq 1$, then $s(A_{n}) = s(A)$ is a first order pole of the resolvent $R(\cdot,A_{n})$. 
+    The corresponding residue is a strictly positive operator.
 \end{enumerate}
 \end{lemma}
 %% --
 \begin{proof}
 	We can assume that $s(A) = 0$ and we will denote the negative coefficients of the Laurent series\index{resolvent!Laurent series} of\/ $R(\cdot,A)$ at $0$ by $Q_{n}$.
-	Thus the following relations hold (see Eq.~\myeqpageref{eq:a3-3.6}),
+	Thus the following relations hold (see Part-I, Example~\ref{eq:a3-3.6}),
 	%% --
 	\begin{equation}\label{eq:b3-2.17}
 	\begin{split}
@@ -736,7 +744,7 @@ Denoting by $A_{n}$ $(n = 0,1,\ldots,k)$ the generator of the semigroup on $I_{n
 	It remains to prove that it is strictly positive. We assume $Q_{1/I_{k-1}}(|x + I_{k-1}|) = 0$ which means $Q_{1}|x| \in I_{k-1}$ hence $Q_{k}|x| = A^{k-1}Q_{1}|x| = 0$, that is, $x \in I_{k-1}$ or $x + I_{k-1} = 0$.
 	
 	Applying what we have proved so far to $I_{k-1}$ and $A_{|I_{k-1}}$ we obtain $I_{k-2}$, $A_{k-1}$, and so on.
-	After $k$ steps $(n=1)$ we conclude that $I_{0}$ is $T$-invariant and that the order of the pole of\/ $R(\cdot,A_{|I_{0}})$ is $0$, 
+	After $k$ steps $(n=1)$ we conclude that $I_{0}$ is $\TT$-invariant and that the order of the pole of\/ $R(\cdot,A_{|I_{0}})$ is $0$, 
 	implying that $0 \in \rho(A_{|I_{0}})$.
 	Since $A_{|I_{0}}$ generates a positive semigroup and $R(\lambda,A_{|I_{0}}) = R(\lambda,A)_{|I_{0}}$ is positive for $\lambda > 0$, it follows from Corollary~\ref{cor:b3-1.3} that $s(A_{0}) = s(A_{|I_{0}}) < 0$.
 \end{proof}
@@ -809,7 +817,7 @@ Then $P\sigma_{b}(A) = \sigma_{b}(A)$ is cyclic.
 \begin{proof}
 	If\/ $\sigma(A) = \emptyset$, there is nothing to prove, thus we can assume that $s(A) = 0$.
 	In view of the lemma and Part-I, Corollary~\ref{cor:a3-4.3} (i) we can assume that $s(A)$ is a first order pole with strictly positive residue, we call it $Q$.
-	We have $AQ = QA = s(A)A = 0$ (see Eq.~\myeqpageref{eq:a3-3.6}), hence
+	We have $AQ = QA = s(A)A = 0$ (see Part-I, Example~\ref{eq:a3-3.6}), hence
 	%% --
 	\begin{equation}\label{eq:b3-2.18}
 		QT(t) = T(t)Q = Q \text{ for all } t \geq 0.
@@ -823,7 +831,7 @@ Then $P\sigma_{b}(A) = \sigma_{b}(A)$ is cyclic.
 	This shows that $P\sigma_{b}(A) = \sigma(A) \cap \im\R$ is cyclic.
 \end{proof}
 %% --
-If\/ $A$ has compact resolvent, then every point of\/ $\sigma(A)$ is a pole of the resolvent (see Example~\ref{ex:a3-3.6} hence we have
+If\/ $A$ has compact resolvent, then every point of\/ $\sigma(A)$ is a pole of the resolvent (see Part-I, Example~\ref{ex:a3-3.6}) hence we have
 \index{resolvent!compact|(}
 
 %% --
@@ -843,7 +851,7 @@ A real spectral value $\lambda_{0}$ of a generator $A$ is called a \emph{dominan
 provided that $\Re(\lambda) < \lambda_{0}$ for every $\lambda \in \sigma(A)$, it is called \emph{strictly dominant}
 if for some $\delta > 0$ one has $\Re(\lambda) \leq \lambda_{0} - \delta$ for every $\lambda \in \sigma(A)$, $\lambda \neq \lambda_{0}$.
 
-The assumptions of Corollary~\ref{cor:b3-2.10} do not imply that $s(A)$ is dominant, the rotation semigroup (Part-I, Example~\ref{ex:a3-5.6} ) is a counterexample.
+The assumptions of Corollary~\ref{cor:b3-2.10} do not imply that $s(A)$ is dominant, the rotation semigroup (Part-I, Example~\ref{ex:a3-5.6}) is a counterexample.
 %% --
 \begin{corollary}\label{cor:b3-2.11}
 %%
@@ -855,7 +863,7 @@ The assumptions of Corollary~\ref{cor:b3-2.10} do not imply that $s(A)$ is domin
     r_{\text{ess}}(T(t_{0})) < r(T(t_{0})), 
     \]
     %% --
-    \eg that $T(t_{0})$ is compact and $r(T(t_{0})) > 0$ (see Eq.~\myeqpageref{eq:a3-3.7}).
+    \eg that $T(t_{0})$ is compact and $r(T(t_{0})) > 0$ (see Eq.~\myeqpageref{eq:a3-3.8}).
 	Then $s(A)$ is a strictly dominant eigenvalue.
 \end{corollary}
 %% --
@@ -1711,7 +1719,7 @@ The quantities $\underline{c}(h,\phi)$ and $\overline{c}(h,\phi)$ are defined as
 		\underline{c}_{t}(h,\phi) \coloneq \inf_{x\in K} \{\frac{1}{t}\int_{0}^{t} h(\phi(s,x)) \ds.
 \end{align}
 %% --
-It is easy to see that $\overline{c}_{t}(h,\phi) = 1/t\cdot\log\|T(t)\|$, hence in the definition of\/ $\overline{c}(h,\phi)$, both the limit and the infimum exist and coincide with the growth bound (see Part-I, Eq.~\myeqpageref{eq:a1-1.1} ).
+It is easy to see that $\overline{c}_{t}(h,\phi) = 1/t\cdot\log\|T(t)\|$, hence in the definition of\/ $\overline{c}(h,\phi)$, both the limit and the infimum exist and coincide with the growth bound (see Part-I, Eq.~\myeqpageref{eq:a1-1.1}).
 Furthermore, $\underline{c}_{t}(h,\phi) = -\overline{c}_{t}(-h,\phi)$.
 Therefore, $\underline{c}(h,\phi)$ is well defined too.
 
@@ -1934,7 +1942,7 @@ Example~\ref{ex:b3-4.3}\,(iv) shows that (i) and (ii) do not exclude each other.
 	\end{equation}
 	%% --
 	Then $\phi_{0}$ can be uniquely extended to a flow $\tilde{\phi}_{0}$ on $\R^n\cup\{\infty\}$ by defining $\tilde{\phi}_{0}(t,\infty) \coloneq \infty$ for all $t \in \R$.
-	$\phi_{0}$ and $\tilde{\phi}_{0}$ satisfy condition (c) of Theorem~\ref{thm:b3-4.4}.
+	$\phi_{0}$ and $\tilde{\phi}_{0}$ satisfy condition Theorem~\ref{thm:b3-4.4}\,(iii).
 
 %%KKG 2025-12-19
     \index{semiflow|(}
@@ -2051,7 +2059,7 @@ then $\hat{h}(x_{0}) + \frac{2\pi}{\tau}\im\Z \subset R{\sigma}(A)$ where $\hat{
 \end{proposition}
 %% --
 \begin{proof}	
-	(i) and (ii): By Eq.~\myeqpageref{eq:b3-4.4} we have $\overline{c}_{t}(h,\phi) = 1/t\cdot\log\|T(t)\|$ hence $\overline{c}(h,\phi) = \omega_{0}(A)$ (\cf Eq.~\myeqpageref{eq:a1-1.1} ).  
+	(i) and (ii): By Eq.~\myeqpageref{eq:b3-4.4} we have $\overline{c}_{t}(h,\phi) = 1/t\cdot\log\|T(t)\|$ hence $\overline{c}(h,\phi) = \omega_{0}(A)$ (\cf Eq.~\myeqpageref{eq:a1-1.1}).  
 	Consequently, we have $\{\lambda \in \C \colon \Re(\lambda) > \overline{c}(h,\phi)\} \subset \rho(A)$ and $\overline{c}(h,\phi) \in \sigma(A)$ by Theorem~\ref{thm:b3-1.6}.
 	
 	To prove $\underline{c}(h,\phi) \in \sigma(A)$, we can assume by Theorem~\ref{thm:b3-4.4} that $K_{\infty} = K_{s}$ for some $s$ and that $\phi_{|K_{\infty}}$ is injective.
@@ -2241,7 +2249,7 @@ In particular we refer to Part-III, Theorems~\ref{thm:c3-2.10},~\ref{thm:c3-3.12
 The dichotomy stated in (Eq.\myeqpageref{eq:b3-2.19})  is probably the most interesting consequence of cyclicity results.
 It has far reaching consequences on the asymptotic behavior of positive semigroups.
 Example~\ref{ex:b3-2.13} is due to Davies (unpublished note).
-Example~\ref{ex:b3-3.4}\,(ii) will be discussed in more detail and more generality in Section~\ref{sec:b4-3}.
+Example~\ref{ex:b3-3.4}\,(iii) will be discussed in more detail and more generality in Section~\ref{sec:b4-3}.
 We return to Remark~\ref{rem:b3-2.15}\,(ii) in Section~\ref{sec:b4-2}.
 
 \item

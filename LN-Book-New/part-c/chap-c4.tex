@@ -23,7 +23,7 @@ Most of the examples are motivated by biological models.
 \newline
 %% --
 In Part-II, Section~\ref{sec:b4-1} we have seen that the growth bound of a positive semigroup on spaces $C_{0}(X)$ coincides with the spectral bound of the generator $A$, which is --- for positive semigroups --- an element of the spectrum of\/ $A$.
-Now, using the combining results of Part-I, Chapter~\ref{chap:a3} and Chapter~\ref{chap:a4},  
+Now, combining the results of Part-I, Chapter~\ref{chap:a3} and Chapter~\ref{chap:a4},  
 Part-II, Chapter~\ref{chap:b4} and Part-III, Chapter~\ref{chap:b3},  it can be shown that this is valid for positive semigroups on AM- , AL- and Hilbert spaces.
 
 \begin{theorem}\label{thm:c4-1.1}
@@ -172,7 +172,7 @@ As shown in Part-I, Example~\ref{ex:a4-1.2}\,(ii), the equality $s(A) = \omega_{
 \index{abstract Cauchy problem}
 However, the knowledge of\/ $s(A)$ is still sufficient to determine the growth bound $\omega_{1}(A)$ of the strong solutions of the abstract Cauchy problem.
 In fact, combining 
-Part-III, Theorems~\ref{thm:c3-1.1}~\ref{thm:c3-1.1}  with 
+Part-III, Theorems~\ref{thm:c3-1.2}  with 
 Part-I, Theorem~\ref{thm:a4-1.4} 
 we obtain the following fundamental result for the stability of positive semigroups.
 %% --
@@ -348,7 +348,7 @@ Then $(T(t))_{t\geq 0}$ is uniformly stable if and only if it is weakly uniforml
 %% --
 \begin{proof}
 If\/ $(T(t))_{t\geq 0}$ is weakly uniformly stable, then $(T(t))$ is bounded by the Uniform Boundedness Principle.
-Using the weak version of Part-I, Theorem~\ref{thm:a4-1.14}, 
+Using the weak version of Part-I, Theorem~\ref{thm:a4-1.16} (see Part-I, Remark~\ref{rem:a4-1.17}), 
 $\int_{0}^{\infty} \langle T(t)f,\phi \rangle \dt$ exists for every $f \in (\image{A})_{+}$ and $\phi \in E'_{+}$.
 It follows that the net $(\int_{0}^{r} T(t)f \, \dt)_{r\geq 0}$ is weakly Cauchy.
 Hence $\sigma(E',E)$-$\lim_{r \to \infty} \int_{0}^{r} T(t)f \, \dt$ exists for every $f \in (\image{A})_{+}$.
@@ -498,7 +498,7 @@ u(t) = T(t)u_{0} + \int_{0}^{t} T(s)f_{0} \, \ds + \int_{0}^{t} T(s)(F(t-s)-f_{0
 The first term tends to zero by Corollary~\ref{cor:c4-1.4},  
 the second term to $R(0,A)f_{0} = -A^{-1}f_{0}$ by Theorem~\ref{thm:c3-1.2} .
 By assumption we have $\lim_{s \to \infty}\|A(F(s)-f_{0})\| = 0$ and from Part-I,
-Theorem~\ref{thm:a4-1.3} \textbf{da fehlt ein Eq ???} we deduce that $\|T(s)R(0,A)\| \leq M\eu^{-\epsilon s}$ for $s \geq 0$ and suitable constants $M \geq 1$, $\epsilon > 0$.
+Theorem~\ref{thm:a4-1.3} and Eq.~\myeqpageref{eq:a4-1.3} we deduce that $\|T(s)R(0,A)\| \leq M\eu^{-\epsilon s}$ for $s \geq 0$ and suitable constants $M \geq 1$, $\epsilon > 0$.
 Thus for the third term we have
 %% --
 \begin{align*}
@@ -570,7 +570,7 @@ Then there exists a positive projection $P$ of finite rank and suitable constant
 \end{theorem}
 %% --
 \begin{proof}
-By Part-II, Theorem~\ref{thm:b4-2.10} the set $\{\lambda \in \sigma(A) \colon \Re(\lambda) = 0\}$ is finite and by Theorem 2.10 of Part-3, Chapter 3  even imaginary additively cyclic.
+By Part-II, Theorem~\ref{thm:b4-2.10} the set $\{\lambda \in \sigma(A) \colon \Re(\lambda) = 0\}$ is finite and by Theorem~\ref{thm:c3-2.10}  even imaginary additively cyclic.
 Thus it contains only the value $s(A) = 0$.
 Then by %Part-II, Chapter~\ref{chap:b4}, (2.5) 
 Eq.~\myeqpageref{eq:b4-2.5} 
