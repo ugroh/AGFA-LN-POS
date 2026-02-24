@@ -1,3 +1,4 @@
+% !TEX root = ../LN-Book-New.tex
 %% --
 \setcounter{section}{0}
 %% --
@@ -702,11 +703,14 @@ Then it is enough to show that $\|(q-1)BR(1,B)\|_{u} = \|(q-1)(R(1,B) - I)\|_{u}
 For $r \in C(K)_{+}$ denote by $M_{r}$ the multiplication operator given by $M_{r}f = r \cdot f$.
 \index{operator!multiplication}
 Then 
+%% --
 \begin{align*}
 	    \|M_{r}\|_{u} &= \sup\{\|r \cdot f\|_{u} \colon \|f\|_{u} \leq 1\} \\
-	              &= \sup\{\sup_{x \in K} r(x)|f(x)|/u(x) \colon \|f\|_{u} \leq 1\}  \\
+	              &= \sup\nolimits_{\|f\|_{u} \leq 1}\{ \, 
+	              \sup \{ r(x) \cdot |f(x)| \cdot u(x)^{-1}  \colon {x \in K} \}  \\
 	              &\leq \|r\|_{\infty}.
 \end{align*}
+%% --
 Since $B$ is $p_{u}$-dissipative we have $\|R(1,B)\|_{u} \leq 1$ (by Part-I, Lemma~\ref{lem:a2-2.10}).
 This gives $\|(q-1)(R(1,B) - I)\|_{u} \leq \|M_{(1-q)}\|_{u}(\|R(1,B)\|_{u} + 1) \leq 2\|1 - q\|_{\infty} < 1$.
 

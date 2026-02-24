@@ -736,9 +736,9 @@ Take now $P$ to be the spectral projection of\/ $R(\lambda_{0},A)$ corresponding
 Then $P$ commutes with $R(\lambda_{0},A)$ (by definition), with $R(\lambda,A)$ for every $\lambda > \omega_{0}(\TT)$ (use the series representation of the resolvent), with $T(t)$ for each $t \geq 0$ (use Proposition~\ref{prop:b2-1.10}) and therefore with the generator $A$ (in the sense explained above).
 In particular, we obtain
 %% --
-\[
+\begin{equation*}\label{eq:a3-new}
 R(\lambda_{0},A)P = R(\lambda_{0},A_{1}), \quad R(\lambda_{0},A)(\Id-P) = R(\lambda_{0},A_{2})
-\]
+\end{equation*}
 %% --
 for the generator $A_{1}$ of\/ $T_{1} = (T(t)P)_{t \geq 0}$ and $A_{2}$ of\/ $T_{2} = (T(t)(\Id-P))_{t \geq 0}$.
 \index{spectral mapping theorem}
@@ -847,11 +847,12 @@ The coefficient $U_{-1}$ is the spectral projection corresponding to the spectra
 It is called the \emph{residue} of\/ $R(\cdot,A)$ at $\lambda_{0}$ and will be denoted by $P$.
 From Eq.~\myeqpageref{eq:a3-3.1} one deduces
 %% --
-\begin{equation*}\label{eq:a3-3.2}
-U_{-(n+1)} = (A - \lambda_{0})^{n} \circ P 
-\quad \text{and} \quad 
-U_{-(n+1)} \circ U_{-(m+1)} = U_{-(n+m+1)} \text{ for } n, m \geq 0 .  
-\end{equation*}
+\begin{equation}\label{eq:a3-3.2}
+\begin{split}
+U_{-(n+1)} &= (A - \lambda_{0})^{n} \circ P \quad \text{and} \\
+U_{-(n+1)} \circ U_{-(m+1)} &= U_{-(n+m+1)} \text{ for } n, m \geq 0 .  
+\end{split}
+\end{equation}
 %% --
 If there exists $k > 0$ such that $U_{-k} \neq 0$ while $U_{-n} = 0$ for all $n > k$, the point $\lambda_{0}$ is called a \emph{pole of} $R(\cdot,A)$ \emph{of order} $k$, otherwise it is called an \emph{essential singularity}. 
 \index{eigenvalue!essential singularity}
