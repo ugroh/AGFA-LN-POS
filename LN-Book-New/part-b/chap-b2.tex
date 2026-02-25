@@ -237,12 +237,12 @@ Moreover,
 \item \label{thm:b2-1.8-1}
 Assume that $w < 0$.
 Denote by $1$ the constant-1-function.
-Let $u = R(0,A)1$.
+Let $u = R(0,A)\1$.
 We claim that $u \gg 0$.
 If not, then there exists $x \in K$ such that $u(x) = 0$.
 Let $f \in C(K)$.
 Then $|f| \leq \|f\|1$.
-Consequently, $|R(0,A)f| \leq R(0,A)|f| \leq \|f\|R(0,A)1 = \|f\|u$.
+Consequently, $|R(0,A)f| \leq R(0,A)|f| \leq \|f\|R(0,A)\1 = \|f\|u$.
 Hence $(R(0,A)f)(x) = 0$ for all $f \in C(K)$.
 Since $D(A) = R(0,A)C(K)$, it follows that $D(A)$ is not dense, a contradiction.
 Define 
@@ -258,7 +258,7 @@ By the resolvent equation we have
 %%$
 %%--
 \[
-\lambda R(\lambda,A)u = \lambda R(\lambda,A)R(0,A)1 = R(0,A)1 - R(\lambda,A)1 \leq R(0,A)1 = u 
+\lambda R(\lambda,A)u = \lambda R(\lambda,A)R(0,A)\1 = R(0,A)\1 - R(\lambda,A)\1 \leq R(0,A)\1 = u 
 \]
 %%--
 for all $\lambda \geq 0$.
@@ -303,8 +303,8 @@ R(\lambda,B) \geq 0 \text{ for all } \lambda \in [\mu,\mu_{2}] \,\}
 	\item
 	The set $M$ is open.
 	In fact, let $\mu \in M$.
-	Then for small $h > 0$ one has \\
-	$R(\mu-h,B) = \sum_{n=0}^{\infty} h^{n}R(\mu,B)^{n+1} \geq 0$.
+	Then for small $h > 0$ one has
+	\[R(\mu-h,B) = \sum_{n=0}^{\infty} h^{n}R(\mu,B)^{n+1} \geq 0.\]
     \item 
  	$M$ is closed.
 	In fact, by the resolvent equation one has for $\mu \in M$,  
@@ -562,7 +562,7 @@ Hence, $-\infty < s(A)$ by Eq.~\myeqpageref{eq:b2-1.9}.
 Since $s(A) = s$ it is clear that $s(A) \in \sigma(A)$.
 
 It remains to show Eq.~\myeqpageref{eq:b2-1.8}. 
-Let $\lambda > s(A)$ and $u = R(\lambda,A)1$.
+Let $\lambda > s(A)$ and $u = R(\lambda,A)\1$.
 Then $u$ is strictly positive (by  Remark~\ref{rem:b2-1.7}) and $Au = \lambda u - 1 \leq \lambda u$.
 This proves one inequality in Eq.~\myeqpageref{eq:b2-1.8}. 
 Assume now that $u \in D(A)$ is strictly positive such that $Au \leq \lambda u$.
@@ -619,6 +619,7 @@ Observing that $f \gg 0$ if and only if\/ $p_{u}(-f) < 0$ the claim follows.
 %%
 Corollaries~\ref{cor:b2-1.14} and~\ref{cor:b2-1.17} do not hold on $C_{0}(X)$.
 For example, let $X = \left[0,1\right)$ and
+%% --
 \[
     (T(t)f)(x) = \begin{cases}
         f(x+t) & \text{if } x+t \leq 1 \\
@@ -1108,8 +1109,6 @@ It follows from the preceding lemma that
 \[
 \langle \Re[(\widehat{\sign} \bar{f})(Af)],\phi \rangle %%&
 = \left.\frac{\diff{}}{\dt}\right|_{t=0} \langle |T(t)f|,\phi \rangle = \left.\frac{\diff{}}{\dt}\right|_{t=0} \langle T(t)|f|,\phi \rangle 
-%%= \\
-%%&
 = \langle |f|,A'\phi \rangle
 \]
 %%\end{align*}
@@ -2493,7 +2492,7 @@ The proof follows from Theorem~\ref{thm:b2-3.14} via Theorem~\ref{thm:b2-3.27} i
 %% --
 \section*{Notes}
 \addcontentsline{toc}{section}{Notes}
-\label{unotes:b2}
+\label{notes:b2}
 %% --
 \begin{enumerate}[label=\emph{Section \arabic*:}, wide]
 
