@@ -236,19 +236,23 @@ Moreover,
 \begin{enumerate}[\upshape (i), wide, labelindent=.25em]
 \item \label{thm:b2-1.8-1}
 Assume that $w < 0$.
-Denote by $1$ the constant-1-function.
-Let $u = R(0,A)\1$.
+Denote by $\1$ the constant-1-function and let $u = R(0,A)\,\1$.
 We claim that $u \gg 0$.
 If not, then there exists $x \in K$ such that $u(x) = 0$.
 Let $f \in C(K)$.
-Then $|f| \leq \|f\|1$.
-Consequently, $|R(0,A)f| \leq R(0,A)|f| \leq \|f\|R(0,A)\1 = \|f\|u$.
+Then $|f| \leq \|f\| \, \1$.
+Consequently, 
+%
+\[
+	\vert R(0,A)f \vert \leq R(0,A)|f| \leq \|f\|R(0,A)\1 = \|f\|u.
+\]
+%
 Hence $(R(0,A)f)(x) = 0$ for all $f \in C(K)$.
 Since $D(A) = R(0,A)C(K)$, it follows that $D(A)$ is not dense, a contradiction.
 Define 
 %%$
 %%-
-\[\|f\|_{0} = \inf \{\lambda > 0 \colon |f| \leq \lambda u\} = \|f/u\|_{\infty}.
+\[\|f\|_{0} = \inf \{\lambda > 0 \colon |f| \leq \lambda u\} = \|f \cdot u^{-1} \|_{\infty}.
 \]
 %%--
 %%$.
@@ -268,7 +272,7 @@ Thus by the Hille-Yosida Theorem $A$ is the generator of a semigroup which is co
 \item \label{thm:b2-1.8-2}
 If\/ $w$ is arbitrary, let $\lambda > w$ and consider $A - \lambda$.
 Then $[w-\lambda,\infty) \subset \rho(A-\lambda)$ and $R(\mu,A-\lambda) = R(\mu+\lambda,A) \geq 0$ for all $\mu \in [w-\lambda,\infty)$.
-Thus by a), $A - \lambda$ is the generator of a bounded positive semigroup.
+Thus by (ii), $A - \lambda$ is the generator of a bounded positive semigroup.
 Consequently, $A$ is a generator as well and $\omega_{0}(A) \leq \lambda$.
 \end{enumerate}
 \end{proof}
@@ -451,7 +455,7 @@ Let $A$ be a densely defined operator on $C(K)$.
 If\/ $A$ satisfies (P) then $A$ is closable and the closure of\/ $A$ satisfies (P) as well.
 \end{corollary}
 %% –
-\begin{proof}[Proof of Corollary~\ref{cor:b2-1.11}]
+\begin{proof}%[Proof of Corollary~\ref{cor:b2-1.11}]
 Let $u \in D(A)$ be strictly positive.
 Then there exists $\lambda \in \R$ such that $Au \leq \lambda u$.
 The operator $B = A - \lambda$ satisfies (P) as well and $Bu \leq 0$.
@@ -1536,7 +1540,7 @@ There exist a derivation $\delta$ generating a semigroup (of algebra homomorphis
 Moreover, if~\ref{thm:b2-3.5-2} holds, then $(T(t))_{t \geq 0}$ is given by
 %% --
 \begin{equation}\label{eq:b2-3.6}
-(T(t)f)(x) = \exp\left(\int_{0}^{t} h(\phi(s,x))\,\ds\right) \cdot f(\phi(t,x))
+(T(t)f)(x) = \exp\left(\int_{0}^{t} h(\phi(s,x)) \ds \right) \cdot f(\phi(t,x))
 \end{equation}
 %% --
 where $\phi$ is the semiflow associated with $\delta$.
@@ -1586,7 +1590,7 @@ An operator $A$ is generator of a lattice semigroup on $C(K)$ if and only if the
 A = M\delta M^{-1} + h
 \end{equation}
 %% -
-where $M \in \L{(C(K))}$ is given by $Mf = p \cdot f$.
+where $M \in \L{C(K)}$ is given by $Mf = p \cdot f$.
 \end{theorem}
 
 \begin{proof}
@@ -1645,7 +1649,7 @@ A strongly continuous group $T(t)_{t \in \R}$ on $\mathcal{A}_{h}$ is an automor
 \end{remark*}
 
 Now we let $X$ be a locally compact space and consider positive groups on $C_{0}(X) = C_{0}(X,\R)$, the space of all continuous real-valued functions on $X$ which vanish at infinity.
-Our aim is to describe their generators as perturbations of generators of automorphism groups; \ie  we will extend Theorem 3.6 by allowing $X$ to be noncompact but
+Our aim is to describe their generators as perturbations of generators of automorphism groups; \ie  we will extend Theorem~\ref{thm:b2-3.6} by allowing $X$ to be non-compact but
 restrict ourselves to positive groups (or equivalently semigroups of lattice isomorphisms).
 And in fact, it is not difficult to show by an example that the corresponding result is wrong for lattice semigroups in general.
 
@@ -1895,8 +1899,8 @@ where $V \colon C_{0}(X) \to C_{0}(X)$ is given by $Vf = p \cdot f$. In that cas
 %% –
 for all $f \in C_{0}(X)$, $t \in \R$, $x \in X$.
 \end{theorem}
-
-Note: Eq.~\myeqpageref{eq:b2-3.18} means that $D(A) = \{ f \colon V^{-1}f \in D(\delta) \}$ and $Af = V\delta V^{-1}f + hf$.
+%% --
+And note that  Eq.~\myeqpageref{eq:b2-3.18} means that $D(A) = \{ f \colon V^{-1}f \in D(\delta) \}$ and $Af = V\delta V^{-1}f + hf$.
 %% –
 \begin{proof}
 Assume that $A$ is given by Eq.~\myeqpageref{eq:b2-3.18}.
@@ -1920,7 +1924,7 @@ Since every generator of a positive group is the perturbation of a derivation, w
 \begin{example}\label{ex:b2-3.15}
 %%
 Let $X = \R^{n}$.
-Consider a function $F \in C^{1}(\R^{n},\R^{n})$ such that $\sup_{x \in \R^{n}} \|DF(x)\| < \infty$ where $DF(x) \in \L{(\R^{n})}$ denotes the derivative of\/ $F$ at $x$.
+Consider a function $F \in C^{1}(\R^{n},\R^{n})$ such that $\sup_{x \in \R^{n}} \|DF(x)\| < \infty$ where $DF(x) \in \L{\R^{n}}$ denotes the derivative of\/ $F$ at $x$.
 Then there exists a continuous flow $\phi$ on $\R^{n}$ such that
 %% –
 \begin{equation}\label{eq:b2-3.20}
@@ -2350,7 +2354,7 @@ This is not difficult to see.
 \end{remark*}
 %% –
 As we have seen above the operators $\delta_{m}$, where $m$ is an admissible function, do not exhaust all generators of automorphism groups.
-But one can obtain every such generator by a similarity transformation (see Part-I,~Eq.~\myeqpageref{eq:a1-3.1}) from some $\delta_{m}$.
+But one can obtain every such generator by a similarity transformation (see Part-I, Section~\ref{subsec:a1-3.1}) from some $\delta_{m}$.
 %% –
 \begin{theorem}\label{thm:b2-3.24}
 %

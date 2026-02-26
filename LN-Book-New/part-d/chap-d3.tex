@@ -368,7 +368,7 @@ for all $\lambda \in D$.
 Let $(\mu,\alpha) \in \R_{+} \times \R$ and $S \coloneqq \mu R(\mu + \im\alpha)$.
 Since $S$ is a contraction, its adjoint $S'$ maps the dual unit ball $E'_{1}$ into itself.
 
-Let $\mathfrak{U}$ be a free ultrafilter on $ \left[1,\infty \right[$ which converges to $1$.
+Let $\mathfrak{U}$ be a free ultrafilter on $ \left[1,\infty \right)$ which converges to $1$.
 Since $E'_{1}$ is $\sigma(E',E)$-compact, 
 %% --
 \[
@@ -503,7 +503,7 @@ for all $x \in M$.
 Consequently $\im\alpha \in P\sigma(A)$ and
 %% --
 \[
-\dim \Kern{(\im\alpha - A')} \leq \dim \Kern{(\im\alpha - A)}
+\dim \Kern{\im\alpha - A'} \leq \dim \Kern{\im\alpha - A}
 \]
 %% --
 which proves the assertion.
@@ -513,11 +513,11 @@ which proves the assertion.
 %% --
 \begin{remark}\label{rem:d3-1.9}
 From the above proof we obtain the following: If 
-\mbox{$0 \neq \psi_{\alpha} \in \Kern{\im\alpha - A)}$} for $ \alpha \in \R $ with polar decomposition 
+\mbox{$0 \neq \psi_{\alpha} \in \Kern{\im\alpha - A}$} for $ \alpha \in \R $ with polar decomposition 
 $\psi_{\alpha} = u_{\alpha}|\psi_{\alpha}|$ ($\alpha \in \R$), 
 then $A'u_{\alpha} = \im\alpha u_{\alpha}$.
 
-Conversely, if\/ $0 \neq v_{\alpha} \in \Kern{(\im\alpha - A')}$, then there exists $\psi \in \Psi$ such that 
+Conversely, if\/ $0 \neq v_{\alpha} \in \Kern{\im\alpha - A'}$, then there exists $\psi \in \Psi$ such that 
 \mbox{$\psi(v_{\alpha}v_{\alpha}^{*}) \neq 0$} and the normal linear form
 %% --
 \[
@@ -749,7 +749,7 @@ Since the fixed space of\/ $\kappa(t)$ is given by
 %% --
 \[
 	\Fix{\kappa(t)} = 
-    \overline{ \left(\bigcup_{k \in \Z} \Kern{2\pi \iu k /t - A)} \right) } ,
+    \overline{ \left(\bigcup_{k \in \Z} \Kern{2\pi \iu k /t - A} \right) } ,
 \]
 %% --
 however no $T(t) \in \TT$ is irreducible.
@@ -880,7 +880,7 @@ Since the map $(y \mapsto y u_{\alpha})$ is a continuous bijection from $M(u_{\a
 Since $\bigoplus_{j=1}^{n} Mp_{j} = M$ and $\bigoplus_{j=1}^{n} L_{j} = M_{*}$, we obtain
 %% --
 \begin{align*}
-\dim \Fix  {(\lambda - \im\alpha)R(\lambda)')} &= \dim \Fix{\lambda R(\lambda)'} , \\
+\dim \Fix  {(\lambda - \im\alpha)R(\lambda)'} &= \dim \Fix{\lambda R(\lambda)'} , \\
 		&= \dim \Fix  {\lambda R(\lambda)} ,
 \end{align*}
 %% --
@@ -1017,7 +1017,7 @@ From this we obtain the contradiction
 Consequently,
 %% --
 \[
-\dim \Fix{(\lambda - \im\alpha)R(\lambda)} = \dim \Fix{\lambda - \im\alpha)\widehat{R}(\lambda)}.
+\dim \Fix{(\lambda - \im\alpha)R(\lambda)} = \dim \Fix{(\lambda - \im\alpha)\widehat{R}(\lambda)}.
 \]
 %% --
 Let $\{x_{1},...,x_{n}\}$ be a base of 
@@ -1035,7 +1035,7 @@ where both subspaces on the right are
 $(\lambda - \im\alpha)R(\lambda)$-invariant and $1$ is a pole of 
 %% --
 \[
-(\lambda-\im\alpha)R(\lambda)|_{\Fix{(\lambda-\im\alpha)R(\lambda))}}
+(\lambda-\im\alpha)R(\lambda)_{\vert \Fix{ (\lambda-\im\alpha) R(\lambda)}}
 \]
 %% --
 by the finite dimensionality of\/ $\Fix{(\lambda - \im\alpha)R(\lambda)}$.
