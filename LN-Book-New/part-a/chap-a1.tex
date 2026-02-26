@@ -76,12 +76,21 @@ The exponential estimate from Remark~\ref{rem:a1-1.2}\,(ii) for the growth of\/ 
 By the \emph{growth bound} (or type) of the semigroup $ T(t)_{t\geq0} $ we understand the number $ \omega_{0} $,
 \index{growth bound}
 %% --
+%\begin{equation}\label{eq:a1-1.1}
+%\begin{split}
+%	\omega_{0} & \coloneq \inf \{ \omega \in \R   \colon \text{there exists $ M \in \R_{+} $  
+% 		such that $\|T(t)\| \leq M \cdot  \eu^{\omega t}$  for  $t \geq 0$} \} \\
+%	& = \lim_{t\to\infty} \frac{1}{t}\log\|T(t)\| = \inf_{t>0} \frac{1}{t}\log\|T(t)\| .
+%\end{split}
+%\end{equation}
 \begin{equation}\label{eq:a1-1.1}
-\begin{split}
-	\omega_{0} & \coloneq \inf \{ \omega \in \R   \colon \text{there exists $ M \in \R_{+} $   
- 		such that $\|T(t)\| \leq M \cdot  \eu^{wt}$  for  $t \geq 0$} \} \\
-	& = \lim_{t\to\infty} \frac{1}{t}\log\|T(t)\| = \inf_{t>0} \frac{1}{t}\log\|T(t)\| .
-\end{split}
+\begin{aligned}
+    \omega_{0} & \coloneqq \inf \bigl\{ \omega \in \R \colon \text{there exists } %\exists\,
+         M \in \R_{+} \text{ such that }
+        \|T(t)\| \leq M \eu^{\omega t} \ (t \geq 0) \bigr\} \\
+    & = \lim_{t\to\infty} \frac{1}{t}\log\|T(t)\|
+      = \inf_{t>0} \frac{1}{t}\log\|T(t)\| .
+\end{aligned}
 \end{equation}
 %% --
 \end{definition}
@@ -510,7 +519,7 @@ Here are some simple examples.
 \newcommand{\CBC}{\begin{pmatrix}	1 & 1 \\ -1 & -1 \end{pmatrix}}
 \newcommand{\DBC}{\begin{pmatrix}	1+t & t \\ - t & 1-t \end{pmatrix}}
 \newcommand{\EBC}{\begin{pmatrix}	0 & 1 \\ 1 &0 \end{pmatrix}}
-\newcommand{\FBC}{\begin{pmatrix}	\cos(t) & \sinh(t) \\ \sinh(t) & \cosh(t) \end{pmatrix}}
+\newcommand{\FBC}{\begin{pmatrix}	\cosh(t) & \sinh(t) \\ \sinh(t) & \cosh(t) \end{pmatrix}}
 %% --
 \[
   \begin{array}{lllll}
@@ -1051,7 +1060,8 @@ By Section~\ref{subsec:a1-2.4} and Section~\ref{subsec:a1-3.2} its generator is
 %% --
 for $f \in D(A_{|}) \coloneqq \{f \in E \colon f \in \text{AC} \text{ with } f' \in E \text{ and } f(x) = 0 \text{ for } x \geq 1\}$.
 
-Next we identify $L^{1}(\left[ 0,1 \right])$ with the quotient space $L^{1}((-\infty,1])I$ where
+Next we identify $L^{1}(\left[ 0,1 \right])$ with the quotient space \sfrac{$L^{1}((-\infty,1])$}{I} where
+
 %% --
 \[
     I \coloneqq \{f \in L^{1}((-\infty,1]) \colon f(x) = 0 \text{ for } 0 \leq x \leq 1\} .
@@ -1059,7 +1069,7 @@ Next we identify $L^{1}(\left[ 0,1 \right])$ with the quotient space $L^{1}((-\i
 %% --
 Again $I$ is invariant for the restricted semigroup $(T(t)_{|})$ and the
 %% --
-quotient semigroup $(T(t)_{|_{/}})$ on $L^{1}(\left[ 0,1 \right])$ is the nilpotent translation semigroup as in Section~\ref{subsec:a1-2.6}.
+quotient semigroup $(T(t)_{\vert _{/}})$ on $L^{1}(\left[ 0,1 \right])$ is the nilpotent translation semigroup as in Section~\ref{subsec:a1-2.6}.
 In particular it follows that the domain of its generator is
 %% --
 \[
@@ -1126,7 +1136,7 @@ The \emph{semigroup dual} of the Banach space $E$ with respect to the strongly c
 The adjoint semigroup on $E^{*}$ is given by the operators
 %% --
 \[
-    T(t)^{*} \coloneqq T(t)'|_{E^{*}}, \quad t \geq 0.
+    T(t)^{*} \coloneqq T(t)'_{ \vert E^{*}}, \quad t \geq 0.
 \]
 %% --
 Since $(T(t)^{*})_{t \geq 0}$ is strongly continuous on $E^{*}$ we call its generator $(A^{*},D(A^{*}))$ the \emph{adjoint generator}.
@@ -1250,7 +1260,7 @@ Since the generator $A$ of a strongly continuous semigroup $(T(t))_{t\geq 0}$ is
 \]
 %% --
 We denote this Banach space by $E_{1}$ and the continuous injection from $E_{1}$ into $E$ by $i_{1}$.
-Since $E_{1}$ is invariant under $(T(t))_{t\geq 0}$, apply Proposition~\ref{prop:a1-1.6}\,(i), it makes sense to consider the semigroup $(T_{1}(t))_{t\geq 0}$ of all restrictions $T_{1}(t) \coloneqq T(t)|_{E_{1}}$.
+Since $E_{1}$ is invariant under $(T(t))_{t\geq 0}$, apply Proposition~\ref{prop:a1-1.6}\,(i), it makes sense to consider the semigroup $(T_{1}(t))_{t\geq 0}$ of all restrictions $T_{1}(t) \coloneqq T(t)_{\vert E_{1}}$.
 The results of Proposition~\ref{prop:a1-1.6} imply that $T_{1}(t) \in \L{E_{1}}$ and $\|T_{1}(t)f-f\|_{1} \to 0$ as $t \to 0$ for every $f \in E_{1}$.
 Thus $(T_{1}(t))_{t\geq 0}$ is a strongly continuous semigroup on $E_{1}$ and has a generator denoted by $(A_{1},D(A_{1}))$.
 
