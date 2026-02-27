@@ -2,27 +2,21 @@
 # --
 # -- Version 2025-02-06 (biblatex/biber)
 # --
-
 # Colors for output
 autoload -U colors && colors
-
 # Main file
 MAIN_FILE="LN-Book-New.tex"
 MAIN_BASE="LN-Book-New"
-
 # Functions
 print_status() {
     echo "$fg[blue]>>> $1$reset_color"
 }
-
 print_success() {
     echo "$fg[green]✓ $1$reset_color"
 }
-
 print_error() {
     echo "$fg[red]✗ $1$reset_color"
 }
-
 # Build function
 build() {
     if [[ ! -f "$MAIN_FILE" ]]; then
@@ -37,7 +31,15 @@ build() {
         return 1 
     }
     print_success "First LaTeX run finished!"
-    
+
+    # Run makeindex
+    print_status "Running makeindex..."
+    makeindex $MAIN_BASE || {
+        print_error "makeindex failed"
+        return 1
+    }
+    print_success "makeindex finished!"
+
     # Run biber (without .tex extension!)
     print_status "Running biber..."
     biber $MAIN_BASE || {
@@ -58,7 +60,6 @@ build() {
     }
     print_success "Build completed successfully!"
 }
-
 # Clean function
 clean() {
     print_status "Cleaning temporary files..."
@@ -77,7 +78,6 @@ clean() {
     find . -name "*.fdb_latexmk" -type f -delete
     print_success "Cleanup finished!"
 }
-
 # Watch function
 watch() {
     if ! command -v latexmk > /dev/null; then
@@ -87,17 +87,15 @@ watch() {
     print_status "Monitoring changes... (Ctrl+C to stop)"
     latexmk -pdf -pvc $MAIN_FILE
 }
-
 # Help function
 show_help() {
     echo "Usage: $0 <command>"
     echo "Commands:"
-    echo "  build   - First run → biber → final runs"
+    echo "  build   - First run → makeindex → biber → final runs"
     echo "  clean   - Deletes temporary files"
     echo "  watch   - Monitors changes and compiles automatically"
     echo "  help    - Shows this help"
 }
-
 # Main part
 case "$1" in
     build)

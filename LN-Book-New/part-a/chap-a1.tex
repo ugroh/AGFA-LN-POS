@@ -538,7 +538,7 @@ Many Banach spaces appearing in applications are Banach spaces of (real or) comp
 As the most standard examples of these \enquote{function spaces}, we mention the space $C_{0}(X)$ of all continuous complex valued functions vanishing at infinity on a locally compact space $X$, or the spaces $L^{p}(X,\Sigma,\mu)$, $1 \leq p \leq \infty$, of all (equivalence classes of) $p$-integrable functions on a $\sigma$-finite measure space $(X,\Sigma,\mu)$.
 
 On these function spaces $E = C_{0}(X)$, \resp $E = L^{p}(X,\Sigma,\mu)$, there is a simple way to define \emph{multiplication operators}.
-
+% --
 Take a continuous, \resp measurable function $q \colon X \to \C$ and define
 %% --
 \[
@@ -583,19 +583,19 @@ one obtains the following characterizations.
 \begin{proposition*}\label{prop:a1-2.3}
 %% --
 Let $M_{q}$ be a multiplication operator on $E = C_{0}(X)$ or $E = L^{p}(X,\Sigma,\mu)$, $1 \leq p < \infty$.
-Then the properties (a) and (b), \resp (a') and (b'), are equivalent.
+Then the properties \upshape(a) and \upshape(b), \resp \upshape(a') and \upshape(b'), are equivalent.
 %% --
-\begin{enumerate}[\upshape (a)]
-\item 
+\begin{enumerate}[labelwidth=2em, labelsep=0.5em, leftmargin=3em, align=left]
+\item[\upshape (a)] 
 	$M_{q}$ generates a strongly continuous semigroup.
 
-\item 
+\item[\upshape (b)]
 	$\sup\{\Re(q(x)) \colon x \in X \} < \infty$.
 
-\item[\upshape (a')] 
+\item[\upshape(a')] 
 	$M_{q}$ generates a uniformly continuous semigroup.
 
-\item[(b')] 
+\item[\upshape(b')] 
 	$\sup\{|q(x)| \colon x \in X \} < \infty$.
 \end{enumerate}
 %% --
@@ -917,7 +917,7 @@ Examples analogous to Section~\ref{subsec:a1-2.7} are valid in $L^{p}\left[ 0,1 
 %% --
 Starting with a semigroup $(T(t))_{t \geq 0}$ on a Banach space $E$ it is possible to construct new semigroups on spaces naturally associated with $E$.
 Such constructions will be important technical devices in many of the subsequent proofs.
-Although most of these constructions are rather routine, we present in the sequel a systematic account of them for the convenience of the reader.
+Although most of these constructions are rather routine, we present below a systematic account of them for the convenience of the reader.
 
 We always start with a semigroup $(T(t))_{t \geq 0}$ on a Banach space $E$, and denote its generator by $A$ on the domain $D(A)$.
 %% --
@@ -961,8 +961,8 @@ For $\lambda \in \C$ and $S(t) \coloneqq \exp(-\lambda t)T(t)$ the formulas Eq.~
 %% --
 \begin{equation}\label{eq:a1-3.1}
 \begin{split}
-     \eu^{-\lambda t}T(t)f - f &= (A-\lambda) \int_{0}^{t}  \eu^{-\lambda s}T(s)f \ds \\
-     \text{ or }  \\
+     \eu^{-\lambda t}T(t)f - f &= (A-\lambda) \int_{0}^{t}  \eu^{-\lambda s}T(s)f \ds \\[4pt]
+     & \text{ or } \\[4pt]
     ( \eu^{\lambda t}-T(t))f &= (\lambda-A) \int_{0}^{t}  \eu^{\lambda(t-s)}T(s)f \ds \quad \text{for } f \in E,  
 \end{split}
 \end{equation}
@@ -971,12 +971,11 @@ and
 %% --
 \begin{equation}\label{eq:a1-3.2}
 \begin{split}
-     \eu^{-\lambda t}T(t)f - f &= \int_{0}^{t}  \eu^{-\lambda s}T(s)(A-\lambda)f \ds  \\
-     \text{or}  \\
+     \eu^{-\lambda t}T(t)f - f &= \int_{0}^{t}  \eu^{-\lambda s}T(s)(A-\lambda)f \ds \\[4pt]
+     & \text{ or } \\[4pt]
     ( \eu^{\lambda t} - T(t))f &= \int_{0}^{t}  \eu^{\lambda(t-s)}T(s)(\lambda-A)f \ds \quad \text{for } f \in D(A).  
 \end{split}
 \end{equation}
-%% --
 %% --
 \subsection{The Subspace Semigroup}\label{subsec:a1-3.3}%
 \index{standard construction!subspace semigroup}
@@ -1026,7 +1025,7 @@ for every $f \in D(A)$.
 Here we use the fact that every $\hat{f} \coloneqq q(f) \in D(A_{/})$ can be written as
 %% --
 \[
-    \hat{f} = \int_{0}^{\infty}  \eu^{-\lambda s} \hat{T}(s)_{/}\hat{g} \ds 
+    \hat{f} = \int_{0}^{\infty}  \eu^{-\lambda s} \widehat{T}(s)_{/}\hat{g} \ds 
     = \int_{0}^{\infty}  \eu^{-\lambda s}q(T(s)g) \ds 
     = q\left(\int_{0}^{\infty}  \eu^{-\lambda s}T(s)g \ds\right) = q(h)
 \]
@@ -1328,11 +1327,11 @@ Denote by $m(E)$ the Banach space of all bounded $E$-valued sequences endowed wi
 It is clear that every $T(t)$ extends canonically to a bounded linear operator
 %% --
 \[
-    \hat{T}(t)(f_{n}) \coloneqq (T(t)f_{n})
+    \widehat{T}(t)(f_{n}) \coloneqq (T(t)f_{n})
 \]
 %% --
-on $m(E)$, but the semigroup $(\hat{T}(t))_{t \geq 0}$ is strongly continuous if and only if\/ $\TT$ has a bounded generator.
-Therefore we restrict our attention to the closed, $(\hat{T}(t))$-invariant subspace
+on $m(E)$, but the semigroup $(\widehat{T}(t))_{t \geq 0}$ is strongly continuous if and only if\/ $\TT$ has a bounded generator.
+Therefore we restrict our attention to the closed, $(\widehat{T}(t))$-invariant subspace
 %% --
 \[
     m^{\mathcal{T}}(E) \coloneqq \{(f_{n}) \in m(E) \colon \lim_{t \to 0} \|T(t)f_{n}-f_{n}\| = 0 \text{ uniformly for } n \in \N\} .
@@ -1341,23 +1340,23 @@ Therefore we restrict our attention to the closed, $(\hat{T}(t))$-invariant subs
 Then the restricted semigroup
 %% --
 \[
-    \hat{T}(t)(f_{n}) = (T(t)f_{n}), \quad (f_{n}) \in m^{\mathcal{T}}(E)
+    \widehat{T}(t)(f_{n}) = (T(t)f_{n}), \quad (f_{n}) \in m^{\mathcal{T}}(E)
 \]
 %% --
-is strongly continuous and we denote its generator by $(\hat{A},D(\hat{A}))$.
+is strongly continuous and we denote its generator by $(\widehat{A},D(\widehat{A}))$.
 
-The following lemma shows that $\hat{A}$ is obtained canonically from $A$.
+The following lemma shows that $\widehat{A}$ is obtained canonically from $A$.
 %% --
 \begin{lemma*}\label{lem:a1-3.6}
-For the generator $\hat{A}$ of\/ $(\hat{T}(t))_{t \geq 0}$ on $m^{\mathcal{T}}(E)$ one has the following properties.
+For the generator $\widehat{A}$ of\/ $(\widehat{T}(t))_{t \geq 0}$ on $m^{\mathcal{T}}(E)$ one has the following properties.
 %% --
 \begin{enumerate}[\upshape(i)]
 
 \item 
-$D(\hat{A}) = \{(f_{n}) \in m^{\mathcal{T}}(E) \colon f_{n} \in D(A) \text{ and } (Af_{n}) \in m^{\mathcal{T}}(E)\}$,
+$D(\widehat{A}) = \{(f_{n}) \in m^{\mathcal{T}}(E) \colon f_{n} \in D(A) \text{ and } (Af_{n}) \in m^{\mathcal{T}}(E)\}$,
 
 \item 
-$\hat{A}(f_{n}) = (Af_{n})$ for $(f_{n}) \in D(\hat{A})$ .
+$\widehat{A}(f_{n}) = (Af_{n})$ for $(f_{n}) \in D(\widehat{A})$ .
 \end{enumerate}
 
 \end{lemma*}
@@ -1372,7 +1371,7 @@ The space of all $\mathcal{F}$-null sequences in $m(E)$, \ie
     c_{\mathcal{F}}(E) \coloneqq \{(f_{n}) \in m(E) \colon \mathcal{F}\text{-}\lim\|f_{n}\| = 0\}
 \]
 %% --
-is closed in $m(E)$ and invariant under $(\hat{T}(t))_{t \geq 0}$. 
+is closed in $m(E)$ and invariant under $(\widehat{T}(t))_{t \geq 0}$. 
 We call the quotient spaces
 %% --
 \[
@@ -1476,7 +1475,7 @@ Then
 \begin{enumerate}[\upshape(i), wide, labelindent=.25em]
 
 \item
-$\|u\|_{\pi} \coloneqq \inf\{\sum_{j=1}^{m} \|h_{j}\|\|k_{j}\| \colon u = \sum_{j=1}^{m}h_{j} \otimes k_{j}, h_{j} \in E, k_{j} \in F\}$ defines the \emph{greatest cross norm $\pi$} on $E \otimes F$.
+$\|u\|_{\pi} \coloneqq \inf\{\sum_{j=1}^{m} \|h_{j}\| \|k_{j}\| \colon u = \sum_{j=1}^{m}h_{j} \otimes k_{j}, h_{j} \in E, k_{j} \in F\}$ defines the \emph{greatest cross norm $\pi$} on $E \otimes F$.
 
 \item
 $\|u\|_{\epsilon} \coloneqq \sup\{\langle u,\phi \otimes \psi\rangle \colon \phi \in E', \psi \in F', \|\phi\|, \|\psi\| \leq 1\}$ defines the 
@@ -1488,7 +1487,7 @@ If\/ $E$ and $F$ are Hilbert spaces, $\|u\|_{h} = (u|u)_{h}^{1/2}$, where the sc
 \end{enumerate}
 %% --
 In the following we write $E \otimes_{\alpha} F$ for the tensor product of\/ $E$ and $F$ endowed---if applicable---with one of the norms $\pi$, $\epsilon$, $h$ just defined.
-In each case one has $\|f \otimes g\| = \|f\|\|g\|$ for $f \in E$, $g \in F$.
+In each case one has $\|f \otimes g\| = \|f\| \|g\|$ for $f \in E$, $g \in F$.
 
 By $E \widetilde{\otimes}_{\alpha} F$ we mean the completion of\/ $E \otimes_{\alpha} F$. 
 Moreover we recall how examples (i) and (ii) above fit into this pattern
@@ -1508,7 +1507,7 @@ Finally, we point out that for any $S \in \LE$, $T \in \L{F} $, the mapping
 \]
 %% --
 defined on $E \otimes F$ is linear and continuous on $E \otimes_{\alpha} F$, hence has a continuous extension to $ E \widetilde{\otimes}_{\alpha} F$. 
-This operator, as well as its continuous extension, will be denoted by $S \otimes T$ and satisfies $\|S \otimes T\| = \|S\|\|T\|$. 
+This operator, as well as its continuous extension, will be denoted by $S \otimes T$ and satisfies $\|S \otimes T\| = \|S\| \|T\|$. 
 The notation $A \otimes B$ will also be used in the obvious way if\/ $A$ and $B$ are not necessarily bounded operators on $E$ and $F$. 
 We are now ready to consider semigroups induced on the tensor product.
 %% --
@@ -1536,17 +1535,14 @@ Then
 \begin{align*}
     &\lim_{h\to 0} \frac{1}{h}(T(h) \otimes S(h)(f \otimes g)-f \otimes g) \\
     &= \lim_{h\to 0} \frac{1}{h}(T(h)f \otimes (S(h)g-g) + (T(h)f-f) \otimes g) \\
-    &= (f \otimes Bg) + (Af \otimes g) .
+%    &= (f \otimes Bg) + (Af \otimes g) .
+    &= f \otimes Bg + Af \otimes g.
 \end{align*}
 %% --
-Since the elements of the form $f \otimes g$, $f \in D(A)$, $g \in D(B)$, generate the linear subspace $D(A) \otimes D(B)$ of\/ $E \otimes_{\alpha} F$, this subspace belongs
-%% --
-%\newpage
-%% -- a1-25
-to the domain of the generator.
+Since the elements of the form $f \otimes g$, $f \in D(A)$, $g \in D(B)$, generate the linear subspace $D(A) \otimes D(B)$ of\/ $E \otimes_{\alpha} F$, this subspace belongs to the domain of the generator.
 Moreover, $D(A) \otimes D(B)$ is dense in $E \widetilde{\otimes}_{\alpha} F$ and invariant under $(S(t)\otimes T(t))_{t\geq 0}$, hence it is a core of\/ $A \otimes \Id + \Id \otimes B$ by Proposition~\ref{prop:a1-1.9}\,(ii).
 \end{proof}
-%% --
+%% -- 
 \subsection{The Product of Commuting Semigroups}\label{subsec:a1-3.9}%
 \index{standard construction!commuting semigroup}
 %% --
@@ -1556,7 +1552,7 @@ It is not difficult to see that the following assertions are equivalent.
 \begin{enumerate}[\upshape (a)]
 
 \item  
-$S(t)T(t) = S(t)T(t)$ for all $t \geq 0$.
+$S(t)T(t) = T(t)S(t)$ for all $t \geq 0$.
 
 \item 
 $R(\mu,A)R(\mu,B) = R(\mu,B)R(\mu,A)$ for some $\mu \in \rho(A) \cap \rho(B)$.
