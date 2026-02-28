@@ -74,7 +74,7 @@ Moreover, $s(A) = \omega_{0}(A) \in R\sigma(A) = P\sigma(A')$ and the following 
 Eq.~\myeqpageref{eq:b4-1.2} follows directly from Section~\ref{subsec:a3-4.4} and the results from Chapter~\ref{chap:b2} and Chapter~\ref{chap:b3} mentioned above. 
 It remains to show the implication $(c) \Rightarrow (a)$.
 
-If\/ $\langle T(t)f,\mu \rangle \to 0$ for every $\mu \in C(K)'$, then, by the Uniform Boundedness Principle, $\|T(t)f\| \leq M_f$ for every $f \in D(A)$. 
+If\/ $\langle T(t)f,\mu \rangle \to 0$ for every $\mu \in C(K)'$, then, by the Uniform Boundedness Principle, $\norm{T(t)f} \leq M_f$ for every $f \in D(A)$. 
 \index{growth bound!omega1@$\omega_1(A)$}
 Using 
 %% -- 
@@ -111,7 +111,7 @@ Indeed, identifying $C_{0}(\R)'$ with the space of all bounded Borel measures on
    \langle T(t)f,\mu \rangle = \int (T(t)f)(x) \diff{\mu}(x) .
 \]
 %% --
-Obviously, $T(t)f$ tends pointwise to $0$ as $t \to \infty$ and is dominated by the $\mu$-integrable function $\|f\|_\infty \cdot 1$. 
+Obviously, $T(t)f$ tends pointwise to $0$ as $t \to \infty$ and is dominated by the $\mu$-integrable function $\norm{f}_\infty \cdot 1$. 
 Thus Lebesgue's Dominated Convergence Theorem implies
 %% -- 
 \[ 
@@ -182,7 +182,7 @@ $f(z) = (\eu^{-\im\alpha t_n}T(t_n)f)(z) = \eu^{-\im\alpha t_n}f(\Phi(t_n,z)) \t
 
 
 \item
-At first we point out that for $f \in C_{0}(X)$ such that $f$ vanishes on the unit circle $\Gamma$, we have $\lim_{t\to\infty} \|T(t)f\| = 0$.
+At first we point out that for $f \in C_{0}(X)$ such that $f$ vanishes on the unit circle $\Gamma$, we have $\lim_{t\to\infty} \norm{T(t)f} = 0$.
 Assume that $\mu$ is a bounded Borel measure such that $T(t)'\mu = \eu^{\im\alpha t}\mu$ for every $t \geq 0$ and some $\alpha \in \R$. 
 Then $\langle f,\mu \rangle = \eu^{\im\alpha t}\langle f,T(t)'\mu \rangle = \eu^{\im\alpha t}\langle T(t)f,\mu \rangle \to 0$ for every $f \in C_{0}(X)$ with $f|_\Gamma = 0$. 
 It follows that the support of\/ $\mu$ is contained in $\Gamma$. Since $\lim_{t\to\infty} \Phi(t,z) = 1$ for every $z \in \Gamma$, we obtain for arbitrary $f \in C_{0}(X)$ that $(T(t)f)(z) \to 0$ $\mu$-a.e.. 
@@ -242,34 +242,34 @@ But for positive $\Phi$ the net is monotone and therefore strongly convergent by
 Hence $R(0,A^*)\Phi = \int_0^{\infty} T(t)^*\Phi \dt$ for every $\Phi \in C_{0}(X)^*$.
 
 Now we make use of the special character of the space $C_{0}(X)$. 
-For positive functions $f_1$, $f_2 \in C_{0}(X)$ we have $\sup(\|f_1\|,\|f_2\|) = \|\sup(f_1,f_2)\|$. 
+For positive functions $f_1$, $f_2 \in C_{0}(X)$ we have $\sup(\norm{f_1},\norm{f_2}) = \norm{\sup(f_1,f_2)}$. 
 Let $\mu_1$, $\mu_2 \in C_{0}(X)'_+$ and $\epsilon  >  0$. 
 Then there are positive elements $f$, $g$ in the unit ball of\/ $C_{0}(X)$ such that 
 %
 \[
-	\langle f,\mu_1 \rangle \geq \|\mu_1\| - \epsilon 
+	\langle f,\mu_1 \rangle \geq \norm{\mu_1} - \epsilon 
 	\quad \text{and} \quad
-	\langle g,\mu_2 \rangle \geq \|\mu_2\| - \epsilon.
+	\langle g,\mu_2 \rangle \geq \norm{\mu_2} - \epsilon.
 \]
 %
-For $h \coloneq \sup(f,g)$ we obtain $\|h\| \leq 1$ and 
+For $h \coloneq \sup(f,g)$ we obtain $\norm{h} \leq 1$ and 
 %
 \[
-	 \|\mu_1 + \mu_2\| \geq \langle h,\mu_1 + \mu_2 \rangle \geq \langle f,\mu_1 \rangle + \langle g,\mu_2 \rangle \geq \|\mu_1\| + \|\mu_2\| - 2\epsilon .
+	 \norm{\mu_1 + \mu_2} \geq \langle h,\mu_1 + \mu_2 \rangle \geq \langle f,\mu_1 \rangle + \langle g,\mu_2 \rangle \geq \norm{\mu_1} + \norm{\mu_2} - 2\epsilon .
 \]
 %
-Hence $\|\mu_1 + \mu_2\| = \|\mu_1\| + \|\mu_2\|$ for $\mu_1$, $\mu_2 \in C_{0}(X)'_+$ (see also Part-III, Chapter~\ref{chap:c1}).
+Hence $\norm{\mu_1 + \mu_2} = \norm{\mu_1} + \norm{\mu_2}$ for $\mu_1$, $\mu_2 \in C_{0}(X)'_+$ (see also Part-III, Chapter~\ref{chap:c1}).
 
 Approximating the integral by Riemann sums one obtains 
 %% -- 
 \[
-\norm*{\int_0^r T(t)^*\mu \dt} = \int_0^r \|T(t)^*\mu\| \dt \text{ for } \mu \in C_{0}(X)^*_{+} , r  >  0 .
+\norm*{\int_0^r T(t)^*\mu \dt} = \int_0^r \norm{T(t)^*\mu} \dt \text{ for } \mu \in C_{0}(X)^*_{+} , r  >  0 .
 \]
 %% -- 
 and therefore, for $r \to \infty$, 
 \[
-\|R(0,A^*)\mu\| = \norm*{\int_0^{\infty} T(t)^*\mu \dt} 
- = \int_0^{\infty} \|T(t)\mu\| \dt\  (\mu \in C_{0}(X)_{+}^{*}) .
+\norm{R(0,A^*)\mu} = \norm*{\int_0^{\infty} T(t)^*\mu \dt} 
+ = \int_0^{\infty} \norm{T(t)\mu} \dt\  (\mu \in C_{0}(X)_{+}^{*}) .
 \]
 %% -- 
 Given $\mu \in C_{0}(X)'$ there is a sequence $\mu_n \in C_{0}(X)^*_+$ converging $\sigma(E',E)$ to $|\mu|$ (Lemma~\ref{lem:b4-1.3}).
@@ -282,25 +282,25 @@ From
 we conclude 
 %
 \[
-	 |\langle f,T(t)'\mu \rangle| \leq \liminf_{n\to\infty}\|f\| \cdot \|T(t)^*\mu_n\| 
+	 |\langle f,T(t)'\mu \rangle| \leq \liminf_{n\to\infty}\norm{f} \cdot \norm{T(t)^*\mu_n} 
 \]
 %
 and 
 %
 \[
-	 \|T(t)'\mu\| \leq \liminf_{n\to\infty}\|T(t)^*\mu_n\| \quad (t \geq 0) .
+	 \norm{T(t)'\mu} \leq \liminf_{n\to\infty}\norm{T(t)^*\mu_n} \quad (t \geq 0) .
 \]
 %
 Applying Fatou's Lemma we obtain 
 %% -- 
 \[
 \begin{aligned}
-	\int_0^{\infty} \|T(t)'\mu\| \dt &\leq \int_0^{\infty} \left(\liminf_{n\to\infty} \|T(t)'\mu_n\|\right) \dt \leq  
-	\liminf_{n\to\infty} \int_0^{\infty} \|T(t)'\mu_n\| \dt = \\ 
-	& = \liminf_{n\to\infty} \|R(0,A^{*})\mu_n\| \leq \|R(0,A^{*})\|\cdot\liminf_{n\to\infty} \|\mu_n\| < \infty .
+	\int_0^{\infty} \norm{T(t)'\mu} \dt &\leq \int_0^{\infty} \left(\liminf_{n\to\infty} \norm{T(t)'\mu_n}\right) \dt \leq  
+	\liminf_{n\to\infty} \int_0^{\infty} \norm{T(t)'\mu_n} \dt = \\ 
+	& = \liminf_{n\to\infty} \norm{R(0,A^{*})\mu_n} \leq \norm{R(0,A^{*})}\cdot\liminf_{n\to\infty} \norm{\mu_n} < \infty .
 \end{aligned}
 \]
-(observe that $t \to \|T(t)'\mu\| = \sup \{\langle T(t)f,\mu \rangle \colon \|f\| \leq 1\}$ is lower semi-continuous and hence measurable). 
+(observe that $t \to \norm{T(t)'\mu} = \sup \{\langle T(t)f,\mu \rangle \colon \norm{f} \leq 1\}$ is lower semi-continuous and hence measurable). 
 Using Part-I, Proposition~\ref{prop:a4-1.10} we obtain $\omega_{0}(A^{*})<0$. 
 But $\omega_{0}(A) = \omega_{0}(A^{*})$ by Part-I, Proposition~\ref{prop:a3-4.4}\,(iii), contradicting $\omega_{0}(A) = 0$.
 \end{proof}
@@ -309,7 +309,7 @@ But $\omega_{0}(A) = \omega_{0}(A^{*})$ by Part-I, Proposition~\ref{prop:a3-4.4}
 If\/ $(T(t))$ is a positive semigroup on an $\alpha$-directed ordered Banach space $E$ (see \textcite{asimow:1980}, p.39), 
 \index{ordered Banach space}
 then the dual of\/ $E$ admits a reversion of the triangle inequality, 
-\ie $\sum\|\mu_i\| \leq \alpha\|\sum\mu_i\|$ 
+\ie $\sum\norm{\mu_i} \leq \alpha\norm{\sum\mu_i}$ 
 for $\mu_i \in E'_+$, 
 and Theorem~\ref{thm:b4-1.4} remains valid (see \textcite{battydavies:1983}). 
 The proof given above may be used with almost no modification.
@@ -351,7 +351,7 @@ Thus
 	T(t) &= T_1(t) + T_2(t) + .. + T_m(t) + R_m(t) ,\\
 	T_n(t) &= \exp(\lambda_n t) \cdot \sum_{j=0}^{k(n)-1} \frac{1}{j!}t^j(A - \lambda_n)^j \circ P_n 
 		\quad (t \geq 0) ,\\
-	\|R_m(t)\| & \leq C \cdot \exp((\epsilon +\Re(\lambda_m))t) \text{ for }  t \geq 0, \epsilon >0\\
+	\norm{R_m(t)} & \leq C \cdot \exp((\epsilon +\Re(\lambda_m))t) \text{ for }  t \geq 0, \epsilon >0\\
 			&  \text{ for }  t \geq 0, \epsilon >0  \text{ and a suitable	constant } C=C(\epsilon ,m) .
 		\end{aligned}
 	\end{equation}
@@ -386,7 +386,7 @@ Thus
 	Then there exists a constant $C_{0}$ such that
 %% -- 
 \[
-\|T(t)(\Id -P)\| \leq \|T(t)_{\vert \Kern{P}}\|\cdot\|\Id -P\| \leq \|\Id -P\|\cdot C_{0} \cdot \exp(\Re(\lambda_m) \cdot t) .
+\norm{T(t)(\Id -P)} \leq \norm{T(t)_{\vert \Kern{P}}}\cdot\norm{\Id -P} \leq \norm{\Id -P}\cdot C_{0} \cdot \exp(\Re(\lambda_m) \cdot t) .
 \]
 %% --
 We define $R_m(t)  \coloneq  T(t)(\Id -P)$ and $T_n(t)  \coloneq  T(t)P_n$ $(n \in \N)$.
@@ -456,13 +456,13 @@ We give a typical example.
 	constants $\delta > 0$, $M \geq 1$ one has
 	%% --
 	\begin{equation}\label{eq:b4-2.2}
-		\|\eu^{-rt}\cdot T(t) - \nu\otimes h\| \leq M\cdot \eu^{-\delta t} \text{ for all } t \geq 0 .
+		\norm{\eu^{-rt}\cdot T(t) - \nu\otimes h} \leq M\cdot \eu^{-\delta t} \text{ for all } t \geq 0 .
 	\end{equation}
 	%% --
 	In particular, for every $f \in C_{0}(X)$ and $t \geq 0$ one has
 	%% --
 	\begin{equation}\label{eq:b4-2.3} 
-		\left(\left|\int f \diff{\nu}\right| - M\cdot \eu^{-\delta t}\|f\|\right) \leq \eu^{-rt}\|T(t)f\| \leq \left(\left|\int f \diff{\nu}\right| + M\cdot \eu^{-\delta t}\|f\|\right).
+		\left(\left|\int f \diff{\nu}\right| - M\cdot \eu^{-\delta t}\norm{f}\right) \leq \eu^{-rt}\norm{T(t)f} \leq \left(\left|\int f \diff{\nu}\right| + M\cdot \eu^{-\delta t}\norm{f}\right).
 	\end{equation}
 \end{corollary}
 %% --
@@ -474,7 +474,7 @@ We give a typical example.
 	form $P = \nu \otimes h$ for strictly positive eigenvectors $\nu$ of\/ $A'$
 	and $h$ of\/ $A$, respectively.
     We choose $h$ such that 
-	$\|h\| = 1$.
+	$\norm{h} = 1$.
 	Corollary~\ref{cor:b3-2.11} of Chapter~\ref{chap:b3} implies that $r$ is strictly
 	dominant, \ie enumerating the eigenvalues as described in Theorem~\ref{thm:b4-2.1} we
 	have 
@@ -582,11 +582,11 @@ By Pettis' Theorem (see IV. Theorem~10.1 in
 \textcite{dunfordschwartz:1958}) we have
 that $m$ is countably additive with respect to the norm.
 In particular, for a sequence $U_n$ of mutually disjoint Borel sets we have
-$\lim_{n\to\infty}\|m(U_n)\| = 0$.
+$\lim_{n\to\infty}\norm{m(U_n)} = 0$.
 It follows that $\lim_{n\to\infty}y'\circ m(U_n) = 0$ uniformly for
-$y' \in G'$, $\|y'\| \leq 1$.
+$y' \in G'$, $\norm{y'} \leq 1$.
 Now condition (c) of Proposition~\ref{prop:b4-2.3} shows that $\{R'y'
-\colon y' \in G'$, $\|y'\| \leq 1\}$ is relatively weakly compact, \ie  $R'$ is
+\colon y' \in G'$, $\norm{y'} \leq 1\}$ is relatively weakly compact, \ie  $R'$ is
 weakly compact.
 Thus $R$ is weakly compact as well.
 
@@ -600,10 +600,10 @@ only if it is bounded and $f_n(x) \to f(x)$ for every $x \in K$.
 (ii) Suppose that $(f_n)$ is a sequence in $C(K)$ which converges to $0$ for
 the weak topology.
 Since $R$ is weakly compact, the same is true for
-the adjoint $R'$, \ie $\{R'y' \colon y' \in G'$, $\|y'\| \leq 1\}$ is relatively weakly compact in $M(K)$.
+the adjoint $R'$, \ie $\{R'y' \colon y' \in G'$, $\norm{y'} \leq 1\}$ is relatively weakly compact in $M(K)$.
 From Proposition~\ref{prop:b4-2.3} $(a)\Rightarrow(b)$ we obtain that
-$\langle Rf_n,y'\rangle = \langle f_n,R'y'\rangle \to 0$ as $n \to \infty$ uniformly for $y' \in G'$, $\|y'\|\leq1$.
-That is $\lim_{n\to\infty}\|Rf_n\| = 0$.
+$\langle Rf_n,y'\rangle = \langle f_n,R'y'\rangle \to 0$ as $n \to \infty$ uniformly for $y' \in G'$, $\norm{y'}\leq1$.
+That is $\lim_{n\to\infty}\norm{Rf_n} = 0$.
 The final assertion follows from the first and the characterization of
 weakly compact operators stated in $(d)$ of (i).
 \end{proof}
@@ -619,7 +619,7 @@ For a Markov operator (see Section~\ref{sec:b1-3} condition (b) of Proposition~\
 	$C(K)$, $K$ compact, such that one operator $T(t_{0})$ has the strong Feller
 	property.
 	Then there exists a positive projection $P$ of finite rank
-	such that $\|T(t) - P\| \leq M\cdot \eu^{-\delta t}$ for suitable constants $\delta>0$, $M \geq 1$.
+	such that $\norm{T(t) - P} \leq M\cdot \eu^{-\delta t}$ for suitable constants $\delta>0$, $M \geq 1$.
 \end{theorem}
 
 \begin{proof}
@@ -696,7 +696,7 @@ Then we have
 \begin{align*} 
     (T(t)f)(x) - f(x) &= \int_K f(y)P_t(x,\dy) - \int_K f(x)P_t(x,\dy) \\
     &= \int_U (f(y)-f(x))P_t(x,\dy) + \int_{K\backslash U} (f(y)-f(x))P_t(x,\dy)  \\
-    &\leq \epsilon\cdot P_t(x,U) + 2\|f\|_{\infty}\cdot P_t(x,K\backslash U) .
+    &\leq \epsilon\cdot P_t(x,U) + 2\norm{f}_{\infty}\cdot P_t(x,K\backslash U) .
 \end{align*}
 %% --
 Since $P_t(x,U) \leq 1$ and $\lim_{t\downarrow0} P_t(x,U) = 1 = P_t(x,K)$, this estimate
@@ -719,7 +719,7 @@ For a Banach space $G$, the ideal of all compact linear operators on $G$ is deno
 For $T \in \mathcal{L}(G)$ we define
 %
 \[
-	\text{dist}(T,\mathcal{K}(G))  \coloneq  \inf\{\|T - K\| \colon K \in \mathcal{K}(G)\} .
+	\text{dist}(T,\mathcal{K}(G))  \coloneq  \inf\{\norm{T - K} \colon K \in \mathcal{K}(G)\} .
 \]
 %% --
 \begin{definition}\label{def:b4-2.7}
@@ -743,7 +743,7 @@ The first one uses the notion of the essential growth bound $\omega_{\text{ess}}
 		$\omega_{\text{ess}}(\TT) < 0$,
 	
 		\item 
-		There exist $t_{0} > 0$, $K \in \mathcal{K}(G)$ such that $\|T(t_{0}) - K\| < 1$.
+		There exist $t_{0} > 0$, $K \in \mathcal{K}(G)$ such that $\norm{T(t_{0}) - K} < 1$.
 	\end{enumerate}
 \end{proposition}
 %% --
@@ -753,7 +753,7 @@ $(a) \Rightarrow (c)$ is obvious by the definition of quasi-compactness.
 $(c) \Rightarrow (b)$: Recalling the definition of the essential spectral radius from 
  Eq.~\myeqpageref{eq:a3-3.6},
 assertion $(c)$ implies 
-$r_{\text{ess}}(T(t_0)) \leq \|T(t_0)\|_{\text{ess}} < 1 .$ 
+$r_{\text{ess}}(T(t_0)) \leq \norm{T(t_0)}_{\text{ess}} < 1 .$ 
 Then  $\omega_{\text{ess}}(\TT) < 0 $ by  
 Eq.~\myeqpageref{eq:a3-3.10}).
 
@@ -765,15 +765,15 @@ Then
 %% -- 
 \[
 \text{
-$\lim_{n \to \infty}\|T(n)\|_{\text{ess}}^{1/n} < 1$,  where $\|T\|_{\text{ess}} = \mathrm{dist}(T,\mathcal{K}(G))$ .}
+$\lim_{n \to \infty}\norm{T(n)}_{\text{ess}}^{1/n} < 1$,  where $\norm{T}_{\text{ess}} = \mathrm{dist}(T,\mathcal{K}(G))$ .}
 \]
 %% --
-Thus for suitable $n_{0} \in \N$, $a < 1$ we have $\|T(n)\|_{\text{ess}} < a^n$ for $n \geq n_{0}$.
+Thus for suitable $n_{0} \in \N$, $a < 1$ we have $\norm{T(n)}_{\text{ess}} < a^n$ for $n \geq n_{0}$.
 
-Choosing a sequence $K_n \in \mathcal{K}(G)$ such that $\|T(n) - K_n\| < a^n$ for $n \geq n_{0}$ and defining $M \coloneqq \sup_{0 \leq s \leq 1}\|T(s)\|$ we obtain for $t \in [n,n+1]$ $(n \geq n_{0})$ 
+Choosing a sequence $K_n \in \mathcal{K}(G)$ such that $\norm{T(n) - K_n} < a^n$ for $n \geq n_{0}$ and defining $M \coloneqq \sup_{0 \leq s \leq 1}\norm{T(s)}$ we obtain for $t \in [n,n+1]$ $(n \geq n_{0})$ 
 %% -- 
 \[
-\|T(t) - T(t-n)K_n\| \leq \|T(t-n)\|\|T(n) - K_n\| \leq M \cdot a^n .
+\norm{T(t) - T(t-n)K_n} \leq \norm{T(t-n)}\norm{T(n) - K_n} \leq M \cdot a^n .
 \] 
 This implies that $\lim_{t \to \infty}\mathrm{dist}(T(t),\mathcal{K}(G)) = 0 .$
 \end{proof}
@@ -797,9 +797,9 @@ More generally we have the following result.
 	If\/ $(T(t))_{t \geq 0}$ and $(S(t))_{t \geq 0}$ are the semigroups generated by $A$ and $A + K$, respectively, we have $S(t) = T(t) + \int_0^t T(t-s)KS(s)  \ds $.
 	In view of Proposition~\ref{prop:b4-2.8}\,(c) it is enough to show that $\int_0^t T(t-s)KS(s)  \ds $ is a compact operator.
 	
-	Since the mapping $(t,x) \mapsto T(t)x$ is jointly continuous on $\R_+ \times G$ and since $K$ is compact, the set $M_t \coloneq \{T(s)Kx \colon 0 \leq s \leq t, \|x\| \leq 1\}$ is relatively compact in $G$. Having in mind that $\int_0^t T(t-s)KS(s)x  \ds $ $(x \in G)$ is the norm limit of Riemann sums, one observes that 
+	Since the mapping $(t,x) \mapsto T(t)x$ is jointly continuous on $\R_+ \times G$ and since $K$ is compact, the set $M_t \coloneq \{T(s)Kx \colon 0 \leq s \leq t, \norm{x} \leq 1\}$ is relatively compact in $G$. Having in mind that $\int_0^t T(t-s)KS(s)x  \ds $ $(x \in G)$ is the norm limit of Riemann sums, one observes that 
 	$(ct)^{-1}\int_0^t T(t-s)KS(s)x  \ds $ is an element of the closed convex hull
-	 $\overline{\mathrm{co}(M_t)}$ of\/ $M_t$, where $c \coloneq \sup \{\|S(s)\| \colon 0 \leq s \leq t\}$ and $\|x\| \leq 1$. Since $\overline{\mathrm{co}(M_t)}$ is compact (see II.4.3 in \textcite{schaefer:1966}) the assertion follows.
+	 $\overline{\mathrm{co}(M_t)}$ of\/ $M_t$, where $c \coloneq \sup \{\norm{S(s)} \colon 0 \leq s \leq t\}$ and $\norm{x} \leq 1$. Since $\overline{\mathrm{co}(M_t)}$ is compact (see II.4.3 in \textcite{schaefer:1966}) the assertion follows.
 \end{proof}
 %% --
 We will now show that for quasi-compact semigroups the asymptotic behavior is similar to the one stated for eventually compact semigroups in Theorem~\ref{thm:b4-2.1}. 
@@ -815,7 +815,7 @@ However, the rate of decay cannot be chosen arbitrarily large.
 		\begin{aligned}
 		T(t) &= T_1(t) + T_2(t) + \ldots + T_m(t) + R(t) \quad \text{where}\\
 		T_n(t) &= \exp(\lambda_nt) \cdot \sum_{j=0}^{k(n)-1} \frac{1}{j!} \cdot t^j (A - \lambda_n)^j \circ P_n \quad (t \geq 0) \quad \text{and}\\
-		\|R(t)\| &\leq C \cdot \eu^{-\epsilon t} \quad \text{for suitable constants} \quad \epsilon > 0, C \geq 1 .		
+		\norm{R(t)} &\leq C \cdot \eu^{-\epsilon t} \quad \text{for suitable constants} \quad \epsilon > 0, C \geq 1 .		
 		\end{aligned}
 	\end{equation}
 \end{theorem}
@@ -842,16 +842,16 @@ Let $\TT = (T(t))_{t \geq 0}$ be a positive semigroup on $C_{0}(X)$ which is qua
 	Let $r$ be an eigenvalue of\/ $A$ admitting a stricly positive eigenfunction and satisfying $\Re(r) \geq 0$. 
     Then $r = \omega_{0}(\TT) = s(A)$ and there is a positive projection $P$ of finite rank such that for suitable constants $\delta > 0$, $M \geq 1$ we have
 	\begin{equation}\label{eq:b4-2.6}
-		\|\eu^{-rt}T(t) - P\| \leq M \cdot \eu^{-\delta t} \quad \text{for all} \quad t \geq 0 \text{.}
+		\norm{\eu^{-rt}T(t) - P} \leq M \cdot \eu^{-\delta t} \quad \text{for all} \quad t \geq 0 \text{.}
 	\end{equation}
 	
 	\item 
 	If\/ $(T(t))_{t \geq 0}$ is irreducible and $\omega_{0}(\TT) \geq 0$, there exist a strictly positive function $h \in C_{0}(X)$ and a strictly positive bounded measure $\nu \in M(X)$ such that for suitable constants $\delta > 0$, $M \geq 1$ one has
 	\begin{equation}\label{eq:b4-2.7}
-		\|\exp(-\omega_{0}(\TT)t) \cdot T(t) - \nu \otimes h\| \leq M \cdot \eu^{-\delta t} \quad \text{for all} \quad t \geq 0 \text{.}
+		\norm{\exp(-\omega_{0}(\TT)t) \cdot T(t) - \nu \otimes h} \leq M \cdot \eu^{-\delta t} \quad \text{for all} \quad t \geq 0 \text{.}
 	\end{equation}
 \end{enumerate}
-In both cases $(i)$ and $(ii)$ the estimates Eq.~\myeqpageref{eq:b4-2.3} for $\|T(t)f\|$ hold true (in case $(i)$ one has to replace $|\int f \diff{\nu}|$ by $\|Pf\|$).
+In both cases $(i)$ and $(ii)$ the estimates Eq.~\myeqpageref{eq:b4-2.3} for $\norm{T(t)f}$ hold true (in case $(i)$ one has to replace $|\int f \diff{\nu}|$ by $\norm{Pf}$).
 \end{corollary}
 %% --
 \begin{proof}
@@ -1042,7 +1042,7 @@ If\/ $(S(t))_{t\geq 0}$ is the semigroup on $F$ generated by $B$ and $\omega_0$ 
 \]
 %% --
 For $\lambda  >  \omega_0$ define the map $S_{\lambda} \in \LE$ by $S_{\lambda}f  \coloneq  f - \epsilon_{\lambda}\otimes R(\lambda,B)\Phi f$ where $\epsilon_{\lambda}(s) = \eu^{\lambda s}$ and $(h\otimes x)(s)  \coloneq  h(s)\cdot x$ for $h \in C[-1,0]$, $x \in F$ and $s \in [-1,0]$.
-Since $\|R(\lambda,B)\| \leq (\lambda-\omega_0)^{-1}$ it follows that $S_{\lambda}$ is invertible for $\lambda  >  \|\Phi\| + \omega_0$ and that $\|S_{\lambda}^{-1}\| \leq (\lambda-\omega_0)\cdot(\lambda-\|\Phi\|-\omega_0)^{-1}$.
+Since $\norm{R(\lambda,B)} \leq (\lambda-\omega_0)^{-1}$ it follows that $S_{\lambda}$ is invertible for $\lambda  >  \norm{\Phi} + \omega_0$ and that $\norm{S_{\lambda}^{-1}} \leq (\lambda-\omega_0)\cdot(\lambda-\norm{\Phi}-\omega_0)^{-1}$.
 Moreover, $S_{\lambda}$ induces a bijection from $D(A)$ onto $D(A_{0})$ such that
 %% --
 \begin{equation}\label{eq:b4-3.2}
@@ -1054,7 +1054,7 @@ Moreover, $S_{\lambda}$ induces a bijection from $D(A)$ onto $D(A_{0})$ such tha
 %% --
 Proceeding as in the example mentioned above we obtain
 %% --
-\[\|R(\lambda,A)\| \leq (\lambda - \omega_0)\cdot(\lambda - \|\Phi\| - \omega_0)^{-1}\cdot(\lambda - \omega_0)^{-1} \leq (\lambda - \|\Phi\| - \omega_0)^{-1}.\]
+\[\norm{R(\lambda,A)} \leq (\lambda - \omega_0)\cdot(\lambda - \norm{\Phi} - \omega_0)^{-1}\cdot(\lambda - \omega_0)^{-1} \leq (\lambda - \norm{\Phi} - \omega_0)^{-1}.\]
 Thus $A$ is a generator by Part-I, Theorem~\ref{thm:a2-1.7}.
 
 It suffices to show the translation property \eqref{eq:b4-3.T} for $f \in D(A)$ only.
@@ -1237,7 +1237,7 @@ On the other hand, $f \in D(A)$ if and only if\/ $x \in D(B)$ and
 \text{$\lambda x - g(0) = Bx + \Phi H_\lambda g + \Phi_\lambda x$ where $(H_\lambda g)(t) \coloneq  \int_t^0 \eu^{\lambda(t-s)} g(s)  \ds  .$}
 \]
 Thus $\lambda \in \rho(A)$ if and only if for every $g \in E$ there exists a unique $x \in D(B)$ such that $(\lambda - B - \Phi_\lambda)x = g(0) + \Phi H_\lambda g$. 
-Notice that the map $x \mapsto x + \Phi H_\lambda(e_\mu \otimes x)$ $(x \in F)$ is surjective on $F$ if\/ $\mu$ is chosen so large that $\|\Phi H_\lambda(e_\mu \otimes x)\| \leq 1/2 \cdot \|x\|$ for all $x \in F$. 
+Notice that the map $x \mapsto x + \Phi H_\lambda(e_\mu \otimes x)$ $(x \in F)$ is surjective on $F$ if\/ $\mu$ is chosen so large that $\norm{\Phi H_\lambda(e_\mu \otimes x)} \leq 1/2 \cdot \norm{x}$ for all $x \in F$. 
 Hence the map $g \mapsto g(0) + \Phi H_\lambda g$ is surjective from $E$ onto $F$ and this shows that $\lambda \in \rho(A)$ if and only if\/ $\lambda - B - \Phi_\lambda$ is invertible.
 \end{proof}
 %% --
@@ -1259,21 +1259,21 @@ We now turn to the aspect of positivity in \eqref{eq:b4-3.RCP} and its impact on
 To this end, we let $F$ be a Banach lattice, making $E = C([-1,0],F)$ into a Banach lattice as well. 
 Furthermore, let $(S(t))_{t \geq 0}$ be a positive semigroup with generator $B$ and let $\Phi \in \mathcal{L}(E,F)$ be a positive operator. 
 As before, we restrict our attention to the case that $B - w$ generates a positive contraction semigroup for some $w \in \R$. 
-Indeed, if\/ $B$ generates a bounded positive semigroup on $F$, then $\|x\|  \coloneq  \sup_{t \geq 0}\|S(t)|x|\|$ for $x \in F$ defines an equivalent lattice norm on $F$ for which $(S(t))_{t \geq 0}$ is contractive.
+Indeed, if\/ $B$ generates a bounded positive semigroup on $F$, then $\norm{x}  \coloneq  \sup_{t \geq 0}\|S(t)|x|\|$ for $x \in F$ defines an equivalent lattice norm on $F$ for which $(S(t))_{t \geq 0}$ is contractive.
 %% --
 \begin{proposition}\label{prop:b4-3.5}
 	If\/ $\Phi \in \mathcal{L}(E,F)$ is a positive operator and if\/ $B$ generates a positive semigroup on $F$, then the semigroup $(T(t))_{t \geq 0}$ on $E$ generated by $Af  \coloneq  f'$ with domain $D(A)  \coloneq  \{f \in C^1 \colon f(0) \in D(B), f'(0) = Bf(0) + \Phi f\}$ is positive.
 \end{proposition}
 %% --
-\begin{proof} By Formula Eq.~\myeqpageref{eq:b4-3.2} we have $R(\lambda,A) = S_\lambda^{-1}R(\lambda,A_{0})$ for $\lambda > \|\Phi\|+w$, (where $S_\lambda f = f - \epsilon_\lambda \otimes R(\lambda,B)\Phi f$ for $f \in E$). 
-Thus the fact that $R(\lambda,A_{0})$ is positive (Part-III, Proposition~\ref{prop:c2-4.1}) reduces the problem to showing that $S_\lambda^{-1}$ is a positive operator for $\lambda > \|\Phi\|+w$.
+\begin{proof} By Formula Eq.~\myeqpageref{eq:b4-3.2} we have $R(\lambda,A) = S_\lambda^{-1}R(\lambda,A_{0})$ for $\lambda > \norm{\Phi}+w$, (where $S_\lambda f = f - \epsilon_\lambda \otimes R(\lambda,B)\Phi f$ for $f \in E$). 
+Thus the fact that $R(\lambda,A_{0})$ is positive (Part-III, Proposition~\ref{prop:c2-4.1}) reduces the problem to showing that $S_\lambda^{-1}$ is a positive operator for $\lambda > \norm{\Phi}+w$.
 
-Since $S_\lambda = \Id  - \epsilon_\lambda \otimes R(\lambda,B)\Phi$ and $\|\epsilon_\lambda \otimes R(\lambda,B)\Phi\| \leq (\lambda-w)^{-1} \cdot \|\Phi\| < 1$ we see that $S_\lambda^{-1} = \sum_{n=0}^{\infty}(\epsilon_\lambda \otimes R(\lambda,B)\Phi)^n$ is positive. 
+Since $S_\lambda = \Id  - \epsilon_\lambda \otimes R(\lambda,B)\Phi$ and $\norm{\epsilon_\lambda \otimes R(\lambda,B)\Phi} \leq (\lambda-w)^{-1} \cdot \norm{\Phi} < 1$ we see that $S_\lambda^{-1} = \sum_{n=0}^{\infty}(\epsilon_\lambda \otimes R(\lambda,B)\Phi)^n$ is positive. 
 Hence $(T(t))_{t \geq 0}$ is a positive semigroup again by Part-III, Proposition~\ref{prop:c2-4.1}.
 \end{proof}
 %% --
 \begin{remark*}
-Suppose that $\Phi$ has no mass in zero (\ie  for every $\epsilon > 0$ there exists $\delta > 0$ such that $\|\Phi f\| \leq \epsilon \|f\|$ for all $f \in E$, supp$(f) \subset [-\delta,0])$. 
+Suppose that $\Phi$ has no mass in zero (\ie  for every $\epsilon > 0$ there exists $\delta > 0$ such that $\norm{\Phi f} \leq \epsilon \norm{f}$ for all $f \in E$, supp$(f) \subset [-\delta,0])$. 
 Then the positivity hypotheses in the above proposition are necessary in order to obtain positivity of\/ $(T(t))_{t \geq 0}$ (\cf Example~\ref{ex:b2-1.22} for the case $\dim F < \infty$ and \textcite{kerscher:1986} for the general case).
 \end{remark*}
 %% --
@@ -1434,9 +1434,9 @@ In the situation of Theorem~\ref{thm:b4-3.7}\,(iii) we have the stronger result 
 (see also Part-III, Example~\ref{ex:c2-4.14}). Take $E = C([-1,0],\C)$, $\alpha \in \C$ and $\mu \in M[-1,0]_{+}$ such that $\mu(\{0\}) = 0$. 
 Then the operator $A$ given by $Af = f'$ on $D(A) = \{f \in C^1([-1,0],\C) \colon f'(0) = \alpha f(0) + \langle f,\mu\rangle\}$ generates a strongly continuous semigroup $(T(t))_{t\geq0}$. 
 In fact, this follows from Theorem~\ref{thm:b4-3.1} if we put $F = \C$, $\Phi = \mu$ and $B$ the multiplication by $\alpha$. 
-Moreover $\Phi_{0}$ is the multiplication by $ \langle \epsilon_{0}, \Phi  \rangle = \|\Phi\|$ (notice 
-$\Phi\geq 0$) and $s(B + \Phi_{0}) = \alpha + \|\Phi\|$. 
-Since $\omega_{0}(A) = s(A)$ by Eq.~\myeqpageref{eq:b4-1.1}, we obtain from Corollary~\ref{cor:b4-3.8} that $A$ generates a uniformly exponentially stable semigroup if and only if\/ $\alpha + \|\Phi\| < 0$.
+Moreover $\Phi_{0}$ is the multiplication by $ \langle \epsilon_{0}, \Phi  \rangle = \norm{\Phi}$ (notice 
+$\Phi\geq 0$) and $s(B + \Phi_{0}) = \alpha + \norm{\Phi}$. 
+Since $\omega_{0}(A) = s(A)$ by Eq.~\myeqpageref{eq:b4-1.1}, we obtain from Corollary~\ref{cor:b4-3.8} that $A$ generates a uniformly exponentially stable semigroup if and only if\/ $\alpha + \norm{\Phi} < 0$.
 \end{example}
 %% --
 The preceding considerations remain true if we consider an (arbitrary) finite time delay $\tau$ where $0 < \tau < \infty$. 

@@ -117,14 +117,14 @@ Using the closed graph theorem, it is easy to see that $b$ is separately continu
 Thus there is a constant $M$ such that
 %% --
 \begin{equation}\label{eq:c3-1.4}
-	\int_{0}^{\infty} \eu^{-\mu s}|\langle T(s)f,\phi\rangle| \ds  = \|b(f,\phi)\| \leq M\|f\|\|\phi\| \quad (f \in E, \phi \in E')\,.
+	\int_{0}^{\infty} \eu^{-\mu s}|\langle T(s)f,\phi\rangle| \ds  = \norm{b(f,\phi)} \leq M\norm{f}\norm{\phi} \quad (f \in E, \phi \in E')\,.
 \end{equation}
 %% --
 Given $0 \leq t < r$ and setting $\epsilon \coloneqq \Re(\lambda) - \mu$ we have
 %% --
 \begin{align*}
 	\left|\int_{t}^r \eu^{-\lambda s}\langle T(s)f,\phi\rangle \ds \right| &\leq \int_{t}^r \exp(-(\Re(\lambda)-\mu)s)\eu^{-\lambda s}|\langle T(s)f,\phi\rangle| \ds  \\
-	&\leq \eu^{-\epsilon t}\int_{t}^r \eu^{-\lambda s}|\langle T(s)f,\phi\rangle| \ds  \leq \eu^{-\epsilon t} M\|f\|\|\phi\|.
+	&\leq \eu^{-\epsilon t}\int_{t}^r \eu^{-\lambda s}|\langle T(s)f,\phi\rangle| \ds  \leq \eu^{-\epsilon t} M\norm{f}\norm{\phi}.
 \end{align*}
 %% --
 It follows that $\norm*{\int_{t}^r \eu^{-\lambda s}T(s) \ds } \leq M\eu^{-\epsilon t}$, hence $\left(\int_{0}^t \eu^{-\lambda s}T(s) \ds \right)_{t\geq 0}$ is a Cauchy net with respect to the operator norm.
@@ -155,7 +155,7 @@ Assume that $s(A) > -\infty$ and $s(A) \notin \sigma(A)$, then it follows from E
 Then
 \[
 \{z \in \C  \colon \Re(z) = s(A)\} \subseteq \rho(A) \text{ and } 
-\|R(z,A)\| \leq M \text{ for } z  \text{ with } \Re(z) = s(A)\,.
+\norm{R(z,A)} \leq M \text{ for } z  \text{ with } \Re(z) = s(A)\,.
 \]
 It follows that $\{z \in \C  \colon |\Re(z) - s(A)| < M^{-1}\} \subseteq \rho(A)$, which is absurd by the definition of\/ $s(A)$.
 \end{proof}
@@ -170,10 +170,10 @@ Then $m$ is a majorant for the order of any other pole on the line $s(A) + \im\R
 %% --
 \begin{proof}
 Without loss of generality we may assume that $s(A) = 0$.
-By Eq.~\myeqpageref{eq:c3-1.5} we have $\|R(\epsilon+\im\beta ,A)\| \leq \|R(\epsilon,A)\|$ for every $\beta \in \R $, $\epsilon > 0$.
+By Eq.~\myeqpageref{eq:c3-1.5} we have $\norm{R(\epsilon+\im\beta ,A)} \leq \norm{R(\epsilon,A)}$ for every $\beta \in \R $, $\epsilon > 0$.
 Therefore 
 \[
-\lim_{\epsilon\to 0}\|\epsilon^k R(\epsilon+\im\beta ,A)\| \leq \lim_{\epsilon\to 0}\|\epsilon^k R(\epsilon,A)\| = 0 \text{ for } k > m\,.
+\lim_{\epsilon\to 0}\norm{\epsilon^k R(\epsilon+\im\beta ,A)} \leq \lim_{\epsilon\to 0}\norm{\epsilon^k R(\epsilon,A)} = 0 \text{ for } k > m\,.
 \]
 \end{proof}
 %% --
@@ -312,15 +312,15 @@ As a first application of Theorem~\ref{thm:c3-2.2} we prove a cyclicity result f
 \index{spectrum!cyclic}
 %%KGK angepasst "point" an "point spectum"    
 \index{spectrum!point spectrum $P\sigma$}
-	Suppose $E$ is a Banach lattice such that the norm is strictly monotone on $E_{+}$ (\ie  $0 \leq f < g \Rightarrow \|f\| < \|g\|$).
+	Suppose $E$ is a Banach lattice such that the norm is strictly monotone on $E_{+}$ (\ie  $0 \leq f < g \Rightarrow \norm{f} < \norm{g}$).
 	If\/ $(T(t))$ is a positive contraction semigroup on $E$ with $s(A) = 0$, then $P\sigma_{b}(A) = P\sigma(A) \cap \im\R $ is imaginary additively cyclic.
 \end{corollary}
 %% --
 \begin{proof}
 	Suppose that $Ah = \im\beta  h$ $(\beta \in \R , h \in E)$.
 	Then we have $T(t)h = \eu^{\im\beta  t}h$ $(t \geq 0)$ and $|h| = |T(t)h| \leq T(t)|h|$ since $T(t)$ is positive.
-	Moreover, $\|h\| \leq \|T(t)|h|\| \leq \|h\|$ since $\|T(t)\| \leq 1$.
-	The assumption on the norm of\/ $E$ implies that $T(t)|h| = |h|$ for all $t \geq 0$, equivalently $A|h| = 0$.
+Moreover, $\norm{h} \leq \norm{T(t)|h|} \leq \norm{h}$ since $\norm{T(t)} \leq 1$.	
+The assumption on the norm of\/ $E$ implies that $T(t)|h| = |h|$ for all $t \geq 0$, equivalently $A|h| = 0$.
 	Now we can apply Theorem~\ref{thm:c3-2.2} in order to obtain the desired result.
 \end{proof}
 %% --
@@ -387,7 +387,7 @@ We assume that $R \colon D \to \mathcal{L}(G)$ is a pseudo-resolvent on a Banach
 %% -- 
 \begin{equation}\label{eq:c3-2.11}
 	\begin{split}
-	&\text{Given  $\lambda_{0} \in D$,  then for  $\mu \in D$  with  $|\mu-\lambda_{0}| < \|R(\lambda_{0})\|^{-1}$}\\ 
+	&\text{Given  $\lambda_{0} \in D$,  then for  $\mu \in D$  with  $|\mu-\lambda_{0}| < \norm{R(\lambda_{0})}^{-1}$}\\ 
 	&\text{ we have $ R(\mu) = \sum_{n=0}^{\infty} (\lambda_{0}-\mu)^n R(\lambda_{0})^{n+1}$ }\,.
 	\end{split}
 \end{equation}
@@ -419,7 +419,7 @@ Further properties of pseudo-resolvents are given in the following two propositi
 	\begin{enumerate}[\upshape (i)]
 		\item Given $\alpha \in \C $, $x \in G$ one has $(\lambda-\alpha)R(\lambda)x = x$ either for all $\lambda \in D$ or for none.
 		
-		\item Suppose $\mu \in \overline{D}\backslash D$. Then $R$ can be extended to an open set containing $\mu$ if and only if there exists a sequence $(\lambda_{n}) \subset D$ converging to $\mu$ such that $\|R(\lambda_{n})\|$ is bounded.
+		\item Suppose $\mu \in \overline{D}\backslash D$. Then $R$ can be extended to an open set containing $\mu$ if and only if there exists a sequence $(\lambda_{n}) \subset D$ converging to $\mu$ such that $\norm{R(\lambda_{n})}$ is bounded.
 	\end{enumerate}
 \end{proposition}
 %% --
@@ -434,10 +434,10 @@ Further properties of pseudo-resolvents are given in the following two propositi
 		It follows that $(\mu-\alpha)R(\mu)x = x$ for all $\mu \in D$.
 		
 		\item 
-        If there exists an extension, then $\|R(\lambda_{n})\|$ is bounded for every sequence $(\lambda_{n})$ converging to $\mu$ by Eq.~\myeqpageref{eq:c3-2.12}.
-		On the other hand assuming that $\|R(\lambda_{n})\|$ is bounded by $M$ for a fixed sequence $(\lambda_{n}) \subset D$ with $\lambda_{n} \to \mu$ $(M \geq 0)$, we have
+        If there exists an extension, then $\norm{R(\lambda_{n})}$ is bounded for every sequence $(\lambda_{n})$ converging to $\mu$ by Eq.~\myeqpageref{eq:c3-2.12}.
+		On the other hand assuming that $\norm{R(\lambda_{n})}$ is bounded by $M$ for a fixed sequence $(\lambda_{n}) \subset D$ with $\lambda_{n} \to \mu$ $(M \geq 0)$, we have
 		\[
-		\|R(\lambda_{n}) - R(\lambda_{m})\| = |\lambda_{n}-\lambda_{m}| \|R(\lambda_{n})R(\lambda_{m})\| \leq M^2|\lambda_{n}-\lambda_{m}|
+		\norm{R(\lambda_{n}) - R(\lambda_{m})} = |\lambda_{n}-\lambda_{m}| \norm{R(\lambda_{n})R(\lambda_{m})} \leq M^2|\lambda_{n}-\lambda_{m}|
         \]
         which shows that $(R(\lambda_{n}))$ is a Cauchy sequence in $\mathcal{L}(G)$, hence $S \coloneq \lim_{n\to\infty}R(\lambda_{n})$ exists.
 		The assertion now follows from Eq.~\myeqpageref{eq:c3-2.10} and Eq.~\myeqpageref{eq:c3-2.11}.
@@ -522,8 +522,8 @@ Before proving the equivalence of the two assertions we make some remarks.
     On the other hand, the set of operators $\{\frac{1}{t} \int_{0}^{t} \exp(-\tau s(A))T(\tau) \diff{\tau} \colon 0 \leq t \leq t_{0} \}$ is bounded for every $t_{0} \geq 0$, hence in Eq.~\myeqpageref{eq:c3-2.15}(b) the boundedness for $t \to \infty$ is important.
 
     \item 
-    By Corollary~\ref{cor:c3-1.4} we have $\|R(\lambda,A)\| \geq r(R(\lambda,A)) = (\lambda-s(A))^{-1}$. 
-    Hence $\|R(\lambda,A)\|$ grows at least as fast as $(\lambda-s(A))^{-1}$. 
+    By Corollary~\ref{cor:c3-1.4} we have $\norm{R(\lambda,A)} \geq r(R(\lambda,A)) = (\lambda-s(A))^{-1}$. 
+    Hence $\norm{R(\lambda,A)}$ grows at least as fast as $(\lambda-s(A))^{-1}$. 
     Thus if Eq.~\myeqpageref{eq:c3-2.15}(a) is satisfied, the resolvent grows as slowly as it possibly can for $\lambda \to s(A)$.
 
     \item 
@@ -554,7 +554,7 @@ Now Eq.~\myeqpageref{eq:c3-1.1} implies
 Thus $C(t)$ is bounded for $t \to \infty$ whenever $\lambda R(\lambda,A)$ is bounded for $\lambda \downarrow 0$.
 
 \upshape(b) $\Rightarrow$ \upshape(a):\quad
- Let $M \coloneqq \sup\{\|C(t)\| \colon t > 0\}$.
+ Let $M \coloneqq \sup\{\norm{C(t)} \colon t > 0\}$.
 Given $f \in E$, $\lambda > 0$ and $r > 0$ then integration by parts yields
 %% --
 \[
@@ -562,12 +562,12 @@ Given $f \in E$, $\lambda > 0$ and $r > 0$ then integration by parts yields
 \]
 It follows that
 \begin{align*}
-	\norm*{\lambda \int_{0}^{r} \eu^{-\lambda s}T(s)f \ds} &\leq \left(r\lambda \eu^{-r} + \lambda^{2}\int_{0}^{r} s\eu^{-\lambda s} \ds\right)M\|f\| \\
-	&= (1 - \eu^{-\lambda r})M\|f\|\,.
+	\norm*{\lambda \int_{0}^{r} \eu^{-\lambda s}T(s)f \ds} &\leq \left(r\lambda \eu^{-r} + \lambda^{2}\int_{0}^{r} s\eu^{-\lambda s} \ds\right)M\norm{f} \\
+	&= (1 - \eu^{-\lambda r})M\norm{f}\,.
 \end{align*}
 %% --
 
-Letting $r \to \infty$, we obtain by Eq.~\myeqpageref{eq:c3-1.1} $\|\lambda R(\lambda,A)f\| \leq M\|f\|$ $(f \in E, \lambda > 0)$ hence $\|\lambda R(\lambda,A)\| \leq M$
+Letting $r \to \infty$, we obtain by Eq.~\myeqpageref{eq:c3-1.1} $\norm{\lambda R(\lambda,A)f} \leq M\norm{f}$ $(f \in E, \lambda > 0)$ hence $\norm{\lambda R(\lambda,A)} \leq M$
 \end{proof}
 %% -- 
 Two sufficient conditions for a resolvent to grow slowly are stated in the following proposition.
@@ -613,7 +613,7 @@ By Eq.~\myeqpageref{eq:c3-2.13} we have
 \end{equation}
 %% --
 Next, we choose any $\phi \in E_{1}'$ such that $\langle  h_{1},\phi \rangle \neq 0$.
-Since $\|R_{1}(\lambda)'\| = \|R_{1}(\lambda)\| = \|R(\lambda,A)\|$, the assumption of slow growth implies that $\{\lambda R_{1}(\lambda)'\phi \colon \lambda > 0\}$ is bounded in $E_{1}'$, hence $\sigma(E_{1}',E_{1})$-relatively compact by \emph{Alaoglu's Theorem}.
+Since $\norm{R_{1}(\lambda)'} = \norm{R_{1}(\lambda)} = \norm{R(\lambda,A)}$, the assumption of slow growth implies that $\{\lambda R_{1}(\lambda)'\phi \colon \lambda > 0\}$ is bounded in $E_{1}'$, hence $\sigma(E_{1}',E_{1})$-relatively compact by \emph{Alaoglu's Theorem}.
 Thus, there exist $\phi_{1} \in \cap_{\epsilon>0}\{\tau R_{1}(\tau)'\phi \colon 0<\tau<\epsilon\}^{-\sigma(E'_1,E_1)}$.
 
 Using the resolvent equation Eq.~\myeqpageref{eq:c3-2.8} we obtain for $r > 0$, $\epsilon > 0$
@@ -660,9 +660,9 @@ Now we apply Proposition~\ref{prop:c3-2.7}(b) and obtain
 	\lambda R_{2}(\lambda+\im n\beta)h_{2}^{[n]} = h_{2}^{[n]}\ \text{ for } \ \Re(\lambda) > 0 , n \in \Z\,.
 \end{equation}
 
-In particular, we have $\|R_{2}(r+\im n\beta)\| \geq \frac{1}{r}$, thus 
+In particular, we have $\norm{R_{2}(r+\im n\beta)} \geq \frac{1}{r}$, thus 
 \[
-\|R(r+\im n\beta,A)\| = \|R_{1}(r+\im n\beta)\| \geq \|R_{2}(r+\im n\beta)\| \geq \frac{1}{r} \ \text{ for } r > 0\,.
+\norm{R(r+\im n\beta,A)} = \norm{R_{1}(r+\im n\beta)} \geq \norm{R_{2}(r+\im n\beta)} \geq \frac{1}{r} \ \text{ for } r > 0\,.
 \]
 This finally implies that $ \im n\beta \in \sigma(A)$ for $n \in \Z$.
 \end{proof}
@@ -869,7 +869,7 @@ This is the second statement of the following theorem (see also Part-II, Remark~
 	
 	Assume that $\langle T(t_{0})f,\phi \rangle = 0$ for some $t_{0} > 0$.
 	
-	We consider a null sequence $(t_{n})$, $0 < t_{n} < t_{0}$, such that $\|T(t_{n})f - f\| \leq 2^{-n}$ and define $f_{n} \coloneqq T(t_{n})f$, $g_{n} \coloneqq f - \sum_{k=n}^{\infty}(f-f_{k})^{+}$.
+	We consider a null sequence $(t_{n})$, $0 < t_{n} < t_{0}$, such that $\norm{T(t_{n})f - f} \leq 2^{-n}$ and define $f_{n} \coloneqq T(t_{n})f$, $g_{n} \coloneqq f - \sum_{k=n}^{\infty}(f-f_{k})^{+}$.
 	
 	Then for $g_{n} \leq f$, $f = \lim_{n\to\infty}g_{n}$ and $m \geq n$, 
 	we have 
@@ -1113,8 +1113,8 @@ Then $(T(t))_{t\geq 0}$ defined by
 is a strongly continuous semigroup of positive contractions on $E$.
 Since $\frac{\alpha}{\beta}$ is irrational, the semigroup $(T_{0}(t))$ is irreducible.
 Moreover, each $m_{t}$ is strictly positive (\ie  $m_{t} > 0$ a.e.) thus $(T(t))$ is irreducible as well.
-If one chooses $m$ such that $m(z,w)$ tends to $+\infty$ sufficiently fast as $(z,w) \to (1,1)$, one obtains $\|T(t)\| = \|m_{t}\|_{\infty} \leq \exp(-t^{2})$ for all $t \geq 0$.
-Obviously such an estimate of\/ $\|T(t)\|$ implies $\omega_0(A) = -\infty$, hence $\sigma(A) = \emptyset$.
+If one chooses $m$ such that $m(z,w)$ tends to $+\infty$ sufficiently fast as $(z,w) \to (1,1)$, one obtains $\norm{T(t)} = \norm{m_{t}}_{\infty} \leq \exp(-t^{2})$ for all $t \geq 0$.
+Obviously such an estimate of\/ $\norm{T(t)}$ implies $\omega_0(A) = -\infty$, hence $\sigma(A) = \emptyset$.
 \end{example}
 %% --
 \begin{theorem}\label{thm:c3-3.7}
@@ -1279,7 +1279,7 @@ To simplify the proof we isolate two lemmas.
     Then there exist an $\epsilon > 0$ and a subsequence $(g_{n})$ of\/ $(f_{n})$ such that
     %% --
     \begin{equation}\label{eq:c3-3.14}
-        \|g_{n} - g_{m}\| \geq \epsilon \text{ whenever } n \neq m.
+        \norm{g_{n} - g_{m}} \geq \epsilon \text{ whenever } n \neq m.
     \end{equation}
     %% --
   
@@ -1287,7 +1287,7 @@ To simplify the proof we isolate two lemmas.
     In particular, for $k \in \N$ the sequence $(g_{n+k})_{n\geq 1}$ is a normalized approximate eigenvector of\/ $R$.
     Then the elements $\hat{g}^{k} \in E_{\mathcal{F}}$ given by $\hat{g}^{k} \coloneqq ((g_{n+k})_{n\geq 1} + c_{\mathcal{F}}(E))$ are normalized eigenvectors of\/ $R_{\mathcal{F}}$ corresponding to $\alpha$.
     As a consequence of Eq.~\myeqpageref{eq:c3-3.14} we obtain
-    $\|\hat{g}^{k} - \hat{g}^{m}\| = \mathcal{F}\text{-}\lim\sup\|g_{n+k} - g_{n+m}\| \geq \epsilon$ provided that $k \neq m$.
+    $\norm{\hat{g}^{k} - \hat{g}^{m}} = \mathcal{F}\text{-}\lim\sup\norm{g_{n+k} - g_{n+m}} \geq \epsilon$ provided that $k \neq m$.
     This shows that the unit ball in $\ker(\alpha - R_{\mathcal{F}})$ is not relatively compact, hence $\ker(\alpha - R_{\mathcal{F}})$ has to be infinite dimensional.
 \end{proof}
 
@@ -1634,19 +1634,19 @@ In the last part of this section we discuss a spectral decomposition of positive
 	The second inequality of Eq.~\myeqpageref{eq:c3-4.1} implies
 	%% --
 	\begin{equation}\label{eq:c3-4.3}
-	\|T_{1}(t)f\|_{\psi} = \langle|T_{1}(t)f|,\psi\rangle = \langle|f|,T_{1}(t)'\psi\rangle \geq \langle|f|,\psi\rangle = \|f\|_{\psi}\,.
+	\norm{T_{1}(t)f}_{\psi} = \langle|T_{1}(t)f|,\psi\rangle = \langle|f|,T_{1}(t)'\psi\rangle \geq \langle|f|,\psi\rangle = \norm{f}_{\psi}\,.
 	\end{equation}
 	%% --
 	Then for $\lambda \in \C $ with $\Re(\lambda) < 0$ we have 
 	\[ 
-	\|(\eu^{\lambda t}-T_{1}(t))f\|_{\psi} \geq \|T_{1}(t)f\|_{\psi}-\|\eu^{\lambda t}f\|_{\psi} \geq (1-|\eu^{\lambda t}|)\|f\|_{\psi} \ (f \in (E,\psi))
+	\norm{(\eu^{\lambda t}-T_{1}(t))f}_{\psi} \geq \norm{T_{1}(t)f}_{\psi}-\norm{\eu^{\lambda t}f}_{\psi} \geq (1-|\eu^{\lambda t}|)\norm{f}_{\psi} \ (f \in (E,\psi))
 	\]
 	and we obtain for the corresponding generator
 	%% --
 	\begin{equation}\label{eq:c3-4.4}
 		\begin{split}
-		\|(\lambda-A_{1})f\|_{\psi} &= \lim_{t \to 0}\norm*{\frac{1}{t}(\eu^{-\lambda t}T_{1}(t)f-f)}_{\psi} \geq \lim_{t \to 0}\frac{1}{t}(\eu^{-t\Re(\lambda)}-1)\|f\|_{\psi}\\
-		&= -\Re(\lambda)\cdot\|f\|_{\psi} \ \text{ for } \ \Re(\lambda) < 0 \ \text{ and } \ f \in (E,\psi)\,.
+		\norm{(\lambda-A_{1})f}_{\psi} &= \lim_{t \to 0}\norm*{\frac{1}{t}(\eu^{-\lambda t}T_{1}(t)f-f)}_{\psi} \geq \lim_{t \to 0}\frac{1}{t}(\eu^{-t\Re(\lambda)}-1)\norm{f}_{\psi}\\
+		&= -\Re(\lambda)\cdot\norm{f}_{\psi} \ \text{ for } \ \Re(\lambda) < 0 \ \text{ and } \ f \in (E,\psi)\,.
 		\end{split}
 	\end{equation}
 	%% --
@@ -1742,7 +1742,7 @@ We list some typical cases in the following corollary.
 	Iterating this inequality we obtain $|f| \leq T|f| \leq T^{2}|f| \leq T^{3}|f| \leq \dots\,.$ 
 	By Eq.~\myeqpageref{eq:c3-4.5} $|f|_{o} \coloneqq  \lim_{n\to \infty} T^{n}|f|$ exists and we have $T|f|_{o} = \lim_{n\to \infty} T^{n+1}|f| = |f|_{o}$, \ie $|f|_{o} \in F_{\R }$.
 	And, for $g \in F_{\R }$ satisfying $\pm f \leq g$, we have $|f|_{o} \leq g$ thus $|f|_{o} = \sup_{F}\{f,-f\}$. 
-	Moreover, $\|f\|_{o} \coloneqq  \||f|_{o}\|$ $(f \in F)$ is an equivalent norm on $F$ such that $(F,\|\cdot\|_{o})$ is a Banach lattice.
+Moreover, $\norm{f}_{o} \coloneqq \norm{\abs{f}_{o}}$ $(f \in F)$ is an equivalent norm on $F$ such that $(F,\norm{\cdot}_{o})$ is a Banach lattice.
 	
 	(ii) If\/ $T(s)$ is mean-ergodic, then we have $\ker (1 - T(s)) = PE$ where $P$ is the mean-ergodic projection, \ie $Pf = \lim_{n\to \infty}\frac{1}{n}\sum_{k=0}^{n-1}T(s)^{k}f$.
 	Obviously $P$ is positive, hence II.11.5 of \textcite{schaefer:1974} implies that $PE$ is a Banach lattice (for the induced order and an equivalent norm).
@@ -1772,7 +1772,7 @@ However, one still cannot prove cyclicity of\/ $P\sigma_{b}(A)$ for arbitrary po
 Then $(T(t))_{t \geq 0}$ is a positve semigroup on $H$ and for the spectrum of
 the generator we obtain $\sigma(A) = i\R $, $P\sigma(A) = i\R \backslash\{0\}$.
 In view of Corollary~\ref{cor:c3-4.3}\,(i) the semigroup cannot be bounded.
-(The explicit representation Eq.~\myeqpageref{eq:c3-4.6} only allows the estimate $\|T(t)\| \leq \sqrt{2} + t \cdot \|k\|_2$ $(t\geq 0)$.)
+(The explicit representation Eq.~\myeqpageref{eq:c3-4.6} only allows the estimate $\norm{T(t)} \leq \sqrt{2} + t \cdot \norm{k}_2$ $(t\geq 0)$.)
 \end{example}
 
 In the next proposition we show that for semigroups of lattice homomorphisms on $L^1$-spaces, there is a spectral mapping theorem for the real part of the spectrum.
@@ -1805,7 +1805,7 @@ In both cases we have $\alpha \in \sigma(A)$.
 
 Now we assume $r \in A\sigma(T(t))$. 
 Then there exists a normalized sequence
-$(f_n) \subset E$ such that $\lim_{n \to \infty}\|T(t)f_n - rf_n\| = 0$.
+$(f_n) \subset E$ such that $\lim_{n \to \infty}\norm{T(t)f_n - rf_n} = 0$.
 Since we have
 %% --
 \[
@@ -1818,36 +1818,36 @@ Defining $g_n \coloneqq \int_{0}^{t} \eu^{-\alpha s}T(s)f_n \ds $ we have $g_n \
 \[
 (A-\alpha)g_n = (A-\alpha)\int_{0}^{t} \eu^{-\alpha s}T(s)f_n \ds = \eu^{-\alpha t}T(t)f_n - f_n = \frac{1}{r}(T(t)f_n - rf_n)\,.
 \]
-Therefore $\lim_{n \to \infty}\|(A - \alpha) g_n\| = 0$\,. It remains to prove 
-$\liminf_{n \to \infty}\|g_n\| > 0$\,.
+Therefore $\lim_{n \to \infty}\norm{(A - \alpha) g_n} = 0$\,. It remains to prove 
+$\liminf_{n \to \infty}\norm{g_n} > 0$\,.
 The latter assertion is a consequence of the following facts.
 \begin{enumerate}[\upshape (i),wide, labelindent=.25em]
 	\item
 	Since $f_n$ is positive and the norm is additive on $E_+$,
 	we have
 	\[
-    \|g_n\| = \int_{0}^{t} \eu^{-\alpha s}\|T(s)f_n\| \ds\,.
+    \norm{g_n} = \int_{0}^{t} \eu^{-\alpha s}\norm{T(s)f_n} \ds\,.
     \]
 	
 	\item 
     The inequality \quad
     $\displaystyle
-    \|T(t)f\| \leq \|T(t-s)\|\|T(s)f\|
+    \norm{T(t)f} \leq \norm{T(t-s)}\norm{T(s)f}
     $\quad 
     implies
 	\[
-    \|T(s)f\| \geq M^{-1}\|T(t)f\|
+    \norm{T(s)f} \geq M^{-1}\norm{T(t)f}
     \]
     \[
-    \text{for } \ 0 \leq s \leq t\,, f \in E \ \text{ and } \ M \coloneqq \sup_{0 \leq s \leq t}\|T(s) \|\,.
+    \text{for } \ 0 \leq s \leq t\,, f \in E \ \text{ and } \ M \coloneqq \sup_{0 \leq s \leq t}\norm{T(s) }\,.
     \]
     
 	 \item 
 	 \ \text{Since} \  
-     $\displaystyle\lim_{n \to \infty}\|T(t)f_n - rf_n\| = 0$ 
-     and $\|f_n\| = 1$, we have
+     $\displaystyle\lim_{n \to \infty}\norm{T(t)f_n - rf_n} = 0$ 
+     and $\norm{f_n} = 1$, we have
     $\displaystyle
-     \lim_{n \to \infty}\|T(t)f_n\| = r > 0\,.
+     \lim_{n \to \infty}\norm{T(t)f_n} = r > 0\,.
     $
 \end{enumerate}
 \end{proof}
@@ -2151,10 +2151,10 @@ Since $\mu$ is assumed to be regular, the inequality stated in (b) holds true fo
 
 \item[$(a)\Rightarrow(b)$:] 
 Assume that $(T(t))$ is a strongly continuous semigroup on
-$L^p(\mu)$ with $1 \leq p < \infty$. For $t_0 > 0$ we define $M \coloneqq  (\sup\{\|T(t)\| \colon 0 \leq t \leq t_0\})^{1/p}$.
+$L^p(\mu)$ with $1 \leq p < \infty$. For $t_0 > 0$ we define $M \coloneqq  (\sup\{\norm{T(t)} \colon 0 \leq t \leq t_0\})^{1/p}$.
 Given a Borel set $C \subset X$ we write $C(t) \coloneqq  \phi_t^{-1}(C)$.
 Then we have $T(t)\1_C = \1_{C(t)}$, hence
-$\mu(\phi_t^{-1}(C)) = \|\1_{C(t)}\|_p^p = \|T(t)\1_C\|_p^p \leq M \cdot \|\1_C\|_p^p = M \cdot \mu(C)$.
+$\mu(\phi_t^{-1}(C)) = \norm{\1_{C(t)}}_p^p = \norm{T(t)\1_C}_p^p \leq M \cdot \norm{\1_C}_p^p = M \cdot \mu(C)$.
 
 \item[$(b)\Rightarrow(a)$:] 
 Since the inequality in (b) holds for all Borel sets,
@@ -2166,18 +2166,18 @@ Moreover, for $0 \leq f \in L^p(\mu)$, there exists an increasing
 sequence $(h_n)$ of simple functions converging pointwise to $f$. Then
 $(h_n \circ \phi_t)$ is a monotone sequence converging pointwise to $f \circ \phi_t$. Using
 the fact that $\1_C \circ \phi_t = \1_{C(t)}$, $C(t)$ as above, and the assumption
-$\mu(C(t)) \leq M \cdot \mu(C)$, it is easy to see that $\|h_n \circ \phi_t\|_p^p \leq M \cdot \|h_n\|_p^p \leq M \cdot \|f\|_p^p$.
+$\mu(C(t)) \leq M \cdot \mu(C)$, it is easy to see that $\norm{h_n \circ \phi_t}_p^p \leq M \cdot \norm{h_n}_p^p \leq M \cdot \norm{f}_p^p$.
 Thus by the Monotone Convergence Theorem we have $f \circ \phi_t \in L^p(\mu)$ and
-$\|f \circ \phi_t\|_p \leq M^{1/p}\|f\|_p$. It follows that $T(t)$ is a bounded linear
-operator on $L^p(\mu)$ and $\|T(t)\| \leq M^{1/p}$ for $0 \leq t \leq t_0$. Since $\phi$ is a
+$\norm{f \circ \phi_t}_p \leq M^{1/p}\norm{f}_p$. It follows that $T(t)$ is a bounded linear
+operator on $L^p(\mu)$ and $\norm{T(t)} \leq M^{1/p}$ for $0 \leq t \leq t_0$. Since $\phi$ is a
 semiflow, we have $T(0) = \Id $ and $T(t+s) = T(s)T(t)$ $(0 \leq s,\,t < \infty)$. 
 \end{enumerate}
 %% --
 It remains to prove strong continuity. Since $\phi$ is continuous and Eq.~\myeqpageref{eq:c3-4.12}
 holds, we know that $T(t)(C_c(X)) \subset C_c(X)$ and that $T(t)f$ tends to $f$
 uniformly as $t \to 0$ provided that $f \in C_c(X)$. It follows that
-$\lim_{t \to 0}\|T(t)f - f\|_p = 0$ for $f \in C_c(X)$. Since $C_c(X)$ is dense in
-$L^p(\mu)$ and $\|T(t)\| \leq M^{1/p}$ for $0 \leq t \leq t_0$, the semigroup is strongly
+$\lim_{t \to 0}\norm{T(t)f - f}_p = 0$ for $f \in C_c(X)$. Since $C_c(X)$ is dense in
+$L^p(\mu)$ and $\norm{T(t)} \leq M^{1/p}$ for $0 \leq t \leq t_0$, the semigroup is strongly
 continuous.
 
 \begin{enumerate}[\upshape (i), wide, labelindent=.25em, start=2]
@@ -2209,10 +2209,10 @@ $\phi \colon \R  \times \R ^n \to \R ^n$ which is $C^1$. Moreover, we have
 %% --
 \begin{equation}\label{eq:c3-4.13}
 \begin{minipage}{.8\textwidth} 
-$\|D\phi_t(x)\| \leq \eu^{M|t|}$  for all  $x \in \R ^n$, $t \in \R$  where   
+$\norm{D\phi_t(x)} \leq \eu^{M|t|}$  for all  $x \in \R ^n$, $t \in \R$  where   
 %
 \[
-	M \coloneqq  \sup \{\|DF(x)\| \colon x \in \R ^n\}.
+	M \coloneqq  \sup \{\norm{DF(x)} \colon x \in \R ^n\}.
 \]
 % 
 \end{minipage}
@@ -2236,7 +2236,7 @@ If\/ $\lambda$ denotes the Lebesgue measure, then
 \end{equation}
 %% --
 Here we used Eq.~\myeqpageref{eq:c3-4.13} and the fact that the determinant of an n$\times$n-matrix
-$B$ satisfies $|\det B| \leq \|B\|^n$\,.
+$B$ satisfies $|\det B| \leq \norm{B}^n$\,.
 \end{example}
 
 In general, existence of a global flow does not ensure that one can

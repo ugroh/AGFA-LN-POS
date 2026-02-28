@@ -27,7 +27,7 @@ Thus it is a good idea to think of such spaces first in order to get a feeling f
 Later we will see that the connections between \emph{abstract} Banach lattices and the \emph{concrete} function lattices $ C(K) $ and $ L^{1}(\mu) $ are closer than one might think at first.
 We will use without further explanation the terms \emph{order relation} (ordering), \emph{ordered set}, \emph{majorant}, \emph{minorant}, \emph{supremum}, \emph{infimum}.
 
-By definition, a Banach lattice is a Banach space $ (E,\|\cdot\|) $ which is endowed with an order relation, usually written $ \leq $, such that $ (E,\leq) $ is a lattice and 
+By definition, a Banach lattice is a Banach space $ (E,\norm{\cdot}) $ which is endowed with an order relation, usually written $ \leq $, such that $ (E,\leq) $ is a lattice and 
 %% --
 \begin{align*}
  &\mathrm{(LO1)} \quad \text{$f \leq g$ implies $f + h \leq g + h $
@@ -74,7 +74,7 @@ whenever one side exists.
 Apart from this, the above definitions allow us to formulate the axiom of compatibility between norm and order requested in a Banach lattice in the following short way.
 %% --
 \begin{equation}\label{eq:c1-1}
-	\text{(LN)} \quad \text{ $|f| \leq |g|$ implies $ \|f\| \leq \|g\| $.}   
+	\text{(LN)} \quad \text{ $|f| \leq |g|$ implies $ \norm{f} \leq \norm{g} $.}   
 \end{equation}
 %% --
 A norm on a vector lattice is called a \emph{lattice norm} if it satisfies (LN).
@@ -252,7 +252,7 @@ In particular, every dual Banach lattice $ E $ admits sufficiently many order-co
 If the norm on a Banach lattice $ E $ satisfies
 %% --
 \begin{equation*}\label{eq:c1-2}
-	\mathrm{(M)} \quad \lVert \sup(f,g) \rVert = \sup(\lVert f \rVert,\|g\|) \text{ for $ f, g \in E_{+}$, }  
+	\mathrm{(M)} \quad \lVert \sup(f,g) \rVert = \sup(\lVert f \rVert,\norm{g}) \text{ for $ f, g \in E_{+}$, }  
 \end{equation*}
 %% --
 then $ E $ is called an abstract M-space or an \emph{AM-space}.
@@ -260,7 +260,7 @@ If, in addition, the unit ball of\/ $ E $ contains a largest element $ u $, then
 Condition (M) in $ E $ implies that in the dual of\/ $ E $ one has
 %% --
 \begin{equation*}\label{eq:c1-3}
-	\mathrm{(L)} \quad \|f + g\| = \|f\| + \|g\| \text{ for $ f $, $ g \in E_{+}'$.} 
+	\mathrm{(L)} \quad \norm{f + g} = \norm{f} + \norm{g} \text{ for $ f $, $ g \in E_{+}'$.} 
 \end{equation*}
 %% --
 Any Banach lattice satisfying (L) is called an abstract L-space or an \emph{AL-space}.
@@ -361,7 +361,7 @@ One has coincidence of\/ $ \mathcal{L}^{r}(E;F) $ and $ \L{E,F} $, \eg when $ E 
 At any rate, if\/ $ F $ is order complete, then $ \mathcal{L}^{r}(E;F) $ under the natural ordering is an order-complete vector lattice, and a Banach lattice under the norm
 %% --
 \[
-	T \mapsto \|T\|_{r} = \| |T| \|,
+	T \mapsto \norm{T}_{r} = \| |T| \|,
 \]
 %% --
 the right hand side denoting the operator norm of the absolute value of\/ $ T $.
@@ -530,7 +530,7 @@ For $ T \in \LE $ the following conditions are equivalent.
     $ f \perp g $ implies $ Tf \perp g $ \quad $(f, g \in E)$,
     
     \item 
-    $ \pm T \leq \|T\| \Id $,
+    $ \pm T \leq \norm{T} \Id $,
     
     \item 
     $ TJ \subseteq J $ for every ideal $ J $ in $ E $.

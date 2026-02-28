@@ -44,19 +44,19 @@ This parallels the case when $E = C_{0}(X)$, but if\/ $E$ has order continuous n
 In this section we first characterize generators of positive contraction semigroups on a real Banach lattice $E$.
 For that we use the results developed in Part-I, Section~\ref{sec:a2-2} for the canonical half-norm $N^{+} \colon E \to \R$ given by
 \begin{equation}\label{eq:c2-1.1}
-N^{+}(f) = \|f^{+}\| \quad (f \in E).
+N^{+}(f) = \norm{f^{+}} \quad (f \in E).
 \end{equation}
 %% --
 \begin{remark*}\label{rem:c2-1.1}
 %
-It is easy to see that $N^{+}(f) = \inf \{\|f+g\| \colon g \in E_{+}\} = \text{dist}(-f,E_{+})$ (\cf Part-I, Remark~\ref{rem:a2-2.8}). 
+It is easy to see that $N^{+}(f) = \inf \{\norm{f+g} \colon g \in E_{+}\} = \text{dist}(-f,E_{+})$ (\cf Part-I, Remark~\ref{rem:a2-2.8}). 
 \end{remark*}
 %% --
 It is obvious that $N^{+}$ is a strict half-norm (see Eq.~\myeqpageref{eq:a2-2.12}). 
 
 The subdifferential of\/ $N^{+}$ is given by
 \begin{equation}\label{eq:c2-1.2}
-	\partial N^{+}(f) = \{\phi \in E'_{+} \colon \|\phi\| \leq 1, \langle f,\phi \rangle = \|f^{+}\|\}
+	\partial N^{+}(f) = \{\phi \in E'_{+} \colon \norm{\phi} \leq 1, \langle f,\phi \rangle = \norm{f^{+}}\}
 \end{equation}
 %% --
 (this follows from the definition, see Part-I, Corollary~\ref{cor:a2-2.5}). 
@@ -68,7 +68,7 @@ The subdifferential of\/ $N^{+}$ is given by
 \item \label{ex:c2-1.1-1}
 Let $E = C_{0}(X)$ (X locally compact). 
 Let $f \in E$.
-There exists $x \in X$ such that $f(x) = \|f^{+}\|_{\infty}$. 
+There exists $x \in X$ such that $f(x) = \norm{f^{+}}_{\infty}$. 
 Then $\delta_{x} \in \partial N^{+}(f)$.
 %% \medskip
 %%
@@ -83,7 +83,7 @@ Let $E = L^{p}(X,\Sigma,\mu)$, where $(X,\Sigma,\mu)$ is a $\sigma$-finite measu
     \end{cases}
 \end{align*}
 %% -- 
-where $c > 0$ is such that $\int f(x) \phi(x) \dx = \|f^{+}\|$.
+where $c > 0$ is such that $\int f(x) \phi(x) \dx = \norm{f^{+}}$.
 Then $\diff{N^{+}}(f) = \{\phi\}$.
 %% \medskip
 %%
@@ -132,24 +132,24 @@ Theorem~\ref{thm:c2-1.2}  and Corollary~\ref{cor:c2-1.3}  immediately follow fro
 %% --
 \begin{lemma}\label{lem:c2-1.4}
 %
-A bounded linear operator  $T$ on a Banach lattice $E$ is a positive contraction if and only if\/ $\|(Tf)^{+}\| \leq \|f^{+}\|$ for all $f \in E$ (\ie if\/ $T$ is $N^{+}$-contractive).
+A bounded linear operator  $T$ on a Banach lattice $E$ is a positive contraction if and only if\/ $\norm{(Tf)^{+}} \leq \norm{f^{+}}$ for all $f \in E$ (\ie if\/ $T$ is $N^{+}$-contractive).
 \end{lemma}
 %% --
 \begin{proof}[Proof of the lemma]
 If\/ $T$ is a positive contraction, then $0 \leq (Tf)^{+} \leq Tf^{+}$ and so 
 %
 \[
-	N^{+}(Tf) = \|(Tf)^{+}\| \leq \|Tf^{+}\| \leq \|f^{+}\| = N^{+}(f)
+	N^{+}(Tf) = \norm{(Tf)^{+}} \leq \norm{Tf^{+}} \leq \norm{f^{+}} = N^{+}(f)
 \]
 %
 for all $f \in E$. 
 
 Conversely, assume that $T$ is an $N^{+}$-contraction and let $f \geq 0$. 
-Then $\|(Tf)^{-}\| = N^{+}(T(-f)) \leq N^{+}(-f) = \|f^{-}\| = 0$. 
+Then $\norm{(Tf)^{-}} = N^{+}(T(-f)) \leq N^{+}(-f) = \norm{f^{-}} = 0$. 
 Hence $(Tf)^{-} = 0$; \ie $Tf \geq 0$. 
 We have proved that $T$ is positive. 
 In particular, $|Tf| \leq T|f|$ for all $f \in E$. 
-Hence $\|Tf\| = \|\,|Tf|\,\| \leq \|T|f|\,\| \leq N^{+}(T|f|) \leq N^{+}(|f|) = \|f\|$ for all $f \in E$. 
+Hence $\norm{Tf} = \|\,|Tf|\,\norm{ \leq }T|f|\,\| \leq N^{+}(T|f|) \leq N^{+}(|f|) = \norm{f}$ for all $f \in E$. 
 So $T$ is a contraction.
 \end{proof}
 %% --
@@ -161,7 +161,7 @@ So $T$ is a contraction.
 Consider the second derivative with Dirichlet boundary condition on $E = C_{0}(0,1)$; \ie we let $Af = f''$ with domain $D(A) = \{f \in C^{2}[0,1] \colon f(0) = f(1) = f''(0) = f''(1) = 0\}$.
 $A$ is dispersive. 
 In fact, let $f \in D(A)$. 
-Then there exists $x \in (0,1)$ such that $f(x) = \sup_{y \in [0,1]} f(y) = \|f^{+}\|_{\infty}$. 
+Then there exists $x \in (0,1)$ such that $f(x) = \sup_{y \in [0,1]} f(y) = \norm{f^{+}}_{\infty}$. 
 Thus $\delta_{x} \in \diff{N^{+}}(f)$. 
 But $\langle Af,\delta_{x} \rangle = f''(x) \leq 0$ since $f$ has a maximum in $x$.
 Let $g \in E$. 
@@ -222,7 +222,7 @@ $A$ is dispersive.
 In fact, let $f \in D(A)$. 
 If\/ $f^{+} = 0$, then $\phi \coloneqq 0 \in \diff{N^{+}}(f)$. 
 So assume that $f^{+} \neq 0$. 
-Then there exists $x \in \R^{n}$ such that $f(x) = \|f\|_{\infty} = \sup\{f(y) \colon y \in \R^{n}\}$. 
+Then there exists $x \in \R^{n}$ such that $f(x) = \norm{f}_{\infty} = \sup\{f(y) \colon y \in \R^{n}\}$. 
 Thus $\delta_{x} \in \diff{N^{+}}(f)$.
 Since $f$ has a maximum in $x$ it follows that $\langle Af,\delta_{x} \rangle = (\Delta f)(x) = \text{tr}(\partial^{2}f/\partial x_{i}\partial x_{j})(x) \leq 0$. 
 Moreover,
@@ -388,7 +388,7 @@ Assume that
 \begin{enumerate}[\upshape (i)]
 %%
 \item \label{thm:c2-1.8-1}
-there exists $w \in \R$ such that $\|T(t)\| \leq \eu^{wt}$ for all $t \geq 0$;
+there exists $w \in \R$ such that $\norm{T(t)} \leq \eu^{wt}$ for all $t \geq 0$;
 %%--
 \item \label{thm:c2-1.8-2}
 there exists a core $D_{0}$ of\/ $A$ such that $f \in D_{0}$ implies $|f| \in D_{0}$.
@@ -412,15 +412,15 @@ If the restriction of\/ $A$ to $D_{0}$ satisfies the positive minimum principle 
 \begin{proof}[Proof of Proposition~\ref{prop:c2-1.9}  ]
 By Part-I, Proposition~\ref{prop:a2-2.9}, it is enough to show that $A_{0} \coloneqq A_{\vert D_{0}}$ is dispersive.
 Let $f \in D_{0}$ and $\phi \in \diff{N^{+}}(f)$.
-Then $\phi \in E'_{+}$, $\|\phi\| \leq 1$ and $\langle f,\phi \rangle = \|f^{+}\|$.
+Then $\phi \in E'_{+}$, $\norm{\phi} \leq 1$ and $\langle f,\phi \rangle = \norm{f^{+}}$.
 Hence, 
 %
 \[
-	\langle f^{-},\phi \rangle = \langle f^{-},\phi \rangle + \langle f,\phi \rangle - \|f^{+}\| = \langle f^{+},\phi \rangle - \|f^{+}\| \leq 0 .
+	\langle f^{-},\phi \rangle = \langle f^{-},\phi \rangle + \langle f,\phi \rangle - \norm{f^{+}} = \langle f^{+},\phi \rangle - \norm{f^{+}} \leq 0 .
 \]
 %
 Thus $\langle f^{-},\phi \rangle = 0$.
-Consequently, $\langle f^{+},\phi \rangle = \langle f,\phi \rangle = \|f^{+}\|$; and so $\phi \in \diff{N}(f^{+})$.
+Consequently, $\langle f^{+},\phi \rangle = \langle f,\phi \rangle = \norm{f^{+}}$; and so $\phi \in \diff{N}(f^{+})$.
 Since $A$ is dissipative it follows that $\langle Af^{+},\phi \rangle \leq 0$.
 Moreover, since $A$ satisfies \myeqpageref{eq:c2-P} we have $\langle Af^{-},\phi \rangle \geq 0$.
 So we finally obtain, $\langle Af,\phi \rangle = \langle Af^{+},\phi \rangle - \langle Af^{-},\phi \rangle \leq 0$.
@@ -437,7 +437,7 @@ Thus $(T(t))_{t \geq 0}$ is positive as well.
 %% --
 Next we give a reformulation of the positive minimum principle.
 For $0 < u \in E_{+}$ we denote by $E_{u}$ the principal ideal generated by $u$.
-If\/ $g \in E_{+}$, then $g \in \overline{E_{u}}$ if and only if\/ $\lim_{n \to \infty} \|u - n u \wedge g\| = 0$.
+If\/ $g \in E_{+}$, then $g \in \overline{E_{u}}$ if and only if\/ $\lim_{n \to \infty} \norm{u - n u \wedge g} = 0$.
 %% --
 \begin{lemma}\label{lem:c2-1.10}
 %
@@ -484,16 +484,16 @@ $f \in E_{+}$, $\phi \in E'_{+}$, $\langle f,\phi \rangle = 0$ implies $\langle 
 $(Af)^{-} \in \overline{E_{f}}$ for all $f \in D(A)_{+}$.
 %%--
 \item \label{thm:c2-1.11-4}
-$A + \|A\| \cdot \Id \geq 0$.
+$A + \norm{A} \cdot \Id \geq 0$.
 \end{enumerate}
 \end{theorem}
 %% --
 \begin{proof}
 It follows by Proposition~\ref{prop:c2-1.7}   that ~\ref{thm:c2-1.11-1}   implies~\ref{thm:c2-1.11-2}.
-Since $\|\eu^{tA}\| \leq \eu^{t\|A\|}$ $(t\geq0)$,~\ref{thm:c2-1.11-2}   implies~\ref{thm:c2-1.11-1}   by Theorem~\ref{thm:c2-1.8}.
+Since $\norm{\eu^{tA}} \leq \eu^{t\norm{A}}$ $(t\geq0)$,~\ref{thm:c2-1.11-2}   implies~\ref{thm:c2-1.11-1}   by Theorem~\ref{thm:c2-1.8}.
 The equivalence of~\ref{thm:c2-1.11-2}   and~\ref{thm:c2-1.11-3}   is established by Lemma~\ref{lem:c2-1.10}.
-If~\ref{thm:c2-1.11-4} holds, then $\eu^{t(A+\|A\|)} \geq 0$ $(t\geq0)$.
-Thus $\eu^{tA} = \eu^{-t\|A\|} \eu^{t(A+\|A\|)} \geq 0$, $(t\geq0)$.
+If~\ref{thm:c2-1.11-4} holds, then $\eu^{t(A+\norm{A})} \geq 0$ $(t\geq0)$.
+Thus $\eu^{tA} = \eu^{-t\norm{A}} \eu^{t(A+\norm{A})} \geq 0$, $(t\geq0)$.
 We have shown that~\ref{thm:c2-1.11-1},~\ref{thm:c2-1.11-2}  and~\ref{thm:c2-1.11-3} are equivalent and~\ref{thm:c2-1.11-4}  implies~\ref{thm:c2-1.11-1}.
 
 It remains to show that~\ref{thm:c2-1.11-1}  implies~\ref{thm:c2-1.11-4}.
@@ -507,15 +507,15 @@ In particular
 \end{equation}
 %% --
 Let $\lambda \geq 0$ and $f \in E_{+}$ such that $g = (A + \lambda)f \not\geq 0$.
-We have to show that $\lambda \leq \|A\|$.
+We have to show that $\lambda \leq \norm{A}$.
 Denote by $P$ the band projection onto the band generated by $g^{-}$.
 Then $PAf + \lambda Pf = Pg = g^{-} < 0$.
 Since by  Eq.~\myeqpageref{eq:c2-1.9}, $[A(\Id - P)f]^{-} \in (\Id - P)E$, it follows 
 $0 > \lambda Pf + PAf = \lambda Pf + PAPf + PA(\Id-P)f \geq \lambda Pf + PAPf + P(A(\Id-P)f)^{+} \geq \lambda Pf + PAPf$.
 %%--
 Hence $0 \leq \lambda Pf < -PAPf$.
-This implies that $Pf \neq 0$ and $\lambda\|Pf\| \leq \|PAPf\| \leq \|A\|\cdot\|Pf\|$.
-Consequently $\lambda \leq \|A\|$.
+This implies that $Pf \neq 0$ and $\lambda\norm{Pf} \leq \norm{PAPf} \leq \norm{A}\cdot\norm{Pf}$.
+Consequently $\lambda \leq \norm{A}$.
 \end{proof}
 %%
 \begin{remark}\label{rem:c2-1.12}
@@ -1496,13 +1496,13 @@ It follows from the hypothesis that there exists $\lambda_{1} \in \rho(\overline
 Since $R(\lambda,A) \leq R(\lambda_{1},A)$ (by Part-II, Lemma~\ref{lem:b2-1.9}), it follows from Eq.~\myeqpageref{eq:c2-4.8} that 
 %
 \[
-	\|R(\lambda,\overline{B})\| \leq \|R(\lambda,A)\| \leq \|R(\lambda_{1},A)\| \coloneq c  
+	\norm{R(\lambda,\overline{B})} \leq \norm{R(\lambda,A)} \leq \norm{R(\lambda_{1},A)} \coloneq c  
 \]
 %
 hence 
 %
 \[
-	\text{dist}(\lambda,\sigma(\overline{B})) = r(R(\lambda,\overline{B}))^{-1} \geq \|R(\lambda,\overline{B})\|^{-1} \geq 1/c 
+	\text{dist}(\lambda,\sigma(\overline{B})) = r(R(\lambda,\overline{B}))^{-1} \geq \norm{R(\lambda,\overline{B})}^{-1} \geq 1/c 
 \]
 %
 for all $\lambda \in \rho(\overline{B}) \cap [\lambda_{1},\infty)$. 
@@ -1516,7 +1516,7 @@ Let $w > \omega_{0}(A), \lambda_{1}$.
 Then it follows from Eq.~\myeqpageref{eq:c2-4.9} that 
 %
 \[
-	\|(\lambda - w)^{n}R(\lambda,\overline{B})^{n}\| \leq \|(\lambda - w)^{n}R(\lambda,A)^{n}\| 
+	\norm{(\lambda - w)^{n}R(\lambda,\overline{B})^{n}} \leq \norm{(\lambda - w)^{n}R(\lambda,A)^{n}} 
 \]
 %
 for all $\lambda > w$, $n \in \N $. 
@@ -1734,8 +1734,8 @@ $(S(t))_{t \geq 0}$, then $s(B) \leq s(A)$.
 \begin{proof}[Proof of Lemma~\ref{lem:c2-4.10}]
 Let $\lambda > s(A)$.
 Then for all $\mu > \max \{\lambda,s(B)\}$ one has $0 \leq R(\mu,A) \leq R(\lambda,A)$ 
-(by Part-II, Lemma~\ref{lem:b2-1.9}), and so $\|R(\mu,B)\| \leq  \|R(\mu,A)\| \leq \|R(\lambda,A)\|$.
-Thus $\text{dist}(\mu,\sigma(B)) \geq \|R(\mu,B)\|^{-1} \geq \|R(\lambda,A)\|^{-1}$.
+(by Part-II, Lemma~\ref{lem:b2-1.9}), and so $\norm{R(\mu,B)} \leq  \norm{R(\mu,A)} \leq \norm{R(\lambda,A)}$.
+Thus $\text{dist}(\mu,\sigma(B)) \geq \norm{R(\mu,B)}^{-1} \geq \norm{R(\lambda,A)}^{-1}$.
 This implies that $[\lambda,\infty) \subset \rho(B)$.
 Hence $s(B) \leq \lambda$.
 \end{proof}
@@ -1937,8 +1937,8 @@ This implies $\Re(\beta) \leq \alpha$ since $\mu \{0\}  = \nu\{0\}  = 0$.
 \begin{remark*}
 It is of interest to find a condition on $B$ which implies that the semigroup $(S(t))_{t \geq 0}$ is uniformly exponentially stable (see Part-I, Section~\ref{sec:a4-1}).
 Using the positivity of\/ $(T(t))_{t \geq 0}$ it is shown in Part-II, Example~\ref{ex:b4-3.9}, that
-$(T(t))_{t \geq 0}$ is uniformly exponentially stable if and only if\/ $\|\mu\| + \alpha < 0$.
-Since a semigroup which is dominated by a uniformly exponentially stable semigroup is itself uniformly exponentially stable we obtain from Eq.~\myeqpageref{eq:c2-4.13} that $(S(t))_{t \geq 0}$ is stable if\/ $\|\nu\| + \Re(\beta) < 0$.
+$(T(t))_{t \geq 0}$ is uniformly exponentially stable if and only if\/ $\norm{\mu} + \alpha < 0$.
+Since a semigroup which is dominated by a uniformly exponentially stable semigroup is itself uniformly exponentially stable we obtain from Eq.~\myeqpageref{eq:c2-4.13} that $(S(t))_{t \geq 0}$ is stable if\/ $\norm{\nu} + \Re(\beta) < 0$.
 \end{remark*}
 %%
 We conclude this section discussing the following question.
@@ -2000,19 +2000,19 @@ If\/ $Af \geq 0$ for all $f \in D(A)_{+}$, then $A$ is bounded.
 \end{lemma}
 %%
 \begin{proof}[Proof of Lemma~\ref{lem:c2-4.18}]
-There exists $M \geq 1$ such that $\|R(\lambda,A)\| \leq M/\lambda$ for all $\lambda \geq$ $\omega_{0}(A)+1$.
+There exists $M \geq 1$ such that $\norm{R(\lambda,A)} \leq M/\lambda$ for all $\lambda \geq$ $\omega_{0}(A)+1$.
 Fix $\mu \geq \omega_{0}(A)+1$.
 Then $AR(\mu,A)Af = \mu R(\mu,A)Af - Af = \mu^{2}R(\mu,A)f - \mu f - Af$; hence $0 \leq Af \leq \mu^{2}R(\mu,A)f$ whenever $f \in D(A)_{+}$.
-Thus $\|Af\| \leq c\|f\|$ for all $f \in D(A)_{+}$ (where $c \coloneq \mu^{2}\|R(\mu,A)\|$).
+Thus $\norm{Af} \leq c\norm{f}$ for all $f \in D(A)_{+}$ (where $c \coloneq \mu^{2}\norm{R(\mu,A)}$).
 Consequently,
 %% --
 \[
-\|(\lambda R(\lambda,A) - \Id)f\| = \|AR(\lambda,A)f\| \leq c\|R(\lambda,A)f\| \leq (Mc/\lambda)\|f\| 
+\norm{(\lambda R(\lambda,A) - \Id)f} = \norm{AR(\lambda,A)f} \leq c\norm{R(\lambda,A)f} \leq (Mc/\lambda)\norm{f} 
 \]
 for all $f \in E_{+}$ and all $ \lambda \geq \omega_{0}(A)+1$. 
 Hence
 \[
-\|(\lambda R(\lambda,A) - \Id)g\| \leq Mc/\lambda(\|g^{+}\| + \|g^{-}\|) \leq (2Mc/\lambda)\|g\| \quad \text{for all} \quad g \in E\,.
+\norm{(\lambda R(\lambda,A) - \Id)g} \leq Mc/\lambda(\norm{g^{+}} + \norm{g^{-}}) \leq (2Mc/\lambda)\norm{g} \quad \text{for all} \quad g \in E\,.
 \]
 %% --
 Thus $\lambda R(\lambda,A)$ is invertible if\/ $\lambda$ is large enough and
@@ -2028,7 +2028,7 @@ Let $f \in D(C)_{+}$. Then $\Re(Bf) = \lim_{t \to 0} 1/t(\Re(\eu^{tB}f) - f) \le
 Hence $(C + |B|)f \geq (C - \Re(B))f \geq 0$ for all $f \in D(C)_{+}$.
 By Lemma~\ref{lem:c2-4.18} this implies that $C + |B|$ is bounded.
 Hence $C$ is bounded as well.
-Since $C + \|C\| \cdot \Id \geq 0$ by Theorem~\ref{thm:c2-1.11}, $C$ is regular.
+Since $C + \norm{C} \cdot \Id \geq 0$ by Theorem~\ref{thm:c2-1.11}, $C$ is regular.
 Let $C = C_{0} + N$ where $C_{0} \in \mathcal{Z}(E)^{d}$ and $N \in \ZE$.
 Since $C \geq \Re(B)$ by what we just proved, it follows that $N \geq \Re(M)$.
 Let $f \in E_{+}$, $\phi \in E'_{+}$ satisfy $\langle f,\phi \rangle = 0$.
@@ -2042,7 +2042,7 @@ Then for all $\alpha \in \R$,
 %% --
 Thus $C - \Re(\eu^{\im \alpha}B)$ satisfies the positive minimum principle (P) 
 for all $\alpha \in \R$.
-It follows from Theorem~\ref{thm:c2-1.11} that $C - \Re(\eu^{\im \alpha}B) + (\|C\|+\|B\|)\Id \geq 0$ for all $\alpha \in \R$.
+It follows from Theorem~\ref{thm:c2-1.11} that $C - \Re(\eu^{\im \alpha}B) + (\norm{C}+\norm{B})\Id \geq 0$ for all $\alpha \in \R$.
 Applying the band projection onto $\ZE^{d}$ on both sides of this inequality one obtains that
 \[
 |B_{0}| = \sup_{\alpha \in \R}\Re(\eu^{\im \alpha}B) \leq C_{0} 
@@ -2574,22 +2574,22 @@ Every strongly continuous group $(T(t))_{t \in \R}$ of real operators contained 
 %%
 \begin{proof}
 Let $(T(t))_{t \geq 0}$ be a strongly continuous multiplication semigroup.
-There exist $\omega \in \R$, $M \geq 1$ such that $\|T(t)\| \leq M\eu^{\omega\,t}$ $(t \geq 0)$.
+There exist $\omega \in \R$, $M \geq 1$ such that $\norm{T(t)} \leq M\eu^{\omega\,t}$ $(t \geq 0)$.
 Then 
-$\|f\|_1 \coloneqq \sup_{t \geq 0}\|\eu^{-\omega t}T(t)f\|$ 
+$\norm{f}_1 \coloneqq \sup_{t \geq 0}\norm{\eu^{-\omega t}T(t)f}$ 
 defines an equivalent lattice norm on $E$ for which 
-$\|T(t)\|_1 \leq \eu^{\omega t}$ $(t \geq 0)$.
-Since $\mathcal{Z}(E)$ is isometrically isomorphic to a space $C(K)$ (as a Banach lattice), for an operator $S \in \mathcal{Z}(E)$ one has $\|S\| = \inf\{c > 0 \colon |S| \leq c \cdot \Id\}$.
+$\norm{T(t)}_1 \leq \eu^{\omega t}$ $(t \geq 0)$.
+Since $\mathcal{Z}(E)$ is isometrically isomorphic to a space $C(K)$ (as a Banach lattice), for an operator $S \in \mathcal{Z}(E)$ one has $\norm{S} = \inf\{c > 0 \colon |S| \leq c \cdot \Id\}$.
 Hence the operator norm of\/ $S$ is independent of which lattice norm equivalent to the given one is considered on $E$.
-Consequently, $\|T(t)\| = \|T(t)\|_1 \leq \eu^{\omega t}$ $(t \geq 0)$.
+Consequently, $\norm{T(t)} = \norm{T(t)}_1 \leq \eu^{\omega t}$ $(t \geq 0)$.
 
-If\/ $(T(t))_{t \in \R}$ is a strongly continuous group contained in $\mathcal{Z}(E)$ then it follows that $\|T(t)\| \leq \eu^{\omega|t|}$ $(t \in \R)$ for some $\omega \geq 0$. 
+If\/ $(T(t))_{t \in \R}$ is a strongly continuous group contained in $\mathcal{Z}(E)$ then it follows that $\norm{T(t)} \leq \eu^{\omega|t|}$ $(t \in \R)$ for some $\omega \geq 0$. 
 If in addition the operators $T(t)$ are real one obtains from the above expression for the operator norm that 
 %% --
 \[
 \eu^{- \omega t} \cdot \Id \leq T(t) \leq \eu^{\omega t} \cdot \Id \quad (t \geq 0).
 \] 
-Consequently, $\lim_{t \to 0}\|T(t) - \Id\| = 0$.
+Consequently, $\lim_{t \to 0}\norm{T(t) - \Id} = 0$.
 \end{proof}
 %% --
 The assumption that the group consists of real operators is essential in Proposition~\ref{prop:c2-5.16}.
@@ -2599,7 +2599,7 @@ A concrete example is the Laplacian (Part-I, Section~\ref{subsec:a1-2.8}).
 
 On the other hand, if\/ $E = C(K)$ (K compact), then every strongly continous multiplication semigroup $(T(t))_{t \geq 0}$ has a bounded generator.
 In fact, let $m_t \coloneqq T(t)\1$ $(t \neq 0)$.
-Then $\lim_{t \downarrow 0}\|T(t) - \Id\| =    \lim_{t \downarrow 0}\|m_t - \1\|_{\infty} = 0$.
+Then $\lim_{t \downarrow 0}\norm{T(t) - \Id} =    \lim_{t \downarrow 0}\norm{m_t - \1}_{\infty} = 0$.
 %% --
 \begin{lemma}\label{lem:c2-5.17}
 %

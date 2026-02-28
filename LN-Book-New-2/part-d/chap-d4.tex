@@ -84,10 +84,10 @@ R(\lambda,A)\phi = \int_{0}^{\infty} \eu^{-\lambda t}T(s)\phi \ds
 \]
 %% --
 which follows as in Part-III, Section~\ref{sec:c3-1} or \textcite[Theorem 3]{greinervoigtwolff:1981}.
-Since $\|\phi\| = \phi(\1)$ for every $\phi \in M_{*}^{+}$ and since the norm is additive on the positive cone of\/ $M_{*}$, the integral
+Since $\norm{\phi} = \phi(\1)$ for every $\phi \in M_{*}^{+}$ and since the norm is additive on the positive cone of\/ $M_{*}$, the integral
 %% --
 \[
-	\int_{0}^{\infty} \eu^{\lambda t}\|T(s)\phi\| \ds
+	\int_{0}^{\infty} \eu^{\lambda t}\norm{T(s)\phi} \ds
 \]
 %% --
 exists for all $\phi \in M_{*}$ and all $\lambda > s(A)$.
@@ -115,7 +115,7 @@ We call the semigroup
 \index{stability!uniformly exponentially stable}
 \begin{enumerate}[\upshape (i)]
 \item 
-\emph{uniformly exponentially stable} if\/ $\|T(t)\| \leq M\eu^{-\omega t}$ for some $\omega$, $M > 0$ and all $t \geq 0$.
+\emph{uniformly exponentially stable} if\/ $\norm{T(t)} \leq M\eu^{-\omega t}$ for some $\omega$, $M > 0$ and all $t \geq 0$.
 
 \item 
 \emph{uniformly stable} if\/ $\lim_{t \to \infty} T(t) = 0$ in the strong operator topology.
@@ -168,7 +168,7 @@ Since $s(A) \leq \omega_{0}$ the assertion follows.
 %% --
 \begin{remark}\label{rem:d4-1.8}
 Consider the translation semigroup $(T(t))_{t \geq 0}$ on $C_{0}(\R_{+})$. 
-Then {$\|T(t)\| = 1$}, hence $s(A) = 1$, but $(T(t))_{t \geq 0}$ is strongly stable.
+Then {$\norm{T(t)} = 1$}, hence $s(A) = 1$, but $(T(t))_{t \geq 0}$ is strongly stable.
 The same holds for the translation semigroup on $L^1(\R_{+})$.
 Thus Theorem~\ref{thm:d4-1.7} is not true for semigroups on \CA-algebras without unit or on preduals of \WA-algebras.
 For the discussion of the commutative situation we refer to Part-II, Section~\ref{sec:b4-1}.
@@ -198,7 +198,7 @@ Every map $T(t) \in \TT$ of an implemented semigroup is weak*-continuous and $n$
 Because of
 %% --
 \[
-	\|T(t)\| = \|T(t)\1\| = \|U(t)^{*}U(t)\| = \|U(t)\|^2
+	\norm{T(t)} = \norm{T(t)\1} = \norm{U(t)^{*}U(t)} = \norm{U(t)}^2
 \]
 %% --
 it follows that $\omega_{0}(\TT) = 2\,\omega_{0}(\UG)$.
@@ -265,7 +265,7 @@ For every $0 \leq x \in D(A)$ there exists $0 \leq y \in D(A)$ such that $Ay = -
 For every $0 \leq x \in D(A)$ there exists $0 \leq y \in D(A)$ such that $y(D(B)) \subseteq D(B^{*})$ and $yB+B^{*}y = -x$.
 
 \item\label{item:d4-2.2-g}
-$\int_{0}^{\infty} \|U(s)\xi\|^2 \ds$ exists for all $\xi \in H$.
+$\int_{0}^{\infty} \norm{U(s)\xi}^2 \ds$ exists for all $\xi \in H$.
 
 \item\label{item:d4-2.2-h}
 $\int_{0}^{\infty} |(T(s)x)\xi|\eta) \ds$ exists for all $\xi$, $\eta \in H$ and all $x \in M$.
@@ -305,10 +305,10 @@ exists in the weak operator topology on $\BH$.
 
 Since on bounded sets of\/ $M$, the weak operator topology is equivalent to the $\sigma(M,M_{*})$-topology, for every $\phi \in M_{*}$ the integral $ \int_{0}^{\infty}\phi(T(s) \1) \ds $ exists (\textcite[1.15.2.]{sakai:1971}).
 Take $x \in M_{+}$ and $\phi \in M_{*}^{+}$.
-Then $x \leq \|x\| \1$ and therefore
+Then $x \leq \norm{x} \1$ and therefore
 %% --
 \[
-	\phi(T(s)x) \leq \|x\|\phi(T(s) \1) \quad (s \in \R_{+}).
+	\phi(T(s)x) \leq \norm{x}\phi(T(s) \1) \quad (s \in \R_{+}).
 \]
 %% --
 Hence $\int_{0}^{\infty} \phi(T(s)x) \ds$ exists.
@@ -318,7 +318,7 @@ Therefore $R(0,A)$ exists and is positive which proves (e).
 \item[(c) $\implies$ (g):] From the last paragraph we obtain that for all $\xi \in H$
 %% --
 \[
-\int_{0}^{\infty}\|U(s)\|^2ds = \int_{0}^{\infty}(T(s)\1\xi \,|\, \xi) \ds
+\int_{0}^{\infty}\norm{U(s)}^2ds = \int_{0}^{\infty}(T(s)\1\xi \,|\, \xi) \ds
 \]
 %% --
 exists.
@@ -502,7 +502,7 @@ Since each $C(s)'$ is an identity preserving Schwarz map, we obtain for all $x \
 \begin{align*}
 	\mleft( C(s)'((\1-p_{r})x))(C(s)'((\1-p_{r})x)^{*} \mright) 
 			&\leq C(s)'((\1-p_{r})xx^{*}(\1-p_{r}))  \\
- 	&\leq \|x\|^2 C(s)'(\1-p_{r}),
+ 	&\leq \norm{x}^2 C(s)'(\1-p_{r}),
 \end{align*}
 %% --
 hence
@@ -760,7 +760,7 @@ We claim that the convergence holds even in the strong operator topology.
 Taking this for granted and since $ T(t) $ is a contraction for every $ t \in \R_{+} $, it follows that
 %% --
 \[
-\lim_{t \to \infty} \|T(t)_{*}\phi\| = 0
+\lim_{t \to \infty} \norm{T(t)_{*}\phi} = 0
 \]
 %% --
 for all $ \phi \in \Kern{P_{*}} $.
@@ -775,7 +775,7 @@ the assertion is proved.
 %\end{proof}
 
 It remains to show that $ \lim_{\mathfrak{U}} T(t)_{*} = P_{*} $  in the strong operator topology.
-Choose $ 0 \leq \phi \in \BH_{*} $, $ \|\phi\| \leq 1 $  and let 
+Choose $ 0 \leq \phi \in \BH_{*} $, $ \norm{\phi} \leq 1 $  and let 
 %
 \[
 	\phi_{t} \coloneqq 
@@ -790,7 +790,7 @@ and let $ \{p_{i}: i \in A\} $  be an increasing net of projections of finite ra
 Since the set $ K \coloneqq \{\phi_{t}: t \geq 0\} $  is relatively compact in the $ \sigma(\BH_{*},\BH) $-topology, there exists for every $ \delta > 0 $  an index $ i_{0} \in A $  such that
 %% --
 \[
-\|(\1 - p_{i})\psi(\1 - p_{i})\| \leq \delta
+\norm{(\1 - p_{i})\psi(\1 - p_{i})} \leq \delta
 \]
 %% --
 for every $ \psi \in K $  and $ i \geq i_{0} $  (\textcite[Theorem III.5.4.(vi)]{takesaki:1979}).
@@ -815,14 +815,14 @@ Then for all $ x $  in the unit ball of\/ $ M $  it follows that
 Since the \WA-algebra $ p \BH p $  is finite dimensional, there exists $ U \in \mathfrak{U} $  such that
 %% --
 \[
-	\|(\phi_{t} - \phi_{0})\vert_{p \BH p} \| \leq \delta .
+	\norm{(\phi_{t} - \phi_{0})\vert_{p \BH p} } \leq \delta .
 \]
 %% --
 for all $ t \in U $.
 Consequently
 %% --
 \[
-\|(\phi_{t} - \phi_{0})\| \leq (\delta + 4\sqrt{\delta})
+\norm{(\phi_{t} - \phi_{0})} \leq (\delta + 4\sqrt{\delta})
 \]
 %% --
 for all $ t \in U $.
@@ -978,7 +978,7 @@ If\/ $ H_{0} \coloneqq \Kern{Q} \subseteq H_{\phi} $,  then it is easy to see th
 Consequently, using the results in \textcite{grohkuemmerer:1982}, it follows that there exists $ c \in \R $  such that for all $ \eta $  near $ 0 $  and all $ \beta \in \R $ :
 %% --
 \begin{equation}
-\|R(\eta + \im\beta A_{0})\| \leq c \tag{*} ,
+\norm{R(\eta + \im\beta A_{0})} \leq c \tag{*} ,
 \end{equation}
 %% --
 where $ A_{0} \coloneqq A_{|\Kern{Q}} $  (the norm taken in $ \mathcal{L}(H_{\phi}) $ ).
@@ -1068,7 +1068,7 @@ If the fixed space of the canonical extension $ \widehat{\RR} $  of\/ $ \RR $  t
 $ \lim_{n} z_{n} = 0 $  in the $ s^{*}(M,M_{*}) $-topology,
 
 \item\label{item:d4-4.3-ii}
-$ \lim_{n} \|(\Id - \lambda R(\lambda))\phi_{n}\| = 0 $  for all $ \lambda \in D $,
+$ \lim_{n} \norm{(\Id - \lambda R(\lambda))\phi_{n}} = 0 $  for all $ \lambda \in D $,
 
 \item\label{item:d4-4.3-iii}
 $ \phi_{n}(z_{n}) \geq \frac{1}{2} $  for all $ n \in \N $. 
@@ -1138,7 +1138,7 @@ there exists for all $ n \in \N $  an element $ U_{n} \in \mathfrak{U} $  such t
 $ \phi(z_{n,k}) \leq r_{n} $,
 
 \item
-$ \|(\Id - \mu R(\mu))\psi_{n,k}\| \leq r_{n} $,
+$ \norm{(\Id - \mu R(\mu))\psi_{n,k}} \leq r_{n} $,
 
 \item
 $ \psi_{n,k}(z_{n,k}) \geq \frac{1}{2} $. 
@@ -1151,7 +1151,7 @@ Inductively we find a sequence $ (z_{n}) $  in $ (M_{p})_{1}^{+} $  and a sequen
 $ \lim_{n} \phi_{n}(z_{n}) = 0 $, 
 
 \item\label{item:d4-4.3-iip}
-$ \lim_{n} \|(\Id - \mu R(\mu))\phi_{n}\| = 0 $, 
+$ \lim_{n} \norm{(\Id - \mu R(\mu))\phi_{n}} = 0 $, 
 
 \item
 $ \phi_{n}(z_{n}) \geq \frac{1}{2} $.
@@ -1169,7 +1169,7 @@ Lemma~\ref{lem:d4-4.3}\,\ref{item:d4-4.3-i} follows immediately from~\ref{item:d
 Using the resolvent equation for $ \RR $  it is easy to see that~\ref{item:d4-4.3-iip} implies
 %% --
 \[
-\lim_{n} \|(\Id - \lambda R(\lambda))\phi_{n}\| = 0
+\lim_{n} \norm{(\Id - \lambda R(\lambda))\phi_{n}} = 0
 \]
 %% --
 for all $ \lambda \in D $  and the proof is complete.
@@ -1183,7 +1183,7 @@ Without further comments, we will now use following facts.
 A sequence $ (\phi_{n}) $  in $ M'_{+} $  converges in the $ \sigma(M',M) $-topology if and only if it converges in $ \sigma(M',M'') $-topology (\textcite{akemann:1972}).
 
 \item\label{rem:item2}
-We can decompose $ \phi \in M'_{+} $  into its normal and singular part $ \phi = \phi^{(n)} + \phi^{(s)} $, $ 0 \leq \phi^{(n)} \in M_{*} $, $ 0 \leq \phi^{(s)} \in M_*^{\perp} $  and $ \|\phi\| = \|\phi^{(n)}\| + \|\phi^{(s)}\| $  (\textcite[Theorem III.2.14]{takesaki:1979}).
+We can decompose $ \phi \in M'_{+} $  into its normal and singular part $ \phi = \phi^{(n)} + \phi^{(s)} $, $ 0 \leq \phi^{(n)} \in M_{*} $, $ 0 \leq \phi^{(s)} \in M_*^{\perp} $  and $ \norm{\phi} = \norm{\phi^{(n)}} + \norm{\phi^{(s)}} $  (\textcite[Theorem III.2.14]{takesaki:1979}).
 
 \item\label{rem:item3}
 If\/ $ (\phi_{k}) $  is a sequence in $ M_{*} $  converging to zero in the $ \sigma(M_{*},M) $-topology and if\/ $ (x_{n}) $  is a sequence in $ M $  converging to zero in the $ s^{*}(M,M_{*}) $-topology, then $ \lim_{n} \phi_{k}(x_{n}) = 0 $  uniformly in $ k \in \N $  (\textcite[Lemma III.5.5]{takesaki:1979}).

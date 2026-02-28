@@ -40,29 +40,29 @@ Every strongly continuous one-parameter semigroup of Schwarz type on a properly 
 %% --
 \begin{proof}
 Let $\TT = (T(t)_{t \geq 0})$ be strongly continuous on $M$ and suppose $\TT$ not to be uniformly continuous.
-Then there exists a sequence $(T_n)$  in  $ \TT $ and $\epsilon > 0$ such that $\|T_n - \Id\| \geq \epsilon$, 
+Then there exists a sequence $(T_n)$  in  $ \TT $ and $\epsilon > 0$ such that $\norm{T_n - \Id} \geq \epsilon$, 
 but $T_n \to \Id$ in the strong operator topology.
 We claim that for every sequence $(p_{k})$ of mutually orthogonal projections and all bounded sequences $(x_{k})$ 
 in $M$
 %% --
 \[
-\lim_n \|(T_n - \Id)(p_{k} x_{k} p_{k})\| = 0
+\lim_n \norm{(T_n - \Id)(p_{k} x_{k} p_{k})} = 0
 \]
 %% --
 uniformly in $k \in \N$.
 This follows from the {Lemma of Phillips} (\textcite[Lemma II.10.3]{schaefer:1974}) and the fact that the sequence $(p_{k} x_{k} p_{k})$ is summable in the $s^{*}(M,M_*)$-topology (compare \textcite{elliot:1972}, Lemma 2.).
 
 Let $(p_{k})$ be a sequence of mutually orthogonal projections in $M$ such that every $p_{k}$ is equivalent to $\1$ via some $u_{k} \in M$ (\textcite[2.2]{sakai:1971}).
-Without loss of generality we may assume $\|(T_n - \Id)(u_n)\| \leq n^{-1}$ since the semigroup $\TT$ is strongly continuous.
+Without loss of generality we may assume $\norm{(T_n - \Id)(u_n)} \leq n^{-1}$ since the semigroup $\TT$ is strongly continuous.
 Thus we obtained the following.
 %% --
 \begin{enumerate}[\upshape (i)]
 \item 
-$\lim_n \|(T_n - \Id)(p_{k} x_{k} p_{k})\| = 0$ uniformly in $k \in \N$ for every bounded sequence $(x_{k})$ in $M$.
+$\lim_n \norm{(T_n - \Id)(p_{k} x_{k} p_{k})} = 0$ uniformly in $k \in \N$ for every bounded sequence $(x_{k})$ in $M$.
 \item 
 Every projection $p_{k}$ is equivalent to $\1$ via some $u_{k} \in M$.
 \item 
-$\|(T_n - \Id)u_n\| \leq n^{-1}$ for all $n \in \N$.
+$\norm{(T_n - \Id)u_n} \leq n^{-1}$ for all $n \in \N$.
 \end{enumerate}
 %% --
 For the following construction see Part-I, Section~\ref{subsec:a1-3.7} and Section~\ref{sec:d3-2} below.
@@ -105,7 +105,7 @@ for all $x \in \widehat{M}$.
 From this we obtain that for every bounded sequence $(x_{k})$ in $M$
 %% --
 \[
-	\lim_k \|T_k x_{k} - x_{k}\| = 0
+	\lim_k \norm{T_k x_{k} - x_{k}} = 0
 \]
 %% --
 for some subsequence of the $T_{k}$'s and of the $x_{k}$'s.

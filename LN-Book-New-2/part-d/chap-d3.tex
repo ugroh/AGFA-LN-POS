@@ -51,7 +51,7 @@ We refer to this as the \emph{polar decomposition} of\/ $\phi$.
 In addition, $|\phi|$ is \emph{uniquely determined} by the following two conditions.
 %% --  
 \begin{empheq}[left={\text{(*) } \, \empheqlbrace \quad }]{align*}
-    \|\phi\| &= \| |\phi| \| \\
+    \norm{\phi} &= \| |\phi| \| \\
     |\phi(x)|^{2} &\leq |\phi|(xx^{*}) \quad (x\in M)
 \end{empheq}
 %% --
@@ -276,15 +276,15 @@ For all $x \in M$ we obtain
 %% --
 \begin{align*}
 |\psi(x)|^2 &= |<\mu R(\mu+\im\alpha)'x,\psi>|^2 \leq \\
-&\leq \|\psi\| <(\mu R(\mu+\im\alpha)'x)(\mu R(\mu+\im\alpha)'x)^{*},\psi>  \\
-&\leq \|\psi\| <\mu R(\mu)'(xx^{*}),|\psi|>
+&\leq \norm{\psi} <(\mu R(\mu+\im\alpha)'x)(\mu R(\mu+\im\alpha)'x)^{*},\psi>  \\
+&\leq \norm{\psi} <\mu R(\mu)'(xx^{*}),|\psi|>
 \end{align*}
 %% --
 (see Corollary~\ref{cor:d1-2.2}).
 Since
 %% --
 \begin{align*}
-\|\psi\| &= \| |\psi| \| = |\psi|(\1) = \\
+\norm{\psi} &= \| |\psi| \| = |\psi|(\1) = \\
 &= <\mu R(\mu)'\1,|\psi|> = \| \mu R(\mu)|\psi| \|,
 \end{align*}
 %% --
@@ -315,10 +315,10 @@ follows.
 If\/ $\phi \in \Fix{\RR} $ is selfadjoint with Jordan decomposition $\phi = \phi^{+} - \phi^{-}$, then for all $ R \in \RR $
 %% --
 \begin{align*}
-\| \phi \| &= \| \phi^{+} \| + \| \phi^{-} \|  =
+\norm{ \phi } &= \norm{ \phi^{+} } + \norm{ \phi^{-} }  =
     \phi^{+}(\1) + \phi^{-}(\1) = \phi^{+}(R'\1) + \phi^{-}(R'\1) \\
     &= R(\phi^{+})(\1) + R(\phi^{-})(\1)  =
-    \| R(\phi^{+}) \| + \| R(\phi^{-}) \| 
+    \norm{ R(\phi^{+}) } + \norm{ R(\phi^{-}) } 
 \end{align*}
 %% -- 
 Then by \textcite[Theorem III.4.2.]{takesaki:1979} we obtain that $\phi^{+}$ and $\phi^{-}$ in $ \Fix{\RR} $.
@@ -354,7 +354,7 @@ But as we shall see below, if a semigroup on the predual of a \WA-algebra has su
 Helpful for these investigations will be the next lemma.
 %% --
 \begin{lemma}\label{lem:d3-1.6}
-Let $\RR$ be a pseudo-resolvent on $D = \{\lambda \in \C \colon \Re(\lambda) > 0\}$ with values in a Banach space $E$ such that $\|R(\mu + \im\alpha)\| \leq 1$ for all $(\mu,\alpha) \in \R_{+} \times \R$.
+Let $\RR$ be a pseudo-resolvent on $D = \{\lambda \in \C \colon \Re(\lambda) > 0\}$ with values in a Banach space $E$ such that $\norm{R(\mu + \im\alpha)} \leq 1$ for all $(\mu,\alpha) \in \R_{+} \times \R$.
 Then
 %% --
 \[
@@ -709,7 +709,7 @@ for some $\eta_{i} \in \Omega$, it follows from a theorem of Kronecker (see, \te
 hence
 %% --
 \[
-\sup\{\|\psi_{i} - T_{0}(t)\psi_{i}\| \colon 1 \leq i \leq n\} < \delta
+\sup\{\norm{\psi_{i} - T_{0}(t)\psi_{i}} \colon 1 \leq i \leq n\} < \delta
 \]
 %% --
 or 
@@ -893,19 +893,19 @@ Before going on let us recall the basic facts of the \emph{ultrapower} $\widehat
 If\/ $\ell^{\infty}(E)$ is the Banach space of all bounded functions on $\N $ with values in $E$, then
 %% --
 \[
-c_{\mathfrak{U}}(E) \coloneqq \{(x_{n}) \in \ell^{\infty}(E) \colon \lim_{\mathfrak{U}}\|x_{n}\| = 0\}
+c_{\mathfrak{U}}(E) \coloneqq \{(x_{n}) \in \ell^{\infty}(E) \colon \lim_{\mathfrak{U}}\norm{x_{n}} = 0\}
 \]
 %% --
 is a closed subspace of\/ $\ell^{\infty}(E)$ and equal to the kernel of the seminorm
 %% --
 \[
-\|(x_{n})\| \coloneqq \lim_{\mathfrak{U}}\|x_{n}\| \, , \, (x_{n}) \in \ell^{\infty}(E).
+\norm{(x_{n})} \coloneqq \lim_{\mathfrak{U}}\norm{x_{n}} \, , \, (x_{n}) \in \ell^{\infty}(E).
 \]
 %% --
 By the \emph{ultrapower} $\widehat{E}$ we understand the quotient space $\ell^{\infty}(E)/c_{\mathfrak{U}}(E)$ with norm
 %% --
 \[
-\|\widehat{x}\| = \lim_{\mathfrak{U}}\|x_{n}\| \, , \, (x_{n}) \in \widehat{x} \in \widehat{E}.
+\norm{\widehat{x}} = \lim_{\mathfrak{U}}\norm{x_{n}} \, , \, (x_{n}) \in \widehat{x} \in \widehat{E}.
 \]
 %% --
 Moreover, for a bounded linear operator $T \in \LE$, we denote by $\widehat{T}$ the well defined operator $\widehat{T}\widehat{x} \coloneqq (Tx_{n}) + c_{\mathfrak{U}}(E)$, $(x_{n}) \in \widehat{x}$.
@@ -926,7 +926,7 @@ This construction gives us the possibility to characterize uniformly ergodic sem
 %% --
 \index{resolvent!pole|(}
 \begin{lemma}\label{lem:d3-2.2}
-Let $\RR$ be a pseudo-resolvent on $D = \{\lambda \in \C \colon \Re(\lambda) > 0\}$ such that $\|\mu R(\mu+\im\alpha)\| \leq 1$ for all $(\mu,\alpha) \in \R_{+} \times \R$ and suppose
+Let $\RR$ be a pseudo-resolvent on $D = \{\lambda \in \C \colon \Re(\lambda) > 0\}$ such that $\norm{\mu R(\mu+\im\alpha)} \leq 1$ for all $(\mu,\alpha) \in \R_{+} \times \R$ and suppose
 %% --
 \[
 0 < \dim \Fix  {(\lambda-\im\alpha)\widehat{R}(\lambda)} < \infty \quad \text{for some} \quad \lambda \in D \, , \, \alpha \in \R .
@@ -952,7 +952,7 @@ $\im\alpha$ is a pole of the pseudo-resolvent $\RR$ and the residue of\/ $\RR$ a
 Take a normalized sequence $(x_{n})$ in $E$ with
 %% --
 \[
-\lim_{n}\|(\lambda - \im\alpha)R(\lambda)x_{n} - x_{n}\| = 0 .
+\lim_{n}\norm{(\lambda - \im\alpha)R(\lambda)x_{n} - x_{n}} = 0 .
 \]
 %% --
 Since the fixed space of {$(\lambda-\im\alpha)\widehat{R}(\lambda)$} is non trivial such a sequence exists.
@@ -960,27 +960,27 @@ Suppose $\{ x_{n} \colon n\in\N \}$ is not relatively compact.
 Then we may assume that there exists $\delta > 0$ such that
 %% --
 \[
-	\|x_{n} - x_{m}\| > \delta \quad \text{for} \quad n \neq m .
+	\norm{x_{n} - x_{m}} > \delta \quad \text{for} \quad n \neq m .
 \]
 %% --
 Take $k \in \N $ and let $\widehat{x}_{k}$ be the image of\/ $(x_{n+k})$ in $\widehat{E}$.
 Since
 %% --
 \[
-	\lim_{n}\|(\lambda - \im\alpha)R(\lambda)x_{n+k} - x_{n+k}\| = 0 ,
+	\lim_{n}\norm{(\lambda - \im\alpha)R(\lambda)x_{n+k} - x_{n+k}} = 0 ,
 \]
 %% --
 the so defined $\widehat{x}_{k}$'s belong to $\Fix{(\lambda - \im\alpha)\widehat{R}(\lambda)}$.
 Since this space is finite dimensional there exist $j < \ell$,  such that
 %% --
 \[
-	\|\widehat{x}_{j} - \widehat{x}_{\ell}\| \leq \frac{\delta}{2} .
+	\norm{\widehat{x}_{j} - \widehat{x}_{\ell}} \leq \frac{\delta}{2} .
 \]
 %% --
 From the definition of the norm in $\widehat{E}$ it follows that there are natural numbers $n < m$ such that
 %% --
 \[
-\|x_{n} - x_{m}\| \leq \frac{\delta}{2} ,
+\norm{x_{n} - x_{m}} \leq \frac{\delta}{2} ,
 \]
 %% --
 leading to a contradiction.
@@ -1000,7 +1000,7 @@ If the last inequality is strict, then there exists $\gamma > 0$ and a normalize
 $\widehat{x} \in \Fix  {(\lambda - \im\alpha)\widehat{R}(\lambda)}$ such that
 %% --
 \[
-\gamma \leq \|\widehat{y} - \widehat{x}\|
+\gamma \leq \norm{\widehat{y} - \widehat{x}}
 \]
 %% --
 for all $y \in \Fix  {(\lambda - \im\alpha)R(\lambda)}$.
@@ -1011,7 +1011,7 @@ Thus $0 \neq z \in \Fix{(\lambda - \im\alpha)R(\lambda)}$.
 From this we obtain the contradiction
 %% --
 \[
- 0 \leq \gamma \leq \|\widehat{z} - \widehat{x}\| = \lim \|z - x_{n}\| = 0
+ 0 \leq \gamma \leq \norm{\widehat{z} - \widehat{x}} = \lim \norm{z - x_{n}} = 0
 \]
 %% --
 Consequently,
@@ -1046,7 +1046,7 @@ Then there exists a normalized sequence $(y_{n})$ in
 $\bigcap_{j=1}^{n} \Kern{\phi_{j}}$ such that
 %% --
 \[
-\lim_{n} \|(\lambda - \im\alpha)R(\lambda)y_{n} - y_{n}\| = 0 .
+\lim_{n} \norm{(\lambda - \im\alpha)R(\lambda)y_{n} - y_{n}} = 0 .
 \]
 %% --
 Therefore $(y_{n})$ has an accumulation point different from zero contained in

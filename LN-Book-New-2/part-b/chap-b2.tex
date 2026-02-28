@@ -87,7 +87,7 @@ $\eu^{tA} \geq 0$ $(t \geq 0)$.
 \item \label{thm:b2-1.3-2}
 For  $0 \leq f \in C_{0}(X)$\, and  $x \in X$,  $f(x) = 0$ implies $(Af)(x) \geq 0$.
 \item \label{thm:b2-1.3-3}
-$A + \|A\|\Id \geq 0$.
+$A + \norm{A}\Id \geq 0$.
 \end{enumerate}
 \end{theorem}
 %% --
@@ -103,18 +103,18 @@ Then
 %% --
 \ref{thm:b2-1.3-2} implies~\ref{thm:b2-1.3-3}.
 Let $x \in X$.
-We have to show that $(Af)(x) + \|A\|f(x) \geq 0$ for all $f \in C_{0}(X)$\,.
+We have to show that $(Af)(x) + \norm{A}f(x) \geq 0$ for all $f \in C_{0}(X)$\,.
 Let $A'\delta_{x} = \mu + c\delta_{x}$ where $\mu \in M(X)$ such that $\mu(\{x\}) = 0$ and $c \in \R$.
 We claim that $\mu \geq 0$.
 Let $0 \leq f \in C_{0}(X)$ such that $f(x) = 0$.
 Then $\langle f,\mu \rangle = \langle f,A'\delta_{x} \rangle = (Af)(x) \geq 0$ by~\ref{thm:b2-1.3-2}.
 Thus $\mu \geq 0$ by Lemma~\ref{lem:b2-1.2}.
-Moreover, $|c| = \|c\delta_{x}\| \leq \|c\delta_{x} + \mu\| = \|A'\delta_{x}\| \leq \|A\|$.
+Moreover, $|c| = \norm{c\delta_{x}} \leq \norm{c\delta_{x} + \mu} = \norm{A'\delta_{x}} \leq \norm{A}$.
 Hence, for $f \in C_{0}(X)_{+}$,
 %%$
 %%--
 \[
-(Af)(x) + \|A\|f(x) = \langle f, A'\delta_{x} + \|A\|\delta_{x} \rangle = \langle f, \mu + (c+\|A\|)\delta_{x} \rangle \geq 0.
+(Af)(x) + \norm{A}f(x) = \langle f, A'\delta_{x} + \norm{A}\delta_{x} \rangle = \langle f, \mu + (c+\norm{A})\delta_{x} \rangle \geq 0.
 \]
 %%--
 %%$.
@@ -122,7 +122,7 @@ This shows ~\ref{thm:b2-1.3-2} to hold.
 
 \ref{thm:b2-1.3-3} implies~\ref{thm:b2-1.3-1}.
 We have 
-$\eu^{tA} = \eu^{-t\|A\|}\eu^{t(A+\|A\|)} \geq \eu^{-t\|A\|}\Id$ for all $t \geq 0$.
+$\eu^{tA} = \eu^{-t\norm{A}}\eu^{t(A+\norm{A})} \geq \eu^{-t\norm{A}}\Id$ for all $t \geq 0$.
 \end{proof}
 
 \begin{example}\label{ex:b2-1.4} 
@@ -240,11 +240,11 @@ Denote by $\1$ the constant-1-function and let $u = R(0,A)\,\1$.
 We claim that $u \gg 0$.
 If not, then there exists $x \in K$ such that $u(x) = 0$.
 Let $f \in C(K)$.
-Then $|f| \leq \|f\| \, \1$.
+Then $|f| \leq \norm{f} \, \1$.
 Consequently, 
 %
 \[
-	\vert R(0,A)f \vert \leq R(0,A)|f| \leq \|f\|R(0,A)\1 = \|f\|u.
+	\vert R(0,A)f \vert \leq R(0,A)|f| \leq \norm{f}R(0,A)\1 = \norm{f}u.
 \]
 %
 Hence $(R(0,A)f)(x) = 0$ for all $f \in C(K)$.
@@ -252,12 +252,12 @@ Since $D(A) = R(0,A)C(K)$, it follows that $D(A)$ is not dense, a contradiction.
 Define 
 %%$
 %%-
-\[\|f\|_{0} = \inf \{\lambda > 0 \colon |f| \leq \lambda u\} = \|f \cdot u^{-1} \|_{\infty}.
+\[\norm{f}_{0} = \inf \{\lambda > 0 \colon |f| \leq \lambda u\} = \norm{f \cdot u^{-1} }_{\infty}.
 \]
 %%--
 %%$.
-Then $\|\cdot\|_{0}$ is an equivalent norm on $C(K)$.
-Moreover, $\|f\|_{0} \leq 1$ if and only if\/ $f \in [-u,u]$.
+Then $\norm{\cdot}_{0}$ is an equivalent norm on $C(K)$.
+Moreover, $\norm{f}_{0} \leq 1$ if and only if\/ $f \in [-u,u]$.
 By the resolvent equation we have 
 %%$
 %%--
@@ -266,8 +266,8 @@ By the resolvent equation we have
 \]
 %%--
 for all $\lambda \geq 0$.
-This implies that $\lambda R(\lambda,A)$ is contractive for the norm $\|\cdot\|_{0}$.
-Thus by the Hille-Yosida Theorem $A$ is the generator of a semigroup which is contractive with respect to the norm $\|\cdot\|_{0}$ and so is bounded with respect to the supremum norm on $C(K)$.
+This implies that $\lambda R(\lambda,A)$ is contractive for the norm $\norm{\cdot}_{0}$.
+Thus by the Hille-Yosida Theorem $A$ is the generator of a semigroup which is contractive with respect to the norm $\norm{\cdot}_{0}$ and so is bounded with respect to the supremum norm on $C(K)$.
 
 \item \label{thm:b2-1.8-2}
 If\/ $w$ is arbitrary, let $\lambda > w$ and consider $A - \lambda$.
@@ -321,7 +321,7 @@ hence $R(\mu,B) \leq R(\mu_{1},B)$.
 	Consequently, 
 	%
 \[
-	\text{dist}(\mu,\sigma(B)) \geq 1/\|R(\mu,B)\| \geq 1/\|R(\mu_{1},B)\|
+	\text{dist}(\mu,\sigma(B)) \geq 1/\norm{R(\mu,B)} \geq 1/\norm{R(\mu_{1},B)}
 \]
 %
 for all $\mu \in M$.
@@ -469,14 +469,14 @@ Thus $A$ is closable and its closure $\overline{A} = \overline{B} + \lambda$ sat
 \begin{corollary}\label{cor:b2-1.12}
 %%
 Let $A \colon C(K) \to C(K)$ be linear.
-If\/ $A$ satisfies (P) then $A$ is bounded and $A + \|A\|\Id \geq 0$.
+If\/ $A$ satisfies (P) then $A$ is bounded and $A + \norm{A}\Id \geq 0$.
 \end{corollary}
 %% –
 
 \begin{proof}
 It follows from Corollary~\ref{cor:b2-1.11} that $A$ is closed.
 Hence $A$ is bounded.
-Since $A$ satisfies (P), it follows from Theorem~\ref{thm:b2-1.3} that $A + \|A\|\Id \geq 0$.
+Since $A$ satisfies (P), it follows from Theorem~\ref{thm:b2-1.3} that $A + \norm{A}\Id \geq 0$.
 \end{proof}
 
 The next result is a strengthened form of Theorem 1.6.
@@ -654,13 +654,13 @@ Then the operator $m \cdot A$ given by $(m \cdot A)f = m \cdot (Af)$ on the doma
 Moreover,
 %% –
 \begin{equation}\label{eq:b2-1.10}
-\|m^{-1}\|_{\infty}^{-1}\, \omega_{0}(A) \leq \omega_{0}(m \cdot A) \leq \|m\|_{\infty}\, \omega_{0}(A).
+\norm{m^{-1}}_{\infty}^{-1}\, \omega_{0}(A) \leq \omega_{0}(m \cdot A) \leq \norm{m}_{\infty}\, \omega_{0}(A).
 \end{equation}
 \end{theorem}
 %% –
 \begin{proof}
-We can assume that $\|m\|_{\infty} \leq 1$ (in fact, if\/ $B \coloneqq (m/\|m\|_{\infty}) \cdot A$ is the generator of a positive semigroup, then by 
-Part-I, Section~\ref{subsec:a1-3.2}, the operator $m \cdot A = \|m\|_{\infty}B$ also generates a positive semigroup).
+We can assume that $\norm{m}_{\infty} \leq 1$ (in fact, if\/ $B \coloneqq (m/\norm{m}_{\infty}) \cdot A$ is the generator of a positive semigroup, then by 
+Part-I, Section~\ref{subsec:a1-3.2}, the operator $m \cdot A = \norm{m}_{\infty}B$ also generates a positive semigroup).
 The assertion of the theorem holds for $A$ if and only if it is valid for $A - w$ $(w \in \R)$.
 So by the proof of Theorem~\ref{thm:b2-1.13} we can assume that there exists $0 \ll u \in C(K)$ such that $A$ is $p_{u}$-dissipative.
 We first show the following. Let $0 \ll q \in C(K)$.
@@ -678,7 +678,7 @@ Next we show,
 \begin{equation}\label{eq:b2-1.12}
 \begin{split}
 &\text{if } B \text{ is the generator of a } p_{u}\text{-contraction semigroup and } \\
-&1 \geq q \in C(K)_{+} \text{ is such that } \|1 - q\|_{\infty} < 1/2,  \\
+&1 \geq q \in C(K)_{+} \text{ is such that } \norm{1 - q}_{\infty} < 1/2,  \\
 &\text{ then } q \cdot B \text{ generates a } p_{u}\text{-contraction semigroup.}
 \end{split}
 \end{equation}
@@ -697,43 +697,43 @@ The norm
 %%$
 %%--
 \[
-\|f\|_{u} = \max\{p_{u}(f), p_{u}(-f)\} = \sup_{x \in K} |f(x)|/u(x)
+\norm{f}_{u} = \max\{p_{u}(f), p_{u}(-f)\} = \sup_{x \in K} |f(x)|/u(x)
 \]
 %%--
 %%$ 
 is equivalent to the supremum norm.
-Denote by $\|T\|_{u}$ the operator norm corresponding to $\|\cdot\|_{u}$ $(T \in \L{C(K)}$.
-Then it is enough to show that $\|(q-1)BR(1,B)\|_{u} = \|(q-1)(R(1,B) - I)\|_{u} < 1$.
+Denote by $\norm{T}_{u}$ the operator norm corresponding to $\norm{\cdot}_{u}$ $(T \in \L{C(K)}$.
+Then it is enough to show that $\norm{(q-1)BR(1,B)}_{u} = \norm{(q-1)(R(1,B) - I)}_{u} < 1$.
 
 For $r \in C(K)_{+}$ denote by $M_{r}$ the multiplication operator given by $M_{r}f = r \cdot f$.
 \index{operator!multiplication}
 Then 
 %% --
 \begin{align*}
-	    \|M_{r}\|_{u} &= \sup\{\|r \cdot f\|_{u} \colon \|f\|_{u} \leq 1\} \\
-	              &= \sup\nolimits_{\|f\|_{u} \leq 1}\{ \, 
+	    \norm{M_{r}}_{u} &= \sup\{\norm{r \cdot f}_{u} \colon \norm{f}_{u} \leq 1\} \\
+	              &= \sup\nolimits_{\norm{f}_{u} \leq 1}\{ \, 
 	              \sup \{ r(x) \cdot |f(x)| \cdot u(x)^{-1}  \colon {x \in K} \}  \\
-	              &\leq \|r\|_{\infty}.
+	              &\leq \norm{r}_{\infty}.
 \end{align*}
 %% --
-Since $B$ is $p_{u}$-dissipative we have $\|R(1,B)\|_{u} \leq 1$ (by Part-I, Lemma~\ref{lem:a2-2.10}).
-This gives $\|(q-1)(R(1,B) - I)\|_{u} \leq \|M_{(1-q)}\|_{u}(\|R(1,B)\|_{u} + 1) \leq 2\|1 - q\|_{\infty} < 1$.
+Since $B$ is $p_{u}$-dissipative we have $\norm{R(1,B)}_{u} \leq 1$ (by Part-I, Lemma~\ref{lem:a2-2.10}).
+This gives $\norm{(q-1)(R(1,B) - I)}_{u} \leq \norm{M_{(1-q)}}_{u}(\norm{R(1,B)}_{u} + 1) \leq 2\norm{1 - q}_{\infty} < 1$.
 
 The proof of Eq.~\myeqpageref{eq:b2-1.12} is complete.
 \index{dissipative operator|)}
 
-There exists $k \in \N$ such that $\|1 - m^{1/k}\|_{\infty} < 1/2$.
+There exists $k \in \N$ such that $\norm{1 - m^{1/k}}_{\infty} < 1/2$.
 Applying now Eq.~\myeqpageref{eq:b2-1.12} 
 succesively to $B = m^{1/k} \cdot A$ and $q = m^{1/k}$ $(l = 1, \ldots, k-1)$ we obtain that $m \cdot A$ generates a $p_{u}$-contraction semigroup (which in particular is positive).
 
 Finally we show Eq.~\myeqpageref{eq:b2-1.10} 
 to hold.
 Let $0 \ll u \in D(A) = D(m \cdot A)$ and $Au \leq \lambda u$.
-Then $m \cdot Au \leq \|m\|_{\infty}\lambda u$.
+Then $m \cdot Au \leq \norm{m}_{\infty}\lambda u$.
 So Eq.~\myeqpageref{eq:b2-1.8} 
-implies that $\omega_{0}(m \cdot A) \leq \|m\|_{\infty}\omega_{0}(A)$.
+implies that $\omega_{0}(m \cdot A) \leq \norm{m}_{\infty}\omega_{0}(A)$.
 This is one part of Eq.~\myeqpageref{eq:b2-1.10}. 
-The other part follows from this since $\omega_{0}(A) = \omega_{0}(m^{-1} \cdot m \cdot A) \leq \|m^{-1}\|_{\infty} \omega_{0}(m \cdot A)$.
+The other part follows from this since $\omega_{0}(A) = \omega_{0}(m^{-1} \cdot m \cdot A) \leq \norm{m^{-1}}_{\infty} \omega_{0}(m \cdot A)$.
 \end{proof}
 
 In the following lemma a condition (P') is introduced which is dual to the positive minimum principle.
@@ -785,7 +785,7 @@ In fact, let $f \in D(A)_{+}$ and $x \in [-1,0]$ such that $f(x) = 0$.
 It is clear that $Af(x) = f'(x) \geq 0$ if\/ $x < 0$.
 But if\/ $f(0) = 0$, then $Af(0) = f'(0) = \langle f,\mu \rangle \geq 0$ since $f \in D(A)$.
 
-c) We show that $(\lambda-A)$ is bijective for $\lambda > \alpha + \|\mu\|$.
+c) We show that $(\lambda-A)$ is bijective for $\lambda > \alpha + \norm{\mu}$.
 Let $g \in C[-1,0]$.
 The solutions of the equation $\lambda f - f' = g$ \,($f \in C[-1,0]$\,) are given by $f(x) = \eu^{\lambda x}[\int_{x}^{0} \eu^{-\lambda y} g(y) \dy + c]$ where $c \in \R$.
 Moreover, $f \in D(A)$ if and only if
@@ -794,17 +794,17 @@ Moreover, $f \in D(A)$ if and only if
 c(\lambda - \alpha - \int_{-1}^{0} \eu^{\lambda x} \diff{\mu(x)}) = g(0) + \int_{-1}^{0} \eu^{\lambda x} \int_{x}^{0}\eu^{-\lambda y} g(y) \dy\diff{\mu(x)}.
 \end{equation}
 %% –
-If\/ $\lambda > \alpha + \|\mu\|$, then $\lambda - \alpha - \int_{-1}^{0} \eu^{\lambda x} d\mu(x) \neq 0$ and there exists exactly one $c \in \R$ satisfying Eq.~\myeqpageref{eq:b2-1.13}.
-We have shown that $(\lambda- A)$ is bijective for $\lambda > \alpha + \|\mu\|$.
+If\/ $\lambda > \alpha + \norm{\mu}$, then $\lambda - \alpha - \int_{-1}^{0} \eu^{\lambda x} d\mu(x) \neq 0$ and there exists exactly one $c \in \R$ satisfying Eq.~\myeqpageref{eq:b2-1.13}.
+We have shown that $(\lambda- A)$ is bijective for $\lambda > \alpha + \norm{\mu}$.
 
 By Theorem~\ref{thm:b2-1.13}, it follows from a), b) and c) that $A$ generates a positive semigroup.
 \end{proof}
 
-Let us mention in addition that it follows from a) in the proof that $(\alpha + \|\mu\|, \infty) \subset \rho(A)$, since $A$ is closed.
+Let us mention in addition that it follows from a) in the proof that $(\alpha + \norm{\mu}, \infty) \subset \rho(A)$, since $A$ is closed.
 By Remark~\ref{rem:b2-1.7} we thus have
 %% –
 \begin{equation}\label{eq:b2-1.14}
-s(A) \leq \alpha + \|\mu\|.
+s(A) \leq \alpha + \norm{\mu}.
 \end{equation}
 %% –
 %% --
@@ -965,15 +965,15 @@ If\/ $\Theta$ is right-sided Gateaux-differentiable at $k(a)$ in the direction o
 \end{proposition}
 %% --
 \begin{proof}
-There exists $L \geq 0$ such that $\|\Theta(x) - \Theta(y)\| \leq L\|x - y\|$ for all $x,y \in G$.
+There exists $L \geq 0$ such that $\norm{\Theta(x) - \Theta(y)} \leq L\norm{x - y}$ for all $x,y \in G$.
 Then
 %% --
 \[
 \begin{array}{lll}
-\lim_{t \downarrow 0} &\|\frac{1}{t} (\Theta(k(a+t)) - \Theta(k(a))) - D_{k'(a)}\Theta(k(a))\| \\
-&\leq \limsup_{t \downarrow 0} \|\frac{1}{t} (\Theta(k(a+t)) - \Theta(k(a)+tk'(a)))\| \\
-&\quad + \limsup_{t \downarrow 0} \|\frac{1}{t} [\Theta(k(a)+tk'(a)) - \Theta(k(a)) - D_{k'(a)}\Theta(k(a))]\| \\
-&\leq \limsup_{t \downarrow 0} L \cdot \|\frac{1}{t} (k(a+t) - k(a)-tk'(a))\| + 0 \\
+\lim_{t \downarrow 0} &\norm{\frac{1}{t} (\Theta(k(a+t)) - \Theta(k(a))) - D_{k'(a)}\Theta(k(a))} \\
+&\leq \limsup_{t \downarrow 0} \norm{\frac{1}{t} (\Theta(k(a+t)) - \Theta(k(a)+tk'(a)))} \\
+&\quad + \limsup_{t \downarrow 0} \norm{\frac{1}{t} [\Theta(k(a)+tk'(a)) - \Theta(k(a)) - D_{k'(a)}\Theta(k(a))]} \\
+&\leq \limsup_{t \downarrow 0} L \cdot \norm{\frac{1}{t} (k(a+t) - k(a)-tk'(a))} + 0 \\
 &= 0.
 \end{array}
 \]
@@ -1144,7 +1144,7 @@ for all $g \in C_{0}(X)$.
 Consequently,
 %% --
 \begin{equation*}
-\overline{\lim}_{h \downarrow 0}\, \frac{1}{h}\, \|(T(t-(s+h)) - T(t-s))'\phi\| < \infty
+\overline{\lim}_{h \downarrow 0}\, \frac{1}{h}\, \norm{(T(t-(s+h)) - T(t-s))'\phi} < \infty
 \end{equation*}
 %% --
 by the uniform boundedness principle.
@@ -1694,9 +1694,9 @@ If for every $x \in X$ the mappings $t \mapsto \phi_{t}(x)$ and $t \mapsto h_{t}
 \end{proposition}
 %%
 \begin{proof}
-We first note that $\|T(t)\|$ is bounded on compact intervals of\/ $\R$.
-This follows from \textcite[7.4.1]{hillephillips:1957} since $q(t) = \log\|T(t)\|$ defines a subadditive, measurable function from $\R$ into $\R$ [In fact, $\|T(t)\| = \sup_{x \in X}|h_{t}(x)|$ for $t \in \R$.
-So it follows from the assumption that $t \mapsto \|T(t)\|$ is lower semicontinuous and hence measurable].
+We first note that $\norm{T(t)}$ is bounded on compact intervals of\/ $\R$.
+This follows from \textcite[7.4.1]{hillephillips:1957} since $q(t) = \log\norm{T(t)}$ defines a subadditive, measurable function from $\R$ into $\R$ [In fact, $\norm{T(t)} = \sup_{x \in X}|h_{t}(x)|$ for $t \in \R$.
+So it follows from the assumption that $t \mapsto \norm{T(t)}$ is lower semicontinuous and hence measurable].
 If\/ $f \in C_{0}(X)$, then by hypothesis the function
 $t \mapsto h_{t}(x) f(\phi(t,x)) = (T(t) f) (x)$ is continuous on $\R$.
 It follows from the dominated convergence theorem that $T(.)f$ is weakly continuous.
@@ -1720,7 +1720,7 @@ It remains to show that $\Phi$ and $(h_t)_{t \in \R}$ are continuous.
 At first we consider the flow.
 Since we have $\Phi_{t+s} = \Phi_t \circ \Phi_s$ and every $\Phi_t$ is a homeomorphism on $X$, it is enough to establish continuity of\/ $\Phi$ at points $(0,x_0) \in \R \times X$.
 Given a compact neighbourhood $V$ of\/ $x_0 = \Phi (0,x_0)$, there exists a continuous function $f \colon X \to [0,1]$ satisfying $f(x_0) = 1$ and $\supp f \subset V$.
-There exists $t_0 > 0$ such that $\|T(t)f - f\| < \frac{1}{2}$ for $|t| \leq t_0$.
+There exists $t_0 > 0$ such that $\norm{T(t)f - f} < \frac{1}{2}$ for $|t| \leq t_0$.
 Let $W \coloneqq \{x \in X \colon |f(x)| > \frac{1}{2}\}$; then for $|t| \leq t_0$ and $x \in W$ we have $|h_t(x) \cdot f(\Phi(t,x)) - f(x)| < \frac{1}{2}$ and $|f(x)| > \frac{1}{2}$; hence $f(\Phi (t,x)) > 0$.
 This implies that $\Phi (t,x) \in V$ whenever $|t| \leq t_0$ and $x \in W$.
 
@@ -1796,14 +1796,14 @@ In fact, let $(T(t))_{t \in \R}$ be the group given by $T(t)f = k_{t} \cdot f \c
 Then there exist constants $M, \omega \geq 1$ such that
 %% --
 \begin{equation}\label{eq:b2-3.17}
-\|T(t)\| \leq M\eu^{(\omega-1)|t|}
+\norm{T(t)} \leq M\eu^{(\omega-1)|t|}
 \end{equation}
 %% --
 for all $t \in \R$.
-Since $\|T(t)\| = \sup_{x \in X} k_{t}(x)$ the right inequality of
+Since $\norm{T(t)} = \sup_{x \in X} k_{t}(x)$ the right inequality of
 Eq.~\myeqpageref{eq:b2-3.16} follows.
 Moreover, $k_{-t} = 1/(k_{t} \circ \phi_{-t})$.
-Hence $\|T(-t)\| = \sup_{x \in X} 1/k_{t}(x) = [\inf_{x \in X} k_{t}(x)]^{-1}$.
+Hence $\norm{T(-t)} = \sup_{x \in X} 1/k_{t}(x) = [\inf_{x \in X} k_{t}(x)]^{-1}$.
 So Eq.~\myeqpageref{eq:b2-3.17} also implies the first inequality in Eq.~\myeqpageref{eq:b2-3.16}.
 
 Now we define $p$ and $h$ by
@@ -1924,7 +1924,7 @@ Since every generator of a positive group is the perturbation of a derivation, w
 \begin{example}\label{ex:b2-3.15}
 %%
 Let $X = \R^{n}$.
-Consider a function $F \in C^{1}(\R^{n},\R^{n})$ such that $\sup_{x \in \R^{n}} \|DF(x)\| < \infty$ where $DF(x) \in \L{\R^{n}}$ denotes the derivative of\/ $F$ at $x$.
+Consider a function $F \in C^{1}(\R^{n},\R^{n})$ such that $\sup_{x \in \R^{n}} \norm{DF(x)} < \infty$ where $DF(x) \in \L{\R^{n}}$ denotes the derivative of\/ $F$ at $x$.
 Then there exists a continuous flow $\phi$ on $\R^{n}$ such that
 %% –
 \begin{equation}\label{eq:b2-3.20}
@@ -1934,7 +1934,7 @@ Then there exists a continuous flow $\phi$ on $\R^{n}$ such that
 Consider the automorphism group $(T_{0}(t))_{t \in \R}$ given by $T_{0}(t)f = f \circ \phi_{t}$
 and denote by $\delta$ its generator.
 Then 
-\[D_{0} = \{ f \in C_{0}(\R^{n}) \cap C^{1}(\R^{n}) \colon \lim_{\|x\| \to \infty} \|(\mathrm{grad}\: f)(x)\| = 0 \}
+\[D_{0} = \{ f \in C_{0}(\R^{n}) \cap C^{1}(\R^{n}) \colon \lim_{\norm{x} \to \infty} \norm{(\mathrm{grad}\: f)(x)} = 0 \}
 \]
 is a core of\/ $\delta$ and
 %% –
@@ -1967,14 +1967,14 @@ Next we show $T_{0}(t)D_{0} \subset D_{0}$ for all $t \geq 0$, which implies tha
 Since $F \in C^{1}(\R^{n},\R^{n})$, it follows that $\phi \in C^{1}(\R \times \R^{n},\R^{n})$ (see \eg \textcite[15.2]{hirschsmale:1974}).
 Moreover for each $x \in \R^{n}$, $(D\phi_{t}(x))' = DF(\phi_{t}(x)) \cdot D\phi_{t}(x)$ and $D\phi_{0}(x) = \Id$, (see \textcite[p. 300]{hirschsmale:1974}); here $\Id \in \L{\R^{n}}$ denotes the identity operator.
 Hence $D\phi_{t}(x) = \Id + \int_{0}^{t} DF(\phi_{s}(x)) \cdot D\phi_{s}(x) \ds$.
-Consequently $\|D\phi_{t}(x)\| \leq 1 + \int_{0}^{t}  M \cdot  \|D\phi_{s}(x)\| \ds$ for all $t \geq 0$ and $x \in \R^{n}$; where $M \coloneqq \sup_{x \in \R^{n}} \|DF(x)\| < \infty$ by hypothesis.
-Hence by Gronwall's inequality, $\|D\phi_{t}(x)\| \leq \eu^{Mt}$ $(t \geq 0)$ for all $x \in \R^{n}$.
+Consequently $\norm{D\phi_{t}(x)} \leq 1 + \int_{0}^{t}  M \cdot  \norm{D\phi_{s}(x)} \ds$ for all $t \geq 0$ and $x \in \R^{n}$; where $M \coloneqq \sup_{x \in \R^{n}} \norm{DF(x)} < \infty$ by hypothesis.
+Hence by Gronwall's inequality, $\norm{D\phi_{t}(x)} \leq \eu^{Mt}$ $(t \geq 0)$ for all $x \in \R^{n}$.
 Now let $f \in D_{0}$, $t \geq 0$.
 Then $[\mathrm{grad}\:(f \circ \phi_{t})](x) = [(\mathrm{grad}\:f)(\phi_{t}(x))] \cdot D\phi_{t}(x)$.
-Hence $\|[\mathrm{grad}\:(f \circ \phi_{t})](x)\| \leq \eu^{Mt}\|(\mathrm{grad}\:f)(\phi_{t}(x))\|$, and so 
+Hence $\norm{[\mathrm{grad}\:(f \circ \phi_{t})](x)} \leq \eu^{Mt}\norm{(\mathrm{grad}\:f)(\phi_{t}(x))}$, and so 
 %%--
 \[
-\lim_{\|x\| \to \infty} \|[\mathrm{grad}\:(f \circ \phi_{t})](x)\| \leq \eu^{Mt} \lim_{\|x\| \to \infty} \|(\mathrm{grad}\:f)(\phi_{t}(x))\| = 0.
+\lim_{\norm{x} \to \infty} \norm{[\mathrm{grad}\:(f \circ \phi_{t})](x)} \leq \eu^{Mt} \lim_{\norm{x} \to \infty} \norm{(\mathrm{grad}\:f)(\phi_{t}(x))} = 0.
 \]
 %%--
 Thus $f \circ \phi_{t} \in D_{0}$ for all $t \geq 0$.

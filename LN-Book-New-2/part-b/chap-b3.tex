@@ -78,10 +78,10 @@ In case $X$ is compact, we always have $s(A) > -\infty$.
 		R(\lambda_{0},A)^{n}\1_{X} \geq (2\lambda_{0})^{-n}\cdot\1_{X} > 0 \quad \text{for every } n \in \N.
 	\end{equation}
 	%% --
-	It follows that $\|R(\lambda_{0},A)^{n}\| \geq (2\lambda_{0})^{-n}$ and therefore
+	It follows that $\norm{R(\lambda_{0},A)^{n}} \geq (2\lambda_{0})^{-n}$ and therefore
 	%% --
 	\begin{equation}\label{eq:b3-1.6}
-		r(R(\lambda_{0},A)) = \lim_{n \to \infty}\|R(\lambda_{0},A)^{n}\|^{1/n} \geq (2\lambda_{0})^{-1} > 0.
+		r(R(\lambda_{0},A)) = \lim_{n \to \infty}\norm{R(\lambda_{0},A)^{n}}^{1/n} \geq (2\lambda_{0})^{-1} > 0.
 	\end{equation}
 	%% --
 	Thus $\sigma(R(\lambda_{0},A))$ contains non-zero spectral values which in view of Part-I, Proposition~\ref{prop:a3-2.5} is equivalent to $\sigma(A) \neq \emptyset$.
@@ -167,7 +167,7 @@ As we have shown above, $R(\lambda,A)$ is positive for $\lambda > \max\{\lambda_
 	It follows that for all $\lambda > \max\{\lambda_{0},s(A)\}$ we have
 	%% --
 	\begin{equation}\label{eq:b3-1.12}
-		(\lambda - s(A))^{-1} = r(R(\lambda,A)) \leq \|R(\lambda,A)\| \leq \|R(\lambda_{0},A)\|
+		(\lambda - s(A))^{-1} = r(R(\lambda,A)) \leq \norm{R(\lambda,A)} \leq \norm{R(\lambda_{0},A)}
 	\end{equation}
 	%% --
 	which can be true only if\/ $\lambda_{0}$ is greater than $s(A)$.
@@ -273,22 +273,22 @@ For the sake of completeness we include the proof of this classical result, stat
 	|R(\lambda,T)f| = \left|\sum_{n=0}^{\infty} \lambda^{-n-1} T^{n}f\right| \leq \sum_{n=0}^{\infty} |\lambda|^{-n-1} T^{n}|f| = R(|\lambda|,T) |f|.
 	\]
 	%% --
-	It follows that $\|R(\lambda,T)\| \leq \|R(|\lambda|,T)\|$ and therefore
+	It follows that $\norm{R(\lambda,T)} \leq \|R(|\lambda|,T)\|$ and therefore
 	%% --
 	\begin{equation}\label{eq:b3-1.15}
-		\lim_{\lambda \downarrow r}\|R(\lambda,T)\| = \infty.
+		\lim_{\lambda \downarrow r}\norm{R(\lambda,T)} = \infty.
 	\end{equation}
 	%% --
-	By the uniform boundedness principle there exist a sequence $(\lambda_{n})$, $\lambda_{n} \downarrow r$ and a positive $\psi \in M(K)$ such that $\|R(\lambda_{n},T)'\psi\| \to \infty$.
+	By the uniform boundedness principle there exist a sequence $(\lambda_{n})$, $\lambda_{n} \downarrow r$ and a positive $\psi \in M(K)$ such that $\norm{R(\lambda_{n},T)'\psi} \to \infty$.
 	Defining 
     \[
-    \psi_{n} \coloneqq \|R(\lambda_{n},T)'\psi\|^{-1}R(\lambda_{n},T)'\psi
+    \psi_{n} \coloneqq \norm{R(\lambda_{n},T)'\psi}^{-1}R(\lambda_{n},T)'\psi
     \] we have
 %% --
 	\begin{equation}\label{eq:b3-1.16}
 		\begin{split}
-		(r - T')\psi_{n} & = \|R(\lambda_{n},T)'\psi\|^{-1}\cdot((r-\lambda_{n}) + (\lambda_{n} - T'))R(\lambda_{n},T)'\psi\\ 
-		& = (r-\lambda_{n})\psi_{n} + \|R(\lambda_{n},T)'\psi\|^{-1}\psi \to 0.
+		(r - T')\psi_{n} & = \norm{R(\lambda_{n},T)'\psi}^{-1}\cdot((r-\lambda_{n}) + (\lambda_{n} - T'))R(\lambda_{n},T)'\psi\\ 
+		& = (r-\lambda_{n})\psi_{n} + \norm{R(\lambda_{n},T)'\psi}^{-1}\psi \to 0.
 		\end{split}
 	\end{equation}
 	%% --
@@ -296,7 +296,7 @@ For the sake of completeness we include the proof of this classical result, stat
 	Because $K$ is compact we have 
 %
 \[
-	\{\phi \in M(K) \colon \phi \geq 0, \|\phi\| = 1\} 
+	\{\phi \in M(K) \colon \phi \geq 0, \norm{\phi} = 1\} 
 	= \{\phi \in M(K) \colon \phi \geq 0, \langle \phi,1 \rangle = 1\} , 
 \]
 %% --
@@ -322,8 +322,8 @@ From the explicit representation of\/ $T(t)$,
 		(T(t)f)(x) = (4\pi t)^{-n/2}\int_{\R^{n}} \exp(-(x-y)^{2}/4t)\cdot f(y) \, \dy \,,
 	\end{equation}
 	%% --
-	it follows that $\lim_{t \to \infty}T(t)f = 0$ for every $f \in C_{0}(\R^{n})$. Note that $\|T(t)\| = 1$ for all $t \geq 0$ and, for $f$ having compact support,      
-    $\|T(t)f\| \leq (4\pi t)^{-n/2}\int_{\R^{n}} |f(y)| \dy \to 0$. 
+	it follows that $\lim_{t \to \infty}T(t)f = 0$ for every $f \in C_{0}(\R^{n})$. Note that $\norm{T(t)} = 1$ for all $t \geq 0$ and, for $f$ having compact support,      
+    $\norm{T(t)f} \leq (4\pi t)^{-n/2}\int_{\R^{n}} |f(y)| \dy \to 0$. 
     	
 	If\/ $\phi$ is an eigenvector of\/ $A'$ corresponding to $s(A) = \omega_{0}(A) = 0$, we have $T(t)'\phi = \phi$ for all $t \geq 0$, hence $\langle \phi,f \rangle = \lim_{t \to \infty}\langle T(t)f,\phi \rangle = 0$ for every $f$, \ie $\phi = 0$.
 \end{example}
@@ -348,28 +348,28 @@ We begin our discussion with two lemmas.
 %% --
 \begin{lemma}\label{lem:b3-2.1}
 	Suppose $K$, $L$ are compact and $T \colon C(K) \to C(L)$ is a linear operator satisfying $T \1_{K} = \1_{L}$.
-	Then we have $T \geq 0$ if and only if\/ $\|T\| \leq 1$.
+	Then we have $T \geq 0$ if and only if\/ $\norm{T} \leq 1$.
 \end{lemma}
 %% --
 \begin{proof}
 	If\/ $T$ is positive, then
 	%% --
 	\begin{equation}\label{eq:b3-2.1}
-	|Tf| \leq T|f| \leq T(\|f\|\cdot \1_{K}) = \|f\|\cdot T(\1_{K}), \quad f \in C(K)\,,
+	|Tf| \leq T|f| \leq T(\norm{f}\cdot \1_{K}) = \norm{f}\cdot T(\1_{K}), \quad f \in C(K)\,,
 	\end{equation}
 	%% --
-	hence $\|T\| = \|T\1_{K}\|$ whenever $T$ is positive.
-	This shows that $T \geq 0$ implies $\|T\| \leq 1$ whenever $T\1_{K} = \1_{L}$.
+	hence $\norm{T} = \norm{T\1_{K}}$ whenever $T$ is positive.
+	This shows that $T \geq 0$ implies $\norm{T} \leq 1$ whenever $T\1_{K} = \1_{L}$.
 	
 	To prove the reverse direction, we first observe that for complex numbers and hence for complex-valued functions the following equivalence holds.
 	%% --
 	\begin{equation}\label{eq:b3-2.2}
-	-1 \leq f \leq 1 \text{ if and only if } \|f - \im\cdot r\cdot 1\| \leq \rho_{r} \coloneqq (1+r^{2})^{1/2} \text{ for every } r \in \R.
+	-1 \leq f \leq 1 \text{ if and only if } \norm{f - \im\cdot r\cdot 1} \leq \rho_{r} \coloneqq (1+r^{2})^{1/2} \text{ for every } r \in \R.
 	\end{equation}
 	%% --
 	Now suppose $f \in C(K)$, $0 \leq f \leq 2\cdot \1_{K}$.
-	Then we have $-\1_{K} \leq f - \1_{K} \leq \1_{K}$ hence by Eq.~\myeqpageref{eq:b3-2.2} $\|f - \1_{K} - \im\cdot r\cdot \1_{K}\| \leq \rho_{r}$ for every $r \in \R$.
-	From $T\1_{K} = \1_{L}$ and $\|T\| \leq 1$ it follows that $\|Tf - \1_{L} - \im\cdot r\cdot \1_{L}\| \leq \rho_{r}$ for every $r \in \R$.
+	Then we have $-\1_{K} \leq f - \1_{K} \leq \1_{K}$ hence by Eq.~\myeqpageref{eq:b3-2.2} $\norm{f - \1_{K} - \im\cdot r\cdot \1_{K}} \leq \rho_{r}$ for every $r \in \R$.
+	From $T\1_{K} = \1_{L}$ and $\norm{T} \leq 1$ it follows that $\norm{Tf - \1_{L} - \im\cdot r\cdot \1_{L}} \leq \rho_{r}$ for every $r \in \R$.
 	Using Eq.~\myeqpageref{eq:b3-2.2} once again, we obtain $-\1_{L} \leq Tf - \1_{L} \leq \1_{L}$ or $0 \leq Tf \leq 2\cdot \1_{L}$.
 \end{proof}
 %% --
@@ -458,9 +458,9 @@ In particular, the spectra (and point spectra, resp.) of\/ $T$ and $R$ coincide.
 	|T_{1}f| = |M_{\tilde{h}}^{-1}\tilde{R}M_{\tilde{h}}f| = |\tilde{R}M_{\tilde{h}}f| \leq \tilde{T}|M_{\tilde{h}}f| = \tilde{T}|f| \text{ for all } f.
 	\end{equation}
 	%% --
-	Hence we have $\|T_{1}\| \leq \|\tilde{T}\| = 1$ (by Eq.~\myeqpageref{eq:b3-2.11}, Eq.~\myeqpageref{eq:b3-2.9}, Eq.~\myeqpageref{eq:b3-2.1}).
+	Hence we have $\norm{T_{1}} \leq \norm{\tilde{T}} = 1$ (by Eq.~\myeqpageref{eq:b3-2.11}, Eq.~\myeqpageref{eq:b3-2.9}, Eq.~\myeqpageref{eq:b3-2.1}).
 	Then it follows from Lemma~\ref{lem:b3-2.1} that $T_{1}$ is a positive operator.
-	Thus Eq.~\myeqpageref{eq:b3-2.11} implies that $0 \leq T_{1} \leq \tilde{T}$ and therefore $\|\tilde{T} - T_{1}\| = \|(\tilde{T} - T_{1})\1\| = 0$ (by Eq.~\myeqpageref{eq:b3-2.10}, Eq.~\myeqpageref{eq:b3-2.9}, Eq.~\myeqpageref{eq:b3-2.1}).
+	Thus Eq.~\myeqpageref{eq:b3-2.11} implies that $0 \leq T_{1} \leq \tilde{T}$ and therefore $\norm{\tilde{T} - T_{1}} = \norm{(\tilde{T} - T_{1})\1} = 0$ (by Eq.~\myeqpageref{eq:b3-2.10}, Eq.~\myeqpageref{eq:b3-2.9}, Eq.~\myeqpageref{eq:b3-2.1}).
 \end{proof}
 %% --
 We are now able to prove a result which in some sense is the key to cyclicity results for the spectrum.
@@ -610,7 +610,7 @@ Consider $D \coloneqq \{z \in \C \colon |z| \leq 1\} = \{r\cdot \eu^{\im\omega} 
 \item
 Suppose $M$ is a closed cyclic subset of\/ $\im \R$, $M = \cup_{\alpha \in S} \im\alpha\Z$ for a suitable $S \subset \R$ (\eg $S = M$).
 	
-	The space $E_{1} \coloneqq \{(f_{\alpha})_{\alpha \in S} \colon f_{\alpha} \in C(\Gamma), \sup_\alpha \|f_{\alpha}\| < \infty\}$ is a Banach space under the norm $\|(f_{\alpha})\| \coloneqq \sup_\alpha \|f_{\alpha}\|$.
+	The space $E_{1} \coloneqq \{(f_{\alpha})_{\alpha \in S} \colon f_{\alpha} \in C(\Gamma), \sup_\alpha \norm{f_{\alpha}} < \infty\}$ is a Banach space under the norm $\norm{(f_{\alpha})} \coloneqq \sup_\alpha \norm{f_{\alpha}}$.
 	The closure of the linear subspace $E_{0} \coloneqq \{(f_{\alpha}) \in E_{1} \colon f_{\alpha} \neq 0 \text{ only for finitely many } \alpha \in S\}$ is isomorphic to $C_{0}(X)$ where $X$ is the topological sum of\/ $|S|$ copies of\/ $\Gamma$.
 	
 	Let $(T_{\alpha}(t))_{t \geq 0}$ denote the rotation semigroup on $C(\Gamma)$ with period $2\pi/\alpha$, then we define a semigroup $(T(t))_{t \geq 0}$ on $E \coloneqq C_{0}(X)$ as
@@ -928,7 +928,7 @@ It is unknown whether there are positive semigroups where $\sigma_{b}(A)$ is not
 		\end{aligned} 
 	\end{equation}
 	%% --
-	Then $(T(t))_{t \geq 0}$ is a positive semigroup and $\|T(t)\| \leq (1 + \|k\|_{1})$.
+	Then $(T(t))_{t \geq 0}$ is a positive semigroup and $\norm{T(t)} \leq (1 + \norm{k}_{1})$.
 	In particular, $s(A) \leq \omega_{0}(A) \leq 0$.
 	It is easy to see that $0$ is not an eigenvalue of\/ $A$, while all $\im k$, $k \in \Z$, $k \neq 0$ are eigenvalues, the corresponding eigenfunctions being $(e_{k},0)$ with $e_{k}(\theta) = \eu^{\im k\theta}$.
 \end{example}
@@ -991,7 +991,7 @@ It is unknown whether there are positive semigroups where $\sigma_{b}(A)$ is not
 		A_{\phi} \coloneqq {A_{m}}_{|D(A_{\phi})} \text{ with } D(A_{\phi}) \coloneqq \{f \in C^{1}[-1,0] \colon f'(0) = \langle f,\phi \rangle\}.
 	\end{equation}
 	%% --
-	Denoting the exponential function $x \mapsto \eu^{\lambda x}$ by $e_{\lambda}$, we have for real $\lambda$ and $\lambda > \|\phi\|$
+	Denoting the exponential function $x \mapsto \eu^{\lambda x}$ by $e_{\lambda}$, we have for real $\lambda$ and $\lambda > \norm{\phi}$
 	%% --
 	 \begin{equation}\label{eq:b3-2.27}
 	 \begin{aligned}
@@ -1003,11 +1003,11 @@ It is unknown whether there are positive semigroups where $\sigma_{b}(A)$ is not
 	Using the Neumann series expansion of\/ $(\Id  - 1/\lambda \cdot \phi \otimes e_{\lambda})^{-1}$ one obtains the following estimate.
 	%% --
 	\begin{equation}\label{eq:b3-2.28}
-		\|(\Id  - 1/\lambda \cdot \phi \otimes e_{\lambda})^{-1}\| \leq \lambda/(\lambda - \|\phi\|) \quad \text{if } \lambda > \|\phi\|.
+		\norm{(\Id  - 1/\lambda \cdot \phi \otimes e_{\lambda})^{-1}} \leq \lambda/(\lambda - \norm{\phi}) \quad \text{if } \lambda > \norm{\phi}.
 	\end{equation}
 	%% --
-It follows from Eq.~\myeqpageref{eq:b3-2.25} and Eq.~\myeqpageref{eq:b3-2.26} that for $\lambda > \|\phi\|$, the resolvent $R(\lambda,A_{\phi})$ exists and satisfies $\|R(\lambda,A_{\phi})\| \leq \lambda/(\lambda-\|\phi\|)\cdot 1/\lambda = 1/(\lambda-\|\phi\|)$.
-Then the Hille-Yosida Theorem (Part-I, Theorem~\ref{thm:a2-1.7}) implies that $A_{\phi}$ generates a semigroup $(T(t))$ satisfying $\|T(t)\| \leq \exp(\|\phi\|t)$.
+It follows from Eq.~\myeqpageref{eq:b3-2.25} and Eq.~\myeqpageref{eq:b3-2.26} that for $\lambda > \norm{\phi}$, the resolvent $R(\lambda,A_{\phi})$ exists and satisfies $\norm{R(\lambda,A_{\phi})} \leq \lambda/(\lambda-\norm{\phi})\cdot 1/\lambda = 1/(\lambda-\norm{\phi})$.
+Then the Hille-Yosida Theorem (Part-I, Theorem~\ref{thm:a2-1.7}) implies that $A_{\phi}$ generates a semigroup $(T(t))$ satisfying $\norm{T(t)} \leq \exp(\norm{\phi}t)$.
 Moreover, this semigroup is eventually norm continuous (see Corollary~\ref{cor:b4-3.3}).
 
 By Example~\ref{ex:b2-1.22} we have the following equivalence.
@@ -1296,7 +1296,7 @@ We now return to the general situation and show that irreducible semigroups poss
 	Take any $f_{0} \in C_{0}(X)$ which is positive and has compact support.
 	If\/ $\lambda > s(A)$, then $R(\lambda,A)f_{0}$ is strictly positive (by Definition~\ref{def:b3-3.1}\,(e)), hence there exists $\epsilon > 0$ such that $R(\lambda,A)f_{0} \geq \epsilon f_{0}$.
 	It follows that $R(\lambda,A)^nf_{0} \geq \epsilon^nf_{0} \geq 0$ for all $n \in \N$ and therefore
-	$r(R(\lambda,A)) = \lim_{n \to \infty}\|R(\lambda,A)^{n}\|^{1/n} \geq \epsilon > 0 $.
+	$r(R(\lambda,A)) = \lim_{n \to \infty}\norm{R(\lambda,A)^{n}}^{1/n} \geq \epsilon > 0 $.
 	The assertion now follows from Part-I, Proposition~\ref{prop:a3-2.5}.	
 
 	\item 
@@ -1489,7 +1489,7 @@ If\/ $X$ is compact, then $j$ is a topological embedding.
     %% --
     Since $\{e_{n} \colon n \in \Z\}$ is a total subset of\/ $C(\Gamma)$, we have $T(t)\circ j = j\circ R_{\tau}(t)$ for every $t > 0$.
 	
-	If\/ $X$ is compact, then $\tilde{h}(X)$ is closed, hence $\tilde{h}$ is onto, moreover, $|h| \geq \epsilon$ for some $\epsilon > 0$, thus the definition of\/ $j$ implies that $\|j(f)\| > \epsilon\|f\|$ for every $f \in C(\Gamma)$.
+	If\/ $X$ is compact, then $\tilde{h}(X)$ is closed, hence $\tilde{h}$ is onto, moreover, $|h| \geq \epsilon$ for some $\epsilon > 0$, thus the definition of\/ $j$ implies that $\norm{j(f)} > \epsilon\norm{f}$ for every $f \in C(\Gamma)$.
 \end{proof}
 %% --
 A consequence of Corollary~\ref{cor:b3-3.8} is the following. 
@@ -1718,7 +1718,7 @@ The quantities $\underline{c}(h,\phi)$ and $\overline{c}(h,\phi)$ are defined as
 		\underline{c}_{t}(h,\phi) \coloneq \inf_{x\in K} \{\frac{1}{t}\int_{0}^{t} h(\phi(s,x)) \ds.
 \end{align}
 %% --
-It is easy to see that $\overline{c}_{t}(h,\phi) = 1/t\cdot\log\|T(t)\|$, hence in the definition of\/ $\overline{c}(h,\phi)$, both the limit and the infimum exist and coincide with the growth bound (see Part-I, Eq.~\myeqpageref{eq:a1-1.1}).
+It is easy to see that $\overline{c}_{t}(h,\phi) = 1/t\cdot\log\norm{T(t)}$, hence in the definition of\/ $\overline{c}(h,\phi)$, both the limit and the infimum exist and coincide with the growth bound (see Part-I, Eq.~\myeqpageref{eq:a1-1.1}).
 Furthermore, $\underline{c}_{t}(h,\phi) = -\overline{c}_{t}(-h,\phi)$.
 Therefore, $\underline{c}(h,\phi)$ is well defined too.
 
@@ -1807,7 +1807,7 @@ Before we state the general result (see Theorem~\ref{thm:b3-4.4}) we give some t
 	%% --
 	\begin{equation}\label{eq:b3-4.6}
 		\begin{aligned}
-			\|f_{n}\| \leq 1 &, \quad {f_{n}|}_{K_{n+1}} = 0\,, \\
+			\norm{f_{n}} \leq 1 &, \quad {f_{n}|}_{K_{n+1}} = 0\,, \\
 			f_{n}(\phi(t,y_{n})) &= 0 \text{ for } 0 \leq t \leq n-(1+\delta) \text{ and } n+\delta \leq t \leq n+1\,, \\
 			f_{n}(\phi(t,y_{n})) &= \eu^{\im\beta  t} \text{ for } n-1 \leq t \leq n .
 		\end{aligned}
@@ -1823,7 +1823,7 @@ Before we state the general result (see Theorem~\ref{thm:b3-4.4}) we give some t
 	%% --
 	Moreover,
 	%% --
-	\[\|g_{n}\| \geq |g_{n}(y_{n})| = \left|\int_{0}^{n+1} \eu^{-\lambda t} h_{t}(y_{n})f_{n}(\phi(t,y_{n})) \dt \right| \geq\]
+	\[\norm{g_{n}} \geq |g_{n}(y_{n})| = \left|\int_{0}^{n+1} \eu^{-\lambda t} h_{t}(y_{n})f_{n}(\phi(t,y_{n})) \dt \right| \geq\]
 	%% --
 	\[\left|\int_{n-1}^{n} \eu^{-\lambda t} h_{t}(y_{n}) \eu^{\im\beta  t} \dt\right| - \left[\int_{n-(1+\delta)}^{n-1} + \int_{n}^{n+\delta}\left| \eu^{-\lambda t}|h_{t}(y_{n})f_{n}(\phi(t,y_{n}))\right| \dt\right]\]
 	%% --
@@ -1833,10 +1833,10 @@ Before we state the general result (see Theorem~\ref{thm:b3-4.4}) we give some t
 	The constant $\delta$ can be chosen such that
 	%% --
 	\begin{equation}\label{eq:b3-4.8}
-		\|g_{n}\| \geq 1/2\epsilon \cdot\left(\eu^{\epsilon n} - \eu^{\epsilon(n-1)})\right) \to \infty \text{ for } n \to \infty.
+		\norm{g_{n}} \geq 1/2\epsilon \cdot\left(\eu^{\epsilon n} - \eu^{\epsilon(n-1)})\right) \to \infty \text{ for } n \to \infty.
 	\end{equation}
 	%% --
-	It follows from Eq.~\myeqpageref{eq:b3-4.8} and Eq.~\myeqpageref{eq:b3-4.7} that $ g_n / \|g_n\|$ is an approximate
+	It follows from Eq.~\myeqpageref{eq:b3-4.8} and Eq.~\myeqpageref{eq:b3-4.7} that $ g_n / \norm{g_n}$ is an approximate
 	eigenvector of\/ $A$ corresponding to $\lambda$. 
     Thus (i) is proved. 
 	
@@ -1854,14 +1854,14 @@ Before we state the general result (see Theorem~\ref{thm:b3-4.4}) we give some t
 	Henceforth we will assume that $K = K_{\infty}$, that is, $\phi$ is surjective (\cf Lemma~\ref{lem:b3-4.2}\,(ii)).
 	
 	We choose $\tau > 0$ such that Eq.~\myeqpageref{eq:b3-4.5} is true.
-	Since $\phi$ is surjective, for every $f \in C(K)$ there is a $x_{f} \in K$ such that $\|f\| = \|f(\phi(\tau,x_{f}))\|$ and we obtain for $\lambda \in H_{2\epsilon}$, $\lambda = a + \im\beta$, $\alpha,\beta \in \R$
+	Since $\phi$ is surjective, for every $f \in C(K)$ there is a $x_{f} \in K$ such that $\norm{f} = \norm{f(\phi(\tau,x_{f}))}$ and we obtain for $\lambda \in H_{2\epsilon}$, $\lambda = a + \im\beta$, $\alpha,\beta \in \R$
 	%% --
 	\begin{equation}\label{eq:b3-4.9}
 		\begin{aligned}
-			\|(\eu^{\lambda\tau} - T(\tau))f\| &\geq |h_{\tau}(x_{f})f(\phi(\tau,x_{f})) - \eu^{\lambda\tau}f(x_{f})| \\
-			& \geq h_{\tau}(x_{f})\|f\| - \eu^{a\tau}|f(x_{f})| 
-			 \geq \eu^{(a+\epsilon)\tau}\|f\| - \eu^{a\tau}\|f\| \\
-			&= \eu^{a\tau}(\eu^{\epsilon\tau} - 1)\|f\|.
+			\norm{(\eu^{\lambda\tau} - T(\tau))f} &\geq |h_{\tau}(x_{f})f(\phi(\tau,x_{f})) - \eu^{\lambda\tau}f(x_{f})| \\
+			& \geq h_{\tau}(x_{f})\norm{f} - \eu^{a\tau}|f(x_{f})| 
+			 \geq \eu^{(a+\epsilon)\tau}\norm{f} - \eu^{a\tau}\norm{f} \\
+			&= \eu^{a\tau}(\eu^{\epsilon\tau} - 1)\norm{f}.
 		\end{aligned}
 	\end{equation}
 	%% --
@@ -2058,7 +2058,7 @@ then $\hat{h}(x_{0}) + \frac{2\pi}{\tau}\im\Z \subset R{\sigma}(A)$ where $\hat{
 \end{proposition}
 %% --
 \begin{proof}	
-	(i) and (ii): By Eq.~\myeqpageref{eq:b3-4.4} we have $\overline{c}_{t}(h,\phi) = 1/t\cdot\log\|T(t)\|$ hence $\overline{c}(h,\phi) = \omega_{0}(A)$ (\cf Eq.~\myeqpageref{eq:a1-1.1}).  
+	(i) and (ii): By Eq.~\myeqpageref{eq:b3-4.4} we have $\overline{c}_{t}(h,\phi) = 1/t\cdot\log\norm{T(t)}$ hence $\overline{c}(h,\phi) = \omega_{0}(A)$ (\cf Eq.~\myeqpageref{eq:a1-1.1}).  
 	Consequently, we have $\{\lambda \in \C \colon \Re(\lambda) > \overline{c}(h,\phi)\} \subset \rho(A)$ and $\overline{c}(h,\phi) \in \sigma(A)$ by Theorem~\ref{thm:b3-1.6}.
 	
 	To prove $\underline{c}(h,\phi) \in \sigma(A)$, we can assume by Theorem~\ref{thm:b3-4.4} that $K_{\infty} = K_{s}$ for some $s$ and that $\phi_{|K_{\infty}}$ is injective.
@@ -2092,20 +2092,20 @@ For $f \in D(A)$ we have
 It follows that $\phi_{nm} \in D(A')$ and, since $\lim_{t\to\infty} h(\phi(t,x_{0})) = \hat{h}$,
 %% --
 \begin{equation}\label{eq:b3-4.13}
-	\lim \sup_{m\to\infty} \|(\hat{h}+\im\beta -A')\phi_{nm}\| \leq 1/n \text{ for every } n \in \N.
+	\lim \sup_{m\to\infty} \norm{(\hat{h}+\im\beta -A')\phi_{nm}} \leq 1/n \text{ for every } n \in \N.
 \end{equation}
 %% --
 Because the orbit is infinite we have
 %% --
 	\begin{align*}
-	\|\phi_{nm}\| & {= \frac{1}{n}\int_{0}^{n} \left|\eu^{-(\hat{h}+\im\beta )t} h_{t}(\phi(m,x_{0}))\right| \dt} \\
+	\norm{\phi_{nm}} & {= \frac{1}{n}\int_{0}^{n} \left|\eu^{-(\hat{h}+\im\beta )t} h_{t}(\phi(m,x_{0}))\right| \dt} \\
 	& {= \frac{1}{n}\int_{0}^{n} \exp\left(\int_{m}^{m+t} (h(\phi(s,x_{0}))-\hat{h})\ds \right)\dt}
 	\end{align*}
 %% --
 which shows that
 %% --
 \begin{equation}\label{eq:b3-4.14}
-	\lim_{m\to\infty} \|\phi_{nm}\| = 1 \text{ for every } n \in \N.
+	\lim_{m\to\infty} \norm{\phi_{nm}} = 1 \text{ for every } n \in \N.
 \end{equation}
 %% --
 In view of Eq.~\myeqpageref{eq:b3-4.13} and Eq.~\myeqpageref{eq:b3-4.14} it is not difficult to find a subsequence $k(n)$ of\/ $\N$ such that $(\phi_{n,k(n)})$ is an approximate eigenvector of\/ $A'$ corresponding to $\hat{h} + \im\beta$.
@@ -2154,7 +2154,7 @@ We are now going to apply the results obtained so far to the special case where 
 	\end{equation}
 	%% --
 	If\/ $0 < \beta < 2\pi/T$, then the assumption $T/2 \leq r \leq T$ implies that there exists a neighborhood $U$ of\/ $\lambda_{0} \coloneq \im\beta$ such that the functions $\lambda \mapsto (1 - \exp(-\lambda r_{x}))^{-1}$ are uniformly bounded on $U$, by $M$ say.
-    Then from Eq.~\myeqpageref{eq:b3-4.15} we can conclude that $\|R(\lambda,A)f\| \leq M\left(\int_{0}^{r} \left|\eu^{-\lambda t}\right|\dt\right)\|f\|$ for $\lambda \in U$, $\Re(\lambda) > 0$, therefore $\lambda_{0} = \im\beta \in \rho(A)$.
+    Then from Eq.~\myeqpageref{eq:b3-4.15} we can conclude that $\norm{R(\lambda,A)f} \leq M\left(\int_{0}^{r} \left|\eu^{-\lambda t}\right|\dt\right)\norm{f}$ for $\lambda \in U$, $\Re(\lambda) > 0$, therefore $\lambda_{0} = \im\beta \in \rho(A)$.
 \end{enumerate}
 \end{proof}
 %% --

@@ -42,7 +42,7 @@ s(A) = \omega_{1}(A) = \omega_{0}(A) \in \sigma(A) .
     There exist $\tau > 0$, $h \in E_{+}$ such that $T(\tau)E \subset E_{h}$.
     
     \item \label{thm:c4-1.1-3}
-    There exist $\tau > 0$, $\phi \in E'_{+}$ such that $\|T(\tau)f\| \leq \langle f,\phi\rangle$ for all $f \in E_{+}$.
+    There exist $\tau > 0$, $\phi \in E'_{+}$ such that $\norm{T(\tau)f} \leq \langle f,\phi\rangle$ for all $f \in E_{+}$.
 \end{enumerate}
 \end{theorem}
 %% --
@@ -53,7 +53,7 @@ Thus we have to show $s(A) = \omega_{0}(A)$.
 \begin{enumerate}[\upshape (i), wide, labelindent=.25em]
 \item 
 For AM-spaces the proof given in Part-II, Section~\ref{sec:b4-1} works (cf.\ Part-II, Remark~\ref{rem:b4-1.5}.).
-Since for positive semigroups we always have $\|R(\lambda,A)\| \leq \|R(\Re(\lambda), A)\|$ ($\Re(\lambda) > s(A)$) (see   Corollar~\ref{cor:c3-1.3}), the assertion for $L^{2}$-spaces follows from Part-I, Corollary~\ref{cor:a3-7.11}.
+Since for positive semigroups we always have $\norm{R(\lambda,A)} \leq \norm{R(\Re(\lambda), A)}$ ($\Re(\lambda) > s(A)$) (see   Corollar~\ref{cor:c3-1.3}), the assertion for $L^{2}$-spaces follows from Part-I, Corollary~\ref{cor:a3-7.11}.
 If\/ $E$ is an $L^{1}$-space the assumptions of ~\ref{thm:c4-1.1-3} are satisfied.
 
 \item 
@@ -71,9 +71,9 @@ Thus $\rho \in R\sigma(T(\tau))$ and hence $s(A) \geq \omega_{0}(A)$ by Part-I, 
 For $\alpha > s(A)$, $r > \tau$, $f \in E_{+}$ we have
 %% --
 \begin{align*}
-\int_{0}^{r} \eu^{-\alpha s}\|T(s)f\| \, \ds &= \int_{0}^{\tau} \eu^{-\alpha s}\|T(s)f\| \, \ds + \eu^{-\alpha \tau}\int_{0}^{r-\tau} \eu^{-\alpha s}\|T(\tau+s)f\| \, \ds \\
-&\leq \int_{0}^{\tau} \eu^{-\alpha s}\|T(s)f\| \, \ds + \eu^{-\alpha \tau}\int_{0}^{r-\tau} \eu^{-\alpha s}\langle T(s)f,\phi \rangle \, \ds \\
-&\leq \int_{0}^{\tau} \eu^{-\alpha s}\|T(s)f\| \, \ds + \|R(\alpha,A)f\|
+\int_{0}^{r} \eu^{-\alpha s}\norm{T(s)f} \, \ds &= \int_{0}^{\tau} \eu^{-\alpha s}\norm{T(s)f} \, \ds + \eu^{-\alpha \tau}\int_{0}^{r-\tau} \eu^{-\alpha s}\norm{T(\tau+s)f} \, \ds \\
+&\leq \int_{0}^{\tau} \eu^{-\alpha s}\norm{T(s)f} \, \ds + \eu^{-\alpha \tau}\int_{0}^{r-\tau} \eu^{-\alpha s}\langle T(s)f,\phi \rangle \, \ds \\
+&\leq \int_{0}^{\tau} \eu^{-\alpha s}\norm{T(s)f} \, \ds + \norm{R(\alpha,A)f}
 \end{align*}
 %% --
 (the last inequality follows from Theorem~\ref{thm:c3-1.2}).
@@ -96,7 +96,7 @@ T_{0} \colon L^{p}(\mu) \cap L^{q}(\mu) \to L^{p}(\mu) \cap L^{q}(\mu)
 is a linear operator which satisfies 
 %% --
 \[
-\|T_{0}f\|_{p} \leq C_{p}\|f\|_{p} \ \text{ and } \ \|T_{0}f\|_{q} \leq C_{q}\|f\|_{q} 
+\norm{T_{0}f}_{p} \leq C_{p}\norm{f}_{p} \ \text{ and } \ \norm{T_{0}f}_{q} \leq C_{q}\norm{f}_{q} 
 \ \text{for every } \ f\in L^{\,p}(\mu) \cap L^{q}(\mu)\,.
 \]
 %% --
@@ -213,9 +213,9 @@ An important tool in the proof is the following result on power bounded operator
 %% --
 \begin{equation}\label{eq:c4-1.4}
 \begin{minipage}{.75\linewidth}
-\textit{Let $R$ be a linear operator on a Banach space such that $\sup\{ \|R^{n}\| \colon n \in \N \} < \infty$. 
+\textit{Let $R$ be a linear operator on a Banach space such that $\sup\{ \norm{R^{n}} \colon n \in \N \} < \infty$. 
 Then one has $\sigma(R) \cap \Gamma \subseteq \{1\}$ if and only if 
-$ \lim_{n \to \infty} \|R^{n} - R^{n+1}\| = 0$.}
+$ \lim_{n \to \infty} \norm{R^{n} - R^{n+1}} = 0$.}
 \end{minipage}
 \end{equation}
 %% --
@@ -256,15 +256,15 @@ Since the spectral mapping theorem holds
 \sigma(T(1)) \cap \Gamma = \{1\} \text{ and } 1 \notin R{\sigma}(T(1)).
 \end{equation}
 %% --
-From \myeqpageref{eq:c4-1.4} it follows that $\lim_{n \to \infty} \|T(n) - T(n+1)\| = 0$ and therefore $\lim_{t \to \infty} \|T(t) - T(t+1)\| = 0$.
+From \myeqpageref{eq:c4-1.4} it follows that $\lim_{n \to \infty} \norm{T(n) - T(n+1)} = 0$ and therefore $\lim_{t \to \infty} \norm{T(t) - T(t+1)} = 0$.
 Thus given $g \in \Image{\Id - T(1)}$ then $g = f - T(1)f$ for some $f \in E$ hence 
 %% --
 \[
-\|T(t)g\| = \|(T(t) - T(t+1))f\| \leq \|(T(t) - T(t+1))\| \cdot \|f\| \to 0.
+\norm{T(t)g} = \norm{(T(t) - T(t+1))f} \leq \norm{(T(t) - T(t+1))} \cdot \norm{f} \to 0.
 \]
 %% --
 The second assertion of \myeqpageref{eq:c4-1.5} ensures that $\Image{\Id - T(1)}$ is dense in $E$.
-Since the semigroup is bounded, we have $\lim_{t \to \infty} \|T(t)f\| = 0$ for every $f \in \overline{\Image{\Id - T(1)}} = E$, \ie  $(T(t))$ is uniformly stable.
+Since the semigroup is bounded, we have $\lim_{t \to \infty} \norm{T(t)f} = 0$ for every $f \in \overline{\Image{\Id - T(1)}} = E$, \ie  $(T(t))$ is uniformly stable.
 
 \ref{thm:c4-1.5-1} $\Rightarrow$~\ref{thm:c4-1.5-3} is always true and follows from Part-I, Theorem~\ref{thm:a4-1.13}.
 
@@ -482,7 +482,7 @@ Instead of uniform stability we now require $s(A) < 0$ while the assumption on t
 
 \begin{proposition}\label{prop:c4-1.12}
 Let $(T(t))_{t \geq 0}$ be a positive semigroup with $s(A) < 0$.
-Assume that the forcing term $F$ has values in $D(A)$, that it is continuous with respect to the graph norm and that $f_{0} \coloneq  \|\cdot\|_{A}$-$\lim_{t \to \infty} F(t)$ exists.
+Assume that the forcing term $F$ has values in $D(A)$, that it is continuous with respect to the graph norm and that $f_{0} \coloneq  \norm{\cdot}_{A}$-$\lim_{t \to \infty} F(t)$ exists.
 Then for every solution $u(\cdot)$ of Eq.~\myeqpageref{eq:c4-1.6} we have $\lim_{t \to \infty} u(t) = -A^{-1}f_{0}$.
 %%
 \footnote{Note, that the assumptions imply that Eq.~\myeqpageref{eq:c4-1.6} has a unique strong solution, see \textcite[ Theorem~4.2.4]{pazy:1983}.}
@@ -497,19 +497,19 @@ u(t) = T(t)u_{0} + \int_{0}^{t} T(s)f_{0} \, \ds + \int_{0}^{t} T(s)(F(t-s)-f_{0
 %% --
 The first term tends to zero by Corollary~\ref{cor:c4-1.4},  
 the second term to $R(0,A)f_{0} = -A^{-1}f_{0}$ by Theorem~\ref{thm:c3-1.2}.
-By assumption we have $\lim_{s \to \infty}\|A(F(s)-f_{0})\| = 0$ and from Part-I,
-Theorem~\ref{thm:a4-1.3} and Eq.~\myeqpageref{eq:a4-1.3} we deduce that $\|T(s)R(0,A)\| \leq M\eu^{-\epsilon s}$ for $s \geq 0$ and suitable constants $M \geq 1$, $\epsilon > 0$.
+By assumption we have $\lim_{s \to \infty}\norm{A(F(s)-f_{0})} = 0$ and from Part-I,
+Theorem~\ref{thm:a4-1.3} and Eq.~\myeqpageref{eq:a4-1.3} we deduce that $\norm{T(s)R(0,A)} \leq M\eu^{-\epsilon s}$ for $s \geq 0$ and suitable constants $M \geq 1$, $\epsilon > 0$.
 Thus for the third term we have
 %% --
 \begin{align*}
- \norm*{\int_{0}^{t} T(s)(F(t-s)-f_{0}) \, \ds\,} &\leq \int_{0}^{t} \|T(s)R(0,A)\| \|A(F(t-s)-f_{0})\| \, \ds \\
+ \norm*{\int_{0}^{t} T(s)(F(t-s)-f_{0}) \, \ds\,} &\leq \int_{0}^{t} \norm{T(s)R(0,A)} \norm{A(F(t-s)-f_{0})} \, \ds \\
 &= \int_{0}^{t/2} \ldots \, \ds + \int_{t/2}^{t} \ldots \, \ds.
 \end{align*}
 %% --
 The first integral can be estimated by
 %% --
 \[
- \sup  \left\{\|A(F(s)-f_{0})\| \colon s \in 
+ \sup  \left\{\norm{A(F(s)-f_{0})} \colon s \in 
  \left[ t/2 , t \right] \right\} 
 \cdot \int_{0}^{\infty} M \cdot \eu^{-\epsilon s} \, \ds
 \]
@@ -517,7 +517,7 @@ The first integral can be estimated by
 while the second integral can be estimated by 
 %% --
 \[
-\sup\{\|A(F(s)-f_{0})\| \colon s \geq 0\}
+\sup\{\norm{A(F(s)-f_{0})} \colon s \geq 0\}
 \cdot \int_{t/2}^{t} M \cdot \eu^{- \epsilon s} \, \ds.
 \]
 %% -- 
@@ -544,7 +544,7 @@ The considerations in this section are motivated by the following guideline.
 Unfortunately, this principle does not hold in general, \eg  there are semigroups with spectral bound less than zero and growth bound greater than zero (see Part-I, Example~\ref{ex:a3-1.3} \&~\ref{ex:a3-1.4}).
 In order to prove results in the above direction we have to assume additional hypotheses on the semigroup.
 Positivity may serve to this purpose.
-For example, the norm convergence to zero, \ie  $\lim_{t \to \infty} \|T(t)\| = 0$ for a positive semigroup on certain Banach lattices, is characterized by the condition $s(A) < 0$ (see Theorem~\ref{thm:c4-1.1}).
+For example, the norm convergence to zero, \ie  $\lim_{t \to \infty} \norm{T(t)} = 0$ for a positive semigroup on certain Banach lattices, is characterized by the condition $s(A) < 0$ (see Theorem~\ref{thm:c4-1.1}).
 Thus in this case the location of the spectrum determines the norm convergence of the semigroup.
 
 Here we concentrate on the case $s(A) = 0$.
@@ -564,7 +564,7 @@ Let $(T(t))_{t \geq 0}$ be a positive semigroup on a Banach lattice $E$ which is
 Then there exists a positive projection $P$ of finite rank and suitable constants $\delta > 0$, $M \geq 1$ such that
 %% --
 \begin{equation}\label{eq:c4-2.1}
-\|T(t) - P\| \leq M \cdot \eu^{-\delta t} \text{ for all } t \geq 0.
+\norm{T(t) - P} \leq M \cdot \eu^{-\delta t} \text{ for all } t \geq 0.
 \end{equation}
 %% --
 \end{theorem}
@@ -580,7 +580,7 @@ we have
 T(t) = \sum_{j=0}^{k-1} \frac{1}{j!} \cdot t^{j}A^{j}\circ P + R(t) \quad (t \geq 0),
 \end{equation*}
 %% --
-where $P$ is the residue of\/ $R(\cdot,A)$ at $0$, $k$ is the pole order and $\|R(t)\| \leq M \cdot \eu^{-\delta t}$ for suitable constants $\delta > 0$, $M \geq 1$.
+where $P$ is the residue of\/ $R(\cdot,A)$ at $0$, $k$ is the pole order and $\norm{R(t)} \leq M \cdot \eu^{-\delta t}$ for suitable constants $\delta > 0$, $M \geq 1$.
 Since we assumed that $(T(t))_{t \geq 0}$ is bounded, the pole order $k$ has to be $1$.
 \end{proof}
 %% --
@@ -716,7 +716,7 @@ Let $(T(t))_{t \geq 0}$ be a bounded positive semigroup on $E = L^{p}(\mu)$, $1 
 Assume that there exist $t_{0} \geq 0$, $\phi \in E'_{+}$,\, $b < 1$ such that
 %% --
 \begin{equation}\label{eq:c4-2.4}
-\|T(t_{0})f\| \leq \langle f,\phi \rangle + b\|f\| \quad \text{for all} \quad f \geq 0.
+\norm{T(t_{0})f} \leq \langle f,\phi \rangle + b\norm{f} \quad \text{for all} \quad f \geq 0.
 \end{equation}
 %% --
 Then $(T(t))_{t \geq 0}$ is quasi-compact.
@@ -737,12 +737,12 @@ We define $F \coloneqq \{f \in E \colon \lim_{t \to \infty} T(t)f \text{ exists}
 Then $F$ is closed since $(T(t))_{t \geq 0}$ is bounded and obviously $\Kern{A} \subset F$.
 Since $\sigma(A) \cap \im\R$ is cyclic and bounded (see Theorem~\ref{thm:c3-2.10} and Part-I, Theorem~\ref{thm:a2-1.20} resp.), we have $\sigma(A) \cap \im\R = \{0\}$.
 Since the spectral mapping theorem holds (cf.\ Part-I, Theorem~\ref{thm:a3-6.6}), we conclude $\sigma(T(t)) \cap \Gamma = \{1\}$ for all $t \geq 0$.
-Then (\refeq{eq:c4-1.4}) implies $\lim_{n \to \infty} \|T(n) - T(n+1)\| = 0$, hence $\lim_{t \to \infty}\|T(t) - T(t+1)\| = 0$.
+Then (\refeq{eq:c4-1.4}) implies $\lim_{n \to \infty} \norm{T(n) - T(n+1)} = 0$, hence $\lim_{t \to \infty}\norm{T(t) - T(t+1)} = 0$.
 Take $f = g - T(1)g$.
 Then 
 %
 \[
-	\|T(t)f\| = \|T(t)g - T(t+1)g\| \leq \|T(t) - T(t+1)\| \cdot \|g\|
+	\norm{T(t)f} = \norm{T(t)g - T(t+1)g} \leq \norm{T(t) - T(t+1)} \cdot \norm{g}
 \]
 %
 implies $\lim_{t \to \infty} T(t)f = 0$.
@@ -768,8 +768,8 @@ Consider the positive contraction $R$ defined by $(Rf)(x) \coloneqq f(x+1)$ on $
 Then $T(t) \coloneqq \eu^{t(R-\Id)}$ defines a positive norm-continuous semigroup on $E$.
 Since $\Kern{R - \Id} = \Fix{R} = \{0\}$, but 
 \[
-\|T(t)f\| = \eu^{-t} \norm*{\sum_{n=0}^{\infty} \frac{t^n}{n!}R^{n}f} = 
-\eu^{-t}\sum_{n=0}^{\infty} \frac{t^n}{n!}\|R^{n}f\|= \|f\| > 0
+\norm{T(t)f} = \eu^{-t} \norm*{\sum_{n=0}^{\infty} \frac{t^n}{n!}R^{n}f} = 
+\eu^{-t}\sum_{n=0}^{\infty} \frac{t^n}{n!}\norm{R^{n}f}= \norm{f} > 0
 \] 
 for every $0 < f \in E$, we see that $\lim_{t\to\infty} T(t)$ does not exist for the strong operator topology.
 
@@ -937,10 +937,13 @@ If\/ $(T(t))_{t \geq 0}$ is eventually norm-continuous, then $\lim_{t \to \infty
 %% --
 \begin{proof}
 Since the semigroup is positive and eventually norm-continuous, its boundary spectrum is cyclic and bounded, \ie  we have $P{\sigma}(A) \cap \im\R = \{0\}$.
-Moreover, there exist $t_{0} > 0$ and $\tau > 0$ such that $\|T(t_{0}) - T(t_{0}+\tau)\| < 1$.
+Moreover, there exist $t_{0} > 0$ and $\tau > 0$ such that $\norm{T(t_{0}) - T(t_{0}+\tau)} < 1$.
 
 For bounded linear operators $S \in \L{L^{1}}$ 
-one has $\|S\| = \|\,|S|\,\|$ (see \textcite[IV, Theorem 1.5]{schaefer:1974}), hence $\|\,|T(t_{0}) - T(t_{0}+\tau)| f\| < \|f\|$ for every $f \in L^{1}(\mu)$, $f \neq 0$.
+one has $\norm{S} = \norm{\lvert S \rvert}$ 
+(see \textcite[IV, Theorem 1.5]{schaefer:1974}), 
+hence 
+hence $ \norm{ \lvert T(t_{0}) - T(t_{0}+\tau) \rvert f} < \|f\|$ for every $f \in L^{1}(\mu)$, $f \neq 0$.
 This shows that condition (2) of Theorem~\ref{thm:c4-2.6}\,(i) can be true only when $e_{2} = 0$, \ie  $X_{2} = \emptyset$.
 \end{proof}
 
@@ -1037,7 +1040,7 @@ In particular, if\/ $0$ is not the only point in the boundary spectrum $\sigma(A
 Therefore the assumptions of Theorem~\ref{thm:c3-3.8} are satisfied and formula \eqref{eq:c3-3.13} implies
 %% --
 \begin{equation}\label{eq:c4-2.10}
-\rho(A) = \rho(A) + \im\alpha\Z \quad \text{and} \quad \|R(\lambda,A)\| = \|R(\lambda+\im\alpha k,A)\|
+\rho(A) = \rho(A) + \im\alpha\Z \quad \text{and} \quad \norm{R(\lambda,A)} = \norm{R(\lambda+\im\alpha k,A)}
 \end{equation}
 %% --
 for $\lambda \in \rho(A)$, $k \in \Z$.
@@ -1049,7 +1052,7 @@ Since $0$ was supposed to be a pole of the resolvent, we can decompose
 \end{equation*}
 %% --
 where $\sigma_{1} = \im\alpha\Z$, $0 < \alpha \in \R$, and $\sup\{\Re(\lambda) \colon \lambda \in \sigma_{2}\} < 0$.
-Moreover, for small $\epsilon > 0$, $\|R(-\epsilon+\im\lambda,A)\|$ is uniformly bounded for $\lambda \in \R$.
+Moreover, for small $\epsilon > 0$, $\norm{R(-\epsilon+\im\lambda,A)}$ is uniformly bounded for $\lambda \in \R$.
 
 \index{spectral decomposition}
 Next, we construct a spectral decomposition of\/ $E$ and $\TT$ corresponding to $\sigma_{1}$ and $\sigma_{2}$ (compare Part-I, Section~\ref{sec:a3-3}).
@@ -1083,7 +1086,7 @@ Under the above assumptions there exists a positive projection $Q$ with range $E
 $E = E_{1} \oplus E_{2}$, $T = T_{1} \oplus T_{2}$ and $A = A_{1} \oplus A_{2}$ is a spectral decomposition corresponding to the decomposition $\sigma(A) = \sigma_{1} \cup \sigma_{2}$ where $\sigma_{1} = \sigma(A_{1}) = \im\alpha\Z$ and $\sigma_{2} = \sigma(A_{2}) = \sigma(A) \setminus \im\alpha\Z$.
 
 \item \label{lem:c4-2.12-2}
-$s(A_{2}) < 0$ and $\|R(\lambda,A_{2})\|$ is uniformly bounded in each semiplane\\ 
+$s(A_{2}) < 0$ and $\norm{R(\lambda,A_{2})}$ is uniformly bounded in each semiplane\\ 
 $\{\lambda \in \C \colon \Re(\lambda) > s(A_{2}) + \epsilon\}$ with $\epsilon > 0$.
 
 \item \label{lem:c4-2.12-3}
@@ -1111,7 +1114,7 @@ Then $\TT$ behaves asymptotically as the rotation group $(R_{\tau}(t))_{t \geq 0
 More precisely, we can identify $L^{2}(\Gamma)$ with a sublattice of\/ $E$, being the range of a strictly positive projection $Q$, and we find constants $\epsilon > 0$ and $M \geq 1$ such that for every $f \in E$ we have
 %% --
 \begin{equation}\label{eq:c4-2.11}
-\|T(t)f - R_{\tau}(t)g\| \leq M\eu^{-\epsilon t}\|f\| \text{ for every } t \geq 0 \text{ where } g \coloneqq Qf.
+\norm{T(t)f - R_{\tau}(t)g} \leq M\eu^{-\epsilon t}\norm{f} \text{ for every } t \geq 0 \text{ where } g \coloneqq Qf.
 \end{equation}
 \end{proposition}
 %% --
@@ -1129,7 +1132,7 @@ Assume that $s(A) = 0$ is a pole of the resolvent of the generator $A$ and that 
 Then $\TT$ behaves asymptotically as the rotation group $(R_{\tau}(t))_{t \geq 0}$ with period $\tau > 0$ on $L^{p}(\Gamma)$, \ie  we can identify $L^{p}(\Gamma)$ with a sublattice of\/ $E$ such that for every $f \in E$ there exists $g \in L^{p}(\Gamma)$ satisfying
 %% --
 \begin{equation}\label{eq:c4-2.12}
-\lim_{t \to \infty} \|T(t)f - R_{\tau}(t)g\| = 0.
+\lim_{t \to \infty} \norm{T(t)f - R_{\tau}(t)g} = 0.
 \end{equation}
 \end{theorem}
 %% --
@@ -1138,14 +1141,14 @@ We only consider $1 \leq p < 2$.
 The assertion for $p > 2$ then follows by duality while $p = 2$ was treated in Proposition~\ref{prop:c4-2.13}.
 
 At first we observe that without loss of generality we may assume that $\mu$ is a probability measure and that $T(t)\1 = \1$ for every $t \geq 0$.
-In fact, the assumptions imply that $T(t)h = h$ for some $h \gg 0$, $\|h\|_{p} = 1$.
+In fact, the assumptions imply that $T(t)h = h$ for some $h \gg 0$, $\norm{h}_{p} = 1$.
 We consider the measure $\nu$ which has the density $h^{p}$ with respect to $\mu$.
 Then $\nu$ is a probability measure and 
 $M \colon L^{p}(\nu) \to L^{p}(\mu)$, defined by $Mh \coloneqq h\cdot f$, is an isometric lattice isomorphism of\/ $L^{p}(\nu)$ onto $L^{p}(\mu)$.
 The semigroup defined by $\widehat{T}(t) \coloneqq M^{-1}T(t)M$ possesses the same properties as $(T(t))$ and satisfies $\widehat{T}(t)\1 = \1$ for $t \geq 0$.
 
 Now the properties $T(t)\1 = \1$, and $T(t) \geq 0$ imply that $L^{\infty}(\mu)$ is an invariant subspace for every operator $T(t)$ which is contractive with respect to the $L^{\infty}$-norm.
-The \emph{Riesz Convexity Theorem} (see \textcite[VI.10.11]{dunfordschwartz:1958}) then implies that by restricting the semigroup $(T(t))$ to $L^{q}(\mu)$ $(p < q < \infty)$ we obtain a strongly continuous semigroup $(T_{q}(t))_{t \geq 0}$ on $L^{q}(\mu)$ such that $\|T_{q}(t)\| \leq \|T(t)\|^{p/q}$ for $t \geq 0$, $q \geq p$.
+The \emph{Riesz Convexity Theorem} (see \textcite[VI.10.11]{dunfordschwartz:1958}) then implies that by restricting the semigroup $(T(t))$ to $L^{q}(\mu)$ $(p < q < \infty)$ we obtain a strongly continuous semigroup $(T_{q}(t))_{t \geq 0}$ on $L^{q}(\mu)$ such that $\norm{T_{q}(t)} \leq \norm{T(t)}^{p/q}$ for $t \geq 0$, $q \geq p$.
 
 Let $A_{q}$ be the generator of\/ $(T_{q}(t))$.
 In order to apply Proposition~\ref{prop:c4-2.13} we have to show that $0$ is a pole of the resolvent of\/ $A_{2}$.
@@ -1162,8 +1165,8 @@ From $AP = PA = 0$ it follows that
 The Riesz Convexity Theorem yields the following estimate for the operator norm:
 %% --
 \begin{align*}
-\|R(1,A_{2})^{n} - P_{2}\| &\leq \|R(1,A)^{n} - P\|^{2/p}\|R(1,A)_{\infty}^{n} - P_{\infty}\|^{1-2/p} \\
-&\leq \|R(1,A)^{n} - P\|^{2/p}(1 + \|P_{\infty}\|)^{1-2/p}.
+\norm{R(1,A_{2})^{n} - P_{2}} &\leq \norm{R(1,A)^{n} - P}^{2/p}\norm{R(1,A)_{\infty}^{n} - P_{\infty}}^{1-2/p} \\
+&\leq \norm{R(1,A)^{n} - P}^{2/p}(1 + \norm{P_{\infty}})^{1-2/p}.
 \end{align*}
 %% --
 Since $0$ is a pole with residue $P$, the spectral radius of the operator $R(1,A)(1-P)$ is less than $1$.
@@ -1174,12 +1177,12 @@ Part-I, Proposition~\ref{prop:a3-2.5}).
 Now we can apply Proposition~\ref{prop:c4-2.13} and obtain a projection $Q$ such that 
 %% --
 \[ 
-\lim_{t \to \infty}\|T(t)f - R_{\tau}(t) \circ Qf\|_{2} = 0 \ \text{ for every 
+\lim_{t \to \infty}\norm{T(t)f - R_{\tau}(t) \circ Qf}_{2} = 0 \ \text{ for every 
 } \ f \in L^{2}(\mu)\,.
 \]
 %% --
 On order intervals of\/ $L^{\infty}(\mu)$, both $L^{p}$- and $L^{2}$-norm induce the same topology (see \textcite[V.8.3]{schaefer:1974}), 
-hence $\lim_{t \to \infty} \|T(t)f - R_{\tau}(t) \circ Qf\|_{p} = 0$ for every $f \in L^{\infty}(\mu)$.
+hence $\lim_{t \to \infty} \norm{T(t)f - R_{\tau}(t) \circ Qf}_{p} = 0$ for every $f \in L^{\infty}(\mu)$.
 Since $(T(t))$ is bounded, we finally obtain convergence in the $L^{p}$-norm for every $f \in L^{p}(\mu)$.
 \end{proof}
 %% --
@@ -1263,7 +1266,7 @@ In general, these conditions are difficult to verify, in particular, when only t
 In the final example we described a method how to cope with this problem. 
 
 If\/ $s(A)$ is an eigenvalue of the adjoint $A'$ with a strictly positive eigenvector $\phi$, then $(T(t))_{t\geq 0}$ induces, in a canonical way, a positive semigroup $(T_{\phi}(t))_{t \geq 0}$ on the AL-space $(E,\phi)$.
-This semigroup satisfies $\|T_{\phi}(t)\| \leq \exp(t \cdot s(A))$ and has spectral bound $s(A)$.
+This semigroup satisfies $\norm{T_{\phi}(t)} \leq \exp(t \cdot s(A))$ and has spectral bound $s(A)$.
 Hence one may apply the results of this section to the rescaled semigroup $(\exp(-t \cdot s(A))T_{\phi}(t))_{t \geq 0}$, thus obtaining convergence of\/ $(T(t))_{t \geq 0}$ for the weaker topology on $E$ which is induced by $(E,\phi)$.
 
 \newpage
@@ -1356,31 +1359,31 @@ and $h \otimes x \in E$ is defined by
 $(h \otimes x)(s) \coloneqq h(s) \cdot x$ for $h \in L^{1}[-1,0]$, $x \in F$ and $s \in [-1,0]$.
 Clearly 
 %\linebreak[4] 
-$\|\epsilon_{\lambda}\| = 1/\lambda \cdot (1 - \eu^{-\lambda}) \to 0$ as $\lambda \to \infty$ and we have
+$\norm{\epsilon_{\lambda}} = 1/\lambda \cdot (1 - \eu^{-\lambda}) \to 0$ as $\lambda \to \infty$ and we have
 %% --
 \[
-\|S_{\lambda}\| = \|\epsilon_{\lambda}\| \cdot \|\Phi\| = 1/\lambda \cdot (1 - \eu^{-\lambda}) \cdot \|\Phi\| \leq 1/\lambda \cdot \|\Phi\|\,.
+\norm{S_{\lambda}} = \norm{\epsilon_{\lambda}} \cdot \norm{\Phi} = 1/\lambda \cdot (1 - \eu^{-\lambda}) \cdot \norm{\Phi} \leq 1/\lambda \cdot \norm{\Phi}\,.
 \]
 %% --
-For every $\lambda > \|\Phi\|$, the operator $(\Id - S_{\lambda})$ is an isomorphism of\/ $E$ and it induces a bijection from $D(A)$ onto $D(A_{0})$ such that
+For every $\lambda > \norm{\Phi}$, the operator $(\Id - S_{\lambda})$ is an isomorphism of\/ $E$ and it induces a bijection from $D(A)$ onto $D(A_{0})$ such that
 %% --
 \begin{equation}\label{eq:c4-3.2}
 (\lambda - A) = (\lambda - A_{0})(\Id - S_{\lambda}).
 \end{equation}
 %% --
 Since $A_{0}$ generates a semigroup of contractions, $\lambda - A_{0}$ is invertible for each $\lambda > 0$.
-This yields the invertibility of\/ $\lambda - A$ for each $\lambda \geq \|\Phi\|$.
+This yields the invertibility of\/ $\lambda - A$ for each $\lambda \geq \norm{\Phi}$.
 
-In order to obtain an estimate on $\|R(\lambda,A)\|$ we use Formula Eq.~\myeqpageref{eq:c4-3.2}.
+In order to obtain an estimate on $\norm{R(\lambda,A)}$ we use Formula Eq.~\myeqpageref{eq:c4-3.2}.
 Since 
 \[ 
-\|R(1,S_{\lambda})\| = \|\sum_{n=0}^{\infty} S_{\lambda}^n\| \leq \sum_{n=0}^{\infty} \|\epsilon_{\lambda}\|^n \cdot \|\Phi\|^n = (1-\|\epsilon_{\lambda}\| \cdot \|\Phi\|)^{-1}
+\norm{R(1,S_{\lambda})} = \norm{\sum_{n=0}^{\infty} S_{\lambda}^n} \leq \sum_{n=0}^{\infty} \norm{\epsilon_{\lambda}}^n \cdot \norm{\Phi}^n = (1-\norm{\epsilon_{\lambda}} \cdot \norm{\Phi})^{-1}
 \]
-and $\|R(\lambda,A_0)\| \leq 1/\lambda$ for $\lambda > 0$, we obtain for $\lambda \geq \|\Phi\|$ that
+and $\norm{R(\lambda,A_0)} \leq 1/\lambda$ for $\lambda > 0$, we obtain for $\lambda \geq \norm{\Phi}$ that
 %% --
 \begin{align*}
-\|R(\lambda,A)\| &\leq (1 - \|\epsilon_{\lambda}\| \cdot \|\Phi\|)^{-1} \cdot 1/\lambda = (\lambda - \lambda \cdot \|\epsilon_{\lambda}\| \cdot \|\Phi\|)^{-1} \\
-&= (\lambda - (1 - \eu^{-\lambda}) \cdot \|\Phi\|)^{-1} \leq (\lambda - \|\Phi\|)^{-1}.
+\norm{R(\lambda,A)} &\leq (1 - \norm{\epsilon_{\lambda}} \cdot \norm{\Phi})^{-1} \cdot 1/\lambda = (\lambda - \lambda \cdot \norm{\epsilon_{\lambda}} \cdot \norm{\Phi})^{-1} \\
+&= (\lambda - (1 - \eu^{-\lambda}) \cdot \norm{\Phi})^{-1} \leq (\lambda - \norm{\Phi})^{-1}.
 \end{align*}
 %% --
 By using Part-I, Corollary~\ref{cor:a2-1.8} we thus have proved the first assertion of the following theorem.
@@ -1453,11 +1456,11 @@ It remains to show uniqueness.
 Let $w$ be a solution of \myeqpageref{eq:c4-re} with initial function $w_{0} = 0$.
 Then
 \begin{align*}
-\|w(t)\|_F & = \|\Phi(w_{t})\| \leq \|\Phi\| \cdot  \|w_{t}\|_{E} =  \|\Phi\| \cdot \int_{-1}^{0} \|w_{t}(s)\_{F}\| \, \ds \\
-&=  \|\Phi\| \int_{-1}^0 \|w(t+s)\|_{F} \ds = \|\Phi\| \int_{t-1}^{t} \|w(s)\|_{F} \ds \\
-&\leq \|\Phi\| \int_{-1}^{t} \|w(s)\|_{F} \ds \ \text{ for } \ t \geq 0\,.
+\norm{w(t)}_F & = \norm{\Phi(w_{t})} \leq \norm{\Phi} \cdot  \norm{w_{t}}_{E} =  \norm{\Phi} \cdot \int_{-1}^{0} \norm{w_{t}(s)\_{F}} \, \ds \\
+&=  \norm{\Phi} \int_{-1}^0 \norm{w(t+s)}_{F} \ds = \norm{\Phi} \int_{t-1}^{t} \norm{w(s)}_{F} \ds \\
+&\leq \norm{\Phi} \int_{-1}^{t} \norm{w(s)}_{F} \ds \ \text{ for } \ t \geq 0\,.
 \end{align*}
-By Gronwall's lemma $\|w(t)\|_F \leq 0$, thus $w(t) = 0$.
+By Gronwall's lemma $\norm{w(t)}_F \leq 0$, thus $w(t) = 0$.
 \end{proof}
 %% --
 Now we turn to the aspect of positivity in \myeqpageref{eq:c4-re}. We assume $F$ to be a Banach lattice and let $E$ inherit the canonical ordering from $F$ making it a Banach lattice again. Additionally, let $\Phi$ be positive.
@@ -1615,7 +1618,7 @@ Now $r > \lambda$ would imply $s(\Phi_{\lambda}) > s(\Phi_{r}) \geq 1$ (by the s
 %\ref{thm:c4-3.7-3} 
 The hypotheses and Lemma~\ref{lem:c4-3.4} imply that the map $\lambda \mapsto s(\Phi_{\lambda})$ is continuous. 
 Let $s(\Phi_{\lambda}) > 1$. 
-Since $s(\Phi_{\mu}) \leq \|\Phi_{\mu}\| \leq \|\Phi\| \cdot \|\epsilon_{\mu}\|$ we see that $s(\Phi_{\mu})$ tends to zero as $\mu \to \infty$. 
+Since $s(\Phi_{\mu}) \leq \norm{\Phi_{\mu}} \leq \norm{\Phi} \cdot \norm{\epsilon_{\mu}}$ we see that $s(\Phi_{\mu})$ tends to zero as $\mu \to \infty$. 
 Therefore there exists $\mu' > \lambda$ such that $s(\Phi_{\mu'}) = 1$. 
 \end{enumerate} 
 Now Proposition~\ref{prop:c4-3.6}\,\ref{prop:c4-3.6-3}  implies $\mu' \in \sigma(A)$ whence $s(A) \geq \mu' > \lambda$.
@@ -1836,7 +1839,7 @@ for every $n \in \N$.
 Hence 
 %% --
 \[
-\|(\Phi_{\mu})^n\| > \eu^{n(\mu-\lambda)\epsilon}\|(\Phi_{\lambda})^n\|
+\norm{(\Phi_{\mu})^n} > \eu^{n(\mu-\lambda)\epsilon}\norm{(\Phi_{\lambda})^n}
 \]
 %% --
 and consequently 
