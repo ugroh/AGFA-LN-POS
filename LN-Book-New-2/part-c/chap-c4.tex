@@ -104,13 +104,13 @@ Then for every $r \in [p,q]$, $T_{0}$ has a (unique) continuous extension $T_{r}
 Moreover,
 %% --
 \begin{equation}\label{eq:c4-1.1}
-u \mapsto \log\left\|T_{1/u}\right\| \text{ is a convex function on the interval } \left[\frac{1}{q},\frac{1}{p}\right].
+u \mapsto \log\norm*{T_{1/u}} \text{ is a convex function on the interval } \left[\frac{1}{q},\frac{1}{p}\right].
 \end{equation}
 %% --
 Applying this result to the powers $T_{r}^{n}$ $(n \in\N)$ and using the fact that the pointwise limit of convex functions is convex, we obtain that the logarithm of the spectral radius is convex, \ie
 %% --
 \begin{equation}\label{eq:c4-1.2}
-u \mapsto \log(r(T_{1/u})) = \lim_{n\to\infty} \frac{1}{n}\log\left\|T_{1/u}^{n}\right\| \text{ is convex on }  \left[\frac{1}{q},\frac{1}{p}\right].
+u \mapsto \log(r(T_{1/u})) = \lim_{n\to\infty} \frac{1}{n}\log\norm*{T_{1/u}^{n}} \text{ is convex on }  \left[\frac{1}{q},\frac{1}{p}\right].
 \end{equation}
 %% --
 In the following we suppose that for every $r \in [p,q]$ we have a strongly continuous semigroup $(T_{r}(t))_{t\geq 0}$ on $L^{r}(\mu)$ such that
@@ -460,8 +460,8 @@ We choose a constant $M$  such that
 and a constant $t'$ such that
 %% --
 \begin{enumerate}[\upshape (i), resume]
-    \item $ \left\|\int_{t'}^{\infty} T(s)g_{0} \, \ds\right\| \leq \frac{\epsilon}{2M}$ and  
-$G(s) \leq \frac{\epsilon}{2} \,  \left\|\int_{0}^{\infty} T(s)g_{0} \, \ds\right\|$ for every $s \geq t'$.
+    \item $ \norm*{\int_{t'}^{\infty} T(s)g_{0} \, \ds} \leq \frac{\epsilon}{2M}$ and  
+$G(s) \leq \frac{\epsilon}{2} \,  \norm*{\int_{0}^{\infty} T(s)g_{0} \, \ds}$ for every $s \geq t'$.
 \end{enumerate}
 %% --
 Then, for $t > 2t'$,
@@ -469,12 +469,12 @@ Then, for $t > 2t'$,
 \begin{align*}
 0 &\leq \int_{0}^{t} T(t)H_{\pm}(s) \, \ds \leq \int_{0}^{t} T(t)G(s)g_{0} \, \ds\\
 &= \int_{0}^{t'} T(t)G(s)g_{0} \, \ds + \int_{t'}^{t} T(t)G(s)g_{0} \, \ds\\
-&\leq M \int_{t-t'}^{\infty} T(t)g_{0} \, \ds + \epsilon/2 \,  \left\|\int_{0}^{\infty} T(t)g_{0} \, \ds\, \right\|^{-1} \int_{0}^{t-t'} T(t)g_{0} \, \ds\\
-&\leq M \int_{t'}^{\infty} T(t)g_{0} \, \ds + \epsilon/2 \,  \left\|\int_{0}^{\infty} T(t)g_{0} \, \ds\, \right\|^{-1} \int_{0}^{\infty} T(t)g_{0} \, \ds.
+&\leq M \int_{t-t'}^{\infty} T(t)g_{0} \, \ds + \epsilon/2 \,  \norm*{\int_{0}^{\infty} T(t)g_{0} \, \ds\, }^{-1} \int_{0}^{t-t'} T(t)g_{0} \, \ds\\
+&\leq M \int_{t'}^{\infty} T(t)g_{0} \, \ds + \epsilon/2 \,  \norm*{\int_{0}^{\infty} T(t)g_{0} \, \ds\, }^{-1} \int_{0}^{\infty} T(t)g_{0} \, \ds.
 \end{align*}
 %% --
 
-Hence $\left\|\int_{0}^{t} T(t)H_{\pm}(s) \, \ds\right\| \leq \epsilon$ for every $t > 2t'$.
+Hence $\norm*{\int_{0}^{t} T(t)H_{\pm}(s) \, \ds} \leq \epsilon$ for every $t > 2t'$.
 \end{proof}
 
 We conclude with a result similar to the previous proposition.
@@ -502,7 +502,7 @@ Theorem~\ref{thm:a4-1.3} and Eq.~\myeqpageref{eq:a4-1.3} we deduce that $\|T(s)R
 Thus for the third term we have
 %% --
 \begin{align*}
- \left\|\int_{0}^{t} T(s)(F(t-s)-f_{0}) \, \ds\,\right\| &\leq \int_{0}^{t} \|T(s)R(0,A)\| \|A(F(t-s)-f_{0})\| \, \ds \\
+ \norm*{\int_{0}^{t} T(s)(F(t-s)-f_{0}) \, \ds\,} &\leq \int_{0}^{t} \|T(s)R(0,A)\| \|A(F(t-s)-f_{0})\| \, \ds \\
 &= \int_{0}^{t/2} \ldots \, \ds + \int_{t/2}^{t} \ldots \, \ds.
 \end{align*}
 %% --
@@ -768,7 +768,7 @@ Consider the positive contraction $R$ defined by $(Rf)(x) \coloneqq f(x+1)$ on $
 Then $T(t) \coloneqq \eu^{t(R-\Id)}$ defines a positive norm-continuous semigroup on $E$.
 Since $\Kern{R - \Id} = \Fix{R} = \{0\}$, but 
 \[
-\|T(t)f\| = \eu^{-t} \left\|\sum_{n=0}^{\infty} \frac{t^n}{n!}R^{n}f\right\| = 
+\|T(t)f\| = \eu^{-t} \norm*{\sum_{n=0}^{\infty} \frac{t^n}{n!}R^{n}f} = 
 \eu^{-t}\sum_{n=0}^{\infty} \frac{t^n}{n!}\|R^{n}f\|= \|f\| > 0
 \] 
 for every $0 < f \in E$, we see that $\lim_{t\to\infty} T(t)$ does not exist for the strong operator topology.

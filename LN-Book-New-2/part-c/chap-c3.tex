@@ -104,7 +104,7 @@ If\/ $\lambda = \mu + \im\nu$ with $\mu$, $\nu$ real and $\mu > s(A)$, we have f
 %% --
 \begin{align*}
 	\left|\left\langle \int_{r}^t \eu^{-\lambda s}T(s)f \ds ,\phi\right\rangle\right| &\leq \int_{r}^t \eu^{-\mu s}\langle T(s)|f|,|\phi|\rangle\ds \\
-	\text{ hence } \left\|\int_{r}^t \eu^{-\lambda s}T(s)f \ds \right\| &\leq \left\|\int_{r}^t \eu^{-\mu s}T(s)|f| \ds \right\| \
+	\text{ hence } \norm*{\int_{r}^t \eu^{-\lambda s}T(s)f \ds } &\leq \left\|\int_{r}^t \eu^{-\mu s}T(s)|f| \ds \right\| \
 \end{align*}
 %% --
 which shows that $\lim_{t\to\infty} \int_{0}^t \eu^{-\lambda s}T(s)f \ds $ exists.
@@ -127,7 +127,7 @@ Given $0 \leq t < r$ and setting $\epsilon \coloneqq \Re(\lambda) - \mu$ we have
 	&\leq \eu^{-\epsilon t}\int_{t}^r \eu^{-\lambda s}|\langle T(s)f,\phi\rangle| \ds  \leq \eu^{-\epsilon t} M\|f\|\|\phi\|.
 \end{align*}
 %% --
-It follows that $\left\|\int_{t}^r \eu^{-\lambda s}T(s) \ds \right\| \leq M\eu^{-\epsilon t}$, hence $\left(\int_{0}^t \eu^{-\lambda s}T(s) \ds \right)_{t\geq 0}$ is a Cauchy net with respect to the operator norm.
+It follows that $\norm*{\int_{t}^r \eu^{-\lambda s}T(s) \ds } \leq M\eu^{-\epsilon t}$, hence $\left(\int_{0}^t \eu^{-\lambda s}T(s) \ds \right)_{t\geq 0}$ is a Cauchy net with respect to the operator norm.
 \end{proof}
 %% --
 Theorem~\ref{thm:c3-1.2} has many consequences.
@@ -562,7 +562,7 @@ Given $f \in E$, $\lambda > 0$ and $r > 0$ then integration by parts yields
 \]
 It follows that
 \begin{align*}
-	\left\|\lambda \int_{0}^{r} \eu^{-\lambda s}T(s)f \ds\right\| &\leq \left(r\lambda \eu^{-r} + \lambda^{2}\int_{0}^{r} s\eu^{-\lambda s} \ds\right)M\|f\| \\
+	\norm*{\lambda \int_{0}^{r} \eu^{-\lambda s}T(s)f \ds} &\leq \left(r\lambda \eu^{-r} + \lambda^{2}\int_{0}^{r} s\eu^{-\lambda s} \ds\right)M\|f\| \\
 	&= (1 - \eu^{-\lambda r})M\|f\|\,.
 \end{align*}
 %% --
@@ -1645,7 +1645,7 @@ In the last part of this section we discuss a spectral decomposition of positive
 	%% --
 	\begin{equation}\label{eq:c3-4.4}
 		\begin{split}
-		\|(\lambda-A_{1})f\|_{\psi} &= \lim_{t \to 0}\left\|\frac{1}{t}(\eu^{-\lambda t}T_{1}(t)f-f)\right\|_{\psi} \geq \lim_{t \to 0}\frac{1}{t}(\eu^{-t\Re(\lambda)}-1)\|f\|_{\psi}\\
+		\|(\lambda-A_{1})f\|_{\psi} &= \lim_{t \to 0}\norm*{\frac{1}{t}(\eu^{-\lambda t}T_{1}(t)f-f)}_{\psi} \geq \lim_{t \to 0}\frac{1}{t}(\eu^{-t\Re(\lambda)}-1)\|f\|_{\psi}\\
 		&= -\Re(\lambda)\cdot\|f\|_{\psi} \ \text{ for } \ \Re(\lambda) < 0 \ \text{ and } \ f \in (E,\psi)\,.
 		\end{split}
 	\end{equation}
