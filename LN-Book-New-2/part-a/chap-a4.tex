@@ -49,10 +49,10 @@ More precisely, the following statements are equivalent.
 %% --
 \begin{enumerate}[\upshape (a)]
 \item 
-$ \|T(t)f\| \to 0 $ for every $ f \in \C^{n} $\,,
+$ \norm{T(t)f} \to 0 $ for every $ f \in \C^{n} $\,,
 
 \item 
-$ \|T(t)\| \leq M \eu^{-\omega t} $ for some $M \geq 1$ and  $\omega > 0 $\,.
+$ \norm{T(t)} \leq M \eu^{-\omega t} $ for some $M \geq 1$ and  $\omega > 0 $\,.
 \end{enumerate}
 %% --
 Moreover, these statements hold if and only if
@@ -79,7 +79,7 @@ Then we define the following constants.
 %% --
 \begin{enumerate}[\upshape (i)]
 \item 
-$\omega(f) \coloneqq \inf\{\omega \colon \|T(t)f\| \leq M\eu^{\omega t} \text{ for some } M \text{ and every } t \geq 0\}$ is called the \emph{exponential growth bound} of\/ $T(\cdot)f$,
+$\omega(f) \coloneqq \inf\{\omega \colon \norm{T(t)f} \leq M\eu^{\omega t} \text{ for some } M \text{ and every } t \geq 0\}$ is called the \emph{exponential growth bound} of\/ $T(\cdot)f$,
 \index{growth bound!omegaf@$\omega(f)$}
 
 \item 
@@ -96,7 +96,7 @@ Note that, by the Principle of Uniform Boundedness,
 %% -- 
 \[
 \sup\{\omega(f) \colon f \in E\} 
-= \inf \{ \omega \colon \|T(t)\| \leq M\eu^{\omega t} 
+= \inf \{ \omega \colon \norm{T(t)} \leq M\eu^{\omega t} 
     \text{ for some $M$ and every $t \geq 0 $}\}.
 \]
 %% --
@@ -116,10 +116,10 @@ The semigroup is called
 \emph{exponentially stable} if\/ $\omega_{1}(A) < 0$,
 \index{stability!exponentially stable}
 \item 
-\emph{uniformly stable} if\/ $\|T(t)f\| \to 0$ as $t \to \infty$ for every $f \in E$,
+\emph{uniformly stable} if\/ $\norm{T(t)f} \to 0$ as $t \to \infty$ for every $f \in E$,
 \index{stability!uniformly stable}
 \item 
-\emph{stable} if\/ $\|T(t)f\| \to 0$ as $t \to \infty$ for every $f \in D(A)$.
+\emph{stable} if\/ $\norm{T(t)f} \to 0$ as $t \to \infty$ for every $f \in D(A)$.
 \index{stability!stable}
 \end{enumerate}
 \end{definition}
@@ -155,7 +155,7 @@ generates the semigroup
 T(t)(x_{n})_{n \in \N} = (\eu^{-t/n} x_{n})_{n \in \N}.
 \]
 %% --
-It is easy to see that $\|T(t)\|=1$ and that $\|T(t)f\|\to 0$ for every $f \in c_{0}$.
+It is easy to see that $\norm{T(t)}=1$ and that $\norm{T(t)f}\to 0$ for every $f \in c_{0}$.
 
 Moreover, since $A$ is a bounded operator, $D(A) = E$.
 This provides an example of a (uniformly) stable but not exponentially stable semigroup.
@@ -176,13 +176,13 @@ This semigroup is not exponentially stable because $0 \in \sigma(\Delta)$ ($\Im(
 	k_t(x,y) \coloneq  \mleft(4\pi t\mright)^{-n/2} \eu^{-|x-y|^{2}/4t}
 \]
 %
-defines a probability density with $\int_{\R^n} k_t(x,y) \dy\, = 1$. Hence, $\|T(t)\| \le 1$; in fact, $\|T(t)\| = 1$ since $k_t$ also forms an approximate identity. Let $f \in C_0(\R^{n})$ and $\epsilon > 0$. Then there exists a compactly supported $g \in C_0(\R^{n})$ such that $\|f-g\| \le \epsilon$. Therefore,
+defines a probability density with $\int_{\R^n} k_t(x,y) \dy\, = 1$. Hence, $\norm{T(t)} \le 1$; in fact, $\norm{T(t)} = 1$ since $k_t$ also forms an approximate identity. Let $f \in C_0(\R^{n})$ and $\epsilon > 0$. Then there exists a compactly supported $g \in C_0(\R^{n})$ such that $\norm{f-g} \le \epsilon$. Therefore,
 %% --
 \[
-\|T(t)f\| \le  \|T(t)\|\|f-g\| + \|T(t)g\| \le \epsilon + (4\pi t)^{-n/2} \int_{\R^{n}} |g(y)|  \dy\, ,
+\norm{T(t)f} \le  \norm{T(t)}\norm{f-g} + \norm{T(t)g} \le \epsilon + (4\pi t)^{-n/2} \int_{\R^{n}} |g(y)|  \dy\, ,
 \]
 %% --
-which implies  $\|T(t)f\| \to 0$ as $t\to\infty$ for all $f \in C_0(\R^{n})$; see also Example~\ref{ex:b3-1.7}.
+which implies  $\norm{T(t)f} \to 0$ as $t\to\infty$ for all $f \in C_0(\R^{n})$; see also Example~\ref{ex:b3-1.7}.
 %%--
 This shows that the Laplacian on $C_0(\R^{n})$ (and also on $L^{p}(\R^{n})$ for $1 < p < \infty$, see 
 Example~\ref{ex:a4-15} below) generates a uniformly stable but not exponentially stable semigroup.
@@ -191,14 +191,14 @@ Example~\ref{ex:a4-15} below) generates a uniformly stable but not exponentially
 Note that the condition 
 %% --
 \[
-0 \leq \omega_{0}(A) = \inf\{\omega\colon\|T(t)\| \leq M\eu^{\omega t} \text{ for all } t \geq 0\}
+0 \leq \omega_{0}(A) = \inf\{\omega\colon\norm{T(t)} \leq M\eu^{\omega t} \text{ for all } t \geq 0\}
 \]
 %% --
 does not exclude the possibility that the semigroup is exponentially stable.
 
 To see this, consider $E \coloneqq C_0(\R_{+}) \cap $ $L^{1}(\R_{+},\eu^{x}\dx)$. 
 Then, as shown in Example~\ref{ex:a3-1.3} 
-the translation semigroup satisfies $\|T(t)\| = 1$, and hence $\omega_{0}(A) = 0$. 
+the translation semigroup satisfies $\norm{T(t)} = 1$, and hence $\omega_{0}(A) = 0$. 
 For every $\lambda \in \C$ with $\Re(\lambda) > -1$ and every $f \in E$, the resolvent of the generator is given as $R(\lambda,A)f = \int_{0}^{\infty} \eu^{\lambda t} T(t)f  \dt$.
 From the Eq.~\myeqpageref{eq:a1-3.2}, it follows that
 %% --
@@ -213,7 +213,7 @@ and from the existence of the limit
 \] 
 %% --
 it follows that 
-$\|T(t)f\| \leq M\eu^{\lambda t}$ for every $f \in D(A)$ and some constant $M$ depending on $f$. This yields $\omega_{1}(A) \le -1 < 0 = \omega_{0}(A)$. 
+$\norm{T(t)f} \leq M\eu^{\lambda t}$ for every $f \in D(A)$ and some constant $M$ depending on $f$. This yields $\omega_{1}(A) \le -1 < 0 = \omega_{0}(A)$. 
 Thus, we have a semigroup that is exponentially stable, but not uniformly exponentially stable.
 
 \item
@@ -252,7 +252,7 @@ implies the existence of the Laplace transform for $\Re(\lambda) > \Re(\mu)$.
 Therefore, the subset of\/ $\C$ for which the Laplace transform exists is always a half-plane 
 $\{\lambda \in \C\colon\Re(\lambda)\allowbreak > \gamma\} \cup H$, where $H$ is a subset of the line $\{\lambda \in \C\colon\Re(\lambda) = \gamma\}$.
 
-In the following theorem, we show that the bound of the half-plane for which the Laplace transform of\/ $T(\cdot)f$ ($f \in E$) exists absolutely, and the bound of the half-plane for which the Laplace transform of\/ $T(\cdot)Af$ ($f \in D(A)$) exists strongly, coincide with the growth bound $\omega(f) = \inf\{\omega\colon\|T(t)f\| \leq M\eu^{\omega t} \text{ for all } t \geq 0\}$.
+In the following theorem, we show that the bound of the half-plane for which the Laplace transform of\/ $T(\cdot)f$ ($f \in E$) exists absolutely, and the bound of the half-plane for which the Laplace transform of\/ $T(\cdot)Af$ ($f \in D(A)$) exists strongly, coincide with the growth bound $\omega(f) = \inf\{\omega\colon\norm{T(t)f} \leq M\eu^{\omega t} \text{ for all } t \geq 0\}$.
 
 %% --
 \begin{theorem}\label{thm:a4-1.3}
@@ -261,14 +261,14 @@ Let $A$ be the generator of a strongly continuous semigroup $ (T(t))_{t \geq 0} 
 Then, for every $f \in E$,
 %% --
 \begin{equation}\label{eq:a4-1.2}
-\omega(f) = \limsup_{t \to \infty} \frac{1}{t}\log\|T(t)f\|, 
+\omega(f) = \limsup_{t \to \infty} \frac{1}{t}\log\norm{T(t)f}, 
 \end{equation}
 %% --
 and
 %% --
 \begin{enumerate}[(i)]
 \item 
-$\,\omega(f) = \inf\{\Re(\lambda)\colon\int_{0}^{\infty} \|\eu^{-\lambda t} T(t)f\|  \dt \text{ exists}\}.$
+$\,\omega(f) = \inf\{\Re(\lambda)\colon\int_{0}^{\infty} \norm{\eu^{-\lambda t} T(t)f}  \dt \text{ exists}\}.$
 \end{enumerate}
 %% --
 If\/ $\ker(A) = \{0\}$, then for every $f \in D(A)$ we have
@@ -309,7 +309,7 @@ This shows that $\lim_{s \to \infty} F(s) = 0$.
 To prove part (i) of Theorem~\ref{thm:a4-1.3}, define 
 %
 \[
-	b \coloneqq \inf \left\{\Re(\lambda)\colon\int_{0}^{\infty} \|^{-\lambda t} T(t)f\|  \dt \text{ exists} \right\}.
+	b \coloneqq \inf \left\{\Re(\lambda)\colon\int_{0}^{\infty} \norm{^{-\lambda t} T(t)f}  \dt \text{ exists} \right\}.
 \]
 %
 A straightforward application of the lemma shows that $\omega(f) \leq b$.
@@ -359,10 +359,10 @@ Integrating by parts, we obtain
      - r \int_t^\infty \eu^{rs} \int_0^s \eu^{-rv} T(v) Af \diff{v} \diff{s}.
 \end{align*}
 %% --
-From $\left\|\int_{0}^{t} \eu^{-r s} T(s)Af  \ds\right\| \leq M$ for some $M$ and every $t \geq 0$ we conclude that $\|T(t)f\| \leq \tilde{M}\eu^{rt}$ for all $t \geq 0$ and some constant $\tilde{M}$.
+From $\norm*{\int_{0}^{t} \eu^{-r s} T(s)Af  \ds} \leq M$ for some $M$ and every $t \geq 0$ we conclude that $\norm{T(t)f} \leq \tilde{M}\eu^{rt}$ for all $t \geq 0$ and some constant $\tilde{M}$.
 Hence, $\omega(f) \leq r$ for every $c < r < 0$, \ie $\omega(f) \leq c$.
 
-If\/ $c \geq 0$ and $w > c$, then $\left\|\int_{0}^{t} \eu^{-w s} T(s)Af \ds\right\| \leq M$ for all $t \geq 0$. 
+If\/ $c \geq 0$ and $w > c$, then $\norm*{\int_{0}^{t} \eu^{-w s} T(s)Af \ds} \leq M$ for all $t \geq 0$. 
 By 
 %% --
 \begin{align*}
@@ -370,7 +370,7 @@ T(t)f - f &= \int_{0}^{t} \eu^{w s} \eu^{-w s} T(s)Af  \ds\\
 &= \eu^{wt}\int_0^t \eu^{-ws} T(s)Af \ds - w\int_0^t\eu^{ws}\int_0^s \eu^{-wr} T(r)Af\, \diff{r} \ds,
 \end{align*}
 %% --
-we obtain $\|T(t)f-f\| \leq M\eu^{w t} + M(\eu^{w t} - 1)
+we obtain $\norm{T(t)f-f} \leq M\eu^{w t} + M(\eu^{w t} - 1)
 \le 2M\eu^{wt}$. 
 Hence, $\omega(f)\le w$ for every $w > c$, that is, $\omega(f) \leq c$.
 \end{proof}
@@ -386,9 +386,9 @@ satisfies
 \begin{equation}\label{eq:a4-1.3}
 \begin{split}
 \omega_1(A) &={} \inf \{ \omega \colon \text{for every  $f \in D(A)$  there exists a constant $ M $ such that  } \\
-& \phantom{xxxxxxxx} \text{ $\|T(t)f\| \leq M\eu^{\omega t}$  for every $t \geq 0$} \} \\
+& \phantom{xxxxxxxx} \text{ $\norm{T(t)f} \leq M\eu^{\omega t}$  for every $t \geq 0$} \} \\
 &={}
-\limsup_{t \to \infty} \frac{1}{t} \log\|T(t)R(\lambda,A)\| \quad (\lambda \in \rho(A)). 
+\limsup_{t \to \infty} \frac{1}{t} \log\norm{T(t)R(\lambda,A)} \quad (\lambda \in \rho(A)). 
 \end{split}
 \end{equation}
 %% --
@@ -404,7 +404,7 @@ Then
 \begin{split}
 \omega_{1}(A) = \inf\{\Re(\lambda) &\colon {\int_{0}^{\infty} \eu^{-\lambda t} T(t)f  \dt} \text{\ exists as an\  \ldots }\\
 	\phantom{\inf\{\Re(\lambda) \colon exists as an} &\text{\ldots\  improper Riemann integral for every } f \in E\} \\
-= \inf\{\Re(\lambda) &\colon {\int_{0}^{\infty} \|\eu^{-\lambda t} T(t)f\|  \dt} \text{ exists for every } f \in D(A)\}.  
+= \inf\{\Re(\lambda) &\colon {\int_{0}^{\infty} \norm{\eu^{-\lambda t} T(t)f}  \dt} \text{ exists for every } f \in D(A)\}.  
 \end{split}
 \end{equation}
 \end{theorem}
@@ -433,7 +433,7 @@ In Equations \eqref{eq:a4-1.4} and \eqref{eq:a4-1.5}, the term \enquote{$\Re(\la
 \begin{proof}(Proof of Theorem~\ref{thm:a4-1.4}) 
 The equality 
  \[ 
- \omega_1(A) = \inf \left\{ \Re(\lambda)\colon\int_0^\infty \|\eu^{-\lambda t} T(t) f \|  \dt \text{ exists for all } f \in D(A) \right\} 
+ \omega_1(A) = \inf \left\{ \Re(\lambda)\colon\int_0^\infty \norm{\eu^{-\lambda t} T(t) f }  \dt \text{ exists for all } f \in D(A) \right\} 
  \] 
  follows from the definition of\/ $\omega_1(A)$ and the lemma in the proof of Theorem~\ref{thm:a4-1.3}.
 We aim to prove that
@@ -476,12 +476,12 @@ Thus, $b \leq \omega_1(A)$.
 
 The inequality
 \[
-    \omega_{0}(A) \geq \inf \left\{ \Re(\lambda)\colon\int_0^\infty \|\eu^{-\lambda t} T(t) f \|  \dt 
+    \omega_{0}(A) \geq \inf \left\{ \Re(\lambda)\colon\int_0^\infty \norm{\eu^{-\lambda t} T(t) f }  \dt 
     \text{ exists for every } f \in E \right\}
 \]
 combined with the lemma of Theorem~\ref{thm:a4-1.3} implies that the growth bound $\omega_{0}(A)$ coincides with the abscissa of absolute convergence of the Laplace transform of\/ $(T(t))_{t \geq 0}$, \ie
 \begin{equation}\label{eq:a4-1.6}
-   \omega_{0}(A) = \inf \left\{ \Re  (\lambda)\colon\int_0^\infty \|\eu^{-\lambda t} T(t) f \|  \dt \text{ exists for every } f \in E \right\}.
+   \omega_{0}(A) = \inf \left\{ \Re  (\lambda)\colon\int_0^\infty \norm{\eu^{-\lambda t} T(t) f }  \dt \text{ exists for every } f \in E \right\}.
 \end{equation}
 %--
 %
@@ -505,7 +505,7 @@ Example~\ref{ex:a4-1.2}(c) shows that uniform exponential stability is not equiv
 The following example shows that even strong solutions can be unstable when $ s(A) < 0 $. We construct a semigroup where $ s(A) < \omega_1(A) < \omega_{0}(A) $.
 %% --
 \begin{example}\label{ex:a4-1.6} 
-As in Example~\ref{ex:a3-1.4}, consider the semigroup $ (T(t))_{t \geq 0} $ on the Hilbert space $ E = \{(x^1, x^2, ...) \colon x^n \in \C^n\colon\sum_{j=1}^{\infty} \|x^j\|^2 < \infty\} $, defined by 
+As in Example~\ref{ex:a3-1.4}, consider the semigroup $ (T(t))_{t \geq 0} $ on the Hilbert space $ E = \{(x^1, x^2, ...) \colon x^n \in \C^n\colon\sum_{j=1}^{\infty} \norm{x^j}^2 < \infty\} $, defined by 
 \[{
 T(t) \coloneq  (\eu^{2\pi i n t} \cdot \exp(t A_n))_{n \in \N}
 },\]
@@ -520,15 +520,15 @@ A_n =
 0 & & & & 0
 \end{bmatrix}_{n \times n}.
 \]
-This semigroup satisfies $ \|T(t)\| = \eu^{t} $ for all $t\ge 0$. Hence, $ \omega_{0}(A) = 1 $, while the generator $ A = (2\pi i n + A_n)_{n \in \N} $ has spectral bound $ s(A) = 0 $. 
+This semigroup satisfies $ \norm{T(t)} = \eu^{t} $ for all $t\ge 0$. Hence, $ \omega_{0}(A) = 1 $, while the generator $ A = (2\pi i n + A_n)_{n \in \N} $ has spectral bound $ s(A) = 0 $. 
 We first show that $ \omega_1(A) = \omega_{0}(A) $; this will later be used to construct a semigroup for which $ s(A) < \omega_1(A) < \omega_{0}(A) $. 
 Let $ e_n = n^{-1/2} (1, ..., 1) \in \C^n $. 
  
 Then, for fixed $n$ and $t\ge 0$, 
 %% --  
 \begin{align*}
-	\|\exp(&t A_n) \cdot e_n\|^2 = \\
-	&= \frac{1}{n} \left\| (1 + t + \dots + \frac{t^{n-1}}{(n-1)!}, 1 + t + \dots + \frac{t^{n-2}}{(n-2)!}, \dots, 1+t, 1) \right\|^2 \\
+	\norm{\exp(t A_n) \cdot e_n}^2 &= \\
+	&= \frac{1}{n} \norm*{ (1 + t + \dots + \frac{t^{n-1}}{(n-1)!}, 1 + t + \dots + \frac{t^{n-2}}{(n-2)!}, \dots, 1+t, 1) }^2 \\
 	&=
 	\frac{1}{n} \sum_{r=0}^{n-1} \left(\sum_{j=0}^{r} \frac{1}{j!} t^j \right)^2 
 	\, = \, \frac{1}{n} \sum_{r=0}^{n-1} \sum_{j,s=0}^{r} \frac{1}{j!s!} t^{j+s} 
@@ -546,7 +546,7 @@ $
 Then $x_q \in D(A)$ and
 %--
 \begin{align*}
-	\|T(t)x_q\|^2 & = \sum_{n=1}^{\infty} n^2 q^{2n} \| \exp(t A) e_n \|^2
+	\norm{T(t)x_q}^2 & = \sum_{n=1}^{\infty} n^2 q^{2n} \norm{ \exp(t A) e_n }^2
 	\geq \sum_{n=1}^{\infty} n^2 q^{2n} \left(\frac{1}{n^2} \sum_{i=0}^{n-1}  \frac{1}{i!} (2t)^i \right)\\
 	&= \sum_{i=0}^{\infty} \sum_{n=i+1}^{\infty} \left( q^{2n} \frac{1}{i!} (2t)^i \right)
 	= \sum_{i=0}^{\infty} q^{2i+2} (1 - q^2)^{-1} \frac{1}{i!} (2t)^i \\
@@ -596,7 +596,7 @@ $s(A) = \sup\{\Re(\lambda)\colon\lambda \in \sigma(A)\}.$
 \begin{equation}\label{eq:a4-1.9}
 \begin{split}
 %% --
-\omega_{0}(A) = \inf \{ w\colon\|R(\lambda, A)^n\| \leq &M ( \Re(\lambda) - w)^{-n} \text{ for some } M \text{ and}\\
+\omega_{0}(A) = \inf \{ w\colon\norm{R(\lambda, A)^n} \leq &M ( \Re(\lambda) - w)^{-n} \text{ for some } M \text{ and}\\
 &\text{every } n \in \N \text{ and } \lambda \in \C \text{ with } \Re(\lambda) > w\}. 
 \end{split}
 \end{equation}
@@ -607,7 +607,7 @@ Due to the difficulty of estimating all powers of the resolvent, this characteri
 However, if\/ $A$ is the generator of a semigroup on a Hilbert space $H$, then it is shown in Corollary~\ref{cor:a3-7.11}  that
 %--
 \begin{equation}\label{eq:a4-1.10}
- \omega_{0}(A) = \inf \{ w\colon\| R(\lambda, A) \| \leq M_w \quad \text{for } \Re(\lambda) > w \}.
+ \omega_{0}(A) = \inf \{ w\colon\norm{ R(\lambda, A) } \leq M_w \quad \text{for } \Re(\lambda) > w \}.
 \end{equation}
 \end{remark}
 %% --
@@ -615,7 +615,7 @@ Unfortunately, the identity Eq.~\myeqpageref{eq:a4-1.10} does not hold on arbitr
 However, as we will see in Part-III, Section~\ref{sec:c4-1},  the identity 
 %--
 \begin{equation}\label{eq:a4-1.11}
- s(A)=\omega_1(A) = \inf \{ w\colon\| R(\lambda, A) \| \leq M_w \quad \text{for } \Re(\lambda) > w \}
+ s(A)=\omega_1(A) = \inf \{ w\colon\norm{ R(\lambda, A) } \leq M_w \quad \text{for } \Re(\lambda) > w \}
 \end{equation}
 %% --
 holds for every positive semigroup on a Banach lattice. 
@@ -628,7 +628,7 @@ Let $A$ be the generator of a strongly continuous semigroup $(T(t))_{t \geq 0}$ 
 Suppose there exist constants $a \geq 0$ and $q \geq s(A)$, and that there exist $C > 0$ and $n \in \N$ such that 
 %% --
 \[
-    \| R(\lambda, A) \| \leq C | \lambda |^{n-2}
+    \norm{ R(\lambda, A) } \leq C | \lambda |^{n-2}
 \]
 %% --
 for all $\lambda \in \C$ with $\Re(\lambda) > q$ and $| \Im(\lambda) | > a$. 
@@ -640,9 +640,9 @@ Then
 \end{theorem}
 %% -- 
 \begin{proof} 
-The hypothesis $\| R(\lambda, A) \| \leq C | \lambda |^{n-2}$ is invariant under rescaling. 
+The hypothesis $\norm{ R(\lambda, A) } \leq C | \lambda |^{n-2}$ is invariant under rescaling. 
 That is, the resolvent $R(\lambda, -b+A)$ of the generator $-b+A$ of the rescaled semigroup $\eu^{-bt} T(t)$ satisfies
-$\| R(\lambda, -b+A) \| \leq \tilde{C} | \lambda |^{n-2}$ for every $\lambda \in \C$ with $\Re(\lambda) > q-b$ and $| \Im(\lambda) | > a+2b$, for a suitable constant $\tilde{C}$. 
+$\norm{ R(\lambda, -b+A) } \leq \tilde{C} | \lambda |^{n-2}$ for every $\lambda \in \C$ with $\Re(\lambda) > q-b$ and $| \Im(\lambda) | > a+2b$, for a suitable constant $\tilde{C}$. 
 Therefore, we may assume, without loss of generality, that $b \coloneq  \max(\omega_{0}(A), q) < 0$. 
 Let $\omega_{0}(A) < p < 0$, and set $p' \coloneq  \max\{p, q\} < 0$. 
 Then, for every $f \in D(A)$ , the inversion formula for the Laplace transform yields 
@@ -666,7 +666,7 @@ $ \frac {1}{2\pi i} \int_{p' - i\infty}^{p' + i\infty} \eu^{\lambda t} \, \lambd
     
  for every $f \in E$ and $t > 0$.
     
- If\/ $q < p'$, then by Cauchy's Integral Theorem and the growth bound $\| R(\lambda, A) \| \leq C | \lambda |^{n-2}$, we can shift the path of integration to 
+ If\/ $q < p'$, then by Cauchy's Integral Theorem and the growth bound $\norm{ R(\lambda, A) } \leq C | \lambda |^{n-2}$, we can shift the path of integration to 
  $\Re(\lambda) = q$, yielding
  %% --
 \[
@@ -675,13 +675,13 @@ $ \frac {1}{2\pi i} \int_{p' - i\infty}^{p' + i\infty} \eu^{\lambda t} \, \lambd
 %% -- 
 Thus, we estimate  
 \[
-\| T(t) R(0,A)^n f \| \leq c' \eu^{q t} \| f \| \int_{-\infty}^{\infty} (q^2 + s^2)^{-1}\ds = M \eu^{q t} \| f \|.
+\norm{ T(t) R(0,A)^n f } \leq c' \eu^{q t} \norm{ f } \int_{-\infty}^{\infty} (q^2 + s^2)^{-1}\ds = M \eu^{q t} \norm{ f }.
 \]
 %% --
 Equivalently,
 %% --
 \[
-\| T(t) f \| \leq M \eu^{q t} \| A^n f \| \text{for $f \in D(A^n)$.}
+\norm{ T(t) f } \leq M \eu^{q t} \norm{ A^n f } \text{for $f \in D(A^n)$.}
 \]
 \end{proof}
 %% --
@@ -698,19 +698,19 @@ Then the following statements are equivalent.
 \item  
 $ \omega_{0}(A) < 0 $.
 \item  
-$ \lim_{t \to \infty} \| T(t) \| = 0 $.
+$ \lim_{t \to \infty} \norm{ T(t) } = 0 $.
 \item  
-$ \| T(t') \| < 1 $ for some $ t' > 0 $.
+$ \norm{ T(t') } < 1 $ for some $ t' > 0 $.
 \end{enumerate}
 \end{proposition}
 %% --
 \begin{proof}
-The implications $(a)  \Rightarrow  (b)  \Rightarrow  (c) $ are immediate; To prove $(c)  \Rightarrow  (a) $, note that $\omega_{0}(A) = \lim_{t \to \infty} \frac{1}{t} \log \| T(t) \|$ (see Eq.~\myeqpageref{eq:a1-1.1}). Assume $\|T(t')\| <1$ for some $t'>0$. For $t=nt'+s$ with $s\in [0,t']$, we have $\|T(t)\|\le \|T(t')\|^n\|T(s)\|$, so that
+The implications $(a)  \Rightarrow  (b)  \Rightarrow  (c) $ are immediate; To prove $(c)  \Rightarrow  (a) $, note that $\omega_{0}(A) = \lim_{t \to \infty} \frac{1}{t} \log \norm{ T(t) }$ (see Eq.~\myeqpageref{eq:a1-1.1}). Assume $\norm{T(t')} <1$ for some $t'>0$. For $t=nt'+s$ with $s\in [0,t']$, we have $\norm{T(t)}\le \norm{T(t')}^n\norm{T(s)}$, so that
 \[
 \displaystyle
-\frac{\log \|T(t)\|}{t} \leq \frac{n\log \|T(t')\|}{nt'+s} + \frac{\log \|T(s)\|}{nt' + s}.
+\frac{\log \norm{T(t)}}{t} \leq \frac{n\log \norm{T(t')}}{nt'+s} + \frac{\log \norm{T(s)}}{nt' + s}.
 \]
-Since $\|T(s)\|$ is bounded on compact intervals, the second term tends to zero as $n\to\infty$. The first term tends to $\frac{\log \|T(t')\|}{t'} < 0$. Thus, $\omega_0(A) < 0$, which proves  $(c)  \Rightarrow  (a) $.
+Since $\norm{T(s)}$ is bounded on compact intervals, the second term tends to zero as $n\to\infty$. The first term tends to $\frac{\log \norm{T(t')}}{t'} < 0$. Thus, $\omega_0(A) < 0$, which proves  $(c)  \Rightarrow  (a) $.
 \end{proof}
 %% --
 Other less obvious characterizations of the property 
@@ -732,7 +732,7 @@ $ \omega_{0}(A) < 0 $.
 $ s(A) < 0 $ and there is $ t_0 > 0 $ such that  
 $ |\lambda| < 1$ for every $ \lambda \in A\sigma (T(t_0)).$
 \item
-For some (equivalently, every) $ p \geq 1 $ the integral $ \int_{0}^{\infty} \| T(t) f \|^p\dt $ exists for every $ f \in E $.
+For some (equivalently, every) $ p \geq 1 $ the integral $ \int_{0}^{\infty} \norm{ T(t) f }^p\dt $ exists for every $ f \in E $.
 \end{enumerate}
 \end{theorem}
 %% --
@@ -754,7 +754,7 @@ By rescaling a given semigroup $ (T(t))_{t \geq 0} $, one obtains the following 
 \begin{corollary} \label{cor:a4-1.12} 
 Let $ (T(t))_{t \geq 0} $ be a strongly continuous semigroup on a Banach space $ E $. Then the set of\/ $ \lambda \in \C$ for which
 \[
-\int_{0}^{\infty} \|\eu^{-\lambda t} T (t) f \|  \dt 
+\int_{0}^{\infty} \norm{\eu^{-\lambda t} T (t) f }  \dt 
 \]
 exists for every $ f \in E $  is an open right half-plane.
 \end{corollary}
@@ -778,7 +778,7 @@ Let $ A $ be the generator of a stable semigroup $ (T(t))_{t \geq 0} $ on a Bana
 \end{enumerate}
 \end{theorem}
 %% --
-\begin{proof} (i) If\/ $ (T(t))_{t \geq 0} $ is stable, then $ \|T(t) f\| \leq M_f $ for every $ f \in D(A) $. Therefore, $ s(A) \leq \omega_1(A) \leq 0 $. 
+\begin{proof} (i) If\/ $ (T(t))_{t \geq 0} $ is stable, then $ \norm{T(t) f} \leq M_f $ for every $ f \in D(A) $. Therefore, $ s(A) \leq \omega_1(A) \leq 0 $. 
 
 Assume, by contradiction, that there exists $ \lambda \in P\sigma(A) $ with $ \Re(\lambda) = 0 $. 
 Then, by Corollary~\ref{cor:a3-6.4} , there exists $ g \neq 0 $ such that $ T(t) g = \eu^{\lambda t} g $ for all $ t \geq 0 $. Since $ |\eu^{\lambda t}| = 1 $, this contradicts the stability of the semigroup. 
@@ -799,7 +799,7 @@ yields the existence of\/ $\lim_{\lambda \to 0+} \lambda R(\lambda,A)f$ for ever
 
 %%--
 Bounded holomorphic semigroups (see Definition~\ref{def:a2-1.11}) satisfy the estimate
-\[\|AT(t)\| \leq \frac{m}{t}\]
+\[\norm{AT(t)} \leq \frac{m}{t}\]
 (see \textcite[p.33]{goldstein:1985a}), and hence $T(t)f \to 0$ as $t \to \infty$
 for every $f \in \Image{A}$. 
 If\/ $\Image{A}$ is dense (\ie $0 \not\in R\sigma(A)$), then we obtain
@@ -876,7 +876,7 @@ Thus, $(b) \Rightarrow (a)$.
 
 The implication $(a') \Rightarrow (b')$ is immediate. 
 
-If\/ $T(t)f \to 0$ for every $f \in E$, then $\|T(t)\| \leq M$, and $0 \not\in R\sigma(A)$ by Theorem~\ref{thm:a4-1.13}. 
+If\/ $T(t)f \to 0$ for every $f \in E$, then $\norm{T(t)} \leq M$, and $0 \not\in R\sigma(A)$ by Theorem~\ref{thm:a4-1.13}. 
 Therefore,
 $D \coloneqq \Image{A}$ is dense in $E$, and for every $f \in D$, the integral $\int_{0}^{\infty} T(t)f  \dt$ exists. 
 This proves $(b') \Rightarrow (c')$. 
@@ -896,7 +896,7 @@ and $h_{s} \to g$ as $s \to 0$.
 Therefore, $D \subset \overline{G}$ or $\overline{G} = E$ since $D$ is dense in $E$. 
 Now, let $h \in G$, so $h=\int_0^\infty T(t)g\dt$ for some $g\in D$.
 Then $T(t)h = T(t) \int_{0}^{\infty} T(s)g  \ds = \int_{t}^{\infty} T(s)g  \ds \to 0$ as $t \to \infty$. 
-Since $\|T(t)\| \leq M$, it follows that   $T(t)f \to 0$ for every $f \in E$.
+Since $\norm{T(t)} \leq M$, it follows that   $T(t)f \to 0$ for every $f \in E$.
 \end{proof}
 
 \begin{remark}\label{rem:a4-1.17}
@@ -1018,7 +1018,7 @@ semigroups, the range $\Image{A}$ is dense in $E$.
 Let $A$ be the generator of a uniformly stable semigroup
 $(T(t))_{t \geq 0}$ on a Banach space $E$. 
 If there exists $g \in \Image{A}$ such that
-$\int_{0}^{\infty} \|F(s) - g\|  \ds < \infty$, then every generalized solution $u(\cdot)$ of
+$\int_{0}^{\infty} \norm{F(s) - g}  \ds < \infty$, then every generalized solution $u(\cdot)$ of
 Eq.~\myeqpageref{eq:a4-2.1} converges as $t \to \infty$, and $\lim_{t \to \infty} u(t) = -h$, where $h \in D(A)$ satisfies
 $Ah = g$.
 \end{theorem}
@@ -1036,14 +1036,14 @@ third term also converges to zero.
 Let $\epsilon > 0$ and define $G(s) \coloneqq F(s)-g$. 
 Then for any $r>0$,
 \begin{align*}
-\left\|\int_{0}^{t} T(t-s)G(s)  \ds\right\| & 
-{\leq \left\|\int_{0}^{r} T(t-r+r-s)G(s)  \ds\right\| + \left\|\int_{r}^{t} T(t-s)G(s)  \ds\right\|}\\
+\norm*{\int_{0}^{t} T(t-s)G(s)  \ds} & 
+{\leq \norm*{\int_{0}^{r} T(t-r+r-s)G(s)  \ds} + \norm*{\int_{r}^{t} T(t-s)G(s)  \ds}}\\
 & 
-{\leq \left\|T(t-r)\int_{0}^{r} T(r-s)G(s)  \ds\right\| + M \int_{r}^{\infty} \|G(s)\|  \ds\,},
+{\leq \norm*{T(t-r)\int_{0}^{r} T(r-s)G(s)  \ds} + M \int_{r}^{\infty} \norm{G(s)}  \ds\,},
 \end{align*}
-where $\|T(t)\|\le M$ for all $t\ge 0$. Since the semigroup is uniformly stable, we obtain
+where $\norm{T(t)}\le M$ for all $t\ge 0$. Since the semigroup is uniformly stable, we obtain
 $T(t-r)\int_{0}^{r} T(r-s)G(s)  \ds \to 0$ as $t \to \infty$ for every $r \geq 0$.
-Therefore, $\|\int_{0}^{t} T(t-s)G(s)  \ds\| \leq \epsilon$ for all sufficiently large $t$.
+Therefore, $\norm{\int_{0}^{t} T(t-s)G(s)  \ds} \leq \epsilon$ for all sufficiently large $t$.
 \end{proof}
 
 
@@ -1054,7 +1054,7 @@ and $\int_{0}^{p} T(p-s)F(s)  \ds \in \Image{\Id - T(p)}$, then Eq.~\myeqpageref
  \index{stability!asymptotically stable}\ie for every generalized solution $v(\cdot)$ of Eq.~\myeqpageref{eq:a4-2.1}, 
 %% --
 \[
-\lim_{t \to \infty} \|v(t) - u(t)\| = 0.
+\lim_{t \to \infty} \norm{v(t) - u(t)} = 0.
 \]  
 (Notice that, by
 Theorem~\ref{thm:a4-1.13} and Lemma~\ref{lem:a3-5.3}, $\overline{ \Image{ \Id - T(p) } } = E $.)

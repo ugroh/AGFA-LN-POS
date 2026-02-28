@@ -299,7 +299,7 @@ This proves that (c) implies (b).
 
 It remains to show that (d)  implies (a). 
 Assertion (d) implies that for all $ t \geq 0 $ there exist bounded operators $ T(t) \in \LE $ such that $ u(t,f) = T(t)f $ if\/ $ f \in D(A) $.
-Moreover, $ \sup_{0 \leq t \leq 1} \|T(t)\| < \infty $.
+Moreover, $ \sup_{0 \leq t \leq 1} \norm{T(t)} < \infty $.
 It follows that $ T(\cdot)f $ is strongly continuous for all $ f \in E $ (since it is so for $ f \in D(A) $ and $ D(A) $ is dense).
 Let $ t > 1 $.
 There exist unique $ n \in \N $ and $ s \in [0,1) $ such that $ t = n + s $.
@@ -399,7 +399,7 @@ There exist $(f_{n}) \in D(A)$ such that $\lim_{n \to \infty} f_{n} = f$.
 Then $\lim_{n \to \infty} T(t)f_{n} = T(t)f$ for all $t \in \R$.
 Since $T(\cdot)f$ is continuous, it follows that $T(\cdot)f$ is measureable.
 Hence by 
-\textcite[10.2.1]{hillephillips:1957} $\sup_{t \in J}\|T(t)\| < \infty$ for every compact interval $J \subset (0,\infty)$.
+\textcite[10.2.1]{hillephillips:1957} $\sup_{t \in J}\norm{T(t)} < \infty$ for every compact interval $J \subset (0,\infty)$.
 By the group property this implies that $T(\cdot)$ is norm bounded on bounded subsets of\/ $\R$ and
 $T(\cdot)f$ is continuous if\/ $f \in D(A)$.
 Since $D(A)$ is dense, this implies the strong continuity of\/ $(T(t))_{t \in \R}$.
@@ -423,7 +423,7 @@ $A$ is the generator of a strongly continuous semigroup.
 The domain  $D(A)$ of\/ $A$ is dense in E and there exist $w$, $M \in \R$ such that $(w,\infty) \subset \rho(A)$ and
 %% –
 \[
-    \| {(\lambda - w)^{n}} (\lambda-A)^{-n}\| \leq M 
+    \norm{ {(\lambda - w)^{n}} (\lambda-A)^{-n}} \leq M 
 \]
 %% –
 for all $\lambda > w$ and $n \in \N$.
@@ -440,7 +440,7 @@ For an operator $A$ on a Banach space $E$ the following assertions are equivalen
 \item \label{cor:a2-1.8.1}
 $A$ is the generator of a strongly continuous contraction semigroup.
 \item \label{cor:a2-1.8.2}
-$A$ is densly defined, $(0,\infty) \subset \rho(A)$ and $\|\lambda R(\lambda,A)\| \leq 1$ for all $\lambda > 0$.
+$A$ is densly defined, $(0,\infty) \subset \rho(A)$ and $\norm{\lambda R(\lambda,A)} \leq 1$ for all $\lambda > 0$.
 \end{enumerate}
 \end{corollary}
 %% –
@@ -549,7 +549,7 @@ S(\alpha + \pi/2) \subset \rho(A)
 and for every $\alpha_{1} \in (0,\alpha)$ there exists a constant $M$ such that
 %% –
 \begin{equation}\label{eq:a2-1.6}
-    \|R(\lambda,A)\| \leq M/|\lambda| \quad (\lambda \in S(\alpha_{1} + \pi/2). 
+    \norm{R(\lambda,A)} \leq M/|\lambda| \quad (\lambda \in S(\alpha_{1} + \pi/2). 
 \end{equation}
 %% –
 \end{theorem}
@@ -585,8 +585,8 @@ It follows that $\lambda \in \rho(A)$ and
 \end{equation}
 %% –
 Since $A$ generates a bounded group, there exists a constant $N \geq 0$ such that \\ 
-$\|R(\mu,A)\| \leq N/\Re(\mu)$, $\|R(\mu,-A)\| \leq N/\Re(\mu)$ for all $\mu \in S(\pi/2)$.
-Consequently, $\|R(\lambda,A^{2})\| \leq N^{2}/r^{2}(\cos\beta)^{2} \leq 1/r^{2}[N/\cos\beta]^{2} = M/|\lambda|$.
+$\norm{R(\mu,A)} \leq N/\Re(\mu)$, $\norm{R(\mu,-A)} \leq N/\Re(\mu)$ for all $\mu \in S(\pi/2)$.
+Consequently, $\norm{R(\lambda,A^{2})} \leq N^{2}/r^{2}(\cos\beta)^{2} \leq 1/r^{2}[N/\cos\beta]^{2} = M/|\lambda|$.
 \end{proof}
 %%
 The corollary will be extended below.
@@ -665,7 +665,7 @@ Let $\alpha \in (0,\pi/2]$.
 A semigroup $(T(t))_{t \geq 0}$ is called \emph{holomorphic of angle} $\alpha$ if it possesses an extension $T \colon S(\alpha) \to \LE$ for some $\alpha \in (0,\pi/2]$ which satisfies all the requirements of Definition~\ref{def:a2-1.11} except that it is not required to be bounded on any sector $S(\alpha_{1})$.
 %% --
 \begin{theorem}\label{thm:a2-1.14}
-A densely defined operator $A$ is the generator of a holomorphic semigroup if and only if there exist $M > 0$ and $r \geq 0$ such that $\lambda \in \rho(A)$ and $\|R(\lambda,A)\| \leq M/|\lambda|$ whenever $\Re(\lambda) > 0$, $|\lambda| \geq r$.
+A densely defined operator $A$ is the generator of a holomorphic semigroup if and only if there exist $M > 0$ and $r \geq 0$ such that $\lambda \in \rho(A)$ and $\norm{R(\lambda,A)} \leq M/|\lambda|$ whenever $\Re(\lambda) > 0$, $|\lambda| \geq r$.
 \end{theorem}
 %% --
 \begin{proof}
@@ -680,32 +680,32 @@ S(\alpha_{1} + \pi/2) \setminus B(r) \subset \rho(A) \quad (\text{where} \quad B
 \]
 and
 \[
-\|R(\lambda,A)\| \leq M/|\lambda|  \quad \text{for all}  \quad \lambda \in S(\alpha_{1}+\pi/2) \setminus B(r).
+\norm{R(\lambda,A)} \leq M/|\lambda|  \quad \text{for all}  \quad \lambda \in S(\alpha_{1}+\pi/2) \setminus B(r).
 \]
 %%-
 This shows that the condition of the theorem is necessary.
 Conversely, assume that the condition holds.
-Since $\|R(\lambda,A)\| \to \infty$ when $\lambda$ approaches $\sigma(A)$ (\cf Lemma ~\ref{lem:a2-1.21}   below), 
-it follows that $\lambda \in \rho(A)$ and $\|R(\lambda,A)\| \leq M/|\lambda|$ if\/ $\Re(\lambda) = 0$ and $|\lambda| > r$ as well.
+Since $\norm{R(\lambda,A)} \to \infty$ when $\lambda$ approaches $\sigma(A)$ (\cf Lemma ~\ref{lem:a2-1.21}   below), 
+it follows that $\lambda \in \rho(A)$ and $\norm{R(\lambda,A)} \leq M/|\lambda|$ if\/ $\Re(\lambda) = 0$ and $|\lambda| > r$ as well.
 
 Let $c = 1/(2M)$.
 If\/ $\xi, \eta \in \R$ satisfy 
 $|\xi| \leq c|\eta|, |\eta| \geq r$, 
 then 
 \[
-\|\xi R(\im\eta,A)\| \leq |\xi| \cdot M/|\eta| \leq c \cdot M = 1/2.
+\norm{\xi R(\im\eta,A)} \leq |\xi| \cdot M/|\eta| \leq c \cdot M = 1/2.
 \]
 Hence $R(\xi+\im\eta,A) = \sum_{n=0}^\infty (-\xi)^{n}R(\im\eta,A)^{n+1}$ exists and 
 %% –
 \begin{align*}
-    \|R(\xi+\im\eta,A)\| &\leq 
+    \norm{R(\xi+\im\eta,A)} &\leq 
     (|\xi + \im\eta|)^{-1} \cdot |\xi + \im\eta| \cdot \sum_{n=0}^\infty |\xi|^{n}M^{n+1}/|\eta|^{n+1}\\
     &\leq  (|\xi + \im\eta|)^{-1} \cdot 2M (|\xi|^{2} + |\eta|^{2})^{1/2} / |\eta| \cdot \sum_{n=0}^\infty M^{n}c^{n}\\   
     &\leq  (4M\cdot(c^{2}+1)^{1/2})/|\xi+\im\eta| \\
     &\leq N/|\xi+\im\eta| \, . 
 \end{align*}
 %% –
-This together with the assumption implies that there exist $N' \geq 0$ and $\alpha \in \left]0,\pi/2\right]$ such that $\lambda \in \rho(A)$ and $\|R(\lambda,A)\| \leq N'/|\lambda|$ for all $\lambda \in S(\alpha+\pi/2)$.
+This together with the assumption implies that there exist $N' \geq 0$ and $\alpha \in \left]0,\pi/2\right]$ such that $\lambda \in \rho(A)$ and $\norm{R(\lambda,A)} \leq N'/|\lambda|$ for all $\lambda \in S(\alpha+\pi/2)$.
 \end{proof}
 %% --
 Compared with the Hille-Yosida theorem, Theorem~\ref{thm:a2-1.14}   gives a very simple criterion for an operator to be the generator of a (holomorphic) semigroup.
@@ -720,7 +720,7 @@ More precisely, the following holds.
 %% --
 A strongly continuous semigroup with generator $A$ is holomorphic if and only if there exist $w > \omega_{0}(A)$ and $M \geq 0$ such that one has
 \[
-    \|R(w+\im\eta,A)\| \leq \frac{M}{|\eta|}  \ \text{ for all }\ \eta \in \R.
+    \norm{R(w+\im\eta,A)} \leq \frac{M}{|\eta|}  \ \text{ for all }\ \eta \in \R.
 \]
 \end{corollary*}
 %% –
@@ -728,11 +728,11 @@ A strongly continuous semigroup with generator $A$ is holomorphic if and only if
 \begin{proof}
 In fact, assume that the condition holds.
 Since $A-w$ is the generator of a bounded semigroup, one has 
-$\|R(\lambda,A-w)\| \leq N/\Re(\lambda)$ for some $N > 0$ and all $\lambda \in \C$ 
+$\norm{R(\lambda,A-w)} \leq N/\Re(\lambda)$ for some $N > 0$ and all $\lambda \in \C$ 
 satisfying $\Re(\lambda) > 0$.
 Consequently, for every $\alpha \in (0,\pi/2)$, 
 \[
-\|R(\lambda,A-w)\| \leq (|\lambda|/\Re(\lambda))N/|\lambda| \leq N(\cos\alpha)^{-1}/|\lambda| 
+\norm{R(\lambda,A-w)} \leq (|\lambda|/\Re(\lambda))N/|\lambda| \leq N(\cos\alpha)^{-1}/|\lambda| 
  \ \text{ for all }\ \lambda \in S(\alpha) .
 \]
 The remaining estimate for a sector symmectric to the imaginary axis is given by the proof of Theorem~\ref{thm:a2-1.14}    
@@ -751,7 +751,7 @@ Then $A^2$ generates a holomorphic semigroup of angle $\pi/2$.
 
 \begin{proof}
 There exists $w \geq 0$ such that $(\pm A - w)$ generates a bounded semigroup.
-Consequently, there exists $M \geq 0$ such that $\|R(\mu,\pm A - w)\| \leq M/\Re(\mu)$ whenever $\Re(\mu) > 0$.
+Consequently, there exists $M \geq 0$ such that $\norm{R(\mu,\pm A - w)} \leq M/\Re(\mu)$ whenever $\Re(\mu) > 0$.
 
 Let $\alpha \in (0,\pi/2)$.
 There exist $r_0 \geq 0$ and $\beta \in (0,\pi/2)$ such that
@@ -786,10 +786,10 @@ Hence $\lambda \in \rho(A^2)$ and $R(\lambda,A^2) = R(r\eu^{\im\theta},A-w)R(r\e
 We conclude that 
 %%
 \[
-|\lambda| \cdot \|R(\lambda,A^2)\| \leq |\lambda| \cdot M^2/(\cos\theta)^2r^2 \leq (|\lambda|/r^2)\cdot M^2/(\cos\beta)^2.
+|\lambda| \cdot \norm{R(\lambda,A^2)} \leq |\lambda| \cdot M^2/(\cos\theta)^2r^2 \leq (|\lambda|/r^2)\cdot M^2/(\cos\beta)^2.
 \]
 %%
-Thus $|\lambda| \cdot \|R(\lambda,A^2)\|$ is uniformly bounded for $\lambda \in S(\alpha+\pi/2) \setminus B(r_0)$.
+Thus $|\lambda| \cdot \norm{R(\lambda,A^2)}$ is uniformly bounded for $\lambda \in S(\alpha+\pi/2) \setminus B(r_0)$.
 \end{proof}
 \index{semigroup!holomorphic semigroup|)}
 %%
@@ -800,7 +800,7 @@ the assumption that $\pm A$ are generators can be relaxed.
 In fact, the proof shows the following.
 If\/ $A$ is a densely defined operator such that 
 $\{\lambda \in \C \colon \Re(\lambda) > 0\} \subset \rho(\pm A - w)$ and 
-$\|R(\lambda,\pm A - w)\| \leq M/\Re(\lambda)$ for some $M \geq 0$, $w \geq 0$, then $A^2$ generates a holomorphic semigroup of angle $\pi/2$\,.
+$\norm{R(\lambda,\pm A - w)} \leq M/\Re(\lambda)$ for some $M \geq 0$, $w \geq 0$, then $A^2$ generates a holomorphic semigroup of angle $\pi/2$\,.
 \end{remark*}
 %% –
 
@@ -835,7 +835,7 @@ There exist constants $c>0$, $b>0$, $M>0$ such that
 \]
 and
 \[
-    \|R(\lambda,A)\| \leq M\cdot|\Im(\lambda)| \text{ for all } \lambda \in \Sigma \text{ satisfying } \Re(\lambda) \leq \omega_{0}(A).
+    \norm{R(\lambda,A)} \leq M\cdot|\Im(\lambda)| \text{ for all } \lambda \in \Sigma \text{ satisfying } \Re(\lambda) \leq \omega_{0}(A).
 \]
 \end{theorem}
 %% –
@@ -850,7 +850,7 @@ For all $b>0$ there exist $c>0$, $M>0$ such that
 \]
 and
 \[
-    \|R(\lambda,A)\| \leq M\cdot \lvert \Im(\lambda) \rvert \text{ for all } \lambda \in \Sigma \text{ satisfying } \Re(\lambda) \leq \omega_{0}(A).
+    \norm{R(\lambda,A)} \leq M\cdot \lvert \Im(\lambda) \rvert \text{ for all } \lambda \in \Sigma \text{ satisfying } \Re(\lambda) \leq \omega_{0}(A).
 \]
 \end{theorem}
 %% –
@@ -861,7 +861,7 @@ For the proofs of these two theorems we refer to \textcite[Chapter 3, Theorem 4.
 \index{semigroup!norm continuous semigroup}
 %% --
 Let $(T(t))_{t\geq 0}$ be a strongly continuous semigroup and $t' > 0$.
-If\/ $\lim_{t \to t'} \|T(t) - T(t')\| = 0$, then it follows from the semigroup property, that the function $t \mapsto T(t)$ is norm continuous on the whole half line $(t',\infty)$.
+If\/ $\lim_{t \to t'} \norm{T(t) - T(t')} = 0$, then it follows from the semigroup property, that the function $t \mapsto T(t)$ is norm continuous on the whole half line $(t',\infty)$.
 
 %% –
 \begin{definition}\label{def:a2-1.19}
@@ -915,7 +915,7 @@ Let $a > \omega_{0}(A)$.
 Then for every $\epsilon > 0$ there exist $n \in \N$ and $r_0 \geq 0$ such that
 %%-
 \[
-\|R(a+ \iu r,A)^n\|^{1/n} < \epsilon \quad  \text{ for all } r \in \R \text{ satisfying $|r| \geq r_{0}$.}
+\norm{R(a+ \iu r,A)^n}^{1/n} < \epsilon \quad  \text{ for all } r \in \R \text{ satisfying $|r| \geq r_{0}$.}
 \]
 %%-
 In fact, then we have by the lemma, 
@@ -931,7 +931,7 @@ R(\lambda,A)^{n+1} = \frac{1}{n!}\int_0^\infty \eu^{-\lambda t}t^nT(t) \dt (n \i
 \]
 Let $t' > 0$ such that $t \mapsto T(t)$ is norm continuous on $(t',\infty)$.
 Let $w \in (\omega_{0}(A),a)$.
-There exists $M \geq 1$ such that $\|T(t)\| \leq M\eu^{wt}$ for all $t \geq 0$.
+There exists $M \geq 1$ such that $\norm{T(t)} \leq M\eu^{wt}$ for all $t \geq 0$.
 Let 
 %% --
 \[
@@ -944,7 +944,7 @@ Since $\lim_{n\to\infty} c^n/n! = 0$ for all $c > 0$, there exists $n \in \N$ su
 	N\cdot \frac{(t')^n}{n!} < \frac{1}{3}\,\epsilon^{n+1}.
 \]
 %
-Choose $T \geq t'$ such that $\frac{1}{n!}\int_{T}^{\infty} t^n\eu^{-at}\|T(t)\| \dt < \epsilon^{n+1}/3$.
+Choose $T \geq t'$ such that $\frac{1}{n!}\int_{T}^{\infty} t^n\eu^{-at}\norm{T(t)} \dt < \epsilon^{n+1}/3$.
 
 Since $(T(t))_{t\geq 0}$ is norm continuous for $t \geq t'$, it follows from the Riemann-Lebesgue lemma that there exists $r_{0} \geq 0$ such that 
 %% --
@@ -956,11 +956,11 @@ Since $(T(t))_{t\geq 0}$ is norm continuous for $t \geq t'$, it follows from the
 
 All together we obtain for $|r| \geq r_{0}$,
 \begin{align*}
-    \|R(a + \iu r,A)^{n+1}\| & = \frac{1}{n!}\cdot 
-    	\left\|\int_0^\infty \eu^{-(a + \iu r)t}t^nT(t) \dt \right\| \\
-    & \leq \frac{1}{n!}\cdot\int_{0}^{t'} \eu^{-at}t^n\|T(t)\| \dt \\
-    & + \frac{1}{n!}\cdot \left\|\int_{t'}^T t^n\eu^{-\iu rt}\eu^{-at}T(t) \dt \right\| \\
-    & + \frac{1}{n!}\cdot\int_T^\infty \eu^{-at}t^n\|T(t)\| \dt \\
+    \norm{R(a + \iu r,A)^{n+1}} & = \frac{1}{n!}\cdot 
+    	\norm*{\int_0^\infty \eu^{-(a + \iu r)t}t^nT(t) \dt } \\
+    & \leq \frac{1}{n!}\cdot\int_{0}^{t'} \eu^{-at}t^n\norm{T(t)} \dt \\
+    & + \frac{1}{n!}\cdot \norm*{\int_{t'}^T t^n\eu^{-\iu rt}\eu^{-at}T(t) \dt } \\
+    & + \frac{1}{n!}\cdot\int_T^\infty \eu^{-at}t^n\norm{T(t)} \dt \\
     & \leq \frac{1}{n!}\cdot(t')^{n}\int_{0}^{t'} \eu^{-at}M\eu^{wt} \dt + \frac{2}{3}\cdot\epsilon^{n+1} \\
     & \leq N\cdot \frac{(t')^n}{n!} + \frac{2}{3}\cdot\epsilon^{n+1} \\
     & \leq \epsilon^{n+1}.
@@ -1162,7 +1162,7 @@ whenever $|t-t'| < \delta$.
 Together with the inequality above, we obtain that 
 %%
 \[
-\|T(t) - T(t')\| = [\text{ess}]\text{-}\sup\left\{\left|\eu^{tm(x)} - \eu^{t'm(x)}\right| \colon x \in X\right\} < \epsilon
+\norm{T(t) - T(t')} = [\text{ess}]\text{-}\sup\left\{\left|\eu^{tm(x)} - \eu^{t'm(x)}\right| \colon x \in X\right\} < \epsilon
 \]
 %% 
 whenever $|t-t'| < \delta$.
@@ -1298,7 +1298,7 @@ $B$ is compact, then $(S(t))_{t \geq 0}$ is also norm continuous for $t > t_{0}$
 If\/ $(T(t))_{t \geq 0}$ is norm continuous for $t > 0$, then $S_{n}(t)$ in Eq.~\myeqpageref{eq:a2-1.10} is norm continuous at $t > 0$ for every $n$.
 Thus $(S(t))_{t \geq 0}$ is norm continuous at $t > 0$ by Eq.~\myeqpageref{eq:a2-1.11}.
 There exists $\lambda_{0} \in \R$ such that 
-$\|R(\lambda,A)\| \leq (2\|B\|)^{-1}$ for $\Re(\lambda) \geq \lambda_{0}$.
+$\norm{R(\lambda,A)} \leq (2\norm{B})^{-1}$ for $\Re(\lambda) \geq \lambda_{0}$.
 Hence $(\Id~-~BR(\lambda,A))^{-1}$ exists for $\Re(\lambda) \geq \lambda_{0}$.
 Since 
 %%
@@ -1313,11 +1313,11 @@ it follows that $(\lambda-(A+B))^{-1}$ exists and is given by
 \end{equation}
 %%--
 whenever $\Re(\lambda) \geq \lambda_{0}$.
-Now if\/ $A$ generates a holomorphic semigroup, there exists $M \geq 0$ such that $\|R(\lambda_{0}+\im\eta,A)\| \leq M/|\eta|$ for all $\eta \in \R$.
+Now if\/ $A$ generates a holomorphic semigroup, there exists $M \geq 0$ such that $\norm{R(\lambda_{0}+\im\eta,A)} \leq M/|\eta|$ for all $\eta \in \R$.
 Consequently, 
 %%--
 \[
-\|R(\lambda_{0}+\im\eta,A+B)\| \leq \|(\Id-BR(\lambda_{0} + \iu \eta,A))^{-1}\| \cdot 2M/|\eta| \leq 2M/|\eta|
+\norm{R(\lambda_{0}+\im\eta,A+B)} \leq \norm{(\Id-BR(\lambda_{0} + \iu \eta,A))^{-1}} \cdot 2M/|\eta| \leq 2M/|\eta|
 \]
 %%--
 for all $\eta \in \R$\,.
@@ -1338,20 +1338,20 @@ Then
 for all $f \in \overline{BS(s)U} \eqqcolon K$.
 
 Since $K$ is compact it follows that the limit exists uniformly with respect to $f \in K$, \ie  
-$\lim_{h \to 0} \|(T(t+s-h) - T(t-s))BS(s)\| = 0$.
+$\lim_{h \to 0} \norm{(T(t+s-h) - T(t-s))BS(s)} = 0$.
 It follows from the dominated convergence theorem that
 %%--
 \begin{equation}\label{eq:a2-1.13}
-    \lim_{h \to 0} \int_{0}^{t} \|(T(t+s-h) - T(t-s))BS(s)\|\, \ds = 0.
+    \lim_{h \to 0} \int_{0}^{t} \norm{(T(t+s-h) - T(t-s))BS(s)}\, \ds = 0.
 \end{equation}
 %%--
 Using  Eq.~\myeqpageref{eq:a2-1.9}  we obtain 
 \begin{align*}
-	\|S(t+h) - S(t)\| &\leq \|T(t+h) - T(t)\|   \\
+	\norm{S(t+h) - S(t)} &\leq \norm{T(t+h) - T(t)}   \\
 	&+  \left\| \int_{0}^{t+h} T(t+h-s)BS(s)\, \ds 
 	-  \int_{0}^{t} (T(t-s)BS(s)\, \ds \right\|  \\
-	\leq \|T(t+h) - T(t)\| &+ \int_{t}^{t+h} \|T(t+h-s)BS(s)\| \ds    \\ 
-	&+ \int_{0}^{t} \|(T(t+h-s) - T(t-s))BS(s)\|\, \ds \to 0 
+	\leq \norm{T(t+h) - T(t)} &+ \int_{t}^{t+h} \norm{T(t+h-s)BS(s)} \ds    \\ 
+	&+ \int_{0}^{t} \norm{(T(t+h-s) - T(t-s))BS(s)}\, \ds \to 0 
 \end{align*}
 %% --
 when  $h \to 0$. 	
@@ -1375,7 +1375,7 @@ Moreover, there exists a bounded operator $C$ on $E$ such that $A + B$ is simila
 We first show that $(\Id - BR(\lambda,A))$ is invertible for some $\lambda \in \C$.
 Choose $\lambda_{0} \in \rho(A)$.
 Then $S \coloneqq (\lambda_{0}-A)BR(\lambda_{0},A) \in \mathcal{L}(E)$.
-Let $\lambda > s(A)$ be so large such that $\|SR(\lambda,A)\| < 1$.
+Let $\lambda > s(A)$ be so large such that $\norm{SR(\lambda,A)} < 1$.
 Then 
 %%
 \[
@@ -1499,7 +1499,7 @@ p(\lambda f) &= \lambda p(f) \quad (f \in E, \lambda \geq 0).\label{eq:a2-2.2}
 The continuity of\/ $p$ implies that there exists a constant $c > 0$ such that
 %% --
 \begin{equation}\label{eq:a2-2.3}
-	|p(f)| \leq c\|f\| \quad (f \in E).
+	|p(f)| \leq c\norm{f} \quad (f \in E).
 \end{equation}
 %% -- 
 Moreover, it follows from Eq.~\myeqpageref{eq:a2-2.1} and Eq.~\myeqpageref{eq:a2-2.2} that
@@ -1510,13 +1510,13 @@ Moreover, it follows from Eq.~\myeqpageref{eq:a2-2.1} and Eq.~\myeqpageref{eq:a2
 %% --
 A bounded operator $T$ on $E$ is called \emph{p-contractive} if\/ $p(Tf) \leq p(f)$ for all $f \in E$.
 Similarly, a semigroup $(T(t))_{t\geq 0}$ is called \emph{p-contractive} if\/ $T(t)$ is p-contractive for all $t \geq 0$.
-Of course, the most important case in this section is when $p$ is the norm function $N$ given by $N(f) = \|f\|$ $(f \in E)$.
+Of course, the most important case in this section is when $p$ is the norm function $N$ given by $N(f) = \norm{f}$ $(f \in E)$.
 An $N$-contractive operator is just a contraction in the usual sense.
 %% –
 \begin{remark*} \label{rem:a2-2.1-kgk}
 However in Part-II, Chapter~\ref{chap:b2} and Part-III, Chapter~\ref{chap:c2} it will be important to dispose of a variety of sublinear functionals other than $N$.
 For example, we will consider $N^{+}$ on $C[0,1]$ given by $N^{+}(f) = \sup_{x \in [0,1]} f(x)$.
-Then a bounded operator $T$ is $N^{+}$-contractive if and only if\/ $T$ is positive and $\|T\| \leq 1$.
+Then a bounded operator $T$ is $N^{+}$-contractive if and only if\/ $T$ is positive and $\norm{T} \leq 1$.
 \end{remark*}
 
 We first want to solve the following problem.
@@ -1535,11 +1535,11 @@ and $A$ is called \emph{strictly p-dissipative} if for all $f \in D(A)$ the ineq
 \end{definition}
 %%
 For convenience we want to have a distinctive name for the norm function.
-So we denote by $N \colon E \to \R$ the function given by $N(f) = \|f\|$ throughout.
+So we denote by $N \colon E \to \R$ the function given by $N(f) = \norm{f}$ throughout.
 Then Eq.~\myeqpageref{eq:a2-2.5}   can be written in the form
 
 \begin{equation}\label{eq:a2-2.6}
-\dN(f) = \{\phi \in E' \colon \|\phi\|\leq 1, \langle f,\phi \rangle = \|f\|\}.
+\dN(f) = \{\phi \in E' \colon \norm{\phi}\leq 1, \langle f,\phi \rangle = \norm{f}\}.
 \end{equation}
 
 A (strictly) $N$-dissipative operator is simply called (strictly) \emph{dissipative}, which is in accordance with the usual nomenclature.
@@ -1550,7 +1550,7 @@ A (strictly) $N$-dissipative operator is simply called (strictly) \emph{dissipat
 
 \item \label{ex:a2-2.2.1}
 Let $E = C[0,1]$, $f \in E$.
-Then there exists $x \in [0,1]$ such that $|f(x)| = \|f\|_{\infty}$.
+Then there exists $x \in [0,1]$ such that $|f(x)| = \norm{f}_{\infty}$.
 Define $\phi \in E'$ by $\langle g,\phi \rangle = (\text{sign } f(x))g(x)$.
 Then $\phi \in \dN(f)$.
 Note that $\dN(f)$ may be an infinite set.
@@ -1558,10 +1558,10 @@ Note that $\dN(f)$ may be an infinite set.
 \item \label{ex:a2-2.2.2}
 Let $H$ be a Hilbert space, $f \in H$, $f \neq 0$.
 Then  $\dN(f) = \{\phi_{f}\}$ where \\
-$\langle g,\phi_{f} \rangle = 1/\|f\|\,(g|f)$.
+$\langle g,\phi_{f} \rangle = 1/\norm{f}\,(g|f)$.
 %%--
 \item \label{ex:a2-2.2.3}
-$A - \|A\|\Id$ is strictly dissipative for every bounded operator $A$.
+$A - \norm{A}\Id$ is strictly dissipative for every bounded operator $A$.
 \end{enumerate}
 \end{examples}
 %% –
@@ -1594,7 +1594,7 @@ So Eq.~\myeqpageref{eq:a2-2.7} holds.
 
 Conversely, let $f \in D(A)$.
 For every $t > 0$ choose $\phi_{t} \in \ddp(f - tAf)$.
-Then $\pm\langle g,\phi_{t} \rangle \leq p(\pm g) \leq c\|g\|$ for all $g \in E$, $t > 0$.
+Then $\pm\langle g,\phi_{t} \rangle \leq p(\pm g) \leq c\norm{g}$ for all $g \in E$, $t > 0$.
 Thus the net $(\phi_{t})_{t>0}$ is bounded.
 Consequently it posseses a $\sigma(E',E)$-limit point $\phi$ as $t \to 0$.
 We show that $\phi \in \ddp(f)$ and $\langle Af,\phi \rangle \leq 0$.
@@ -1702,11 +1702,11 @@ Then for every $t > 0$ and $g \in D(A)$ we have
 &\leq \frac{1}{t}(p(f + tg) + tp(Af - g) - p(f)) \\
 &\leq \frac{1}{t}(p((\Id - tA)(f + tg)) + tp(Af - g) - p(f)) \quad \text{(by Eq.~\myeqpageref{eq:a2-2.7}\,)} \\ %% (2.7))
 &\leq \frac{1}{t}(p(f) + tp(g - Af) + t^2p(-Ag) + tp(Af - g) - p(f)) \\
-&\leq \frac{1}{t}(2tc\|g - Af\| + t^2c\|Ag\|) \quad \text{(by (2.3))} \\
-&= 2c\|g - Af\| + tc\|Ag\|.
+&\leq \frac{1}{t}(2tc\norm{g - Af} + t^2c\norm{Ag}) \quad \text{(by (2.3))} \\
+&= 2c\norm{g - Af} + tc\norm{Ag}.
 \end{align*}
 
-Letting $t \to 0$ we obtain $\langle Af,\phi \rangle \leq 2c\|g - Af\|$ for all $g \in D(A)$.
+Letting $t \to 0$ we obtain $\langle Af,\phi \rangle \leq 2c\norm{g - Af}$ for all $g \in D(A)$.
 Since $D(A)$ is dense in $E$, this implies that $\langle Af,\phi \rangle \leq 0$.
 \end{proof}
 
@@ -1721,12 +1721,12 @@ p(f) + p(-f) > 0 \text{ whenever } f \neq 0;
 and $p$ is called a \emph{strict half-norm} if in addition there exists some constant $d > 0$ such that
 %%--
 \begin{equation}\label{eq:a2-2.12}
-p(f) + p(-f) \geq d\|f\| \text{ for all } f \in E.
+p(f) + p(-f) \geq d\norm{f} \text{ for all } f \in E.
 \end{equation}
 %%--
 If\/ $p$ is a half-norm, then
 \begin{equation}\label{eq:a2-2.13}
-\|f\|_p = p(f) + p(-f) \quad (f \in E)
+\norm{f}_p = p(f) + p(-f) \quad (f \in E)
 \end{equation}
 %%--
 defines a norm on $E$ which is equivalent to the given norm if and only if\/ $p$ is strict.
@@ -1745,7 +1745,7 @@ Any p-contractive operator $T$ on $E$ leaves the cone $E_{p}$ invariant (\ie  $T
 Conversely, given a closed proper cone $E_{+}$ on $E$, then 
 %$
 \[
-p(f) \coloneqq \text{dist}(-f,E_{+}) = \inf\{\|f + g\| \colon g \in E_{+}\}
+p(f) \coloneqq \text{dist}(-f,E_{+}) = \inf\{\norm{f + g} \colon g \in E_{+}\}
 \]
 %$ 
 defines a half-norm on $E$ such that $E_{+} = E_{p}$.
@@ -1793,7 +1793,7 @@ Hence $p(g) + p(-g) \leq 0$ which implies $g = 0$ by Eq.~\myeqpageref{eq:a2-2.11
 Let $p$ be a half-norm and $A$ a p-dissipative operator.
 Then
 \begin{equation}\label{eq:a2-2.14}
-\lambda\|f\|_{p} \leq \|(\lambda - A)f\|_{p} \text{ for all } f \in D(A), \lambda > 0.
+\lambda\norm{f}_{p} \leq \norm{(\lambda - A)f}_{p} \text{ for all } f \in D(A), \lambda > 0.
 \end{equation}
 
 In particular, $(\lambda-A)$ is injective for all $\lambda > 0$.
@@ -1808,13 +1808,13 @@ Then by Eq.~\myeqpageref{eq:a2-2.7}
 Hence 
 %%
 \[
-\lambda\|f\|_{p} = \lambda p(f) + \lambda p(-f) \leq p((\lambda - A)f) + p(-(\lambda-A)f) = \|(\lambda-A)f\|_{p}.
+\lambda\norm{f}_{p} = \lambda p(f) + \lambda p(-f) \leq p((\lambda - A)f) + p(-(\lambda-A)f) = \norm{(\lambda-A)f}_{p}.
 %%
 \]
 Thus Eq.~\myeqpageref{eq:a2-2.14}   
 is proved.
 Now suppose that $p$ is strict.
-Then $\|\cdot\|_{p}$ is equivalent to the given norm.
+Then $\norm{\cdot}_{p}$ is equivalent to the given norm.
 Let $\lambda > 0$ and $g \in \overline{\Image{\lambda - A}}$.
 Then $g = \lim_{n\to\infty} (\lambda - A)f_{n}$ for some sequence $(f_{n})_{n \in \N} \subset D(A)$.
 It follows from Eq.~\myeqpageref{eq:a2-2.14}  
@@ -1850,14 +1850,14 @@ $D(A)$ is dense, $A$ is p-dissipative and $\Image{\lambda - A} = E$ for some $\l
 %% –
 %%
 \begin{proof}
-Since $p$ is a strict half-norm, we can assume that $\|f\| = \|f\|_{p}$ for all $f \in E$.
+Since $p$ is a strict half-norm, we can assume that $\norm{f} = \norm{f}_{p}$ for all $f \in E$.
 By Theorem~\ref{thm:a2-2.6}, condition~\ref{thm:a2-2.11.1} implies~\ref{thm:a2-2.11.2}. 
 
 Now suppose that~\ref{thm:a2-2.11.2}   holds.
 Then it follows from Lemma~\ref{lem:a2-2.10}   
-that $\mu \in \rho(A)$ and $\|\mu R(\mu,A)\| \leq 1$ whenever $\mu > 0$ such that $\Image{\mu-A} = E$.
+that $\mu \in \rho(A)$ and $\norm{\mu R(\mu,A)} \leq 1$ whenever $\mu > 0$ such that $\Image{\mu-A} = E$.
 So by hypothesis $\lambda \in \rho(A)$ and 
-$\text{dist}(\lambda,\sigma(A)) \geq \|R(\lambda,A)\|^{-1} \geq \lambda$.
+$\text{dist}(\lambda,\sigma(A)) \geq \norm{R(\lambda,A)}^{-1} \geq \lambda$.
 Hence $(0,2\lambda) \subset \rho(A)$.
 Iterating this argument we see that $(0,\infty) \subset \rho(A)$.
 It follows from the Hille-Yosida theorem that $A$ generates a contraction semigroup $(T(t))_{t\geq 0}$.
@@ -1866,7 +1866,7 @@ Finally, from~\ref{thm:a2-2.6}
 it follows that $(T(t))_{t\geq 0}$ is p-contractive.
 \end{proof}
 
-Of course, the norm function $N$ given by $N(f) = \|f\|$ is a strict half-norm.
+Of course, the norm function $N$ given by $N(f) = \norm{f}$ is a strict half-norm.
 In the case when $p = N$, Theorem~\ref{thm:a2-2.11}    
 is due to \textcite{lumerphillips:1961}.
 It turns out to be extremely useful in showing that a concrete operator is a generator.
@@ -1913,7 +1913,7 @@ for all $f \in D(A)$, $t \geq 0$.
 
 The results of this section carry over if they are appropriately modified.
 We explicitly state the most important result for the case when $p$ is the norm.
-A linear operator $A$ is simply called \emph{dissipative} if it is N-dissipative where $N(f) = \|f\|$ $(f \in E)$.
+A linear operator $A$ is simply called \emph{dissipative} if it is N-dissipative where $N(f) = \norm{f}$ $(f \in E)$.
 
 %% –
 \begin{theorem}[Lumer-Phillips]\label{thm:a2-2.13}
@@ -1943,19 +1943,19 @@ In this section we shall prove that on $L^\infty$, on $H^\infty$, and on some ot
 %% –
 \begin{lemma}\label{lem:a2-3.1}
 Let\, $\TT = (T(t))_{t\geq 0}$\, be a one-parameter semigroup of operators on a Banach space $E$.
-Suppose that\, $s = \lim\sup_{t\to 0} \|T(t) - \Id\|$\, is finite.
-Then $\TT$ is uniformly continuous, if\/ $\lim_{t\to 0} \|(T(t) - \Id)^2\| = 0$.
+Suppose that\, $s = \lim\sup_{t\to 0} \norm{T(t) - \Id}$\, is finite.
+Then $\TT$ is uniformly continuous, if\/ $\lim_{t\to 0} \norm{(T(t) - \Id)^2} = 0$.
 \end{lemma}
 %% –
 \begin{proof}
 The identity  $2(T(t) - \Id) = T(2t) - \Id - (T(t) - \Id)^2$\, shows that
 %%
 \[
-	2\|T(t) - \Id\| - \|(T(t) - \Id)^{2} \| \leq \|T(2t) - \Id\| .
+	2\norm{T(t) - \Id} - \norm{(T(t) - \Id)^{2} } \leq \norm{T(2t) - \Id} .
 \]
 %% -- 
-Hence $2s \leq \lim \sup_{t \downarrow 0} \|T(2t) - \Id\|$.
-Obviously, $\lim \sup_{t \downarrow 0} \|T(2t) - \Id\| = s$ and so, $2s \leq s$.
+Hence $2s \leq \lim \sup_{t \downarrow 0} \norm{T(2t) - \Id}$.
+Obviously, $\lim \sup_{t \downarrow 0} \norm{T(2t) - \Id} = s$ and so, $2s \leq s$.
 Consequently, $s = 0$.
 \end{proof}
 %% --
@@ -1966,7 +1966,7 @@ Consequently, $s = 0$.
 If, in Lemma~\ref{lem:a2-3.1},    
 $\TT = (T(t))_{t \geq 0}$ is strongly continuous, in which case 
 $s < \infty$, one can replace 
-$\lim_{t \to 0} \|(T(t) - \Id)^2\| = 0$ by the weaker condition 
+$\lim_{t \to 0} \norm{(T(t) - \Id)^2} = 0$ by the weaker condition 
 %%--
 \[
 \lim \sup_{t \to 0} r(T(t) - \Id) < 1\,, \]
@@ -2015,7 +2015,7 @@ $\TT$ is strongly continuous.
 
 \begin{proof}
 Let $x' \in E'$ and $t_n \geq 0$ be given.
-Then $\lim \|(T(t_n) - \Id)'x'\| = 0$ if and only if\/ $\lim \langle x_n, (T(t_n) - \Id)'x' \rangle = 0$ for every bounded sequence $(x_n)$ in $E$.
+Then $\lim \norm{(T(t_n) - \Id)'x'} = 0$ if and only if\/ $\lim \langle x_n, (T(t_n) - \Id)'x' \rangle = 0$ for every bounded sequence $(x_n)$ in $E$.
 This implies the equivalence of~\ref{lem:a2-3.2-1}   and~\ref{lem:a2-3.2-2}. 
 In particular,~\ref{lem:a2-3.2-1}   implies that $((T(t_n) - \Id)x)$ converges weakly to zero for every sequence $(t_n)$ in $[0,\infty)$ with $\lim t_n = 0$ and every $x \in E$.
 Hence $\TT$ is strongly continuous by Proposition 1.23 
@@ -2032,7 +2032,7 @@ If  $\TT=(T(t))_{t \geq 0}$\, is a strongly continuous semigroup in $E$, then $\
 \begin{proof}
 Suppose that $(x_{n}')$ is a bounded sequence in $E'$ and that $t_{n} \geq 0$ with $\lim t_{n} = 0$.
 Put $V_{n} \coloneqq T(t_{n}) - \Id$.
-Then $\lim \|V_{n}x\| = 0$ and therefore $\lim \langle x, V_{n}'x_{n}' \rangle = 0$ for every $x \in E$.
+Then $\lim \norm{V_{n}x} = 0$ and therefore $\lim \langle x, V_{n}'x_{n}' \rangle = 0$ for every $x \in E$.
 Hence $(V_{n}'x_{n}')$ w*-converges to zero.
 Since $E$ is a Grothendieck space, $(V_{n}'x_{n}')$ converges weakly to zero.
 Now Lemma~\ref{lem:a2-3.2} implies that $(T(t)'')$ is strongly continuous.
@@ -2048,18 +2048,18 @@ If  $\TT'' = (T(t)'')_{t \geq 0}$ is strongly continuous in $E''$, then $\TT$ is
 \begin{proof}
 Suppose that $\TT''$ is a strongly continuous semigroup.
 Then Lemma~\ref{lem:a2-3.2}   implies that $\TT'$ and $\TT$ are strongly continuous.
-Hence by the uniform boundedness principle, $\lim \sup_{t \to 0} \|(T(t) - \Id)\|$ is finite.
-By Lemma~\ref{lem:a2-3.1}   it suffices to show that $\lim_{t \to 0} \|(T(t) - \Id)^2\| = 0$.
+Hence by the uniform boundedness principle, $\lim \sup_{t \to 0} \norm{(T(t) - \Id)}$ is finite.
+By Lemma~\ref{lem:a2-3.1}   it suffices to show that $\lim_{t \to 0} \norm{(T(t) - \Id)^2} = 0$.
 Let $t_{n} \geq 0$ with $\lim t_{n} = 0$ be given.
 Then there exists a bounded sequence $(x_{n})$ in $E$ and a bounded sequence $(x_{n}')$ in $E'$ such that
 %%
 \[
-\left\|(T(t_{n}) - \Id)^2 \right\| - \frac{1}{n} \leq \langle (T(t_{n}) - \Id)x_{n}, (T(t_{n}) - \Id)'x_{n}' \rangle\,.
+\norm*{(T(t_{n}) - \Id)^2 } - \frac{1}{n} \leq \langle (T(t_{n}) - \Id)x_{n}, (T(t_{n}) - \Id)'x_{n}' \rangle\,.
 \]
 %%
 Since $\TT'$ and $\TT''$ are strongly continuous, Lemma~\ref{lem:a2-3.2}   implies that $((T(t_{n}) - \Id)x_{n})$ and $((T(t_{n}) - \Id)'x_{n}')$ converge weakly to zero.
-Since $E$ has the Dunford-Pettis property, $\lim \|(T(t_{n}) - \Id)^2\| = 0$.
-Consequently, $\lim_{t \to 0} \|(T(t) - \Id)^2\| = 0$.
+Since $E$ has the Dunford-Pettis property, $\lim \norm{(T(t_{n}) - \Id)^2} = 0$.
+Consequently, $\lim_{t \to 0} \norm{(T(t) - \Id)^2} = 0$.
 \end{proof}
 
 An immediate consequence of Theorem~\ref{thm:a2-3.3}   and Theorem~\ref{thm:a2-3.4}   is the following.
