@@ -38,7 +38,7 @@ We single out the strong operator topology on $\LE$ and require $\tau$ to be con
 A one-parameter semigroup $(T(t))_{t\geq0}$ is called \emph{strongly continuous} if the map $t \mapsto T(t)$ is continuous for the strong operator topology on $\LE$, \eg
 %% --
 \[
-	\lim_{t\to t_{0}} \|T(t)f - T(t_{0})f\| = 0
+	\lim_{t\to t_{0}} \norm{T(t)f - T(t_{0})f} = 0
 \]
 %% --
 for every $f \in E$ and $t_{0} \geq 0$.
@@ -79,23 +79,23 @@ By the \emph{growth bound} (or type) of the semigroup $ T(t)_{t\geq0} $ we under
 %\begin{equation}\label{eq:a1-1.1}
 %\begin{split}
 %	\omega_{0} & \coloneq \inf \{ \omega \in \R   \colon \text{there exists $ M \in \R_{+} $  
-% 		such that $\|T(t)\| \leq M \cdot  \eu^{\omega t}$  for  $t \geq 0$} \} \\
-%	& = \lim_{t\to\infty} \frac{1}{t}\log\|T(t)\| = \inf_{t>0} \frac{1}{t}\log\|T(t)\| .
+% 		such that $\norm{T(t)} \leq M \cdot  \eu^{\omega t}$  for  $t \geq 0$} \} \\
+%	& = \lim_{t\to\infty} \frac{1}{t}\log\norm{T(t)} = \inf_{t>0} \frac{1}{t}\log\norm{T(t)} .
 %\end{split}
 %\end{equation}
 \begin{equation}\label{eq:a1-1.1}
 \begin{aligned}
     \omega_{0} & \coloneqq \inf \bigl\{ \omega \in \R \colon \text{there exists } %\exists\,
          M \in \R_{+} \text{ such that }
-        \|T(t)\| \leq M \eu^{\omega t} \ (t \geq 0) \bigr\} \\
-    & = \lim_{t\to\infty} \frac{1}{t}\log\|T(t)\|
-      = \inf_{t>0} \frac{1}{t}\log\|T(t)\| .
+        \norm{T(t)} \leq M \eu^{\omega t} \ (t \geq 0) \bigr\} \\
+    & = \lim_{t\to\infty} \frac{1}{t}\log\norm{T(t)}
+      = \inf_{t>0} \frac{1}{t}\log\norm{T(t)} .
 \end{aligned}
 \end{equation}
 %% --
 \end{definition}
 %% --
-Particularly important are semigroups such that for every $t \geq 0$ we have $\|T(t)\| \leq M$ (\emph{bounded semigroups}) or $\|T(t)\| \leq 1$ (\emph{contraction semigroups}).
+Particularly important are semigroups such that for every $t \geq 0$ we have $\norm{T(t)} \leq M$ (\emph{bounded semigroups}) or $\norm{T(t)} \leq 1$ (\emph{contraction semigroups}).
 In both cases we have $\omega_{0} \leq 0$.
 \index{semigroup!contraction semigroup}
 
@@ -115,7 +115,7 @@ Take
 	T(t) =  \eu^{tA} = \begin{pmatrix}1 & t\\0 & 1\end{pmatrix} .
 \]
 %
-Then for the $\ell^{1}$-norm on $E$ we obtain $\|T(t)\| = 1 + t$, hence $(T(t))_{t\geq0}$ is an unbounded semigroup having growth bound $\omega_{0} = 0$.
+Then for the $\ell^{1}$-norm on $E$ we obtain $\norm{T(t)} = 1 + t$, hence $(T(t))_{t\geq0}$ is an unbounded semigroup having growth bound $\omega_{0} = 0$.
 
 \item 
 Take $E = L^1(\R)$ and for $f \in E$, $t \geq 0$ define
@@ -128,7 +128,7 @@ T(t)f(x) \coloneqq
 	\end{cases}
 \end{align*}
 %% --
-Each $T(t)$, $t > 0$, satisfies $\|T(t)\| = 2$ as can be seen by taking $f \coloneq  \1_{[0,t]}$.
+Each $T(t)$, $t > 0$, satisfies $\norm{T(t)} = 2$ as can be seen by taking $f \coloneq  \1_{[0,t]}$.
 Therefore $(T(t))_{t \geq 0}$ is a strongly continuous semigroup which is bounded, hence has $\omega_{0} = 0$, but the constant $M$ in Eq.~\myeqpageref{eq:a1-1.1} cannot be chosen to be $1$.
 
 \end{enumerate}
@@ -232,7 +232,7 @@ An operator $B$ with domain $D(B)$ on a Banach space $E$ is called \emph{closed}
 %% --
 %\[
 \begin{equation*}\label{eq:a1-1.8}
-	\|f\|_{B} \coloneqq \|f\| + \|Bf\|
+	\norm{f}_{B} \coloneqq \norm{f} + \norm{Bf}
 \end{equation*} 
 %\]
 %% --
@@ -258,7 +258,7 @@ In that case, $B$ is called \emph{closable}, a property which is equivalent to
 The smallest closed extension of\/ $(B,D(B))$ will be called the \emph{closure} $\overline{B}$ with domain $D(\overline{B})$.
 In other words, the graph of\/ $\overline{B}$ is the closure of\/ $\{(f,Bf) \colon f \in D(B)\}$ in $E \times E$.
 
-Finally, we call a subset $D_{0}$ of\/ $D(B)$ a \emph{core} for $B$ if\/ $D_{0}$ is $\|\cdot\|_{B}$-dense in $D(B)$.
+Finally, we call a subset $D_{0}$ of\/ $D(B)$ a \emph{core} for $B$ if\/ $D_{0}$ is $\norm{\cdot}_{B}$-dense in $D(B)$.
 \index{core}
 This means that a closed operator is determined (via closure) by its restriction to a core in its domain.
 
@@ -403,7 +403,7 @@ for some $g \in E$.
 But these elements belong to $D(A)$ by Eq.~\myeqpageref{eq:a1-1.3}, hence $D(A) = E$.
 Since the generator $A$ is closed and everywhere defined, it must be bounded.
 Remark that bounded operators are always generators of groups, not just semigroups.
-Moreover, the growth bound $\omega_0$ satisfies $|\omega_0| \leq \|A\|$ in this situation.
+Moreover, the growth bound $\omega_0$ satisfies $|\omega_0| \leq \norm{A}$ in this situation.
 
 The above characterization of the generators of uniformly continuous semigroups as the bounded operators shows that these semigroups are---at least in many aspects---rather simple objects.
 %% --
@@ -567,7 +567,7 @@ $M_{q}$ is bounded.
 $q$ is ($\mu$-essentially) bounded.
 \end{enumerate}
 %% --
-One has $\|M_{q}\| = \|q\|_{\infty}$ in this situation.
+One has $\norm{M_{q}} = \norm{q}_{\infty}$ in this situation.
 Observe that on spaces $C(K)$, $K$ compact, there are no densely defined, unbounded multiplication operators.
 \index{operator!multiplication}
 
@@ -803,7 +803,7 @@ We now use $e_{n}$ to define bounded linear operators
 		= ( f | e_{n} ) e_{n} %\langle f,e_{n}\rangle e_{n}
 \]
 %% -- 
-satisfying $\|e_{n} \otimes e_{n}\| \leq 1$ and
+satisfying $\norm{e_{n} \otimes e_{n}} \leq 1$ and
 $(e_{n} \otimes e_{n})(e_{m} \otimes e_{m}) = \delta_{n,m}(e_{n} \otimes e_{n})$ for $n \in \Z$.
 
 For $t > 0$ we define
@@ -836,7 +836,7 @@ which is a positive function on $\left[ 0,1 \right]^{2}$.
 Therefore $T(t)$ is a bounded operator on $C\left[ 0,1 \right]$ with
 %% --
 \[
-    \|T(t)\| = \|T(t)\1\| = \sup_{x \in \left[ 0,1 \right]} \int_{0}^{1} k_{t}(x,y)dy = 1 .
+    \norm{T(t)} = \norm{T(t)\1} = \sup_{x \in \left[ 0,1 \right]} \int_{0}^{1} k_{t}(x,y)dy = 1 .
 \]
 %% --
 From the behavior of\/ $T(t)$ on the dense subspace $E_{0}$ it follows that $(T(t))_{t \geq 0}$ with $T(0) = \Id$ is a strongly continuous semigroup on $E$ and its generator $A$ coincides with $B$ on $E_{0}$.
@@ -861,10 +861,10 @@ In fact, the integral exists for every $f \in L^{p}(\R^{n})$ since $\mu_{t}$ is 
 Moreover,
 %% --
 \[
-    \|T(t)f\|_{p} \leq \|\mu_{t}\|_{1}\|f\|_{p} = \|f\|_{p}
+    \norm{T(t)f}_{p} \leq \norm{\mu_{t}}_{1}\norm{f}_{p} = \norm{f}_{p}
 \]
 %% --
-by Young's inequality (\textcite[p.28]{reedsimon:1975}). Hence $\|T(t)\| \leq 1$ for every $t > 0$.
+by Young's inequality (\textcite[p.28]{reedsimon:1975}). Hence $\norm{T(t)} \leq 1$ for every $t > 0$.
 
 Next we observe that $\mathcal{S}(\R^{n})$ is dense in $E$ and invariant under each $T(t)$.
 Therefore we can apply the Fourier transformation $\mathbf{F}$ which leaves $\mathcal{S}(\R^{n})$ invariant and yields
@@ -1129,7 +1129,7 @@ In order to achieve this we restrict $T(t)'$ to an appropriate subspace of\/ $E'
 The \emph{semigroup dual} of the Banach space $E$ with respect to the strongly continuous semigroup $(T(t))_{t \geq 0}$ is
 %% --
 \[
-    E^{*} \coloneqq \{\phi \in E' \colon \|\cdot\|\text{-}\lim_{t \to 0} T(t)'\phi = \phi\}.
+    E^{*} \coloneqq \{\phi \in E' \colon \norm{\cdot}\text{-}\lim_{t \to 0} T(t)'\phi = \phi\}.
 \]
 %% --
 The adjoint semigroup on $E^{*}$ is given by the operators
@@ -1146,15 +1146,15 @@ The main point is that $E^{*}$ is still reasonably large.
 In fact, since $\int_{0}^{t} T(s)'\phi  \ds$, understood in the weak sense, is contained in $E^{*}$ for every $\phi \in E'$ and $t \geq 0$, it follows that
 %% --
 \[
-    \sup\{\langle f,\phi \rangle \colon \phi \in E^{*}, \|\phi\| \leq 1\} \leq \|f\| \leq M\cdot\sup\{\langle f,\phi \rangle \colon \phi \in E^{*}, \|\phi\| \leq1\}
+    \sup\{\langle f,\phi \rangle \colon \phi \in E^{*}, \norm{\phi} \leq 1\} \leq \norm{f} \leq M\cdot\sup\{\langle f,\phi \rangle \colon \phi \in E^{*}, \norm{\phi} \leq1\}
 \]
 %% --
-where $M \coloneqq \lim\sup_{t \to 0} \|T(t)\|$.
+where $M \coloneqq \lim\sup_{t \to 0} \norm{T(t)}$.
 In particular, $E^{*}$ separates $E$, \ie $E^{*}$ is $\sigma(E',E)$-dense in $E'$.
 In addition, the norm estimate given above yields
 %% --
 \[
-    \|T(t)^{*}\| \leq \|T(t)\| \leq M\|T(t)^{*}\| \quad \text{for all } t \geq 0.
+    \norm{T(t)^{*}} \leq \norm{T(t)} \leq M\norm{T(t)^{*}} \quad \text{for all } t \geq 0.
 \]
 %% --
 In the following proposition we describe the relation between $A^{*}$ and $A'$.
@@ -1164,7 +1164,7 @@ For the adjoint generator $A^{*}$ of a strongly continuous semigroup $(T(t))_{t 
 %% --
 \begin{enumerate}[\upshape(i)]
 \item 
-$E^{*}$ is the $\|\cdot\|$-closure of\/ $D(A')$.
+$E^{*}$ is the $\norm{\cdot}$-closure of\/ $D(A')$.
 
 \item 
 $D(A^{*}) = \{\phi \in D(A') \colon A'\phi \in E^{*}\}$.
@@ -1176,7 +1176,7 @@ $A^{*}$ and $A'$ coincide on $D(A^{*})$.
 %% --
 \begin{proof}
 (i) Take $\phi \in D(A')$ fixed.
-For every $f \in D(A)$ with $\|f\| \leq 1$ we define a continuously differentiable function
+For every $f \in D(A)$ with $\norm{f} \leq 1$ we define a continuously differentiable function
 %% --
 \[
     t \mapsto \xi_{f}(t) \coloneqq \langle T(t)f,\phi \rangle
@@ -1184,10 +1184,10 @@ For every $f \in D(A)$ with $\|f\| \leq 1$ we define a continuously differentiab
 %% --
 on $\left[ 0,1 \right]$ with derivative $\xi_{f}'(t) = \langle T(t)Af,\phi \rangle = \langle T(t)f,A'\phi \rangle$.
 
-Since $\{\xi_{f}'(t) \colon t \in \left[ 0,1 \right], f \in D(A), \|f\| \leq 1\}$ is bounded, it follows that the set
+Since $\{\xi_{f}'(t) \colon t \in \left[ 0,1 \right], f \in D(A), \norm{f} \leq 1\}$ is bounded, it follows that the set
 %% --
 \[
-    \{\xi_{f} \colon f \in D(A), \|f\| \leq 1\}
+    \{\xi_{f} \colon f \in D(A), \norm{f} \leq 1\}
 \]
 %% --
 is equicontinuous at $0$, \ie for every $\epsilon > 0$ there exists $0 < t_{0} < 1$ such that
@@ -1196,8 +1196,8 @@ is equicontinuous at $0$, \ie for every $\epsilon > 0$ there exists $0 < t_{0} <
     |\xi_{f}(s) - \xi_{f}(0)| = |\langle f,T(s)'\phi - \phi \rangle| < \epsilon
 \]
 %% --
-for every $0 \leq s \leq t_{0}$ and $f \in D(A)$, $\|f\| \leq 1$.
-But this implies $\|T(s)'\phi - \phi\| < \epsilon$ and hence $\phi \in E^{*}$.
+for every $0 \leq s \leq t_{0}$ and $f \in D(A)$, $\norm{f} \leq 1$.
+But this implies $\norm{T(s)'\phi - \phi} < \epsilon$ and hence $\phi \in E^{*}$.
 
 Conversely, take $\psi \in E^{*}$.
 Then $\frac{1}{t}\int_{0}^{t} T(s)'\psi \ds$, $t > 0$, belongs to $D(A')$ and norm converges to $\psi$ as $t \to 0$, \ie $\psi$ belongs to the norm closure of\/ $D(A')$.
@@ -1208,11 +1208,11 @@ As above define the functions $\xi_{f}$.
 The assumption on $\phi$ implies the set of all derivatives
 %% --
 \[
-\{\xi_{f}' \colon f \in D(A), \|f\| \leq 1\}
+\{\xi_{f}' \colon f \in D(A), \norm{f} \leq 1\}
 \]
 %% --
 to be equicontinuous at $t = 0$. 
-This means that for every $\epsilon > 0$ there exists $0 < t_{0} < 1$ such that $|f_f'(0) - f_f'(s)| < \epsilon$ for every $f \in D(A)$, $\|f\| \leq 1$ and $0 < s < t_{0}$.
+This means that for every $\epsilon > 0$ there exists $0 < t_{0} < 1$ such that $|f_f'(0) - f_f'(s)| < \epsilon$ for every $f \in D(A)$, $\norm{f} \leq 1$ and $0 < s < t_{0}$.
 %% --
 In particular,
 %% --
@@ -1224,7 +1224,7 @@ In particular,
 hence
 %% --
 \[
-    \epsilon > \left\|A'\phi - \frac{1}{s}(T(s)'\phi-\phi) \right\|
+    \epsilon > \norm*{A'\phi - \frac{1}{s}(T(s)'\phi-\phi) }
 \]
 %% --
 for all $0 \leq s \leq t_{0}$.
@@ -1255,12 +1255,12 @@ Obviously, the function $x \mapsto |\sin x|$ belongs to $D(A')$, but not to $D(A
 Since the generator $A$ of a strongly continuous semigroup $(T(t))_{t\geq 0}$ is closed, its domain $D(A)$ becomes a Banach space for the graph norm
 %% --
 \[
-    \|f\|_{1} \coloneqq \|f\| + \|Af\| .
+    \norm{f}_{1} \coloneqq \norm{f} + \norm{Af} .
 \]
 %% --
 We denote this Banach space by $E_{1}$ and the continuous injection from $E_{1}$ into $E$ by $i_{1}$.
 Since $E_{1}$ is invariant under $(T(t))_{t\geq 0}$, apply Proposition~\ref{prop:a1-1.6}\,(i), it makes sense to consider the semigroup $(T_{1}(t))_{t\geq 0}$ of all restrictions $T_{1}(t) \coloneqq T(t)_{\vert E_{1}}$.
-The results of Proposition~\ref{prop:a1-1.6} imply that $T_{1}(t) \in \L{E_{1}}$ and $\|T_{1}(t)f-f\|_{1} \to 0$ as $t \to 0$ for every $f \in E_{1}$.
+The results of Proposition~\ref{prop:a1-1.6} imply that $T_{1}(t) \in \L{E_{1}}$ and $\norm{T_{1}(t)f-f}_{1} \to 0$ as $t \to 0$ for every $f \in E_{1}$.
 Thus $(T_{1}(t))_{t\geq 0}$ is a strongly continuous semigroup on $E_{1}$ and has a generator denoted by $(A_{1},D(A_{1}))$.
 
 Using Proposition~\ref{prop:a1-1.6} again we see that $A_{1}$ is the restriction of\/ $A$ to $E_{1}$ with maximal domain, \ie
@@ -1282,7 +1282,7 @@ Therefore we might call $E_{n}$ the \emph{n-th Sobolev space} and $(T_{n}(t))_{t
 \begin{enumerate}[\upshape(i), wide, labelindent=.25em]
 \item
 \index{resolvent}
-For $\lambda \in \rho(A)$ the operator $(\lambda - A)$ and the resolvent $R(\lambda,A)$ are isomorphisms from $E_{1}$ onto $E$, \resp from $E$ onto $E_{1}$ (show that $\|\cdot\|_{1}$ and $\|\cdot\|_{\lambda}$ with $\|\cdot\|_{\lambda} \coloneqq \|(\lambda - A)\cdot\|$ are equivalent).
+For $\lambda \in \rho(A)$ the operator $(\lambda - A)$ and the resolvent $R(\lambda,A)$ are isomorphisms from $E_{1}$ onto $E$, \resp from $E$ onto $E_{1}$ (show that $\norm{\cdot}_{1}$ and $\norm{\cdot}_{\lambda}$ with $\norm{\cdot}_{\lambda} \coloneqq \norm{(\lambda - A)\cdot}$ are equivalent).
 %% --
 In addition, the following diagram commutes. 
 %% -- tikz
@@ -1296,10 +1296,10 @@ Therefore all Sobolev semigroups $(E_{n}, T_{n}(t))_{t \geq 0}$, $n \in \N$, are
 For $\lambda \in \rho(A)$ consider the norm
 %% --
 \[
-    \|f\|_{-1} \coloneqq \|R(\lambda,A)f\|
+    \norm{f}_{-1} \coloneqq \norm{R(\lambda,A)f}
 \]
 %% --
-for every $f \in E$ and define $E_{-1}$ as the completion of\/ $E$ for $\|\cdot\|_{-1}$.
+for every $f \in E$ and define $E_{-1}$ as the completion of\/ $E$ for $\norm{\cdot}_{-1}$.
 Then $(T(t))_{t \geq 0}$ extends continuously to a strongly continuous semigroup $(T_{-1}(t))_{t \geq 0}$ on $E_{-1}$ and the above diagram can be extended to the negative integers.
 \end{enumerate}
 \end{remarks*}
@@ -1321,7 +1321,7 @@ Let $\mathcal{T} = (T(t))_{t \geq 0}$ be a strongly continuous semigroup on the 
 Denote by $m(E)$ the Banach space of all bounded $E$-valued sequences endowed with the norm
 %% --
 \[
-    \|(f_{n})_{n \in \N}\| \coloneqq \sup \{\|f_{n}\| \colon n \in \N\} .
+    \norm{(f_{n})_{n \in \N}} \coloneqq \sup \{\norm{f_{n}} \colon n \in \N\} .
 \]
 %% --
 It is clear that every $T(t)$ extends canonically to a bounded linear operator
@@ -1334,7 +1334,7 @@ on $m(E)$, but the semigroup $(\widehat{T}(t))_{t \geq 0}$ is strongly continuou
 Therefore we restrict our attention to the closed, $(\widehat{T}(t))$-invariant subspace
 %% --
 \[
-    m^{\mathcal{T}}(E) \coloneqq \{(f_{n}) \in m(E) \colon \lim_{t \to 0} \|T(t)f_{n}-f_{n}\| = 0 \text{ uniformly for } n \in \N\} .
+    m^{\mathcal{T}}(E) \coloneqq \{(f_{n}) \in m(E) \colon \lim_{t \to 0} \norm{T(t)f_{n}-f_{n}} = 0 \text{ uniformly for } n \in \N\} .
 \]
 %% --
 Then the restricted semigroup
@@ -1368,7 +1368,7 @@ Now let $\mathcal{F}$ be any filter on $\N$ finer than the Fréchet filter (\ie 
 The space of all $\mathcal{F}$-null sequences in $m(E)$, \ie
 %% --
 \[
-    c_{\mathcal{F}}(E) \coloneqq \{(f_{n}) \in m(E) \colon \mathcal{F}\text{-}\lim\|f_{n}\| = 0\}
+    c_{\mathcal{F}}(E) \coloneqq \{(f_{n}) \in m(E) \colon \mathcal{F}\text{-}\lim\norm{f_{n}} = 0\}
 \]
 %% --
 is closed in $m(E)$ and invariant under $(\widehat{T}(t))_{t \geq 0}$. 
@@ -1389,7 +1389,7 @@ We have $E_{\mathcal{F}}^{T} = E_{\mathcal{F}}$ if (and only if) $\TT$ has a bou
 The canonical quotient norm on $E_{\mathcal{F}}$ is given by
 %% --
 \[
-    \|(f_{n}) + c_{\mathcal{F}}(E)\| = \mathcal{F}\text{-}\lim \sup \|f_{n}\| .
+    \norm{(f_{n}) + c_{\mathcal{F}}(E)} = \mathcal{F}\text{-}\lim \sup \norm{f_{n}} .
 \]
 %% --
 We can apply Section~\ref{subsec:a1-3.4} in order to define the \emph{$\mathcal{F}$-product semigroup} $(T_{\mathcal{F}}(t))_{t \geq 0}$ on $E_{\mathcal{F}}^{T}$ by
@@ -1402,7 +1402,7 @@ We can apply Section~\ref{subsec:a1-3.4} in order to define the \emph{$\mathcal{
 Thus $T_{\mathcal{F}}(t)$ is the restriction of\/ $T(t)_{F}$ where $T(t)_{F}$ denotes the canonical extension of\/ $T(t)$ to the $\mathcal{F}$-product $E_{\mathcal{F}}$. 
 But note that $(T(t)_{F})_{t \geq 0}$ is not strongly continuous unless $\TT$ has a bounded generator.
 
-With the canonical injection $j \colon f \mapsto (f,f,f,\ldots) + c_{\mathcal{F}}(E)$ from $E$ into $E_{\mathcal{F}}^{T}$ the operators $T_{\mathcal{F}}(t)$ are extensions of\/ $T(t)$ satisfying $\|T_{\mathcal{F}}(t)\| = \|T(t)\|$. The basic facts about the generator $(A_{\mathcal{F}},D(A_{\mathcal{F}}))$ of\/ $(T_{\mathcal{F}}(t))_{t \geq 0}$ follow from 3.3 and are collected in the following proposition.
+With the canonical injection $j \colon f \mapsto (f,f,f,\ldots) + c_{\mathcal{F}}(E)$ from $E$ into $E_{\mathcal{F}}^{T}$ the operators $T_{\mathcal{F}}(t)$ are extensions of\/ $T(t)$ satisfying $\norm{T_{\mathcal{F}}(t)} = \norm{T(t)}$. The basic facts about the generator $(A_{\mathcal{F}},D(A_{\mathcal{F}}))$ of\/ $(T_{\mathcal{F}}(t))_{t \geq 0}$ follow from 3.3 and are collected in the following proposition.
 %% --
 \begin{proposition*}\label{prop:a1-3.6}
 For the generator $(A_{\mathcal{F}},D(A_{\mathcal{F}}))$ of the $\mathcal{F}$-product semigroup the following holds.
@@ -1475,19 +1475,19 @@ Then
 \begin{enumerate}[\upshape(i), wide, labelindent=.25em]
 
 \item
-$\|u\|_{\pi} \coloneqq \inf\{\sum_{j=1}^{m} \|h_{j}\| \|k_{j}\| \colon u = \sum_{j=1}^{m}h_{j} \otimes k_{j}, h_{j} \in E, k_{j} \in F\}$ defines the \emph{greatest cross norm $\pi$} on $E \otimes F$.
+$\norm{u}_{\pi} \coloneqq \inf\{\sum_{j=1}^{m} \norm{h_{j}} \norm{k_{j}} \colon u = \sum_{j=1}^{m}h_{j} \otimes k_{j}, h_{j} \in E, k_{j} \in F\}$ defines the \emph{greatest cross norm $\pi$} on $E \otimes F$.
 
 \item
-$\|u\|_{\epsilon} \coloneqq \sup\{\langle u,\phi \otimes \psi\rangle \colon \phi \in E', \psi \in F', \|\phi\|, \|\psi\| \leq 1\}$ defines the 
+$\norm{u}_{\epsilon} \coloneqq \sup\{\langle u,\phi \otimes \psi\rangle \colon \phi \in E', \psi \in F', \norm{\phi}, \norm{\psi} \leq 1\}$ defines the 
 \emph{least cross norm $\epsilon$} on $E \times F$. 
 Here, $\langle u,\phi \otimes \psi\rangle$ denotes the canonical bilinear form on $(E \otimes F) \times (E' \otimes F')$, \ie $\langle\sum_{i=1}^{n} f_{i} \otimes g_{i},\phi \otimes \psi\rangle = \sum_{i=1}^{n} \langle f_{i},\phi\rangle\langle g_{i},\psi\rangle$.
 
 \item
-If\/ $E$ and $F$ are Hilbert spaces, $\|u\|_{h} = (u|u)_{h}^{1/2}$, where the scalar product $(\cdot|\cdot)_{h}$ is defined as in (ii), defines the \emph{Hilbert norm $h$} on $E \otimes F$.
+If\/ $E$ and $F$ are Hilbert spaces, $\norm{u}_{h} = (u|u)_{h}^{1/2}$, where the scalar product $(\cdot|\cdot)_{h}$ is defined as in (ii), defines the \emph{Hilbert norm $h$} on $E \otimes F$.
 \end{enumerate}
 %% --
 In the following we write $E \otimes_{\alpha} F$ for the tensor product of\/ $E$ and $F$ endowed---if applicable---with one of the norms $\pi$, $\epsilon$, $h$ just defined.
-In each case one has $\|f \otimes g\| = \|f\| \|g\|$ for $f \in E$, $g \in F$.
+In each case one has $\norm{f \otimes g} = \norm{f} \norm{g}$ for $f \in E$, $g \in F$.
 
 By $E \widetilde{\otimes}_{\alpha} F$ we mean the completion of\/ $E \otimes_{\alpha} F$. 
 Moreover we recall how examples (i) and (ii) above fit into this pattern
@@ -1507,7 +1507,7 @@ Finally, we point out that for any $S \in \LE$, $T \in \L{F} $, the mapping
 \]
 %% --
 defined on $E \otimes F$ is linear and continuous on $E \otimes_{\alpha} F$, hence has a continuous extension to $ E \widetilde{\otimes}_{\alpha} F$. 
-This operator, as well as its continuous extension, will be denoted by $S \otimes T$ and satisfies $\|S \otimes T\| = \|S\| \|T\|$. 
+This operator, as well as its continuous extension, will be denoted by $S \otimes T$ and satisfies $\norm{S \otimes T} = \norm{S} \norm{T}$. 
 The notation $A \otimes B$ will also be used in the obvious way if\/ $A$ and $B$ are not necessarily bounded operators on $E$ and $F$. 
 We are now ready to consider semigroups induced on the tensor product.
 %% --

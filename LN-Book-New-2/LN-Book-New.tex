@@ -1,5 +1,5 @@
 % !TEX TS-program = pdflatexmk
-%%%%%%%%%%%%%%%%%%%% LN-Book.tex %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%% LN-Book-2.tex %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Status: 2026-02-24 ulgr
 %%%%%%%%%%%%%%%% Springer-Verlag %%%%%%%%%%%%%%%%%%%%%%%%%% 
 \documentclass[%  
@@ -78,6 +78,9 @@
 \usepackage[showonlyrefs]{mathtools}
 %\usepackage{mathtools}
 \usepackage{empheq}
+\DeclarePairedDelimiterX{\norm}[1]{\lVert}{\rVert}{\ifblank{#1}{\:\cdot\:}{#1}}
+\DeclarePairedDelimiterX{\abs}[1]{\lvert}{\rvert}{\ifblank{#1}{\:\cdot\:}{#1}}
+\DeclarePairedDelimiterX{\dualp}[1]{\langle}{\rangle}{\ifblank{#1}{\,\cdot\,,\cdot\,}{#1}}
 
 %% -- Images 
 %% --
