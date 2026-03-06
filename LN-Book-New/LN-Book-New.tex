@@ -234,43 +234,38 @@
   \ifthenelse{\pageref{#1}=\thepage}{}{on page~\pageref{#1}}%
 }
 
+%\newcommand{\myeqpageref}[1]{%
+%  \eqref{#1}\ifthenelse{\pageref{#1}=\thepage}{}{ on p.~\pageref{#1}}%
+%}    
+
+\usepackage{refcount}   % in der Präambel
+
 \newcommand{\myeqpageref}[1]{%
-  \eqref{#1}\ifthenelse{\pageref{#1}=\thepage}{}{ on p.~\pageref{#1}}%
-}    
+  \eqref{#1}%
+  \ifnum\getpagerefnumber{#1}=\thepage
+  \else
+    \ifnum\numexpr\getpagerefnumber{#1}-\thepage\relax=1
+      { on the next page}%
+    \else
+      \ifnum\numexpr\getpagerefnumber{#1}-\thepage\relax=-1
+        { on the previous page}%
+      \else
+        { on p.~\pageref{#1}}%
+      \fi
+    \fi
+  \fi
+}
 
 \usepackage{mleftright}
 \mleftright
-%%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% Automatische Klammergrößenanpassung -> 
-%%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% WARNUNG: Macht (), [] zu aktiven Zeichen!
-%%% Kann in TikZ, Beamer oder anderen Paketen zu Problemen führen.
-%%% Quelle: DTK 1/2011 & Herbert Voß
-%%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%\makeatletter
-%\gdef\resetMathstrut@{%
-%    \setbox\z@\hbox{%
-%        \mathchardef\@tempa\mathcode`\!\relax%
-%        \def\@tempb##1"##2##3{\the\textfont"##3\char"}%
-%        \expandafter\@tempb\meaning\@tempa \relax
-%    }%
-%    \ht\Mathstrutbox@\ht\z@ \dp\Mathstrutbox@\dp\z@}
-%\makeatother
-%
-%\begingroup
-%    \catcode`(\active \xdef({\left\string(}
-%    \catcode`)\active \xdef){\right\string)}
-%    \catcode`[\active \xdef[{\left\string[}
-%    \catcode`]\active \xdef]{\right\string]}
-%\endgroup
-%\mathcode`(="8000 \mathcode`)="8000
-%\mathcode`[="8000 \mathcode`]="8000
-%
-%%% Geschweifte Klammern: Funktionieren sowohl in Mathe als auch Text
-%\DeclareRobustCommand{\{}{\ifmmode\left\lbrace\else\textbraceleft\fi}
-%\DeclareRobustCommand{\}}{\ifmmode\right\rbrace\else\textbraceright\fi}                
-%% -- Hyperlinks
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Intervalle
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\interval}[1]{\left[ #1 \right]}      % Geschlossenes Intervall [a,b]
+\newcommand{\ointerval}[1]{\left] #1 \right[}     % Offenes Intervall ]a,b[
+\newcommand{\rointerval}[1]{\left[ #1 \right[}    % Rechtsoffen [a,b[
+\newcommand{\lointerval}[1]{\left] #1 \right]}    % Linksoffen ]a,b]
 %% --
 \usepackage{hyperref}
 \hypersetup{% 

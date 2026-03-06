@@ -154,12 +154,12 @@ We then obtain the \emph{generator} as a not necessarily everywhere defined oper
 To every semigroup $(T(t))_{t \geq 0}$ there belongs an operator $(A,D(A))$, 
 called the \emph{generator}, defined on the \emph{domain}
 \begin{align*}
-    D(A) &\coloneqq \left\{ f \in E \colon \lim_{h\to0} \frac{T(h)f - f}{h} 
+    D(A) &\coloneqq \left\{ f \in E \colon \lim_{h\to0} \frac{1}{h} (T(h)f - f)
              \text{ exists in } E \right\}
 \end{align*}
 by
 \begin{align*}
-    Af &\coloneqq \lim_{h\to0} \frac{T(h)f - f}{h} \quad (f \in D(A)).
+    Af &\coloneqq \lim_{h\to0} \frac{1}{h} (T(h)f - f) \quad (f \in D(A)).
 \end{align*}
 \end{definition}
 %% --
@@ -189,7 +189,7 @@ In that case one has
 For every $f \in E$ and $t > 0$ the element $\int_0^t T(s)f \ds$ belongs to $D(A)$ and one has
 %% --
 \begin{equation}\label{eq:a1-1.3}
-    A\int_0^t T(s)f \ds = T(t)f - f  .
+    A \mleft( \int_0^t T(s)f \ds \mright) = T(t)f - f  .
 \end{equation}
 %% --
 \item
@@ -240,7 +240,7 @@ becomes a Banach space.
 Equivalently, $(B,D(B))$ is closed if and only if its \emph{graph} $\{(f,Bf) \colon f \in D(B)\}$ is closed in $E \times E$, \ie
 %% --
 \[
-    (f_{n}) \subset D(B), f_{n} \to f \text{ and } Bf_{n} \to g \text{ implies } f \in D(B) \text{ and } Bf = g.
+    (f_{n}) \text{ in } D(B), f_{n} \to f \text{ and } Bf_{n} \to g \text{ implies } f \in D(B) \text{ and } Bf = g.
 \]
 %% --
 \end{definition}
@@ -262,7 +262,8 @@ Finally, we call a subset $D_{0}$ of\/ $D(B)$ a \emph{core} for $B$ if\/ $D_{0}$
 \index{core}
 This means that a closed operator is determined (via closure) by its restriction to a core in its domain.
 
-We now collect the fundamental topological properties of semigroup generators, their domains (see also Corollary~\ref{cor:a2-1.34} ) and their resolvents.
+We now collect the fundamental topological properties of semigroup generators, their domains and their resolvents
+(see also Corollary~\ref{cor:a2-1.34}).
 \index{resolvent}
 %% --
 \begin{proposition}\label{prop:a1-1.9}
@@ -278,8 +279,8 @@ If a subspace $D_{0}$ of the domain $D(A)$ is dense in $E$ and $(T(t))$-invarian
 \item Define 
 %
 \begin{align*}
-	D(A^{1}) &= D(A) \\
-	D(A^{n}) &= \{f \in D(A^{n-1}) \colon Af \in D(A^{n-1})\} \, \text{ for $ n \geq 2 $, }
+	D(A^{1}) & \coloneqq D(A) \\
+	D(A^{n}) & \coloneqq \{f \in D(A^{n-1}) \colon Af \in D(A^{n-1})\} \, \text{ for $ n \geq 2 $, }
 \end{align*}
 %
 Then %
@@ -294,7 +295,7 @@ is dense in $E$ and a core for $A$.
 %% --
 \begin{example}\label{ex:a1-1.10}
 Property (iii) above does not hold for general densely defined closed operators.
-Take $E = C\left[ 0,1 \right]$, $D(B) = C^{1}\left[ 0,1 \right]$ and $Bf = q \cdot f'$ for some nowhere differentiable function $q \in C\left[ 0,1 \right]$.
+Take $E = C\interval{0,1}$, $D(B) = C^{1}\interval{0,1}$ and $Bf = q \cdot f'$ for some nowhere differentiable function $q \in C\interval{0,1}$.
 Then $B$ is closed, but $D(B^{2}) = \{0\}$.
 \end{example}
 %% --
@@ -386,8 +387,8 @@ If the semigroup $(T(t))_{t \geq 0}$ is uniformly continuous, then
 	\frac{1}{t}\int_{0}^{t} T(s) \ds
 \]
 %
-uniformly converges to $T(0) = \Id$ as $t \to 0$.
-Therefore for some $t' > 0$ the operator 
+uniformly converges to $T(0)=\Id$ as $t \to 0$.
+Therefore for some $t' > 0$ the ope\-rator 
 %
 \[
 	\frac{1}{t'}\int_{0}^{t'} T(s) \ds
@@ -552,8 +553,18 @@ This natural domain is a dense subspace of\/ $C_{0}(X)$, \resp $L^{p}(X,\Sigma,\
 Moreover, $(M_{q},D(M_{q}))$ is a closed operator.
 This is easy in case $E = C_{0}(X)$.
 
-For $E = L^{p}(X,\Sigma,\mu)$, $1 \leq p < \infty$, we consider a sequence $(f_{n}) \subset E$ such that $\lim_{n \to \infty} f_{n} = f \in E$ and $\lim_{n \to \infty} qf_{n} = \colon g \in E$.
-Choose a subsequence $(f_{n(k)})_{k \in \N}$ such that $\lim_{k \to \infty} f_{n(k)}(x) = f(x)$ and $\lim_{k \to \infty} q(x)f_{n(k)}(x) = g(x)$ for $\mu$-almost every $x \in X$.
+For $E = L^{p}(X,\Sigma,\mu)$, $1 \leq p < \infty$, we consider a sequence $(f_{n})$ in  $E$ such that 
+%
+\[
+	\lim_{n \to \infty} f_{n} = f \in E \text{ and } \lim_{n \to \infty} qf_{n} = \colon g \in E .
+\]
+%
+Choose a subsequence $(f_{n(k)})_{k \in \N}$ such that 
+%
+\[
+	\lim_{k \to \infty} f_{n(k)}(x) = f(x) \text{ and } \lim_{k \to \infty} q(x)f_{n(k)}(x) = g(x)
+\]
+for $\mu$-almost every $x \in X$.
 Then $g = q \cdot f$ and $f \in D(M_{q})$, \ie $M_{q}$ is closed.
 
 For such multiplication operators many properties can be checked quite directly.
@@ -680,7 +691,7 @@ Since integration is continuous, we obtain for every $a$, $b \in \R_{(+)}$ that
 \end{equation*}
 %% --
 converges to $\int_{a}^{b} g(x) \dx$ as $h \to 0+$.
-But for almost all $a, b$ the left hand side of\/ $(*)$ converges to $f(b) - f(a)$.
+But for almost all $a$, $b$ the left hand side of\/ $(*)$ converges to $f(b) - f(a)$.
 By redefining $f$ on a nullset we obtain
 %% --
 \[
@@ -725,19 +736,19 @@ As in Section~\ref{subsec:a1-2.4} one shows that its generator has the form
 An isomorphic copy of the group $(R_{\tau}(t))_{t \in \R}$ is obtained if we consider 
 %% --
 \[
-E = \{f \in C\left[ 0,1 \right] \colon f(0) = f(1)\}
+E = \{f \in C\interval{0,1} \colon f(0) = f(1)\}
 \]
 %% -- 
 \resp 
 %% --
 \[
-E = L^{p}(\left[ 0,1 \right])
+E = L^{p}(\interval{0,1})
 \]
 %% --
 and the group of \emph{periodic translations}
 %% --
 \[
-    T(t)f(x) \coloneqq f(y) \quad \text{for $y \in \left[ 0,1 \right], y = x+t \bmod 1$} 
+    T(t)f(x) \coloneqq f(y) \quad \text{for $y \in \interval{0,1}, y = x+t \bmod 1$} 
 \]
 %% --
 with generator
@@ -776,21 +787,21 @@ By Proposition~\ref{prop:a1-1.6}\,(i), it follows that $T(t)f$ is absolutely con
 For the second derivative 
 %% --
 \[
-    Bf(x) \coloneqq \frac{d^{2}}{dx^{2}}f(x) = f''(x)
+    Bf(x) \coloneqq \frac{\mathrm{d}^{2}}{\dx^{2}}f(x) = f''(x)
 \]
 %% --
 we take the domain
 %% --
 \[
-    D(B) \coloneqq \{f \in C^{2}\left[ 0,1 \right] \colon f'(0) = f'(1) = 0\}
+    D(B) \coloneqq \{f \in C^{2}\interval{0,1} \colon f'(0) = f'(1) = 0\}
 \]
 %% --
-in the Banach space $E = C\left[ 0,1 \right]$.
-Then $D(B)$ is dense in $C\left[ 0,1 \right]$, but closed for the graph norm.
+in the Banach space $E = C\interval{0,1}$.
+Then $D(B)$ is dense in $C\interval{0,1}$, but closed for the graph norm.
 Obviously, each function
 %% --
 \[
-    e_{n}(x) \coloneqq \cos \pi nx, \quad n \in \Z,
+    e_{n}(x) \coloneqq \cos \pi nx \quad (n \in \Z, x \in \interval{0,1})
 \]
 %% --
 is contained in $D(B)$ and is an eigenfunction of\/ $B$ pertaining to the eigenvalue $\lambda_{n} \coloneqq -\pi^{2}n^{2}$.
@@ -832,11 +843,11 @@ and trigonometric relations show that
     k_{t}(x,y) = w_{t}(x+y) + w_{t}(x-y)
 \]
 %% --
-which is a positive function on $\left[ 0,1 \right]^{2}$.
-Therefore $T(t)$ is a bounded operator on $C\left[ 0,1 \right]$ with
+which is a positive function on $\interval{0,1}^{2}$.
+Therefore $T(t)$ is a bounded operator on $C\interval{0,1}$ with
 %% --
 \[
-    \|T(t)\| = \|T(t)\1\| = \sup_{x \in \left[ 0,1 \right]} \int_{0}^{1} k_{t}(x,y)dy = 1 .
+    \|T(t)\| = \|T(t)\1\| = \sup_{x \in \interval{0,1}} \int_{0}^{1} k_{t}(x,y)dy = 1 .
 \]
 %% --
 From the behavior of\/ $T(t)$ on the dense subspace $E_{0}$ it follows that $(T(t))_{t \geq 0}$ with $T(0) = \Id$ is a strongly continuous semigroup on $E$ and its generator $A$ coincides with $B$ on $E_{0}$.
@@ -910,7 +921,7 @@ For the analogous discussion of the unitary group on $L^{2}(\R^{n})$ generated b
 %% --
 we refer to Section IX.7 in \textcite{reedsimon:1975}. 
 
-Examples analogous to Section~\ref{subsec:a1-2.7} are valid in $L^{p}\left[ 0,1 \right]$, \resp to Section~\ref{subsec:a1-2.8} in $C_{0}(\R^{n})$.
+Examples analogous to Section~\ref{subsec:a1-2.7} are valid in $L^{p}\interval{0,1}$, \resp to Section~\ref{subsec:a1-2.8} in $C_{0}(\R^{n})$.
 %% --
 \section{Standard Constructions}\label{sec:a1-3}%
 \index{standard construction}
@@ -1059,7 +1070,7 @@ By Section~\ref{subsec:a1-2.4} and Section~\ref{subsec:a1-3.2} its generator is
 %% --
 for $f \in D(A_{|}) \coloneqq \{f \in E \colon f \in \text{AC} \text{ with } f' \in E \text{ and } f(x) = 0 \text{ for } x \geq 1\}$.
 
-Next we identify $L^{1}(\left[ 0,1 \right])$ with the quotient space \sfrac{$L^{1}((-\infty,1])$}{I} where
+Next we identify $L^{1}(\interval{0,1})$ with the quotient space \sfrac{$L^{1}((-\infty,1])$}{I} where
 
 %% --
 \[
@@ -1068,11 +1079,11 @@ Next we identify $L^{1}(\left[ 0,1 \right])$ with the quotient space \sfrac{$L^{
 %% --
 Again $I$ is invariant for the restricted semigroup $(T(t)_{|})$ and the
 %% --
-quotient semigroup $(T(t)_{\vert _{/}})$ on $L^{1}(\left[ 0,1 \right])$ is the nilpotent translation semigroup as in Section~\ref{subsec:a1-2.6}.
+quotient semigroup $(T(t)_{\vert _{/}})$ on $L^{1}(\interval{0,1})$ is the nilpotent translation semigroup as in Section~\ref{subsec:a1-2.6}.
 In particular it follows that the domain of its generator is
 %% --
 \[
-    D(A_{|_{/}}) = \{f \in L^{1}(\left[ 0,1 \right]) \colon f \in \text{AC} \text{ with } f' \in L^{1}(\left[ 0,1 \right]) \text{ and } f(1) = 0\}.
+    D(A_{|_{/}}) = \{f \in L^{1}(\interval{0,1}) \colon f \in \text{AC} \text{ with } f' \in L^{1}(\interval{0,1}) \text{ and } f(1) = 0\}.
 \]
 \end{example*}
 %% --
@@ -1182,9 +1193,9 @@ For every $f \in D(A)$ with $\|f\| \leq 1$ we define a continuously differentiab
     t \mapsto \xi_{f}(t) \coloneqq \langle T(t)f,\phi \rangle
 \]
 %% --
-on $\left[ 0,1 \right]$ with derivative $\xi_{f}'(t) = \langle T(t)Af,\phi \rangle = \langle T(t)f,A'\phi \rangle$.
+on $\interval{0,1}$ with derivative $\xi_{f}'(t) = \langle T(t)Af,\phi \rangle = \langle T(t)f,A'\phi \rangle$.
 
-Since $\{\xi_{f}'(t) \colon t \in \left[ 0,1 \right], f \in D(A), \|f\| \leq 1\}$ is bounded, it follows that the set
+Since $\{\xi_{f}'(t) \colon t \in \interval{0,1}, f \in D(A), \|f\| \leq 1\}$ is bounded, it follows that the set
 %% --
 \[
     \{\xi_{f} \colon f \in D(A), \|f\| \leq 1\}
