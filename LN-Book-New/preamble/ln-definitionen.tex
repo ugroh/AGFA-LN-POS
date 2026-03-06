@@ -116,8 +116,11 @@
 %% -- E/F im Textmodus: \sfrac{E}{F}
 %% -- E/F in Mathmodus: \mfrac{E}{F}
 %% -- 
-\newcommand{\mfrac}[2]{{\raise0.5ex\hbox{$#1$}}\kern.025em\big/\kern.025em{\raise-0.5ex\hbox{$#2$}}}
-%% --
+\newcommand{\mfrac}[2]{%
+    {\raise.5ex\hbox{$\scriptstyle #1$}}%
+    \kern.025em/\kern.025em%
+    {\lower.25ex\hbox{$\scriptstyle #2$}}}
+    
 \newcommand*{\sfrac}[2]{\leavevmode\kern.1em%
        \raise.5ex\hbox{\small #1}%
        \kern.025em/\kern.025em%
