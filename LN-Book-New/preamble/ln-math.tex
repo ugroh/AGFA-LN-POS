@@ -1,0 +1,55 @@
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% ln-math.tex
+%% Mathematik-Pakete und -Befehle
+%% Status: 2026-03-09 ulgr
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% -- Pakete
+\usepackage[showonlyrefs]{mathtools}
+\usepackage{empheq}
+\usepackage{mleftright}
+\mleftright
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Normen, Absolutbeträge, Duale Paarungen
+%% Verwendung: \norm{x} oder \norm*{x} für automatische Größenanpassung
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\DeclarePairedDelimiterX{\norm}[1]{\lVert}{\rVert}{\ifblank{#1}{\:\cdot\:}{#1}}
+\DeclarePairedDelimiterX{\abs}[1]{\lvert}{\rvert}{\ifblank{#1}{\:\cdot\:}{#1}}
+\DeclarePairedDelimiterX{\dualp}[1]{\langle}{\rangle}{\ifblank{#1}{\,\cdot\,,\cdot\,}{#1}}
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Intervalle
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\interval}[1]{\left[ #1 \right]}      % Geschlossenes Intervall [a,b]
+\newcommand{\ointerval}[1]{\left] #1 \right[}     % Offenes Intervall ]a,b[
+\newcommand{\rointerval}[1]{\left[ #1 \right[}    % Rechtsoffen [a,b[
+\newcommand{\lointerval}[1]{\left] #1 \right]}    % Linksoffen ]a,b]
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Querverweise mit Seitenangabe
+%% \myeqpageref{label}: gibt \eqref{label} aus, ergänzt um Seitenangabe
+%% falls die Gleichung nicht auf der aktuellen Seite steht
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{refcount}
+\newcommand{\myeqpageref}[1]{%
+  \eqref{#1}%
+  \ifnum\getpagerefnumber{#1}=\thepage
+  \else
+    \ifnum\numexpr\getpagerefnumber{#1}-\thepage\relax=1
+      { on the next page}%
+    \else
+      \ifnum\numexpr\getpagerefnumber{#1}-\thepage\relax=-1
+        { on the previous page}%
+      \else
+        { on p.~\pageref{#1}}%
+      \fi
+    \fi
+  \fi
+}
+
+%% -- Hilfsmakro (ohne Gleichungsbezug)
+\usepackage{ifthen}
+\newcommand{\mypageref}[1]{%
+  \ifthenelse{\pageref{#1}=\thepage}{}{on page~\pageref{#1}}%
+}

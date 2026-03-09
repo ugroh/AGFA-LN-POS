@@ -1,3 +1,5 @@
+% !TEX root = ../LN-Book-New.tex
+%% -- Stand: 2026-03-09
 %% --
 \setcounter{section}{0}
 %% --
@@ -31,12 +33,11 @@ Any space $C_{0}(X)$ is a commutative \CA-algebra under the sup-norm and the poi
 The algebraic notions of ideal, quotient, homomorphism are well known and need not be explained further.
 
 Another natural and important structure of\/ $C_{0}(X)$ is the \emph{pointwise} ordering under which $C_{0}(X,\R)$ is a (real) Banach lattice and $C_{0}(X,\C)$ a complex Banach lattice in the sense explained in Part-III, Chapter~\ref{chap:c1}.
-Concerning the order structure of\/ $C_{0}(X)$ we use the following notations.
-For a function $f$ in $C_{0}(X,\R)$
+Concerning the order structure of\/ $C_{0}(X)$ we use the following notations for a function $f$ in $C_{0}(X,\R)$.
 %% --
 \begin{enumerate}[\upshape (i), labelindent=.25em]
 \item
-A function $ f $ is called \emph{positive, $ f \geq 0 $,} if\/ $ f(t) \geq 0  $ for all $ t \in X $, 
+The function $ f $ is called \emph{positive, $ f \geq 0 $,} if\/ $ f(t) \geq 0  $ for all $ t \in X $, 
 
 \item
 We write $f>0$ if\/ $ f $ is positive but does not vanish identically,
@@ -48,11 +49,12 @@ We call $ f $ \emph{strictly positive, $f \gg 0$,}  if\/ $ f(t) > 0 $ for all $ 
 %% --
 The notion of an order ideal explained in Part-III, Chapter~\ref{chap:c1} applies of course to the Banach lattices $C_{0}(X)$ and might give rise to confusion with the corresponding algebraic notion.
 
-However, since we are mainly considering closed ideals and since a closed linear subspace $I$ of\/ $C_{0}(X)$ is a lattice ideal if and only if\/ $I$ is an algebraic ideal, we may and will simply speak of closed ideals, without specifying whether we think of the algebraic or the order theoretic meaning of this word.
+However, since we are mainly considering closed ideals and since a closed linear subspace $J$ of\/ $C_{0}(X)$ is a lattice ideal if and only if\/ $J$ is an algebraic ideal, we may and will simply speak of closed ideals, without specifying whether we think of the algebraic or the order theoretic meaning of this word.
 
-An important and frequently used characterization of these objects is the following: A subspace $I$ of\/ $C_{0}(X)$ is a closed ideal if and only if there exists a closed subset $A$ of\/ $X$ such that a function $f$ belongs to $I$ if and only if\/ $f$ vanishes on $A$.
-The set $A$ is of course uniquely determined by $I$ and is called the \emph{support} of\/ $I$.
-If\/ $I = I_{A}$ is a closed ideal with support $A$, then $I_{A}$ is naturally isomorphic to $C_{0}(X\backslash A)$ and the quotient $C_{0}(X)/I$ (under the natural quotient structure) is again a Banach algebra and a Banach lattice that can be identified canonically (via the map $f + I \to f_{|A}$) with $C_{0}(A)$.
+An important and frequently used characterization of these objects is the following: A subspace $J$ of\/ $C_{0}(X)$ is a closed ideal if and only if there exists a closed subset $F$ of\/ $X$ such that a function $f$ belongs to $J$ if and only if\/ $f$ vanishes on $F$.
+The set $F$ is of course uniquely determined by $J$ and is called the \emph{support} of\/ $J$.
+
+If\/ $J = J_{F}$ is a closed ideal with support $F$, then $J_{F}$ is naturally isomorphic to $C_{0}(X\backslash F)$ and the quotient $C_{0}(X)/J$ (under the natural quotient structure) is again a Banach algebra and a Banach lattice that can be identified canonically (via the map $f + J \to f\vert_{F}$) with $C_{0}(F)$.
 %% --
 \section{Linear Forms and Duality}\label{sec:b1-2}%
 %% --
@@ -68,8 +70,7 @@ If\/ $\mu$ is a linear form on $C_{0}(X,\R)$, then
 \begin{enumerate}[\upshape (i), labelindent=.25em]
 
 \item
-$\mu \geq 0$ means  $ \mu(f) \geq 0 $ for all $ f \geq 0 $;  $ \mu $ is then called \emph{positive},
-
+$ \mu $ is called \emph{positive}, $\mu \geq 0$, if $ \mu(f) \geq 0 $ for all $ f \geq 0 $;  
 \item
 $ \mu > 0 $ means that $ \mu $ is positive but does not vanish identically,
 
@@ -152,16 +153,26 @@ If\/ $T$ is, in addition, bijective, then the mapping $\phi$ in (c) is a homeomo
 This characterization of homomorphisms carries over mutatis mutandis to situations where the conditions on $X$, $Y$ or $T$ are less restrictive.
 For later reference we explicitly state the following.
 %% --
-\begin{enumerate}[\upshape (i), wide, labelindent=.25em]
+\begin{enumerate}[\upshape (i), labelindent=.25em]
 \item 
 	Let $K$ be compact. Then $ T \in \mathcal{L}(C(K)) $ is a lattice homomorphism if and only if there is a mapping 
-$\phi$ from $K$ into $K$ and a function $h \in C(K)$ such that $Tf(s) = h(s)f(\phi(s))$ holds for all $s \in K$.
+$\phi$ from $K$ into $K$ and a function $h \in C(K)$ such that 
+%
+\[
+	Tf(s) = h(s)f(\phi(s)) \quad (s \in K) .
+\]
+%
 The mapping $\phi$ is continuous in every point $t$ with $h(t) \neq 0$.
 
 \item 
-	Let $X$ be locally compact and $T \in \mathcal{L}(C_{0}(X))$.
-Then $T$ is a lattice isomorphism if and only if there is a homeomorphism $\phi$ from $X$ onto $X$ and a bounded continuous function $h$ on $X$ such that $h(s) \geq \delta > 0$ for all $s$ and $Tf(s) = h(s)f(\phi(s))$ $(s \in X)$.
-Moreover, $T$ is an algebraic $*$-isomorphism if and only if\/ $T$ is a lattice isomorphism and the function $h$ above is $\equiv \1$.
+Let $X$ be locally compact and $T \in \mathcal{L}(C_{0}(X))$.
+Then $T$ is a lattice isomorphism if and only if there is a homeomorphism $\phi$ from $X$ onto $X$ and a bounded continuous function $h$ on $X$ such that $h(s) \geq \delta > 0$ for all $s$ and 
+%
+\[
+	Tf(s) = h(s)f(\phi(s)) \quad (s \in X) .
+\]
+%
+Moreover, $T$ is an algebraic $^{*}$-isomorphism if and only if\/ $T$ is a lattice isomorphism and the function $h$ above is $\equiv \1$.
 \end{enumerate}
 %% --
 %% -- References 
