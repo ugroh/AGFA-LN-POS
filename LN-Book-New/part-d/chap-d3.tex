@@ -49,10 +49,16 @@ If\/ $\phi$ is a normal linear functional on a \WA-algebra $M$, then there exist
 where $s(|\phi|)$ denotes the support projection of\/ $|\phi|$ in $M$.
 We refer to this as the \emph{polar decomposition} of\/ $\phi$.
 In addition, $|\phi|$ is \emph{uniquely determined} by the following two conditions.
-%% --  
-\begin{empheq}[left={\text{(*) } \, \empheqlbrace \quad }]{align*}
-    \|\phi\| &= \| |\phi| \| \\
+%%% --  
+%\begin{empheq}[left={\text{(*) } \, \empheqlbrace \quad }]{align*}
+%    \|\phi\| &= \| |\phi| \| \\
+%    |\phi(x)|^{2} &\leq |\phi|(xx^{*}) \quad (x\in M)
+%\end{empheq}
+%%% --
+\begin{empheq}[left={\empheqlbrace \quad}]{align}
+    \|\phi\| &= \| |\phi| \| \notag \\
     |\phi(x)|^{2} &\leq |\phi|(xx^{*}) \quad (x\in M)
+    \tag{*}\label{eq:star-uniqueness}
 \end{empheq}
 %% --
 For the polar decomposition of the adjoint $\phi^{*}$, where $\phi^{*}(x)$ is the complex conjugate 
@@ -301,8 +307,7 @@ Since
 &= <\mu R(\mu)'\1,|\psi|> = \| \mu R(\mu)|\psi| \|,
 \end{align*}
 %% --
-we obtain $\mu R(\mu)|\psi| = |\psi|$ by the uniqueness 
-theorem (*) above for the absolut value.
+we obtain $\mu R(\mu)|\psi| = |\psi|$ by the uniqueness theorem \eqref{eq:star-uniqueness} on p.~\pageref{eq:star-uniqueness} for the absolut value.
 Therefore $|\psi| \in \Fix{\RR} $.
 Since
 %% --
@@ -400,7 +405,6 @@ From the considerations above it follows
 %% --
 hence $0 \neq \psi_{0} \in \Fix{S}$.
 Therefore $\Fix{S'}$ separates the points of\/ $\Fix{S}$.
-
 From this it follows that
 %% --
 \[
@@ -606,8 +610,13 @@ Since $\Fix{\TT}$ is positively generated (Corollary~\ref{cor:d3-1.5}),
 for some faithful normal state $\phi$.
 
 Let $\mu \in \R_{+}$ and $\alpha \in \R$ such that $\im\alpha \in P\sigma(A)$.
-If\/ $\psi_{\alpha} = u_{\alpha}|\psi_{\alpha}|$ is a normalized eigenvector of\/ $A$ pertaining to $\im\alpha$, then $\phi = |\psi_{\alpha}| = |\psi_{\alpha}^{*}|$ (Corollary~\ref{cor:d3-1.5} and the above considerations).
-Hence $u_{\alpha}u_{\alpha}^{*} = u_{\alpha}^{*}u_{\alpha} = s(\phi) = \1$.
+If\/ $\psi_{\alpha} = u_{\alpha}|\psi_{\alpha}|$ is a normalized eigenvector of\/ $A$ pertaining to $\im\alpha$, then $\phi = |\psi_{\alpha}| = |\psi_{\alpha}^{*}|$, hence 
+%
+\[
+	u_{\alpha}u_{\alpha}^{*} = u_{\alpha}^{*}u_{\alpha} = s(\phi) = \1
+\]
+%
+(Corollary~\ref{cor:d3-1.5} and the above considerations).
 
 Since
 %% --
@@ -693,8 +702,8 @@ For $\eta \in \Omega \coloneqq P\sigma(A) \cap \im\R$ let
 U(\eta) \coloneqq \{\psi \in D(A): A\psi = \eta\psi\}
 \]
 %% --
-and $U = \{U(\eta) \colon \eta \in \Omega\}$.
-Then $(U)^{-} = N_{*}$.
+and $U = \{U(\eta) \colon \eta \in \Omega\}$. 
+Then $\closure{U} = N_{*}$, where $\closure{U}$ denotes the closure of $U$.
 
 For each $\psi \in U$ there exists $\eta \in \Omega$ such that
 %% --
@@ -733,8 +742,19 @@ or
 
 Finally we prove the group property of\/ $G$.
 Let $\mathfrak{U}$ be an ultrafilter on $\R$ such that $\lim_{\mathfrak{U}}T_{0}(t) = \Id$ in the strong operator topology.
-For positive $s \in \R$ let $S \coloneqq \lim_{\mathfrak{U}}T(t-s)$.
-Then $ST_{0}(s) = T_{0}(s)S = \Id$, hence $T_{0}(s)^{-1}$ exists in $G$ for all $s \in \R_{+}$.
+For positive $s \in \R$ let 
+%
+\[
+	S \coloneqq \lim_{\mathfrak{U}}T(t-s) .
+\]
+%
+Then 
+%
+\[
+	S \cdot T_{0}(s) = T_{0}(s)S = \Id
+\]
+%
+and $T_{0}(s)^{-1}$ exists in $G$ for all $s \in \R_{+}$.
 From this it follows that $G$ is a group.
 \end{proof}
 %% --
@@ -890,7 +910,15 @@ Since the map $(y \mapsto y u_{\alpha})$ is a continuous bijection from $M(u_{\a
  	&\leq \dim \Fix  {\RR'} .
 \end{align*}
 %% --
-Since $\bigoplus_{j=1}^{n} Mp_{j} = M$ and $\bigoplus_{j=1}^{n} L_{j} = M_{*}$, we obtain
+Since 
+%
+\[
+	\bigoplus_{j=1}^{n} Mp_{j} = M 
+	\quad \text{and} \quad 
+	\bigoplus_{j=1}^{n} L_{j} = M_{*},
+\]
+%
+e obtain
 %% --
 \begin{align*}
 \dim \Fix  {(\lambda - \im\alpha)R(\lambda)'} &= \dim \Fix{\lambda R(\lambda)'} , \\
@@ -918,12 +946,12 @@ is a closed subspace of\/ $\ell^{\infty}(E)$ and equal to the kernel of the semi
 By the \emph{ultrapower} $\widehat{E}$ we understand the quotient space $\ell^{\infty}(E)/c_{\mathfrak{U}}(E)$ with norm
 %% --
 \[
-\|\widehat{x}\| = \lim_{\mathfrak{U}}\|x_{n}\| \, , \, (x_{n}) \in \widehat{x} \in \widehat{E}.
+\|\hat{x}\| = \lim_{\mathfrak{U}}\|x_{n}\| \, , \, (x_{n}) \in \hat{x} \in \widehat{E}.
 \]
 %% --
-Moreover, for a bounded linear operator $T \in \LE$, we denote by $\widehat{T}$ the well defined operator $\widehat{T}\widehat{x} \coloneqq (Tx_{n}) + c_{\mathfrak{U}}(E)$, $(x_{n}) \in \widehat{x}$.
+Moreover, for a bounded linear operator $T \in \LE$, we denote by $\widehat{T}$ the well defined operator $\widehat{T}\hat{x} \coloneqq (Tx_{n}) + c_{\mathfrak{U}}(E)$, $(x_{n}) \in \hat{x}$.
 
-It is clear by virtue of\/ $(x \mapsto (x, x, ..) + c_{\mathfrak{U}}(E))$ that each $x \in E$ defines an element $\widehat{x} \in \widehat{E}$.
+It is clear by virtue of\/ $(x \mapsto (x, x, ..) + c_{\mathfrak{U}}(E))$ that each $x \in E$ defines an element $\hat{x} \in \widehat{E}$.
 This isometric embedding as well as the operator map $(T \mapsto \widehat{T})$ are called canonical.
 \index{pseudo-resolvent|(}
 In particular, if\/ $\RR \colon (D \to \LE)$ is a pseudo-resolvent, then
@@ -976,18 +1004,18 @@ Then we may assume that there exists $\delta > 0$ such that
 	\|x_{n} - x_{m}\| > \delta \quad \text{for} \quad n \neq m .
 \]
 %% --
-Take $k \in \N $ and let $\widehat{x}_{k}$ be the image of\/ $(x_{n+k})$ in $\widehat{E}$.
+Take $k \in \N $ and let $\hat{x}_{k}$ be the image of\/ $(x_{n+k})$ in $\widehat{E}$.
 Since
 %% --
 \[
 	\lim_{n}\|(\lambda - \im\alpha)R(\lambda)x_{n+k} - x_{n+k}\| = 0 ,
 \]
 %% --
-the so defined $\widehat{x}_{k}$'s belong to $\Fix{(\lambda - \im\alpha)\widehat{R}(\lambda)}$.
+the so defined $\hat{x}_{k}$'s belong to $\Fix{(\lambda - \im\alpha)\widehat{R}(\lambda)}$.
 Since this space is finite dimensional there exist $j < \ell$,  such that
 %% --
 \[
-	\|\widehat{x}_{j} - \widehat{x}_{\ell}\| \leq \frac{\delta}{2} .
+	\|\hat{x}_{j} - \hat{x}_{\ell}\| \leq \frac{\delta}{2} .
 \]
 %% --
 From the definition of the norm in $\widehat{E}$ it follows that there are natural numbers $n < m$ such that
@@ -1010,21 +1038,21 @@ Obviously
 %% -- d3-18
 %% --
 If the last inequality is strict, then there exists $\gamma > 0$ and a normalized 
-$\widehat{x} \in \Fix  {(\lambda - \im\alpha)\widehat{R}(\lambda)}$ such that
+$\hat{x} \in \Fix  {(\lambda - \im\alpha)\widehat{R}(\lambda)}$ such that
 %% --
 \[
-\gamma \leq \|\widehat{y} - \widehat{x}\|
+\gamma \leq \|\hat{y} - \hat{x}\|
 \]
 %% --
 for all $y \in \Fix  {(\lambda - \im\alpha)R(\lambda)}$.
 
-Take a normalized sequence $(x_{n}) \in \widehat{x}$.
+Take a normalized sequence $(x_{n}) \in \hat{x}$.
 Then $(x_{n})$ has a convergent subsequence, whence we may assume that $\lim_{n} x_{n} = z$ exists in $E$.
 Thus $0 \neq z \in \Fix{(\lambda - \im\alpha)R(\lambda)}$.
 From this we obtain the contradiction
 %% --
 \[
- 0 \leq \gamma \leq \|\widehat{z} - \widehat{x}\| = \lim \|z - x_{n}\| = 0
+ 0 \leq \gamma \leq \|\hat{z} - \hat{x}\| = \lim \|z - x_{n}\| = 0
 \]
 %% --
 Consequently,
@@ -1041,7 +1069,7 @@ $\Fix{(\lambda - \im\alpha)R(\lambda)'}$ such that $\phi_{k}(x_{j}) = \delta_{k,
 Then
 %% --
 \[
-E = \Fix{(\lambda - \im\alpha)R(\lambda)} \oplus \bigcap_{j=1}^{n} \Kern{\phi_{j}},
+E = \Fix{(\lambda - \im\alpha)R(\lambda)} \bigoplus \bigcap_{j=1}^{n} \Kern{\phi_{j}},
 \]
 %% --
 where both subspaces on the right are 
@@ -1123,15 +1151,25 @@ The residue of the resolvent in $0$ and the assocciated ergodic projection are i
 Let $M$ be a \WA-algebra with predual $M_{*}$, $\mathfrak{U}$ a free ultrafilter on $\N $ and $\widehat{M}$ (\resp  $(M_{*})^{\wedge}$) the ultrapower of\/ $M$ (\resp  $M_{*}$) with respect to $\mathfrak{U}$.
 Then it is easy to see that $c_{\mathfrak{U}}(M)$ is a two sided ideal in $\ell^{\infty}(M)$ hence $\widehat{M}$ is a \CA-algebra, but in general not a \WA-algebra.
 Note that the unit of\/ $\widehat{M}$ is the canonical image of\/ $\1$.
-For $\widehat{x} \in \widehat{M}$ and $\widehat{\phi} \in (M_{*})^{\wedge}$ let $J: (M_{*})^{\wedge} \to \widehat{M}'$ be defined by
+
+For $\hat{x} \in \widehat{M}$ and $\widehat{\phi} \in (M_{*})^{\wedge}$ let $J: (M_{*})^{\wedge} \to \widehat{M}'$ be defined by
 %% --
 \[
-\langle x,J(\widehat{\phi}) \rangle \coloneqq \lim_{\mathfrak{U}}\phi_{n}(x_{n}) \, , \, (x_{n}) \in \widehat{x} \, , \, (\phi_{n}) \in \widehat{\phi} .
+\dualp{x,J(\widehat{\phi})} 
+	\coloneqq \lim_{\mathfrak{U}}\phi_{n}(x_{n}) \quad 
+		(x_{n}) \in \hat{x}, \, (\phi_{n}) \in \widehat{\phi} .
 \]
 %% --
 Then $J$ is well defined and an isometric embedding.
-It turns out that $J((M_{*})^{\wedge})$ is a translation invariant subspace of\/ $\widehat{M'}$.
-Hence there exists a central projection $z \in \widehat{M''}$ such that $J((M_{*})^{\wedge}) = \widehat{M''}z$ (\textcite[Proposition 2.2]{groh:1984b}).
+
+It turns out that $J( (M_{*})^{\wedge} )$ is a translation invariant subspace of\/ $\widehat{M'}$.
+Hence there exists a central projection $z \in \widehat{M''}$ such that 
+%
+\[
+	J((M_{*})^{\wedge}) = \widehat{M''} \cdot z 
+\]
+%
+(\textcite[Proposition 2.2]{groh:1984b}).
 
 Below we identify $(M_{*})^{\wedge}$ via $J$ with this translation invariant subspace.
 From the construction the following is obvious: If\/ $T$ is an identity preserving Schwarz map with preadjoint $T_{*} \in \mathcal{L}(M_{*})$, then $\widehat{T}$ is an identity preserving Schwarz map on $\widehat{M}$ such that $(T_{*})^{\wedge} = \widehat{(T)}{}'_{\vert (M_{*})^{\wedge}}$.
@@ -1178,7 +1216,7 @@ The consequences of this result for the asymptotic behavior of one-parameter sem
 \item
 The Perron-Frobenius theory for a single positive operator on a noncommutative operator algebra is worked out in \textcite{albeverio:1978} and \textcite{groh:1981}.
 The limitations of the theory (in the continuous as in the discrete case)
-are explained by the example following Remark~\ref{rem:d3-1.9} (see also \textcite{groh:1982a}) 
+are explained by the example following Remark~\ref{rem:d3-1.9} (see also \textcite{groh:1982a}). 
 Therefore we concentrate on irreducible semigroups.
 Our main result Theorem~\ref{thm:d3-1.11} on extends Part-II, Theorem~\ref{thm:b3-3.6} to the noncommutative setting.
 
