@@ -2035,14 +2035,26 @@ to\z@{\kern0.55\wd0\vrule\@height0.45\ht0\hss}\box0}}}}
 
                         %%%SOPHIE TEMPLATE END%%%
 
-\usepackage[thmmarks,thref]{ntheorem} 
-\theoremstyle{nonumberplain}
-\theoremheaderfont{\bfseries\itshape}
-\theorembodyfont{\upshape}
-\theoremsymbol{\ensuremath{\square}}
-\newtheorem{proof}{Proof} 
+%\usepackage[thmmarks,thref]{ntheorem} 
+%\theoremstyle{nonumberplain}
+%\theoremheaderfont{\bfseries\itshape}
+%\theorembodyfont{\upshape}
+%\theoremsymbol{\ensuremath{\square}}
+%\newtheorem{proof}{Proof} 
 \gdef\NoneSymbol{}
 
+
+% NEU:
+\usepackage{amsthm}
+\usepackage{thmtools}
+%\renewenvironment{proof}[1][\proofname]{\par
+%  \pushQED{\qed}%
+%  \normalfont\itshape\bfseries #1.\enspace\upshape\ignorespaces
+%}{%
+%  \popQED\endtrivlist
+%}
+
+%% --
 \makeatletter
 
 % MiniTOC
