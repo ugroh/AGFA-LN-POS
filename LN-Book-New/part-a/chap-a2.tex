@@ -1862,14 +1862,14 @@ We first want to solve the following problem.
 %% --
 The \emph{subdifferential} $\ddp$ of\/ $p$ at $f$ is defined by
 \begin{equation}\label{eq:a2-2.5}
-\ddp(f) = \{\phi \in E' \colon \langle g,\phi \rangle \leq p(g) \text{ for all } g \in E, \langle f,\phi \rangle = p(f) \}.
+\ddp(f) = \{\phi \in E' \colon \dualp{g,\phi} \leq p(g) \text{ for all } g \in E, \dualp{f,\phi} = p(f) \}.
 \end{equation}
 It follows from the Hahn-Banach theorem that $\ddp(f) \neq \emptyset$ for all $f \in E$.
 
 \begin{definition}\label{def:a2-2.1}
 \index{half-norm!p-dissipative}
-An operator $A$ on $E$ is called \emph{p-dissipative} if for all $f \in D(A)$ there exists $\phi \in \ddp(f)$ such that $\langle Af,\phi \rangle \leq 0$ 
-and $A$ is called \emph{strictly p-dissipative} if for all $f \in D(A)$ the inequality $\langle Af,\phi \rangle \leq 0$ holds for all $\phi \in \ddp(f)$.
+An operator $A$ on $E$ is called \emph{p-dissipative} if for all $f \in D(A)$ there exists $\phi \in \ddp(f)$ such that $\dualp{Af,\phi} \leq 0$ 
+and $A$ is called \emph{strictly p-dissipative} if for all $f \in D(A)$ the inequality $\dualp{Af,\phi} \leq 0$ holds for all $\phi \in \ddp(f)$.
 \end{definition}
 %%
 For convenience we want to have a distinctive name for the norm function.
@@ -1877,7 +1877,7 @@ So we denote by $N \colon E \to \R$ the function given by $N(f) = \|f\|$ through
 Then Eq.~\myeqpageref{eq:a2-2.5} can be written in the form
 
 \begin{equation}\label{eq:a2-2.6}
-\dN(f) = \{\phi \in E' \colon \|\phi\|\leq 1, \langle f,\phi \rangle = \|f\|\}.
+\dN(f) = \{\phi \in E' \colon \|\phi\|\leq 1, \dualp{f,\phi} = \|f\|\}.
 \end{equation}
 
 A (strictly) $N$-dissipative operator is simply called (strictly) \emph{dissipative}, which is in accordance with the usual nomenclature.
@@ -1933,7 +1933,7 @@ There exists  $\phi~\in~\ddp(f)$ such that $\dualp{Af,\phi} \leq 0$.
 Hence, 
 %%
 \[
-p(f) = \langle f,\phi \rangle = \langle f - tAf + tAf, \phi \rangle \leq \langle f - tAf,\phi \rangle \leq p(f - tAf).
+p(f) = \dualp{f,\phi} = \dualp{f - tAf + tAf, \phi} \leq \dualp{f - tAf,\phi} \leq p(f - tAf).
 \] 
 %%
 So Eq.~\myeqpageref{eq:a2-2.7} holds.
@@ -1943,42 +1943,47 @@ For every $t > 0$ choose $\phi_{t} \in \ddp(f - tAf)$.
 Then 
 %
 \[
-	\pm\langle g,\phi_{t} \rangle \leq p(\pm g) \leq c\|g\|
+	\pm \dualp{g,\phi_{t}} \leq p(\pm g) \leq c\|g\|
 \]
 %
 for all $g \in E$, $t > 0$.
 Thus the net $(\phi_{t})_{t>0}$ is bounded.
 Consequently it posseses a $\sigma(E',E)$-limit point $\phi$ as $t \to 0$.
-We show that $\phi \in \ddp(f)$ and $\langle Af,\phi \rangle \leq 0$.
+We show that $\phi \in \ddp(f)$ and $\dualp{Af,\phi} \leq 0$.
 
-Since $\langle g,\phi_{t} \rangle \leq p(g)$ for all $t > 0$, 
-it follows that $\langle g,\phi \rangle \leq p(g)$ $(g \in E)$.
+Since $\dualp{g,\phi_{t}} \leq p(g)$ for all $t > 0$, 
+it follows that $\dualp{g,\phi} \leq p(g)$ $(g \in E)$.
 Moreover, 
 %
 \[
-	\langle f,\phi_{t} \rangle - t\langle Af, \phi_{t} \rangle = p(f - tAf)$ $(t > 0) .
+	\dualp{f,\phi_{t}} - t\dualp{Af, \phi_{t}} = p(f - tAf) \quad (t > 0) .
 \]
 %
-Letting $t \to 0$ yields $\langle f,\phi \rangle = p(f)$.
+Letting $t \to 0$ yields $\dualp{f,\phi} = p(f)$.
 
 We have proved that $\phi \in \ddp(f)$.
 By hypothesis we have for all $t > 0$, \\
 %
 \[
-	p(f)~\leq~p(f-tAf)~=~\langle f-tAf,\phi_{t} \rangle 
-= \langle f,\phi_{t} \rangle - t\langle Af,\phi_{t} \rangle \leq p(f) - t\langle Af,\phi_{t} \rangle .
+\begin{split}
+	p(f)~& \leq~p(f-tAf)~=~\dualp{f-tAf,\phi_{t}} \\
+&= \dualp{f,\phi_{t}} - t\dualp{Af,\phi_{t}} \leq p(f) - t \dualp{Af,\phi_{t}} .
+\end{split}
 \]
 %
-Consequently $\langle Af,\phi_{t} \rangle \leq 0$ for all $t > 0$.
-Thus $\langle Af,\phi \rangle \leq 0$.
+Consequently $\dualp{Af,\phi_{t}} \leq 0$ for all $t > 0$.
+Thus $\dualp{Af,\phi} \leq 0$.
 \end{proof}
 %%
+\phantom{x}
+%% --
 \begin{remark}\label{rem:a2-2.4}
 The function $p$ is convex.
 So the one-sided Gateaux-derivatives
 %% –
 \begin{align*}
-D^{+}_{g} p(f) &= \lim_{t \downarrow 0} \frac{1}{t} (p(f+tg) - p(f)) \quad \text{and} \\
+D^{+}_{g} p(f) &= \lim_{t \downarrow 0} \frac{1}{t} (p(f+tg) - p(f)) 
+\intertext{and}
 D^{-}_{g} p(f) &= \lim_{t \uparrow 0} \frac{1}{t} (p(f+tg) - p(f))
 \end{align*}
 %% –
@@ -1986,11 +1991,11 @@ exist and satisfy $D^{-}_{g}p(f) \leq D^{+}_{g}p(f)$ for all $f, g \in E$ (\cf \
 Moreover,
 %% --
 \begin{equation}\label{eq:a2-2.9}
-D^{+}_{g} p(f) = \sup \{\langle g,\phi \rangle \colon \phi \in \ddp(f)\},
+D^{+}_{g} p(f) = \sup \{\dualp{g,\phi} \colon \phi \in \ddp(f)\},
 \end{equation}
 %% --
 \begin{equation}\label{eq:a2-2.10}
-D^{-}_{g} p(f) = \inf \{\langle g,\phi \rangle \colon \phi \in \ddp(f)\}.
+D^{-}_{g} p(f) = \inf \{\dualp{g,\phi} \colon \phi \in \ddp(f)\}.
 \end{equation}
 %% --
 Thus $A$ is p-dissipative if and only if\/ $D^{-}_{Af} p(f) \leq 0$, and $A$ is strictly p-dissipative if and only if\/ $D^{+}_{Af} p(f) \leq 0$ for all $f \in D(A)$.
@@ -2023,8 +2028,8 @@ Assume that~\ref{thm:a2-2.6.1} holds.
 Let $f \in D(A)$, $\phi \in \ddp(f)$.
 Then 
 \begin{align*}
-	\langle Af,\phi \rangle &= \lim_{t\to 0} \frac{1}{t} (\langle T(t)f,\phi \rangle - \langle f,\phi \rangle) \\
-	&= \lim_{t\to 0} \frac{1}{t} (\langle T(t)f,\phi \rangle - p(f)) \\
+	\dualp{Af,\phi} &= \lim_{t\to 0} \frac{1}{t} (\dualp{T(t)f,\phi} - \dualp{f,\phi}) \\
+	&= \lim_{t\to 0} \frac{1}{t} (\dualp{T(t)f,\phi} - p(f)) \\
 	&\leq \limsup_{t\to 0} \frac{1}{t} (p(T(t)f) - p(f)) \leq 0. 
 \end{align*}
 This proves~\ref{thm:a2-2.6.2}. 
@@ -2032,14 +2037,20 @@ This proves~\ref{thm:a2-2.6.2}.
 It is trivial that~\ref{thm:a2-2.6.2} implies~\ref{thm:a2-2.6.3}.  
 So let us assume~\ref{thm:a2-2.6.3}. 
 Then it follows from Corollary~\ref{cor:a2-2.5}   that $A$ is p-dissipative.
-Hence, by Eq.~\myeqpageref{eq:a2-2.8},  $p(\lambda R(\lambda,A)g) \leq p(g)$ for all $g \in E$, $\lambda > \omega_{0}(A)$.
+Hence, by Eq.~\myeqpageref{eq:a2-2.8},  
+%
+\[
+	p(\lambda R(\lambda,A)g) \leq p(g) \text{for all $g \in E$, $\lambda > \omega_{0}(A)$}.
+\]
+%
 Hence $\lambda R(\lambda,A)$ is p-contractive for $\lambda > \omega_{0}(A)$.
 This implies that $T(t)$ is p-contractive by the formula Eq.~\myeqpageref{eq:a2-1.3}, 
 %% –
 \[
-T(t) = \lim_{t\to 0} \left( \frac{n}{t} R\left( \frac{n}{t},A \right) \right)^{n} \text{ (strongly) for } t \geq 0.
+T(t) = \lim_{t\to 0} \left( \frac{n}{t} R\left( \frac{n}{t},A \right) \right)^{n} 
+	\text{ (strongly) for } t \geq 0. \qedhere
 \]
-%% –
+%% --
 \end{proof}
 %% --
 We have shown that for generators, p-dissipativity is equivalent to p-contractivity of the semigroup.
@@ -2055,8 +2066,8 @@ If\/ $D(A)$ is dense, then $A$ is strictly p-dissipative.
 Let $f \in D(A)$, $\phi \in \ddp(f)$.
 Then for every $t > 0$ and $g \in D(A)$ we have
 \begin{align*}
-\langle Af,\phi \rangle 
-&= \frac{1}{t}(\langle f + tAf,\phi \rangle - \langle f,\phi \rangle) \leq \frac{1}{t}(p(f + tAf) - p(f)) \\
+\dualp{Af,\phi} 
+&= \frac{1}{t}(\dualp{f + tAf,\phi} - \dualp{f,\phi}) \leq \frac{1}{t}(p(f + tAf) - p(f)) \\
 &\leq \frac{1}{t}(p(f + tg) + tp(Af - g) - p(f)) \\
 &\leq \frac{1}{t}(p((\Id - tA)(f + tg)) + tp(Af - g) - p(f)) \quad \text{(by Eq.~\myeqpageref{eq:a2-2.7}\,)} \\ %% (2.7))
 &\leq \frac{1}{t}(p(f) + tp(g - Af) + t^2p(-Ag) + tp(Af - g) - p(f)) \\
@@ -2064,8 +2075,8 @@ Then for every $t > 0$ and $g \in D(A)$ we have
 &= 2c\|g - Af\| + tc\|Ag\|.
 \end{align*}
 
-Letting $t \to 0$ we obtain $\langle Af,\phi \rangle \leq 2c\|g - Af\|$ for all $g \in D(A)$.
-Since $D(A)$ is dense in $E$, this implies that $\langle Af,\phi \rangle \leq 0$.
+Letting $t \to 0$ we obtain $\dualp{Af,\phi} \leq 2c\|g - Af\|$ for all $g \in D(A)$.
+Since $D(A)$ is dense in $E$, this implies that $\dualp{Af,\phi} \leq 0$.
 \end{proof}
 
 We now impose stronger conditions on $p$.
@@ -2254,13 +2265,13 @@ be a seminorm on $E$ (\ie $p(f + g) \leq p(f) + p(g)$ and $p(\lambda f) = |\lamb
 The subdifferential $\ddp(f)$ of\/ $p$ in $f \in E$ is defined by
 %% --
 \begin{equation}\label{eq:a2-4.15}
-\ddp(f) = \{\phi \in E' \colon \Re\langle g,\phi \rangle \leq p(g) \text{ for all } g \in E \quad \text{ and } \langle f,\phi \rangle = p(f)  \}.
+\ddp(f) = \{\phi \in E' \colon \Re\dualp{g,\phi} \leq p(g) \text{ for all } g \in E \quad \text{ and } \dualp{f,\phi} = p(f)  \}.
 \end{equation}
 %% --
 We assume in addition that $p$ is continuous.
 Then it follows from the Hahn-Banach theorem that $\diff{p}(f) \neq \emptyset$ for any $f \in E$.
 %%
-A linear operator $A$ on $E$ is called \emph{p-dissipative} if for all $f \in D(A)$ there exists $\phi \in \ddp(f)$ such that $\Re\langle Af,\phi \rangle \leq 0$.
+A linear operator $A$ on $E$ is called \emph{p-dissipative} if for all $f \in D(A)$ there exists $\phi \in \ddp(f)$ such that $\Re\dualp{Af,\phi} \leq 0$.
 
 The arguments given above show that also in the situation considered here $A$ is p-dissipative if and only if
 \[
@@ -2373,7 +2384,7 @@ $\TT$ is strongly continuous.
 
 \begin{proof}
 Let $x' \in E'$ and $t_n \geq 0$ be given.
-Then $\lim \|(T(t_n) - \Id)'x'\| = 0$ if and only if\/ $\lim \langle x_n, (T(t_n) - \Id)'x' \rangle = 0$ for every bounded sequence $(x_n)$ in $E$.
+Then $\lim \|(T(t_n) - \Id)'x'\| = 0$ if and only if\/ $\lim \dualp{x_n, (T(t_n) - \Id)'x'} = 0$ for every bounded sequence $(x_n)$ in $E$.
 This implies the equivalence of~\ref{lem:a2-3.2-1}   and~\ref{lem:a2-3.2-2}. 
 In particular,~\ref{lem:a2-3.2-1}   implies that $((T(t_n) - \Id)x)$ converges weakly to zero for every sequence $(t_n)$ in $[0,\infty)$ with $\lim t_n = 0$ and every $x \in E$.
 Hence $\TT$ is strongly continuous by Proposition 1.23 
@@ -2390,13 +2401,13 @@ If  $\TT=(T(t))_{t \geq 0}$\, is a strongly continuous semigroup in $E$, then $\
 \begin{proof}
 Suppose that $(x_{n}')$ is a bounded sequence in $E'$ and that $t_{n} \geq 0$ with $\lim t_{n} = 0$.
 Put $V_{n} \coloneqq T(t_{n}) - \Id$.
-Then $\lim \|V_{n}x\| = 0$ and therefore $\lim \langle x, V_{n}'x_{n}' \rangle = 0$ for every $x \in E$.
+Then $\lim \|V_{n}x\| = 0$ and therefore $\lim \dualp{x, V_{n}'x_{n}'} = 0$ for every $x \in E$.
 Hence $(V_{n}'x_{n}')$ w*-converges to zero.
 Since $E$ is a Grothendieck space, $(V_{n}'x_{n}')$ converges weakly to zero.
 Now Lemma~\ref{lem:a2-3.2} implies that $(T(t)'')$ is strongly continuous.
 \end{proof}
 %% --
-Recall now that a Banach space $E$ is said to have the \emph{Dunford-Pettis property} if\/ $\lim \langle x_{n},x_{n}' \rangle = 0$ whenever $(x_{n})$ in $E$ and $(x_{n}')$ in $E'$ converge weakly to zero.
+Recall now that a Banach space $E$ is said to have the \emph{Dunford-Pettis property} if\/ $\lim \dualp{x_{n},x_{n}'} = 0$ whenever $(x_{n})$ in $E$ and $(x_{n}')$ in $E'$ converge weakly to zero.
 %% -- 
 \begin{theorem}\label{thm:a2-3.4}
 Let $E$ be a Banach space with the Dunford-Pettis property and let  $\TT = (T(t))_{t \geq 0}$ be a one-parameter semigroup of operators on $E$.
@@ -2412,7 +2423,7 @@ Let $t_{n} \geq 0$ with $\lim t_{n} = 0$ be given.
 Then there exists a bounded sequence $(x_{n})$ in $E$ and a bounded sequence $(x_{n}')$ in $E'$ such that
 %%
 \[
-\left\|(T(t_{n}) - \Id)^2 \right\| - \frac{1}{n} \leq \langle (T(t_{n}) - \Id)x_{n}, (T(t_{n}) - \Id)'x_{n}' \rangle\,.
+\left\|(T(t_{n}) - \Id)^2 \right\| - \frac{1}{n} \leq \dualp{(T(t_{n}) - \Id)x_{n}, (T(t_{n}) - \Id)'x_{n}'}\,.
 \]
 %%
 Since $\TT'$ and $\TT''$ are strongly continuous, Lemma~\ref{lem:a2-3.2}   implies that $((T(t_{n}) - \Id)x_{n})$ and $((T(t_{n}) - \Id)'x_{n}')$ converge weakly to zero.
