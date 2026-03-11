@@ -1437,8 +1437,8 @@ if and only if there exists $c > 0$ such that}
 \]
 %
 \begin{proof}
-We show that the following assertions are equivalent.
-\begin{enumerate}[\upshape(a)]
+The semigroup is right-sided differentiable at a point $t > 0$ if and only if the following equivalent assertions holds.
+\begin{enumerate*}[\upshape(a)]
 \item
 $T(t)E \subset D(A)$,
 \item
@@ -1454,7 +1454,7 @@ $[\text{ess}]\text{-}\Image{m} \subset
 \item
 there exists $c > 0$ such that 
 $\left\{\lambda \in \C \colon \lvert\Im(\lambda)\rvert > c \cdot \eu^{-t\Re(\lambda)}\right\} \subset \rho(A)$.
-\end{enumerate}
+\end{enumerate*}
 %The semigroup is right-sided differentiable at $t$ if and only if the following equivalent assertions are true.
 %\begin{enumerate}[\upshape(a)]
 %\item
@@ -1751,10 +1751,12 @@ Given a semigroup $(T(t))_{t \geq 0}$,
 it is frequently difficult to determine the precise domain of its generator $A$.
 So it is important to know which (possibly strict) subspaces of\/ $D(A)$ determine the semigroup uniquely.
 This can be formulated more precisely in the following way.
-
+%% --
+\begin{quote}
 \textit{Let $D_{0}$ be a subspace of\/ $D(A)$ and consider the restriction $A_{0}$ of\/ $A$ to $D_{0}$.
 Under which condition on $D_{0}$ is $A$ the only extension of\/ $A_{0}$ which is a generator?}
-
+\end{quote}
+%% --
 One obvious condition is that $D_{0}$ is a core.
 \index{core}
 In fact, in that case, $A$ is the closure of\/ $A_{0}$.
@@ -1826,9 +1828,9 @@ p(\lambda f) &= \lambda p(f) \quad (f \in E, \lambda \geq 0). %\label{eq:a2-2.2}
 %% --
 The continuity of\/ $p$ implies that there exists a constant $c > 0$ such that
 %% --
-\begin{equation*}\label{eq:a2-2.3}
+\begin{equation}\label{eq:a2-2.3}
 	|p(f)| \leq c\|f\| \quad (f \in E).
-\end{equation*}
+\end{equation}
 %% -- 
 Moreover, it follows from Eq.~\myeqpageref{eq:a2-2.1} 
 %% --
@@ -1853,8 +1855,11 @@ Then a bounded operator $T$ is $N^{+}$-contractive if and only if\/ $T$ is posit
 \end{remark*}
 
 We first want to solve the following problem.
-Given the generator $A$ of a semigroup $(T(t))_{t\geq 0}$ find a condition on $A$ which is equivalent to $T(t)$ being p-contractive for all $t \geq 0$.
-
+%% --
+\begin{quotation}
+\textit{Given the generator $A$ of a semigroup $(T(t))_{t\geq 0}$ find a condition on $A$ which is equivalent to $T(t)$ being p-contractive for all $t \geq 0$.}
+\end{quotation}
+%% --
 The \emph{subdifferential} $\ddp$ of\/ $p$ at $f$ is defined by
 \begin{equation}\label{eq:a2-2.5}
 \ddp(f) = \{\phi \in E' \colon \langle g,\phi \rangle \leq p(g) \text{ for all } g \in E, \langle f,\phi \rangle = p(f) \}.
@@ -1882,7 +1887,7 @@ A (strictly) $N$-dissipative operator is simply called (strictly) \emph{dissipat
 \begin{enumerate}[\upshape(i), wide, labelindent=.25em]
 
 \item \label{ex:a2-2.2.1}
-Let $E = C[0,1]$, $f \in E$.
+Let $E = C[0,1]$ and $f \in E$.
 Then there exists $x \in [0,1]$ such that $|f(x)| = \|f\|_{\infty}$.
 Define $\phi \in E'$ by 
 %
@@ -1890,11 +1895,10 @@ Define $\phi \in E'$ by
 	\dualp{g,\phi} = \sign(f(x))\,g(x) .
 \]
 %
-Then $\phi \in \dN(f)$.
-Note that $\dN(f)$ may be an infinite set.
+Then $\phi \in \dN(f)$ and note that $\dN(f)$ may be an infinite set.
 %%--
 \item \label{ex:a2-2.2.2}
-Let $H$ be a Hilbert space, $f \in H$, $f \neq 0$.
+Let $H$ be a Hilbert space and $ 0 \neq f \in H$.%, $f \neq 0$.
 Then  $\dN(f) = \{\phi_{f}\}$ where 
 %
 \[
@@ -1908,24 +1912,24 @@ $A - \|A\|\Id$ is strictly dissipative for every bounded operator $A$.
 \end{examples}
 %% –
 \begin{proposition}\label{prop:a2-2.3}
-Let $A$ be an operator on $E$.
+Let $A$ with domain $D(A)$ be an operator on $E$.
 Then $A$ is p-dissipative if and only if
-
+%% --
 \begin{equation} \label{eq:a2-2.7}
-p(f) \leq p(f - tAf) \text{ for all } f \in D(A), t > 0.
+p(f) \leq p(f - tAf) \text{ for all } f \in D(A) \text{ and } t > 0.
 \end{equation}
-
+%% --
 If in particular $(w,\infty) \subset \rho(A)$ for some $w \in \R$, then $A$ is p-dissipative if and only if
-
+%% --
 \begin{equation}\label{eq:a2-2.8}
 p(\lambda R(\lambda,A)f) \leq p(f) \text{ for all } f \in E, \lambda > w.
 \end{equation}
 \end{proposition}
-
+%% --
 \begin{proof}
 Assume that $A$ is p-dissipative.
-Let $f \in D(A)$,  $t > 0$.
-There exists  $\phi~\in~\ddp(f)$ such that $\langle Af,\phi \rangle \leq 0$.
+Let $f \in D(A)$ and $t > 0$.
+There exists  $\phi~\in~\ddp(f)$ such that $\dualp{Af,\phi} \leq 0$.
 Hence, 
 %%
 \[
@@ -1936,13 +1940,25 @@ So Eq.~\myeqpageref{eq:a2-2.7} holds.
 
 Conversely, let $f \in D(A)$.
 For every $t > 0$ choose $\phi_{t} \in \ddp(f - tAf)$.
-Then $\pm\langle g,\phi_{t} \rangle \leq p(\pm g) \leq c\|g\|$ for all $g \in E$, $t > 0$.
+Then 
+%
+\[
+	\pm\langle g,\phi_{t} \rangle \leq p(\pm g) \leq c\|g\|
+\]
+%
+for all $g \in E$, $t > 0$.
 Thus the net $(\phi_{t})_{t>0}$ is bounded.
 Consequently it posseses a $\sigma(E',E)$-limit point $\phi$ as $t \to 0$.
 We show that $\phi \in \ddp(f)$ and $\langle Af,\phi \rangle \leq 0$.
 
-Since $\langle g,\phi_{t} \rangle \leq p(g)$ for all $t > 0$, it follows that $\langle g,\phi \rangle \leq p(g)$ $(g \in E)$.
-Moreover, $\langle f,\phi_{t} \rangle - t\langle Af, \phi_{t} \rangle = p(f - tAf)$ $(t > 0)$.
+Since $\langle g,\phi_{t} \rangle \leq p(g)$ for all $t > 0$, 
+it follows that $\langle g,\phi \rangle \leq p(g)$ $(g \in E)$.
+Moreover, 
+%
+\[
+	\langle f,\phi_{t} \rangle - t\langle Af, \phi_{t} \rangle = p(f - tAf)$ $(t > 0) .
+\]
+%
 Letting $t \to 0$ yields $\langle f,\phi \rangle = p(f)$.
 
 We have proved that $\phi \in \ddp(f)$.
