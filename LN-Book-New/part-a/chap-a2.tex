@@ -2127,13 +2127,14 @@ The canonical half-norm is strict if and only if the cone $E_{+}$ is \emph{norma
 %% –
 \begin{proposition}\label{prop:a2-2.9}
 Let $A$ be a p-dissipative operator where $p$ is a half-norm.
-If\/ $D(A)$ is dense, then $A$ is closable (and the closure of\/ $A$ is p-dissipative as well (by Corollary~\ref{cor:a2-2.5})). 
+If\/ $D(A)$ is dense, then $A$ is closable and the closure of\/ $A$ is p-dissipative as well (by Corollary~\ref{cor:a2-2.5}). 
 \end{proposition}
 %% –
 
 \begin{proof}
-Let $f_n \in D(A)$, $\lim_{n \to \infty} f_{n} = 0$, $\lim_{n \to \infty} Af_{n} = g$.
+Let $(f_{n})_{n \in \N}$ be a sequence in $D(A)$ with $\lim_{n \to \infty} f_{n} = 0$ and $\lim_{n \to \infty} Af_{n} = g$.
 We have to show that $g = 0$.
+
 To this end let $h \in D(A)$.
 Then Eq.~\myeqpageref{eq:a2-2.7}   
 gives 
@@ -2156,38 +2157,41 @@ Since $D(A)$ is dense by hypothesis, we can approximate $g$ by $h \in D(A)$ and 
 Since $\lim_{n\to\infty} A(-f_{n}) = -g$, we have $p(-g) \leq 0$ by symmetry.
 Hence $p(g) + p(-g) \leq 0$ which implies $g = 0$ by Eq.~\myeqpageref{eq:a2-2.11}. 
 \end{proof}
-
 %% –
 \begin{lemma}\label{lem:a2-2.10}
 Let $p$ be a half-norm and $A$ a p-dissipative operator.
 Then
+%% --
 \begin{equation}\label{eq:a2-2.14}
 \lambda\|f\|_{p} \leq \|(\lambda - A)f\|_{p} \text{ for all } f \in D(A), \lambda > 0.
 \end{equation}
-
+%% --
 In particular, $(\lambda-A)$ is injective for all $\lambda > 0$.
 If\/ $p$ is strict and $A$ is closed, then $\Image{\lambda - A}$ is closed for all $\lambda > 0$.
 \end{lemma}
 %% –
-
 \begin{proof}
 Let $\lambda > 0$, $f \in D(A)$.
-Then by Eq.~\myeqpageref{eq:a2-2.7}  
-, $\lambda p(\pm f) \leq p((\lambda - A)(\pm f))$.
+Then by Eq.~\myeqpageref{eq:a2-2.7}, 
+%
+\[
+	\lambda p(\pm f) \leq p((\lambda - A)(\pm f)) .
+\]
+%
 Hence 
 %%
 \[
-\lambda\|f\|_{p} = \lambda p(f) + \lambda p(-f) \leq p((\lambda - A)f) + p(-(\lambda-A)f) = \|(\lambda-A)f\|_{p}.
+\lambda \|f\|_{p} = \lambda p(f) + \lambda p(-f) \leq p((\lambda - A)f) + p(-(\lambda-A)f) = \|(\lambda-A)f\|_{p}.
 %%
 \]
-Thus Eq.~\myeqpageref{eq:a2-2.14}   
-is proved.
+Thus Eq.~\myeqpageref{eq:a2-2.14} is proved.
+
 Now suppose that $p$ is strict.
 Then $\|\cdot\|_{p}$ is equivalent to the given norm.
 Let $\lambda > 0$ and $g \in \overline{\Image{\lambda - A}}$.
-Then $g = \lim_{n\to\infty} (\lambda - A)f_{n}$ for some sequence $(f_{n})_{n \in \N} \subset D(A)$.
-It follows from Eq.~\myeqpageref{eq:a2-2.14}  
-that $(f_{n})_{n\in\N}$ is a Cauchy sequence.
+Then $g = \lim_{n\to\infty} (\lambda - A)f_{n}$ for some sequence $(f_{n})_{n \in \N} $ in $D(A)$.
+It follows from Eq.~\myeqpageref{eq:a2-2.14} that $(f_{n})_{n\in\N}$ is a Cauchy sequence.
+
 Let $f = \lim_{n\to\infty} f_{n}$.
 Then 
 %%
@@ -2198,16 +2202,15 @@ Then
 %%
 exists.
 If\/ $A$ is closed, this implies that $f \in D(A)$ and $Af = \lambda f - g$.
-Hence $g = (\lambda - A)f \in \Image{\lambda - A}$.
-We have shown that $\Image{\lambda - A}$ is closed.
+Hence $g = (\lambda - A)f \in \Image{\lambda - A}$ and we have shown that $\Image{\lambda - A}$ is closed.
 \end{proof}
-
+%% --
 The following is the main theorem of this section.
-
 %% –
 \begin{theorem}\label{thm:a2-2.11}
 Let $p$ be a strict half-norm and $A$ an operator on $E$.
 The following assertions are equivalent.
+%% --
 \begin{enumerate}[\upshape (a)]
 \item \label{thm:a2-2.11.1}
 $A$ is the generator of a p-contraction semigroup.
@@ -2215,6 +2218,7 @@ $A$ is the generator of a p-contraction semigroup.
 \item \label{thm:a2-2.11.2}
 $D(A)$ is dense, $A$ is p-dissipative and $\Image{\lambda - A} = E$ for some $\lambda > 0$.
 \end{enumerate}
+%% --
 \end{theorem}
 %% –
 %%
@@ -2222,19 +2226,22 @@ $D(A)$ is dense, $A$ is p-dissipative and $\Image{\lambda - A} = E$ for some $\l
 Since $p$ is a strict half-norm, we can assume that $\|f\| = \|f\|_{p}$ for all $f \in E$.
 By Theorem~\ref{thm:a2-2.6}, condition~\ref{thm:a2-2.11.1} implies~\ref{thm:a2-2.11.2}. 
 
-Now suppose that~\ref{thm:a2-2.11.2}   holds.
+Now suppose that~\ref{thm:a2-2.11.2}  holds.
 Then it follows from Lemma~\ref{lem:a2-2.10}   
 that $\mu \in \rho(A)$ and $\|\mu R(\mu,A)\| \leq 1$ whenever $\mu > 0$ such that $\Image{\mu-A} = E$.
 So by hypothesis $\lambda \in \rho(A)$ and 
-$\text{dist}(\lambda,\sigma(A)) \geq \|R(\lambda,A)\|^{-1} \geq \lambda$.
+%
+\[
+	\mathrm{dist}(\lambda,\sigma(A)) \geq \|R(\lambda,A)\|^{-1} \geq \lambda .
+\]
+%
 Hence $(0,2\lambda) \subset \rho(A)$.
+
 Iterating this argument we see that $(0,\infty) \subset \rho(A)$.
 It follows from the Hille-Yosida theorem that $A$ generates a contraction semigroup $(T(t))_{t\geq 0}$.
-Finally, from~\ref{thm:a2-2.6} 
-%% Thm. 2.6 
-it follows that $(T(t))_{t\geq 0}$ is p-contractive.
+Finally, from~\ref{thm:a2-2.6} it follows that $(T(t))_{t\geq 0}$ is p-contractive.
 \end{proof}
-
+%% --
 Of course, the norm function $N$ given by $N(f) = \|f\|$ is a strict half-norm.
 In the case when $p = N$, Theorem~\ref{thm:a2-2.11}    
 is due to \textcite{lumerphillips:1961}.
@@ -2242,7 +2249,6 @@ It turns out to be extremely useful in showing that a concrete operator is a gen
 Because of its importance we state this special case explicitly below (including the complex case).
 Before that let us formulate Theorem~\ref{thm:a2-2.11}   
 for the case when the operator is merely given on a core.
-
 %% –
 \begin{corollary}\label{cor:a2-2.12}
 Let $p$ be a strict half-norm and $A$ be a densely defined operator.
@@ -2250,22 +2256,19 @@ If\/ $A$ is p-dissipative and $(\lambda - A)$ has dense range for some $\lambda 
 \end{corollary}
 %% –
 \begin{proof}
-It follows from Proposition~\ref{prop:a2-2.9}  
-that $A$ is closable and the closure $\overline{A}$ is p-dissipative.
-Lemma~\ref{lem:a2-2.10}   
-implies that $(\lambda- \overline{A})D(\overline{A}) = E$.
-So Theorem~\ref{thm:a2-2.11}   
-yields the desired conclusion.
+It follows from Proposition~\ref{prop:a2-2.9} that $A$ is closable and the closure $\overline{A}$ is p-dissipative.
+Lemma~\ref{lem:a2-2.10} implies that $(\lambda- \overline{A})D(\overline{A}) = E$.
+So Theorem~\ref{thm:a2-2.11} yields the desired conclusion.
 \end{proof}
 %% --
 We conclude this section indicating the results for the complex case.
 
 Let $E$ be a complex Banach space and $p \colon E \to \R_{+}$ 
-be a seminorm on $E$ (\ie $p(f + g) \leq p(f) + p(g)$ and $p(\lambda f) = |\lambda|p(f)$ holds for all $f, g \in E$, $\lambda \in \C$).
+be a seminorm on $E$, \ie $p(f + g) \leq p(f) + p(g)$ and $p(\lambda f) = |\lambda|p(f)$ holds for all $f, g \in E$, $\lambda \in \C$.
 The subdifferential $\ddp(f)$ of\/ $p$ in $f \in E$ is defined by
 %% --
 \begin{equation}\label{eq:a2-4.15}
-\ddp(f) = \{\phi \in E' \colon \Re\dualp{g,\phi} \leq p(g) \text{ for all } g \in E \quad \text{ and } \dualp{f,\phi} = p(f)  \}.
+\ddp(f) = \{\phi \in E' \colon \Re\dualp{g,\phi} \leq p(g) \text{ for all } g \in E \text{ and } \dualp{f,\phi} = p(f)\}.
 \end{equation}
 %% --
 We assume in addition that $p$ is continuous.
@@ -2332,21 +2335,25 @@ Consequently, $s = 0$.
 %% --
 \begin{enumerate}[\upshape (i), wide, labelindent=0.5em]
 \item \label{rem:a2-3.1-kgk-1}
-If, in Lemma~\ref{lem:a2-3.1},    
-$\TT = (T(t))_{t \geq 0}$ is strongly continuous, in which case 
+If, in Lemma~\ref{lem:a2-3.1}, $\TT = (T(t))_{t \geq 0}$ is strongly continuous, in which case 
 $s < \infty$, one can replace 
-$\lim_{t \to 0} \|(T(t) - \Id)^2\| = 0$ by the weaker condition 
+%
+\[
+	\lim_{t \to 0} \|(T(t) - \Id)^2\| = 0
+\]
+%
+by the weaker condition 
 %%--
 \[
-\lim \sup_{t \to 0} r(T(t) - \Id) < 1\,, \]
-%%--see \textcite[Lemma 2]{lotz:1985}, where $r$ denotes the spectral radius.
+\lim \sup_{t \to 0} r(T(t) - \Id) < 1\ ,
+\]
 %%--
-see \textcite[Lemma 2]{lotz:1985}, where $r$ denotes the spectral radius.
+where $r$ denotes the spectral radius (see \textcite[Lemma 2]{lotz:1985}.
 %%--
 \item \label{rem:a2-3.1-kgk-2}
 The condition $s < \infty$ in Lemma~\ref{lem:a2-3.1}   
-is essential as the following example shows:
-Let $f \colon \R \to \R$ be non-continuous with $f(s+t) = f(s) + f(t)$ for all $s, t \in \R$ (see \textcite{hamel:1905}).
+is essential as the following example shows.
+Let $f \colon \R \to \R$ be non-continuous with $f(s+t) = f(s) + f(t)$ for all $s$ and $t \in \R$ (see \textcite{hamel:1905}).
 Then $\{(t,f(t)) \colon t \in \R\}$ is dense in $\R^2$.
 Hence for the semigroups $\TT = (T(t))_{t \geq 0}$ on $\R^2$ with
 %%–
@@ -2354,12 +2361,11 @@ Hence for the semigroups $\TT = (T(t))_{t \geq 0}$ on $\R^2$ with
 T(t) = \left( \begin{array}{cc}
     1 & f(t) \\
     0 & 1
-\end{array} \right) \quad  \text{ for } t \geq 0
+\end{array} \right) \quad  (t \geq 0)
 \]
 %%–
 we have $s = \infty$.
-Therefore $\TT$ is not uniformly continuous.
-However, $(T(t) - \Id)^{2} = 0$ for all $t \geq 0$.
+Therefore $\TT$ is not uniformly continuous however, $(T(t) - \Id)^{2} = 0$ for all $t \geq 0$.
 \end{enumerate}
 \end{remarks*}
 
@@ -2384,13 +2390,25 @@ $\TT$ is strongly continuous.
 
 \begin{proof}
 Let $x' \in E'$ and $t_n \geq 0$ be given.
-Then $\lim \|(T(t_n) - \Id)'x'\| = 0$ if and only if\/ $\lim \dualp{x_n, (T(t_n) - \Id)'x'} = 0$ for every bounded sequence $(x_n)$ in $E$.
+Then 
+%
+\[
+	\lim \|(T(t_n) - \Id)'x'\| = 0 
+\]
+%
+if and only if\/ 
+%
+\[
+	\lim \dualp{x_n, (T(t_n) - \Id)'x'} = 0
+\]
+%
+or every bounded sequence $(x_n)$ in $E$.
 This implies the equivalence of~\ref{lem:a2-3.2-1}   and~\ref{lem:a2-3.2-2}. 
-In particular,~\ref{lem:a2-3.2-1}   implies that $((T(t_n) - \Id)x)$ converges weakly to zero for every sequence $(t_n)$ in $[0,\infty)$ with $\lim t_n = 0$ and every $x \in E$.
-Hence $\TT$ is strongly continuous by Proposition 1.23 
-in \textcite{davies:1980}.
-\end{proof}
 
+In particular,~\ref{lem:a2-3.2-1}   implies that $((T(t_n) - \Id)x)$ converges weakly to zero for every sequence $(t_n)$ in $[0,\infty)$ with $\lim t_n = 0$ and every $x \in E$.
+Hence $\TT$ is strongly continuous by Proposition 1.23 in \textcite{davies:1980}.
+\end{proof}
+%% --
 We recall that a Banach space $E$ is called a \emph{Grothendieck space} if every weak* convergent sequence in $E'$ converges weakly.
 %%
 \begin{theorem}\label{thm:a2-3.3}
@@ -2419,6 +2437,7 @@ Suppose that $\TT''$ is a strongly continuous semigroup.
 Then Lemma~\ref{lem:a2-3.2}   implies that $\TT'$ and $\TT$ are strongly continuous.
 Hence by the uniform boundedness principle, $\lim \sup_{t \to 0} \|(T(t) - \Id)\|$ is finite.
 By Lemma~\ref{lem:a2-3.1}   it suffices to show that $\lim_{t \to 0} \|(T(t) - \Id)^2\| = 0$.
+
 Let $t_{n} \geq 0$ with $\lim t_{n} = 0$ be given.
 Then there exists a bounded sequence $(x_{n})$ in $E$ and a bounded sequence $(x_{n}')$ in $E'$ such that
 %%
@@ -2438,7 +2457,7 @@ Let $E$ be a Grothendieck space with the Dunford-Pettis property.
 Then every strongly continuous semigroup of operators on $E$ is uniformly continuous.
 \end{theorem}
 %%
-A compact Hausdorff space is called an \emph{F-space} if the closures of two disjoint open $F_{\sigma}$-sets are disjoint and is called a \emph{Stonean} (res., \emph{$\sigma$-Stonean}) space if the closure of every open set (res., open $F_{\sigma}$-set) is open.
+A compact Hausdorff space is called an \emph{F-space} if the closures of two disjoint open $F_{\sigma}$-sets are disjoint and is called a \emph{Stonean} (\resp \emph{$\sigma$-Stonean}) space if the closure of every open set (\resp open $F_{\sigma}$-set) is open.
 Every $\sigma$-Stonean space is an F-space.
 
 \begin{theorem}\label{thm:a2-3.6}
@@ -2484,7 +2503,7 @@ By Theorem~\ref{thm:a2-3.5}   it suffices to show that the spaces listed above a
 		
 \item[\ref{thm:a2-3.6-1}] 
 	If\/ $K$ is compact, then $C(K)$ has the Dunford-Pettis property (\cf \textcite[Théorème 4]{grothendieck:1953}).
-	If\/ $K$ is a compact F-space, then $C(K)$ is a Grothendieck space cf.~\textcite[Theorem 2.5]{seever:1968}. 
+	If\/ $K$ is a compact F-space, then $C(K)$ is a Grothendieck space (\cf \textcite[Theorem 2.5]{seever:1968}). 
 	The special cases for Stonean and $\sigma$-Stonean spaces are due to \textcite[Théorème 9]{grothendieck:1953} and \textcite{ando:1961},  respectively.
 		
 \item[\ref{thm:a2-3.6-2} and~\ref{thm:a2-3.6-3} ] It is well known that every $\sigma$-order complete AM-space with unit is isometric to a space $C(K)$ where $K$ is a compact $\sigma$-Stonean space.
@@ -2516,8 +2535,8 @@ To see this let $A$ be a closed densely defined unbounded operator from $\ell^2$
 By the Khintchine inequality, the map $R \colon (a_{n}) \mapsto \sum a_{n}r_{n}$, where $r_{n}$ denotes the $n^{\text{th}}$ Rademacher function, from $\ell^2$ into $L^1([0,1])$ is a topological isomorphism.
 Hence $T = R'$ maps $L^{\infty}([0,1])$ onto $\ell^2$.
 
-Banach's homomorphism theorem implies that $T^{-1}(D)$ is dense in $L^{\infty}([0,1])$ and that $AT$ is a closed densely defined unbounded operator on $L^{\infty}([0,1])$ with domain $T^{-1}(D)$.
-This solves a problem raised by R.\, Kaufman.
+Banach's homomorphism theorem implies that $T^{-1}(D)$ is dense in $L^{\infty}([0,1])$ and that $A \cdot T$ is a closed densely defined unbounded operator on $L^{\infty}([0,1])$ with domain $T^{-1}(D)$.
+This solves a problem raised by R.\,Kaufman.
 
 H.\,Porta and the author have shown that if a Banach space $E$ has an infinite dimensional separable quotient space and $F$ is an infinite dimensional Banach space, then there always exists a closed densely defined unbounded operator from $E$ into $F$.
 \end{remark*}
