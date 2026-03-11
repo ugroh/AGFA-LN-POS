@@ -1,6 +1,5 @@
 % !TEX root = ../LN-Book-New.tex
-%% -- Stand: 2026-03-09
-%% -- bis zum begin 2.1.6 Norm Continuous
+%% -- Stand: 2026-03-11
 %% --
 \setcounter{section}{0}
 %% --
@@ -266,7 +265,6 @@ Moreover, $\dot{v}(t) = u(t) = Av(t)$ and
 %% --
 Thus $v \in C^{1}([0,\infty), E_{1})$ satisfies $\dot{v}(t) = A_{1}v(t)$.
 Since $v(0) = 0$, it follows that $v \equiv 0$, and hence $u \equiv 0$.
-\phantom{x}
 \end{proof}
 % Let $v(t) = \int_{0}^{t} u(s) \ds$.
 % Then $v(t) \in D(A)$ and $Av(t) = \int_{0}^{t} Au(s) \ds =
@@ -698,9 +696,9 @@ Consequently,
 %
 \[
 	\|R(\lambda,A^{2})\| \leq N^{2}/r^{2}(\cos\beta)^{2} \leq 1/r^{2}[N/\cos\beta]^{2} = M/|\lambda| .
+	\qedhere
 \]
 %
-\phantom{x}
 \end{proof}
 %%
 The corollary will be extended below.
@@ -1176,10 +1174,9 @@ All together we obtain for $\lvert r\rvert \geq r_{0}$,
     &\leq \frac{(s')^{n}}{n!}\int_{0}^{s'} M \eu^{(\omega - a)t}\,\dt
           + \tfrac{2}{3}\epsilon^{n+1} \\
     &\leq N \cdot \frac{(s')^n}{n!} + \tfrac{2}{3}\epsilon^{n+1} \\
-    &\leq \epsilon^{n+1}.
+    &\leq \epsilon^{n+1}. \qedhere
 \end{align*}
 %% --
-\phantom{x}
 \end{proof}
 %% --
 A complete characterization of eventually norm continuous semigroups in terms of their generator seems not to be known.
@@ -1718,9 +1715,8 @@ U(A+C)U^{-1} &= U(A - \lambda+C)U^{-1} + \lambda \\
 &= U(A - \lambda)[\Id - BR(\lambda,A)]U^{-1} + \lambda \\
 &= U(A - \lambda) + \lambda \\
 &= A - \lambda + B + \lambda \\
-&= A + B.	
+&= A + B.	\qedhere
 \end{align*}
-\phantom{x}
 \end{proof}
 %% --
 \begin{corollary}\label{cor:a2-1.32}
@@ -1975,7 +1971,6 @@ Consequently $\dualp{Af,\phi_{t}} \leq 0$ for all $t > 0$.
 Thus $\dualp{Af,\phi} \leq 0$.
 \end{proof}
 %%
-\phantom{x}
 %% --
 \begin{remark}\label{rem:a2-2.4}
 The function $p$ is convex.
