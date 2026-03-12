@@ -1,6 +1,6 @@
 % !TEX root = ../LN-Book-New.tex
 %% --
-\setcounter{section}{0}
+%%\setcounter{section}{0}
 \chapternopage{Characterization of Positive Semigroups on Banach Lattices}\label{chap:c2}
 \chaptermark{Characterization of Positive Semigroups}
 \thispagestyle{empty}%
@@ -658,7 +658,10 @@ Then by Eq.~\myeqpageref{eq:c2-2.7},
 where the equality holds for $t = 0$.
 Hence the inequality remains valid if we differentiate at $0$ on both sides of Eq.~\myeqpageref{eq:c2-2.8}.
 Since $\phi \in D(A')$ we obtain $\diff{}/\dt|_{t=0} \langle T(t)|f|,\phi \rangle = \langle |f|,A'\phi \rangle$ on the right side.
-By Eq.~\myeqpageref{eq:c2-2.6} and the chain rule Part-II, Proposition~\ref{prop:b2-2.3} 
+By Eq.~(\vref{eq:c2-2.6}) and the chain rule Part-II, 
+%% -- pruefen
+%By Eq.~\myeqpageref{eq:c2-2.6} and the chain rule Part-II, 
+Proposition~\ref{prop:b2-2.3} 
 one obtains $\diff{}/\dt|_{t=0}|T(t)f| = \Re((\widehat{\sign} \bar{f})Af)$ on the left side.
 Since $\Re((\sign \bar{f})Af) \leq \Re((\widehat{\sign} \bar{f})Af)$, this finally gives
 %% --
@@ -1437,7 +1440,9 @@ Let $\phi \in M'$ and $p$ be the seminorm given by $p(f) = \langle|f|,\phi\rangl
 We show that $B$ is $p$-dissipative (see end of Part-I, Section~\ref{sec:a2-2}).
 Let $f \in D(B)$, $\psi = (\sign  \bar{f})'\phi$. 
 Then it is easy to see that $\psi \in \ddp(f)$. 
-Moreover, by Eq.~\myeqpageref{eq:c2-4.4} and Eq.~\myeqpageref{eq:c2-4.5} one obtains that 
+%Moreover, by Eq.~\myeqpageref{eq:c2-4.4} and Eq.~\myeqpageref{eq:c2-4.5} one obtains that 
+%% -- pruefen
+Moreover, by Eqs.~\eqref{eq:c2-4.4} and~\eqref{eq:c2-4.5} one obtains that 
 $\Re\langle Bf,\psi\rangle = \Re\langle(\sign  \bar{f})Bf,\phi\rangle \leq \langle|f|,A'\phi\rangle \leq 0$. 
 Thus $B$ is $p$-dissipative. 
 By the proof of Part-I, Proposition~\ref{prop:a2-2.9} 

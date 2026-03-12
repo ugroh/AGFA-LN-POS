@@ -1,0 +1,138 @@
+% !TEX TS-program = pdflatexmk
+%%%%%%%%%%%%%%%%%%%% LN-Book.tex %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Status: 2026-03-09 ulgr
+%%%%%%%%%%%%%%%% Springer-Verlag %%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[graybox]{svmono}
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Schrift und Basispakete
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage[bottom]{footmisc}
+\usepackage{newtxtext}
+\usepackage[varvw]{newtxmath}
+\usepackage{microtype}
+\usepackage{tabularx}
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Projektspezifische Präambel-Dateien
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{./preamble/ln-preamble}          % Pakete (projektspezifisch)
+\input{./preamble/ln-definitionen}      % Definitionen (projektspezifisch)
+\input{./preamble/ln-theorems}          % Theorem-Umgebungen und Zähler
+\input{./preamble/ln-math}              % Mathematik-Pakete und -Befehle
+\input{./preamble/ln-toc}               % Inhaltsverzeichnis-Einstellungen
+\input{./preamble/ln-headings}          % Seitenstile und Kopfzeilen
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Literatur
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{./preamble/ln-biblatex}
+\addbibresource{./bib/ln-references.bib}
+\addbibresource{./bib/ln-references-EN.bib}
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Index
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{makeidx}
+\makeindex
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Hyperref (immer als letztes Paket laden)
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{hyperref}
+\hypersetup{
+  breaklinks  = true,
+  colorlinks  = true,
+  linkcolor   = blue,
+  urlcolor    = blue,
+  citecolor   = blue,
+  hyperindex  = true,
+  hypertexnames = true,
+%  hidelinks   % <- für Druckversion auskommentieren
+}
+\mathtoolsset{showonlyrefs=true}
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Dokument
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\date{}
+
+\begin{document}
+
+\author{Wolfgang Arendt, Annette Grabosch, Günther Greiner, Ulrich Groh,
+        Heinrich P. Lotz, Ulrich Moustakas, Rainer Nagel,
+        Frank Neubrander, Ulf Schlotterbeck}
+
+\title{One-parameter Semigroups of Positive Operators\\
+       {\large{Edited by R. Nagel}}}
+
+\subtitle{Lecture Notes in Mathematics\\ \\ 1184\\ \\
+          Springer-Verlag\\ Berlin Heidelberg New York Tokyo}
+
+\maketitle
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Frontmatter
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frontmatter
+  \include{./part-0/ln-dedication}
+  \prefaceheader
+  \include{./part-0/ln-preface}
+  \contentsheader
+  \tableofcontents
+  \newpage
+  \symbolsheader
+  \include{./part-0/ln-symbols}
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Mainmatter
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mainmatter
+\pagestyle{headings}
+
+%% -- Part A
+\include{./part-a/part-a}
+  \include{./part-a/chap-a1}
+  \include{./part-a/chap-a2}
+  \include{./part-a/chap-a3}
+  \include{./part-a/chap-a4}
+
+%% -- Part B
+\include{./part-b/part-b}
+  \include{./part-b/chap-b1}
+  \include{./part-b/chap-b2}
+  \include{./part-b/chap-b3}
+  \include{./part-b/chap-b4}
+
+%% -- Part C
+\include{./part-c/part-c}
+  \include{./part-c/chap-c1}
+  \include{./part-c/chap-c2}
+  \include{./part-c/chap-c3}
+  \include{./part-c/chap-c4}
+
+%% -- Part D
+\include{./part-d/part-d}
+  \include{./part-d/chap-d1}
+  \include{./part-d/chap-d2}
+  \include{./part-d/chap-d3}
+  \include{./part-d/chap-d4}
+
+%% -- Part E: Updated Notes
+\notesheader
+  \include{./part-e/part-e}
+  \include{./part-e/un-part-a}
+  \include{./part-e/un-part-b}
+  \include{./part-e/un-part-c}
+  \include{./part-e/un-part-d}
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Backmatter
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cleardoublepage
+\indexheader
+\printindex
+
+\end{document}
