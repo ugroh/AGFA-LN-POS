@@ -22,7 +22,7 @@ In this chapter we do this for two properties.
 We characterize generators of positive semigroups and generators of lattice semigroups.
 
 In Section~\ref{sec:b2-1} we consider a semigroup $(T(t))_{t \geq 0}$ on the real space $C(K)$ ($K$ compact).
-It is shown that the semigroup consists of positive operators if and only if its generator satisfies a positive minimum principle (P).
+It is shown that the semigroup consists of positive operators if and only if its generator satisfies a positive minimum principle~\eqref{eq:a2-pmp}.
 Even without assuming a priori that $A$ is a generator the positive minimum principle has strong consequences.
 Together with a range condition it implies that $A$ is a generator (of a positive semigroup).
 Moreover, we show that for a densely defined operator $A$ to be the generator of a positive semigroup it is already sufficient that the resolvent $R(\lambda,A)$ of\/ $A$ exists and is positive for all sufficiently large real $\lambda$.
@@ -48,7 +48,7 @@ It is easy to describe the positivity of\/ $(T(t))_{t \geq 0}$ in terms of the r
 In fact, the resolvent is expressed by the semigroup by
 %% --
 \begin{equation}\label{eq:b2-1.1}
-R(\lambda,A) = \int_{0}^{\infty} \eu^{-\lambda t} T(t) \dt \quad (\lambda > \omega_{0}(A));
+R(\lambda,A) = \int_{0}^{\infty} \eu^{-\lambda t} T(t) \dt \quad (\lambda > \omega_{0}(A))
 \end{equation}
 %% --
 and conversely, the semigroup by the resolvent via the formula
@@ -97,19 +97,43 @@ Let $f \in C_{0}(X)_{+}$ and $x \in X$ such that $f(x) = 0$.
 Then
 %% --
 \begin{align*}
-(Af)(x) &= \lim_{t \to 0} 1/t\, ((\eu^{tA}f(x) - f(x)) \\
-&= \lim_{t \to 0} 1/t\, ((\eu^{tA}f(x)) \geq 0
+(Af)(x) &= \lim_{t \to 0} \frac{1}{t} \mleft( (\eu^{tA}f(x) - f(x)) \mright) \\
+&= \lim_{t \to 0}\frac{1}{t} \mleft( (\eu^{tA}f(x) \mright) \geq 0 .
 \end{align*}
 %% --
 \ref{thm:b2-1.3-2} implies~\ref{thm:b2-1.3-3}.
 Let $x \in X$.
-We have to show that $(Af)(x) + \|A\|f(x) \geq 0$ for all $f \in C_{0}(X)$\,.
-Let $A'\delta_{x} = \mu + c\delta_{x}$ where $\mu \in M(X)$ such that $\mu(\{x\}) = 0$ and $c \in \R$.
+We have to show that 
+%
+\[
+	(Af)(x) + \|A\|f(x) \geq 0
+\]
+%
+for all $f \in C_{0}(X)$\,.
+Let 
+%
+\[
+	A'\delta_{x} = \mu + c\delta_{x}
+\]
+%
+where $\mu \in M(X)$ such that $\mu(\{x\}) = 0$ and $c \in \R$.
+
 We claim that $\mu \geq 0$.
 Let $0 \leq f \in C_{0}(X)$ such that $f(x) = 0$.
-Then $\langle f,\mu \rangle = \langle f,A'\delta_{x} \rangle = (Af)(x) \geq 0$ by~\ref{thm:b2-1.3-2}.
+Then 
+%
+\[
+	\langle f,\mu \rangle = \langle f,A'\delta_{x} \rangle = (Af)(x) \geq 0 
+\]
+%
+by~\ref{thm:b2-1.3-2}.
 Thus $\mu \geq 0$ by Lemma~\ref{lem:b2-1.2}.
-Moreover, $|c| = \|c\delta_{x}\| \leq \|c\delta_{x} + \mu\| = \|A'\delta_{x}\| \leq \|A\|$.
+Moreover, 
+%
+\[
+	|c| = \|c\delta_{x}\| \leq \|c\delta_{x} + \mu\| = \|A'\delta_{x}\| \leq \|A\| .
+\]
+%
 Hence, for $f \in C_{0}(X)_{+}$,
 %%$
 %%--
@@ -118,65 +142,74 @@ Hence, for $f \in C_{0}(X)_{+}$,
 \]
 %%--
 %%$.
-This shows ~\ref{thm:b2-1.3-2} to hold.
+This shows~\ref{thm:b2-1.3-2} to hold.
 
-\ref{thm:b2-1.3-3} implies~\ref{thm:b2-1.3-1}.
-We have 
-$\eu^{tA} = \eu^{-t\|A\|}\eu^{t(A+\|A\|)} \geq \eu^{-t\|A\|}\Id$ for all $t \geq 0$.
+\ref{thm:b2-1.3-3} implies~\ref{thm:b2-1.3-1} and we have for all $t \geq 0$
+%
+\[
+	\eu^{tA} = \eu^{-t\|A\|}\eu^{t(A+\|A\|)} \geq \eu^{-t\|A\|}\Id .
+	\qedhere
+\]
+%
 \end{proof}
-
+%% --
 \begin{example}\label{ex:b2-1.4} 
  
-	\begin{enumerate}[\upshape (i), wide, labelindent=.5ex] 
-		\item \label{ex:b2-1.4-1}
-		Let $B$ be a positive operator on $C_{0}(X)$ and $m \colon X \to \R$ be a continuous and bounded mapping.
-		Let $Af = Bf - m \cdot f$ $(f \in C_{0}(X))$.
-		Then $\eu^{tA} \geq 0$ for all $t \geq 0$.
+\begin{enumerate}[\upshape (i), wide, labelindent=.5ex] 
+\item \label{ex:b2-1.4-1}
+Let $B$ be a positive operator on $C_{0}(X)$, $m \colon X \to \R$ be a continuous and bounded mapping and let $Af = Bf - m \cdot f$ for $f \in C_{0}(X)$.
+Then $\eu^{tA} \geq 0$ for all $t \geq 0$.
 		
-		\item \label{ex:b2-1.4-2}
-		Let $A$ be an $n \times n$ - matrix.
-		Then $\eu^{tA} \geq 0$ for all $t \geq 0$ if and only if\/ $a_{ij} \geq 0$ for $i \neq j$.
-		This is the linear version of Kamke's theorem (see \textcite{kamke:1932}).
-    \end{enumerate}
+\item \label{ex:b2-1.4-2}
+Let $A$ be an $n \times n$-matrix.
+Then $\eu^{tA} \geq 0$ for all $t \geq 0$ if and only if\/ $a_{ij} \geq 0$ for $i \neq j$.
+This is the linear version of Kamke's theorem (see \textcite{kamke:1932}).
+\end{enumerate}
 \end{example}
-
+%% --
 Now we come to the actual subject of this section, the characterization of strongly continuous positive semigroups on $C(K)$.
-Here $K$
-denotes a compact space and $C(K)$ the space of all real-valued continuous functions on $K$.
+Here $K$ denotes a compact space and $C(K)$ the space of all real-valued continuous functions on $K$.
 It will be essential that $K$ is compact for all what follows since it will be needed that the positive cone of\/ $C(K)$ has interior points.
 
 We reformulate condition~\ref{thm:b2-1.3-2} of Theorem~\ref{thm:b2-1.3} for unbounded operators.
-
-\begin{definition}\label{def:b2-1.5}
-An (unbounded) operator $A$ on $C(K)$ is said to satisfy the \emph{positive minimum principle} if
 %% --
-
-$\text{(P)}$ \qquad $
-\begin{array}{l}
-	\text{for every } 0 \leq f \in D(A) \text{ and } x \in K,\\
+\begin{definition}\label{def:b2-1.5}
+An (unbounded) operator $A$ on $C(K)$ is said to satisfy the \emph{positive minimum principle}  
+%% --
+\begin{equation*}\label{eq:a2-pmp} \tag{P}
+\left.
+\begin{split}
+	\text{if for every } 0 \leq f \in D(A) \text{ and } x \in K,\\
     f(x) = 0 \text{ implies } (Af)(x) \geq 0
-\end{array}$
-%%--
+\end{split} 
+\right\}   
+\end{equation*}
+%% --
 \end{definition}
 %% --
 Our next theorem shows that the positive minimum principle characterizes the positivity of the semigroup; and in fact, the proof is very elementary.
-Using more involved arguments we will later prove a much stronger result (Theorem~\ref{thm:b2-1.13} ).
+Using more involved arguments we will later prove a much stronger result (Theorem~\ref{thm:b2-1.13}).
 %% --%% --
 \begin{theorem}\label{thm:b2-1.6}
 Let $A$ be the generator of a strongly continuous semigroup on $C(K)$.
-Then the semigroup is positive if and only if the generator $A$ satisfies the positive minimum principle $(P)$.
+Then the semigroup is positive if and only if the generator $A$ satisfies the positive minimum principle~\eqref{eq:a2-pmp}.
 \end{theorem}
 %%
 \begin{proof}
 The necessity of the condition is proved as 
 \enquote{\ref{thm:b2-1.3-1} implies~\ref{thm:b2-1.3-2}} in Theorem~\ref{thm:b2-1.3}.
-Assume that $(P)$ holds.
+Assume that~\eqref{eq:a2-pmp} holds.
 We claim that $R(\lambda,A) \geq 0$ for sufficiently large real $\lambda$. 
-(This implies the positivity of the semigroup by Proposition~\ref{prop:b2-1.1}).
+This implies the positivity of the semigroup by Proposition~\ref{prop:b2-1.1}.
 
-Let $s \coloneqq \inf \{\lambda \in \R \colon \left[\lambda,\infty \right) \subset \rho(A)\}$.
-Then $s \leq \omega_{0}(A) < \infty$ and let $0~\ll~u~\in~C(K)$.
-Then 
+Let 
+%
+\[
+	s \coloneqq \inf \{\lambda \in \R \colon \left[\lambda,\infty \right) \subset \rho(A)\}.
+\]
+%
+
+Then $s \leq \omega_{0}(A) < \infty$ and let $0 \ll u \in C(K)$ and  
 %%--
 %% $
 \[
@@ -185,12 +218,11 @@ Then
 %%--
 %%$ 
 since $\lim_{\mu \to \infty} \mu R(\mu,A)u = u$.
-
 We claim that $\lambda_{0} = s$.
 
 In fact, if this is not true, then $\left[\lambda_{0},\infty\right) \subset \rho(A)$ and $R(\lambda_{0},A)u \geq 0$ but $R(\lambda_{0},A)u$ is not strictly positive.
 Consequently there exists $x \in K$ such that $(R(\lambda_{0},A)u)(x) = 0$.
-Then $(P)$ implies that $A(R(\lambda_{0},A)u)(x) \geq 0$.
+Then~\eqref{eq:a2-pmp} implies that $A(R(\lambda_{0},A)u)(x) \geq 0$.
 Hence, 
 %%--
 \[
@@ -209,7 +241,7 @@ In particular, $R(\lambda,A) \geq 0$ whenever $\left[\lambda,\infty\right) \subs
 %%
 \index{resolvent!positivity|(}
 %%
-If\/ $A$ is a generator, then the positivity of the resolvent $R(\lambda,A)$ for large real $\lambda$ implies the positivity of the semigroup (by Proposition.~\ref{prop:b2-1.1}).
+If\/ $A$ is a generator, then the positivity of the resolvent $R(\lambda,A)$ for large real $\lambda$ implies the positivity of the semigroup by Proposition.~\ref{prop:b2-1.1}.
 On $C(K)$ much more is true.
 Even if\/ $A$ is not supposed to be a generator, the existence and positivity of\/ $R(\lambda,A)$ for large real $\lambda$ implies that $A$ is a generator (of a positive semigroup).
 This is surprising, because it means that in the case when the resolvent is positive, the norm condition on the resolvent 
@@ -287,7 +319,7 @@ This follows from the following lemma.
 \index{resolvent!positivity}
 \index{resolvent!monotonicity}
 Let $B$ be an operator on $C(K)$ (more generally, on a Banach lattice).
-If\/ $\mu_{1}, \mu_{2} \in \rho(B) \cap \R$ such that $0 \leq R(\mu_{1},B)$, $0 \leq R(\mu_{2},B)$ and $\mu_{1} < \mu_{2}$, then $[\mu_{1},\mu_{2}] \subset \rho(B)$ and
+If\/ $\mu_{1}$ and $\mu_{2} \in \rho(B) \cap \R$ such that $0 \leq R(\mu_{1},B)$, $0 \leq R(\mu_{2},B)$ and $\mu_{1} < \mu_{2}$, then $[\mu_{1},\mu_{2}] \subset \rho(B)$ and
 %% –
 \[
     0 \leq R(\mu_{2},B) \leq R(\mu,B) \leq R(\mu_{1},B) \quad \text{for all } \mu \in [\mu_{1},\mu_{2}]
@@ -297,20 +329,23 @@ If\/ $\mu_{1}, \mu_{2} \in \rho(B) \cap \R$ such that $0 \leq R(\mu_{1},B)$, $0 
 %% --
 \begin{proof}
 Let 
+%% --
 \begin{align*}
-M \coloneqq \{\mu \in \rho(B) \cap [\mu_{1},\mu_{2}] &\colon [\mu,\mu_{2}] \subset \rho(B) \\
- &\text{ and } 
-R(\lambda,B) \geq 0 \text{ for all } \lambda \in [\mu,\mu_{2}] \,\}
+M & \coloneqq \{\mu \in \rho(B) \cap [\mu_{1},\mu_{2}] \colon [\mu,\mu_{2}] \subset \rho(B) 
+\intertext{and} 
+R(\lambda,B) & \geq 0 \text{ for all } \lambda \in [\mu,\mu_{2}]\}
 \end{align*}
 %% 
 \begin{enumerate}[\upshape (i), wide, labelindent=.25em]
 	\item
-	The set $M$ is open.
+	\emph{The set $M$ is open.}
 	In fact, let $\mu \in M$.
 	Then for small $h > 0$ one has
-	\[R(\mu-h,B) = \sum_{n=0}^{\infty} h^{n}R(\mu,B)^{n+1} \geq 0.\]
+	\[
+	R(\mu-h,B) = \sum_{n=0}^{\infty} h^{n}R(\mu,B)^{n+1} \geq 0.
+	\]
     \item 
- 	$M$ is closed.
+ 	\emph{The set $M$ is closed.}
 	In fact, by the resolvent equation one has for $\mu \in M$,  
 	%
 \[
@@ -321,7 +356,7 @@ hence $R(\mu,B) \leq R(\mu_{1},B)$.
 	Consequently, 
 	%
 \[
-	\text{dist}(\mu,\sigma(B)) \geq 1/\|R(\mu,B)\| \geq 1/\|R(\mu_{1},B)\|
+	\mathrm{dist}(\mu,\sigma(B)) \geq \|R(\mu,B)\|^{-1} \geq \|R(\mu_{1},B)\|^{-1}
 \]
 %
 for all $\mu \in M$.
@@ -416,7 +451,7 @@ For any such $u$ the following assertions are equivalent.
 $A$ is $p_{u}$-dissipative.
 
 \item  \label{prop:b2-1.10-2}
-$Au \leq 0$ and $A$ satisfies (P).
+$Au \leq 0$ and $A$ satisfies~\eqref{eq:a2-pmp}.
 \end{enumerate}
 \end{proposition}
 %% –
@@ -430,13 +465,18 @@ Let $x \in K$.
 It follows from Eq.~\myeqpageref{eq:b2-1.6} that $\phi_{x} \in \ddp_{u}(u)$.
 Since $D(A)$ is dense, it follows from Part-I, Theorem~\ref{thm:a2-2.7}
 that $A$ is strictly $p_{u}$-dissipative.
-Hence $\langle Au,\phi_{x} \rangle \leq 0$.
-Thus $(Au)(x) \leq 0$.
-We now show (P).
+Hence $\langle Au,\phi_{x} \rangle \leq 0$ and thus $(Au)(x) \leq 0$.
+
+We now show~\eqref{eq:a2-pmp}.
 Let $0 \leq f \in D(A)$ and $x \in K$ such that $f(x) = 0$.
 We have to show that $(Af)(x) \geq 0$.
 Since $f(x) = 0$ and $p_{u}(-f) = 0$ we have by Eq.~\myeqpageref{eq:b2-1.6}  $\phi_{x} \in \ddp_{u}(-f)$\,.
-Since $A$ is strictly $p_{u}$-dissipative we conclude that $-u(x)(Af)(x) = \langle A(-f),\phi_{x} \rangle \leq 0$.
+Since $A$ is strictly $p_{u}$-dissipative we conclude that 
+%
+\[
+	-u(x)(Af)(x) = \langle A(-f),\phi_{x} \rangle \leq 0.
+\]
+%
 Hence $(Af)(x) \geq 0$.
 
 \ref{prop:b2-1.10-2} implies~\ref{prop:b2-1.10-1}.
@@ -444,52 +484,64 @@ Let $f \in D(A)$.
 If\/ $p_{u}(f) = 0$ then $\phi \coloneqq 0 \in \ddp_{u}(f)$ and $\langle Af,\phi \rangle \leq 0$.
 If\/ $p_{u}(f) > 0$, then there exists $x \in K$ such that $\phi_{x} \in \ddp_{u}(f)$.
 Hence, $0 \leq p_{u}(f)u - f$ and $(p_{u}(f)u - f)(x) = 0$.
-It follows from (P) that $p_{u}(f)(Au)(x) - (Af)(x) \geq 0$.
-Hence $(Af)(x) \leq p_{u}(f)(Au)(x) \leq 0$ (by~\ref{prop:b2-1.10-2}); \ie  $\langle Af,\phi_{x} \rangle \leq 0$.
+It follows from~\eqref{eq:a2-pmp} that 
+%
+\[
+	p_{u}(f)(Au)(x) - (Af)(x) \geq 0 .
+\]
+%
+Hence 
+%
+\[
+	 (Af)(x) \leq p_{u}(f)(Au)(x) \leq 0 
+\]
+%
+\ie  $\langle Af,\phi_{x} \rangle \leq 0$ 
+by~\ref{prop:b2-1.10-2}.
 \end{proof}
 
 %% –
 \begin{corollary}\label{cor:b2-1.11}
 %%
 Let $A$ be a densely defined operator on $C(K)$.
-If\/ $A$ satisfies (P) then $A$ is closable and the closure of\/ $A$ satisfies (P) as well.
+If\/ $A$ satisfies~\eqref{eq:a2-pmp} then $A$ is closable and the closure of\/ $A$ satisfies~\eqref{eq:a2-pmp} as well.
 \end{corollary}
 %% –
 \begin{proof}%[Proof of Corollary~\ref{cor:b2-1.11}]
 Let $u \in D(A)$ be strictly positive.
 Then there exists $\lambda \in \R$ such that $Au \leq \lambda u$.
-The operator $B = A - \lambda$ satisfies (P) as well and $Bu \leq 0$.
+The operator $B = A - \lambda$ satisfies~\eqref{eq:a2-pmp} as well and $Bu \leq 0$.
 Then by Proposition~\ref{prop:b2-1.10}, $B$ is $p_{u}$-dissipative.
 Hence $B$ is closable and the closure $\overline{B}$ of\/ $B$ is $p_{u}$-dissipative as well (by Part-I, Proposition~\ref{prop:a2-2.9}).
-Then by Proposition~\ref{prop:b2-1.10} $\overline{B}$ satisfies (P).
-Thus $A$ is closable and its closure $\overline{A} = \overline{B} + \lambda$ satisfies (P) as well.
+Then by Proposition~\ref{prop:b2-1.10} $\overline{B}$ satisfies~\eqref{eq:a2-pmp}.
+Thus $A$ is closable and its closure $\overline{A} = \overline{B} + \lambda$ satisfies~\eqref{eq:a2-pmp} as well.
 \end{proof}
 
 %% –
 \begin{corollary}\label{cor:b2-1.12}
 %%
 Let $A \colon C(K) \to C(K)$ be linear.
-If\/ $A$ satisfies (P) then $A$ is bounded and $A + \|A\|\Id \geq 0$.
+If\/ $A$ satisfies~\eqref{eq:a2-pmp} then $A$ is bounded and $A + \|A\|\Id \geq 0$.
 \end{corollary}
 %% –
 
 \begin{proof}
 It follows from Corollary~\ref{cor:b2-1.11} that $A$ is closed.
 Hence $A$ is bounded.
-Since $A$ satisfies (P), it follows from Theorem~\ref{thm:b2-1.3} that $A + \|A\|\Id \geq 0$.
+Since $A$ satisfies~\eqref{eq:a2-pmp}, it follows from Theorem~\ref{thm:b2-1.3} that $A + \|A\|\Id \geq 0$.
 \end{proof}
 
 The next result is a strengthened form of Theorem 1.6.
 It is somewhat similar to the Lumer-Phillips Theorem (Part-I, Theorem~\ref{thm:a2-2.13}).
-Note that, however, in contrast to the condition of dissipativity, $A + w$ satisfies (P) for any $w \in \R$ whenever (P) holds for $A$.
-Thus (P) is not a "metric" condition; that is, it does not imply any norm estimate for the semigroup.
+Note that, however, in contrast to the condition of dissipativity, $A + w$ satisfies~\eqref{eq:a2-pmp} for any $w \in \R$ whenever~\eqref{eq:a2-pmp} holds for $A$.
+Thus~\eqref{eq:a2-pmp} is not a "metric" condition; that is, it does not imply any norm estimate for the semigroup.
 We also point out that, if\/ $(T(t))_{t \geq 0}$ is a positive semigroup on $C(K)$, then in general none of the semigroups $(\eu^{-wt}T(t))_{t \geq 0}$ $(w \in \R)$ is contractive (see \textcite{battydavies:1983} or \textcite{derndinger:1983}).
 
 %% –
 \begin{theorem}\label{thm:b2-1.13}
 %%
 \index{generator!positive semigroup}
-Let $A$ be a densely defined operator on $C(K)$ which satisfies (P).
+Let $A$ be a densely defined operator on $C(K)$ which satisfies~\eqref{eq:a2-pmp}.
 Then
 \[
     \lambda_{0} \coloneqq \inf\{\lambda \in \R \colon Au \leq \lambda u \text{ for some } 0 \ll u \in D(A)\} < \infty.
@@ -509,7 +561,7 @@ It follows from Proposition~\ref{prop:b2-1.10} that $\lambda_{0} < \infty$.
 
 Assume that $(\lambda - A)D(A)$ is dense, where $\lambda > \lambda_{0}$.
 Let $\lambda_{0} < \mu < \lambda$ and $B = A - \mu$.
-Then $B$ satisfies (P) and $Bu \leq 0$ for some strictly positive $u \in D(B) = D(A)$.
+Then $B$ satisfies~\eqref{eq:a2-pmp} and $Bu \leq 0$ for some strictly positive $u \in D(B) = D(A)$.
 Thus $B$ is $p_{u}$-dissipative by Proposition~\ref{prop:b2-1.10}.
 Moreover, $((\lambda-\mu) - B)D(B)$ is dense.
 Thus by Part-I, Corollary~\ref{cor:a2-2.12} 
@@ -599,7 +651,7 @@ Then by Corollary~\ref{cor:b2-1.14}
 \begin{align*}
     s(A) &= \inf\{\lambda \in \R \colon Au \leq \lambda u \text{ for some strictly positive } u\} \\
     &= \inf_{u \gg 0} \inf\{\lambda \in \R \colon Au \leq \lambda u\} \\
-    &= \inf\left\{\sup_{i} \sum_{j=1}^{n} a_{ij} u_{j}/u_{i} \colon u \gg 0\right\}.
+    &= \inf\left\{\sup_{i} \sum_{j=1}^{n} a_{ij} \frac{u_{j}}{u_{i}} \colon u \gg 0\right\}.
 \end{align*}
 This formula is due to \textcite{collatz:1942} (see also \textcite[Chapter I, Exercise 20]{schaefer:1974} and \textcite{wielandt:1950}).
 \end{example}
@@ -780,7 +832,7 @@ is a discontinuous linear form on $F$.
 Consequently $D(A) = \Kern{\psi}$ is dense in $F$.
 Since $F$ is dense in $C[-1,0]$, $D(A)$ is dense in $C[-1,0]$ as well.
 
-b) $A$ satisfies (P) (see Definition~\ref{def:b2-1.5}).
+b) $A$ satisfies~\eqref{eq:a2-pmp} (see Definition~\ref{def:b2-1.5}).
 In fact, let $f \in D(A)_{+}$ and $x \in [-1,0]$ such that $f(x) = 0$.
 It is clear that $Af(x) = f'(x) \geq 0$ if\/ $x < 0$.
 But if\/ $f(0) = 0$, then $Af(0) = f'(0) = \langle f,\mu \rangle \geq 0$ since $f \in D(A)$.
@@ -852,7 +904,7 @@ Then $A$ is the generator of positive semigroup.
 %% --
 
 \begin{proof}
-The operator $A$ satisfies (P).
+The operator $A$ satisfies~\eqref{eq:a2-pmp}.
 In fact, let $0 \leq f \in D(A)$ and $f(a) = 0$ where $a~\in~[0,1]$.
 If\/ $a \in (0,1)$ then $f''(a) \geq 0$ since $f$ has a minimum in $a$.
 If\/ $a = 0$ then 
