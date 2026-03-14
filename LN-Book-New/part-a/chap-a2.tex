@@ -1,5 +1,6 @@
 % !TEX root = ../LN-Book-New.tex
-%% -- Stand: 2026-03-11
+%% -- Stand: 2026-03-14
+%% -- final
 %% --
 %%\setcounter{section}{0}
 %% --
@@ -200,7 +201,7 @@ exists in the norm of\/ $E$.
 Since  
 % --
 \[ 
-\lim_{t \to 0} \frac{}{t} \mleft( T_{1}(t)f - f \mright)
+\lim_{t \to 0} \frac{1}{t} \mleft( T_{1}(t)f - f \mright)
 = Af 
 \]
 %% --$ 
@@ -1174,7 +1175,7 @@ All together we obtain for $\lvert r\rvert \geq r_{0}$,
     &\leq \frac{(s')^{n}}{n!}\int_{0}^{s'} M \eu^{(\omega - a)t}\,\dt
           + \tfrac{2}{3}\epsilon^{n+1} \\
     &\leq N \cdot \frac{(s')^n}{n!} + \tfrac{2}{3}\epsilon^{n+1} \\
-    &\leq \epsilon^{n+1}. \qedhere
+   &\leq \epsilon^{n+1}. &&\qedhere
 \end{align*}
 %% --
 \end{proof}
@@ -1852,9 +1853,9 @@ Then a bounded operator $T$ is $N^{+}$-contractive if and only if\/ $T$ is posit
 
 We first want to solve the following problem.
 %% --
-\begin{quotation}
+\begin{quote}
 \textit{Given the generator $A$ of a semigroup $(T(t))_{t\geq 0}$ find a condition on $A$ which is equivalent to $T(t)$ being p-contractive for all $t \geq 0$.}
-\end{quotation}
+\end{quote}
 %% --
 The \emph{subdifferential} $\ddp$ of\/ $p$ at $f$ is defined by
 \begin{equation}\label{eq:a2-2.5}
@@ -1891,7 +1892,8 @@ Define $\phi \in E'$ by
 	\dualp{g,\phi} = \sign(f(x))\,g(x) .
 \]
 %
-Then $\phi \in \dN(f)$ and note that $\dN(f)$ may be an infinite set.
+Then $\phi \in \dN(f)$.
+Note that $\dN(f)$ may be an infinite set.
 %%--
 \item \label{ex:a2-2.2.2}
 Let $H$ be a Hilbert space and $ 0 \neq f \in H$.%, $f \neq 0$.
@@ -1908,7 +1910,7 @@ $A - \|A\|\Id$ is strictly dissipative for every bounded operator $A$.
 \end{examples}
 %% –
 \begin{proposition}\label{prop:a2-2.3}
-Let $A$ with domain $D(A)$ be an operator on $E$.
+Let $A$ be an operator on $E$.
 Then $A$ is p-dissipative if and only if
 %% --
 \begin{equation} \label{eq:a2-2.7}
