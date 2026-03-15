@@ -808,9 +808,13 @@ succesively to $B = m^{1/k} \cdot A$ and $q = m^{1/k}$ $(l = 1, \ldots, k-1)$ we
 
 Finally we show Eq.~\myeqpageref{eq:b2-1.10} to hold.
 Let $0 \ll u \in D(A) = D(m \cdot A)$ and $Au \leq \lambda u$.
-Then $m \cdot Au \leq \|m\|_{\infty}\lambda u$.
-So Eq.~\myeqpageref{eq:b2-1.8} 
-implies that
+Then 
+%
+\[
+	m \cdot Au \leq \|m\|_{\infty}\lambda u .
+\]
+%
+So Eq.~\myeqpageref{eq:b2-1.8} implies that
 %
 \[
 	  \omega_{0}(m \cdot A) \leq \|m\|_{\infty}\omega_{0}(A) .
@@ -862,10 +866,10 @@ this implies that $\mu \geq 0$.
 
 In order to show the converse assume that $\mu \geq 0$.
 %% --
-\begin{enumerate}[\upshape(i)]
+\begin{enumerate}[\upshape(i), wide, labelindent=.25em]
 
 \item
-We show that $A$ is densely defined.\\
+\textit{We show that $A$ is densely defined.}\\
 Consider the normed space $F = C^{1}[-1,0]$ with the supremum norm.
 Then $\psi \colon F \to \R$ given by 
 $\psi(f) = f'(0) - \alpha f(0) - \langle f,\mu \rangle$ 
@@ -874,13 +878,13 @@ Consequently $D(A) = \Kern{\psi}$ is dense in $F$.
 Since $F$ is dense in $C[-1,0]$, $D(A)$ is dense in $C[-1,0]$ as well.
 
 \item
-$A$ satisfies~\eqref{eq:b2-pmp} (see Definition~\ref{def:b2-1.5}).\\
+\textit{$A$ satisfies~\eqref{eq:b2-pmp} (see Definition~\ref{def:b2-1.5}).}\\
 In fact, let $f \in D(A)_{+}$ and $x \in [-1,0]$ such that $f(x) = 0$.
 It is clear that $Af(x) = f'(x) \geq 0$ if\/ $x < 0$.
 But if\/ $f(0) = 0$, then $Af(0) = f'(0) = \langle f,\mu \rangle \geq 0$ since $f \in D(A)$.
 
 \item
-We show that $(\lambda-A)$ is bijective for $\lambda > \alpha + \|\mu\|$.\\
+\textit{We show that $(\lambda-A)$ is bijective for $\lambda > \alpha + \|\mu\|$.}\\
 Let $g \in C[-1,0]$.
 The solutions of the equation $\lambda f - f' = g$ \,($f \in C[-1,0]$\,) are given by 
 %
@@ -904,7 +908,13 @@ We have shown that $(\lambda- A)$ is bijective for $\lambda > \alpha + \|\mu\|$.
 By Theorem~\ref{thm:b2-1.13}, it follows from \upshape(i), \upshape(ii) and \upshape(iii) that $A$ generates a positive semigroup.
 \end{proof}
 
-Let us mention in addition that it follows from a) in the proof that $(\alpha + \|\mu\|, \infty) \subset \rho(A)$, since $A$ is closed.
+Let us mention in addition that it follows from \upshape(iii) in the proof that 
+%
+\[
+	(\alpha + \|\mu\|, \infty) \subset \rho(A) ,
+\]
+%
+since $A$ is closed.
 By Remark~\ref{rem:b2-1.7} we thus have
 %% –
 \begin{equation}\label{eq:b2-1.14}
@@ -989,7 +999,13 @@ f'(0) = f'(0) + \alpha f(0) = 0
 %%--
 since $f \in D(A)$.
 
-Consequently, $f(x) = \int_{0}^{x} (x-y)f''(y) \dy \geq 0$ for all $x \geq 0$.
+Consequently, 
+%
+\[
+	f(x) = \int_{0}^{x} (x-y)f''(y) \dy \geq 0 
+	\quad \text{for all $x \geq 0$.}
+\]
+%
 This implies $f''(0) \geq 0$.
 The argument for $a = 1$ is analogous.
 
@@ -997,7 +1013,7 @@ It remains to show that $\mu - A$ is surjective for large real $\mu$.
 Let $g \in C[0,1]$.
 Let $\lambda > 0$ and 
 %%--
-\[k = \frac{1}{2}\lambda\left[\eu^{\lambda x}\int_{x}^{1} \eu^{-\lambda y}g(y)\dy - \eu^{-\lambda x}\int_{x}^{1} \eu^{\lambda y}g(y)\dy\right].
+\[k = \frac{1}{2}\lambda\mleft( \eu^{\lambda x}\int_{x}^{1} \eu^{-\lambda y}g(y)\dy - \eu^{-\lambda x}\int_{x}^{1} \eu^{\lambda y}g(y)\dy \mright).
 \]
 %%--$.
 Then $k \in C^{2}[0,1]$ and $\lambda^{2}k - k'' = g$.
