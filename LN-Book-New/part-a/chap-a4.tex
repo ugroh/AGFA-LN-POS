@@ -427,7 +427,7 @@ Therefore, by Theorem~\ref{thm:a4-1.4},
 \item
 In Equations \eqref{eq:a4-1.4} and \eqref{eq:a4-1.5}, the term \enquote{$\Re(\lambda)$} may be replaced by \enquote{$\lambda \in \R$} (use Eq.~\myeqpageref{eq:c4-1}).
 \end{enumerate}
-
+%% --
 \end{remarks*}
 %% --
 \begin{proof}(Proof of Theorem~\ref{thm:a4-1.4}) 
@@ -468,7 +468,7 @@ Since the operator families on the right side are uniformly bounded, the same is
 Since $(T_t f)_{t \geq 0}$ converges for every $f \in D(A)$, it follows that $(T_t f)_{t \geq 0}$ converges for every $f \in E$. 
 Thus, $b \leq \omega_1(A)$.
 \end{proof}
-
+%% --
 %%--
 %\medskip
 %
@@ -649,7 +649,7 @@ Then, for every $f \in D(A)$ , the inversion formula for the Laplace transform y
 \begin{equation} \label{eq:a4-1.12}
 T(t) f = \frac{1}{2\pi i} \int_{p' - i\infty}^{p' + i\infty} \eu^{\lambda t} R(\lambda, A) f \, d\lambda.
 \end{equation}
-
+%% --
  (For a proof of the vector-valued inversion formula, see \textcite[p.66]{widder:1946}; also refer to the notes in this section.)
 Using the resolvent equation, we obtain 
 \index{resolvent equation}
@@ -861,7 +861,7 @@ Furthermore the following statements are equivalent,
 \end{enumerate}
 \index{stability!uniformly stable}
 \end{theorem}
-
+%% --
 \begin{proof}
 If\/ $(T(t))_{t \geq 0}$ is stable, then by Theorem~\ref{thm:a4-1.13}, $\ker(A) = \{0\}$, and
 \[{
@@ -898,7 +898,7 @@ Now, let $h \in G$, so $h=\int_0^\infty T(t)g\dt$ for some $g\in D$.
 Then $T(t)h = T(t) \int_{0}^{\infty} T(s)g  \ds = \int_{t}^{\infty} T(s)g  \ds \to 0$ as $t \to \infty$. 
 Since $\|T(t)\| \leq M$, it follows that   $T(t)f \to 0$ for every $f \in E$.
 \end{proof}
-
+%% --
 \begin{remark}\label{rem:a4-1.17}
 \begin{enumerate}[\upshape (i), wide, labelindent=.25em]
 \item 
@@ -1022,7 +1022,7 @@ $\int_{0}^{\infty} \|F(s) - g\|  \ds < \infty$, then every generalized solution 
 Eq.~\myeqpageref{eq:a4-2.1} converges as $t \to \infty$, and $\lim_{t \to \infty} u(t) = -h$, where $h \in D(A)$ satisfies
 $Ah = g$.
 \end{theorem}
-
+%% --
 \begin{proof}
 If\/ $u(\cdot)$ is a generalized solution of Eq.~\myeqpageref{eq:a4-2.1}, then by Eq.~\myeqpageref{eq:a4-2.2}, we have
 \[
@@ -1045,7 +1045,7 @@ where $\|T(t)\|\le M$ for all $t\ge 0$. Since the semigroup is uniformly stable,
 $T(t-r)\int_{0}^{r} T(r-s)G(s)  \ds \to 0$ as $t \to \infty$ for every $r \geq 0$.
 Therefore, $\|\int_{0}^{t} T(t-s)G(s)  \ds\| \leq \epsilon$ for all sufficiently large $t$.
 \end{proof}
-
+%% --
 
 In the following theorem, we show that if A generates a
 uniformly stable semigroup, the forcing term $F(\cdot)$ is p-periodic
