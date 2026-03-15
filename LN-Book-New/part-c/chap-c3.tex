@@ -84,7 +84,7 @@ By Datko's Theorem (Part-I, Theorem~\ref{thm:a4-1.11}) the function $t \mapsto \
 		R(\lambda_{0},A)^{n+1}f = \frac{1}{n!} \int_{0}^{\infty} s^n \exp(-\lambda_{0}s) T(s)f \ds  \quad (n \in \N_{0}, f \in E)\,.
 	\end{equation}
 	%% --
-	Given $\mu$ such that $s(A) < \mu < \lambda_{0}$, $f \in E_{+}$, $\phi \in E'_{+}$, then
+	Given $\mu$ such that $s(A) < \mu < \lambda_{0}$, $f \in E_{+}$ and $\phi \in E'_{+}$, then
 	%% --
 	\begin{equation}\label{eq:c3-1.3}
     \begin{split}
@@ -104,8 +104,9 @@ By Datko's Theorem (Part-I, Theorem~\ref{thm:a4-1.11}) the function $t \mapsto \
 If\/ $\lambda = \mu + \im\nu$ with $\mu$, $\nu$ real and $\mu > s(A)$, we have for arbitrary $f \in E$, $\phi \in E'$
 %% --
 \begin{align*}
-	\left|\left\langle \int_{r}^t \eu^{-\lambda s}T(s)f \ds ,\phi\right\rangle\right| &\leq \int_{r}^t \eu^{-\mu s}\langle T(s)|f|,|\phi|\rangle\ds \\
-	\text{ hence } \left\|\int_{r}^t \eu^{-\lambda s}T(s)f \ds \right\| &\leq \left\|\int_{r}^t \eu^{-\mu s}T(s)|f| \ds \right\| \
+	\left|\left\langle \int_{r}^t \eu^{-\lambda s}T(s)f \ds ,\phi\right\rangle\right| &\leq \int_{r}^t \eu^{-\mu s}\langle T(s)|f|,|\phi|\rangle\ds 
+		\intertext{hence} 
+\left\|\int_{r}^t \eu^{-\lambda s}T(s)f \ds \right\| &\leq \left\|\int_{r}^t \eu^{-\mu s}T(s)|f| \ds \right\| \
 \end{align*}
 %% --
 which shows that $\lim_{t\to\infty} \int_{0}^t \eu^{-\lambda s}T(s)f \ds $ exists.
@@ -403,11 +404,18 @@ We assume that $R \colon D \to \mathcal{L}(G)$ is a pseudo-resolvent on a Banach
 We only sketch the proof of these assertions. Eq.~\myeqpageref{eq:c3-2.12} follows from Eq.~\myeqpageref{eq:c3-2.11} and the latter is a consequence of Eq.~\myeqpageref{eq:c3-2.10}.
 The identity stated in Eq.~\myeqpageref{eq:c3-2.10} can be rewritten as follows
 %% --
-\[
-(\Id-(\lambda_{0}-\mu)R(\lambda_{0}))(\Id-(\mu-\lambda_{0})S) = \Id = (\Id-(\mu-\lambda_{0})S)(\Id-(\lambda_{0}-\mu)R(\lambda_{0}))\,.
-\]
+\begin{align*}
+(\Id-(\lambda_{0}-\mu)R(\lambda_{0}))(\Id-(\mu-\lambda_{0})S) & = \Id \\
+& = (\Id-(\mu-\lambda_{0})S)(\Id-(\lambda_{0}-\mu)R(\lambda_{0})).
+\end{align*}
 %% --
-Thus $S = (\mu-\lambda_{0})^{-1}(1 - (1-(\lambda_{0}-\mu)R(\lambda_{0}))^{-1})$ has to be unique.
+Thus 
+%
+\[
+	S = (\mu-\lambda_{0})^{-1}(1 - (1-(\lambda_{0}-\mu)R(\lambda_{0}))^{-1})
+\]
+%
+has to be unique.
 
 It follows from Eq.~\myeqpageref{eq:c3-2.11} and Eq.~\myeqpageref{eq:c3-2.12} that every pseudo-resolvent has a unique maximal extension.
 Further properties of pseudo-resolvents are given in the following two propositions.
@@ -518,15 +526,37 @@ Before proving the equivalence of the two assertions we make some remarks.
 \begin{remarks*}
 \begin{enumerate}[\upshape (i), wide, labelindent=0.5em]
     \item 
-    Since one always has \quad $\lambda R(\lambda,A) \to \Id$\quad for \quad $\lambda \to \infty$, 
-    the set \quad $\{(\lambda-s(A))R(\lambda,A) \colon \lambda > s(A)+\epsilon\}$ is bounded for every $\epsilon > 0$. 
-    Thus in Eq.~\myeqpageref{eq:c3-2.15}(a) the essential fact is boundedness near $s(A)$. 
-    On the other hand, the set of operators $\{\frac{1}{t} \int_{0}^{t} \exp(-\tau s(A))T(\tau) \diff{\tau} \colon 0 \leq t \leq t_{0} \}$ is bounded for every $t_{0} \geq 0$, hence in Eq.~\myeqpageref{eq:c3-2.15}(b) the boundedness for $t \to \infty$ is important.
+    Since one always has 
+    %
+\[
+	\lambda R(\lambda,A) \to \Id \text{ for $\lambda \to \infty$,}
+\]
+%
+the set 
+%
+\[
+	\{(\lambda-s(A))R(\lambda,A) \colon \lambda > s(A)+\epsilon\}
+\]
+%
+is bounded for every $\epsilon > 0$. 
+Thus in Eq.~\myeqpageref{eq:c3-2.15}~(a) the essential fact is boundedness near $s(A)$. 
+    On the other hand, the set of operators 
+    %
+\[
+	\{\frac{1}{t} \int_{0}^{t} \exp(-\tau s(A))T(\tau) \diff{\tau} \colon 0 \leq t \leq t_{0} \}
+\]
+%
+is bounded for every $t_{0} \geq 0$, hence in Eq.~\myeqpageref{eq:c3-2.15}~(b) the boundedness for $t \to \infty$ is important.
 
     \item 
-    By Corollary~\ref{cor:c3-1.4} we have $\|R(\lambda,A)\| \geq r(R(\lambda,A)) = (\lambda-s(A))^{-1}$. 
-    Hence $\|R(\lambda,A)\|$ grows at least as fast as $(\lambda-s(A))^{-1}$. 
-    Thus if Eq.~\myeqpageref{eq:c3-2.15}(a) is satisfied, the resolvent grows as slowly as it possibly can for $\lambda \to s(A)$.
+    By Corollary~\ref{cor:c3-1.4} we have 
+    %
+\[
+	\|R(\lambda,A)\| \geq r(R(\lambda,A)) = (\lambda-s(A))^{-1} .
+\]
+%
+Hence $\|R(\lambda,A)\|$ grows at least as fast as $(\lambda-s(A))^{-1}$. 
+    Thus if Eq.~\myeqpageref{eq:c3-2.15}~(a) is satisfied, the resolvent grows as slowly as it possibly can for $\lambda \to s(A)$.
 
     \item 
     We do not assume in Definition~\ref{def:c3-2.8} that spectral bound and growth bound coincide.
@@ -544,7 +574,7 @@ Then we have
 \[
 \lambda \cdot \eu^{-\lambda s} \geq 
 \begin{cases}
-	(\mathrm{e}t)^{-1} & \text{if } s \leq t\,, \\
+	(\eu t)^{-1} & \text{if } s \leq t\,, \\
 	0 & \text{if } s > t\,.
 \end{cases}
 \]
@@ -704,8 +734,12 @@ In contrast with the former result we do not assume that every point of\/ $\sigm
 \end{corollary}
 %% --
 \begin{proof}
-Considering the sequence of ideals as described in Proposition~\ref{prop:c3-2.11} and the corresponding generators $A_{n}$ $(0 \leq n \leq k)$, then we have by Part-I, Proposition~\ref{prop:a3-4.2} that $\sigma_{b}(A) = \cup_{n=1}^{k} \sigma_{b}(A_{n})$.
-
+Considering the sequence of ideals as described in Proposition~\ref{prop:c3-2.11} and the corresponding generators $A_{n}$ $(0 \leq n \leq k)$, then we have by Part-I, Proposition~\ref{prop:a3-4.2} that 
+%
+\[
+	\sigma_{b}(A) = \bigcup_{n=1}^{k} \sigma_{b}(A_{n}) .
+\]
+%
 By Theorem~\ref{thm:c3-2.10} each set $\sigma_{b}(A_{n})$ is cyclic, hence so is $\sigma_{b}(A)$.
 \end{proof}
 %% --
@@ -963,8 +997,8 @@ Next we consider some concrete examples.
 %
 	\item 
 	Consider the first derivative on $\R $, $\R _{+}$ or $\R _{2\pi} = \Gamma$ as operator on the corresponding $L^{p}$-space (with respect to the Lebesgue measure.)
-	Then the statements made in Part-II, Example~\ref{ex:b3-3.4}(iii) are true.
-	The same is true for Part-II, Example~\ref{ex:b3-3.4}(v) and (vi) (second order differential operator) when the corresponding $L^{p}$-spaces are considered.
+	Then the statements made in Part-II, Example~\ref{ex:b3-3.4}\,(iii) are true.
+	The same is true for Part-II, Example~\ref{ex:b3-3.4}\,(v) and (vi) (second order differential operator) when the corresponding $L^{p}$-spaces are considered.
 	
 	\item 
 	Let $E = L^{1}[-1,0]$ and for $g \in L^{\infty}$ consider the operator $A_{g}$ given by
@@ -1048,10 +1082,13 @@ Next we consider some concrete examples.
 	%% --
 	Since we assumed that $\kappa$ is strictly positive, $I_{Y}$ is $K$-invariant if and only if\/ $Y = X\times[-1,1]$ for some measurable set $X \subset [0,1]$.
 	If we assume that $X$ has positive measure and define
-    \[%\textstyle
-	\alpha \coloneqq \sup\left\{x \in [0,1] \colon \int_{0}^{x} \1_{X}(s)\ds  = 0\right\}, \beta \coloneqq \inf\left\{x \in [0,1] \colon \int_{x}^{1} \1_{X}(s)\ds  = 0 \right\},
-	\] 
-	then we have $\alpha < \beta$ and the support of the function $h \coloneqq R(\lambda,A)\1_{Y}$, where 
+	%% --
+    \begin{align*}
+    \alpha & \coloneqq \sup\left\{x \in [0,1] \colon \int_{0}^{x} \1_{X}(s)\ds  = 0\right\}, \\
+	 \beta & \coloneqq \inf\left\{x \in [0,1] \colon \int_{x}^{1} \1_{X}(s)\ds  = 0 \right\}.
+    \end{align*}
+    %% .. 
+	Then we have $\alpha < \beta$ and the support of the function $h \coloneqq R(\lambda,A)\1_{Y}$, where 
 	$(Y \coloneqq X\times[-1,1])$ is given by $\supp h = [\alpha,1]\times[0,1] \cup [0,\beta]\times[-1,0]$.
 	Since we assumed that $I_{Y}$ is $R(\lambda,A)$-invariant, we have $h \in I_{Y}$, \ie  $\supp h \subset Y = X\times[-1,1]$.
 	Obviously, this is true only if\/ $Y = [0,1]\times[-1,1]$ or $I_{Y} = E$.
@@ -1099,8 +1136,10 @@ The first assertion of the latter proposition is no longer true in the general s
     We only prove (iii) and assume $s(A) = 0$.
     By assumption and by assertion (i) there exists $\phi \gg 0$ such that $T(t)'\phi = \phi$ $(t\geq0)$.
     Given $f \in \ker A$, then $T(t)f = f$ hence $|f| = |T(t)f| \leq T(t)|f|$.
+    
     Since $\phi$ is strictly positive and $\langle|f|,\phi\rangle \leq \langle T(t)|f|,\phi\rangle = \langle|f|,\phi\rangle$, it follows that $|f| = T(t)|f|$.
     We have shown that $\ker A$ is a sublattice.
+    
     Then for $f \in \ker A$, $f$ real, \ie  $f = \overline{f}$, we have that $f^{+}$ and $f^{-}$ are elements of\/ $\ker A$.
     Hence the principal ideals generated by $f^{+}$ and $f^{-}$ are $\TT$-invariant.
     Since these ideals are orthogonal, the irreducibility of\/ $\TT$ implies that either $f^{+}$ or $f^{-}$ is zero.
@@ -1171,7 +1210,8 @@ Each of the following conditions on $E$ and $(T(t))$, respectively, implies that
 	Moreover, from Eq.~\myeqpageref{eq:a1-3.1} we deduce
 	%% --
 	\begin{align*}
-		T(t)R(\lambda,A) = \eu^{\lambda t}R(\lambda,A) - \eu^{\lambda t}\int_{0}^{t} \eu^{-\lambda s}T(s)\ds \leq \eu^{\lambda t}R(\lambda,A) \ (t\geq 0, \lambda>s(A))\,.
+		T(t)R(\lambda,A) & = \eu^{\lambda t}R(\lambda,A) - \eu^{\lambda t}\int_{0}^{t} \eu^{-\lambda s}T(s)\ds \\
+		& \leq \eu^{\lambda t}R(\lambda,A) \ (t\geq 0, \lambda>s(A))\,.
 	\end{align*}
 	%% --
 	Since the spectral radius is an isotone function on the cone of positive operators, it is enough to show that
@@ -1261,15 +1301,16 @@ which is irreducible (\cf Part-I, Section~\ref{subsec:a1-2.5}).%
     According to the Kakutani-Krein Theorem we identify $E_{|h|}$ with $C(K)$.
     Then $h$ is a unimodular function onto $\Gamma$ (use the argument given in the proof of Part-II, Theorem~\ref{thm:b3-3.6}(iii)).
     
-    We define $i \colon C(\Gamma) \to E$ by $i(f) \coloneqq f\circ h \in C(K) \cong E_{h} \subset E$, then $i$ is injective.
-    For the monomials $e_{n}(z) \coloneqq z^{n}$ $(n \in \Z)$ we have $i(e_{n}) = h^{[n]}$ thus $i$ has dense image in $E$ (by Part-I, Theorem~\ref{thm:a3-5.4}).
+    We define $j \colon C(\Gamma) \to E$ by $j(f) \coloneqq f\circ h \in C(K) \cong E_{h} \subset E$, then $j$ is injective.
+    For the monomials $e_{n}(z) \coloneqq z^{n}$ $(n \in \Z)$ we have $j(e_{n}) = h^{[n]}$ thus $j$ has dense image in $E$ (by Part-I, Theorem~\ref{thm:a3-5.4}).
     Moreover, 
     \[
-    \langle h^{[n]},\phi\rangle = \langle i(e_{n}),\phi\rangle = \int_{0}^{2\pi} e_{n}(\eu^{\im t})\dt  =2\pi\cdot\delta_{n0}\  \text{ for all } n \in \Z\,,
+    \langle h^{[n]},\phi\rangle = \langle j(e_{n}),\phi\rangle = \int_{0}^{2\pi} e_{n}(\eu^{\im t})\dt  =2\pi\cdot\delta_{n0}\  \text{ for all } n \in \Z\,,
     \] 
-    hence $\int_{0}^{2\pi} f(\eu^{\im t})\dt   = \langle i(f),\phi\rangle$ for all $f \in C(\Gamma)$.
-    It follows that $(E,\phi) \cong L^{1}(\Gamma)$, and we define $j$ to be the canonical mapping from $E$ into $(E,\phi) \cong L^{1}(\Gamma)$ (see Section~\ref{sec:c1-4}).
-    Then $j$ has dense image and is injective since $\phi$ is strictly positive (\cf Proposition~\ref{prop:c3-3.5}\,(ii)).
+    hence $\int_{0}^{2\pi} f(\eu^{\im t})\dt   = \langle j(f),\phi\rangle$ for all $f \in C(\Gamma)$.
+    
+    It follows that $(E,\phi) \cong L^{1}(\Gamma)$, and we define $\tilde{j}$ to be the canonical mapping from $E$ into $(E,\phi) \cong L^{1}(\Gamma)$ (see Section~\ref{sec:c1-4}).
+    Then $\tilde{j}$ has dense image and is injective since $\phi$ is strictly positive (\cf Proposition~\ref{prop:c3-3.5}\,(ii)).
     One easily verifies that the diagram commutes.
 \end{proof}
 %% --
@@ -1305,7 +1346,12 @@ To simplify the proof we isolate two lemmas.
     In particular, for $k \in \N$ the sequence $(g_{n+k})_{n\geq 1}$ is a normalized approximate eigenvector of\/ $R$.
     Then the elements $\hat{g}^{k} \in E_{\mathcal{F}}$ given by $\hat{g}^{k} \coloneqq ((g_{n+k})_{n\geq 1} + c_{\mathcal{F}}(E))$ are normalized eigenvectors of\/ $R_{\mathcal{F}}$ corresponding to $\alpha$.
     As a consequence of Eq.~\myeqpageref{eq:c3-3.14} we obtain
-    $\|\hat{g}^{k} - \hat{g}^{m}\| = \mathcal{F}\text{-}\lim\sup\|g_{n+k} - g_{n+m}\| \geq \epsilon$ provided that $k \neq m$.
+    %
+\[
+	\|\hat{g}^{k} - \hat{g}^{m}\| = \mathcal{F}\text{-}\lim\sup\|g_{n+k} - g_{n+m}\| \geq \epsilon
+\]
+%
+provided that $k \neq m$.
     This shows that the unit ball in $\ker(\alpha - R_{\mathcal{F}})$ is not relatively compact, hence $\ker(\alpha - R_{\mathcal{F}})$ has to be infinite dimensional.
 \end{proof}
 
@@ -1360,9 +1406,9 @@ Moreover, $\sigma_{b}(A)$ contains only algebraically simple poles.
 	Given an ultrafilter $\mathcal{U}$ on $\N$ which is finer than the Frechet filter, then $\lim_{\mathcal{U}}\phi(f_{n})$ exists for every bounded sequence $(f_{n})$ in $E$.
 	Using this fact it is easy to see that the canonical extension $P_{\mathcal{U}}$ of\/ $P$ to the $\mathcal{U}$-product $E_{\mathcal{U}}$ of\/ $E$ has the following form.
 	%% --
-	\begin{equation}\label{eq:c3-3.16}
-		\begin{split}
-		&P_{\mathcal{U}} = \hat{\phi}\otimes\hat{u} \quad \ \text{where } \hat{u} \coloneqq (u,u,u,\ldots)+c_{\mathcal{U}}(E) \in E_{\mathcal{U}} \ \text{ and } \hat{\phi} \in (E_{\mathcal{U}})'
+\begin{equation}\label{eq:c3-3.16}
+\begin{split}
+		&P_{\mathcal{U}} = \hat{\phi}\otimes\hat{u} \text{ where } \hat{u} \coloneqq (u,u,u,\ldots)+c_{\mathcal{U}}(E) \in E_{\mathcal{U}} \ \text{ and } \hat{\phi} \in (E_{\mathcal{U}})'
 		\\
 		&\text{is given by } \hat{\phi}((f_{n})+c_{\mathcal{U}}(E)) \coloneqq \lim_{\mathcal{U}}\phi(f_{n}) \ ((f_{n})+c_{\mathcal{U}}(E) \in E_{\mathcal{U}})\,.
 		\end{split}
@@ -1371,10 +1417,28 @@ Moreover, $\sigma_{b}(A)$ contains only algebraically simple poles.
 	
 	Given $\im\beta \in \sigma_{b}(A)$ then $\im\beta \in A\sigma(A)$ hence $1 \in A\sigma(\lambda R(\lambda+\im\beta,A))$.
 	If we assume that  $\im\beta \notin P\sigma(A)$, then $1 \notin P\sigma(\lambda R(\lambda+\im\beta,A))$.
-	Then Lemma~\ref{lem:c3-3.10} implies that $M \coloneqq \ker(1 - \lambda R(\lambda+\im\beta,A)_{\mathcal{U}})$ is infinite dimensional (and independent of\/ $\lambda$ by Proposition~\ref{prop:c3-2.6}\,(i).)
-	For $\hat{f} \in M$ we have $|\hat{f}| = \gamma R(\gamma+\im\beta,A)_{\mathcal{U}}|\hat{f}| \leq \gamma R(\gamma,A)_{\mathcal{U}}|\hat{f}|$ for every $\gamma > 0$.
-	It follows that $\hat{\phi}(|\hat{f}|) = P_{\mathcal{U}}|\hat{f}| = \lim_{\gamma\to 0}\gamma R(\gamma,A)_{\mathcal{U}}|\hat{f}| \geq |\hat{f}|$.
-	Thus considering the closed ideal $I \coloneqq \{\hat{f} \in E_{\mathcal{U}} \colon \hat{\phi}(|\hat{f}|) = 0\}$ we have
+	Then Lemma~\ref{lem:c3-3.10} implies that 
+	%
+\[
+	M \coloneqq \ker(1 - \lambda R(\lambda+\im\beta,A)_{\mathcal{U}})
+\]
+%
+is infinite dimensional (and independent of\/ $\lambda$ by Proposition~\ref{prop:c3-2.6}\,(i).)
+
+For $\hat{f} \in M$ we have 
+%
+\[
+	|\hat{f}| = \gamma R(\gamma+\im\beta,A)_{\mathcal{U}}|\hat{f}| \leq \gamma R(\gamma,A)_{\mathcal{U}}|\hat{f}|
+\]
+%
+for every $\gamma > 0$.
+It follows that 
+%
+\[
+	\hat{\phi}(|\hat{f}|) = P_{\mathcal{U}}|\hat{f}| = \lim_{\gamma\to 0}\gamma R(\gamma,A)_{\mathcal{U}}|\hat{f}| \geq |\hat{f}| .
+\]
+%
+Thus considering the closed ideal $I \coloneqq \{\hat{f} \in E_{\mathcal{U}} \colon \hat{\phi}(|\hat{f}|) = 0\}$ we have
 	%% --
 	\begin{equation}\label{eq:c3-3.17}
 		\tilde{\phi}(|\hat{f}|) - |\hat{f}| \in I \ \text{ for every } \hat{f} \in M\,.
@@ -1382,6 +1446,7 @@ Moreover, $\sigma_{b}(A)$ contains only algebraically simple poles.
 	%% --
 	This implies that $M \cap I = \{0\}$. 
 	Hence the canonical image $M_/$ of\/ $M$ in the quotient space $E_{\mathcal{U}/{I}}$ is infinite dimensional as well. 
+	
 	By Eq.~\myeqpageref{eq:c3-3.16} and Eq.~\myeqpageref{eq:c3-3.17} the absolute value of an element $\tilde{f} \in M_/$ is a scalar multiple of\/ $\tilde{u} \coloneqq \hat{u} + I$. 
 	This is a contradiction by Lemma~\ref{lem:c3-3.11}.
 \end{proof}
@@ -1405,25 +1470,31 @@ The latter claim is a consequence of Proposition~\ref{prop:c3-2.11} and the foll
 \end{lemma}
 %% --
 \begin{proof}
-	We assume $s(A) = 0$. 
-	Since $P$ is a strictly positive projection $PE = \ker A$ is a sublattice of\/ $E$. 
-	Actually, if\/ $x \in PE$ \ie  $Px = x$, then $P|x| \geq |Px| = |x|$. 
-	Hence $P(|P|x|-|x||) = P^{2}|x| - P|x| = 0$ which implies that $P|x| - |x| = 0$ or $|x| \in PE$.
-	Thus we know that $\ker A$ is a finite dimensional sublattice of\/ $E$ hence it is isomorphic to a space $\C ^{m}$ for some $m \in \N$ (see Section~II.4 of \textcite{schaefer:1974}). 
+We assume $s(A) = 0$. 
+Since $P$ is a strictly positive projection $PE = \ker A$ is a sublattice of\/ $E$. 
+Actually, if\/ $x \in PE$ \ie  $Px = x$, then $P|x| \geq |Px| = |x|$. 
+Hence 
+%
+\[
+	P(|P|x|-|x||) = P^{2}|x| - P|x| = 0
+\]
+%
+which implies that $P|x| - |x| = 0$ or $|x| \in PE$.
+Thus we know that $\ker A$ is a finite dimensional sublattice of\/ $E$ hence it is isomorphic to a space $\C ^{m}$ for some $m \in \N$ (see Section~II.4 of \textcite{schaefer:1974}). 
 	
-	Then there exist vectors $e_{j} \in E_{+}$ $(1\leq j\leq m)$ such that the following holds.
-	%% --
-	\begin{equation}\label{eq:c3-3.18}
-		\ker A = \mathrm{span} \{e_{1},e_{2}, .. ,e_{m}\} \text{ and } \inf\{e_{i},e_{j}\} = 0 \ \text{ for }  i \neq j\,.
-	\end{equation}
-	%% --
-	We have $T(t)e_{k} = e_{k}$ hence the closed ideal generated by $e_{k}$ is $\TT$-invariant. 
-	We denote this ideal $J_{k}$ and define $J\coloneqq  J_{1}\oplus J_{2}\oplus .. \oplus J_{m}$.
-	The ideal $J$ is closed 
-    (see \textcite[III Theorem~1.2]{schaefer:1974}, $\TT$-invariant and we have $PE = \ker A \subset J$. 
-	Then $P_{/J} = 0$ hence the spectral bound $s(A_{/J})$
+Then there exist vectors $e_{j} \in E_{+}$ $(1\leq j\leq m)$ such that the following holds.
+%% --
+\begin{equation}\label{eq:c3-3.18}
+	\ker A = \mathrm{span} \{e_{1},e_{2}, \ldots ,e_{m}\} \text{ and } \inf\{e_{i},e_{j}\} = 0 \ \text{ for }  i \neq j .
+\end{equation}
+%% --
+We have $T(t)e_{k} = e_{k}$ hence the closed ideal generated by $e_{k}$ is $\TT$-invariant. 
+We denote this ideal $J_{k}$ and define $J\coloneqq  J_{1}\oplus J_{2}\oplus \ldots \oplus J_{m}$.
+The ideal $J$ is closed, $\TT$-invariant and we have $PE = \ker A \subset J$ (see \textcite[III Theorem~1.2]{schaefer:1974}). 
+Then $P_{/J} = 0$ hence the spectral bound $s(A_{/J})$
 	is strictly less than zero (by Theorem~\ref{thm:c3-1.1}\,(i)). 
 	Moreover, the residue corresponding to the resolvent of\/ $\TT_{k}$, we denote it $P_{k}$, is the restriction of\/ $P$ to $J_{k}$.
+	
 	Then $P_{k}$ is strictly positive and $P(J_{k}) = \mathrm{span}\{e_{k}\}$. 
 	To show that $T_{k}$ is irreducible, we consider an invariant ideal $I$. 
 	Then we have $R(\lambda,A_{k})I \subset I$ for $\lambda > 0$ hence $P_{k} = \lim_{\lambda \to 0}\lambda R(\lambda,A_{k})$ leaves $I$ invariant. 
@@ -1432,7 +1503,7 @@ The latter claim is a consequence of Proposition~\ref{prop:c3-2.11} and the foll
 %% --
 Combining the lemma with Proposition~\ref{prop:c3-2.11} one obtains the following.
 
-If\/ $s(A)$ is a pole of finite algebraic multiplicity, then there exists a finite chain of\/ $\TT$-invariant ideals $I_{-1} \coloneqq  \{0\} \subset I_{0}\subset ... \subset I_{N} \coloneqq  E$ $(N\in\N)$ such that the following is true.
+If\/ $s(A)$ is a pole of finite algebraic multiplicity, then there exists a finite chain of\/ $\TT$-invariant ideals $I_{-1} \coloneqq  \{0\} \subset I_{0}\subset \ldots \subset I_{N} \coloneqq  E$ $(N\in\N)$ such that the following is true.
 %% --
 \begin{equation}\label{eq:c3-3.19}
 	\begin{split}
@@ -1448,9 +1519,13 @@ The following theorem is an immediate consequence of Eq.~\myeqpageref{eq:c3-3.19
 \index{resolvent!pole}%
 \index{boundary spectrum}
 	Let $\TT$ be a positive semigroup on a Banach lattice with generator $A$. 
-	If\/ $s(A)$ is a pole of finite algebraic multiplicity, then $\sigma_{b}(A)$ is a finite union of discrete subgroups (\ie  $\sigma_{b}(A) = s(A) + \cup_{k=1}^{N}\im\alpha_{k}\Z$ with $\alpha_{k} \in \R )$.
-	
-	Moreover, $\sigma_{b}$ contains only poles of finite algebraic multiplicity.
+	If\/ $s(A)$ is a pole of finite algebraic multiplicity, then $\sigma_{b}(A)$ is a finite union of discrete subgroups, \ie  
+%
+\[
+		\sigma_{b}(A) = s(A) + \cup_{k=1}^{N}\im\alpha_{k}\Z \text{ with $\alpha_{k} \in \R$.}
+\]
+%
+Moreover, $\sigma_{b}$ contains only poles of finite algebraic multiplicity.
 \end{theorem}
 
 Here the assumption that the multiplicity of\/ $s(A)$ is finite is essential as can be seen from the following example.
@@ -1514,24 +1589,48 @@ The meaning of\/ $r_{ess}(T(t))$ and $\omega_{ess}(\TT)$ and its properties are 
 	It follows that $s(A)$ is strictly dominant.
 	By Part-I, Theorem~\ref{thm:a3-6.6} we have $s(A) = \omega_0(\TT)$.
 \end{proof}
-
+ 
 In the following proposition we give a condition which ensures that Theorem~\ref{thm:c3-3.14} can be applied to certain perturbations. 
 Moreover, we state a criterion ensuring the existence of a dominant eigenvalue.
 \index{operator!compact}
 %% --
 \begin{proposition}\label{prop:c3-3.18}
 \index{spectral bound $s(A)$!dominant}
-	Suppose that $A$ is the generator of a positive semigroup and that $K \in \mathcal{L}(E)$ is a positive linear operator.
-	If\/ $K$ is A-compact (\ie  if\/ $KR(\lambda_{0},A)$ is compact for some $\lambda_{0} \in \rho(A))$ and if\/ $s(A+K) > s(A)$, then $B \coloneqq  A + K$ satisfies the assumptions of Theorem~\ref{thm:c3-3.14}.
-	
-	If, in addition, $K$ is irreducible, then $s(B)$ is a dominant eigenvalue and the semigroup generated by $B$ is irreducible.
+Suppose that $A$ is the generator of a positive semigroup and that $K \in \LE$ is a positive linear operator.
+%
+\begin{enumerate}[\upshape(i)]
+\item
+If\/ $K$ is $A$-compact, \ie $K\cdot R(\lambda_{0},A)$ is compact for some
+$\lambda_{0} \in \rho(A)$, and if\/ $s(A+K) > s(A)$, then
+$B \coloneqq A + K$ satisfies the assumptions of Theorem~\ref{thm:c3-3.14}.%
+\item
+If, in addition, $K$ is irreducible, then $s(B)$ is a dominant eigenvalue and the semigroup generated by $B$ is irreducible.
+\end{enumerate}
+%% --	
 \end{proposition}
 %% --
 \begin{proof}
-The resolvent equation $R(\lambda,A) = R(\lambda_{0},A)(1 - (\lambda-\lambda_{0})R(\lambda,A))$ implies that $KR(\lambda,A)$ is a compact operator for every $\lambda \in \rho(A)$. 
-For $\lambda > s(A)$ we have $\lambda - B = (1 - KR(\lambda,A))(\lambda-A)$ and $(1 - KR(\lambda,A))^{-1}$ exists for $\lambda > s(B)$.
+The resolvent equation %
+\[
+	R(\lambda,A) = R(\lambda_{0},A)(\Id - (\lambda-\lambda_{0})R(\lambda,A))
+\]
+%
+implies that $K \cdot R(\lambda,A)$ is a compact operator for every $\lambda \in \rho(A)$. 
+For $\lambda > s(A)$ we have 
+%
+\[
+	\lambda - B = (\Id - KR(\lambda,A))(\lambda-A)
+\]
+%
+and $(\Id - KR(\lambda,A))^{-1}$ exists for $\lambda > s(B)$.
+
 Therefore \textcite[Theorem XIII.13]{reedsimon:1979} 
-implies that $R(\lambda,B) = R(\lambda,A)(1 - KR(\lambda,A))^{-1}$ has only poles of finite algebraic multiplicity in $\{\lambda \in \C  \colon \Re(\lambda) > s(A)\}$. 
+implies that %
+\[
+	R(\lambda,B) = R(\lambda,A)(1 - KR(\lambda,A))^{-1}
+\]
+%
+has only poles of finite algebraic multiplicity in $\{\lambda \in \C  \colon \Re(\lambda) > s(A)\}$. 
 This proves the first claim.
 
 In order to prove the second, we denote the semigroup corresponding to $A$ and $B$ by $(T(t))$ and $(S(t))$,  respectively.
@@ -1542,14 +1641,14 @@ Iterating this identity we obtain for every $m \in \N$, $t \geq 0$
 \begin{split}
     S(t) &= \sum_{n=0}^{m-1} T_{n}(t) + R_{m}(t) \ \text{ where}\\ 
     T_{0}(t)&\coloneqq T(t),\  T_{n}(t) \coloneqq  \int_{0}^{t} T(t-s)KT_{n-1}(s)\ds \text{ for } n \in \N\,,\\
-    R_{m}(t) &\coloneqq \textit{\small $\int_{0}^{t}\int_{0}^{t_{1}} .. \int_{0}^{t_{m-1}} T(t-t_{1})KT(t_{1}-t_{2})K \ldots T(t_{m-1}-t_m)KS(t_{m})\dt _{m}..\dt _{1}$}\,.
+    R_{m}(t) &\coloneqq \textit{\small $\int_{0}^{t}\int_{0}^{t_{1}} \ldots \int_{0}^{t_{m-1}} T(t-t_{1})KT(t_{1}-t_{2})K \ldots T(t_{m-1}-t_m)KS(t_{m})\dt _{m}\ldots \dt _{1}$}\,.
 \end{split}
 \end{equation}
 %% --
 We fix $0 < f \in E$, $0 < \phi \in E'$, $t > 0$. 
 By Theorem~\ref{thm:c3-3.2}\,(i), $S(t)f > 0$.
 Since $K$ is irreducible, there exists $m \in \N$ such that $\langle K^{m}f,\phi\rangle > 0$. 
-Thus the integrand appearing in the the representation Eq.~\myeqpageref{eq:c3-3.21} of\/ $\langle R_{m}(t)f,\phi\rangle$ is non-zero at $t_{1}=t_{2}= .. =t_{m-1}=t$, $t_{m}= t$.
+Thus the integrand appearing in the the representation Eq.~\myeqpageref{eq:c3-3.21} of\/ $\langle R_{m}(t)f,\phi\rangle$ is non-zero at $t_{1}=t_{2}= \ldots =t_{m-1}=t$, $t_{m}= t$.
 
 Since the integrand is positive and continuous, we conclude
 \begin{equation}\label{eq:c3-3.22}%\textstyle
@@ -1709,7 +1808,12 @@ In the last part of this section we discuss a spectral decomposition of positive
     in order to reduce the problem to the point spectrum. 
 	We use the notation of Part-I, Section~\ref{subsec:a1-3.7}. 
 	Obviously the space $m(E)$ is a Banach lattice and every operator $\hat{T}(t)$ is a lattice homomorphism. 
-	We have $|T(t)|f| - |f|| = ||T(t)f| - |f|| \leq |T(t)f - f|$ $(f \in E)$, hence $(|f_{n}|) \in m^{\TT}(E)$ whenever $(f_{n}) \in m^{\TT}(E)$. 
+	We have %
+\[
+	|T(t)|f| - |f|| = ||T(t)f| - |f|| \leq |T(t)f - f| \quad (f \in E) ,
+\]
+%
+hence $(|f_{n}|) \in m^{\TT}(E)$ whenever $(f_{n}) \in m^{\TT}(E)$. 
 	This proves that $m^{\TT}(E)$ is a sublattice, hence a Banach lattice as well. 
 	Obviously, $c_{\mathcal{F}}(E)\cap m^{\TT}(E)$ is an order ideal. 
 	Thus $E_{\mathcal{F}}^{\TT}$ is a Banach lattice and $(T_{\mathcal{F}}(t))$ is a semigroup of lattice homomorphisms. 
@@ -1742,7 +1846,13 @@ We list some typical cases in the following corollary.
 	
 	In case (iii), $\ker (1 - T(s))$ is even a sublattice of\/ $E$. 
 	Indeed, assume $T(t)'\phi = \phi$ and $\phi \gg 0\,, (t \geq 0)$, then $T(s)f = f$ implies $T(s)|f| \geq |f|$. 
-	Thus from $\langle T(s)|f| - |f|,\phi\rangle = \langle |f|,T(s)'\phi - \phi \rangle = 0$ it follows that $T(s)|f| = |f|$.
+	Thus from 
+	%
+\[
+	\langle T(s)|f| - |f|,\phi\rangle = \langle |f|,T(s)'\phi - \phi \rangle = 0
+\]
+%
+it follows that $T(s)|f| = |f|$.
 	
 	Now we assume that $E$ is weakly sequentially complete, which is equivalent to (\cf Section~\ref{sec:c1-5})
 	%% --
@@ -1754,7 +1864,7 @@ We list some typical cases in the following corollary.
 	Obviously $f \in F$ implies $\bar{f} \in F$ hence $F = F\cap E_{\R } + iF\cap E_{\R }$. 
 	Thus we have to show that $F_{\R } = F\cap\mathbb{E}_{\R }$ is a sublattice. 
 	Given $f \in F_{\R }$, then $Tf = f$ hence $|f| \leq T|f|$. 
-	Iterating this inequality we obtain $|f| \leq T|f| \leq T^{2}|f| \leq T^{3}|f| \leq \dots\,.$ 
+	Iterating this inequality we obtain $|f| \leq T|f| \leq T^{2}|f| \leq T^{3}|f| \leq \ldots$.
 	By Eq.~\myeqpageref{eq:c3-4.5} $|f|_{o} \coloneqq  \lim_{n\to \infty} T^{n}|f|$ exists and we have $T|f|_{o} = \lim_{n\to \infty} T^{n+1}|f| = |f|_{o}$, \ie $|f|_{o} \in F_{\R }$.
 	And, for $g \in F_{\R }$ satisfying $\pm f \leq g$, we have $|f|_{o} \leq g$ thus $|f|_{o} = \sup_{F}\{f,-f\}$. 
 	Moreover, $\|f\|_{o} \coloneqq  \||f|_{o}\|$ $(f \in F)$ is an equivalent norm on $F$ such that $(F,\|\cdot\|_{o})$ is a Banach lattice.
@@ -1836,33 +1946,36 @@ Therefore $\lim_{n \to \infty}\|(A - \alpha) g_n\| = 0$\,. It remains to prove
 $\liminf_{n \to \infty}\|g_n\| > 0$\,.
 The latter assertion is a consequence of the following facts.
 \begin{enumerate}[\upshape (i),wide, labelindent=.25em]
-	\item
-	Since $f_n$ is positive and the norm is additive on $E_+$,
-	we have
-	\[
+
+\item
+Since $f_n$ is positive and the norm is additive on $E_+$,
+we have
+\[
     \|g_n\| = \int_{0}^{t} \eu^{-\alpha s}\|T(s)f_n\| \ds\,.
-    \]
+\]
+
 \item 
-    The inequality \quad
-    $\displaystyle
+The inequality 
+\[
     \|T(t)f\| \leq \|T(t-s)\|\|T(s)f\|
-    $\quad 
-    implies
-	\[
-    \|T(s)f\| \geq M^{-1}\|T(t)f\|
-    \]
-    \[
-    \text{for } \ 0 \leq s \leq t\,, f \in E \ \text{ and } \ M \coloneqq \sup_{0 \leq s \leq t}\|T(s) \|\,.
-    \]
+\]
+%% -- 
+implies
+%% --
+\[
+    	\|T(s)f\| \geq M^{-1}\|T(t)f\|
+\]
+for  $0 \leq s \leq t$, $f \in E$ and $ M \coloneqq \sup_{ 0 \leq s \leq t} \|T(s)\|$.
     
-	 \item 
-	 \ \text{Since} \  
-     $\displaystyle\lim_{n \to \infty}\|T(t)f_n - rf_n\| = 0$ 
-     and $\|f_n\| = 1$, we have
-    $\displaystyle
-     \lim_{n \to \infty}\|T(t)f_n\| = r > 0\,.
-    $
-    \qedhere
+    
+\item 
+Since 
+\[
+\lim_{n \to \infty} \|T(t)f_{n} - rf_{n}\| = 0 \text{ and $\|f_n\| = 1$}
+\]
+we have
+$\lim_{n \to \infty}\|T(t)f_n\| = r > 0$.
+\qedhere
 \end{enumerate}
 \end{proof}
 %% --
