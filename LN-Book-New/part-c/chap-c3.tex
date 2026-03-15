@@ -855,36 +855,51 @@ This is the second statement of the following theorem (see also Part-II, Remark~
 \begin{proof}
 \begin{enumerate}[\upshape (i), wide, labelindent=.25em]
 	\item
-	Given $t > 0$ and $f > 0$ such that $T(t)f = 0$ and $\lambda > s(A)$, then we have $T(t)(R(\lambda,A)f) = R(\lambda,A)T(t)f = 0$.
-	Since $R(\lambda,A)f$ is a quasi-interior point, it follows that $T(t) = 0$.
-	Thus for fixed $t \in \R _{+}$ we have either $T(t)$ is strictly positive or else $T(t) = 0$.
-	Then strong continuity and $T(0) = \Id \neq 0$ implies that there exists $\tau > 0$ such that $T(t)$ is strictly positive for $0 \leq t \leq \tau$.
-	For arbitrary $t \in \R _{+}$ we find $n \in \N$ such that $\frac{t}{n} \leq \tau$.
-	Then $T(t) = T(\frac{t}{n})^{n}$ is also strictly positive.
+	Given $t > 0$ and $f > 0$ such that $T(t)f = 0$ and $\lambda > s(A)$, then we have 
+	%
+\[
+	T(t)(R(\lambda,A)f) = R(\lambda,A)T(t)f = 0 .
+\]
+%
+Since $R(\lambda,A)f$ is a quasi-interior point, it follows that $T(t) = 0$.
+Thus for fixed $t \in \R _{+}$ we have either $T(t)$ is strictly positive or else $T(t) = 0$.
+Then strong continuity and $T(0) = \Id \neq 0$ implies that there exists $\tau > 0$ such that $T(t)$ is strictly positive for $0 \leq t \leq \tau$.
+For arbitrary $t \in \R _{+}$ we find $n \in \N$ such that $\frac{t}{n} \leq \tau$.
+Then $T(t) = T(\frac{t}{n})^{n}$ is also strictly positive.
 	
-	\item
-	We prove that for an arbitrary holomorphic positive semigroup $(T(t))_{t\geq 0}$ the following holds.
-	
-	Given $f > 0$, $\phi > 0$ then either $\langle T(t)f,\phi \rangle = 0$ for all $t \geq 0$ or $\langle T(t)f,\phi \rangle > 0$ for all $t > 0$.
-	
-	Then it follows from Definition~\ref{def:c3-3.1}\,(b) that for irreducible semigroups always the second case occurs.
-	
-	Assume that $\langle T(t_{0})f,\phi \rangle = 0$ for some $t_{0} > 0$.
-	
-	We consider a null sequence $(t_{n})$, $0 < t_{n} < t_{0}$, such that $\|T(t_{n})f - f\| \leq 2^{-n}$ and define $f_{n} \coloneqq T(t_{n})f$, $g_{n} \coloneqq f - \sum_{k=n}^{\infty}(f-f_{k})^{+}$.
-	
-	Then for $g_{n} \leq f$, $f = \lim_{n\to\infty}g_{n}$ and $m \geq n$, 
-	we have 
-	
-	$g_{n} \leq f - (f-f_{m})^{+} = \inf\{f,f_{m}\} \leq f_{m}$.
-	
-	For $n \in \N$ fixed and $m \geq n$ we obtain 
-	
-	$0 \leq \langle T(t_{0}-t_{m})g_{n}^{+},\phi \rangle \leq \langle T(t_{0}-t_{m})f_{m},\phi \rangle = \langle T(t_{0})f,\phi \rangle = 0$.
-	
-	Thus the function $t \mapsto \langle T(t)g_{n}^{+},\phi \rangle$ is identically zero by the uniqueness theorem for analytic functions.
-	Since $f = \lim_{n\to\infty}g_{n}^{+}$, we have $\langle T(t)f,\phi \rangle = 0$ for all $t \in \R _{+}$.
-	\qedhere
+\item
+We prove that for an arbitrary holomorphic positive semigroup $(T(t))_{t\geq 0}$ the following holds.
+%% --
+\begin{quote}
+Given $f > 0$ and $\phi > 0$.
+Then either $\langle T(t)f,\phi \rangle = 0$ for all $t \geq 0$ or $\langle T(t)f,\phi \rangle > 0$ for all $t > 0$.
+\end{quote}
+%% --	
+Then it follows from Definition~\ref{def:c3-3.1}\,(b) that for irreducible semigroups always the second case occurs.
+
+Assume that $\langle T(t_{0})f,\phi \rangle = 0$ for some $t_{0} > 0$.
+We consider a null sequence $(t_{n})$, $0 < t_{n} < t_{0}$, such that $\|T(t_{n})f - f\| \leq 2^{-n}$ and define %
+\[
+	f_{n} \coloneqq T(t_{n})f 
+	\quad \text{and} \quad 
+	g_{n} \coloneqq f - \sum_{k=n}^{\infty}(f-f_{k})^{+}.
+\]
+%
+Then for $g_{n} \leq f$, $f = \lim_{n\to\infty}g_{n}$ and $m \geq n$, we have 
+	%
+\[
+	g_{n} \leq f - (f-f_{m})^{+} = \inf\{f,f_{m}\} \leq f_{m} .
+\]
+%
+For $n \in \N$ fixed and $m \geq n$ we obtain 
+%
+\[
+		0 \leq \langle T(t_{0}-t_{m})g_{n}^{+},\phi \rangle \leq \langle T(t_{0}-t_{m})f_{m},\phi \rangle = \langle T(t_{0})f,\phi \rangle = 0 .
+\]
+%
+Thus the function $t \mapsto \langle T(t)g_{n}^{+},\phi \rangle$ is identically zero by the uniqueness theorem for analytic functions.
+Since $f = \lim_{n\to\infty}g_{n}^{+}$, we have $\langle T(t)f,\phi \rangle = 0$ for all $t \in \R _{+}$.
+\qedhere
 \end{enumerate}
 \end{proof}
 \index{quasi-interior point|)}
@@ -940,8 +955,12 @@ Next we consider some concrete examples.
 	\end{equation}
 	%% --
 	for some measurable function $k \colon \R _{+} \times X \times X \to \R _{+}$.
-	Then $(T(t))$ is irreducible if and only if for any two measurable sets $M$ and $N$ with $0 < \mu(M) < \infty$, $0 < \mu(N) < \infty$, $\mu(M\cap N) = 0$ there exist $t_{0} > 0$ such that $\int_{M}\int_{N} k(t_{0},x,y)\diff{\mu}(x)\diff{\mu}(y) > 0$\,.
-	
+	Then $(T(t))$ is irreducible if and only if for any two measurable sets $M$ and $N$ with $0 < \mu(M) < \infty$, $0 < \mu(N) < \infty$ and $\mu(M\cap N) = 0$ there exist $t_{0} > 0$ such that 
+	%
+\[
+	\int_{M}\int_{N} k(t_{0},x,y)\diff{\mu}(x)\diff{\mu}(y) > 0 .
+\]
+%
 	\item 
 	Consider the first derivative on $\R $, $\R _{+}$ or $\R _{2\pi} = \Gamma$ as operator on the corresponding $L^{p}$-space (with respect to the Lebesgue measure.)
 	Then the statements made in Part-II, Example~\ref{ex:b3-3.4}(iii) are true.

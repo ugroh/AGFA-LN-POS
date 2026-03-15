@@ -596,7 +596,7 @@ For $\alpha \in (0,\pi]$ we define the sector $S(\alpha)$ in the complex plane b
     S(\alpha) = \{r\eu^{\im\theta} \colon r \geq 0, \theta \in (-\alpha,\alpha)\} .
 \]
 %% –
-
+%% --
 \begin{definition}\label{def:a2-1.11}
 Let $\alpha \in (0,\pi/2]$.
 A strongly continuous semigroup $(T(t))_{t \geq 0}$ is called a bounded holomorphic semigroup of angle $\alpha$ if\/ $T(\cdot)$ is the restriction of a holomorphic function
@@ -656,7 +656,7 @@ and for every $\alpha_{1} \in (0,\alpha)$ there exists a constant $M$ such that
 %% –
 \end{theorem}
 For the proof we refer to \textcite{davies:1980}, for example.
-
+%% --
 \begin{remark*}\label{rem:a2-1.6-kgk}
 Let $A$ be the generator of a bounded holomorphic semigroup $(T(t))_{t \geq 0}$ 
 of angle $\alpha$, and let $z_{0} \in S(\alpha)$.
@@ -865,7 +865,7 @@ A strongly continuous semigroup with generator $A$ is holomorphic if and only if
 \]
 \end{corollary*}
 %% –
-
+%% --
 \begin{proof}
 In fact, assume that the condition holds.
 Since $A-w$ is the generator of a bounded semigroup, one has 
@@ -1087,7 +1087,7 @@ Then
 \]
 \end{lemma}
 %% –
-
+%% --
 \begin{proof}
 One has $\{0\} \cup \sigma(R(\lambda,A)) = \{0\} \cup \{(\lambda-\mu)^{-1} \colon \mu \in \sigma(A)\}$ (\textcite[Lemma~ 2.11]{davies:1980}).
 Hence 
@@ -1379,7 +1379,7 @@ $\{\lambda \in \sigma(A) \colon \Re(\lambda) \geq b\}$
 is bounded for every $b \in \R$.
 Thus the property proved in Theorem~\ref{thm:a2-1.20}   characterizes generators of eventually norm continuous semigroups in the case that the semigroup consists of multiplication operators.}
 \index{semigroup!eventually norm-continuous semigroup|)}
-
+%% --
 \begin{proof}
 Assume that $\{\lambda \in \sigma(A) \colon \Re(\lambda) \geq b\}$ is bounded for every $b \in \R$.
 Let $t' > 0$.
@@ -1580,10 +1580,10 @@ where the series converges in the operator norm uniformly on bounded intervals.
 We refer to \textcite[III.1]{davies:1980}, \textcite[I.6]{goldstein:1985a} or \textcite[Chapter 3]{pazy:1983} for these results.
 
 Several special properties discussed above are preserved by bounded perturbations.
-
+%% --
 \begin{theorem} \label{thm:a2-1.30}
 Let $(T(t))_{t \geq 0}$ be a strongly continuous semigroup with generator $A$, and let $B \in \LE$.
-
+%% --
 \begin{enumerate}[\upshape(i)]
 \item
 If\/ $(T(t))_{t \geq 0}$ is holomorphic or norm continuous or compact, then so is the semigroup 
@@ -1862,7 +1862,7 @@ The \emph{subdifferential} $\ddp$ of\/ $p$ at $f$ is defined by
 \ddp(f) = \{\phi \in E' \colon \dualp{g,\phi} \leq p(g) \text{ for all } g \in E, \dualp{f,\phi} = p(f) \}.
 \end{equation}
 It follows from the Hahn-Banach theorem that $\ddp(f) \neq \emptyset$ for all $f \in E$.
-
+%% --
 \begin{definition}\label{def:a2-2.1}
 \index{half-norm!p-dissipative}
 An operator $A$ on $E$ is called \emph{p-dissipative} if for all $f \in D(A)$ there exists $\phi \in \ddp(f)$ such that $\dualp{Af,\phi} \leq 0$ 
@@ -1872,7 +1872,7 @@ and $A$ is called \emph{strictly p-dissipative} if for all $f \in D(A)$ the ineq
 For convenience we want to have a distinctive name for the norm function.
 So we denote by $N \colon E \to \R$ the function given by $N(f) = \|f\|$ throughout.
 Then Eq.~\myeqpageref{eq:a2-2.5} can be written in the form
-
+%% --
 \begin{equation}\label{eq:a2-2.6}
 \dN(f) = \{\phi \in E' \colon \|\phi\|\leq 1, \dualp{f,\phi} = \|f\|\}.
 \end{equation}
@@ -2007,7 +2007,7 @@ If\/ $A$ is p-dissipative, then so is its closure.
 Let $p$ be a continuous sublinear functional on a real Banach space $E$.
 Let $A$ be the generator of a strongly continuous semigroup $(T(t))_{t\geq 0}$.
 The following assertions are equivalent.
-
+%% --
 \begin{enumerate}[\upshape (a)]
 \item \label{thm:a2-2.6.1}
 $p(T(t)f) \leq p(f)$ for all $t \geq 0$, $f \in E$.
@@ -2127,7 +2127,7 @@ Let $A$ be a p-dissipative operator where $p$ is a half-norm.
 If\/ $D(A)$ is dense, then $A$ is closable and the closure of\/ $A$ is p-dissipative as well (by Corollary~\ref{cor:a2-2.5}). 
 \end{proposition}
 %% –
-
+%% --
 \begin{proof}
 Let $(f_{n})_{n \in \N}$ be a sequence in $D(A)$ with $\lim_{n \to \infty} f_{n} = 0$ and $\lim_{n \to \infty} Af_{n} = g$.
 We have to show that $g = 0$.
@@ -2366,7 +2366,7 @@ Therefore $\TT$ is not uniformly continuous however, $(T(t) - \Id)^{2} = 0$ for 
 \end{enumerate}
 \end{remarks*}
 %% --
-
+%% --
 \begin{lemma}\label{lem:a2-3.2}
 Let $\TT = (T(t))_{t \geq 0}$ be a one-parameter semigroup of operators on a Banach space $E$.
 Then the following assertions are equivalent
@@ -2448,7 +2448,7 @@ Consequently, $\lim_{t \to 0} \|(T(t) - \Id)^2\| = 0$.
 \end{proof}
 %% --
 An immediate consequence of Theorem~\ref{thm:a2-3.3}   and Theorem~\ref{thm:a2-3.4}   is the following.
-
+%% --
 \begin{theorem}\label{thm:a2-3.5}
 Let $E$ be a Grothendieck space with the Dunford-Pettis property.
 Then every strongly continuous semigroup of operators on $E$ is uniformly continuous.
@@ -2456,7 +2456,7 @@ Then every strongly continuous semigroup of operators on $E$ is uniformly contin
 %%
 A compact Hausdorff space is called an \emph{F-space} if the closures of two disjoint open $F_{\sigma}$-sets are disjoint and is called a \emph{Stonean} (\resp \emph{$\sigma$-Stonean}) space if the closure of every open set (\resp open $F_{\sigma}$-set) is open.
 Every $\sigma$-Stonean space is an F-space.
-
+%% --
 \begin{theorem}\label{thm:a2-3.6}
 Every strongly continuous semigroups of operators on one of the following Banach spaces is uniformly continuous.
 \begin{enumerate}[\upshape (i)]
