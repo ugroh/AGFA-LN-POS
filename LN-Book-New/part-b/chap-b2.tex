@@ -410,7 +410,7 @@ For that we will make use of the theory of half-norms developed in Part-I, Secti
 For $0  \ll u \in C(K)$ let
 %% –
 \begin{equation}\label{eq:b2-1.4}
-p_{u}(f) = \inf\{\lambda \in \R_{+} \colon f \leq \lambda u\} = \sup_{x \in K} \frac{f^{+}(x)}{u(x)}.
+p_{u}(f) = \inf\{\lambda \in \R_{+} \colon f \leq \lambda u\} = \sup_{x \in K} f^{+}(x)\,u(x)^{-1}.
 \end{equation}
 %% –
 Then $p_{u}$ is a strict half-norm on $C(K)$ 
@@ -544,9 +544,9 @@ We also point out that, if\/ $(T(t))_{t \geq 0}$ is a positive semigroup on $C(K
 \index{generator!positive semigroup}
 Let $A$ be a densely defined operator on $C(K)$ which satisfies~\eqref{eq:b2-pmp}.
 Then
-\[
-    \lambda_{0} \coloneqq \inf\{\lambda \in \R \colon Au \leq \lambda u \text{ for some } 0 \ll u \in D(A)\} < \infty.
-\]
+$
+    \lambda_{0} \coloneqq \inf\{\lambda \in \R \colon Au \leq \lambda u \text{ for some } 0 \ll u \in D(A)\} < \infty
+$.
 \begin{enumerate}[\upshape (i)]
 \item \label{thm:b2-1.13-1}
 If\/ $(\lambda - A)D(A)$ is dense for some $\lambda > \lambda_{0}$, then $A$ is closable and the closure $\overline{A}$ of\/ $A$ is the generator of a positive semigroup.
@@ -652,7 +652,7 @@ Then by Corollary~\ref{cor:b2-1.14}
 \begin{align*}
     s(A) &= \inf\{\lambda \in \R \colon Au \leq \lambda u \text{ for some strictly positive } u\} \\
     &= \inf_{u \gg 0} \inf\{\lambda \in \R \colon Au \leq \lambda u\} \\
-    &= \inf\left\{\sup_{i} \sum_{j=1}^{n} a_{ij} \frac{u_{j}}{u_{i}} \colon u \gg 0\right\}.
+    &= \inf\left\{\sup_{i} \sum_{j=1}^{n} a_{ij} u_{j} \, u_{i}^{-1} \colon u \gg 0\right\}.
 \end{align*}
 This formula is due to \textcite{collatz:1942} (see also \textcite[Chapter I, Exercise 20]{schaefer:1974} and \textcite{wielandt:1950}).
 \end{example}
@@ -1178,7 +1178,8 @@ D_{u}\Theta(z) &= (\Theta(x_{0},y_{0})|u) = \frac{1}{|z|}\, ((x_{0},y_{0})|(u_{1
                &= \Re[(\sign \bar{z})\cdot u],
 \end{align*}
 %% --
-where $u = u_{1} + iu_{2} = (u_{1},u_{2}) \in \C = \R^2$ and $(v|u)$ denotes the canonical scalar product of\/ $v,u \in \R^2$.
+where $u = u_{1} + iu_{2} = (u_{1},u_{2}) \in \C = \R^2$ and $(v|u)$ denotes the canonical scalar product of\/ 
+$v$ and $u \in \R^2$.
 \end{proof}
 %% --
 Let $f, g \in C_{0}(X)$.
@@ -1263,6 +1264,7 @@ The dominated convergence theorem and Eq.~\myeqpageref{eq:b2-2.11} imply that
 %% --
 \begin{align*}
 \frac{\diff{}}{\dt}|_{t=0}\, \langle |T(t)f|,\phi \rangle = \lim_{t \downarrow 0}\, \langle k_{t},\phi \rangle = \langle \Re[(\widehat{\sign} \bar{f})(Af)],\phi \rangle
+&&\qedhere
 \end{align*}
 %% --
 \end{proof}
@@ -1455,6 +1457,7 @@ Then
 %%--
 \[
 \Re[(\sign \bar{f})m \cdot Af] = m \cdot \Re[(\sign \bar{f})Af] = m \cdot A|f|.
+\qedhere
 \]
 %%--
 \end{proof}
@@ -1535,7 +1538,7 @@ Thus
 \langle \Re[(\widehat{\sign} \bar{f})Af],\phi \rangle &= \int_{-1}^{0} |f(x)|'\phi(x)\, \dx = \int_{0}^{1} \phi(x)\, \diff{|f(x)|} = \\
 &= \phi(0)|f(0)| - \phi(-1)|f(-1)| - \int_{-1}^{0} |f(x)|\,\diff{\phi(x)}  \\
 &= \langle |f|,A'_{\max}\phi \rangle.
-\qedhere
+&&\qedhere
 \end{align*}
 %% --
 \end{proof}
@@ -1616,7 +1619,6 @@ However, if\/ $L = \alpha\delta_{0}$, then it is easy to see that $A$ generates 
 \end{cases}
 \end{equation*}
 %% --
-
 So $(T(t))_{t \geq 0}$ is clearly a lattice semigroup.
 \end{proof}
 %% --
@@ -2177,7 +2179,6 @@ Hence %
 	f(t) = \exp \mleft( \int_{0}^{t} h(\phi(s,x)) \ds \mright)
 \]
 %
-
 for every $t \in \R$.
 This is Eq.~\myeqpageref{eq:b2-3.15}.
 \end{proof}

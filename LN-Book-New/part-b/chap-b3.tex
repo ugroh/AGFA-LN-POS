@@ -261,6 +261,7 @@ If\/ $r$ is an eigenvalue of\/ $T(\tau)'$ with positive eigenvector $\phi_{0}$, 
     \]
 	\item 
 	Defining $\phi \coloneqq \int_{0}^{\tau} T(s)'\phi_{0} \, \ds $, one can proceed as in (i) to obtain the desired result.
+	\qedhere
 	\end{enumerate}
 	%% --
 \end{proof}
@@ -661,15 +662,27 @@ For the semigroup on $C(\Gamma \times \Gamma)$ given by
 	If\/ $\alpha/\beta$ is irrational, then this is a dense subset of\/ $\im \R$ and $\sigma_{b}(A) = \sigma(A) = \im\R$.
 	
 \item
-Consider $D \coloneqq \{z \in \C \colon |z| \leq 1\} = \{r\cdot \eu^{\im\omega} \colon r \in [0,1], \omega \in \R\}$, and a strictly positive function $\kappa \in C[0,1]$.
-	The flow on $D$ governed by the differential equation $\dot{r} = 0$, $\dot{\omega} = \kappa(r)$ induces a strongly continuous semigroup on $C(D)$ (which is given by
-	%% --
-	\[
+Consider %
+\[
+	D \coloneqq \{z \in \C \colon |z| \leq 1\} = \{r\cdot \eu^{\im\omega} \colon r \in [0,1], \omega \in \R\} 
+\]
+%
+and a strictly positive function $\kappa \in C[0,1]$.
+The flow on $D$ governed by the differential equation $\dot{r} = 0$, $\dot{\omega} = \kappa(r)$ induces a strongly continuous semigroup on $C(D)$ (which is given by
+%% --
+\[
 	(T(t)f)(z) = f(z\cdot \eu^{\im\kappa(|z|)t}).
-	\]
-	%% --
-	The boundary spectrum is $M_{6}$ with $\alpha \coloneqq \inf_r \kappa(r)$, $\beta \coloneqq \sup_r \kappa(r)$.
-	In particular, for $\kappa(r) = 1 + r$ we obtain as boundary spectrum the set $M_{5}$.
+\]
+%% --
+The boundary spectrum is $M_{6}$ with 
+%
+\[
+	\alpha \coloneqq \inf_r \kappa(r) 
+	\quad \text{and} \quad 
+	\beta \coloneqq \sup_r \kappa(r).
+\]
+%
+In particular, for $\kappa(r) = 1 + r$ we obtain as boundary spectrum the set $M_{5}$.
 	
 \item
 Suppose $M$ is a closed cyclic subset of\/ $\im \R$, $M = \bigcup_{\alpha \in S} \im\alpha\Z$ for a suitable $S \subset \R$ (\eg $S = M$).
@@ -1308,7 +1321,8 @@ In fact, we have the following result.
 \begin{align*}
 R(\lambda,B) &= (1 - R(\lambda,A)M_{h})^{-1}R(\lambda,A) 
 	= \sum_{n=0}^{\infty} (R(\lambda,A)M_{h})^{n}R(\lambda,A) \\
-R(\lambda,A) &= (1 - R(\lambda,B)M_{-h})^{-1}R(\lambda,B) = \sum_{n=0}^{\infty} (R(\lambda,B)M_{-h})^{n}R(\lambda,B)
+R(\lambda,A) &= (1 - R(\lambda,B)M_{-h})^{-1}R(\lambda,B) = \sum_{n=0}^{\infty} (R(\lambda,B)M_{-h})^{n}R(\lambda,B).
+&&\qedhere
 \end{align*} 
 	%% --
 \end{proof}
@@ -1454,6 +1468,7 @@ We now return to the general situation and show that irreducible semigroups poss
     PE = \Kern{s(A) - A} \text{ and } P'E' = \Kern{s(A) - A'}\,,
     \]
     therefore the remaining assertion follows from (ii) and (iv).
+    \qedhere
 	\end{enumerate}
 	\end{proof}
 %% --ulgr ende
@@ -1555,6 +1570,7 @@ And in case $X$ is compact, a $\phi \geq 0$ satisfying $A'\phi = 0$ always exist
     0 < \langle|h|,\phi\rangle = \lim_{n\to\infty}\langle h\cdot p_{n}(h),\phi\rangle = 0
     \]
     which is a contradiction.
+    \qedhere
 	\end{enumerate}
 %%
 \end{proof}
