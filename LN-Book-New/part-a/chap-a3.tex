@@ -93,8 +93,6 @@ we obtain for $t > 0$
     r(T(t)) = \lim_{n \to \infty} \exp\left( \frac{t}{nt}\,\log \|T(nt)\|\right) = \eu^{\omega_{0} t} .
     \qedhere
 \]
-%% --
-%\phantom{x}
 \end{proof}
 %% --
 \index{spectral bound $s(A)$}
@@ -380,6 +378,7 @@ to show that $(g_{n})_{n \in \N}$ is an approximate eigenvector corresponding to
 \item 
 This is a simple consequence of the Hahn-Banach theorem.
 %% --
+\qedhere
 \end{enumerate}
 \end{proof}
 %% --
@@ -554,7 +553,18 @@ is well known. It can be found, for example, in \textcite[VII.9.2]{dunfordschwar
 \item 
 We show that $\alpha \in A\sigma(A)$ if\/ $(\lambda_{0}-\alpha)^{-1} \in A\sigma(R(\lambda_{0}))$ and leave the proof of the remaining statements to the reader.
 
-Take $(f_{n})_{n \in \N} \subset E$ such that $\|f_{n}\| = 1$, $\|(\lambda_{0}-\alpha)^{-1}f_{n} - R(\lambda_{0},A)f_{n}\| \to 0$ and $\|R(\lambda_{0},A)f_{n}\| \geq \frac{1}{2}|\lambda_{0} - \alpha|^{-1}$.
+Take $(f_{n})_{n \in \N}$ a sequence in $E$ such that $\|f_{n}\| = 1$, 
+%
+\[
+	\|(\lambda_{0}-\alpha)^{-1}f_{n} - R(\lambda_{0},A)f_{n}\| \to 0
+\]
+%
+and 
+%
+\[
+	\|R(\lambda_{0},A)f_{n}\| \geq \frac{1}{2}|\lambda_{0} - \alpha|^{-1} .
+\]
+%
 Define
 %% --
 \[
@@ -623,6 +633,7 @@ U_{-n-1} = (A - \alpha)U_{-n}
 \quad \text{and} \quad 
 V_{-n-1} = \left(R(\lambda_{0},A) - (\lambda_{0}-\alpha)^{-1}\right)V_{-n} .
 \]
+\qedhere
 \end{enumerate}
 %% --
 \end{proof}
@@ -1078,6 +1089,7 @@ R(\lambda,A)_{/}(f+N) = R(\lambda,A)f + N
 %% --
 (use again the integral representation).
 This proves that $R(\lambda,A)_{/} = R(\lambda,A_{/})$.
+\qedhere
 \end{enumerate}
 \end{proof}
 %% --
@@ -1127,8 +1139,8 @@ If\/ $R(\cdot,A)_{|}$ has a pole in $\mu$ of order $\ell$, then $U_{-(\ell+1)|} 
 Similarly, it follows that $U_{-(m+1)}E \subset N$ if\/ $R(\cdot,A)_{/}$ has a pole in $\mu$ of order $m$.
 Therefore $U_{-(\ell+1)} \circ U_{-(m+1)} = 0$.
 
-The relations Eq.~\myeqpageref{eq:a3-3.2} imply $U_{-(m+\ell+1)} = 0$, hence the pole order of\/ $R(\cdot,A)$ is dominated 
-by $\ell + m$.
+The relations Eq.~\myeqpageref{eq:a3-3.2} imply $U_{-(m+\ell+1)} = 0$, hence the pole order of\/ $R(\cdot,A)$ is dominated by $\ell + m$.
+\qedhere
 \end{enumerate}
 \end{proof}
 %% --
@@ -1266,6 +1278,7 @@ We now show $\rho(A) \subset \rho(A_{\F})$: Assume $\lambda \in \rho(A)$.
 By (i) $(\lambda-A_{\F})$ has to be injective.
 Choose $\hat{f} = (f_{1},f_{2},\ldots) + c_{\F}(E)$ such that $(f_{n}) \in m^{\TT}(E)$.
 Then $(R(\lambda,A)f_{n}) \in m^{\TT}(E)$ and $(\lambda-A_{\F})((R(\lambda,A)f_{n})+c_{\F}(E)) = (f_{n}) + c_{\F}(E)$, \ie $(\lambda-A_{\F})$ is surjective and $\lambda \in \rho(A_{\F})$.
+\qedhere
 \end{enumerate}
 \end{proof}
 %% --
@@ -1620,7 +1633,7 @@ Since $\eu^{\lambda t} - T(t) = (\lambda - A)\int_{0}^{t} \eu^{\lambda(t-s)}T(s)
 The inclusion Eq.~\myeqpageref{eq:a3-6.1} becomes evident from the following proof of Eq.~\myeqpageref{eq:a3-6.2}. Take $\lambda \in A\sigma(A)$ and an associated approximate eigenvector $(f_{n})$ in $D(A)$.
 Then
 %% --
-\[\textstyle
+\[%\textstyle
 g_{n} \coloneqq \eu^{\lambda t}f_{n} - T(t)f_{n} = \int_{0}^{t} \eu^{\lambda(t-s)}T(s)(\lambda-A)f_{n} \ds
 \]
 %% --
@@ -1628,8 +1641,9 @@ converges to zero as $n \to \infty$.
 Consequently, $\eu^{\lambda t} \in A\sigma(T(t))$ and, in fact, the same approximate eigenvector $(f_{n})$ does the job for all $t \geq 0$.
 
 For the proof of Eq.~\myeqpageref{eq:a3-6.3} we take $\lambda \in R\sigma(A)$ and observe that 
-\[\textstyle
-(\eu^{\lambda t} - T(t))f = (\lambda - A)(\int_{0}^{t} \eu^{\lambda(t-s)}T(s)f \ds) \in (\lambda - A)D(A) \text{ for every } f \in E\,.\quad\square
+\[%\textstyle
+(\eu^{\lambda t} - T(t))f = (\lambda - A)(\int_{0}^{t} \eu^{\lambda(t-s)}T(s)f \ds) \in (\lambda - A)D(A) \text{ for every } f \in E.
+\qedhere
 \]
 \end{proof}
 %% --
@@ -1738,7 +1752,12 @@ is the trouble maker in the sense that not every approximate eigenvalue of\/ $T(
 Since nothing more can be said in general, we now look for additional hypotheses on the semigroup implying the spectral mapping theorem.
 
 As a simple example we assume $T(t_{0})$ to be compact for some $t_{0} > 0$.
-Then $\sigma(T(t)) \setminus \{0\} = P\sigma(T(t)) \setminus \{0\}$ for $t \geq t_{0}$ and the spectral mapping theorem is valid by Eq.~\myeqpageref{eq:a3-6.4}.
+Then %
+\[
+	\sigma(T(t)) \setminus \{0\} = P\sigma(T(t)) \setminus \{0\}
+\]
+%
+for $t \geq t_{0}$ and the spectral mapping theorem is valid by Eq.~\myeqpageref{eq:a3-6.4}.
 A different class of semigroups verifying the spectral mapping theorem is given by the uniformly continuous semigroups (compare Corollary~\ref{cor:a3-1.2}).
 
 Both cases, and many more, are included in the following result.
@@ -2084,6 +2103,7 @@ the assertions Eq.~\myeqpageref{eq:a3-7.3} and Eq.~\myeqpageref{eq:a3-7.4} imply
 %% --
 \begin{equation}\label{eq:a3-7.5}
 P_{k} = \int_{-\infty}^{\infty} \eu^{\im 2ks}\check{\phi_{0}}(s)T(s)\ds \text{ for } k \in \Z .
+\qedhere
 \end{equation}
 %% --
 \end{proof}
@@ -2147,8 +2167,6 @@ Then Eq.~\myeqpageref{eq:a3-7.6} implies
 &= \sum_{m\in\Z} (\check{\psi_{0}}(m\pi) + \check{\psi_{0}}((m+1)\pi))T(m\pi) \\
 &= \left[ \sum_{m\in\Z} \check{\psi_{0}}(m\pi)T(m\pi) \right] (\Id + T(\pi)) . \qedhere
 \end{align*}
-%% --
-%\phantom{x}
 \end{proof}
 %% --
 In the rest of this section we discuss the behavior of the single spectral values $\lambda$ of\/ $T(t)$, $t > 0$.
@@ -2218,7 +2236,13 @@ Hence $\sum_{k\in\Z} R(\im k,A)Q_{k}f$ is Césaro-summable if and only if\/ $\su
 (b) $\Rightarrow$ (a) We have $Q_{k} = \frac{1}{2\pi}(1 - T(2\pi))R(\im k,A)$.
 %\marginpar{Eqs. (3.7.7) and (3.7.8) [on previuos page]}
 Furthermore we know by Eq.~\myeqpageref{eq:a3-7.7} and Eq.~\myeqpageref{eq:a3-7.8}  that $\sum_{k\in\Z} Q_{k}f$ is Césaro-summable towards $\frac{1}{2}(f + T(2\pi)f)$.
-If we define $S \colon E \to E$ by $Sf \coloneqq \frac{1}{2}f + \frac{1}{2\pi}\cdot C_{1}\text{-}\sum_k R(\im k,A)f$, then we have
+If we define $S \colon E \to E$ by 
+%
+\[
+	Sf \coloneqq \frac{1}{2}f + \frac{1}{2\pi}\cdot C_{1}\text{-}\sum_k R(\im k,A)f .
+\]
+%
+Then we have
 \begin{align*}
 (1 - T(2\pi))Sf &= \frac{1}{2}(f - T(2\pi)f) + \frac{1}{2\pi}\cdot C_{1}\text{-}\sum_k (1 - T(2\pi))R(\im k,A)f \\
 &= \frac{1}{2}(f - T(2\pi)f) + \frac{1}{2}(f + T(2\pi)f) = f .

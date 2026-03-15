@@ -1,6 +1,5 @@
 % !TEX root = ../LN-Book-New.tex
 %% -- Stand: 2026-03-14
-%% -- final
 %% --
 %%\setcounter{section}{0}
 %% --
@@ -162,7 +161,12 @@ Then
 \]
 %% --
 Since $v(0) = f$, it follows that $v(t) = u(t,f)$.
-Hence $Au(t,f) = Av(t) = \dot{v}(t) = u(t,Af)$.
+Hence 
+%
+\[
+	Au(t,f) = Av(t) = \dot{v}(t) = u(t,Af) .
+\]
+%
 This is Eq.~\myeqpageref{eq:a2-1.1}.
 %%--
 Now denote by $B$ the generator of\/ $(T_{1}(t))_{t \geq 0}$\,.
@@ -689,15 +693,16 @@ It follows that $\lambda \in \rho(A)$ and
 Since $A$ generates a bounded group, there exists a constant $N \geq 0$ such that 
 %
 \[
-	\|R(\mu,A)\| \leq N/\Re(\mu) \quad \text{and} \quad \|R(\mu,-A)\| \leq N/\Re(\mu) 
+	\|R(\mu,A)\| \leq N\Re(\mu)^{-1} \quad \text{and} \quad \|R(\mu,-A)\| \leq N \Re(\mu)^{-1} 
 \]
 %
 for all $\mu \in S(\pi/2)$.
 Consequently, 
 %
 \[
-	\|R(\lambda,A^{2})\| \leq N^{2}/r^{2}(\cos\beta)^{2} \leq 1/r^{2}[N/\cos\beta]^{2} = M/|\lambda| .
-	\qedhere
+	\|R(\lambda,A^{2})\| \leq \frac{N^{2}}{r^{2} (\cos\beta)^{2}} 
+		\leq \frac{1}{r^{2}}\mleft( \frac{N}{\cos\beta} \mright)^{2} = M\,|\lambda|^{-1} .
+\qedhere
 \]
 %
 \end{proof}
@@ -843,7 +848,7 @@ exists and
     (|\xi + \im\eta|)^{-1} \cdot |\xi + \im\eta| \cdot \sum_{n=0}^\infty |\xi|^{n}M^{n+1}/|\eta|^{n+1}\\
     &\leq  (|\xi + \im\eta|)^{-1} \cdot 2M (|\xi|^{2} + |\eta|^{2})^{1/2} / |\eta| \cdot \sum_{n=0}^\infty M^{n}c^{n}\\   
     &\leq  (4M\cdot(c^{2}+1)^{1/2})/|\xi+\im\eta| \\
-    &\leq N/|\xi+\im\eta| \, . 
+    &\leq N |\xi+\im\eta|^{-1}  . 
 \end{align*}
 %% –
 This together with the assumption implies that there exist $N' \geq 0$ and $\alpha \in \left]0,\pi/2\right]$ such that $\lambda \in \rho(A)$ and $\|R(\lambda,A)\| \leq N'/|\lambda|$ for all $\lambda \in S(\alpha+\pi/2)$.
@@ -1096,6 +1101,7 @@ Hence
 r(R(\lambda,A)) &= \sup \left\{|\lambda-\mu|^{-1} \colon \mu \in \sigma(A)\right\} \\
 & = 
 \left(\inf \{|\lambda-\mu| \colon \mu \in \sigma(A)\}\right)^{-1} = \text{dist}(\lambda,\sigma(A))^{-1}.
+&&\qedhere
 \end{align*}
 %%
 \end{proof}
@@ -1452,32 +1458,8 @@ $[\text{ess}]\text{-}\Image{m} \subset
 \item
 there exists $c > 0$ such that 
 $\left\{\lambda \in \C \colon \lvert\Im(\lambda)\rvert > c \cdot \eu^{-t\Re(\lambda)}\right\} \subset \rho(A)$.
+\qedhere
 \end{enumerate*}
-%The semigroup is right-sided differentiable at $t$ if and only if the following equivalent assertions are true.
-%\begin{enumerate}[\upshape(a)]
-%\item
-%$T(t)E \subset D(A)$,
-%
-%\item
-%$\eu^{tm} \cdot f \cdot m \in E$ for all $f \in E$,
-%
-%\item
-%$\eu^{tm} \cdot m$ is [essentially] bounded,
-%
-%\item
-%$\eu^{t\Re(m)} \cdot \Im(m)$ is [essentially] bounded, 
-%
-%\item
-%there exists $c > 0$ such that 
-%$[\text{ess}]\text{-}\Image{m} \subset 
-%\left\{\lambda \in \C \colon \eu^{t\Re(\lambda)}|\Im(\lambda)| \leq c\right\}$, 
-%
-%\item
-%there exists $c > 0$ such that 
-%$\left\{\lambda \in \C \colon |\Im(\lambda)| > c \cdot \eu^{-t\Re(\lambda)}\right\} \subset \rho(A)$.
-%\end{enumerate}
-%%% --
-%\phantom{x}
 \end{proof}
 %% --
 \item \label{ex:a2-1.28-3}
@@ -2518,9 +2500,8 @@ If\/ $O$ is a finitely connected domain and $H^{\infty}$ does not only contain t
 Note that $H^{\infty}(D)$ is isomorphic to $\{f \in H^{\infty}(D) \colon f(0) = 0\}$ via the map $f \mapsto zf$.
 Then use \textcite[p.77 and Proposition 4.4.1]{grothendieck:1953}.
 Hence $H^{\infty}(O)$ is a Grothendieck space with the Dunford-Pettis property.
-		
+\qedhere
 \end{description}
-	
 \end{proof}
 %% --
 \begin{remark*}\label{rem:a2-final}
