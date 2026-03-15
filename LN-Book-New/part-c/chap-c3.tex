@@ -1,4 +1,5 @@
 % !TEX root = ../LN-Book-New.tex
+%% -- Stand: 2026-03-15
 %% --
 %\setcounter{section}{0}
 \chapter[Spectral Theory on Banach Lattices]{Spectral Theory of Positive Semigroups on Banach Lattices}\label{chap:c3}
@@ -145,7 +146,7 @@ If\/ $\Re(\lambda) > s(A)$, then we have
 \end{corollary}
 %% --
 The proof is an immediate consequence of Theorem~\ref{thm:c3-1.2}.
-
+%% --
 \begin{corollary}\label{cor:c3-1.4}
 We have $s(A) \in \sigma(A)$ unless $s(A) = -\infty$.
 \end{corollary}
@@ -160,7 +161,6 @@ Then
 It follows that $\{z \in \C  \colon |\Re(z) - s(A)| < M^{-1}\} \subseteq \rho(A)$, which is absurd by the definition of\/ $s(A)$.
 \end{proof}
 %% --
-
 \begin{corollary}\label{cor:c3-1.5}
 Suppose that $s(A)$ is a pole%
 \index{resolvent!pole} 
@@ -174,6 +174,7 @@ By Eq.~\myeqpageref{eq:c3-1.5} we have $\|R(\epsilon+\im\beta ,A)\| \leq \|R(\ep
 Therefore 
 \[
 \lim_{\epsilon\to 0}\|\epsilon^k R(\epsilon+\im\beta ,A)\| \leq \lim_{\epsilon\to 0}\|\epsilon^k R(\epsilon,A)\| = 0 \text{ for } k > m\,.
+\qedhere
 \]
 \end{proof}
 %% --
@@ -197,7 +198,6 @@ Thus we arrive at a contradiction.
 \end{proof}
 %% --
 We conclude this section by indicating possible extensions and further consequences of the results stated above.
-
 %% --
 \begin{remarks}\label{rem:c3-1.7}
 \begin{enumerate}[\upshape (i), wide, labelindent=.25em]
@@ -441,6 +441,7 @@ Further properties of pseudo-resolvents are given in the following two propositi
         \]
         which shows that $(R(\lambda_{n}))$ is a Cauchy sequence in $\mathcal{L}(G)$, hence $S \coloneq \lim_{n\to\infty}R(\lambda_{n})$ exists.
 		The assertion now follows from Eq.~\myeqpageref{eq:c3-2.10} and Eq.~\myeqpageref{eq:c3-2.11}.
+		\qedhere
 	\end{enumerate}
 \end{proof}
 %% --
@@ -499,7 +500,7 @@ In terms of the initial space this means precisely $h^{[n]} = zR(z+\im n\beta)h^
 We will prove cyclicity of the boundary spectrum under a \emph{growth condition}%
 \index{growth condition} 
 which is stated in the following definition.
-
+%% --
 \begin{definition}\label{def:c3-2.8}
     \index{resolvent}
 	Let $A$ be the generator of a positive semigroup $(T(t))_{t \geq 0}$ with spectral bound $s(A) > -\infty$.
@@ -513,6 +514,7 @@ which is stated in the following definition.
 \end{definition}
 %% --
 Before proving the equivalence of the two assertions we make some remarks.
+%% --
 \begin{remarks*}
 \begin{enumerate}[\upshape (i), wide, labelindent=0.5em]
     \item 
@@ -548,7 +550,7 @@ Then we have
 \]
 %% --
 Now Eq.~\myeqpageref{eq:c3-1.1} implies 
-\[\textstyle
+\[%\textstyle
 \lambda R(\lambda,A) = \int_{0}^{\infty} \lambda \exp(-\lambda s)T(s) \ds \geq \eu^{-1}C(t) = \eu^{-1}\cdot C(\frac{1}{\lambda}) \geq 0\,.
 \]
 Thus $C(t)$ is bounded for $t \to \infty$ whenever $\lambda R(\lambda,A)$ is bounded for $\lambda \downarrow 0$.
@@ -602,13 +604,13 @@ We consider an $\mathcal{F}$-product $E_{\mathcal{F}}$ of\/ $E$ and for convenie
 The canonical extensions of\/ $R(\lambda,A)$ to $E_{1}$ form a positive pseudo-resolvent $\{(R_{1}(\lambda)\}_{\Re(\lambda)>0}$ on $E_{1}$.
 By Proposition~\ref{prop:c3-2.6}\,(i) and Part-I, Section~\ref{sec:a3-1} there exists $h_{1} \in E_{1}$, $h_{1} \neq 0$ such that
 %% --
-\begin{equation}\textstyle\label{eq:c3-2.16}
+\begin{equation}\label{eq:c3-2.16}
 	\lambda R_{1}(\lambda+\im\beta)h_{1} = h_{1} \ \text{ for }  \Re(\lambda) > 0\,.
 \end{equation}
 %% --
 By Eq.~\myeqpageref{eq:c3-2.13} we have
 %% --
-\begin{equation}\label{eq:c3-2.17}\textstyle
+\begin{equation}\label{eq:c3-2.17}%\textstyle
 	|h_{1}| = |\tau R_{1}(\tau+\im\beta)h_{1}| \leq \tau R_{1}(\tau)|h_{1}| \ (r > 0)\,.
 \end{equation}
 %% --
@@ -882,13 +884,13 @@ This is the second statement of the following theorem (see also Part-II, Remark~
 	
 	Thus the function $t \mapsto \langle T(t)g_{n}^{+},\phi \rangle$ is identically zero by the uniqueness theorem for analytic functions.
 	Since $f = \lim_{n\to\infty}g_{n}^{+}$, we have $\langle T(t)f,\phi \rangle = 0$ for all $t \in \R _{+}$.
+	\qedhere
 \end{enumerate}
 \end{proof}
 \index{quasi-interior point|)}
 
 %% --
 The next result can be used to check irreducibility for a semigroup whose generator is a bounded perturbation of a known semigroup. It is a generalization (and an extension to Banach lattices) of Part-II, Proposition~\ref{prop:b3-3.3}. 
-
 %% --
 \begin{proposition}\label{prop:c3-3.3}
 	\index{semigroup!bounded perturbation}
@@ -927,7 +929,7 @@ Then, by continuity, we have $KI \subset I$, \ie  $I$ is $K$-invariant.
 \end{proof}
 
 Next we consider some concrete examples.
-
+%% --
 \begin{examples}\label{ex:c3-3.4}
 	\begin{enumerate}[\upshape (i), wide, labelindent=.25em]
 	\item 
@@ -1027,7 +1029,7 @@ Next we consider some concrete examples.
 	%% --
 	Since we assumed that $\kappa$ is strictly positive, $I_{Y}$ is $K$-invariant if and only if\/ $Y = X\times[-1,1]$ for some measurable set $X \subset [0,1]$.
 	If we assume that $X$ has positive measure and define
-    \[\textstyle
+    \[%\textstyle
 	\alpha \coloneqq \sup\left\{x \in [0,1] \colon \int_{0}^{x} \1_{X}(s)\ds  = 0\right\}, \beta \coloneqq \inf\left\{x \in [0,1] \colon \int_{x}^{1} \1_{X}(s)\ds  = 0 \right\},
 	\] 
 	then we have $\alpha < \beta$ and the support of the function $h \coloneqq R(\lambda,A)\1_{Y}$, where 
@@ -1047,11 +1049,11 @@ Next we consider some concrete examples.
 	For details we refer to \textcite{greiner:1984d}.
 	\end{enumerate}	
 \end{examples}
-	
+%% --
 In the following proposition we list some properties which are consequences of irreducibility. 
 This extends Theorem~\ref{thm:b2-3.5} to the setting of Banach lattices. 
 The first assertion of the latter proposition is no longer true in the general setting (see Example~\ref{ex:c3-3.6} and Theorem~\ref{thm:c3-3.7}). 
-
+%% --
 \begin{proposition}\label{prop:c3-3.5}
     \index{spectrum!irreducible semigroup}
 	
@@ -1088,7 +1090,7 @@ The first assertion of the latter proposition is no longer true in the general s
 %% --
 In arbitrary Banach lattices it is no longer true that an irreducible semigroup has necessarily nonvoid spectrum.
 We indicate how an irreducible semigroup having empty spectrum can be constructed.
-
+%% --
 \begin{example}\label{ex:c3-3.6}
 
 Consider the Banach lattice $E = L^{p}(\Gamma\times\Gamma)$.
@@ -1172,7 +1174,7 @@ Thus the assumption (iii) is satisfied.
 
 Concerning the eigenvalues of an irreducible semigroup which are contained in $\sigma_{b}(A)$ all statements established for spaces $C_{0}(X)$ in Part-II, Theorem~\ref{thm:b3-3.6} are true in the setting of Banach lattices.
 The proof can be translated without difficulties and will be omitted (see also \textcite[Theorem~2.6]{greiner:1982}).
-
+%% --
 \begin{theorem}\label{thm:c3-3.8}
 	Suppose $\TT$ is an irreducible semigroup
     \index{spectrum!irreducible semigroup}
@@ -1209,11 +1211,8 @@ which is irreducible (\cf Part-I, Section~\ref{subsec:a1-2.5}).%
 \index{rotation semigroup}%
 \index{semigroup!rotation semigroup}
 \index{periodic semigroup}
-
-
-
+%% --
 \begin{corollary}\label{cor:c3-3.9}
-	
 	Let $(T(t))_{t\geq 0}$ be a positive irreducible semigroup on a Banach lattice $E$ which is periodic of period $\tau$.
 	Assume that $\dim E > 1$.
 	Then there exist continuous lattice homomorphisms
@@ -1371,7 +1370,7 @@ Moreover, $\sigma_{b}(A)$ contains only algebraically simple poles.
 In view of Part-I, Proposition~\ref{prop:a3-4.2} the result above has consequences for semigroups which can be reduced (by considering restrictions to invariant ideals or quotients) to semigroups which satisfy the hypothesis of Theorem~\ref{thm:c3-3.12}. 
 Semigroups having this property are precisely those for which $s(A)$ is a pole of the resolvent of finite algebraic multiplicity. 
 The latter claim is a consequence of Proposition~\ref{prop:c3-2.11} and the following lemma.
-
+%% --
 \begin{lemma}\label{lem:c3-3.13}
 	Suppose that $\TT = (T(t))_{t \ge 0}$ is a positive semigroup such that $s(A)$ is a first order pole of the resolvent. 
 	Moreover assume that the corresponding residue is a strictly positive operator of finite rank.
@@ -1410,8 +1409,6 @@ The latter claim is a consequence of Proposition~\ref{prop:c3-2.11} and the foll
 	To show that $T_{k}$ is irreducible, we consider an invariant ideal $I$. 
 	Then we have $R(\lambda,A_{k})I \subset I$ for $\lambda > 0$ hence $P_{k} = \lim_{\lambda \to 0}\lambda R(\lambda,A_{k})$ leaves $I$ invariant. 
 	If\/ $I \neq \{0\}$, then $P_{k}I \neq \{0\}$ since $P_{k}$ is strictly positive. 
-	Then $e_{k} \in P_{k}J \subset I$ which implies that $J_{k} \subset I$.
-	%$\square$
 \end{proof}
 %% --
 Combining the lemma with Proposition~\ref{prop:c3-2.11} one obtains the following.
@@ -1427,7 +1424,7 @@ If\/ $s(A)$ is a pole of finite algebraic multiplicity, then there exists a fini
 \end{equation}
 %% --
 The following theorem is an immediate consequence of Eq.~\myeqpageref{eq:c3-3.19}, Theorem~\ref{thm:c3-3.12} and Part-I, Proposition~\ref{prop:a3-4.2}.
-
+%% --
 \begin{theorem}\label{thm:c3-3.14}
 \index{resolvent!pole}%
 \index{boundary spectrum}
@@ -1438,7 +1435,7 @@ The following theorem is an immediate consequence of Eq.~\myeqpageref{eq:c3-3.19
 \end{theorem}
 
 Here the assumption that the multiplicity of\/ $s(A)$ is finite is essential as can be seen from the following example.
-
+%% --
 \begin{example}\label{ex:c3-3.15}
 	Consider $X \coloneqq  [0,1] \times V$, $V \coloneqq  \{v \in \R  \colon v_{1} < |v| < v_{2}\}$ $(0 < v_{1} < v_{2} < \infty)$. 
 	The flow in the phase space $X$ which describes the free motion in the interval $[0,1]$ with velocities in $V$ assuming that the particles are reflected at the endpoints generates a positive semigroup on $L^{p}(X,\mu)$ $(\mu$ the Lebesgue measure). 
@@ -1465,7 +1462,7 @@ Obviously one can apply Theorem~\ref{thm:c3-3.12} and Theorem~\ref{thm:c3-3.14},
 We consider two typical cases in the following corollaries. 
 The meaning of\/ $r_{ess}(T(t))$ and $\omega_{ess}(\TT)$ and its properties are explained in Part-I, Example~\ref{ex:a3-3.7}.
 \end{example}
-
+%% --
 \begin{corollary}\label{cor:c3-3.16}
     \index{spectrum!essential}
     \index{quasi-interior point}
@@ -1483,7 +1480,7 @@ The meaning of\/ $r_{ess}(T(t))$ and $\omega_{ess}(\TT)$ and its properties are 
 	It follows that $s(A)$ is strictly dominant.
 	For the final assertion we refer to Remark~\ref{rem:c3-2.15}\,(ii).
 \end{proof}
-
+%% --
 \begin{corollary}\label{cor:c3-3.17}
 	Suppose that $\TT$ is an irreducible, eventually norm continuous semigroup having compact resolvent.
 	Then $s(A) = \omega_0(\TT)$ is an algebraically simple pole and a strictly dominant eigenvalue.
@@ -1497,7 +1494,6 @@ The meaning of\/ $r_{ess}(T(t))$ and $\omega_{ess}(\TT)$ and its properties are 
 	In addition $\{\lambda \in \sigma(A) \colon \Re(\lambda) \geq -1\}$ is compact since $\TT$ is eventually norm-continuous (see Part-I, Theorem~\ref{thm:a2-1.20}). 
 	It follows that $s(A)$ is strictly dominant.
 	By Part-I, Theorem~\ref{thm:a3-6.6} we have $s(A) = \omega_0(\TT)$.
-	%$\square$
 \end{proof}
 
 In the following proposition we give a condition which ensures that Theorem~\ref{thm:c3-3.14} can be applied to certain perturbations. 
@@ -1576,7 +1572,7 @@ For semigroups of lattice homomorphisms much more can be said.
 The whole spectrum is an imaginary additively cyclic subset of\/ $\C $ (\cf Theorem~\ref{thm:c3-4.2}). 
 This result can be used to derive cyclicity results for the eigenvalues in the boundary spectrum of positive semigroups (\cf Corollary~\ref{cor:c3-4.3}). 
 In the last part of this section we discuss a spectral decomposition of positive groups (\cf Theorem~\ref{thm:c3-4.8}).
-
+%% --
 \begin{lemma}\label{lem:c3-4.1}
 	Suppose that $(T(t))_{t \ge 0}$ is a semigroup of lattice homomorphisms on a Banach lattice $E$ with generator $A$.
 	In case $\im\alpha \in R\sigma(A)$, $\alpha \in \R $, then one of the following assertions are true
@@ -1612,7 +1608,7 @@ In the last part of this section we discuss a spectral decomposition of positive
 	That is we have
 	%% --
 	\begin{equation}\label{eq:c3-4.2}
-    \textstyle
+    %\textstyle
 		T_{1}(t)\circ q_{\psi} = q_{\psi}\circ T(t) \ (t \geq 0)\,.
 	\end{equation}
 	%% -- tikz
@@ -1673,7 +1669,7 @@ In the last part of this section we discuss a spectral decomposition of positive
 	Theorem~\ref{thm:c3-2.2} 
 	and obtain $\im\alpha\Z \subset P\sigma(A_{1}^*) = R\sigma(A_{1})$.
 	\end{proof}
-
+%% --
 \begin{theorem}\label{thm:c3-4.2}
     \index{semigroup!lattice semigroup} 
     \index{spectrum!point spectrum $P\sigma$}
@@ -1681,7 +1677,7 @@ In the last part of this section we discuss a spectral decomposition of positive
 	Let $A$ be the generator of a semigroup $(T(t))_{t \geq 0}$ of lattice homomorphisms on a Banach lattice $E$. 
 	Then $\sigma(A)$, $A\sigma(A)$ and $P\sigma(A)$ are imaginary additively cyclic subsets of\/ $\C $.
 \end{theorem}
-
+%% --
 \begin{proof}
 	We first consider the point spectrum. 
 	If\/ $\lambda \in P\sigma(A)$, $\lambda = \alpha + \im\beta$ $(\alpha,\beta \in \R )$, then there exists $f \in E$, $f \neq 0$ such that $Af = \lambda f$. 
@@ -1704,7 +1700,7 @@ Cyclicity of the entire spectrum follows from the cyclicity of\/ $A\sigma(A)$ an
 
 One can use Theorem~\ref{thm:c3-4.2} in order to prove cyclicity for the eigenvalues in the boundary spectrum of positive semigroups. 
 We list some typical cases in the following corollary.
-
+%% --
 \begin{corollary}\label{cor:c3-4.3}
 	Let $\TT = (T(t))_{t \geq 0}$ be a positive semigroup on a Banach lattice $E$ which is bounded. 
 	Each of the following conditions implies that $P\sigma(A)\cap i\R $ is imaginary additively cyclic.
@@ -1731,9 +1727,9 @@ We list some typical cases in the following corollary.
 	
 	Now we assume that $E$ is weakly sequentially complete, which is equivalent to (\cf Section~\ref{sec:c1-5})
 	%% --
-	\begin{equation}\label{eq:c3-4.5}
+\begin{equation}\label{eq:c3-4.5}
 	\textit{Every increasing norm-bounded net of\/ $E_{+}$ converges}.
-	\end{equation}
+\end{equation}
 	%% --
 	We fix $s > 0$ and define $T \coloneqq  T(s)$ and $F \coloneqq  \ker (1 - T)$, . 
 	Obviously $f \in F$ implies $\bar{f} \in F$ hence $F = F\cap E_{\R } + iF\cap E_{\R }$. 
@@ -1746,12 +1742,11 @@ We list some typical cases in the following corollary.
 	
 	(ii) If\/ $T(s)$ is mean-ergodic, then we have $\ker (1 - T(s)) = PE$ where $P$ is the mean-ergodic projection, \ie $Pf = \lim_{n\to \infty}\frac{1}{n}\sum_{k=0}^{n-1}T(s)^{k}f$.
 	Obviously $P$ is positive, hence II.11.5 of \textcite{schaefer:1974} implies that $PE$ is a Banach lattice (for the induced order and an equivalent norm).
-	%$\square$
 \end{proof}
 %% --
 The assumptions made in Corollary~\ref{cor:c3-4.3} can be weakened slightly (\cf \textcite{greiner:1982}). 
 However, one still cannot prove cyclicity of\/ $P\sigma_{b}(A)$ for arbitrary positive semigroups.
-
+%% --
 \begin{example}\label{ex:c3-4.4}
 	At first we recall Part-II, Example~\ref{ex:b3-2.13}. 
 	There we constructed a bounded semigroup on $C(\Gamma)\times C_{0}(\R )$ such that $P\sigma_{b}(A) = \{\im k \colon k \in \Z, k \neq 0\}$.
@@ -1778,7 +1773,7 @@ In view of Corollary~\ref{cor:c3-4.3}\,(i) the semigroup cannot be bounded.
 In the next proposition we show that for semigroups of lattice homomorphisms on $L^1$-spaces, there is a spectral mapping theorem for the real part of the spectrum.
 \index{spectral mapping theorem}
 \index{spectrum!lattice semigroup}
-
+%% --
 \begin{proposition}\label{prop:c3-4.5}
 \index{spectral mapping theorem!lattice homomorphism}
 Let $(T(t))_{t \geq 0}$ be a strongly continuous semigroup
@@ -1828,8 +1823,7 @@ The latter assertion is a consequence of the following facts.
 	\[
     \|g_n\| = \int_{0}^{t} \eu^{-\alpha s}\|T(s)f_n\| \ds\,.
     \]
-	
-	\item 
+\item 
     The inequality \quad
     $\displaystyle
     \|T(t)f\| \leq \|T(t-s)\|\|T(s)f\|
@@ -1849,6 +1843,7 @@ The latter assertion is a consequence of the following facts.
     $\displaystyle
      \lim_{n \to \infty}\|T(t)f_n\| = r > 0\,.
     $
+    \qedhere
 \end{enumerate}
 \end{proof}
 %% --
@@ -1909,7 +1904,7 @@ g_2 \coloneqq \frac{1}{2}\cdot(g - (\text{sign } R(\mu,A)g)g)\,,
 %% --
 then obviously $g = g_1 + g_2$. Moreover, $g$ is positive if and only if
 both, $g_1$ and $g_2$ are positive. We summarize these considerations in the following lemma.
-
+%% --
 \begin{lemma}\label{lem:c3-4.6}
 \index{group of positive operators}
 Let $A$ be the generator of a positive group on a Banach
@@ -1930,7 +1925,7 @@ such that
 %% --
 We need another lemma. It can be formulated for arbitrary positive
 semigroups on Banach lattices.
-
+%% --
 \begin{lemma}\label{lem:c3-4.7}
 Let $(T(t))_{t \geq 0}$ be a positive semigroup on a Banach
 lattice $E$ with generator $A$. Given $\mu \in \rho(A) \cap \R $ and $h \in E_+$, then the following assertions are equivalent.
@@ -1949,23 +1944,23 @@ $\int_{0}^{t} \eu^{-\mu s}T(s)h \ds = (\Id - \eu^{-\mu t}T(t))R(\mu,A)h$
 (see Eq.~\myeqpageref{eq:a1-3.2}).
 %
 Since $R(\mu,A)h \geq 0$ and $T(t)$ is a positive operator we obtain
-\[\textstyle
+\[%\textstyle
 \int_{0}^{t} \eu^{-\mu s}T(s)h \ds = R(\mu,A)h - \eu^{-\mu t}T(t)R(\mu,A)h \leq R(\mu,A)h
 \] 
 which implies assertion (b).
 
 $(b)\Rightarrow(a)$  The assumption implies that 
-\[\textstyle
+\[%\textstyle
 \int_{0}^{\infty} \eu^{-\nu s}T(s)h \ds \coloneqq 
 \lim_{t \to \infty} \int_{0}^{t} \eu^{-\nu s}T(s)h \ds \ \text{ exists for } \ \nu > \mu\,. 
 \]
 Using that $A$ is a closed operator it follows that 
-\[\textstyle
+\[%\textstyle
 (\nu - A)\left(\int_{0}^{\infty} \eu^{-\nu s}T(s)h \ds\right) = h\,.
 \]
 For $\nu$
 sufficiently close to $\mu$ such that $\nu \in \rho(A) \cap \R $ we have 
-\[\textstyle
+\[%\textstyle
 R(\nu,A)h = \int_{0}^{\infty} \eu^{-\nu s}T(s)h \ds \geq 0\,. 
 \] 
 By continuity we conclude $R(\mu,A)h \geq 0$.
@@ -1975,7 +1970,7 @@ By now we are prepared to prove the spectral decomposition for positive groups. 
 consequence of Theorem~\ref{thm:c3-4.2}. For any $\mu \in \rho(A) \cap \R $ the line $\mu+i\R $ is a
 subset of the resolvent set and divides $\sigma(A)$ into disjoint sets.
 Both sets will be unbounded in general.
-
+%% --
 \begin{theorem} \label{thm:c3-4.8}
 \index{group of positive operators}
 \index{spectral decomposition}
@@ -2017,13 +2012,12 @@ $R(\mu,A_{|I_{\mu}}) = R(\mu,A)_{|I_{\mu}} \geq 0$. Theorem~\ref{thm:c3-1.1}\,(i
 $\sigma(A_{\vert I_{\mu}}) \subset \{\lambda \in \C  \colon \Re(\lambda) < \mu\}$. The same argument applied to $-A$ and
 $-\mu$ yields $\sigma(A_{|J_{\mu}}) \subset \{\lambda \in \C  \colon \Re(\lambda) > \mu\}$. Now the assertion follows
 from Part-I, Proposition~\ref{prop:a3-4.2}.
-%$\square$
 \end{proof}
-
+%% --
 The spectral projections corresponding to the spectral decomposition
 described above have the expected representation as an integral
-'around' the spectral sets (see Corollary 3 in \textcite{greiner:1984c}).
-
+\enquote*{around} the spectral sets (see Corollary 3 in \textcite{greiner:1984c}).
+%% --
 \begin{corollary}\label{cor:c3-4.9}
 \index{spectral projection}
 Assume that the assumptions of the theorem are satisfied, $\mu \in \rho(A) \cap \R $, $\beta > s(A)$, $\alpha < -s(-A)$. 
@@ -2042,7 +2036,7 @@ have
 \end{corollary}
 We mention another consequence of Theorem~\ref{thm:c3-4.8}. Just like Proposition~\ref{prop:c3-4.5} it is a
 spectral mapping theorem for the real part of the spectrum.
-
+%% --
 \begin{corollary}\label{cor:c3-4.10}
 \index{spectral mapping theorem} 
 If\/ $(T(t))_{t \in \R }$ is a positive group on a space $L^2$ or
@@ -2108,7 +2102,7 @@ not have measure zero. This problem does not arise in case every
 transformation $\phi_t$ is measure preserving, i.e. $\mu(\phi_t^{-1}(C)) = \mu(C)$
 for every Borel set $C$. A more general criterion is stated in the
 following proposition.
-
+%% --
 \begin{proposition}\label{prop:c3-4.11}
 \index{semiflow}
 \index{semiflow!measure preserving}
@@ -2124,7 +2118,7 @@ semiflow $\phi \colon \R _+ \times X \to X$ satisfies the condition
 \begin{enumerate}[\upshape (i)]
 \item		
 For every $p$, $1 \leq p < \infty$ the following assertions are equivalent.
-
+%% --
 \begin{enumerate} [(a)]
 \item
 The operators $T(t)$ defined by $T(t)f \coloneqq  f \circ \phi_t$ for $f \in L^p(\mu)$, $t \geq 0$, are well-defined as bounded linear operator on $L^p(\mu)$ and $(T(t))_{t \geq 0}$ is a strongly continuous semigroup.
@@ -2179,7 +2173,7 @@ uniformly as $t \to 0$ provided that $f \in C_c(X)$. It follows that
 $\lim_{t \to 0}\|T(t)f - f\|_p = 0$ for $f \in C_c(X)$. Since $C_c(X)$ is dense in
 $L^p(\mu)$ and $\|T(t)\| \leq M^{1/p}$ for $0 \leq t \leq t_0$, the semigroup is strongly
 continuous.
-
+%% --
 \begin{enumerate}[\upshape (i), wide, labelindent=.25em, start=2]
 \item
 Obviously every operator $T(t)$ defined in assertion (a) of (i)
@@ -2189,8 +2183,8 @@ is dense because the elements of the form $\int_{0}^{r} T(s)f \ds$, $f \in C_c(X
 $r > 0$ belong to $C_c(X)$ and to $D(A)$. Hence $D(A) \cap C_c(X)$ is a core%
 \index{core} 
 (by Part-I, Proposition~\ref{prop:a1-1.9}).
+\qedhere
 \end{enumerate}
-
 \end{proof}
 %% --
 Proposition~\ref{prop:c3-4.11} can be used to prove that flows corresponding to certain
@@ -2199,7 +2193,7 @@ semigroups on $L^p(\R ^n)$ (where $\R ^n$ is equipped with the Lebesgue
 measure). One has to impose conditions on the corresponding vector
 field. Note that for continuous flows condition Eq.~\myeqpageref{eq:c3-4.12} is automatically satisfied because for a compact $K \subset X$ the set $\phi_t^{-1}(K) = \phi_{-t}(K)$
 is compact as the continuous image of a compact set.
-
+%% --
 \begin{example}\label{ex:c3-4.12}
 \index{semiflow!generated by ODE}
 Let $F \colon \R ^n \to \R ^n$ be a $C^1$-vector field and assume that
@@ -2218,7 +2212,6 @@ $\|D\phi_t(x)\| \leq \eu^{M|t|}$  for all  $x \in \R ^n$, $t \in \R$  where
 \end{minipage}
 \end{equation}
 %% --
-
 All these properties were proven in Part-II, Example~\ref{ex:b2-3.15}.
 We will show that $\phi$ satisfies condition (b) of Proposition~\ref{prop:c3-4.11},
 hence it induces a strongly continuous (semi-)group of lattice homomorphisms
@@ -2249,10 +2242,10 @@ Further examples of flows which are measure preserving and therefore induce semi
 %\clearpage
 \section*{Notes}
 \addcontentsline{toc}{section}{Notes}
-
+%% --
 Spectral theory for a single positive operator as developed in Chapter V of \textcite{schaefer:1974} is an essential tool for this chapter. 
 Various results on the spectral theory of positive one-parameter semigroups can be found in Chapter~7 of \textcite{davies:1980} and in the second part of \textcite{battyrobinson:1984}.
-
+%% --
 \begin{enumerate}[label=\emph{Section \arabic*:}, wide, itemsep=1ex]
 \item
 That the spectral bound is always an element of the spectrum was stated by \textcite{karlin:1959}, but a valid proof was given by \textcite{derndinger:1980}. 
