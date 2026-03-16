@@ -26,7 +26,7 @@ Most of the examples are motivated by biological models.
 In Part-II, Section~\ref{sec:b4-1}, we have seen that the growth bound of a positive semigroup on spaces $C_{0}(X)$ coincides with the spectral bound of the generator $A$, which is --- for positive semigroups --- an element of the spectrum of\/ $A$.
 Now, combining the results of Part-I, Chapter~\ref{chap:a3} and Chapter~\ref{chap:a4},  
 Part-II, Chapter~\ref{chap:b4} and Part-III, Chapter~\ref{chap:b3},  it can be shown that this is valid for positive semigroups on AM- , AL-, and Hilbert spaces.
-
+%% --
 \begin{theorem}\label{thm:c4-1.1}
 Let $A$ be the generator of a positive semigroup $(T(t))_{t \geq 0}$ on a Banach lattice $E$ such that $s(A) > -\infty$.
 Each of the following conditions implies
@@ -50,7 +50,7 @@ s(A) = \omega_{1}(A) = \omega_{0}(A) \in \sigma(A) .
 \begin{proof}
 We know that $s(A) \leq \omega_{1}(A) \leq \omega_{0}(A)$ (see Part-I, Corollary~\ref{cor:a4-1.5}) and $s(A) \in \sigma(A)$ (see Corollary~\ref{cor:c3-1.4} ).
 Thus we have to show $s(A) = \omega_{0}(A)$.
-
+%% --
 \begin{enumerate}[\upshape (i), wide, labelindent=.25em]
 \item 
 For AM-spaces the proof given in Part-II, Section~\ref{sec:b4-1} works (cf.\ Part-II, Remark~\ref{rem:b4-1.5}.).
@@ -123,7 +123,7 @@ T_{r}(t)_{|L^{r} \cap L^{s}} = T_{s}(t)_{|L^{r} \cap L^{s}} \text{ for all } r,s
 %% --
 Let $A_{r}$ be the generator of\/ $(T_{r}(t))$, $\omega_{0}(r)$ its growth bound and $s(r)$ the spectral bound of\/ $A_{r}$.
 In this situation we have the following corollary of Theorem~\ref{thm:c4-1.1}.
-
+%% --
 \begin{corollary}\label{cor:c4-1.2}
 Suppose that the semigroups $(T_{r}(t))_{t\geq 0}$ are positive.
 \begin{enumerate}[\upshape(i)]
@@ -343,7 +343,7 @@ Next we show that weak uniform stability implies uniform stability provided that
 The left translations on $L^{2}(\R_{+})$ are stable.
 Hence, by Part-I, Remark~\ref{rem:a4-1.17}\,(i), $\Image{A} = \{f \in L^{2}(\R_{+}) \colon \int_{0}^{\infty} f(x) \, \dx \text{ exists}\}$ and we see that $(\Image{A})_{+}$ is a total subset of\/ $L^{2}(\R_{+})$.
 On the other hand, $\mleft(\image{A}\mright)_{+} = \{0\}$ for the generator of the non stable, but weakly stable semigroup of left translations on $L^{2}(\R)$.
-
+%% --
 \begin{proposition}\label{prop:c4-1.7}
 %
 Let $A$ be the generator of a positive semigroup $(T(t))_{t\geq 0}$ on a weakly sequentially complete Banach lattice $E$, such that $(\Image{A})_{+}$ is total in $E$.
@@ -383,7 +383,7 @@ In view of Theorem~\ref{thm:c3-1.2}  we have for $\phi \in E'_{+}$:
 Thus, either both limits exist (in the $\sigma(E,E')$-topology) or neither exists.
 Since both nets are monotonically increasing, the assertion follows from Dini's Theorem (see \textcite[II. Theorem~5.9]{schaefer:1974}).
 \end{proof}
-
+%% --
 \begin{proposition}\label{prop:c4-1.9}
 %
 Let $A$ be the generator of a positive, bounded semigroup $(T(t))_{t \geq 0}$ on a Banach lattice $E$.
@@ -395,7 +395,7 @@ If there is a subset $D \subset E_{+}$ which is total in $E$ such that $\lim_{\l
 By Lemma~\ref{lem:c4-1.8} $\int_{0}^{\infty} T(t)f \, \dt$ exists for every $f$ in the linear hull of\/ $D$.
 But $D$ is total, $(T(t))_{t \geq 0}$ is bounded and hence, by Part-I, Theorem~\ref{thm:a4-1.16}, uniformly stable.
 \end{proof}
-
+%% --
 \begin{remark}\label{rem:c4-1.10}
 If\/ $A$ is the generator of a positive semigroup, then for every $n \in \N$, 
 %% --
@@ -427,7 +427,7 @@ We recall that some important generators, such as the Laplacian on $L^{p}(\R^{n}
 Therefore, the weakening of the assumptions on $A$ mentioned above - \ie  replacing \emph{$\omega_{0}(A) < 0$} by \emph{positive and stable} - widens the class of equations~\myeqpageref{eq:c4-1.6} for which the following stability result is applicable.
 For additional results of this kind see \textcite{neubrander:1985b}.
 \index{operator!Laplacian|)}
-
+%% --
 \begin{proposition}\label{prop:c4-1.11}
 \index{semigroup!stable semigroup}
 %% --
@@ -478,10 +478,10 @@ Then, for $t > 2t'$,
 
 Hence $\left\|\int_{0}^{t} T(t-s)H_{\pm}(s) \, \ds\right\| \leq \epsilon$ for every $t > 2t'$.
 \end{proof}
-
+%% --
 We conclude with a result similar to the previous proposition.
 Instead of uniform stability we now require $s(A) < 0$ while the assumption on the forcing term is weaker than in Proposition~\ref{prop:c4-1.11}.
-
+%% --
 \begin{proposition}\label{prop:c4-1.12}
 Let $(T(t))_{t \geq 0}$ be a positive semigroup with $s(A) < 0$.
 Assume that the forcing term $F$ has values in $D(A)$, that it is continuous with respect to the graph norm and that $f_{0} \coloneq  \|\cdot\|_{A}$-$\lim_{t \to \infty} F(t)$ exists.
@@ -559,7 +559,7 @@ In this section we mainly consider the case $s(A) = 0 \in P{\sigma}(A)$ and show
 \index{semigroup!quasi-compact semigroup}
 We begin our discussion by considering quasi-compact semigroups.
 Using the general results presented in Section~\ref{sec:b4-2}  and the spectral theoretical result of Chapter~\ref{chap:c3} we obtain the following.
-
+%% --
 \begin{theorem}\label{thm:c4-2.1}
 Let $(T(t))_{t \geq 0}$ be a positive semigroup on a Banach lattice $E$ which is bounded, quasi-compact and has spectral bound zero.
 \index{spectral bound $s(A)$}
@@ -647,13 +647,13 @@ Indeed, by Theorem~\ref{thm:c3-3.7} we know that $\omega_0(\TT) > -\infty$, whil
 It follows that the rescaled semigroup is quasi-compact, hence~\ref{rem:c4-2.2-4} is applicable.
 \end{enumerate}
 \end{remarks}
-
+%% --
 \index{population semigroup}
 \index{population!age-structured}
 \index{equation!population}
 The following example has a biological background, and the semigroup considered describes the time evolution of an age-structured population.
 For more details we refer to \textcite{greiner:1984a} or \textcite{webb:1984}.
-
+%% --
 \begin{example}\label{ex:c4-2.3}
 On the Banach lattice $E = L^{1}( \left[0,\infty\right))$ we consider the operator $A$ defined by
 %% --
@@ -709,7 +709,7 @@ Part-II, Proposition~\ref{prop:b4-2.13}
 that Doeblin's condition is sufficient for quasi-compactness.
 Actually this is true in $L^{p}$-spaces with $1 < p < \infty$ as well.
 We quote the result from \textcite{lotz:1986}.
-
+%% --
 \begin{proposition}\label{prop:c4-2.4}
 %
 \index{Doeblin's condition}
@@ -725,7 +725,7 @@ Then $(T(t))_{t \geq 0}$ is quasi-compact.
 \end{proposition}
 \index{semigroup!eventually norm-continuous semigroup|(}
 In the following result we replace quasi-compactness by eventual norm-continuity of the semigroup.
-
+%% --
 \begin{theorem} \label{thm:c4-2.5}
 %
 Let $\TT = (T(t))_{t \geq 0}$ be a bounded, eventually norm-continuous positive semigroup with generator $A$ on a reflexive Banach lattice $E$.
@@ -782,7 +782,7 @@ In the next few results we study semigroups which are not necessarily eventually
 The essential tool will be the following \emph{0-2 Law} which we quote from \textcite[Theorem~3.7]{greiner:1982}.
 
 If\/ $(X, \Sigma, \mu)$ is a measure space and $\TT = (T(t))_{t \geq 0}$ is a positive semigroup on $L^{p}(\mu)$, then a subset $C \in \Sigma$ is called \emph{$\TT$-invariant} if the principal ideal generated by the characteristic function $\1_{C}$ is $(T(t))$-invariant in the usual sense.
-
+%% --
 \begin{theorem}\label{thm:c4-2.6}
 %
 \index{zero-two law (0-2 Law)}
@@ -820,7 +820,7 @@ If the semigroup is irreducible, then for every $\tau > 0$ one has the alternati
 \end{theorem}
 %% --
 The \emph{0-2 Law} can be used in order to obtain results on convergence of positive semigroups.
-
+%% --
 \begin{corollary}\label{cor:c4-2.7}
 %
 Assume that --- in addition to the assumptions made in Theorem~\ref{thm:c4-2.6} --- $P{\sigma}(A) \cap \im\R = \{0\}$.
@@ -850,7 +850,7 @@ which finally proves the convergence on the whole space.
 %% --
 Typical examples for which Theorem~\ref{thm:c4-2.6} and Corollary~\ref{cor:c4-2.7}  can be applied, occur in the theory of stochastic processes (see also Part-II, Example~\ref{ex:b4-2.6}).
 We briefly describe this situation and remind that in this context the sets $X_{0}$ and $X_{2}$ have a probabilistic meaning (see \textcite{greinernagel:1982} or the Supplement in \textcite{krengel:1985}).
-
+%% --
 \begin{example}\label{ex:c4-2.8}
 %
 \index{Markov transition function|(}
@@ -926,7 +926,7 @@ and we have weak, hence strong continuity.
 \index{Markov transition function|)}
 Therefore a Markov transition function satisfying all the assumptions of~\ref{cor:c4-2.7} induces a strongly continuous semigroup on $L^{1}(\mu)$, and, by interpolation on $L^{p}(\mu)$, it satisfies the hypotheses of Theorem~\ref{thm:c4-2.6}.
 \end{example}
-
+%% --
 In the following corollaries of Theorem~\ref{thm:c4-2.6}, we give criteria which ensure convergence on the whole space.
 In view of Corollary~\ref{cor:c4-2.7} it is enough to show $X_{2} = \emptyset$.
 %% --
@@ -945,7 +945,7 @@ For bounded linear operators $S \in \L{L^{1}}$
 one has $\|S\| = \|\,|S|\,\|$ (see \textcite[IV, Theorem 1.5]{schaefer:1974}), hence $\|\,|T(t_{0}) - T(t_{0}+\tau)| f\| < \|f\|$ for every $f \in L^{1}(\mu)$, $f \neq 0$.
 This shows that condition (2) of Theorem~\ref{thm:c4-2.6}\,(i) can be true only when $e_{2} = 0$, \ie  $X_{2} = \emptyset$.
 \end{proof}
-
+%% --
 \begin{corollary}\label{cor:c4-2.10}
 %
 \index{irreducible semigroup}
@@ -1075,7 +1075,7 @@ Part-I, Proposition~\ref{prop:a3-4.2} and Corollary~\ref{cor:a3-4.3}\,(ii)
 we have $\sigma(A_{2}) = \sigma(A) \setminus \im\alpha\Z$.
 Therefore the decomposition $E = E_{1} \oplus E_{2}$ is a spectral decomposition corresponding to $\sigma_{1}$ and $\sigma_{2}$.
 This proves the first part of the following lemma.
-
+%% --
 \begin{lemma}\label{lem:c4-2.12}%
 \index{spectral decomposition}
 Under the above assumptions there exists a positive projection $Q$ with range $E_{1} \coloneqq QE$ and kernel $E_{2} \coloneqq Q^{-1}(0)$ such that the following holds.
@@ -1119,7 +1119,7 @@ More precisely, we can identify $L^{2}(\Gamma)$ with a sublattice of\/ $E$, bein
 %% --
 For $L^{p}$-spaces the analogous statement can be shown only for a weaker type of convergence.
 The proof of this result uses interpolation for operators, mainly the Riesz Convexity Theorem (see the remarks preceding Corollary~\ref{cor:c4-1.2}).
-
+%% --
 \begin{theorem}\label{thm:c4-2.14}
 %
 \index{periodic semigroup}
@@ -1191,7 +1191,7 @@ Since $(T(t))$ is bounded, we finally obtain convergence in the $L^{p}$-norm for
 We give an example for the situation treated in Theorem~\ref{thm:c4-2.14}.
 The equation we consider describes the division of a cell population.
 For details we refer to \textcite{diekmannetal:1984}.
-
+%% --
 \begin{example}\label{ex:c4-2.15}
 Let $E = L^{1}([\frac{1}{4},1],w\,\dx)$, where the density $w$ is a continuous positive function on $[\frac{1}{4},1]$, vanishes at $x = 1$ and is strictly positive in $[\frac{1}{4},1)$.
 We consider the operator $C = A + B$ where $A$ is defined by $(Af)(x) \coloneq  -xf'(x)$ on the domain $D(A) \coloneqq \{f \in AC \colon f(\frac{1}{2}) = 0\}$ and $B$ is defined by
@@ -1259,7 +1259,7 @@ h_{0}(x) \coloneq  \begin{cases}
 %% --
 The verification of these statements is left as an excercise.
 \end{example}
-
+%% --
 In several of the above results we had to assume that the positive semigroup $(T(t))_{t\geq 0}$ is bounded and has spectral bound zero.
 In general, these conditions are difficult to verify, in particular, when only the generator is known.
 In the final example we described a method how to cope with this problem. 
@@ -1402,7 +1402,7 @@ For every $f \in E$, $t \geq 0$, we have for a.e. $s \in [-1,0]$
 %% --
 Moreover, if\/ $f \in D(A)$, then the translation property (T) (see Part-II, Theorem~\ref{thm:b4-3.1}) is satisfied.
 \end{theorem}
-
+%% --
 \begin{proof}
 Consider $E_1 \coloneqq D(A)$ endowed with the graph norm 
 and on $E_1$ the operator $A_1$ which is the restriction of\/ $A$ to $D(A_1) \coloneqq D(A^{2})\subset E_1$.
@@ -1431,7 +1431,7 @@ Consequently $(T(t)-T_{0}(t))f = 0$ a.e. on $[-1,-t]$ which shows $(T(t)f)(s) = 
 \end{proof}
 %% --
 The following corollary corresponds to Part-II, Corollary~\ref{cor:b4-3.2} and assures the well-posed\-ness of \myeqpageref{eq:c4-re}.
-
+%% --
 \begin{corollary}\label{cor:c4-3.2}
 %
 For every $f \in E$ the function $u$ defined by
@@ -1468,7 +1468,7 @@ The first observation is that $A$ generates a positive semigroup.
 Indeed, it follows from equation Eq.~\myeqpageref{eq:c4-3.2}, that $R(\lambda,A) = R(1,S_\lambda)R(\lambda,A_{0})$ for $\lambda > \omega$. Since $S_\lambda$ is a positive operator, we have $R(1,S_\lambda) \geq 0$.
 The semigroup generated by $A_{0}$ is positive (use \myeqpageref{eq:c4-re}), hence $R(\lambda,A_{0}) \geq 0$.
 It follows that $R(\lambda,A) \geq 0$ which is equivalent to the positivity of\/ $(T(t))_{t \geq 0}$ (see Proposition~\ref{prop:c2-4.1} ).
-
+%% --
 \begin{proposition}\label{prop:c4-3.3}
 If\/ $\Phi \in \L{E,F}$ is a positive operator, then the solution semigroup corresponding to \myeqpageref{eq:c4-re} is positive.
 \end{proposition}
@@ -1483,7 +1483,7 @@ Evidently, each $\Phi_\lambda$ is a positive operator on $F$ and $\lambda \leq \
 From this relation it follows that the spectral bound $s(\Phi_{\lambda})$ which coincides with the spectral radius $r(\Phi_{\lambda})$ is a decreasing function in $\lambda$.
 
 Furthermore, we shall need the following properties.
-
+%% --
 \begin{lemma}\label{lem:c4-3.4}
 %
 The map $h \colon \R \to \R_{+}$\,, $\lambda \mapsto s(\Phi_{\lambda})$ is continuous from the left. 
@@ -1498,7 +1498,7 @@ $s(\Phi_{\lambda})$ is the boundary spectrum $\sigma_b(\Phi_{\lambda})$ (see Cor
 \end{proof}
 %% --
 For the operators $A_{0}$ and $A$ as defined in the beginning of this section we obtain an explicit representation of their resolvents.
-
+%% --
 \begin{lemma}\label{lem:c4-3.5}
 For the resolvents of the operators $A_{0}$, \resp $A$, on $E$ the following statements hold.
 %% --
@@ -1574,7 +1574,7 @@ If\/ $\Phi_{\lambda}$ is compact, then $\sigma(\Phi_{\lambda})\backslash\{0\} \s
 \end{proof}
 %% --
 The previous results will now be used to characterize the spectral bound of\/ $A$ and hence the stability of the solutions of \myeqpageref{eq:c4-re}.
-
+%% --
 \begin{theorem}\label{thm:c4-3.7}
 \index{stability}
 \index{spectral bound $s(A)$}
@@ -1597,7 +1597,7 @@ Let $\Phi_{\lambda}$ be compact for all $\lambda \in \R$ \quad or\quad let $\Phi
 If\/ $s(\Phi_{\lambda}) > 1$, then $s(A) > \lambda$.
 \end{enumerate}
 \end{theorem}
-
+%% --
 \begin{proof}
 \begin{enumerate}[\upshape (i), wide, labelindent=.25em] 
 \item% 
@@ -1678,7 +1678,7 @@ The operator $\Phi$ is bounded from $E$ into $F$.
 %% --
 We assume that $\psi$ and $B$, hence $\Phi$, are positive.
 Then the following holds and is stated without proof.
-
+%% --
 \begin{lemma*}\label{lem:c4-3.9-kgk}
 %
 The following statements hold.
@@ -1693,7 +1693,7 @@ Hence the map $\mu \mapsto s(\Phi_{\mu})$ is continuous and strictly decreasing 
 \end{enumerate}
 \end{lemma*}
 \end{example}
-
+%% --
 For this type of \enquote{retarding functionals} $\Phi$ we obtain a simple characterization of the spectral bound.
 %% --
 \begin{corollary*}\label{cor:c4-3.9-kgk}
@@ -1734,7 +1734,7 @@ $s(\Phi_{\lambda}) \overset{<}{ \underset{>}{=} } 1$.}
 \]
 %% --
 \end{example}
-
+%% --
 \begin{proof}
 By Corollary~\ref{cor:c4-3.8} it suffices to show that the map $h \colon \lambda \mapsto s(\Phi_{\lambda}) = r(\Phi_{\lambda})$ is strictly decreasing and continuous.
 With the help of \textcite[Theorem III.11.4]{schaefer:1966} and \textcite[Theorem II.9.9]{schaefer:1974} it is easy to show that $\Phi_{\lambda}^{2}$ is compact and the continuity of\/ $h$ follows by the above remark.
@@ -1805,7 +1805,7 @@ s(A) \overset{<}{ \underset{>}{=} }\lambda \quad \text{if and only if} \quad s(\
 \end{equation*}
 %% --
 \end{example}
-
+%% --
 \begin{proof}
 By Corollary~\ref{cor:c4-3.8} it suffices to show that the map $h \colon \lambda \mapsto s(\Phi_{\lambda})$ is strictly decreasing and continuous.
 
@@ -1852,10 +1852,11 @@ Now
 \[
 \text{$(\mu-\lambda)\epsilon > 0$ implies 
 $r(\Phi_{\mu}) > r(\Phi_{\lambda})$.}
+\qedhere
 \]
 %% --
 \end{proof}
-
+%% --
 \index{equation!population}
 \index{population!equation}
 The theory developed so far can also be applied to certain population equations.
@@ -1867,7 +1868,7 @@ We adopt this setting and transform the above results, \eg $\epsilon_{\lambda}$ 
 As a concrete example we consider the following.
 
 
-
+%% --
 \begin{example}\label{ex:c4-3.12}
 %
 \index{differential equation}
@@ -1947,7 +1948,7 @@ whose unique real solution $\lambda$ is $s(A)$.
 
 The infinite dimensional problem of determining $s(A)$ is therefore reduced to solving a one-dimensional equation.
 \end{example}
-
+%% --
 The differential equation Eq.~\myeqpageref{eq:c4-3.13} may be interpreted as follows.
 \begin{quote}
 Consider $n$ populations and let $r$ be the maximal age of an individual.
@@ -2106,7 +2107,7 @@ Most of the examples are motivated by biological models.
 In Part-II, Section~\ref{sec:b4-1} we have seen that the growth bound of a positive semigroup on spaces $C_{0}(X)$ coincides with the spectral bound of the generator $A$, which is --- for positive semigroups --- an element of the spectrum of\/ $A$.
 Now, combining the results of Part-I, Chapter~\ref{chap:a3} and Chapter~\ref{chap:a4},  
 Part-II, Chapter~\ref{chap:b4} and Part-III, Chapter~\ref{chap:b3},  it can be shown that this is valid for positive semigroups on AM- , AL- and Hilbert spaces.
-
+%% --
 \begin{theorem}\label{thm:c4-1.1}
 Let $A$ be the generator of a positive semigroup $(T(t))_{t \geq 0}$ on a Banach lattice $E$ such that $s(A) > -\infty$.
 Each of the subsequent conditions implies
@@ -2130,7 +2131,7 @@ s(A) = \omega_{1}(A) = \omega_{0}(A) \in \sigma(A) .
 \begin{proof}
 We know that $s(A) \leq \omega_{1}(A) \leq \omega_{0}(A)$ (see Part-I, Corollary~\ref{cor:a4-1.5}) and $s(A) \in \sigma(A)$ (see Corollary~\ref{cor:c3-1.4} ).
 Thus we have to show $s(A) = \omega_{0}(A)$.
-
+%% --
 \begin{enumerate}[\upshape (i), wide, labelindent=.25em]
 \item 
 For AM-spaces the proof given in Part-II, Section~\ref{sec:b4-1} works (cf.\ Part-II, Remark~\ref{rem:b4-1.5}.).
@@ -2160,6 +2161,7 @@ For $\alpha > s(A)$, $r > \tau$, $f \in E_{+}$ we have
 (the last inequality follows from Theorem~\ref{thm:c3-1.2}).
 \index{Datko's theorem}
 Now Datko's theorem (Part-I, Theorem~\ref{thm:a4-1.11}) implies $\omega_{0}(A) < \alpha$.
+\qedhere
 \end{enumerate}
 \end{proof}
 For $L^{p}$-spaces, $p \neq 1$, $2$, $\infty$, it is not known whether spectral- and growth bound of an arbitrary positive semigroup coincide.
@@ -2202,7 +2204,7 @@ T_{r}(t)_{|L^{r} \cap L^{s}} = T_{s}(t)_{|L^{r} \cap L^{s}} \text{ for all } r,s
 %% --
 Let $A_{r}$ be the generator of\/ $(T_{r}(t))$, $\omega_{0}(r)$ its growth bound and $s(r)$ the spectral bound of\/ $A_{r}$.
 In this situation we have the following corollary of Theorem~\ref{thm:c4-1.1}.
-
+%% --
 \begin{corollary}\label{cor:c4-1.2}
 Suppose that the semigroups $(T_{r}(t))_{t\geq 0}$ are positive.
 \begin{enumerate}[\upshape(i)]
@@ -2420,7 +2422,7 @@ Next we show that weak uniform stability implies uniform stability provided that
 The left translations on $L^{2}(\R_{+})$ are stable.
 Hence, by Part-I, Remark~\ref{rem:a4-1.17}\,(i), $\Image{A} = \{f \in L^{2}(\R_{+}) \colon \int_{0}^{\infty} f(x) \, \dx \text{ exists}\}$ and we see that $(\Image{A})_{+}$ is a total subset of\/ $L^{2}(\R_{+})$.
 On the other hand, $\mleft(\image{A}\mright)_{+} = \{0\}$ for the generator of the non stable, but weakly stable semigroup of left translations on $L^{2}(\R)$.
-
+%% --
 \begin{proposition}\label{prop:c4-1.7}
 %
 Let $A$ be the generator of a positive semigroup $(T(t))_{t\geq 0}$ on a weakly sequentially complete Banach lattice $E$, such that $(\Image{A})_{+}$ is total in $E$.
@@ -2460,7 +2462,7 @@ In view of Theorem~\ref{thm:c3-1.2}  we have for $\phi \in E'_{+}$:
 Thus either both limits exist with respect to $\sigma(E,E')$-topology or none.
 Since both nets are monotonically increasing, the assertion follows from Dini's Theorem (see \textcite[II. Theorem~5.9]{schaefer:1974}).
 \end{proof}
-
+%% --
 \begin{proposition}\label{prop:c4-1.9}
 %
 Let $A$ be the generator of a positive, bounded semigroup $(T(t))_{t \geq 0}$ on a Banach lattice $E$.
@@ -2472,7 +2474,7 @@ If there is a subset $D \subset E_{+}$ which is total in $E$ such that $\lim_{\l
 By Lemma~\ref{lem:c4-1.8} $\int_{0}^{\infty} T(t)f \, \dt$ exists for every $f$ in the linear hull of\/ $D$.
 But $D$ is total, $(T(t))_{t \geq 0}$ is bounded and hence, by Part-I, Theorem~\ref{thm:a4-1.16}, uniformly stable.
 \end{proof}
-
+%% --
 \begin{remark}\label{rem:c4-1.10}
 If\/ $A$ is the generator of a positive semigroup, then for every $n \in \N$, 
 %% --
@@ -2506,7 +2508,7 @@ We recall that some important generators as, for example, the Laplacian on $L^{p
 Therefore, the weakening of the assumptions on $A$ mentioned above - \ie  replacing \emph{$\omega_{0}(A) < 0$} by \emph{positive and stable} - widens the class of equations~\myeqpageref{eq:c4-1.6} for which the following stability result is applicable.
 For additional results of this kind see \textcite{neubrander:1985b}.
 \index{operator!Laplacian|)}
-
+%% --
 \begin{proposition}\label{prop:c4-1.11}
 \index{semigroup!stable semigroup}
 %% --
@@ -2554,13 +2556,12 @@ Then, for $t > 2t'$,
 &\leq M \int_{t'}^{\infty} T(t)g_{0} \, \ds + \epsilon/2 \,  \left\|\int_{0}^{\infty} T(t)g_{0} \, \ds\, \right\|^{-1} \int_{0}^{\infty} T(t)g_{0} \, \ds.
 \end{align*}
 %% --
-
 Hence $\left\|\int_{0}^{t} T(t)H_{\pm}(s) \, \ds\right\| \leq \epsilon$ for every $t > 2t'$.
 \end{proof}
-
+%% --
 We conclude with a result similar to the previous proposition.
 Instead of uniform stability we now require $s(A) < 0$ while the assumption on the forcing term is weaker than in Proposition~\ref{prop:c4-1.11}.
-
+%% --
 \begin{proposition}\label{prop:c4-1.12}
 Let $(T(t))_{t \geq 0}$ be a positive semigroup with $s(A) < 0$.
 Assume that the forcing term $F$ has values in $D(A)$, that it is continuous with respect to the graph norm and that $f_{0} \coloneq  \|\cdot\|_{A}$-$\lim_{t \to \infty} F(t)$ exists.
@@ -2638,7 +2639,7 @@ In this section we mainly consider the case $s(A) = 0 \in P{\sigma}(A)$ and show
 \index{semigroup!quasi-compact semigroup}
 We begin our discussion by considering quasi-compact semigroups.
 Using the general results presented in Section~\ref{sec:b4-2}  and the spectral theoretical result of Chapter~\ref{chap:c3} we obtain the following.
-
+%% --
 \begin{theorem}\label{thm:c4-2.1}
 Let $(T(t))_{t \geq 0}$ be a positive semigroup on a Banach lattice $E$ which is bounded, quasi-compact and has spectral bound zero.
 \index{spectral bound $s(A)$}
@@ -2726,13 +2727,13 @@ Indeed, by Theorem~\ref{thm:c3-3.7} we know that $\omega_0(\TT) > -\infty$, whil
 It follows that the rescaled semigroup is quasi-compact, hence~\ref{rem:c4-2.2-4} is applicable.
 \end{enumerate}
 \end{remarks}
-
+%% --
 \index{population semigroup}
 \index{population!age-structured}
 \index{equation!population}
 The following example has a biological background, and the semigroup considered describes the time evolution of an age-structured population.
 For more details we refer to \textcite{greiner:1984a} or \textcite{webb:1984}.
-
+%% --
 \begin{example}\label{ex:c4-2.3}
 On the Banach lattice $E = L^{1}( \left[0,\infty\right))$ we consider the operator $A$ defined by
 %% --
@@ -2788,7 +2789,7 @@ Part-II, Proposition~\ref{prop:b4-2.13}
 that Doeblin's condition is sufficient for quasi-compactness.
 Actually this is true in $L^{p}$-spaces with $1 < p < \infty$ as well.
 We quote the result from \textcite{lotz:1986}.
-
+%% --
 \begin{proposition}\label{prop:c4-2.4}
 %
 \index{Doeblin's condition}
@@ -2804,7 +2805,7 @@ Then $(T(t))_{t \geq 0}$ is quasi-compact.
 \end{proposition}
 \index{semigroup!eventually norm-continuous semigroup|(}
 In the following result we replace quasi-compactness by eventual norm-continuity of the semigroup.
-
+%% --
 \begin{theorem} \label{thm:c4-2.5}
 %
 Let $\TT = (T(t))_{t \geq 0}$ be a bounded, eventually norm-continuous positive semigroup with generator $A$ on a reflexive Banach lattice $E$.
@@ -2861,7 +2862,7 @@ In the next few results we study semigroups which are not necessarily eventually
 The essential tool will be the following \emph{0-2 Law} which we quote from \textcite[Theorem~3.7]{greiner:1982}.
 
 If\/ $(X, \Sigma, \mu)$ is a measure space and $\TT = (T(t))_{t \geq 0}$ is a positive semigroup on $L^{p}(\mu)$, then a subset $C \in \Sigma$ is called \emph{$\TT$-invariant} if the principal ideal generated by the characteristic function $\1_{C}$ is $(T(t))$-invariant in the usual sense.
-
+%% --
 \begin{theorem}\label{thm:c4-2.6}
 %
 \index{zero-two law (0-2 Law)}
@@ -2899,7 +2900,7 @@ If the semigroup is irreducible, then for every $\tau > 0$ one has the alternati
 \end{theorem}
 %% --
 The \emph{0-2 Law} can be used in order to obtain results on convergence of positive semigroups.
-
+%% --
 \begin{corollary}\label{cor:c4-2.7}
 %
 Assume that --- in addition to the assumptions made in Theorem~\ref{thm:c4-2.6} --- $P{\sigma}(A) \cap \im\R = \{0\}$.
@@ -2929,7 +2930,7 @@ which finally proves the convergence on the whole space.
 %% --
 Typical examples for which Theorem~\ref{thm:c4-2.6} and Corollary~\ref{cor:c4-2.7}  can be applied, occur in the theory of stochastic processes (see also Part-II, Example~\ref{ex:b4-2.6}).
 We briefly describe this situation and remind that in this context the sets $X_{0}$ and $X_{2}$ have a probabilistic meaning (see \textcite{greinernagel:1982} or the Supplement in \textcite{krengel:1985}).
-
+%% --
 \begin{example}\label{ex:c4-2.8}
 %
 \index{Markov transition function|(}
@@ -3005,7 +3006,7 @@ and we have weak, hence strong continuity.
 \index{Markov transition function|)}
 Therefore a Markov transition function satisfying all the assumptions of~\ref{cor:c4-2.7} induces a strongly continuous semigroup on $L^{1}(\mu)$, and, by interpolation on $L^{p}(\mu)$, it satisfies the hypotheses of Theorem~\ref{thm:c4-2.6}.
 \end{example}
-
+%% --
 In the following corollaries of Theorem~\ref{thm:c4-2.6}, we give criteria which ensure convergence on the whole space.
 In view of Corollary~\ref{cor:c4-2.7} it is enough to show $X_{2} = \emptyset$.
 %% --
@@ -3024,7 +3025,7 @@ For bounded linear operators $S \in \L{L^{1}}$
 one has $\|S\| = \|\,|S|\,\|$ (see \textcite[IV, Theorem 1.5]{schaefer:1974}), hence $\|\,|T(t_{0}) - T(t_{0}+\tau)| f\| < \|f\|$ for every $f \in L^{1}(\mu)$, $f \neq 0$.
 This shows that condition (2) of Theorem~\ref{thm:c4-2.6}\,(i) can be true only when $e_{2} = 0$, \ie  $X_{2} = \emptyset$.
 \end{proof}
-
+%% --
 \begin{corollary}\label{cor:c4-2.10}
 %
 \index{irreducible semigroup}
@@ -3100,7 +3101,6 @@ Thus we have convergence on the the principal ideal $E_j$\,.
 Since the semigroup is bounded and the union of these ideals is total in  $L^p(\mu)$  we have convergence on the whole space.
 \end{proof}
 %%%%%%%%%%%%%%%%% ENDE  Teil 2 %%%%
-
 %% --
 In all the results obtained so far we had to show or to assume that $P{\sigma}(A) \cap \im\R = \{0\}$.
 This is not surprising since for an eigenvector $g \in E$ corresponding to $\im\alpha \neq 0$, $\alpha \in \R$, we have $T(t)g = \eu^{\im\alpha t}g$ and so $\lim_{t\to\infty} T(t)g$ does not exist.
@@ -3154,7 +3154,7 @@ Part-I, Proposition~\ref{prop:a3-4.2} and Corollary~\ref{cor:a3-4.3}\,(ii)
 we have $\sigma(A_{2}) = \sigma(A) \setminus \im\alpha\Z$.
 Therefore the decomposition $E = E_{1} \oplus E_{2}$ is a spectral decomposition corresponding to $\sigma_{1}$ and $\sigma_{2}$.
 This proves the first part of the following lemma.
-
+%% --
 \begin{lemma}\label{lem:c4-2.12}%
 \index{spectral decomposition}
 Under the above assumptions there exists a positive projection $Q$ with range $E_{1} \coloneqq QE$ and kernel $E_{2} \coloneqq Q^{-1}(0)$ such that the following holds.
@@ -3198,7 +3198,7 @@ More precisely, we can identify $L^{2}(\Gamma)$ with a sublattice of\/ $E$, bein
 %% --
 For $L^{p}$-spaces the analogous statement can be shown only for a weaker type of convergence.
 The proof of this result uses interpolation for operators, mainly the Riesz Convexity Theorem (see the remarks preceding Corollary~\ref{cor:c4-1.2}).
-
+%% --
 \begin{theorem}\label{thm:c4-2.14}
 %
 \index{periodic semigroup}
@@ -3270,7 +3270,7 @@ Since $(T(t))$ is bounded, we finally obtain convergence in the $L^{p}$-norm for
 We give an example for the situation treated in Theorem~\ref{thm:c4-2.14}.
 The equation we consider describes the division of a cell population.
 For details we refer to \textcite{diekmannetal:1984}.
-
+%% --
 \begin{example}\label{ex:c4-2.15}
 Let $E = L^{1}([\frac{1}{4},1],w\,\dx)$, where the density $w$ is a continuous positive function on $[\frac{1}{4},1]$, vanishes at $x = 1$ and is strictly positive in $[\frac{1}{4},1)$.
 We consider the operator $C = A + B$ where $A$ is defined by $(Af)(x) \coloneq  -xf'(x)$ on the domain $D(A) \coloneqq \{f \in AC \colon f(\frac{1}{2}) = 0\}$ and $B$ is defined by
@@ -3338,7 +3338,7 @@ h_{0}(x) \coloneq  \begin{cases}
 %% --
 The verification of these statements is left as an excercise.
 \end{example}
-
+%% --
 In several of the above results we had to assume that the positive semigroup $(T(t))_{t\geq 0}$ is bounded and has spectral bound zero.
 In general, these conditions are difficult to verify, in particular, when only the generator is known.
 In the final example we described a method how to cope with this problem. 
@@ -3481,7 +3481,7 @@ For every $f \in E$, $t \geq 0$, we have for a.e. $s \in [-1,0]$
 %% --
 Moreover, if\/ $f \in D(A)$, then the translation property (T) (see Part-II, Theorem~\ref{thm:b4-3.1}) is satisfied.
 \end{theorem}
-
+%% --
 \begin{proof}
 Consider $E_1 \coloneqq D(A)$ endowed with the graph norm 
 and on $E_1$ the operator $A_1$ which is the restriction of\/ $A$ to $D(A_1) \coloneqq D(A^{2})\subset E_1$.
@@ -3510,7 +3510,7 @@ Consequently $(T(t)-T_{0}(t))f = 0$ a.e. on $[-1,-t]$ which shows $(T(t)f)(s) = 
 \end{proof}
 %% --
 The following corollary corresponds to Part-II, Corollary~\ref{cor:b4-3.2} and assures the well-posed\-ness of \myeqpageref{eq:c4-re}.
-
+%% --
 \begin{corollary}\label{cor:c4-3.2}
 %
 For every $f \in E$ the function $u$ defined by
@@ -3547,7 +3547,7 @@ The first observation is that $A$ generates a positive semigroup.
 Indeed, it follows from equation Eq.~\myeqpageref{eq:c4-3.2}, that $R(\lambda,A) = R(1,S_\lambda)R(\lambda,A_{0})$ for $\lambda > \omega$. Since $S_\lambda$ is a positive operator, we have $R(1,S_\lambda) \geq 0$.
 The semigroup generated by $A_{0}$ is positive (use \myeqpageref{eq:c4-re}), hence $R(\lambda,A_{0}) \geq 0$.
 It follows that $R(\lambda,A) \geq 0$ which is equivalent to the positivity of\/ $(T(t))_{t \geq 0}$ (see Proposition~\ref{prop:c2-4.1} ).
-
+%% --
 \begin{proposition}\label{prop:c4-3.3}
 If\/ $\Phi \in \L{E,F}$ is a positive operator, then the solution semigroup corresponding to \myeqpageref{eq:c4-re} is positive.
 \end{proposition}
@@ -3562,7 +3562,7 @@ Evidently, each $\Phi_\lambda$ is a positive operator on $F$ and $\lambda \leq \
 From this relation it follows that the spectral bound $s(\Phi_{\lambda})$ which coincides with the spectral radius $r(\Phi_{\lambda})$ is a decreasing function in $\lambda$.
 
 Furthermore, we shall need the following properties.
-
+%% --
 \begin{lemma}\label{lem:c4-3.4}
 %
 The map $h \colon \R \to \R_{+}$\,, $\lambda \mapsto s(\Phi_{\lambda})$ is continuous from the left. 
@@ -3577,7 +3577,7 @@ $s(\Phi_{\lambda})$ is the boundary spectrum $\sigma_b(\Phi_{\lambda})$ (see Cor
 \end{proof}
 %% --
 For the operators $A_{0}$ and $A$ as defined in the beginning of this section we obtain an explicit representation of their resolvents.
-
+%% --
 \begin{lemma}\label{lem:c4-3.5}
 For the resolvents of the operators $A_{0}$, \resp $A$, on $E$ the following statements hold.
 %% --
@@ -3653,7 +3653,7 @@ If\/ $\Phi_{\lambda}$ is compact, then $\sigma(\Phi_{\lambda})\backslash\{0\} \s
 \end{proof}
 %% --
 The previous results will now be used to characterize the spectral bound of\/ $A$ and hence the stability of the solutions of \myeqpageref{eq:c4-re}.
-
+%% --
 \begin{theorem}\label{thm:c4-3.7}
 \index{stability}
 \index{spectral bound $s(A)$}
@@ -3676,7 +3676,7 @@ Let $\Phi_{\lambda}$ be compact for all $\lambda \in \R$ \quad or\quad let $\Phi
 If\/ $s(\Phi_{\lambda}) > 1$, then $s(A) > \lambda$.
 \end{enumerate}
 \end{theorem}
-
+%% --
 \begin{proof}
 \begin{enumerate}[\upshape (i), wide, labelindent=.25em] 
 \item% 
@@ -3757,7 +3757,7 @@ The operator $\Phi$ is bounded from $E$ into $F$.
 %% --
 We assume that $\psi$ and $B$, hence $\Phi$, are positive.
 Then the following holds and is stated without proof.
-
+%% --
 \begin{lemma*}\label{lem:c4-3.9-kgk}
 %
 The following statements hold.
@@ -3772,7 +3772,7 @@ Hence the map $\mu \mapsto s(\Phi_{\mu})$ is continuous and strictly decreasing 
 \end{enumerate}
 \end{lemma*}
 \end{example}
-
+%% --
 For this type of \enquote{retarding functionals} $\Phi$ we obtain a simple characterization of the spectral bound.
 %% --
 \begin{corollary*}\label{cor:c4-3.9-kgk}
@@ -3813,7 +3813,7 @@ $s(\Phi_{\lambda}) \overset{<}{ \underset{>}{=} } 1$.}
 \]
 %% --
 \end{example}
-
+%% --
 \begin{proof}
 By Corollary~\ref{cor:c4-3.8} it suffices to show that the map $h \colon \lambda \mapsto s(\Phi_{\lambda}) = r(\Phi_{\lambda})$ is strictly decreasing and continuous.
 With the help of \textcite[Theorem III.11.4]{schaefer:1966} and \textcite[Theorem II.9.9]{schaefer:1974} it is easy to show that $\Phi_{\lambda}^{2}$ is compact and the continuity of\/ $h$ follows by the above remark.
@@ -3884,7 +3884,7 @@ s(A) \overset{<}{ \underset{>}{=} }\lambda \quad \text{if and only if} \quad s(\
 \end{equation*}
 %% --
 \end{example}
-
+%% --
 \begin{proof}
 By Corollary~\ref{cor:c4-3.8} it suffices to show that the map $h \colon \lambda \mapsto s(\Phi_{\lambda})$ is strictly decreasing and continuous.
 
@@ -3931,10 +3931,11 @@ Now
 \[
 \text{$(\mu-\lambda)\epsilon > 0$ implies 
 $r(\Phi_{\mu}) > r(\Phi_{\lambda})$.}
+\qedhere
 \]
 %% --
 \end{proof}
-
+%% --
 \index{equation!population}
 \index{population!equation}
 The theory developed so far can also be applied to certain population equations.
@@ -3946,7 +3947,7 @@ We adopt this setting and transform the above results, \eg $\epsilon_{\lambda}$ 
 As a concrete example we consider the following.
 
 
-
+%% --
 \begin{example}\label{ex:c4-3.12}
 %
 \index{differential equation}
@@ -4026,7 +4027,7 @@ whose unique real solution $\lambda$ is $s(A)$.
 
 The infinite dimensional problem of determining $s(A)$ is therefore reduced to solving a one-dimensional equation.
 \end{example}
-
+%% --
 The differential equation Eq.~\myeqpageref{eq:c4-3.13} may be interpreted as follows.
 \begin{quote}
 Consider $n$ populations and let $r$ be the maximal age of an individual.

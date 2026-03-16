@@ -442,7 +442,8 @@ Let $(T(t))_{t \geq 0}$ be a strongly continuous positive semigroup with generat
 then 
 \[
 \langle Af,\phi \rangle = \lim_{t \to 0} 1/t \langle T(t)f - f, \phi \rangle = \lim_{t \to 0} 1/t \langle T(t)f, \phi \rangle \geq 0\,.
-\qedhere\]
+\qedhere
+\]
 \end{proof}
 %%
 We will see that the positive minimum principle is not sufficient for the positivity of the semigroup, in general (Remark~\ref{rem:c2-3.16}).
@@ -894,7 +895,7 @@ This is Kato's inequality in the distributional sense.
 \begin{remark*}\label{rem:c2-3.0}
 It has been proved by \textcite{miyajimaokazawa:1984}] that \myeqpageref{eq:c2-Kd} implies that $m \leq 2$ and that the principal part $\mathcal{A}_{0} = \sum_{|\alpha|=2} a_{\alpha} D^{\alpha}$ of\/ $\mathcal{A}$ is elliptic; \ie if we write the operator $\mathcal{A}_{0}$ in the form $\mathcal{A}_{0} = \sum_{i,j=1}^{2} b_{ij} \partial^{2}/\partial x_{i} \partial x_{j}$, then the matrix $(b_{ij}(x))$ is positive semidefinite for all $x \in \R^n$.
 \end{remark*}
-
+%% --
 Finally we formulate Theorem~\ref{thm:c2-2.4}   for the space $E \coloneq C_{0}(X)$ ($X$ locally compact) (which is not $\sigma$-order complete unless $X$ is $\sigma$-Stonian).
 Recall, that for $f \in C_{0}(X)$, \mbox{$\sign f$} is defined as a Borel function and for any bounded Borel function $g$ on $X$ and any $\phi \in M(X) = C_{0}(X)'$, we let $\langle g,\phi \rangle = \int g(x) \diff{\phi}(x)$ (see Part-II, Section~\ref{sec:b2-2}).
 %% --
@@ -986,7 +987,7 @@ Moreover, the set $M'$ consists of
 subeigenvectors of\/ $A'$. In fact, let $\psi \in N'$, $\phi = R(\lambda,A)'\psi$. Then
 $A'\phi = \lambda\phi - \psi \leq \lambda\phi$.
 \end{proof}
-
+%% --
 The fact that $\phi \in D(A')_{+}$ is a subeigenvector can be expressed by the
 semigroup (if it is positive).
 %% --
@@ -1273,7 +1274,7 @@ $(T(t))_{t \geq 0}$ is a semigroup which is \emph{not positive}. Nevertheless it
 \langle(\sign  f) Af,\phi\rangle = \langle|f|,A'\phi \rangle \quad \text{for all } f \in D(A), 0 \leq \phi \in D(A').
 \end{equation}
 %% --
-
+%% --
 \begin{proof}
 It is not difficult to see that
 \begin{equation}\label{eq:c2-3.11}
@@ -1297,7 +1298,7 @@ Hence for $f \in D(A)$,
 \end{align*}
 %% --
 \end{proof}
-
+%% --
 \begin{remark}\label{rem:c2-3.15}
 The equality Eq.~\myeqpageref{eq:c2-3.10} does not hold for all $\phi \in D(A')$. 
 In fact, this would imply that $|f| \in D(A)$ and $(\sign  f)Af = A|f|$ for
@@ -1411,7 +1412,7 @@ Hence there exists $\mu \geq 1$ such that
 \qedhere
 \]
 \end{proof}
-
+%% --
 But the semigroup $(U(t))_{t \geq 0}$ is not positive. 
 In fact, we show that there exists $f~\in~D(B)$ such that
 %% --
@@ -1501,7 +1502,7 @@ Conversely, if Eq.~\myeqpageref{eq:c2-4.2} holds, then
 \end{proof}
 %%--
 One can describe domination by an inequality for the generators in a manner analogous to the characterization of positive semigroups in Section~\ref{sec:c3-1}, however, no positive subeigenvectors are needed here.
-
+%% --
 \begin{theorem}\label{thm:c2-4.2}
 Let $(T(t))_{t \geq 0}$ be a positive semigroup with generator $A$ and $(S(t))_{t \geq 0}$ a semigroup with generator $B$. The following assertions are equivalent.
 \begin{enumerate}[\upshape (a)]
@@ -1545,12 +1546,12 @@ Setting $f \coloneq R(\lambda,B)g \in D(B)$ we obtain by~\ref{thm:c2-4.2-2}
 %% --
 Since $\psi \in E'_{+}$ is arbitrary Eq.~\myeqpageref{eq:c2-4.3} follows.
 \end{proof}
-
+%% --
 In order to deduce that~\ref{thm:c2-4.2-2}   implies~\ref{thm:c2-4.2-1}   in Theorem~\ref{thm:c2-4.2}, it is not
 necessary to assume that $B$ is a generator. 
 Merely a range condition is sufficient. 
 The precise formulation is the following.
-
+%% --
 \begin{theorem}\label{thm:c2-4.3}
 Let $(T(t))_{t \geq 0}$ be a positive semigroup with generator $A$. 
 Let $B$ be a densely defined operator such that
@@ -1677,7 +1678,7 @@ for all $\lambda > w$, $n \in \N $.
 So by the Hille-Yosida theorem, $\overline{B}$ is the generator of a semigroup $(S(t))_{t \geq 0}$. 
 Finally, the domination of\/ $(S(t))_{t \geq 0}$ by $(T(t))_{t \geq 0}$ follows from Eq.~\myeqpageref{eq:c2-4.8} and  Proposition~\ref{prop:c2-4.1}.
 \end{proof}
-
+%% --
 \begin{example}\label{ex:c2-4.4} 
 \begin{enumerate}[\upshape (i), wide, labelindent=.25em] %%, itemindent=\parindent]
 %%
@@ -1715,10 +1716,10 @@ Then
 This implies condition~\ref{thm:c2-4.2-2} in Theorem~\ref{thm:c2-4.2}.
 \end{enumerate}
 \end{example}
-
+%% --
 Domination and positivity are characterized simultaneously as
 follows.
-
+%% --
 \begin{proposition}\label{prop:c2-4.5}
 Let $E$ be a $\sigma$-order complete real Banach lattice.
 Let $(T(t))_{t \geq 0}$ be a positive semigroup with generator $A$ and let
@@ -1765,10 +1766,10 @@ Consequently,
 \]
 hence~\ref{prop:c2-4.5-1}   holds.
 \end{proof}
-
+%% --
 In the following example we apply Theorem~\ref{thm:c2-4.3} to Schrödinger operators. 
 Here the range condition is proved by an elegant argument due to \textcite{kato:1986} with the help of Kato's classical inequality.
-
+%% --
 \begin{example}[Schrödinger operators on $L^{p}$]
 \label{ex:c2-4.7}
 \index{Schr\"odinger operator}
@@ -1778,7 +1779,7 @@ Define $B$ on $E$ by $Bf = \Delta f - Vf$ with domain $D(B) = C^{\infty}_{c}(\R^
 Then $B$ is closable and $\overline{B}$ is the generator of a semigroup $(S(t))_{t \geq 0}$ which is dominated by the diffusion semigroup (Example~\ref{ex:c2-1.5}\,\ref{ex:c2-1.5-4} and Part-I, Section~\ref{subsec:a1-2.8}). 
 If\/ $V \geq 0$, then $(S(t))_{t \geq 0}$ is positive.
 \end{example}
-
+%% --
 \begin{proof}
 Denote by $A$ the generator of the diffusion semigroup. 
 Then $C^{\infty}_{c} \coloneq C^{\infty}_{c}(\R^{n})$ is a core of\/ $A$ and $Af = \Delta f$ for $f \in C^{\infty}_{c}$ (see Example~\ref{ex:c2-1.5}\,\ref{ex:c2-1.5-4}). 
@@ -1820,10 +1821,10 @@ Then for every $f \in C^{\infty}_{c}$, $0 \leq \phi \in D(A')$ we have
 by Eq.~\myeqpageref{eq:c2-3.6}. 
 It follows from  Proposition~\ref{prop:c2-4.5} that $(S(t))_{t \geq 0}$ is positive.
 \end{proof}
-
+%% --
 Finally, if it is known that the semigroup $(S(t))_{t \geq 0}$ is positive,
 domination can be characterized as follows.
-
+%% --
 \begin{proposition}\label{prop:c2-4.8}
 Let $E$ be a real Banach lattice, $(T(t))_{t \geq 0}$ a
 positive semigroup with generator $A$ and $(S(t))_{t \geq 0}$ a positive
@@ -1843,7 +1844,7 @@ Then~\ref{prop:c2-4.8-1} and~\ref{prop:c2-4.8-2}  are equivalent and imply~\ref{
 Moreover, if\/ $D(A) \subset D(B)$ or $D(B) \subset D(A)$, then~\ref{prop:c2-4.8-3}   implies~\ref{prop:c2-4.8-1}.
 %\marginpar{daher: (a)}
 \end{proposition}
-
+%% --
 \begin{proof}
 Assume that~\ref{prop:c2-4.8-1}   holds. 
 Then for $f \in D(B)_{+}$, $\phi \in D(A')_{+}$,
@@ -1877,7 +1878,7 @@ R(\lambda,A) - R(\lambda,B) = R(\lambda,A)(A - B)R(\lambda,B) \geq 0\,.
 \]
 This implies~\ref{prop:c2-4.8-1}.
 \end{proof}
-
+%% --
 The preceding results can be applied to the perturbation by multiplication operators. 
 Let $(X,\mu)$ be a $\sigma$-finite measure space and $E = L^{p}(X,\mu)$ $(1 \leq p < \infty)$. 
 Consider a positive semigroup $(T(t))_{t \geq 0}$ with generator $A$. 
@@ -2152,7 +2153,7 @@ More precisely, we look for a positive semigroup $(T(t))_{t \geq 0}$ dominating 
 by any other positive semigroup which dominates $(S(t))_{t \geq 0}$.
 If such a minimal dominating semigroup exists, it is unique and we call it the
 \emph{modulus semigroup} of\/ $(S(t))_{t \geq 0}$.
-
+%% --
 \begin{example}[Modulus semigroup associated with $\Delta - V$]
 \label{ex:c2-4.15}
 \quad Let $E$ be the complex space $L^{p}(\R^{n})$ $(1 \leq p < \infty)$ and $V \in L^{p}_{\text{loc}}(\R^{n})$ satisfying $\Re(V) \geq 0$.
@@ -2193,15 +2194,15 @@ It follows from Theorem~\ref{thm:c2-4.3}   that $(U(t))_{t \geq 0}$ dominates th
 Let $A_{0}$ be the generator of a positive semigroup on an order complete Banach lattice $E$ and $M \in \ZE$.
 The semigroup generated by $A_{0} + M$ possesses a modulus semigroup. Its generator is $A_{0} + \Re(M)$. (This can be proved as the assertion in Example~\ref{ex:c2-4.15}.)
 \end{example}
-
+%% --
 If a semigroup has a bounded regular generator, then it possesses a modulus semigroup. Its generator is bounded too (see Section~\ref{sec:c1-6} for the notion of regular operators).
-
+%% --
 \begin{theorem}\label{thm:c2-4.17}
 Let $B$ be a regular, bounded operator on an order complete complex Banach lattice $E$. The semigroup $(\eu^{tB})_{t \geq 0}$ possesses a modulus semigroup. Its generator is $A = |B_{0}| + \Re(M)$, where $B = B_{0} + M$ is the unique decomposition of\/ $B$ in $\mathcal{L}^{r}(E)$ satisfying $M \in \ZE)$, $B_{0} \in \mathcal{Z}(E)^{d}$.
 \end{theorem}
-
+%% --
 For the proof we need the following result which is of independent interest.
-
+%% --
 \begin{lemma}\label{lem:c2-4.18}
 Let $A$ be the generator of a positive semigroup on a Banach lattice $E$. 
 If\/ $Af \geq 0$ for all $f \in D(A)_{+}$, then $A$ is bounded.
@@ -2279,17 +2280,17 @@ This implies that
 for all $f \in E$.
 It follows from Theorem~\ref{thm:c2-4.2}   that $(\eu^{tB})_{t \geq 0}$ is dominated by $(\eu^{tC})_{t \geq 0}$.
 \end{proof}
-
+%% --
 \begin{remark*}
 The proof of Theorem~\ref{thm:c2-4.17}   shows that any semigroup, dominating a semigroup whose generator is bounded and regular, has a bounded generator as well.
 \end{remark*}
-
+%% --
 \begin{example}\label{ex:c2-4.19}
 Let $E = \ell^{p}$ $(1 \leq p < \infty)$ or $c_{0}$ and $B \in \mathcal{L}^{r}(E)$ be
 given by the matrix $(b_{ij})$.
 The generator $A$ of the modulus semigroup of\/ $(\eu^{tB})_{t \geq 0}$ is given by the matrix $(a_{ij})$ where $a_{ij} = |b_{ij}|$ when $i \neq j$ and $a_{ii} = \Re(b_{ii})$.
 \end{example}
-
+%% --
 A related question is under which condition a semigroup $(S(t))_{t \geq 0}$ is
 dominated by some positive semigroup.
 Of course, a necessary condition is that every $S(t)$ is a regular operator.
@@ -2322,7 +2323,7 @@ In the following we will consider \emph{disjointness preserving semigroups}
 (by this we mean semigroups of disjointness preserving operators) and
 \emph{lattice semigroups} (\ie semigroups of lattice homomorphisms). For
 example, the semigroup $(T_{d}(t))_{t \geq 0}$ defined in Section~\ref{sec:c2-3} after Theorem~\ref{thm:c2-3.13}  is disjointness preserving for all $d \in \R$ and a lattice semigroup if\/ $d \geq 0$.
-
+%% --
 \begin{proposition}\label{prop:c2-5.1}
 A bounded operator $S$ on a complex Banach lattice $E$ is disjointness preserving if and only if there exists a linear operator $|S|$ on $E$ such that
 %% --
@@ -2334,15 +2335,15 @@ In that case, the operator $|S|$ is uniquely determined by Eq.~\myeqpageref{eq:c
 $|S|$ is a lattice homomorphism and the \emph{modulus} of\/ $S$ (\ie one has
 $|S| \leq T$ for all $T \in \LE$ satisfying $|Sf| \leq T|f|$ for all $f \in E$).
 \end{proposition}
-
+%% --
 For the proof of the proposition we refer to \textcite{arendt:1983} and \textcite{depagter:1984}.
-
+%% --
 \begin{proposition}\label{prop:c2-5.2}
 Let $(S(t))_{t \geq 0}$ be a disjointness preserving semigroup. 
 Let $T(t) = |S(t)|$ $(t \geq 0)$. 
 Then $(T(t))_{t \geq 0}$ is a strongly continuous semigroup.
 \end{proposition}
-
+%% --
 \begin{proof}
 Let $0 \leq s,t$ and $f \in E_{+}$. 
 Then by Eq.~\myeqpageref{eq:c2-5.1}, 
@@ -2361,7 +2362,7 @@ This implies that $(T(t))_{t \geq 0}$ is strongly continuous.
 Let $d \in \C$ and $S(t) = T_{d}(t)$ be given by Eq.~\myeqpageref{eq:c2-3.9}. 
 Then $|T_{d}(t)| = T_{|d|}(t)$ $(t \geq 0)$.
 \end{example}
-
+%% --
 \begin{proposition}\label{prop:c2-5.4}
 Let $B$ be the generator of a disjointness preserving semigroup $(S(t))_{t \geq 0}$ on a Banach lattice $E$. 
 Then $B$ is \emph{local}; i.e.
@@ -2371,7 +2372,7 @@ f \perp g \quad \text{implies} \quad Bf \perp g \quad \text{for all } f \in D(B)
 \end{equation}
 %% --
 \end{proposition}
-
+%% --
 \begin{proof}
 Let $f \in D(B)$ and $g \in E$ such that $\inf\{|f|,|g|\} = 0$. 
 Then
@@ -2386,9 +2387,9 @@ Then
 %% --
 Letting $t \to \infty$ one obtains $|Bf| \wedge |g| = 0$.
 \end{proof}
-
+%% --
 We now describe the relation between the generator of a disjointness preserving semigroup and the generator of the modulus semigroup.
-
+%% --
 \begin{theorem}\label{thm:c2-5.5}
 Assume that E is a complex Banach lattice with order continuous norm. 
 Let $(S(t))_{t \geq 0}$ be a semigroup with generator $B$.
@@ -2410,7 +2411,7 @@ f \in D(B) \text{ implies } |f| \in D(A) \text{ and } \Re\mleft((\widehat{\sign}
 Moreover, if these equivalent conditions are satisfied, then
 $T(t) = |S(t)|$ for all $t \geq 0$.
 \end{theorem}
-
+%% --
 \begin{remark*} 
 \begin{enumerate}[\upshape (i), wide, labelindent=.25em] %%, itemindent=\parindent] \label{enum:c2-kgk.1}
 %%
@@ -2435,7 +2436,7 @@ The basic idea of the proof of Theorem~\ref{thm:c2-5.5}   is to differentiate th
 that we need, that the modulus function is differentiable.
 If\/ $E = L^{p}(X,\Sigma,\mu)$ $(1 \leq p < \infty)$ this had been proved in Example~\ref{ex:c2-2.3}.
 We extend this result to Banach lattices with order continuous norm.
-
+%% --
 \begin{proposition}\label{prop:c2-5.6}
 Let $E$ be a real or complex Banach lattice with order continuous norm. 
 Then the modulus function $\Theta \colon E \to E$, given by $\Theta(h) \coloneq |h|$, is right-sided Gateaux differerentiable and
@@ -2445,7 +2446,7 @@ D_{g}\Theta(f) = \Re\mleft((\widehat{\sign}  \bar{f})g\mright) \quad (f, g \in E
 \end{equation}
 %% --
 \end{proposition}
-
+%% --
 \begin{proof}
 Let $f, g \in E$. Define $k \colon \R \to E$ by $k(t) = |f+tg| - |f|$.
 Then $k(0) = 0$ and $k$ is convex (\ie $k(\lambda s + (1-\lambda)t) \leq \lambda k(s) + (1-\lambda)k(t)$ for all $s, t \in \R, \lambda \in [0,1]$).
@@ -2520,9 +2521,9 @@ $((\sign  \bar{f})h)(x) = \mleft(\sign  \overline{f(x)}\mright)h(x)$
 Consequently, $D_{h}\Theta(f) = \Re(\sign  \bar{f})h$ whenever $h \in E_{|f|}$. 
 Since $D_{h}\Theta(f)$ is continuous in $h$, in fact, $|D_{h}\Theta(f) - D_{k}\Theta(f)| \leq |h - k|$ for all $h,k \in E$ and $E_{|f|}$ is dense in $\{f\}^{dd}$, it follows that Eq.~\myeqpageref{eq:c2-5.8} holds for all $h \in \{f\}^{dd}$.
 \end{proof}
-
+%% --
 \begin{remark}\label{rem:c2-5.7} 
-
+%% --
 \begin{enumerate}[\upshape (i), wide, labelindent=.25em] %%, itemindent=\parindent]
 %%
 \item \label{rem:c2-5.7-1}
@@ -2598,7 +2599,7 @@ We now obtain from Theorem~\ref{thm:c2-5.5} the semigroup consists of lattice ho
 \index{Kato's equality} 
 The precise statement is the following.
 \index{lattice homomorphism}
-
+%% --
 \begin{corollary}\label{cor:c2-5.8}
 Let $A$ be the generator of a strongly continuous semigroup $(T(t))_{t \geq 0}$ on a Banach lattice $E$ with order continuous norm. 
 The following assertions are equivalent.
@@ -2617,7 +2618,7 @@ $f \in D(A)$ implies $|f|,\bar{f} \in D(A)$ and $\Re\mleft((\sign  \bar{f})Af\mr
 \end{enumerate}
 %% --
 \end{corollary}
-
+%% --
 \begin{proof}
 The equivalence of~\ref{cor:c2-5.8-1}   and~\ref{cor:c2-5.8-2}   follows directly from Theorem~\ref{thm:c2-5.5}. 
 If~\ref{cor:c2-5.8-1}   holds, then $A$ is local by  Proposition~\ref{prop:c2-5.4}.
@@ -2628,9 +2629,9 @@ Then Kato's equality implies that $Af \in \{f\}^{dd}$ whenever $f \in D(A)_{+}$.
 Since $D(A)$ is a sublattice of\/ $E$ by hypothesis, this implies that $A$ is local. 
 Thus~\ref{cor:c2-5.8-2}   follows from~\ref{cor:c2-5.8-3}.
 \end{proof}
-
+%% --
 In the case when $E$ is real this result can be reformulated.
-
+%% --
 \begin{corollary}\label{cor:c2-5.9}
 %
 Let $A$ be the generator of a strongly continuous semigroup $(T(t))_{t \geq 0}$ on a real Banach lattice $E$ with order continuous norm. 
@@ -2646,7 +2647,7 @@ $D(A)$ is a sublattice and $A$ is local.
 \end{enumerate}
 %% --
 \end{corollary}
-
+%% --
 \begin{proof}
 Assume that~\ref{cor:c2-5.9-2}   holds. 
 Let $f \in D(A)$ and $P_{+} \coloneqq P_{f^{+}}$ and $P_{-} \coloneqq P_{f^{-}}$.
@@ -2677,15 +2678,15 @@ Hence
 for all $f \in D(B)$. 
 Thus it follows from Theorem~\ref{thm:c2-5.5}   that $B$ generates a disjointness preserving semigroup whose modulus semigroup is generated by $A$.
 \end{example}
-
+%% --
 Next we describe when a disjointness preserving semigroup is positive.
-
+%% --
 \begin{proposition}\label{prop:c2-5.11}
 %
 Let $E$ be a complex Banach lattice with order continuous norm and $B$ be the generator of a disjointness preserving semigroup $(S(t))_{t \geq 0}$. 
 The semigroup is positive if and only if\/ $B$ is real and $\text{span } D(B)_{+} = D(B)$.
 \end{proposition}
-
+%% --
 \begin{proof}
 The conditions are clearly necessary. 
 In order to prove sufficiency, we can assume that $E$ is real. 
@@ -2699,7 +2700,7 @@ By assumption, $\text{span } D(B)_{+} = D(B)$.
 Thus it follows that $B \subset A$. 
 This implies that $B = A$ since $\rho(B) \cap \rho(A) \neq \emptyset$.
 \end{proof}
-
+%% --
 \begin{remark}\label{rem:c2-5.12}
 %
 If\/ $B$ is the generator of a disjointness preserving semigroup $(S(t))_{t \geq 0}$ on a real Banach lattice $E$ with order continuous norm then Kato's inequality holds in the reverse sense; \ie
@@ -2719,12 +2720,12 @@ Then
  = \langle |f|, B'\phi \rangle.
 \end{align*}
 \end{remark}
-
+%% --
 Finally, we come back to Corollary~\ref{cor:c2-5.9}.
 If in condition~\ref{cor:c2-5.9-2}   we demand that $D(A)$ is not only a sublattice but an ideal of\/ $E$ we obtain a characterization of multiplication semigroups.
 
 Here we call a semigroup $(T(t))_{t \geq 0}$ \emph{multiplication semigroup} if\/ $T(t)$ is a multiplication operator (\ie an element of the center) for every $t > 0$.
-
+%% --
 \begin{theorem}\label{thm:c2-5.13}
 %
 Let $A$ be the generator of a strongly continuous semigroup $(T(t))_{t \geq 0}$ on a $\sigma$-order complete real or complex Banach lattice $E$.
@@ -2747,7 +2748,7 @@ $A$ is local and $D(A)$ is an ideal in $E$
 If\/ $f \in D(A)$ then $Pf \in D(A)$ for every band projection $P$ and $APf = PAf$.
 \end{enumerate}
 \end{theorem}
-
+%% --
 \begin{proof}
 Assume that~\ref{thm:c2-5.13-1}   holds and let $\lambda \in \rho(A)$.
 Since $R(\lambda,A)$ is the Laplace transform of the semigroup, it follows that $R(\lambda,A)$ is local since $T(t)$ is local for all $t \geq 0$.
@@ -2801,22 +2802,22 @@ Then $PAf = APf = A0 = 0$.
 Thus $Af \in \{|h|\}^{d}$.
 We have proved that $A$ is local.
 \end{proof}
-
-
+%% --
+%% --
 \begin{corollary}\label{cor:c2-5.14}
 %
 A multiplication semigroup $(T(t))_{t \geq 0}$ on a complex Banach lattice $E$ with order continuous norm is positive if and only if its generator $A$ is real, \ie $f \in D(A)$ implies $\bar{f} \in D(A)$ and $A\bar{f} = \overline{Af}$.
 \end{corollary}
-
+%% --
 \begin{proof}
 The condition is equivalent to $T(t)E_{\R} \subset E_{\R}$ $(t \geq 0)$ (\cf Remark~\ref{rem:c2-3.1}), so it is clearly necessary.
 Conversely, if\/ $A$ is real, then denote by $(T_{\R}(t))_{t \geq 0}$ the restriction semigroup on $E_{\R}$ and by $A_{\R}$ its generator.
 Then $A_{\R}$ is local (since $A$ is local) and $D(A_{\R})$ is a sublattice of\/ $E_{\R}$.
 Thus $(T_{\R}(t))_{t \geq 0}$ is a lattice semigroup (and so positive) by Corollary~\ref{cor:c2-5.9}.
 \end{proof}
-
+%% --
 The class of bounded operators which generate a lattice semigroup is very restricted.
-
+%% --
 \begin{proposition}\label{prop:c2-5.15}
 %
 Let $E$ be a real or complex Banach lattice and $A \in \LE$. 
@@ -2834,7 +2835,7 @@ $\eu^{tA} \in \mathcal{Z}(E)$ for all $t \in \R$.
 \end{enumerate}
 Moreover, if\/ $A \in \ZE$ is real, then $\eu^{tA} \geq 0$ for all $t \in \R$.
 \end{proposition}
-
+%% --
 \begin{proof}
 Since $\ZE$ is a closed subalgebra of\/ $\LE$ (see Section~\ref{sec:c1-9})
 , it is clear that~\ref{prop:c2-5.15-1}   implies~\ref{prop:c2-5.15-3}.
@@ -2844,7 +2845,7 @@ Hence $A \in \mathcal{Z}(E)$
 
 The last assertion follows from the fact that $\mathcal{Z}(E)$ is isomorphic to a space $C(K)$ as a Banach lattice and a Banach algebra.
 \end{proof}
-
+%% --
 \begin{proposition}\label{prop:c2-5.16}
 %
 Let $E$ be a complex Banach lattice.
@@ -2887,7 +2888,7 @@ Let $A \in \LE$.
 Assume that there exists a dense sublattice $D$ of\/ $E$ such that for all $f \in D$, $g \in E$, $f \perp g$ implies $Af \perp g$.
 Then $A \in \mathcal{Z}(E)$.
 \end{lemma}
-
+%% --
 \begin{proof}
 Let $0 \leq f \in D$, $\phi \in E^*$ such that $\langle f,\phi \rangle = 0$.
 Since $Af \in (f)^{dd}$ by assumption, it follows that $\langle Af,\phi \rangle = 0$.
@@ -2910,7 +2911,7 @@ Let $B \in \LE$.
 The semigroup generated by $A + B$ is positive if and only if\/ $(\eu^{tB})_{t \geq 0}$ is positive.
 The semigroup generated by $A + B$ is a lattice semigroup if and only if\/ $B \in \ZE$.
 \end{theorem}
-
+%% --
 \begin{proof}
 Assume that $A + B$ generates a positive semigroup.
 Let $f \in D(A)_{+}$, $\phi \in E_{+}^*$ such that $\langle f,\phi \rangle = 0$.
@@ -2925,7 +2926,7 @@ By Corollary~\ref{cor:c2-5.9} the operator $A + B$ generates a lattice semigroup
 Since $A$ is local, this is equivalent to $B_{\vert D(A)}$ being local.
 By Lemma~\ref{lem:c2-5.17} this is true if and only if\/ $B \in \ZE$.
 \end{proof}
-
+%% --
 %% -- Bitte die Notes so setzen
 %% --
 \section*{Notes}
