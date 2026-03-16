@@ -670,7 +670,7 @@ On the other hand, take $f \in E$ differentiable such that $f' \in E$.
 Then
 %% --
 \[
-    \left|\frac{f(x+h) - f(x)}{h} - f'(x)\right| \leq \frac{1}{h}\int_{x}^{x+h}|f'(y) - f'(x)|\,\dy,
+    \left|\frac{f(x+h) - f(x)}{h} - f'(x)\right| \leq \frac{1}{h}\int_{x}^{x+h}|f'(y) - f'(x)| \dy,
 \]
 %% --
 where the last expression tends to zero uniformly in $x$ as $h \to 0$.
@@ -1429,7 +1429,7 @@ Occasionally we will need such a construction and refer to Section V.1 of \textc
 If we try to adapt this construction to strongly continuous semigroups we encounter the difficulty that the semigroup extended to the larger space will not remain strongly continuous.
 An idea already used in Section~\ref{subsec:a1-3.4} will help to overcome this difficulty.
 
-Let $\mathcal{T} = (T(t))_{t \geq 0}$ be a strongly continuous semigroup on the Banach space $E$.
+Let $\TT = (T(t))_{t \geq 0}$ be a strongly continuous semigroup on the Banach space $E$.
 Denote by $m(E)$ the Banach space of all bounded $E$-valued sequences endowed with the norm
 %% --
 \[
@@ -1446,13 +1446,13 @@ on $m(E)$, but the semigroup $(\widehat{T}(t))_{t \geq 0}$ is strongly continuou
 Therefore we restrict our attention to the closed, $(\widehat{T}(t))$-invariant subspace
 %% --
 \[
-    m^{\mathcal{T}}(E) \coloneqq \{(f_{n}) \in m(E) \colon \lim_{t \to 0} \|T(t)f_{n}-f_{n}\| = 0 \text{ uniformly for } n \in \N\} .
+    m^{\TT}(E) \coloneqq \{(f_{n}) \in m(E) \colon \lim_{t \to 0} \|T(t)f_{n}-f_{n}\| = 0 \text{ uniformly for } n \in \N\} .
 \]
 %% --
 Then the restricted semigroup
 %% --
 \[
-    \widehat{T}(t)(f_{n}) = (T(t)f_{n}), \quad (f_{n}) \in m^{\mathcal{T}}(E)
+    \widehat{T}(t)(f_{n}) = (T(t)f_{n}), \quad (f_{n}) \in m^{\TT}(E)
 \]
 %% --
 is strongly continuous and we denote its generator by $(\widehat{A},D(\widehat{A}))$.
@@ -1460,12 +1460,12 @@ is strongly continuous and we denote its generator by $(\widehat{A},D(\widehat{A
 The following lemma shows that $\widehat{A}$ is obtained canonically from $A$.
 %% --
 \begin{lemma*}\label{lem:a1-3.6}
-For the generator $\widehat{A}$ of\/ $(\widehat{T}(t))_{t \geq 0}$ on $m^{\mathcal{T}}(E)$ one has the following properties.
+For the generator $\widehat{A}$ of\/ $(\widehat{T}(t))_{t \geq 0}$ on $m^{\TT}(E)$ one has the following properties.
 %% --
 \begin{enumerate}[\upshape(i)]
 
 \item 
-$D(\widehat{A}) = \{(f_{n}) \in m^{\mathcal{T}}(E) \colon f_{n} \in D(A) \text{ and } (Af_{n}) \in m^{\mathcal{T}}(E)\}$,
+$D(\widehat{A}) = \{(f_{n}) \in m^{\TT}(E) \colon f_{n} \in D(A) \text{ and } (Af_{n}) \in m^{\TT}(E)\}$,
 
 \item 
 $\widehat{A}(f_{n}) = (Af_{n})$ for $(f_{n}) \in D(\widehat{A})$ .
@@ -1489,7 +1489,7 @@ We call the quotient spaces
 \[
     E_{\mathcal{F}} \coloneqq m(E)/c_{\mathcal{F}}(E) 
     \quad \text{and} \quad 
-    E_{\mathcal{F}}^{T} \coloneqq m^{\mathcal{T}}(E)/ (c_{\mathcal{F}}(E)\cap m^{\mathcal{T}}(E))
+    E_{\mathcal{F}}^{T} \coloneqq m^{\TT}(E)/ (c_{\mathcal{F}}(E)\cap m^{\TT}(E))
 \]
 %% --
 the \emph{$\mathcal{F}$-product of\/ $E$} and the \emph{$ \mathcal{F} $-product of\/ $E$ with respect to the semigroup $\TT$}, respectively.
@@ -1508,7 +1508,7 @@ We can apply Section~\ref{subsec:a1-3.4} in order to define the \emph{$\mathcal{
 %% --
 \[
     T_{\mathcal{F}}(t)((f_{n}) + c_{\mathcal{F}}(E)) \coloneqq (T(t)f_{n}) 
-    	+ ( c_{\mathcal{F}}(E)\cap m^{\mathcal{T}}(E) ) .
+    	+ ( c_{\mathcal{F}}(E)\cap m^{\TT}(E) ) .
 \]
 %% --
 Thus $T_{\mathcal{F}}(t)$ is the restriction of\/ $T(t)_{F}$ where $T(t)_{F}$ denotes the canonical extension of\/ $T(t)$ to the $\mathcal{F}$-product $E_{\mathcal{F}}$. 
@@ -1523,7 +1523,7 @@ For the generator $(A_{\mathcal{F}},D(A_{\mathcal{F}}))$ of the $\mathcal{F}$-pr
 %% --
 \begin{enumerate}[\upshape(i)]
 \item 
-$D(A_{\mathcal{F}}) = \{(f_{n}) + c_{\mathcal{F}}(E) \colon f_{n} \in D(A); (f_{n}), (Af_{n}) \in m^{\mathcal{T}}(E)\}$,
+$D(A_{\mathcal{F}}) = \{(f_{n}) + c_{\mathcal{F}}(E) \colon f_{n} \in D(A); (f_{n}), (Af_{n}) \in m^{\TT}(E)\}$,
 
 \item 
 $A_{\mathcal{F}}((f_{n}) + c_{\mathcal{F}}(E)) = (Af_{n}) + c_{\mathcal{F}}(E)$.

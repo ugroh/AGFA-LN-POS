@@ -672,9 +672,9 @@ We suppose in addition that $\beta$ and $\mu$ satisfy
 %% --
 \begin{equation}\label{eq:c4-2.3}
 %\int_{0}^{\infty} \beta(a)(\exp\left(-\int_{0}^{a} \mu(x) \dx\right) )\diff{a} = 1 \quad \text{and} \quad \mu(\infty) > 0.
-\int_{0}^{\infty} \beta(a)\,\eu^{-\int_{0}^{a} \mu(x)\,\dx}\,\diff{a} = 1
+\int_{0}^{\infty} \beta(a)\,\eu^{-\int_{0}^{a} \mu(x) \dx} \diff{a} = 1
 \quad \text{and} \quad \mu(\infty) > 0.
-%\int_{0}^{\infty} \beta(a)\exp\!\left(-\int_{0}^{a} \mu(x)\,\dx\right)\diff{a} = 1 
+%\int_{0}^{\infty} \beta(a)\exp\!\left(-\int_{0}^{a} \mu(x) \dx\right)\diff{a} = 1 
 %\quad \text{and} \quad \mu(\infty) > 0.
 \end{equation}
 %% --
@@ -1193,7 +1193,7 @@ The equation we consider describes the division of a cell population.
 For details we refer to \textcite{diekmannetal:1984}.
 %% --
 \begin{example}\label{ex:c4-2.15}
-Let $E = L^{1}([\frac{1}{4},1],w\,\dx)$, where the density $w$ is a continuous positive function on $[\frac{1}{4},1]$, vanishes at $x = 1$ and is strictly positive in $[\frac{1}{4},1)$.
+Let $E = L^{1}([\frac{1}{4},1],w \dx)$, where the density $w$ is a continuous positive function on $[\frac{1}{4},1]$, vanishes at $x = 1$ and is strictly positive in $[\frac{1}{4},1)$.
 We consider the operator $C = A + B$ where $A$ is defined by $(Af)(x) \coloneq  -xf'(x)$ on the domain $D(A) \coloneqq \{f \in AC \colon f(\frac{1}{2}) = 0\}$ and $B$ is defined by
 %% --
 \begin{equation*}\label{eq:c4-2.12-kgk}
@@ -1990,7 +1990,7 @@ The corresponding Cauchy problem is
 u_i(0,a) &= v_i(a) 
     && (i=1,\ldots,n), \quad a\in[0,r], \\[2mm]
 &\text{and boundary condition} \\[1mm]
-u_i(t,0) &= \int_0^r \sum_{j=1}^n \beta_{ij}(a)\,u_j(t,a)\,\diff{a} 
+u_i(t,0) &= \int_0^r \sum_{j=1}^n \beta_{ij}(a)\,u_j(t,a) \diff{a} 
     && (i=1,\ldots,n), \quad t\in\R_+.
 \end{aligned}
 \right.
@@ -2752,9 +2752,9 @@ We suppose in addition that $\beta$ and $\mu$ satisfy
 %% --
 \begin{equation}\label{eq:c4-2.3}
 %\int_{0}^{\infty} \beta(a)(\exp\left(-\int_{0}^{a} \mu(x) \dx\right) )\diff{a} = 1 \quad \text{and} \quad \mu(\infty) > 0.
-\int_{0}^{\infty} \beta(a)\,\eu^{-\int_{0}^{a} \mu(x)\,\dx}\,\diff{a} = 1
+\int_{0}^{\infty} \beta(a)\,\eu^{-\int_{0}^{a} \mu(x) \dx} \diff{a} = 1
 \quad \text{and} \quad \mu(\infty) > 0.
-%\int_{0}^{\infty} \beta(a)\exp\!\left(-\int_{0}^{a} \mu(x)\,\dx\right)\diff{a} = 1 
+%\int_{0}^{\infty} \beta(a)\exp\!\left(-\int_{0}^{a} \mu(x) \dx\right)\diff{a} = 1 
 %\quad \text{and} \quad \mu(\infty) > 0.
 \end{equation}
 %% --
@@ -3272,7 +3272,7 @@ The equation we consider describes the division of a cell population.
 For details we refer to \textcite{diekmannetal:1984}.
 %% --
 \begin{example}\label{ex:c4-2.15}
-Let $E = L^{1}([\frac{1}{4},1],w\,\dx)$, where the density $w$ is a continuous positive function on $[\frac{1}{4},1]$, vanishes at $x = 1$ and is strictly positive in $[\frac{1}{4},1)$.
+Let $E = L^{1}([\frac{1}{4},1],w \dx)$, where the density $w$ is a continuous positive function on $[\frac{1}{4},1]$, vanishes at $x = 1$ and is strictly positive in $[\frac{1}{4},1)$.
 We consider the operator $C = A + B$ where $A$ is defined by $(Af)(x) \coloneq  -xf'(x)$ on the domain $D(A) \coloneqq \{f \in AC \colon f(\frac{1}{2}) = 0\}$ and $B$ is defined by
 %% --
 \begin{equation*}\label{eq:c4-2.12-kgk}
@@ -4069,7 +4069,7 @@ The corresponding Cauchy problem is
 u_i(0,a) &= v_i(a) 
     && (i=1,\ldots,n), \quad a\in[0,r], \\[2mm]
 &\text{and boundary condition} \\[1mm]
-u_i(t,0) &= \int_0^r \sum_{j=1}^n \beta_{ij}(a)\,u_j(t,a)\,\diff{a} 
+u_i(t,0) &= \int_0^r \sum_{j=1}^n \beta_{ij}(a)\,u_j(t,a) \diff{a} 
     && (i=1,\ldots,n), \quad t\in\R_+.
 \end{aligned}
 \right.

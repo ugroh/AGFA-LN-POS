@@ -868,8 +868,8 @@ $e_{j}$ are the unit vectors $(e_{j} \coloneqq (\delta_{jk}))$.
  \caption{Matrix Example}\label{tab:b3-table1}
 \begin{tabular}{p{10mm}p{10mm}p{10mm}|c|p{8mm}ccc} % <--: 1st column left, 2nd middle and 3rd right, with vertical lines in between
 		 &&& $ \overset{\text{\small pole}}{\text{\small order}}$ & $\ I_0$ & $I_2$ & $I_2$ & $I_3$ \\[1ex]\hline
-		$ d > 0 $, & $ f>0 $, &  $ e \ge 0 $ & 3 & $\langle e_1 \rangle$ &  $\langle e_1, e_2 \rangle$ &  $\langle e_1, e_2, e_3 \rangle$ &  $\C^4$\\
-		$ d = 0 $, & $ f > 0 $, & $ e \ge 0 $ & 2 & $\langle e_1 \rangle$ &  $\langle e_1, e_2, e_3 \rangle$ &  $\C^4$ & \\	
+		$ d > 0 $, & $ f>0 $, &  $ e  \geq 0 $ & 3 & $\langle e_1 \rangle$ &  $\langle e_1, e_2 \rangle$ &  $\langle e_1, e_2, e_3 \rangle$ &  $\C^4$\\
+		$ d = 0 $, & $ f > 0 $, & $ e  \geq 0 $ & 2 & $\langle e_1 \rangle$ &  $\langle e_1, e_2, e_3 \rangle$ &  $\C^4$ & \\	
 		$ d = 0 $, & $ f = 0 $, & $ e > 0 $ & 2 & $\langle e_1 \rangle$ &  $\langle e_1, e_2, e_3 \rangle$ &  $\C^4$ & \\
 		$ d > 0 $, & $ f = 0 $, & $ e > 0 $ & 2 & $\langle e_1 \rangle$ &  $\langle e_1, e_2 \rangle$ &  $\C^4$ & \\			
 		$ d > 0 $, & $ f = 0 $, & $ e = 0 $ & 2 & $\langle e_1 \rangle$ &  $\langle e_1, e_2, e_4 \rangle$ &  $\C^4$ & \\	
@@ -1303,7 +1303,7 @@ The rotation semigroup (see Part-I, Example~\ref{subsec:a1-2.5}) is irreducible 
 	We will give a proof of this result in the more general situation of Banach lattices (see Part-III, Theorem~\ref{thm:c3-3.2}\,(ii)).
 \end{remark}
 %% --
-A semigroup $(T(t))_{t \ge 0}$ is irreducible if and only if\/ $(\eu^{-\alpha t}T(t))_{t \ge 0}$, $\alpha \in \R$  is. 
+A semigroup $(T(t))_{t  \geq 0}$ is irreducible if and only if\/ $(\eu^{-\alpha t}T(t))_{t  \geq 0}$, $\alpha \in \R$  is. 
 More generally, irreducibility is invariant under perturbations by multiplication operators. 
 In fact, we have the following result. 
 %% --
@@ -1528,7 +1528,7 @@ And in case $X$ is compact, a $\phi \geq 0$ satisfying $A'\phi = 0$ always exist
 	A + i(\beta - \alpha) = S_{h}(A + \im\beta)S_{\bar{h}} = S_{h}S_{\bar{g}}A S_{g}S_{h}^{-1}.
 	\end{equation}
 	It follows that 
-    \[\textstyle
+    \[%\textstyle
     \Kern{A + i(\beta - \alpha)} = S_{h}S_{\bar{g}}(\Kern{A}) \neq \{0\}\,,
     \]
     hence $\im (\beta - \alpha) \in P\sigma(A)$.
@@ -1553,7 +1553,7 @@ And in case $X$ is compact, a $\phi \geq 0$ satisfying $A'\phi = 0$ always exist
 	\end{equation}
 	%% --
 	It follows that 
-    \[\textstyle
+    \[%\textstyle
     h(x)\cdot p_{n}(\tilde{h}(x)) \to |h|(x)
     \]
     uniformly in $x \in X$.
@@ -1771,7 +1771,7 @@ To prove this result one uses the proof of the analogous result for a single ope
     \index{operator!Markov} 
     on $C(K)$, $K$ compact.
 	Then $\sigma_{b}(A)$ is a closed subgroup of\/ $\im \R$, \ie
-   \[\textstyle
+   \[%\textstyle
    \text{either}\quad \sigma_{b}(A) = \{0\}\quad\text{or}\quad \sigma_{b}(A) = \im\R\quad\text{or}\quad\sigma_{b}(A) =\im\alpha\Z \text{  for some } \alpha > 0\,.
    \]
 \end{theorem}

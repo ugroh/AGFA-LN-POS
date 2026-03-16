@@ -253,7 +253,7 @@ This follows from
 \begin{equation}\label{eq:a4-1.1}
 \begin{split}
 \int_0^t \eu^{-\lambda s} f(s) \ds &= \eu^{-(\lambda-\mu)t} \int_{0}^{t} \eu^{\mu s} f(s)  \ds \\ 
-&+ (\lambda - \mu) \int_{0}^{t} \eu^{-(\lambda-\mu)s} \int_{0}^{s} \eu^{\mu r} f(r) \,\diff{r} \ds \,. 
+&+ (\lambda - \mu) \int_{0}^{t} \eu^{-(\lambda-\mu)s} \int_{0}^{s} \eu^{\mu r} f(r)  \diff{r} \ds \,. 
 \end{split}
 \end{equation}
 %% --
@@ -564,11 +564,11 @@ A_n =
 0 & & & & 0
 \end{bmatrix}_{n \times n}.
 \]
-This semigroup satisfies $ \|T(t)\| = \eu^{t} $ for all $t\ge 0$. Hence, $ \omega_{0}(A) = 1 $, while the generator $ A = (2\pi i n + A_n)_{n \in \N} $ has spectral bound $ s(A) = 0 $. 
+This semigroup satisfies $ \|T(t)\| = \eu^{t} $ for all $t \geq 0$. Hence, $ \omega_{0}(A) = 1 $, while the generator $ A = (2\pi i n + A_n)_{n \in \N} $ has spectral bound $ s(A) = 0 $. 
 We first show that $ \omega_1(A) = \omega_{0}(A) $; this will later be used to construct a semigroup for which $ s(A) < \omega_1(A) < \omega_{0}(A) $. 
 Let $ e_n = n^{-1/2} (1, ..., 1) \in \C^n $. 
  
-Then, for fixed $n$ and $t\ge 0$, 
+Then, for fixed $n$ and $t \geq 0$, 
 %% --  
 \begin{align*}
 	\|\exp(&t A_n) \cdot e_n\|^2 = \\
@@ -578,9 +578,9 @@ Then, for fixed $n$ and $t\ge 0$,
 	\, = \, \frac{1}{n} \sum_{r=0}^{n-1} \sum_{j,s=0}^{r} \frac{1}{j!s!} t^{j+s} 
 	= \frac{1}{n} \sum_{r=0}^{n-1} \sum_{i=0}^{2r} t^i
 	\sum_{\substack{j+s=i\\0 \leq j,s \leq r}} \frac{1}{j!\,s!} \\
-	&\ge \frac{1}{n} \sum_{r=0}^{n-1} \sum_{i=0}^{r} \frac{(2t)^i}{i!} 
+	& \geq \frac{1}{n} \sum_{r=0}^{n-1} \sum_{i=0}^{r} \frac{(2t)^i}{i!} 
 	= \frac{1}{n} \sum_{i=0}^{n-1} (n-i)\,\frac{(2t)^i}{i!} 
-	\ge \frac{1}{n^2} \sum_{i=0}^{n-1} \frac{(2t)^i}{i!}.
+	 \geq \frac{1}{n^2} \sum_{i=0}^{n-1} \frac{(2t)^i}{i!}.
 \end{align*}
 %% --
 For $ 0 < q < 1 $, define $ x_q \in E $ as  
@@ -1103,7 +1103,7 @@ Then for any $r>0$,
 & 
 {\leq \left\|T(t-r)\int_{0}^{r} T(r-s)G(s)  \ds\right\| + M \int_{r}^{\infty} \|G(s)\|  \ds\,},
 \end{align*}
-where $\|T(t)\| \leq M$ for all $t\ge 0$. Since the semigroup is uniformly stable, we obtain
+where $\|T(t)\| \leq M$ for all $t \geq 0$. Since the semigroup is uniformly stable, we obtain
 $T(t-r)\int_{0}^{r} T(r-s)G(s)  \ds \to 0$ as $t \to \infty$ for every $r \geq 0$.
 Therefore, $\|\int_{0}^{t} T(t-s)G(s)  \ds\| \leq \epsilon$ for all sufficiently large $t$.
 \end{proof}
@@ -1137,7 +1137,7 @@ There exists a (unique) $f \in E$ such that $(\Id - T(p))f = \int_{0}^{p} T(p-s)
 \begin{proof}
 (a) $\Rightarrow$ (b): 
 Let $f \coloneqq u(0)$ be the initial value for which Eq.~\myeqpageref{eq:a4-2.1} admits a $p$-periodic mild solution. 
-Then for every $t\ge 0$,
+Then for every $t \geq 0$,
 %% --
 \begin{align*}
 u(t) &= u(t+p) \\
@@ -1199,7 +1199,7 @@ is asymptotically stable.
 \begin{example}\label{ex:a4-2.5}
 Let $E$ be the Banach space $C_{0}(\R_{+})$ of continuous functions vanishing at infinity.
 The operator $A = \frac{d}{dx}$ with domain $D(A) = \{f \in E: f' \in C^{1} \text{ and } f' \in E\}$ is the generator of the uniformly stable translation semigroup $T(t)f(x) \coloneqq f(t+x)$. 
-Applying Eq.~\myeqpageref{eq:a4-1.14}, we obtain that $\Image{A} = \{f\colon\int_{0}^{\infty} f(x) \,\dx \text{ exists}\}$ is dense in $C_{0}(\R_{+})$. 
+Applying Eq.~\myeqpageref{eq:a4-1.14}, we obtain that $\Image{A} = \{f\colon\int_{0}^{\infty} f(x)  \dx \text{ exists}\}$ is dense in $C_{0}(\R_{+})$. 
 Let $r \in \Image{A}$ and let $F(\cdot)$ be a $p$-periodic, real-valued function.
 We apply Theorem~\ref{thm:a4-2.4}  to the initial value problem
 %% --

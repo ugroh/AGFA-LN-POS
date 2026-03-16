@@ -1171,14 +1171,14 @@ All together we obtain for $\lvert r\rvert \geq r_{0}$,
 \begin{align*}
   \norm{R(a + \iu r,A)^{n+1}}
     &= \frac{1}{n!}
-       \norm*{\int_0^\infty \eu^{-(a + \iu r)t} t^n T(t)\,\dt} \\
-    &\leq \frac{1}{n!}\int_{0}^{s'} \eu^{-at} t^n \norm{T(t)}\,\dt \\
+       \norm*{\int_0^\infty \eu^{-(a + \iu r)t} t^n T(t) \dt} \\
+    &\leq \frac{1}{n!}\int_{0}^{s'} \eu^{-at} t^n \norm{T(t)} \dt \\
     &\phantom{{}\leq{}}
        + \frac{1}{n!}
-         \norm*{\int_{s'}^{s} t^n \eu^{-\iu rt} \eu^{-at} T(t)\,\dt} \\
+         \norm*{\int_{s'}^{s} t^n \eu^{-\iu rt} \eu^{-at} T(t) \dt} \\
     &\phantom{{}\leq{}}
-       + \frac{1}{n!}\int_{s}^{\infty} \eu^{-at} t^n \norm{T(t)}\,\dt \\
-    &\leq \frac{(s')^{n}}{n!}\int_{0}^{s'} M \eu^{(\omega - a)t}\,\dt
+       + \frac{1}{n!}\int_{s}^{\infty} \eu^{-at} t^n \norm{T(t)} \dt \\
+    &\leq \frac{(s')^{n}}{n!}\int_{0}^{s'} M \eu^{(\omega - a)t} \dt
           + \tfrac{2}{3}\epsilon^{n+1} \\
     &\leq N \cdot \frac{(s')^n}{n!} + \tfrac{2}{3}\epsilon^{n+1} \\
    &\leq \epsilon^{n+1}. &&\qedhere
@@ -1771,7 +1771,7 @@ Let $(S(t))_{t\geq 0}$ be a semigroup with generator $B$ such that $B_{\vert D_{
 Then $u(t) \coloneqq T(t)f$ satisfies 
 %%
 \[
-u(0) = f\,  \text{ and } \,\dot{u}(t) = AT(t)f = BT(t)f = Bu(t) \quad (t \geq 0).
+u(0) = f\,  \text{ and }  \dot{u}(t) = AT(t)f = BT(t)f = Bu(t) \quad (t \geq 0).
 \]
 %%
 Since $v(t) = S(t)f$ $(t \geq 0)$ also is a solution of the Cauchy problem defined by $B$ with initial value $f$ it follows that $S(t)f = T(t)f$ $(t\geq 0)$.

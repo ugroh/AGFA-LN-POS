@@ -1536,7 +1536,7 @@ Thus
 %% --
 \begin{align*}
 \langle \Re[(\widehat{\sign} \bar{f})Af],\phi \rangle &= \int_{-1}^{0} |f(x)|'\phi(x)\, \dx = \int_{0}^{1} \phi(x)\, \diff{|f(x)|} = \\
-&= \phi(0)|f(0)| - \phi(-1)|f(-1)| - \int_{-1}^{0} |f(x)|\,\diff{\phi(x)}  \\
+&= \phi(0)|f(0)| - \phi(-1)|f(-1)| - \int_{-1}^{0} |f(x)| \diff{\phi(x)}  \\
 &= \langle |f|,A'_{\max}\phi \rangle.
 &&\qedhere
 \end{align*}
@@ -2455,7 +2455,7 @@ The set $\{x \in (a,b) : m(x) \neq 0\}$ is a union of finitely or countably many
 pairwise disjoint open intervals $(a_{n},b_{n})$, $n \in J$.
 For each $n \in J$, fix $c_{n} \in (a_{n},b_{n})$ and set
 \[
-    g_{n}(x) \coloneqq \int_{c_{n}}^{x} \frac{1}{m(y)}\,\dy \qquad (x \in (a_{n},b_{n})).
+    g_{n}(x) \coloneqq \int_{c_{n}}^{x} \frac{1}{m(y)} \dy \qquad (x \in (a_{n},b_{n})).
 \]
 Since $m$ is admissible, each $g_{n}$ is a homeomorphism from $(a_{n},b_{n})$ onto $\R$.
 The flow $\phi \colon \R \times (a,b) \to (a,b)$ is then given by
