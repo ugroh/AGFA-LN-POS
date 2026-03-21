@@ -1,6 +1,6 @@
 % !TEX root = ../LN-Book-New.tex
 %% --
-%% -- Stand: 2026-03-23 (GG final)
+%% -- Stand: 2026-03-15
 %% --
 %\setcounter{section}{0}
 \chapternopage{Spectral Theory of Positive Semigroups on \texorpdfstring{$C_{0}(X)$}{C\textsubscript{0}(X)}}\label{chap:b3}%
@@ -64,7 +64,7 @@ In case $X$ is compact, we always have $s(A) > -\infty$.
 		\lambda_{0} - r(R(\lambda_{0},A))^{-1} \in \sigma(A) \quad \text{and} \quad r(R(\lambda_{0},A)) \geq |\lambda_{0} - \mu_{0}|^{-1}
 	\end{equation}
 	%% --
-	This and Eq.~\myeqpageref{eq:b3-1.2} imply that $\lambda_{0} - r(R(\lambda_{0},A))^{-1}$ is a real spectral value which is greater than $s(A) - \epsilon$.
+	This and Eq.~\myeqpageref{eq:b3-1.2} implies that $\lambda_{0} - r(R(\lambda_{0},A))^{-1}$ is a real spectral value which is greater than $s(A) - \epsilon$.
 	We have derived a contradiction to Eq.~\myeqpageref{eq:b3-1.1} and thus have proved the first statement of the theorem.
 	
 	To establish the second statement we recall that $\lim_{\lambda \to \infty}\lambda R(\lambda,A)f = f$ for every $f \in E$.
@@ -398,8 +398,7 @@ We begin our discussion with two lemmas.
     \]
 	Using Eq.~\myeqpageref{eq:b3-2.2} once again, we obtain 
     \[
-    -\1_{L} \leq Tf - \1_{L} \leq \1_{L}\text{ or } 0 \leq Tf \leq 2\cdot \1_{L}\,. 
-    \qedhere
+    -\1_{L} \leq Tf - \1_{L} \leq \1_{L}\text{ or } 0 \leq Tf \leq 2\cdot \1_{L}\,. \qedhere
     \]
 \end{proof}
 %% --
@@ -544,7 +543,7 @@ Suppose $A$ is the generator of a positive semigroup, $h \in C_{0}(X)$, $\alpha,
 %(i) 
 The closed principal ideal $\overline{E_{h}}$, which is canonically isomorphic to $C_{0}(X_{1})$ with $X_{1} = \{x \in X \colon h(x) \neq 0\}$, is $T$-invariant.
 	We give an object a tilde when we consider it as an element of\/ $\overline{E_{h}} \cong C_{0}(X_{1})$.
-	Defining $\tilde{R} \coloneqq \bar{\lambda}\tilde{T}$, then $\tilde{T}$, $\tilde{R}$, $\tilde{h}$ satisfy Eq.~\myeqpageref{eq:b3-2.8}, hence we have
+	Defining $\tilde{R} \coloneqq \lambda\tilde{T}$, then $\tilde{T}$, $\tilde{R}$, $\tilde{h}$ satisfy Eq.~\myeqpageref{eq:b3-2.8}, hence we have
 	%% --
 	\begin{equation}\label{eq:b3-2.12}
 		\tilde{T} = S_{\tilde{h}}^{-1} \circ \tilde{R} \circ S_{\tilde{h}} = \bar{\lambda} \cdot S_{\tilde{h}}^{-1} \circ \tilde{T} \circ S_{\tilde{h}}
@@ -709,7 +708,7 @@ Let $(T_{\alpha}(t))_{t \geq 0}$ denote the rotation semigroup on $C(\Gamma)$ wi
 	\]
 	%% --
 	This is a positive semigroup on $E = C_{0}(X)$ whose boundary spectrum is precisely the given closed cyclic set $M$.
-	We leave the verification as an exercise.
+	We leave the verification as an excercise.
 	
 \end{enumerate}
 \end{examples}
@@ -845,7 +844,7 @@ Denoting by $A_{n}$ $(n = 0,1,\ldots,k)$ the generator of the semigroup on $I_{n
 	Since $A_{|I_{0}}$ generates a positive semigroup and $R(\lambda,A_{|I_{0}}) = R(\lambda,A)_{|I_{0}}$ is positive for $\lambda > 0$, it follows from Corollary~\ref{cor:b3-1.3} that $s(A_{0}) = s(A_{|I_{0}}) < 0$.
 \end{proof}
 %% --
-One can check the different steps of the proof by studying the following example.
+One can check the different steps of the proof by studying the following example
 Consider this matrix as generator on $\C^{4}$
 %% --
 \[
@@ -906,14 +905,14 @@ and $s(A) = 0$ is a pole of the resolvent of order $k$ where $1 \leq k \leq n$.
 %% --
 \index{boundary spectrum!cyclic}
 %% --
-Suppose $A$ is the generator of a positive semigroup on $C_{0}(X)$ such that every point of\/ $\sigma_{b}(A)$ is a pole of the resolvent.
+Suppose $A$ is the generator of a positive semigroup on $C_{0}(X)$ such that every point of\/ $\sigma_{b}(A)$ is a pole of the resolvent
 Then $P\sigma_{b}(A) = \sigma_{b}(A)$ is cyclic.
 \end{theorem}
 %% --
 \begin{proof}
 	If\/ $\sigma(A) = \emptyset$, there is nothing to prove, thus we can assume that $s(A) = 0$.
 	In view of Lemma~\ref{lem:b3-2.8} and Part-I,  Corollary~\ref{cor:a3-4.3}\,(i) we can assume that $s(A)$ is a first order pole with strictly positive residue, we call it $Q$.
-	We have $AQ = QA = s(A)A = 0$ (see Part-I, Example~\ref{ex:a3-3.6}), hence
+	We have $AQ = QA = s(A)A = 0$ (see Part-I, Example~\ref{eq:a3-3.6}), hence
 	%% --
 	\begin{equation}\label{eq:b3-2.18}
 		QT(t) = T(t)Q = Q \text{ for all } t \geq 0.
@@ -1287,7 +1286,7 @@ Since $\lambda \mapsto R(\lambda,A)f$ is decreasing in the interval $(s(A),\inft
 By (e), $g$ is strictly positive, thus $I$ has to be dense (it contains all functions of compact support). 
 
 \ref{item:b3-3.1-iv} $\implies$~\ref{item:b3-3.1-i}: At first we recall that a closed linear subspace which is invariant for $R(\lambda_0,A)\ (\lambda_0 \in \rho(A))$, is invariant for $R(\lambda ,A)$
-whenever $\lambda$ and $\lambda_0$ belong to the same component of\/ $\rho(A)$. 
+whenever $\lambda$ and $\lambda_0$ belong to the same component of\/ $\rho((A)$. 
 Hence, if\/ $\lambda_0 \in \rho_{+}(A)$ then by Part-I, Example~\ref{subsec:a1-3.3} every $R(\lambda_0,A)$-invariant subspace is $\TT$-invariant and vice versa.
 %% --
 \begin{remark}\label{rem:b3-3.2}
@@ -1976,7 +1975,7 @@ Before we state the general result (see Theorem~\ref{thm:b3-4.4}) we give some t
 %% --
 \begin{theorem}\label{thm:b3-4.4}
 	Suppose $\TT$ is a semigroup of lattice homomorphisms given by Eq.~\myeqpageref{eq:b3-4.1} with generator $A$.
-	Considering $H \coloneq \{\lambda \in \C \colon \Re(\lambda) < \underline{c}(h,\phi)\}$, where $\underline{c}(h,\phi)$ is given by Eq.~\myeqpageref{eq:b3-4.4}, then we have:
+	Considering $H \coloneq \{\lambda \in \C \colon \Re(\lambda) < \underline{c}(h,\phi)\}$, where $\underline{c}(h,\phi)$ is given by Eq.~\myeqpageref{eq:b3-4.4}, then we have.
 	\begin{enumerate}[\upshape (i)]
 		\item 
 		If\/ $K_{t} \neq K_{\infty}$ for every $t < \infty$, then $H \subseteq A\sigma(A)$.
@@ -2165,7 +2164,7 @@ Example~\ref{ex:b3-4.3}\,(iv) shows that (i) and (ii) do not exclude each other.
     For $\{x \in \R^n \colon (x|F(x)) > 0\}$ bounded in $\R^n$, a global semiflow always exists (\cf \textcite[Section~5.2]{deimling:1977}).
     
 	\item 
-	Now we do not assume that  $\phi_0$ is globally defined.
+	Now we do not asssume that  $\phi_0$ is globally defined.
 	Instead we consider a bounded domain $\Omega \subset \R^n$ with smooth boundary $\partial\Omega$ such that $(F(x)|\nu(x)) > 0$ for every $x \in \partial\Omega$, where $\nu(x)$ denotes the outward normal vector.
 	
 	Then for $x \in \overline{\Omega}$ we have $\underline{t}_{x} = -\infty$.
@@ -2399,8 +2398,7 @@ We are now going to apply the results obtained so far to the special case where 
     \[
     \|R(\lambda,A)f\| \leq M\left(\int_{0}^{r} \left|\eu^{-\lambda t}\right|\dt\right)\|f\| \text{ for } \lambda \in U\,,\ \Re(\lambda) > 0\,,
     \]
-    therefore $\lambda_{0} = \im\beta \in \rho(A)$.
-    \qedhere
+    therefore $\lambda_{0} = \im\beta \in \rho(A)$.\qedhere
 \end{enumerate}
 \end{proof}
 %% --
@@ -2505,7 +2503,7 @@ Example~\ref{ex:b3-3.4}\,(iii) will be discussed in more detail and more general
 We return to Remark~\ref{rem:b3-2.15}\,(ii) in Section~\ref{sec:b4-2}.
 
 \item
-The concept of irreducibility as defined in~\ref{def:b3-3.1} is closely related to various other notions:
+The concept of irreducibility as defined in~\ref{def:b3-3.1} closely related to various other notions:
 In topological dynamics flows inducing irreducible semigroups are called \enquote{minimal flows} (\cf Example~\ref{ex:b3-3.4}\,(i)).
 Moreover, \enquote{ergodicity} and \enquote{unique ergodicity} are closely related to irreducibility (see \textcite{cornfeldetal:1982} or \textcite{krengel:1985}).
 Irreducible semigroups are discussed to some extent in \textcite{davies:1980} where he proves a special case of Theorem~\ref{thm:b3-3.6}.

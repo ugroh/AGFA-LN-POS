@@ -1,6 +1,6 @@
 % !TEX TS-program = pdflatexmk
 %%%%%%%%%%%%%%%%%%%% LN-Book.tex %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Status: 2026-03-12 ulgr
+%% Status: 2026-03-21 ulgr
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \documentclass[graybox]{svmono}
 
@@ -136,6 +136,7 @@
 %% Cross-references with page info
 %% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage[nospace]{varioref}
+\AtBeginDocument{\renewcommand*{\reftextcurrent}{}}
 \newcommand{\myeqpageref}[1]{\eqref{#1} \vpageref{#1}}
 
 %% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

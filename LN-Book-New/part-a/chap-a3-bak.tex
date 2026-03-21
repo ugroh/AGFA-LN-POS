@@ -1,6 +1,6 @@
 % !TEX root = ../LN-Book-New.tex
 %% --
-%% -- Stand: 2026-03-22  (GG final)
+%% -- Stand: 2026-03-15
 %% --
 %\setcounter{section}{0}
 \chapternopage{Spectral Theory}\label{chap:a3}%
@@ -122,9 +122,9 @@ Through this corollary we have re-established Liapunov's  famous result, which a
 %% --
 are \emph{stable}, \ie they converge to zero as $t \to \infty$ if (and only if) the real parts of all eigenvalues of the matrix $A$ are less than zero.
 
-The situation is much more difficult for unbounded generators, and $s(A)$ may differ drastically from $\omega_{0}(\TT)$ as can be seen in the following example (see \textcite{greinervoigtwolff:1981}).
+The situation is much more difficult for unbounded generators, and $s(A)$ may differ drastically from $\omega_{0}(\TT)$.
 %% --
-\begin{example}[Banach function space]\label{ex:a3-1.3}
+\begin{example}\label{ex:a3-1.3}(Banach function space, \textcite{greinervoigtwolff:1981})
 \index{spectral mapping theorem!counter example}%% --
 Consider the Banach space $E$ of all complex valued continuous functions on $\R_{+}$ which vanish at infinity and are integrable for $\eu^{x}\dx$, \ie 
 %% --
@@ -269,7 +269,7 @@ These examples show that neither the conclusion of Corollary~\ref{cor:a3-1.2}, \
 \]
 %% --
 is valid for arbitrary strongly continuous semigroups.
-A careful analysis of the general situation will be given in Section~\ref{sec:a3-6} below, but we will first systematically develop the necessary spectral theoretic tools for unbounded operators.
+A careful analysis of the general situation will be given in Section~\ref{sec:a3-6} below, but we will first develop systematically the necessary spectral theoretic tools for unbounded operators.
 %% --
 \section{The Fine Structure of the Spectrum}\label{sec:a3-2}%
 %% --
@@ -285,11 +285,11 @@ $\rho(A)$ and its resolvent
 which is a holomorphic map from $\rho(A)$ into $\mathcal{L}(E)$.
 In contrast to the finite dimensional situation, where a linear operator fails to be surjective if and only if it fails to be injective, we now have to distinguish different cases of \emph{non-invertibility} of\/ $\lambda - A$.
 This distinction gives rise to a subdivision of\/ $\sigma(A)$ into different subsets.
-We point out that these subsets need not be disjoint, but ur definitions are
+We point out that these subsets need not be disjoint. Our definitions are
 justified by the fact that for each of the following subsets of\/ $\sigma(A)$ there exist canonical constructions converting the corresponding spectral values into eigenvalues (see Proposition~\ref{prop:a3-2.2}\,(ii) and Proposition~\ref{prop:a3-4.4} below).
 %% --
 \begin{definition}\label{def:a3-2.1}
-For a closed, densely defined, linear operator $A$ with domain $D(A)$ in the Banach space $E$ we define the
+For a closed, densely defined, linear operator $A$ with domain $D(A)$ in the Banach space $E$ denote by the
 %% --
 \begin{enumerate}[\upshape (i)]
 \item 
@@ -443,7 +443,7 @@ q(X) \subset R\sigma(M_{q}) \text{ and } \eu^{tq(X)} \subset R\sigma(T(t)) .
 The eigenvalues of\/ $M_{q}$ can be characterized as follows.
 %% --
 \begin{quote}
-$\lambda \in P\sigma(M_{q})$ if and only if the set $\{x \in X \colon q(x) = \lambda\}$ has non-empty interior (analogously for $P\sigma(T(t))$).
+$\lambda \in P\sigma(M_{q})$ if and only if the set $\{x \in X \colon q(x) = \lambda\}$ has non empty interior (analogously for $P\sigma(T(t))$).
 \end{quote}
 %% --
 For example, it follows that $P\sigma(M_{q}) = \emptyset$ for $E = C_{0}(\R_{+})$ and $q(x) = -x$, $x \in \R_{+}$.
@@ -496,7 +496,7 @@ $f_{n}(x) = \eu^{\im\alpha x}\eu^{-|x|/n}$, hence
 \sigma(A) = A\sigma(A) = \im\R .
 \]
 %% --
-The generator $A$ of the nilpotent translation semigroup from Section~\ref{subsec:a1-2.6} has empty spectrum by Proposition~\ref{prop:a1-1.11}.
+The generator $A$ of the nilpotent translation semigroup Section~\ref{subsec:a1-2.6} has empty spectrum by Proposition~\ref{prop:a1-1.11}.
 The resolvent is given by
 %% --
 \[
@@ -548,7 +548,7 @@ In that case the residues (\resp the pole orders) in $\alpha$ and in $(\lambda_{
 \begin{proof}
 \begin{enumerate}[\upshape (i), wide, labelindent=.25em]
 \item 
-This is well known and can be found, for example, in \textcite[VII.9.2]{dunfordschwartz:1958}.
+is well known. It can be found, for example, in \textcite[VII.9.2]{dunfordschwartz:1958}.
 
 \item 
 We show that $\alpha \in A\sigma(A)$ if\/ $(\lambda_{0}-\alpha)^{-1} \in A\sigma(R(\lambda_{0}))$ and leave the proof of the remaining statements to the reader.
@@ -632,8 +632,8 @@ This has already been proved for $n = 1$ and follows for $n > 1$ by induction us
 U_{-n-1} = (A - \alpha)U_{-n} 
 \quad \text{and} \quad 
 V_{-n-1} = \left(R(\lambda_{0},A) - (\lambda_{0}-\alpha)^{-1}\right)V_{-n} .
-\qedhere
 \]
+\qedhere
 \end{enumerate}
 %% --
 \end{proof}
@@ -643,7 +643,7 @@ V_{-n-1} = \left(R(\lambda_{0},A) - (\lambda_{0}-\alpha)^{-1}\right)V_{-n} .
 \index{spectral decomposition}
 %% --
 In the next two sections we develop some important techniques for our further investigation of semigroups and their generators.
-Even though these methods are well known (compare, \eg Section VII.3 of \textcite{dunfordschwartz:1958}) and rather technical, it is useful to present them in a coherent way.
+Even though these methods are well known (compare, \eg Section VII.3 of \textcite{dunfordschwartz:1958}) or rather technical, it is useful to present them in a coherent way.
 
 Our interest in this section is the following: Let $E$ be a Banach space and $\TT = (T(t))_{t \geq 0}$ a strongly continuous semigroup with generator $A$.
 Suppose that the spectrum $\sigma(A)$ splits into the disjoint union of two closed subsets $\sigma_{1}$ and $\sigma_{2}$.
@@ -675,7 +675,7 @@ In this case it follows that the domain $D(A)$ of the generator $A$ splits analo
 We write
 %% --
 \[
-A = A_{1} \oplus A_{2} 
+A = A_{1} \oplus A_{2} .
 \]
 %% --
 and say that \emph{$A$ commutes with $P$} and call $P$ a \emph{spectral projection}. 
@@ -828,7 +828,7 @@ for some $\alpha > 0$.
 If we set $\beta \coloneqq (\log\alpha)/t_{0}$ and use 
 \textcite[Chap.I, Theorem~6.5]{pazy:1983}, 
 we obtain $\omega_{0}(\TT_{2}) < \beta$ and $\omega_{0}(\TT_{1}^{-1}) < \beta$ by Proposition~\ref{prop:a3-1.1}.
-Therefore we have constants $m$, $M$ with $m  \leq 1  \leq M $ such that
+Therefore we have constants $m$ and $M$ with $m \leq 1 \leq M $ such that
 %% --
 \begin{align*}
 	\|T(t)f\| &\leq M \cdot \eu^{\beta t}\|f\| \quad \text{for } f \in E_{2} , \\
@@ -1156,21 +1156,21 @@ E^{*} = \{\phi \in E' \colon \lim_{t \to \infty} \|T(t)'\phi-\phi\| = 0\} .
 \]
 %% --
 Its generator $A^{*}$ is the maximal restriction of the adjoint $A'$ to $E^{*}$.
-For these operators the spectra coincide, or more precisely:
+For these operators the spectra coincide, or more precisely.
 \begin{enumerate}[\upshape (i)]
 \item 
-$\sigma(T(t)) = \sigma(T(t)') = \sigma(T(t)^{*})$\,,\\
-$R\sigma(T(t)) = P\sigma(T(t)') = P\sigma(T(t)^{*})$\,,
+$\sigma(T(t)) = \sigma(T(t)') = \sigma(T(t)^{*})$,\\
+$R\sigma(T(t)) = P\sigma(T(t)') = P\sigma(T(t)^{*})$ ,
 
 \item 
-$\sigma(A) = \sigma(A') = \sigma(A^{*})$, $R\sigma(A) = P\sigma(A') = P\sigma(A^{*})$\,,
+$\sigma(A) = \sigma(A') = \sigma(A^{*})$, $R\sigma(A) = P\sigma(A') = P\sigma(A^{*})$ ,
 \item 
-$s(A) = s(A^{*})$, $\omega_{0}(A) = \omega_{0}(A^{*})$\,.
+$s(A) = s(A^{*})$, $\omega_{0}(A) = \omega_{0}(A^{*})$ .
 \end{enumerate}
 %% --
 \begin{proof}
 The left part of these equalities is either well known or has been stated in 
-\ref{prop:a3-2.2}(ii). %2.2\,(ii).
+2.2\,(ii).
 The first statement of (iii) follows from (ii), while the second is an immediate consequence of the estimate $\|T(t)^{*}\| \leq \|T(t)\| \leq M\cdot\|T(t)^{*}\|$ given in Section~\ref{subsec:a1-3.5}.
 
 As a sample for the remaining assertions we show that $0 \notin \sigma(A)$ if and only if\/ $0 \notin \sigma(A^{*})$:
@@ -1208,7 +1208,7 @@ In particular it can be used to convert approximate eigenvectors of the generato
 %% --
 \begin{proposition}\label{prop:a3-4.4}
 %% --
-Let $A$ be the generator of a strongly continuous semigroup. Then the generator $A_{\F}$ of the $\F$-product semigroup satisfies:
+Let $A$ be the generator of a strongly continuous semigroup. Then the generator $A_{\F}$ of the $\F$-product semigroup satisfies.
 %% --
 \begin{enumerate}[\upshape (i)]
 \item 
@@ -1559,7 +1559,7 @@ Before doing so, we have another look at the examples.
 \item
 \index{spectral theory example!translation semigroup}
 \index{spectrum!translation semigroup}
-Take the nilpotent translation semigroup from Section~\ref{subsec:a1-2.6}. Then $\sigma(A) = \emptyset$ and $\sigma(T(t)) = \{0\}$ for every $t > 0$.
+Take the nilpotent translation semigroup from Section~\ref{subsec:a1-2.6}. Then $\sigma(A) = \emptyset$ and $\sigma(T(t)) = 0$ for every $t > 0$.
 By this trivial example and since $\eu^{z} \neq 0$ for every $z \in \C$, it is natural to read the spectral mapping theorem modulo the addition of\/ $\{0\}$, \ie 
 %% --
 \[
@@ -1583,12 +1583,12 @@ Therefore in this example the spectral mapping theorem is valid only in the foll
 \item 
 By Example~\ref{ex:a3-1.3} there exists a semigroup $\TT = (T(t))_{t \geq 0}$ with generator $A$ such that $s(A) = -1$ and $\omega_{0}(\TT) = 0$.
 This implies that for preassigned real numbers $\alpha < \beta$ there exists a semigroup $\mathcal{S} = (S(t))_{t \geq 0}$ with generator $B$ such that $s(B) = \alpha$ and $\omega_{0}(\mathcal{S}) = \beta$. Indeed, take $S(t) = \eu^{\beta t}T((\beta - \alpha)t)$ and observe that $B = (\beta-\alpha)A + \beta\Id$. 
-In that case, $\exp(t\sigma(B))$ is contained in the circle about $0$ with radius $\eu^{\alpha t}$ 
+In that case $\exp(t\sigma(B))$ is contained in the circle about $0$ with radius $\eu^{\alpha t}$ 
 while $\sigma(S(t))$ has spectral values satisfying $|\lambda| = r(S(t)) = \eu^{\beta t} > \eu^{\alpha t}$ .
 
 
 \item 
-The Example~\ref{ex:a3-1.3} can be strengthened in order to yield a semigroup $\TT = (T(t))_{t \geq 0}$ with generator $A$ such that $\sigma(A) = \emptyset$, but $\|T(t)\| = r(T(t)) = 1$ for $t \geq 0$, \ie $s(A) = -\infty$ and $\omega_{0} = 0$. 
+The Example~\ref{ex:a3-1.3} can be strengthend in order to yield a semigroup $\TT = (T(t))_{t \geq 0}$ with generator $A$ such that $\sigma(A) = \emptyset$, but $\|T(t)\| = r(T(t)) = 1$ for $t \geq 0$, \ie $s(A) = -\infty$, $\omega_{0} = 0$ and $s(A) < \omega_{0}$. 
 Take the translation semigroup on the Banach space
 %% --
 \[
@@ -1599,7 +1599,7 @@ with $\|f\| \coloneqq \sup \{|f(x)| \colon x \in \R_{+}\} + \int_{0}^{\infty} |f
 
 \item 
 Another modification of Example~\ref{ex:a3-1.3} yields a group $\TT = (T(t))_{t \in \R}$ satisfying $s(A) < \omega_{0}$.
-Therefore the spectral mapping theorem does not hold in the setting of groups (see \textcite{wolff:1981}).
+Therefore the spectral mapping theorem does not hold in the setting of groups (see Wolff (1981)).
 \end{enumerate}
 \end{example}
 %% --
@@ -1682,7 +1682,7 @@ Then the closed, $\TT$-invariant subspace
 G \coloneqq \{g \in E \colon T(t_{0})g = g\}
 \]
 %% --
-is non-trivial.
+is non trivial.
 The restricted semigroup $\TT_{|}$ is periodic with period $\tau \leq t_{0}$ and the spectrum of its generator $A_{|}$ contains at least one eigenvalue $\mu = 2\pi\im n/t_{0}$ for some $n \in \Z$ (see Lemma~\ref{lem:a3-5.3}).
 Since every eigenvalue of\/ $A_{|}$ is an eigenvalue of\/ $A$, we obtain that $1 \in \exp(t_{0} \cdot P\sigma(A))$.
 The converse inclusion has been proved in Eq.~\myeqpageref{eq:a3-6.1}.
@@ -1814,7 +1814,7 @@ The coincidence of\/ $\sigma(A)$ and $\sigma(A_{\F})$ proves the assertion.
 %% --
 We point out that the above spectral mapping theorem implies the coincidence of spectral bound and growth bound for eventually norm continuous semigroups, hence we have generalized the Liapunov Stability Theorem (see~\ref{cor:a3-1.2}) to a much larger class of semigroups.
 As mentioned before, this will be of great use in many applications.
-Therefore we state explicitly the spectral mapping theorem for several important classes of semigroups all of which are eventually norm continuous (\cf the diagram preceding Example~\ref{ex:a2-1.27}).
+Therefore we state explicitly the spectral mapping theorem for several important classes of semigroups all of which are eventually norm continuous (\cf the diagram preceding Example~\ref{ex:a2-1.27}.
 %% --
 \begin{corollary}\label{cor:a3-6.7}
 The Spectral Mapping Theorem~\ref{thm:a3-6.6}
@@ -1970,11 +1970,11 @@ Let $A = M_{q}$ be a matrix multiplication operator on $C_{0}(X,\C^{n})$ generat
 	T(t) \coloneq M_{\eu^{ t q} } \quad \text{ for $t \geq 0$.}
 \]
 %
-Then the following \enquote{Weak Spectral Mapping Theorem}  holds: 
+Then the Weak Spectral Mapping Theorem~\ref{thm:a3-7.2} holds true, \ie 
 \index{spectral mapping theorem!weak form}
 %% --
 \[
-	\sigma(T(t)) = \overline{ \exp( t \cdot \sigma(A) ) }\,.
+	\sigma(T(t)) = \overline{ \exp( t \cdot \sigma(A) ) } .
 \]
 %% --
 \end{theorem}
@@ -2141,7 +2141,7 @@ P_{k} &= \int_{-\infty}^{\infty} \eu^{\im 2ks}\check{\phi_{0}}(s)T(s)\ds \\
 \xi_{f} \colon s \mapsto \sum_{m\in\Z} \check{\phi_{0}}(s+m\pi)T(s+m\pi)f\,, f \in E\,.
 \]
 Since the projections $P_{k}$ are mutually orthogonal, \ie $P_{k}P_{m} = 0$ for $k \neq m$, it follows that $g = \sum_{n\in\Z} P_{n}g$ for every $g \in \text{span }\bigcup_{k\in\Z} P_{k}E$.
-In particular, the Fourier coefficients of the function $\xi_{g}$ are absolutely summable, hence the Fourier series of\/ $\xi_{g}$ converges to $\xi_g$.
+In particular, the Fourier coefficients of the function $\xi_{g}$ are absolutely summable, hence the Fourier series of\/ $\xi_{g}$ converges to $\xi$.
 
 For $s = 0$ we obtain for 
 $g \in \text{span }\bigcup_{k\in\Z} P_{k}E$
@@ -2165,7 +2165,7 @@ Then Eq.~\myeqpageref{eq:a3-7.6} implies
 \begin{align*}
 \Id &= \sum_{m\in\Z} \check{\phi_{0}}(m\pi)T(m\pi) \\
 &= \sum_{m\in\Z} (\check{\psi_{0}}(m\pi) + \check{\psi_{0}}((m+1)\pi))T(m\pi) \\
-&= \left[ \sum_{m\in\Z} \check{\psi_{0}}(m\pi)T(m\pi) \right] (\Id + T(\pi)) . &&\qedhere
+&= \left[ \sum_{m\in\Z} \check{\psi_{0}}(m\pi)T(m\pi) \right] (\Id + T(\pi)) . \qedhere
 \end{align*}
 \end{proof}
 %% --
@@ -2186,7 +2186,7 @@ Q_{k}\coloneqq \frac{1}{2\pi}\int_{0}^{2\pi} \eu^{-\im ks}T(s)\ds = \frac{1}{2\p
 Our approach is based on Fejér's Theorem (for Banach space valued functions).
 Let us recall this result.
 Suppose $\xi \colon [0,2\pi] \to E$ is a continuous function and let $\xi_{k}\coloneqq \frac{1}{2\pi}\int_{0}^{2\pi} \eu^{-\im ks}\xi(s)\ds$ be its $k$-th Fourier coefficient.
-Then the Fourier series is Cesàro summable to $\xi$ in every point $t \in (0,2\pi)$.
+Then the Fourier series is Césaro summable to $\xi$ in every point $t \in (0,2\pi)$.
 Moreover one has
 %% --
 \begin{equation}\label{eq:a3-7.8}
@@ -2205,10 +2205,10 @@ Then the following conditions are equivalent.
 \item $1 \in \rho(T(2\pi))$ ,
 
 \item 
-$\im\Z \subset \rho(A)$ and the series $\sum_{k\in\Z} R(\im k,A)f$ is Cesàro-summable for every $f \in E$,
+$\im\Z \subset \rho(A)$ and the series $\sum_{k\in\Z} R(\im k,A)f$ is Césaro-summable for every $f \in E$,
 
 \item 
-$\im\Z \subset \rho(A)$ and the series $\sum_{k\in\Z} R(\im k,A)Q_{k}f$ is Cesàro-summable for every $f \in E$ .
+$\im\Z \subset \rho(A)$ and the series $\sum_{k\in\Z} R(\im k,A)Q_{k}f$ is Césaro-summable for every $f \in E$ .
 
 \end{enumerate}
 \end{proposition}
@@ -2216,7 +2216,7 @@ $\im\Z \subset \rho(A)$ and the series $\sum_{k\in\Z} R(\im k,A)Q_{k}f$ is Cesà
 \begin{proof}
 (a) $\Rightarrow$ (b) The Spectral Inclusion Proposition~\ref{prop:a3-6.2} implies $\im\Z \subset \rho(A)$.
 By Eq.~\myeqpageref{eq:a3-7.7} we have $R(\im k,A) = 2\pi\cdot(1-T(2\pi))^{-1}Q_{k}$.
-Since $\sum_{k\in\Z} Q_{k}f$ is Cesàro-summable (\mbox{towards} $\frac{1}{2}(f + T(2\pi)f)$) (see Eq.~\myeqpageref{eq:a3-7.8}), it follows that $\sum_{k\in\Z} R(\im k,A)f$ is Cesàro-summable as well.
+Since $\sum_{k\in\Z} Q_{k}f$ is Césaro-summable (\mbox{towards} $\frac{1}{2}(f + T(2\pi)f)$) (see Eq.~\myeqpageref{eq:a3-7.8}), it follows that $\sum_{k\in\Z} R(\im k,A)f$ is Césaro-summable as well.
 
 (b) $\Leftrightarrow$ (c) If we use Eq.~\myeqpageref{eq:a1-3.1} and integrate by parts, we obtain
 \begin{align*}
@@ -2230,12 +2230,12 @@ Fejér's theorem ensures that
 	 \sum_{k\in\Z} \frac{1}{2\pi}\int_{0}^{2\pi} \eu^{-\im kt} (2\pi-t) T(t)f \dt 
 \]
 %
-is Cesàro summable.
-Hence $\sum_{k\in\Z} R(\im k,A)Q_{k}f$ is Cesàro-summable if and only if\/ $\sum_{k\in\Z} R(\im k,A)f$ is.
+is Césaro summable.
+Hence $\sum_{k\in\Z} R(\im k,A)Q_{k}f$ is Césaro-summable if and only if\/ $\sum_{k\in\Z} R(\im k,A)f$ is.
 
 (b) $\Rightarrow$ (a) We have $Q_{k} = \frac{1}{2\pi}(1 - T(2\pi))R(\im k,A)$.
 %\marginpar{Eqs. (3.7.7) and (3.7.8) [on previuos page]}
-Furthermore we know by Eq.~\myeqpageref{eq:a3-7.7} and Eq.~\myeqpageref{eq:a3-7.8}  that $\sum_{k\in\Z} Q_{k}f$ is Cesàro-summable towards $\frac{1}{2}(f + T(2\pi)f)$.
+Furthermore we know by Eq.~\myeqpageref{eq:a3-7.7} and Eq.~\myeqpageref{eq:a3-7.8}  that $\sum_{k\in\Z} Q_{k}f$ is Césaro-summable towards $\frac{1}{2}(f + T(2\pi)f)$.
 If we define $S \colon E \to E$ by 
 %
 \[
