@@ -588,13 +588,13 @@ First we recall the well known \emph{resolvent equation}
 For any $z$,  $\lambda_{0} \in \rho(A)$ we have 
 %
 \[
-R(\lambda_{0},A) - R(z,A)= -(\lambda_{0}-z)R(\lambda_{0},A)R(z,A)\,.
+R(\lambda_{0},A) - R(z,A)= -(\lambda_{0}-z)R(\lambda_{0},A)R(z,A) .
 \]
 %
 From this it follows that 
 %
 \[
-	(\lambda_{0}-z)^2\cdot R(z,A) = \left((\lambda_{0}-z)^{-1}-R(\lambda_{0},A)\right)^{-1} - (\lambda_{0}-z)\,.
+	(\lambda_{0}-z)^2\cdot R(z,A) = \left((\lambda_{0}-z)^{-1}-R(\lambda_{0},A)\right)^{-1} - (\lambda_{0}-z) .
 \]
 %
 If we now take a circle $\Gamma$ with center $\alpha$ and sufficiently small radius, then the residue $P$ of\/ $R(\cdot,A)$ at $\alpha$ is
@@ -1165,7 +1165,7 @@ $R\sigma(T(t)) = P\sigma(T(t)') = P\sigma(T(t)^{*})$\,,
 \item 
 $\sigma(A) = \sigma(A') = \sigma(A^{*})$, $R\sigma(A) = P\sigma(A') = P\sigma(A^{*})$\,,
 \item 
-$s(A) = s(A^{*})$, $\omega_{0}(A) = \omega_{0}(A^{*})$\,.
+$s(A) = s(A^{*})$, $\omega_{0}(A) = \omega_{0}(A^{*})$ .
 \end{enumerate}
 %% --
 \begin{proof}
@@ -1325,7 +1325,7 @@ Then
 and for $\mu \notin 2\pi\im /\tau\cdot\Z$,
 %% --
 \begin{equation}\label{eq:a3-5.1}
-R(\mu,A) = (1-\eu^{-\mu\tau})^{-1} \int_{0}^{\tau}\eu^{-\mu s}T(s) \ds\,.
+R(\mu,A) = (1-\eu^{-\mu\tau})^{-1} \int_{0}^{\tau}\eu^{-\mu s}T(s) \ds .
 \end{equation}
 %% --
 \end{lemma}
@@ -1945,7 +1945,7 @@ Since $M_{q}$ has a bounded inverse if and only if\/ $q(x)^{-1}$ exists and is u
 In fact, much more can be said in case the function is bounded.
 %% --
 \begin{lemma}\label{lem:a3-7.1}
-The spectrum of the matrix valued multiplication operator $M_{q}$, where $q \colon X \to M(n)$ is bounded, is given by $\sigma(M_{q}) = \overline{\bigcup_{x\in X} \sigma(q(x))}$\,.
+The spectrum of the matrix valued multiplication operator $M_{q}$, where $q \colon X \to M(n)$ is bounded, is given by $\sigma(M_{q}) = \overline{\bigcup_{x\in X} \sigma(q(x))}$ .
 \end{lemma}
 %% --
 \begin{proof}
@@ -1974,7 +1974,7 @@ Then the following \enquote{Weak Spectral Mapping Theorem}  holds:
 \index{spectral mapping theorem!weak form}
 %% --
 \[
-	\sigma(T(t)) = \overline{ \exp( t \cdot \sigma(A) ) }\,.
+	\sigma(T(t)) = \overline{ \exp( t \cdot \sigma(A) ) } .
 \]
 %% --
 \end{theorem}
@@ -2138,7 +2138,7 @@ P_{k} &= \int_{-\infty}^{\infty} \eu^{\im 2ks}\check{\phi_{0}}(s)T(s)\ds \\
 %% --
 \ie $P_{k}f$ is the $k$-th Fourier coefficient of the $\pi$-periodic, continuous function 
 \[
-\xi_{f} \colon s \mapsto \sum_{m\in\Z} \check{\phi_{0}}(s+m\pi)T(s+m\pi)f\,, f \in E\,.
+\xi_{f} \colon s \mapsto \sum_{m\in\Z} \check{\phi_{0}}(s+m\pi)T(s+m\pi)f\,, f \in E .
 \]
 Since the projections $P_{k}$ are mutually orthogonal, \ie $P_{k}P_{m} = 0$ for $k \neq m$, it follows that $g = \sum_{n\in\Z} P_{n}g$ for every $g \in \text{span }\bigcup_{k\in\Z} P_{k}E$.
 In particular, the Fourier coefficients of the function $\xi_{g}$ are absolutely summable, hence the Fourier series of\/ $\xi_{g}$ converges to $\xi_g$.
@@ -2147,7 +2147,7 @@ For $s = 0$ we obtain for
 $g \in \text{span }\bigcup_{k\in\Z} P_{k}E$
 %% --
 \[
-g = \sum_{n\in\Z} P_{n}g\cdot \eu^{-\im n0} = \sum_{m\in\Z} \check{\phi_{0}}(0 + m\pi)T(0 + m\pi)g\,.
+g = \sum_{n\in\Z} P_{n}g\cdot \eu^{-\im n0} = \sum_{m\in\Z} \check{\phi_{0}}(0 + m\pi)T(0 + m\pi)g .
 \]
 %% --
 Since $\text{span }\bigcup_{k\in\Z} P_{k}E$ is dense (Lemma~\ref{lem:a3-7.7}), we conclude that

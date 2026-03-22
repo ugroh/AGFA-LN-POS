@@ -65,7 +65,7 @@ Note however, that the integral exists only as an improper Riemann integral.
 By Datko's Theorem (Part-I, Theorem~\ref{thm:a4-1.11}) the function $t \mapsto \eu^{-\lambda t}T(t)f$ cannot be Bochner integrable for all $f \in E$ in the case $\Re(\lambda) \leq \omega_0(A)$.
 %% --
 \begin{theorem}\label{thm:c3-1.2}
-	Suppose $A$ is the generator of a positive semigroup $(T(t))_{t\geq 0}$\,.
+	Suppose $A$ is the generator of a positive semigroup $(T(t))_{t\geq 0}$ .
 	
 	For\/ $\Re(\lambda) > s(A)$ we have
 	%% --
@@ -81,7 +81,7 @@ By Datko's Theorem (Part-I, Theorem~\ref{thm:a4-1.11}) the function $t \mapsto \
 	Then, by Part-I, Proposition~\ref{prop:a1-1.11},
 	%% --
 	\begin{equation}\label{eq:c3-1.2}
-		R(\lambda_{0},A)^{n+1}f = \frac{1}{n!} \int_{0}^{\infty} s^n \exp(-\lambda_{0}s) T(s)f \ds  \quad (n \in \N_{0}, f \in E)\,.
+		R(\lambda_{0},A)^{n+1}f = \frac{1}{n!} \int_{0}^{\infty} s^n \exp(-\lambda_{0}s) T(s)f \ds  \quad (n \in \N_{0}, f \in E) .
 	\end{equation}
 	%% --
 	Given $\mu$ such that $s(A) < \mu < \lambda_{0}$, $f \in E_{+}$ and $\phi \in E'_{+}$, then
@@ -92,7 +92,7 @@ By Datko's Theorem (Part-I, Theorem~\ref{thm:a4-1.11}) the function $t \mapsto \
 		&= \sum_{n=0}^{\infty} \int_{0}^{\infty} \frac{1}{n!}(\lambda_{0}-\mu)^n\exp(-\lambda_{0}s)\langle T(s)f,\phi\rangle\ds = \\
 		&= \int_{0}^{\infty} \sum_{n=0}^{\infty} \frac{1}{n!}(\lambda_{0}-\mu)^n\exp(-\lambda_{0}s)\langle T(s)f,\phi\rangle\ds = \\
 		&= \int_{0}^{\infty} \exp((\lambda_{0}-\mu)s)\exp(-\lambda_{0}s)\langle T(s)f,\phi\rangle\ds = \\
-		&= \int_{0}^{\infty} \exp(-\mu s)\langle T(s)f,\phi\rangle\ds = \\ & = \lim_{t\to\infty}\left\langle \int_{0}^t \exp(-\mu s)T(s)f \ds,\phi\right\rangle\,.
+		&= \int_{0}^{\infty} \exp(-\mu s)\langle T(s)f,\phi\rangle\ds = \\ & = \lim_{t\to\infty}\left\langle \int_{0}^t \exp(-\mu s)T(s)f \ds,\phi\right\rangle .
     \end{split}
 	\end{equation}
 %% --
@@ -110,7 +110,7 @@ If\/ $\lambda = \mu + \im\nu$ with $\mu$, $\nu$ real and $\mu > s(A)$, we have f
 \end{align*}
 %% --
 which shows that $\lim_{t\to\infty} \int_{0}^t \eu^{-\lambda s}T(s)f \ds $ exists.
-Thus, by  Part-I, Proposition~\ref{prop:a1-1.11} we have  $R(\lambda,A)f = \int_{0}^{\infty} \eu^{-\lambda s} T(s)f \ds $\,. 
+Thus, by  Part-I, Proposition~\ref{prop:a1-1.11} we have  $R(\lambda,A)f = \int_{0}^{\infty} \eu^{-\lambda s} T(s)f \ds $ . 
 
 It remains to prove that the net $\left(\int_{0}^t \exp(-\mu s)T(s) \ds \right)_{t\geq 0}$ converges with respect to the operator norm.
 We fix $\mu$ such that $s(A) < \mu < \Re(\lambda)$.
@@ -119,7 +119,7 @@ Using the closed graph theorem, it is easy to see that $b$ is separately continu
 Thus there is a constant $M$ such that
 %% --
 \begin{equation}\label{eq:c3-1.4}
-	\int_{0}^{\infty} \eu^{-\mu s}|\langle T(s)f,\phi\rangle| \ds  = \|b(f,\phi)\| \leq M\|f\|\|\phi\| \quad (f \in E, \phi \in E')\,.
+	\int_{0}^{\infty} \eu^{-\mu s}|\langle T(s)f,\phi\rangle| \ds  = \|b(f,\phi)\| \leq M\|f\|\|\phi\| \quad (f \in E, \phi \in E') .
 \end{equation}
 %% --
 Given $0 \leq t < r$ and setting $\epsilon \coloneqq \Re(\lambda) - \mu$ we have
@@ -157,7 +157,7 @@ Assume that $s(A) > -\infty$ and $s(A) \notin \sigma(A)$, then it follows from E
 Then
 \[
 \{z \in \C  \colon \Re(z) = s(A)\} \subseteq \rho(A) \text{ and } 
-\|R(z,A)\| \leq M \text{ for } z  \text{ with } \Re(z) = s(A)\,.
+\|R(z,A)\| \leq M \text{ for } z  \text{ with } \Re(z) = s(A) .
 \]
 It follows that $\{z \in \C  \colon |\Re(z) - s(A)| < M^{-1}\} \subseteq \rho(A)$, which is absurd by the definition of\/ $s(A)$.
 \end{proof}
@@ -174,7 +174,7 @@ Without loss of generality we may assume that $s(A) = 0$.
 By Eq.~\myeqpageref{eq:c3-1.5} we have $\|R(\epsilon+\im\beta ,A)\| \leq \|R(\epsilon,A)\|$ for every $\beta \in \R $, $\epsilon > 0$.
 Therefore 
 \[
-\lim_{\epsilon\to 0}\|\epsilon^k R(\epsilon+\im\beta ,A)\| \leq \lim_{\epsilon\to 0}\|\epsilon^k R(\epsilon,A)\| = 0 \text{ for } k > m\,.
+\lim_{\epsilon\to 0}\|\epsilon^k R(\epsilon+\im\beta ,A)\| \leq \lim_{\epsilon\to 0}\|\epsilon^k R(\epsilon,A)\| = 0 \text{ for } k > m .
 \qedhere
 \]
 \end{proof}
@@ -185,7 +185,7 @@ More precisely, we have the following result
 %% --
 \begin{corollary}\label{cor:c3-1.6}
 \index{group of positive operators}
-If\/ $A$ is the generator of a positive group, then $\sigma(A)\cap\R  \neq \emptyset$\,.
+If\/ $A$ is the generator of a positive group, then $\sigma(A)\cap\R  \neq \emptyset$ .
 \end{corollary}
 %% --
 \begin{proof}
@@ -216,7 +216,6 @@ We conclude this section by indicating possible extensions and further consequen
 %%KGK 2025-12-18 !!! spectrum!boundary 2(zu-auf)
 \index{spectrum!boundary|)} 
 %% --
-
 \section{The Boundary Spectrum}\label{sec:c3-2}
 \index{boundary spectrum}
 \index{spectrum!boundary|(} 
@@ -236,7 +235,7 @@ Thus the following definition makes sense
 	\begin{split}
 		f^{[0]} &\coloneqq |f|\,, \\
 		f^{[n]} &\coloneqq (\sign  f)f^{[n-1]} \text{ if } n > 0\,,\\
-		f^{[n]} &\coloneqq (\sign  \overline{f})f^{[n+1]} \text{ if } n < 0\,.
+		f^{[n]} &\coloneqq (\sign  \overline{f})f^{[n+1]} \text{ if } n < 0 .
 	\end{split}
 	\end{equation}
 \end{definition}
@@ -278,14 +277,14 @@ For definition and simple properties of the sign operator $S_{h}$ see Section~\r
 Then the following holds true
 %% --
 \begin{equation}\label{eq:c3-2.7}
-	Ah^{[n]} = (\alpha+\im n\beta)h^{[n]} \text{ for all } n \in \Z\,.
+	Ah^{[n]} = (\alpha+\im n\beta)h^{[n]} \text{ for all } n \in \Z .
 \end{equation}
 %% --
 In case $|h|$ is a quasi-interior point of\/ $E_{+}$, then
 \index{quasi-interior point} 
 %% --
 \[
-S_{h}D(A) = D(A) \text{ and } A + \im\beta \Id = S_{h}^{-1}AS_{h}\,.
+S_{h}D(A) = D(A) \text{ and } A + \im\beta \Id = S_{h}^{-1}AS_{h} .
 \]
 %% --
 \end{theorem}
@@ -380,16 +379,16 @@ We assume that $R \colon D \to \mathcal{L}(G)$ is a pseudo-resolvent on a Banach
 \begin{equation}\label{eq:c3-2.10}
 	\begin{split}
 	&\text{Given  $\lambda_{0} \in D, \mu \in \C $  there exists at most one operator  $S \in \mathcal{L}(G)$ }\\
-	&\text{ such that \quad $R(\lambda_{0}) - S = -(\lambda_{0}-\mu)R(\lambda_{0})S = -(\lambda_{0}-\mu)SR(\lambda_{0})$}\,.\\
+	&\text{ such that \quad $R(\lambda_{0}) - S = -(\lambda_{0}-\mu)R(\lambda_{0})S = -(\lambda_{0}-\mu)SR(\lambda_{0})$} .\\
 	&\text{ In case such an operator exists we have} \\
-	&\text{$R(\lambda) - S = -(\lambda-\mu)R(\lambda)S = -(\lambda-\mu)SR(\lambda)$ for all $\lambda \in D$}\,.
+	&\text{$R(\lambda) - S = -(\lambda-\mu)R(\lambda)S = -(\lambda-\mu)SR(\lambda)$ for all $\lambda \in D$} .
 	\end{split}
 \end{equation}
 %% -- 
 \begin{equation}\label{eq:c3-2.11}
 	\begin{split}
 	&\text{Given  $\lambda_{0} \in D$,  then for  $\mu \in D$  with  $|\mu-\lambda_{0}| < \|R(\lambda_{0})\|^{-1}$}\\ 
-	&\text{ we have $ R(\mu) = \sum_{n=0}^{\infty} (\lambda_{0}-\mu)^n R(\lambda_{0})^{n+1}$ }\,.
+	&\text{ we have $ R(\mu) = \sum_{n=0}^{\infty} (\lambda_{0}-\mu)^n R(\lambda_{0})^{n+1}$ } .
 	\end{split}
 \end{equation}
 %% --
@@ -397,7 +396,7 @@ We assume that $R \colon D \to \mathcal{L}(G)$ is a pseudo-resolvent on a Banach
 \begin{equation}\label{eq:c3-2.12}
 	\begin{split}
 	&\text{The map $\lambda \mapsto R(\lambda)$ is a locally holomorphic function defined on  $D \subseteq \C $}\\ 
-	&\text{ with values in  $\mathcal{L}(G)$}\,.
+	&\text{ with values in  $\mathcal{L}(G)$} .
 	\end{split}
 \end{equation}
 %% --
@@ -437,7 +436,7 @@ Further properties of pseudo-resolvents are given in the following two propositi
         Suppose that $(\lambda-\alpha)R(\lambda)x = x$ for some fixed $\lambda \in D$, $x \in G$.
 		Then using Eq.~\myeqpageref{eq:c3-2.8} we have for $\mu \in D$ 
         \[
-        (\mu-\alpha)(\mu-\lambda)R(\mu)R(\lambda)x = (\lambda-\alpha)(R(\lambda)x - R(\mu)x) = x - (\lambda-\alpha)R(\mu)x\,.
+        (\mu-\alpha)(\mu-\lambda)R(\mu)R(\lambda)x = (\lambda-\alpha)(R(\lambda)x - R(\mu)x) = x - (\lambda-\alpha)R(\mu)x .
         \]
 		It follows that $(\mu-\alpha)R(\mu)x = x$ for all $\mu \in D$.
 		
@@ -465,7 +464,7 @@ This shows that without loss of generality one can assume that the domain of a p
 	If for some $\beta \in \R $, $h \in E$ we have
 	$\lambda R(\lambda+\im\beta)h = h$ and $\lambda R(\lambda)|h| = |h|$ $(\lambda \in \Delta)$, then
 	\[
-    \lambda R(\lambda+\im n\beta)h^{[n]} = h^{[n]} \text{ for all } n \in \Z, \lambda \in \Delta\,.
+    \lambda R(\lambda+\im n\beta)h^{[n]} = h^{[n]} \text{ for all } n \in \Z, \lambda \in \Delta .
     \]
 \end{proposition}
 %% --
@@ -473,7 +472,7 @@ This shows that without loss of generality one can assume that the domain of a p
 At first we prove the following domination property which is the extension of Eq.~\myeqpageref{eq:c3-1.5} to positive pseudo-resolvents
 %% --
 \begin{equation}\label{eq:c3-2.13}
-	|R(\lambda)f| \leq R(\Re(\lambda)) |f| \ \text{ for every } \ \lambda \in \Delta , f \in E\,.
+	|R(\lambda)f| \leq R(\Re(\lambda)) |f| \ \text{ for every } \ \lambda \in \Delta , f \in E .
 \end{equation}
 %% --
 To do this we fix $\lambda \in \Delta$.
@@ -482,7 +481,7 @@ Therefore $R(\lambda) = \sum_{n=0}^{\infty}(r-\lambda)^{n}R(r)^{n+1}$ for $r > r
 %% --
 \begin{align*}
 	|R(\lambda)f| &\leq \sum_{n=0}^{\infty}|r-\lambda|^{n}R(r)^{n+1}|f| = \\
-	& =\sum_{n=0}^{\infty}(r - (r-|r-\lambda|))^{n}R(r)^{n+1}|f| = R(r - |\lambda-r|) |f|\,.
+	& =\sum_{n=0}^{\infty}(r - (r-|r-\lambda|))^{n}R(r)^{n+1}|f| = R(r - |\lambda-r|) |f| .
 \end{align*}
 %% --
 Since $\lim_{r \to \infty} (r - |\lambda-r|) = \Re(\lambda)$, we obtain Eq.~\myeqpageref{eq:c3-2.13}.
@@ -492,13 +491,13 @@ Identifying, according to the Kakutani-Krein Theorem, $E_{|h|}$ with a space $C(
 Then we have for every $\alpha > 0$ and $f \in E$
 %% --
 \[
-\alpha\tilde{R}(\alpha+\im\beta)h = h, \alpha\tilde{R}(\alpha) |h| = |h| = \1_{K}, \alpha|\tilde{R}(\alpha+\im\beta)f| \leq \alpha\tilde{R}(\alpha) |f|\,.
+\alpha\tilde{R}(\alpha+\im\beta)h = h, \alpha\tilde{R}(\alpha) |h| = |h| = \1_{K}, \alpha|\tilde{R}(\alpha+\im\beta)f| \leq \alpha\tilde{R}(\alpha) |f| .
 \]
 %% --
 Applying Part-II, Lemma~\ref{lem:b3-2.3} we obtain $\tilde{R}(\alpha) = S_{h}^{-1}\tilde{R}(\alpha + \im\beta)S_{h}$ for every $\alpha > 0$ and using the uniqueness theorem for holomorphic functions we obtain
 %% --
 \begin{equation}\label{eq:c3-2.14}
-\tilde{R}(z) = S_{h}^{-n}\tilde{R}(z + \im n\beta)S_{h}^{n} \ \text{ for all } \ z \in \Delta \ \text{ and } \ n \in \Z\,.
+\tilde{R}(z) = S_{h}^{-n}\tilde{R}(z + \im n\beta)S_{h}^{n} \ \text{ for all } \ z \in \Delta \ \text{ and } \ n \in \Z .
 \end{equation}
 In particular, $S_{h}^{n}|h| = S_{h}^{-n}z\tilde{R}(z) |h| = z\tilde{R}(z+\im n\beta)S_{h}^{n}|h|$.
 
@@ -515,8 +514,8 @@ which is stated in the following definition.
 	The resolvent is said to \emph{grow slowly} if one of the following (equivalent) conditions is satisfied.
 	\begin{equation}\label{eq:c3-2.15}
 	\begin{split}
-	\text{(a)}\quad & \text{$\{(\lambda-s(A))R(\lambda,A) \colon \lambda > s(A)\}$ is bounded in $\mathcal{L}(E)$}\,.\\
-	\text{(b)}\quad & \text{$\left\{\frac{1}{t} \int_{0}^{t} \exp(-\tau s(A))T(\tau) \diff{\tau} \colon t > 0\right\}$ is bounded in $\mathcal{L}(E)$}\,.
+	\text{(a)}\quad & \text{$\{(\lambda-s(A))R(\lambda,A) \colon \lambda > s(A)\}$ is bounded in $\mathcal{L}(E)$} .\\
+	\text{(b)}\quad & \text{$\left\{\frac{1}{t} \int_{0}^{t} \exp(-\tau s(A))T(\tau) \diff{\tau} \colon t > 0\right\}$ is bounded in $\mathcal{L}(E)$} .
 	\end{split}
 	\end{equation}
 \end{definition}
@@ -575,13 +574,13 @@ Then we have
 \lambda \cdot \eu^{-\lambda s} \geq 
 \begin{cases}
 	(\eu t)^{-1} & \text{if } s \leq t\,, \\
-	0 & \text{if } s > t\,.
+	0 & \text{if } s > t .
 \end{cases}
 \]
 %% --
 Now Eq.~\myeqpageref{eq:c3-1.1} implies 
 \[%\textstyle
-\lambda R(\lambda,A) = \int_{0}^{\infty} \lambda \exp(-\lambda s)T(s) \ds \geq \eu^{-1}C(t) = \eu^{-1}\cdot C(\frac{1}{\lambda}) \geq 0\,.
+\lambda R(\lambda,A) = \int_{0}^{\infty} \lambda \exp(-\lambda s)T(s) \ds \geq \eu^{-1}C(t) = \eu^{-1}\cdot C(\frac{1}{\lambda}) \geq 0 .
 \]
 Thus $C(t)$ is bounded for $t \to \infty$ whenever $\lambda R(\lambda,A)$ is bounded for $\lambda \downarrow 0$.
 
@@ -590,12 +589,12 @@ Thus $C(t)$ is bounded for $t \to \infty$ whenever $\lambda R(\lambda,A)$ is bou
 Given $f \in E$, $\lambda > 0$ and $r > 0$ then integration by parts yields
 %% --
 \[
-	\lambda \int_{0}^{r} \eu^{-\lambda s}T(s)f \ds = \lambda \eu^{-\lambda r} \int_{0}^{r} T(\sigma)f \diff{\sigma} + \lambda^{2}\int_{0}^{r} s\eu^{-\lambda s}\left(\frac{1}{s}\int_{0}^{s} T(\sigma)f \diff{\sigma}\right)\ds\,.
+	\lambda \int_{0}^{r} \eu^{-\lambda s}T(s)f \ds = \lambda \eu^{-\lambda r} \int_{0}^{r} T(\sigma)f \diff{\sigma} + \lambda^{2}\int_{0}^{r} s\eu^{-\lambda s}\left(\frac{1}{s}\int_{0}^{s} T(\sigma)f \diff{\sigma}\right)\ds .
 \]
 It follows that
 \begin{align*}
 	\left\|\lambda \int_{0}^{r} \eu^{-\lambda s}T(s)f \ds\right\| &\leq \left(r\lambda \eu^{-r} + \lambda^{2}\int_{0}^{r} s\eu^{-\lambda s} \ds\right)M\|f\| \\
-	&= (1 - \eu^{-\lambda r})M\|f\|\,.
+	&= (1 - \eu^{-\lambda r})M\|f\| .
 \end{align*}
 %% --
 
@@ -635,13 +634,13 @@ The canonical extensions of\/ $R(\lambda,A)$ to $E_{1}$ form a positive pseudo-r
 By Proposition~\ref{prop:c3-2.6}\,(i) and Part-I, Section~\ref{sec:a3-1} there exists $h_{1} \in E_{1}$, $h_{1} \neq 0$ such that
 %% --
 \begin{equation}\label{eq:c3-2.16}
-	\lambda R_{1}(\lambda+\im\beta)h_{1} = h_{1} \ \text{ for }  \Re(\lambda) > 0\,.
+	\lambda R_{1}(\lambda+\im\beta)h_{1} = h_{1} \ \text{ for }  \Re(\lambda) > 0 .
 \end{equation}
 %% --
 By Eq.~\myeqpageref{eq:c3-2.13} we have
 %% --
 \begin{equation}\label{eq:c3-2.17}%\textstyle
-	|h_{1}| = |r R_{1}(r+\im\beta)h_{1}| \leq r R_{1}(r)|h_{1}| \ (r > 0)\,.
+	|h_{1}| = |r R_{1}(r+\im\beta)h_{1}| \leq r R_{1}(r)|h_{1}| \ (r > 0) .
 \end{equation}
 %% --
 Next, we choose any $\phi \in E_{1}'$ such that $\langle  h_{1},\phi \rangle \neq 0$.
@@ -651,13 +650,13 @@ Thus, there exist $\phi_{1} \in \cap_{\epsilon>0}\{\tau R_{1}(\tau)'\phi \colon 
 Using the resolvent equation Eq.~\myeqpageref{eq:c3-2.8} we obtain for $r > 0$, $\epsilon > 0$
 %% --
 \[
-(1 - \tau R_{1}(\tau)')\epsilon R_{1}(\epsilon)'\phi = \epsilon(\tau-\epsilon)^{-1}(\tau R_{1}(\tau)'\phi - \epsilon R_{1}(\epsilon)'\phi)\,.
+(1 - \tau R_{1}(\tau)')\epsilon R_{1}(\epsilon)'\phi = \epsilon(\tau-\epsilon)^{-1}(\tau R_{1}(\tau)'\phi - \epsilon R_{1}(\epsilon)'\phi) .
 \]
 %% --
 Since the right hand side tends to $0$ as $\epsilon \to 0$, we have $(1 - \tau R_{1}(\tau)')\phi_{1} = 0$ or
 %% --
 \begin{equation}\label{eq:c3-2.18}
-\lambda R_{1}(\lambda)'\phi_{1} = \phi_{1} \ \text{ for } \Re(\lambda) > 0\,.
+\lambda R_{1}(\lambda)'\phi_{1} = \phi_{1} \ \text{ for } \Re(\lambda) > 0 .
 \end{equation} 
 %% --
 Moreover, from 
@@ -669,7 +668,7 @@ Moreover, from
 it follows that
 %% --
 \begin{equation}\label{eq:c3-2.19}
-		\langle |h_{1}|,\phi_{1} \rangle > 0\,.
+		\langle |h_{1}|,\phi_{1} \rangle > 0 .
 \end{equation}
 For arbitrary $f_{1} \in E_{1}$, $\Re(\lambda) > 0$ we have $\langle |R_{1}(\lambda)f_{1}|,\phi_{1} \rangle \leq \langle R_{1}(\Re(\lambda))|f_{1}|,\phi_{1} \rangle = \langle |f_{1}|,R_{1}(\Re(\lambda))'\phi_{1} \rangle = (\Re(\lambda))^{-1}\langle |f_{1}|,\phi_{1} \rangle$.
 
@@ -681,7 +680,7 @@ Furthermore we have (see Eq.~\myeqpageref{eq:c3-2.17}, Eq.~\myeqpageref{eq:c3-2.
 \end{align*}	
 which implies
 \begin{equation}\label{eq:c3-2.20}
-rR_{1}(r)|h_{1}| - |h_{1}| \in I \ \text{ for } \ r > 0)\,.
+rR_{1}(r)|h_{1}| - |h_{1}| \in I \ \text{ for } \ r > 0) .
 \end{equation}
 Denote by $E_{2}$ the quotient space $E_{1}/I$ and by $\{R_{2}(\lambda)\}_{\Re(\lambda)>0}$ the pseudo-resolvent on $E_{2}$ induced by $\{(R_{1}(\lambda)\}_{\Re(\lambda)>0}$ in the canonical way. 
 Then $h_{2} \coloneqq h_{1} + I \neq 0$ (by Eq.~\myeqpageref{eq:c3-2.19}.
@@ -689,12 +688,12 @@ Moreover, $\lambda R_{2}(\lambda+\im\beta)h_{2} = h_{2}$ (by Eq.~\myeqpageref{eq
 
 Now we apply Proposition~\ref{prop:c3-2.7}(b) and obtain
 \begin{equation}\label{eq:c3-2.21}
-	\lambda R_{2}(\lambda+\im n\beta)h_{2}^{[n]} = h_{2}^{[n]}\ \text{ for } \ \Re(\lambda) > 0 , n \in \Z\,.
+	\lambda R_{2}(\lambda+\im n\beta)h_{2}^{[n]} = h_{2}^{[n]}\ \text{ for } \ \Re(\lambda) > 0 , n \in \Z .
 \end{equation}
 %% --
 In particular, we have $\|R_{2}(r+\im n\beta)\| \geq \frac{1}{r}$, thus 
 \[
-\|R(r+\im n\beta,A)\| = \|R_{1}(r+\im n\beta)\| \geq \|R_{2}(r+\im n\beta)\| \geq \frac{1}{r} \ \text{ for } r > 0\,.
+\|R(r+\im n\beta,A)\| = \|R_{1}(r+\im n\beta)\| \geq \|R_{2}(r+\im n\beta)\| \geq \frac{1}{r} \ \text{ for } r > 0 .
 \]
 This finally implies that $ \im n\beta \in \sigma(A)$ for $n \in \Z$.
 \end{proof}
@@ -882,7 +881,7 @@ This is the second statement of the following theorem (see also Part-II, Remark~
 %%KGK 2025-12-19 (in einem Bereich)
 %    \index{quasi-interior point} 
     of\/ $E_{+}$ whenever $f > 0$ and $t > 0$.
-	Equivalently, given $f \in E$, $\phi \in E'$ such that $f > 0$, $\phi > 0$, then $\langle T(t)f,\phi \rangle > 0$ for all $t > 0$\,.
+	Equivalently, given $f \in E$, $\phi \in E'$ such that $f > 0$, $\phi > 0$, then $\langle T(t)f,\phi \rangle > 0$ for all $t > 0$ .
 	\end{enumerate}
 \end{theorem}
 %% --
@@ -1098,7 +1097,7 @@ Next we consider some concrete examples.
 	\begin{equation}\label{eq:c3-3.8}
 		\begin{split}
 		&\text{There exists } \delta > 0 \text{ such that } \kappa \text{ is strictly positive}\\
-		&\text{on the sets } [0,\delta]\times[-1,1] \text{ and } [1-\delta,1]\times[-1,1]\,.
+		&\text{on the sets } [0,\delta]\times[-1,1] \text{ and } [1-\delta,1]\times[-1,1] .
 		\end{split}
 	\end{equation}
 	%% --
@@ -1155,13 +1154,13 @@ Consider the Banach lattice $E = L^{p}(\Gamma\times\Gamma)$.
 For (fixed) positive numbers $\alpha,\beta$ such that $\frac{\alpha}{\beta}$ is irrational we define a positive semigroup $(T_{0}(t))_{t\geq 0}$ as follows
 %% --
 \begin{equation}\label{eq:c3-3.9}
-	(T_{0}(t)f)(z,w) \coloneqq f(z\cdot \eu^{\im\alpha t},w\cdot \eu^{\im\beta t}) \quad (z,w \in \Gamma = \{\xi\in\C :|\xi|=1\})\,.
+	(T_{0}(t)f)(z,w) \coloneqq f(z\cdot \eu^{\im\alpha t},w\cdot \eu^{\im\beta t}) \quad (z,w \in \Gamma = \{\xi\in\C :|\xi|=1\}) .
 \end{equation}
 %% --
 Next we define for a positive function $m \colon \Gamma\times\Gamma \to \R $ which is continuous on $\Gamma\times\Gamma\setminus(1,1)$ functions $m_{t}$, $t\geq 0$, as follows
 %% --
 \begin{equation}\label{eq:c3-3.10}
-	m_{t}(z,w) \coloneqq \exp(-\int_{0}^{t} m(z\cdot \eu^{\im\alpha s},w\cdot \eu^{\im\beta s})\ds )\,.
+	m_{t}(z,w) \coloneqq \exp(-\int_{0}^{t} m(z\cdot \eu^{\im\alpha s},w\cdot \eu^{\im\beta s})\ds ) .
 \end{equation}
 %% --
 Then $(T(t))_{t\geq 0}$ defined by
@@ -1197,7 +1196,7 @@ Each of the following conditions on $E$ and $(T(t))$, respectively, implies that
 	\footnote[1]{For a precise definition of a kernel operator we refer to Section~IV.9 of \textcite{schaefer:1974} or Chapter~13 of \textcite{zaanen:1983}.}
 
 	\item 
-	$E$ is reflexive and there exist $t_{0} > 0$, $h \in E_{+}$ such that $T(t_{0})E \subset E_{h}$\,.
+	$E$ is reflexive and there exist $t_{0} > 0$, $h \in E_{+}$ such that $T(t_{0})E \subset E_{h}$ .
 \end{enumerate}
 %% --
 \end{theorem}
@@ -1211,7 +1210,7 @@ Each of the following conditions on $E$ and $(T(t))$, respectively, implies that
 	%% --
 	\begin{align*}
 		T(t)R(\lambda,A) & = \eu^{\lambda t}R(\lambda,A) - \eu^{\lambda t}\int_{0}^{t} \eu^{-\lambda s}T(s)\ds \\
-		& \leq \eu^{\lambda t}R(\lambda,A) \ (t\geq 0, \lambda>s(A))\,.
+		& \leq \eu^{\lambda t}R(\lambda,A) \ (t\geq 0, \lambda>s(A)) .
 	\end{align*}
 	%% --
 	Since the spectral radius is an isotone function on the cone of positive operators, it is enough to show that
@@ -1239,7 +1238,7 @@ The proof can be translated without difficulties and will be omitted (see also \
     \index{spectrum!irreducible semigroup}
     \index{spectrum!point spectrum $P\sigma$}
     on the Banach lattice $E$ and let $A$ be its generator.
-	Assume that $s(A) = 0$ and that there exists a positive linear form $\psi \in D(A')$ with $A'\psi \leq 0$\,.
+	Assume that $s(A) = 0$ and that there exists a positive linear form $\psi \in D(A')$ with $A'\psi \leq 0$ .
 
     If\/ $P\sigma(A)\cap \im\R $ is non-empty, then the following assertions are true.
 	\begin{enumerate}[\upshape (i)]
@@ -1279,7 +1278,7 @@ which is irreducible (\cf Part-I, Section~\ref{subsec:a1-2.5}).%
 	both injective with dense range,
     \index{lattice homomorphism}
 	such that the diagram commutes for all $t\geq 0$.
-	Hereby, $j\circ i$ is the canonical inclusion of\/ $C(\Gamma)$ in $L^{1}(\Gamma)$\,.
+	Hereby, $j\circ i$ is the canonical inclusion of\/ $C(\Gamma)$ in $L^{1}(\Gamma)$ .
 %% -- tikz
 \begin{center}
 \includegraphics[width=0.5\textwidth]{./tikz-images/tikz-chap-c3-a.pdf}
@@ -1410,7 +1409,7 @@ Moreover, $\sigma_{b}(A)$ contains only algebraically simple poles.
 \begin{split}
 		&P_{\mathcal{U}} = \hat{\phi}\otimes\hat{u} \text{ where } \hat{u} \coloneqq (u,u,u,\ldots)+c_{\mathcal{U}}(E) \in E_{\mathcal{U}} \ \text{ and } \hat{\phi} \in (E_{\mathcal{U}})'
 		\\
-		&\text{is given by } \hat{\phi}((f_{n})+c_{\mathcal{U}}(E)) \coloneqq \lim_{\mathcal{U}}\phi(f_{n}) \ ((f_{n})+c_{\mathcal{U}}(E) \in E_{\mathcal{U}})\,.
+		&\text{is given by } \hat{\phi}((f_{n})+c_{\mathcal{U}}(E)) \coloneqq \lim_{\mathcal{U}}\phi(f_{n}) \ ((f_{n})+c_{\mathcal{U}}(E) \in E_{\mathcal{U}}) .
 		\end{split}
 	\end{equation}
 	%% --
@@ -1441,7 +1440,7 @@ It follows that
 Thus considering the closed ideal $I \coloneqq \{\hat{f} \in E_{\mathcal{U}} \colon \hat{\phi}(|\hat{f}|) = 0\}$ we have
 	%% --
 	\begin{equation}\label{eq:c3-3.17}
-		\tilde{\phi}(|\hat{f}|) - |\hat{f}| \in I \ \text{ for every } \hat{f} \in M\,.
+		\tilde{\phi}(|\hat{f}|) - |\hat{f}| \in I \ \text{ for every } \hat{f} \in M .
 	\end{equation}
 	%% --
 	This implies that $M \cap I = \{0\}$. 
@@ -1464,8 +1463,8 @@ The latter claim is a consequence of Proposition~\ref{prop:c3-2.11} and the foll
     %% --
     \index{spectral bound $s(A)$}
 	\begin{enumerate}[\upshape (i)]
-		\item $\TT_{k}$ is irreducible with spectral bound $s(A_k) = s(A)$\,.
-		\item $s(A_{/J}) < s(A)$  where $J \coloneqq  J_{1}\oplus J_{2}\oplus .. \oplus J_{m}\,.$
+		\item $\TT_{k}$ is irreducible with spectral bound $s(A_k) = s(A)$ .
+		\item $s(A_{/J}) < s(A)$  where $J \coloneqq  J_{1}\oplus J_{2}\oplus .. \oplus J_{m} .$
 	\end{enumerate}
 \end{lemma}
 %% --
@@ -1509,7 +1508,7 @@ If\/ $s(A)$ is a pole of finite algebraic multiplicity, then there exists a fini
 	\begin{split}
 	&\textit{For the semigroup $\TT_{n}$ on $I_{n}/I_{n-1}\, \ (0 \leq n \leq N)$ which is induced by $\TT$}
 		\\
-	& \textit{we have either $s(A_{n}) = s(A)$ and $\TT_{n}$ is irreducible or $s(A_{n}) < s(A)$}\,.
+	& \textit{we have either $s(A_{n}) = s(A)$ and $\TT_{n}$ is irreducible or $s(A_{n}) < s(A)$} .
 	\end{split}
 \end{equation}
 %% --
@@ -1641,7 +1640,7 @@ Iterating this identity we obtain for every $m \in \N$, $t \geq 0$
 \begin{split}
     S(t) &= \sum_{n=0}^{m-1} T_{n}(t) + R_{m}(t) \ \text{ where}\\ 
     T_{0}(t)&\coloneqq T(t),\  T_{n}(t) \coloneqq  \int_{0}^{t} T(t-s)KT_{n-1}(s)\ds \text{ for } n \in \N\,,\\
-    R_{m}(t) &\coloneqq \textit{\small $\int_{0}^{t}\int_{0}^{t_{1}} \ldots \int_{0}^{t_{m-1}} T(t-t_{1})KT(t_{1}-t_{2})K \ldots T(t_{m-1}-t_m)KS(t_{m})\dt _{m}\ldots \dt _{1}$}\,.
+    R_{m}(t) &\coloneqq \textit{\small $\int_{0}^{t}\int_{0}^{t_{1}} \ldots \int_{0}^{t_{m-1}} T(t-t_{1})KT(t_{1}-t_{2})K \ldots T(t_{m-1}-t_m)KS(t_{m})\dt _{m}\ldots \dt _{1}$} .
 \end{split}
 \end{equation}
 %% --
@@ -1652,7 +1651,7 @@ Thus the integrand appearing in the the representation Eq.~\myeqpageref{eq:c3-3.
 
 Since the integrand is positive and continuous, we conclude
 \begin{equation}\label{eq:c3-3.22}%\textstyle
-    \langle S(t)f,\phi\rangle \geq \langle R_{m}(t)f,\phi\rangle > 0 \ \text{ for } \ 0 < f \,,  \ 0 < \phi \ \text{ and } \ t > 0\,.
+    \langle S(t)f,\phi\rangle \geq \langle R_{m}(t)f,\phi\rangle > 0 \ \text{ for } \ 0 < f \,,  \ 0 < \phi \ \text{ and } \ t > 0 .
 \end{equation}
 %% --
 It follows that $(\eu^{-ts(B)}S(t))_{t \geq 0}$ cannot contain the rotation semigroup on $\Gamma$. 
@@ -1706,12 +1705,12 @@ In the last part of this section we discuss a spectral decomposition of positive
 	If we fix $r > \omega_0(\TT)$ and define $\psi \coloneqq  rR(r,A)'|\phi|$, we have
 	%% -- 
 	\begin{equation}\label{eq:c3-4.1}
-		T(t)'\psi \leq \eu^{rt}\psi \ \text{ and } \ \ T(t)'\psi \geq \psi \ (t \geq 0) \ \text{ and } \ |\phi| \leq \psi\,.
+		T(t)'\psi \leq \eu^{rt}\psi \ \text{ and } \ \ T(t)'\psi \geq \psi \ (t \geq 0) \ \text{ and } \ |\phi| \leq \psi .
 	\end{equation}
 	%% --
 	In fact, Eq.~\myeqpageref{eq:a1-3.1} implies $(\eu^{rt} - T(r))R(r,A) \geq 0$ hence 
     \[
-    T(t)'\psi = rR(r,A)'T(t)'|\phi| \leq r\cdot \eu^{rt}R(r,A)'|\phi| = \eu^{rt}\psi\,.
+    T(t)'\psi = rR(r,A)'T(t)'|\phi| \leq r\cdot \eu^{rt}R(r,A)'|\phi| = \eu^{rt}\psi .
     \]
 	Moreover, the inequality $T(t)'|\phi| \geq |\phi|$ $(t \geq 0)$ implies 
     \[
@@ -1719,7 +1718,7 @@ In the last part of this section we discuss a spectral decomposition of positive
     \]
     and 
     \[
-    \psi = rR(r,A)'|\phi| = r \int_{0}^{\infty} \eu^{-rt}T(t)'|\phi|\dt  \geq r\int_{0}^{\infty} \eu^{-rt}|\phi|\dt  = |\phi|\,.
+    \psi = rR(r,A)'|\phi| = r \int_{0}^{\infty} \eu^{-rt}T(t)'|\phi|\dt  \geq r\int_{0}^{\infty} \eu^{-rt}|\phi|\dt  = |\phi| .
     \]
     %% --
 	Now, considering the AL-space $(E,\psi)$ (see Section~\ref{sec:c1-4}) the first inequality of Eq.~\myeqpageref{eq:c3-4.1} implies that $(T(t))_{t \geq 0}$ induces a strongly continuous semigroup $(T_{1}(t))_{t \geq 0}$ on $(E,\psi)$.
@@ -1727,7 +1726,7 @@ In the last part of this section we discuss a spectral decomposition of positive
 	%% --
 	\begin{equation}\label{eq:c3-4.2}
     %\textstyle
-		T_{1}(t)\circ q_{\psi} = q_{\psi}\circ T(t) \ (t \geq 0)\,.
+		T_{1}(t)\circ q_{\psi} = q_{\psi}\circ T(t) \ (t \geq 0) .
 	\end{equation}
 	%% -- tikz
 \begin{center}
@@ -1748,7 +1747,7 @@ In the last part of this section we discuss a spectral decomposition of positive
 	The second inequality of Eq.~\myeqpageref{eq:c3-4.1} implies
 	%% --
 	\begin{equation}\label{eq:c3-4.3}
-	\|T_{1}(t)f\|_{\psi} = \langle|T_{1}(t)f|,\psi\rangle = \langle|f|,T_{1}(t)'\psi\rangle \geq \langle|f|,\psi\rangle = \|f\|_{\psi}\,.
+	\|T_{1}(t)f\|_{\psi} = \langle|T_{1}(t)f|,\psi\rangle = \langle|f|,T_{1}(t)'\psi\rangle \geq \langle|f|,\psi\rangle = \|f\|_{\psi} .
 	\end{equation}
 	%% --
 	Then for $\lambda \in \C $ with $\Re(\lambda) < 0$ we have 
@@ -1760,7 +1759,7 @@ In the last part of this section we discuss a spectral decomposition of positive
 	\begin{equation}\label{eq:c3-4.4}
 		\begin{split}
 		\|(\lambda-A_{1})f\|_{\psi} &= \lim_{t \to 0}\left\|\frac{1}{t}(\eu^{-\lambda t}T_{1}(t)f-f)\right\|_{\psi} \geq \lim_{t \to 0}\frac{1}{t}(\eu^{-t\Re(\lambda)}-1)\|f\|_{\psi}\\
-		&= -\Re(\lambda)\cdot\|f\|_{\psi} \ \text{ for } \ \Re(\lambda) < 0 \ \text{ and } \ f \in (E,\psi)\,.
+		&= -\Re(\lambda)\cdot\|f\|_{\psi} \ \text{ for } \ \Re(\lambda) < 0 \ \text{ and } \ f \in (E,\psi) .
 		\end{split}
 	\end{equation}
 	%% --
@@ -1889,7 +1888,7 @@ However, one still cannot prove cyclicity of\/ $P\sigma_{b}(A)$ for arbitrary po
 	\begin{split} 
 		T(t)([f,g]) &\coloneqq [f_t,g_t] \quad \ \text{with}\\
 		f_t(z) &\coloneqq f(z \cdot \eu^{\im t}) \quad (z \in \Gamma) \quad \text{and}\\
-		g_t(x) &\coloneqq g(x+t) + \frac{1}{2\pi}\int_{0}^{2\pi} f(z \cdot \eu^{\im s}) \ds  \cdot \int_{x}^{x+t} k(u) \du \,.
+		g_t(x) &\coloneqq g(x+t) + \frac{1}{2\pi}\int_{0}^{2\pi} f(z \cdot \eu^{\im s}) \ds  \cdot \int_{x}^{x+t} k(u) \du  .
 	\end{split}
 \end{equation}
 %% --
@@ -1910,7 +1909,7 @@ of lattice homomorphisms on an $L^1$-space and denote by $A$ its generator.
 Then we have
 %% --
 \begin{equation}\label{eq:c3-4.7}
-	\exp(t\sigma(A) \cap \R ) = \sigma(T(t)) \cap (0,\infty) \quad \text{for every} \quad t \geq 0\,.
+	\exp(t\sigma(A) \cap \R ) = \sigma(T(t)) \cap (0,\infty) \quad \text{for every} \quad t \geq 0 .
 \end{equation}
 %% --
 \end{proposition}
@@ -1940,10 +1939,10 @@ we may assume that $(f_n)$ is a sequence in $E_+$.
 
 Defining $g_n \coloneqq \int_{0}^{t} \eu^{-\alpha s}T(s)f_n \ds $ we have $g_n \in D(A)$ and
 \[
-(A-\alpha)g_n = (A-\alpha)\int_{0}^{t} \eu^{-\alpha s}T(s)f_n \ds = \eu^{-\alpha t}T(t)f_n - f_n = \frac{1}{r}(T(t)f_n - rf_n)\,.
+(A-\alpha)g_n = (A-\alpha)\int_{0}^{t} \eu^{-\alpha s}T(s)f_n \ds = \eu^{-\alpha t}T(t)f_n - f_n = \frac{1}{r}(T(t)f_n - rf_n) .
 \]
-Therefore $\lim_{n \to \infty}\|(A - \alpha) g_n\| = 0$\,. It remains to prove 
-$\liminf_{n \to \infty}\|g_n\| > 0$\,.
+Therefore $\lim_{n \to \infty}\|(A - \alpha) g_n\| = 0$ . It remains to prove 
+$\liminf_{n \to \infty}\|g_n\| > 0$ .
 The latter assertion is a consequence of the following facts.
 \begin{enumerate}[\upshape (i),wide, labelindent=.25em]
 
@@ -1951,7 +1950,7 @@ The latter assertion is a consequence of the following facts.
 Since $f_n$ is positive and the norm is additive on $E_+$,
 we have
 \[
-    \|g_n\| = \int_{0}^{t} \eu^{-\alpha s}\|T(s)f_n\| \ds\,.
+    \|g_n\| = \int_{0}^{t} \eu^{-\alpha s}\|T(s)f_n\| \ds .
 \]
 
 \item 
@@ -2006,7 +2005,7 @@ Then the domain $D(A)$ is a sublattice of\/ $E$ and
 For real $\mu$ one has $\mu|f| = \Re [(\text{sign } f)\mu f]$, hence
 %% --
 \[
-(\mu - A)|f| = \Re[(\text{sign } f)(\mu - A)f] \ \ \text{ for } \ \mu \in \R , f \in D(A)\,.
+(\mu - A)|f| = \Re[(\text{sign } f)(\mu - A)f] \ \ \text{ for } \ \mu \in \R , f \in D(A) .
 \]
 %% --
 The relations $f^+ = \frac{1}{2}(|f| + f), \ f^- = \frac{1}{2}(|f| - f)$ yield
@@ -2051,7 +2050,7 @@ such that
 	$R(\mu,A)g_1 = (R(\mu,A)g)^+$\,,
 
 	\item
-	$R(\mu,A)g_2 = -(R(\mu,A)g)^-$\,.
+	$R(\mu,A)g_2 = -(R(\mu,A)g)^-$ .
 \end{enumerate}	
 \end{lemma}
 %% --
@@ -2084,16 +2083,16 @@ which implies assertion (b).
 $(b)\Rightarrow(a)$  The assumption implies that 
 \[%\textstyle
 \int_{0}^{\infty} \eu^{-\nu s}T(s)h \ds \coloneqq 
-\lim_{t \to \infty} \int_{0}^{t} \eu^{-\nu s}T(s)h \ds \ \text{ exists for } \ \nu > \mu\,. 
+\lim_{t \to \infty} \int_{0}^{t} \eu^{-\nu s}T(s)h \ds \ \text{ exists for } \ \nu > \mu . 
 \]
 Using that $A$ is a closed operator it follows that 
 \[%\textstyle
-(\nu - A)\left(\int_{0}^{\infty} \eu^{-\nu s}T(s)h \ds\right) = h\,.
+(\nu - A)\left(\int_{0}^{\infty} \eu^{-\nu s}T(s)h \ds\right) = h .
 \]
 For $\nu$
 sufficiently close to $\mu$ such that $\nu \in \rho(A) \cap \R $ we have 
 \[%\textstyle
-R(\nu,A)h = \int_{0}^{\infty} \eu^{-\nu s}T(s)h \ds \geq 0\,. 
+R(\nu,A)h = \int_{0}^{\infty} \eu^{-\nu s}T(s)h \ds \geq 0 . 
 \] 
 By continuity we conclude $R(\mu,A)h \geq 0$.
 \end{proof}
@@ -2244,7 +2243,7 @@ regular, positive Borel measure on $X$. Assume that the continuous
 semiflow $\phi \colon \R _+ \times X \to X$ satisfies the condition
 %% --
 \begin{equation}\label{eq:c3-4.12}
-	\phi_t^{-1}(K)  \text{ is compact for every compact set }  K \subset X , t \geq 0\,.
+	\phi_t^{-1}(K)  \text{ is compact for every compact set }  K \subset X , t \geq 0 .
 \end{equation}
 %% --
 \begin{enumerate}[\upshape (i)]
@@ -2361,7 +2360,7 @@ If\/ $\lambda$ denotes the Lebesgue measure, then
 \end{equation}
 %% --
 Here we used Eq.~\myeqpageref{eq:c3-4.13} and the fact that the determinant of an n$\times$n-matrix
-$B$ satisfies $|\det B| \leq \|B\|^n$\,.
+$B$ satisfies $|\det B| \leq \|B\|^n$ .
 \end{example}
 %% --
 In general, existence of a global flow does not ensure that one can
