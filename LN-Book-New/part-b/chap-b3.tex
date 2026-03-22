@@ -100,7 +100,7 @@ Consider $X = [0,1)$ and $(T(t))$ on $C_{0}(X)$ given by
 %
 \begin{equation}\label{eq:b3-1.7}
 	(T(t)f)(x) \coloneqq \begin{cases} 
-		f(x+t) & \text{if } x+t < 1\,, \\
+		f(x+t) & \text{if } x+t < 1 ,  \\
 		0 & \text{if } x+t \geq 1.
 	\end{cases}
 \end{equation}
@@ -239,7 +239,7 @@ If\/ $r$ is an eigenvalue of\/ $T(\tau)'$ with positive eigenvector $\phi_{0}$, 
 	Defining
 	%% --
 	\begin{equation}\label{eq:b3-1.14}
-		h \coloneqq \int_{0}^{\tau} T(s)h_{0} \, \ds \,,
+		h \coloneqq \int_{0}^{\tau} T(s)h_{0} \, \ds  , 
 	\end{equation}
 	%% --
 	then for $0 \leq t \leq \tau$ we have
@@ -331,17 +331,17 @@ Theorem~\ref{thm:b3-1.6} fails to be true for locally compact spaces as the foll
 From the explicit representation of\/ $T(t)$,
 	%% --
 	\begin{equation}\label{eq:b3-1.17}
-		(T(t)f)(x) = (4\pi t)^{-n/2}\int_{\R^{n}} \exp(-(x-y)^{2}/4t)\cdot f(y) \, \dy \,,
+		(T(t)f)(x) = (4\pi t)^{-n/2}\int_{\R^{n}} \exp(-(x-y)^{2}/4t)\cdot f(y) \, \dy  , 
 	\end{equation}
 	%% --
 	it follows that $\lim_{t \to \infty}T(t)f = 0$ for every $f \in C_{0}(\R^{n})$. In fact, for $f$ having compact support, we have     
     \[
-    \|T(t)f\| \leq (4\pi t)^{-n/2}\int_{\R^{n}} |f(y)| \dy \to 0\,,
+    \|T(t)f\| \leq (4\pi t)^{-n/2}\int_{\R^{n}} |f(y)| \dy \to 0 , 
     \]
     and since $\|T(t)\| = 1$ for all $t \geq 0$, convergence to $0$ holds for all  $f\in E$.
 	If\/ $\phi$ is an eigenvector of\/ $A'$ corresponding to $s(A) = \omega_{0}(A) = 0$, we have $T(t)'\phi = \phi$ for all $t \geq 0$, hence 
     \[
-    \langle \phi,f \rangle = \lim_{t \to \infty}\langle T(t)f,\phi \rangle = 0 \text{ for every } f\,,
+    \langle \phi,f \rangle = \lim_{t \to \infty}\langle T(t)f,\phi \rangle = 0 \text{ for every } f , 
     \]
     \ie $\phi = 0$.
 \end{example}
@@ -376,7 +376,7 @@ We begin our discussion with two lemmas.
 	If\/ $T$ is positive, then
 	%% --
 	\begin{equation}\label{eq:b3-2.1}
-	|Tf| \leq T|f| \leq T(\|f\|\cdot \1_{K}) = \|f\|\cdot T(\1_{K}), \quad f \in C(K)\,,
+	|Tf| \leq T|f| \leq T(\|f\|\cdot \1_{K}) = \|f\|\cdot T(\1_{K}), \quad f \in C(K) , 
 	\end{equation}
 	%% --
 	hence $\|T\| = \|T\1_{K}\|$ whenever $T$ is positive.
@@ -426,7 +426,7 @@ For $f \in C_{0}(X)$, $n \in \Z$ we define $f^{[n]} \in C_{0}(X)$ by
 	f^{[n]}(x) = 
 	\begin{cases}
         \mleft(\frac{f(x)}{|f(x)|}\mright)^{n-1}
-        \cdot f(x) & \text{if } f(x) \neq 0\,,\\			
+        \cdot f(x) & \text{if } f(x) \neq 0 , \\			
 			\qquad 0 \rule{0ex}{3ex}& \text{if } f(x) = 0.
 			\end{cases}
 \end{equation}
@@ -560,7 +560,7 @@ The closed principal ideal $\overline{E_{h}}$, which is canonically isomorphic t
 	%% --
 		\begin{equation*}
 		\tilde{T}\tilde{h}^{[n]} = \tilde{T} \circ S_{\tilde{h}}^{n}|\tilde{h}| = \lambda^{n} \cdot S_{\tilde{h}}^{n} \circ \tilde{T}|\tilde{h}| 
-		= \lambda^{n} \cdot S_{\tilde{h}}^{n}\tilde{h} = \lambda^{n} \cdot \tilde{h}^{[n]}\,,
+		= \lambda^{n} \cdot S_{\tilde{h}}^{n}\tilde{h} = \lambda^{n} \cdot \tilde{h}^{[n]} , 
 	\end{equation*}
 	%% --
 	which is precisely $Th^{[n]} = \lambda^{n}h^{[n]}$ for all $n \in \Z$ (see Eq.~\myeqpageref{eq:b3-2.7} and Eq.~\myeqpageref{eq:b3-2.12}). 
@@ -572,7 +572,7 @@ The closed principal ideal $\overline{E_{h}}$, which is canonically isomorphic t
 \item 
     This can be deduced easily from (i) as follows. If
     \[
-    Ah = (\alpha+\im\beta )h \text{ amd } A|h| = \alpha|h|\,,
+    Ah = (\alpha+\im\beta )h \text{ amd } A|h| = \alpha|h| , 
     \] 
     then we have by Part-I, Corollary~\ref{cor:a3-6.4} $ for t \geq 0$,
 	%% --
@@ -582,7 +582,7 @@ The closed principal ideal $\overline{E_{h}}$, which is canonically isomorphic t
 	%% --
     %Hence by (a) $\eu^{-\alpha t}T(t)h^{[n]} = \eu^{\im n\beta t}h^{[n]}$ ($t \geq 0$, $n \in \Z$) which is equivalent to $Ah^{[n]} = (\alpha+\im n\beta)h^{[n]}$.
 	By (i) we have for $t \geq 0 $ and for $n \in \Z$ 
-    \[\eu^{-\alpha t}T(t)h^{[n]} = \eu^{\im n\beta t}h^{[n]}\,, 
+    \[\eu^{-\alpha t}T(t)h^{[n]} = \eu^{\im n\beta t}h^{[n]} ,  
     \] 
     which is equivalent to 
     \[ 
@@ -590,7 +590,7 @@ The closed principal ideal $\overline{E_{h}}$, which is canonically isomorphic t
     \] 
 	If\/ $h$ does not have zeros, then 
     \[
-    \eu^{-\alpha t}T(t) = \eu^{-\alpha t}\eu^{\im\beta  t}S_{h}^{-1}T(t)S_{h} \text{ for every } t \geq 0\,,
+    \eu^{-\alpha t}T(t) = \eu^{-\alpha t}\eu^{\im\beta  t}S_{h}^{-1}T(t)S_{h} \text{ for every } t \geq 0 , 
     \] 
     which is equivalent to the final statement of (ii).
     \end{enumerate}
@@ -618,7 +618,7 @@ For a subset $M$ of\/ $\im \R$ we give the following equivalent conditions.
 		$M$ is imaginary additively cyclic,
 		
 		\item 
-		$M$ is the union of (additive) subgroups of\/ $\im \R$\,,
+		$M$ is the union of (additive) subgroups of\/ $\im \R$ , 
 		
 		\item 
 		$M = \bigcup_{\alpha \in S} \im\alpha\Z$ for some set $S \subseteq \R$.
@@ -784,7 +784,7 @@ Denoting by $A_{n}$ $(n = 0,1,\ldots,k)$ the generator of the semigroup on $I_{n
 %% --
 \begin{enumerate}[\upshape (i)]
     \item 
-    $s(A_{0}) < s(A)$\,,
+    $s(A_{0}) < s(A)$ , 
     
     \item 
     If\/ $n \geq 1$, then $s(A_{n}) = s(A)$ is a first order pole of the resolvent $R(\cdot,A_{n})$. 
@@ -798,8 +798,8 @@ Denoting by $A_{n}$ $(n = 0,1,\ldots,k)$ the generator of the semigroup on $I_{n
 	%% --
 	\begin{equation}\label{eq:b3-2.17}
 	\begin{split}
-		Q_{n} &= \frac{1}{2\pi i}\int_{\gamma} z^{n-1}R(z,A)  \diff{z} \quad (n \in \N)\,, \\
-		Q_{n} &\neq 0 \text{ if } n \leq k \text{ and } Q_{n} = 0 \text{ for } n > k\,, \\
+		Q_{n} &= \frac{1}{2\pi i}\int_{\gamma} z^{n-1}R(z,A)  \diff{z} \quad (n \in \N) ,  \\
+		Q_{n} &\neq 0 \text{ if } n \leq k \text{ and } Q_{n} = 0 \text{ for } n > k ,  \\
 		\rule{0ex}{3ex} Q_{n} &= A^{n-1}Q_{1} \quad (n \in \N); \quad Q_{k} = \lim_{z \to 0}z^{k}\cdot R(z,A).
 	\end{split}
 	\end{equation}
@@ -922,7 +922,7 @@ Then $P\sigma_{b}(A) = \sigma_{b}(A)$ is cyclic.
 	If\/ $Ah = \im\alpha h$ for some $\alpha \in \R$, $h \neq 0$, then $T(t)h = \eu^{\im\alpha t}h$ (by Part-I, Corollary~\ref{cor:a3-6.4}).
 	Hence 
     \[
-    |h| = |\eu^{\im\alpha t}h| = |T(t)h| \leq T(t)|h|\,,
+    |h| = |\eu^{\im\alpha t}h| = |T(t)h| \leq T(t)|h| , 
     \]
     or equivalently, $T(t)|h| - |h| \geq 0$.
 	By Eq.~\myeqpageref{eq:b3-2.18} we have $Q(T(t)|h| - |h|) = 0$.
@@ -1075,7 +1075,7 @@ It is unknown whether there are positive semigroups where $\sigma_{b}(A)$ is not
 	Consider $E = C[-1,0]$ and define $A_{m}$ and $A_{0}$ as follows,
 	%% --
 	\begin{equation}\label{eq:b3-2.23}
-		A_{m}f \coloneqq f', \quad f \in D(A_{m}) = C^{1}[-1,0]\,,
+		A_{m}f \coloneqq f', \quad f \in D(A_{m}) = C^{1}[-1,0] , 
 	\end{equation}
 	%% --
 	%% --
@@ -1087,7 +1087,7 @@ It is unknown whether there are positive semigroups where $\sigma_{b}(A)$ is not
 	%% --
 	\begin{equation}\label{eq:b3-2.25}
 		(T_{0}(t)f)(x) = \begin{cases}
-			f(x+t) & \text{if } x+t \leq 0\,, \\
+			f(x+t) & \text{if } x+t \leq 0 ,  \\
 			f(0) & \text{if } x+t \geq 0.
 		\end{cases}
 	\end{equation}
@@ -1130,12 +1130,12 @@ By Example~\ref{ex:b2-1.22} we have the following equivalence.
 Thus Corollary~\ref{cor:b3-2.12} is applicable if\/ $\phi + r\delta_{0} \geq 0$ for some $r \in \R$.
 Since every eigenvalue of\/ $A_{\phi}$ is an eigenvalue of\/ $A_{m}$ and since 
 \[
-\Kern{\lambda-A_{m}} = \{\alpha e_{\lambda} \colon a \in \C\}\,,
+\Kern{\lambda-A_{m}} = \{\alpha e_{\lambda} \colon a \in \C\} , 
 \]
 the spectral bound $s(A_{\phi})$ is determined by the (unique) real $\lambda \in \R$ such that $e_{\lambda} \in D(A_{\phi})$ or equivalently, $\lambda$ is a solution of the so-called \emph{characteristic equation}
 %% --
 \begin{equation}\label{eq:b3-2.30}
-	\lambda = \phi(e_{\lambda}), \quad \lambda \in \R\,,
+	\lambda = \phi(e_{\lambda}), \quad \lambda \in \R , 
 \end{equation}
 %% --
 since the assumption $\phi + r\delta_{0} \geq 0$ implies that the function $\lambda \mapsto \phi(e_{\lambda})$ is strictly decreasing and $\lim_{\lambda \to \infty}\langle e_{\lambda},\phi \rangle > -\infty$, $\lim_{\lambda \to -\infty}\langle e_{\lambda},\phi \rangle = \infty$ unless $\phi = r_{0}\delta_{0}$ for some $r_{0} \in \R$.)
@@ -1466,7 +1466,7 @@ We now return to the general situation and show that irreducible semigroups poss
 	By (ii) it is even strictly positive, thus $s(A)$ is a first order pole by Remark~\ref{rem:b3-2.15}\,(i).
 	The residue $P$ is a positive operator satisfying 
     \[
-    PE = \Kern{s(A) - A} \text{ and } P'E' = \Kern{s(A) - A'}\,,
+    PE = \Kern{s(A) - A} \text{ and } P'E' = \Kern{s(A) - A'} , 
     \]
     therefore the remaining assertion follows from (ii) and (iv).
     \qedhere
@@ -1530,7 +1530,7 @@ And in case $X$ is compact, a $\phi \geq 0$ satisfying $A'\phi = 0$ always exist
 	\end{equation}
 	It follows that 
     \[%\textstyle
-    \Kern{A + i(\beta - \alpha)} = S_{h}S_{\bar{g}}(\Kern{A}) \neq \{0\}\,,
+    \Kern{A + i(\beta - \alpha)} = S_{h}S_{\bar{g}}(\Kern{A}) \neq \{0\} , 
     \]
     hence $\im (\beta - \alpha) \in P\sigma(A)$.
 	
@@ -1659,7 +1659,7 @@ We give some examples.
 	\item 
 	We assume that the semigroup $(T(t))$ satisfies the hypotheses of Theorem~\ref{thm:b3-3.6} and that it is given by
 	\[
-	(T(t)f)(x) = \int_{X} k(t,x,y)f(y) \diff{\mu}(y)\,,
+	(T(t)f)(x) = \int_{X} k(t,x,y)f(y) \diff{\mu}(y) , 
 	\]
 	where $\mu$ is a positive measure and $k$ is a positive continuous function (see Example~\ref{ex:b3-3.4}\,(ii)).
 	We will show that $P\sigma(A)\cap(s(A) + \im\R) = \{s(A)\}$.
@@ -1682,11 +1682,11 @@ We give some examples.
 	\item 
 	Let $\Omega$ be a domain in $\R^{n}$ and define $L_{0}$ as
 	\[
-	L_{0}f \coloneq \sum_{i,j=1}^{n} a_{ij}f_{ij}'' + \sum_{i=1}^{n}b_{i}f_{i}' + cf\,,
+	L_{0}f \coloneq \sum_{i,j=1}^{n} a_{ij}f_{ij}'' + \sum_{i=1}^{n}b_{i}f_{i}' + cf , 
 	\]
 	with domain 
     \[
-    D(L_{0}) \coloneq \{f \in C_{0}(\Omega) \colon f \in  C^{\infty}, L_{0}f \in C_{0}(\Omega)\}\,,
+    D(L_{0}) \coloneq \{f \in C_{0}(\Omega) \colon f \in  C^{\infty}, L_{0}f \in C_{0}(\Omega)\} , 
     \]
 	where $f_{i}'$ stands for $\partial f/\partial x_{i}$, and $f_{ij}'' = \partial^{2}f/\partial x_{i}\partial x_{j}$.
 	
@@ -1746,7 +1746,7 @@ If we define $u \coloneq |h|$ and $w \coloneq h/|h|$, then Eq.~\myeqpageref{eq:b
 	\item 
 	We consider 
     \[
-    \Omega = \{(x,y) \in \R^{2} \colon 1 < (x^{2} + y^{2})^{1/2} < 2\}\,,
+    \Omega = \{(x,y) \in \R^{2} \colon 1 < (x^{2} + y^{2})^{1/2} < 2\} , 
     \]
     and the second order differential operator $L_{0}$ given by
     \index{differential operator}
@@ -1788,7 +1788,7 @@ As we have seen in Section~\ref{sec:b3-2} the boundary spectrum of many positive
 However, there are hardly any restrictions on the set 
 %% --
 \[
-\lambda \in \{ \sigma(A) \colon \Re(\lambda) < s(A)\}\,,
+\lambda \in \{ \sigma(A) \colon \Re(\lambda) < s(A)\} , 
 \] 
 %% --
 except that it is symmetric with respect to the real axis.
@@ -1807,7 +1807,7 @@ If\/ $A$ is the generator of a semigroup of lattice homomorphisms, then $\sigma(
 We prove the assertion concerning $A\sigma(A)$ and $P\sigma(A)$.
 	Assume that 
     \[
-    Ah = (\alpha + \im\beta)h\,, \alpha,\beta \in \R\,, h \neq 0\,,
+    Ah = (\alpha + \im\beta)h ,  \alpha,\beta \in \R ,  h \neq 0 , 
     \]
     then by Part-I, Corollary~\ref{cor:a3-6.4}
     \[
@@ -1816,7 +1816,7 @@ We prove the assertion concerning $A\sigma(A)$ and $P\sigma(A)$.
 	Since $T(t)$ is a lattice homomorphism we have 
     \[
     T(t)|h| = |T(t)h| = \eu^{\alpha t}|h|\, (t \geq 0)
-    \quad\text{or}\quad A|h| = \alpha|h|\,,
+    \quad\text{or}\quad A|h| = \alpha|h| , 
     \] 
     hence by Theorem~\ref{thm:b3-2.4}\,(ii)
     \[
@@ -1847,9 +1847,9 @@ Therefore we will assume that $(T(t))$ has the following form (\cf Theorem~\ref{
 %% --
 where 
 \[
-\phi = (\phi_{t}): \R_{+} \times K \to K\,,\ \phi_{t+s}
+\phi = (\phi_{t}): \R_{+} \times K \to K , \ \phi_{t+s}
 =\phi_{t}\circ\phi_{s}  
-\ (t,\,s \geq 0)\,,
+\ (t,\,s \geq 0) , 
 \]
 is a continuous semiflow and 
 \[
@@ -1892,19 +1892,19 @@ Studying the spectrum of the semigroup given by Eq.~\myeqpageref{eq:b3-4.1} we d
 %% --
 \begin{equation}\label{eq:b3-4.3}
 	\begin{split}	 
-		&\{\lambda \in \C \colon \Re(\lambda) < \underline{c}(h,\phi)\}\,, \\
-		&\{\lambda \in \C \colon \underline{c}(h,\phi) \leq \Re(\lambda) \leq \overline{c}(h,\phi)\}\,, \\
+		&\{\lambda \in \C \colon \Re(\lambda) < \underline{c}(h,\phi)\} ,  \\
+		&\{\lambda \in \C \colon \underline{c}(h,\phi) \leq \Re(\lambda) \leq \overline{c}(h,\phi)\} ,  \\
 		&\{\lambda \in \C \colon \overline{c}(h,\phi) < \Re(\lambda)\}.
 	\end{split}
 \end{equation}
 %% --
 The quantities $\underline{c}(h,\phi)$ and $\overline{c}(h,\phi)$ are defined as follows.
 \begin{align}\label{eq:b3-4.4}\notag
-		\overline{c}(h,\phi) &\coloneq \lim_{t\to\infty} \overline{c}_{t}(h,\phi) = \inf_{t>0} \overline{c}_{t}(h,\phi)\,, \\ \notag
+		\overline{c}(h,\phi) &\coloneq \lim_{t\to\infty} \overline{c}_{t}(h,\phi) = \inf_{t>0} \overline{c}_{t}(h,\phi) ,  \\ \notag
         &\text{ where }
-		\overline{c}_{t}(h,\phi) \coloneq \sup_{x\in K} \mleft\{\frac{1}{t}\int_{0}^{t} h(\phi(s,x)) \ds \mright\}\,,\notag
+		\overline{c}_{t}(h,\phi) \coloneq \sup_{x\in K} \mleft\{\frac{1}{t}\int_{0}^{t} h(\phi(s,x)) \ds \mright\} , \notag
         \\& \\ \notag
-		\underline{c}(h,\phi) &\coloneq \lim_{t\to\infty} \underline{c}_{t}(h,\phi) = \sup_{t>0} \underline{c}_{t}(h,\phi)\,, \\ \notag
+		\underline{c}(h,\phi) &\coloneq \lim_{t\to\infty} \underline{c}_{t}(h,\phi) = \sup_{t>0} \underline{c}_{t}(h,\phi) ,  \\ \notag
         &\text{ where } 
 		\underline{c}_{t}(h,\phi) \coloneq \inf_{x\in K} \mleft\{\frac{1}{t}\int_{0}^{t} h(\phi(s,x)) \ds\mright\} .
 \end{align}
@@ -1938,12 +1938,12 @@ Before we state the general result (see Theorem~\ref{thm:b3-4.4}) we give some t
 	Consider again $K = [0,\infty]$ and define a semiflow by
 	\[
 	\phi(t,x) \coloneq \begin{cases} 
-		x - t & \text{if } x \geq t \,,\\
+		x - t & \text{if } x \geq t  , \\
 		0 & \text{if } x < t .
 	\end{cases} \quad (\infty - t = \infty)
 	\]
 	Then $K_{t} = K$ for all $t$, hence $K_{\infty} = K$ and \[
-    \sigma(A) = \{\lambda \in \C \colon \Re(\lambda) \leq 0\}\,, \ R\sigma(A) = \{\lambda \in \C \colon \Re(\lambda) < 0\} \cup \{0\} .
+    \sigma(A) = \{\lambda \in \C \colon \Re(\lambda) \leq 0\} ,  \ R\sigma(A) = \{\lambda \in \C \colon \Re(\lambda) < 0\} \cup \{0\} .
     \]
 	
 	\item 
@@ -1962,7 +1962,7 @@ Before we state the general result (see Theorem~\ref{thm:b3-4.4}) we give some t
 	Consider on $K = [-1,1]$ the flow $\phi$ given by
 	\[
 	\phi(t,x)\coloneq \begin{cases}
-		-1 & \text{if } x < 0 \text{ and } t > -\frac{x+1}{x} \,, \\
+		-1 & \text{if } x < 0 \text{ and } t > -\frac{x+1}{x}  ,  \\
 		\frac{x}{1+tx} & \text{otherwise.}
 	\end{cases}
 	\]
@@ -2011,8 +2011,8 @@ Before we state the general result (see Theorem~\ref{thm:b3-4.4}) we give some t
 	%% --
 	\begin{equation}\label{eq:b3-4.6}
 		\begin{aligned}
-			\|f_{n}\| \leq 1 &, \quad {f_{n}|}_{K_{n+1}} = 0\,, \\
-			f_{n}(\phi(t,y_{n})) &= 0 \text{ for } 0 \leq t \leq n-(1+\delta) \text{ and } n+\delta \leq t \leq n+1\,, \\
+			\|f_{n}\| \leq 1 &, \quad {f_{n}|}_{K_{n+1}} = 0 ,  \\
+			f_{n}(\phi(t,y_{n})) &= 0 \text{ for } 0 \leq t \leq n-(1+\delta) \text{ and } n+\delta \leq t \leq n+1 ,  \\
 			f_{n}(\phi(t,y_{n})) &= \eu^{\im\beta  t} \text{ for } n-1 \leq t \leq n .
 		\end{aligned}
 	\end{equation}
@@ -2136,8 +2136,8 @@ Example~\ref{ex:b3-4.3}\,(iv) shows that (i) and (ii) do not exclude each other.
 	%% --
 	\begin{equation}\label{eq:b3-4.11}
 		\begin{aligned}
-			&-\infty \leq \underline{t}_{x} < 0 < \overline{t}_{x} \leq \infty\,, \\
-			&\phi_{0}(t,x) \text{ is defined if } \underline{t}_{x} < t < \overline{t}_{x}\,, \\
+			&-\infty \leq \underline{t}_{x} < 0 < \overline{t}_{x} \leq \infty ,  \\
+			&\phi_{0}(t,x) \text{ is defined if } \underline{t}_{x} < t < \overline{t}_{x} ,  \\
 			&\text{if } \overline{t}_{x} < \infty \text{ (}\underline{t}_{x} > -\infty\text{)} \text{ then } |\phi_{0}(t,x)| \to \infty \text{ as } t\uparrow\overline{t}_{x} \text{ (}t\downarrow\underline{t}_{x}\text{)}.
 		\end{aligned}
 	\end{equation}
@@ -2151,7 +2151,7 @@ Example~\ref{ex:b3-4.3}\,(iv) shows that (i) and (ii) do not exclude each other.
 	\begin{equation}\label{eq:b3-4.12}
 		\begin{aligned}
 			A_{1}f = (F|\text{grad }f) \coloneq 
-            {  \sum_i F_{i} \cdot \partial_{i}f} \,, \\
+            {  \sum_i F_{i} \cdot \partial_{i}f}  ,  \\
 			D(A_{1}) \coloneq \{f \in C^1 \colon \supp(f)  \text{ is compact}\}.
 		\end{aligned}
 	\end{equation}
@@ -2174,7 +2174,7 @@ Example~\ref{ex:b3-4.3}\,(iv) shows that (i) and (ii) do not exclude each other.
 	Then we define $\phi: \R_{+} \times \overline{\Omega} \to \overline{\Omega}$ as 
 	%% --
 	\[\phi(t,x) \coloneq \begin{cases}
-		\phi_{0}(t,x) & \text{if } 0 \leq t < s_{x} \,, \\
+		\phi_{0}(t,x) & \text{if } 0 \leq t < s_{x}  ,  \\
 		\phi_{0}(s_{x},x) & \text{if } t \geq s_{x} .
 	\end{cases}\]
 	%% --
@@ -2262,13 +2262,13 @@ Then the following assertions hold.
 %% --
 \begin{enumerate}[\upshape (i)]
 \item 
-	$\{\lambda \in \C \colon \Re(\lambda) > \overline{c}(h,\phi)\} \subset \rho(A)$\,,
+	$\{\lambda \in \C \colon \Re(\lambda) > \overline{c}(h,\phi)\} \subset \rho(A)$ , 
 		
 \item 
-	$\overline{c}(h,\phi)$ and $\underline{c}(h,\phi)$ are spectral values\,,
+	$\overline{c}(h,\phi)$ and $\underline{c}(h,\phi)$ are spectral values , 
 		
 \item 
-	If\/ $\phi(t,x_{0}) = x_{0}$ for every $t \geq 0$, then $h(x_{0}) \in R{\sigma}(A)$\,,
+	If\/ $\phi(t,x_{0}) = x_{0}$ for every $t \geq 0$, then $h(x_{0}) \in R{\sigma}(A)$ , 
 		
 \item 
 Assume $x_{0}$ has a finite orbit, \ie $\phi(\R_{+},x_{0}) = \phi([0,T],x_{0})$ for some $T < \infty$ and 
@@ -2397,7 +2397,7 @@ We are now going to apply the results obtained so far to the special case where 
 	If\/ $0 < \beta < 2\pi/T$, then the assumption $T/2 \leq r \leq T$ implies that there exists a neighborhood $U$ of\/ $\lambda_{0} \coloneq \im\beta$ such that the functions $\lambda \mapsto (1 - \exp(-\lambda r_{x}))^{-1}$ are uniformly bounded on $U$, by $M$ say.
     Then from Eq.~\myeqpageref{eq:b3-4.15} we can conclude that 
     \[
-    \|R(\lambda,A)f\| \leq M\left(\int_{0}^{r} \left|\eu^{-\lambda t}\right|\dt\right)\|f\| \text{ for } \lambda \in U\,,\ \Re(\lambda) > 0\,,
+    \|R(\lambda,A)f\| \leq M\left(\int_{0}^{r} \left|\eu^{-\lambda t}\right|\dt\right)\|f\| \text{ for } \lambda \in U , \ \Re(\lambda) > 0 , 
     \]
     therefore $\lambda_{0} = \im\beta \in \rho(A)$.
     \qedhere
@@ -2448,8 +2448,8 @@ For more details and the proof of the following result we refer to \textcite{are
 		$\sigma(A) = \sigma_{1}\cup\sigma_{2}\cup\sigma_{3}$ where the sets $\sigma_{i}$ are defined as follows.
 		%% --
 		\[\begin{aligned}
-			\sigma_{1} &\coloneq \overline{\{\hat{h}(x) + \im\cdot 2\pi k/\tau_{x} \colon x \in X, 0 < \tau_{x} < \infty\}}\,,\\
-			\sigma_{2} &\coloneq \overline{\{h(x) \colon x \in X, \tau_{x} = 0\}}\,, \\
+			\sigma_{1} &\coloneq \overline{\{\hat{h}(x) + \im\cdot 2\pi k/\tau_{x} \colon x \in X, 0 < \tau_{x} < \infty\}} , \\
+			\sigma_{2} &\coloneq \overline{\{h(x) \colon x \in X, \tau_{x} = 0\}} ,  \\
 			\sigma_{3} &\coloneq \{\lambda \in \C \colon \lambda + \im\R \subseteq \sigma(A)\}
 		\end{aligned}\]
 		
