@@ -54,7 +54,7 @@ More precisely, the following statements are equivalent.
 $ \|T(t)f\| \to 0 $ for every $ f \in \C^{n} $ ,
 
 \item 
-$ \|T(t)\| \leq M \eu^{-\omega t} $ for some $M \geq 1$ and  $\omega > 0 $\,.
+$ \|T(t)\| \leq M \eu^{-\omega t} $ for some $M \geq 1$ and  $\omega > 0 $. 
 \end{enumerate}
 %% --
 Moreover, these statements hold if and only if
@@ -170,7 +170,7 @@ the Laplacian $\Delta$ on $C_0(\R^{n})$ generates a bounded holomorphic semigrou
 \index{operator!Laplacian}
 %% --
 \[
-T(t)f(x) = (4\pi t)^{-n/2} \int_{\R^{n}} \eu^{-|x-y|^{2}/4t} f(y)  \dy\,.
+T(t)f(x) = (4\pi t)^{-n/2} \int_{\R^{n}} \eu^{-|x-y|^{2}/4t} f(y)  \dy .
 \]
 %% --
 This semigroup is not exponentially stable because $0 \in \sigma(\Delta)$ ($\Im(\Delta) \not= C_0(\R^{n})$); see Corollary~\ref{cor:a4-1.5} below. To see that the semigroup is (uniformly) stable, observe that for every fixed $x\in\R^n$, the kernel 
@@ -253,7 +253,7 @@ This follows from
 \begin{equation}\label{eq:a4-1.1}
 \begin{split}
 \int_0^t \eu^{-\lambda s} f(s) \ds &= \eu^{-(\lambda-\mu)t} \int_{0}^{t} \eu^{\mu s} f(s)  \ds \\ 
-&+ (\lambda - \mu) \int_{0}^{t} \eu^{-(\lambda-\mu)s} \int_{0}^{s} \eu^{\mu r} f(r) \,\diff{r} \ds \,. 
+&+ (\lambda - \mu) \int_{0}^{t} \eu^{-(\lambda-\mu)s} \int_{0}^{s} \eu^{\mu r} f(r) \,\diff{r} \ds  . 
 \end{split}
 \end{equation}
 %% --
@@ -292,7 +292,7 @@ and
 \begin{enumerate}[(i)]
 \item 
 $\displaystyle\quad
-\omega(f) = \inf\{\Re(\lambda)\colon\int_{0}^{\infty} \|\eu^{-\lambda t} T(t)f\|  \dt \text{ exists}\}\,.$
+\omega(f) = \inf\{\Re(\lambda)\colon\int_{0}^{\infty} \|\eu^{-\lambda t} T(t)f\|  \dt \text{ exists}\} .$
 \end{enumerate}
 %% --
 If\/ $\ker(A) = \{0\}$, then for every $f \in D(A)$ we have
@@ -301,7 +301,7 @@ If\/ $\ker(A) = \{0\}$, then for every $f \in D(A)$ we have
 \item 
 $\displaystyle\quad
 \,\omega(f) = \inf\{\Re(\lambda)\colon\int_{0}^{\infty} \eu^{-\lambda t} T(t)Af  \dt
-\text{ exists}\}\,.$
+\text{ exists}\} .$
 \end{enumerate}
 %% --
 \end{theorem}
@@ -354,7 +354,7 @@ it follows that $\int_{0}^{\infty} \eu^{-\lambda t} T(t)Af  \dt$ exists.
 Therefore, 
 %%--
 \[ 
-c \coloneqq \inf\{\Re(\lambda)\colon\int_{0}^{\infty} \eu^{-\lambda t}T(t)Af  \dt \text{ exists}\} \leq \omega(f)\,.
+c \coloneqq \inf\{\Re(\lambda)\colon\int_{0}^{\infty} \eu^{-\lambda t}T(t)Af  \dt \text{ exists}\} \leq \omega(f) .
 \]
 %%--
 Next, we show that $c < 0$ implies $c = \omega(f)$. 
@@ -688,6 +688,7 @@ The hypothesis $\| R(\lambda, A) \| \leq C | \lambda |^{n-2}$ is invariant under
 That is, the resolvent $R(\lambda, -b+A)$ of the generator $-b+A$ of the rescaled semigroup $\eu^{-bt} T(t)$ satisfies
 $\| R(\lambda, -b+A) \| \leq \tilde{C} | \lambda |^{n-2}$ for every $\lambda \in \C$ with $\Re(\lambda) > q-b$ and $| \Im(\lambda) | > a+2b$, for a suitable constant $\tilde{C}$. 
 Therefore, we may assume, without loss of generality, that $b \coloneq  \max(\omega_{0}(A), q) < 0$. 
+
 Let $\omega_{0}(A) < p < 0$, and set $p' \coloneq  \max\{p, q\} < 0$. 
 Then, for every $f \in D(A)$ , the inversion formula for the Laplace transform yields 
 \begin{equation} \label{eq:a4-1.12}
@@ -917,7 +918,7 @@ Furthermore the following statements are equivalent,
 \begin{proof}
 If\/ $(T(t))_{t \geq 0}$ is stable, then by Theorem~\ref{thm:a4-1.13}, $\ker(A) = \{0\}$, and
 \[{
-\int_{0}^{t} T(s)Af  \ds = T(t)f - f \to -f \ \text{as} \ t \to \infty\,.
+\int_{0}^{t} T(s)Af  \ds = T(t)f - f \to -f \ \text{as} \ t \to \infty .
 }\]
 Hence, $(a) \Rightarrow (b)$.
 
@@ -968,7 +969,7 @@ If\/ $A$ is the generator of a stable semigroup
 $(T(t))_{t \geq 0}$ on a Banach space $E$, then by the previous theorem,
 \[{
 \Image{A} \subseteq \left\{f \in E\colon\int_{0}^{\infty} T(t)f  \dt 
-\text{ exists} \right\}  \eqqcolon  H\,.
+\text{ exists} \right\}  \eqqcolon  H .
 }
 \]
 If\/ $g \in H$, then $\int_{0}^{\infty} T(t)g  \dt \in D(A)$ and $A \int_{0}^{\infty} T(t)g  \dt = -g$. 
@@ -1031,7 +1032,7 @@ Since $F(\cdot)$ is locally integrable, it follows that
 Thus, the solution $u(t)$ of Eq.~\myeqpageref{eq:a4-2.1} is given by
 %% --
 \begin{equation}\label{eq:a4-2.2}
-u(t) = T(t)f + \int_{0}^{t} T(t-s)F(s)  \ds\,.
+u(t) = T(t)f + \int_{0}^{t} T(t-s)F(s)  \ds .
 \end{equation}
 %% --
 %%%
@@ -1170,7 +1171,7 @@ admits a unique $p$-periodic solution with initial value $(\Id - T(p))^{-1} \lef
 As a consequence of Theorem~\ref{thm:a4-1.13}  and Corollary~\ref{cor:a3-6.4},  a uniformly stable semigroup admits at most one $f \in E$ satisfying 
 %% --
 \[
-(\Id-T(p))f = \int_{0}^{p} T(p-s)F(s)  \ds\,.
+(\Id-T(p))f = \int_{0}^{p} T(p-s)F(s)  \ds .
 \]
 %% --
 This fact, together with Lemma~\ref{lem:a4-2.2}, is used to prove the following theorem.
@@ -1181,7 +1182,7 @@ This fact, together with Lemma~\ref{lem:a4-2.2}, is used to prove the following 
 Let $A$ be the generator of a uniformly stable semigroup $(T(t))_{t \geq 0}$ and let $F(\cdot)$ be a $p$-periodic, locally integrable function such that 
 %% --
 \[{
-(\Id - T(p))f = \int_{0}^{p} T(p-s)F(s)  \ds \ \text{ for some } \ f \in E\,.
+(\Id - T(p))f = \int_{0}^{p} T(p-s)F(s)  \ds \ \text{ for some } \ f \in E .
 }
 \]
 %% --
@@ -1233,7 +1234,7 @@ u(t,x) = F(x+t)\int_{x+t}^{\infty} r(s) \ds + F(x+t)\int_{x}^{x+t} r(s) \ds = F(
 Finally, for every solution $v(t,\cdot)$ of (*), Theorem~\ref{thm:a4-2.4} implies that
 %% --
 \[
-\sup\left\{\left|v(t,x) - F(x+t)\int_{x}^{\infty} r(s)  \ds\right| \colon x \in \R_{+}\right\} \to 0 \quad \text{as} \quad t \to \infty\,.
+\sup\left\{\left|v(t,x) - F(x+t)\int_{x}^{\infty} r(s)  \ds\right| \colon x \in \R_{+}\right\} \to 0 \quad \text{as} \quad t \to \infty .
 \]
 %% --
 \end{example}
