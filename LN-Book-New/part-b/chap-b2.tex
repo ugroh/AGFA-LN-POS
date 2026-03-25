@@ -1256,9 +1256,9 @@ The dominated convergence theorem and Eq.~\myeqpageref{eq:b2-2.11} imply that
 \begin{align*}
 \left.\frac{\diff{}}{\dt}\right|_{t=0}\, \langle |T(t)f|,\phi \rangle = \lim_{t \downarrow 0}\, \langle k_{t},\phi \rangle = \left\langle \Re\left[\left(\widehat{\sign} \bar{f}\right)(Af)\right],\phi \right\rangle .
 %\langle \Re[(\widehat{\sign} \bar{f})(Af)],\phi \rangle
-&&\qedhere
+\tag*{\qedsymbol}%&&\qedhere
 \end{align*}
-%% --
+\let\qedsymbol\relax
 \end{proof}
 %% --
 \begin{proof}[Proof of Theorem~\ref{thm:b2-2.5}]
@@ -1536,9 +1536,9 @@ Thus
 \langle \Re[(\widehat{\sign} \bar{f})Af],\phi \rangle &= \int_{-1}^{0} |f(x)|'\phi(x)\, \dx = \int_{0}^{1} \phi(x)\, \diff{|f(x)|} = \\
 &= \phi(0)|f(0)| - \phi(-1)|f(-1)| - \int_{-1}^{0} |f(x)|\,\diff{\phi(x)}  \\
 &= \langle |f|,A'_{\max}\phi \rangle.
-&&\qedhere
+\tag*{\qedsymbol}%&&\qedhere
 \end{align*}
-%% --
+\let\qedsymbol\relax
 \end{proof}
 %% --
 \begin{example}\label{ex:b2-2.13}

@@ -1102,9 +1102,9 @@ Hence
 r(R(\lambda,A)) &= \sup \left\{|\lambda-\mu|^{-1} \colon \mu \in \sigma(A)\right\} \\
 & = 
 \left(\inf \{|\lambda-\mu| \colon \mu \in \sigma(A)\}\right)^{-1} = \text{dist}(\lambda,\sigma(A))^{-1}.
-&&\qedhere
+\tag*{\qedsymbol}%&&\qedhere
 \end{align*}
-%%
+\let\qedsymbol\relax
 \end{proof}
 %% --
 \begin{proof}[Proof of Theorem~\ref{thm:a2-1.20}  ]
@@ -1182,9 +1182,9 @@ All together we obtain for $\lvert r\rvert \geq r_{0}$,
     &\leq \frac{(s')^{n}}{n!}\int_{0}^{s'} M \eu^{(\omega - a)t}\,\dt
           + \tfrac{2}{3}\epsilon^{n+1} \\
     &\leq N \cdot \frac{(s')^n}{n!} + \tfrac{2}{3}\epsilon^{n+1} \\
-   &\leq \epsilon^{n+1}. &&\qedhere
+   &\leq \epsilon^{n+1}. \tag*{\qedsymbol}%&&\qedhere
 \end{align*}
-%% --
+\let\qedsymbol\relax
 \end{proof}
 %% --
 A complete characterization of eventually norm continuous semigroups in terms of their generator seems not to be known.
@@ -1699,8 +1699,9 @@ U(A+C)U^{-1} &= U(A - \lambda+C)U^{-1} + \lambda \\
 &= U(A - \lambda)[\Id - BR(\lambda,A)]U^{-1} + \lambda \\
 &= U(A - \lambda) + \lambda \\
 &= A - \lambda + B + \lambda \\
-&= A + B.	&&\qedhere
+&= A + B.	\tag*{\qedsymbol}%&&\qedhere
 \end{align*}
+\let\qedsymbol\relax
 \end{proof}
 %% --
 \begin{corollary}\label{cor:a2-1.32}

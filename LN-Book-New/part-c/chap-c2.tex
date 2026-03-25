@@ -812,9 +812,9 @@ Then
 	\leq \lim_{t \to 0} 1/t \langle T(t)|f| - |f|, \phi \rangle\\
 	&= \lim_{t \to 0} \langle |f|, 1/t(T(t)'\phi - \phi) \rangle
 	= \langle |f|, A'\phi \rangle.
-&&\qedhere
+\tag*{\qedsymbol}%&&\qedhere
 \end{align*}
-%%--
+\let\qedsymbol\relax
 \end{proof}
 %%
 Let $D(A')_{+} = E'_{+} \cap D(A')$. 
@@ -1274,7 +1274,7 @@ $(T(t))_{t \geq 0}$ is a semigroup which is \emph{not positive}. Nevertheless it
 \ie
 %% --
 \begin{equation}\label{eq:c2-3.10}
-\langle(\sign  f) Af,\phi\rangle = \langle|f|,A'\phi \rangle \quad \text{for all } f \in D(A), 0 \leq \phi \in D(A').
+\langle(\sign  f) Af,\phi\rangle = \langle|f|,A'\phi \rangle \quad \text{for all } f \in D(A), 0 \leq \phi \in D(A'). 
 \end{equation}
 %% --
 %% --
@@ -1297,9 +1297,9 @@ Hence for $f \in D(A)$,
 &= |f(1)|\phi(1) - |f(0)|\phi(0) - \int_{0}^{1} |f(x)| \, \phi'(x) \dx\\
 &= |f(1)|\phi(1) - |f(0)|\phi(0) + \langle|f|,A'\phi\rangle\\
 &= \langle|f|,A'\phi\rangle
-&&\qedhere
+\tag*{\qedsymbol}%&&\qedhere
 \end{align*}
-%% --
+\let\qedsymbol\relax
 \end{proof}
 %% --
 \begin{remark}\label{rem:c2-3.15}
@@ -1439,9 +1439,9 @@ Hence,
 &+ [f''\phi]_{-\infty}^{0} - [f''\phi]_{0}^{\infty} \quad \text{(since $\phi''(0)=\phi'(0)=0$)}\\[1ex]
 &= \langle(\sign  f) Bf,\phi\rangle + 2f''(0)\phi(0)\\[1ex]
 &< \langle(\sign  f) Bf,\phi\rangle \quad \text{(since $f''(0)\phi(0) = f''(0) = -2$)}.
-&&\qedhere
+\tag*{\qedsymbol}%&&\qedhere
 \end{align*}
-%% --
+\let\qedsymbol\relax
 \end{proof}
 %% --
 We now show that $B$ satisfies Kato's inequality for positive elements, though, \ie
@@ -1501,8 +1501,9 @@ Conversely, if Eq.~\myeqpageref{eq:c2-4.2} holds, then
 |S(t)f| &= \lim_{n \to \infty} |((n/t)R(n/t,B))^{n}f|\\
 &\leq \lim_{n \to \infty} ((n/t)R(n/t,A))^{n}|f|\\
 &= T(t)|f| \quad (t \geq 0, f \in E).
-&&\qedhere
+\tag*{\qedsymbol}%&&\qedhere
 \end{align*}
+\let\qedsymbol\relax
 \end{proof}
 %%--
 One can describe domination by an inequality for the generators in a manner analogous to the characterization of positive semigroups in Section~\ref{sec:c3-1}, however, no positive subeigenvectors are needed here.

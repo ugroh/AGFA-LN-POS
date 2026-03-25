@@ -179,7 +179,7 @@ Therefore $\int_{0}^{\infty} \eu^{-\lambda s}T(s)f \ds$ exists in $E$ for every 
 As we observed in Proposition~\ref{prop:a1-1.11}, this implies $\lambda \in \rho(A)$.
 Therefore $\TT = (T(t))_{t\geq 0}$ is a semigroup having $s(A) = -1$, but $\omega_{0}(\TT) = 0$.
 %% --
-\begin{example}\label{ex:a3-1.4}(Hilbert space, \textcite{zabczyk:1975})
+\begin{example}\label{ex:a3-1.4}[Hilbert space, \textcite{zabczyk:1975}]
 %% --
 For every $n \in \N$ consider the $n$-dimensional Hilbert space $H_{n} \coloneqq \C^{n}$ and operators $A_{n} \in \mathcal{L}(H_{n})$ defined by the matrices
 %% --
@@ -285,7 +285,7 @@ $\rho(A)$ and its resolvent
 which is a holomorphic map from $\rho(A)$ into $\mathcal{L}(E)$.
 In contrast to the finite dimensional situation, where a linear operator fails to be surjective if and only if it fails to be injective, we now have to distinguish different cases of \emph{non-invertibility} of\/ $\lambda - A$.
 This distinction gives rise to a subdivision of\/ $\sigma(A)$ into different subsets.
-We point out that these subsets need not be disjoint, but ur definitions are
+We point out that these subsets need not be disjoint, but our definitions are
 justified by the fact that for each of the following subsets of\/ $\sigma(A)$ there exist canonical constructions converting the corresponding spectral values into eigenvalues (see Proposition~\ref{prop:a3-2.2}\,(ii) and Proposition~\ref{prop:a3-4.4} below).
 %% --
 \begin{definition}\label{def:a3-2.1}
@@ -625,7 +625,7 @@ The final assertion on the pole order follows from the identities
 V_{-n} = ((\lambda_{0}-\alpha)^{-1}R(\lambda_{0},A))^{n-1}U_{-n} \quad (n \in \N) ,
 \]
 %% --
-where $U_{n}$, \resp $V_{n}$ stand for the $ n $-th coefficient in the Laurent series of\/ $R(\cdot,A)$, \resp $R(\cdot,R(\lambda_{0},A))$ at $\alpha$, \resp $(\lambda_{0}-\alpha)^{-1}$.
+where $U_{- n}$, \resp $V_{- n}$ stand for the $ n $-th coefficient in the Laurent series of\/ $R(\cdot,A)$, \resp $R(\cdot,R(\lambda_{0},A))$ at $\alpha$, \resp $(\lambda_{0}-\alpha)^{-1}$.
 This has already been proved for $n = 1$ and follows for $n > 1$ by induction using the relations
 %% --
 \[
@@ -2165,8 +2165,9 @@ Then Eq.~\myeqpageref{eq:a3-7.6} implies
 \begin{align*}
 \Id &= \sum_{m\in\Z} \check{\phi_{0}}(m\pi)T(m\pi) \\
 &= \sum_{m\in\Z} (\check{\psi_{0}}(m\pi) + \check{\psi_{0}}((m+1)\pi))T(m\pi) \\
-&= \left[ \sum_{m\in\Z} \check{\psi_{0}}(m\pi)T(m\pi) \right] (\Id + T(\pi)) . &&\qedhere
+&= \left[ \sum_{m\in\Z} \check{\psi_{0}}(m\pi)T(m\pi) \right] (\Id + T(\pi)) . \tag*{\qedsymbol}%&&\qedhere
 \end{align*}
+\let\qedsymbol\relax
 \end{proof}
 %% --
 In the rest of this section we discuss the behavior of the single spectral values $\lambda$ of\/ $T(t)$, $t > 0$.
@@ -2190,7 +2191,7 @@ Then the Fourier series is Cesàro summable to $\xi$ in every point $t \in (0,2\
 Moreover one has
 %% --
 \begin{equation}\label{eq:a3-7.8}
-\frac{1}{2}(\xi(0) + \xi(2\pi)) = C_{1}\text{-}\sum_{k\in\Z} \xi_{n} \coloneqq \lim_{N\to\infty} \frac{1}{N}\sum_{n=0}^{N-1}(\sum_{k=-n}^{n} \xi_{k}) .
+\frac{1}{2}(\xi(0) + \xi(2\pi)) = C_{1}\text{-}\sum_{k\in\Z} \xi_{n} \coloneqq \lim_{N\to\infty} \frac{1}{N}\sum_{n=0}^{N-1}\mleft( \sum_{k=-n}^{n} \xi_{k} \mright) .
 \end{equation}
 %% --
 This result enables us to prove the following proposition.
