@@ -151,14 +151,14 @@ for all $f \in E$.
 Conversely, assume that $T$ is an $N^{+}$-contraction and let $f \geq 0$. 
 Then 
 \[
-\|(Tf)^{-}\| = N^{+}(T(-f)) \leq N^{+}(-f) = \|f^{-}\| = 0\,.
+\|(Tf)^{-}\| = N^{+}(T(-f)) \leq N^{+}(-f) = \|f^{-}\| = 0 .
 \]
 Hence $(Tf)^{-} = 0$; \ie $Tf \geq 0$. 
 We have proved that $T$ is positive. 
 In particular, $|Tf| \leq T|f|$ for all $f \in E$. 
 Hence 
 \[
-\|Tf\| = \|\,|Tf|\,\| \leq \|T|f|\,\| \leq N^{+}(T|f|) \leq N^{+}(|f|) = \|f\| \text{ for all } f \in E\,.
+\|Tf\| = \|\,|Tf|\,\| \leq \|T|f|\,\| \leq N^{+}(T|f|) \leq N^{+}(|f|) = \|f\| \text{ for all } f \in E .
 \]
 So $T$ is a contraction.
 \end{proof}
@@ -170,7 +170,7 @@ So $T$ is a contraction.
 \item \label{ex:c2-1.5-1}
 Consider the second derivative with Dirichlet boundary condition on $E = C_{0}(0,1)$; \ie we let $Af = f''$ with domain 
 \[
-D(A) \coloneq \{f \in C^{2}[0,1] \colon f(0) = f(1) = f''(0) = f''(1) = 0\}\,.
+D(A) \coloneq \{f \in C^{2}[0,1] \colon f(0) = f(1) = f''(0) = f''(1) = 0\} .
 \]
 $A$ is dispersive. 
 In fact, let $f \in D(A)$. 
@@ -259,7 +259,7 @@ Moreover,
 In fact, the Fourier transform $f \mapsto \hat{f}$ is a bijection from $\mathcal{S}(\R^{n})$ onto $\mathcal{S}(\R^{n})$.
 But $[(\Id - \Delta)f]^{\widehat{\ }} = M\hat{f}$ where 
 \[
-(Mg)(y) = (1 + \sum_{i=1}^{n} y_{i}^{2})g(y), g \in \mathcal{S}(\R^{n}))\,.
+(Mg)(y) = (1 + \sum_{i=1}^{n} y_{i}^{2})g(y), g \in \mathcal{S}(\R^{n})) .
 \]
 It follows from Eq.~\myeqpageref{eq:c2-1.3} that $(\Id - A)D(A)$ is dense in $E$. So the claim follows from Corollary~\ref{cor:c2-1.3}.
 \end{proof}
@@ -345,7 +345,7 @@ For example, this is the case if the boundary $\partial\Omega$ is $C^{2}$ (see \
 Let $A$ be given by 
 \[
 Af = \Delta f\quad\text{on}\quad 
-D(A) \coloneq \{f \in C^{2}(\Omega) \cap C_{0}(\Omega) \colon \Delta f \in C_{0}(\Omega)\}\,.
+D(A) \coloneq \{f \in C^{2}(\Omega) \cap C_{0}(\Omega) \colon \Delta f \in C_{0}(\Omega)\} .
 \]
 Then $A$ is closable and the closure of\/ $A$ is the generator of a positive contraction semigroup.
 %% --
@@ -367,18 +367,18 @@ g(x) & \text{ if } x \in \Omega\ \\
 \]
 %g(x) \right\{
 %\text{ if }  x \in \Omega\\
-%0 \text{ if } x \not\in \Omega \left.\,.
+%0 \text{ if } x \not\in \Omega \left. .
 Then $\bar{g} \in \mathcal{S}(\R^n)$.
 By  Eq.~\myeqpageref{eq:c2-1.3}, there exists $\bar{f} \in \mathcal{S}(\R^n)$ such that $\bar{f} - \Delta\bar{f} = \bar{g}$.
 Consider the function $b \in C(\partial\Omega)$, given by, $b(x) = \bar{f}(x)$ for all $x \in \partial\Omega$.
 Then by our hypothesis there exists $u \in C(\overline{\Omega}) \cap C^{2}(\Omega)$ satisfying  Eq.~\myeqpageref{eq:c2-1.7}.
 Let 
 \[
-f(x) = \bar{f}(x) - u(x) \text{ for } x \in \Omega\,.
+f(x) = \bar{f}(x) - u(x) \text{ for } x \in \Omega .
 \]
 Then $f \in C^{2}(\Omega) \cap C(\Omega)$ and 
 \[
-(f - \Delta f)(x) = g(x) \text{ for } x \in \Omega\,.
+(f - \Delta f)(x) = g(x) \text{ for } x \in \Omega .
 \]
 Thus $\Delta f = f - g$ vanishes on $\partial\Omega$.
 Hence $f \in D(A)$ and $f - Af = g$.
@@ -388,7 +388,7 @@ Hence $f \in D(A)$ and $f - Af = g$.
 Let $\Omega \subseteq \R^{n}$ be as in~\ref{ex:c2-1.5-5}   and $E = L^{p}(\Omega)$.
 Define 
 \[ 
-Af \coloneq \Delta f \text{ on } D(A) \coloneq \{f \in C^{2}(\Omega) \cap C_{0}(\Omega) \colon \Delta f \in C_{0}(\Omega)\}\,.
+Af \coloneq \Delta f \text{ on } D(A) \coloneq \{f \in C^{2}(\Omega) \cap C_{0}(\Omega) \colon \Delta f \in C_{0}(\Omega)\} .
 \]
 Then $A$ is closable and the closure of\/ $A$ is the generator of a positive contraction semigroup on $E$.
 %%--
@@ -444,7 +444,7 @@ Let $(T(t))_{t \geq 0}$ be a strongly continuous positive semigroup with generat
 \]
 then 
 \[
-\langle Af,\phi \rangle = \lim_{t \to 0} 1/t \langle T(t)f - f, \phi \rangle = \lim_{t \to 0} 1/t \langle T(t)f, \phi \rangle \geq 0\,.
+\langle Af,\phi \rangle = \lim_{t \to 0} 1/t \langle T(t)f - f, \phi \rangle = \lim_{t \to 0} 1/t \langle T(t)f, \phi \rangle \geq 0 .
 \qedhere
 \]
 \end{proof}
@@ -496,7 +496,7 @@ Since $A$ is dissipative it follows that $\langle Af^{+},\phi \rangle \leq 0$.
 Moreover, since $A$ satisfies \myeqpageref{eq:c2-P} we have $\langle Af^{-},\phi \rangle \geq 0$.
 So we finally obtain, 
 \[
-\langle Af,\phi \rangle = \langle Af^{+},\phi \rangle - \langle Af^{-},\phi \rangle \leq 0\,.
+\langle Af,\phi \rangle = \langle Af^{+},\phi \rangle - \langle Af^{-},\phi \rangle \leq 0 .
 \qedhere
 \]
 \end{proof}
@@ -542,11 +542,11 @@ then $\psi_{0}$ is positive homogeneous on $E_{+}$.
 Thus the linear extension of\/ $\psi_{0}$ defines a positive linear form $\psi$ on $E$.
 We have 
 \[
-\langle g^{-},\psi \rangle = \langle g^{-},\phi \rangle > 0 \quad\text{and}\quad \langle g^{+},\psi \rangle = 0\,.
+\langle g^{-},\psi \rangle = \langle g^{-},\phi \rangle > 0 \quad\text{and}\quad \langle g^{+},\psi \rangle = 0 .
 \]
 Thus 
 \[
-\langle Au,\psi \rangle = - \langle g^{-},\psi \rangle < 0\quad\text{but} \quad\langle u,\psi \rangle \leq \langle u,\phi \rangle = 0\,.
+\langle Au,\psi \rangle = - \langle g^{-},\psi \rangle < 0\quad\text{but} \quad\langle u,\psi \rangle \leq \langle u,\phi \rangle = 0 .
 \]
 Thus  ~\myeqpageref{eq:c2-P}   does not hold.
 \end{proof}
@@ -582,11 +582,11 @@ The equivalence of~\ref{thm:c2-1.11-2}   and~\ref{thm:c2-1.11-3}   is establishe
 
 If~\ref{thm:c2-1.11-4} holds, then 
 \[
-\eu^{t(A+\|A\|)} \geq 0 \text{ for } t\geq 0\,.
+\eu^{t(A+\|A\|)} \geq 0 \text{ for } t\geq 0 .
 \]
 Thus 
 \[
-\eu^{tA} = \eu^{-t\|A\|} \eu^{t(A+\|A\|)} \geq 0 \text{ for } t\geq 0\,.
+\eu^{tA} = \eu^{-t\|A\|} \eu^{t(A+\|A\|)} \geq 0 \text{ for } t\geq 0 .
 \]
 We have shown that \ref{thm:c2-1.11-1}, \ref{thm:c2-1.11-2}  and \ref{thm:c2-1.11-3} are equivalent and \ref{thm:c2-1.11-4}  implies \ref{thm:c2-1.11-1}.
 
@@ -605,7 +605,7 @@ We have to show that $\lambda \leq \|A\|$.
 Denote by $P$ the band projection onto the band generated by $g^{-}$.
 Then 
 \[
-PAf + \lambda Pf = Pg = g^{-} < 0\,.
+PAf + \lambda Pf = Pg = g^{-} < 0 .
 \]
 Since by  Eq.~\myeqpageref{eq:c2-1.9}, 
 \[
@@ -615,7 +615,7 @@ it follows
 \begin{equation*}
     \begin{split}
     0 &> \lambda Pf + PAf = \lambda Pf + PAPf + PA(\Id-P)f \\
-    &\geq \lambda Pf + PAPf + P(A(\Id-P)f)^{+} \geq \lambda Pf + PAPf\,.
+    &\geq \lambda Pf + PAPf + P(A(\Id-P)f)^{+} \geq \lambda Pf + PAPf .
     \end{split}
 \end{equation*}
 %%--
@@ -679,7 +679,7 @@ For every $f \in E$ there exists a unique linear operator (sign $f$) on $E$ whic
 %% --
 %% --
 \begin{equation}\label{eq:c2-2.3}
-(\sign \bar{f})f = |f| \quad \left(\text{where } \bar{f} \coloneqq \Re(f) - \im\Im(f) \right)\,.
+(\sign \bar{f})f = |f| \quad \left(\text{where } \bar{f} \coloneqq \Re(f) - \im\Im(f) \right) .
 \end{equation}
 %% --
 \end{proposition}
@@ -708,7 +708,7 @@ Define
 	\begin{cases}
         f(x)\cdot|f(x)|^{-1} & \text{if }  f(x)   \neq 0 \,, \\ 
     	%\mfrac{f(x)}{ \lvert f(x) \rvert} & \text{if }  f(x)   \neq 0 \\  
-    	0 & \text{if } f(x) = 0 \,.
+    	0 & \text{if } f(x) = 0  .
 	\end{cases}
 \end{align*}
 %% --
@@ -738,7 +738,7 @@ Then by Part-II, Lemma~\ref{lem:b2-2.4}
 \lim_{t \downarrow 0} \frac{1}{t} (|f(x)+tg(x)|-|f(x)|) = 
 \begin{cases}
     \Re \left(\sign \overline{f(x)}\right)g(x) & \text{if } f(x) \neq 0 \,, \\
-    \ \quad\quad|g(x)| & \text{if } f(x) = 0 \,.
+    \ \quad\quad|g(x)| & \text{if } f(x) = 0  .
 \end{cases}
 \end{align*}
 %% --
@@ -828,7 +828,7 @@ Consider the condition
 If \myeqpageref{eq:c2-K}   and Eq.~\myeqpageref{eq:c2-2.9}   hold, then Kato's inequality holds in the strong form as well, whenever it makes sense, \ie
 %% --
 \begin{equation}\label{eq:c2-2.10}
-\Re\left((\sign \bar{f})Af \right) \leq A|f| \quad \text{whenever}\quad f \text{ and } |f| \in D(A)\,.
+\Re\left((\sign \bar{f})Af \right) \leq A|f| \quad \text{whenever}\quad f \text{ and } |f| \in D(A) .
 \end{equation}
 %% --
 \begin{example}\label{ex:c2-2.5}
@@ -1000,7 +1000,7 @@ Let $\phi \in D(A')_{+}$ and $\lambda \in \R$.
 Then
 %%
 \[
-A'\phi \leq \lambda \phi \quad\text{if and only if}\quad T(t)'\phi \leq \eu^{\lambda t}\phi \quad (t \geq 0)\,.
+A'\phi \leq \lambda \phi \quad\text{if and only if}\quad T(t)'\phi \leq \eu^{\lambda t}\phi \quad (t \geq 0) .
 \]
 \end{proposition}
 %% --
@@ -1015,7 +1015,7 @@ For the converse let $f \in E_{+}$. Then
 %% --
 \begin{align*}
 \langle f,T(t)'\phi \rangle &= \langle f,\phi \rangle + \int_{0}^{t} \langle f,T(s)'A'\phi \rangle \ds\\
-&\leq \langle f,\phi \rangle + \lambda \int_{0}^{t} \langle f,T(s)'\phi \rangle \ds\,.
+&\leq \langle f,\phi \rangle + \lambda \int_{0}^{t} \langle f,T(s)'\phi \rangle \ds .
 \end{align*}
 %% --
 It follows from Gronwall's lemma that $\langle f,T(t)'\phi \rangle \leq \eu^{\lambda t} \langle f,\phi \rangle$.
@@ -1096,10 +1096,10 @@ Let $g \in E$.
 Since $0 \leq Q \leq \Id$ we have 
 \[
 \langle g,\psi \rangle = \langle Qg,\phi \rangle \leq \langle Qg^{+},\phi \rangle \leq
-\langle g^{+},\phi \rangle = p(g)\,.
+\langle g^{+},\phi \rangle = p(g) .
 \]
 Moreover, 
-\[\langle f, \psi \rangle = \langle Qf,\phi \rangle = \langle P_{+}f + 1/2 \, Pf,\phi \rangle = \langle f^{+},\phi \rangle = p(f^{+})\,.
+\[\langle f, \psi \rangle = \langle Qf,\phi \rangle = \langle P_{+}f + 1/2 \, Pf,\phi \rangle = \langle f^{+},\phi \rangle = p(f^{+}) .
 \]
 So Eq.~\myeqpageref{eq:c2-3.2} follows by the definition of\/ $\ddp(f)$. 
 We show that
@@ -1116,7 +1116,7 @@ One has trivially
 %% --
 Adding Eq.~\myeqpageref{eq:c2-3.4} and \myeqpageref{eq:c2-K6},  yields
 \[
-\langle(2P_{+} + P)Bf,\phi \rangle \leq \langle 2f^{+},B'\phi \rangle \leq 0\,.
+\langle(2P_{+} + P)Bf,\phi \rangle \leq \langle 2f^{+},B'\phi \rangle \leq 0 .
 \]
 Hence $\langle Bf,\psi \rangle = \langle QBf,\phi \rangle \leq 0$.
 Thus we have proved that the restriction  $B_{|D_{0}}$ is $p$-dissipative. 
@@ -1134,7 +1134,7 @@ Then $B$ satisfies $B'\phi \leq 0$ and \myeqpageref{eq:c2-K6}   as well.
 So it follows from Proposition~\ref{prop:c2-3.10}   that $B$ is $p$-dissipative.
 Since $B$ generates the semigroup $(\eu^{-\lambda t}T(t))_{t \geq 0}$ we obtain from Part-I, Theorem~\ref{thm:a2-2.6} that 
 \[
-p(\eu^{-\lambda t}T(t)f) \leq p(f) \text{ for } f \in E \text{ and } t\geq 0)\,.
+p(\eu^{-\lambda t}T(t)f) \leq p(f) \text{ for } f \in E \text{ and } t\geq 0) .
 \]
 Hence,
 %% --
@@ -1145,7 +1145,7 @@ Hence,
 Now let $t > 0$ and $f \leq 0$, then $f^{+} = 0$. 
 It follows from  Eq.~\myeqpageref{eq:c2-3.5} that 
 \[
-\langle (T(t)f)^{+},\phi \rangle \leq 0\,.
+\langle (T(t)f)^{+},\phi \rangle \leq 0 .
 \]
 Since $\phi \in M'$ is arbitrary and $M'$ is strictly positive, it follows that $(T(t)f)^{+} = 0$, \ie $T(t)f \leq 0$. 
 This implies that $T(t) \geq 0$.
@@ -1185,7 +1185,7 @@ In Theorem~\ref{thm:c2-3.8} and Corollary~\ref{cor:c2-3.9}  one can replace ineq
 Indeed, Eq.~\myeqpageref{eq:c2-3.6} for $-f$ yields $\langle -P_{(f^{-})}Af,\phi \rangle \leq \langle f^{-},A'\phi \rangle$. 
 Adding up both inequalities one obtains 
 \[
-\langle(\sign f)Af,\phi \rangle \leq \langle |f|,A'\phi \rangle\,.
+\langle(\sign f)Af,\phi \rangle \leq \langle |f|,A'\phi \rangle .
 \]
 On the other hand, if\/ $A$ generates a positive semigroup, one sees by
 the obvious alterations in the proof of Theorem~\ref{thm:c2-2.4}   that Eq.~\myeqpageref{eq:c2-3.6} holds for all $f \in D(A)$ and $\phi \in D(A')_{+}$. 
@@ -1346,7 +1346,7 @@ We can assume that $\mu \geq 0$.
 Let $\psi(x) = \phi(1-x)$. 
 Then 
 \[
-\psi'(x) = -\phi'(1-x) \leq \mu\phi(1-x) = \mu\psi(x)\,.
+\psi'(x) = -\phi'(1-x) \leq \mu\phi(1-x) = \mu\psi(x) .
 \]
 Since $\psi(0) = 0$, we obtain
 %% --
@@ -1361,7 +1361,7 @@ It follows from Gronwall's lemma that $\psi \leq 0$. Hence $\phi = \psi = 0$.
 Let $B$ be the generator of a strongly continuous semigroup on a real Banach lattice with order continuous norm. Assume that the following two conditions hold.
 %% --
 \begin{equation} \label{eq:c2-3.17-K} \tag{K}
-\langle(\sign  f)Bf,\phi\rangle \leq \langle|f|,B'\phi\rangle \quad\text{for all } f \in D(B),  \phi \in D(B')_{+})\,.
+\langle(\sign  f)Bf,\phi\rangle \leq \langle|f|,B'\phi\rangle \quad\text{for all } f \in D(B),  \phi \in D(B')_{+}) .
 \end{equation}
 \begin{equation}
 \overline{(D(B')_{+})}^{\sigma(E',E)} = E'_{+}. \label{eq:c2-3.17}
@@ -1489,7 +1489,7 @@ The semigroup $(T(t))_{t \geq 0}$ with generator $A$ dominates the semigroup $(S
 %% --
 \begin{equation}\label{eq:c2-4.2}
 |R(\lambda,B)f| \leq R(\lambda,A)|f| %\quad (f \in E) 
-\quad \text{for large real }  \lambda  \text{ and all } f \in E\,.
+\quad \text{for large real }  \lambda  \text{ and all } f \in E .
 \end{equation}
 \end{proposition}
 %% --
@@ -1562,7 +1562,7 @@ Let $B$ be a densely defined operator such that
 %% --
 \begin{equation}\label{eq:c2-4.4}
 \Re\langle(\sign  \bar{f})Bf,\phi\rangle \leq \langle|f|,A'\phi\rangle
-\quad\text{for all } f \in D(B), \phi \in D(A')_{+}\,.
+\quad\text{for all } f \in D(B), \phi \in D(A')_{+} .
 \end{equation}
 %% --
 Then $B$ is closable. 
@@ -1590,7 +1590,7 @@ We show that $B$ is $p$-dissipative (see end of Part-I, Section~\ref{sec:a2-2}).
 Let $f \in D(B)$, $\psi = (\sign  \bar{f})'\phi$. 
 Then it is easy to see that 
 \[
-\psi \in \ddp(f)\,.
+\psi \in \ddp(f) .
 \]
 Moreover, by Eq.~\eqref{eq:c2-4.4} and~\eqref{eq:c2-4.5} one obtains that 
 \[
@@ -1612,7 +1612,7 @@ g = (\lambda - B)f \text{ implies } |f| \leq R(\lambda,A)|g|.
 Let $\psi \in E'_{+}$. 
 We have to show that 
 \[
-\langle|f|,\psi\rangle \leq \langle R(\lambda,A)|g|,\psi\rangle\,.
+\langle|f|,\psi\rangle \leq \langle R(\lambda,A)|g|,\psi\rangle .
 \]
 Let $\phi = R(\lambda,A)'\psi \in D(A')_{+}$. 
 Then by Eq.~\myeqpageref{eq:c2-4.4}
@@ -1645,7 +1645,7 @@ Indeed, let $h \in E$.
 There exists $f_{n} \in D(B)$ such that $g_{n} \coloneq (\mu - B)f_{n} \to h$ $(n \to \infty)$. 
 By Eq.~\myeqpageref{eq:c2-4.6} it follows that 
 \[
-|f_{n} - f_{m}| \leq R(\lambda,A)|g_{n} - g_{m}|\,.
+|f_{n} - f_{m}| \leq R(\lambda,A)|g_{n} - g_{m}| .
 \] 
 Thus $(f_{n})$ is a Cauchy sequence. 
 Let $f \coloneq \lim_{n \to \infty} f_{n}$. 
@@ -1698,7 +1698,7 @@ Assume that $\Re(M) \leq 0$. Let $f \in D(B)$ and $\phi \in D(A')_{+}$. Then
 \begin{align*}
 \Re\mleft\langle(\sign  \bar{f})Bf,\phi\mright\rangle &= \Re\mleft\langle(\sign  \bar{f})Af,\phi\mright\rangle + \Re\mleft\langle(\sign  \bar{f})Mf,\phi\mright\rangle\\
 &= \Re\mleft\langle(\sign  \bar{f})Af,\phi\mright\rangle + \Re\langle M|f|,\phi\rangle 
-\leq \langle|f|,A'\phi\rangle\,.
+\leq \langle|f|,A'\phi\rangle .
 \end{align*}
 %% --
 Thus, by Theorem~\ref{thm:c2-4.2}, $(S(t))_{t \geq 0}$ is dominated by $(T(t))_{t \geq 0}$.
@@ -1762,7 +1762,7 @@ In a similar way as Eq.~\myeqpageref{eq:c2-4.6} one shows that for all $f \in D_
 Since $D_{0}$ is a core of\/ $B$ it follows that Eq.~\myeqpageref{eq:c2-4.10} also holds for all $f \in D(B)$. 
 This implies that 
 \[
-(R(\lambda,B)g)^{+} \leq R(\lambda,A)g^{+} \text{ for all } g \in E \text{ and } \lambda > \lambda_{0}\,.
+(R(\lambda,B)g)^{+} \leq R(\lambda,A)g^{+} \text{ for all } g \in E \text{ and } \lambda > \lambda_{0} .
 \]
 Consequently, 
 \[
@@ -1807,7 +1807,7 @@ By Kato's classical inequality (see Example~\ref{ex:c2-2.5}) this implies that
 (here we use that $\Delta\phi = \lambda\phi + V\phi \in L^{1}_{\text{loc}}$). 
 Hence 
 \[
-(\lambda - \Delta)|\phi| \leq -(\Re(V))|\phi| \leq 0\,.
+(\lambda - \Delta)|\phi| \leq -(\Re(V))|\phi| \leq 0 .
 \]
 Since $(\lambda - \Delta)^{-1}$ is a positive linear mapping from $\mathcal{S}(\R^{n})'$ onto $\mathcal{S}(\R^{n})'$, this implies that $\phi = 0$. 
 It follows from Theorem~\ref{thm:c2-4.3}   that $\overline{B}$ is the
@@ -1878,7 +1878,7 @@ Let $\lambda > \max\{s(A),s(B)\}$.
 Then $(A - B)R(\lambda,B)$ is a positive operator.
 Hence 
 \[
-R(\lambda,A) - R(\lambda,B) = R(\lambda,A)(A - B)R(\lambda,B) \geq 0\,.
+R(\lambda,A) - R(\lambda,B) = R(\lambda,A)(A - B)R(\lambda,B) \geq 0 .
 \]
 This implies~\ref{prop:c2-4.8-1}.
 \end{proof}
@@ -1918,12 +1918,12 @@ There exists $\mu > 0$ such that $Au \leq \mu u$.
 Given $\lambda$ such that  $\lambda > \max \{s(A),\mu\}$, 
 then 
 \[
-\lambda R(\lambda,A)u = \lambda R(\lambda,A)u+u \leq \mu R(\lambda,A)u + u\,.
+\lambda R(\lambda,A)u = \lambda R(\lambda,A)u+u \leq \mu R(\lambda,A)u + u .
 \]
 Hence $R(\lambda,A)u \leq c \cdot u$ where $c > 0$.
 It follows that 
 \[
-R(\lambda,A)E_{u} \subseteq E_{u} \cap D(A) \subseteq D(B)\,.
+R(\lambda,A)E_{u} \subseteq E_{u} \cap D(A) \subseteq D(B) .
 \]
 Hence $D(B)$ is dense.
 Let $f \in D(B)$, $\phi \in D(A')_{+}$ and set $P_{+} \coloneqq P_{f^{+}}$, $P_{-} \coloneqq P_{f^{-}}$.
@@ -1952,7 +1952,7 @@ Now we show that $(\lambda - \overline{B})D(\overline{B})$ is dense in $E$.
 Let $m_{n} \coloneq \sup \{m, -n \1_{X}\}$ $(n \in \N )$ and $B_{n} \coloneq A + m_{n}$.
 Then $B_{n}$ is the generator of a positive semigroup and it follows from Proposition~\ref{prop:c2-4.8}  that 
 \[
-0 \leq R(\lambda,B_{n+1}) \leq R(\lambda,B_{n}) \leq R(\lambda,A) \text{ for all } n \in \N , \lambda > s(A)\,.
+0 \leq R(\lambda,B_{n+1}) \leq R(\lambda,B_{n}) \leq R(\lambda,A) \text{ for all } n \in \N , \lambda > s(A) .
 \]
 Note that $s(B_{n}) \leq s(A)$ by Lemma~\ref{lem:c2-4.10}.
 Let $0 \leq f \in E_{u}$ and $g_{n} = R(\lambda,B_{n})f$.
@@ -1974,7 +1974,7 @@ But $\lim_{n \to \infty} (m_{n} - m)u = 0$ since $u \in D(m)$.
 Thus $g \in D(\overline{B})$ and $(\lambda - \overline{B})g = f$.
 We have shown that 
 \[
-E_{u} \subseteq (\lambda - \overline{B})D(\overline{B})\,.
+E_{u} \subseteq (\lambda - \overline{B})D(\overline{B}) .
 \]
 Hence $(\lambda - \overline{B})D(\overline{B})$ is dense in $E$.
 \end{proof}
@@ -2012,7 +2012,7 @@ where
 \[\sign  \overline{f(x)} =
 \begin{cases}
     \overline{f(x)}/|f(x)| & \text{if } f(x) \neq 0 \\
-    \ \quad\quad0  & \text{if } f(x) = 0\,.
+    \ \quad\quad0  & \text{if } f(x) = 0 .
 \end{cases}
 %f(x)/|f(x)| if f(x) \neq 0 and \sign  0 = 0
 \]
@@ -2059,7 +2059,7 @@ We claim that
 & B  \text{ is the generator of a strongly continuous semigroup } (S(t))_{t \geq 0}  
 \text{ and, } \\ 
 &(T(t))_{t \geq 0} \text{ dominates } (S(t))_{t \geq 0} 
-\text{ if and only if } \Re(\beta) \leq \alpha \text{ and } |\nu| \leq \mu\,.
+\text{ if and only if } \Re(\beta) \leq \alpha \text{ and } |\nu| \leq \mu .
 \end{split} 
 \end{equation}
 %% --
@@ -2080,7 +2080,7 @@ for all $f \in D(A_{\max})$, $0 \leq \phi \in D((A_{\max})')$.
 In particular
 %% --
 \begin{equation}\label{eq:c2-4.14}
-\Re\langle(\sign  \bar{f})Bf,\phi\rangle \leq \langle|f|,A'\phi\rangle\,.
+\Re\langle(\sign  \bar{f})Bf,\phi\rangle \leq \langle|f|,A'\phi\rangle .
 \end{equation}
 %% --
 holds for all $f \in D(B)$, $0 \leq \phi \in D((A_{\max})')$.
@@ -2094,7 +2094,7 @@ this is an order direct sum.
 Thus, in view of Eq.~\myeqpageref{eq:c2-4.14}, it remains to show that
 %% --
 \begin{equation}\label{eq:c2-4.15}
-\Re\langle(\sign  \bar{f})Bf,\delta_{0}\rangle \leq \langle|f|,A'\delta_{0}\rangle \text{ for all } f \in D(B)\,.
+\Re\langle(\sign  \bar{f})Bf,\delta_{0}\rangle \leq \langle|f|,A'\delta_{0}\rangle \text{ for all } f \in D(B) .
 \end{equation}
 %% --
 By the definition of\/ $A$, $\delta_{0} \in D(A')$ and $A'\delta_{0} =  \alpha\delta_{0} + \mu$.
@@ -2228,11 +2228,11 @@ Consequently,
 for all $f \in E_{+}$ and all $ \lambda \geq \omega_{0}(A)+1$. 
 Hence
 \[
-\|(\lambda R(\lambda,A) - \Id)g\| \leq Mc/\lambda(\|g^{+}\| + \|g^{-}\|) \leq (2Mc/\lambda)\|g\| \quad \text{for all} \quad g \in E\,.
+\|(\lambda R(\lambda,A) - \Id)g\| \leq Mc/\lambda(\|g^{+}\| + \|g^{-}\|) \leq (2Mc/\lambda)\|g\| \quad \text{for all} \quad g \in E .
 \]
 %% --
 Thus $\lambda R(\lambda,A)$ is invertible if\/ $\lambda$ is large enough and
-$D(A) = \Image{\lambda R(\lambda,A)} = E$\,.
+$D(A) = \Image{\lambda R(\lambda,A)} = E$ .
 \end{proof}
 %%
 \begin{proof}[Proof of Theorem~\ref{thm:c2-4.17}]
@@ -2243,11 +2243,11 @@ We first show that $C$ is bounded.
 
 Let $f \in D(C)_{+}$. Then 
 \[
-\Re(Bf) = \lim_{t \to 0} 1/t(\Re(\eu^{tB}f) - f) \leq \lim_{t \to 0} 1/t(U(t)f - f) = Cf\,.
+\Re(Bf) = \lim_{t \to 0} 1/t(\Re(\eu^{tB}f) - f) \leq \lim_{t \to 0} 1/t(U(t)f - f) = Cf .
 \]
 Hence 
 \[
-(C + |B|)f \geq (C - \Re(B))f \geq 0 \text{ for all } f \in D(C)_{+}\,.
+(C + |B|)f \geq (C - \Re(B))f \geq 0 \text{ for all } f \in D(C)_{+} .
 \]
 By Lemma~\ref{lem:c2-4.18} this implies that $C + |B|$ is bounded.
 Hence $C$ is bounded as well.
@@ -2268,7 +2268,7 @@ Thus $C - \Re(\eu^{\im \alpha}B)$ satisfies the positive minimum principle \myeq
 for all $\alpha \in \R$.
 It follows from Theorem~\ref{thm:c2-1.11} that 
 \[
-C - \Re(\eu^{\im \alpha}B) + (\|C\|+\|B\|)\Id \geq 0 \text{ for all } \alpha \in \R\,.
+C - \Re(\eu^{\im \alpha}B) + (\|C\|+\|B\|)\Id \geq 0 \text{ for all } \alpha \in \R .
 \]
 Applying the band projection onto $\ZE^{d}$ on both sides of this inequality one obtains that
 \[
@@ -2278,7 +2278,7 @@ Applying the band projection onto $\ZE^{d}$ on both sides of this inequality one
 We have proved that $\Re(M) \leq N$ and $|B_{0}| \leq C_{0}$.
 This implies that for all $f \in E$,
 \[
-\Re((\sign  \bar{f})Bf) = \Re((\sign  \bar{f})B_{0}f) + \Re(M)|f| \leq C_{0}|f| + N|f| = C|f|\,.
+\Re((\sign  \bar{f})Bf) = \Re((\sign  \bar{f})B_{0}f) + \Re(M)|f| \leq C_{0}|f| + N|f| = C|f| .
 \]
 It follows from Theorem~\ref{thm:c2-4.2}   that $(\eu^{tB})_{t \geq 0}$ is dominated by $(\eu^{tC})_{t \geq 0}$.
 \end{proof}
@@ -2350,13 +2350,13 @@ Then $(T(t))_{t \geq 0}$ is a strongly continuous semigroup.
 Let $0 \leq s,t$ and $f \in E_{+}$. 
 Then by Eq.~\myeqpageref{eq:c2-5.1}, 
 \[
-T(s)T(t)f = T(s)|S(t)f| = |S(s)S(t)f| = |S(s+t)f| = T(s+t)f\,.
+T(s)T(t)f = T(s)|S(t)f| = |S(s)S(t)f| = |S(s+t)f| = T(s+t)f .
 \]
 Since $\text{span } E_{+} = E$, it follows that $(T(t))_{t \geq 0}$ is a semigroup. 
 Moreover, 
 \[
 \lim_{t \to 0} T(t)f = \lim_{t \to 0} |S(t)f| = |f| = f 
-\text{ for } f \in E_{+}\,.
+\text{ for } f \in E_{+} .
 \]
 This implies that $(T(t))_{t \geq 0}$ is strongly continuous.
 \end{proof}
@@ -2465,7 +2465,7 @@ Choose $\lambda = t/s \in (0,1)$.
 Then $t = (1-\lambda)0 + \lambda s$. 
 Consequently, 
 \[
-k(t) \leq (1-\lambda)k(0) + \lambda k(s) = t/s \, k(s)\,.
+k(t) \leq (1-\lambda)k(0) + \lambda k(s) = t/s \, k(s) .
 \]
 Second case: $s < 0 < t$.
 Let $0 < \lambda \coloneqq t/(t-s) < 1$. 
@@ -2489,7 +2489,7 @@ It remains to show that $D_{g}\Theta(f) = \Re\mleft(\widehat{\sign}  \bar{f}\mri
 First of all denote by $P$ the band projection onto $\{f\}^{dd}$. Then it
 follows from the definition of\/ $D_{g}\Theta(f)$ that 
 \[
-D_{g}\Theta(f) = PD_{g}\Theta(f) + (\Id-P)D_{g}\Theta(f) = D_{Pg}\Theta(f) + |(\Id-P)g|\,.
+D_{g}\Theta(f) = PD_{g}\Theta(f) + (\Id-P)D_{g}\Theta(f) = D_{Pg}\Theta(f) + |(\Id-P)g| .
 \]
 Thus it remains to show that
 %% --
@@ -2558,7 +2558,7 @@ Then $S(t)f$ is differentiable at $t$.
 By the chain rule Part-II, Proposition~\ref{prop:b2-2.3},
 $T(t)|f| = |S(t)f|$ is also differentiable and by  Proposition~\ref{prop:c2-5.6}
 \[
-\diff{}/\dt|_{t=0} T(t)|f| = \diff{}/\dt|_{t=0} |S(t)f| = \Re\mleft(\widehat{\sign}  \bar{f}\mright)Bf\,.
+\diff{}/\dt|_{t=0} T(t)|f| = \diff{}/\dt|_{t=0} |S(t)f| = \Re\mleft(\widehat{\sign}  \bar{f}\mright)Bf .
 \]
 Hence $|f| \in D(A)$ and $A|f| = \Re\mleft(\widehat{\sign}  \bar{f}\mright)Bf$.
 
@@ -2566,13 +2566,13 @@ Conversely, assume that~\ref{thm:c2-5.5-2}   holds.
 Let $s > 0, f \in E$. 
 We show that 
 \[
-|S(s)f| = T(s)|f|\,.
+|S(s)f| = T(s)|f| .
 \]
 This implies that $S(s)$ is disjointness preserving and $|S(s)| = T(s)$ (by Proposition~\ref{prop:c2-5.1}). 
 Since $D(B)$ is dense we can assume that $f \in D(B)$. 
 Let 
 \[
-\xi(t) = T(s-t)|S(t)f|  \text{ for } t \in [0,s])\,.
+\xi(t) = T(s-t)|S(t)f|  \text{ for } t \in [0,s]) .
 \]
 Since by assumption $|S(t)f| \in D(A)$ one obtains
 %% --
@@ -2659,7 +2659,7 @@ Hence
 \begin{equation*}
     \begin{split}
     (\sign  f)Af &= (P_{+} - P_{-})Af = (P_{+} - P_{-})(Af^{+} + Af^{-})\\ 
-    &= (P_{+})Af^{+} + (P_{-})Af^{-} = Af^{+} + Af^{-} = A|f|\,.
+    &= (P_{+})Af^{+} + (P_{-})Af^{-} = Af^{+} + Af^{-} = A|f| .
     \end{split}
 \end{equation*}
 Thus Kato's equality holds and it follows from Corollary~\ref{cor:c2-5.8}   that $(T(t))_{t \geq 0}$ is a lattice semigroup. The other implication follows directly from Corollary~\ref{cor:c2-5.8}.
@@ -2670,7 +2670,7 @@ Thus Kato's equality holds and it follows from Corollary~\ref{cor:c2-5.8}   that
 Let $E = L^{p}(X,\mu)$ (where $(X,\mu)$ is a $\sigma$-finite measure space and $1 \leq p < \infty$) and let $A_{0}$ be the generator of a semigroup of lattice homomorphisms. 
 Let $h \in L^{\infty}$ and $B = A_{0} + h$, \ie $B$ is given by 
 \[
-Bf = A_{0}f + h \cdot f  \text{ for } f \in D(B) = D(A_{0})\,. 
+Bf = A_{0}f + h \cdot f  \text{ for } f \in D(B) = D(A_{0}) . 
 \]
 Let $A = A_{0} + \Re(h)$.
 Since $A_{0}$ generates a semigroup of lattice homomorphisms, we have $|f| \in D(A_{0})$ whenever $f \in D(A_{0})$ and $\Re\mleft(\mleft( \widehat{\sign} \bar{f}\mright)A_{0}f\mright) = A_{0}|f|$.
@@ -2696,7 +2696,7 @@ Denote by $A$ the generator of\/ $(T(t))_{t \geq 0}$, where $T(t) = |S(t)|$.
 Let $f \in D(B)_{+}$. 
 Since $B$ is local we have 
 \[
-Bf = P_{f}Bf = (\sign  f)Bf = A|f| = Af\,.
+Bf = P_{f}Bf = (\sign  f)Bf = A|f| = Af .
 \]
 By assumption, $\text{span } D(B)_{+} = D(B)$. 
 Thus it follows that $B \subseteq A$. 
@@ -2763,12 +2763,12 @@ Then $PR(\lambda,A) = R(\lambda,A)P$.
 Let $f \in D(A)$, $g \coloneqq (\lambda-A)f$.
 Then 
 \[
-Pf = PR(\lambda,A)g = R(\lambda,A)Pg\,.
+Pf = PR(\lambda,A)g = R(\lambda,A)Pg .
 \]
 Hence $Pf \in D(A)$ and $(\lambda-A)Pf = Pg$.
 Thus 
 \[
-APf= \lambda Pf - Pg = P(\lambda f - g) = PAf\,.
+APf= \lambda Pf - Pg = P(\lambda f - g) = PAf .
 \]
 
 We show that \ref{thm:c2-5.13-5}   implies \ref{thm:c2-5.13-3}.
@@ -2778,7 +2778,7 @@ Let $g \in E$, $f \coloneqq R(\lambda,A)g$.
 Then $Pf \in D(A)$ and $APf = PAf$.
 Hence 
 \[
-PR(\lambda,A)g = Pf = R(\lambda,A)P(\lambda-A)f = R(\lambda,A)Pg\,.
+PR(\lambda,A)g = Pf = R(\lambda,A)P(\lambda-A)f = R(\lambda,A)Pg .
 \]
 It follows from Section~\ref{sec:c1-9} 
 that $R(\lambda,A) \in \ZE$.
