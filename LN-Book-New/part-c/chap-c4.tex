@@ -1922,29 +1922,55 @@ u_i(t,0) = \int_0^r [\sum_{j=1}^n \beta_{ij}(a)u_j(t,a)]\diff{a} \quad (i=1,...,
 %% --
 This system has a solution for every $(v_{1}, \ldots, v_{n}) \in D(A)$ and the asymptotic behavior is determined by the identity
 %% --
+%\[
+%0 = \det
+%\begin{pmatrix}\scriptstyle{
+% \left(1 - \int_{0}^{r} \beta_{11}(a)\eu^{-\lambda a} \diff{a}\right)} 
+%  & \scriptstyle{ \left(-\int_{0}^{r} \beta_{12}(a)\eu^{-\lambda a} \diff{a}\right)} 
+%  & \scriptstyle{\cdots} 
+%  & \scriptstyle{ \left(-\int_{0}^{r} \beta_{1n}(a)\eu^{-\lambda a} \diff{a}\right)} \\
+%\scriptstyle{ \left(-\int_{0}^{r} \beta_{21}(a)\eu^{-\lambda a} \diff{a}\right)} 
+%  & \scriptstyle{\ddots} 
+%  & \scriptstyle{\cdots}
+%  & \scriptstyle{\vdots} \\
+%\scriptstyle{\vdots}
+%  & \scriptstyle{\ddots}  
+%  & \scriptstyle{\ddots}   
+%  & \scriptstyle{\vdots}  \\
+%\vdots
+%  & \scriptstyle{\cdots}  
+%  & \scriptstyle{\cdots}
+%  & \scriptstyle{ \left(-\int_{0}^{r} \beta_{n-1,n}(a)\eu^{-\lambda a} \diff{a}\right)} \\
+%\scriptstyle{ \left(-\int_{0}^{r} \beta_{n1}(a)\eu^{-\lambda a} \diff{a}\right)} 
+%  & \scriptstyle{\cdots} 
+%  & \scriptstyle{\cdots}
+%  & \scriptstyle{ \left(1 - \int_{0}^{r} \beta_{nn}(a)\eu^{-\lambda a} \diff{a}\right)}
+%\end{pmatrix}
+%\]
+%% --
 \[
-0 = \det
-\begin{pmatrix}\scriptstyle{
+0 = \det\,
+\begin{pmatrix}{
  \left(1 - \int_{0}^{r} \beta_{11}(a)\eu^{-\lambda a} \diff{a}\right)} 
-  & \scriptstyle{ \left(-\int_{0}^{r} \beta_{12}(a)\eu^{-\lambda a} \diff{a}\right)} 
-  & \scriptstyle{\cdots} 
-  & \scriptstyle{ \left(-\int_{0}^{r} \beta_{1n}(a)\eu^{-\lambda a} \diff{a}\right)} \\
-\scriptstyle{ \left(-\int_{0}^{r} \beta_{21}(a)\eu^{-\lambda a} \diff{a}\right)} 
-  & \scriptstyle{\ddots} 
-  & \scriptstyle{\cdots}
-  & \scriptstyle{\vdots} \\
-\scriptstyle{\vdots}
-  & \scriptstyle{\ddots}  
-  & \scriptstyle{\ddots}   
-  & \scriptstyle{\vdots}  \\
+  & { \left(-\int_{0}^{r} \beta_{12}(a)\eu^{-\lambda a} \diff{a}\right)} 
+  & {\cdots} 
+  & { \left(-\int_{0}^{r} \beta_{1n}(a)\eu^{-\lambda a} \diff{a}\right)} \\
+{ \left(-\int_{0}^{r} \beta_{21}(a)\eu^{-\lambda a} \diff{a}\right)} 
+  & {\ddots} 
+  & {\cdots}
+  & {\vdots} \\
+{\vdots}
+  & {\ddots}  
+  & {\ddots}   
+  & {\vdots}  \\
 \vdots
-  & \scriptstyle{\cdots}  
-  & \scriptstyle{\cdots}
-  & \scriptstyle{ \left(-\int_{0}^{r} \beta_{n-1,n}(a)\eu^{-\lambda a} \diff{a}\right)} \\
-\scriptstyle{ \left(-\int_{0}^{r} \beta_{n1}(a)\eu^{-\lambda a} \diff{a}\right)} 
-  & \scriptstyle{\cdots} 
-  & \scriptstyle{\cdots}
-  & \scriptstyle{ \left(1 - \int_{0}^{r} \beta_{nn}(a)\eu^{-\lambda a} \diff{a}\right)}
+  & {\cdots}  
+  & {\cdots}
+  & { \left(-\int_{0}^{r} \beta_{n-1,n}(a)\eu^{-\lambda a} \diff{a}\right)} \\
+{ \left(-\int_{0}^{r} \beta_{n1}(a)\eu^{-\lambda a} \diff{a}\right)} 
+  & {\cdots} 
+  & {\cdots}
+  & { \left(1 - \int_{0}^{r} \beta_{nn}(a)\eu^{-\lambda a} \diff{a}\right)}
 \end{pmatrix}
 \]
 %% --
@@ -1964,7 +1990,13 @@ The second equation defines the initial state at time zero and the last equation
 %% --
 \begin{example}\label{ex:c4-3.13}
 %
-Take $F \coloneqq L^{1}(\Omega)$ where $\Omega \subseteq \R^{2}$ is bounded and take \\ $E \coloneqq L^{1}([0,r], F) = L^{1}([0,r] \times \Omega)$ for some $r \in \R_{+}$.
+Take $F \coloneqq L^{1}(\Omega)$ where $\Omega \subseteq \R^{2}$ is bounded and take
+%
+\[
+	 E \coloneqq L^{1}([0,r], F) = L^{1}([0,r] \times \Omega)
+\]
+%
+for some $r \in \R_{+}$.
 %%FN\index{operator!integral}
 Furthermore, let $\Phi = \beta \otimes B$ where $0 < \beta \in L^{\infty}[0,r]$ and $B \in \L{F}$ is an integral operator with positive bounded kernel $k$.
 
