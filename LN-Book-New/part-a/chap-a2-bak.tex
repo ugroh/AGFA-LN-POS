@@ -193,7 +193,7 @@ Hence
 \]
 %% --
 in the norm of\/ $E_{1}$.
-This shows that $A_{1} \subseteq B$.
+This shows that $A_{1} \subset B$.
 
 In order to show the converse, let $f \in D(B)$.
 Then 
@@ -377,7 +377,7 @@ From the uniqueness of the solutions it follows that $ T(t)f = u(t,f) $ for all 
 Thus $ T $ is a semigroup.
 
 Denote by $ B $ its generator.
-It follows from the definition that $ A \subseteq B $.
+It follows from the definition that $ A \subset B $.
 Moreover, $ D(A) $ is invariant under the semigroup.
 So by Theorem~\ref{prop:a1-1.9}\,(ii) $ D(A) $ is a core of\/ $ B $.
 Since $ A $ is closed this implies that $ A = B $.
@@ -408,7 +408,7 @@ $ A $ is not. For instance
 condition~\ref{cor:a2-1.2-2}   in Corollary~\ref{cor:a2-1.2}   does not hold since, for each $ \lambda \in \C $
 %% --
 \[
-    (\lambda-A)D(A) = \{(\lambda f-Bg,\lambda g) \colon f \in F, g \in D(B)\} \subseteq F \times D(B) \neq F \times F = E ,
+    (\lambda-A)D(A) = \{(\lambda f-Bg,\lambda g) \colon f \in F, g \in D(B)\} \subset F \times D(B) \neq F \times F = E ,
 \]
 %% --
 so $ \rho(A) = \emptyset $.
@@ -505,7 +505,7 @@ Hence by \textcite[10.2.1]{hillephillips:1957}
 	\sup_{t \in J}\|T(t)\| < \infty
 \]
 %
-for every compact interval $J \subseteq (0,\infty)$.
+for every compact interval $J \subset (0,\infty)$.
 
 By the group property this implies that $T(\cdot)$ is norm bounded on bounded subsets of\/ $\R$ and
 $T(\cdot)f$ is continuous if\/ $f \in D(A)$.
@@ -527,7 +527,7 @@ The following conditions are equivalent.
 \item \label{thm:a2-1.7.1}
 $A$ is the generator of a strongly continuous semigroup.
 \item \label{thm:a2-1.7.2}
-The domain  $D(A)$ of\/ $A$ is dense in E and there exist $w$, $M \in \R$ such that $(w,\infty) \subseteq \rho(A)$ and
+The domain  $D(A)$ of\/ $A$ is dense in E and there exist $w$, $M \in \R$ such that $(w,\infty) \subset \rho(A)$ and
 %% –
 \[
     \| {(\lambda - w)^{n}} (\lambda-A)^{-n}\| \leq M 
@@ -547,7 +547,7 @@ For an operator $A$ on a Banach space $E$ the following assertions are equivalen
 \item \label{cor:a2-1.8.1}
 $A$ is the generator of a strongly continuous contraction semigroup.
 \item \label{cor:a2-1.8.2}
-$A$ is densely defined, $(0,\infty) \subseteq \rho(A)$ and $\|\lambda R(\lambda,A)\| \leq 1$ for all $\lambda > 0$.
+$A$ is densely defined, $(0,\infty) \subset \rho(A)$ and $\|\lambda R(\lambda,A)\| \leq 1$ for all $\lambda > 0$.
 \end{enumerate}
 \end{corollary}
 %% –
@@ -650,7 +650,7 @@ Let $A$ be a densely defined operator on a Banach space $E$ and $\alpha \in (0,\
 Then $A$ is the generator of a bounded holomorphic semigroup of angle $\alpha$ if and only if 
 %% –
 \[
-S(\alpha + \pi/2) \subseteq \rho(A)
+S(\alpha + \pi/2) \subset \rho(A)
 \]
 %%-
 and for every $\alpha_{1} \in (0,\alpha)$ there exists a constant $M$ such that
@@ -711,7 +711,7 @@ Consequently,
 The corollary will be extended below.
 We first consider an example.
 %% --
-\begin{example*}[The Laplacian on $E = C_{0}(\R^{n})$ or $L^{p}(\R^{n})$ $(1 \leq p < \infty)$]\label{ex:a2-1.13-kgk} 
+\begin{example*}\label{ex:a2-1.13-kgk}(The Laplacian on $E = C_{0}(\R^{n})$ or $L^{p}(\R^{n})$ $(1 \leq p < \infty)$) 
 \index{operator!Laplacian}
 %% --
 \begin{enumerate}[\upshape (i), wide, labelindent=.25em]
@@ -784,7 +784,7 @@ According to Section~\ref{subsec:a1-3.9} the domain of its generator $A$ contain
 and, in particular
 %%--
 \[
-D_{0} = \{f \in E \cap C^{2}(\R^{n}) \colon D^{\alpha}f \in E \text{ for every multiindex } \alpha \text{ with } |\alpha| \leq 2\} \subseteq D(A)\,.
+D_{0} = \{f \in E \cap C^{2}(\R^{n}) \colon D^{\alpha}f \in E \text{ for every multiindex } \alpha \text{ with } |\alpha| \leq 2\} \subset D(A)\,.
 \]
 On $D_{0}$ the generator is given by
 %% –
@@ -816,7 +816,7 @@ As a consequence one obtains the following.
 A densely defined operator $A$ generates a holomorphic semigroup of angle $\alpha \in (0,\pi/2]$ if and only if for every $\alpha_{1} \in \left[0,\alpha\right[$ there exist a constant $M \geq 0$ and $r \geq 0$ such that 
 %%-
 \[
-S(\alpha_{1} + \pi/2) \setminus B(r) \subseteq \rho(A) \quad (\text{where} \quad B(r) = \{z \in \C \colon |z| \leq r\})
+S(\alpha_{1} + \pi/2) \setminus B(r) \subset \rho(A) \quad (\text{where} \quad B(r) = \{z \in \C \colon |z| \leq r\})
 \]
 and
 \[
@@ -914,7 +914,7 @@ Let $\alpha \in (0,\pi/2)$.
 There exist $r_0 \geq 0$ and $\beta \in (0,\pi/2)$ such that
 %% --
 \[
-    S(\alpha+\pi/2)\setminus B(r_{0}) \subseteq \{ z^2 \colon z \in S(\beta) + w \}.
+    S(\alpha+\pi/2)\setminus B(r_{0}) \subset \{ z^2 \colon z \in S(\beta) + w \}.
 \]
 %% --
 In fact, the line 
@@ -973,7 +973,7 @@ In Theorem~\ref{thm:a2-1.15}
 the assumption that $\pm A$ are generators can be relaxed.
 In fact, the proof shows the following.
 If\/ $A$ is a densely defined operator such that 
-$\{\lambda \in \C \colon \Re(\lambda) > 0\} \subseteq \rho(\pm A - w)$ and 
+$\{\lambda \in \C \colon \Re(\lambda) > 0\} \subset \rho(\pm A - w)$ and 
 $\|R(\lambda,\pm A - w)\| \leq M/\Re(\lambda)$ for some $M \geq 0$, $w \geq 0$, then $A^2$ generates a holomorphic semigroup of angle $\pi/2$\,.
 \end{remark*}
 %% –
@@ -992,7 +992,7 @@ The semigroup is called \emph{differentiable} if\/ $t_0$ can be chosen $0$.
 \end{definition}
 %% –
 
-It is not difficult to see that if\/ $(T(t))_{t \geq 0}$ is differentiable for $t > t_{0}$, then for $n \in \N$ it is $n$-times differentiable at all $s > nt_{0}$ and $T(s)E \subseteq D(A^n)$. 
+It is not difficult to see that if\/ $(T(t))_{t \geq 0}$ is differentiable for $t > t_{0}$, then for $n \in \N$ it is $n$-times differentiable at all $s > nt_{0}$ and $T(s)E \subset D(A^n)$. 
 If\/ $(T(t))_{t\geq 0}$ is differentiable, then the function $t \mapsto T(t)f$ from $(0,\infty)$ into $E$ is infinitely often differentiable for every $f \in E$.
 
 Generators of (eventually) differentiable semigroups 
@@ -1005,7 +1005,7 @@ Whereas the spectrum of the generator of a holomorphic semigroup is included in 
 %A strongly continuous semigroup $(T(t))_{t\geq 0}$ is eventually differentiable if and only if its generator $A$ satisfies the following. 
 %There exist constants $c>0$, $b>0$, $M>0$ such that
 %\[
-%    \Sigma \coloneqq \{\lambda \in \C \colon c\eu^{-b\cdot \Re(\lambda)} \leq |\Im(\lambda)|\} \subseteq \rho(A)
+%    \Sigma \coloneqq \{\lambda \in \C \colon c\eu^{-b\cdot \Re(\lambda)} \leq |\Im(\lambda)|\} \subset \rho(A)
 %\]
 %and
 %\[
@@ -1020,7 +1020,7 @@ There exist constants $c, b, M > 0$ such that
 \[
     \Sigma \coloneqq \left\{\lambda \in \C \colon 
         c\eu^{-b\Re(\lambda)} \leq \lvert\Im(\lambda)\rvert
-    \right\} \subseteq \rho(A)
+    \right\} \subset \rho(A)
 \]
 and
 \[
@@ -1036,7 +1036,7 @@ For all $b>0$ there exist $c>0$, $M>0$ such that
 %% --
 \[
     \Sigma \coloneqq \{\lambda \in \C \colon c\eu^{-b\cdot \Re(\lambda)} 
-    	\leq  \lvert \Im(\lambda) \rvert\} \subseteq \rho(A)
+    	\leq  \lvert \Im(\lambda) \rvert\} \subset \rho(A)
 \]
 %% --
 and
@@ -1438,14 +1438,14 @@ We have shown that the semigroup is norm continuous for $t > 0$ whenever $\{\lam
 if and only if there exists $c > 0$ such that}
 %
 \[
-	\{\lambda \in \C \colon |\Im(\lambda)| > c \cdot \eu^{-t\Re(\lambda)}\} \subseteq \rho(A) .
+	\{\lambda \in \C \colon |\Im(\lambda)| > c \cdot \eu^{-t\Re(\lambda)}\} \subset \rho(A) .
 \]
 %
 \begin{proof}
 The semigroup is right-sided differentiable at a point $t > 0$ if and only if the following equivalent assertions holds.
 \begin{enumerate*}[\upshape(a)]
 \item
-$T(t)E \subseteq D(A)$,
+$T(t)E \subset D(A)$,
 \item
 $\eu^{tm} \cdot f \cdot m \in E$ for all $f \in E$,
 \item
@@ -1454,11 +1454,11 @@ $\eu^{tm} \cdot m$ is [essentially] bounded,
 $\eu^{t\Re(m)} \cdot \Im(m)$ is [essentially] bounded, 
 \item
 there exists $c > 0$ such that 
-$[\text{ess}]\text{-}\Image{m} \subseteq 
+$[\text{ess}]\text{-}\Image{m} \subset 
 \left\{\lambda \in \C \colon \eu^{t\Re(\lambda)}\lvert\Im(\lambda)\rvert \leq c\right\}$, 
 \item
 there exists $c > 0$ such that 
-$\left\{\lambda \in \C \colon \lvert\Im(\lambda)\rvert > c \cdot \eu^{-t\Re(\lambda)}\right\} \subseteq \rho(A)$.
+$\left\{\lambda \in \C \colon \lvert\Im(\lambda)\rvert > c \cdot \eu^{-t\Re(\lambda)}\right\} \subset \rho(A)$.
 \qedhere
 \end{enumerate*}
 \end{proof}
@@ -1467,7 +1467,7 @@ $\left\{\lambda \in \C \colon \lvert\Im(\lambda)\rvert > c \cdot \eu^{-t\Re(\lam
 \textit{$(T(t))_{t \geq 0}$ is a bounded holomorphic semigroup of angle $\theta$ if and only if} 
 %
 \[
-	S(\theta + \pi/2) \subseteq \rho(A) .
+	S(\theta + \pi/2) \subset \rho(A) .
 \]
 %
 \begin{proof}
@@ -1718,7 +1718,8 @@ If\/ $B$ is compact as an operator on $D(A)$ endowed with the graph norm and if\
 \end{corollary}
 %% --
 \begin{proof}
-Both assertions follow from Theorem~\ref{thm:a2-1.30}  because $(US(t)U^{-1})_{t\geq 0}$ has $A+C$ as generator.
+This follows from Theorem~\ref{thm:a2-1.30}   since 
+$(US(t)U^{-1})_{t\geq 0}$ has $A+C$ as generator.
 \end{proof}
 %% --
 %% -- Stand 2026-03-10
@@ -1739,7 +1740,7 @@ Under which condition on $D_{0}$ is $A$ the only extension of\/ $A_{0}$ which is
 One obvious condition is that $D_{0}$ is a core.
 \index{core}
 In fact, in that case, $A$ is the closure of\/ $A_{0}$.
-Since every generator $B$ extending $A_{0}$ is closed, it follows that $A \subseteq B$ and hence $A = B$ since 
+Since every generator $B$ extending $A_{0}$ is closed, it follows that $A \subset B$ and hence $A = B$ since 
 $\rho(A) \cap \rho(B) \neq \emptyset$.
 
 We now show that cores are the only domains of uniqueness.
@@ -1762,7 +1763,7 @@ It is obvious that an infinite number of generators can be constructed in that w
 \begin{corollary}\label{cor:a2-1.34}
 Let $(T(t))_{t\geq 0}$ be a strongly continuous semigroup with generator $A$.
 Let $D_{0}$ be a dense subspace of\/ $E$.
-Assume that $D_{0} \subseteq D(A)$ and $T(t)D_{0} \subseteq D_{0}$ for all $t \geq 0$.
+Assume that $D_{0} \subset D(A)$ and $T(t)D_{0} \subset D_{0}$ for all $t \geq 0$.
 Then $D_{0}$ is a core.
 \end{corollary}
 %% --
@@ -1900,7 +1901,7 @@ Then $A$ is p-dissipative if and only if
 p(f) \leq p(f - tAf) \text{ for all } f \in D(A) \text{ and } t > 0.
 \end{equation}
 %% --
-If in particular $(w,\infty) \subseteq \rho(A)$ for some $w \in \R$, then $A$ is p-dissipative if and only if
+If in particular $(w,\infty) \subset \rho(A)$ for some $w \in \R$, then $A$ is p-dissipative if and only if
 %% --
 \begin{equation}\label{eq:a2-2.8}
 p(\lambda R(\lambda,A)f) \leq p(f) \text{ for all } f \in E, \lambda > w.
@@ -1947,7 +1948,7 @@ By hypothesis we have for all $t > 0$, \\
 %
 \[
 \begin{split}
-	p(f)~& \leq~p(f-tAf) = \dualp{f-tAf,\phi_{t}} \\
+	p(f)~& \leq~p(f-tAf)~=~\dualp{f-tAf,\phi_{t}} \\
 &= \dualp{f,\phi_{t}} - t\dualp{Af,\phi_{t}} \leq p(f) - t \dualp{Af,\phi_{t}} .
 \end{split}
 \]
@@ -2215,9 +2216,9 @@ So by hypothesis $\lambda \in \rho(A)$ and
 	\mathrm{dist}(\lambda,\sigma(A)) \geq \|R(\lambda,A)\|^{-1} \geq \lambda .
 \]
 %
-Hence $(0,2\lambda) \subseteq \rho(A)$.
+Hence $(0,2\lambda) \subset \rho(A)$.
 
-Iterating this argument we see that $(0,\infty) \subseteq \rho(A)$.
+Iterating this argument we see that $(0,\infty) \subset \rho(A)$.
 It follows from the Hille-Yosida theorem that $A$ generates a contraction semigroup $(T(t))_{t\geq 0}$.
 Finally, from~\ref{thm:a2-2.6} it follows that $(T(t))_{t\geq 0}$ is p-contractive.
 \end{proof}
@@ -2311,9 +2312,9 @@ Obviously, $\lim \sup_{t \downarrow 0} \|T(2t) - \Id\| = s$ and so, $2s \leq s$.
 Consequently, $s = 0$.
 \end{proof}
 %% --
-\begin{remarks*}\label{rem:a2-3.1-kgk}  
+\begin{remarks*}\label{rem:a2-3.1-kgk} ~ 
 %% --
-\begin{enumerate}[\upshape (i), wide, labelindent=.25em]
+\begin{enumerate}[\upshape (i), wide, labelindent=0.5em]
 \item \label{rem:a2-3.1-kgk-1}
 If, in Lemma~\ref{lem:a2-3.1}, $\TT = (T(t))_{t \geq 0}$ is strongly continuous, in which case 
 $s < \infty$, one can replace 
@@ -2382,7 +2383,7 @@ if and only if\/
 	\lim \dualp{x_n, (T(t_n) - \Id)'x'} = 0
 \]
 %
-for every bounded sequence $(x_n)$ in $E$.
+or every bounded sequence $(x_n)$ in $E$.
 This implies the equivalence of~\ref{lem:a2-3.2-1}   and~\ref{lem:a2-3.2-2}. 
 
 In particular,~\ref{lem:a2-3.2-1}   implies that $((T(t_n) - \Id)x)$ converges weakly to zero for every sequence $(t_n)$ in $[0,\infty)$ with $\lim t_n = 0$ and every $x \in E$.

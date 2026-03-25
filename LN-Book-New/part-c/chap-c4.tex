@@ -39,7 +39,7 @@ s(A) = \omega_{1}(A) = \omega_{0}(A) \in \sigma(A) .
     Either $E$ is an AM-space,  an $L^{2}$-space, or an $L^{1}$-space.
     
     \item \label{thm:c4-1.1-2}
-    There exist $\tau > 0$ and $h \in E_{+}$ such that $T(\tau)E \subset E_{h}$.
+    There exist $\tau > 0$ and $h \in E_{+}$ such that $T(\tau)E \subseteq E_{h}$.
     
     \item \label{thm:c4-1.1-3}
     There exist $\tau > 0$ and $\phi \in E'_{+}$ such that $\|T(\tau)f\| \leq \langle f,\phi\rangle$ for all $f \in E_{+}$.
@@ -306,14 +306,14 @@ Let $A$ be the generator of a positive semigroup on a (real or complex) Banach l
 Then 
 %% --
 \[ 
-\text{$\omega_{1}(A) < 0 $ \quad \text{if and only if} \quad $E_{+} \subset \Image{A(D(A)_{-})}$.}
+\text{$\omega_{1}(A) < 0 $ \quad \text{if and only if} \quad $E_{+} \subseteq \Image{A(D(A)_{-})}$.}
 \]
 \end{proposition}
 %% --
 \begin{proof}
 If\/ $\omega_{1}(A) < 0$, then $s(A) < 0$ (Part-I, Corollary~\ref{cor:a4-1.5}), hence $A^{-1} = -R(0,A) \leq 0$ by Theorem~\ref{thm:c3-1.1}.
 
-If\/ $E_{+} \subset \Image{A(D(A)_{-})}$, then, for every $f \in E_{+}$, there exists $-g \in D(A)_{+}$ such that $Ag = -f$.
+If\/ $E_{+} \subseteq \Image{A(D(A)_{-})}$, then, for every $f \in E_{+}$, there exists $-g \in D(A)_{+}$ such that $Ag = -f$.
 We have 
 %% --
 \[
@@ -386,7 +386,7 @@ Since both nets are monotonically increasing, the assertion follows from Dini's 
 \begin{proposition}\label{prop:c4-1.9}
 %
 Let $A$ be the generator of a positive, bounded semigroup $(T(t))_{t \geq 0}$ on a Banach lattice $E$.
-If there is a subset $D \subset E_{+}$ which is total in $E$ such that $\lim_{\lambda \to 0+} R(\lambda,A)f$ exists for every $f \in D$, then $(T(t))_{t \geq 0}$ is uniformly stable.
+If there is a subset $D \subseteq E_{+}$ which is total in $E$ such that $\lim_{\lambda \to 0+} R(\lambda,A)f$ exists for every $f \in D$, then $(T(t))_{t \geq 0}$ is uniformly stable.
 \index{stability!uniformly stable}
 \end{proposition}
 %% --
@@ -735,7 +735,7 @@ $P$ is a positive projection onto the fixed space $\Fix{\TT} = \Kern{A}$.
 \begin{proof}
 In view of Theorem~\ref{thm:c4-1.5} it suffices to consider the case $s(A) = 0 \in P{\sigma}(A)$.
 We define $F \coloneqq \{f \in E \colon \lim_{t \to \infty} T(t)f \text{ exists}\}$.
-Then $F$ is closed since $(T(t))_{t \geq 0}$ is bounded and obviously $\Kern{A} \subset F$.
+Then $F$ is closed since $(T(t))_{t \geq 0}$ is bounded and obviously $\Kern{A} \subseteq F$.
 Since $\sigma(A) \cap \im\R$ is cyclic and bounded (see Theorem~\ref{thm:c3-2.10} and Part-I, Theorem~\ref{thm:a2-1.20} resp.), we have $\sigma(A) \cap \im\R = \{0\}$.
 Since the spectral mapping theorem holds (cf.\ Part-I, Theorem~\ref{thm:a3-6.6}), we conclude $\sigma(T(t)) \cap \Gamma = \{1\}$ for all $t \geq 0$.
 Then (\refeq{eq:c4-1.4}) implies $\lim_{n \to \infty} \|T(n) - T(n+1)\| = 0$, hence $\lim_{t \to \infty}\|T(t) - T(t+1)\| = 0$.
@@ -753,8 +753,8 @@ Thus
 \lim_{t \to \infty} T(t)f = 0\, \text{ for every }\, f \in \Image{\Id - T(1)}.
 \end{equation}
 %% --
-That is, $\mathrm{im}(\Id - T(1)) \subset F$.
-Since $\Kern{A} = \bigcap_{t \geq 0} \Kern{\Id - T(t)} = \Kern{\Id - T(1)}$ (cf.\ Part-I, Corollary~\ref{cor:a3-6.4}), we have $\Image{\Id - T(1)} + \Kern{\Id - T(1)} \subset F$.
+That is, $\mathrm{im}(\Id - T(1)) \subseteq F$.
+Since $\Kern{A} = \bigcap_{t \geq 0} \Kern{\Id - T(t)} = \Kern{\Id - T(1)}$ (cf.\ Part-I, Corollary~\ref{cor:a3-6.4}), we have $\Image{\Id - T(1)} + \Kern{\Id - T(1)} \subseteq F$.
 Since power bounded operators on a reflexive Banach space are mean ergodic (\eg  see \textcite[Chapter~2, Theorem~1.2]{krengel:1985}), we obtain that $\Image{\Id - T(1)} + \Kern{\Id - T(1)}$ is dense in $E$, hence $F = E$.
 \end{proof}
 %% --
@@ -966,7 +966,7 @@ Since the regular operators on $L^{p}(\mu)$ form a vector lattice, it follows by
 Consequently, the first alternative of Theorem~\ref{thm:c4-2.6} holds true with $\tau \coloneqq s-r$.
 Equivalently, we have $X_{2} = \emptyset$ and by Corollary~\ref{cor:c4-2.7} $Pf \coloneqq \lim_{t \to \infty} T(t)f$ exists for every $f \in L^{p}(\mu)$.
 The limit $P$ is a positive projection satisfying $PT(t) = T(t)P = P$ for all $t \geq 0$.
-It follows that $\Image{P} \subset \Kern{A}$ and $\Image{P'} \subset \Kern{A'}$.
+It follows that $\Image{P} \subseteq \Kern{A}$ and $\Image{P'} \subseteq \Kern{A'}$.
 Since Pe = e, hence $P \neq 0$, we conclude that $\Kern{A'}$ contains positive elements.
 Now Proposition~\ref{prop:c3-3.5}\,(i)-(iii) implies that $P$ has the form $P = h \otimes e$ for a strictly positive function $h \in L^{q}(\mu) = (L^{p}(\mu))'$.
 \end{proof}
@@ -1157,7 +1157,7 @@ The \emph{Riesz Convexity Theorem} (see \textcite[VI.10.11]{dunfordschwartz:1958
 Let $A_{q}$ be the generator of\/ $(T_{q}(t))$.
 In order to apply Proposition~\ref{prop:c4-2.13} we have to show that $0$ is a pole of the resolvent of\/ $A_{2}$.
 Denoting the residue of\/ $R(\cdot,A)$ at $0$ by $P$, then $P = h \otimes l$ for a suitable $h \in (L^{p}(\mu))'$.
-Since $(L^{p}(\mu))' \subset (L^{2}(\mu))'$, $P$ can also be considered as bounded operator on $L^{2}(\mu)$.
+Since $(L^{p}(\mu))' \subseteq (L^{2}(\mu))'$, $P$ can also be considered as bounded operator on $L^{2}(\mu)$.
 We denote it by $P_{2}$.
 From $AP = PA = 0$ it follows that
 %% --
@@ -1410,7 +1410,7 @@ Moreover, if\/ $f \in D(A)$, then the translation property (T) (see Part-II, The
 %% --
 \begin{proof}
 Consider $E_1 \coloneqq D(A)$ endowed with the graph norm 
-and on $E_1$ the operator $A_1$ which is the restriction of\/ $A$ to $D(A_1) \coloneqq D(A^{2})\subset E_1$.
+and on $E_1$ the operator $A_1$ which is the restriction of\/ $A$ to $D(A_1) \coloneqq D(A^{2})\subseteq E_1$.
 By 
 Part-I, Section~\ref{subsec:a1-3.6}, $A_1$ generates the semigroup $(T(t)_{|D(A)})_{t \geq 0}$.
 On $E_1$ the point evaluation is a continuous mapping and therefore the translation property can be shown as in the proof of Part-II, Theorem~\ref{thm:b4-3.1}.
@@ -1430,7 +1430,7 @@ Hence we obtain
 It remains to show Eq.~\myeqpageref{eq:c4-3.3} for all $f \in E$.
 Let $t \in \R_+$ and $s \in [-t,0]$.
 For $t + s > 0$ the equality follows immediately by the continuity of\/ $\Phi$ from Eq.~\myeqpageref{eq:c4-3.4}.
-For the case $t + s \leq 0$ we consider $g \in L^{\infty}[-1,0]$ with supp $g \subset [-1,-t]$.
+For the case $t + s \leq 0$ we consider $g \in L^{\infty}[-1,0]$ with supp $g \subseteq [-1,-t]$.
 Comparing Eq.~\myeqpageref{eq:c4-3.1} and Eq.~\myeqpageref{eq:c4-3.4} we see that $\langle(T(t)-T_0(t))f,g\rangle = 0$ for all $f \in D(A)$, and hence for all $f \in E$.
 Consequently $(T(t)-T_{0}(t))f = 0$ a.e. on $[-1,-t]$ which shows $(T(t)f)(s) = f(t+s)$ for a.e. $s \in [-1,-t]$.
 \end{proof}
@@ -1575,7 +1575,7 @@ If\/ $\Phi(D(A_{0}))$ $= F$,  then the equation $x - \Phi_{\lambda}(x) = 0$ has 
 unique solution for every $g \in E$ if and only if\, $1 \in \rho(\Phi_{\lambda})$. 
 According to the proof of~\ref{lem:c4-3.5}\,\ref{lem:c4-3.5-2} this is equivalent to $\lambda \in \sigma(A)$.
 \end{enumerate}
-If\/ $\Phi_{\lambda}$ is compact, then $\sigma(\Phi_{\lambda})\backslash\{0\} \subset P\sigma(\Phi_{\lambda})$. Thus the assertion follows from~\ref{prop:c4-3.6-1} and~\ref{prop:c4-3.6-2}.
+If\/ $\Phi_{\lambda}$ is compact, then $\sigma(\Phi_{\lambda})\backslash\{0\} \subseteq P\sigma(\Phi_{\lambda})$. Thus the assertion follows from~\ref{prop:c4-3.6-1} and~\ref{prop:c4-3.6-2}.
 \end{proof}
 %% --
 The previous results will now be used to characterize the spectral bound of\/ $A$ and hence the stability of the solutions of \myeqpageref{eq:c4-re}.
@@ -1964,7 +1964,7 @@ The second equation defines the initial state at time zero and the last equation
 %% --
 \begin{example}\label{ex:c4-3.13}
 %
-Take $F \coloneqq L^{1}(\Omega)$ where $\Omega \subset \R^{2}$ is bounded and take \\ $E \coloneqq L^{1}([0,r], F) = L^{1}([0,r] \times \Omega)$ for some $r \in \R_{+}$.
+Take $F \coloneqq L^{1}(\Omega)$ where $\Omega \subseteq \R^{2}$ is bounded and take \\ $E \coloneqq L^{1}([0,r], F) = L^{1}([0,r] \times \Omega)$ for some $r \in \R_{+}$.
 %%FN\index{operator!integral}
 Furthermore, let $\Phi = \beta \otimes B$ where $0 < \beta \in L^{\infty}[0,r]$ and $B \in \L{F}$ is an integral operator with positive bounded kernel $k$.
 

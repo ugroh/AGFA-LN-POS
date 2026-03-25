@@ -114,7 +114,7 @@ If\/ $\Re(\lambda) < 0$ for each $\lambda \in \sigma(A)$, then
 \mbox{$\lim_{t \to \infty}\|T(t)\| = 0$.}
 \end{corollary}
 %% --
-Through this corollary we have re-established Liapunov's  famous result, which assures that the solutions of the linear Cauchy problem
+Through this corollary we have re-established Lyapunov's  famous result, which assures that the solutions of the linear Cauchy problem
 %% --
 \[
     \dot{x}(t) = Ax(t), \quad x(0) = x_{0} \in \C^{n} \quad \text{and} \quad A = (a_{ij})_{n\times n}
@@ -322,7 +322,7 @@ It follows from the \emph{Open Mapping Theorem} that $\lambda \in A\sigma(A)$ if
 \index{eigenvector!approximate} 
 such that $\|f_{n}\| = 1$ and $ \lim_{n \to \infty} \|Af_{n} - \lambda f_{n}\| = 0$.
 
-Clearly we have $P\sigma(A) \subset A\sigma(A)$ and $\sigma(A) = A\sigma(A) \cup R\sigma(A)$ where the union need not be disjoint.
+Clearly we have $P\sigma(A) \subseteq A\sigma(A)$ and $\sigma(A) = A\sigma(A) \cup R\sigma(A)$ where the union need not be disjoint.
 
 The following proposition is a first indication that the subdivision we made yields nice properties.
 %% --
@@ -437,7 +437,7 @@ In addition, we observe that to each spectral value of\/ $A$ (\resp of\/ $T(t)$)
 Since each Dirac functional is an eigenvector for the adjoint multiplication operator, we obtain
 %% --
 \[
-q(X) \subset R\sigma(M_{q}) \text{ and } \eu^{tq(X)} \subset R\sigma(T(t)) .
+q(X) \subseteq R\sigma(M_{q}) \text{ and } \eu^{tq(X)} \subseteq R\sigma(T(t)) .
 \]
 %% --
 The eigenvalues of\/ $M_{q}$ can be characterized as follows.
@@ -475,7 +475,7 @@ hence $\lambda \in P\sigma(A)$.
 Since $\TT = (T(t))_{t \geq 0}$ is a contraction semigroup, it follows that 
 %
 \[
-	 \text{$\sigma(A) = \{\lambda \in \C \colon \Re(\lambda) \leq 0\}$  and $\im\R \subset A\sigma(A)$}  
+	 \text{$\sigma(A) = \{\lambda \in \C \colon \Re(\lambda) \leq 0\}$  and $\im\R \subseteq A\sigma(A)$}  
 \]
 %
 (use Proposition~\ref{prop:a3-2.2}\,(i) or show directly that $f_{n}(x) = \eu^{ \im\alpha x}\eu^{-x/n}$ defines an approximate eigenvector for $\im\alpha$, $\alpha \in \R$).
@@ -488,7 +488,7 @@ Using the same functions one obtains
 %% --
 \index{approximate eigenvector|(}
 \index{eigenvector!approximate|(}
-In the case of the translation group on $E = C_{0}(\R)$ one has $\sigma(A) \subset \im\R$.
+In the case of the translation group on $E = C_{0}(\R)$ one has $\sigma(A) \subseteq \im\R$.
 As above one obtains approximate eigenvectors for every $\alpha \in \R$ from 
 $f_{n}(x) = \eu^{\im\alpha x}\eu^{-|x|/n}$, hence
 %% --
@@ -1047,13 +1047,13 @@ In the next proposition we collect the information on $\sigma(A)$ which in gener
 Using the standard notations the following inclusions hold.
 \begin{enumerate}[\upshape (i)]
 \item 
-$\rho(A) \subset [\rho(A_{|}) \cap \rho(A_{/})] \cup [\sigma(A_{|}) \cap \sigma(A_{/})]$ ,
+$\rho(A) \subseteq [\rho(A_{|}) \cap \rho(A_{/})] \cup [\sigma(A_{|}) \cap \sigma(A_{/})]$ ,
 
 \item 
-$[\rho(A_{|}) \cap \rho(A_{/})] \subset \rho(A) $ ,
+$[\rho(A_{|}) \cap \rho(A_{/})] \subseteq \rho(A) $ ,
 
 \item 
-$\rho_{+}(A) \subset [\rho(A_{|}) \cap \rho(A_{/})]$ ,
+$\rho_{+}(A) \subseteq [\rho(A_{|}) \cap \rho(A_{/})]$ ,
 \end{enumerate}
  where $\rho_{+}(A)$ denotes the connected component of\/ $\rho(A)$ which is unbounded to the right.
 
@@ -1063,7 +1063,7 @@ $\rho_{+}(A) \subset [\rho(A_{|}) \cap \rho(A_{/})]$ ,
 \begin{enumerate}[\upshape (i), wide, labelindent=.25em]
 \item 
 Assume $\lambda \in \rho(A)$, \ie $(\lambda-A)$ is a bijection from $D(A)$ onto $E$.
-Since $N$ is $\TT$-invariant, we have $D(A_{|}) = D(A) \cap N$ and $(\lambda-A)D(A_{|}) \subset N$.
+Since $N$ is $\TT$-invariant, we have $D(A_{|}) = D(A) \cap N$ and $(\lambda-A)D(A_{|}) \subseteq N$.
 If\/ $(\lambda-A)D(A_{|}) = N$, then $R(\lambda,A)N = D(A_{|})$ and the induced operators $R(\lambda,A)_{|}$, \resp $R(\lambda,A)_{/}$ are the inverses of\/ $(\lambda-A_{|})$, \resp $(\lambda-A_{/})$.
 If\/ $(\lambda-A)D(A_{|}) \neq N$, then $\lambda \in \sigma(A_{|})$.
 
@@ -1078,7 +1078,7 @@ In addition, $(\lambda-A)$ is surjective: For $g \in E$ there exists $\hat{f} \i
 Therefore we obtain $(\lambda-A)(f-k) = g$. 
 
 \item 
-The integral representation of the resolvent for $\lambda > \omega_{0}(\TT)$ (see Proposition~\ref{prop:a1-1.11}) shows that $R(\lambda,A)N \subset N$.
+The integral representation of the resolvent for $\lambda > \omega_{0}(\TT)$ (see Proposition~\ref{prop:a1-1.11}) shows that $R(\lambda,A)N \subseteq N$.
 By the power series expansion for holomorphic functions this extends to all $\lambda \in \rho_{+}(A)$.
 Therefore the restriction $R(\lambda,A)_{|}$ coincides with the resolvent $R(\lambda,A_{|})$.
 On the other hand $R(\lambda,A)_{/}$ is well defined on $E_{/}$ and satisfies
@@ -1136,7 +1136,7 @@ $R(\lambda,A) = \sum_{n} U_{n}(\lambda-\mu)^{n}$, $\quad R(\lambda,A)_{|} = \sum
 which shows $\max\{k_{|},k_{/}\} \leq k$.
 
 If\/ $R(\cdot,A)_{|}$ has a pole in $\mu$ of order $\ell$, then $U_{-(\ell+1)|} = 0$, \ie $U_{-(\ell+1)}N = \{0\}$.
-Similarly, it follows that $U_{-(m+1)}E \subset N$ if\/ $R(\cdot,A)_{/}$ has a pole in $\mu$ of order $m$.
+Similarly, it follows that $U_{-(m+1)}E \subseteq N$ if\/ $R(\cdot,A)_{/}$ has a pole in $\mu$ of order $m$.
 Therefore $U_{-(\ell+1)} \circ U_{-(m+1)} = 0$.
 
 The relations Eq.~\myeqpageref{eq:a3-3.2} imply $U_{-(m+\ell+1)} = 0$, hence the pole order of\/ $R(\cdot,A)$ is dominated by $\ell + m$.
@@ -1228,9 +1228,9 @@ $\F$-product $E_{\F}$.
 \begin{proof}[Proof of the proposition]
 \begin{enumerate}[\upshape (i), wide, labelindent=.25em]
 \item 
-The inclusion $P\sigma(A_{\F}) \subset A\sigma(A_{\F})$ holds trivially.
+The inclusion $P\sigma(A_{\F}) \subseteq A\sigma(A_{\F})$ holds trivially.
 
-We show that $A\sigma(A_{\F}) \subset A\sigma(A)$: Take $\lambda \in A\sigma(A_{\F})$ and an associated approximate eigenvector $({\hat{f}^{m}})_{n \in \N}$, \ie $\hat{f}^{m} \in D(A_{\F})$, $\|\hat{f}^{m}\| = 1$ and $(\lambda-A_{\F})\hat{f}^{m} \to 0$ as $m \to \infty$.
+We show that $A\sigma(A_{\F}) \subseteq A\sigma(A)$: Take $\lambda \in A\sigma(A_{\F})$ and an associated approximate eigenvector $({\hat{f}^{m}})_{n \in \N}$, \ie $\hat{f}^{m} \in D(A_{\F})$, $\|\hat{f}^{m}\| = 1$ and $(\lambda-A_{\F})\hat{f}^{m} \to 0$ as $m \to \infty$.
 
 By the considerations in Section~\ref{subsec:a1-3.7} we can represent each $\hat{f}^{m}$ as a normalized sequence $(f_{n}^{m})_{n \in \N}$ in $D(A)$ such that
 %% --
@@ -1246,7 +1246,7 @@ Therefore we can find a sequence $g_{k} = f_{k}^{m(k)}$ satisfying
 %% --
 \ie $\lambda \in A\sigma(A)$.
 
-Finally we show $A\sigma(A) \subset P\sigma(A_{\F})$: For $\lambda \in A\sigma(A)$ take a corresponding approximate eigenvector $(f_{n})$.
+Finally we show $A\sigma(A) \subseteq P\sigma(A_{\F})$: For $\lambda \in A\sigma(A)$ take a corresponding approximate eigenvector $(f_{n})$.
 By Section~\ref{subsec:a1-3.2} we have
 %% --
 \begin{align*}
@@ -1267,14 +1267,14 @@ From the characterization of\/ $D(A_{\F})$ given in Section~\ref{subsec:a1-3.7} 
 %% --
 
 \item 
-The inclusion $A\sigma(A) \subset \sigma(A_{\F})$ follows from (i). 
+The inclusion $A\sigma(A) \subseteq \sigma(A_{\F})$ follows from (i). 
 
-Now we show $R\sigma(A) \subset R\sigma(A_{\F})$.
+Now we show $R\sigma(A) \subseteq R\sigma(A_{\F})$.
 For $\lambda \in R\sigma(A)$ choose $f \in E$ such that $\|(\lambda-A)g - f\| \geq 1$ for every $g \in D(A)$.
 Then $\|(\lambda-A_{\F})\hat{g} - \hat{f}\| \geq 1$ for every $\hat{g} \in D(A_{\F})$ and $\hat{f} = (f,f,\ldots) + c_{\F}(E)$.
 Therefore $\lambda \in R\sigma(A_{\F})$.
 
-We now show $\rho(A) \subset \rho(A_{\F})$: Assume $\lambda \in \rho(A)$.
+We now show $\rho(A) \subseteq \rho(A_{\F})$: Assume $\lambda \in \rho(A)$.
 By (i) $(\lambda-A_{\F})$ has to be injective.
 Choose $\hat{f} = (f_{1},f_{2},\ldots) + c_{\F}(E)$ such that $(f_{n}) \in m^{\TT}(E)$.
 Then $(R(\lambda,A)f_{n}) \in m^{\TT}(E)$ and $(\lambda-A_{\F})((R(\lambda,A)f_{n})+c_{\F}(E)) = (f_{n}) + c_{\F}(E)$, \ie $(\lambda-A_{\F})$ is surjective and $\lambda \in \rho(A_{\F})$.
@@ -1312,14 +1312,14 @@ The \emph{period} $\tau$ of\/ $\TT$ is obtained as
 \index{semigroup!periodic semigroup}
 \index{periodic semigroup}
 We immediately observe that periodic semigroups are groups with inverses $T(t)^{-1} = T(n\tau-t)$ for $0 \leq t \leq n\tau$, $\tau$ the period of\/ $\TT$.
-Moreover, they are bounded, hence the growth bound is zero and $\sigma(A) \subset \im\R$.
+Moreover, they are bounded, hence the growth bound is zero and $\sigma(A) \subseteq \im\R$.
 %% --
 \begin{lemma}\label{lem:a3-5.2}
 Let $\TT$ be a strongly continuous semigroup with period $\tau > 0$ and generator $A$.
 Then
 %% --
 \[
-\sigma(A) \subset 2\pi \im/\tau\cdot\Z
+\sigma(A) \subseteq 2\pi \im/\tau\cdot\Z
 \]
 %% --
 and for $\mu \notin 2\pi\im /\tau\cdot\Z$,
@@ -1352,7 +1352,7 @@ Another way of looking at $P_{n}$ is given by saying that $P_{n}$ is the n-th Fo
 From this it follows that no non-zero $\phi \in E'$ vanishes on all $P_{n}E$ simultaneously.
 By the Hahn-Banach theorem we conclude that $\text{span } \bigcup_{n \in \Z} P_{n}E$ is dense in $E$.
 
-Since $P_{n}E \subset D(A)$, we obtain again from Eq.~\myeqpageref{eq:a1-3.1} that
+Since $P_{n}E \subseteq D(A)$, we obtain again from Eq.~\myeqpageref{eq:a1-3.1} that
 %% --
 \begin{equation}\label{eq:a3-5.3}
 AP_{n}f = \mu_{n}P_{n}f
@@ -1615,15 +1615,15 @@ Let $A$ be the generator of a strongly continuous semigroup $\TT = (T(t))_{t \ge
 Then
 %% --
 \[
-\exp(t\sigma(A)) \subset \sigma(T(t)) \text{ for } t \geq 0 .
+\exp(t\sigma(A)) \subseteq \sigma(T(t)) \text{ for } t \geq 0 .
 \]
 %% --
 More precisely we have the following inclusions.
 %% --
 \begin{align}
-\exp(t \cdot P\sigma(A)) &\subset P\sigma(T(t)) \label{eq:a3-6.1} , \\
-\exp(t \cdot A\sigma(A)) &\subset A\sigma(T(t)) \label{eq:a3-6.2} , \\
-\exp(t \cdot R\sigma(A)) &\subset R\sigma(T(t)) \label{eq:a3-6.3} .
+\exp(t \cdot P\sigma(A)) &\subseteq P\sigma(T(t)) \label{eq:a3-6.1} , \\
+\exp(t \cdot A\sigma(A)) &\subseteq A\sigma(T(t)) \label{eq:a3-6.2} , \\
+\exp(t \cdot R\sigma(A)) &\subseteq R\sigma(T(t)) \label{eq:a3-6.3} .
 \end{align}
 \end{proposition}
 %% --
@@ -1776,12 +1776,12 @@ Then the spectral mapping theorem is valid, \ie
 \end{theorem}
 %% --
 \begin{proof}
-By the previous considerations it suffices to show that $A\sigma(T(t)) \setminus \{0\} \subset \eu^{t \cdot \sigma(A)}$ for $t > 0$.
+By the previous considerations it suffices to show that $A\sigma(T(t)) \setminus \{0\} \subseteq \eu^{t \cdot \sigma(A)}$ for $t > 0$.
 This will be done by converting approximate eigenvectors into eigenvectors in the semigroup $\F$-product (see Subsection~\ref{subsec:a3-4.5}).
 The assertion then follows from Eq.~\myeqpageref{eq:a3-6.4} and Proposition~\ref{prop:a3-4.4}\,(ii).
 
 Assume $t \mapsto T(t)$ to be norm continuous for $t \geq t_{0}$.
-Moreover it suffices to consider $1 \in A\sigma(T(t_{1}))$ for some $t_{1} > 0$, \ie we have a normalized sequence $(f_{n})_{n\in\N} \subset E$ such that
+Moreover it suffices to consider $1 \in A\sigma(T(t_{1}))$ for some $t_{1} > 0$, \ie we have a normalized sequence $(f_{n})_{n\in\N} \subseteq E$ such that
 %% --
 \[
 \lim_{n\to\infty} \|T(t_{1})f_{n} - f_{n}\| = 0 .
@@ -1812,7 +1812,7 @@ Obviously, $g$ is an eigenvector of\/ $T_{\F}(t_{1})$ with eigenvalue $1$ and by
 The coincidence of\/ $\sigma(A)$ and $\sigma(A_{\F})$ proves the assertion.
 \end{proof}
 %% --
-We point out that the above spectral mapping theorem implies the coincidence of spectral bound and growth bound for eventually norm continuous semigroups, hence we have generalized the Liapunov Stability Theorem (see~\ref{cor:a3-1.2}) to a much larger class of semigroups.
+We point out that the above spectral mapping theorem implies the coincidence of spectral bound and growth bound for eventually norm continuous semigroups, hence we have generalized the Lyapunov Stability Theorem (see~\ref{cor:a3-1.2}) to a much larger class of semigroups.
 As mentioned before, this will be of great use in many applications.
 Therefore we state explicitly the spectral mapping theorem for several important classes of semigroups all of which are eventually norm continuous (\cf the diagram preceding Example~\ref{ex:a2-1.27}).
 %% --
@@ -1980,11 +1980,11 @@ Then the following \enquote{Weak Spectral Mapping Theorem}  holds:
 \end{theorem}
 %% --
 \begin{proof}
-By the Spectral Inclusion Proposition~\ref{prop:a3-6.2} we always have $\exp(t\sigma(A)) \subset \sigma(T(t))$.
+By the Spectral Inclusion Proposition~\ref{prop:a3-6.2} we always have $\exp(t\sigma(A)) \subseteq \sigma(T(t))$.
 Since $T(t)$ is a matrix multiplication operator with a bounded function, we obtain from Lemma~\ref{lem:a3-7.1}
 %% --
 \[
-\sigma(T(t)) = \overline{\bigcup_{x\in X} \sigma(\exp(tq(x)))} = \overline{\bigcup_{x\in X} \exp(t\sigma(q(x)))} \subset \overline{\exp(t\sigma(A))}
+\sigma(T(t)) = \overline{\bigcup_{x\in X} \sigma(\exp(tq(x)))} = \overline{\bigcup_{x\in X} \exp(t\sigma(q(x)))} \subseteq \overline{\exp(t\sigma(A))}
 \]
 %% --
 which proves the assertion.
@@ -2062,7 +2062,7 @@ If\/ $E \neq \{0\}$, then $\sigma(A) \neq \emptyset$.
 \begin{proof}
 If\/ $\sigma(A) = \emptyset$, then Eq.~\myeqpageref{eq:a3-7.3} implies $T(\phi) = 0$ whenever $\check{\phi}$ has compact support.
 Since these functions form a dense subspace of\/ $\mathcal{S}$, we conclude that $T(\phi) = 0$ for all $\phi \in \mathcal{S}$.
-Choosing an approximate identity $(\psi_{n})_{n\in\N} \subset \mathcal{D}$, we obtain
+Choosing an approximate identity $(\psi_{n})_{n\in\N} \subseteq \mathcal{D}$, we obtain
 %% --
 \[
 f = T(0)f = \lim_{n\to\infty} T(\psi_{n})f = 0
@@ -2076,7 +2076,7 @@ By the Spectral Inclusion (see Proposition~\ref{prop:a3-6.2}), we have to show t
 In view of the rescaling procedure it suffices to prove this when $-1 \in \rho(T(\pi))$, provided that the following condition is satisfied.
 %% --
 \begin{equation}\label{eq:a3-7.4}
-	\text{There exists } \epsilon > 0 \text{ such that } \bigcup_{k\in\Z} \im\,[2k+1-2\epsilon,2k+1+2\epsilon] \subset 	\rho(A) .
+	\text{There exists } \epsilon > 0 \text{ such that } \bigcup_{k\in\Z} \im\,[2k+1-2\epsilon,2k+1+2\epsilon] \subseteq 	\rho(A) .
 \end{equation}
 %% --
 Assume now that Eq.~\myeqpageref{eq:a3-7.4} holds.
@@ -2173,9 +2173,9 @@ In the rest of this section we discuss the behavior of the single spectral value
 The goal is a characterization of\/ $\sigma(T(t))$ involving only properties of the generator.
 By the rescaling procedure Section~\ref{subsec:a1-3.2} we may assume $\lambda = 1$ and $t = 2\pi$.
 
-From the Spectral Inclusion Theorem (Proposition~\ref{prop:a3-6.2}) we know that $1 \in \rho(T(2\pi))$ implies $\im\Z \subset \rho(A)$.
+From the Spectral Inclusion Theorem (Proposition~\ref{prop:a3-6.2}) we know that $1 \in \rho(T(2\pi))$ implies $\im\Z \subseteq \rho(A)$.
 As seen in many examples the converse does not hold and we are now looking for additional conditions.
-Henceforth we assume $\im\Z \subset \rho(A)$ and define for $k \in \Z$
+Henceforth we assume $\im\Z \subseteq \rho(A)$ and define for $k \in \Z$
 %% --
 \begin{equation}\label{eq:a3-7.7}
 Q_{k}\coloneqq \frac{1}{2\pi}\int_{0}^{2\pi} \eu^{-\im ks}T(s)\ds = \frac{1}{2\pi}(1 - T(2\pi))R(\im k,A)
@@ -2205,16 +2205,16 @@ Then the following conditions are equivalent.
 \item $1 \in \rho(T(2\pi))$ ,
 
 \item 
-$\im\Z \subset \rho(A)$ and the series $\sum_{k\in\Z} R(\im k,A)f$ is Cesàro-summable for every $f \in E$,
+$\im\Z \subseteq \rho(A)$ and the series $\sum_{k\in\Z} R(\im k,A)f$ is Cesàro-summable for every $f \in E$,
 
 \item 
-$\im\Z \subset \rho(A)$ and the series $\sum_{k\in\Z} R(\im k,A)Q_{k}f$ is Cesàro-summable for every $f \in E$. 
+$\im\Z \subseteq \rho(A)$ and the series $\sum_{k\in\Z} R(\im k,A)Q_{k}f$ is Cesàro-summable for every $f \in E$. 
 
 \end{enumerate}
 \end{proposition}
 %% --
 \begin{proof}
-(a) $\Rightarrow$ (b) The Spectral Inclusion Proposition~\ref{prop:a3-6.2} implies $\im\Z \subset \rho(A)$.
+(a) $\Rightarrow$ (b) The Spectral Inclusion Proposition~\ref{prop:a3-6.2} implies $\im\Z \subseteq \rho(A)$.
 By Eq.~\myeqpageref{eq:a3-7.7} we have $R(\im k,A) = 2\pi\cdot(1-T(2\pi))^{-1}Q_{k}$.
 Since $\sum_{k\in\Z} Q_{k}f$ is Cesàro-summable (\mbox{towards} $\frac{1}{2}(f + T(2\pi)f)$) (see Eq.~\myeqpageref{eq:a3-7.8}), it follows that $\sum_{k\in\Z} R(\im k,A)f$ is Cesàro-summable as well.
 
@@ -2257,12 +2257,12 @@ However, in general it is difficult to verify the summability condition stated i
 In Hilbert spaces the boundedness of the resolvents will suffice (see Theorem~\ref{thm:a3-7.10} below).
 %% --
 \begin{lemma}\label{lem:a3-7.9}
-Let $(T(t))_{t\geq 0}$ be a semigroup on some Hilbert space $H$ and assume $\im\Z \subset \rho(A)$ for the generator $A$.
+Let $(T(t))_{t\geq 0}$ be a semigroup on some Hilbert space $H$ and assume $\im\Z \subseteq \rho(A)$ for the generator $A$.
 Then we have
 %% --
 \begin{enumerate}[\upshape (i)]
 \item 
-$(Q_{k}f)_{k\in\Z} \subset \ell^{2}(H)$ for every $f \in H$, and
+$(Q_{k}f)_{k\in\Z} \subseteq \ell^{2}(H)$ for every $f \in H$, and
 
 \item 
 if\quad $\sup_{k\in\Z}\|R(\im k,A)\| < \infty$~, then\quad $\sum_{k\in\Z} R(\im k,A)f_{k}$\quad is summable 
@@ -2333,7 +2333,7 @@ Then the following form of the spectral mapping theorem is valid.
 \begin{proof}
 If\/ $\eu^{\lambda t} \not\in \sigma(T(t))$, it follows from the Spectral Inclusion Proposition~\ref{prop:a3-6.2} that $\mu_{k} \not\in \sigma(A)$ for every $k \in \Z$ and from Formula \eqref{eq:a1-3.1},  that $\|R(\mu_{k},A)\|$ is bounded.
 For the converse inclusion it suffices to assume $t = 2\pi$ and $\lambda = 0$ (use the rescaling procedure Section~\ref{subsec:a1-3.2}).
-Assuming that $\im\Z \subset \rho(A)$ and $\|R(\im k,A)\|$ is bounded, then $\sum_{k\in\Z} R(\im k,A)Q_{k}f$ is summable by Lemma~\ref{lem:a3-7.9}.
+Assuming that $\im\Z \subseteq \rho(A)$ and $\|R(\im k,A)\|$ is bounded, then $\sum_{k\in\Z} R(\im k,A)Q_{k}f$ is summable by Lemma~\ref{lem:a3-7.9}.
 Since every summable series is Cesàro-summable, condition (c) of Proposition~\ref{prop:a3-7.8} is satisfied and we conclude $1 \in \rho(T(2\pi))$.
 \end{proof}
 %% --
@@ -2345,7 +2345,7 @@ The growth bound
 of a semigroup $(T(t))_{t\geq 0}$ on a Hilbert space $H$ satisfies
 %% --
 \begin{equation}\label{eq:a3-7.9}
-\omega_{0} = \inf \{\lambda \in \R \colon \lambda + \im\R \subset \rho(A) \text{ and } \|R(\lambda+\im\mu,A)\| \text{ is bounded for } \mu \in \R\} .
+\omega_{0} = \inf \{\lambda \in \R \colon \lambda + \im\R \subseteq \rho(A) \text{ and } \|R(\lambda+\im\mu,A)\| \text{ is bounded for } \mu \in \R\} .
 \end{equation}
 \end{corollary}
 %% --

@@ -237,7 +237,7 @@ If\/ $A$ generates a positive semigroup, then
 \]
 %%--
 
-Note that $R(\lambda,A)'E' \subset D(A') \subset E^*$, thus \,$R(\lambda,A)'^2E' \subset R(\lambda,A)'E^* = D(A^*)$.
+Note that $R(\lambda,A)'E' \subseteq D(A') \subseteq E^*$, thus \,$R(\lambda,A)'^2E' \subseteq R(\lambda,A)'E^* = D(A^*)$.
 
 We summarize these observations in the following lemma.
 %% --
@@ -436,7 +436,7 @@ Thus
 	Then $P$ reduces the semigroup and we have
 	%% --
 	\[
-	\sigma(T(t_{0})_{\vert \Kern{P}} \subset \{z \in \C \colon |z| < \exp(\Re(\lambda_m) \cdot t_{0})\} .
+	\sigma(T(t_{0})_{\vert \Kern{P}} \subseteq \{z \in \C \colon |z| < \exp(\Re(\lambda_m) \cdot t_{0})\} .
 \]
 %
 	Hence the type of
@@ -569,7 +569,7 @@ weakly compact subsets in the dual space $M(K) = C(K)'$, due to
 %% --
 \begin{proposition}\label{prop:b4-2.3}
 	Let $K$ be a compact space.
-	For a subset $D \subset M(K) = C(K)'$ the following assertions are equivalent.
+	For a subset $D \subseteq M(K) = C(K)'$ the following assertions are equivalent.
 	
 	\begin{enumerate}[\upshape (a)]
 		\item 
@@ -586,7 +586,7 @@ weakly compact subsets in the dual space $M(K) = C(K)'$, due to
 For a proof of this result, see \eg II.9.8 in \textcite{schaefer:1974}.
 We use this proposition in order to describe weakly compact operators on spaces $C(K)$.
 As usual we naturally identify the bounded Borel functions on $K$ with a subspace $B(K)$ of\/ $M(K)' = C(K)''$, note that in
-general, $C(K) \not\subset B(K) \not\subset C(K)''$.
+general, $C(K) \not\subseteq B(K) \not\subseteq C(K)''$.
 %% --
 \begin{proposition}\label{prop:b4-2.4}
 	Let $K$ be a compact space, $G$ be a Banach space, and let $R \colon C(K) \to G$ be a bounded linear operator.\index{operator!weakly compact}
@@ -602,13 +602,13 @@ general, $C(K) \not\subset B(K) \not\subset C(K)''$.
     for every bounded Borel function $g$ on $K$ we have $R''g \in G$,
 
     \item 
-    for every Borel set $C \subset K$ we have $R''(\1_C) \in G$.
+    for every Borel set $C \subseteq K$ we have $R''(\1_C) \in G$.
 \end{enumerate}
 %% --
 In case $G = C(K)$ these conditions are equivalent to the following.
 	\begin{enumerate}[\upshape (a), resume]
 	\item 
-	If\/ $(f_n) \subset C(K)$ is a bounded sequence, then $(Rf_n)$ has a subsequence which converges pointwise to a continuous function.
+	If\/ $(f_n) \subseteq C(K)$ is a bounded sequence, then $(Rf_n)$ has a subsequence which converges pointwise to a continuous function.
     \end{enumerate}
 	
 \item 
@@ -653,7 +653,7 @@ In case $G = C(K)$ the equivalence of\/ $(a)$ and $(d)$ is a consequence of
 two results. First, \emph{Eberlein's Theorem} states that for the weak topology in any Banach space compactness and sequential compactness are
 equivalent.
 Second, \emph{Lebesgue's Dominated Convergence Theorem} assures
-that a sequence $(f_n) \subset C(K)$ converges weakly to $f \in C(K)$ if and
+that a sequence $(f_n) \subseteq C(K)$ converges weakly to $f \in C(K)$ if and
 only if it is bounded and $f_n(x) \to f(x)$ for every $x \in K$.
 	
 (ii) Suppose that $(f_n)$ is a sequence in $C(K)$ which converges to $0$ for
@@ -768,7 +768,7 @@ Since $\epsilon > 0$ was arbitrary we have pointwise convergence, hence strong c
 
 Finally we observe that every operator $T(t)$ defined by Eq.~\myeqpageref{eq:b4-2.4} has the
 strong Feller property since $T(t)''\1_C = P_t(.,C)$ for every Borel set
-$C \subset K$ (see Proposition~\ref{prop:b4-2.4}\,(i)).
+$C \subseteq K$ (see Proposition~\ref{prop:b4-2.4}\,(i)).
 Thus Theorem~\ref{thm:b4-2.5} can be applied in this situation.
 \end{example}
 \index{semigroup!eventually compact semigroup|)}
@@ -1419,7 +1419,7 @@ Hence $(T(t))_{t \geq 0}$ is a positive semigroup again by Part-III, Proposition
 \end{proof}
 %% --
 \begin{remark*}
-Suppose that $\Phi$ has no mass in zero (\ie  for every $\epsilon > 0$ there exists $\delta > 0$ such that $\|\Phi f\| \leq \epsilon \|f\|$ for all $f \in E$, supp$(f) \subset [-\delta,0])$. 
+Suppose that $\Phi$ has no mass in zero (\ie  for every $\epsilon > 0$ there exists $\delta > 0$ such that $\|\Phi f\| \leq \epsilon \|f\|$ for all $f \in E$, supp$(f) \subseteq [-\delta,0])$. 
 Then the positivity hypotheses in the above proposition are necessary in order to obtain positivity of\/ $(T(t))_{t \geq 0}$ (\cf Example~\ref{ex:b2-1.22} for the case $\dim F < \infty$ and \textcite{kerscher:1986} for the general case).
 \end{remark*}
 %% --

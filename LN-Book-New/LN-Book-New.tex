@@ -53,6 +53,7 @@
 
 %% -- Reset theorem counter per section
 \counterwithin{theorem}{section}
+\numberwithin{equation}{section} 
 
 %% -- Shared theorem counter for all environments
 \makeatletter
@@ -76,7 +77,8 @@
 %% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Mathematics
 %% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage[showonlyrefs]{mathtools}
+%\usepackage[showonlyrefs]{mathtools}
+\usepackage{mathtools}
 \usepackage{empheq}
 
 %% -- Norms, absolute values, dual pairings
@@ -130,13 +132,13 @@
 %% Index
 %% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{makeidx}
-\makeindex
+\makeindex 
 
 %% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Cross-references with page info
 %% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage[nospace]{varioref}
-\AtBeginDocument{\renewcommand*{\reftextcurrent}{}}
+\AtBeginDocument{\renewcommand*{\reftextcurrent}{\unskip}}
 \newcommand{\myeqpageref}[1]{\eqref{#1} \vpageref{#1}}
 
 %% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -237,7 +237,7 @@ As we shall see, the operator equality
 yB + B^{*}y = -x \quad (x, y \in M_{+})
 \]
 %% --
-is necessary and sufficient, which is in complete analogy to the classical Liapunov stability result.
+is necessary and sufficient, which is in complete analogy to the classical Lyapunov stability result.
 %% --
 \begin{theorem}\label{thm:d4-2.2}
 Let $M$ be a \WA-algebra on a Hilbert space $H$ and let $\TT = (T(t))_{t \geq 0}$ be a weak*-semigroup on $M$ with generator $A$ implemented by the semigroup $\UG$ on $H$ with generator $B$.
@@ -451,7 +451,7 @@ faithful on $p_{r}Mp_{r}$ and consists of\/ $\TT^{(r)}$-invariant elements, it f
 $P\sigma(A) \cap \im\R = P_{\sigma}(A^{(r)}) \cap \im\R$.
 
 \item
-$\Kern{ \im\gamma - A } \subset p_{r}M_{*}p_{r}$ for all $\gamma \in \R$.
+$\Kern{ \im\gamma - A } \subseteq p_{r}M_{*}p_{r}$ for all $\gamma \in \R$.
 
 \item
 The semigroup $\TT^{(r)}$ is relatively compact in the weak operator topology and therefore strongly ergodic.
@@ -637,7 +637,7 @@ If, in addition, $\TT$ is irreducible and if\/ $\phi$ is the normal state genera
 \begin{proof}
 Consider $\Omega \coloneqq P\sigma(A) \cap \iu  \R$ which is not empty by assumptions.
 From Proposition~\ref{prop:d4-3.1} it follows that $\TT$ is relatively compact in the weak operator topology.
-Let $K$ be the semigroup kernel of\/ $\closure{\TT} \subset \mathcal{L}_{w}{(M_{*})}$ and $Q$ the unit of\/ $K$.
+Let $K$ be the semigroup kernel of\/ $\closure{\TT} \subseteq \mathcal{L}_{w}{(M_{*})}$ and $Q$ the unit of\/ $K$.
 Recall that $Q\psi_{\eta} = \psi_{\eta}$ for all $\psi_{\eta} \in M_{*}$ such that $A\psi_{\eta} = \eta\psi_{\eta}$ $(\eta \in \Omega)$.
 
 Let $\mathcal{E}$ be the family of all eigenvectors of\/ $A'$ pertaining to the eigenvalues in $\Omega$.
@@ -887,7 +887,7 @@ Hence $ S(t) = \Id $.
 But the semigroup $ S $  is weak*-irreducible on the center.
 Consequently, the center is one dimensional.
 Using \textcite[Theorem V.1.27]{takesaki:1979} we obtain $ N = B(H_{n}) $  where $ H_{n} $  is a finite dimensional Hilbert space.
-But if\/ $ 0 \neq \im\gamma \in P\sigma(A) \cap \im\R $  then $ \im\gamma\Z \subset P\sigma(A) $  by Theorem~\ref{thm:d3-1.11}, whence $ N $  must be infinite dimensional.
+But if\/ $ 0 \neq \im\gamma \in P\sigma(A) \cap \im\R $  then $ \im\gamma\Z \subseteq P\sigma(A) $  by Theorem~\ref{thm:d3-1.11}, whence $ N $  must be infinite dimensional.
 Therefore $ P\sigma(A) \cap \im\R = \{0\} $  as desired.
 \end{proof}
 %% --
@@ -1411,7 +1411,7 @@ We refer to \textcite{battyrobinson:1984} for this more general setting and to P
 
 
 \item
-Theorem~\ref{thm:d4-2.2} generalizes the Liapunov stability theorem from the matrix algebra $ M_{n}(\C) $  to arbitrary \WA-algebras.
+Theorem~\ref{thm:d4-2.2} generalizes the Lyapunov stability theorem from the matrix algebra $ M_{n}(\C) $  to arbitrary \WA-algebras.
 For the algebra $ \BH $  it is due to \textcite{milstein:1975} and in the general form to \textcite{grohneubrander:1981}.
 
 
