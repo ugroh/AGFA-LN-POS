@@ -321,7 +321,7 @@ Consequently, $f = 0$.
 Using the Fourier transform one can show that the semigroups in Example~\ref{ex:c2-1.5-3}   and~\ref{ex:c2-1.5-4} \vpageref{ex:c2-1.5-3} are given by
 %% --
 \begin{equation}\label{eq:c2-1.6}
-(T(t)f)(x) = (4\pi t)^{-n/2} \int_{\R^n} \exp(-(x-y)^{2}/4t) f(y) \dy \text{ for } f \in E\,, 
+(T(t)f)(x) = (4\pi t)^{-n/2} \int_{\R^n} \exp(-(x-y)^{2}/4t) f(y) \dy \text{ for } f \in E , 
 \end{equation}
 %% -- 
 where $z^{2} \coloneqq \sum_{i=1}^n z_{i}^{2}$ $(z \in \R^n)$.
@@ -329,7 +329,7 @@ where $z^{2} \coloneqq \sum_{i=1}^n z_{i}^{2}$ $(z \in \R^n)$.
 %% \medskip
 %%
 \item \label{ex:c2-1.5-5}
-The following example is the analog of ~\ref{ex:c2-1.5-1}   for higher dimension.
+The following example is the analog of~\ref{ex:c2-1.5-1}   for higher dimension.
 Let $\Omega \subseteq \R^n$ be a bounded open and connected set and $E = C_{0}(\Omega)$.
 We assume that the Dirichlet problem
 %% --
@@ -440,7 +440,7 @@ principle~\myeqpageref{eq:c2-P}.
 \begin{proof}
 Let $(T(t))_{t \geq 0}$ be a strongly continuous positive semigroup with generator $A$. Given
 \[
-0 \leq f \in D(A) \text{ and } \phi \in E'_{+} \text{ such that } \langle f,\phi \rangle = 0\,,
+0 \leq f \in D(A) \text{ and } \phi \in E'_{+} \text{ such that } \langle f,\phi \rangle = 0 ,
 \]
 then 
 \[
@@ -536,7 +536,7 @@ Then there exists $\phi \in (E_{u})^{\circ}$ such that $\langle g^{-},\phi \rang
 %%Since $(E_{u})^{\circ}$ has a generating cone (by \textcite[II,4.7]{schaefer:1974}), we can assume that $\phi > 0$.
 Define 
 \[
-\psi_{0}(f) \coloneq \sup \phi([0,f] \cap E_{(g^{-})}) \text{ for } f \in E_{+}\,,
+\psi_{0}(f) \coloneq \sup \phi([0,f] \cap E_{(g^{-})}) \text{ for } f \in E_{+} ,
 \]
 then $\psi_{0}$ is positive homogeneous on $E_{+}$.
 Thus the linear extension of\/ $\psi_{0}$ defines a positive linear form $\psi$ on $E$.
@@ -548,7 +548,7 @@ Thus
 \[
 \langle Au,\psi \rangle = - \langle g^{-},\psi \rangle < 0\quad\text{but} \quad\langle u,\psi \rangle \leq \langle u,\phi \rangle = 0 .
 \]
-Thus  ~\myeqpageref{eq:c2-P}   does not hold.
+Thus~\myeqpageref{eq:c2-P}   does not hold.
 \end{proof}
 %% --
 Bounded generators of positive semigroups can now be characterized as follows.
@@ -574,7 +574,7 @@ $A + \|A\| \cdot \Id \geq 0$.
 \end{theorem}
 %% --
 \begin{proof}
-It follows by Proposition~\ref{prop:c2-1.7},  that ~\ref{thm:c2-1.11-1}   implies~\ref{thm:c2-1.11-2}.
+It follows by Proposition~\ref{prop:c2-1.7},  that~\ref{thm:c2-1.11-1}   implies~\ref{thm:c2-1.11-2}.
 
 Since $\|\eu^{tA}\| \leq \eu^{t\|A\|}$ $(t\geq0)$,~\ref{thm:c2-1.11-2}   implies~\ref{thm:c2-1.11-1}   by Theorem~\ref{thm:c2-1.8}.
 
@@ -609,7 +609,7 @@ PAf + \lambda Pf = Pg = g^{-} < 0 .
 \]
 Since by  Eq.~\myeqpageref{eq:c2-1.9}, 
 \[
-[A(\Id - P)f]^{-} \in (\Id - P)E\,,
+[A(\Id - P)f]^{-} \in (\Id - P)E ,
 \]
 it follows 
 \begin{equation*}
@@ -706,7 +706,7 @@ Define
 \begin{align*}
 	m(x) \coloneq 
 	\begin{cases}
-        f(x)\cdot|f(x)|^{-1} & \text{if }  f(x)   \neq 0 \,, \\ 
+        f(x)\cdot|f(x)|^{-1} & \text{if }  f(x)   \neq 0  , \\ 
     	%\mfrac{f(x)}{ \lvert f(x) \rvert} & \text{if }  f(x)   \neq 0 \\  
     	0 & \text{if } f(x) = 0  .
 	\end{cases}
@@ -737,7 +737,7 @@ Then by Part-II, Lemma~\ref{lem:b2-2.4}
 \begin{align*}
 \lim_{t \downarrow 0} \frac{1}{t} (|f(x)+tg(x)|-|f(x)|) = 
 \begin{cases}
-    \Re \left(\sign \overline{f(x)}\right)g(x) & \text{if } f(x) \neq 0 \,, \\
+    \Re \left(\sign \overline{f(x)}\right)g(x) & \text{if } f(x) \neq 0  , \\
     \ \quad\quad|g(x)| & \text{if } f(x) = 0  .
 \end{cases}
 \end{align*}
@@ -755,7 +755,7 @@ Now let $A$ be the generator of a strongly continuous positive semigroup $(T(t))
 The positivity of the semigroup is equivalent to
 %% --
 \begin{equation}\label{eq:c2-2.7}
-|T(t)f| \leq T(t)|f| \quad (t \geq 0 \,, f \in E).
+|T(t)f| \leq T(t)|f| \quad (t \geq 0  , f \in E).
 \end{equation}
 %% --
 In order to deduce from Eq.~\myeqpageref{eq:c2-2.7} a property for the generator $A$ it is natural trying to differentiate Eq.~\myeqpageref{eq:c2-2.7} at $t = 0$.
@@ -764,7 +764,7 @@ Let $f \in D(A)$ and $0 \leq \phi \in D(A')$.
 Then by Eq.~\myeqpageref{eq:c2-2.7},
 %% --
 \begin{equation}\label{eq:c2-2.8}
-	\langle |T(t)f|,\phi \rangle \leq \langle T(t)|f|,\phi \rangle \quad (t \geq 0)\,,
+	\langle |T(t)f|,\phi \rangle \leq \langle T(t)|f|,\phi \rangle \quad (t \geq 0) ,
 \end{equation}
 %% --
 where the equality holds for $t = 0$.
@@ -783,7 +783,7 @@ on the left side.
 Since $\Re\left((\sign \bar{f})Af\right) \leq \Re\left((\widehat{\sign} \bar{f})Af\right)$, this finally gives
 %% --
 \begin{equation*}\label{eq:c2-K} \tag{K}
-\Re\left\langle(\sign \bar{f})Af,\phi \right\rangle \leq \langle |f|,A'\phi \rangle \quad (f \in D(A) \,, 0 \leq \phi \in D(A')).
+\Re\left\langle(\sign \bar{f})Af,\phi \right\rangle \leq \langle |f|,A'\phi \rangle \quad (f \in D(A)  , 0 \leq \phi \in D(A')).
 \end{equation*}
 %% --
 We refer to this as \emph{Kato's inequality}, since it represents an abstract version of the classical inequality proved by Kato for the Laplacian (see Example~\ref{ex:c2-2.5} below) and we will see in the next section, that---together with an additional condition---this inequality is characteristic for the positivity of the semigroup.
@@ -1084,7 +1084,7 @@ then $B$ is $p$-dissipative.
 Let $f \in D_{0}$. 
 Set $P_{+} \coloneqq P_{f^{+}}$, $P_{-} \coloneqq P_{f^{-}}$ and let
 \[
-P \coloneqq \Id - P_{+} - P_{-}\,, \quad Q \coloneq P_{+} + 1/2
+P \coloneqq \Id - P_{+} - P_{-} , \quad Q \coloneq P_{+} + 1/2
 \]
 and $\psi \coloneq Q'\phi$. We show that
 %% --
@@ -1766,7 +1766,7 @@ This implies that
 \]
 Consequently, 
 \[
-0 \leq R(\lambda,B) \leq R(\lambda,A) \text{ for all } \lambda > \lambda_{0}\,,
+0 \leq R(\lambda,B) \leq R(\lambda,A) \text{ for all } \lambda > \lambda_{0} ,
 \]
 hence~\ref{prop:c2-4.5-1}   holds.
 \end{proof}
@@ -1873,7 +1873,7 @@ Then
 where $f \coloneq R(\lambda,A)g \in D(A)_{+}$ and $\phi \coloneq R(\lambda,B)'\psi \in D(B')_{+}$. 
 This shows that $0 \leq R(\lambda,B) \leq R(\lambda,A)$ and~\ref{prop:c2-4.8-1}   follows.
 
-Finally, we prove that~\ref{prop:c2-4.8-3}   implies ~\ref{prop:c2-4.8-1}   if\/ $D(B) \subseteq D(A)$, say.
+Finally, we prove that~\ref{prop:c2-4.8-3}   implies~\ref{prop:c2-4.8-1}   if\/ $D(B) \subseteq D(A)$, say.
 Let $\lambda > \max\{s(A),s(B)\}$. 
 Then $(A - B)R(\lambda,B)$ is a positive operator.
 Hence 
@@ -1959,7 +1959,7 @@ Let $0 \leq f \in E_{u}$ and $g_{n} = R(\lambda,B_{n})f$.
 Then $g = \inf_{n \in \N } g_{n} = \lim_{n \to \infty} g_{n}$ exists.
 Moreover $g_{n} \in D(B)$ and 
 \[
-\lim_{n \to \infty} (\lambda - B)g_{n} = f + \lim_{n \to \infty} (B_{n} - B)g_{n} = f\,,
+\lim_{n \to \infty} (\lambda - B)g_{n} = f + \lim_{n \to \infty} (B_{n} - B)g_{n} = f ,
 \]
 since
 \begin{equation*}
@@ -2086,7 +2086,7 @@ In particular
 holds for all $f \in D(B)$, $0 \leq \phi \in D((A_{\max})')$.
 It is not difficult to see that 
 \[
-D(A') = D((A_{\max})') + \C\cdot\delta_{0}\,,
+D(A') = D((A_{\max})') + \C\cdot\delta_{0} ,
 \]
 and since $D((A_{\max})') = BV[-1,0]$
 (see Part-II, Example~\ref{ex:b2-2.12})
@@ -2164,7 +2164,7 @@ Denote by $B$ the closure of\/ $\Delta - V$ on $C^{\infty}_{c}$
 (\cf Example~\ref{ex:c2-4.7}).
 The modulus semigroup of the semigroup $(S(t))_{t \geq 0}$ generated by $B$ exists and its generator $A$ is given by 
 \[
-Af = \Delta f - \Re(V)f \text{ for all } f \in C^{\infty}_{c}\,,
+Af = \Delta f - \Re(V)f \text{ for all } f \in C^{\infty}_{c} ,
 \]
 and $C^{\infty}_{c}$ is a core of\/ $A$ (see Example~\ref{ex:c2-4.7}).
 \end{example}
@@ -2216,7 +2216,7 @@ There exists $M \geq 1$ such that $\|R(\lambda,A)\| \leq M/\lambda$ for all $\la
 Fix $\mu \geq \omega_{0}(A)+1$.
 Then 
 \[
-AR(\mu,A)Af = \mu R(\mu,A)Af - Af = \mu^{2}R(\mu,A)f - \mu f - Af\,,
+AR(\mu,A)Af = \mu R(\mu,A)Af - Af = \mu^{2}R(\mu,A)f - \mu f - Af ,
 \]
 hence $0 \leq Af \leq \mu^{2}R(\mu,A)f$ whenever $f \in D(A)_{+}$.
 Thus $\|Af\| \leq c\|f\|$ for all $f \in D(A)_{+}$, where $c \coloneq \mu^{2}\|R(\mu,A)\|$.
@@ -2472,14 +2472,14 @@ Let $0 < \lambda \coloneqq t/(t-s) < 1$.
 Then $0 = \lambda s + (1-\lambda)t$. 
 Hence 
 \[
-0 = k(0) \leq \lambda k(s) + (1-\lambda)k(t) = t/(t-s) \, k(s) - s/(t-s) \, k(t)\,,
+0 = k(0) \leq \lambda k(s) + (1-\lambda)k(t) = t/(t-s) \, k(s) - s/(t-s) \, k(t) ,
 \]
 which implies Eq.~\myeqpageref{eq:c2-5.7}.
 
 Third case: $0 < s < t$.
 Let $\lambda = s/t \in (0,1)$. Then $s = (1-\lambda)0 + \lambda t$. Consequently, 
 \[
-k(s) \leq (1-\lambda)k(0) + \lambda k(t) = s/t \, k(t)\,,
+k(s) \leq (1-\lambda)k(0) + \lambda k(t) = s/t \, k(t) ,
 \]
 which implies Eq.~\myeqpageref{eq:c2-5.7}.
 
@@ -2785,14 +2785,14 @@ that $R(\lambda,A) \in \ZE$.
 
 \ref{thm:c2-5.13-3}   implies \ref{thm:c2-5.13-1}   since $T(t) = \lim_{n \to \infty} [n/t\,R(n/t,A)]^{n}$ strongly for all $t > 0$.
 
-It remains to show the equivalence of ~\ref{thm:c2-5.13-4}   and ~\ref{thm:c2-5.13-5}.
-Assume that ~\ref{thm:c2-5.13-4}   holds, let $f \in D(A)$ and $P$ be a band projection.
+It remains to show the equivalence of~\ref{thm:c2-5.13-4}   and~\ref{thm:c2-5.13-5}.
+Assume that~\ref{thm:c2-5.13-4}   holds, let $f \in D(A)$ and $P$ be a band projection.
 Then $Pf \in D(A)$ and $(\Id-P)f \in D(A)$ by the assumption.
 Since $A$ is local we have 
 \[
 APf = PAPf + (\Id-P)APf = PAPf = PAPf + PA(\Id-P)f = PAf.
 \]
-Conversely, assume ~\ref{thm:c2-5.13-5}.
+Conversely, assume~\ref{thm:c2-5.13-5}.
 Let $f \in D(A)$ and $|g| \leq |f|$.
 Then there exists a band projection $P$ such that $Pf = g$.
 Hence $g \in D(A)$.
@@ -2919,7 +2919,7 @@ Assume that $A + B$ generates a positive semigroup.
 Let $f \in D(A)_{+}$, $\phi \in E_{+}^*$ such that $\langle f,\phi \rangle = 0$.
 Since $A$ is local, it follows that $\langle Af,\phi \rangle = 0$.
 
-But $\langle (A+B)f,\phi \rangle \geq 0$ by  Proposition ~\ref{prop:c2-1.7}.
+But $\langle (A+B)f,\phi \rangle \geq 0$ by  Proposition~\ref{prop:c2-1.7}.
 Hence $\langle Bf,\phi \rangle \geq 0$.
 We have shown that $B_{\vert D(A)}$ satisfies the positive minimum principle (Definition~\ref{def:c2-1.6}).
 Since $D(A)$ is a sublattice of\/ $E$ (by Corollary~\ref{cor:c2-5.9}), it follows from Theorem~\ref{thm:c2-1.8}   that $(\eu^{tB})_{t \geq 0}$ is positive.
@@ -2967,7 +2967,7 @@ Proposition~\ref{prop:c2-5.15}   had been proved in \textcite{schaeferetal:1978}
  
 %%
 \item  
-The characterization of generators of lattice semigroups on a Banach lattice with order continuous norm (Corollary ~\ref{cor:c2-5.8}) is due to \textcite{nageluhlig:1981}. An extension of this result to arbitrary Banach lattices is given by \textcite{arendt:1982} from which the proof of  Proposition ~\ref{prop:c2-5.6}   is taken as well.
+The characterization of generators of lattice semigroups on a Banach lattice with order continuous norm (Corollary~\ref{cor:c2-5.8}) is due to \textcite{nageluhlig:1981}. An extension of this result to arbitrary Banach lattices is given by \textcite{arendt:1982} from which the proof of  Proposition~\ref{prop:c2-5.6}   is taken as well.
 
 Local closed operators having an ideal as domain, \ie operators satisfying condition~\ref{thm:c2-5.13-4} of Theorem~\ref{thm:c2-5.13}, are investigated in detail by \textcite{nakano:1950} who calls them dilatators. \textcite{peetre:1959} characterizes differential operators by locality (see also \textcite{luxemburg:1979}). In the context of \CA-algebras local operators are investigated by \textcite{battyrobinson:1984} and \textcite{battyrobinson:1985}.
 
