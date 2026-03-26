@@ -198,10 +198,10 @@ defines a function $f \in C^{2}[0,1]$ satisfying $f(0) = f(1) = 0$. Since $f - f
 Theorem~\ref{thm:c2-1.2} that $A$ is the generator of a positive contraction semigroup.
 %%-- 
 \item \label{ex:c2-1.5-2}
-Let $E = L^{p}[0,1]$ $(1 \leq p < \infty)$ and $A$ be given by $Af = f''$ on 
+Let $E = L^{p}([0,1])$ $(1 \leq p < \infty)$ and $A$ be given by $Af = f''$ on 
 %% --
 \[
-D(A) \coloneq \{f \in E \colon f \in C^{1}[0,1], f' \in AC[0,1], f'' \in L^{p}[0,1], f(0) = f(1) = 0\}.
+D(A) \coloneq \{f \in E \colon f \in C^{1}[0,1], f' \in AC[0,1], f'' \in L^{p}([0,1]), f(0) = f(1) = 0\}.
 \]
 Then $A$ is the generator of a positive contraction semigroup.
 %%--
@@ -1218,22 +1218,22 @@ Now we want to discuss the results obtained so far.
 As a first example we consider the first derivative with boundary
 conditions on %
 \[
-	E = L^{p}[0,1] \quad (1 \leq p < \infty).
+	E = L^{p}([0,1]) \quad (1 \leq p < \infty).
 \]
 %
-By $\text{AC}[0,1]$ we denote the space of all absolutely continuous functions on $[0,1]$. 
+By $AC([0,1])$ we denote the space of all absolutely continuous functions on $[0,1]$. 
 Let $A_{\max}$ be given by
 %% --
 \begin{align*}
-D(A_{\max}) &\coloneq \{f \in \text{AC}[0,1] \colon f' \in L^{p}[0,1]\}\\
+D(A_{\max}) &\coloneq \{f \in AC([0,1]) \colon f' \in L^{p}([0,1])\}\\
 A_{\max}f &\coloneq f' \quad (f \in D(A_{\max})).
 \end{align*}
 %% --
 The following lemma is easy to prove.
 %% --
 \begin{lemma}\label{lem:c2-3.14}
-Let $f \in \text{AC}[0,1]$. 
-Then $|f| \in \text{AC}[0,1]$ and $|f|' = (\sign  f) \cdot f'$ (a.e.).
+Let $f \in AC([0,1])$. 
+Then $|f| \in AC([0,1])$ and $|f|' = (\sign  f) \cdot f'$ (a.e.).
 \end{lemma}
 %% \medskip
 As a consequence of the lemma, $D(A_{\max})$ is a sublattice of\/ $E$ and
@@ -1282,7 +1282,7 @@ $(T(t))_{t \geq 0}$ is a semigroup which is \emph{not positive}. Nevertheless it
 It is not difficult to see that
 \begin{equation}\label{eq:c2-3.11}
 \begin{array}{rl}
-D(A') &= \{\phi \in \text{AC}[0,1] \colon \phi' \in L^{q}[0,1], \phi(0) = d\phi(1)\}\\ 
+D(A') &= \{\phi \in AC([0,1]) \colon \phi' \in L^{q}[0,1], \phi(0) = d\phi(1)\}\\ 
 A'\phi &= -\phi' \quad \text{for all } \phi \in D(A').
 \end{array}
 \end{equation}
@@ -1392,7 +1392,7 @@ This is not the case.
 To give an example, consider $E = L^{2}(\R)$ and the operator $B$ given by 
 $Bf = f^{(3)}$ with domain
 \[
-D(B) \coloneq \{f \in L^{2}(\R) \colon f \in C^{2}(\R); f'' \in \text{AC}(\R) ; f,f',f'',f^{(3)} \in L^{2}(\R)\}
+D(B) \coloneq \{f \in L^{2}(\R) \colon f \in C^{2}(\R); f'' \in AC(\R) ; f,f',f'',f^{(3)} \in L^{2}(\R)\}
 \]
 %%--
 Then $B$ is the generator of a unitary group $(U(t))_{t \in \R}$. 

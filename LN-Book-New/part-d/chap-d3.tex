@@ -214,6 +214,7 @@ Consequently,
 \]
 %% --
 and $T(u^{*}u) = u^{*}u$ by the faithfulness and $T$-invariance of\/ $|\phi|$.
+\qedhere
 \end{enumerate}
 \end{proof}
 %% --
@@ -295,9 +296,9 @@ In particular,
 For all $x \in M$ we obtain
 %% --
 \begin{align*}
-|\psi(x)|^2 &= |<\mu R(\mu+\im\alpha)'x,\psi>|^2 \leq \\
-&\leq \|\psi\| <(\mu R(\mu+\im\alpha)'x)(\mu R(\mu+\im\alpha)'x)^{*},\psi>  \\
-&\leq \|\psi\| <\mu R(\mu)'(xx^{*}),|\psi|>
+|\psi(x)|^2 &= | \dualp{\mu R(\mu+\im\alpha)'x,\psi} |^2 \leq \\
+&\leq \|\psi\| \dualp{(\mu R(\mu+\im\alpha)'x)(\mu R(\mu+\im\alpha)'x)^{*},\psi}  \\
+&\leq \|\psi\| \dualp{\mu R(\mu)'(xx^{*}),|\psi|}
 \end{align*}
 %% --
 (see Corollary~\ref{cor:d1-2.2}).
@@ -337,7 +338,7 @@ If\/ $\phi \in \Fix{\RR} $ is selfadjoint with Jordan decomposition $\phi = \phi
 \| \phi \| &= \| \phi^{+} \| + \| \phi^{-} \|  =
     \phi^{+}(\1) + \phi^{-}(\1) = \phi^{+}(R'\1) + \phi^{-}(R'\1) \\
     &= \dualp{R(\phi^{+}), \1}  + \dualp{R(\phi^{-}), \1}   =
-    \| R(\phi^{+}) \| + \| R(\phi^{-}) \| 
+    \| R(\phi^{+}) \| + \| R(\phi^{-}) \| .
 \end{align*}
 %% -- 
 Then by \textcite[Theorem III.4.2.]{takesaki:1979} we obtain that $\phi^{+}$ and $\phi^{-}$ in $ \Fix{\RR} $.
@@ -401,7 +402,7 @@ Take now $0 \neq x_{0} \in \Fix{S}$ and choose $\psi \in E'_{1}$ such that $\psi
 From the considerations above it follows
 %% --
 \[ 
-\psi_{0}(x_{0}) = \lim_{\mathfrak{U}}(\lambda - 1)\psi(R(\lambda,S)x_{0}) = \psi(x_{0}) \neq 0
+\psi_{0}(x_{0}) = \lim_{\mathfrak{U}}(\lambda - 1)\psi(R(\lambda,S)x_{0}) = \psi(x_{0}) \neq 0 ,
 \]
 %% --
 hence $0 \neq \psi_{0} \in \Fix{S}$.
@@ -920,7 +921,7 @@ Since
 	\bigoplus_{j=1}^{n} L_{j} = M_{*},
 \]
 %
-e obtain
+we obtain
 %% --
 \begin{align*}
 \dim \Fix  {(\lambda - \im\alpha)R(\lambda)'} &= \dim \Fix{\lambda R(\lambda)'} , \\
