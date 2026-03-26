@@ -392,7 +392,7 @@ In fact, for $\alpha \in (0,1)$,  the operator $A$ on $C_{0}(0,1]$ given by
 with domain 
 %%--
 \[
-D(A) = \{f \in C^{1}[0,1] \colon f'(0) = f(0) = 0\} 
+D(A) = \{f \in C^{1}([0,1]) \colon f'(0) = f(0) = 0\} 
 \]
 %%--
 satisfies $\rho(A) = \C $ and 
@@ -980,7 +980,7 @@ This can be proved in a similar way as the claim in Example~\ref{ex:b2-1.22}
 Let $A$ on $C[0,1]$ be given by $Af = f''$ with domain 
 %%--
 \[
-D(A) = \{f \in C^{2}[0,1] \colon f'(0) + \alpha f(0) = 0, f'(1) + \beta f(1) = 0\},
+D(A) = \{f \in C^{2}([0,1]) \colon f'(0) + \alpha f(0) = 0, f'(1) + \beta f(1) = 0\},
 \]
 %%-- 
 where $\alpha,\beta \in \R$.
@@ -1011,15 +1011,15 @@ This implies $f''(0) \geq 0$.
 The argument for $a = 1$ is analogous.
 
 It remains to show that $\mu - A$ is surjective for large real $\mu$.
-Let $g \in C[0,1]$.
+Let $g \in C([0,1])$.
 Let $\lambda > 0$ and 
 %%--
 \[k = \frac{1}{2}\lambda\mleft( \eu^{\lambda x}\int_{x}^{1} \eu^{-\lambda y}g(y)\dy - \eu^{-\lambda x}\int_{x}^{1} \eu^{\lambda y}g(y)\dy \mright).
 \]
 %%--$.
-Then $k \in C^{2}[0,1]$ and $\lambda^{2}k - k'' = g$.
+Then $k \in C^{2}([0,1])$ and $\lambda^{2}k - k'' = g$.
 Let $h = a\eu^{\lambda x} + b\eu^{-\lambda x}$, where $a$ and $b \in \R$.
-Then $h \in C^{2}[0,1]$ and $\lambda^{2}h - h'' = 0$.
+Then $h \in C^{2}([0,1])$ and $\lambda^{2}h - h'' = 0$.
 Let $f = k + h$.
 Then $\lambda^{2}f - f'' = g$.
 
@@ -1677,7 +1677,7 @@ This implies strong continuity (see for example \textcite[Proposition 1.23]{davi
 It remains to show that~\ref{lem:b2-3.2-3} implies~\ref{lem:b2-3.2-1}.
 Because of Eq.~\myeqpageref{eq:b2-3.1} it suffices to show that the restriction $\widetilde{\phi}$ of\/ $\phi$ to $[0,1] \times K$ is continuous.
 By hypothesis, the mapping $W \colon f \mapsto (t \mapsto T(t)f)$ from $C(K)$ into $C([0,1],C(K))$ is continuous.
-Identifying $C([0,1],C(K))$ canonically with $C([0,1] \times K)$ the mapping $W$ obtains the form $f \mapsto f \circ \widetilde{\phi}$.
+Identifying $C([0,1],C(K))$ canonically with $C([0,1]) \times K$ the mapping $W$ obtains the form $f \mapsto f \circ \widetilde{\phi}$.
 Since $W$ is continuous, $\widetilde{\phi}$ is continuous as well.
 \end{proof}
 %% --
@@ -1863,7 +1863,7 @@ Since $M\1 = p \in D(A)$ one has $\1 \in D(\delta)$ and %
 Thus $\delta$ is the generator of a semigroup of algebra homomorphisms, hence a derivation by Theorem~\ref{thm:b2-3.4}.
 \end{proof}
 %% --
-At the end of this section we will show that any derivation on $C[0,1]$ which generates a group is similar to a differential operator of first order.
+At the end of this section we will show that any derivation on $C([0,1])$ which generates a group is similar to a differential operator of first order.
 This in connection with Theorem~\ref{thm:b2-3.6} will enable us to describe all generators of positive groups as perturbations of a differential operator.
 
 \index{automorphism group|(}
@@ -1894,7 +1894,7 @@ Thus Theorem~\ref{thm:b2-3.7} follows from Theorem~\ref{thm:b2-1.13}.
 \begin{remark*}\label{rem:b2-3.7a}
 It is remarkable that from locality, the range condition and $\1 \in D(A)$, $A\1 = 0$ it follows that $D(A)$ actually is a subalgebra of\/ $C(K)$ and $A$ is a derivation.
 The \enquote{order-theoretical} property of locality is in some aspects stronger than the algebraic property of being a derivation.
-For example a local, densely defined operator is closable (by Corollary~\ref{cor:b2-1.11} ); but there exist derivations on $C[0,1]$ which are not closable (see \textcite{brattelirobinson:1975}).
+For example a local, densely defined operator is closable (by Corollary~\ref{cor:b2-1.11} ); but there exist derivations on $C([0,1])$ which are not closable (see \textcite{brattelirobinson:1975}).
 \end{remark*}
 %% --
 \begin{remark*}[An excursion to \CA-algebras]\label{rem:b2-3.7b}
@@ -3067,7 +3067,7 @@ The corresponding result for positive groups on $C_{0}(X)$ (Theorem~\ref{thm:b2-
 \textcite{linetal:1977} consider multiplicative perturbations of a generator of an automorphism group on $C(K)$ ($K$ compact) by a function $m$ which has a finite number of zeros.
 The function $m$ is assumed to satisfy the "generalized Osgood condition" which is similar to being \emph{admissible} (in our sense) but in addition the given flow is involved in the definition.
 
-\textcite{batty:1981} determined all densely defined derivations $\delta$ on $C[0,1]$ which are well-behaved (\ie  $\pm\delta$ is dispersive) by a representation similar to Theorem~\ref{thm:b2-3.24}.
+\textcite{batty:1981} determined all densely defined derivations $\delta$ on $C([0,1])$ which are well-behaved (\ie  $\pm\delta$ is dispersive) by a representation similar to Theorem~\ref{thm:b2-3.24}.
 In contrast to Batty, here we assume that $\delta$ is the generator of a group.
 This simplifies the matter considerably since all continuous flows on an interval are easy to determine (Proposition~\ref{prop:b2-3.21}).
 Our approach is inspired by \textcite{delaubenfels:1984} to whom Theorem~\ref{thm:b2-3.24} is due.
@@ -3075,7 +3075,7 @@ Our approach is inspired by \textcite{delaubenfels:1984} to whom Theorem~\ref{th
 For simplicity we confined ourselves to groups.
 \textcite{uhlig:1979} determined all semi-flows on an interval.
 
-In the sequel of Batty's work (loc.cit.) a characterization of all densely defined closed derivations on $C[0,1]$ has been obtained by Kurose in a series of papers 
+In the sequel of Batty's work (loc.cit.) a characterization of all densely defined closed derivations on $C([0,1])$ has been obtained by Kurose in a series of papers 
 \textcite{kurose:1981, kurose:1982, kurose:1983}.
 \end{enumerate}
 \index{automorphism group|)}

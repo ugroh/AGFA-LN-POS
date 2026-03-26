@@ -1948,33 +1948,66 @@ This system has a solution for every $(v_{1}, \ldots, v_{n}) \in D(A)$ and the a
 %\end{pmatrix}
 %\]
 %% --
+%\[
+%0 = \det\,
+%\begin{pmatrix}{
+% \left(1 - \int_{0}^{r} \beta_{11}(a)\eu^{-\lambda a} \diff{a}\right)} 
+%  & { \left(-\int_{0}^{r} \beta_{12}(a)\eu^{-\lambda a} \diff{a}\right)} 
+%  & {\cdots} 
+%  & { \left(-\int_{0}^{r} \beta_{1n}(a)\eu^{-\lambda a} \diff{a}\right)} \\
+%{ \left(-\int_{0}^{r} \beta_{21}(a)\eu^{-\lambda a} \diff{a}\right)} 
+%  & {\ddots} 
+%  & {\cdots}
+%  & {\vdots} \\
+%{\vdots}
+%  & {\ddots}  
+%  & {\ddots}   
+%  & {\vdots}  \\
+%\vdots
+%  & {\cdots}  
+%  & {\cdots}
+%  & { \left(-\int_{0}^{r} \beta_{n-1,n}(a)\eu^{-\lambda a} \diff{a}\right)} \\
+%{ \left(-\int_{0}^{r} \beta_{n1}(a)\eu^{-\lambda a} \diff{a}\right)} 
+%  & {\cdots} 
+%  & {\cdots}
+%  & { \left(1 - \int_{0}^{r} \beta_{nn}(a)\eu^{-\lambda a} \diff{a}\right)}
+%\end{pmatrix}
+%\]
+%% --
+%
 \[
-0 = \det\,
-\begin{pmatrix}{
- \left(1 - \int_{0}^{r} \beta_{11}(a)\eu^{-\lambda a} \diff{a}\right)} 
-  & { \left(-\int_{0}^{r} \beta_{12}(a)\eu^{-\lambda a} \diff{a}\right)} 
-  & {\cdots} 
-  & { \left(-\int_{0}^{r} \beta_{1n}(a)\eu^{-\lambda a} \diff{a}\right)} \\
-{ \left(-\int_{0}^{r} \beta_{21}(a)\eu^{-\lambda a} \diff{a}\right)} 
-  & {\ddots} 
-  & {\cdots}
-  & {\vdots} \\
-{\vdots}
-  & {\ddots}  
-  & {\ddots}   
-  & {\vdots}  \\
-\vdots
-  & {\cdots}  
-  & {\cdots}
-  & { \left(-\int_{0}^{r} \beta_{n-1,n}(a)\eu^{-\lambda a} \diff{a}\right)} \\
-{ \left(-\int_{0}^{r} \beta_{n1}(a)\eu^{-\lambda a} \diff{a}\right)} 
-  & {\cdots} 
-  & {\cdots}
-  & { \left(1 - \int_{0}^{r} \beta_{nn}(a)\eu^{-\lambda a} \diff{a}\right)}
+0 = \det
+\begin{pmatrix}
+ 1 - \tint_{0}^{r}\beta_{11}(a)\,\eu^{-\lambda a}\diff{a}
+   & -\tint_{0}^{r}\beta_{12}(a)\,\eu^{-\lambda a}\diff{a}
+   & \cdots
+   & -\tint_{0}^{r}\beta_{1n}(a)\,\eu^{-\lambda a}\diff{a} \\[1ex]
+  -\tint_{0}^{r}\beta_{21}(a)\,\eu^{-\lambda a}\diff{a}
+   & \ddots & \cdots & \vdots \\[1ex]
+   \vdots & \ddots & \ddots & \vdots \\[1ex]
+  -\tint_{0}^{r}\beta_{n1}(a)\,\eu^{-\lambda a}\diff{a}
+   & \cdots & \cdots
+   & 1 - \tint_{0}^{r}\beta_{nn}(a)\,\eu^{-\lambda a}\diff{a}
 \end{pmatrix}
 \]
 %% --
 whose unique real solution $\lambda$ is $s(A)$.
+
+%% --
+%Setze $b_{ij}(\lambda) \coloneqq \int_{0}^{r} \beta_{ij}(a)\,\eu^{-\lambda a} \diff{a}$.
+%Dann gilt $0 = \det(I - B(\lambda))$, wobei $B(\lambda) = \bigl(b_{ij}(\lambda)\bigr)_{1\le i,j\le n}$,
+%d.\,h.\ explizit:
+%%
+%\[
+%0 = \det
+%\begin{pmatrix}
+% 1 - b_{11}(\lambda)  & -b_{12}(\lambda)     & \cdots & -b_{1n}(\lambda)     \\[1ex]
+%  -b_{21}(\lambda)    & \ddots               & \cdots & \vdots               \\[1ex]
+%   \vdots             & \ddots               & \ddots & \vdots               \\[1ex]
+%  -b_{n1}(\lambda)    & \cdots               & \cdots & 1 - b_{nn}(\lambda)
+%\end{pmatrix}.
+%\]
+%%% --
 
 The infinite dimensional problem of determining $s(A)$ is therefore reduced to solving a one-dimensional equation.
 \end{example}
