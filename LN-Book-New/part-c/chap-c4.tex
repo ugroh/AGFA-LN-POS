@@ -302,7 +302,7 @@ We begin with a generalization of Corollary~\ref{cor:c4-1.4}\,\ref{cor:c4-1.4-2}
 %%
 \begin{proposition}\label{prop:c4-1.6}
 %
-Let $A$ be the generator of a positive semigroup on a (real or complex) Banach lattice, $D(A)_{-} \coloneqq -(D(A) \cap E_{+})$.
+Let $A$ be the generator of a positive semigroup on a (real or complex) Banach lattice, $D(A)_{-} \coloneq -(D(A) \cap E_{+})$.
 Then 
 %% --
 \[ 
@@ -338,7 +338,7 @@ Using Theorem~\ref{thm:c3-1.2}  we conclude that $R(\alpha,A)f \leq g$ for $\alp
 By the Uniform Boundedness Principle we know that $\{R(\alpha,A) \colon \alpha > \max\{0,s(A)\}\}$ is uniformly bounded.
 Since $\omega_{1}(A) = s(A) \in \sigma(A)$ (see Theorem~\ref{thm:c4-1.3}) it follows that $\omega_{1}(A) < 0$.
 \end{proof}
-Next we show that weak uniform stability implies uniform stability provided that $E$ is weakly sequentially complete (see Section~\ref{sec:c1-5}) and $(\image{A})_{+} \coloneqq A(D(A)) \cap E_{+}$ is a total subset of\/ $E$.
+Next we show that weak uniform stability implies uniform stability provided that $E$ is weakly sequentially complete (see Section~\ref{sec:c1-5}) and $(\image{A})_{+} \coloneq A(D(A)) \cap E_{+}$ is a total subset of\/ $E$.
 The left translations on $L^{2}(\R_{+})$ are stable.
 Hence, by Part-I, Remark~\ref{rem:a4-1.17}\,(i), $\Image{A} = \{f \in L^{2}(\R_{+}) \colon \int_{0}^{\infty} f(x) \, \dx \text{ exists}\}$ and we see that $(\Image{A})_{+}$ is a total subset of\/ $L^{2}(\R_{+})$.
 On the other hand, $\mleft(\image{A}\mright)_{+} = \{0\}$ for the generator of the non-stable, but weakly stable semigroup of left translations on $L^{2}(\R)$.
@@ -443,9 +443,9 @@ u(t) = T(t)u_0 + \int_{0}^{t} T(t-s)f_{0} \ds + \int_{0}^{t} T(t-s)(F(s) - f_{0}
 \end{equation}
 %% --
 By the stability of the semigroup and $u_0 \in D(A)$, the first term converges to zero as $t \to \infty$.
-Since $f_{0} \in \Image{A}$, the second term converges to $h \coloneqq  \int_{0}^{\infty} T(s)f_{0} \ds \in \Image{A}$ (Part-I, Theorem~\ref{thm:a4-1.16}) and $Ah = -f_{0}$.
-Define $H(s) \coloneqq F(s) - f_{0}$, 
-$ H_{+}(s) \coloneqq (H(s))_{+} $ 
+Since $f_{0} \in \Image{A}$, the second term converges to $h \coloneq  \int_{0}^{\infty} T(s)f_{0} \ds \in \Image{A}$ (Part-I, Theorem~\ref{thm:a4-1.16}) and $Ah = -f_{0}$.
+Define $H(s) \coloneq F(s) - f_{0}$, 
+$ H_{+}(s) \coloneq (H(s))_{+} $ 
 and similarly $H_{-}(\cdot)$.
 
 We have to show that $\int_{0}^{t} T(t-s)H_{\pm}(s) \ds \to 0$ as $t \to \infty$.
@@ -600,7 +600,7 @@ If one has a positive semigroup\, $\TT = (T(t))_{t \geq 0}$\,  satisfying
 then the rescaled semigroup with 
 %% --
 \[
-\widehat{T}(t) \coloneqq \eu^{-\omega_0 \, t }T(t)
+\widehat{T}(t) \coloneq \eu^{-\omega_0 \, t }T(t)
 \]
 %% --
 is quasi-compact and has spectral bound zero.
@@ -666,7 +666,7 @@ On the Banach lattice $E = L^{1}( \left[0,\infty\right))$ we consider the operat
 %% --
 Here we assume that $\mu$ and $\beta$ are positive, measurable, bounded functions on $[0,\infty)$.
 One can show that $A$ generates a strongly continuous semigroup $\TT$ of positive operators.
-Assuming that $\mu(\infty) \coloneqq \lim_{a \to \infty}\mu(a)$ exists, we obtain $\omega_{ess}(\TT) = -\mu(\infty)$.
+Assuming that $\mu(\infty) \coloneq \lim_{a \to \infty}\mu(a)$ exists, we obtain $\omega_{ess}(\TT) = -\mu(\infty)$.
 We suppose in addition that $\beta$ and $\mu$ satisfy
 %% --
 \begin{equation}\label{eq:c4-2.3}
@@ -677,7 +677,7 @@ We suppose in addition that $\beta$ and $\mu$ satisfy
 %\quad \text{and} \quad \mu(\infty) > 0.
 \end{equation}
 %% --
-The function $h$ with $h(a) \coloneqq \exp(-\int_{0}^{a} \mu(s) \ds)$ is differentiable, $h \in E$ and $h' = -\mu h$.
+The function $h$ with $h(a) \coloneq \exp(-\int_{0}^{a} \mu(s) \ds)$ is differentiable, $h \in E$ and $h' = -\mu h$.
 Moreover, Eq.~\myeqpageref{eq:c4-2.3} implies 
 %
 \[
@@ -728,13 +728,13 @@ In the following result we replace quasi-compactness by eventual norm-continuity
 \begin{theorem} \label{thm:c4-2.5}
 %
 Let $\TT = (T(t))_{t \geq 0}$ be a bounded, eventually norm-continuous positive semigroup with generator $A$ on a reflexive Banach lattice $E$.
-Then $Pf \coloneqq  \lim_{t \to \infty} T(t)f$ exists for every $f \in E$, and
+Then $Pf \coloneq  \lim_{t \to \infty} T(t)f$ exists for every $f \in E$, and
 $P$ is a positive projection onto the fixed space $\Fix{\TT} = \Kern{A}$. 
 \end{theorem}
 %% --
 \begin{proof}
 In view of Theorem~\ref{thm:c4-1.5} it suffices to consider the case $s(A) = 0 \in P{\sigma}(A)$.
-We define $F \coloneqq \{f \in E \colon \lim_{t \to \infty} T(t)f \text{ exists}\}$.
+We define $F \coloneq \{f \in E \colon \lim_{t \to \infty} T(t)f \text{ exists}\}$.
 Then $F$ is closed since $(T(t))_{t \geq 0}$ is bounded and obviously $\Kern{A} \subseteq F$.
 Since $\sigma(A) \cap \im\R$ is cyclic and bounded (see Theorem~\ref{thm:c3-2.10} and Part-I, Theorem~\ref{thm:a2-1.20} resp.), we have $\sigma(A) \cap \im\R = \{0\}$.
 Since the spectral mapping theorem holds (cf.\ Part-I, Theorem~\ref{thm:a3-6.6}), we conclude $\sigma(T(t)) \cap \Gamma = \{1\}$ for all $t \geq 0$.
@@ -760,7 +760,7 @@ Since power bounded operators on a reflexive Banach space are mean ergodic (\eg 
 %% --
 Strong convergence of the semigroup $\TT = (T(t))_{t \geq 0}$ implies strong convergence of the Cesàro means 
 \[
-C(t)f \coloneqq  \frac{1}{t}\int_{0}^{t} T(s)f \ds \text{ for } f \in E
+C(t)f \coloneq  \frac{1}{t}\int_{0}^{t} T(s)f \ds \text{ for } f \in E
 \]
 which (by definition) constitute \emph{mean ergodicity} of the semigroup $\TT$ (see \textcite[Chap.5.1]{davies:1980}).
 \index{mean ergodicity}
@@ -769,8 +769,8 @@ On the other hand, an inspection of the proof of Theorem~\ref{thm:c4-2.5} shows 
 
 This remark also shows where to look for examples of semigroups not converging as $t \to \infty$.
 
-Consider the positive contraction $R$ defined by $(Rf)(x) \coloneqq f(x+1)$ on $E = L^{1}(\R)$.
-Then $T(t) \coloneqq \eu^{t(R-\Id)}$ defines a positive norm-continuous semigroup on $E$.
+Consider the positive contraction $R$ defined by $(Rf)(x) \coloneq f(x+1)$ on $E = L^{1}(\R)$.
+Then $T(t) \coloneq \eu^{t(R-\Id)}$ defines a positive norm-continuous semigroup on $E$.
 Since $\Kern{R - \Id} = \Fix{R} = \{0\}$, but 
 \[
 \|T(t)f\| = \eu^{-t} \left\|\sum_{n=0}^{\infty} \frac{t^n}{n!}R^{n}f\right\| = 
@@ -894,7 +894,7 @@ $\text{For every } C \in \Sigma \text{ one has } \lim_{t \to 0} P_{t}(x,C) = 1_{
 %% --
 Given $h \in L^{1}(\mu)$ we define a measure\, $P_{t}h$\, on\, $\Sigma$\, by
 \[
-P_{t}h(C) \coloneqq \int P_{t}(x,C)h(x) \, \diff{\mu(x)} .
+P_{t}h(C) \coloneq \int P_{t}(x,C)h(x) \, \diff{\mu(x)} .
 \]
 In case $\mu(C) = 0$, then, by~\ref{ex:c4-2.7-4}, $P_{t}(x,C) = 0$ $\mu$-a.e. on $X$, hence $P_{t}h(C) = 0$.
 That is, $P_{t}h$ is absolutely continuous with respect to $\mu$.
@@ -963,8 +963,8 @@ Since the regular operators on $L^{p}(\mu)$ form a vector lattice, it follows by
 \[
 |T(r) - T(s)|e = T(r)e + T(s)e - 2(\inf\{T(r),T(s)\})e < 2e .
 \]
-Consequently, the first alternative of Theorem~\ref{thm:c4-2.6} holds true with $\tau \coloneqq s-r$.
-Equivalently, we have $X_{2} = \emptyset$ and by Corollary~\ref{cor:c4-2.7} $Pf \coloneqq \lim_{t \to \infty} T(t)f$ exists for every $f \in L^{p}(\mu)$.
+Consequently, the first alternative of Theorem~\ref{thm:c4-2.6} holds true with $\tau \coloneq s-r$.
+Equivalently, we have $X_{2} = \emptyset$ and by Corollary~\ref{cor:c4-2.7} $Pf \coloneq \lim_{t \to \infty} T(t)f$ exists for every $f \in L^{p}(\mu)$.
 The limit $P$ is a positive projection satisfying $PT(t) = T(t)P = P$ for all $t \geq 0$.
 It follows that $\Image{P} \subseteq \Kern{A}$ and $\Image{P'} \subseteq \Kern{A'}$.
 Since Pe = e, hence $P \neq 0$, we conclude that $\Kern{A'}$ contains positive elements.
@@ -1064,7 +1064,7 @@ Since $h$ is a quasi-interior point and $\TT$ is bounded, it follows that $\TT$ 
 
 Therefore the \emph{Jacobs-DeLeeuw-Glicksberg Splitting Theorem} (see \textcite[Chapter 2, Theorem 4.4 and 4.5]{krengel:1985}) can be applied to (the weak closure of) $\TT$ and we obtain a projection $Q \in \LE$ onto the closed subspace $E_{1}$ generated by the eigenvectors $h_{k}$ of\/ $A$ corresponding to the eigenvalues $\im\alpha k$, $k \in \Z$.
 
-Clearly, $Q$ splits the semigroup $\TT$ into the restricted semigroups $\TT_{1}$ on $E_{1} \coloneqq QE$ and $\TT_{2}$ on $E_{2} \coloneqq \Kern{Q}$.
+Clearly, $Q$ splits the semigroup $\TT$ into the restricted semigroups $\TT_{1}$ on $E_{1} \coloneq QE$ and $\TT_{2}$ on $E_{2} \coloneq \Kern{Q}$.
 We first describe $\TT_{1}$ in more detail.
 
 The projection $Q$ is positive as an element of the weak closure of\/ $\TT$ and even strictly positive by the irreducibility of\/ $\TT$.
@@ -1081,7 +1081,7 @@ This proves the first part of the following lemma.
 %% --
 \begin{lemma}\label{lem:c4-2.12}%
 \index{spectral decomposition}
-Under the above assumptions there exists a positive projection $Q$ with range $E_{1} \coloneqq QE$ and kernel $E_{2} \coloneqq Q^{-1}(0)$ such that the following holds.
+Under the above assumptions there exists a positive projection $Q$ with range $E_{1} \coloneq QE$ and kernel $E_{2} \coloneq Q^{-1}(0)$ such that the following holds.
 %% --
 \begin{enumerate}[\upshape (i)]
 \item \label{lem:c4-2.12-1}
@@ -1118,7 +1118,7 @@ Then $\TT$ behaves asymptotically as the rotation group $(R_{\tau}(t))_{t \geq 0
 More precisely, we can identify $L^{2}(\Gamma)$ with a sublattice of\/ $E$, being the range of a strictly positive projection $Q$, and we find constants $\epsilon > 0$ and $M \geq 1$ such that for every $f \in E$ we have
 %% --
 \begin{equation}\label{eq:c4-2.11}
-\|T(t)f - R_{\tau}(t)g\| \leq M\eu^{-\epsilon t}\|f\| \text{ for every } t \geq 0 \text{ where } g \coloneqq Qf.
+\|T(t)f - R_{\tau}(t)g\| \leq M\eu^{-\epsilon t}\|f\| \text{ for every } t \geq 0 \text{ where } g \coloneq Qf.
 \end{equation}
 \end{proposition}
 %% --
@@ -1148,8 +1148,8 @@ At first we observe that without loss of generality we may assume that $\mu$ is 
 In fact, the assumptions imply that $T(t)h = h$ for some $h \gg 0$, $\|h\|_{p} = 1$.
 We consider the measure $\nu$ which has the density $h^{p}$ with respect to $\mu$.
 Then $\nu$ is a probability measure and 
-$M \colon L^{p}(\nu) \to L^{p}(\mu)$, defined by $Mh \coloneqq h\cdot f$, is an isometric lattice isomorphism of\/ $L^{p}(\nu)$ onto $L^{p}(\mu)$.
-The semigroup defined by $\widehat{T}(t) \coloneqq M^{-1}T(t)M$ possesses the same properties as $(T(t))$ and satisfies $\widehat{T}(t)\1 = \1$ for $t \geq 0$.
+$M \colon L^{p}(\nu) \to L^{p}(\mu)$, defined by $Mh \coloneq h\cdot f$, is an isometric lattice isomorphism of\/ $L^{p}(\nu)$ onto $L^{p}(\mu)$.
+The semigroup defined by $\widehat{T}(t) \coloneq M^{-1}T(t)M$ possesses the same properties as $(T(t))$ and satisfies $\widehat{T}(t)\1 = \1$ for $t \geq 0$.
 
 Now the properties $T(t)\1 = \1$, and $T(t) \geq 0$ imply that $L^{\infty}(\mu)$ is an invariant subspace for every operator $T(t)$ which is contractive with respect to the $L^{\infty}$-norm.
 The \emph{Riesz Convexity Theorem} (see \textcite[VI.10.11]{dunfordschwartz:1958}) then implies that by restricting the semigroup $(T(t))$ to $L^{q}(\mu)$ $(p < q < \infty)$ we obtain a strongly continuous semigroup $(T_{q}(t))_{t \geq 0}$ on $L^{q}(\mu)$ such that $\|T_{q}(t)\| \leq \|T(t)\|^{p/q}$ for $t \geq 0$, $q \geq p$.
@@ -1199,10 +1199,10 @@ For details we refer to \textcite{diekmannetal:1984}.
 %% --
 \begin{example}\label{ex:c4-2.15}
 Let $E = L^{1}([\frac{1}{4},1],w\,\dx)$, where the density $w$ is a continuous positive function on $[\frac{1}{4},1]$, vanishes at $x = 1$ and is strictly positive in $[\frac{1}{4},1)$.
-We consider the operator $C = A + B$ where $A$ is defined by $(Af)(x) \coloneq  -xf'(x)$ on the domain $D(A) \coloneqq \{f \in AC \colon f(\frac{1}{2}) = 0\}$ and $B$ is defined by
+We consider the operator $C = A + B$ where $A$ is defined by $(Af)(x) \coloneq  -xf'(x)$ on the domain $D(A) \coloneq \{f \in AC \colon f(\frac{1}{2}) = 0\}$ and $B$ is defined by
 %% --
 \begin{equation*}\label{eq:c4-2.12-kgk}
-Bf(x) \coloneqq \begin{cases}
+Bf(x) \coloneq \begin{cases}
     k(x)f(2x) & \text{if } x \leq \frac{1}{2}, \\
     0 & \text{if } x > \frac{1}{2}.
 \end{cases}
@@ -1236,7 +1236,7 @@ A suitable choice of the weight function $w$ ensures that $(S(t))$ is bounded.
 Take
 %% --
 \begin{equation}\label{eq:c4-2.14}
-w(x) \coloneqq \begin{cases}
+w(x) \coloneq \begin{cases}
     \text{\sfrac{1}{x}} & \text{for } x \leq \frac{1}{2}, \\
     \text{\sfrac{1}{x}} \left\{1 - \int_{1/4}^{x/2} \frac{k(y)}{y} \, \dy \right\} & \text{for } x \geq \frac{1}{2}.
 \end{cases}
@@ -1252,7 +1252,7 @@ Thus $\1 \in D(C')$ and $C'\1 = 0$, equivalently $S(t)'\1 = \1$ for all $t$.
 This shows that $(S(t))$ is a semigroup of contractions on $E$.
 
 It remains to show that there is $\alpha > 0$ such that $\im\alpha \in \sigma(C)$.
-In fact, considering $\alpha \coloneqq 2\pi(\log 2)^{-1}$,  then $\im\alpha$ is an eigenvalue of\/ $C$.
+In fact, considering $\alpha \coloneq 2\pi(\log 2)^{-1}$,  then $\im\alpha$ is an eigenvalue of\/ $C$.
 A corresponding eigenfunction is given by $h_{1}(x) \coloneq  x^{-\im\alpha}h_{0}(x)$, where $h_{0}$ is the eigenfunction corresponding to $0$ which is given by
 %% --
 \begin{equation}\label{eq:c4-2.15}
@@ -1300,8 +1300,8 @@ u_0 &= g.
 \end{split}
 \end{equation*}
 %% --
-We use the following setting: Let $F$ be a Banach space, consider $E \coloneqq L^{1}([-1,0],F)$ and take $\Phi \in \L{E,F}$.
-For $u \in L^{1}_{\mathrm{loc}}([-1,\infty),F)$ we denote by $u_t \in E$ the function given by $u_t(s) \coloneqq u(t+s)$, $t \geq 0$, $s \in [-1,0]$.
+We use the following setting: Let $F$ be a Banach space, consider $E \coloneq L^{1}([-1,0],F)$ and take $\Phi \in \L{E,F}$.
+For $u \in L^{1}_{\mathrm{loc}}([-1,\infty),F)$ we denote by $u_t \in E$ the function given by $u_t(s) \coloneq u(t+s)$, $t \geq 0$, $s \in [-1,0]$.
 
 By a solution of \myeqpageref{eq:c4-re} with initial function $g \in E$ we understand a function $u \in L^{1}_{\mathrm{loc}}([-1,\infty),F)$ which satisfies equation \myeqpageref{eq:c4-re}.
 The problem \myeqpageref{eq:c4-re} is called \emph{well-posed} if for each $g \in E$ there exists exactly one solution.
@@ -1340,10 +1340,10 @@ D(A):=\{f \in AC([-1,0],F) \colon f' \in E \text{ and } f(0) = \Phi(f)\}.
 \end{equation*}
 %% --
 We claim that $(A,D(A))$ generates a strongly continuous semigroup $(T(t))_{t\geq 0}$ on $E$.
-To this end we first consider the operator $A_0 f \coloneqq f'$ with domain
+To this end we first consider the operator $A_0 f \coloneq f'$ with domain
 %% --
 \begin{equation*}\label{eq:c4-3.0-KGK3}
-D(A_0) \coloneqq \{f \in E \colon f \in AC([-1,0],F), f' \in E \text{ and } f(0) = 0\}.
+D(A_0) \coloneq \{f \in E \colon f \in AC([-1,0],F), f' \in E \text{ and } f(0) = 0\}.
 \end{equation*}
 %% --
 Similarly to the special case where $F = \R$ (compare Part-I, Example~\ref{subsec:a1-2.4}.\,(ii)), it can be seen that the operator $A_0$ generates a strongly continuous semigroup $(T_0(t))_{t\geq 0}$ given by
@@ -1360,7 +1360,7 @@ Notice that $(T_0(t))_{t \geq 0}$ is a nilpotent semigroup.
 Now consider the operators $S_{\lambda} \colon E \to E \colon f \mapsto \epsilon_{\lambda} \otimes \Phi(f)$, $\lambda > 0$, where $\epsilon_{\lambda}$ denotes the function $s \mapsto \eu^{\lambda s}$ as an element of\/ $L^{1}[-1,0]$, 
 and $h \otimes x \in E$ is defined by 
 %\linebreak[2] 
-$(h \otimes x)(s) \coloneqq h(s) \cdot x$ for $h \in L^{1}[-1,0]$, $x \in F$ and $s \in [-1,0]$.
+$(h \otimes x)(s) \coloneq h(s) \cdot x$ for $h \in L^{1}[-1,0]$, $x \in F$ and $s \in [-1,0]$.
 Clearly 
 %\linebreak[4] 
 $\|\epsilon_{\lambda}\| = 1/\lambda \cdot (1 - \eu^{-\lambda}) \to 0$ as $\lambda \to \infty$ and we have
@@ -1409,8 +1409,8 @@ Moreover, if\/ $f \in D(A)$, then the translation property (T) (see Part-II, The
 \end{theorem}
 %% --
 \begin{proof}
-Consider $E_1 \coloneqq D(A)$ endowed with the graph norm 
-and on $E_1$ the operator $A_1$ which is the restriction of\/ $A$ to $D(A_1) \coloneqq D(A^{2})\subseteq E_1$.
+Consider $E_1 \coloneq D(A)$ endowed with the graph norm 
+and on $E_1$ the operator $A_1$ which is the restriction of\/ $A$ to $D(A_1) \coloneq D(A^{2})\subseteq E_1$.
 By 
 Part-I, Section~\ref{subsec:a1-3.6}, $A_1$ generates the semigroup $(T(t)_{|D(A)})_{t \geq 0}$.
 On $E_1$ the point evaluation is a continuous mapping and therefore the translation property can be shown as in the proof of Part-II, Theorem~\ref{thm:b4-3.1}.
@@ -1442,7 +1442,7 @@ The following corollary corresponds to Part-II, Corollary~\ref{cor:b4-3.2} and a
 For every $f \in E$ the function $u$ defined by
 %% --
 \begin{equation}\label{eq:c4-3.5}
-u(t) \coloneqq  \begin{cases}
+u(t) \coloneq  \begin{cases}
     f(t) & \text{if } \ -1 \leq t \leq 0 \\
     \Phi(T(t)f) & \text{if } \ t > 0
 \end{cases}
@@ -1481,7 +1481,7 @@ If\/ $\Phi \in \L{E,F}$ is a positive operator, then the solution semigroup corr
 For the following considerations concerning spectral properties of the semigroup we always suppose $\Phi$ to be positive. Furthermore, we define operators $\Phi_{\lambda} \in \L{F}$, $\lambda \in \R$, by
 %% --
 \begin{equation}\label{eq:c4-3.6}
-\Phi_\lambda x \coloneqq \Phi(\epsilon_{\lambda} \cdot x), \quad x \in F .
+\Phi_\lambda x \coloneq \Phi(\epsilon_{\lambda} \cdot x), \quad x \in F .
 \end{equation}
 %% --
 Evidently, each $\Phi_\lambda$ is a positive operator on $F$ and $\lambda \leq \mu$ implies $\Phi_{\lambda} \geq \Phi_{\mu}$.
@@ -1583,7 +1583,7 @@ The previous results will now be used to characterize the spectral bound of\/ $A
 \begin{theorem}\label{thm:c4-3.7}
 \index{stability}
 \index{spectral bound $s(A)$}
-Let $A \coloneqq \frac{\diff{}}{\dt}, D(A) \coloneqq \{f \in AC([-1,0],F) \colon f' \in L^{1}([-1,0],F)$ and $f(0) = \Phi(f)\}$ be the generator of the solution semigroup on $E \coloneqq L^{1}([-1,0],F)$ corresponding to \myeqpageref{eq:c4-re}. 
+Let $A \coloneq \frac{\diff{}}{\dt}, D(A) \coloneq \{f \in AC([-1,0],F) \colon f' \in L^{1}([-1,0],F)$ and $f(0) = \Phi(f)\}$ be the generator of the solution semigroup on $E \coloneq L^{1}([-1,0],F)$ corresponding to \myeqpageref{eq:c4-re}. 
 
 If\/ $F$ is a Banach lattice and $0 < \Phi \in \L{E,F}$, then the following assertions hold for $\lambda \in \R$.
 \begin{enumerate}[\upshape (i)]
@@ -1607,7 +1607,7 @@ If\/ $s(\Phi_{\lambda}) > 1$, then $s(A) > \lambda$.
 \begin{enumerate}[\upshape (i), wide, labelindent=.25em] 
 \item% 
 %\ref{thm:c4-3.7-1} 
-Suppose $r \coloneqq s(A) \geq \lambda$. 
+Suppose $r \coloneq s(A) \geq \lambda$. 
 The positivity of\/ $(T(t))_{t \geq 0}$ implies $r \in \sigma(A)$ (see Theorem~\ref{thm:c3-1.1}\,(i)) and by Proposition~\ref{prop:c4-3.6}\,\ref{prop:c4-3.6-1}  this implies $1 \in \sigma(\Phi_r)$, so that $s(\Phi_{r)} \geq 1$. 
 Since $r \geq \lambda$, this yields $s(\Phi_{\lambda}) \geq s(\Phi_{r}) \geq 1$.
 
@@ -1615,7 +1615,7 @@ Since $r \geq \lambda$, this yields $s(\Phi_{\lambda}) \geq s(\Phi_{r}) \geq 1$.
 %\ref{thm:c4-3.7-2} 
 Let $s(\Phi_{\lambda}) = 1$. 
 Since $1 \in \sigma(\Phi_{\lambda})$ (see Theorem~\ref{thm:c3-1.1}\,(i)), $\lambda \in \sigma(A)$ by Proposition~\ref{prop:c4-3.6}\,\ref{prop:c4-3.6-3} whence $s(A) \geq \lambda$. 
-If\/ $r \coloneqq s(A)$, we deduce as in the proof of~\ref{thm:c4-3.7-1} that $s(\Phi_{r}) \geq 1$. 
+If\/ $r \coloneq s(A)$, we deduce as in the proof of~\ref{thm:c4-3.7-1} that $s(\Phi_{r}) \geq 1$. 
 Now $r > \lambda$ would imply $s(\Phi_{\lambda}) > s(\Phi_{r}) \geq 1$ (by the strict monotonicity of\/ $\lambda \mapsto s(\Phi_{\lambda})$), a contradiction. Hence we conclude $s(A) = r = \lambda$.
 
 \item 
@@ -1677,7 +1677,7 @@ Under the assumptions of Corollary~\ref{cor:c4-3.8} (in particular if\/ $\Phi$ i
 %
 We give an example of a large class of operators $\Phi$ satisfying the above assumptions.
 
-For $\psi \in (L^{1}[-1,0])' = L^{\infty}[-1,0]$ and $B \in \L{F}$ we denote by $\Phi \coloneqq \psi \otimes B$ the operator defined by $\Phi(h \otimes x) = \psi(h) \cdot Bx$ for $h \in L^{1}[-1,0]$, $x \in F$.
+For $\psi \in (L^{1}[-1,0])' = L^{\infty}[-1,0]$ and $B \in \L{F}$ we denote by $\Phi \coloneq \psi \otimes B$ the operator defined by $\Phi(h \otimes x) = \psi(h) \cdot Bx$ for $h \in L^{1}[-1,0]$, $x \in F$.
 Note that $E = (L^{1}[-1,0],F)$ is isomorphic to $L^{1}[-1,0] \otimes F$ (see \textcite[Chapter III,6.5]{schaefer:1966}).
 The operator $\Phi$ is bounded from $E$ into $F$.
 %% --
@@ -1721,7 +1721,7 @@ Let $F$ be a Banach lattice with the Dunford-Pettis property (see \textcite[Sect
 Take for example $F = C(K)$ or $F = L^{1}(X, \Sigma, \mu)$.
 Furthermore define $E = L^{1}([-1,0],F)$ as usual and let $\{K(s) \colon s \in [-1,0]\}$ be a bounded family of positive, irreducible, weakly compact operators on $F$.
   \index{operator!weakly compact}
-If we define $\Phi f \coloneqq \int_{-1}^{0} K(s)f(s) \ds$ for all $f \in E$, then 
+If we define $\Phi f \coloneq \int_{-1}^{0} K(s)f(s) \ds$ for all $f \in E$, then 
 \myeqpageref{eq:c4-re} 
 has the form
 %% --
@@ -1783,7 +1783,7 @@ The next example is of a more particular form and occurs as a model describing t
 Let $F = L^{p}([0,1])$,\, $E = L^{1}([-1,0], F)$ and define an operator $\Phi \colon E \to F$ by
 %% --
 \[
-\Phi(\psi)(x) \coloneqq \int_0^1 k(x,x')\psi(q(x))(x') \dx' \quad \text{for almost all} \quad x \in [0,1].
+\Phi(\psi)(x) \coloneq \int_0^1 k(x,x')\psi(q(x))(x') \dx' \quad \text{for almost all} \quad x \in [0,1].
 \]
 %% --
 Here $q$ is a continuously differentiable function with strictly positive derivative satisfying $-1 \leq q(x) \leq \epsilon < 0$ for all $x \in [0,1]$ and $k$ is a bounded, measurable, strictly positive kernel.
@@ -1798,7 +1798,7 @@ It is easy to show that $\Phi \in \L{E,F}$.
 If we define $K \in \L{F}$  as 
 %% --
 \[
-(Kf)(x) \coloneqq \int_{0}^{1} k(x,x')f(x') \, \dx' \ ,
+(Kf)(x) \coloneq \int_{0}^{1} k(x,x')f(x') \, \dx' \ ,
 \ \text{we obtain} \quad 
 \Phi_{\lambda}f = \eu^{\lambda q(x)}Kf \,\, (f \in F) .
 \]
@@ -1854,11 +1854,11 @@ r(\Phi_{\mu}) \geq \eu^{(\mu-\lambda)\epsilon}r(\Phi_{\lambda}) .
 %% --
 Now 
 %% --
-\[
+\begin{equation*}
 \text{$(\mu-\lambda)\epsilon > 0$ implies 
 $r(\Phi_{\mu}) > r(\Phi_{\lambda})$.}
 \qedhere
-\]
+\end{equation*}
 %% --
 \end{proof}
 %% --
@@ -1867,9 +1867,9 @@ $r(\Phi_{\mu}) > r(\Phi_{\lambda})$.}
 The theory developed so far can also be applied to certain population equations.
 We first notice that (ACP) is isomorphic (in an obvious manner) to the following Cauchy problem.
 
-For some $r \in \R_{+}$ take $E \coloneqq L^{1}([0,r], F)$ and let $A \coloneqq - \frac{\diff{}}{\dt}$ on the domain $D(A) \coloneqq \{f \in AC([0,r], F) \colon f' \in E$ and $f(0) = \Phi(f)\}$ for some $\Phi \in \L{E,F}$.
+For some $r \in \R_{+}$ take $E \coloneq L^{1}([0,r], F)$ and let $A \coloneq - \frac{\diff{}}{\dt}$ on the domain $D(A) \coloneq \{f \in AC([0,r], F) \colon f' \in E$ and $f(0) = \Phi(f)\}$ for some $\Phi \in \L{E,F}$.
 
-We adopt this setting and transform the above results, \eg $\epsilon_{\lambda}$ has to be defined as $\epsilon_{\lambda}(s) \coloneqq \eu^{-\lambda s}$ instead of\/ $\eu^{\lambda s}$.
+We adopt this setting and transform the above results, \eg $\epsilon_{\lambda}$ has to be defined as $\epsilon_{\lambda}(s) \coloneq \eu^{-\lambda s}$ instead of\/ $\eu^{\lambda s}$.
 As a concrete example we consider the following.
 
 
@@ -1878,7 +1878,7 @@ As a concrete example we consider the following.
 %
 \index{differential equation}
 %
-Let $F \coloneqq \C^{n}$, $E:= L^{1}([0,r],F) = \prod_{k=1}^{n} F_{k}$, $F_{k} = L^{1}[0,r]$ and define $\Phi \colon E \to \C^{n}$ by $\Phi = (v_{ij})_{{n\times n}}$ where
+Let $F \coloneq \C^{n}$, $E:= L^{1}([0,r],F) = \prod_{k=1}^{n} F_{k}$, $F_{k} = L^{1}[0,r]$ and define $\Phi \colon E \to \C^{n}$ by $\Phi = (v_{ij})_{{n\times n}}$ where
 %% --
 \[
 \langle v_{ij}, f \rangle = \int_{0}^{r} \beta_{ij}(a)f(a) \, \diff{a} \quad \text{for } f \in L^{1}[0,r] \text{ and } 0 \leq \beta_{ij} \in L^{\infty}[0,r]  .
@@ -1994,7 +1994,7 @@ This system has a solution for every $(v_{1}, \ldots, v_{n}) \in D(A)$ and the a
 whose unique real solution $\lambda$ is $s(A)$.
 
 %% --
-%Setze $b_{ij}(\lambda) \coloneqq \int_{0}^{r} \beta_{ij}(a)\,\eu^{-\lambda a} \diff{a}$.
+%Setze $b_{ij}(\lambda) \coloneq \int_{0}^{r} \beta_{ij}(a)\,\eu^{-\lambda a} \diff{a}$.
 %Dann gilt $0 = \det(I - B(\lambda))$, wobei $B(\lambda) = \bigl(b_{ij}(\lambda)\bigr)_{1\le i,j\le n}$,
 %d.\,h.\ explizit:
 %%
@@ -2023,10 +2023,10 @@ The second equation defines the initial state at time zero and the last equation
 %% --
 \begin{example}\label{ex:c4-3.13}
 %
-Take $F \coloneqq L^{1}(\Omega)$ where $\Omega \subseteq \R^{2}$ is bounded and take
+Take $F \coloneq L^{1}(\Omega)$ where $\Omega \subseteq \R^{2}$ is bounded and take
 %
 \[
-	 E \coloneqq L^{1}([0,r], F) = L^{1}([0,r] \times \Omega)
+	 E \coloneq L^{1}([0,r], F) = L^{1}([0,r] \times \Omega)
 \]
 %
 for some $r \in \R_{+}$.

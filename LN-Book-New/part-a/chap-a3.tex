@@ -89,10 +89,10 @@ Since the spectral radius of\/ $T(t)$ is given as
 %% --
 we obtain for $t > 0$
 %% --
-\[
+\begin{equation*}
     r(T(t)) = \lim_{n \to \infty} \exp\left( \frac{t}{nt}\,\log \|T(nt)\|\right) = \eu^{\omega_{0} t} .
     \qedhere
-\]
+\end{equation*}
 \end{proof}
 %% --
 \index{spectral bound $s(A)$}
@@ -129,13 +129,13 @@ The situation is much more difficult for unbounded generators, and $s(A)$ may di
 Consider the Banach space $E$ of all complex valued continuous functions on $\R_{+}$ which vanish at infinity and are integrable for $\eu^{x}\dx$, \ie 
 %% --
 \[
-    E \coloneqq C_{0}(\R_{+}) \cap L^{1}(\R_{+}, \eu^{x}\dx)
+    E \coloneq C_{0}(\R_{+}) \cap L^{1}(\R_{+}, \eu^{x}\dx)
 \]
 %% --
 endowed with the norm
 %% --
 \[
-    \|f\| \coloneqq \|f\|_{\infty} + \|f\|_{1} = \sup\{|f(x)| \colon x \in \R_{+}\} + \int_{0}^{\infty} |f(x)|\eu^{x} \dx .
+    \|f\| \coloneq \|f\|_{\infty} + \|f\|_{1} = \sup\{|f(x)| \colon x \in \R_{+}\} + \int_{0}^{\infty} |f(x)|\eu^{x} \dx .
 \]
 %% --
 \end{example}
@@ -144,7 +144,7 @@ The translation semigroup
 \index{translation semigroup}
 %% --
 \[
-    T(t)f(x) \coloneqq f(x+t)
+    T(t)f(x) \coloneq f(x+t)
 \]
 %% --
 is strongly continuous on $E$ and one shows as in Section~\ref{subsec:a1-2.4} that its generator is given by
@@ -157,7 +157,7 @@ First we observe that $\|T(t)\| = 1$ for every $t \geq 0$, hence $\omega_{0}(\TT
 Moreover it is clear that $\lambda$ is an eigenvalue of\/ $A$ as soon as $\Re(\lambda) < -1$. In fact, the function
 %% --
 \[
-    x \mapsto e_{\lambda}(x) \coloneqq \eu^{\lambda x}
+    x \mapsto e_{\lambda}(x) \coloneq \eu^{\lambda x}
 \]
 %% --
 belongs to $D(A)$ and is an eigenvector of\/ $A$, hence $s(A) \geq -1$.
@@ -181,7 +181,7 @@ Therefore $\TT = (T(t))_{t\geq 0}$ is a semigroup having $s(A) = -1$, but $\omeg
 %% --
 \begin{example}\label{ex:a3-1.4}[Hilbert space, \textcite{zabczyk:1975}]
 %% --
-For every $n \in \N$ consider the $n$-dimensional Hilbert space $H_{n} \coloneqq \C^{n}$ and operators $A_{n} \in \mathcal{L}(H_{n})$ defined by the matrices
+For every $n \in \N$ consider the $n$-dimensional Hilbert space $H_{n} \coloneq \C^{n}$ and operators $A_{n} \in \mathcal{L}(H_{n})$ defined by the matrices
 %% --
 \[
     A_{n} =
@@ -197,7 +197,7 @@ These matrices are nilpotent and therefore $\sigma(A_{n}) = \{0\}$.
 The elements 
 %% --
 \[
-	x_{n} \coloneqq n^{-1/2}(1, \ldots, 1) \in H_{n}
+	x_{n} \coloneq n^{-1/2}(1, \ldots, 1) \in H_{n}
 \]
 %% --
 satisfy the following properties.
@@ -217,8 +217,8 @@ satisfy the following properties.
 Consider now the Hilbert space 
 %
 \[
-	\text{$H \coloneqq \bigoplus_{n \in \N} H_{n}$ and the operator 
-		$A \coloneqq (A_{n} + 2\pi\im n)_{n \in \N}$}
+	\text{$H \coloneq \bigoplus_{n \in \N} H_{n}$ and the operator 
+		$A \coloneq (A_{n} + 2\pi\im n)_{n \in \N}$}
 \]
 %
 with maximal domain in $H$.
@@ -226,7 +226,7 @@ with maximal domain in $H$.
 Analogously we define a semigroup $\TT = (T(t))_{t \geq 0}$ by
 %% --
 \[
-    T(t) \coloneqq (\eu^{2\pi\im nt}\exp(tA_{n}))_{n \in \N} .
+    T(t) \coloneq (\eu^{2\pi\im nt}\exp(tA_{n}))_{n \in \N} .
 \]
 %% --
 \end{example}
@@ -258,7 +258,7 @@ On the other hand, it is easy to see that $\|T(t)\| = \eu^{t}$, hence $\omega_{0
 
 
 \index{spectral bound $s(A)$}
-Finally, if we take $S(t) \coloneqq \eu^{-t/2}T(t)$, we obtain a semigroup $\mathcal{S}$ 
+Finally, if we take $S(t) \coloneq \eu^{-t/2}T(t)$, we obtain a semigroup $\mathcal{S}$ 
 having spectral bound $-\frac{1}{2}$ but satisfying $\lim_{t \to \infty} \|S(t)\| = \infty$ in contrast with Corollary~\ref{cor:a3-1.2}.
 
 These examples show that neither the conclusion of Corollary~\ref{cor:a3-1.2}, \ie \enquote{$s(A) < 0$ implies stability}, nor the \enquote{spectral mapping theorem}
@@ -279,7 +279,7 @@ $\rho(A)$ and its resolvent
 \index{resolvent}
 %% --
 \[
-    \lambda \mapsto R(\lambda,A) \coloneqq (\lambda - A)^{-1}
+    \lambda \mapsto R(\lambda,A) \coloneq (\lambda - A)^{-1}
 \]
 %% --
 which is a holomorphic map from $\rho(A)$ into $\mathcal{L}(E)$.
@@ -364,7 +364,7 @@ Since
 Define $g_{n} \in D(A)$ by
 %% --
 \[
-g_{n} \coloneqq \|R(\lambda_{n},A)f\|^{-1} R(\lambda_{n},A)f
+g_{n} \coloneq \|R(\lambda_{n},A)f\|^{-1} R(\lambda_{n},A)f
 \]
 %% --
 and use the identity
@@ -399,7 +399,7 @@ M_{q} \colon f \mapsto q \cdot f
 with maximal domain $D(M_{q})$ generates the multiplication semigroup
 %% --
 \[
-T(t)f \coloneqq \eu^{tq} \cdot f \, , \, f \in E .
+T(t)f \coloneq \eu^{tq} \cdot f \, , \, f \in E .
 \]
 %% --
 Since $M_{q}$ is bounded if and only if\/ $q$ is bounded, we conclude that $M_{q}$ is invertible (with bounded inverse $M_{1/q}$) if and only if
@@ -460,7 +460,7 @@ On $E = L^{p}(X,\Sigma,\mu)$ analogous results are valid, but their exact formul
 We consider the translation semigroup
 %% --
 \[
-T(t)f(x) \coloneqq f(x+t)
+T(t)f(x) \coloneq f(x+t)
 \]
 %% --
 on $E = C_{0}(\R_{+})$ (or $L^{p}(\R_{+})$, see Section~\ref{subsec:a1-2.4}).
@@ -517,7 +517,7 @@ has point spectrum
 P\sigma(A) = 2\pi \im\Z
 \]
 %% --
-with eigenfunctions $\epsilon_{n}(x) \coloneqq \exp(2\pi \im n x)$.
+with eigenfunctions $\epsilon_{n}(x) \coloneq \exp(2\pi \im n x)$.
 In Section~\ref{sec:a3-5} we show that $\sigma(A) = 2\pi \im\Z$.
 %% --
 \end{example}
@@ -526,7 +526,7 @@ We now return to the general theory and recall from Corollary~\ref{cor:a3-1.2} t
 spectral values of the generator $A$ into spectral values of the semigroup operator $T(t)$ and vice versa.
 As shown in Examples~\ref{ex:a3-1.3} and~\ref{ex:a3-1.4} this is not possible in general.
 \index{spectral mapping theorem}
-Therefore we tackle first a much easier \emph{spectral mapping theorem}: the relation between $\sigma(A)$ and $\sigma(R(\lambda_{0}))$, where $R(\lambda_{0}) \coloneqq R(\lambda_{0},A)$ for some $\lambda_{0} \in \rho(A)$.
+Therefore we tackle first a much easier \emph{spectral mapping theorem}: the relation between $\sigma(A)$ and $\sigma(R(\lambda_{0}))$, where $R(\lambda_{0}) \coloneq R(\lambda_{0},A)$ for some $\lambda_{0} \in \rho(A)$.
 %% --
 \begin{proposition}\label{prop:a3-2.5}
 Let $(A,D(A))$ be a densely defined closed linear operator with non-empty resolvent set $\rho(A)$.
@@ -568,7 +568,7 @@ and
 Define
 %% --
 \[
-g_{n} \coloneqq \|R(\lambda_{0},A)f_{n}\|^{-1}R(\lambda_{0},A)f_{n} \in D(A)
+g_{n} \coloneq \|R(\lambda_{0},A)f_{n}\|^{-1}R(\lambda_{0},A)f_{n} \in D(A)
 \]
 %% --
 and deduce from
@@ -609,7 +609,7 @@ If\/ $\lambda_{0}$ lies in the exterior of\/ $\Gamma$, the second integral is ze
 The substitution 
 %
 \[
-	 \tilde{z} \coloneqq (\lambda_{0} - z)^{-1} 
+	 \tilde{z} \coloneq (\lambda_{0} - z)^{-1} 
 \]
 %
 yields a path $\tilde{\Gamma}$ around $(\lambda_{0}-\alpha)^{-1}$ and we obtain
@@ -628,12 +628,12 @@ V_{-n} = ((\lambda_{0}-\alpha)^{-1}R(\lambda_{0},A))^{n-1}U_{-n} \quad (n \in \N
 where $U_{- n}$, \resp $V_{- n}$ stand for the $ n $-th coefficient in the Laurent series of\/ $R(\cdot,A)$, \resp $R(\cdot,R(\lambda_{0},A))$ at $\alpha$, \resp $(\lambda_{0}-\alpha)^{-1}$.
 This has already been proved for $n = 1$ and follows for $n > 1$ by induction using the relations
 %% --
-\[
+\begin{equation*}
 U_{-n-1} = (A - \alpha)U_{-n} 
 \quad \text{and} \quad 
 V_{-n-1} = \left(R(\lambda_{0},A) - (\lambda_{0}-\alpha)^{-1}\right)V_{-n} .
 \qedhere
-\]
+\end{equation*}
 \end{enumerate}
 %% --
 \end{proof}
@@ -666,7 +666,7 @@ A decomposition
 E = E_{1} \oplus E_{2}
 \]
 %% --
-of\/ $E$ into the direct sum of two non-trivial closed $\TT$-invariant subspaces is called a \emph{spectral decomposition} corresponding to $\sigma_{1} \cup \sigma_{2}$ if the spectrum $\sigma(A_{i})$ of the generator $A_{i}$ of\/ $\TT_{i} \coloneqq (T(t)_{|E_{i}})_{t \geq 0}$ coincides with $\sigma_{i}$ for $i = 1$, $2$.
+of\/ $E$ into the direct sum of two non-trivial closed $\TT$-invariant subspaces is called a \emph{spectral decomposition} corresponding to $\sigma_{1} \cup \sigma_{2}$ if the spectrum $\sigma(A_{i})$ of the generator $A_{i}$ of\/ $\TT_{i} \coloneq (T(t)_{|E_{i}})_{t \geq 0}$ coincides with $\sigma_{i}$ for $i = 1$, $2$.
 \end{definition}
 %% --
 For a better understanding of the above definition we recall that to every direct sum decomposition $E = E_{1} \oplus E_{2}$ there corresponds a continuous projection $P \in \LE$ such that $PE = E_{1}$ and $P^{-1}(0) = E_{2}$.
@@ -705,10 +705,10 @@ It was stated in Example~\ref{ex:a3-2.4} and will be proved in Section~\ref{sec:
 \sigma(A) = P\sigma(A) = \im\Z
 \]
 %% --
-where $\epsilon_{k}(z) \coloneqq z^{k}$ spans the eigenspace corresponding to $\im k$, $k \in \Z$.
+where $\epsilon_{k}(z) \coloneq z^{k}$ spans the eigenspace corresponding to $\im k$, $k \in \Z$.
 
-Now, $\sigma(A)$ is the disjoint union of $\sigma_{1} \coloneqq \{0,\im ,2\im, \ldots\}$ 
-and $\sigma_{2} \coloneqq \{-\im, -2\im, \ldots\}$.
+Now, $\sigma(A)$ is the disjoint union of $\sigma_{1} \coloneq \{0,\im ,2\im, \ldots\}$ 
+and $\sigma_{2} \coloneq \{-\im, -2\im, \ldots\}$.
 By a result of M. Riesz there is no projection $P \in \L{L^{1}(\Gamma)}$ satisfying $P\epsilon_{k} = \epsilon_{k}$ for $k \geq 0$, $P\epsilon_{k} = 0$ for $k < 0$ , hence there is no spectral decomposition of\/ $L^{1}(\Gamma)$ corresponding to $\sigma_{1}$, $\sigma_{2}$ (\textcite[p.165]{lindenstraustzafriri:1979}).
 
 On the other hand, for $L^{p}(\Gamma)$, $1 < p < \infty$, such a spectral projection exists (l.c., 2.c.15).
@@ -734,9 +734,9 @@ For $\lambda_{0} > \omega_{0}(\TT)$ it follows from Proposition~\ref{prop:a3-2.5
 From $\sigma(A) = \sigma_{1} \cup \sigma_{2}$ we obtain a decomposition of\/ $\sigma(R(\lambda_{0},A)) \setminus \{0\}$ into
 %% --
 \[
-	\tau_{1} \coloneqq (\lambda_{0} - \sigma_{1})^{-1}, 
+	\tau_{1} \coloneq (\lambda_{0} - \sigma_{1})^{-1}, 
 		\quad 
-	\tau_{2} \coloneqq (\lambda_{0} - \sigma_{2})^{-1} .
+	\tau_{2} \coloneq (\lambda_{0} - \sigma_{2})^{-1} .
 \]
 %% --
 Since $\sigma_{1}$ is compact, the set $\tau_{1}$ is compact and does not contain $0$.
@@ -825,7 +825,7 @@ This decomposition can be applied to the study of the asymptotic behavior of\/ $
 \]
 %% --
 for some $\alpha > 0$. 
-If we set $\beta \coloneqq (\log\alpha)/t_{0}$ and use 
+If we set $\beta \coloneq (\log\alpha)/t_{0}$ and use 
 \textcite[Chap.I, Theorem~6.5]{pazy:1983}, 
 we obtain $\omega_{0}(\TT_{2}) < \beta$ and $\omega_{0}(\TT_{1}^{-1}) < \beta$ by Proposition~\ref{prop:a3-1.1}.
 Therefore we have constants $m$, $M$ with $m  \leq 1  \leq M $ such that
@@ -881,7 +881,7 @@ The dimension of\/ $PE$ (\ie the dimension of the spectral subspace correspondin
 \index{eigenvalue!algebraic multiplicity} 
 $m_{a}$ of\/ $\lambda_{0}$, while the \emph{geometric multiplicity} 
 \index{eigenvalue!geometric multiplicity} 
-is $m_{g} \coloneqq \text{dim ker}(\lambda_{0} - A)$.
+is $m_{g} \coloneq \text{dim ker}(\lambda_{0} - A)$.
 In case $m_{a} = 1$, we call $\lambda_{0}$ an \emph{algebraically simple pole}.
 \index{resolvent!algebraically simple pole}
 \index{resolvent!essential singularity}
@@ -917,7 +917,7 @@ For an operator $T \in \LE$ the \emph{Fredholm domain} $\rho_{F}(T)$ is
 %% --
 \begin{equation}\label{eq:a3-3.5} 
 \begin{aligned}
-	\rho_{F}(T) & \coloneqq  \{\lambda \in \C \colon \lambda - T \text{ is a Fredholm operator}\}\\
+	\rho_{F}(T) & \coloneq  \{\lambda \in \C \colon \lambda - T \text{ is a Fredholm operator}\}\\
 	& =  \{\lambda \in \C \colon \text{ker}(\lambda - T) \text{ and }  E / \mathrm{im}(\lambda - T) \text{ are finite dimensional}\}.
 \end{aligned}
 \end{equation}
@@ -934,13 +934,13 @@ The corresponding spectral radius, called \emph{essential spectral radius}, \ind
 satisfies
 %% --
 \begin{equation}\label{eq:a3-3.6}
-r_{\text{ess}}(T) \coloneqq \sup \{|\lambda| \colon \lambda \in \sigma_{\text{ess}}(T)\} = \lim_{n \to \infty} \|T^{n}\|_{\text{ess}}^{1/n} ,
+r_{\text{ess}}(T) \coloneq \sup \{|\lambda| \colon \lambda \in \sigma_{\text{ess}}(T)\} = \lim_{n \to \infty} \|T^{n}\|_{\text{ess}}^{1/n} ,
 \end{equation}
 %% --
 where 
 %
 \[
-	\|T\|_{\text{ess}} = \text{dist}(T,\mathcal{K}(E)) \coloneqq \inf \{\|T - K\| \colon K \in \mathcal{K}(E)\}
+	\|T\|_{\text{ess}} = \text{dist}(T,\mathcal{K}(E)) \coloneq \inf \{\|T - K\| \colon K \in \mathcal{K}(E)\}
 \]
 %
 is the norm of\/ $T$ in $\LE/\mathcal{K}(E)$. 
@@ -971,7 +971,7 @@ $\lambda \in \sigma(T)$, $ |\lambda| > r $  is a pole of finite algebraic multip
 Now, if\/ $\TT = (T(t))_{t \geq 0}$ is a strongly continuous semigroup, then VIII.1, Lemma~4 of \textcite{dunfordschwartz:1958} applied to the function $t \mapsto \log \|T(t)\|_{\text{ess}}$ ensures that
 %% --
 \begin{equation}\label{eq:a3-3.9}
-\omega_{\text{ess}}(\TT) \coloneqq \lim_{t \to \infty} \frac{1}{t} \log\|T(t)\|_{\text{ess}} = \inf \left\{\frac{1}{t} \log\|T(t)\|_{\text{ess}} \colon t > 0\right\}
+\omega_{\text{ess}}(\TT) \coloneq \lim_{t \to \infty} \frac{1}{t} \log\|T(t)\|_{\text{ess}} = \inf \left\{\frac{1}{t} \log\|T(t)\|_{\text{ess}} \colon t > 0\right\}
 \end{equation}
 %% --
 is well defined (possibly $-\infty$).
@@ -1027,14 +1027,14 @@ As in the example in Section~\ref{subsec:a1-2.4} we consider the translation sem
 invariant subspace 
 %
 \[
-	N \coloneqq \{f \in E \colon f(x) = 0 \text{ for } x \geq 1\} .
+	N \coloneq \{f \in E \colon f(x) = 0 \text{ for } x \geq 1\} .
 \]
 %
 Then $\sigma(A) = \im\R$, but $\sigma(A_{|}) = \{\lambda \in \C \colon \Re(\lambda) \leq 0\}$.
 Next we take the translation invariant subspace 
 %
 \[
-	M \coloneqq \{f \in N \colon f(x) = 0 \text{ for } 0 \leq x \leq 1\}
+	M \coloneq \{f \in N \colon f(x) = 0 \text{ for } 0 \leq x \leq 1\}
 \]
 %
 and obtain $\sigma(A_{|/}) = \emptyset$ for the generator $A_{|/}$ of the quotient semigroup $\TT_{|/}$ (use the fact that $\TT_{|/}$ is nilpotent).
@@ -1067,8 +1067,8 @@ Since $N$ is $\TT$-invariant, we have $D(A_{|}) = D(A) \cap N$ and $(\lambda-A)D
 If\/ $(\lambda-A)D(A_{|}) = N$, then $R(\lambda,A)N = D(A_{|})$ and the induced operators $R(\lambda,A)_{|}$, \resp $R(\lambda,A)_{/}$ are the inverses of\/ $(\lambda-A_{|})$, \resp $(\lambda-A_{/})$.
 If\/ $(\lambda-A)D(A_{|}) \neq N$, then $\lambda \in \sigma(A_{|})$.
 
-In addition there exists $f \in D(A)\backslash N$ such that $g \coloneqq (\lambda-A)f \in N$.
-Hence for $\hat{f} \coloneqq f+N$, $\hat{g} \coloneqq g+N \in E_{/}$ it follows that $(\lambda-A_{/})\hat{f} = \hat{g} = 0$, \ie $\lambda \in \sigma(A_{/})$
+In addition there exists $f \in D(A)\backslash N$ such that $g \coloneq (\lambda-A)f \in N$.
+Hence for $\hat{f} \coloneq f+N$, $\hat{g} \coloneq g+N \in E_{/}$ it follows that $(\lambda-A_{/})\hat{f} = \hat{g} = 0$, \ie $\lambda \in \sigma(A_{/})$
 
 \item 
 Take $\lambda \in \rho(A_{|}) \cap \rho(A_{/})$.
@@ -1258,7 +1258,7 @@ which converges to zero uniformly in $n$ as $t \to 0$, \ie $(f_{n}) \in m^{\TT}(
 From the characterization of\/ $D(A_{\F})$ given in Section~\ref{subsec:a1-3.7} it follows that
 %% --
 \[
-	\hat{f} \coloneqq (f_{n}) + c_{\F}(E) \in D(A_{\F})
+	\hat{f} \coloneq (f_{n}) + c_{\F}(E) \in D(A_{\F})
 	\quad \text{and} \quad
 	A_{\F}\hat{f} = \lambda\hat{f}
 \]
@@ -1304,7 +1304,7 @@ A strongly continuous semigroup $\TT = (T(t))_{t \geq 0}$ on a Banach space $E$ 
 The \emph{period} $\tau$ of\/ $\TT$ is obtained as 
 %
 \[
-	\tau \coloneqq \inf\{t_{0} > 0 \colon T(t_{0}) = \Id\} .
+	\tau \coloneq \inf\{t_{0} > 0 \colon T(t_{0}) = \Id\} .
 \]
 %
 \end{definition}
@@ -1338,7 +1338,7 @@ From the basic identities Eqs.~\eqref{eq:a1-3.1} and~\myeqpageref{eq:a1-3.2} for
 The representation of\/ $R(\mu,A)$ given in Proposition~\ref{prop:a1-1.11} shows that the resolvent of the generator of a periodic semigroup is a meromorphic function having only poles of order one and the residues
 %% --
 \[
-P_{n} \coloneqq \lim_{\mu \to \mu_{n}} (\mu-\mu_{n})R(\mu,A) \quad \text{in} \quad \mu_{n} \coloneqq 2\pi\im n/\tau, \quad n \in \Z ,
+P_{n} \coloneq \lim_{\mu \to \mu_{n}} (\mu-\mu_{n})R(\mu,A) \quad \text{in} \quad \mu_{n} \coloneq 2\pi\im n/\tau, \quad n \in \Z ,
 \]
 %% --
 are
@@ -1370,10 +1370,10 @@ Therefore $\mu_{n}$ is an eigenvalue of\/ $A$ and $\exp(\mu_{n}t)$ is an eigenva
 In that case, $P_{n}E$ is the corresponding eigenspace and we have proven the following lemma.
 %% --
 \begin{lemma}\label{lem:a3-5.3}
-For a $\tau$-periodic semigroup $\TT$ we take $\mu_{n} \coloneqq 2\pi\im n/\tau$, $n \in \Z$, and consider
+For a $\tau$-periodic semigroup $\TT$ we take $\mu_{n} \coloneq 2\pi\im n/\tau$, $n \in \Z$, and consider
 %% --
 \[
-P_{n} \coloneqq \frac{1}{\tau}\int_{0}^{\tau} \exp(-\mu_{n}s)T(s)  \ds .
+P_{n} \coloneq \frac{1}{\tau}\int_{0}^{\tau} \exp(-\mu_{n}s)T(s)  \ds .
 \]
 %% --
 Then the following assertions are equivalent.
@@ -1412,7 +1412,7 @@ where the series should be summable for the strong operator topology.
 Unfortunately, this is false in general since the family of projections
 %% --
 \[
-Q_{H} \coloneqq \sum_{n \in H} P_{n} ,
+Q_{H} \coloneq \sum_{n \in H} P_{n} ,
 \]
 %% --
 where $H$ runs through all finite subsets of\/ $\Z$, may be unbounded (see the example below).
@@ -1423,7 +1423,7 @@ Nevertheless the following is true.
 Let $\TT = (T(t))_{t \geq 0}$ be a $\tau$-periodic semigroup on a Banach space $E$ with generator $A$ and associated spectral projections
 %% --
 \[
-P_{n} \coloneqq  \frac{1}{\tau}\int_{0}^{\tau} \exp(-\mu_{n}s)T(s) \ds, \quad \mu_{n} \coloneqq 2\pi\im n/\tau, \quad n \in \Z  .
+P_{n} \coloneq  \frac{1}{\tau}\int_{0}^{\tau} \exp(-\mu_{n}s)T(s) \ds, \quad \mu_{n} \coloneq 2\pi\im n/\tau, \quad n \in \Z  .
 \]
 %% --
 For every $f \in D(A)$ one has $f = \sum_{-\infty}^{+\infty} P_{n}f$ and therefore
@@ -1442,7 +1442,7 @@ It suffices to prove the first statement. Then (i) and (ii) follow by Eqs.~\eqre
 
 We assume $\tau = 2\pi$ and show first that $\sum_{-\infty}^{+\infty} P_{n}f$ is summable for $f \in D(A)$.
 
-For $g \coloneqq Af$ we obtain $P_{n}g = P_{n}Af = AP_{n}f = \im nP_{n}f$.
+For $g \coloneq Af$ we obtain $P_{n}g = P_{n}Af = AP_{n}f = \im nP_{n}f$.
 Take $H$ to be a finite subset of\/ $\Z \setminus \{0\}$ and $\phi \in E'$. Then
 %% --
 \[
@@ -1458,7 +1458,7 @@ From Bessel's inequality we obtain for the second factor
 \leq \|\phi\|^{2} \cdot \frac{1}{2\pi} \cdot \int_{0}^{2\pi} \|T(s)g\|^{2}  \ds  .
 \]
 %% --
-With the constant $c \coloneqq \left(\frac{1}{2\pi} \cdot \int_{0}^{2\pi} \|T(s)g\|^{2} \ds\right)^{1/2}$ we obtain
+With the constant $c \coloneq \left(\frac{1}{2\pi} \cdot \int_{0}^{2\pi} \|T(s)g\|^{2} \ds\right)^{1/2}$ we obtain
 %% --
 \[
 \left\|\sum_{n \in H} P_{n}f\right\| \leq \|P_{0} f\|+c\left(\sum_{n \in H} n^{-2}\right)^{1/2}
@@ -1466,7 +1466,7 @@ With the constant $c \coloneqq \left(\frac{1}{2\pi} \cdot \int_{0}^{2\pi} \|T(s)
 %% --
 for every finite subset $H$ of\/ $\Z$, \ie $\sum_{-\infty}^{+\infty} P_{n}f$ is summable.
 
-Next we set $h \coloneqq \sum_{-\infty}^{+\infty} P_{n}f$ and observe that for every $\phi \in E'$ the Fourier coefficients of the continuous, $\tau$-periodic functions
+Next we set $h \coloneq \sum_{-\infty}^{+\infty} P_{n}f$ and observe that for every $\phi \in E'$ the Fourier coefficients of the continuous, $\tau$-periodic functions
 $s \mapsto \langle T(s)h,\phi \rangle$ and $s \mapsto \langle T(s)f,\phi \rangle$
 coincide.
 Therefore these functions are identical for $s \geq 0$ and in particular for $s = 0$, \ie 
@@ -1504,7 +1504,7 @@ $A = \sum_{-m}^{+m} (2\pi\im n/\tau)P_{n}$.
 From Section~\ref{subsec:a1-2.5} we recall briefly the rotation group
 %% --
 \[
-R_{\tau}(t)f(z) \coloneqq f(\exp(2\pi\im t/\tau) \cdot z)
+R_{\tau}(t)f(z) \coloneq f(\exp(2\pi\im t/\tau) \cdot z)
 \]
 %% --
 on $E = C(\Gamma)$, \resp $E = L^{p}(\Gamma,m)$ for $1 \leq p < \infty$.
@@ -1512,7 +1512,7 @@ The spectrum of the generator\quad
 $Af(z) = (2\pi\im /\tau)z \cdot f'(z)$\quad
 %% --
 is \quad $\sigma(A) = (2\pi\im /\tau) \cdot\Z$.
-The eigenfunctions $\epsilon_{n}(z) \coloneqq z^{n}$ yield the projections
+The eigenfunctions $\epsilon_{n}(z) \coloneq z^{n}$ yield the projections
 %% --
 \[
 P_{n} = \frac{1}{2\pi \iu} \cdot\epsilon_{-(n+1)} \otimes \epsilon_{n}, \text{ \ie }
@@ -1522,7 +1522,7 @@ P_{n} = \frac{1}{2\pi \iu} \cdot\epsilon_{-(n+1)} \otimes \epsilon_{n}, \text{ \
 P_{n}f(z) = \frac{1}{2\pi \iu}  \cdot \left( \int_{\Gamma} f(w)w^{-(n+1)} \diff{w} \right)\cdot z^{n} .
 \]
 %% --
-It is left as an exercise to compute the norms of\/ $Q_{m} \coloneqq \sum_{-m}^{+m} P_{n}$ in $L^{p}(\Gamma,m)$ for various $p$ and then check the assertions of Theorem~\ref{thm:a3-5.4}.
+It is left as an exercise to compute the norms of\/ $Q_{m} \coloneq \sum_{-m}^{+m} P_{n}$ in $L^{p}(\Gamma,m)$ for various $p$ and then check the assertions of Theorem~\ref{thm:a3-5.4}.
 
 Clearly, this proves some classical convergence theorems for Fourier series (compare \textcite[Chap.8.1]{davies:1980}).
 \end{example}
@@ -1592,10 +1592,10 @@ The Example~\ref{ex:a3-1.3} can be strengthened in order to yield a semigroup $\
 Take the translation semigroup on the Banach space
 %% --
 \[
-E \coloneqq C_{0}(\R_{+}) \cap L^{1}(\R_{+}, \eu^{x^{2}}\dx)
+E \coloneq C_{0}(\R_{+}) \cap L^{1}(\R_{+}, \eu^{x^{2}}\dx)
 \]
 %% --
-with $\|f\| \coloneqq \sup \{|f(x)| \colon x \in \R_{+}\} + \int_{0}^{\infty} |f(x)|\eu^{x^{2}} \dx$ (see \textcite{greinervoigtwolff:1981}).
+with $\|f\| \coloneq \sup \{|f(x)| \colon x \in \R_{+}\} + \int_{0}^{\infty} |f(x)|\eu^{x^{2}} \dx$ (see \textcite{greinervoigtwolff:1981}).
 
 \item 
 Another modification of Example~\ref{ex:a3-1.3} yields a group $\TT = (T(t))_{t \in \R}$ satisfying $s(A) < \omega_{0}$.
@@ -1634,17 +1634,17 @@ The inclusion Eq.~\myeqpageref{eq:a3-6.1} becomes evident from the following pro
 Then
 %% --
 \[%\textstyle
-g_{n} \coloneqq \eu^{\lambda t}f_{n} - T(t)f_{n} = \int_{0}^{t} \eu^{\lambda(t-s)}T(s)(\lambda-A)f_{n} \ds
+g_{n} \coloneq \eu^{\lambda t}f_{n} - T(t)f_{n} = \int_{0}^{t} \eu^{\lambda(t-s)}T(s)(\lambda-A)f_{n} \ds
 \]
 %% --
 converges to zero as $n \to \infty$.
 Consequently, $\eu^{\lambda t} \in A\sigma(T(t))$ and, in fact, the same approximate eigenvector $(f_{n})$ does the job for all $t \geq 0$.
 
 For the proof of Eq.~\myeqpageref{eq:a3-6.3} we take $\lambda \in R\sigma(A)$ and observe that 
-\[%\textstyle
+\begin{equation*}
 (\eu^{\lambda t} - T(t))f = (\lambda - A)(\int_{0}^{t} \eu^{\lambda(t-s)}T(s)f \ds) \in (\lambda - A)D(A) \text{ for every } f \in E.
 \qedhere
-\]
+\end{equation*}
 \end{proof}
 %% --
 As we know from the Examples~\ref{ex:a3-6.1}, the converse inclusions do not hold in general, \ie not every spectral value of a semigroup operator $T(t)$ comes---via the exponential map---from a spectral value of the generator.
@@ -1679,7 +1679,7 @@ we may assume $\lambda = 1$.
 Then the closed, $\TT$-invariant subspace
 %% --
 \[
-G \coloneqq \{g \in E \colon T(t_{0})g = g\}
+G \coloneq \{g \in E \colon T(t_{0})g = g\}
 \]
 %% --
 is non-trivial.
@@ -1691,7 +1691,7 @@ In fact, even more can be said: Let $g \in G$ be an eigenvector of\/ $T(t_{0})$ 
 For each $n \in \Z$ define
 %% --
 \[
-g_{n} \coloneqq P_{n}g = 1/t_{0} \cdot \int_{0}^{t_{0}} \exp(-2\pi\im ns/t_{0})T(s)g  \ds \in G
+g_{n} \coloneq P_{n}g = 1/t_{0} \cdot \int_{0}^{t_{0}} \exp(-2\pi\im ns/t_{0})T(s)g  \ds \in G
 \]
 %% --
 as in Section~\ref{sec:a3-5}.
@@ -1787,7 +1787,7 @@ Moreover it suffices to consider $1 \in A\sigma(T(t_{1}))$ for some $t_{1} > 0$,
 \lim_{n\to\infty} \|T(t_{1})f_{n} - f_{n}\| = 0 .
 \]
 %% --
-Choose $k \in \N$ such that $kt_{1} > t_{0}$ and define $g_{n} \coloneqq T(kt_{1})f_{n}$.
+Choose $k \in \N$ such that $kt_{1} > t_{0}$ and define $g_{n} \coloneq T(kt_{1})f_{n}$.
 Then
 %% --
 \[
@@ -1848,7 +1848,7 @@ uniformly continuous semigroups.
 %% --
 Another application of the above spectral mapping theorem can be made to tensor product semigroups (see Section~\ref{subsec:a1-3.8}).
 Let $\TT_{1} = (T_{1}(t))_{t\geq 0}$, $\TT_{2} = (T_{2}(t))_{t\geq 0}$ be strongly continuous semigroups on Banach spaces $E_{1}$, $E_{2}$ with generator $A_{1}$, $A_{2}$.
-The tensor product semigroup $\TT = \TT_{1} \otimes \TT_{2}$ on some (appropriate) tensor product $E \coloneqq E_{1} \otimes E_{2}$ has the generator $A = A_{1}\otimes\Id + \Id\otimes A_{2}$, but in general the spectrum of\/ $A$ is not determined by the spectra of\/ $A_{1}$, $A_{2}$.
+The tensor product semigroup $\TT = \TT_{1} \otimes \TT_{2}$ on some (appropriate) tensor product $E \coloneq E_{1} \otimes E_{2}$ has the generator $A = A_{1}\otimes\Id + \Id\otimes A_{2}$, but in general the spectrum of\/ $A$ is not determined by the spectra of\/ $A_{1}$, $A_{2}$.
 But with an additional hypothesis the following can be proved.
 %% --
 %\phantom{x}
@@ -1950,7 +1950,7 @@ The spectrum of the matrix valued multiplication operator $M_{q}$, where $q \col
 %% --
 \begin{proof}
 It remains to show that $0 \notin \overline{\bigcup_{x\in X} \sigma(q(x))}$ implies $0 \notin \sigma(M_{q})$.
-Since $\det q(x)$ is the product of\/ $n$ eigenvalues (according to their multiplicity) of\/ $q(x)$, the hypothesis implies that $d \coloneqq \inf\{|\det q(x)| \colon x \in X\} > 0$.
+Since $\det q(x)$ is the product of\/ $n$ eigenvalues (according to their multiplicity) of\/ $q(x)$, the hypothesis implies that $d \coloneq \inf\{|\det q(x)| \colon x \in X\} > 0$.
 By Formula 4.12 in Chapter I of \textcite{kato:1976} we obtain
 %% --
 \[
@@ -1999,7 +1999,7 @@ The growth bound $\omega_{0}(A)$ and the spectral bound $s(A)$ coincide for matr
 The above results remain valid for other Banach spaces of\/ $\C^{n}$-valued functions such as $L^{p}(X,\C^{n})$, $1 \leq p < \infty$.
 
 The example given at the beginning of this section can be generalized in a different way.
-In fact, $A(x_{n}) \coloneqq (\im nx_{n})$ on $E = c_{0}$ generates a bounded group, and we will show that this property too ensures that the Weak Spectral Mapping Theorem~\ref{thm:a3-7.2} holds.
+In fact, $A(x_{n}) \coloneq (\im nx_{n})$ on $E = c_{0}$ generates a bounded group, and we will show that this property too ensures that the Weak Spectral Mapping Theorem~\ref{thm:a3-7.2} holds.
 Without any boundedness assumption on $(T(t))_{t\in\R}$ this result cannot be true (see \textcite[Sec.23.16]{hillephillips:1957} or \textcite{wolff:1981}).
 %% --
 \begin{theorem}\label{thm:a3-7.4}
@@ -2016,13 +2016,13 @@ From the proof we isolate a series of lemmas assuming always that the hypothesis
 Moreover we recall from Fourier analysis that the Fourier transformation $\phi \mapsto \hat{\phi}$,
 %% --
 \[
-\hat{\phi}(\alpha) \coloneqq \int_{-\infty}^{\infty} \phi(x)\eu^{-\im\alpha x} \dx
+\hat{\phi}(\alpha) \coloneq \int_{-\infty}^{\infty} \phi(x)\eu^{-\im\alpha x} \dx
 \]
 %% --
 and its inverse $\Psi \mapsto \check{\Psi}$,
 %% --
 \[
-\check{\Psi}(x) \coloneqq \frac{1}{2\pi}\int_{-\infty}^{\infty}\Psi(\alpha)\eu^{\im\alpha x} 		\diff{\alpha}
+\check{\Psi}(x) \coloneq \frac{1}{2\pi}\int_{-\infty}^{\infty}\Psi(\alpha)\eu^{\im\alpha x} 		\diff{\alpha}
 \]
 %% --
 are topological isomorphisms of the Schwartz space $\mathcal{S} ( = \mathcal{S}(\R))$.
@@ -2032,7 +2032,7 @@ Since the subspace $\mathcal{D}$ of all functions having compact support is dens
 For every function $\phi \in \mathcal{S}$ we obtain an operator $T(\phi) \in \LE$ by
 %% --
 \[
-T(\phi)f \coloneqq \int_{-\infty}^{\infty} \phi(s)T(s)f \ds, \quad f \in E .
+T(\phi)f \coloneq \int_{-\infty}^{\infty} \phi(s)T(s)f \ds, \quad f \in E .
 \]
 %% --
 This operator can be represented as
@@ -2082,7 +2082,7 @@ In view of the rescaling procedure it suffices to prove this when $-1 \in \rho(T
 Assume now that Eq.~\myeqpageref{eq:a3-7.4} holds.
 Then each of the sets 
 \[
-	\sigma_{k}\coloneqq \{\im\alpha \in \sigma(A) \colon \alpha \in [2k-1,2k+1]\}
+	\sigma_{k}\coloneq \{\im\alpha \in \sigma(A) \colon \alpha \in [2k-1,2k+1]\}
 \] 
 is a spectral set of\/ $A$ with corresponding spectral projection $P_{k}$.
 If we choose $\phi_{0} \in \mathcal{D}$ such that 
@@ -2157,7 +2157,7 @@ Since $\text{span }\bigcup_{k\in\Z} P_{k}E$ is dense (Lemma~\ref{lem:a3-7.7}), w
 \end{equation}
 %% --
 As the final step we construct the inverse operator of\/ $\Id + T(\pi)$ showing that $-1 \in \rho(T(\pi))$.
-We define $\psi_{0}(\alpha) \coloneqq \phi_{0}(\alpha)\cdot(1 + \eu^{\im\pi\alpha})^{-1}$, $\alpha \in \R$.
+We define $\psi_{0}(\alpha) \coloneq \phi_{0}(\alpha)\cdot(1 + \eu^{\im\pi\alpha})^{-1}$, $\alpha \in \R$.
 Then we have $\psi_{0} \in \mathcal{S}$ and $\psi_{0}\cdot(1 + \eu^{\im\pi\cdot}) = \phi_{0}$,
 hence $\check{\psi_{0}}(x) + \check{\psi_{0}}(x + \pi) = \check{\phi_{0}}(x)$ for all $x \in \R$.
 Then Eq.~\myeqpageref{eq:a3-7.6} implies
@@ -2179,19 +2179,19 @@ As seen in many examples the converse does not hold and we are now looking for a
 Henceforth we assume $\im\Z \subseteq \rho(A)$ and define for $k \in \Z$
 %% --
 \begin{equation}\label{eq:a3-7.7}
-Q_{k}\coloneqq \frac{1}{2\pi}\int_{0}^{2\pi} \eu^{-\im ks}T(s)\ds = \frac{1}{2\pi}(1 - T(2\pi))R(\im k,A)
+Q_{k}\coloneq \frac{1}{2\pi}\int_{0}^{2\pi} \eu^{-\im ks}T(s)\ds = \frac{1}{2\pi}(1 - T(2\pi))R(\im k,A)
 \end{equation}
 %% --
 (\cf Formula Eq.~\myeqpageref{eq:a1-3.1}).
 
 Our approach is based on Fejér's Theorem (for Banach space valued functions).
 Let us recall this result.
-Suppose $\xi \colon [0,2\pi] \to E$ is a continuous function and let $\xi_{k}\coloneqq \frac{1}{2\pi}\int_{0}^{2\pi} \eu^{-\im ks}\xi(s)\ds$ be its $k$-th Fourier coefficient.
+Suppose $\xi \colon [0,2\pi] \to E$ is a continuous function and let $\xi_{k}\coloneq \frac{1}{2\pi}\int_{0}^{2\pi} \eu^{-\im ks}\xi(s)\ds$ be its $k$-th Fourier coefficient.
 Then the Fourier series is Cesàro summable to $\xi$ in every point $t \in (0,2\pi)$.
 Moreover one has
 %% --
 \begin{equation}\label{eq:a3-7.8}
-\frac{1}{2}(\xi(0) + \xi(2\pi)) = C_{1}\text{-}\sum_{k\in\Z} \xi_{n} \coloneqq \lim_{N\to\infty} \frac{1}{N}\sum_{n=0}^{N-1}\mleft( \sum_{k=-n}^{n} \xi_{k} \mright) .
+\frac{1}{2}(\xi(0) + \xi(2\pi)) = C_{1}\text{-}\sum_{k\in\Z} \xi_{n} \coloneq \lim_{N\to\infty} \frac{1}{N}\sum_{n=0}^{N-1}\mleft( \sum_{k=-n}^{n} \xi_{k} \mright) .
 \end{equation}
 %% --
 This result enables us to prove the following proposition.
@@ -2240,7 +2240,7 @@ Furthermore we know by Eq.~\myeqpageref{eq:a3-7.7} and Eq.~\myeqpageref{eq:a3-7.
 If we define $S \colon E \to E$ by 
 %
 \[
-	Sf \coloneqq \frac{1}{2}f + \frac{1}{2\pi}\cdot C_{1}\text{-}\sum_k R(\im k,A)f .
+	Sf \coloneq \frac{1}{2}f + \frac{1}{2\pi}\cdot C_{1}\text{-}\sum_k R(\im k,A)f .
 \]
 %
 Then we have
@@ -2290,7 +2290,7 @@ It follows that $\sum_{k\in\Z} \|Q_{k}f\|^{2} \leq \frac{1}{2\pi}\int_{0}^{2\pi}
 
 (ii) Fix $\lambda > 0$ sufficiently large and set 
 \[
-g_{k}\coloneqq (1 + \lambda R(\im k,A))f_{k}, k \in \Z .
+g_{k}\coloneq (1 + \lambda R(\im k,A))f_{k}, k \in \Z .
 \]
 \index{resolvent equation}
 Using the resolvent equation and then Eq.~\myeqpageref{eq:a1-3.1}, we obtain
@@ -2313,7 +2313,7 @@ This yields for every finite subset $N$ of\/ $\Z$ that
 	= c(\sum_{k\in N} \|g_{k}\|^{2})^{1/2} & \leq c(1 + \lambda M)\left(\sum_{k\in N} \|f_{k}\|^{2}\right)^{1/2} .
 \end{align*}
 %% --
-Here $c\coloneqq \|(1 - \eu^{-2\pi\lambda}T(2\pi))^{-1}\|\cdot\left(\int_{0}^{2\pi}\|T(s)\|^{2} \ds\right)^{1/2}$ and $M\coloneqq \sup_{k\in\Z}\|R(\im k,A)\|$ do the job.
+Here $c\coloneq \|(1 - \eu^{-2\pi\lambda}T(2\pi))^{-1}\|\cdot\left(\int_{0}^{2\pi}\|T(s)\|^{2} \ds\right)^{1/2}$ and $M\coloneq \sup_{k\in\Z}\|R(\im k,A)\|$ do the job.
 \end{proof}
 %% --
 \begin{theorem}\label{thm:a3-7.10}
@@ -2325,7 +2325,7 @@ Then the following form of the spectral mapping theorem is valid.
 \[
 \begin{minipage}{.85\textwidth}
 	$ \eu^{\lambda t} \in \sigma(T(t))\setminus\{0\} $ if and only if either 
-	$\mu_{k}\coloneqq \lambda + 2\pi\im  k/t \in \sigma(A)$ for some  $k \in \Z$
+	$\mu_{k}\coloneq \lambda + 2\pi\im  k/t \in \sigma(A)$ for some  $k \in \Z$
 	otherwise  if\/ $(\|R(\mu_{k},A)\|)_{k\in\Z}$ is unbounded.
 \end{minipage}
 \]

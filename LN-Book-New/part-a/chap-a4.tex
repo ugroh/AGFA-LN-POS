@@ -82,15 +82,15 @@ Then we define the following constants.
 %% --
 \begin{enumerate}[\upshape (i)]
 \item 
-$\omega(f) \coloneqq \inf\{\omega \colon \|T(t)f\| \leq M\eu^{\omega t} \text{ for some } M \text{ and every } t \geq 0\}$ is called the \emph{exponential growth bound} of\/ $T(\cdot)f$,
+$\omega(f) \coloneq \inf\{\omega \colon \|T(t)f\| \leq M\eu^{\omega t} \text{ for some } M \text{ and every } t \geq 0\}$ is called the \emph{exponential growth bound} of\/ $T(\cdot)f$,
 \index{growth bound!omegaf@$\omega(f)$}
 
 \item 
-$\omega_{1}(A) \coloneqq \sup\{\omega(f) \colon f \in D(A)\}$ is called the \emph{exponential growth bound for the solutions of the Cauchy problem} $\dot{u}(t) = Au(t)$,
+$\omega_{1}(A) \coloneq \sup\{\omega(f) \colon f \in D(A)\}$ is called the \emph{exponential growth bound for the solutions of the Cauchy problem} $\dot{u}(t) = Au(t)$,
 \index{growth bound!omega1@$\omega_1(A)$}
 
 \item 
-$\omega_{0}(A) \coloneqq \sup\{\omega(f) \colon f \in E\}$ is called the (exponential) \emph{growth bound for the mild solutions of the Cauchy problem} $\dot{u}(t) = Au(t)$.
+$\omega_{0}(A) \coloneq \sup\{\omega(f) \colon f \in E\}$ is called the (exponential) \emph{growth bound for the mild solutions of the Cauchy problem} $\dot{u}(t) = Au(t)$.
 \index{growth bound!omega0@$\omega_0(A)$}
 \end{enumerate}
 \end{definition}
@@ -199,7 +199,7 @@ Note that the condition
 %% --
 does not exclude the possibility that the semigroup is exponentially stable.
 
-To see this, consider $E \coloneqq C_0(\R_{+}) \cap $ $L^{1}(\R_{+},\eu^{x}\dx)$. 
+To see this, consider $E \coloneq C_0(\R_{+}) \cap $ $L^{1}(\R_{+},\eu^{x}\dx)$. 
 Then, as shown in Example~\ref{ex:a3-1.3} 
 the translation semigroup satisfies $\|T(t)\| = 1$, and hence $\omega_{0}(A) = 0$. 
 For every $\lambda \in \C$ with $\Re(\lambda) > -1$ and every $f \in E$, the resolvent of the generator is given as $R(\lambda,A)f = \int_{0}^{\infty} \eu^{\lambda t} T(t)f  \dt$.
@@ -317,7 +317,7 @@ If there exist positive constants $m$ and $n$ such that $F$ satisfies the local 
 \begin{proof}
 Let $\epsilon > 0$. Since $\int_0^\infty F(r) \dr < \infty$, there exists $a > 0$ such that
 \[
-A(a) \coloneqq \int_{a}^{\infty} F(r) \dr < \frac{n}{m}\epsilon.
+A(a) \coloneq \int_{a}^{\infty} F(r) \dr < \frac{n}{m}\epsilon.
 \]
 Now fix any $s > a + n$. We claim that there exists $r \in [s - n, s]$ such that
 \(
@@ -336,7 +336,7 @@ This shows that $\lim_{s \to \infty} F(s) = 0$.
 To prove part (i) of Theorem~\ref{thm:a4-1.3}, define 
 %
 \[
-	b \coloneqq \inf \left\{\Re(\lambda)\colon\int_{0}^{\infty} \|^{-\lambda t} T(t)f\|  \dt \text{ exists} \right\}.
+	b \coloneq \inf \left\{\Re(\lambda)\colon\int_{0}^{\infty} \|^{-\lambda t} T(t)f\|  \dt \text{ exists} \right\}.
 \]
 %
 A straightforward application of the lemma shows that $\omega(f) \leq b$.
@@ -354,7 +354,7 @@ it follows that $\int_{0}^{\infty} \eu^{-\lambda t} T(t)Af  \dt$ exists.
 Therefore, 
 %%--
 \[ 
-c \coloneqq \inf\{\Re(\lambda)\colon\int_{0}^{\infty} \eu^{-\lambda t}T(t)Af  \dt \text{ exists}\} \leq \omega(f) .
+c \coloneq \inf\{\Re(\lambda)\colon\int_{0}^{\infty} \eu^{-\lambda t}T(t)Af  \dt \text{ exists}\} \leq \omega(f) .
 \]
 %%--
 Next, we show that $c < 0$ implies $c = \omega(f)$. 
@@ -725,10 +725,10 @@ Thus, we estimate
 %% --
 Equivalently,
 %% --
-\[
+\begin{equation*}
 \| T(t) f \| \leq M \eu^{q t} \| A^n f \| \text{ for $f \in D(A^n)$.}
 \qedhere
-\]
+\end{equation*}
 \end{proof}
 %% --
 In view of the characterizations given in Section~\ref{sec:a2-1},  the semigroups considered in the theorem above are holomorphic if\/ $ n = 1 $. 
@@ -923,7 +923,7 @@ If\/ $(T(t))_{t \geq 0}$ is stable, then by Theorem~\ref{thm:a4-1.13}, $\ker(A) 
 Hence, $(a) \Rightarrow (b)$.
 
 Conversely, suppose $\int_{0}^{t} T(s)Af  \ds$ converges as $t \to \infty$. Then, by
-the identity above, the limit $g \coloneqq \lim_{t \to \infty} T(t)f$ exists. 
+the identity above, the limit $g \coloneq \lim_{t \to \infty} T(t)f$ exists. 
 Since $\ker(A) = \{0\}$, it follows that $g = 0$, so $T(t)f \to 0$. 
 Thus, $(b) \Rightarrow (a)$.
 
@@ -931,14 +931,14 @@ The implication $(a') \Rightarrow (b')$ is immediate.
 
 If\/ $T(t)f \to 0$ for every $f \in E$, then $\|T(t)\| \leq M$, and $0 \not\in R\sigma(A)$ by Theorem~\ref{thm:a4-1.13}. 
 Therefore,
-$D \coloneqq \Image{A}$ is dense in $E$, and for every $f \in D$, the integral $\int_{0}^{\infty} T(t)f  \dt$ exists. 
+$D \coloneq \Image{A}$ is dense in $E$, and for every $f \in D$, the integral $\int_{0}^{\infty} T(t)f  \dt$ exists. 
 This proves $(b') \Rightarrow (c')$. 
 
 It remains to prove $(c') \Rightarrow (a')$.
 Define 
 %% --
 \[
-G \coloneqq \{h \in E \colon h = \int_{0}^{\infty} T(t)g  \dt \ \text{ for some } \ g \in D\}.
+G \coloneq \{h \in E \colon h = \int_{0}^{\infty} T(t)g  \dt \ \text{ for some } \ g \in D\}.
 \] 
 %% --
 We claim that $G$ is dense in $E$. 
@@ -1096,7 +1096,7 @@ stability and the identity $\int_0^t T(s)Ah \ds = T(t)h - h$ (see Theorem~\ref{p
 and the second term converges to $-h$. 
 It remains to show that the
 third term also converges to zero. 
-Let $\epsilon > 0$ and define $G(s) \coloneqq F(s)-g$. 
+Let $\epsilon > 0$ and define $G(s) \coloneq F(s)-g$. 
 Then for any $r>0$,
 \begin{align*}
 \left\|\int_{0}^{t} T(t-s)G(s)  \ds\right\| & 
@@ -1137,7 +1137,7 @@ There exists a (unique) $f \in E$ such that $(\Id - T(p))f = \int_{0}^{p} T(p-s)
 %% --
 \begin{proof}
 (a) $\Rightarrow$ (b): 
-Let $f \coloneqq u(0)$ be the initial value for which Eq.~\myeqpageref{eq:a4-2.1} admits a $p$-periodic mild solution. 
+Let $f \coloneq u(0)$ be the initial value for which Eq.~\myeqpageref{eq:a4-2.1} admits a $p$-periodic mild solution. 
 Then for every $t \geq 0$,
 %% --
 \begin{align*}
@@ -1199,7 +1199,7 @@ is asymptotically stable.
 %% --
 \begin{example}\label{ex:a4-2.5}
 Let $E$ be the Banach space $C_{0}(\R_{+})$ of continuous functions vanishing at infinity.
-The operator $A = \frac{d}{dx}$ with domain $D(A) = \{f \in E: f' \in C^{1} \text{ and } f' \in E\}$ is the generator of the uniformly stable translation semigroup $T(t)f(x) \coloneqq f(t+x)$. 
+The operator $A = \frac{d}{dx}$ with domain $D(A) = \{f \in E: f' \in C^{1} \text{ and } f' \in E\}$ is the generator of the uniformly stable translation semigroup $T(t)f(x) \coloneq f(t+x)$. 
 Applying Eq.~\myeqpageref{eq:a4-1.14}, we obtain that $\Image{A} = \{f\colon\int_{0}^{\infty} f(x) \,\dx \text{ exists}\}$ is dense in $C_{0}(\R_{+})$. 
 Let $r \in \Image{A}$ and let $F(\cdot)$ be a $p$-periodic, real-valued function.
 We apply Theorem~\ref{thm:a4-2.4}  to the initial value problem
@@ -1216,13 +1216,13 @@ We rewrite (*) as
 \end{equation}
 %% --
 where $v(t) = u(t,\cdot)$ and $G\colon\R_{+} \to E$ is defined by $G(t)(x) = r(x)F(x+t)$.
-Then $G$ is $p$-periodic with values in $E$ and $h_{0} \coloneqq \int_{0}^{p} T(p-t)G(t)  \dt$ is the function 
+Then $G$ is $p$-periodic with values in $E$ and $h_{0} \coloneq \int_{0}^{p} T(p-t)G(t)  \dt$ is the function 
 %
 \[
 	x \mapsto \left[\int_{0}^{p} T(p-t)G(t)  \dt\right](x) = F(x)\int_{x}^{x+p} r(s)  \ds .
 \]
 %
-Now define $f \coloneqq  \sum_{k=0}^{\infty} T(kp)h_{0}$, which corresponds to the function $x \mapsto F(x)\int_{x}^{\infty} r(s)  \ds$. It is then clear that $(\Id - T(p))f = h_{0}$. 
+Now define $f \coloneq  \sum_{k=0}^{\infty} T(kp)h_{0}$, which corresponds to the function $x \mapsto F(x)\int_{x}^{\infty} r(s)  \ds$. It is then clear that $(\Id - T(p))f = h_{0}$. 
 Therefore, (**) admits a unique $p$-periodic generalized solution by Theorem~\ref{thm:a4-2.4}, even though $\im \R \subseteq \sigma(A)$ (\cf Remark~\ref{rem:a4-2.3}).
 
 The unique $p$-periodic generalized solution $u(t,\cdot)$ is given explicitly by 

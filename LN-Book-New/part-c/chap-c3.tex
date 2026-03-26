@@ -128,7 +128,7 @@ Thus there is a constant $M$ such that
 	\int_{0}^{\infty} \eu^{-\mu s}|\langle T(s)f,\phi\rangle| \ds  = \|b(f,\phi)\| \leq M\|f\|\|\phi\| \quad (f \in E, \phi \in E') .
 \end{equation}
 %% --
-Given $0 \leq t < r$ and setting $\epsilon \coloneqq \Re(\lambda) - \mu$ we have
+Given $0 \leq t < r$ and setting $\epsilon \coloneq \Re(\lambda) - \mu$ we have
 %% --
 \begin{align*}
 	\left|\int_{t}^r \eu^{-\lambda s}\langle T(s)f,\phi\rangle \ds \right| &\leq \int_{t}^r \exp(-(\Re(\lambda)-\mu)s)\eu^{-\lambda s}|\langle T(s)f,\phi\rangle| \ds  \\
@@ -179,10 +179,10 @@ Then $m$ is a majorant for the order of any other pole on the line $s(A) + \im\R
 Without loss of generality we may assume that $s(A) = 0$.
 By Eq.~\myeqpageref{eq:c3-1.5} we have $\|R(\epsilon+\im\beta ,A)\| \leq \|R(\epsilon,A)\|$ for every $\beta \in \R $, $\epsilon > 0$.
 Therefore 
-\[
+\begin{equation*}
 \lim_{\epsilon\to 0}\|\epsilon^k R(\epsilon+\im\beta ,A)\| \leq \lim_{\epsilon\to 0}\|\epsilon^k R(\epsilon,A)\| = 0 \text{ for } k > m .
 \qedhere
-\]
+\end{equation*}
 \end{proof}
 %% --
 The spectrum of a positive semigroup may be empty (see Part-II, Example~\ref{ex:b3-1.2}(i)) and the spectrum of a general group may be empty as well (see \textcite[Section~23.16]{hillephillips:1957}).
@@ -239,9 +239,9 @@ Thus the following definition makes sense
 	%% --
 	\begin{equation}\label{eq:c3-2.1}
 	\begin{split}
-		f^{[0]} &\coloneqq |f| ,  \\
-		f^{[n]} &\coloneqq (\sign  f)f^{[n-1]} \text{ if } n > 0 , \\
-		f^{[n]} &\coloneqq (\sign  \overline{f})f^{[n+1]} \text{ if } n < 0 .
+		f^{[0]} &\coloneq |f| ,  \\
+		f^{[n]} &\coloneq (\sign  f)f^{[n-1]} \text{ if } n > 0 , \\
+		f^{[n]} &\coloneq (\sign  \overline{f})f^{[n+1]} \text{ if } n < 0 .
 	\end{split}
 	\end{equation}
 \end{definition}
@@ -465,7 +465,7 @@ Applying Pringsheim's Theorem (see Theorem~2.1 in the appendix of \textcite{scha
 This shows that without loss of generality one can assume that the domain of a positive pseudo-resolvent contains the half-plane $\{z \in \C  \colon \Re(z) > 0\}$.
 %% --
 \begin{proposition}\label{prop:c3-2.7}
-	Suppose $R \colon \Delta \to \mathcal{L}(E)$ is a positive pseudo-resolvent on a Banach lattice $E$ and $\Delta \coloneqq \{z \in \C  \colon \Re(z) > 0\}$.
+	Suppose $R \colon \Delta \to \mathcal{L}(E)$ is a positive pseudo-resolvent on a Banach lattice $E$ and $\Delta \coloneq \{z \in \C  \colon \Re(z) > 0\}$.
 	
 	If for some $\beta \in \R $, $h \in E$ we have
 	$\lambda R(\lambda+\im\beta)h = h$ and $\lambda R(\lambda)|h| = |h|$ $(\lambda \in \Delta)$, then
@@ -570,7 +570,7 @@ Hence $\|R(\lambda,A)\|$ grows at least as fast as $(\lambda-s(A))^{-1}$.
 \end{remarks*}
 %% --
 \begin{proof} 
-To prove equivalence of \upshape(a) and \upshape(b) of Eq.~\myeqpageref{eq:c3-2.15}, we assume $s(A) = 0$ and write $C(t) \coloneqq \frac{1}{t} \int_{0}^{t} T(\tau) \diff{\tau}$.
+To prove equivalence of \upshape(a) and \upshape(b) of Eq.~\myeqpageref{eq:c3-2.15}, we assume $s(A) = 0$ and write $C(t) \coloneq \frac{1}{t} \int_{0}^{t} T(\tau) \diff{\tau}$.
 
 \upshape(a) $\Rightarrow$ \upshape(b): \quad 
 Consider $\lambda > 0$, $t > 0$ such that $\lambda t = 1$. 
@@ -591,7 +591,7 @@ Now Eq.~\myeqpageref{eq:c3-1.1} implies
 Thus $C(t)$ is bounded for $t \to \infty$ whenever $\lambda R(\lambda,A)$ is bounded for $\lambda \downarrow 0$.
 
 \upshape(b) $\Rightarrow$ \upshape(a):\quad
- Let $M \coloneqq \sup\{\|C(t)\| \colon t > 0\}$.
+ Let $M \coloneq \sup\{\|C(t)\| \colon t > 0\}$.
 Given $f \in E$, $\lambda > 0$ and $r > 0$ then integration by parts yields
 %% --
 \[
@@ -678,7 +678,7 @@ it follows that
 \end{equation}
 For arbitrary $f_{1} \in E_{1}$, $\Re(\lambda) > 0$ we have $\langle |R_{1}(\lambda)f_{1}|,\phi_{1} \rangle \leq \langle R_{1}(\Re(\lambda))|f_{1}|,\phi_{1} \rangle = \langle |f_{1}|,R_{1}(\Re(\lambda))'\phi_{1} \rangle = (\Re(\lambda))^{-1}\langle |f_{1}|,\phi_{1} \rangle$.
 
-Therefore the ideal $I \coloneqq \{f_{1} \in E_{1} \colon \langle |f_{1}|,\phi_{1} \rangle = 0\}$ is invariant under $\{R_{1}(\lambda)\}_{\Re(\lambda)>0}$.
+Therefore the ideal $I \coloneq \{f_{1} \in E_{1} \colon \langle |f_{1}|,\phi_{1} \rangle = 0\}$ is invariant under $\{R_{1}(\lambda)\}_{\Re(\lambda)>0}$.
 Furthermore we have (see Eq.~\myeqpageref{eq:c3-2.17}, Eq.~\myeqpageref{eq:c3-2.18}) 
 \begin{align*}
 	\langle |rR_{1}(r)|h_{1}| - |h_{1}||,\phi_{1} \rangle &= \langle rR_{1}(r)|h_{1}| - |h_{1}|,\phi_{1} \rangle = \\
@@ -689,7 +689,7 @@ which implies
 rR_{1}(r)|h_{1}| - |h_{1}| \in I \ \text{ for } \ r > 0) .
 \end{equation}
 Denote by $E_{2}$ the quotient space $E_{1}/I$ and by $\{R_{2}(\lambda)\}_{\Re(\lambda)>0}$ the pseudo-resolvent on $E_{2}$ induced by $\{(R_{1}(\lambda)\}_{\Re(\lambda)>0}$ in the canonical way. 
-Then $h_{2} \coloneqq h_{1} + I \neq 0$ (by Eq.~\myeqpageref{eq:c3-2.19}.
+Then $h_{2} \coloneq h_{1} + I \neq 0$ (by Eq.~\myeqpageref{eq:c3-2.19}.
 Moreover, $\lambda R_{2}(\lambda+\im\beta)h_{2} = h_{2}$ (by Eq.~\myeqpageref{eq:c3-2.16} and $\lambda R_{2}(\lambda)|h_{2}| = |h_{2}|$ (by Eq.~\myeqpageref{eq:c3-2.20} and Proposition~\ref{prop:c3-2.6}\,(i)).
 
 Now we apply Proposition~\ref{prop:c3-2.7}(b) and obtain
@@ -714,7 +714,7 @@ For completeness we recall this result.
     of order $k$.
 	Then there is a sequence
 	\begin{equation}\label{eq:c3-2.22}
-		I_{-1} \coloneqq \{0\} \subseteq I_{0} \subsetneq I_{1} \subsetneq ... \subsetneq I_{k} \coloneqq E
+		I_{-1} \coloneq \{0\} \subseteq I_{0} \subsetneq I_{1} \subsetneq ... \subsetneq I_{k} \coloneq E
 	\end{equation}
 	of\/ $\TT$-invariant closed ideals with the following properties.
 	If\/ $A_{n}$ is the generator of the semigroup induced by $\TT$ on the quotient $I_{n}/I_{n-1}$, then we have
@@ -784,10 +784,10 @@ For more details and proofs we refer to \textcite{amann:1983}.
 %% --
 \begin{equation}\label{eq:c3-2.23}
     \begin{split}
-        L_{p,0}f &\coloneqq \sum_{i,j=1}^{n} a_{ij} f_{ij}'' 
+        L_{p,0}f &\coloneq \sum_{i,j=1}^{n} a_{ij} f_{ij}'' 
                   + \sum_{i=1}^{n} b_{i} f_{i}' + c\,f, 
                   \quad \text{with domain} \\
-        D(L_{p,0}) &\coloneqq \{f \in C^{2}(\bar{\Omega}) \colon 
+        D(L_{p,0}) &\coloneq \{f \in C^{2}(\bar{\Omega}) \colon 
                     f(x) = 0 \text{ for } x \in \Gamma_{0} \\
                    &\phantom{\coloneqq\{} \text{and } 
                     \partial f/\partial\nu(x) + \gamma(x)f(x) = 0 
@@ -919,9 +919,9 @@ Then it follows from Definition~\ref{def:c3-3.1}\,(b) that for irreducible semig
 Assume that $\langle T(t_{0})f,\phi \rangle = 0$ for some $t_{0} > 0$.
 We consider a null sequence $(t_{n})$, $0 < t_{n} < t_{0}$, such that $\|T(t_{n})f - f\| \leq 2^{-n}$ and define %
 \[
-	f_{n} \coloneqq T(t_{n})f 
+	f_{n} \coloneq T(t_{n})f 
 	\quad \text{and} \quad 
-	g_{n} \coloneqq f - \sum_{k=n}^{\infty}(f-f_{k})^{+}.
+	g_{n} \coloneq f - \sum_{k=n}^{\infty}(f-f_{k})^{+}.
 \]
 %
 Then for $g_{n} \leq f$, $f = \lim_{n\to\infty}g_{n}$ and $m \geq n$, we have 
@@ -949,7 +949,7 @@ The next result can be used to check irreducibility for a semigroup whose genera
 \begin{proposition}\label{prop:c3-3.3}
 	\index{semigroup!bounded perturbation}
 	Suppose that $A$ is the generator of a positive semigroup $\TT$, further assume that $K$ is a bounded positive operator and $M$ is a bounded real multiplier (\cf Section~\ref{sec:c1-8}).
-	Let $\mathcal{S}$ be the semigroup generated by $B \coloneqq A + K + M$.
+	Let $\mathcal{S}$ be the semigroup generated by $B \coloneq A + K + M$.
 	
 	For a closed ideal $I \subseteq E$ the following assertions are equivalent.
 	\begin{enumerate}[\upshape (a)]
@@ -962,7 +962,7 @@ The next result can be used to check irreducibility for a semigroup whose genera
 \end{proposition}
 %% --
 \begin{proof}
-We recall that a closed subspace $I \subseteq E$ is invariant for a semigroup generated by $C$ if and only if\/ $C(D(C)\cap I) \subseteq I$ and the restriction $C_{|I}$ of\/ $C$ with domain $D_{|I} \coloneqq D(C)\cap I$ generates a semigroup on $I$ (see Part-I, Section~\ref{subsec:a1-3.3}).
+We recall that a closed subspace $I \subseteq E$ is invariant for a semigroup generated by $C$ if and only if\/ $C(D(C)\cap I) \subseteq I$ and the restriction $C_{|I}$ of\/ $C$ with domain $D_{|I} \coloneq D(C)\cap I$ generates a semigroup on $I$ (see Part-I, Section~\ref{subsec:a1-3.3}).
 Now let $I$ be a closed ideal of\/ $E$.
 
 $(b)\Rightarrow (a)$.
@@ -1009,19 +1009,19 @@ Next we consider some concrete examples.
 	Let $E = L^{1}[-1,0]$ and for $g \in L^{\infty}$ consider the operator $A_{g}$ given by
 	%% --
 	\begin{equation}\label{eq:c3-3.2}
-		A_{g}f \coloneqq f', \quad 
-		D(A_{g}) \coloneqq \mleft\{f \in W^{1}[-1,0] \colon f(0) = \int_{-1}^{0} f(x)g(x)\dx \mright\}
+		A_{g}f \coloneq f', \quad 
+		D(A_{g}) \coloneq \mleft\{f \in W^{1}[-1,0] \colon f(0) = \int_{-1}^{0} f(x)g(x)\dx \mright\}
 	\end{equation}
 	%% --
 	If\/ $g \geq 0$ then $A_{g}$ generates a positive semigroup.
-	In case there exists $\epsilon > 0$ such that $g$ vanishes a.e. on $[-1,-1+\epsilon]$, then $I \coloneqq \{f \in L^{1} \colon f|_{[-1+\epsilon,0]} = 0\}$ is a non-trivial closed ideal which is invariant under the semigroup.
+	In case there exists $\epsilon > 0$ such that $g$ vanishes a.e. on $[-1,-1+\epsilon]$, then $I \coloneq \{f \in L^{1} \colon f|_{[-1+\epsilon,0]} = 0\}$ is a non-trivial closed ideal which is invariant under the semigroup.
 	It is not difficult to see that the condition on $g$ stated above is also necessary for $(T(t))$ to be reducible (\ie  not irreducible.)
 
 	\item 
 	Let $E = L^{1}([0,1] \times[-1,1] )$ and consider the semigroup $(T(t))_{t\geq 0}$ defined as follows
 	%% --
 	\begin{equation}\label{eq:c3-3.3}
-		(T(t)f)(x,v) \coloneqq \begin{cases}
+		(T(t)f)(x,v) \coloneq \begin{cases}
 			f(x-vt,v) & \text{for } 0 \leq x-vt \leq 1  , \\
 			0 & \text{otherwise}.
 		\end{cases}
@@ -1032,7 +1032,7 @@ Next we consider some concrete examples.
         in an interval. The unbounded operator 
 	%% --
 	\begin{align*}\label{eq:c3-D0}
-		D_{0} \coloneqq \{f \in C^{1}([0,1]\times[-1,1]) \colon  
+		D_{0} \coloneq \{f \in C^{1}([0,1]\times[-1,1]) \colon  
 		& f(0,v) = f_{x}(0,v) = 0 \text{ if } v \geq 0 , \\ 
 		& f(1,v) = f_{x}(1,v) = 0 \text{ if } v \leq 0\}
 	\end{align*}
@@ -1066,10 +1066,10 @@ Next we consider some concrete examples.
 	Let $\sigma \colon [0,1]\times[-1,1] \to \R _{+}$ and $\kappa \colon [0,1]\times[-1,1]\times[-1,1] \to \R _{+}$ be bounded measurable functions and consider the operators $M$ and $K$ given by
 	%% --
 	\begin{equation}\label{eq:c3-3.6}
-		Mf \coloneqq \sigma f, \quad Kf \coloneqq \int_{-1}^{1} \kappa(\cdot,\cdot,v')f(\cdot,v') \diff{v'}.
+		Mf \coloneq \sigma f, \quad Kf \coloneq \int_{-1}^{1} \kappa(\cdot,\cdot,v')f(\cdot,v') \diff{v'}.
 	\end{equation}
 	%% --
-	Then $B \coloneqq A - M + K$ with domain $D(B) \coloneqq D(A)$ is the generator of a positive semigroup.
+	Then $B \coloneq A - M + K$ with domain $D(B) \coloneq D(A)$ is the generator of a positive semigroup.
 	
 	Using Proposition~\ref{prop:c3-3.3} we can prove the following irreducibility criterion for the semigroup $(S(t))_{t\geq 0}$ generated by $B$.
 	%% --
@@ -1090,12 +1090,12 @@ Next we consider some concrete examples.
 	If we assume that $X$ has positive measure and define
 	%% --
     \begin{align*}
-    \alpha & \coloneqq \sup\left\{x \in [0,1] \colon \int_{0}^{x} \1_{X}(s)\ds  = 0\right\}, \\
-	 \beta & \coloneqq \inf\left\{x \in [0,1] \colon \int_{x}^{1} \1_{X}(s)\ds  = 0 \right\}.
+    \alpha & \coloneq \sup\left\{x \in [0,1] \colon \int_{0}^{x} \1_{X}(s)\ds  = 0\right\}, \\
+	 \beta & \coloneq \inf\left\{x \in [0,1] \colon \int_{x}^{1} \1_{X}(s)\ds  = 0 \right\}.
     \end{align*}
     %% .. 
-	Then we have $\alpha < \beta$ and the support of the function $h \coloneqq R(\lambda,A)\1_{Y}$, where 
-	$(Y \coloneqq X\times[-1,1])$ is given by $\supp h = [\alpha,1]\times[0,1] \cup [0,\beta]\times[-1,0]$.
+	Then we have $\alpha < \beta$ and the support of the function $h \coloneq R(\lambda,A)\1_{Y}$, where 
+	$(Y \coloneq X\times[-1,1])$ is given by $\supp h = [\alpha,1]\times[0,1] \cup [0,\beta]\times[-1,0]$.
 	Since we assumed that $I_{Y}$ is $R(\lambda,A)$-invariant, we have $h \in I_{Y}$, \ie  $\supp h \subseteq Y = X\times[-1,1]$.
 	Obviously, this is true only if\/ $Y = [0,1]\times[-1,1]$ or $I_{Y} = E$.
 	
@@ -1161,19 +1161,19 @@ Consider the Banach lattice $E = L^{p}(\Gamma\times\Gamma)$.
 For (fixed) positive numbers $\alpha,\beta$ such that $\frac{\alpha}{\beta}$ is irrational we define a positive semigroup $(T_{0}(t))_{t\geq 0}$ as follows
 %% --
 \begin{equation}\label{eq:c3-3.9}
-	(T_{0}(t)f)(z,w) \coloneqq f(z\cdot \eu^{\im\alpha t},w\cdot \eu^{\im\beta t}) \quad (z,w \in \Gamma = \{\xi\in\C :|\xi|=1\}) .
+	(T_{0}(t)f)(z,w) \coloneq f(z\cdot \eu^{\im\alpha t},w\cdot \eu^{\im\beta t}) \quad (z,w \in \Gamma = \{\xi\in\C :|\xi|=1\}) .
 \end{equation}
 %% --
 Next we define for a positive function $m \colon \Gamma\times\Gamma \to \R $ which is continuous on $\Gamma\times\Gamma\setminus(1,1)$ functions $m_{t}$, $t\geq 0$, as follows
 %% --
 \begin{equation}\label{eq:c3-3.10}
-	m_{t}(z,w) \coloneqq \exp\mleft(-\int_{0}^{t} m(z\cdot \eu^{\im\alpha s},w\cdot \eu^{\im\beta s})\ds \mright) .
+	m_{t}(z,w) \coloneq \exp\mleft(-\int_{0}^{t} m(z\cdot \eu^{\im\alpha s},w\cdot \eu^{\im\beta s})\ds \mright) .
 \end{equation}
 %% --
 Then $(T(t))_{t\geq 0}$ defined by
 %% --
 \begin{equation}\label{eq:c3-3.11}
-	T(t)f \coloneqq m_{t}\cdot(T_{0}(t)f)
+	T(t)f \coloneq m_{t}\cdot(T_{0}(t)f)
 \end{equation}
 %% --
 is a strongly continuous semigroup of positive contractions on $E$.
@@ -1301,14 +1301,14 @@ which is irreducible (\cf Part-I, Section~\ref{subsec:a1-2.5}).%
 \end{corollary}
 %% --
 \begin{proof}
-    By Theorem~\ref{thm:c3-3.8} and Part-I, Theorem~\ref{thm:a3-5.4} we have $R\sigma(A) = P\sigma(A) = \sigma(A) = \im\alpha\Z$ with $\alpha \coloneqq \frac{2\pi}{n\tau}$ for suitable $n \in \N$.
+    By Theorem~\ref{thm:c3-3.8} and Part-I, Theorem~\ref{thm:a3-5.4} we have $R\sigma(A) = P\sigma(A) = \sigma(A) = \im\alpha\Z$ with $\alpha \coloneq \frac{2\pi}{n\tau}$ for suitable $n \in \N$.
     We fix $h \in \ker(\im\alpha - A)$, $h \neq 0$.
     Then $|h| \in \ker A$ and there exists $\phi \in \ker A'$ such that $\langle|h|,\phi\rangle = 1$.
     According to the Kakutani-Krein Theorem we identify $E_{|h|}$ with $C(K)$.
     Then $h$ is a unimodular function onto $\Gamma$ (use the argument given in the proof of Part-II, Theorem~\ref{thm:b3-3.6}(iii)).
     
-    We define $j \colon C(\Gamma) \to E$ by $j(f) \coloneqq f\circ h \in C(K) \cong E_{h} \subseteq E$, then $j$ is injective.
-    For the monomials $e_{n}(z) \coloneqq z^{n}$ $(n \in \Z)$ we have $j(e_{n}) = h^{[n]}$ thus $j$ has dense image in $E$ (by Part-I, Theorem~\ref{thm:a3-5.4}).
+    We define $j \colon C(\Gamma) \to E$ by $j(f) \coloneq f\circ h \in C(K) \cong E_{h} \subseteq E$, then $j$ is injective.
+    For the monomials $e_{n}(z) \coloneq z^{n}$ $(n \in \Z)$ we have $j(e_{n}) = h^{[n]}$ thus $j$ has dense image in $E$ (by Part-I, Theorem~\ref{thm:a3-5.4}).
     Moreover, 
     \[
     \langle h^{[n]},\phi\rangle = \langle j(e_{n}),\phi\rangle = \int_{0}^{2\pi} e_{n}(\eu^{\im t})\dt  =2\pi\cdot\delta_{n0}\  \text{ for all } n \in \Z , 
@@ -1350,7 +1350,7 @@ To simplify the proof we isolate two lemmas.
   
     Obviously, $(g_{n})$ is a normalized approximate eigenvector of\/ $R$ and so is every subsequence of\/ $(g_{n})$.
     In particular, for $k \in \N$ the sequence $(g_{n+k})_{n\geq 1}$ is a normalized approximate eigenvector of\/ $R$.
-    Then the elements $\hat{g}^{k} \in E_{\mathcal{F}}$ given by $\hat{g}^{k} \coloneqq ((g_{n+k})_{n\geq 1} + c_{\mathcal{F}}(E))$ are normalized eigenvectors of\/ $R_{\mathcal{F}}$ corresponding to $\alpha$.
+    Then the elements $\hat{g}^{k} \in E_{\mathcal{F}}$ given by $\hat{g}^{k} \coloneq ((g_{n+k})_{n\geq 1} + c_{\mathcal{F}}(E))$ are normalized eigenvectors of\/ $R_{\mathcal{F}}$ corresponding to $\alpha$.
     As a consequence of Eq.~\myeqpageref{eq:c3-3.14} we obtain
     %
 \[
@@ -1370,7 +1370,7 @@ provided that $k \neq m$.
 %% --	
 \begin{proof}
     Let $\{g_{1},g_{2},\ldots,g_{m}\}$ $(m\geq 1)$ be any (finite) subset of\/ $M$ which is linearly independent.
-    For $u \coloneqq \sum_{n=1}^{m}|g_{n}|$ all vectors $g_{n}$ are contained in the principal ideal $E_{u}$ which (by the Kakutani-Krein Theorem) is isomorphic to a space $C(K)$.
+    For $u \coloneq \sum_{n=1}^{m}|g_{n}|$ all vectors $g_{n}$ are contained in the principal ideal $E_{u}$ which (by the Kakutani-Krein Theorem) is isomorphic to a space $C(K)$.
     Considering $g_{1}$, $g_{2}$, $\ldots$, $g_{m}$ as continuous functions on $K$, there exist points $x_{1}$, $x_{2}$, $\ldots$, $x_{m} \in K$ and functions $h_{1}$, $h_{2}$, $\ldots$, $h_{m} \in \mathrm{span}\{g_{1},g_{2},\ldots,g_{m}\}$ such that $h_{i}(x_{j}) = \delta_{ij}$.
     Then $|h_{i}|(x_{j}) = \delta_{ij}$ hence $\{|h_{j}| \colon 1\leq j\leq m\}$
     is a subset of\/ $m$ linearly independent vectors which (by assumption) is contained in $L$.
@@ -1414,9 +1414,9 @@ Moreover, $\sigma_{b}(A)$ contains only algebraically simple poles.
 	%% --
 \begin{equation}\label{eq:c3-3.16}
 \begin{split}
-		&P_{\mathcal{U}} = \hat{\phi}\otimes\hat{u} \text{ where } \hat{u} \coloneqq (u,u,u,\ldots)+c_{\mathcal{U}}(E) \in E_{\mathcal{U}} \ \text{ and } \hat{\phi} \in (E_{\mathcal{U}})'
+		&P_{\mathcal{U}} = \hat{\phi}\otimes\hat{u} \text{ where } \hat{u} \coloneq (u,u,u,\ldots)+c_{\mathcal{U}}(E) \in E_{\mathcal{U}} \ \text{ and } \hat{\phi} \in (E_{\mathcal{U}})'
 		\\
-		&\text{is given by } \hat{\phi}((f_{n})+c_{\mathcal{U}}(E)) \coloneqq \lim_{\mathcal{U}}\phi(f_{n}) \ ((f_{n})+c_{\mathcal{U}}(E) \in E_{\mathcal{U}}) .
+		&\text{is given by } \hat{\phi}((f_{n})+c_{\mathcal{U}}(E)) \coloneq \lim_{\mathcal{U}}\phi(f_{n}) \ ((f_{n})+c_{\mathcal{U}}(E) \in E_{\mathcal{U}}) .
 		\end{split}
 	\end{equation}
 	%% --
@@ -1426,7 +1426,7 @@ Moreover, $\sigma_{b}(A)$ contains only algebraically simple poles.
 	Then Lemma~\ref{lem:c3-3.10} implies that 
 	%
 \[
-	M \coloneqq \ker(1 - \lambda R(\lambda+\im\beta,A)_{\mathcal{U}})
+	M \coloneq \ker(1 - \lambda R(\lambda+\im\beta,A)_{\mathcal{U}})
 \]
 %
 is infinite dimensional (and independent of\/ $\lambda$ by Proposition~\ref{prop:c3-2.6}\,(i).)
@@ -1444,7 +1444,7 @@ It follows that
 	\hat{\phi}(|\hat{f}|) = P_{\mathcal{U}}|\hat{f}| = \lim_{\gamma\to 0}\gamma R(\gamma,A)_{\mathcal{U}}|\hat{f}| \geq |\hat{f}| .
 \]
 %
-Thus considering the closed ideal $I \coloneqq \{\hat{f} \in E_{\mathcal{U}} \colon \hat{\phi}(|\hat{f}|) = 0\}$ we have
+Thus considering the closed ideal $I \coloneq \{\hat{f} \in E_{\mathcal{U}} \colon \hat{\phi}(|\hat{f}|) = 0\}$ we have
 	%% --
 	\begin{equation}\label{eq:c3-3.17}
 		\tilde{\phi}(|\hat{f}|) - |\hat{f}| \in I \ \text{ for every } \hat{f} \in M .
@@ -1453,7 +1453,7 @@ Thus considering the closed ideal $I \coloneqq \{\hat{f} \in E_{\mathcal{U}} \co
 	This implies that $M \cap I = \{0\}$. 
 	Hence the canonical image $M_/$ of\/ $M$ in the quotient space $E_{\mathcal{U}/{I}}$ is infinite dimensional as well. 
 	
-	By Eq.~\myeqpageref{eq:c3-3.16} and Eq.~\myeqpageref{eq:c3-3.17} the absolute value of an element $\tilde{f} \in M_/$ is a scalar multiple of\/ $\tilde{u} \coloneqq \hat{u} + I$. 
+	By Eq.~\myeqpageref{eq:c3-3.16} and Eq.~\myeqpageref{eq:c3-3.17} the absolute value of an element $\tilde{f} \in M_/$ is a scalar multiple of\/ $\tilde{u} \coloneq \hat{u} + I$. 
 	This is a contradiction by Lemma~\ref{lem:c3-3.11}.
 \end{proof}
 %% --
@@ -1471,7 +1471,7 @@ The latter claim is a consequence of Proposition~\ref{prop:c3-2.11} and the foll
     \index{spectral bound $s(A)$}
 	\begin{enumerate}[\upshape (i)]
 		\item $\TT_{k}$ is irreducible with spectral bound $s(A_k) = s(A)$. 
-		\item $s(A_{/J}) < s(A)$  where $J \coloneqq  J_{1}\oplus J_{2}\oplus .. \oplus J_{m} .$
+		\item $s(A_{/J}) < s(A)$  where $J \coloneq  J_{1}\oplus J_{2}\oplus .. \oplus J_{m} .$
 	\end{enumerate}
 \end{lemma}
 %% --
@@ -1495,7 +1495,7 @@ Then there exist vectors $e_{j} \in E_{+}$ $(1\leq j\leq m)$ such that the follo
 \end{equation}
 %% --
 We have $T(t)e_{k} = e_{k}$ hence the closed ideal generated by $e_{k}$ is $\TT$-invariant. 
-We denote this ideal $J_{k}$ and define $J\coloneqq  J_{1}\oplus J_{2}\oplus \ldots \oplus J_{m}$.
+We denote this ideal $J_{k}$ and define $J\coloneq  J_{1}\oplus J_{2}\oplus \ldots \oplus J_{m}$.
 The ideal $J$ is closed, $\TT$-invariant and we have $PE = \ker A \subseteq J$ (see \textcite[III Theorem~1.2]{schaefer:1974}). 
 Then $P_{/J} = 0$ hence the spectral bound $s(A_{/J})$
 	is strictly less than zero (by Theorem~\ref{thm:c3-1.1}\,(i)). 
@@ -1509,7 +1509,7 @@ Then $P_{/J} = 0$ hence the spectral bound $s(A_{/J})$
 %% --
 Combining the lemma with Proposition~\ref{prop:c3-2.11} one obtains the following.
 
-If\/ $s(A)$ is a pole of finite algebraic multiplicity, then there exists a finite chain of\/ $\TT$-invariant ideals $I_{-1} \coloneqq  \{0\} \subseteq I_{0}\subseteq \ldots \subseteq I_{N} \coloneqq  E$ $(N\in\N)$ such that the following is true.
+If\/ $s(A)$ is a pole of finite algebraic multiplicity, then there exists a finite chain of\/ $\TT$-invariant ideals $I_{-1} \coloneq  \{0\} \subseteq I_{0}\subseteq \ldots \subseteq I_{N} \coloneq  E$ $(N\in\N)$ such that the following is true.
 %% --
 \begin{equation}\label{eq:c3-3.19}
 	\begin{split}
@@ -1537,13 +1537,13 @@ Moreover, $\sigma_{b}$ contains only poles of finite algebraic multiplicity.
 Here the assumption that the multiplicity of\/ $s(A)$ is finite is essential as can be seen from the following example.
 %% --
 \begin{example}\label{ex:c3-3.15}
-	Consider $X \coloneqq  [0,1] \times V$, $V \coloneqq  \{v \in \R  \colon v_{1} < |v| < v_{2}\}$ $(0 < v_{1} < v_{2} < \infty)$. 
+	Consider $X \coloneq  [0,1] \times V$, $V \coloneq  \{v \in \R  \colon v_{1} < |v| < v_{2}\}$ $(0 < v_{1} < v_{2} < \infty)$. 
 	The flow in the phase space $X$ which describes the free motion in the interval $[0,1]$ with velocities in $V$ assuming that the particles are reflected at the endpoints generates a positive semigroup on $L^{p}(X,\mu)$ $(\mu$ the Lebesgue measure). 
 	For the spectrum of the generator $A$ one obtains 
     \[
     \sigma(A) = \{\im \gamma \colon n\gamma_{1} \leq |\gamma| \leq n\gamma_{2} \text{ for some } n \in \N_{0}\}
     \]
-    with $\gamma_{1} \coloneqq  \pi/v_{1}$, $\gamma_{2} \coloneqq  \pi/v_{2}$. 
+    with $\gamma_{1} \coloneq  \pi/v_{1}$, $\gamma_{2} \coloneq  \pi/v_{2}$. 
 	Moreover, $0$ is a first order pole of the resolvent, obviously the only pole in $\sigma_{b}(A) = \sigma(A)$.
 	These statements can be verified by calculating the resolvent explicitely. 
 	This can be done using the integral representation. 
@@ -1608,7 +1608,7 @@ Suppose that $A$ is the generator of a positive semigroup and that $K \in \LE$ i
 \item
 If\/ $K$ is $A$-compact, \ie $K\cdot R(\lambda_{0},A)$ is compact for some
 $\lambda_{0} \in \rho(A)$, and if\/ $s(A+K) > s(A)$, then
-$B \coloneqq A + K$ satisfies the assumptions of Theorem~\ref{thm:c3-3.14}.%
+$B \coloneq A + K$ satisfies the assumptions of Theorem~\ref{thm:c3-3.14}.%
 \item
 If, in addition, $K$ is irreducible, then $s(B)$ is a dominant eigenvalue and the semigroup generated by $B$ is irreducible.
 \end{enumerate}
@@ -1646,8 +1646,8 @@ Iterating this identity we obtain for every $m \in \N$, $t \geq 0$
 \begin{equation}\label{eq:c3-3.21}
 \begin{split}
     S(t) &= \sum_{n=0}^{m-1} T_{n}(t) + R_{m}(t) \ \text{ where}\\ 
-    T_{0}(t)&\coloneqq T(t),\  T_{n}(t) \coloneqq  \int_{0}^{t} T(t-s)KT_{n-1}(s)\ds \text{ for } n \in \N , \\
-    R_{m}(t) &\coloneqq \textit{\small $\int_{0}^{t}\int_{0}^{t_{1}} \ldots \int_{0}^{t_{m-1}} T(t-t_{1})KT(t_{1}-t_{2})K \ldots T(t_{m-1}-t_m)KS(t_{m})\dt _{m}\ldots \dt _{1}$} .
+    T_{0}(t)&\coloneq T(t),\  T_{n}(t) \coloneq  \int_{0}^{t} T(t-s)KT_{n-1}(s)\ds \text{ for } n \in \N , \\
+    R_{m}(t) &\coloneq \textit{\small $\int_{0}^{t}\int_{0}^{t_{1}} \ldots \int_{0}^{t_{m-1}} T(t-t_{1})KT(t_{1}-t_{2})K \ldots T(t_{m-1}-t_m)KS(t_{m})\dt _{m}\ldots \dt _{1}$} .
 \end{split}
 \end{equation}
 %% --
@@ -1663,7 +1663,7 @@ Since the integrand is positive and continuous, we conclude
 %% --
 It follows that $(\eu^{-ts(B)}S(t))_{t \geq 0}$ cannot contain the rotation semigroup on $\Gamma$. 
 On the other hand, assuming that $s(B)$ is not dominant, then $\dim(\ker((\eu^{\tau\cdot s(B)} - S(\tau))) > 1$ for some $\tau > 0$. 
-Hence, the restriction $(\eu^{-ts(B)}S(t)_{|F})_{t \geq 0}$, $F \coloneqq  \ker(\eu^{\tau\cdot s(B)}- S(\tau))$, contains the rotation semigroup by Corollary~\ref{cor:c3-3.9}.
+Hence, the restriction $(\eu^{-ts(B)}S(t)_{|F})_{t \geq 0}$, $F \coloneq  \ker(\eu^{\tau\cdot s(B)}- S(\tau))$, contains the rotation semigroup by Corollary~\ref{cor:c3-3.9}.
 \end{proof}
 %% --
 We conclude this section considering the linear transport equation%
@@ -1676,7 +1676,7 @@ From Eq.~\eqref{eq:c3-3.5} and Eq.~\myeqpageref{eq:c3-3.6} one deduces that
 (KR(\lambda,A)f)(x,v) = \int_{0}^{1}\int_{-1}^{1} k(x,v,x',v')f(x',v')\dx'dv'
 \]
 %% --
-where the kernel $k$ is given by $k(x,v,x',v') \coloneqq  \kappa(x,v,v')r_{\lambda}(x,x',v')$ (\cf Eq.~\eqref{eq:c3-3.5} and Eq.~\myeqpageref{eq:c3-3.7}). 
+where the kernel $k$ is given by $k(x,v,x',v') \coloneq  \kappa(x,v,v')r_{\lambda}(x,x',v')$ (\cf Eq.~\eqref{eq:c3-3.5} and Eq.~\myeqpageref{eq:c3-3.7}). 
 Using this representation of\/ $KR(\lambda,A)$ it follows that $K$ is A-compact. 
 Moreover for $\lambda$ sufficiently large one has $R(\lambda,A-M) = R(\lambda,A)(1 - MR(\lambda,A))^{-1}$ which shows that $K$ is also $(A-M)$-compact. 
 In order to apply Theorem~\ref{thm:c3-3.14} one needs $s(B) > s(A-M)$ (see Proposition~\ref{prop:c3-3.18}) which is difficult to verify. 
@@ -1709,7 +1709,7 @@ In the last part of this section we discuss a spectral decomposition of positive
 \begin{proof}
 	There exists $\phi \in E'$, $\phi \neq 0$ such that $T(t)'\phi = \eu^{\im\alpha t}\phi$ $(t \geq 0)$. 
 	Then we have $|\phi| = |T(t)'\phi| \leq T(t)'|\phi|$ $(t \geq 0)$.
-	If we fix $r > \omega_0(\TT)$ and define $\psi \coloneqq  rR(r,A)'|\phi|$, we have
+	If we fix $r > \omega_0(\TT)$ and define $\psi \coloneq  rR(r,A)'|\phi|$, we have
 	%% -- 
 	\begin{equation}\label{eq:c3-4.1}
 		T(t)'\psi \leq \eu^{rt}\psi \ \text{ and } \ \ T(t)'\psi \geq \psi \ (t \geq 0) \ \text{ and } \ |\phi| \leq \psi .
@@ -1843,7 +1843,7 @@ We list some typical cases in the following corollary.
 \begin{proof}
 	We will show that each of the conditions (i), (ii), (iii) implies that $\ker(1 - T(s))$ is a Banach lattice (not necessarily a sublattice of\/ $E$) for every $s \geq 0$. 
 	Then one argues as follows. Given $\im\alpha \in P\sigma(A)$, $\alpha \in \R $, then $T(t)g = \eu^{\im\alpha t}g$ for suitable $g \neq 0$. 
-	For $\tau \coloneqq  2\pi|\alpha|^{-1}$ we have $g \in F \coloneqq  \ker (1 - T(\tau))$. 
+	For $\tau \coloneq  2\pi|\alpha|^{-1}$ we have $g \in F \coloneq  \ker (1 - T(\tau))$. 
 	Then the restriction $(T(t)_{|F})_{t \geq 0}$ is a $\tau$-periodic positive semigroup on $F$. 
 	Since $\left(T(t)_{|F}\right)^{-1} = T(n\tau-t)_{|F} \geq 0$, it follows that $(T(t)_{|F})$ is a semigroup of lattice isomorphisms. 
 	Since $g \in F$, we have $\im\alpha \in P\sigma(A_{|F})$ hence $\im\alpha\Z \in P\sigma(A_{|F}) \subseteq P\sigma(A)$ by Theorem~\ref{thm:c3-4.2}.
@@ -1866,14 +1866,14 @@ it follows that $T(s)|f| = |f|$.
 	\textit{Every increasing norm-bounded net of\/ $E_{+}$ converges}.
 \end{equation}
 	%% --
-	We fix $s > 0$ and define $T \coloneqq  T(s)$ and $F \coloneqq  \ker (1 - T)$. 
+	We fix $s > 0$ and define $T \coloneq  T(s)$ and $F \coloneq  \ker (1 - T)$. 
 	Obviously $f \in F$ implies $\bar{f} \in F$ hence $F = F\cap E_{\R } + iF\cap E_{\R }$. 
 	Thus we have to show that $F_{\R } = F\cap\mathbb{E}_{\R }$ is a sublattice. 
 	Given $f \in F_{\R }$, then $Tf = f$ hence $|f| \leq T|f|$. 
 	Iterating this inequality we obtain $|f| \leq T|f| \leq T^{2}|f| \leq T^{3}|f| \leq \ldots$.
-	By Eq.~\myeqpageref{eq:c3-4.5} $|f|_{o} \coloneqq  \lim_{n\to \infty} T^{n}|f|$ exists and we have $T|f|_{o} = \lim_{n\to \infty} T^{n+1}|f| = |f|_{o}$, \ie $|f|_{o} \in F_{\R }$.
+	By Eq.~\myeqpageref{eq:c3-4.5} $|f|_{o} \coloneq  \lim_{n\to \infty} T^{n}|f|$ exists and we have $T|f|_{o} = \lim_{n\to \infty} T^{n+1}|f| = |f|_{o}$, \ie $|f|_{o} \in F_{\R }$.
 	And, for $g \in F_{\R }$ satisfying $\pm f \leq g$, we have $|f|_{o} \leq g$ thus $|f|_{o} = \sup_{F}\{f,-f\}$. 
-	Moreover, $\|f\|_{o} \coloneqq  \||f|_{o}\|$ $(f \in F)$ is an equivalent norm on $F$ such that $(F,\|\cdot\|_{o})$ is a Banach lattice.
+	Moreover, $\|f\|_{o} \coloneq  \||f|_{o}\|$ $(f \in F)$ is an equivalent norm on $F$ such that $(F,\|\cdot\|_{o})$ is a Banach lattice.
 	
 	(ii) If\/ $T(s)$ is mean-ergodic, then we have $\ker (1 - T(s)) = PE$ where $P$ is the mean-ergodic projection, \ie $Pf = \lim_{n\to \infty}\frac{1}{n}\sum_{k=0}^{n-1}T(s)^{k}f$.
 	Obviously $P$ is positive, hence II.11.5 of \textcite{schaefer:1974} implies that $PE$ is a Banach lattice (for the induced order and an equivalent norm).
@@ -1887,15 +1887,15 @@ However, one still cannot prove cyclicity of\/ $P\sigma_{b}(A)$ for arbitrary po
 	There we constructed a bounded semigroup on $C(\Gamma)\times C_{0}(\R )$ such that $P\sigma_{b}(A) = \{\im k \colon k \in \Z, k \neq 0\}$.
 
     Let us perform the same construction on the Hilbert space
-    $H \coloneqq L^2(\Gamma)\times L^2(\R )$.
+    $H \coloneq L^2(\Gamma)\times L^2(\R )$.
     For a fixed positive, non-zero function $k \in C_c(\R )$,
     we define $T(t)$ on $H$ as follows.
     %% --
 \begin{equation}\label{eq:c3-4.6}
 	\begin{split} 
-		T(t)([f,g]) &\coloneqq [f_t,g_t] \quad \ \text{with}\\
-		f_t(z) &\coloneqq f(z \cdot \eu^{\im t}) \quad (z \in \Gamma) \quad \text{and}\\
-		g_t(x) &\coloneqq g(x+t) + \frac{1}{2\pi}\int_{0}^{2\pi} f(z \cdot \eu^{\im s}) \ds  \cdot \int_{x}^{x+t} k(u) \du  .
+		T(t)([f,g]) &\coloneq [f_t,g_t] \quad \ \text{with}\\
+		f_t(z) &\coloneq f(z \cdot \eu^{\im t}) \quad (z \in \Gamma) \quad \text{and}\\
+		g_t(x) &\coloneq g(x+t) + \frac{1}{2\pi}\int_{0}^{2\pi} f(z \cdot \eu^{\im s}) \ds  \cdot \int_{x}^{x+t} k(u) \du  .
 	\end{split}
 \end{equation}
 %% --
@@ -1925,7 +1925,7 @@ Then we have
 In view of Part-I, Proposition~\ref{prop:a3-6.2} it is enough to prove that the left hand
 side contains the set on the right.
 
-Fix $t > 0$ and assume $r \in \sigma(T(t))$, $r > 0$ and let $\alpha \coloneqq \frac{1}{t} \log r$.
+Fix $t > 0$ and assume $r \in \sigma(T(t))$, $r > 0$ and let $\alpha \coloneq \frac{1}{t} \log r$.
 At first we assume $r \in R(\sigma(T(t)))$.
 Then by Part-I, Theorem~\ref{thm:a3-6.3} there exists
 $\beta \in \R $ such that $\alpha+\im\beta \in R\sigma(A)$.
@@ -1944,7 +1944,7 @@ Since we have
 %% --
 we may assume that $(f_n)$ is a sequence in $E_+$.
 
-Defining $g_n \coloneqq \int_{0}^{t} \eu^{-\alpha s}T(s)f_n \ds $ we have $g_n \in D(A)$ and
+Defining $g_n \coloneq \int_{0}^{t} \eu^{-\alpha s}T(s)f_n \ds $ we have $g_n \in D(A)$ and
 \[
 (A-\alpha)g_n = (A-\alpha)\int_{0}^{t} \eu^{-\alpha s}T(s)f_n \ds = \eu^{-\alpha t}T(t)f_n - f_n = \frac{1}{r}(T(t)f_n - rf_n) .
 \]
@@ -1971,7 +1971,7 @@ implies
 \[
     	\|T(s)f\| \geq M^{-1}\|T(t)f\|
 \]
-for  $0 \leq s \leq t$, $f \in E$ and $ M \coloneqq \sup_{ 0 \leq s \leq t} \|T(s)\|$.
+for  $0 \leq s \leq t$, $f \in E$ and $ M \coloneq \sup_{ 0 \leq s \leq t} \|T(s)\|$.
     
     
 \item 
@@ -2036,8 +2036,8 @@ for all $g \in E_{\R }$.
 If we set
 %% -- 
 \[ 
-g_1 \coloneqq \frac{1}{2}\cdot(g + (\text{sign } R(\mu,A)g)g) \ \text{ and } \ 
-g_2 \coloneqq \frac{1}{2}\cdot(g - (\text{sign } R(\mu,A)g)g) , 
+g_1 \coloneq \frac{1}{2}\cdot(g + (\text{sign } R(\mu,A)g)g) \ \text{ and } \ 
+g_2 \coloneq \frac{1}{2}\cdot(g - (\text{sign } R(\mu,A)g)g) , 
 \]
 %% --
 then obviously $g = g_1 + g_2$. Moreover, $g$ is positive if and only if
@@ -2089,7 +2089,7 @@ which implies assertion (b).
 
 $(b)\Rightarrow(a)$  The assumption implies that 
 \[%\textstyle
-\int_{0}^{\infty} \eu^{-\nu s}T(s)h \ds \coloneqq 
+\int_{0}^{\infty} \eu^{-\nu s}T(s)h \ds \coloneq 
 \lim_{t \to \infty} \int_{0}^{t} \eu^{-\nu s}T(s)h \ds \ \text{ exists for } \ \nu > \mu . 
 \]
 Using that $A$ is a closed operator it follows that 
@@ -2115,7 +2115,7 @@ Both sets will be unbounded in general.
 Let $(T(t))_{t \in \R }$ be a strongly continuous group of positive
 operators on a Banach lattice $E$ with order continuous norm.
 If\/ $A$ is the generator and $\mu \in \rho(A) \cap \R $, then
-$I_{\mu} \coloneqq  \{f \in E \colon R(\mu,A)|f| \geq 0\}$ and $J_{\mu} \coloneqq  \{f \in E \colon R(\mu,A)|f| \leq 0\}$
+$I_{\mu} \coloneq  \{f \in E \colon R(\mu,A)|f| \geq 0\}$ and $J_{\mu} \coloneq  \{f \in E \colon R(\mu,A)|f| \leq 0\}$
 are $(T(t))_{t \in \R }$-invariant projection bands, 
 the direct sum of them is $E$, and the spectra of the restrictions satisfy
 %% --
@@ -2234,7 +2234,7 @@ certain conditions on the flow.
 We consider an example which shows where the problems are.
 
 Define the semiflow $\phi$ on $\R _+$ as follows. 
-$\phi(t,x) \coloneqq  x-t$ for $x \geq t$ and $\phi(t,x) \coloneqq  0$ for $x < t$. 
+$\phi(t,x) \coloneq  x-t$ for $x \geq t$ and $\phi(t,x) \coloneq  0$ for $x < t$. 
 For $f \in L^p(\mu)$ one has difficulties to define $f \circ \phi_t$ properly since the preimage of the zero-set $\{0\}$ does
 not have measure zero. This problem does not arise in case every
 transformation $\phi_t$ is measure preserving, \ie  $\mu(\phi_t^{-1}(C)) = \mu(C)$
@@ -2259,7 +2259,7 @@ For every $p$, $1 \leq p < \infty$ the following assertions are equivalent.
 %% --
 \begin{enumerate} [(a)]
 \item
-The operators $T(t)$ defined by $T(t)f \coloneqq  f \circ \phi_t$ for $f \in L^p(\mu)$, $t \geq 0$, are well-defined as bounded linear operator on $L^p(\mu)$ and $(T(t))_{t \geq 0}$ is a strongly continuous semigroup.
+The operators $T(t)$ defined by $T(t)f \coloneq  f \circ \phi_t$ for $f \in L^p(\mu)$, $t \geq 0$, are well-defined as bounded linear operator on $L^p(\mu)$ and $(T(t))_{t \geq 0}$ is a strongly continuous semigroup.
 			
 \item 
 There exist constants $t_0 > 0$, $M > 0$ such that $\mu(\phi_t^{-1}(C)) \leq M \cdot \mu(C)$ for every open (compact) set $C \subseteq X$ and every $t \leq t_0$.
@@ -2283,8 +2283,8 @@ Since $\mu$ is assumed to be regular, the inequality stated in (b) holds true fo
 
 \item[$(a)\Rightarrow(b)$:] 
 Assume that $(T(t))$ is a strongly continuous semigroup on
-$L^p(\mu)$ with $1 \leq p < \infty$. For $t_0 > 0$ we define $M \coloneqq  (\sup\{\|T(t)\| \colon 0 \leq t \leq t_0\})^{1/p}$.
-Given a Borel set $C \subseteq X$ we write $C(t) \coloneqq  \phi_t^{-1}(C)$.
+$L^p(\mu)$ with $1 \leq p < \infty$. For $t_0 > 0$ we define $M \coloneq  (\sup\{\|T(t)\| \colon 0 \leq t \leq t_0\})^{1/p}$.
+Given a Borel set $C \subseteq X$ we write $C(t) \coloneq  \phi_t^{-1}(C)$.
 Then we have $T(t)\1_C = \1_{C(t)}$, hence
 $\mu(\phi_t^{-1}(C)) = \|\1_{C(t)}\|_p^p = \|T(t)\1_C\|_p^p \leq M \cdot \|\1_C\|_p^p = M \cdot \mu(C)$.
 
@@ -2344,7 +2344,7 @@ $\phi \colon \R  \times \R ^n \to \R ^n$ which is $C^1$. Moreover, we have
 $\|D\phi_t(x)\| \leq \eu^{M|t|}$  for all  $x \in \R ^n$, $t \in \R$  where   
 %
 \[
-	M \coloneqq  \sup \{\|DF(x)\| \colon x \in \R ^n\}.
+	M \coloneq  \sup \{\|DF(x)\| \colon x \in \R ^n\}.
 \]
 % 
 \end{minipage}

@@ -3,7 +3,7 @@
 %% -- Stand: 2026-03-14
 %% -- 2026-03-21 (GG  hat Kleinigkeiten korrigiert)
 %% --
-\chapternopage{Characterization of Positive Semigroups on \texorpdfstring{$C_{0}(X)$}{C\textsubscript{0}(X)}}
+\chapternopage{Characterization of Positive Semigroups on \texorpdfstring{$C_{0}(X)$}{C_0(X)}}
 \label{chap:b2}%
 \thispagestyle{empty}
 %% --
@@ -40,7 +40,7 @@ This furnishes a wide class of examples.
 Furthermore, positive one-parameter groups on $C_{0}(X)$ (which form a particular type of lattice semigroups) are discussed.
 Their generators are similar to a derivation perturbated by a multiplication operator (Section~\ref{sec:b2-3}).
 
-\section{Generators of Positive Semigroups on  \texorpdfstring{$C_{0}(X)$}{C\textunderscore 0(X)}} \label{sec:b2-1}%
+\section{Generators of Positive Semigroups on  \texorpdfstring{$C_{0}(X)$}{C_0(X)}} \label{sec:b2-1}%
 %% --
 Let $X$ be a locally compact space.
 Throughout this section we denote by $C_{0}(X)$ the space of all real-valued continuous functions on $X$ which vanish at infinity.
@@ -147,10 +147,10 @@ This shows~\ref{thm:b2-1.3-2} to hold.
 
 \ref{thm:b2-1.3-3} implies~\ref{thm:b2-1.3-1} and we have for all $t \geq 0$
 %
-\[
+\begin{equation*}
 	\eu^{tA} = \eu^{-t\|A\|}\eu^{t(A+\|A\|)} \geq \eu^{-t\|A\|}\Id .
 	\qedhere
-\]
+\end{equation*}
 %
 \end{proof}
 %% --
@@ -176,15 +176,26 @@ We reformulate condition~\ref{thm:b2-1.3-2} of Theorem~\ref{thm:b2-1.3} for unbo
 %% --
 \begin{definition}\label{def:b2-1.5}
 An (unbounded) operator $A$ on $C(K)$ is said to satisfy the \emph{positive minimum principle}  
+% %% --
+% \begin{equation*}\label{eq:b2-pmp} \tag{P}
+% \left.
+% \begin{split}
+% 	\text{if for every } 0 \leq f \in D(A) \text{ and } x \in K,\\
+%     f(x) = 0 \text{ implies } (Af)(x) \geq 0
+% \end{split} 
+% \right\}   
+% \end{equation*}
+%% --
 %% --
 \begin{equation*}\label{eq:b2-pmp} \tag{P}
 \left.
-\begin{split}
-	\text{if for every } 0 \leq f \in D(A) \text{ and } x \in K,\\
+\begin{aligned}
+    \text{if for every } 0 \leq f \in D(A) \text{ and } x \in K,\\
     f(x) = 0 \text{ implies } (Af)(x) \geq 0
-\end{split} 
+\end{aligned} 
 \right\}   
 \end{equation*}
+%% --
 %% --
 \end{definition}
 %% --
@@ -206,7 +217,7 @@ This implies the positivity of the semigroup by Proposition~\ref{prop:b2-1.1}.
 Let 
 %
 \[
-	s \coloneqq \inf \{\lambda \in \R \colon \left[\lambda,\infty \right) \subseteq \rho(A)\}.
+	s \coloneq \inf \{\lambda \in \R \colon \left[\lambda,\infty \right) \subseteq \rho(A)\}.
 \]
 %
 
@@ -214,7 +225,7 @@ Then $s \leq \omega_{0}(A) < \infty$ and let $0 \leq  u \in C(K)$ and
 %%--
 %% $
 \[
-\lambda_{0} \coloneqq \inf \{\lambda > s \colon R(\mu,A)u \gg 0 \text{ for all } \mu \in (\lambda,\infty)\} < \infty
+\lambda_{0} \coloneq \inf \{\lambda > s \colon R(\mu,A)u \gg 0 \text{ for all } \mu \in (\lambda,\infty)\} < \infty
 \]
 %%--
 %%$ 
@@ -333,7 +344,7 @@ If\/ $\mu_{1}$ and $\mu_{2} \in \rho(B) \cap \R$ such that $0 \leq R(\mu_{1},B)$
 Let 
 %% --
 \begin{align*}
-M & \coloneqq \{\mu \in \rho(B) \cap [\mu_{1},\mu_{2}] \colon [\mu,\mu_{2}] \subseteq \rho(B) 
+M & \coloneq \{\mu \in \rho(B) \cap [\mu_{1},\mu_{2}] \colon [\mu,\mu_{2}] \subseteq \rho(B) 
 \intertext{and} 
 R(\lambda,B) & \geq 0 \text{ for all } \lambda \in [\mu,\mu_{2}]\}
 \end{align*}
@@ -483,7 +494,7 @@ Hence $(Af)(x) \geq 0$.
 
 \ref{prop:b2-1.10-2} implies~\ref{prop:b2-1.10-1}.
 Let $f \in D(A)$.
-If\/ $p_{u}(f) = 0$ then $\phi \coloneqq 0 \in \ddp_{u}(f)$ and $\langle Af,\phi \rangle \leq 0$.
+If\/ $p_{u}(f) = 0$ then $\phi \coloneq 0 \in \ddp_{u}(f)$ and $\langle Af,\phi \rangle \leq 0$.
 If\/ $p_{u}(f) > 0$, then there exists $x \in K$ such that $\phi_{x} \in \ddp_{u}(f)$.
 Hence, $0 \leq p_{u}(f)u - f$ and $(p_{u}(f)u - f)(x) = 0$.
 It follows from~\eqref{eq:b2-pmp} that 
@@ -546,7 +557,7 @@ We also point out that, if\/ $(T(t))_{t \geq 0}$ is a positive semigroup on $C(K
 Let $A$ be a densely defined operator on $C(K)$ which satisfies~\eqref{eq:b2-pmp}.
 Then
 $
-    \lambda_{0} \coloneqq \inf\{\lambda \in \R \colon Au \leq \lambda u \text{ for some } 0 \leq  u \in D(A)\} < \infty
+    \lambda_{0} \coloneq \inf\{\lambda \in \R \colon Au \leq \lambda u \text{ for some } 0 \leq  u \in D(A)\} < \infty
 $.
 \begin{enumerate}[\upshape (i)]
 \item \label{thm:b2-1.13-1}
@@ -602,7 +613,7 @@ s(A) \geq \sup\{\mu \in \R \colon Af \geq \mu f \text{ for some } 0 < f \in D(A)
 \end{corollary}
 %% --
 \begin{proof}
-Let $s \coloneqq \inf\{\lambda \in \R \colon [\lambda,\infty) \subseteq \rho(A)\}$.
+Let $s \coloneq \inf\{\lambda \in \R \colon [\lambda,\infty) \subseteq \rho(A)\}$.
 Clearly, $s \leq s(A)$.
 Moreover, by Remark~\ref{rem:b2-1.7}, $R(\lambda,A) \geq 0$ for all $\lambda > s$.
 Hence it follows from Eq.~\myeqpageref{eq:b2-1.3} that $\omega_{0}(A) \leq s$.
@@ -714,7 +725,7 @@ Moreover,
 %% –
 \begin{proof}
 We can assume that $\|m\|_{\infty} \leq 1$.
-In fact, if\/ $B \coloneqq (m/\|m\|_{\infty}) \cdot A$ is the generator of a positive semigroup, then by 
+In fact, if\/ $B \coloneq (m/\|m\|_{\infty}) \cdot A$ is the generator of a positive semigroup, then by 
 Part-I, Section~\ref{subsec:a1-3.2}, the operator $m \cdot A = \|m\|_{\infty}B$ also generates a positive semigroup).
 The assertion of the theorem holds for $A$ if and only if it is valid for $A - w$ $(w \in \R)$.
 So by the proof of Theorem~\ref{thm:b2-1.13} we can assume that there exists $0 \leq  u \in C(K)$ such that $A$ is $p_{u}$-dissipative.
@@ -824,10 +835,10 @@ So Eq.~\myeqpageref{eq:b2-1.8} implies that
 This is one part of Eq.~\myeqpageref{eq:b2-1.10}. 
 The other part follows from this since 
 %
-\[
+\begin{equation*}
 	\omega_{0}(A) = \omega_{0}(m^{-1} \cdot m \cdot A) \leq \|m^{-1}\|_{\infty} \, \omega_{0}(m \cdot A).
 	\qedhere
-\]
+\end{equation*}
 %
 \end{proof}
 %% --
@@ -1033,7 +1044,7 @@ Thus there exists a solution if\/ $\lambda$ is large enough, and $(\lambda^{2} -
 \end{proof}
 %% --
 %% --
-\section{Lattice Semigroups on  \texorpdfstring{$C_{0}(X)$}{C\textsubscript{0}(X)}}\label{sec:b2-2}%
+\section{Lattice Semigroups on  \texorpdfstring{$C_{0}(X)$}{C_{0}(X)}}\label{sec:b2-2}%
 %%
 Throughout this section $X$ denotes a locally compact space and $C_{0}(X,\R)$ (resp., $C_{0}(X,\C)$) the space of all real-valued (resp., complex-valued) continuous functions on $X$ which vanish at infinity.
 If we do not want to specify the field we simply write $C_{0}(X)$.
@@ -1097,7 +1108,7 @@ Let $f \in G$, $u \in G$.
 Then $\Theta$ is called \emph{right-sided Gateaux differentiable at} $f$ \emph{in direction} $u$ if
 %% –
 \begin{equation}\label{eq:b2-2.3}
-D_{u}\Theta(f) \coloneqq \lim_{t \to 0} 1/t(\Theta(f+tu) - \Theta(f)) \text{ exists.}
+D_{u}\Theta(f) \coloneq \lim_{t \to 0} 1/t(\Theta(f+tu) - \Theta(f)) \text{ exists.}
 \end{equation}
 %% –
 The mapping $\Theta$ is \emph{right-sided Gateaux differentiable at} $f$ if\/ $D_{u}\Theta(f)$ exists for all directions $u \in G$; and if\/ $\Theta$ is right-sided Gateaux-differentiable at every point $f \in G$ then we call $\Theta$ \emph{right-sided Gateaux differentiable}.
@@ -1176,7 +1187,7 @@ Let $f, g \in C_{0}(X)$.
 We denote by $(\widehat{\sign} f)(g)$ the bounded Borel function given by
 %% --
 \begin{equation}\label{eq:b2-2.7}
-[(\widehat{\sign} f)(g)](x) \coloneqq \begin{cases}
+[(\widehat{\sign} f)(g)](x) \coloneq \begin{cases}
     (\sign f(x))\cdot g(x) & \text{if } f(x) \neq 0 \\
     |g(x)| & \text{if } f(x) = 0
 \end{cases}
@@ -1370,7 +1381,7 @@ Then $g \in D(A)$ and $Ag = f$.
 \end{lemma}
 %% --
 \begin{proof}
-Denote by $G(A) \coloneqq \{(h,Ah) \colon h \in D(A)\} \subseteq G \times G$ the graph of\/ $A$.
+Denote by $G(A) \coloneq \{(h,Ah) \colon h \in D(A)\} \subseteq G \times G$ the graph of\/ $A$.
 Assume that $(g,f) \notin G(A)$.
 Since $G(A)$ is closed, it follows from the Hahn-Banach theorem that there exists $(\psi_{1},\psi_{2}) \in G' \times G'$ such that $\langle h,\psi_{1} \rangle + \langle Ah,\psi_{2} \rangle = 0$ for all $h \in D(A)$ and $\langle g,\psi_{1} \rangle + \langle f,\psi_{2} \rangle \neq 0$.
 By the definition of\/ $A'$ this implies that $\psi_{2} \in D(A')$ and $A'\psi_{2} = -\psi_{1}$.
@@ -1402,7 +1413,7 @@ Moreover, $\lim_{t \to 0} T(t)u = u$ uniformly.
 Thus there exists $t_{0} > 0$ such that $T(t)u$ is strictly positive for all $t \in [0,t_{0}]$ and $ \epsilon > 0 $ small enough.
  
 Let $f \in D(A_{\R})$.
-For $\epsilon > 0$ let $f_{\epsilon} \coloneqq f + \iu \epsilon u$.
+For $\epsilon > 0$ let $f_{\epsilon} \coloneq f + \iu \epsilon u$.
 Then $T(t)f_{\epsilon} \in D(A)$ and $|T(t)f_{\epsilon}|$ is strictly positive for all $t \in [0,t_{0}]$.
 By hypothesis, $|T(t)f_{\epsilon}| \in D(A)$ and 
 %% --
@@ -1453,10 +1464,10 @@ We use Theorem~\ref{thm:b2-2.10}.
 Let $f \in D(m \cdot A) = D(A)$ such that $f(x) \neq 0$ for all $x \in K$.
 Then 
 %%--
-\[
+\begin{equation*}
 \Re[(\sign \bar{f})m \cdot Af] = m \cdot \Re[(\sign \bar{f})Af] = m \cdot A|f|.
 \qedhere
-\]
+\end{equation*}
 %%--
 \end{proof}
 %% --
@@ -1518,8 +1529,8 @@ and
 By Lemma~\ref{lem:b2-2.4} and the chain rule (Proposition~\ref{prop:b2-2.3}) we have
 %%--
 \[
-%|f(x)|' \coloneqq \frac{\diff^{+}}{\dt}\bigg|_{t=x}|f(t)| = \Re[(\widehat{\sign} \bar{f})f'](x)
-|f(x)|' \coloneqq \frac{\diff{^{+}}}{\dt}\bigg|_{t=x} |f(t)| 
+%|f(x)|' \coloneq \frac{\diff^{+}}{\dt}\bigg|_{t=x}|f(t)| = \Re[(\widehat{\sign} \bar{f})f'](x)
+|f(x)|' \coloneq \frac{\diff{^{+}}}{\dt}\bigg|_{t=x} |f(t)| 
 = \Re \mleft( ( \widehat{\sign}\, \bar{f} ) \, f' \mright)(x)
 \]
 %% --
@@ -1742,7 +1753,7 @@ Since $D(A)$ is a dense subalgebra, we can assume that $f,g \in D(A)$.
 Define $\eta \colon [0,t] \to C(K)$ by 
 %
 \[
-	\eta(s) \coloneqq T(t-s) ( T(s)f \cdot T(s)g ).
+	\eta(s) \coloneq T(t-s) ( T(s)f \cdot T(s)g ).
 \]
 %
 Then 
@@ -1854,7 +1865,7 @@ Let
 \]
 %
 The operator given by $Mf = f \cdot p$ is a lattice isomorphism.
-Thus $\delta \coloneqq M^{-1}(A - h)M$ generates a lattice semigroup.
+Thus $\delta \coloneq M^{-1}(A - h)M$ generates a lattice semigroup.
 Since $M\1 = p \in D(A)$ one has $\1 \in D(\delta)$ and %
 \[
 	\delta(\1) = M^{-1}(A - h)p = 0.
@@ -2004,7 +2015,7 @@ Then there exist a continuous flow $\phi$ on $X$ and a continuous cocycle $(h_t)
 \begin{proof}
 Since $T(t)$ and $T(t)^{-1} = T(-t)$ are positive operators, $T(t)$ actually is a lattice isomorphism.
 Then there exist a homeomorphism $\phi_t$ on $X$ and $h_t \in C^{b}(X)_+$ such that $T(t)f = h_t \cdot f \circ \phi_t$ for all $f \in C_0(X)$ $(t \in \R)$.
-The group property of\/ $(T(t))_{t \in \R}$ then implies that $\phi(t,x) \coloneqq \phi_t(x)$ defines a flow on $X$ and that $(h_t)_{t \in \R}$ is a cocycle of\/ $\phi$.
+The group property of\/ $(T(t))_{t \in \R}$ then implies that $\phi(t,x) \coloneq \phi_t(x)$ defines a flow on $X$ and that $(h_t)_{t \in \R}$ is a cocycle of\/ $\phi$.
 It remains to show that $\phi$ and $(h_t)_{t \in \R}$ are continuous.
 
 At first we consider the flow.
@@ -2020,7 +2031,7 @@ There exists $t_0 > 0$ such that
 Let 
 %
 \[
-	W \coloneqq \{x \in X \colon |f(x)| > \frac{1}{2}\};
+	W \coloneq \{x \in X \colon |f(x)| > \frac{1}{2}\};
 \]
 %
 then for $|t| \leq t_0$ and $x \in W$ we have 
@@ -2035,7 +2046,7 @@ This implies that $\phi (t,x) \in V$ whenever $|t| \leq t_0$ and $x \in W$.
 To prove continuity of the cocycle we first remark that by strong continuity of\/ $(T(t))_{t \in \R}$ 
 the mapping $(t,x) \mapsto (T(t)f) (x)$ is continuous on $\R \times X$ for every fixed $f \in C_0(X)$.
 Given compact subsets $A \subseteq \R $ and $B \subseteq X$.
-The set $C \coloneqq \phi(A \times B)$ is compact; hence there exists $f \in C_0(X)$ such that $f|_{C} = 1$.
+The set $C \coloneq \phi(A \times B)$ is compact; hence there exists $f \in C_0(X)$ such that $f|_{C} = 1$.
 For $(t,x) \in A \times B$ we have $h_t(x) = (T(t)f) (x)$.
 Thus $(t,x) \mapsto h_t(x)$ is continuous on $A \times B$.
 \end{proof}
@@ -2063,7 +2074,7 @@ Let $p$ be a continuous function on $X$ such that
 Then
 %% --
 \begin{equation}\label{eq:b2-3.13}
-p_{t} \coloneqq p^{-1} \cdot (p \circ \phi_{t}) \quad (t \in \R)
+p_{t} \coloneq p^{-1} \cdot (p \circ \phi_{t}) \quad (t \in \R)
 \end{equation}
 %% --
 defines a continuous cocycle of\/ $\phi$.
@@ -2072,7 +2083,7 @@ defines a continuous cocycle of\/ $\phi$.
 For $h \in C^{b}(X)$ define
 %% --
 \begin{equation}\label{eq:b2-3.14}
-h_{t}(x) \coloneqq \exp\left(\int_{0}^{t} h(\phi(s,x))  \ds \right).
+h_{t}(x) \coloneq \exp\left(\int_{0}^{t} h(\phi(s,x))  \ds \right).
 \end{equation}
 %% --
 Then $(h_{t})_{t \in \R}$ is a continuous cocycle of\/ $\phi$ (compare Eq.~\myeqpageref{eq:b2-3.6}).
@@ -2136,9 +2147,9 @@ So Eq.~\myeqpageref{eq:b2-3.17} also implies the first inequality in Eq.~\myeqpa
 Now we define $p$ and $h$ by
 %% –
 \[
-p(x) \coloneqq \int_{0}^{\infty} \eu^{-ws}k_{s}(x) \ds 
+p(x) \coloneq \int_{0}^{\infty} \eu^{-ws}k_{s}(x) \ds 
 \quad \text{and} \quad 
-h(x) \coloneqq w - 1/p(x) \quad (x \in X).
+h(x) \coloneq w - 1/p(x) \quad (x \in X).
 \]
 %% –
 Then $p$ is a continuous function and we have for all $x \in X $
@@ -2161,7 +2172,7 @@ k_{t}(x) \cdot p(\phi(t,x)) = \int_{0}^{\infty} \eu^{-ws}k_{t+s}(x) \ds
 Now fix $x \in X$ and define $f \colon \R \to \R$ by 
 %%--
 \[
-f(t) \coloneqq k_{t}(x)p(\phi(t,x))/p(x) 
+f(t) \coloneq k_{t}(x)p(\phi(t,x))/p(x) 
  = \mleft( \eu^{wt}\,p(x)^{-1} \mright) \cdot \int_{t}^{\infty} \eu^{-ws}k_{s}(x)  \ds.
 \]
 %%-
@@ -2321,7 +2332,7 @@ Hence
 \[
     D\phi_{t}(x) = \Id + \int_{0}^{t} DF(\phi_{s}(x)) \cdot D\phi_{s}(x) \ds.
 \]
-Setting $M \coloneqq \sup_{x \in \R^{n}} \|DF(x)\| < \infty$ (finite by hypothesis),
+Setting $M \coloneq \sup_{x \in \R^{n}} \|DF(x)\| < \infty$ (finite by hypothesis),
 we obtain
 \[
     \|D\phi_{t}(x)\| \leq 1 + M\int_{0}^{t} \|D\phi_{s}(x)\| \ds
@@ -2347,7 +2358,7 @@ hence $\|\nabla(f \circ \phi_{t})(x)\| \leq \eu^{Mt}\|(\nabla f)(\phi_{t}(x))\|$
 %Since $F \in C^{1}(\R^{n},\R^{n})$, it follows that $\phi \in C^{1}(\R \times \R^{n},\R^{n})$ (see \eg \textcite[15.2]{hirschsmale:1974}).
 %Moreover for each $x \in \R^{n}$, $(D\phi_{t}(x))' = DF(\phi_{t}(x)) \cdot D\phi_{t}(x)$ and $D\phi_{0}(x) = \Id$, (see \textcite[p. 300]{hirschsmale:1974}); here $\Id \in \L{\R^{n}}$ denotes the identity operator.
 %Hence $D\phi_{t}(x) = \Id + \int_{0}^{t} DF(\phi_{s}(x)) \cdot D\phi_{s}(x) \ds$.
-%Consequently $\|D\phi_{t}(x)\| \leq 1 + \int_{0}^{t}  M \cdot  \|D\phi_{s}(x)\| \ds$ for all $t \geq 0$ and $x \in \R^{n}$; where $M \coloneqq \sup_{x \in \R^{n}} \|DF(x)\| < \infty$ by hypothesis.
+%Consequently $\|D\phi_{t}(x)\| \leq 1 + \int_{0}^{t}  M \cdot  \|D\phi_{s}(x)\| \ds$ for all $t \geq 0$ and $x \in \R^{n}$; where $M \coloneq \sup_{x \in \R^{n}} \|DF(x)\| < \infty$ by hypothesis.
 %Hence by Gronwall's inequality, $\|D\phi_{t}(x)\| \leq \eu^{Mt}$ $(t \geq 0)$ for all $x \in \R^{n}$.
 %Now let $f \in D_{0}$, $t \geq 0$.
 %Then $[\mathrm{grad}\:(f \circ \phi_{t})](x) = [(\mathrm{grad}\:f)(\phi_{t}(x))] \cdot D\phi_{t}(x)$.
@@ -2417,11 +2428,11 @@ For example, every Lipschitz continuous function is admissible.
 %%
 %Let $m \colon (a,b) \to \R$ be a continuous function.
 %The operator $\delta_{m}$ is generator of an automorphism group on $C_{0}(a,b)$ if and only if\/ $m$ is admissible.
-%In that case $D_{0}(\delta_{m}) \coloneqq \{ f \in D(\delta_{m}) \colon f \text{ is differentiable on } (a,b)\}$ is a core of\/ $\delta_{m}$.
+%In that case $D_{0}(\delta_{m}) \coloneq \{ f \in D(\delta_{m}) \colon f \text{ is differentiable on } (a,b)\}$ is a core of\/ $\delta_{m}$.
 %
 %\textup{Additional properties:} If\/ $m$ is admissible, then the flow $\phi$ defining the group generated by $\delta_{m}$ can be described explicitely:
 %The set $\{x \in (a,b) \colon m(x) \neq 0\}$ is the union of a finite or countable number of disjoint intervals $(a_{n},b_{n})$ $(n \in J)$.
-%Let $c_{n} \in (a_{n},b_{n})$ and $g_{n}(x) \coloneqq \int_{c_{n}}^{x} 1/m(y) \dy$ $(x \in (a_{n},b_{n}), n \in J)$.
+%Let $c_{n} \in (a_{n},b_{n})$ and $g_{n}(x) \coloneq \int_{c_{n}}^{x} 1/m(y) \dy$ $(x \in (a_{n},b_{n}), n \in J)$.
 %Since $m$ is admissible, $g_{n}$ is a homeomorphism from $(a_{n},b_{n})$ onto $\R$.
 %Now the flow $\phi$ is defined by
 %%% –
@@ -2440,7 +2451,7 @@ Let $m \colon (a,b) \to \R$ be a continuous function. The operator $\delta_{m}$
 is the generator of an automorphism group on $C_{0}(a,b)$ if and only if\/ $m$
 is admissible. In that case,
 \[
-    D_{0}(\delta_{m}) \coloneqq \{ f \in D(\delta_{m}) : f \text{ is differentiable on } (a,b)\}
+    D_{0}(\delta_{m}) \coloneq \{ f \in D(\delta_{m}) : f \text{ is differentiable on } (a,b)\}
 \]
 is a core of\/ $\delta_{m}$.
 \end{theorem}
@@ -2452,12 +2463,12 @@ The set $\{x \in (a,b) : m(x) \neq 0\}$ is a union of finitely or countably many
 pairwise disjoint open intervals $(a_{n},b_{n})$, $n \in J$.
 For each $n \in J$, fix $c_{n} \in (a_{n},b_{n})$ and set
 \[
-    g_{n}(x) \coloneqq \int_{c_{n}}^{x} \frac{1}{m(y)}\,\dy \qquad (x \in (a_{n},b_{n})).
+    g_{n}(x) \coloneq \int_{c_{n}}^{x} \frac{1}{m(y)}\,\dy \qquad (x \in (a_{n},b_{n})).
 \]
 Since $m$ is admissible, each $g_{n}$ is a homeomorphism from $(a_{n},b_{n})$ onto $\R$.
 The flow $\phi \colon \R \times (a,b) \to (a,b)$ is then given by
 \begin{equation}\label{eq:b2-3.22}
-    \phi(t,x) \coloneqq \begin{cases}
+    \phi(t,x) \coloneq \begin{cases}
         x                       & \text{if } m(x) = 0, \\
         g_{n}^{-1}(g_{n}(x)+t) & \text{if } x \in (a_{n},b_{n}),
     \end{cases}
@@ -2525,7 +2536,7 @@ Let $f \in D(B)$.
 Then 
 %
 \[
-	 u(t) \coloneqq T(t)f \in D(B) \subseteq D(B_{1}) 
+	 u(t) \coloneq T(t)f \in D(B) \subseteq D(B_{1}) 
 \]
 %
 for all $t \geq 0$ and 
@@ -2625,7 +2636,7 @@ Then $T(t)f = f \circ \phi_{t}$ is differentiable and so in $D_{0}(\delta_{m})$.
 %This shows that $\phi(t,c) = c$ for all $t \in \R$.
 %Consequently $\phi_{t}(a,c) \subseteq (a,c)$ for all $t \in \R$.
 %Similarly $\phi_{t}(d,b) \subseteq (d,b)$ for all $t \in \R$.
-%Thus the space $E_{0} \coloneqq \{f \in C_{0}(a,b) \colon f \text{ vanishes off } (c,d)\}$ is invariant under the group $(T(t))_{t \in \R}$.
+%Thus the space $E_{0} \coloneq \{f \in C_{0}(a,b) \colon f \text{ vanishes off } (c,d)\}$ is invariant under the group $(T(t))_{t \in \R}$.
 %We denote the group restricted to $E_{0}$ by $(T_{0}(t))_{t \in \R}$ and by $A_{0}$ its generator.
 %Then $D(A_{0}) = \{f \in E_{0} \cap D(\delta_{m}) \colon \delta_{m}f \in E_{0}\}$.
 %Identifying $E_{0}$ with $C_{0}(c,d)$ we obtain $A_{0} = \delta_{m'}$, where $m'$ denotes the restriction of\/ $m$ to $(c,d)$.
@@ -2649,7 +2660,7 @@ Hence $\phi(t,c) = c$ for all $t \in \R$, and consequently
 $\phi_{t}((a,c)) \subseteq (a,c)$ for all $t \in \R$.
 Similarly, $\phi_{t}((d,b)) \subseteq (d,b)$ for all $t \in \R$.
 
-Thus the subspace $E_{0} \coloneqq \{f \in C_{0}(a,b) : f \text{ vanishes off } (c,d)\}$
+Thus the subspace $E_{0} \coloneq \{f \in C_{0}(a,b) : f \text{ vanishes off } (c,d)\}$
 is invariant under $(T(t))_{t \in \R}$.
 Denote by $(T_{0}(t))_{t \in \R}$ the restricted group on $E_{0}$ and by $A_{0}$ its generator.
 Then
@@ -2725,7 +2736,7 @@ K = \{ x \in (a,b) \colon \phi(t,x) = x \text{ for all } t \in \R \}
 is closed in $(a,b)$
 Thus $(a,b) \setminus K$ is the union of a finite or countable set of disjoint intervals $(a_{n},b_{n})$ $(n \in J)$.
 Pick $x_{n} \in (a_{n},b_{n})$ $(n \in J)$.
-Then $\alpha_{n}(t) \coloneqq \phi(t,x_{n})$ defines an injective mapping from $\R$ into $(a_{n},b_{n})$.
+Then $\alpha_{n}(t) \coloneq \phi(t,x_{n})$ defines an injective mapping from $\R$ into $(a_{n},b_{n})$.
 Thus $\alpha_{n}$ is strictly monotonous.
 It is easy to see that $\lim_{t \to \infty} \phi(t,x_{n})$ is an element of\/ $K$ whenever the limit exists in $(a,b)$; similarly for the limit as $t \to -\infty$.
 Consequently, $\alpha_{n}(\R) = (a_{n},b_{n})$ \ie  $\alpha_{n}$ is a homeomorphism from $\R$ onto $(a_{n},b_{n})$.
@@ -2748,7 +2759,7 @@ This can be expressed by two facts:
 %% –
 \begin{enumerate}[\upshape (i)]
 \item \label{enum:b2-3-1.1}
-$C_{c}^{1}(a,b) \coloneqq \{ f \in C^{1}(a,b) \colon f \text{ vanishes in a neighbourhood of } a \text{ and } b\}$
+$C_{c}^{1}(a,b) \coloneq \{ f \in C^{1}(a,b) \colon f \text{ vanishes in a neighbourhood of } a \text{ and } b\}$
 \\is contained in $D(\delta_{m})$ (this follows from the definition of\/ $\delta_{m}$).
 
 \item  \label{enum:b2-3-1.2}
@@ -2884,7 +2895,7 @@ In order to prove the non-trivial implication let $(T(t))_{t \in \R}$ be an auto
 Let $\phi$ be the continuous flow on $(a,b)$ such that $T(t)f = f \circ \phi_{t}$ $(f \in C_{0}(a,b), t \in \R)$.
 Then $\phi$ is of the form given in Proposition~\ref{prop:b2-3.21}.
 For every $n \in J$ choose a $C^{1}$-diffeomorphism $q_{n}$ from $(a_{n},b_{n})$ onto $(-\infty,\infty)$ satisfying $q_{n}'(x) > 0$ for all $x \in (a_{n},b_{n})$ in the case when $r_{n}$ is increasing and $q_{n}'(x) < 0$ for all $x \in (a_{n},b_{n})$ in the case when $r_{n}$ is decreasing.
-Then $\beta_{n} \coloneqq r_{n}^{-1} \circ q_{n}$ is a homeomorphism from $(a_{n},b_{n})$ onto itself satisfying 
+Then $\beta_{n} \coloneq r_{n}^{-1} \circ q_{n}$ is a homeomorphism from $(a_{n},b_{n})$ onto itself satisfying 
 %
 \[
 	\lim_{x \downarrow a_{n}}\beta_{n}(x) = a_{n} \quad \text{and} \quad 
@@ -2902,7 +2913,7 @@ Let $\beta \colon (a,b) \to (a,b)$ be defined by
 %% –
 Then $\beta$ is a homeomorphism from $(a,b)$ onto $(a,b)$ and 
 \[
-	\psi_{t} \coloneqq \beta^{-1} \circ \phi_{t} \circ \beta \quad (t \in \R)
+	\psi_{t} \coloneq \beta^{-1} \circ \phi_{t} \circ \beta \quad (t \in \R)
 \]
 %
 defines a continuous flow on $(a,b)$.
@@ -2983,7 +2994,6 @@ f \text{ is differentiable at } x \in (a,b) \text{ whenever } m(x) \neq 0 \\
 \text{ and there exists a (necessarily unique) } g \in C[a,b] \\
 \text{ such that Eq.~\myeqpageref{eq:b2-3.25} holds} 
 \end{array} \right\}.
-\qedhere
 \]
 %% –
 \begin{theorem}\label{thm:b2-3.26}
