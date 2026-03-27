@@ -1,0 +1,37 @@
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% ln-toc.tex
+%% Inhaltsverzeichnis-Einstellungen und zugehörige Hilfsbefehle
+%% Status: 2026-03-09 ulgr
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{tocloft}
+
+%% -- Breite der Kapitelnummer im TOC
+\renewcommand\cftchapnumwidth{1cm}
+\setlength{\cftbeforechapskip}{3pt plus 1pt minus 1pt}
+
+%% -- Nur bis \section ins TOC (keine \subsection)
+\setcounter{tocdepth}{1}
+
+%% -- Keine Seitenzahl bei \part-Einträgen
+\cftpagenumbersoff{part}
+
+%% -- Part-Zähler bei neuem Part zurücksetzen
+\makeatletter
+\@addtoreset{chapter}{part}
+\makeatother
+
+%% -- \chapternopage: Kapitel ohne Seitenzahl im TOC
+\newcommand{\chapternopage}[1]{%
+  \addtocontents{toc}{\protect\cftpagenumbersoff{chapter}}%
+  \chapter{#1}%
+  \addtocontents{toc}{\protect\cftpagenumberson{chapter}}%
+}
+
+%% -- \sectionnopage: unnummerierter Abschnitt ohne Seitenzahl im TOC
+\newcommand{\sectionnopage}[1]{%
+  \addtocontents{toc}{\protect\cftpagenumbersoff{section}}%
+  \section*{#1}%
+  \addcontentsline{toc}{section}{#1}%
+  \addtocontents{toc}{\protect\cftpagenumberson{section}}%
+}
