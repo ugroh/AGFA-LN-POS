@@ -281,17 +281,6 @@ Moreover, $\dot{v}(t) = u(t) = Av(t)$ and
 Thus $v \in C^{1}([0,\infty), E_{1})$ satisfies $\dot{v}(t) = A_{1}v(t)$.
 Since $v(0) = 0$, it follows that $v \equiv 0$, and hence $u \equiv 0$.
 \end{proof}
-% Let $v(t) = \int_{0}^{t} u(s) \ds$.
-% Then $v(t) \in D(A)$ and $Av(t) = \int_{0}^{t} Au(s) \ds =
-%  \int_{0}^{t} \dot{u}(s) \ds = 
-%  u(t) \in D(A)$.
-% Consequently, $v(t) \in D(A^{2})$ for all $t \geq 0$.
-% Moreover, $\dot{v}(t) = u(t) = Av(t)$ and 
-% $\frac{\diff{}}{\dt}Av(t) = Au(t) = A_{1}\dot{v}(t) = A^{2}v(t)$.
-% Thus $v \in C^{1}(\left[0,\infty \right),E_{1})$ and $\dot{v}(t) = A_{1}v(t)$.
-% Since $v(0) = 0$, it follows that $v \equiv 0$.
-% Thus $u \equiv v  \equiv 0$.
-%\end{proof}
 %% --
 If \eqref{eq:a2-acp} has a unique solution for every initial value in $D(A)$, then $A$ is the generator of a strongly continuous semigroup only if some additional assumptions on the solutions (continuous dependence from the initial value) or on $A$ $(\rho(A) \neq \emptyset)$ are made.
 %% –
@@ -822,7 +811,7 @@ whenever $\Re(\lambda) > 0$ and $|\lambda| \geq r$.
 It is not difficult to show that $A$ generates a holomorphic semigroup of angle $\alpha$ if and only if for every $\alpha_{1} \in (0,\alpha)$ there exists $w \in \R$ such that $A - w$ generates a bounded holomorphic semigroup of angle $\alpha_{1}$ (\cf \textcite[p.252]{reedsimon:1978}).
 
 As a consequence one obtains the following.
-A densely defined operator $A$ generates a holomorphic semigroup of angle $\alpha \in (0,\pi/2]$ if and only if for every $\alpha_{1} \in \left[0,\alpha\right[$ there exist a constant $M \geq 0$ and $r \geq 0$ such that 
+A densely defined operator $A$ generates a holomorphic semigroup of angle $\alpha \in (0,\pi/2]$ if and only if for every $\alpha_{1} \in \left[0,\alpha\right)$ there exist a constant $M \geq 0$ and $r \geq 0$ such that 
 %%-
 \[
 S(\alpha_{1} + \pi/2) \setminus B(r) \subseteq \rho(A) \quad (\text{where} \quad B(r) = \{z \in \C \colon |z| \leq r\})
@@ -1870,6 +1859,8 @@ Then Eq.~\myeqpageref{eq:a2-2.5} can be written in the form
 \end{equation}
 %% --
 A (strictly) $N$-dissipative operator is simply called (strictly) \emph{dissipative}, which is in accordance with the usual nomenclature.
+
+\phantom{x}
 %% –
 \begin{examples}\label{ex:a2-2.2}  ~ 
 %% --
@@ -2038,7 +2029,8 @@ This implies that $T(t)$ is p-contractive by the formula Eq.~\myeqpageref{eq:a2-
 %% –
 \begin{equation*}
 T(t) = \lim_{t\to 0} \left( \frac{n}{t} R\left( \frac{n}{t},A \right) \right)^{n} 
-	\text{ (strongly) for } t \geq 0. \qedhere
+	\text{ (strongly) for } t \geq 0. 
+	\qedhere
 \end{equation*}
 %% --
 \end{proof}
