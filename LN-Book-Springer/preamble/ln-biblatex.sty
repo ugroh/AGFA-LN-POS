@@ -21,7 +21,7 @@
 %%
 \ExecuteBibliographyOptions{%
  	,url		= true		% true: URL werden angezeigt
- 	,doi		= false		% DOI werden im Titel hinterlegt 
+ 	,doi		= true%false		% DOI werden im Titel hinterlegt 
 	,eprint		= false		% werden in der bib entfernt
 	}
 %% --
@@ -155,12 +155,12 @@
 %% und https://bit.ly/2YghEHH
 %% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newbibmacro{string+doi}[1]{%
-  \iffieldundef{doi}{#1}{\href{http://dx.doi.org/\thefield{doi}}{#1}}}
-\DeclareFieldFormat{title}{% Titel+Formatierung an das Makro weiterreichen
-  \usebibmacro{string+doi}{\mkbibemph{#1}}}
-\DeclareFieldFormat[article,manual]{title}{\usebibmacro{string+doi}%
-	{\mkbibemph{#1}}}
+%\newbibmacro{string+doi}[1]{%
+%  \iffieldundef{doi}{#1}{\href{http://dx.doi.org/\thefield{doi}}{#1}}}
+%\DeclareFieldFormat{title}{% Titel+Formatierung an das Makro weiterreichen
+%  \usebibmacro{string+doi}{\mkbibemph{#1}}}
+%\DeclareFieldFormat[article,manual]{title}{\usebibmacro{string+doi}%
+%	{\mkbibemph{#1}}}
 	
 
 
