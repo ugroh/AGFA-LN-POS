@@ -58,7 +58,7 @@ The fundamental Hille-Yosida theorem gives a different characterization in terms
 Another problem we will treat here is how diverse properties of a semigroup can be described in terms of its generator.
 This is a reasonable question from the theoretical point of view (since the generator uniquely determines the semigroup).
 It is of interest from the practical point of view as well: the generator is the given object, defined by the differential equation.
-It is useful to dispose of conditions of the generator itself giving information on the solutions (which might not be known explicitely).
+It is useful to dispose of conditions of the generator itself giving information on the solutions (which might not be known explicitly).
 We discuss smoothness properties such as analyticity, differentiability, norm continuity and compactness of the semigroup.
 
 A frequent method to obtain new generators out of a given one is by perturbation.
@@ -377,7 +377,7 @@ Thus $ T $ is a semigroup.
 Denote by $ B $ its generator.
 It follows from the definition that $ A \subseteq B $.
 Moreover, $ D(A) $ is invariant under the semigroup.
-So by Theorem~\ref{prop:a1-1.9}\,(ii) $ D(A) $ is a core of\/ $ B $.
+So by Proposition~\ref{prop:a1-1.9}\,(ii) $ D(A) $ is a core of\/ $ B $.
 Since $ A $ is closed this implies that $ A = B $.
 \end{proof}
 %% --
@@ -496,7 +496,7 @@ It follows from the uniqueness of the solutions that $T(t+s) = T(t)T(s)$ $(s,t \
 Let $f \in E$. 
 There exist $(f_{n}) \in D(A)$ such that $\lim_{n \to \infty} f_{n} = f$.
 Then $\lim_{n \to \infty} T(t)f_{n} = T(t)f$ for all $t \in \R$.
-Since $T(\cdot)f$ is continuous, it follows that $T(\cdot)f$ is measureable.
+Since $T(\cdot)f$ is continuous, it follows that $T(\cdot)f$ is measurable.
 Hence by \textcite[10.2.1]{hillephillips:1957} 
 %
 \[
@@ -981,7 +981,7 @@ $\|R(\lambda,\pm A - w)\| \leq M/\Re(\lambda)$ for some $M \geq 0$, $w \geq 0$, 
 %%
 Let $(T(t))_{t\geq 0}$ be a strongly continuous semigroup with generator $A$.
 Let $t_0 \geq 0$ and $f \in E$.
-Then the function $t \mapsto T(t)f$ is right sided differentiable at $t_0$ if and only if\/ $T(t_0)f \in D(A)$; and in that case it is differentiable at every $s > t_0$ and the derivative is $AT(s)f$ (this follows from Theorem~\ref{prop:a1-1.6}\,(ii)).
+Then the function $t \mapsto T(t)f$ is right sided differentiable at $t_0$ if and only if\/ $T(t_0)f \in D(A)$; and in that case it is differentiable at every $s > t_0$ and the derivative is $AT(s)f$ (this follows from Proposition~\ref{prop:a1-1.6}\,(ii)).
 
 %% –
 \begin{definition}\label{def:a2-1.16}
@@ -1154,7 +1154,7 @@ Since $(T(t))_{t\geq 0}$ is norm continuous for $t \geq s'$, it follows from the
 %% --
  whenever $|r| \geq r_{0}$.
 
-All together we obtain for $|r| \geq r_{0}$,
+%All together we obtain for $|r| \geq r_{0}$, % Fahnenkorrektur: Doppelung
 %\begin{align*}
 %    \|R(a + \iu r,A)^{n+1}\| & = \frac{1}{n!}\cdot 
 %    	\left\|\int_0^\infty \eu^{-(a + \iu r)t}t^nT(t) \dt \right\| \\
@@ -1440,7 +1440,7 @@ if and only if there exists $c > 0$ such that}
 \]
 %
 \begin{proof}
-The semigroup is right-sided differentiable at a point $t > 0$ if and only if the following equivalent assertions holds.
+The semigroup is right-sided differentiable at a point $t > 0$ if and only if the following equivalent assertions hold.
 \begin{enumerate*}[\upshape(a)]
 \item
 $T(t)E \subseteq D(A)$,
@@ -1930,7 +1930,7 @@ Then
 %
 for all $g \in E$, $t > 0$.
 Thus the net $(\phi_{t})_{t>0}$ is bounded.
-Consequently it posseses a $\sigma(E',E)$-limit point $\phi$ as $t \to 0$.
+Consequently it possesses a $\sigma(E',E)$-limit point $\phi$ as $t \to 0$.
 We show that $\phi \in \ddp(f)$ and $\dualp{Af,\phi} \leq 0$.
 
 Since $\dualp{g,\phi_{t}} \leq p(g)$ for all $t > 0$, 
@@ -2021,7 +2021,7 @@ Then it follows from Corollary~\ref{cor:a2-2.5}   that $A$ is p-dissipative.
 Hence, by Eq.~\myeqpageref{eq:a2-2.8},  
 %
 \[
-	p(\lambda R(\lambda,A)g) \leq p(g) \text{for all $g \in E$, $\lambda > \omega_{0}(A)$}.
+	p(\lambda R(\lambda,A)g) \leq p(g) \quad\text{for all $g \in E$, $\lambda > \omega_{0}(A)$}.
 \]
 %
 Hence $\lambda R(\lambda,A)$ is p-contractive for $\lambda > \omega_{0}(A)$.
@@ -2064,7 +2064,7 @@ Then for every $t > 0$ and $g \in D(A)$ we have
 &\leq \frac{1}{t}(p((\Id - tA)(f + tg)) + tp(Af - g) - p(f)) \\
 &\qquad \text{(by Eq.~\myeqpageref{eq:a2-2.7}\,)} \\
 &\leq \frac{1}{t}(p(f) + tp(g - Af) + t^2p(-Ag) + tp(Af - g) - p(f)) \\
-&\leq \frac{1}{t}(2tc\|g - Af\| + t^2c\|Ag\|) \quad \text{(by (2.3))} \\
+&\leq \frac{1}{t}(2tc\|g - Af\| + t^2c\|Ag\|) \quad \text{(by Eq.~\eqref{eq:a2-2.3})} \\
 &= 2c\|g - Af\| + tc\|Ag\|.
 \end{align*}
 %% --
