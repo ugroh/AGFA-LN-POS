@@ -1,0 +1,51 @@
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% ln-theorems.tex
+%% Theorem-Umgebungen, Nummerierung, gemeinsame Zähler
+%% Status: 2026-03-09 ulgr
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% -- Neue Umgebungen (mit Zähler)
+\spnewtheorem{remarks}[theorem]{Remarks}{\normalfont\bfseries}{\normalfont}
+\spnewtheorem{examples}[theorem]{Examples}{\normalfont\bfseries}{\normalfont}
+
+%% -- Neue Umgebungen (ohne Zähler, Stern-Varianten)
+\spnewtheorem*{example*}{Example}{\normalfont\bfseries}{\normalfont}
+\spnewtheorem*{examples*}{Examples}{\normalfont\bfseries}{\normalfont}
+\spnewtheorem*{remark*}{Remark}{\normalfont\bfseries}{\normalfont}
+\spnewtheorem*{remarks*}{Remark}{\normalfont\bfseries}{\normalfont}
+\spnewtheorem*{definition*}{Definition}{\normalfont\bfseries}{\normalfont}
+\spnewtheorem*{theorem*}{Theorem}{\normalfont\bfseries}{\itshape}
+\spnewtheorem*{proposition*}{Proposition}{\normalfont\bfseries}{\itshape}
+\spnewtheorem*{lemma*}{Lemma}{\normalfont\bfseries}{\itshape}
+\spnewtheorem*{corollary*}{Corollary}{\normalfont\bfseries}{\itshape}
+
+%% -- Nummerierung: section.nummer
+\renewcommand\thetheorem{\thesection.\arabic{theorem}}
+\renewcommand\theproposition{\thesection.\arabic{proposition}}
+\renewcommand\thedefinition{\thesection.\arabic{definition}}
+\renewcommand\thelemma{\thesection.\arabic{lemma}}
+\renewcommand\thecorollary{\thesection.\arabic{corollary}}
+\renewcommand\theremark{\thesection.\arabic{remark}}
+\renewcommand\theremarks{\thesection.\arabic{remarks}}
+\renewcommand\theexample{\thesection.\arabic{example}}
+\renewcommand\theexamples{\thesection.\arabic{examples}}
+
+%% -- Zähler pro Section zurücksetzen
+\counterwithin{equation}{section}
+\counterwithin{theorem}{section}
+
+\makeatletter
+\@addtoreset{section}{chapter}
+\makeatother
+
+%% -- Gemeinsamer Zähler: alle Umgebungen teilen theorem-Zähler
+\makeatletter
+\let\c@definition\c@theorem
+\let\c@example\c@theorem
+\let\c@examples\c@theorem
+\let\c@lemma\c@theorem
+\let\c@corollary\c@theorem
+\let\c@proposition\c@theorem
+\let\c@remark\c@theorem
+\let\c@remarks\c@theorem
+\makeatother

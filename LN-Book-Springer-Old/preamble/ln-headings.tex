@@ -1,0 +1,73 @@
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% ln-headings.tex
+%% Seitenstile und Kopfzeilen-Definitionen
+%% Status: 2026-03-09 ulgr
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\makeatletter
+
+%% -- Standardstil für Part / Chapter / Section
+\def\ps@headings{%
+  \let\@oddfoot\@empty\let\@evenfoot\@empty
+  \def\@evenhead{\runheadsize\rmfamily\upshape
+                  \rlap{\thepage}\hfil
+                  Part~\thepart\hspace{.75em}\leftmark}%
+  \def\@oddhead{\runheadsize\rmfamily\upshape
+                 \rightmark\hfil\llap{\thepage}}%
+}
+
+%% -- Spezialstile für Frontmatter und Backmatter
+%% -- Verwendung: \prefaceheader vor dem jeweiligen \include
+\newcommand{\prefaceheader}{%
+  \def\@evenhead{\runheadsize\rmfamily\upshape\rlap{\thepage}\hfil Preface}%
+  \def\@oddhead{\runheadsize\rmfamily\upshape Preface\hfil\llap{\thepage}}%
+}
+
+\newcommand{\contentsheader}{%
+  \def\@evenhead{\runheadsize\rmfamily\upshape\rlap{\thepage}\hfil Contents}%
+  \def\@oddhead{\runheadsize\rmfamily\upshape Contents\hfil\llap{\thepage}}%
+}
+
+\newcommand{\symbolsheader}{%
+  \def\@evenhead{\runheadsize\rmfamily\upshape\rlap{\thepage}\hfil List of Symbols}%
+  \def\@oddhead{\runheadsize\rmfamily\upshape List of Symbols\hfil\llap{\thepage}}%
+}
+
+\newcommand{\notesrefheader}{%
+  \def\@evenhead{\runheadsize\rmfamily\upshape\rlap{\thepage}\hfil Notes and References}%
+  \def\@oddhead{\runheadsize\rmfamily\upshape Notes and References\hfil\llap{\thepage}}%
+}
+
+\newcommand{\indexheader}{%
+  \def\@evenhead{\runheadsize\rmfamily\upshape\rlap{\thepage}\hfil Index}%
+  \def\@oddhead{\runheadsize\rmfamily\upshape Index\hfil\llap{\thepage}}%
+}
+
+%% -- Updated Notes (allgemein und nach Part aufgeteilt)
+\newcommand{\notesheader}{%
+  \def\@evenhead{\runheadsize\rmfamily\upshape\rlap{\thepage}\hfil Updated Notes}%
+  \def\@oddhead{\runheadsize\rmfamily\upshape Updated Notes\hfil\llap{\thepage}}%
+}
+
+\newcommand{\notesheaderone}{%
+  \def\@evenhead{\runheadsize\rmfamily\upshape\rlap{\thepage}\hfil Updated Notes Part I}%
+  \def\@oddhead{\runheadsize\rmfamily\upshape Updated Notes Part I\hfil\llap{\thepage}}%
+}
+
+\newcommand{\notesheadertwo}{%
+  \def\@evenhead{\runheadsize\rmfamily\upshape\rlap{\thepage}\hfil Updated Notes Part II}%
+  \def\@oddhead{\runheadsize\rmfamily\upshape Updated Notes Part II\hfil\llap{\thepage}}%
+}
+
+\newcommand{\notesheaderthree}{%
+  \def\@evenhead{\runheadsize\rmfamily\upshape\rlap{\thepage}\hfil Updated Notes Part III}%
+  \def\@oddhead{\runheadsize\rmfamily\upshape Updated Notes Part III\hfil\llap{\thepage}}%
+}
+
+\newcommand{\notesheaderfour}{%
+  \def\@evenhead{\runheadsize\rmfamily\upshape\rlap{\thepage}\hfil Updated Notes Part IV}%
+  \def\@oddhead{\runheadsize\rmfamily\upshape Updated Notes Part IV\hfil\llap{\thepage}}%
+}
+
+\pagestyle{headings}
+\makeatother

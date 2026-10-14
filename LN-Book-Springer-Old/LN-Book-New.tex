@@ -1,0 +1,319 @@
+% !TEX TS-program = pdflatexmk
+%%%%%%%%%%%%%%%%%%%% LN-Book.tex %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Status: 2026-03-21 ulgr
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[graybox]{svmono}
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Fonts & Encoding
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[T1]{fontenc}  
+\usepackage{newtxtext}
+\usepackage[varvw]{newtxmath}
+\usepackage{microtype}
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Layout & General Packages
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage[bottom]{footmisc}
+\usepackage{tabularx}
+\usepackage{mleftright}
+\mleftright
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Theorem Environments (starred = without counter)
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\spnewtheorem{remarks}[theorem]{Remarks}{\normalfont\bfseries}{\normalfont}
+\spnewtheorem{examples}[theorem]{Examples}{\normalfont\bfseries}{\normalfont}
+
+\spnewtheorem*{example*}{Example}{\normalfont\bfseries}{\normalfont}
+\spnewtheorem*{examples*}{Examples}{\normalfont\bfseries}{\normalfont}
+\spnewtheorem*{remark*}{Remark}{\normalfont\bfseries}{\normalfont}
+\spnewtheorem*{remarks*}{Remark}{\normalfont\bfseries}{\normalfont}
+\spnewtheorem*{definition*}{Definition}{\normalfont\bfseries}{\normalfont}
+\spnewtheorem*{theorem*}{Theorem}{\normalfont\bfseries}{\itshape}
+\spnewtheorem*{proposition*}{Proposition}{\normalfont\bfseries}{\itshape}
+\spnewtheorem*{lemma*}{Lemma}{\normalfont\bfseries}{\itshape}
+\spnewtheorem*{corollary*}{Corollary}{\normalfont\bfseries}{\itshape}
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Theorem Numbering: section.number
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand\thetheorem{\thesection.\arabic{theorem}}
+\renewcommand\theproposition{\thesection.\arabic{proposition}}
+\renewcommand\thedefinition{\thesection.\arabic{definition}}
+\renewcommand\thelemma{\thesection.\arabic{lemma}}
+\renewcommand\thecorollary{\thesection.\arabic{corollary}}
+\renewcommand\theremark{\thesection.\arabic{remark}}
+\renewcommand\theremarks{\thesection.\arabic{remarks}}
+\renewcommand\theexample{\thesection.\arabic{example}}
+\renewcommand\theexamples{\thesection.\arabic{examples}}
+
+%% -- Reset theorem counter per section
+\counterwithin{theorem}{section}
+\numberwithin{equation}{section} 
+
+%% -- Shared theorem counter for all environments
+\makeatletter
+\let\c@definition\c@theorem
+\let\c@example\c@theorem
+\let\c@examples\c@theorem
+\let\c@lemma\c@theorem
+\let\c@corollary\c@theorem
+\let\c@proposition\c@theorem
+\let\c@remark\c@theorem
+\let\c@remarks\c@theorem
+\makeatother
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Part resets Chapter counter
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\makeatletter
+\@addtoreset{chapter}{part}
+\makeatother
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Mathematics
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage[showonlyrefs]{mathtools}
+\usepackage{mathtools}
+\usepackage{empheq}
+
+%% -- Norms, absolute values, dual pairings
+%% -- Usage: \norm{x}, \norm*{x} (auto-scaling), \norm{} (placeholder) 
+\DeclarePairedDelimiterX{\norm}[1]{\lVert}{\rVert}{\ifblank{#1}{\:\cdot\:}{#1}}
+\DeclarePairedDelimiterX{\abs}[1]{\lvert}{\rvert}{\ifblank{#1}{\:\cdot\:}{#1}}
+\DeclarePairedDelimiterX{\dualp}[1]{\langle}{\rangle}{\ifblank{#1}{\,\cdot\,,\cdot\,}{#1}}
+
+%% -- Intervals
+\newcommand{\interval}[1]{\left[ #1 \right]}    % closed [a,b]
+\newcommand{\ointerval}[1]{\left] #1 \right[}   % open ]a,b[
+\newcommand{\rointerval}[1]{\left[ #1 \right[}  % half-open [a,b[
+\newcommand{\lointerval}[1]{\left] #1 \right]}  % half-open ]a,b]
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% User Definitions & Packages
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{./preamble/ln-preamble}       %% packages
+\input{./preamble/ln-definitionen}   %% definitions
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Bibliography
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{./preamble/ln-biblatex}
+\addbibresource{./bib/ln-references.bib}
+\addbibresource{./bib/ln-references-EN.bib}
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Table of Contents
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{tocloft}
+\renewcommand\cftchapnumwidth{1cm}
+\setlength{\cftbeforechapskip}{3pt plus 1pt minus 1pt}
+\setcounter{tocdepth}{1}
+\cftpagenumbersoff{part}
+
+%% -- No page number for chapter/section in TOC
+\newcommand{\chapternopage}[1]{%
+  \addtocontents{toc}{\protect\cftpagenumbersoff{chapter}}%
+  \chapter{#1}%
+  \addtocontents{toc}{\protect\cftpagenumberson{chapter}}%
+}
+\newcommand{\sectionnopage}[1]{%
+  \addtocontents{toc}{\protect\cftpagenumbersoff{section}}%
+  \section*{#1}%
+  \addcontentsline{toc}{section}{#1}%
+  \addtocontents{toc}{\protect\cftpagenumberson{section}}%
+}
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Index
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{makeidx}
+\makeindex 
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Cross-references with page info
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[nospace]{varioref}
+\AtBeginDocument{\renewcommand*{\reftextcurrent}{\unskip}}
+\newcommand{\myeqpageref}[1]{\eqref{#1} \vpageref{#1}}
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Headings
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\makeatletter
+
+\def\ps@headings{%
+  \let\@oddfoot\@empty\let\@evenfoot\@empty
+  \def\@evenhead{\runheadsize\rmfamily\upshape
+                 \rlap{\thepage}\hfil Part~\thepart\hspace{.75em}\leftmark}%
+  \def\@oddhead{\runheadsize\rmfamily\upshape
+                \rightmark\hfil\llap{\thepage}}%
+}
+
+\newcommand{\prefaceheader}{%
+  \def\@evenhead{\runheadsize\rmfamily\upshape\rlap{\thepage}\hfil Preface}%
+  \def\@oddhead{\runheadsize\rmfamily\upshape Preface\hfil\llap{\thepage}}%
+}
+\newcommand{\contentsheader}{%
+  \def\@evenhead{\runheadsize\rmfamily\upshape\rlap{\thepage}\hfil Contents}%
+  \def\@oddhead{\runheadsize\rmfamily\upshape Contents\hfil\llap{\thepage}}%
+}
+\newcommand{\symbolsheader}{%
+  \def\@evenhead{\runheadsize\rmfamily\upshape\rlap{\thepage}\hfil List of Symbols}%
+  \def\@oddhead{\runheadsize\rmfamily\upshape List of Symbols\hfil\llap{\thepage}}%
+}
+\newcommand{\notesrefheader}{%
+  \def\@evenhead{\runheadsize\rmfamily\upshape\rlap{\thepage}\hfil Notes and References}%
+  \def\@oddhead{\runheadsize\rmfamily\upshape Notes and References\hfil\llap{\thepage}}%
+}
+\newcommand{\notesheader}{%
+  \def\@evenhead{\runheadsize\rmfamily\upshape\rlap{\thepage}\hfil Updated Notes}%
+  \def\@oddhead{\runheadsize\rmfamily\upshape Updated Notes\hfil\llap{\thepage}}%
+}
+\newcommand{\notesheaderone}{%
+  \def\@evenhead{\runheadsize\rmfamily\upshape\rlap{\thepage}\hfil Updated Notes Part I}%
+  \def\@oddhead{\runheadsize\rmfamily\upshape Updated Notes Part I\hfil\llap{\thepage}}%
+}
+\newcommand{\notesheadertwo}{%
+  \def\@evenhead{\runheadsize\rmfamily\upshape\rlap{\thepage}\hfil Updated Notes Part II}%
+  \def\@oddhead{\runheadsize\rmfamily\upshape Updated Notes Part II\hfil\llap{\thepage}}%
+}
+\newcommand{\notesheaderthree}{%
+  \def\@evenhead{\runheadsize\rmfamily\upshape\rlap{\thepage}\hfil Updated Notes Part III}%
+  \def\@oddhead{\runheadsize\rmfamily\upshape Updated Notes Part III\hfil\llap{\thepage}}%
+}
+\newcommand{\notesheaderfour}{%
+  \def\@evenhead{\runheadsize\rmfamily\upshape\rlap{\thepage}\hfil Updated Notes Part IV}%
+  \def\@oddhead{\runheadsize\rmfamily\upshape Updated Notes Part IV\hfil\llap{\thepage}}%
+}
+\newcommand{\indexheader}{%
+  \def\@evenhead{\runheadsize\rmfamily\upshape\rlap{\thepage}\hfil Index}%
+  \def\@oddhead{\runheadsize\rmfamily\upshape Index\hfil\llap{\thepage}}%
+}
+
+\pagestyle{headings}
+\makeatother
+
+%% --
+%\usepackage{yhmath}   % definiert \widecheck
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Hyperref & PDF Links  
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[plainpages=false, pdfpagelabels]{hyperref}
+\hypersetup{%
+  breaklinks  = true,
+  colorlinks  = true,
+  linkcolor   = blue,
+  urlcolor    = blue,
+  citecolor   = blue,
+  hyperindex  = true,
+  hypertexnames = true,
+  % hidelinks   %% uncomment for print version
+}
+
+%% -- Unique hyperref anchors (needed because chapter resets per part)
+\renewcommand{\theHchapter}   {\Alph{part}.\arabic{chapter}}
+\renewcommand{\theHsection}   {\Alph{part}.\arabic{chapter}.\arabic{section}}
+\renewcommand{\theHsubsection}{\Alph{part}.\arabic{chapter}.\arabic{section}.\arabic{subsection}}
+\renewcommand{\theHequation}  {\Alph{part}.\arabic{chapter}.\arabic{section}.\arabic{equation}}
+\renewcommand{\theHtheorem}   {\Alph{part}.\arabic{chapter}.\arabic{section}.\arabic{theorem}}
+\renewcommand{\theHdefinition}{\Alph{part}.\arabic{chapter}.\arabic{section}.\arabic{theorem}}
+\renewcommand{\theHlemma}     {\Alph{part}.\arabic{chapter}.\arabic{section}.\arabic{theorem}}
+\renewcommand{\theHcorollary} {\Alph{part}.\arabic{chapter}.\arabic{section}.\arabic{theorem}}
+\renewcommand{\theHproposition}{\Alph{part}.\arabic{chapter}.\arabic{section}.\arabic{theorem}}
+\renewcommand{\theHremark}    {\Alph{part}.\arabic{chapter}.\arabic{section}.\arabic{theorem}}
+\renewcommand{\theHexample}   {\Alph{part}.\arabic{chapter}.\arabic{section}.\arabic{theorem}}
+\newcommand{\theHremarks}   {\Alph{part}.\arabic{chapter}.\arabic{section}.\arabic{theorem}}
+\newcommand{\theHexamples}  {\Alph{part}.\arabic{chapter}.\arabic{section}.\arabic{theorem}}
+\renewcommand{\theHtable}{\Alph{part}.\arabic{chapter}.\arabic{section}.\arabic{table}}
+
+%% --
+\newcommand{\tint}{\textstyle\int} %% p 401 große Matrix
+%% --
+%% --
+\date{}
+%% --
+\begin{document}
+%% --
+\author{Wolfgang Arendt, Annette Grabosch, Günther Greiner, Ulrich Groh, Heinrich P. Lotz, Ulrich Moustakas, Rainer Nagel, Frank Neubrander, Ulf Schlotterbeck}
+%% --
+\title{One-parameter Semigroups of Positive Operators\\ 
+		{\large{Edited by R. Nagel}}}
+%% --
+\subtitle{Lecture Notes in Mathematics\\ \\ 1184\\ \\Springer-Verlag\\ Berlin Heidelberg New York Tokyo}
+
+%% --
+\maketitle
+%% --
+\frontmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%% -- part-0
+\include{./part-0/ln-dedication}
+\prefaceheader
+\include{./part-0/ln-preface}
+%% --
+\contentsheader
+\tableofcontents
+\newpage
+%% --
+\symbolsheader
+\include{./part-0/ln-symbols}
+% %% --
+\mainmatter
+\pagestyle{headings}
+%% --
+%% -- Part-A
+\include{./part-a/part-a} 
+    \include{./part-a/chap-a1}
+%    \pagestyle{headings}
+    \include{./part-a/chap-a2}
+%    \pagestyle{headings}
+    \include{./part-a/chap-a3}
+%    \pagestyle{headings}
+    \include{./part-a/chap-a4}
+
+%%% -- Part-B
+\include{./part-b/part-b}
+    \include{./part-b/chap-b1}
+    \include{./part-b/chap-b2}
+    \include{./part-b/chap-b3}
+    \include{./part-b/chap-b4}
+
+%%%% -- Part-C
+\include{./part-c/part-c}
+    \include{./part-c/chap-c1}
+    \include{./part-c/chap-c2}
+    \include{./part-c/chap-c3}
+    \include{./part-c/chap-c4}
+%
+%%% -- Part-D
+\include{./part-d/part-d}
+   \include{./part-d/chap-d1}
+    \include{./part-d/chap-d2}
+    \include{./part-d/chap-d3}
+    \include{./part-d/chap-d4}
+
+%% --
+%% -- Start Updated Notes
+%% --
+%% -- Part-E
+\notesheader
+	\include{./part-e/part-e}
+	\include{./part-e/un-part-a}
+	\include{./part-e/un-part-b}
+	\include{./part-e/un-part-c}
+	\include{./part-e/un-part-d}
+
+%% --
+\cleardoublepage 
+\indexheader
+\printindex
+%% --
+%% --
+%% -- End of LN
+%% --
+\end{document}
