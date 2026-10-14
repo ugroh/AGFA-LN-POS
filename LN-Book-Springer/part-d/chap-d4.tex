@@ -104,7 +104,7 @@ Then $s(A) = \omega_{0}$ holds.
 \begin{remark}\label{rem:d4-1.5}
 A simple modification of Part-I, Example~\ref{ex:a3-1.4} (take $c_{0}$ instead of\/ $\ell^2$) shows that Theorem~\ref{thm:d4-1.3} is no longer true for non-positive semigroups (for details see \textcite[Beispiel 2.5]{grohneubrander:1981}).
 
-While the growth bound $\omega_{0}$ characterizes uniform exponentially stability of the semigroup there are other (and weaker) stability concepts (\cf Part-I, Section~\ref{sec:a4-1}).
+While the growth bound $\omega_{0}$ characterizes uniform exponential stability of the semigroup there are other (and weaker) stability concepts (\cf Part-I, Section~\ref{sec:a4-1}).
 \end{remark}
 %% --
 \begin{definition}\label{def:d4-1.6}
@@ -129,7 +129,7 @@ Surprisingly all these properties coincide for positive semigroups on C*-algebra
 %% --
 \begin{theorem}\label{thm:d4-1.7}
 Let $M$ be a C*-algebra with unit and $(T(t))_{t \geq 0}$ a positive semigroup on $M$.
-Then the following assertion are equivalent.
+Then the following assertions are equivalent.
 %% --
 \begin{enumerate}[\upshape (a)]
 \item 
@@ -273,7 +273,7 @@ $\int_{0}^{\infty} |(T(s)x)\xi|\eta) \ds$ exists for all $\xi$, $\eta \in H$ and
 \end{theorem}
 %% --
 \begin{proof}
-The equivalence of~\ref{item:d4-2.2-a} and~\ref{item:d4-2.2-b} follows from Remark~\ref{rem:d4-2.1}\,\ref{item:d4-2.1-i}, whereas~\ref{item:d4-2.2-c} and~\ref{item:d4-2.2-d}), \resp~\ref{item:d4-2.2-e} and~\ref{item:d4-2.2-f} are equivalent by the Remark~\ref{rem:d4-2.1}\,\ref{item:d4-2.1-iii}.
+The equivalence of~\ref{item:d4-2.2-a} and~\ref{item:d4-2.2-b} follows from Remark~\ref{rem:d4-2.1}\,\ref{item:d4-2.1-i}, whereas~\ref{item:d4-2.2-c} and~\ref{item:d4-2.2-d}, \resp~\ref{item:d4-2.2-e} and~\ref{item:d4-2.2-f}, are equivalent by Remark~\ref{rem:d4-2.1}\,\ref{item:d4-2.1-iii}.
 %% --
 \begin{enumerate}[wide, labelindent=.25em]
 
@@ -367,14 +367,14 @@ Essentially we distinguish three cases.
 The Cesàro means $\frac{1}{s}\int_{0}^{s} T(t)dt$ converge strongly to a projection $P$ onto the fixed space of\/ $(T(t))_{t \geq 0}$ (see Propositions~\ref{prop:d4-3.3} \&~\ref{prop:d4-3.4}).
 
 \item
-The maps $T(t)$ converge strongly to $P$ (see Propositions~\ref{prop:d4-3.7},~\ref{thm:d4-3.8} \&.~\ref{cor:d4-3.9}).
+The maps $T(t)$ converge strongly to $P$ (see Proposition~\ref{prop:d4-3.7}, Theorem~\ref{thm:d4-3.8} and Corollary~\ref{cor:d4-3.9}).
 
 \item
 The maps $T(t)$ behave asymptotically as a periodic group (Theorem~\ref{thm:d4-3.11}).
 \end{enumerate}
 %% --
 Much of the following is based on the theory of weakly compact operator semigroups.
-Therefore the following compactness criterium is quite useful. 
+Therefore the following compactness criterion is quite useful. 
 \index{operator!weakly compact}
 %% --
 \begin{proposition}\label{prop:d4-3.1}
@@ -390,7 +390,7 @@ exists for every $x$ in $M$ and yields a projection onto $\Fix{\TT}$.
 \end{proposition}
 %
 \begin{proof}
-Since the positive cone of\/ $M_{*}$ is generating, it is enough to show that for every $0 \leq \phi \in M_{*}$ the orbit $\{T(t)\phi \colon t \in \R_{+}\}$ is relatively weak compact.
+Since the positive cone of\/ $M_{*}$ is generating, it is enough to show that for every $0 \leq \phi \in M_{*}$ the orbit $\{T(t)\phi \colon t \in \R_{+}\}$ is relatively weakly compact.
 For this we use \textcite[Theorem III.5.4.\,(iii)]{takesaki:1979}.
 
 Let $(p_{n})_{n \in \N}$ be a decreasing sequence of projections in $M$ such that $\inf_{n} p_{n} = 0$.
@@ -494,7 +494,7 @@ $s^{*}(M,M_{*})\text{-}\lim_{s \to \infty} C(s)'p_{r} = \1$.
 %% --
 \begin{proof}
 Suppose that (a) holds.
-Since $\Fix{\TT}$ separates $\Fix{\TT'}$, the fixed space of\/ $\TT'$ is non trivial, hence $p_{r} \neq 0$ (see \textcite[Chap.2, Theorem1.4]{krengel:1985}).
+Since $\Fix{\TT}$ separates $\Fix{\TT'}$, the fixed space of\/ $\TT'$ is non trivial, hence $p_{r} \neq 0$ (see \textcite[Chap.~2, Theorem~1.4]{krengel:1985}).
 Let $0 \leq \psi \in M_{*}$, then 
 %
 \[
@@ -571,7 +571,7 @@ Therefore $\TT$ is relatively compact in the weak operator topology by Propositi
 
 Suppose that (d) holds.
 Let $\phi$ be a faithful normal state on $M$ such that $\Fix{\TT} = \phi\C$.
-By Proposition 3.1 the semigroup $\TT$ is strongly ergodic.
+By Proposition~\ref{prop:d4-3.1} the semigroup $\TT$ is strongly ergodic.
 Therefore the fixed space of\/ $\TT$ separates the points of\/ $\Fix{T'}$.
 Consequently $\Fix{T'} = \C.\1$.
 Thus the ergodic projection associated with $\TT$ is given by $P = \1 \otimes \phi$, \ie $P\psi = \psi(\1)\phi$ for all $\psi \in M_{*}$.
@@ -693,7 +693,7 @@ Since the range of\/ $Q'$ is a \WA-subalgebra of\/ $M$ it follows from \textcite
 This $Q'$ is faithful, \ie $\Kern{Q'} \cap M_{+} = \{0\}$ since $Q\phi = \phi$ for the faithful linear form $\phi$.
 
 Let $\phi$ be the faithful normal state generating $\Fix{\TT}$ and let $\UG$ be a family of unitary eigenvectors of\/ $A'$ pertaining to the eigenvalues in $\Omega$ (see Remark~\ref{rem:d3-1.12}).
-If\/ $u_{1}$ and $u_{2}$ in $U$, then
+If\/ $u_{1}$ and $u_{2}$ are in $U$, then
 %% --
 \[
 \phi(u_{1}u_{2}^{*}) = \phi(T_{0}(t)'(u_{1}u_{2}^{*})) = \eu^{(n_{1}-n_{2})t}\phi(u_{1}u_{2}^{*}).
@@ -724,7 +724,7 @@ Then the assertion follows from Proposition~\ref{prop:d3-1.4}.
 
 \item
 If\/ $\psi \in N_{*}$, then $|T_{0}(t)\psi| = T_{0}(t)|\psi|$ for all $t \in \R$.
-This follows immediately from the fact that $T_{0}(t)'$ is a *-automorphismus on $N$.
+This follows immediately from the fact that $T_{0}(t)'$ is a *-automorphism on $N$.
 
 \item
 Let us add a few words concerning the structure of\/ $N$: If\/ $\TT$ is irreducible and $K$ is the semigroup kernel of\/ $\TT^{-} \subseteq L_{w}(M_{*})$, then 
@@ -733,7 +733,7 @@ Let us add a few words concerning the structure of\/ $N$: If\/ $\TT$ is irreduci
 	(S \mapsto S'): K \to \mathcal{L}( (N,\sigma(N,N_{*}) ) 
 \]
 %
-is a representation of the compact, Abelian group $K$ as group of *-automorphism such that the fixed space is one dimensional.
+is a representation of the compact, Abelian group $K$ as a group of *-automorphisms such that the fixed space is one dimensional.
 Therefore we are able to apply the results of \textcite{olesen:1980}.
 There are three possibilities for $N$.
 %% --
@@ -758,10 +758,10 @@ where $ R $  is as in (ii) and $ \dm $  the normalized Haar measure on $ K/G $  
 \end{remarks}
 %% --
 So far we have studied weak*-semigroups on general \WA-algebras.
-We apply now these results to weak*-semigroup on $ \BH $.
+We now apply these results to weak*-semigroups on $ \BH $.
 %This is of interest in view of the results in \textcite{davies:1976}.
-To do this we call a triple $ (M,\phi,\TT) $  a \WA-dynamical system if\/ $ M $  is a \WA-algebra, $ \TT$ a weak*-semigroup of identity preserving Schwarz maps on $ M $  and $ \phi $  is a faithful \/ $ \TT $-invariant normal states.
-We call $ (M,\phi,\TT) $  irreducible, if the preadjoint semigroup is irreducible (equvalently, if the fixed space of\/ $ \TT $  is one dimensional).
+To do this we call a triple $ (M,\phi,\TT) $  a \WA-dynamical system if\/ $ M $  is a \WA-algebra, $ \TT$ a weak*-semigroup of identity preserving Schwarz maps on $ M $  and $ \phi $  is a faithful \/ $ \TT $-invariant normal state.
+We call $ (M,\phi,\TT) $  irreducible, if the preadjoint semigroup is irreducible (equivalently, if the fixed space of\/ $ \TT $  is one dimensional).
 %% --
 \begin{proposition}\label{prop:d4-3.7}
 Let $ (\BH,\phi,\TT) $  be a \WA-dynamical system on the \WA-algebra $ \BH $  of all bounded linear operators on a Hilbert space $ H $.
@@ -927,7 +927,7 @@ Since $ \TT $  is periodic of period $ \tau $, it follows that 0 is a pole of th
 Thus $ \TT $  is irreducible and uniformly ergodic on $ L^{1}(\Gamma ,\dm) $  
 (see Part-I, Section~\ref{subsec:a1-2.5}).
 
-Now let $ \TT $  be a semigroup on a predual $ M_{*} $ of a von Neumann-algebra $ M $.
+Now let $ \TT $  be a semigroup on a predual $ M_{*} $ of a von Neumann algebra $ M $.
 It is called \emph{partially periodic}, if there exists a projection $ Q \in \mathcal{L}(M_{*}) $  reducing $ \TT $  such that $ Q(M_{*}) \cong L^{1}(\Gamma,\dm) $  and $ \TT_{| \Image{Q}} $  is conjugate to a periodic semigroup on $ L^{1}(\Gamma ,\dm) $.
 \index{periodic semigroup}
 
@@ -1233,7 +1233,7 @@ for all $ \lambda \in D $  and the proof is complete.
 \end{proof}
 %% --
 \begin{remark}\label{rem:d4-remark}
-Without further comments, we will now use following facts.
+Without further comments, we will now use the following facts.
 %% --
 \begin{enumerate}[\upshape(i), wide, labelindent=.25em]
 \item\label{rem:item1}
@@ -1331,7 +1331,7 @@ Then $ \lim_{\eta} \psi_{1}^{(n)}(z_{\eta}) = 1 $  but $ \lim_{\eta} \psi_{2}^{(
 Let $ z $  be a $ \sigma(M,M_{*}) $-accumulation point of\/ $ (z_{\eta}) $  in $ M_{+} $.
 Since every $ \psi_{i}^{(n)} $  is normal, $ \psi_{1}^{(n)}(z) = 1 $  but $ \psi_{2}^{(n)}(z) = 0 $.
 The first condition implies $ z \neq 0 $  while the second shows that $ \psi_{2}^{(n)} $  cannot be faithful.
-This is a contradiction and it implies $ \dim( \Fix{\RR'}) = 1 $, hence Theorem~\ref{rem:d4-4.2}\,(iv) is proved.
+This is a contradiction and it implies $ \dim( \Fix{\RR'}) = 1 $, hence Theorem~\ref{thm:d4-4.4}\,(iv) is proved.
 \qedhere
 \end{enumerate}
 %% --
@@ -1387,7 +1387,7 @@ for every $ \psi \in M' $.
 Hence $ \Fix{\TT''} \subseteq M_{*} $  which implies (c).
 
 If (c) is fulfilled, then $ \Fix{\TT'} = \Fix{\TT''} $.
-Therefore the fixed space of\/ $ \TT' $  separates the points of\/ $ \Fix{\TT''} $, hence $ \TT' $  is strongly ergodic on $ M $  (\textcite[Chap.2, Theorem~1.4]{krengel:1985}).
+Therefore the fixed space of\/ $ \TT' $  separates the points of\/ $ \Fix{\TT''} $, hence $ \TT' $  is strongly ergodic on $ M $  (\textcite[Chap.~2, Theorem~1.4]{krengel:1985}).
 
 If (b) holds, then
 %% --
@@ -1395,7 +1395,7 @@ If (b) holds, then
 P = \lim_{\mu \to 0} \mu R(\mu,A')
 \]
 %% --
-exists in the strong operator topology with $ A' $  is the generator of\/ $ \TT' $.
+exists in the strong operator topology where $ A' $  is the generator of\/ $ \TT' $.
 Therefore $ \dim \Fix{\widehat{\mu R(\mu)}} < \infty $  in some ultrapower of\/ $ M $  (Theorem~\ref{thm:d4-4.4}).
 It follows from Proposition~\ref{prop:d3-2.3} that 0 is a pole of the resolvent of\/ $ R(\cdot,A) $.
 Therefore $ \TT $  is uniformly ergodic.
