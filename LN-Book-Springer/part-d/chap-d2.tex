@@ -40,7 +40,7 @@ Every strongly continuous one-parameter semigroup of Schwarz type on a properly 
 \end{theorem}
 %% --
 \begin{proof}
-Let $\TT = (T(t)_{t \geq 0})$ be strongly continuous on $M$ and suppose $\TT$ not to be uniformly continuous.
+Let $\TT = (T(t))_{t \geq 0}$ be strongly continuous on $M$ and suppose $\TT$ not to be uniformly continuous.
 Then there exists a sequence $(T_n)$  in  $ \TT $ and $\epsilon > 0$ such that $\|T_n - \Id\| \geq \epsilon$, 
 but $T_n \to \Id$ in the strong operator topology.
 We claim that for every sequence $(p_{k})$ of mutually orthogonal projections and all bounded sequences $(x_{k})$ 
@@ -54,7 +54,7 @@ uniformly in $k \in \N$.
 This follows from the {Lemma of Phillips} (\textcite[Lemma II.10.3]{schaefer:1974}) and the fact that the sequence $(p_{k} x_{k} p_{k})$ is summable in the $s^{*}(M,M_*)$-topology (compare \textcite[Lemma 2]{elliot:1972}).
 
 Let $(p_{k})$ be a sequence of mutually orthogonal projections in $M$ such that every $p_{k}$ is equivalent to $\1$ via some $u_{k} \in M$ (\textcite[2.2]{sakai:1971}).
-Without loss of generality we may assume $\|(T_n - \Id)(u_n)\| \leq n^{-1}$ since the semigroup $\TT$ is strongly continuous.
+Without loss of generality we may assume $\|(T_n - \Id)u_n\| \leq n^{-1}$ since the semigroup $\TT$ is strongly continuous.
 Thus we obtained the following.
 %% --
 \begin{enumerate}[\upshape (i)]
@@ -76,7 +76,7 @@ Let $\widehat{M}$ be an ultrapower of\/ $M$,
 let $p \coloneq \widehat{(p_{k})} \in \widehat{M}$,
 
 \item
-let $T \coloneq \widehat{(T_{n}) }\in \mathcal{L}(\widehat{M})$
+let $T \coloneq \widehat{(T_{n}) }\in \mathcal{L}(\widehat{M})$,
 
 \item
 and let $u \coloneq \widehat{(u_{k})}  \in \widehat{M}$.
@@ -86,7 +86,7 @@ and let $u \coloneq \widehat{(u_{k})}  \in \widehat{M}$.
 Then $T$ is identity preserving and of Schwarz type on $\widehat{M}$.
 
 Since $u^{*}u = p$ and $uu^{*} = \1$, it follows $pu^{*} = u^{*}$ and $(uu^{*})x(uu^{*}) = x$ for all $x \in \widehat{M}$.
-Finally, $T(pxp) = pxp$ for all $x \in \widehat{M}$ which follows from \upshape(i)', and $T(u^{*}) = T(pu^{*}) = pu^{*} = u^{*}$ and $T(u) = u$, which follows from \upshape(iii)'.
+Finally, $T(pxp) = pxp$ for all $x \in \widehat{M}$ which follows from (i), and $T(u^{*}) = T(pu^{*}) = pu^{*} = u^{*}$ and $T(u) = u$, which follows from (iii).
 Using the Schwarz inequality, we obtain
 %% --
 \[

@@ -58,7 +58,7 @@ In addition, $|\phi|$ is \emph{uniquely determined} by the following two conditi
 %%% --
 \begin{empheq}[left={\empheqlbrace \quad}]{align}
     \|\phi\| &= \| |\phi| \| \notag \\
-    |\phi(x)|^{2} &\leq |\phi|(xx^{*}) \quad (x\in M)
+    |\phi(x)|^{2} &\leq \|\phi\|\,|\phi|(xx^{*}) \quad (x\in M)
     \tag{*}\label{eq:star-uniqueness}
 \end{empheq}
 %% --
@@ -107,10 +107,10 @@ If there exists a faithful family $\Psi$ of subinvariant states for $T$ on $M$, 
 \end{lemma}
 %%  --
 \begin{proof} 
-(i) Take $0 \leq \psi \in M^{*}$ and consider $f \coloneq \psi\circ b$.
+(i) Take $0 \leq \psi \in M'$ and consider $f \coloneq \psi\circ b$.
 Then $f$ is a positive semidefinite sesquilinear form on $M$ with values in $\C$.
 From the Cauchy-Schwarz inequality it follows that $f(x,x) = 0$ for some $x\in M$ if and only if\/ $f(x,y) = 0$ and $f(y,x) = 0$ for all $y\in M$.
-Since the positive cone $M^{*}_{+}$ is generating, assertion (i) is proved.
+Since the positive cone $M'_{+}$ is generating, assertion (i) is proved.
 
 (ii) Since $T$ is positive,  it follows that $T(x)^{*} = T(x^{*})$ for all $x \in M$.
 Hence $\Fix{T}$ is a self-adjoint subspace of\/ $M$, \ie invariant under the involution on $M$.
@@ -139,7 +139,7 @@ Hence $T(xy^{*}) = xT(y)^{*}$ for all $y\in M$ and (ii) is proved.
 \end{proof}
 %% --
 \begin{lemma}\label{lem:d3-1.2}
-Let $M$ be a \WA-algebra, $T$ an identity preserving Schwarz map on $M$ and $S\in\L{M}$ such that $S(x)(Sx)^{*} \leq T(xx^{*})$ for every $x\in M$.
+Let $M$ be a \WA-algebra, $T$ an identity preserving Schwarz map on $M$ and $S\in\L{M}$ such that $S(x)S(x)^{*} \leq T(xx^{*})$ for every $x\in M$.
 %% --
 \begin{enumerate}[\upshape (i)]
 
@@ -148,7 +148,7 @@ If\/ $v\in M$ such that $S(v^{*}) = v^{*}$ and $T(v^{*}v) = v^{*}v$, then $T(xv)
 
 \item\label{item:d3-1.2-ii}
 Suppose there exists $\phi\in M_{*}$ with polar decomposition $\phi = u|\phi|$ such that $S_{*}\phi = \phi$ and $T_{*}|\phi| = |\phi|$.
-If the closed subspace $s(|\phi|)M$ is T-invariant, then $Su^{*} = u^{*}$ and $T(u^{*}u) = u^{*}u$.
+If the closed subspace $s(|\phi|)M$ is $T$-invariant, then $Su^{*} = u^{*}$ and $T(u^{*}u) = u^{*}u$.
 \end{enumerate}
 %% --
 \end{lemma}
@@ -156,7 +156,7 @@ If the closed subspace $s(|\phi|)M$ is T-invariant, then $Su^{*} = u^{*}$ and $T
 \begin{proof}
 \begin{enumerate}[\upshape (i), wide, labelindent=.25em]
 \item 
-Define a positive semidefinite sesquilinear map $b: M\times M \mapsto M$ by
+Define a positive semidefinite sesquilinear map $b \colon M\times M \to M$ by
 %% -- 
 \[
 b(x,y) \coloneq T(xy^{*}) - S(x)S(y)^{*} \quad (x, y\in M).
@@ -201,11 +201,11 @@ Since $ S_{*}\phi = \phi $, $ T_{*}|\phi| = |\phi| $ and $ \phi = u|\phi| $ it f
 \begin{align*}
 	0 &\leq |\phi|((Su^{*} - u^{*})(Su^{*} - u^{*})^{*}) \\
 	& \leq 2|\phi|(u^{*}u) - |\phi|(S(u^{*})u)^{*} - |\phi|(S(u^{*})u) \\
-	& = 2|\phi|(uu^{*}) - \phi(u^{*})^{*} - \phi(u^{*}) \\
+	& = 2|\phi|(u^{*}u) - \phi(u^{*})^{*} - \phi(u^{*}) \\
 	& = 2(|\phi|(u^{*}u) - |\phi|(u^{*}u)) = 0.
 \end{align*}
 %% --
-But $(Su^{*} - u^{*})(Su^{*} - u^{*}) \in F$ and $|\phi|$ is faithful on $F$.
+But $(Su^{*} - u^{*})(Su^{*} - u^{*})^{*} \in F$ and $|\phi|$ is faithful on $F$.
 Hence we obtain $Su^{*} = u^{*}$.
 Consequently,
 %% --
@@ -296,8 +296,8 @@ In particular,
 For all $x \in M$ we obtain
 %% --
 \begin{align*}
-|\psi(x)|^2 &= | \dualp{\mu R(\mu+\im\alpha)'x,\psi} |^2 \leq \\
-&\leq \|\psi\| \dualp{(\mu R(\mu+\im\alpha)'x)(\mu R(\mu+\im\alpha)'x)^{*},\psi}  \\
+|\psi(x)|^2 &= | \dualp{\mu R(\mu+\im\alpha)'x,\psi} |^2 \\
+&\leq \|\psi\| \dualp{(\mu R(\mu+\im\alpha)'x)(\mu R(\mu+\im\alpha)'x)^{*},|\psi|}  \\
 &\leq \|\psi\| \dualp{\mu R(\mu)'(xx^{*}),|\psi|}
 \end{align*}
 %% --
@@ -305,7 +305,7 @@ For all $x \in M$ we obtain
 Since
 %% --
 \begin{align*}
-\|\psi\| &= \| |\psi| \| = |\psi|(\1) = \\
+\|\psi\| &= \| |\psi| \| = |\psi|(\1) \\
 &= \dualp{\mu R(\mu)'\1,\abs{\psi}} = \| \mu R(\mu)|\psi| \|,
 \end{align*}
 %% --
@@ -337,7 +337,7 @@ If\/ $\phi \in \Fix{\RR} $ is self-adjoint with Jordan decomposition $\phi = \ph
 \begin{align*}
 \| \phi \| &= \| \phi^{+} \| + \| \phi^{-} \|  =
     \phi^{+}(\1) + \phi^{-}(\1) = \phi^{+}(R'\1) + \phi^{-}(R'\1) \\
-    &= \dualp{R(\phi^{+}), \1}  + \dualp{R(\phi^{-}), \1}   =
+    &= \dualp{\1, R(\phi^{+})}  + \dualp{\1, R(\phi^{-})}   =
     \| R(\phi^{+}) \| + \| R(\phi^{-}) \| .
 \end{align*}
 %% -- 
@@ -405,7 +405,7 @@ From the considerations above it follows
 \psi_{0}(x_{0}) = \lim_{\mathfrak{U}}(\lambda - 1)\psi(R(\lambda,S)x_{0}) = \psi(x_{0}) \neq 0 ,
 \]
 %% --
-hence $0 \neq \psi_{0} \in \Fix{S}$.
+hence $0 \neq \psi_{0} \in \Fix{S'}$.
 Therefore $\Fix{S'}$ separates the points of\/ $\Fix{S}$.
 From this it follows that
 %% --
@@ -534,7 +534,7 @@ which proves the assertion.
 From the above proof we obtain the following: If 
 \mbox{$0 \neq \psi_{\alpha} \in \Kern{\im\alpha - A}$} for $ \alpha \in \R $ with polar decomposition 
 $\psi_{\alpha} = u_{\alpha}|\psi_{\alpha}|$ ($\alpha \in \R$), 
-then $A'u_{\alpha} = \im\alpha u_{\alpha}$.
+then $A'u_{\alpha}^{*} = \im\alpha u_{\alpha}^{*}$.
 
 Conversely, if\/ $0 \neq v_{\alpha} \in \Kern{\im\alpha - A'}$, then there exists $\psi \in \Psi$ such that 
 \mbox{$\psi(v_{\alpha}v_{\alpha}^{*}) \neq 0$} and the normal linear form
@@ -558,7 +558,7 @@ u_{t} \coloneq \begin{pmatrix} 1 & 0 \\
 \in M_{2}(\C) .
 \]
 %% --
-The semigroup of *-automorphisms $(x \mapsto u_{t}xu_{t}^{*})$ on $M_{2}(\C)$ is identity preserving and of Schwarz type, but the spectrum of its generator is $\{0, \lambda, \lambda^{*}\}$ hence is not additively cyclic.
+The semigroup of *-automorphisms $(x \mapsto u_{t}xu_{t}^{*})$ on $M_{2}(\C)$ is identity preserving and of Schwarz type, but the spectrum of its generator is $\{0, \lambda, \overline{\lambda}\}$ hence is not additively cyclic.
 \end{example*}
 %% --
 It turns out that, in order to obtain a noncommutative analogue of the Perron-Frobenius theorems, one has to consider semigroups which are irreducible.
@@ -579,7 +579,7 @@ Let $\TT$ be an irreducible, identity preserving semigroup of Schwarz type with 
 The fixed space of\/ $\TT$ is one-dimensional and spanned by a faithful normal state.
 
 \item 
-$P\sigma(A) \cap \im\R$ is an additive subgroup of\/ $\im \, \R$,
+$P\sigma(A) \cap \im\R$ is an additive subgroup of\/ $\im\R$,
 %% --
 \[
 \sigma(A) = \sigma(A) + (P\sigma(A) \cap \im\R)
@@ -637,21 +637,21 @@ and
 we obtain by Lemma~\ref{lem:d3-1.2}\,\ref{item:d3-1.2-ii} that
 %% --
 \[
-\mu R(\mu,A) = V_{\alpha} \circ \mu R(\mu+\im\alpha,A) \circ V_{\alpha}^{-1} \quad (1)
+\mu R(\mu,A) = V_{\alpha} \circ \mu R(\mu+\im\alpha,A) \circ V_{\alpha}^{-1} \tag{1}
 \]
 %% --
 where $V_{\alpha}$ is the map $(x \mapsto xu_{\alpha})$ on $M$.
 
-Similarly, for $i\beta \in P\sigma(A)$ we find $V_{\beta}$ such that $\1 = u_{\beta}u_{\beta}^{*} = u_{\beta}u_{\beta}^{*}$ and
+Similarly, for $\im\beta \in P\sigma(A)$ we find $V_{\beta}$ such that $\1 = u_{\beta}u_{\beta}^{*} = u_{\beta}^{*}u_{\beta}$ and
 %% --
 \[
-\mu R(\mu,A) = V_{\beta} \circ \mu R(\mu+ \iu \beta,A) \circ V_{\beta}^{-1}. \quad (2) 
+\mu R(\mu,A) = V_{\beta} \circ \mu R(\mu+ \iu \beta,A) \circ V_{\beta}^{-1} \tag{2} 
 \]
 %% --
 Hence
 %% --
 \[
-\mu R(\mu,A) = V_{\alpha\beta} \circ \mu R(\mu+ \iu (\alpha+\beta),A) \circ V_{\alpha\beta}^{-1} \quad (3)
+\mu R(\mu,A) = V_{\alpha\beta} \circ \mu R(\mu+ \iu (\alpha+\beta),A) \circ V_{\alpha\beta}^{-1} \tag{3}
 \]
 %% --
 where $V_{\alpha\beta} \coloneq V_{\alpha} \circ V_{\beta}$.
@@ -659,7 +659,7 @@ where $V_{\alpha\beta} \coloneq V_{\alpha} \circ V_{\beta}$.
 Since $u_{\alpha}$ is unitary in $M$, it follows from (1) that $\im\alpha$ is an eigenvalue which is simple because $\Fix{\TT} = \Fix{\mu R(\mu,A)}$ is one-dimensional.
 
 From (3) it follows that $\iu(\alpha+\beta) \in P\sigma(A)$ since $0 \in P\sigma(A)$ and $V_{\alpha\beta}$ is bijective.
-From the identity (1) we conclude that $\sigma(R(\mu,A)) = \sigma(R(\mu+\im\alpha))$, which proves
+From the identity (1) we conclude that $\sigma(R(\mu,A)) = \sigma(R(\mu+\im\alpha,A))$, which proves
 %% --
 \[
 \sigma(A) + (P\sigma(A) \cap \im\R) \subseteq \sigma(A).
@@ -692,7 +692,7 @@ Then
 \begin{enumerate}[\upshape (i)]
  
 \item 
-$G \coloneq (\TT_{0})^{-} \subseteq \mathcal{L}_{s}(N_{*})$ is a compact, Abelian group in the strong operator topology.
+$G \coloneq \overline{\TT_{0}} \subseteq \mathcal{L}_{s}(N_{*})$ is a compact, Abelian group in the strong operator topology.
 
 \item 
 $\Id_{| N_{{*}}} \in \overline{\{T_{0}(t) \colon t>s\}} \subseteq \mathcal{L}_{s}(N_{*})$ for all $0<s \in \R$.
@@ -703,22 +703,22 @@ $\Id_{| N_{{*}}} \in \overline{\{T_{0}(t) \colon t>s\}} \subseteq \mathcal{L}_{s
 For $\eta \in \Omega \coloneq P\sigma(A) \cap \im\R$ let
 %% --
 \[
-U(\eta) \coloneq \{\psi \in D(A): A\psi = \eta\psi\}
+U(\eta) \coloneq \{\psi \in D(A) \colon A\psi = \eta\psi\}
 \]
 %% --
-and $U = \{U(\eta) \colon \eta \in \Omega\}$. 
+and $U \coloneq \bigcup_{\eta \in \Omega} U(\eta)$. 
 Then $\closure{U} = N_{*}$, where $\closure{U}$ denotes the closure of $U$.
 
 For each $\psi \in U$ there exists $\eta \in \Omega$ such that
 %% --
 \[
-\{T_{0}(t)\psi \colon t \in \R_{+}\} = \{\eu^{-\eta t}\psi \colon t \in \R_{+}\} .
+\{T_{0}(t)\psi \colon t \in \R_{+}\} = \{\eu^{\eta t}\psi \colon t \in \R_{+}\} .
 \]
 %% --
 Consequently this set is relatively compact in $\mathcal{L}_{s}(N_{*})$.
 From \textcite[III.4.5]{schaefer:1966} we obtain that $G$ is compact in the strong operator topology.
 
-Next choose $\psi_{1}, ..., \psi_{n} \in U$, $0 < s \in \R$ and $\delta > 0$.
+Next choose $\psi_{1}, \dots, \psi_{n} \in U$, $0 < s \in \R$ and $\delta > 0$.
 Since 
 %% --
 \[
@@ -729,7 +729,7 @@ T_{0}(t)\psi_{i} = \eu^{\eta_{i}t}\psi_{i}
 for some $\eta_{i} \in \Omega$, it follows from a theorem of Kronecker (see \textcite[Satz 6.1, p.~77]{jacobs:1972}) that there exists $s < t$ such that
 %% --
 \[
-|(1,1, ..., 1) - (\eu^{\eta_{1}t}, \eu^{\eta_{2}t}, ..., \eu^{\eta_{n}t})| < \delta ,
+|(1,1, \dots, 1) - (\eu^{\eta_{1}t}, \eu^{\eta_{2}t}, \dots, \eu^{\eta_{n}t})| < \delta ,
 \]
 %% --
 hence
@@ -740,7 +740,7 @@ hence
 %% --
 or 
 \[
-\Id_{|N_{*}} \in \overline{\{T_{0}(t) \colon t>s\}} \subseteq L_{s}(N_{*}).
+\Id_{|N_{*}} \in \overline{\{T_{0}(t) \colon t>s\}} \subseteq \mathcal{L}_{s}(N_{*}).
 \]
 %% --
 
@@ -749,7 +749,7 @@ Let $\mathfrak{U}$ be an ultrafilter on $\R$ such that $\lim_{\mathfrak{U}}T_{0}
 For positive $s \in \R$ let 
 %
 \[
-	S \coloneq \lim_{\mathfrak{U}}T(t-s) .
+	S \coloneq \lim_{\mathfrak{U}}T_{0}(t-s) .
 \]
 %
 Then 
@@ -764,7 +764,7 @@ From this it follows that $G$ is a group.
 %% --
 \begin{remark}\label{rem:d3-1.14}
 \begin{enumerate}[\upshape (i), wide, labelindent=.25em]
-\item Let $\kappa:\R \to G$ be given by
+\item Let $\kappa \colon \R \to G$ be given by
 %% --
 \[
 \kappa(t) = \begin{cases}
@@ -817,14 +817,14 @@ for all $\gamma \in D$ and $\alpha \in \R$.
 \begin{proof}
 By Remark~\ref{rem:d4-3.2}, we may assume without loss of generality that there exists a faithful family of\/ $\RR$-invariant normal states on $M$.
 In particular the fixed space $N$ of the adjoint pseudo-resolvent $\RR'$ is a \WA-subalgebra of\/ $M$ with $\1 \in N$ (by Lemma~\ref{lem:d3-1.1}\,\ref{item:d3-1.1-ii}).
-Since $N$ is finite dimensional, there exist a natural number $n$ and a set $P \coloneq \{p_{1}, .., p_{n}\}$ of minimal, mutually orthogonal projections in $N$ such that $\sum_{k=1}^{n} p_{k} = \1$.
+Since $N$ is finite dimensional, there exist a natural number $n$ and a set $P \coloneq \{p_{1}, \ldots, p_{n}\}$ of minimal, mutually orthogonal projections in $N$ such that $\sum_{k=1}^{n} p_{k} = \1$.
 These projections are also mutually orthogonal in $M$ with sum $\1$.
 
 Let $R_{j}$ be the $\sigma(M,M_{*})$-closed right ideal $p_{j}M$ and $L_{j}$ the closed left invariant subspace $M_{*}p_{j}$ for $(1 \leq j \leq n)$.
 Since the map $\mu R(\mu)'$, $\mu \in \R_{+}$ is an identity preserving Schwarz map, we obtain from Lemma~\ref{lem:d3-1.1}\,\ref{item:d3-1.1-ii} that for all $x \in N$ and $y \in M$,
 %% --
 \[
-	\mu R(\mu)'(xy) = x(\mu \RR'(\mu)y) .
+	\mu R(\mu)'(xy) = x(\mu R(\mu)'y) .
 \]
 %% --
 In particular, $R_{j}$, \resp $L_{j}$ are invariant under $\RR'$, respectively, $\RR$.
@@ -840,7 +840,7 @@ Let now $\alpha \in \R$ and suppose that there exists $\psi_{\alpha} \in L_{j}$ 
 Since $\lambda R(\lambda)|\psi_{\alpha}| = |\psi_{\alpha}|$ (Proposition~\ref{prop:d3-1.4}), we obtain
 %% --
 \[
-	\mu R(\mu)'(\1-s(|\psi_{\alpha}|)) \leq (\1-s(|\psi_{\alpha}|) , \mu \in \R_{+} .
+	\mu R(\mu)'(\1-s(|\psi_{\alpha}|)) \leq \1-s(|\psi_{\alpha}|) , \mu \in \R_{+} .
 \]
 %% --
 From the existence of a faithful family of\/ $\RR$-invariant normal states and since $\RR'$ is identity preserving, it follows that
@@ -892,7 +892,7 @@ Since $u_{\alpha}$ does not depend on $\mu \in \R_{+}$, we obtain for all $\mu \
 Consequently, the holomorphic functions 
 %
 \[
-	(\mu \mapsto \mu R(\mu)'(x u_{\alpha})u_{\alpha}^{*})
+	(\mu \mapsto \mu R(\mu)'(x u_{\alpha}^{*})u_{\alpha})
 	\quad \text{and} \quad
 	(\mu \mapsto \mu R(\mu+\im\alpha)'x)
 \]
@@ -909,7 +909,7 @@ Since the map $(y \mapsto y u_{\alpha})$ is a continuous bijection from $M(u_{\a
 %% --
 \begin{align*}
 \dim \Fix  {(\lambda-\im\alpha)R(\lambda)'|Mp_{j}} 
-	&= \dim \Fix  {\lambda R(\lambda)')|M(u_{\alpha}u_{\alpha}^{*}}  \\
+	&= \dim \Fix{\lambda R(\lambda)'|M(u_{\alpha}u_{\alpha}^{*})}  \\
  	&\leq \dim \Fix  {\RR'} .
 \end{align*}
 %% --
@@ -924,7 +924,7 @@ Since
 we obtain
 %% --
 \begin{align*}
-\dim \Fix  {(\lambda - \im\alpha)R(\lambda)'} &= \dim \Fix{\lambda R(\lambda)'} , \\
+\dim \Fix  {(\lambda - \im\alpha)R(\lambda)'} &= \dim \Fix{\lambda R(\lambda)'} \\
 		&= \dim \Fix  {\lambda R(\lambda)} ,
 \end{align*}
 %% --
@@ -954,13 +954,13 @@ By the \emph{ultrapower} $\widehat{E}$ we understand the quotient space $\ell^{\
 %% --
 Moreover, for a bounded linear operator $T \in \LE$, we denote by $\widehat{T}$ the well defined operator $\widehat{T}\hat{x} \coloneq (Tx_{n}) + c_{\mathfrak{U}}(E)$, $(x_{n}) \in \hat{x}$.
 
-It is clear by virtue of\/ $(x \mapsto (x, x, ..) + c_{\mathfrak{U}}(E))$ that each $x \in E$ defines an element $\hat{x} \in \widehat{E}$.
+It is clear by virtue of\/ $(x \mapsto (x, x, \dots) + c_{\mathfrak{U}}(E))$ that each $x \in E$ defines an element $\hat{x} \in \widehat{E}$.
 This isometric embedding as well as the operator map $(T \mapsto \widehat{T})$ are called canonical.
 \index{pseudo-resolvent|(}
 In particular, if\/ $\RR \colon (D \to \LE)$ is a pseudo-resolvent, then
 %% --
 \[
-\widehat{\RR} \coloneq (\lambda \mapsto R(\lambda)^{\wedge}): D \to \mathcal{L}(\widehat{E})
+\widehat{\RR} \coloneq (\lambda \mapsto R(\lambda)^{\wedge}) \colon D \to \mathcal{L}(\widehat{E})
 \]
 %% --
 is a pseudo-resolvent, too.
@@ -1055,7 +1055,7 @@ Thus $0 \neq z \in \Fix{(\lambda - \im\alpha)R(\lambda)}$.
 From this we obtain the contradiction
 %% --
 \[
- 0 \leq \gamma \leq \|\hat{z} - \hat{x}\| = \lim \|z - x_{n}\| = 0
+ 0 \leq \gamma \leq \|\hat{z} - \hat{x}\| = \lim_{n} \|z - x_{n}\| = 0 .
 \]
 %% --
 Consequently,
@@ -1064,15 +1064,15 @@ Consequently,
 \dim \Fix{(\lambda - \im\alpha)R(\lambda)} = \dim \Fix{(\lambda - \im\alpha)\widehat{R}(\lambda)}.
 \]
 %% --
-Let $\{x_{1},...,x_{n}\}$ be a base of 
-$\Fix{(\lambda - \im\alpha)R(\lambda)}$ and choose $\{\phi_{1},...,\phi_{n}\}$ in 
+Let $\{x_{1},\dots,x_{n}\}$ be a base of 
+$\Fix{(\lambda - \im\alpha)R(\lambda)}$ and choose $\{\phi_{1},\dots,\phi_{n}\}$ in 
 $\Fix{(\lambda - \im\alpha)R(\lambda)'}$ such that $\phi_{k}(x_{j}) = \delta_{k,j}$ 
 (Lemma~\ref{lem:d3-1.6}).
 
 Then
 %% --
 \[
-E = \Fix{(\lambda - \im\alpha)R(\lambda)} \bigoplus \bigcap_{j=1}^{n} \Kern{\phi_{j}},
+E = \Fix{(\lambda - \im\alpha)R(\lambda)} \oplus \bigcap_{j=1}^{n} \Kern{\phi_{j}},
 \]
 %% --
 where both subspaces on the right are 
@@ -1085,7 +1085,7 @@ $(\lambda - \im\alpha)R(\lambda)$-invariant and $1$ is a pole of
 by the finite dimensionality of\/ $\Fix{(\lambda - \im\alpha)R(\lambda)}$.
 
 Suppose $1$ belongs to the spectrum of\/ $S$ where $S$ is the restriction of 
-$(\lambda-\im\alpha)R(\lambda)$ to $\bigcap_{j=1}^{n} \ker\phi_{j}$.
+$(\lambda-\im\alpha)R(\lambda)$ to $\bigcap_{j=1}^{n} \Kern{\phi_{j}}$.
 Then there exists a normalized sequence $(y_{n})$ in 
 $\bigcap_{j=1}^{n} \Kern{\phi_{j}}$ such that
 %% --
@@ -1096,7 +1096,7 @@ $\bigcap_{j=1}^{n} \Kern{\phi_{j}}$ such that
 Therefore $(y_{n})$ has an accumulation point different from zero contained in
 %% --
 \[
-\Fix{(\lambda - \im\alpha)R(\lambda)} \, \cap \,\left( \bigcap_{j=1}^{n} \ker\phi_{j} \right) .
+\Fix{(\lambda - \im\alpha)R(\lambda)} \, \cap \,\left( \bigcap_{j=1}^{n} \Kern{\phi_{j}} \right) .
 \]
 %% --
 This contradiction implies that $1$ does not belong to the spectrum of\/ $S$.
@@ -1134,7 +1134,7 @@ Since the canonical map $(T \mapsto \widehat{T})$ is isometric and since $\wideh
 \widehat{P}_{\alpha} = \lim_{\lambda \to \im\alpha}(\lambda - \im\alpha)\widehat{R}(\lambda,A)
 \]
 %% --
-in $L(\widehat{E})$ and $\rank(P_{\alpha}) = \rank(\widehat{P}_{\alpha})$.
+in $\mathcal{L}(\widehat{E})$ and $\rank(P_{\alpha}) = \rank(\widehat{P}_{\alpha})$.
 Because of
 %% --
 \[
@@ -1155,10 +1155,10 @@ Let $M$ be a \WA-algebra with predual $M_{*}$, $\mathfrak{U}$ a free ultrafilter
 Then it is easy to see that $c_{\mathfrak{U}}(M)$ is a two sided ideal in $\ell^{\infty}(M)$ hence $\widehat{M}$ is a \CA-algebra, but in general not a \WA-algebra.
 Note that the unit of\/ $\widehat{M}$ is the canonical image of\/ $\1$.
 
-For $\hat{x} \in \widehat{M}$ and $\widehat{\phi} \in (M_{*})^{\wedge}$ let $J: (M_{*})^{\wedge} \to \widehat{M}'$ be defined by
+For $\hat{x} \in \widehat{M}$ and $\widehat{\phi} \in (M_{*})^{\wedge}$ let $J \colon (M_{*})^{\wedge} \to \widehat{M}'$ be defined by
 %% --
 \[
-\dualp{x,J(\widehat{\phi})} 
+\dualp{\hat{x},J(\widehat{\phi})} 
 	\coloneq \lim_{\mathfrak{U}}\phi_{n}(x_{n}) \quad 
 		(x_{n}) \in \hat{x}, \, (\phi_{n}) \in \widehat{\phi} .
 \]
