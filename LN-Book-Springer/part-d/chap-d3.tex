@@ -40,16 +40,16 @@ However we will show in the example preceding Theorem~\ref{thm:d3-1.11} below th
 The appropriate hypothesis on the semigroup implying the desired results seems to be the concept of \emph{irreducibility}.
 
 Let us first recall some facts on \emph{normal linear functionals}.
-If\/ $\phi$ is a normal linear functional on a \WA-algebra $M$, then there exists a partial isometry $u \in M$ and a positive linear functional $|\phi| \in M_{*}$ such that
+If\/ $\phi$ is a normal linear functional on a \WA-algebra $M$, then there exists a partial isometry $u \in M$ and a positive linear functional $\abs{\phi} \in M_{*}$ such that
 %% -- 
 \begin{align*}
-	\phi(x) = |\phi|(xu) & \eqqcolon  (u|\phi|)(x) \quad (x \in M), \\
-	u^{*}u  &= s(|\phi|),
+	\phi(x) = \abs{\phi}(xu) & \eqqcolon  (u\abs{\phi})(x) \quad (x \in M), \\
+	u^{*}u  &= s(\abs{\phi}),
 \end{align*}
 %% -- 
-where $s(|\phi|)$ denotes the support projection of\/ $|\phi|$ in $M$.
+where $s(\abs{\phi})$ denotes the support projection of\/ $\abs{\phi}$ in $M$.
 We refer to this as the \emph{polar decomposition} of\/ $\phi$.
-In addition, $|\phi|$ is \emph{uniquely determined} by the following two conditions.
+In addition, $\abs{\phi}$ is \emph{uniquely determined} by the following two conditions.
 %%% --  
 %\begin{empheq}[left={\text{(*) } \, \empheqlbrace \quad }]{align*}
 %    \|\phi\| &= \| |\phi| \| \\
@@ -57,8 +57,8 @@ In addition, $|\phi|$ is \emph{uniquely determined} by the following two conditi
 %\end{empheq}
 %%% --
 \begin{empheq}[left={\empheqlbrace \quad}]{align}
-    \|\phi\| &= \| |\phi| \| \notag \\
-    |\phi(x)|^{2} &\leq \|\phi\|\,|\phi|(xx^{*}) \quad (x\in M)
+    \|\phi\| &= \| \abs{\phi} \| \notag \\
+    \abs{\phi(x)}^{2} &\leq \|\phi\|\,\abs{\phi}(xx^{*}) \quad (x\in M)
     \tag{*}\label{eq:star-uniqueness}
 \end{empheq}
 %% --
@@ -66,12 +66,12 @@ For the polar decomposition of the adjoint $\phi^{*}$, where $\phi^{*}(x)$ is th
 of $\phi(x^{*})$, we obtain
 %% -- 
 \[
-	\phi^{*} = u^{*}|\phi^{*}|, 
-	\quad |\phi^{*}| = u|\phi|u^{*} \quad 
-	\text{and} \quad uu^{*} = s(|\phi^{*}|).
+	\phi^{*} = u^{*}\abs{\phi^{*}}, 
+	\quad \abs{\phi^{*}} = u\abs{\phi}u^{*} \quad 
+	\text{and} \quad uu^{*} = s(\abs{\phi^{*}}).
 \]
 %% -- 
-It is easy to see that $u^{*} \in s(|\phi|)M $ 
+It is easy to see that $u^{*} \in s(\abs{\phi})M $ 
 (\textcite[Theorem III.4.2 \& Proposition III.4.6]{takesaki:1979}).
 
 If\/ $\Psi$ is a subset of the state space of a \CA-algebra $M$, then $\Psi$ is called \emph{faithful} if 
@@ -147,8 +147,8 @@ Let $M$ be a \WA-algebra, $T$ an identity preserving Schwarz map on $M$ and $S\i
 If\/ $v\in M$ such that $S(v^{*}) = v^{*}$ and $T(v^{*}v) = v^{*}v$, then $T(xv) = S(x)v$ for all $x\in M$.
 
 \item\label{item:d3-1.2-ii}
-Suppose there exists $\phi\in M_{*}$ with polar decomposition $\phi = u|\phi|$ such that $S_{*}\phi = \phi$ and $T_{*}|\phi| = |\phi|$.
-If the closed subspace $s(|\phi|)M$ is $T$-invariant, then $Su^{*} = u^{*}$ and $T(u^{*}u) = u^{*}u$.
+Suppose there exists $\phi\in M_{*}$ with polar decomposition $\phi = u\abs{\phi}$ such that $S_{*}\phi = \phi$ and $T_{*}\abs{\phi} = \abs{\phi}$.
+If the closed subspace $s(\abs{\phi})M$ is $T$-invariant, then $Su^{*} = u^{*}$ and $T(u^{*}u) = u^{*}u$.
 \end{enumerate}
 %% --
 \end{lemma}
@@ -165,30 +165,30 @@ b(x,y) \coloneq T(xy^{*}) - S(x)S(y)^{*} \quad (x, y\in M).
 Since $b(v^{*},v^{*}) = 0$ we obtain $b(x,v^{*}) = 0$ for all $x \in M$,  hence $T(xv) = S(x)v$ by Lemma~\ref{lem:d3-1.1}\,\ref{item:d3-1.1-i}.
 
 \item
-Since $s(|\phi|)M$ is a closed right ideal, the closed face 
+Since $s(\abs{\phi})M$ is a closed right ideal, the closed face 
 %
 \[
-	F \coloneq s(|\phi|)(M_{+})s(|\phi|) 
+	F \coloneq s(\abs{\phi})(M_{+})s(\abs{\phi}) 
 \]
 %
-determines $s(|\phi|)M$ uniquely, \ie
+determines $s(\abs{\phi})M$ uniquely, \ie
 %% --
 \[
-s(|\phi|)M = \{x \in M \colon xx^{*} \in F\}
+s(\abs{\phi})M = \{x \in M \colon xx^{*} \in F\}
 \]
 %% --
 (\textcite[Theorem 1.5.2]{pedersen:1979}). 
-Since $T$ is a Schwarz map and $s(|\phi|)M$ is $T$-invariant, it follows $TF \subseteq F$.
-On the other hand, if\/ $x \in s(|\phi|)M$, then $xx^{*} \in F$.
+Since $T$ is a Schwarz map and $s(\abs{\phi})M$ is $T$-invariant, it follows $TF \subseteq F$.
+On the other hand, if\/ $x \in s(\abs{\phi})M$, then $xx^{*} \in F$.
 Consequently,
 %% --
 \[
 0 \leq S(x)S(x)^{*} \leq T(xx^{*}) \in F,
 \]
 %% --
-whence $S(x) \in s(|\phi|)M$.
+whence $S(x) \in s(\abs{\phi})M$.
 
-Next we show $T(u^{*}u) = u^{*}u$ and $Su^{*} = u^{*} \in s(|\phi|)M$.
+Next we show $T(u^{*}u) = u^{*}u$ and $Su^{*} = u^{*} \in s(\abs{\phi})M$.
 First of all
 %% --
 \begin{align*}
@@ -196,16 +196,16 @@ First of all
 	& \leq T(u^{*}u) - u^{*}S(u^{*})^{*} - (Su^{*})u + u^{*}u.
 \end{align*}
 %% --
-Since $ S_{*}\phi = \phi $, $ T_{*}|\phi| = |\phi| $ and $ \phi = u|\phi| $ it follows
+Since $ S_{*}\phi = \phi $, $ T_{*}\abs{\phi} = \abs{\phi} $ and $ \phi = u\abs{\phi} $ it follows
 %% --
 \begin{align*}
-	0 &\leq |\phi|((Su^{*} - u^{*})(Su^{*} - u^{*})^{*}) \\
-	& \leq 2|\phi|(u^{*}u) - |\phi|(S(u^{*})u)^{*} - |\phi|(S(u^{*})u) \\
-	& = 2|\phi|(u^{*}u) - \phi(u^{*})^{*} - \phi(u^{*}) \\
-	& = 2(|\phi|(u^{*}u) - |\phi|(u^{*}u)) = 0.
+	0 &\leq \abs{\phi}((Su^{*} - u^{*})(Su^{*} - u^{*})^{*}) \\
+	& \leq 2\abs{\phi}(u^{*}u) - \abs{\phi}(S(u^{*})u)^{*} - \abs{\phi}(S(u^{*})u) \\
+	& = 2\abs{\phi}(u^{*}u) - \phi(u^{*})^{*} - \phi(u^{*}) \\
+	& = 2(\abs{\phi}(u^{*}u) - \abs{\phi}(u^{*}u)) = 0.
 \end{align*}
 %% --
-But $(Su^{*} - u^{*})(Su^{*} - u^{*})^{*} \in F$ and $|\phi|$ is faithful on $F$.
+But $(Su^{*} - u^{*})(Su^{*} - u^{*})^{*} \in F$ and $\abs{\phi}$ is faithful on $F$.
 Hence we obtain $Su^{*} = u^{*}$.
 Consequently,
 %% --
@@ -213,7 +213,7 @@ Consequently,
 	0 \leq u^{*}u = (Su^{*})(Su^{*})^{*} \leq T(u^{*}u)
 \]
 %% --
-and $T(u^{*}u) = u^{*}u$ by the faithfulness and $T$-invariance of\/ $|\phi|$.
+and $T(u^{*}u) = u^{*}u$ by the faithfulness and $T$-invariance of\/ $\abs{\phi}$.
 \qedhere
 \end{enumerate}
 \end{proof}
@@ -228,25 +228,25 @@ V_{u^{*}} \colon x \mapsto xu^{*}
 V_{u} \colon x \mapsto xu 
 \]
 %% --
-on $M$, then $V_{u^{*}}$ is a continuous bijection from $Ms(|\phi|)$ onto $Ms(|\phi^{*}|)$ with inverse $V_u$ because 
+on $M$, then $V_{u^{*}}$ is a continuous bijection from $Ms(\abs{\phi})$ onto $Ms(\abs{\phi^{*}})$ with inverse $V_u$ because 
 %% --
 \[
-V_{u} \circ V_{u^{*}} = \Id_{Ms(|\phi|)}
+V_{u} \circ V_{u^{*}} = \Id_{Ms(\abs{\phi})}
 \quad \text{and} \quad 
-V_{u^{*}} \circ V_{u} = \Id_{Ms(|\phi^{*}|)} .
+V_{u^{*}} \circ V_{u} = \Id_{Ms(\abs{\phi^{*}})} .
 \]
 %% --
 Let $x \in M$.
 From $T(xu) = S(x)u$ we obtain $T(xu)u^{*} = S(x)uu^{*}$.
-In particular, if\/ $Ms(|\phi^{*}|)$ is $S$-invariant, then
+In particular, if\/ $Ms(\abs{\phi^{*}})$ is $S$-invariant, then
 %% --
 \[
 	(V_{u^{*}} \circ T \circ V_u)(x) = T(xu)u^{*} = S(x)
 \]
 %% --
-for every $x \in Ms(|\phi^{*}|)$.
+for every $x \in Ms(\abs{\phi^{*}})$.
 
-Let $T_{|}$ (\resp  $S_{|}$) be the restriction of\/ $T$ to $Ms(|\phi|)$ (\resp of\/ $S$ to $Ms(|\phi^{*}|)$).
+Let $T_{|}$ (\resp  $S_{|}$) be the restriction of\/ $T$ to $Ms(\abs{\phi})$ (\resp of\/ $S$ to $Ms(\abs{\phi^{*}})$).
 Then the following diagram is commutative:
 %% -- tikz
 \begin{center}
@@ -279,7 +279,7 @@ Let $\RR$ be a pseudo-resolvent on $D = \{\lambda \in \C \colon \Re(\lambda) > 0
 \begin{enumerate}[\upshape (i)]
 
 \item\label{item:d3-1.4-i}
-If\/ $\alpha \in \R$ and $\psi \in M_{*}$ such that $(\gamma - \im\alpha)R(\gamma)\psi = \psi$ for some $\gamma \in D$, then $\lambda R(\lambda)|\psi| = |\psi|$ and $\lambda R(\lambda)|\psi^{*}| = |\psi^{*}|$ for all $\lambda \in D$.
+If\/ $\alpha \in \R$ and $\psi \in M_{*}$ such that $(\gamma - \im\alpha)R(\gamma)\psi = \psi$ for some $\gamma \in D$, then $\lambda R(\lambda)\abs{\psi} = \abs{\psi}$ and $\lambda R(\lambda)\abs{\psi^{*}} = \abs{\psi^{*}}$ for all $\lambda \in D$.
 
 \item\label{item:d3-1.4-ii} 
 $ \Fix{\RR} $ is invariant under the involution in $M_{*}$ and if\/ $\psi \in \Fix{\RR} $ is self-adjoint, then the positive part $\psi^{+}$ and the negative part $\psi^{-}$ of\/ $\psi$ are elements of\/ $ \Fix{\RR} $.
@@ -296,21 +296,21 @@ In particular,
 For all $x \in M$ we obtain
 %% --
 \begin{align*}
-|\psi(x)|^2 &= | \dualp{\mu R(\mu+\im\alpha)'x,\psi} |^2 \\
-&\leq \|\psi\| \dualp{(\mu R(\mu+\im\alpha)'x)(\mu R(\mu+\im\alpha)'x)^{*},|\psi|}  \\
-&\leq \|\psi\| \dualp{\mu R(\mu)'(xx^{*}),|\psi|}
+\abs{\psi(x)}^2 &= \abs{\dualp{\mu R(\mu+\im\alpha)'x,\psi}}^2 \\
+&\leq \|\psi\| \dualp{(\mu R(\mu+\im\alpha)'x)(\mu R(\mu+\im\alpha)'x)^{*},\abs{\psi}}  \\
+&\leq \|\psi\| \dualp{\mu R(\mu)'(xx^{*}),\abs{\psi}}
 \end{align*}
 %% --
 (see Corollary~\ref{cor:d1-2.2}).
 Since
 %% --
 \begin{align*}
-\|\psi\| &= \| |\psi| \| = |\psi|(\1) \\
-&= \dualp{\mu R(\mu)'\1,\abs{\psi}} = \| \mu R(\mu)|\psi| \|,
+\|\psi\| &= \| \abs{\psi} \| = \abs{\psi}(\1) \\
+&= \dualp{\mu R(\mu)'\1,\abs{\psi}} = \| \mu R(\mu)\abs{\psi} \|,
 \end{align*}
 %% --
-we obtain $\mu R(\mu)|\psi| = |\psi|$ by the uniqueness theorem \eqref{eq:star-uniqueness} on p.~\pageref{eq:star-uniqueness} for the absolute value.
-Therefore $|\psi| \in \Fix{\RR} $.
+we obtain $\mu R(\mu)\abs{\psi} = \abs{\psi}$ by the uniqueness theorem \eqref{eq:star-uniqueness} on p.~\pageref{eq:star-uniqueness} for the absolute value.
+Therefore $\abs{\psi} \in \Fix{\RR} $.
 Since
 %% --
 \[
@@ -327,7 +327,7 @@ Consequently
 from which 
 %% --
 \[
-|\psi^{*}| \in \Fix{\RR} 
+\abs{\psi^{*}} \in \Fix{\RR} 
 \]
 %% 
 follows.
@@ -349,7 +349,7 @@ Let $\TT$ be an identity preserving semigroup of Schwarz type on $M_{*}$ with ge
 %% --
 \begin{enumerate}[\upshape (i)]
 \item
-If\/ $\alpha \in \R$ and $\psi \in \operatorname{ker}(\im\alpha - A)$, then $|\psi|$ and $|\psi^{*}|$ are elements of\/ $\Fix{\TT} = \Kern{A}$.
+If\/ $\alpha \in \R$ and $\psi \in \operatorname{ker}(\im\alpha - A)$, then $\abs{\psi}$ and $\abs{\psi^{*}}$ are elements of\/ $\Fix{\TT} = \Kern{A}$.
 
 \item 
 $\Fix{\TT}$ is invariant under the involution of\/ $M_{*}$.
@@ -453,16 +453,16 @@ Let $D = \{\lambda \in \C \colon \Re(\lambda) > 0\}$ and $\RR$ the pseudo-resolv
 Then $\RR$ is identity preserving and of Schwarz type.
 Take $\im\alpha \in P\sigma(A)$ ($\alpha \in \R$) and choose $0 < \mu \in \R$.
 
-If\/ $\psi_{\alpha} \in M_{*}$ is of norm one with polar decomposition $\psi_{\alpha} = u_{\alpha}|\psi_{\alpha}|$ such that $\psi_{\alpha} = (\mu - \im\alpha)R(\mu)\psi_{\alpha}$ then $\mu R(\mu)|\psi_{\alpha}| = |\psi_{\alpha}|$ (Proposition~\ref{prop:d3-1.4}\,\ref{item:d3-1.4-i}).
+If\/ $\psi_{\alpha} \in M_{*}$ is of norm one with polar decomposition $\psi_{\alpha} = u_{\alpha}\abs{\psi_{\alpha}}$ such that $\psi_{\alpha} = (\mu - \im\alpha)R(\mu)\psi_{\alpha}$ then $\mu R(\mu)\abs{\psi_{\alpha}} = \abs{\psi_{\alpha}}$ (Proposition~\ref{prop:d3-1.4}\,\ref{item:d3-1.4-i}).
 
 Since
 %% --
 \[
-\mu R(\mu)'(\1 - s(|\psi_{\alpha}|)) 
-    \leq \1 - s(|\psi_{\alpha}|) ,
+\mu R(\mu)'(\1 - s(\abs{\psi_{\alpha}})) 
+    \leq \1 - s(\abs{\psi_{\alpha}}) ,
 \]
 %% --
-we obtain $\mu R(\mu)'s(|\psi_{\alpha}|) = s(|\psi_{\alpha}|)$ by the faithfulness of\/ $\Psi$.
+we obtain $\mu R(\mu)'s(\abs{\psi_{\alpha}}) = s(\abs{\psi_{\alpha}})$ by the faithfulness of\/ $\Psi$.
 
 Hence the maps 
 %% --
@@ -533,7 +533,7 @@ which proves the assertion.
 \begin{remark}\label{rem:d3-1.9}
 From the above proof we obtain the following: If 
 \mbox{$0 \neq \psi_{\alpha} \in \Kern{\im\alpha - A}$} for $ \alpha \in \R $ with polar decomposition 
-$\psi_{\alpha} = u_{\alpha}|\psi_{\alpha}|$ ($\alpha \in \R$), 
+$\psi_{\alpha} = u_{\alpha}\abs{\psi_{\alpha}}$ ($\alpha \in \R$), 
 then $A'u_{\alpha}^{*} = \im\alpha u_{\alpha}^{*}$.
 
 Conversely, if\/ $0 \neq v_{\alpha} \in \Kern{\im\alpha - A'}$, then there exists $\psi \in \Psi$ such that 
@@ -614,7 +614,7 @@ Since $\Fix{\TT}$ is positively generated (Corollary~\ref{cor:d3-1.5}),
 for some faithful normal state $\phi$.
 
 Let $\mu \in \R_{+}$ and $\alpha \in \R$ such that $\im\alpha \in P\sigma(A)$.
-If\/ $\psi_{\alpha} = u_{\alpha}|\psi_{\alpha}|$ is a normalized eigenvector of\/ $A$ pertaining to $\im\alpha$, then $\phi = |\psi_{\alpha}| = |\psi_{\alpha}^{*}|$, hence 
+If\/ $\psi_{\alpha} = u_{\alpha}\abs{\psi_{\alpha}}$ is a normalized eigenvector of\/ $A$ pertaining to $\im\alpha$, then $\phi = \abs{\psi_{\alpha}} = \abs{\psi_{\alpha}^{*}}$, hence 
 %
 \[
 	u_{\alpha}u_{\alpha}^{*} = u_{\alpha}^{*}u_{\alpha} = s(\phi) = \1
@@ -631,7 +631,7 @@ Since
 and
 %% --
 \[
-\mu R(\mu,A)|\psi_{\alpha}| = |\psi_{\alpha}| ,
+\mu R(\mu,A)\abs{\psi_{\alpha}} = \abs{\psi_{\alpha}} ,
 \]
 %% --
 we obtain by Lemma~\ref{lem:d3-1.2}\,\ref{item:d3-1.2-ii} that
@@ -729,7 +729,7 @@ T_{0}(t)\psi_{i} = \eu^{\eta_{i}t}\psi_{i}
 for some $\eta_{i} \in \Omega$, it follows from a theorem of Kronecker (see \textcite[Satz 6.1, p.~77]{jacobs:1972}) that there exists $s < t$ such that
 %% --
 \[
-|(1,1, \dots, 1) - (\eu^{\eta_{1}t}, \eu^{\eta_{2}t}, \dots, \eu^{\eta_{n}t})| < \delta ,
+\abs{(1,1, \dots, 1) - (\eu^{\eta_{1}t}, \eu^{\eta_{2}t}, \dots, \eu^{\eta_{n}t})} < \delta ,
 \]
 %% --
 hence
@@ -828,37 +828,37 @@ Since the map $\mu R(\mu)'$, $\mu \in \R_{+}$ is an identity preserving Schwarz 
 \]
 %% --
 In particular, $R_{j}$, \resp $L_{j}$ are invariant under $\RR'$, respectively, $\RR$.
-Furthermore, if\/ $\psi \in L_{j}$ with polar decomposition $\psi = u|\psi|$, then $u^{*}u \leq s(|\psi|) \leq p_{j}$.
-Consequently, $|\psi| \in L_{j}$.
+Furthermore, if\/ $\psi \in L_{j}$ with polar decomposition $\psi = u\abs{\psi}$, then $u^{*}u \leq s(\abs{\psi}) \leq p_{j}$.
+Consequently, $\abs{\psi} \in L_{j}$.
 
-Let now $\alpha \in \R$ and suppose that there exists $\psi_{\alpha} \in L_{j}$ of norm $ 1 $, $\psi_{\alpha} = u_{\alpha}|\psi_{\alpha}|$, such that
+Let now $\alpha \in \R$ and suppose that there exists $\psi_{\alpha} \in L_{j}$ of norm $ 1 $, $\psi_{\alpha} = u_{\alpha}\abs{\psi_{\alpha}}$, such that
 %% --
 \[
 	\psi_{\alpha} \in \Fix  {(\lambda - \im\alpha)R(\lambda)} , \lambda \in D .
 \]
 %% --
-Since $\lambda R(\lambda)|\psi_{\alpha}| = |\psi_{\alpha}|$ (Proposition~\ref{prop:d3-1.4}), we obtain
+Since $\lambda R(\lambda)\abs{\psi_{\alpha}} = \abs{\psi_{\alpha}}$ (Proposition~\ref{prop:d3-1.4}), we obtain
 %% --
 \[
-	\mu R(\mu)'(\1-s(|\psi_{\alpha}|)) \leq \1-s(|\psi_{\alpha}|) , \mu \in \R_{+} .
+	\mu R(\mu)'(\1-s(\abs{\psi_{\alpha}})) \leq \1-s(\abs{\psi_{\alpha}}) , \mu \in \R_{+} .
 \]
 %% --
 From the existence of a faithful family of\/ $\RR$-invariant normal states and since $\RR'$ is identity preserving, it follows that
 %% --
 \[
-	\mu R(\mu)'s(|\psi_{\alpha}|) = s(|\psi_{\alpha}|) .
+	\mu R(\mu)'s(\abs{\psi_{\alpha}}) = s(\abs{\psi_{\alpha}}) .
 \]
 %% --
-Thus $s(|\psi_{\alpha}|) \leq p_{j}$ and even $s(|\psi_{\alpha}|) = p_{j}$ by the minimality property of\/ $p_{j}$.
+Thus $s(\abs{\psi_{\alpha}}) \leq p_{j}$ and even $s(\abs{\psi_{\alpha}}) = p_{j}$ by the minimality property of\/ $p_{j}$.
 
 On the other hand, $\psi_{\alpha}^{*} \in \Fix  {(\lambda + \im\alpha)R(\lambda)}$.
 As above we obtain
 %% --
 \[
-\mu R(\mu)'s(|\psi_{\alpha}^{*}|) = s(|\psi_{\alpha}^{*}|) .
+\mu R(\mu)'s(\abs{\psi_{\alpha}^{*}}) = s(\abs{\psi_{\alpha}^{*}}) .
 \]
 %% --
-Consequently, the closed left ideals $Ms(|\psi_{\alpha}^{*}|)$ and $Ms(|\psi_{\alpha}|)$ are $\RR'$-invariant.
+Consequently, the closed left ideals $Ms(\abs{\psi_{\alpha}^{*}})$ and $Ms(\abs{\psi_{\alpha}})$ are $\RR'$-invariant.
 
 Next fix $\mu \in \R_{+}$, let $S \coloneq (\mu - \im\alpha)R(\mu)'$ and $T = \mu R(\mu)'$.
 Then 
@@ -866,11 +866,11 @@ Then
 \[
 	(Sx)(Sx)^{*} \leq T(xx^{*}), \,
 	S_{*}(\psi_{\alpha}^{*}) = \psi_{\alpha}^{*}, \,
-	T_{*}(|\psi_{\alpha}^{*}|) = |\psi_{\alpha}^{*}|, 
+	T_{*}(\abs{\psi_{\alpha}^{*}}) = \abs{\psi_{\alpha}^{*}}, 
 \]
 %
 and $T$ is an identity preserving Schwarz map.
-Since $s(|\psi_{\alpha}^{*}|)M$ is $T$-invariant, the assumptions of Lemma~\ref{lem:d3-1.2} are fulfilled and we obtain for every $x \in M$
+Since $s(\abs{\psi_{\alpha}^{*}})M$ is $T$-invariant, the assumptions of Lemma~\ref{lem:d3-1.2} are fulfilled and we obtain for every $x \in M$
 %% --
 \[
 	S(x)u_{\alpha}^{*} = T(xu_{\alpha}^{*}) .

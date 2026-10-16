@@ -423,13 +423,13 @@ Let $\TT$ be an identity preserving semigroup of Schwarz type on the predual of 
 We call
 %% --
 \[
-p_{r} \coloneqq \sup\{s(|\phi|) \colon \phi \in \Fix{\TT}\}
+p_{r} \coloneqq \sup\{s(\abs{\phi}) \colon \phi \in \Fix{\TT}\}
 \]
 %% --
 the recurrent projection associated with $\TT$.
 For a motivation of this definition compare, \eg \textcite[Section 6.3]{davies:1976}.
 
-Since $T(t)|\phi| = |\phi|$ for all $\phi \in \Fix{\TT}$ (Corollary~\ref{cor:d3-1.5}), we obtain $T(t)'p_{r} \geq p_{r}$ (see Section~\ref{sec:d1-3}\,(3)).
+Since $T(t)\abs{\phi} = \abs{\phi}$ for all $\phi \in \Fix{\TT}$ (Corollary~\ref{cor:d3-1.5}), we obtain $T(t)'p_{r} \geq p_{r}$ (see Section~\ref{sec:d1-3}\,(3)).
 Let $\TT^{(r)}$ be the reduced semigroup on $p_{r}M_{*}p_{r}$ with generator $A^{(r)}$.
 Then $\TT^{(r)}$ is identity preserving and of Schwarz type.
 Similarly, if\/ $\RR$ is a pseudo-resolvent 
@@ -441,10 +441,10 @@ on $D = \{\lambda \in \C \colon \Re(\lambda) > 0\}$ with values in $M_{*}$ such 
 
 \item\label{item:d4-3.2-i}
 Let $\phi \in M_{*}$ and $\gamma \in \R$ such that $(\mu - \im\gamma)R(\mu)\phi = \phi$ for some $\mu \in \R_{+}$.
-Since $s(|\phi|)$ and $s(|\phi^{*}|)$ are majorized by $p_{r}$ (Proposition~\ref{prop:d3-1.4}), it follows that $\phi$ and $\phi^{*}$ are in $p_{r}M_{*}p_{r}$.
+Since $s(\abs{\phi})$ and $s(\abs{\phi^{*}})$ are majorized by $p_{r}$ (Proposition~\ref{prop:d3-1.4}), it follows that $\phi$ and $\phi^{*}$ are in $p_{r}M_{*}p_{r}$.
 
 \item\label{item:d4-3.2-ii}
-From (i) and the observation that the family $\{|\phi| \colon \phi \in \Fix{\TT}\}$ is
+From (i) and the observation that the family $\{\abs{\phi} \colon \phi \in \Fix{\TT}\}$ is
 faithful on $p_{r}Mp_{r}$ and consists of\/ $\TT^{(r)}$-invariant elements, it follows that
 %% --
 \begin{enumerate}[--]
@@ -718,12 +718,12 @@ Hence $\phi(u_{1}u_{2}^{*}) = \phi(u_{2}^{*}u_{1})$ from which it follows that $
 Since $QM_{*} = N_{*}$ and $Q'M = N$, where $N_{*}$ is as in Proposition~\ref{prop:d3-1.13}, it follows from general duality theory that $(N_{*})' = N$.
 
 \item
-If\/ $\psi \in N_{*}$, then $|\psi| \in N_{*}$.
+If\/ $\psi \in N_{*}$, then $\abs{\psi} \in N_{*}$.
 To see this, note that $Q\psi = \psi$ and $Q$ is an identity preserving Schwarz map.
 Then the assertion follows from Proposition~\ref{prop:d3-1.4}.
 
 \item
-If\/ $\psi \in N_{*}$, then $|T_{0}(t)\psi| = T_{0}(t)|\psi|$ for all $t \in \R$.
+If\/ $\psi \in N_{*}$, then $\abs{T_{0}(t)\psi} = T_{0}(t)\abs{\psi}$ for all $t \in \R$.
 This follows immediately from the fact that $T_{0}(t)'$ is a *-automorphism on $N$.
 
 \item
@@ -821,19 +821,19 @@ for every $ \psi \in K $  and $ i \geq i_{0} $  (\textcite[Theorem III.5.4.(vi)]
 In particular
 %% --
 \[
-|\psi(\1 - p_{i})| \leq \delta, \quad \psi \in K,\, i_{0} \leq i.
+\abs{\psi(\1 - p_{i})} \leq \delta, \quad \psi \in K,\, i_{0} \leq i.
 \]
 %% --
 Let $ p \coloneqq p_{i_{0}} $.
 Then for all $ x $  in the unit ball of\/ $ M $  it follows that
 %% --
 \begin{gather*}
-|(\phi_{t} - \phi_{0})(x)|  \\
-\leq |(\phi_{t} - \phi_{0})(pxp)| 
-     + |(\phi_{t} - \phi_{0})((\1-p)xp)| 
-+ |(\phi_{t} - \phi_{0})(x(\1-p))| \\
+\abs{(\phi_{t} - \phi_{0})(x)}  \\
+\leq \abs{(\phi_{t} - \phi_{0})(pxp)} 
+     + \abs{(\phi_{t} - \phi_{0})((\1-p)xp)} 
++ \abs{(\phi_{t} - \phi_{0})(x(\1-p))} \\
      \leq 
- |(\phi_{t} - \phi_{0})(pxp)| + 4\sqrt{\delta} .
+ \abs{(\phi_{t} - \phi_{0})(pxp)} + 4\sqrt{\delta} .
 \end{gather*}
 %% --
 Since the \WA-algebra $ p \BH p $  is finite dimensional, there exists $ U \in \mathfrak{U} $  such that
@@ -1174,8 +1174,8 @@ Since the projections $ s(\widehat{\psi}_{n}) $  are mutually orthogonal, there 
 For all $ n \in \N $  choose $ \hat{z}_{n} \in (\widehat{M}_{p}')_{1}^{+} $  such that
 %% --
 \begin{align*}
-|\langle\widehat{\phi},s(\widehat{\psi}_{n}) - \hat{z}_{n}\rangle| &\leq \frac{1}{2}r_{n}, \\
-|\langle\widehat{\psi}_{n},s(\widehat{\psi}_{n}) - \hat{z}_{n}\rangle| &\leq \frac{1}{2}r_{n}.
+\abs{\langle\widehat{\phi},s(\widehat{\psi}_{n}) - \hat{z}_{n}\rangle} &\leq \frac{1}{2}r_{n}, \\
+\abs{\langle\widehat{\psi}_{n},s(\widehat{\psi}_{n}) - \hat{z}_{n}\rangle} &\leq \frac{1}{2}r_{n}.
 \end{align*}
 %% --
 Hence $ \widehat{\phi}(\hat{z}_{n}) \leq r_{n} $  and $ \widehat{\psi}_{n}(\hat{z}_{n}) \geq \frac{1}{2} $  for all $ n \in \N $.
