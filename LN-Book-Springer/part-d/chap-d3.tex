@@ -332,7 +332,7 @@ from which
 %% 
 follows.
 
-If\/ $\phi \in \Fix{\RR} $ is self-adjoint with Jordan decomposition $\phi = \phi^{+} - \phi^{-}$, then for all $ R \in \RR $
+If\/ $\phi \in \Fix{\RR} $ is self-adjoint with Jordan decomposition $\phi = \phi^{+} - \phi^{-}$, then for all $\lambda \in \R_{+}$ and $R \coloneq \lambda R(\lambda)$
 %% --
 \begin{align*}
 \| \phi \| &= \| \phi^{+} \| + \| \phi^{-} \|  =
@@ -374,7 +374,7 @@ But as we shall see below, if a semigroup on the predual of a \WA-algebra has su
 Helpful for these investigations will be the next lemma.
 %% --
 \begin{lemma}\label{lem:d3-1.6}
-Let $\RR$ be a pseudo-resolvent on $D = \{\lambda \in \C \colon \Re(\lambda) > 0\}$ with values in a Banach space $E$ such that $\|R(\mu + \im\alpha)\| \leq 1$ for all $(\mu,\alpha) \in \R_{+} \times \R$.
+Let $\RR$ be a pseudo-resolvent on $D = \{\lambda \in \C \colon \Re(\lambda) > 0\}$ with values in a Banach space $E$ such that $\|\mu R(\mu + \im\alpha)\| \leq 1$ for all $(\mu,\alpha) \in \R_{+} \times \R$.
 Then
 %% --
 \[
@@ -467,7 +467,7 @@ we obtain $\mu R(\mu)'s(\abs{\psi_{\alpha}}) = s(\abs{\psi_{\alpha}})$ by the fa
 Hence the maps 
 %% --
 \[
-S \coloneq (\mu - \im\alpha)R(\mu)'  
+S \coloneq \mu R(\mu + \im\alpha)'  
 \quad \text{and} \quad 
 T \coloneq \mu R(\mu)'
 \]
@@ -476,7 +476,7 @@ fulfill the assumptions of Lemma~\ref{lem:d3-1.2}\,\ref{item:d3-1.2-ii}.
 Therefore $Su_{\alpha}^{*} = u_{\alpha}^{*}$ or 
 %% --
 \[
-(\mu-\im\alpha)R(\mu)'u_{\alpha}^{*} = u_{\alpha}^{*}
+\mu R(\mu+\im\alpha)'u_{\alpha}^{*} = u_{\alpha}^{*}
 \]
 %% --
 which implies $u_{\alpha}^{*} \in D(A')$ and 
@@ -497,7 +497,7 @@ and $\psi \in \Psi$ such that $\psi(v_{\alpha}v_{\alpha}^{*}) \neq 0$.
 Since
 %% --
 \[
-0 \leq v_{\alpha}v_{\alpha}^{*} = ((\mu - \im\alpha)R(\mu)'v_{\alpha})((\mu - \im\alpha)R(\mu)'v_{\alpha})^{*} \leq \mu R(\mu)'(v_{\alpha}v_{\alpha}^{*}) ,
+0 \leq v_{\alpha}v_{\alpha}^{*} = (\mu R(\mu + \im\alpha)'v_{\alpha})(\mu R(\mu + \im\alpha)'v_{\alpha})^{*} \leq \mu R(\mu)'(v_{\alpha}v_{\alpha}^{*}) ,
 \]
 %% --
 we obtain $\mu R(\mu)'(v_{\alpha}v_{\alpha}^{*}) = v_{\alpha}v_{\alpha}^{*}$ because $\Psi$ is faithful.
@@ -505,7 +505,7 @@ we obtain $\mu R(\mu)'(v_{\alpha}v_{\alpha}^{*}) = v_{\alpha}v_{\alpha}^{*}$ bec
 Hence from Lemma~\ref{lem:d3-1.2}\,\ref{item:d3-1.2-i} it follows that
 %% --
 \[
-\mu R(\mu)'(xv_{\alpha}^{*}) = ((\mu - \im\alpha)R(\mu)'x)v_{\alpha}^{*}
+\mu R(\mu)'(xv_{\alpha}^{*}) = (\mu R(\mu + \im\alpha)'x)v_{\alpha}^{*}
 \]
 %% --
 for all $x \in M$.
@@ -514,7 +514,7 @@ Let $\psi_{\alpha}$ be the normal linear functional $(x \mapsto \psi(xv_{\alpha}
 Then
 %% --
 \begin{align*}
-\langle x, (\mu - \im\alpha)R(\mu)\psi_{\alpha} \rangle &= \langle ((\mu - \im\alpha)R(\mu)'x)v_{\alpha}^{*},\psi \rangle \\
+\langle x, \mu R(\mu + \im\alpha)\psi_{\alpha} \rangle &= \langle (\mu R(\mu + \im\alpha)'x)v_{\alpha}^{*},\psi \rangle \\
 &= \langle \mu R(\mu)'(xv_{\alpha}^{*}),\psi \rangle = \psi(xv_{\alpha}^{*}) = \psi_{\alpha}(x)
 \end{align*}
 %% --
@@ -641,7 +641,7 @@ and
 we obtain by Lemma~\ref{lem:d3-1.2}\,\ref{item:d3-1.2-ii} that
 %% --
 \[
-\mu R(\mu,A) = V_{\alpha} \circ \mu R(\mu+\im\alpha,A) \circ V_{\alpha}^{-1} \tag{1}
+\mu R(\mu,A)' = V_{\alpha} \circ \mu R(\mu+\im\alpha,A)' \circ V_{\alpha}^{-1} \tag{1}
 \]
 %% --
 where $V_{\alpha}$ is the map $(x \mapsto xu_{\alpha})$ on $M$.
@@ -649,27 +649,29 @@ where $V_{\alpha}$ is the map $(x \mapsto xu_{\alpha})$ on $M$.
 Similarly, for $\im\beta \in P\sigma(A)$ we find $V_{\beta}$ such that $\1 = u_{\beta}u_{\beta}^{*} = u_{\beta}^{*}u_{\beta}$ and
 %% --
 \[
-\mu R(\mu,A) = V_{\beta} \circ \mu R(\mu+ \iu \beta,A) \circ V_{\beta}^{-1} \tag{2} 
+\mu R(\mu,A)' = V_{\beta} \circ \mu R(\mu+ \iu \beta,A)' \circ V_{\beta}^{-1} \tag{2} 
 \]
 %% --
 Hence
 %% --
 \[
-\mu R(\mu,A) = V_{\alpha\beta} \circ \mu R(\mu+ \iu (\alpha+\beta),A) \circ V_{\alpha\beta}^{-1} \tag{3}
+\mu R(\mu,A)' = V_{\alpha\beta} \circ \mu R(\mu+ \iu (\alpha+\beta),A)' \circ V_{\alpha\beta}^{-1} \tag{3}
 \]
 %% --
 where $V_{\alpha\beta} \coloneq V_{\alpha} \circ V_{\beta}$.
 
-Since $u_{\alpha}$ is unitary in $M$, it follows from (1) that $\im\alpha$ is an eigenvalue which is simple because $\Fix{\TT} = \Fix{\mu R(\mu,A)}$ is one-dimensional.
+Since $u_{\alpha}$ is unitary in $M$, it follows from (1) that $V_{\alpha}$ maps $\Kern{\im\alpha - A'} = \Fix{\mu R(\mu+\im\alpha,A)'}$ bijectively onto $\Fix{\TT'} = \Fix{\mu R(\mu,A)'}$.
+By Proposition~\ref{prop:d3-1.8}, applied to $\Psi = \{\phi\}$, we have $\dim \Fix{\TT'} = \dim \Fix{\TT} = 1$ and $\dim \Kern{\im\alpha - A} = \dim \Kern{\im\alpha - A'} = 1$, \ie $\im\alpha$ is a simple eigenvalue of\/ $A$.
 
-From (3) it follows that $\iu(\alpha+\beta) \in P\sigma(A)$ since $0 \in P\sigma(A)$ and $V_{\alpha\beta}$ is bijective.
-From the identity (1) we conclude that $\sigma(R(\mu,A)) = \sigma(R(\mu+\im\alpha,A))$, which proves
+From (3) it follows that $\iu(\alpha+\beta) \in P\sigma(A')$, since $0 \in P\sigma(A')$ and $V_{\alpha\beta}$ is bijective, hence $\iu(\alpha+\beta) \in P\sigma(A)$ by Proposition~\ref{prop:d3-1.8}.
+From the identity (1) we conclude that $\sigma(R(\mu,A)) = \sigma(R(\mu,A)') = \sigma(R(\mu+\im\alpha,A)') = \sigma(R(\mu+\im\alpha,A))$, which proves
 %% --
 \[
 \sigma(A) + (P\sigma(A) \cap \im\R) \subseteq \sigma(A).
 \]
 %% --
 The other inclusion is trivial since $0 \in P\sigma(A)$.
+Assertions (iii) and (iv) follow from Proposition~\ref{prop:d3-1.8} applied to $\Psi = \{\phi\}$.
 \end{proof}
 %% --
 \begin{remarks}\label{rem:d3-1.12}
@@ -719,7 +721,7 @@ For each $\psi \in U$ there exists $\eta \in \Omega$ such that
 \{T_{0}(t)\psi \colon t \in \R_{+}\} = \{\eu^{\eta t}\psi \colon t \in \R_{+}\} .
 \]
 %% --
-Consequently this set is relatively compact in $\mathcal{L}_{s}(N_{*})$.
+Consequently this set is relatively compact in $N_{*}$.
 From \textcite[III.4.5]{schaefer:1966} we obtain that $G$ is compact in the strong operator topology.
 
 Next choose $\psi_{1}, \dots, \psi_{n} \in U$, $0 < s \in \R$ and $\delta > 0$.
@@ -749,7 +751,7 @@ or
 %% --
 
 Finally we prove the group property of\/ $G$.
-Let $\mathfrak{U}$ be an ultrafilter on $\R$ such that $\lim_{\mathfrak{U}}T_{0}(t) = \Id$ in the strong operator topology.
+By (ii) there exists an ultrafilter $\mathfrak{U}$ on $\R_{+}$ containing all intervals $(s,\infty)$, $s > 0$, such that $\lim_{\mathfrak{U}}T_{0}(t) = \Id$ in the strong operator topology.
 For positive $s \in \R$ let 
 %
 \[
@@ -864,7 +866,7 @@ As above we obtain
 %% --
 Consequently, the closed left ideals $Ms(\abs{\psi_{\alpha}^{*}})$ and $Ms(\abs{\psi_{\alpha}})$ are $\RR'$-invariant.
 
-Next fix $\mu \in \R_{+}$, let $S \coloneq (\mu - \im\alpha)R(\mu)'$ and $T = \mu R(\mu)'$.
+Next fix $\mu \in \R_{+}$, let $S \coloneq \mu R(\mu - \im\alpha)'$ and $T = \mu R(\mu)'$.
 Then 
 %
 \[
@@ -890,7 +892,7 @@ S(x) = T(xu_{\alpha}^{*})u_{\alpha} \, , \, x \in Mp_{j}
 Since $u_{\alpha}$ does not depend on $\mu \in \R_{+}$, we obtain for all $\mu \in \R_{+}$
 %% --
 \[
-\mu R(\mu+\im\alpha)'x = \mu R(\mu)'(xu_{\alpha}^{*})u_{\alpha}.
+\mu R(\mu-\im\alpha)'x = \mu R(\mu)'(xu_{\alpha}^{*})u_{\alpha}.
 \]
 %% --
 Consequently, the holomorphic functions 
@@ -898,13 +900,13 @@ Consequently, the holomorphic functions
 \[
 	(\mu \mapsto \mu R(\mu)'(x u_{\alpha}^{*})u_{\alpha})
 	\quad \text{and} \quad
-	(\mu \mapsto \mu R(\mu+\im\alpha)'x)
+	(\mu \mapsto \mu R(\mu-\im\alpha)'x)
 \]
 %
 coincide on $\R_{+}$ from which we conclude
 %% --
 \[
-\lambda R(\lambda+\im\alpha)'x = \lambda R(\lambda)'(xu_{\alpha}^{*})u_{\alpha}
+\lambda R(\lambda-\im\alpha)'x = \lambda R(\lambda)'(xu_{\alpha}^{*})u_{\alpha}
 \]
 %% --
 for every $\lambda \in D$ and all $x \in Mp_{j}$.
@@ -912,7 +914,7 @@ for every $\lambda \in D$ and all $x \in Mp_{j}$.
 Since the map $(y \mapsto y u_{\alpha})$ is a continuous bijection from $M(u_{\alpha}u_{\alpha}^{*})$ onto $Mp_{j}$ with inverse $(y \mapsto y u_{\alpha}^{*})$, we can deduce that
 %% --
 \begin{align*}
-\dim \Fix  {(\lambda-\im\alpha)R(\lambda)'|Mp_{j}} 
+\dim \Fix{(\lambda+\im\alpha)R(\lambda)'|Mp_{j}} 
 	&= \dim \Fix{\lambda R(\lambda)'|M(u_{\alpha}u_{\alpha}^{*})}  \\
  	&\leq \dim \Fix  {\RR'} .
 \end{align*}
@@ -928,9 +930,11 @@ Since
 we obtain
 %% --
 \begin{align*}
-\dim \Fix  {(\lambda - \im\alpha)R(\lambda)'} &= \dim \Fix{\lambda R(\lambda)'} \\
+\dim \Fix{(\lambda - \im\alpha)R(\lambda)'} &= \dim \Fix{(\lambda + \im\alpha)R(\lambda)'} \leq \dim \Fix{\lambda R(\lambda)'} \\
 		&= \dim \Fix  {\lambda R(\lambda)} ,
 \end{align*}
+%% --
+where the first equality holds since $x \mapsto x^{*}$ maps $\Kern{\im\alpha - A'}$ onto $\Kern{-\im\alpha - A'}$,
 %% --
 % -- d3-16
 %% --
@@ -1054,12 +1058,24 @@ $\hat{x} \in \Fix  {(\lambda - \im\alpha)\widehat{R}(\lambda)}$ such that
 for all $y \in \Fix  {(\lambda - \im\alpha)R(\lambda)}$.
 
 Take a normalized sequence $(x_{n}) \in \hat{x}$.
-Then $(x_{n})$ has a convergent subsequence, whence we may assume that $\lim_{n} x_{n} = z$ exists in $E$.
-Thus $0 \neq z \in \Fix{(\lambda - \im\alpha)R(\lambda)}$.
-From this we obtain the contradiction
+We show that $z \coloneq \lim_{\mathfrak{U}} x_{n}$ exists in $E$.
+Let $\eta > 0$.
+By the first part of the proof (which works for bounded sequences as well) there exists $\varepsilon > 0$ such that
 %% --
 \[
- 0 \leq \gamma \leq \|\hat{z} - \hat{x}\| = \lim_{n} \|z - x_{n}\| = 0 .
+K_{\varepsilon} \coloneq \{x \in E \colon \|x\| \leq 1,\ \|(\lambda - \im\alpha)R(\lambda)x - x\| \leq \varepsilon\}
+\]
+%% --
+is covered by finitely many balls of radius $\eta$;
+otherwise there would be an $\eta$-separated sequence $(y_{k})$ with $y_{k} \in K_{1/k}$, which is not relatively compact.
+Since $\{n \in \N \colon x_{n} \in K_{\varepsilon}\} \in \mathfrak{U}$ and $\mathfrak{U}$ is an ultrafilter,
+one of these balls contains $x_{n}$ for all $n$ in some set of\/ $\mathfrak{U}$.
+Hence $(x_{n})$ is a Cauchy sequence along $\mathfrak{U}$ and $z = \lim_{\mathfrak{U}} x_{n}$ exists.
+Clearly $\|z\| = 1$, $z \in \Fix{(\lambda - \im\alpha)R(\lambda)}$ and $\hat{z} = \hat{x}$,
+which yields the contradiction
+%% --
+\[
+ 0 < \gamma \leq \|\hat{z} - \hat{x}\| = \lim_{\mathfrak{U}} \|z - x_{n}\| = 0 .
 \]
 %% --
 Consequently,
@@ -1173,7 +1189,7 @@ It turns out that $J( (M_{*})^{\wedge} )$ is a translation invariant subspace of
 Hence there exists a central projection $z \in (\widehat{M})''$ such that 
 %
 \[
-	J((M_{*})^{\wedge}) = (\widehat{M})'' \cdot z 
+	J((M_{*})^{\wedge}) = (\widehat{M})' \cdot z 
 \]
 %
 (\textcite[Proposition 2.2]{groh:1984b}).
