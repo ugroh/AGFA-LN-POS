@@ -1,0 +1,152 @@
+%% korr-preamble.tex -- gemeinsame Präambel für die Korrekturlisten LNM 1184
+%% Makros wie im Buch (LN-Book-Springer/preamble), damit die Formeln
+%% genauso aussehen wie im Proof.
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{newtxtext}
+\usepackage[varvw]{newtxmath}
+\usepackage[scaled=.9]{helvet}
+\usepackage[varqu,scaled=.95]{zi4}
+\usepackage[ngerman]{babel}
+\usepackage{csquotes}
+\usepackage[a4paper,landscape,margin=1.6cm,top=1.8cm,bottom=1.8cm]{geometry}
+\usepackage{microtype}
+\usepackage{array,longtable,booktabs}
+\usepackage{ragged2e}
+\usepackage[table]{xcolor}
+\usepackage{xspace}
+\usepackage{enumitem}
+\setlist{nosep,leftmargin=*}
+\usepackage[nointegrals]{wasysym}
+\usepackage{newunicodechar}
+\usepackage{nicefrac}
+\usepackage{mathtools}
+\usepackage{mleftright}
+\mleftright
+\usepackage[hidelinks]{hyperref}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{.5em}
+\setlength{\emergencystretch}{3em}
+\renewcommand{\arraystretch}{1.25}
+\definecolor{codegray}{gray}{0.35}
+
+%% ---- Makros aus dem Buch -------------------------------------------
+\DeclarePairedDelimiterX{\norm}[1]{\lVert}{\rVert}{\ifblank{#1}{\:\cdot\:}{#1}}
+\DeclarePairedDelimiterX{\abs}[1]{\lvert}{\rvert}{\ifblank{#1}{\:\cdot\:}{#1}}
+\DeclarePairedDelimiterX{\dualp}[1]{\langle}{\rangle}{\ifblank{#1}{\,\cdot\,,\cdot\,}{#1}}
+\newcommand{\interval}[1]{\left[ #1 \right]}
+\newcommand{\ointerval}[1]{\left] #1 \right[}
+\newcommand{\rointerval}[1]{\left[ #1 \right[}
+\newcommand{\lointerval}[1]{\left] #1 \right]}
+\newcommand{\tint}{\textstyle\int}
+\AtBeginDocument{%
+\let\ORGvarepsilon=\varepsilon
+\let\epsilon=\epsilon
+\let\epsilon=\ORGvarepsilon
+\let\ORGvarrho=\varrho
+\let\rho=\rho
+\let\rho=\ORGvarrho
+\let\ORGvartheta=\vartheta
+\let\theta=\theta
+\let\theta=\ORGvartheta
+\let\ORGvarphi=\varphi
+\let\phi=\phi
+\let\phi=\ORGvarphi
+\let\ORGvarleq=\leqslant
+\let\leqslant=\leq
+\let\leq=\ORGvarleq
+\let\ORGvargeq=\geqslant
+\let\geqslant=\geq
+\let\geq=\ORGvargeq
+\let\ORGvarpreccurlyeq=\preccurlyeq
+\let\preccurlyeq=\preceq
+\let\preceq=\ORGvarpreccurlyeq
+\let\setminus\smallsetminus			% A - B fuer Mengen
+\renewcommand{\P}{\mathfrak{P}}		% Achtung: \P hat andere Bedeutung in LaTeX
+}
+\newcommand{\N}{\mathbb{N}}		% Natuerliche Zahlen
+\newcommand{\Z}{\mathbb{Z}}		% Ganze Zahlen
+\newcommand{\Q}{\mathbb{Q}}		% Rationale Zahlen
+\newcommand{\R}{\mathbb{R}}		% Reelle Zahlen
+\newcommand{\C}{\mathbb{C}}		% Komplexe Zahlen
+\newcommand{\K}{\mathbb{K}}		% Koerperzeichen
+\newcommand{\T}{\mathbb{T}}		% Torus
+\DeclareMathOperator{\Id}{Id}
+\DeclareMathOperator{\sign}{sign}				% signum-Operator
+\newcommand{\im}{\ensuremath{\mathrm{i}}}		% imaginäre Konstante i
+\newcommand{\iu}{\ensuremath{\mathrm{i}}}
+\newcommand{\eu}{\ensuremath{\mathrm{e}}}
+\renewcommand*{\Re}{\mathop{}\!\mathrm{Re}}		% Realteil
+\renewcommand*{\Im}{\mathop{}\!\mathrm{Im}}		% Imaginärteil
+\newcommand*{\supp}{\mathop{}\!\mathrm{supp}\,}  % Träger
+\newcommand*{\diff}[1]{\mathop{}\!\mathrm{d}{#1}}	% \diff{s} = ds, 
+\newcommand*{\ds}{\mathop{}\!\mathrm{d}{s}}       	% \ds = ds, 
+\newcommand*{\dg}{\mathop{}\!\mathrm{d}{g}}       	% \dg = dg, 
+\newcommand*{\dt}{\mathop{}\!\mathrm{d}{t}}       	% \dt = dt, 
+\newcommand*{\dx}{\mathop{}\!\mathrm{d}{x}}       	% \dx = dx, 
+\newcommand*{\dy}{\mathop{}\!\mathrm{d}{y}}       	% \dy = dy, 
+\newcommand*{\dr}{\mathop{}\!\mathrm{d}{r}}       	% \dr = dr, 
+\newcommand*{\dm}{\mathop{}\!\mathrm{d}{m}}       	% \dm = dm, 
+\newcommand*{\du}{\mathop{}\!\mathrm{d}{u}}       	% \du = du, 
+\DeclareMathOperator{\esssup}{ess\,sup}
+\newcommand{\LE}{\mathcal{L}(E)} 		% 
+\newcommand{\BH}{\mathcal{B}(H)} 		% 
+\newcommand{\BA}{\mathfrak{A}}
+\newcommand{\ZE}{\mathcal{Z}(E)} 	% \ZE  Zentrum von E
+\newcommand{\LH}{\mathcal{L}(H)} 
+\let\originalL\L
+\AtBeginDocument{%
+  \DeclareRobustCommand{\L}[1]{\mathcal{L}(#1)}%
+}
+\newcommand{\Fix}[1]{\mathop{}\mathrm{Fix}\left(#1\right)}		% \Fix{T} Fixraum
+\newcommand{\rank}{\mathop{}\!\mathrm{rank}\,}		% 
+\newcommand{\Kern}[1]{\mathop{}\mathrm{ker}(#1)}
+\newcommand{\Image}[1]{\mathop{}\mathrm{im}(#1)}
+\newcommand{\image}{\mathop{}\!\mathrm{im}\,}
+\renewcommand{\dim}{\mathop{}\!\mathrm{dim}\,}
+\newcommand*{\eg}{e.g.,\xspace}
+\newcommand*{\ie}{i.e.,\xspace}
+\newcommand*{\resp}{resp.\xspace}
+\newcommand*{\vs}{vs.\xspace}
+\newcommand*{\cf}{cf.\xspace}
+\newcommand*{\etc}{etc.\xspace}
+\newcommand{\CA}{$\mathrm{C}^{*}$}	% C*-Algebra
+\newcommand{\WA}{$\mathrm{W}^{*}$}	% W*-Algbera
+\newcommand{\AW}{$\mathrm{AW}^{*}$}	% AW*-Algbera
+\newcommand*{\TT}{\mathcal{T}}		% C_0-Semigroup
+\newcommand*{\RR}{\mathcal{R}}		% Pseudo Resolvente
+\newcommand*{\SG}{\mathcal{S}}	    % Semigroup
+\newcommand*{\UG}{\mathcal{U}}	    % Implemented Semigroup
+\newcommand*{\F}{\mathcal{F}}		% F-product
+\newcommand{\mfrac}[2]{%
+    {\raise.5ex\hbox{$\scriptstyle #1$}}%
+    \kern.025em/\kern.025em%
+    {\lower.25ex\hbox{$\scriptstyle #2$}}}
+\newcommand*{\sfrac}[2]{\leavevmode\kern.1em%
+       \raise.5ex\hbox{\small #1}%
+       \kern.025em/\kern.025em%
+       \lower.25ex\hbox{\small #2}}
+\newcommand{\1}{\mathbf{1}}
+\newcommand{\HO}{\mathcal{H}(O)} 		%  für Lotz
+\newcommand{\WO}{\mathcal{W}(O)} 		%  für Lotz
+\newcommand*{\ddp}{\mathop{}\!\mathrm{d}{p}}       	% \ddp = dp, 
+\newcommand*{\dN}{\mathop{}\!\mathrm{d}{N}}       	% \dN = dN, 
+\newcommand*{\ddt}{\mathop{}\!\mathrm\fraq{d}{dt}}   % \ddt = d/dt
+\newcommand*{\lnm}{LNM1184: } % \LMN-BookCode
+\newcommand{\closure}[1]{#1^{-}}
+%% Hilfsmatrizen aus Teil I, Kap. 1
+\newcommand{\ABC}{\begin{pmatrix} 0 & 1 \\ -1 & 0 \end{pmatrix}}
+\newcommand{\BBC}{\begin{pmatrix} \cos(t) & \sin(t) \\ - \sin(t) & \cos(t) \end{pmatrix}}
+\newcommand{\CBC}{\begin{pmatrix} 1 & 1 \\ -1 & -1 \end{pmatrix}}
+\newcommand{\DBC}{\begin{pmatrix} 1+t & t \\ - t & 1-t \end{pmatrix}}
+\newcommand{\EBC}{\begin{pmatrix} 0 & 1 \\ 1 &0 \end{pmatrix}}
+\newcommand{\FBC}{\begin{pmatrix} \cosh(t) & \sinh(t) \\ \sinh(t) & \cosh(t) \end{pmatrix}}
+
+%% ---- Darstellung der Listen ----------------------------------------
+%% Quelltext, der sich nicht als Formel setzen lässt (Labels, \ref, Dateinamen)
+\newcommand{\code}[1]{\leavevmode{\color{codegray}\ttfamily\small #1}}
+\newcommand{\sichA}{\CIRCLE}      % ● hoch
+\newcommand{\sichB}{\LEFTcircle}  % ◐ mittel
+\newcommand{\sichC}{\Circle}      % ○ niedrig
+%% Querverweise im Buch: Label-Namen statt Nummern
+\newcommand{\lbl}[1]{\textsf{\footnotesize\color{codegray}\detokenize{#1}}}

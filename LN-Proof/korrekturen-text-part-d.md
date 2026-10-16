@@ -23,8 +23,8 @@ Insgesamt **72 Punkte**: 33 ●, 25 ◐, 14 ○; davon umgesetzt: 33.
 | 412 | ○ | T is a semigroup of Schwarz-type, if and only if 𝜇𝑅(𝜇, 𝐴) is a Schwarz-operator | T is a semigroup of Schwarz type if and only if 𝜇𝑅(𝜇, 𝐴) is a Schwarz operator | Konsistenz | Sonst 'Schwarz type' ohne Bindestrich; Komma vor 'if and only if' überflüssig |
 | 413 | ● | R𝑝 has both the Schwarz type property and is identity preservation. | R𝑝 has the Schwarz type property and is identity preserving. | Grammatik | **Umgesetzt.**  |
 | 414 | ● | the following equalities holds | the following equalities hold | Grammatik | **Umgesetzt.**  |
-| 414 | ◐ | [1] N. Bourbaki: Éléments des Mathématiques, Intégration, Chapitre 5: Intégration des Mesures. | N. Bourbaki: Éléments de mathématique. Intégration, Chapitre 5: Intégration des mesures. | Literatur | Originaltitel 'Éléments de mathématique' |
-| 415 | ○ | Completely positive linear maps, non Hamiltonian evolution | Completely positive linear maps, non-Hamiltonian evolution | Literatur |  |
+|      |      |                                                              |                                                              |             |                                                              |
+|      |      |                                                              |                                                              |             |  |
 
 ### Teil IV, Kap. 2 – Characterization of Positive Semigroups on W*-Algebras
 
@@ -33,14 +33,14 @@ Insgesamt **72 Punkte**: 33 ●, 25 ◐, 14 ○; davon umgesetzt: 33.
 | 417 | ○ | which derivations) commuting with certain automorphism groups are automatically generators of strongly continuous positive semigroups. | ... generators of strongly continuous positive semigroups? | Satz | Formulierung als Frage ('Which maps ...'), endet mit Punkt |
 | 418 | ● | Using the Schwarz, inequality we obtain | Using the Schwarz inequality, we obtain | Satz | **Umgesetzt.** Komma an falscher Stelle (im PDF sichtbar) |
 | 418 | ◐ | (compare Elliot [1], Lemma 2.). | (compare Elliott [1, Lemma 2]). | Literatur | Name korrekt 'Elliott' (auch in der Literaturliste S. 419 'G. Elliot'); überflüssiger Punkt; Zitierformat sonst '[n, ...]' |
-| 418 | ○ | Take (i)’ 𝑀̂ be an ultrapower of 𝑀, | Take: (i)’ let 𝑀̂ be an ultrapower of 𝑀, | Grammatik | (ii)'–(iv)' beginnen mit 'let', (i)' nicht |
+|      |      |                                                              |                                                            |           |                                                              |
 
 ### Teil IV, Kap. 3 – Spectral Theory on W*-Algebras and their Preduals
 
 | S. | | Ist | Soll | Art | Kommentar |
 |---|---|---|---|---|---|
 | 422 | ● | subinvariant for a positive map 𝑇 ∈ L(𝑀) (resp.. positive semigroup T) | (resp. positive semigroup T) | Satz | **Umgesetzt.** Doppelter Punkt |
-| 422 | ○ | Kolumnentitel: Part IV 3 Spectral Theory on W∗-algebras | Part IV 3 Spectral Theory on W∗-Algebras | Konsistenz | Kapiteltitel und andere Kolumnentitel schreiben 'W∗-Algebras' groß |
+|      |      |                                                              |                                                              |             |                                                              |
 | 423 | ◐ | Hence Fix(𝑇) is a self adjoint subspace of 𝑀 | selfadjoint (bzw. einheitlich self-adjoint) | Konsistenz | Uneinheitlich: 'self adjoint' (S. 423, 425, 457) neben 'selfadjoint' (S. 425, 426) |
 | 425 | ● | by the uniqueness theorem (*) on p. 422 for the absolut value | for the absolute value | Tippfehler | **Umgesetzt.**  |
 | 426 | ● | we obtain that 𝜑+ and 𝜑− in Fix(R). | we obtain that 𝜑+ and 𝜑− are in Fix(R). | Grammatik | **Umgesetzt.** Verb fehlt |
@@ -96,7 +96,7 @@ Insgesamt **72 Punkte**: 33 ●, 25 ◐, 14 ○; davon umgesetzt: 33.
 | 461 | ● | hence Theorem 4.4.2 (iv) is proved. | hence Theorem 4.4.5 (iv) is proved. | Querverweis | **Umgesetzt, abweichend (siehe Umgesetzte_Korrekturen_LNM1184.md).** 4.4.2 ist eine Remark; gemeint ist Theorem 4.4.5 |
 | 461 | ● | exists in the strong operator topology with 𝐴′ is the generator of T′. | where 𝐴′ is the generator of T′. | Grammatik | **Umgesetzt.**  |
 | 463 | ● | U. Groh & B. Kümmerer: Bibounded operators 𝑊∗-algebras. | Bibounded operators on W∗-algebras. | Literatur | **Umgesetzt.** 'on' fehlt im Titel |
-| 463 | ○ | E. Størmer: On projection maps on von Neumann algebras. Math. Scand. 50 (1972) 42–50. | Math. Scand. 30 (1972) ... | Literatur | Band 50 ist von 1982 (vgl. Groh & Kümmerer); 1972 entspricht Band 30. Bitte Band und Seiten prüfen |
+|      |      |                                                              |                                                              |             |                                                              |
 
 ### Updated Notes, Part IV
 
@@ -105,4 +105,4 @@ Insgesamt **72 Punkte**: 33 ●, 25 ◐, 14 ○; davon umgesetzt: 33.
 | 489 | ● | This also follows from the example given above above and the fact | from the example given above and the fact | Tippfehler | **Umgesetzt.** Wort doppelt |
 | 490 | ● | By Greiner et al. [12, Theorem 5.3.1]] one has | By Greiner et al. [12, Theorem 5.3.1] one has | Satz | **Umgesetzt.** doppelte schließende Klammer |
 | 490 | ◐ | Chapter 4 As in Part-IV, Chapter 4, results from Glück & Mironchenko [10] | As in Part-II, Chapter 4, results from Glück & Mironchenko ... | Querverweis | Der Abschnitt gehört selbst zu Part IV, Chapter 4; Glück & Mironchenko wird in den Updated Notes zu Part II, Chapter 4 zitiert |
-| 491 | ◐ | C. W. Henson & L. C. j. Moore: Nonstandard hulls | C. W. Henson & L. C. Moore Jr.: | Literatur | BibTeX-Artefakt aus 'Jr.' |
+|      |      |                                                              |                                                              |             |                                                              |

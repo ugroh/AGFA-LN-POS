@@ -3,7 +3,7 @@
 %% --
 %\setcounter{section}{0}
 \chapternopage{Spectral Theory of Positive Semigroups on \texorpdfstring{W$^{*}$-Algebras}{W*-Algebras} and their Preduals}\label{chap:d3}
-\chaptermark{Spectral Theory on\/ \WA-algebras}
+\chaptermark{Spectral Theory on\/ \WA-Algebras}
 \thispagestyle{empty}
 \index{semigroup!positive semigroup}
 %% --
@@ -1165,11 +1165,11 @@ For $\hat{x} \in \widehat{M}$ and $\widehat{\phi} \in (M_{*})^{\wedge}$ let $J: 
 %% --
 Then $J$ is well defined and an isometric embedding.
 
-It turns out that $J( (M_{*})^{\wedge} )$ is a translation invariant subspace of\/ $\widehat{M'}$.
-Hence there exists a central projection $z \in \widehat{M''}$ such that 
+It turns out that $J( (M_{*})^{\wedge} )$ is a translation invariant subspace of\/ $(\widehat{M})'$.
+Hence there exists a central projection $z \in (\widehat{M})''$ such that 
 %
 \[
-	J((M_{*})^{\wedge}) = \widehat{M''} \cdot z 
+	J((M_{*})^{\wedge}) = (\widehat{M})'' \cdot z 
 \]
 %
 (\textcite[Proposition 2.2]{groh:1984b}).
@@ -1183,7 +1183,7 @@ From the construction the following is obvious: If\/ $T$ is an identity preservi
 %% --
 \begin{theorem}\label{thm:d3-2.5}
 Let $\TT$ be an identity preserving semigroup of Schwarz type with generator $A$ on the predual of a \WA-algebra $M$.
-If\/ $\TT$ is uniformly ergodic with finite dimensional fixed space, then every $\gamma \in \sigma(A) \cap \im\R$ is a pole of the resolvent $R(.,A)$ and $\dim \Kern{\gamma - A} \leq \dim \Fix{T}$.
+If\/ $\TT$ is uniformly ergodic with finite dimensional fixed space, then every $\gamma \in \sigma(A) \cap \im\R$ is a pole of the resolvent $R(.,A)$ and $\dim \Kern{\gamma - A} \leq \dim \Fix{\TT}$.
 \end{theorem}
 %% --
 \begin{proof}
@@ -1195,12 +1195,12 @@ Then
 \]
 %% --
 exists in the uniform operator topology.
-Since $ P(E) = \Fix{T} $, we obtain $ \widehat{P}(\widehat{E}) = \Fix{\widehat{T}} $ and 
-$\dim \Fix{T} = \dim \Fix{\widehat{T}} < \infty$, where $\widehat{P}$ is the canonical extension of\/ $P$ onto $(M_{*})^{\wedge}$.
+Since $ P(M_{*}) = \Fix{\TT} $, we obtain $ \widehat{P}(\widehat{M_{*}}) = \Fix{\widehat{\TT}} $ and 
+$\dim \Fix{\TT} = \dim \Fix{\widehat{\TT}} < \infty$, where $\widehat{P}$ is the canonical extension of\/ $P$ onto $(M_{*})^{\wedge}$.
 Since $\widehat{P} = \lim_{\mu \downarrow 0} \mu R(\mu)^{\wedge}$ it follows that
 %% --
 \[
-\dim \Fix  {(\lambda - \im\alpha)\widehat{R}(\lambda)} \leq \dim \Fix{\widehat{T}} < \infty
+\dim \Fix  {(\lambda - \im\alpha)\widehat{R}(\lambda)} \leq \dim \Fix{\widehat{\TT}} < \infty
 \]
 %% -- 
 for all $\alpha \in \R$ (Proposition~\ref{prop:d3-2.1} ).

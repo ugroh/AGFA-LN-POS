@@ -74,7 +74,7 @@ Insgesamt **122 Punkte**: 40 ●, 55 ◐, 27 ○. Davon stehen 9 bereits in der 
 | 430 | 743 | ● | `\subseteq L_{s}(N_{*})` | `\subseteq \mathcal{L}_{s}(N_{*})` | Notation | Sonst kalligraphisches L (Z. 695, 698, 718, 963); ebenso Z. 1137 `L(\widehat{E})` → `\mathcal{L}(\widehat{E})`. |
 | 430 | 752 | ◐ | `S \coloneq \lim_{\mathfrak{U}}T(t-s)` | `S \coloneq \lim_{\mathfrak{U}}T_{0}(t-s)` | Notation | Im Beweis sonst T_0 (Z. 748, 758). |
 | 431 | 783 | ◐ | `fulfils the assertions of Theorem 1.10` | `fulfils the assertions of Theorem~\ref{thm:d3-1.11}` | Verweis | Schon in der Arbeitsliste. Hart codierte Altnummer. |
-| 432 | 820 | ● | `\{p_{1}, .., p_{n}\}` | `\{p_{1}, \dots, p_{n}\}` | Tippfehler | Nur zwei Punkte; ebenso Z. 957 `(x, x, ..)` → `(x, x, \dots)`. |
+| 432 | 820 | ● | `\{p_{1}, .., p_{n}\}` | `\{p_{1}, \ldots, p_{n}\}` | Tippfehler | Nur zwei Punkte; ebenso Z. 957 `(x, x, ..)` → `(x, x, \dots)`. |
 | 432 | 824 | ◐ | `from Lemma 1.1.b that` | `from Lemma~\ref{lem:d3-1.1}\,\ref{item:d3-1.1-ii} that` | Verweis | Schon in der Arbeitsliste. Hart codierte Altnummer. |
 | 432 | 827 | ◐ | `x(\mu \RR'(\mu)y)` | `x(\mu R(\mu)'y)` | Notation | Links R(\mu)', rechts kalligraphisches \RR'(\mu). |
 | 432 | 843 | ● | `\leq (\1-s(\vert\psi_{\alpha}\vert) , \mu` | `\leq \1-s(\vert\psi_{\alpha}\vert) , \mu` | Klammern | Öffnende Klammer ohne Gegenstück (vgl. Z. 461 f.). |
@@ -85,8 +85,8 @@ Insgesamt **122 Punkte**: 40 ●, 55 ◐, 27 ○. Davon stehen 9 bereits in der 
 | 435 | 1075 | ◐ | `R(\lambda)} \bigoplus \bigcap_{j=1}^{n}` | `R(\lambda)} \oplus \bigcap_{j=1}^{n}` | LaTeX | \bigoplus ist ein großer Operator; als binäres Zeichen \oplus. |
 | 435 | 1088 | ○ | `\bigcap_{j=1}^{n} \ker\phi_{j}` | `\bigcap_{j=1}^{n} \Kern{\phi_{j}}` | Notation | Z. 1075 und 1090 ker(φ_j) mit Klammern; ebenso Z. 1099. |
 | 437 | 1161 | ○ | `\dualp{x,J(\widehat{\phi})}` | `\dualp{\hat{x},J(\widehat{\phi})}` | Tippfehler | Definiert wird für \hat{x} ∈ \widehat{M}; bitte prüfen. |
-| 437 | 1168 | ○ | `subspace of\/ $\widehat{M'}$` | `subspace of\/ $\widehat{M}'$` | Notation | Z. 1158: J bildet in \widehat{M}' ab; ebenso Z. 1169 und 1172 `\widehat{M''}`. Bitte prüfen. |
-| 438 | 1186 | ◐ | `\dim \Fix{T}` | `\dim \Fix{\TT}` | Notation | Halbgruppe heißt \TT, ein T ist nicht eingeführt; ebenso Z. 1198, 1199 (\Fix{T}, \Fix{\widehat{T}}), 1203; in Z. 1198 außerdem E, \widehat{E} statt M_*, (M_*)^\wedge. |
+|      |      |      |                                                              |                                                              |             |                                                              |
+|  |      |      |                                                              |                                                              |             |                                                              |
 | 438 | 1206 | ● | `(Proposition~\ref{prop:d3-2.1} ).` | `(Proposition~\ref{prop:d3-2.1}).` | Abstand | Schon in der Arbeitsliste. Leerzeichen vor der Klammer. |
 
 ### Teil IV, Kap. 4 – Asymptotics on C*- and W*-Algebras (`part-d/chap-d4.tex`)
