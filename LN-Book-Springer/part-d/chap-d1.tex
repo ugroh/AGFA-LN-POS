@@ -66,7 +66,7 @@ A map $ T \in \L{M} $ is called \emph{positive} (in symbols $ T \geq 0 $) if\/ $
 It is called \emph{$n$-positive} ($ n \in \N $) if\/ $ T \otimes \Id _{n} $ is positive from $ M \otimes M_{n} $ into $ M \otimes M_{n} $, where $ \Id _{n} $ is the identity map on the \CA-algebra $ M_{n} $ of all $ n \times n $-matrices.
 Obviously, every $n$-positive map is positive.
 
-We call a contraction $ T \in \L{M} $ a \emph{Schwarz map} if\/ $ T $ satisfies the so-called \emph{Schwarz inequality}
+We call a map $ T \in \L{M} $ a \emph{Schwarz map} if\/ $ T $ satisfies the so-called \emph{Schwarz inequality}
 \index{Schwarz map!definition}
 %% --
 \[
@@ -74,6 +74,8 @@ We call a contraction $ T \in \L{M} $ a \emph{Schwarz map} if\/ $ T $ satisfies 
 \]
 %% --
 for all $ x \in M $.
+Every Schwarz map $ T $ is positive, since $ T(xx^{*}) \geq T(x)T(x)^{*} \geq 0 $, and $ T(\1)T(\1)^{*} \leq T(\1) $ implies $ \|T(\1)\| \leq 1 $.
+Since $ M $ has a unit, it follows that $ \|T\| = \|T(\1)\| \leq 1 $, \ie every Schwarz map is a contraction.
 It is well known that every $n$-positive contraction, for $ n \geq 2 $ and every positive contraction on a commutative \CA-algebra is a Schwarz map (\textcite[Chapter IV]{takesaki:1979}).%
 \index{Schwarz map|(}
 As we shall see, the Schwarz inequality is crucial for our investigations.
@@ -107,7 +109,7 @@ There exists a representation for the resolvent $ R(\lambda,A) $ given by the fo
  	R(\lambda,A)x = \int_{0}^\infty \eu^{-\lambda t} T(t)x  \dt  \quad (x \in M)
 \]
 %% --
-where the integral exists in the norm topology.
+where the integral exists in the norm topology (\resp in the $\sigma(M,M_{*})$-topology).
 
 The next theorem relates the domination of two semigroups to an inequality for the corresponding resolvent operators.
 This inequality will be needed later and can be used to characterize semigroups of Schwarz type on \CA-algebras.
@@ -147,7 +149,7 @@ for every $ r $, $ t \in \R_{+} $ and therefore
 
 %% --
 \[
-	(S(r)x)(S(r)x)^{*} + (S(t)x)(S(t)x)^{*} \leq T(r)(xx^{*}) + T(t)(xx^{*}) .
+	(S(r)x)(S(t)x)^{*} + (S(t)x)(S(r)x)^{*} \leq T(r)(xx^{*}) + T(t)(xx^{*}) .
 \]
 %% --
 Obviously, $ \| S(t)\| \leq 1 $ for all $ t \in \R_{+} $.
@@ -238,7 +240,7 @@ We state what will be used without further reference.
 %% --
 \begin{enumerate}[\upshape(i), wide, labelindent=.25em]
 \item 
-If\/ $ \alpha \in \C $ and $ x \in E $ such that $ (\alpha - \lambda)R(\lambda)x = x $ for some $ \lambda \in D $, then $ (\alpha - \mu)R(\mu)x = x $ for all $ \mu \in D $ (use the \emph{resolvent equation}).
+If\/ $ \alpha \in \C $ and $ x \in E $ such that $ (\lambda - \alpha)R(\lambda)x = x $ for some $ \lambda \in D $, then $ (\mu - \alpha)R(\mu)x = x $ for all $ \mu \in D $ (use the \emph{resolvent equation}).
 
 \item 
 If\/ $ F $ is a closed subspace of\/ $ E $ such that $ R(\lambda)F \subseteq F $ for some $ \lambda \in D $, then $ R(\mu)F \subseteq F $ for all $ \mu $ in a neighborhood of\/ $ \lambda $.
@@ -336,7 +338,7 @@ M_{\phi} = s(\phi)^{\perp}Ms(\phi)^{\perp}
 T(s(\phi)^{\perp}) \leq \1 
 \]
 %% --
-and \ref{item:d1-3.2} above it follows 
+and the $ T $-invariance of\/ $ M_{\phi} \ni s(\phi)^{\perp} $ it follows 
 %% --
 \[ 
 T(s(\phi)^{\perp}) \leq s(\phi)^{\perp}  .
@@ -374,7 +376,7 @@ Furthermore, if  $ \mathcal{R} $ is a pseudo-resolvent on
 	D = \{\lambda \in \C \colon \Re(\lambda) > 0\} 
 \]
 %
-with values in $ M_{*} $ which is identity preserving and of Schwarz type such that $ R(\mu)\phi = \phi $ for some $ \mu \in \R_{+} $, then $ \mathcal{R}_{\vert s(\phi)M_{*}s(\phi)} $ has the same properties.
+with values in $ M_{*} $ which is identity preserving and of Schwarz type such that $ \mu R(\mu)\phi = \phi $ for some $ \mu \in \R_{+} $, then $ \mathcal{R}_{\vert s(\phi)M_{*}s(\phi)} $ has the same properties.
 \index{pseudo-resolvent|)}
 
 %% --

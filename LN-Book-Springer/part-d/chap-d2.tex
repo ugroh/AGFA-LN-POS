@@ -83,17 +83,18 @@ and let $u \coloneq \widehat{(u_{k})}  \in \widehat{M}$.
 
 \end{enumerate}
 %% --  
-Then $T$ is identity preserving and of Schwarz type on $\widehat{M}$.
+Then $T$ is a Schwarz map on $\widehat{M}$.
 
 Since $u^{*}u = p$ and $uu^{*} = \1$, it follows $pu^{*} = u^{*}$ and $(uu^{*})x(uu^{*}) = x$ for all $x \in \widehat{M}$.
-Finally, $T(pxp) = pxp$ for all $x \in \widehat{M}$ which follows from (i), and $T(u^{*}) = T(pu^{*}) = pu^{*} = u^{*}$ and $T(u) = u$, which follows from (iii).
+Finally, $T(pxp) = pxp$ for all $x \in \widehat{M}$ which follows from (i), and $T(u) = u$, which follows from (iii); hence $T(u^{*}) = T(u)^{*} = u^{*}$, since $T$ is positive.
 Using the Schwarz inequality, we obtain
 %% --
 \[
-	T(uu^{*}) = T(\1) \leq \1 = uu^{*} = T(u)T(u)^{*}.
+	T(uu^{*}) = T(\1) \leq \1 = uu^{*} = T(u)T(u)^{*} \leq T(uu^{*}).
 \]
 %% --
-From Lemma~\ref{lem:d3-1.1} below, we conclude $T(ux) = uT(x)$ and $T(xu^{*}) = T(x)u^{*}$ for all $x \in \widehat{M}$.
+Hence $T(uu^{*}) = T(u)T(u)^{*}$ and $T(\1) = \1$, \ie $T$ is identity preserving.
+From Lemma~\ref{lem:d3-1.1}\,\ref{item:d3-1.1-i} below, applied to $b(x,y) \coloneq T(xy^{*}) - T(x)T(y)^{*}$, we conclude $T(ux) = uT(x)$ and $T(xu^{*}) = T(x)u^{*}$ for all $x \in \widehat{M}$.
 Hence
 %% --
 \begin{align*}
