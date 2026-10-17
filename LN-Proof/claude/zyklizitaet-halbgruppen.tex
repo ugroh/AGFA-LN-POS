@@ -1,0 +1,293 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{mathtools}
+\usepackage{enumitem}
+\usepackage[a4paper,margin=2.6cm]{geometry}
+\usepackage[hidelinks]{hyperref}
+
+\newtheorem{satz}{Satz}
+\newtheorem{korollar}[satz]{Korollar}
+\newtheorem{problem}[satz]{Problem}
+\theoremstyle{remark}
+\newtheorem{bemerkung}[satz]{Bemerkung}
+\theoremstyle{definition}
+\newtheorem{beispiel}[satz]{Beispiel}
+
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\T}{\mathbb{T}}
+\newcommand{\D}{\mathbb{D}}
+\newcommand{\TT}{\mathcal{T}}
+\newcommand{\eu}{\mathrm{e}}
+\newcommand{\im}{\mathrm{i}}
+\newcommand{\sperb}{\sigma_{\mathrm{per}}}
+
+\title{Zur Zyklizität: Dobricks Satz und positive Halbgruppen}
+\author{Claude (Anthropic)\thanks{Zusammengestellt auf Bitte von Ulrich Groh (Tübingen).}}
+\date{16.~Oktober 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+In dem Preprint \cite{dobrick} beweist A.~Dobrick die Zyklizitätsvermutung für einzelne positive Operatoren auf komplexen Banachverbänden.
+Diese Notiz geht der Frage nach, ob sich das Resultat oder die Methode auf stark stetige positive Halbgruppen übertragen lässt, also auf die Frage, ob die Randspektren $\sigma_b(A)$ ihrer Generatoren imaginär additiv zyklisch sind.
+Diese Frage ist, wie in den Updated Notes zu Part-II und Part-III von LNM~1184 \cite{ln} festgehalten, auch für $C(K)$ offen.
+Ergebnis: Für die einzelnen Operatoren $T(t)$ folgt die Zyklizität des peripheren Spektrums sofort; für den Generator nicht.
+Die Methode lebt auf dem Kreis $r(T)\T$, und der Weg zum Generator scheitert am Spektralabbildungssatz.
+Für $C(K)$ zeigen wir an einem Beispiel, dass ein strikt positives invariantes Maß als Hilfsmittel nicht ausreicht, und geben einen kurzen, elementaren Beweis der (bekannten) Zyklizität im kontraktiven Fall.
+\end{abstract}
+
+\section{Ausgangspunkt}
+
+Für $T \in \mathcal{L}(E)$ sei $\sperb(T) \coloneqq \sigma(T) \cap r(T)\T$ mit $\T = \{z \in \C \colon |z| = 1\}$ und $\D = \{z \in \C \colon |z| < 1\}$.
+
+\begin{satz}[{\cite[Theorem~1.2]{dobrick}}]\label{satz:dobrick}
+Ist $T$ ein positiver Operator auf einem komplexen Banachverband $E$ mit $r(T) = 1$, so gilt $\lambda^k \in \sigma(T)$ für alle $\lambda \in \sperb(T)$ und alle $k \in \Z$.
+\end{satz}
+
+Der Beweis beruht auf drei Bausteinen:
+\begin{enumerate}[label=(\Alph*)]
+\item \emph{Vererbung unter Domination} \cite[Theorem~2.3]{dobrick}: Aus $0 \le S \le T$ und $r(T) = 1$ folgt
+\[
+  \sigma\bigl(S + \mu(T-S)\bigr) \cap \T = \sigma(S) \cap \T \subseteq \sigma(T) \cap \T \qquad (\mu \in \D).
+\]
+Das Argument benutzt den Satz von Vesentini (Subharmonizität von $\log r(F(\mu))$ für holomorphe $F$) und das Maximumprinzip.
+
+\item \emph{Asymptotisch rotations-selbstähnliche Minoranten} \cite[Proposition~3.4]{dobrick}: Ist $Tz = \lambda z$ mit $z \neq 0$, $|\lambda| = 1$, und $U$ ein Torsionsoperator mit $U|z| = z$, so liefert die Iteration von
+\[
+  \Phi(Q) \coloneqq \tfrac{1}{4}\bigl(2Q + \bar\lambda U^{-1}QU + \lambda UQU^{-1}\bigr)
+\]
+positive Operatoren $S_n = \Phi^n(T) \le T$ mit $r(S_n) = 1$ und $\|S_nU - \lambda US_n\| \to 0$.
+
+\item \emph{Ultrapotenz und Bidual}: Sie machen aus einer approximativen eine exakte Rotations-Selbstähnlichkeit bzw.\ aus einem approximativen Eigenwert einen Eigenwert, und sie liefern Dedekind-Vollständigkeit (für die Konstruktion des Torsionsoperators über den Signum-Operator).
+\end{enumerate}
+
+\section{Was für Halbgruppen sofort folgt}
+
+\begin{korollar}\label{kor:T(t)}
+Sei $\TT = (T(t))_{t \ge 0}$ eine positive Halbgruppe auf einem komplexen Banachverband $E$ und $t > 0$ mit $\rho_t \coloneqq r(T(t)) > 0$.
+Dann gilt für jedes $\lambda \in \sperb(T(t))$
+\[
+  \rho_t \Bigl(\frac{\lambda}{\rho_t}\Bigr)^{k} \in \sigma(T(t)) \qquad (k \in \Z),
+\]
+d.\,h.\ das periphere Spektrum jedes einzelnen Operators $T(t)$ ist zyklisch.
+\end{korollar}
+
+\begin{proof}
+Satz~\ref{satz:dobrick}, angewandt auf den positiven Operator $T(t)/\rho_t$.
+\end{proof}
+
+\section{Warum daraus nichts für \texorpdfstring{$\sigma_b(A)$}{sigma\_b(A)} folgt}
+
+Sei $A$ der Generator von $\TT$.
+Wir nehmen $s(A) = \omega_0 = 0$ an.
+Für positive Halbgruppen auf $C_0(X)$ ist $s(A) = \omega_0$ immer erfüllt (Part-II, Theorem~3.1.1 in \cite{ln}), auf $L^p$ nach dem Satz von Weis \cite{weis}; auf allgemeinen Banachverbänden dagegen nicht (Beispiel von Arendt auf $L^p \cap L^q$, vgl.\ \cite{abhn}).
+
+Ist $\im\beta \in \sigma_b(A)$, so folgt aus dem Spektralinklusionssatz $\eu^{\im\beta t} \in \sperb(T(t))$, und Korollar~\ref{kor:T(t)} ergibt
+\[
+  \eu^{\im k\beta t} \in \sigma(T(t)) \qquad (t > 0,\ k \in \Z).
+\]
+Gewünscht ist aber $\im k\beta \in \sigma(A)$.
+Nach Greiner (Part-I, Proposition~3.7.8 in \cite{ln}, nach Reskalierung) gilt für $\mu \in \C$ und $t > 0$:
+\[
+  \eu^{\mu t} \in \rho(T(t)) \iff
+  \begin{cases}
+    \mu + \tfrac{2\pi\im}{t}\Z \subseteq \rho(A) \text{ und} \\[2pt]
+    \sum_{n \in \Z} R\bigl(\mu + \tfrac{2\pi\im n}{t}, A\bigr)f \text{ ist Cesàro-summierbar für alle } f \in E.
+  \end{cases}
+\]
+Aus $\eu^{\im k\beta t} \in \sigma(T(t))$ folgt also nur: Entweder liegt \emph{irgendein} Punkt von $\im k\beta + \frac{2\pi\im}{t}\Z$ in $\sigma(A)$, oder die Cesàro-Bedingung ist verletzt.
+Dass dies für alle $t > 0$ gilt, erzwingt $\im k\beta \in \sigma(A)$ nicht, und zwar schon aus rein mengentheoretischen Gründen:
+
+\begin{beispiel}\label{bsp:menge}
+Sei $\beta > 0$, $0 < \delta < \beta$ und $M \coloneqq \im\R \setminus \im(2\beta - \delta, 2\beta + \delta)$.
+Dann ist $M$ abgeschlossen, $0, \im\beta \in M$, aber $2\im\beta \notin M$; trotzdem gilt $\eu^{tM} = \T$ für jedes $t > 0$.
+Selbst ein exakter Spektralabbildungssatz am Rand, $\sigma(T(t)) \cap \T = \overline{\eu^{t\sigma_b(A)}}$, verträgt sich also mit zyklischen peripheren Spektren aller $T(t)$, ohne dass $\sigma_b(A)$ zyklisch sein müsste.
+\end{beispiel}
+
+\begin{bemerkung}
+Die Reduktion funktioniert nur, wenn zusätzlich $\sigma_b(A)$ beschränkt ist und $\sigma(T(t)) \cap \T = \eu^{t\sigma_b(A)}$ gilt, etwa bei schließlich normstetigen Halbgruppen.
+Ist dann $\sigma_b(A) \subseteq \im[-R,R]$ und $t > 0$ so klein, dass $2\pi/t > R + |k\beta|$, so erzwingt $\eu^{\im k\beta t} = \eu^{t\gamma_t}$ mit $\gamma_t \in \sigma_b(A)$ die Gleichheit $\gamma_t = \im k\beta$.
+Zusammen mit der Beschränktheit ergibt das aber nur das Bekannte: $\sigma_b(A) = \{s(A)\}$.
+\end{bemerkung}
+
+\section{Warum sich die Methode nicht direkt überträgt}
+
+Alle drei Bausteine (A)--(C) leben auf dem Kreis $r(T)\T$.
+
+\paragraph{Zu (A).}
+Für Generatoren bräuchte man die folgende Aussage, für die wir kein Argument sehen:
+
+\begin{problem}\label{prob:vererbung}
+Seien $\mathcal{S} = (S(t))_{t\ge0}$ und $\TT = (T(t))_{t\ge0}$ positive Halbgruppen mit Generatoren $B$ bzw.\ $A$ auf einem Banachverband, $0 \le S(t) \le T(t)$ für alle $t \ge 0$ und $s(B) = s(A)$.
+Gilt dann $\sigma_b(B) \subseteq \sigma_b(A)$?
+\end{problem}
+
+Der Umweg über die Resolventen hilft nicht: Für reelles $\lambda > s(A)$ ist zwar $0 \le R(\lambda,B) \le R(\lambda,A)$ und $r(R(\lambda,B)) = r(R(\lambda,A)) = (\lambda - s(A))^{-1}$, aber ein Punkt $s(A) + \im\beta$ mit $\beta \neq 0$ wird auf $(\lambda - s(A) - \im\beta)^{-1}$ abgebildet, und dieser Punkt liegt im \emph{Inneren} der Spektralkreisscheibe.
+Auf dem Kreis sieht man von $\sigma_b(A)$ nur $s(A)$ selbst.
+
+\paragraph{Zu (B).}
+Die Mittelung liefert hier
+\[
+  S_n(t) = \sum_{k} p_{n,k}\, \eu^{-\im k\beta t}\, U^{-k}T(t)U^{k}
+\]
+(mit $\lambda = \eu^{\im\beta t}$), und das ist für kein $n \ge 1$ eine Halbgruppe, da die Phase von $t$ abhängt.
+Die naheliegende Generatorvariante ist
+\[
+  B_n \coloneqq \sum_{k} p_{n,k}\, A_k, \qquad A_k \coloneqq U^{-k}AU^{k} - \im k\beta .
+\]
+Jedes $A_k$ erzeugt $\eu^{-\im k\beta t}U^{-k}T(t)U^k$, und diese Halbgruppen sind durch $\TT$ modulus-dominiert: $|\eu^{-\im k\beta t}U^{-k}T(t)U^k x| \le T(t)|x|$.
+Mit $\overline{U}\,{=}\,U^{-1}$ (vgl.\ \cite[Proposition~A.3]{dobrick}) ist $\overline{A_k} = A_{-k}$; wegen $p_{n,k} = p_{n,-k}$ ist $B_n$ reell.
+Falls der Abschluss von $B_n$ ein Generator ist (die Definitionsbereiche $U^{-k}D(A)$ sind im Allgemeinen verschieden), liefert die Trotter-Formel eine durch $\TT$ modulus-dominierte, reelle Halbgruppe.
+Es fehlen jedoch die Positivität (Dobricks Realteil-Argument arbeitet mit dem Operator $\Phi(Q)$, nicht mit Exponentialen von Summen) und die Kritikalität $s(B_n) = s(A)$.
+
+\paragraph{Zu (C).}
+Für Halbgruppen muss man sich in der Ultrapotenz auf den Stetigkeitsteil $E^{\mathfrak{U}}_{\TT}$ einschränken (die Halbgruppen-$\mathcal{F}$-Produkte in Part-I, Abschnitt~1.3.7 von \cite{ln}); dort wird $\im\beta$ ein Eigenwert.
+Im Bidual geht jedoch die starke Stetigkeit verloren, und gerade dort wird der Torsionsoperator konstruiert.
+Auf dem Hauptideal $E_{|z|} \cong C(K)$ existiert der Signum-Operator zwar auch ohne Dedekind-Vollständigkeit (wie in Part-III, Theorem~3.2.2 von \cite{ln}), dort benutzt man aber $T(t)|z| = |z|$, was hier nicht vorliegt.
+
+\section{Der Fall \texorpdfstring{$C(K)$}{C(K)}}
+
+Für $C(K)$ liegt zunächst folgender Ansatz nahe: Man wählt ein strikt positives invariantes Maß $\varphi$ und hofft, approximative Eigenvektoren $f_n$ zu $\im\beta \in \sigma_b(A)$ mit $\inf_n \varphi(|f_n|) > 0$ zu finden.
+Im $\mathcal{F}$-Produkt hätte dann der Grenzeigenvektor $h$ positive $\varphi$-Masse, woraus $T_{\mathcal{F}}(t)|h| = |h|$ und mit Part-II, Theorem~3.2.4 die Zyklizität folgen könnte.
+Das folgende Beispiel zeigt, dass dies nicht trägt.
+
+\begin{beispiel}\label{bsp:kreise}
+Sei $K \coloneqq \{0\} \cup \bigcup_{m \in \N} C_m \subseteq \R^2$ mit den konzentrischen Kreisen $C_m \coloneqq \{x \colon |x| = 1/m\}$; jedes $C_m$ ist offen-abgeschlossen in $K$.
+Der Fluss $\phi_t$ drehe $C_m$ mit Winkelgeschwindigkeit $\omega_m \coloneqq 1 + 1/m$ und halte $0$ fest.
+Dann ist $T(t)f \coloneqq f \circ \phi_t$ eine stark stetige Markov-Halbgruppe auf $C(K)$ mit $s(A) = 0$, und
+\[
+  \varphi \coloneqq \sum_{m \in \N} 2^{-m} \lambda_m \qquad (\lambda_m \text{ normiertes Bogenmaß auf } C_m)
+\]
+ist ein invariantes, strikt positives Wahrscheinlichkeitsmaß (jede Umgebung von $0$ enthält fast alle $C_m$).
+\begin{enumerate}[label=(\roman*)]
+\item $\im \in \sigma_b(A)$: Für $g_m \coloneqq \eu^{\im\theta}$ auf $C_m$ und $0$ sonst gilt $\|(\im - A)g_m\| = 1/m \to 0$.
+\item $\im \notin P\sigma(A)$: Auf $C(C_m)$ ist $\sigma(A) = \im\omega_m\Z \not\ni \im$, da $1/\omega_m = m/(m+1) \notin \Z$; im Fixpunkt $0$ ist $Af(0) = 0$.
+\item Jede Folge $(f_n)$ mit $\|f_n\| = 1$ und $(\im - A)f_n \to 0$ erfüllt $\varphi(|f_n|) \to 0$.
+Denn $K_M \coloneqq C_1 \cup \dots \cup C_M$ ist offen-abgeschlossen und invariant, auf $C(K_M)$ ist $\im \in \rho(A)$, also $\|\mathbf{1}_{K_M} f_n\| \le c_M \|(\im - A)f_n\| \to 0$ und daher $\limsup_n \varphi(|f_n|) \le \sum_{m > M} 2^{-m}$ für jedes $M$.
+\end{enumerate}
+Strikt positive Invarianz reicht also nicht: Die relevante Masse wandert in Bereiche, die $\varphi$ kaum sieht.
+\end{beispiel}
+
+Verzichtet man dagegen auf ein \emph{festes} invariantes Maß und nimmt zu jedem $f_n$ ein eigenes, nur fast invariantes Maß, so erhält man im kontraktiven Fall einen kurzen, elementaren Beweis der Zyklizität, ohne $\mathcal{F}$-Produkte und ohne Signum-Operatoren.
+Für $z \in \C$ sei $z^{[k]} \coloneqq |z|\,(z/|z|)^k$ ($k \in \Z$) und $0^{[k]} \coloneqq 0$.
+Die Abbildung $z \mapsto z^{[k]}$ ist Lipschitz-stetig mit einer Konstanten $L_k \le 1 + |k|\pi/2$, und für $|\mu| = 1$ gilt $(\mu z)^{[k]} = \mu^k z^{[k]}$.
+
+\begin{satz}\label{satz:kontraktiv}
+Sei $\TT$ eine positive Kontraktionshalbgruppe auf $C(K)$, d.\,h.\ $T(t) \ge 0$ und $\|T(t)\| = \|T(t)\mathbf{1}\| \le 1$, äquivalent $T(t)\mathbf{1} \le \mathbf{1}$, für alle $t \ge 0$.
+Dann ist $\sigma(A) \cap \im\R$ imaginär additiv zyklisch.
+Insbesondere ist $\sigma_b(A)$ zyklisch, wenn $s(A) = 0$ ist.
+
+Allgemeiner gilt: Ist $s(A) > -\infty$ und die reskalierte Halbgruppe $(\eu^{-s(A)t}T(t))_{t \ge 0}$ kontraktiv, so ist $\sigma_b(A)$ zyklisch.
+\end{satz}
+
+\begin{proof}
+Sei $\im\beta \in \sigma(A)$ und $k \in \Z$.
+Die allgemeinere Aussage folgt durch Anwendung auf die reskalierte Halbgruppe mit Generator $A - s(A)$.
+Wegen $\|T(t)\| \le 1$ ist $s(A) \le \omega_0 \le 0$; daher ist $\im\beta$ ein Randpunkt von $\sigma(A)$, also $\im\beta \in A\sigma(A)$.
+
+\emph{Schritt 1 (approximative Eigenvektoren).}
+Wähle $f_n \in D(A)$ mit $\|f_n\| = 1$ und $\varepsilon_n \coloneqq \|(A - \im\beta)f_n\| \to 0$, o.\,B.\,d.\,A.\ $\varepsilon_n > 0$.
+Wegen $T(t)f - \eu^{\im\beta t}f = \int_0^t \eu^{\im\beta(t-r)}T(r)(A - \im\beta)f \,\mathrm{d}r$ gilt $\|T(t)f_n - \eu^{\im\beta t}f_n\| \le t\varepsilon_n$.
+
+\emph{Schritt 2 (fast invariante Maße).}
+Wähle $x_n \in K$ mit $|f_n(x_n)| = 1$, setze $\tau_n \coloneqq \varepsilon_n^{-1/2}$ und
+\[
+  \psi_n \coloneqq \frac{1}{\tau_n}\int_0^{\tau_n} T(s)'\delta_{x_n} \,\mathrm{d}s \qquad (\text{schwach*-Integral}).
+\]
+Dann ist $\psi_n \ge 0$, $\psi_n(\mathbf{1}) \le 1$, $\|T(t)'\psi_n - \psi_n\| \le 2t/\tau_n$ und
+\[
+  \psi_n(|f_n|) = \frac{1}{\tau_n}\int_0^{\tau_n} \bigl(T(s)|f_n|\bigr)(x_n)\,\mathrm{d}s
+  \ge \frac{1}{\tau_n}\int_0^{\tau_n} \bigl|(T(s)f_n)(x_n)\bigr|\,\mathrm{d}s
+  \ge 1 - \tfrac{1}{2}\tau_n\varepsilon_n \longrightarrow 1 .
+\]
+
+\emph{Schritt 3 (duale Kandidaten).}
+Sei $g_n \coloneqq f_n^{[k]} \in C(K)$ und $\chi_n \coloneqq \overline{g_n}\,\psi_n \in C(K)'$.
+Dann ist $\|\chi_n\| \le 1$ und $\|\chi_n\| \ge \chi_n(g_n) = \psi_n(|f_n|^2) \ge \psi_n(|f_n|)^2 \to 1$.
+
+\emph{Schritt 4 (Kernabschätzung).}
+Fixiere $t \ge 0$, schreibe $T = T(t)$, $\mu = \eu^{\im\beta t}$, $(Tf)(x) = \int f\,\mathrm{d}\mu_x$ mit positiven Maßen $\mu_x$, $\mu_x(K) = (T\mathbf{1})(x) \le 1$, und $\delta \coloneqq \|T'\psi_n - \psi_n\|$.
+Für $\|f\| \le 1$ ist $\mu^k\chi_n(f) = \mu^k (T'\psi_n)(\overline{g_n}f) + O(\delta)$, also
+\begin{align*}
+  \bigl|(T'\chi_n - \mu^k\chi_n)(f)\bigr|
+  &\le \delta + \int\!\!\int \bigl|(\mu f_n(x))^{[k]} - f_n(y)^{[k]}\bigr| \,\mathrm{d}\mu_x(y)\,\mathrm{d}\psi_n(x) \\
+  &\le \delta + L_k \Bigl(\int\!\!\int |\mu f_n(x) - f_n(y)|^2 \,\mathrm{d}\mu_x(y)\,\mathrm{d}\psi_n(x)\Bigr)^{1/2},
+\end{align*}
+wobei im letzten Schritt die Cauchy--Schwarz-Ungleichung mit $\int\!\!\int \mathrm{d}\mu_x\,\mathrm{d}\psi_n \le 1$ benutzt wurde.
+Ausmultiplizieren ergibt mit $Tf_n = \mu f_n + e$, $\|e\| \le t\varepsilon_n$:
+\begin{align*}
+  \int |\mu f_n(x) - f_n(y)|^2 \,\mathrm{d}\mu_x(y)
+  &\le \bigl(T|f_n|^2\bigr)(x) - 2|f_n(x)|^2 + 2t\varepsilon_n + |f_n(x)|^2 \mu_x(K) \\
+  &\le \bigl(T|f_n|^2 - |f_n|^2\bigr)(x) + 2t\varepsilon_n .
+\end{align*}
+Integration gegen $\psi_n$ und $\psi_n(T|f_n|^2 - |f_n|^2) = (T'\psi_n - \psi_n)(|f_n|^2) \le \delta$ liefern
+\[
+  \|T(t)'\chi_n - \eu^{\im k\beta t}\chi_n\| \le \frac{2t}{\tau_n} + L_k\Bigl(\frac{2t}{\tau_n} + 2t\varepsilon_n\Bigr)^{1/2} \longrightarrow 0,
+\]
+gleichmäßig für $t$ in kompakten Intervallen.
+
+\emph{Schritt 5 (Schluss).}
+Angenommen $\lambda \coloneqq \im k\beta \in \rho(A)$.
+Für $\tau > 0$ sei $y_n \coloneqq \int_0^\tau \eu^{\lambda(\tau - s)}T(s)'\chi_n\,\mathrm{d}s$.
+Dann ist $y_n \in D(A')$ und $(A' - \lambda)y_n = T(\tau)'\chi_n - \eu^{\lambda\tau}\chi_n \to 0$, während nach Schritt~4 $\|y_n - \tau\eu^{\lambda\tau}\chi_n\| \to 0$, also $\liminf_n \|y_n\| \ge \tau$.
+Das widerspricht der Beschränktheit von $R(\lambda, A') = R(\lambda, A)'$.
+Also ist $\im k\beta \in \sigma(A)$.
+\end{proof}
+
+\begin{bemerkung}
+\begin{enumerate}[label=(\alph*)]
+\item Satz~\ref{satz:kontraktiv} ist inhaltlich nicht neu: Für beschränkte positive Halbgruppen mit $s(A) = 0$ wächst die Resolvente langsam, und Part-III, Theorem~3.2.10 mit Proposition~3.2.9\,(i) in \cite{ln} liefert die Zyklizität sogar auf beliebigen Banachverbänden.
+Neu ist der kurze, rein maßtheoretische Beweis.
+\item Die Kontraktivität geht genau zweimal ein: bei der Fast-Invarianz der Cesàro-Mittel (Schritt~2) und bei $\mu_x(K) \le 1$ (Schritt~4).
+\item Offen bleibt auf $C(K)$ damit der Fall $s(A) = \omega_0 = 0$ mit unbeschränkter Halbgruppe, in dem die Resolvente nicht langsam wächst und $s(A)$ kein Pol ist.
+\end{enumerate}
+\end{bemerkung}
+
+\section{Mögliche Ansätze}
+
+\begin{itemize}
+\item Der Kern ist Problem~\ref{prob:vererbung}, eine Vererbungsaussage für das Randspektrum von Generatoren.
+Gelänge sie, so könnte man versuchen, den Rest über $B_n$ und Trotter-Konstruktionen zu retten.
+\item Für $C(K)$ bietet sich eine Variante im Geist von Dobrick an: Man sucht zu einer unbeschränkten positiven Halbgruppe mit $s(A) = 0$ eine \emph{beschränkte} kritische Minorante $0 \le S(t) \le T(t)$ mit $s(B) = 0$.
+Für $S$ gilt die Zyklizität nach Satz~\ref{satz:kontraktiv} bzw.\ Part-III, Theorem~3.2.10; es bliebe die Vererbung $\sigma_b(B) \subseteq \sigma_b(A)$, also Problem~\ref{prob:vererbung} in der handlicheren Form mit beschränkter Minorante.
+Die Maße $\mu_x$ und $\psi_n$ aus dem Beweis von Satz~\ref{satz:kontraktiv} könnten dabei helfen.
+\end{itemize}
+
+\section{Zur Arbeit}
+
+Theorem~2.3 aus \cite{dobrick} ist bestechend einfach und nach unserer Prüfung korrekt, ebenso der Schluss $r(S_n) = 1$ im Beweis von Proposition~3.4 (über $S_1 \le (1-\tfrac1n)T + \tfrac1n S_n$ und Theorem~2.3).
+Die Anhänge wurden nicht im Detail nachgerechnet.
+Es handelt sich um einen arXiv-Preprint vom 7.~Oktober 2026, noch ohne Begutachtung; laut eigener Erklärung entstand er mit Unterstützung durch KI-Werkzeuge.
+Hält das Resultat, sollte es in den Updated Notes zu Part-III von \cite{ln} für den Fall eines einzelnen Operators erwähnt werden; die dortigen Aussagen zur offenen Halbgruppenfrage bleiben richtig.
+
+\begin{thebibliography}{9}
+\bibitem{abhn}
+W.~Arendt, C.\,J.\,K.~Batty, M.~Hieber, F.~Neubrander,
+\emph{Vector-valued Laplace Transforms and Cauchy Problems},
+2.~Aufl., Birkhäuser, Basel, 2011.
+
+\bibitem{dobrick}
+A.~Dobrick,
+\emph{On the cyclicity conjecture},
+arXiv:2610.10093v1 [math.FA], 7.~Oktober 2026.
+
+\bibitem{ln}
+R.~Nagel (Hrsg.),
+\emph{One-parameter Semigroups of Positive Operators},
+Lecture Notes in Mathematics 1184, Springer, Berlin, 1986; 2.~Aufl.\ in Vorbereitung.
+
+\bibitem{weis}
+L.~Weis,
+\emph{The stability of positive semigroups on $L_p$ spaces},
+Proc.\ Amer.\ Math.\ Soc.\ \textbf{123} (1995), 3089--3094.
+\end{thebibliography}
+
+\end{document}

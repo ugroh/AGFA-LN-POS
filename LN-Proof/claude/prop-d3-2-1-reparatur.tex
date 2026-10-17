@@ -1,0 +1,155 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,ngerman]{babel}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{mathtools}
+\usepackage{enumitem}
+\usepackage[a4paper,margin=2.6cm]{geometry}
+\usepackage[autostyle]{csquotes}
+\emergencystretch=3em
+\usepackage[hidelinks]{hyperref}
+
+\newtheorem{proposition}{Proposition}
+\newtheorem{theorem}[proposition]{Theorem}
+\theoremstyle{remark}
+\newtheorem{remark}[proposition]{Remark}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\im}{\mathrm{i}}
+\newcommand{\1}{\mathbf{1}}
+\newcommand{\RR}{\mathcal{R}}
+\newcommand{\TT}{\mathcal{T}}
+\newcommand{\Fix}[1]{\operatorname{Fix}(#1)}
+\newcommand{\Kern}[1]{\ker(#1)}
+\newcommand{\abs}[1]{\lvert #1\rvert}
+\newcommand{\eu}{\mathrm{e}}
+\newcommand{\ie}{i.e.}
+\newcommand{\WA}{W$^{*}$}
+
+\title{LNM 1184, Part-IV, Abschnitt~3.2:\\ Neufassung von Proposition~3.2.1 und Theorem~3.2.5}
+\author{Arbeitsnotiz}
+\date{17.~Oktober 2026}
+
+\begin{document}
+\maketitle
+
+\section*{1.\quad Anlass}
+
+Im Beweis von Proposition~3.2.1 (\texttt{part-d/chap-d3.tex}, \texttt{prop:d3-2.1}) wird für jede minimale Projektion $p_j$ des endlichdimensionalen Fixraums $N = \Fix{\RR'}$ gezeigt, dass der Fixraum auf $Mp_j$ zu $Nq_j$ mit $q_j = u_ju_j^{*} \in N$ isomorph ist, und anschließend über $j$ summiert.
+Dabei bleiben zwei Lücken:
+\begin{enumerate}[label=(\alph*)]
+\item Für Indizes $j$, zu denen es in $L_j = M_*p_j$ keinen Eigenvektor gibt, existiert kein $u_j$.
+\item Die Abschätzung $\sum_j \dim Nq_j \le \dim N$ ist nicht begründet; eine Begründung über Orthogonalität der $q_j$ scheidet aus (Gegenbeispiel in Remark~\ref{rem:schranke}).
+\end{enumerate}
+Lücke~(a) wird geschlossen, indem man im \emph{Prädual} nach den Räumen $p_jM_*$ zerlegt.
+Für~(b) steht nur die grobe Schranke $\dim Nq_j \le \dim N$ zur Verfügung.
+
+\textbf{Entscheidung:} Die Aussagen werden auf eine gleichmäßige Schranke $m$ für die Dimensionen reduziert (insbesondere sind alle Räume endlichdimensional); die konkrete Abschätzung $m = n\,d \le d^{2}$, die der Beweis liefert, steht in einer anschließenden Bemerkung.
+Das genügt für alle Anwendungen im Buch (Lemma~3.2.2, Theorem~3.2.5, Proposition~4.3.10, Theorem~4.4.4, Corollary~4.4.5).
+
+\section*{2.\quad Neuer Buchtext}
+
+\selectlanguage{english}
+
+\begin{proposition}[Proposition~3.2.1, new version]\label{prop:neu}
+Let $\RR$ be an identity preserving pseudo-resolvent of Schwarz type on $D = \{\lambda \in \C \colon \Re(\lambda) > 0\}$ with values in the predual of a \WA-algebra $M$.
+If\/ $\Fix{\lambda R(\lambda)}$ is finite dimensional for some $\lambda \in D$, then there exists $m \in \N$ such that
+\[
+  \dim \Fix{(\gamma - \im\alpha)R(\gamma)} \le m \qquad (\gamma \in D,\ \alpha \in \R).
+\]
+In particular, all these fixed spaces are finite dimensional.
+\end{proposition}
+
+\begin{proof}
+By Remark~4.3.2 we may assume without loss of generality that there exists a faithful family of\/ $\RR$-invariant normal states on $M$.
+In particular, the fixed space $N$ of the adjoint pseudo-resolvent $\RR'$ is a \WA-subalgebra of\/ $M$ with $\1 \in N$ (Lemma~3.1.1\,(ii)), and $d \coloneqq \dim N = \dim \Fix{\lambda R(\lambda)} < \infty$.
+Hence there exist a natural number $n \le d$ and minimal, mutually orthogonal projections $p_1, \dots, p_n$ in $N$ such that $\sum_{j=1}^{n} p_j = \1$.
+
+For $a \in M$ and $\psi \in M_*$ we write $(a\psi)(y) \coloneqq \psi(ya)$ and $(\psi a)(y) \coloneqq \psi(ay)$ $(y \in M)$; note that $(a\psi)^{*} = \psi^{*}a^{*}$.
+
+\emph{Step 1.}
+For $\mu \in \R_{+}$ the map $\mu R(\mu)'$ is an identity preserving Schwarz map, and Lemma~3.1.1\,(ii) yields
+$R(\mu)'(xy) = xR(\mu)'(y)$ and, by taking adjoints, $R(\mu)'(yx) = R(\mu)'(y)x$ for all $x \in N$ and $y \in M$.
+Given $\lambda \in D$ choose $\mu > \abs{\lambda}^{2}/(2\Re\lambda)$.
+Then $\abs{\lambda - \mu} < \mu$, and since $\|R(\mu)\| \le 1/\mu$, the series $R(\lambda) = \sum_{k \ge 0} (\mu - \lambda)^{k} R(\mu)^{k+1}$ converges in norm.
+Hence the above module property holds for $R(\lambda)'$ for every $\lambda \in D$.
+
+\emph{Step 2.}
+Fix $\gamma \in D$, $\alpha \in \R$ and let $F \coloneqq \Fix{(\gamma - \im\alpha)R(\gamma)}$.
+For $\psi \in M_*$ and $y \in M$ we obtain from Step~1
+\[
+  \langle R(\gamma)(p_j\psi), y\rangle = \psi\bigl(R(\gamma)'(y)\,p_j\bigr) = \psi\bigl(R(\gamma)'(yp_j)\bigr) = \langle p_jR(\gamma)\psi, y\rangle .
+\]
+Thus the closed subspaces $p_jM_*$ are $\RR$-invariant and $p_jF \subseteq F$ $(1 \le j \le n)$.
+Since $\psi = \sum_{j} p_j\psi$ for every $\psi \in M_*$, it follows that
+\[
+  F = \bigoplus_{j=1}^{n} F_j , \qquad F_j \coloneqq F \cap p_jM_* .
+\]
+
+\emph{Step 3.}
+Let $1 \le j \le n$ with $F_j \ne \{0\}$ and choose $0 \ne \phi \in F_j$.
+Then $\phi^{*} \in M_*p_j = L_j$ and $\phi^{*} \in \Fix{(\bar\gamma + \im\alpha)R(\bar\gamma)}$.
+Applying the argument of the original proof (with $-\alpha$ instead of\/ $\alpha$) to $\psi \coloneqq \phi^{*}/\|\phi\|$ with polar decomposition $\psi = u\abs{\psi}$, we obtain $s(\abs{\psi}) = p_j$, $q_j \coloneqq s(\abs{\psi^{*}}) = uu^{*} \in N$ and
+\[
+  \Fix{(\gamma - \im\alpha)R(\gamma)'} \cap Mp_j = \{\, yu \colon y \in Nq_j \,\},
+\]
+where $y \mapsto yu$ is a bijection from $Nq_j$ onto this space with inverse $x \mapsto xu^{*}$.
+Since $p_jM_*$ is invariant under $(\gamma - \im\alpha)R(\gamma)$ and $Mp_j$ is its dual space via $\langle p_j\psi, x\rangle = \psi(xp_j)$, the restriction of\/ $(\gamma - \im\alpha)R(\gamma)'$ to $Mp_j$ is the adjoint of the restriction of\/ $(\gamma - \im\alpha)R(\gamma)$ to $p_jM_*$.
+By Lemma~3.1.6, applied to the restricted pseudo-resolvent, we conclude
+\[
+  \dim F_j \le \dim \bigl(\Fix{(\gamma - \im\alpha)R(\gamma)'} \cap Mp_j\bigr) = \dim Nq_j \le d .
+\]
+
+\emph{Step 4.}
+By Steps~2 and~3, $F$ is the direct sum of at most $n$ subspaces of dimension at most $d$, hence $\dim F \le n\,d$.
+Since $n$ and $d$ do not depend on $\gamma$ and $\alpha$, the assertion holds with $m \coloneqq n\,d$.
+\end{proof}
+
+\begin{remark}\label{rem:schranke}
+\begin{enumerate}[label=(\roman*), wide, labelindent=0pt]
+\item The proof shows that one can choose $m = n \dim \Fix{\lambda R(\lambda)}$, \ie
+\[
+  \dim \Fix{(\gamma - \im\alpha)R(\gamma)} \le n\,\dim \Fix{\lambda R(\lambda)} \le \bigl(\dim \Fix{\lambda R(\lambda)}\bigr)^{2},
+\]
+where $n$ is the number of minimal projections in a decomposition of the unit of\/ $\Fix{\RR'}$ into mutually orthogonal minimal projections.
+If\/ $\Fix{\RR'}$ is commutative, then $n = \dim \Fix{\RR'}$; if it is a factor, then $n = (\dim\Fix{\RR'})^{1/2}$.
+
+\item We do not know whether the sharper estimate $\dim \Fix{(\gamma - \im\alpha)R(\gamma)} \le \dim \Fix{\lambda R(\lambda)}$ holds in general.
+It cannot be obtained by summing $\dim Nq_j$ over orthogonal projections $q_j$, since the $q_j$ need not be orthogonal:
+for $M = M_{3}(\C)$ and the semigroup $\mathrm{Ad}(\mathrm{diag}(1, \eu^{\im t}, \eu^{\im t}))$ one has $N = \C \oplus M_{2}(\C)$, and for the eigenvalue with eigenspace $\operatorname{span}\{e_{12}, e_{13}\}$ one obtains $q_2 = q_3 = e_{11}$.
+In this example the sharper estimate holds ($2 \le 5$); in finite dimensions it follows from the Cauchy--Schwarz inequality $\sum_b k_b k_{\sigma(b)} \le \sum_b k_b^{2}$ over the matrix blocks $M_{k_b}(\C)$ of\/ $N$.
+\end{enumerate}
+\end{remark}
+
+\begin{theorem}[Theorem~3.2.5, new version]
+Let $\TT$ be an identity preserving semigroup of Schwarz type with generator $A$ on the predual of a \WA-algebra $M$.
+If\/ $\TT$ is uniformly ergodic with finite dimensional fixed space, then every $\gamma \in \sigma(A) \cap \im\R$ is a pole of the resolvent $R(.,A)$, and there exists $m \in \N$ such that $\dim \Kern{\gamma - A} \le m$ for all $\gamma \in \im\R$.
+\end{theorem}
+
+\begin{proof}
+Let $D = \{\lambda \in \C \colon \Re(\lambda) > 0\}$ and $\RR$ the $M_{*}$-valued pseudo-resolvent of Schwarz type induced by $R(.,A)$ on $D$.
+Then $P = \lim_{\mu \downarrow 0}\mu R(\mu)$ exists in the uniform operator topology.
+Since $P(M_{*}) = \Fix{\TT}$, we obtain $\widehat{P}(\widehat{M_{*}}) = \Fix{\widehat{\TT}}$ and $\dim \Fix{\TT} = \dim \Fix{\widehat{\TT}} < \infty$, where $\widehat{P}$ is the canonical extension of\/ $P$ onto $(M_{*})^{\wedge}$.
+Since $\widehat{P} = \lim_{\mu \downarrow 0} \mu R(\mu)^{\wedge}$, the space $\Fix{\mu\widehat{R}(\mu)} = \widehat{P}\bigl((M_{*})^{\wedge}\bigr)$ is finite dimensional, and Proposition~3.2.1 yields $m \in \N$ such that
+\[
+  \dim \Fix{(\lambda - \im\alpha)\widehat{R}(\lambda)} \le m \qquad (\lambda \in D,\ \alpha \in \R).
+\]
+Therefore every $\gamma \in \sigma(A) \cap \im\R$ is a pole of\/ $R(.,A)$ by Lemma~3.2.2, and Lemma~3.2.2\,(ii) gives $\dim\Kern{\im\alpha - A} = \dim \Fix{(\lambda - \im\alpha)R(\lambda)} = \dim \Fix{(\lambda - \im\alpha)\widehat{R}(\lambda)} \le m$ whenever this space is non-zero.
+\end{proof}
+
+\selectlanguage{ngerman}
+\section*{3.\quad Übersicht der Änderungen in \texttt{chap-d3.tex}}
+
+\begin{itemize}
+\item \textbf{Proposition~3.2.1:} Statt der Dimensionsungleichung eine \emph{gleichmäßige} Schranke: Es gibt $m \in \N$ mit $\dim\Fix{(\gamma - \im\alpha)R(\gamma)} \le m$ für alle $\gamma \in D$, $\alpha \in \R$; Beweis wie oben (Schritte~1--4).
+\item \textbf{Neue Bemerkung} direkt nach Proposition~3.2.1: Abschätzung $\le n\,d \le d^{2}$ und offene Frage nach $\le d$ (Remark~\ref{rem:schranke}).
+\item \textbf{Theorem~3.2.5:} \enquote{$\dim\Kern{\gamma - A} \le \dim\Fix{\TT}$} ersetzt durch \enquote{there exists $m \in \N$ such that $\dim\Kern{\gamma - A} \le m$ for all $\gamma \in \im\R$}; im Beweis wird die Schranke aus Proposition~3.2.1 mit Lemma~3.2.2\,(ii) übertragen.
+\item \textbf{Nicht betroffen:} Lemma~3.2.2, Proposition~4.3.10, Theorem~4.4.4 und Corollary~4.4.5, da dort nur die Endlichkeit benutzt wird.
+\item \textbf{Nummerierung:} Die neue Bemerkung sollte im Buch \emph{ohne Nummer} gesetzt werden. Eine nummerierte Bemerkung würde Lemma~3.2.2 und alle folgenden Aussagen in Abschnitt~3.2 um eins verschieben, und die Korrekturlisten beziehen sich auf die bisherigen Nummern.
+\end{itemize}
+
+\end{document}
