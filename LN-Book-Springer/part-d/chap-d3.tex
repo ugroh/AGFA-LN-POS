@@ -805,139 +805,118 @@ If\/ $\TT$ is the irreducible semigroup of Schwarz type on the predual of\/ $\BH
 The aim of this section is the study of spectral properties of semigroups which are uniformly ergodic, identity preserving and of Schwarz type.
 For the basic theory of uniformly ergodic semigroups on Banach spaces we refer to \textcite{dunfordschwartz:1958}.
 
-Our first result yields an estimate for the dimension of the eigenspaces pertaining to eigenvalues of a pseudo-resolvent.
+Our first result shows that the eigenspaces pertaining to eigenvalues of a pseudo-resolvent have uniformly bounded dimension.
 % --
 \begin{proposition}\label{prop:d3-2.1}
 Let $\RR$ be an identity preserving pseudo-resolvent of Schwarz type on $D = \{\lambda \in \C \colon \Re(\lambda) > 0\}$ with values in the predual of a \WA-algebra $M$. 
-If\/ $\Fix{\lambda R(\lambda)}$ is finite dimensional for some $\lambda \in D$, then
+If\/ $\Fix{\lambda R(\lambda)}$ is finite dimensional for some $\lambda \in D$, then there exists $m \in \N$ such that
 %% --
 \[
-\dim \Fix{\left( \gamma - \im\alpha \right)R(\gamma)} \leq \dim \Fix{\lambda R(\lambda)}
+\dim \Fix{\left( \gamma - \im\alpha \right)R(\gamma)} \leq m
 \]
 %% --
 for all $\gamma \in D$ and $\alpha \in \R$.
+In particular, all these fixed spaces are finite dimensional.
 \end{proposition}
 %% --
 \begin{proof}
-By Remark~\ref{rem:d4-3.2}, we may assume without loss of generality that there exists a faithful family of\/ $\RR$-invariant normal states on $M$.
-In particular the fixed space $N$ of the adjoint pseudo-resolvent $\RR'$ is a \WA-subalgebra of\/ $M$ with $\1 \in N$ (by Lemma~\ref{lem:d3-1.1}\,\ref{item:d3-1.1-ii}).
-Since $N$ is finite dimensional, there exist a natural number $n$ and a set $P \coloneq \{p_{1}, \ldots, p_{n}\}$ of minimal, mutually orthogonal projections in $N$ such that $\sum_{k=1}^{n} p_{k} = \1$.
-These projections are also mutually orthogonal in $M$ with sum $\1$.
-
-Let $R_{j}$ be the $\sigma(M,M_{*})$-closed right ideal $p_{j}M$ and $L_{j}$ the closed left invariant subspace $M_{*}p_{j}$ for $(1 \leq j \leq n)$.
-Since the map $\mu R(\mu)'$, $\mu \in \R_{+}$ is an identity preserving Schwarz map, we obtain from Lemma~\ref{lem:d3-1.1}\,\ref{item:d3-1.1-ii} that for all $x \in N$ and $y \in M$,
+Recall that by the resolvent equation the fixed space of\/ $(\gamma - \im\alpha)R(\gamma)$, as well as that of its adjoint, does not depend on $\gamma \in D$.
+By Remark~\ref{rem:d4-3.2}, we may assume without loss of generality that there exists a faithful family $\Phi$ of\/ $\RR$-invariant normal states on $M$.
+Since $\Phi \subseteq \Fix{\lambda R(\lambda)}$ and this space is finite dimensional, there are $\phi_{1}, \ldots, \phi_{k} \in \Phi$ spanning the linear hull of\/ $\Phi$, and $\phi_{0} \coloneq \frac{1}{k}\sum_{i=1}^{k}\phi_{i}$ is a faithful $\RR$-invariant normal state on $M$.
+The fixed space $N$ of the adjoint pseudo-resolvent $\RR'$ is a \WA-subalgebra of\/ $M$ with $\1 \in N$, and for $\mu \in \R_{+}$ we have
 %% --
 \[
-	\mu R(\mu)'(xy) = x(\mu R(\mu)'y) .
-\]
-%% --
-In particular, $R_{j}$, \resp $L_{j}$ are invariant under $\RR'$, respectively, $\RR$.
-Furthermore, if\/ $\psi \in L_{j}$ with polar decomposition $\psi = u\abs{\psi}$, then $u^{*}u \leq s(\abs{\psi}) \leq p_{j}$.
-Consequently, $\abs{\psi} \in L_{j}$.
-
-Let now $\alpha \in \R$ and suppose that there exists $\psi_{\alpha} \in L_{j}$ of norm $ 1 $, $\psi_{\alpha} = u_{\alpha}\abs{\psi_{\alpha}}$, such that
-%% --
-\[
-	\psi_{\alpha} \in \Fix  {(\lambda - \im\alpha)R(\lambda)} , \lambda \in D .
-\]
-%% --
-Since $\lambda R(\lambda)\abs{\psi_{\alpha}} = \abs{\psi_{\alpha}}$ (Proposition~\ref{prop:d3-1.4}), we obtain
-%% --
-\[
-	\mu R(\mu)'(\1-s(\abs{\psi_{\alpha}})) \leq \1-s(\abs{\psi_{\alpha}}) , \mu \in \R_{+} .
-\]
-%% --
-From the existence of a faithful family of\/ $\RR$-invariant normal states and since $\RR'$ is identity preserving, it follows that
-%% --
-\[
-	\mu R(\mu)'s(\abs{\psi_{\alpha}}) = s(\abs{\psi_{\alpha}}) .
-\]
-%% --
-Thus $s(\abs{\psi_{\alpha}}) \leq p_{j}$ and even $s(\abs{\psi_{\alpha}}) = p_{j}$ by the minimality property of\/ $p_{j}$.
-
-On the other hand, $\psi_{\alpha}^{*} \in \Fix  {(\lambda + \im\alpha)R(\lambda)}$.
-As above we obtain
-%% --
-\[
-\mu R(\mu)'s(\abs{\psi_{\alpha}^{*}}) = s(\abs{\psi_{\alpha}^{*}}) .
-\]
-%% --
-Consequently, the closed left ideals $Ms(\abs{\psi_{\alpha}^{*}})$ and $Ms(\abs{\psi_{\alpha}})$ are $\RR'$-invariant.
-
-Next fix $\mu \in \R_{+}$, let $S \coloneq \mu R(\mu - \im\alpha)'$ and $T = \mu R(\mu)'$.
-Then 
-%
-\[
-	(Sx)(Sx)^{*} \leq T(xx^{*}), \,
-	S_{*}(\psi_{\alpha}^{*}) = \psi_{\alpha}^{*}, \,
-	T_{*}(\abs{\psi_{\alpha}^{*}}) = \abs{\psi_{\alpha}^{*}}, 
-\]
-%
-and $T$ is an identity preserving Schwarz map.
-Since $s(\abs{\psi_{\alpha}^{*}})M$ is $T$-invariant, the assumptions of Lemma~\ref{lem:d3-1.2} are fulfilled and we obtain for every $x \in M$
-%% --
-\[
-	S(x)u_{\alpha}^{*} = T(xu_{\alpha}^{*}) .
-\]
-%% --
-The closed left ideal $Mp_{j}$ is $S$-invariant, therefore it follows
-%% --
-\[
-S(x) = T(xu_{\alpha}^{*})u_{\alpha} \, , \, x \in Mp_{j}
-\]
-%% --
-(see Remark~\ref{rem:d3-1.3}).
-Since $u_{\alpha}$ does not depend on $\mu \in \R_{+}$, we obtain for all $\mu \in \R_{+}$
-%% --
-\[
-\mu R(\mu-\im\alpha)'x = \mu R(\mu)'(xu_{\alpha}^{*})u_{\alpha}.
-\]
-%% --
-Consequently, the holomorphic functions 
-%
-\[
-	(\mu \mapsto \mu R(\mu)'(x u_{\alpha}^{*})u_{\alpha})
-	\quad \text{and} \quad
-	(\mu \mapsto \mu R(\mu-\im\alpha)'x)
-\]
-%
-coincide on $\R_{+}$ from which we conclude
-%% --
-\[
-\lambda R(\lambda-\im\alpha)'x = \lambda R(\lambda)'(xu_{\alpha}^{*})u_{\alpha}
-\]
-%% --
-for every $\lambda \in D$ and all $x \in Mp_{j}$.
-
-Since the map $(y \mapsto y u_{\alpha})$ is a continuous bijection from $M(u_{\alpha}u_{\alpha}^{*})$ onto $Mp_{j}$ with inverse $(y \mapsto y u_{\alpha}^{*})$, we can deduce that
-%% --
-\begin{align*}
-\dim \Fix{(\lambda+\im\alpha)R(\lambda)'|Mp_{j}} 
-	&= \dim \Fix{\lambda R(\lambda)'|M(u_{\alpha}u_{\alpha}^{*})}  \\
- 	&\leq \dim \Fix  {\RR'} .
-\end{align*}
-%% --
-Since 
-%
-\[
-	\bigoplus_{j=1}^{n} Mp_{j} = M 
+	R(\mu)'(xy) = xR(\mu)'(y)
 	\quad \text{and} \quad 
-	\bigoplus_{j=1}^{n} L_{j} = M_{*},
+	R(\mu)'(yx) = R(\mu)'(y)x \qquad (x \in N,\ y \in M)
 \]
-%
-we obtain
 %% --
-\begin{align*}
-\dim \Fix{(\lambda - \im\alpha)R(\lambda)'} &= \dim \Fix{(\lambda + \im\alpha)R(\lambda)'} \leq \dim \Fix{\lambda R(\lambda)'} \\
-		&= \dim \Fix  {\lambda R(\lambda)} ,
-\end{align*}
+by Lemma~\ref{lem:d3-1.1}\,\ref{item:d3-1.1-ii} (the second identity follows from the first by taking adjoints).
+In particular, for $x \in N$ the normal functional $\phi_{0}(\,\cdot\,x^{*})$ belongs to $\Fix{\lambda R(\lambda)}$, and $\phi_{0}(xx^{*}) > 0$ if\/ $x \neq 0$.
+Hence $x \mapsto \phi_{0}(\,\cdot\,x^{*})$ is a conjugate linear injection from $N$ into $\Fix{\lambda R(\lambda)}$, and $d \coloneq \dim N$ is finite.
+Thus there exist a natural number $n \leq d$ and minimal, mutually orthogonal projections $p_{1}, \ldots, p_{n}$ in $N$ such that $\sum_{j=1}^{n} p_{j} = \1$.
+For $a \in M$ and $\psi \in M_{*}$ we write $(a\psi)(y) \coloneq \psi(ya)$ and $(\psi a)(y) \coloneq \psi(ay)$ $(y \in M)$; note that $(a\psi)^{*} = \psi^{*}a^{*}$.
+
+\emph{Step 1.}
+Given $\lambda \in D$ choose $\mu > \abs{\lambda}^{2}/(2\Re(\lambda))$.
+Then $\abs{\lambda - \mu} < \mu$, and since $\|R(\mu)\| \leq 1/\mu$, the series $R(\lambda) = \sum_{k \geq 0} (\mu - \lambda)^{k}R(\mu)^{k+1}$ converges in norm.
+Therefore the two module identities above hold for $R(\lambda)'$ for every $\lambda \in D$.
+
+\emph{Step 2.}
+Fix $\gamma \in D$ and $\alpha \in \R$ and let $F \coloneq \Fix{(\gamma - \im\alpha)R(\gamma)}$.
+For $\psi \in M_{*}$ and $y \in M$ we obtain from Step~1
 %% --
-where the first equality holds since $x \mapsto x^{*}$ maps $\Kern{\im\alpha - A'}$ onto $\Kern{-\im\alpha - A'}$,
+\[
+	\langle R(\gamma)(p_{j}\psi), y \rangle 
+	= \psi\bigl(R(\gamma)'(y)\,p_{j}\bigr) 
+	= \psi\bigl(R(\gamma)'(yp_{j})\bigr) 
+	= \langle p_{j}R(\gamma)\psi, y \rangle .
+\]
 %% --
-% -- d3-16
+Hence the closed subspaces $p_{j}M_{*}$ are $\RR$-invariant and $p_{j}F \subseteq F$ $(1 \leq j \leq n)$.
+Since $\psi = \sum_{j} p_{j}\psi$ for every $\psi \in M_{*}$, it follows that
 %% --
-and the assertion follows from Lemma~\ref{lem:d3-1.6}.
+\[
+	F = \bigoplus_{j=1}^{n} F_{j}, \qquad F_{j} \coloneq F \cap p_{j}M_{*} .
+\]
+%% --
+
+\emph{Step 3.}
+Let $1 \leq j \leq n$ such that $F_{j} \neq \{0\}$ and choose $0 \neq \phi \in F_{j}$.
+Then $\psi \coloneq \phi^{*}/\|\phi\|$ belongs to the closed left invariant subspace $L_{j} \coloneq M_{*}p_{j}$ and to $\Fix{(\lambda + \im\alpha)R(\lambda)}$ $(\lambda \in D)$.
+Let $\psi = u\abs{\psi}$ be its polar decomposition.
+Since $\psi \in L_{j}$, we have $u^{*}u = s(\abs{\psi}) \leq p_{j}$.
+By Proposition~\ref{prop:d3-1.4} we have $\lambda R(\lambda)\abs{\psi} = \abs{\psi}$ and $\lambda R(\lambda)\abs{\psi^{*}} = \abs{\psi^{*}}$, hence $\mu R(\mu)'(\1 - s(\abs{\psi})) \leq \1 - s(\abs{\psi})$ and $\mu R(\mu)'(\1 - s(\abs{\psi^{*}})) \leq \1 - s(\abs{\psi^{*}})$ for $\mu \in \R_{+}$ (see Section~\ref{sec:d1-3}).
+Since $\RR'$ is identity preserving and $\phi_{0}$ is faithful and invariant, equality holds, \ie $s(\abs{\psi})$ and $q_{j} \coloneq s(\abs{\psi^{*}}) = uu^{*}$ belong to $N$.
+By the minimality of\/ $p_{j}$ we obtain $u^{*}u = s(\abs{\psi}) = p_{j}$.
+
+Now fix $\mu \in \R_{+}$ and let $S \coloneq \mu R(\mu + \im\alpha)'$ and $T \coloneq \mu R(\mu)'$.
+Then $(Sx)(Sx)^{*} \leq T(xx^{*})$ $(x \in M)$, $T$ is an identity preserving Schwarz map, $S_{*}\psi^{*} = \psi^{*}$ and $T_{*}\abs{\psi^{*}} = \abs{\psi^{*}}$, where $\psi^{*} = u^{*}\abs{\psi^{*}}$ is the polar decomposition of\/ $\psi^{*}$.
+Since $q_{j}M$ is $T$-invariant, Lemma~\ref{lem:d3-1.2} yields
+%% --
+\[
+	S(x)u^{*} = T(xu^{*}) \qquad (x \in M) .
+\]
+%% --
+Since $Mp_{j}$ is $S$-invariant by Step~1 and $x = xu^{*}u$ for $x \in Mp_{j}$, we obtain
+%% --
+\[
+	S(x) = S(x)u^{*}u = T(xu^{*})u \qquad (x \in Mp_{j}) .
+\]
+%% --
+If\/ $y \in Nq_{j}$, then $x \coloneq yu \in Mp_{j}$ satisfies $S(x) = T(y)u = x$.
+Conversely, if\/ $x \in Mp_{j}$ and $S(x) = x$, then $y \coloneq xu^{*} \in Mq_{j}$ satisfies $y = T(y)uu^{*} = T(yq_{j}) = T(y)$, \ie $y \in Nq_{j}$ and $x = yu$.
+Therefore $y \mapsto yu$ is a bijection from $Nq_{j}$ onto $\Fix{S} \cap Mp_{j}$ with inverse $x \mapsto xu^{*}$, and $\Fix{S} = \Fix{(\gamma - \im\alpha)R(\gamma)'}$.
+
+Finally, $p_{j}M_{*}$ is $\RR$-invariant with dual space $Mp_{j}$ (via $\langle p_{j}\psi, x \rangle = \psi(xp_{j})$), and the restriction of\/ $R(\gamma)'$ to $Mp_{j}$ is the adjoint of the restriction of\/ $R(\gamma)$ to $p_{j}M_{*}$.
+Applying Lemma~\ref{lem:d3-1.6} to the restricted pseudo-resolvent we conclude
+%% --
+\[
+	\dim F_{j} 
+	\leq \dim \bigl( \Fix{(\gamma - \im\alpha)R(\gamma)'} \cap Mp_{j} \bigr) 
+	= \dim Nq_{j} 
+	\leq d .
+\]
+%% --
+
+\emph{Step 4.}
+By Steps~2 and~3, $F$ is the direct sum of at most $n$ subspaces of dimension at most $d$.
+Since $n$ and $d$ do not depend on $\gamma$ and $\alpha$, the assertion holds with $m \coloneq n\,d$.
 \end{proof}
+%% --
+\begin{remark*}
+%% --
+\begin{enumerate}[\upshape (i), wide, labelindent=.25em]
+\item
+The proof shows that one can choose $m = n \dim \Fix{\lambda R(\lambda)} \leq \bigl(\dim \Fix{\lambda R(\lambda)}\bigr)^{2}$, where $n$ is the number of minimal projections in a decomposition of the unit of\/ $\Fix{\RR'}$ into mutually orthogonal minimal projections.
+If\/ $\Fix{\RR'}$ is commutative, then $n = \dim \Fix{\RR'}$; if it is a factor, then $n = (\dim \Fix{\RR'})^{1/2}$.
+
+\item
+We do not know whether $m = \dim \Fix{\lambda R(\lambda)}$ is always possible.
+The projections $q_{j}$ in the proof need not be mutually orthogonal: for $M = M_{3}(\C)$ and the semigroup $\bigl(\mathrm{Ad}(\mathrm{diag}(1, \eu^{\im t}, \eu^{\im t}))\bigr)_{t \geq 0}$ one has $\Fix{\RR'} = \C \oplus M_{2}(\C)$, and for the eigenvalue with eigenspace $\operatorname{span}\{e_{12}, e_{13}\}$ one obtains $q_{2} = q_{3} = e_{11}$.
+In this example the sharper estimate holds, and in finite dimensions it follows from the Cauchy--Schwarz inequality over the matrix blocks of\/ $\Fix{\RR'}$.
+\end{enumerate}
+\end{remark*}
 %% --
 Before going on let us recall the basic facts of the \emph{ultrapower} $\widehat{E}$ of a Banach space $E$ with respect to some free ultrafilter $\mathfrak{U}$ on $\N $ (compare Part-I, Section~\ref{subsec:a1-3.7}).
 If\/ $\ell^{\infty}(E)$ is the Banach space of all bounded functions on $\N $ with values in $E$, then
@@ -1201,7 +1180,7 @@ From the construction the following is obvious: If\/ $T$ is an identity preservi
 %% --
 \begin{theorem}\label{thm:d3-2.5}
 Let $\TT$ be an identity preserving semigroup of Schwarz type with generator $A$ on the predual of a \WA-algebra $M$.
-If\/ $\TT$ is uniformly ergodic with finite dimensional fixed space, then every $\gamma \in \sigma(A) \cap \im\R$ is a pole of the resolvent $R(.,A)$ and $\dim \Kern{\gamma - A} \leq \dim \Fix{\TT}$.
+If\/ $\TT$ is uniformly ergodic with finite dimensional fixed space, then every $\gamma \in \sigma(A) \cap \im\R$ is a pole of the resolvent $R(.,A)$, and there exists $m \in \N$ such that $\dim \Kern{\gamma - A} \leq m$ for all $\gamma \in \im\R$.
 \end{theorem}
 %% --
 \begin{proof}
@@ -1215,14 +1194,15 @@ Then
 exists in the uniform operator topology.
 Since $ P(M_{*}) = \Fix{\TT} $, we obtain $ \widehat{P}(\widehat{M_{*}}) = \Fix{\widehat{\TT}} $ and 
 $\dim \Fix{\TT} = \dim \Fix{\widehat{\TT}} < \infty$, where $\widehat{P}$ is the canonical extension of\/ $P$ onto $(M_{*})^{\wedge}$.
-Since $\widehat{P} = \lim_{\mu \downarrow 0} \mu R(\mu)^{\wedge}$ it follows that
+Since $\widehat{P} = \lim_{\mu \downarrow 0} \mu R(\mu)^{\wedge}$, the fixed space $\Fix{\mu\widehat{R}(\mu)} = \widehat{P}\bigl((M_{*})^{\wedge}\bigr)$ is finite dimensional, and Proposition~\ref{prop:d3-2.1} yields $m \in \N$ such that
 %% --
 \[
-\dim \Fix  {(\lambda - \im\alpha)\widehat{R}(\lambda)} \leq \dim \Fix{\widehat{\TT}} < \infty
+\dim \Fix  {(\lambda - \im\alpha)\widehat{R}(\lambda)} \leq m
 \]
 %% -- 
-for all $\alpha \in \R$ (Proposition~\ref{prop:d3-2.1}).
-Therefore the assertion follows from Lemma~\ref{lem:d3-2.2}.
+for all $\lambda \in D$ and $\alpha \in \R$.
+Therefore every $\gamma \in \sigma(A) \cap \im\R$ is a pole of\/ $R(.,A)$ by Lemma~\ref{lem:d3-2.2}.
+Moreover, $\Kern{\im\alpha - A} = \Fix{(\lambda - \im\alpha)R(\lambda)}$ is contained in the canonical image of\/ $\Fix{(\lambda - \im\alpha)\widehat{R}(\lambda)}$, hence $\dim \Kern{\im\alpha - A} \leq m$ for all $\alpha \in \R$.
 \end{proof} 
 %% --
 The consequences of this result for the asymptotic behavior of one-parameter semigroups will be discussed in Section~\ref{sec:d4-4}.
