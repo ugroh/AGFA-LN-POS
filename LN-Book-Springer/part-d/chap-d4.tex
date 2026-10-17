@@ -367,11 +367,11 @@ is finite.
 Every $\phi \in M_{*}$ is of the form $\phi(x) = \sum_{n}(x\xi_{n} \,|\, \eta_{n})$ $(x \in M)$ with $\xi_{n}$, $\eta_{n} \in H$ and $\sum_{n}\|\xi_{n}\|\,\|\eta_{n}\| < \infty$ (\textcite[Theorem III.4.2 and Theorem II.2.6]{takesaki:1979}).
 Since $T(s)x = U(s)^{*}xU(s)$, the Cauchy--Schwarz inequality yields for all $x \in M$
 %% --
-\[
+\begin{align*}
 \int_{0}^{\infty} \abs{\phi(T(s)x)} \ds 
-	\leq \|x\| \sum_{n} \int_{0}^{\infty} \|U(s)\xi_{n}\|\,\|U(s)\eta_{n}\| \ds 
-	\leq c^{2}\|x\| \sum_{n} \|\xi_{n}\|\,\|\eta_{n}\| < \infty .
-\]
+	&\leq \|x\| \sum_{n} \int_{0}^{\infty} \|U(s)\xi_{n}\|\,\|U(s)\eta_{n}\| \ds \\
+	&\leq c^{2}\|x\| \sum_{n} \|\xi_{n}\|\,\|\eta_{n}\| < \infty .
+\end{align*}
 %% --
 Hence the integral $\int_{0}^{\infty} \phi(T(s)x) \ds$ exists for all $x \in M$ and $\phi \in M_{*}$.
 Therefore, the resolvent $R(0,A)$ exists and is positive, hence $s(A) < 0$.
