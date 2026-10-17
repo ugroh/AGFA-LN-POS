@@ -1,0 +1,26 @@
+% !TEX TS-program = pdflatexmk
+%%%%%%%%%%%%%%%%%%%% LN-Book-Print.tex %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Buchversion: identisch mit LN-Book-New.tex (Springer-Fassung),
+%% aber Querverweise auf Saetze, Abschnitte und Kapitel erhalten
+%% eine Seitenangabe ("on page ...") und Links sind nicht farbig.
+%%
+%% Die Springer-Fassung LN-Book-New.tex bleibt unveraendert.
+%%
+%% Uebersetzen:
+%%   pdflatex LN-Book-Print
+%%   biber    LN-Book-Print
+%%   makeindex LN-Book-Print
+%%   pdflatex LN-Book-Print   (2-3 mal, bis keine Warnungen mehr)
+%%
+%% Status: 2026-10-17
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% -- Seitenangaben bei Querverweisen: direkt nach hyperref laden
+\AddToHook{package/hyperref/after}{\input{./preamble/ln-print-refs}}
+
+%% -- \include durch \input ersetzen, damit sich die .aux-Dateien der
+%%    Kapitel nicht mit denen von LN-Book-New.tex ueberschreiben
+\renewcommand{\include}[1]{\clearpage\input{#1}\clearpage}
+
+%% -- Gesamtes Buch wie in der Springer-Fassung
+\input{LN-Book-New}
