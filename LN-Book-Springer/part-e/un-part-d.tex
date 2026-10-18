@@ -65,6 +65,21 @@ Another approach to the spectral theory on \WA-algebras can be found in \textcit
 This leads to a noncommutative version of the Perron-Frobenius theorem for \WA-algebras and is applied to the asymptotics of \WA-dynamical systems.
 A similar approach is in \textcite{zbmath06728793}.
 
+\item
+In the first edition, Part-IV, Proposition~\ref{prop:d3-2.1} was stated with $\dim \Fix{\lambda R(\lambda)}$ in place of $m$, and accordingly Part-IV, Theorem~\ref{thm:d3-2.5} with $\dim \Kern{\gamma - A} \leq \dim \Fix{\TT}$.
+Since the summation step in the original proof was not justified, the proof has been replaced by a new one.
+It shows that one can choose $m = n\,d$, where $d = \dim \Fix{\RR'}$ and $n$ is the number of minimal projections in a decomposition of the unit of\/ $\Fix{\RR'}$ into mutually orthogonal minimal projections; note that $d \leq \dim \Fix{\lambda R(\lambda)}$.
+Being a finite dimensional \WA-algebra, $\Fix{\RR'}$ is isomorphic to $M_{k_{1}}(\C) \oplus \cdots \oplus M_{k_{r}}(\C)$ for some $k_{1}, \ldots, k_{r} \in \N$.
+Every minimal projection lies in one of these blocks and has rank one there, and the unit of\/ $M_{k}(\C)$ is the sum of $k$ mutually orthogonal minimal projections.
+Hence $d = k_{1}^{2} + \cdots + k_{r}^{2}$ and $n = k_{1} + \cdots + k_{r}$; in particular, $n$ does not depend on the chosen decomposition, and $\sqrt{d} \leq n \leq d$.
+If\/ $\Fix{\RR'}$ is commutative, then $k_{1} = \cdots = k_{r} = 1$, hence $n = d$ and $m = d^{2}$.
+If\/ $\Fix{\RR'}$ is a factor, then $r = 1$, hence $n = \sqrt{d}$ and $m = d^{3/2}$.
+For the applications in Part-IV only the existence of such a bound is needed.
+
+We do not know whether $m = \dim \Fix{\lambda R(\lambda)}$ is always possible.
+The projections $q_{j}$ in the proof of Part-IV, Proposition~\ref{prop:d3-2.1} need not be mutually orthogonal: for $M = M_{3}(\C)$ and the semigroup $\bigl(\mathrm{Ad}(\mathrm{diag}(1, \eu^{\im t}, \eu^{\im t}))\bigr)_{t \geq 0}$ one has $\Fix{\RR'} = \C \oplus M_{2}(\C)$, and for the eigenvalue with eigenspace $\operatorname{span}\{e_{12}, e_{13}\}$ one obtains $q_{2} = q_{3} = e_{11}$.
+In this example the sharper estimate holds, and in finite dimensions it follows from the Cauchy--Schwarz inequality over the matrix blocks of\/ $\Fix{\RR'}$.
+
 \end{enumerate}
 %% --
 \section*{Chapter 4}
