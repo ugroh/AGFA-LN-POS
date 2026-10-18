@@ -4,7 +4,7 @@
 
 **Umfang:** Teil III, Kap. 1–4, geprüft im LaTeX-Quelltext (Branch `fahnenkorrektur`). Geprüft wurden nur Satz und Notation in Formeln: Tippfehler, Klammern, Indizes, uneinheitliche Schreibweisen, Mathemodus, Satzzeichen an Formeln, Verweise. Beweise wurden **nicht** nachgerechnet; wo ein Befund inhaltlich wirkt, steht „bitte prüfen“.
 
-**Noch nichts geändert.** Die Liste dient zur Besprechung; umgesetzt wird erst nach Rücksprache.
+**Stand 18.10.2026:** Kap. 1 ist nach Durchsicht durch Rainer Nagel umgesetzt (in der Spalte Kommentar mit **Umgesetzt** markiert); Kap. 2–4 sind noch offen. Die Zeilenangaben beziehen sich auf den Stand vom 14.10.2026.
 
 **Spalten:** S. = gedruckte Buchseite, ermittelt über das nächstgelegene Label (kann um eine Seite abweichen). Z. = Zeile in der .tex-Datei. Sicherheit: ● eindeutig · ◐ sehr wahrscheinlich · ○ Hinweis/Ermessen.
 
@@ -16,20 +16,20 @@ Insgesamt **222 Punkte**: 47 ●, 99 ◐, 76 ○. Davon stehen 26 bereits in der
 
 | S. | Z. | | Ist | Soll | Art | Kommentar |
 |---|---|---|---|---|---|---|
-| 265 | 35 | ◐ | `\mathrm{(LO1)} \quad` | `\text{(LO$_{1}$)} \quad` | Notation | In der Definition „(LO1)“/„(LO2)“ ohne Index, im Fließtext Z. 45, 46, 49 „(LO$_{1}$)“/„(LO$_{2}$)“ mit tiefgestellter Ziffer, im Druck sichtbar verschieden; ebenso Z. 37 `\mathrm{(LO2)}`. Alternativ Z. 45–49 auf (LO1)/(LO2) umstellen. |
-| 265 | 71 | ● | `\inf   \sup_{\alpha} f_{\alpha},h  )` | `\inf(\sup_{\alpha} f_{\alpha},h)` | Klammern | Öffnende Klammer nach \inf fehlt (vgl. die Parallelformel Z. 72 `\sup(\inf_{\alpha}f_{\alpha},h)`). |
-| 266 | 79 | ○ | `\begin{equation*}\label{eq:c1-1}` | `\begin{equation*}` | LaTeX | \label in einer unnummerierten Umgebung; das Label wird nirgends referenziert (ein \ref würde die Abschnittsnummer liefern). Ebenso Z. 267 (eq:c1-2) und Z. 275 (eq:c1-3). Im Druck unsichtbar, nur Bereinigung. |
-| 269 | 206 | ○ | `\{u\}^{d} = 0` | `\{u\}^{d} = \{0\}` | Notation | Gleichheit von Mengen; sonst im Kapitel `= \{0\}` (Z. 180, 368). |
-| 270 | 245 | ◐ | `\sup\{\phi(h) \colon \vert h\vert \leq f \text{ for $ f \in E_{+} $}\}` | `\sup\{\phi(h) \colon \vert h\vert \leq f\} \quad \text{for $ f \in E_{+} $}` | Notation | Die Bedingung „for f ∈ E₊“ steht innerhalb der Mengenklammer, betrifft aber die feste Variable f, nicht die Laufvariable h; gehört hinter die Menge. Ebenso Z. 384 (`\vert h\vert \leq f , \text{ $ f \in E_{+} $} \}`) und Z. 529 (`\text{ for $ h \geq 0 $} \}`). |
-| 271 | 276 | ○ | `g \in E_{+}'` | `g \in E'_{+}` | Notation | Strich hinter dem Index gesetzt; in Teil III sonst durchweg E'_{+} (z. B. chap-c2 Z. 61, 415, 488, 568). |
-| 271 | 302 | ◐ | `which we denote by $ (E,x') $` | `which we denote by $ (E,f') $` | Tippfehler | Das Funktional heißt im Kontext f' (q_{f'}), ein x' kommt nicht vor; vgl. Z. 305 `(E,\mu)`. Bitte prüfen. |
-| 273 | 371 | ◐ | `\mathcal{L}^{r}(E;F)` | `\mathcal{L}^{r}(E,F)` | Notation | Semikolon als Trenner, während im selben Absatz `\L{E,F}` mit Komma steht (Z. 369, 372, 373, 475); sichtbar uneinheitlich. Ebenso Z. 372, 373, 374, 381. |
-| 273 | 435 | ● | `$ h = f + ig $` | `$ h = f + \iu g $` | Notation | Kursives i für die imaginäre Einheit; sonst \iu/\im (aufrecht), z. B. Z. 428, 438, 446, 450, 461. Ebenso Z. 474 `T_{1} + iT_{2}` und Z. 533 `+ i(S_{3} - S_{4})`. |
-| 273 | 476 | ◐ | `if\/ $ T_{2} $ is $ = 0 $` | `if\/ $ T_{2} = 0 $` | Mathemodus | Schon in der Arbeitsliste. Relationszeichen allein im Mathemodus nach „is“. Ähnlich Z. 524 `one has necessarily the values $ = 0 $ for $ S_{f} $` (besser: „one has necessarily $ S_{f} = 0 $“). |
-| 275 | 508 | ○ | `\text{sign } f = f\cdot\vert f\vert^{-1}` | `\sign f = f\cdot\vert f\vert^{-1}` | Notation | In Z. 485 mit dem Operator \sign gesetzt; \text{sign } übernimmt die Umgebungsschrift und hat anderen Abstand. |
-| 275 | 520 | ◐ | `the band $ \{x\}^{dd} $` | `the band $ \{f\}^{dd} $` | Tippfehler | **Umgesetzt** (vorgezogen zusammen mit math-error Z. 529; Rainers Haken steht noch aus). Ein Element x kommt im Kontext nicht vor, gemeint ist das Band zu f. Ebenso Z. 524 `\{x\}^{d}` und Z. 527 `\{x\}^{dd}`. Bitte prüfen. |
-| 275 | 529 | ○ | `S_{f}h = \sup \{ S_{f}g \colon` | `S_{f}h = \sup \{ S_{0}g \colon` | Tippfehler | S_f wird hier erst definiert; rechts ist wohl S_0 gemeint (g ∈ E_{\vert f\vert}). Bitte prüfen. |
-| 276 | 579 | ● | `then $ Z(E) $ is isomorphic` | `then $ \mathcal{Z}(E) $ is isomorphic` | Notation | Zentrum sonst kalligraphisch \mathcal{Z}(E) (Z. 572, 573, 575, 582). |
+| 265 | 35 | ◐ | `\mathrm{(LO1)} \quad` | `\text{(LO$_{1}$)} \quad` | Notation | **Umgesetzt.** In der Definition „(LO1)“/„(LO2)“ ohne Index, im Fließtext Z. 45, 46, 49 „(LO$_{1}$)“/„(LO$_{2}$)“ mit tiefgestellter Ziffer, im Druck sichtbar verschieden; ebenso Z. 37 `\mathrm{(LO2)}`. Alternativ Z. 45–49 auf (LO1)/(LO2) umstellen. |
+| 265 | 71 | ● | `\inf   \sup_{\alpha} f_{\alpha},h  )` | `\inf(\sup_{\alpha} f_{\alpha},h)` | Klammern | **Umgesetzt.** Öffnende Klammer nach \inf fehlt (vgl. die Parallelformel Z. 72 `\sup(\inf_{\alpha}f_{\alpha},h)`). |
+| 266 | 79 | ○ | `\begin{equation*}\label{eq:c1-1}` | `\begin{equation*}` | LaTeX | **Umgesetzt.** \label in einer unnummerierten Umgebung; das Label wird nirgends referenziert (ein \ref würde die Abschnittsnummer liefern). Ebenso Z. 267 (eq:c1-2) und Z. 275 (eq:c1-3). Im Druck unsichtbar, nur Bereinigung. |
+| 269 | 206 | ○ | `\{u\}^{d} = 0` | `\{u\}^{d} = \{0\}` | Notation | **Umgesetzt.** Gleichheit von Mengen; sonst im Kapitel `= \{0\}` (Z. 180, 368). |
+| 270 | 245 | ◐ | `\sup\{\phi(h) \colon \vert h\vert \leq f \text{ for $ f \in E_{+} $}\}` | `\sup\{\phi(h) \colon \vert h\vert \leq f\} \quad \text{for $ f \in E_{+} $}` | Notation | **Umgesetzt.** Die Bedingung „for f ∈ E₊“ steht innerhalb der Mengenklammer, betrifft aber die feste Variable f, nicht die Laufvariable h; gehört hinter die Menge. Ebenso Z. 384 (`\vert h\vert \leq f , \text{ $ f \in E_{+} $} \}`) und Z. 529 (`\text{ for $ h \geq 0 $} \}`). |
+| 271 | 276 | ○ | `g \in E_{+}'` | `g \in E'_{+}` | Notation | **Umgesetzt.** Strich hinter dem Index gesetzt; in Teil III sonst durchweg E'_{+} (z. B. chap-c2 Z. 61, 415, 488, 568). |
+| 271 | 302 | ◐ | `which we denote by $ (E,x') $` | `which we denote by $ (E,f') $` | Tippfehler | **Umgesetzt.** Das Funktional heißt im Kontext f' (q_{f'}), ein x' kommt nicht vor; vgl. Z. 305 `(E,\mu)`. Bitte prüfen. |
+| 273 | 371 | ◐ | `\mathcal{L}^{r}(E;F)` | `\mathcal{L}^{r}(E,F)` | Notation | **Umgesetzt.** Semikolon als Trenner, während im selben Absatz `\L{E,F}` mit Komma steht (Z. 369, 372, 373, 475); sichtbar uneinheitlich. Ebenso Z. 372, 373, 374, 381. |
+| 273 | 435 | ● | `$ h = f + ig $` | `$ h = f + \iu g $` | Notation | **Umgesetzt.** Kursives i für die imaginäre Einheit; sonst \iu/\im (aufrecht), z. B. Z. 428, 438, 446, 450, 461. Ebenso Z. 474 `T_{1} + iT_{2}` und Z. 533 `+ i(S_{3} - S_{4})`. |
+| 273 | 476 | ◐ | `if\/ $ T_{2} $ is $ = 0 $` | `if\/ $ T_{2} = 0 $` | Mathemodus | **Umgesetzt** (stand schon so im Text). Schon in der Arbeitsliste. Relationszeichen allein im Mathemodus nach „is“. Ähnlich Z. 524 `one has necessarily the values $ = 0 $ for $ S_{f} $` (besser: „one has necessarily $ S_{f} = 0 $“). |
+| 275 | 508 | ○ | `\text{sign } f = f\cdot\vert f\vert^{-1}` | `\sign f = f\cdot\vert f\vert^{-1}` | Notation | **Umgesetzt.** In Z. 485 mit dem Operator \sign gesetzt; \text{sign } übernimmt die Umgebungsschrift und hat anderen Abstand. |
+| 275 | 520 | ◐ | `the band $ \{x\}^{dd} $` | `the band $ \{f\}^{dd} $` | Tippfehler | **Umgesetzt** (vorgezogen zusammen mit math-error Z. 529; Rainer ohne Einwand). Ein Element x kommt im Kontext nicht vor, gemeint ist das Band zu f. Ebenso Z. 524 `\{x\}^{d}` und Z. 527 `\{x\}^{dd}`. Bitte prüfen. |
+| 275 | 529 | ○ | `S_{f}h = \sup \{ S_{f}g \colon` | `S_{f}h = \sup \{ S_{0}g \colon` | Tippfehler | **Umgesetzt** (stand schon so im Text). S_f wird hier erst definiert; rechts ist wohl S_0 gemeint (g ∈ E_{\vert f\vert}). Bitte prüfen. |
+| 276 | 579 | ● | `then $ Z(E) $ is isomorphic` | `then $ \mathcal{Z}(E) $ is isomorphic` | Notation | **Umgesetzt.** Zentrum sonst kalligraphisch \mathcal{Z}(E) (Z. 572, 573, 575, 582). |
 
 ### Teil III, Kap. 2 – Characterization of Positive Semigroups on Banach Lattices (`part-c/chap-c2.tex`)
 

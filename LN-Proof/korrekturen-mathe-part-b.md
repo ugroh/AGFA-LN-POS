@@ -4,7 +4,7 @@
 
 **Umfang:** Teil II, Kap. 1–4, geprüft im LaTeX-Quelltext (Branch `fahnenkorrektur`). Geprüft wurden nur Satz und Notation in Formeln: Tippfehler, Klammern, Indizes, uneinheitliche Schreibweisen, Mathemodus, Satzzeichen an Formeln, Verweise. Beweise wurden **nicht** nachgerechnet; wo ein Befund inhaltlich wirkt, steht „bitte prüfen“.
 
-**Noch nichts geändert.** Die Liste dient zur Besprechung; umgesetzt wird erst nach Rücksprache.
+**Stand 18.10.2026:** Kap. 1 ist nach Durchsicht durch Rainer Nagel umgesetzt (in der Spalte Kommentar mit **Umgesetzt** markiert); Kap. 2–4 sind noch offen. Die Zeilenangaben beziehen sich auf den Stand vom 14.10.2026.
 
 **Spalten:** S. = gedruckte Buchseite, ermittelt über das nächstgelegene Label (kann um eine Seite abweichen). Z. = Zeile in der .tex-Datei. Sicherheit: ● eindeutig · ◐ sehr wahrscheinlich · ○ Hinweis/Ermessen.
 
@@ -16,8 +16,8 @@ Insgesamt **206 Punkte**: 50 ●, 93 ◐, 63 ○. Davon stehen 13 bereits in der
 
 | S. | Z. | | Ist | Soll | Art | Kommentar |
 |---|---|---|---|---|---|---|
-| 137 | 57 | ○ | `C_{0}(X\backslash F)` | `C_{0}(X\setminus F)` | LaTeX | \backslash setzt einen großen Backslash ohne Abstände wie bei einem binären Operator; für Mengendifferenz \setminus (im Buch überwiegend, 34 vs. 12 Stellen). Einzige Stelle im Kapitel. |
-| 137 | 57 | ◐ | `via the map $f + J \to f\vert_{F}$` | `via the map $f + J \mapsto f\vert_{F}$` | Notation | Zuordnung von Elementen: \mapsto (im Buch durchgehend so, z. B. t ↦ T(t)f); ebenso Z. 110 `$t \to \delta_{t}$` → `$t \mapsto \delta_{t}$`. |
+| 137 | 57 | ○ | `C_{0}(X\backslash F)` | `C_{0}(X\setminus F)` | LaTeX | **Umgesetzt.** \backslash setzt einen großen Backslash ohne Abstände wie bei einem binären Operator; für Mengendifferenz \setminus (im Buch überwiegend, 34 vs. 12 Stellen). Einzige Stelle im Kapitel. |
+| 137 | 57 | ◐ | `via the map $f + J \to f\vert_{F}$` | `via the map $f + J \mapsto f\vert_{F}$` | Notation | **Umgesetzt.** Zuordnung von Elementen: \mapsto (im Buch durchgehend so, z. B. t ↦ T(t)f); ebenso Z. 110 `$t \to \delta_{t}$` → `$t \mapsto \delta_{t}$`. |
 
 ### Teil II, Kap. 2 – Characterization of Positive Semigroups on C₀(X) (`part-b/chap-b2.tex`)
 

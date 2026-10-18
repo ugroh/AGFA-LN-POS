@@ -4,7 +4,7 @@
 
 **Umfang:** Teil I, Kap. 1–4, geprüft im LaTeX-Quelltext (Branch `fahnenkorrektur`). Geprüft wurden nur Satz und Notation in Formeln: Tippfehler, Klammern, Indizes, uneinheitliche Schreibweisen, Mathemodus, Satzzeichen an Formeln, Gleichungsverweise. Beweise wurden **nicht** nachgerechnet; wo ein Befund inhaltlich wirkt, steht „bitte prüfen“.
 
-**Noch nichts geändert.** Die Liste dient zur Besprechung; umgesetzt wird erst nach Rücksprache.
+**Stand 18.10.2026:** Kap. 1 ist nach Durchsicht durch Rainer Nagel umgesetzt (in der Spalte Kommentar mit **Umgesetzt** markiert); Kap. 2–4 sind noch offen. Die Zeilenangaben beziehen sich auf den Stand vom 14.10.2026.
 
 **Spalten:** S. = gedruckte Buchseite, ermittelt über das nächstgelegene Label (kann um eine Seite abweichen). Z. = Zeile in der .tex-Datei. Sicherheit: ● eindeutig · ◐ sehr wahrscheinlich · ○ Hinweis/Ermessen.
 
@@ -23,37 +23,37 @@ Insgesamt **141 Punkte**: 34 ●, 58 ◐, 49 ○. Davon stehen 9 bereits in der 
 
 | S. | Z. | | Ist | Soll | Art | Kommentar |
 |---|---|---|---|---|---|---|
-| 4 | 69 | ◐ | `$ T(t)_{t\geq0} $` | `$ (T(t))_{t\geq0} $` | Klammern | Sonst überall `(T(t))_{t\geq0}`; ebenso Z. 78. |
-| 4 | 104 | ◐ | `$ -\infty \leq \omega < +\infty$` | `$ -\infty \leq \omega_{0} < +\infty$` | Tippfehler | Im Satz geht es um ω₀. |
-| 6 | 220 | ◐ | `\frac{d}{\dt}\xi(t)` | `\frac{\diff{}}{\dt}\xi(t)` | Notation | Kursives d; in Z. 187, 321, 648 aufrecht. Ebenso Z. 785 `\frac{d}{\dx}`. |
-| 7 | 285 | ◐ | `\text{ for $ n \geq 2 $, }` | `\text{ for $ n \geq 2 $.}` | Satzzeichen | Danach beginnt ein neuer Satz („Then“, Z. 288). |
-| 9 | 380 | ◐ | `= \colon  \eu^{tA}` | `\eqqcolon \eu^{tA}` | LaTeX | `= \colon` ergibt „= :“ mit falschem Abstand; ebenso Z. 561 und 818. |
-| 9 | 448 | ◐ | `for all $ (k \geq 2)$` | `for all $ k \geq 2 $` | Klammern | Überflüssige Klammern. |
-| 9 | 470 | ● | `\eu^{t( A - 1/2  \cdot \Id )}` | `\eu^{t( A - s/2  \cdot \Id )}` | Tippfehler | In Z. 451 und 471 steht s/2. |
-| 9 | 472 | ◐ | `\sum_{ \text{k even} }` | `\sum_{k \text{ even}}` | Mathemodus | k aufrecht in Textschrift; ebenso `\text{k odd}`. |
-| 14 | 767 | ● | `…$Af \coloneq f'$}. \}` | `…, f' \in E\}, \quad Af \coloneq f'.` | Klammern | Punkt vor `\}`, und „Af := f′“ steht innerhalb der Mengenklammer. |
-| 15 | 814 | ○ | `\cos \pi nx` | `\cos(\pi nx)` | Notation | Z. 851 mit Klammern, Z. 814 und 858 ohne. |
-| 15 | 871 | ● | `k_{t}(x,y)dy` | `k_{t}(x,y)\dy` | Notation | Kursives d ohne Abstand; sonst `\dy`. Ebenso Z. 884 `f(y)dy`. |
-| 16 | 878 | ◐ | `\subsection{n-dimensional …}` | `\subsection{\texorpdfstring{$n$}{n}-dimensional …}` | Mathemodus | n nicht im Mathemodus (im Index steht `$n$`). |
-| 16 | 881 | ○ | `$1 \leq p \leq \infty$` | `$1 \leq p < \infty$` | Tippfehler | Auf L^∞ nicht stark stetig, 𝒮 dort nicht dicht (Z. 906); inhaltlich bitte prüfen. |
-| 16 | 916 | ● | `T(t)\vert_{ S(\R^{n})}` | `T(t)\vert_{\mathcal{S}(\R^{n})}` | Notation | Schwartz-Raum sonst `\mathcal{S}`. |
-| 16 | 952 | ○ | `$L^{p}\interval{0,1}$` | `$L^{p}(\interval{0,1})$` | Notation | Z. 755 und 1176: `L^p([0,1])`. |
-| 19 | 1047 | ◐ | `$(T(t)_{\vert})$` | `$(T_{\vert}(t))_{t \geq 0}$` | Notation | Z. 1035 definiert `T_{\vert}(t)`; Einschränkungen insgesamt uneinheitlich notiert (Z. 1167, 1251, 1379). |
-| 20 | 1109 | ○ | `\hat{g} \, \ds` | `\hat{g} \ds` | Abstand | Zusätzliches `\,` nur in Z. 1109–1111. |
-| 20 | 1115 | ○ | `$\lambda > \omega$` | `$\lambda > \omega_{0}$` | Notation | ω ohne Index hier nicht definiert. |
-| 20 | 1159 | ◐ | `(see Example~\ref{subsec:a1-2.4})` | `(see Section~\ref{subsec:a1-2.4})` | Verweis | Schon in der Arbeitsliste (S. 20). |
-| 20 | 1173 | ◐ | `f \in AC` | `f \in \mathrm{AC}` | Notation | Z. 1187 `\mathrm{AC}`; ebenso Z. 1362. |
-| 20 | 1177 | ○ | `quotient space \mfrac{F}{I}, where` | `quotient space $\mfrac{F}{I}$, where` | Mathemodus | `\mfrac` ist für den Mathemodus gedacht (vgl. Z. 1088). |
-| 21 | 1265 | ◐ | `\lim\sup_{t \to 0}` | `\limsup_{t \to 0}` | LaTeX | Index hängt sonst nur am sup; ebenso Z. 1512. |
-| 22 | 1332 | ● | `\vert f_f'(0) - f_f'(s)\vert` | `\vert \xi_f'(0) - \xi_f'(s)\vert` | Tippfehler | Gemeint sind die Funktionen ξ_f (Z. 1295, 1328); ebenso Z. 1337 `f'_f(0)`. |
-| 22 | 1347 | ○ | `$0 \leq s \leq t_{0}$` | `$0 < s \leq t_{0}$` | Tippfehler | Bei s = 0 ist 1/s nicht definiert; Z. 1332: 0 < s < t₀. |
-| 23 | 1398 | ● | `\emph{n-th Sobolev space}` | `\emph{$n$-th Sobolev space}` | Mathemodus | Zweimal in der Zeile (auch „n-th Sobolev semigroup“). |
-| 26 | 1500 | ○ | `E_{\mathcal{F}}^{T}` | `E_{\mathcal{F}}^{\TT}` | Notation | Daneben `m^{\TT}(E)`; ebenso Z. 1506, 1507, 1526, 1542 – bitte prüfen, ob gewollt. |
-| 26 | 1522 | ◐ | `T(t)_{F}` | `T(t)_{\mathcal{F}}` | Notation | Gemeint ist der Filter 𝓕, nicht der Raum F; ebenso Z. 1523. |
-| 27 | 1583 | ○ | `let $X$,$Y$ be` | `let $X$, $Y$ be` | Abstand | Leerzeichen nach dem Komma fehlt. |
-| 27 | 1605 | ● | `on $E \times F$` | `on $E \otimes F$` | Tippfehler | Gemeint ist die Norm auf dem Tensorprodukt (Z. 1601, 1609). |
-| 27 | 1628 | ○ | `L^{1}(\mu \otimes \nu)` | `L^{1}(\mu \times \nu)` | Notation | Z. 1574, 1580: `\mu \times \nu`; ebenso Z. 1630. |
-| 28 | 1683 | ◐ | `(T(h) \otimes S(h))(f \otimes g)` | `(S(h) \otimes T(h))(f \otimes g)` | Tippfehler | Im Satz heißt das Produkt S(t)⊗T(t); im Beweis vertauscht, auch Z. 1686. |
+| 4 | 69 | ◐ | `$ T(t)_{t\geq0} $` | `$ (T(t))_{t\geq0} $` | Klammern | **Umgesetzt.** Sonst überall `(T(t))_{t\geq0}`; ebenso Z. 78. |
+| 4 | 104 | ◐ | `$ -\infty \leq \omega < +\infty$` | `$ -\infty \leq \omega_{0} < +\infty$` | Tippfehler | **Umgesetzt.** Im Satz geht es um ω₀. |
+| 6 | 220 | ◐ | `\frac{d}{\dt}\xi(t)` | `\frac{\diff{}}{\dt}\xi(t)` | Notation | **Umgesetzt.** Kursives d; in Z. 187, 321, 648 aufrecht. Ebenso Z. 785 `\frac{d}{\dx}`. |
+| 7 | 285 | ◐ | `\text{ for $ n \geq 2 $, }` | `\text{ for $ n \geq 2 $.}` | Satzzeichen | **Umgesetzt.** Danach beginnt ein neuer Satz („Then“, Z. 288). |
+| 9 | 380 | ◐ | `= \colon  \eu^{tA}` | `\eqqcolon \eu^{tA}` | LaTeX | **Umgesetzt.** `= \colon` ergibt „= :“ mit falschem Abstand; ebenso Z. 561 und 818. |
+| 9 | 448 | ◐ | `for all $ (k \geq 2)$` | `for all $ k \geq 2 $` | Klammern | **Umgesetzt.** Überflüssige Klammern. |
+| 9 | 470 | ● | `\eu^{t( A - 1/2  \cdot \Id )}` | `\eu^{t( A - s/2  \cdot \Id )}` | Tippfehler | **Umgesetzt.** In Z. 451 und 471 steht s/2. |
+| 9 | 472 | ◐ | `\sum_{ \text{k even} }` | `\sum_{k \text{ even}}` | Mathemodus | **Umgesetzt.** k aufrecht in Textschrift; ebenso `\text{k odd}`. |
+| 14 | 767 | ● | `…$Af \coloneq f'$}. \}` | `…, f' \in E\}, \quad Af \coloneq f'.` | Klammern | **Umgesetzt** (stand schon so im Text). Punkt vor `\}`, und „Af := f′“ steht innerhalb der Mengenklammer. |
+| 15 | 814 | ○ | `\cos \pi nx` | `\cos(\pi nx)` | Notation | **Umgesetzt.** Z. 851 mit Klammern, Z. 814 und 858 ohne. |
+| 15 | 871 | ● | `k_{t}(x,y)dy` | `k_{t}(x,y)\dy` | Notation | **Umgesetzt.** Kursives d ohne Abstand; sonst `\dy`. Ebenso Z. 884 `f(y)dy`. |
+| 16 | 878 | ◐ | `\subsection{n-dimensional …}` | `\subsection{\texorpdfstring{$n$}{n}-dimensional …}` | Mathemodus | **Umgesetzt.** n nicht im Mathemodus (im Index steht `$n$`). |
+| 16 | 881 | ○ | `$1 \leq p \leq \infty$` | `$1 \leq p < \infty$` | Tippfehler | **Umgesetzt** (stand schon so im Text). Auf L^∞ nicht stark stetig, 𝒮 dort nicht dicht (Z. 906); inhaltlich bitte prüfen. |
+| 16 | 916 | ● | `T(t)\vert_{ S(\R^{n})}` | `T(t)\vert_{\mathcal{S}(\R^{n})}` | Notation | **Umgesetzt.** Schwartz-Raum sonst `\mathcal{S}`. |
+| 16 | 952 | ○ | `$L^{p}\interval{0,1}$` | `$L^{p}(\interval{0,1})$` | Notation | **Umgesetzt.** Z. 755 und 1176: `L^p([0,1])`. |
+| 19 | 1047 | ◐ | `$(T(t)_{\vert})$` | `$(T_{\vert}(t))_{t \geq 0}$` | Notation | **Umgesetzt.** Z. 1035 definiert `T_{\vert}(t)`; Einschränkungen insgesamt uneinheitlich notiert (Z. 1167, 1251, 1379). |
+| 20 | 1109 | ○ | `\hat{g} \, \ds` | `\hat{g} \ds` | Abstand | **Umgesetzt.** Zusätzliches `\,` nur in Z. 1109–1111. |
+| 20 | 1115 | ○ | `$\lambda > \omega$` | `$\lambda > \omega_{0}$` | Notation | **Umgesetzt.** ω ohne Index hier nicht definiert. |
+| 20 | 1159 | ◐ | `(see Example~\ref{subsec:a1-2.4})` | `(see Section~\ref{subsec:a1-2.4})` | Verweis | **Umgesetzt** (stand schon so im Text). Schon in der Arbeitsliste (S. 20). |
+| 20 | 1173 | ◐ | `f \in AC` | `f \in \mathrm{AC}` | Notation | **Umgesetzt.** Z. 1187 `\mathrm{AC}`; ebenso Z. 1362. |
+| 20 | 1177 | ○ | `quotient space \mfrac{F}{I}, where` | `quotient space $\mfrac{F}{I}$, where` | Mathemodus | **Umgesetzt.** `\mfrac` ist für den Mathemodus gedacht (vgl. Z. 1088). |
+| 21 | 1265 | ◐ | `\lim\sup_{t \to 0}` | `\limsup_{t \to 0}` | LaTeX | **Umgesetzt.** Index hängt sonst nur am sup; ebenso Z. 1512. |
+| 22 | 1332 | ● | `\vert f_f'(0) - f_f'(s)\vert` | `\vert \xi_f'(0) - \xi_f'(s)\vert` | Tippfehler | **Umgesetzt.** Gemeint sind die Funktionen ξ_f (Z. 1295, 1328); ebenso Z. 1337 `f'_f(0)`. |
+| 22 | 1347 | ○ | `$0 \leq s \leq t_{0}$` | `$0 < s \leq t_{0}$` | Tippfehler | **Umgesetzt.** Bei s = 0 ist 1/s nicht definiert; Z. 1332: 0 < s < t₀. |
+| 23 | 1398 | ● | `\emph{n-th Sobolev space}` | `\emph{$n$-th Sobolev space}` | Mathemodus | **Umgesetzt.** Zweimal in der Zeile (auch „n-th Sobolev semigroup“). |
+| 26 | 1500 | ○ | `E_{\mathcal{F}}^{T}` | `E_{\mathcal{F}}^{\TT}` | Notation | **Umgesetzt.** Daneben `m^{\TT}(E)`; ebenso Z. 1506, 1507, 1526, 1542 – bitte prüfen, ob gewollt. |
+| 26 | 1522 | ◐ | `T(t)_{F}` | `T(t)_{\mathcal{F}}` | Notation | **Umgesetzt.** Gemeint ist der Filter 𝓕, nicht der Raum F; ebenso Z. 1523. |
+| 27 | 1583 | ○ | `let $X$,$Y$ be` | `let $X$, $Y$ be` | Abstand | **Umgesetzt.** Leerzeichen nach dem Komma fehlt. |
+| 27 | 1605 | ● | `on $E \times F$` | `on $E \otimes F$` | Tippfehler | **Umgesetzt.** Gemeint ist die Norm auf dem Tensorprodukt (Z. 1601, 1609). |
+| 27 | 1628 | ○ | `L^{1}(\mu \otimes \nu)` | `L^{1}(\mu \times \nu)` | Notation | **Umgesetzt.** Z. 1574, 1580: `\mu \times \nu`; ebenso Z. 1630. |
+| 28 | 1683 | ◐ | `(T(h) \otimes S(h))(f \otimes g)` | `(S(h) \otimes T(h))(f \otimes g)` | Tippfehler | **Umgesetzt.** Im Satz heißt das Produkt S(t)⊗T(t); im Beweis vertauscht, auch Z. 1686. |
 
 ### Teil I, Kap. 2 – Characterization of Semigroups on Banach Spaces (`part-a/chap-a2.tex`)
 

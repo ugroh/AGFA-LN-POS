@@ -66,7 +66,7 @@ A one-parameter semigroup $(T(t))_{t \geq 0}$ on a Banach space $E$ is strongly 
 For every strongly continuous semigroup there exist constants $ M \geq 1 $ and $ \omega \in \R $, such that 
 $ \lVert T(t) \rVert \leq M \cdot \eu^{ \omega t} $ for every $  t \geq 0 $.
 
-\item If\/ $ T(t)_{t\geq0} $ is a one-parameter semigroup such that $ \lVert T(t) \rVert $ is bounded for
+\item If\/ $ (T(t))_{t\geq0} $ is a one-parameter semigroup such that $ \lVert T(t) \rVert $ is bounded for
 $ 0 < t \leq \delta $ then it is strongly continuous if and only if\/ $ \lim_{t\to0} T(t)f = f $ for every $ f $ in a total subset of\/ $ E $.
 
 \end{enumerate}
@@ -75,7 +75,7 @@ $ 0 < t \leq \delta $ then it is strongly continuous if and only if\/ $ \lim_{t\
 The exponential estimate from Remark~\ref{rem:a1-1.2}\,(ii) for the growth of\/ $ \lVert T(t) \rVert $ can be used to define an important characteristic of the semigroup.
 %% --
 \begin{definition}\label{def:a1-1.3}
-By the \emph{growth bound} (or type) of the semigroup $ T(t)_{t\geq0} $ we understand the number $ \omega_{0} $,
+By the \emph{growth bound} (or type) of the semigroup $ (T(t))_{t\geq0} $ we understand the number $ \omega_{0} $,
 \index{growth bound}
 %% --
 %\begin{equation}\label{eq:a1-1.1}
@@ -101,7 +101,7 @@ Particularly important are semigroups such that for every $t \geq 0$ we have $\|
 In both cases we have $\omega_{0} \leq 0$.
 \index{semigroup!contraction semigroup}
 
-It follows from the subsequent examples and from Definition~\ref{def:a1-1.3} that $\omega_{0}$ may be any number $ -\infty \leq \omega < +\infty$.
+It follows from the subsequent examples and from Definition~\ref{def:a1-1.3} that $\omega_{0}$ may be any number $ -\infty \leq \omega_{0} < +\infty$.
 Moreover the reader should observe that the infimum in Definition~\ref{def:a1-1.3} need not be attained and that $M$ may be larger than $1$ even for bounded semigroups.
 %% --
 \begin{examples}\label{ex:a1-1.4}
@@ -217,7 +217,7 @@ Then the \emph{abstract Cauchy problem}
 \index{abstract Cauchy problem}
 %% --
 \begin{equation}\label{eq:a1-1.5.ACP} \tag{ACP}
-\frac{d}{\dt}\xi(t) = A\xi(t), \quad \xi(0) = f_{0}
+\frac{\diff{}}{\dt}\xi(t) = A\xi(t), \quad \xi(0) = f_{0}
 \end{equation}
 %% --
 has for every $f_{0} \in D(A)$ a unique solution $\xi \colon \R_{+} \to D(A)$ in $C^1(\R_{+},E)$.
@@ -282,7 +282,7 @@ If a subspace $D_{0}$ of the domain $D(A)$ is dense in $E$ and $(T(t))$-invarian
 %
 \begin{align*}
 	D(A^{1}) & \coloneq D(A) \\
-	D(A^{n}) & \coloneq \{f \in D(A^{n-1}) \colon Af \in D(A^{n-1})\} \, \text{ for $ n \geq 2 $, }
+	D(A^{n}) & \coloneq \{f \in D(A^{n-1}) \colon Af \in D(A^{n-1})\} \, \text{ for $ n \geq 2 $.}
 \end{align*}
 %
 Then %
@@ -377,7 +377,7 @@ We start with the class of semigroups mentioned after Definition~\ref{def:a1-1.1
 It follows from elementary operator theory that for every bounded operator $A$ in  $\LE$ the sum
 %% --
 \[
-    \sum_{n=0}^{\infty} \frac{t^{n}A^{n}}{n!} = \colon  \eu^{tA}
+    \sum_{n=0}^{\infty} \frac{t^{n}A^{n}}{n!} \eqqcolon \eu^{tA}
 \]
 %% --
 exists and determines a unique uniformly continuous (semi)group $( \eu^{tA})_{t \in \R}$ having $A$ as its generator.
@@ -445,7 +445,7 @@ Now we have to consider two cases.
 \begin{description}[wide, labelindent=0em]
 
 \item[$ D^{2} = 0 $: ] 
-Then $\left( A - \frac{s}{2}  \cdot \Id \right)^{k} = D^{k} \cdot \Id = 0 $  for all $ (k \geq 2)$ and this implies 
+Then $\left( A - \frac{s}{2}  \cdot \Id \right)^{k} = D^{k} \cdot \Id = 0 $  for all $ k \geq 2 $ and this implies 
 %
 \[
 	  \eu^{t \cdot \left( A - s/2  \cdot \Id \right)} = \Id + t \left(  A - \frac{s}{2}  \cdot \Id \right)
@@ -467,9 +467,9 @@ In this case we obtain for every $ k \in \N $
 %%
 Thus 
 \begin{align*}
-	 \eu^{t( A - 1/2  \cdot \Id )} 
+	 \eu^{t( A - s/2  \cdot \Id )} 
 		& = \sum_{k=0}^\infty \frac{t^k}{k!}\left( A - \frac{s}{2}  \cdot \Id \right)^k 
-		= \sum_{ \text{k even} } (\cdots) + \sum_{ \text{k odd} } (\cdots)  \\
+		= \sum_{k \text{ even}} (\cdots) + \sum_{k \text{ odd}} (\cdots)  \\
 	&= \cosh( t D ) \cdot \Id + \frac{1}{D} \sinh( t D ) \left( A - \frac{s}{2}  \cdot \Id \right) \\
 	&= \frac{ 1 }{ D } \sinh( tD )\cdot A + \left( \cosh(tD) - \frac{s}{2D} \sinh(tD) \right) \cdot \Id
 \end{align*}
@@ -558,7 +558,7 @@ This is easy in case $E = C_{0}(X)$.
 For $E = L^{p}(X,\Sigma,\mu)$, $1 \leq p < \infty$, we consider a sequence $(f_{n})$ in  $E$ such that 
 %
 \[
-	\lim_{n \to \infty} f_{n} = f \in E \text{ and } \lim_{n \to \infty} qf_{n} = \colon g \in E .
+	\lim_{n \to \infty} f_{n} = f \in E \text{ and } \lim_{n \to \infty} qf_{n} \eqqcolon g \in E .
 \]
 %
 Choose a subsequence $(f_{n(k)})_{k \in \N}$ such that 
@@ -782,7 +782,7 @@ Take $E = L^{p}([0,\tau],m)$ for $1 \leq p < \infty$ and define
 \]
 %% --
 Then $(T(t))_{t\geq 0}$ is a semigroup satisfying $T(t) = 0$ for $t \geq \tau$.
-Its generator is still the first derivative $A = \frac{d}{\dx}$, but with domain 
+Its generator is still the first derivative $A = \frac{\diff{}}{\dx}$, but with domain 
 %% --
 \[
 D(A) = \{f \in E \colon f \text{ absolutely continuous}, f' \in E, f(\tau) = 0\}.
@@ -811,11 +811,11 @@ Then $D(B)$ is dense in $C\interval{0,1}$, but closed for the graph norm.
 Obviously, each function
 %% --
 \[
-    e_{n}(x) \coloneq \cos \pi nx \quad (n \in \Z, x \in \interval{0,1})
+    e_{n}(x) \coloneq \cos(\pi nx) \quad (n \in \Z, x \in \interval{0,1})
 \]
 %% --
 is contained in $D(B)$ and is an eigenfunction of\/ $B$ pertaining to the eigenvalue $\lambda_{n} \coloneq -\pi^{2}n^{2}$.
-The linear hull $\text{span }\{e_{n} \colon n \in \Z\} = \colon E_{0}$ forms a subalgebra of\/ $D(B)$ which by the Stone-Weierstrass theorem is dense in $E$.
+The linear hull $\text{span }\{e_{n} \colon n \in \Z\} \eqqcolon E_{0}$ forms a subalgebra of\/ $D(B)$ which by the Stone-Weierstrass theorem is dense in $E$.
 
 We now use $e_{n}$ to define bounded linear operators 
 %% --
@@ -856,7 +856,7 @@ The Jacobi identity
 %% --
 \begin{align*}
     w_{t}(x) &\coloneq \left( \frac{1}{4\pi t}\right)^{\frac{1}{2}} \sum_{m \in \Z} \exp(-(x+2m)^{2}/4t) \\
-    &= \frac{1}{2} + \sum_{n \in \N} \exp(-\pi^{2}n^{2}t) \cos\pi nx
+    &= \frac{1}{2} + \sum_{n \in \N} \exp(-\pi^{2}n^{2}t) \cos(\pi nx)
 \end{align*}
 %% --
 and trigonometric relations show that
@@ -869,7 +869,7 @@ which is a positive function on $\interval{0,1}^{2}$.
 Therefore $T(t)$ is a bounded operator on $C\interval{0,1}$ with
 %% --
 \[
-    \|T(t)\| = \|T(t)\1\| = \sup_{x \in \interval{0,1}} \int_{0}^{1} k_{t}(x,y)dy = 1 .
+    \|T(t)\| = \|T(t)\1\| = \sup_{x \in \interval{0,1}} \int_{0}^{1} k_{t}(x,y)\dy = 1 .
 \]
 %% --
 From the behavior of\/ $T(t)$ on the dense subspace $E_{0}$ it follows that $(T(t))_{t \geq 0}$ with $T(0) = \Id$ is a strongly continuous semigroup on $E$ and its generator $A$ coincides with $B$ on $E_{0}$.
@@ -877,13 +877,13 @@ Finally, we observe that $E_{0}$ is a core for $(A,D(A))$ by Proposition~\ref{pr
 Since $\lambda - B$ is injective for $\lambda > 0$ and $A \subseteq B$, we obtain $A = B$.
 Consequently, $(T(t))_{t \geq 0}$ is the semigroup generated by $B$.
 %% --
-\subsection{n-dimensional Diffusion Semigroup}\label{subsec:a1-2.8}%
+\subsection{\texorpdfstring{$n$}{n}-dimensional Diffusion Semigroup}\label{subsec:a1-2.8}%
 \index{standard example!$n$-dimensional diffusion semigroup}
 %% --
 On $E = L^{p}(\R^{n})$, $1 \leq p < \infty$, the operators
 %% --
 \begin{align*}
-    T(t)f(x) \coloneqq{}& (4\pi t)^{-n/2} \int_{\R^{n}} \exp(-|x-y|^{2}/4t)f(y)dy \\
+    T(t)f(x) \coloneqq{}& (4\pi t)^{-n/2} \int_{\R^{n}} \exp(-|x-y|^{2}/4t)f(y)\dy \\
     ={}& \mu_{t}*f(x)
 \end{align*}
 %% --
@@ -915,7 +915,7 @@ Therefore we can apply the Fourier transformation $\mathbf{F}$ which leaves $\ma
 %% --
 where $f \in \mathcal{S}(\R^{n})$, $\hat{f} = \mathbf{F}f \in \mathcal{S}(\R^{n})$.
 
-In other words, $\mathbf{F}$ transforms $(T(t)\vert_{ S(\R^{n})})_{t \geq 0}$ into a multiplication semigroup on $\mathcal{S}(\R^{n})$ which is pointwise continuous for the usual topology of\/ $\mathcal{S}(\R^{n})$.
+In other words, $\mathbf{F}$ transforms $(T(t)\vert_{\mathcal{S}(\R^{n})})_{t \geq 0}$ into a multiplication semigroup on $\mathcal{S}(\R^{n})$ which is pointwise continuous for the usual topology of\/ $\mathcal{S}(\R^{n})$.
 The generator, \ie the right derivative at $0$, of this semigroup is the multiplication operator
 \index{operator!multiplication}
 %% --
@@ -951,7 +951,7 @@ we refer to Section IX.7 in \textcite{reedsimon:1975}.
 
 %Examples analogous to Section~\ref{subsec:a1-2.7} are valid in $L^{p}\interval{0,1}$, \resp to Section~\ref{subsec:a1-2.8} in $C_{0}(\R^{n})$.
 The constructions of Sections~\ref{subsec:a1-2.7} 
-and~\ref{subsec:a1-2.8} carry over to $L^{p}\interval{0,1}$ 
+and~\ref{subsec:a1-2.8} carry over to $L^{p}(\interval{0,1})$ 
 and $C_{0}(\R^{n})$, respectively.
 %% --
 \section{Standard Constructions}\label{sec:a1-3}%
@@ -1046,7 +1046,7 @@ Therefore
     A_{|} \coloneq A\big|_{ (D(A)\cap F)} \text{ with domain } D(A_{|}) \coloneq D(A) \cap F
 \]
 %% --
-is the generator of\/ $(T(t)_{|})$.
+is the generator of\/ $(T_{\vert}(t))_{t \geq 0}$.
 %
 Conversely, if\/ $F$ is a closed \emph{linear subspace} of\/ $E$ with $A(D(A) \cap F) \subseteq F$ such that 
 $A_{|}$ is a generator on $F$, then $F$ is $(T(t))$-invariant.
@@ -1108,13 +1108,13 @@ for every $f \in D(A)$.
 Here we use the fact that every $\hat{f} \coloneq q(f) \in D(A_{/})$ can be written as
 %% --
 \[
-    \hat{f} = \int_{0}^{\infty} \eu^{-\lambda s} T_{/}(s)\hat{g} \, \ds 
-            = \int_{0}^{\infty} \eu^{-\lambda s} q(T(s)g) \, \ds 
-            = q\mleft(\int_{0}^{\infty} \eu^{-\lambda s} T(s)g \, \ds\mright) 
+    \hat{f} = \int_{0}^{\infty} \eu^{-\lambda s} T_{/}(s)\hat{g} \ds 
+            = \int_{0}^{\infty} \eu^{-\lambda s} q(T(s)g) \ds 
+            = q\mleft(\int_{0}^{\infty} \eu^{-\lambda s} T(s)g \ds\mright) 
             = q(h)
 \]
 %% --
-where $h \in D(A)$ and $\lambda > \omega$ (see Proposition~\ref{prop:a1-1.11}).
+where $h \in D(A)$ and $\lambda > \omega_{0}$ (see Proposition~\ref{prop:a1-1.11}).
 In particular, for every $\hat{f} \in D(A_{/})$ there exist representatives $f \in \hat{f}$ belonging to $D(A)$.
 %% --
 \begin{example*}\label{ex:a1-3.1}%
@@ -1172,11 +1172,11 @@ The restricted semigroup on $F$ is given by
 By Sections~\ref{subsec:a1-2.4} and~\ref{subsec:a1-3.3}, the generator 
 $A_{\vert F}$ acts as $A_{\vert F}f = f'$ on the domain
 \[
-    D(A_{\vert F}) \coloneq \{f \in F \colon f \in AC,\; 
+    D(A_{\vert F}) \coloneq \{f \in F \colon f \in \mathrm{AC},\; 
     f' \in F \text{ and } f(x) = 0 \text{ for } x \geq 1\}.
 \]
 Next, $L^{1}(\interval{0,1})$ can be identified with the quotient space 
-\mfrac{F}{I}, where
+$\mfrac{F}{I}$, where
 \[
     I \coloneq \{f \in F \colon f(x) = 0 \text{ for } 0 \leq x \leq 1\}.
 \]
@@ -1265,7 +1265,7 @@ In fact, since $\int_{0}^{t} T(s)'\phi  \ds$, understood in the weak sense, is c
     \sup\{\langle f,\phi \rangle \colon \phi \in E^{*}, \|\phi\| \leq 1\} \leq \|f\| \leq M\cdot\sup\{\langle f,\phi \rangle \colon \phi \in E^{*}, \|\phi\| \leq1\}
 \]
 %% --
-where $M \coloneq \lim\sup_{t \to 0} \|T(t)\|$.
+where $M \coloneq \limsup_{t \to 0} \|T(t)\|$.
 In particular, $E^{*}$ separates $E$, \ie $E^{*}$ is $\sigma(E',E)$-dense in $E'$.
 In addition, the norm estimate given above yields
 %% --
@@ -1332,12 +1332,12 @@ The assumption on $\phi$ implies the set of all derivatives
 \]
 %% --
 to be equicontinuous at $t = 0$. 
-This means that for every $\epsilon > 0$ there exists $0 < t_{0} < 1$ such that $|f_f'(0) - f_f'(s)| < \epsilon$ for every $f \in D(A)$, $\|f\| \leq 1$ and $0 < s < t_{0}$.
+This means that for every $\epsilon > 0$ there exists $0 < t_{0} < 1$ such that $|\xi_f'(0) - \xi_f'(s)| < \epsilon$ for every $f \in D(A)$, $\|f\| \leq 1$ and $0 < s < t_{0}$.
 %% --
 In particular,
 %% --
 \[
-    \epsilon > \left\lvert f'_f(0) - \frac{1}{s}(\xi_f(s)-\xi_f(0)) \right\rvert 
+    \epsilon > \left\lvert \xi_f'(0) - \frac{1}{s}(\xi_f(s)-\xi_f(0)) \right\rvert 
     = \left\lvert \left\langle f,A'\phi - \frac{1}{s}(T(s)'\phi-\phi) \right\rangle \right\rvert ,
 \]
 %% --
@@ -1347,7 +1347,7 @@ hence
     \epsilon > \left\|A'\phi - \frac{1}{s}(T(s)'\phi-\phi) \right\|
 \]
 %% --
-for all $0 \leq s \leq t_{0}$.
+for all $0 < s \leq t_{0}$.
 From this it follows that $\phi \in D(A^*)$.
 \end{proof}
 %% --
@@ -1362,7 +1362,7 @@ The largest subspace of\/ $L^\infty(\R)$ on which these translations form a stro
 Calculating $D(A')$ and $D(A^*)$ respectively, one obtains
 %% --
 \begin{align*}
-    D(A') &= \{f \in L^\infty(\R) \colon f \in AC, f' \in L^\infty(\R)\}, \\
+    D(A') &= \{f \in L^\infty(\R) \colon f \in \mathrm{AC}, f' \in L^\infty(\R)\}, \\
     D(A^*) &= \{f \in L^\infty(\R) \colon f \in C^1(\R), f' \in C_{bu}(\R)\}.
 \end{align*}
 %% --
@@ -1398,7 +1398,7 @@ It is now possible to repeat this construction in order to obtain Banach spaces 
 \end{center}
 %% --
 For the translation semigroup on $L^{p}(\R)$ (see Section~\ref{subsec:a1-2.4}) the above construction leads to the usual \emph{Sobolev spaces}.
-Therefore we might call $E_{n}$ the \emph{n-th Sobolev space} and $(T_{n}(t))_{t \geq 0}$ the \emph{n-th Sobolev semigroup} associated to $E$ and $(T(t))_{t \geq 0}$.
+Therefore we might call $E_{n}$ the \emph{$n$-th Sobolev space} and $(T_{n}(t))_{t \geq 0}$ the \emph{$n$-th Sobolev semigroup} associated to $E$ and $(T(t))_{t \geq 0}$.
 %% --
 \begin{remarks*}\label{rem:a1-19.1}
 %% --
@@ -1500,33 +1500,33 @@ We call the quotient spaces
 \[
     E_{\mathcal{F}} \coloneq m(E)/c_{\mathcal{F}}(E) 
     \quad \text{and} \quad 
-    E_{\mathcal{F}}^{T} \coloneq m^{\TT}(E)/ (c_{\mathcal{F}}(E)\cap m^{\TT}(E))
+    E_{\mathcal{F}}^{\TT} \coloneq m^{\TT}(E)/ (c_{\mathcal{F}}(E)\cap m^{\TT}(E))
 \]
 %% --
 the \emph{$\mathcal{F}$-product of\/ $E$} and the \emph{$ \mathcal{F} $-product of\/ $E$ with respect to the semigroup $\TT$}, respectively.
 \index{F-product@$\mathcal{F}$-product}
 
-Thus $E_{\mathcal{F}}^{T}$ can be considered as a closed linear subspace of\/ $E_{\mathcal{F}}$. 
-We have $E_{\mathcal{F}}^{T} = E_{\mathcal{F}}$ if (and only if) $\TT$ has a bounded generator.
+Thus $E_{\mathcal{F}}^{\TT}$ can be considered as a closed linear subspace of\/ $E_{\mathcal{F}}$. 
+We have $E_{\mathcal{F}}^{\TT} = E_{\mathcal{F}}$ if (and only if) $\TT$ has a bounded generator.
 
 The canonical quotient norm on $E_{\mathcal{F}}$ is given by
 %% --
 \[
-    \|(f_{n}) + c_{\mathcal{F}}(E)\| = \mathcal{F}\text{-}\lim \sup \|f_{n}\| .
+    \|(f_{n}) + c_{\mathcal{F}}(E)\| = \mathcal{F}\text{-}\limsup \|f_{n}\| .
 \]
 %% --
-We can apply Section~\ref{subsec:a1-3.4} in order to define the \emph{$\mathcal{F}$-product semigroup} $(T_{\mathcal{F}}(t))_{t \geq 0}$ on $E_{\mathcal{F}}^{T}$ by
+We can apply Section~\ref{subsec:a1-3.4} in order to define the \emph{$\mathcal{F}$-product semigroup} $(T_{\mathcal{F}}(t))_{t \geq 0}$ on $E_{\mathcal{F}}^{\TT}$ by
 %% --
 \[
     T_{\mathcal{F}}(t)((f_{n}) + c_{\mathcal{F}}(E)) \coloneq (T(t)f_{n}) 
     	+ ( c_{\mathcal{F}}(E)\cap m^{\TT}(E) ) .
 \]
 %% --
-Thus $T_{\mathcal{F}}(t)$ is the restriction of\/ $T(t)_{F}$ where $T(t)_{F}$ denotes the canonical extension of\/ $T(t)$ to the $\mathcal{F}$-product $E_{\mathcal{F}}$. 
-But note that $(T(t)_{F})_{t \geq 0}$ is not strongly continuous unless $\TT$ has a bounded generator.
+Thus $T_{\mathcal{F}}(t)$ is the restriction of\/ $T(t)_{\mathcal{F}}$ where $T(t)_{\mathcal{F}}$ denotes the canonical extension of\/ $T(t)$ to the $\mathcal{F}$-product $E_{\mathcal{F}}$. 
+But note that $(T(t)_{\mathcal{F}})_{t \geq 0}$ is not strongly continuous unless $\TT$ has a bounded generator.
 
 With the canonical injection $j \colon f \mapsto (f,f,f,\ldots) + c_{\mathcal{F}}(E)$ from $E$ into 
-$E_{\mathcal{F}}^{T}$ the operators $T_{\mathcal{F}}(t)$ are extensions of\/ $T(t)$ satisfying $\|T_{\mathcal{F}}(t)\| = \|T(t)\|$. 
+$E_{\mathcal{F}}^{\TT}$ the operators $T_{\mathcal{F}}(t)$ are extensions of\/ $T(t)$ satisfying $\|T_{\mathcal{F}}(t)\| = \|T(t)\|$. 
 The basic facts about the generator $(A_{\mathcal{F}},D(A_{\mathcal{F}}))$ of\/ $(T_{\mathcal{F}}(t))_{t \geq 0}$ follow from Section~\ref{subsec:a1-3.4} and are collected in the following proposition.
 %% --
 \begin{proposition*}\label{prop:a1-3.6}
@@ -1542,7 +1542,7 @@ $A_{\mathcal{F}}((f_{n}) + c_{\mathcal{F}}(E)) = (Af_{n}) + c_{\mathcal{F}}(E)$.
 \end{enumerate}
 \end{proposition*}
 %% --
-In case $A$ is a bounded operator then $D(A_{\mathcal{F}}) = E_{\mathcal{F}}^{T} = E_{\mathcal{F}}$ and $A_{\mathcal{F}}$ is the canonical extension of\/ $A$ to $E_{\mathcal{F}}$.
+In case $A$ is a bounded operator then $D(A_{\mathcal{F}}) = E_{\mathcal{F}}^{\TT} = E_{\mathcal{F}}$ and $A_{\mathcal{F}}$ is the canonical extension of\/ $A$ to $E_{\mathcal{F}}$.
 
 We will show in Section~\ref{subsec:a3-4.5} that the above construction preserves and even improves many spectral properties of the semigroup and its generator.
 %% --
@@ -1583,7 +1583,7 @@ with the (class of\/ $\mu \times \nu$-a.e.-defined) functions
 then $L^{p}(\mu) \otimes L^{p}(\nu)$ becomes a dense subspace of\/ $L^{p}(X\times Y,\Sigma\times\Omega,\mu\times\nu)$ for $1 \leq p < \infty$.
 
 \item
-Similarly, let $X$,$Y$ be compact spaces. Then $C(X) \otimes C(Y)$ becomes a dense subspace of\/ $C(X\times Y)$ by identifying, for $f \in C(X)$ and $g \in C(Y)$, $f \otimes g$ with the function
+Similarly, let $X$, $Y$ be compact spaces. Then $C(X) \otimes C(Y)$ becomes a dense subspace of\/ $C(X\times Y)$ by identifying, for $f \in C(X)$ and $g \in C(Y)$, $f \otimes g$ with the function
 %% --
 \[
     (x,y) \mapsto f(x)g(y) .
@@ -1605,7 +1605,7 @@ $\|u\|_{\pi} \coloneq \inf\{\sum_{j=1}^{m} \|h_{j}\| \|k_{j}\| \colon u = \sum_{
 
 \item
 $\|u\|_{\epsilon} \coloneq \sup\{\langle u,\phi \otimes \psi\rangle \colon \phi \in E', \psi \in F', \|\phi\|, \|\psi\| \leq 1\}$ defines the 
-\emph{least cross norm $\epsilon$} on $E \times F$. 
+\emph{least cross norm $\epsilon$} on $E \otimes F$. 
 Here, $\langle u,\phi \otimes \psi\rangle$ denotes the canonical bilinear form on $(E \otimes F) \times (E' \otimes F')$, \ie $\langle\sum_{i=1}^{n} f_{i} \otimes g_{i},\phi \otimes \psi\rangle = \sum_{i=1}^{n} \langle f_{i},\phi\rangle\langle g_{i},\psi\rangle$.
 
 \item
@@ -1628,9 +1628,9 @@ Moreover we recall how examples (i) and (ii) above fit into this pattern.
 %\]
 %%% --
 \begin{align*}
-    L^{1}(\mu \otimes \nu) &= L^{1}(\mu) \widetilde{\otimes}_{\pi} L^{1}(\nu), \\
+    L^{1}(\mu \times \nu) &= L^{1}(\mu) \widetilde{\otimes}_{\pi} L^{1}(\nu), \\
     C(X \times Y)          &= C(X) \widetilde{\otimes}_{\epsilon} C(Y),          \\
-    L^{2}(\mu \otimes \nu) &= L^{2}(\mu) \widetilde{\otimes}_{h} L^{2}(\nu).
+    L^{2}(\mu \times \nu) &= L^{2}(\mu) \widetilde{\otimes}_{h} L^{2}(\nu).
 \end{align*}
 %% --
 Finally, we point out that for any $S \in \LE$, $T \in \L{F} $, the mapping
@@ -1683,10 +1683,10 @@ Then
 %% --
 \begin{align*}
     &\lim_{h\to 0} \frac{1}{h}\mleft(
-        \mleft(T(h) \otimes S(h)\mright)(f \otimes g) - f \otimes g
+        \mleft(S(h) \otimes T(h)\mright)(f \otimes g) - f \otimes g
       \mright) \\
     &= \lim_{h\to 0} \frac{1}{h}\mleft(
-        T(h)f \otimes (S(h)g - g) + (T(h)f - f) \otimes g
+        S(h)f \otimes (T(h)g - g) + (S(h)f - f) \otimes g
       \mright) \\
     &= f \otimes Bg + Af \otimes g.
 \end{align*}
