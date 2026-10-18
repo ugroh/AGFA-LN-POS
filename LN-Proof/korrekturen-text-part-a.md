@@ -4,8 +4,8 @@
 
 Auszug aus `Fahnenkorrektur_Springer_LNM1184.md`. **Seitenangaben** = gedruckte Seitenzahl (PDF-Seite = gedruckte Seite + 18). **Sicherheit:** ● hoch · ◐ mittel · ○ niedrig.
 
-**Stand der Umsetzung (Branch `fahnenkorrektur`):** Alle ●-Punkte sind umgesetzt und im Kommentar mit „Umgesetzt“ markiert (Abweichungen siehe `Umgesetzte_Korrekturen_LNM1184.md`). ◐ und ○ sind offen, außer wo „Umgesetzt“ steht.
-Insgesamt **121 Punkte**: 31 ●, 39 ◐, 51 ○; davon umgesetzt: 32.
+**Stand der Umsetzung (Branch `fahnenkorrektur`):** Alle ●-Punkte sind umgesetzt und im Kommentar mit „Umgesetzt“ markiert (Abweichungen siehe `Umgesetzte_Korrekturen_LNM1184.md`). Kap. 1 und die Updated Notes sind vollständig umgesetzt (Stand 18.10.2026). Sonst sind ◐ und ○ offen, außer wo „Umgesetzt“ steht.
+Insgesamt **121 Punkte**: 31 ●, 39 ◐, 51 ○; davon umgesetzt: 45.
 
 
 Übergreifende Punkte (Inhaltsverzeichnis, Kolumnentitel, Schreibweisen) und der Index stehen in `korrekturen-text-allgemein.md`.
@@ -14,20 +14,20 @@ Insgesamt **121 Punkte**: 31 ●, 39 ◐, 51 ○; davon umgesetzt: 32.
 
 | S. | | Ist | Soll | Art | Kommentar |
 |---|---|---|---|---|---|
-| 4 | ◐ | is continuous for the strong operator topology on L(E), e.g., lim ∥T(t)f − T(t0)f∥ = 0 | is continuous for the strong operator topology on L(E), i.e., lim ... | Grammatik | Definition, kein Beispiel: 'i.e.' statt 'e.g.'. |
-| 5 | ○ | the generator is everywhere defined and therefore bounded (use Proposition 1.1.9 (ii)) | (use Proposition 1.1.9 (i)) | Querverweis | Beschränktheit folgt aus Abgeschlossenheit = 1.1.9 (i); bitte prüfen. |
-| 10 | ◐ | As summary we obtain | In summary we obtain | Grammatik |  |
+| 4 | ◐ | is continuous for the strong operator topology on L(E), e.g., lim ∥T(t)f − T(t0)f∥ = 0 | is continuous for the strong operator topology on L(E), i.e., lim ... | Grammatik | **Umgesetzt.** Definition, kein Beispiel: 'i.e.' statt 'e.g.'. |
+| 5 | ○ | the generator is everywhere defined and therefore bounded (use Proposition 1.1.9 (ii)) | (use Proposition 1.1.9 (i)) | Querverweis | **Umgesetzt.** Beschränktheit folgt aus Abgeschlossenheit = 1.1.9 (i); bitte prüfen. |
+| 10 | ◐ | As summary we obtain | In summary we obtain | Grammatik | **Umgesetzt.** |
 | 12 | ● | Let E to be one of the following function spaces | Let E be one of the following function spaces | Grammatik | **Umgesetzt.**  |
 | 17 | ● | generator on a core of its domain (see Proposition 1.1.9 (ii). In particular | (see Proposition 1.1.9 (ii)). In particular | Satz | **Umgesetzt.** Schließende Klammer fehlt. |
-| 17 | ○ | (Reed & Simon [10, p.28]) | (Reed & Simon [10, p. 28]) | Satz | Ebenso S. 42 'p.252', S. 66 'pp.18-22 ... p.55', S. 67 'p.77'; sonst 'p. 6'. |
-| 18 | ○ | There is an easy way how to obtain different (but isomorphic) semigroups | There is an easy way to obtain different (but isomorphic) semigroups | Grammatik |  |
-| 20 | ◐ | the translation semigroup (T(t))t⩾0 where T(t)f(x) := f(x+t) (see Example 1.2.4) | (see Section 1.2.4) | Querverweis | 1.2.4 ist ein Abschnitt, kein Beispiel. |
-| 20 | ○ | By Sections 1.2.4 and 1.3.2, the generator A\|F acts as | By Sections 1.2.4 and 1.3.3, the generator A\|F acts as | Querverweis | Restriktion auf Unterraum = Abschnitt 1.3.3 (Subspace Semigroup), nicht 1.3.2 (Rescaled). Bitte prüfen. |
-| 21 | ◐ | it is natural to associate (T(t)′)t⩾0 its weak*-generator | it is natural to associate with (T(t)′)t⩾0 its weak*-generator | Grammatik |  |
+| 17 | ○ | (Reed & Simon [10, p.28]) | (Reed & Simon [10, p. 28]) | Satz | **Umgesetzt.** Ebenso S. 42 'p.252', S. 66 'pp.18-22 ... p.55', S. 67 'p.77'; sonst 'p. 6'. |
+| 18 | ○ | There is an easy way how to obtain different (but isomorphic) semigroups | There is an easy way to obtain different (but isomorphic) semigroups | Grammatik | **Umgesetzt.** |
+| 20 | ◐ | the translation semigroup (T(t))t⩾0 where T(t)f(x) := f(x+t) (see Example 1.2.4) | (see Section 1.2.4) | Querverweis | **Umgesetzt.** 1.2.4 ist ein Abschnitt, kein Beispiel. |
+| 20 | ○ | By Sections 1.2.4 and 1.3.2, the generator A\|F acts as | By Sections 1.2.4 and 1.3.3, the generator A\|F acts as | Querverweis | **Umgesetzt.** Restriktion auf Unterraum = Abschnitt 1.3.3 (Subspace Semigroup), nicht 1.3.2 (Rescaled). Bitte prüfen. |
+| 21 | ◐ | it is natural to associate (T(t)′)t⩾0 its weak*-generator | it is natural to associate with (T(t)′)t⩾0 its weak*-generator | Grammatik | **Umgesetzt.** |
 | 23 | ● | form a strongly-continuos semigroup with respect to the sup-norm | form a strongly continuous semigroup with respect to the sup-norm | Tippfehler | **Umgesetzt.** 'continuos' -> 'continuous'; außerdem kein Bindestrich (sonst überall 'strongly continuous'). |
 | 26 | ● | In most cases F will be either the Frechét filter or some free ultra filter | In most cases F will be either the Fréchet filter or some free ultrafilter | Tippfehler | **Umgesetzt.** Eine Zeile vorher richtig 'Fréchet filter'. |
-| 26 | ◐ | (i.e., the filter of sets with finite complement. In most cases F will be ... ultra filter). | (i.e., the filter of sets with finite complement). In most cases F will be ... ultrafilter. | Satz | Klammer schließt an falscher Stelle. |
-| 26 | ○ | For the proof we refer to Lemma 1.4. of Derndinger [2]. | For the proof we refer to Lemma 1.4 of Derndinger [2]. | Satz |  |
+| 26 | ◐ | (i.e., the filter of sets with finite complement. In most cases F will be ... ultra filter). | (i.e., the filter of sets with finite complement). In most cases F will be ... ultrafilter. | Satz | **Umgesetzt.** Klammer schließt an falscher Stelle. |
+| 26 | ○ | For the proof we refer to Lemma 1.4. of Derndinger [2]. | For the proof we refer to Lemma 1.4 of Derndinger [2]. | Satz | **Umgesetzt.** |
 
 ### Teil I, Kap. 2 – Characterization of Semigroups on Banach Spaces
 
@@ -150,8 +150,8 @@ Insgesamt **121 Punkte**: 31 ●, 39 ◐, 51 ○; davon umgesetzt: 32.
 |---|---|---|---|---|---|
 | 468 | ● | to the spectral theory of 𝐶0-semigroups, as in Chapter 3.6.6, was started | as in Part-I, Section 3.6.6 | Querverweis | **Umgesetzt, abweichend (siehe Umgesetzte_Korrekturen_LNM1184.md).** 'Chapter' statt 'Section' |
 | 468 | ● | Using this, El-Mennaoui & Engel [30] gives a characterization | El-Mennaoui & Engel [30] give a characterization | Grammatik | **Umgesetzt.**  |
-| 469 | ◐ | (i.e., stability of the semigroup induced on an ultra power of the underlying Banach space) | ultrapower | Konsistenz | Sonst immer 'ultrapower' |
+| 469 | ◐ | (i.e., stability of the semigroup induced on an ultra power of the underlying Banach space) | ultrapower | Konsistenz | **Umgesetzt.** Sonst immer 'ultrapower' |
 | 470 | ● | Quantative estimates of the decay of the semigroup | Quantitative estimates | Tippfehler | **Umgesetzt.**  |
 | 471 | ● | [16] J. Diestel: A survey of results related to the Dunford-Pettis property. ... Contemp. Math. 2, 15-60 (1980). 1980. | ... Contemp. Math. 2 (1980) 15–60. | Literatur | **Umgesetzt.** Jahr doppelt, Format weicht ab, Bindestrich statt Halbgeviertstrich |
-| 471 | ○ | [15] R. Derndinger: Über das Spektrum positiver Generatoren. Math. Z. 172 (1980). | Math. Z. 172 (1980) 281–293. | Literatur | Seitenangaben fehlen (bitte prüfen) |
-| 471 | ○ | Institute of Mathematics 2007 pp. 71–109 Available from: | ... 2007 pp. 71–109. Available from: | Literatur | Punkt fehlt; ebenso bei Groh [13] S. 491 ('C∗-Algebras. 2026 Available from') |
+| 471 | ○ | [15] R. Derndinger: Über das Spektrum positiver Generatoren. Math. Z. 172 (1980). | Math. Z. 172 (1980) 281–293. | Literatur | **Umgesetzt.** Seitenangaben fehlen (bitte prüfen) |
+| 471 | ○ | Institute of Mathematics 2007 pp. 71–109 Available from: | ... 2007 pp. 71–109. Available from: | Literatur | **Umgesetzt.** Punkt fehlt; ebenso bei Groh [13] S. 491 ('C∗-Algebras. 2026 Available from') |

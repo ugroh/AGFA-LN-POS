@@ -4,8 +4,8 @@
 
 Auszug aus `Fahnenkorrektur_Springer_LNM1184.md`. **Seitenangaben** = gedruckte Seitenzahl (PDF-Seite = gedruckte Seite + 18). **Sicherheit:** ● hoch · ◐ mittel · ○ niedrig.
 
-**Stand der Umsetzung (Branch `fahnenkorrektur`):** Alle ●-Punkte sind umgesetzt und im Kommentar mit „Umgesetzt“ markiert (Abweichungen siehe `Umgesetzte_Korrekturen_LNM1184.md`). ◐ und ○ sind offen, außer wo „Umgesetzt“ steht.
-Insgesamt **120 Punkte**: 36 ●, 56 ◐, 28 ○; davon umgesetzt: 38.
+**Stand der Umsetzung (Branch `fahnenkorrektur`):** Alle ●-Punkte sind umgesetzt und im Kommentar mit „Umgesetzt“ markiert (Abweichungen siehe `Umgesetzte_Korrekturen_LNM1184.md`). Kap. 1 und die Updated Notes sind vollständig umgesetzt (Stand 18.10.2026). Sonst sind ◐ und ○ offen, außer wo „Umgesetzt“ steht.
+Insgesamt **120 Punkte**: 36 ●, 56 ◐, 28 ○; davon umgesetzt: 44.
 
 
 Übergreifende Punkte (Inhaltsverzeichnis, Kolumnentitel, Schreibweisen) und der Index stehen in `korrekturen-text-allgemein.md`.
@@ -14,11 +14,11 @@ Insgesamt **120 Punkte**: 36 ●, 56 ◐, 28 ○; davon umgesetzt: 38.
 
 | S. | | Ist | Soll | Art | Kommentar |
 |---|---|---|---|---|---|
-| 137 | ○ | Basic Results of Spaces 𝐶0(𝑋) | Basic Results on Spaces 𝐶0(𝑋) | Grammatik | Präposition; betrifft auch den Kolumnentitel. |
-| 137 | ○ | 1.1 Algebraic and Order-Structure: Ideals and Quotients | 1.1 Algebraic and Order Structure: Ideals and Quotients | Satz |  |
+| 137 | ○ | Basic Results of Spaces 𝐶0(𝑋) | Basic Results on Spaces 𝐶0(𝑋) | Grammatik | **Umgesetzt.** Präposition; betrifft auch den Kolumnentitel. |
+| 137 | ○ | 1.1 Algebraic and Order-Structure: Ideals and Quotients | 1.1 Algebraic and Order Structure: Ideals and Quotients | Satz | **Umgesetzt.** |
 | 139 | ● | This identification is a topological isomorphisms with respect to the weak*-topology | This identification is a topological isomorphism with respect to the weak* topology | Tippfehler | **Umgesetzt.**  |
 | 139 | ● | (i) positive (notation: 𝑇 ⩾ 0) if 𝑇 𝑓 is a positive whenever 𝑓 is positive, | if 𝑇𝑓 is positive whenever 𝑓 is positive, | Tippfehler | **Umgesetzt.**  |
-| 139 | ◐ | (iii) Markov-operator if 𝑋 and 𝑌 are compact | (iii) Markov operator if 𝑋 and 𝑌 are compact | Konsistenz | Auf S. 140 'Markov operator' ohne Bindestrich. |
+| 139 | ◐ | (iii) Markov-operator if 𝑋 and 𝑌 are compact | (iii) Markov operator if 𝑋 and 𝑌 are compact | Konsistenz | **Umgesetzt.** Auf S. 140 'Markov operator' ohne Bindestrich. |
 
 ### Teil II, Kap. 2 – Characterization of Positive Semigroups on C₀(X)
 
@@ -149,8 +149,8 @@ Insgesamt **120 Punkte**: 36 ●, 56 ◐, 28 ○; davon umgesetzt: 38.
 | S. | | Ist | Soll | Art | Kommentar |
 |---|---|---|---|---|---|
 | 474 | ● | As examples for the rich litterature we mention | the rich literature | Tippfehler | **Umgesetzt.**  |
-| 474 | ◐ | by the work of I. Mezic [36] in the context of numerical problems using the dynamical mode decomposition | I. Mezić [36] ... dynamic mode decomposition | Konsistenz | Im Literaturverzeichnis 'Mezić'; der übliche Fachbegriff lautet 'dynamic mode decomposition' |
+| 474 | ◐ | by the work of I. Mezic [36] in the context of numerical problems using the dynamical mode decomposition | I. Mezić [36] ... dynamic mode decomposition | Konsistenz | **Umgesetzt.** Im Literaturverzeichnis 'Mezić'; der übliche Fachbegriff lautet 'dynamic mode decomposition' |
 | 475 | ● | persistent irreducibilty implies that the generator | persistent irreducibility | Tippfehler | **Umgesetzt.**  |
 | 475 | ● | In Gerlach [21] strong convergence of Feller semigoups is studied. | Feller semigroups | Tippfehler | **Umgesetzt.**  |
-| 475 | ○ | whose positive cone has non empty interior | non-empty interior | Konsistenz | sonst 'non-empty' |
-| 477 | ◐ | [29] N. Jacob: Pseudo Differential Operators and Markov Processes. Vol. 1: ... [30] N. Jacob: Pseudo Differential Operators and Markov Processes. Vol III: | Pseudo-Differential Operators and Markov Processes. Vol. I: ... / Vol. III: | Literatur | Uneinheitlich gegenüber [28] 'Pseudo-Differential ... Vol. II'; Punkt nach 'Vol' fehlt bei [30] |
+| 475 | ○ | whose positive cone has non empty interior | non-empty interior | Konsistenz | **Umgesetzt.** sonst 'non-empty' |
+| 477 | ◐ | [29] N. Jacob: Pseudo Differential Operators and Markov Processes. Vol. 1: ... [30] N. Jacob: Pseudo Differential Operators and Markov Processes. Vol III: | Pseudo-Differential Operators and Markov Processes. Vol. I: ... / Vol. III: | Literatur | **Umgesetzt.** Uneinheitlich gegenüber [28] 'Pseudo-Differential ... Vol. II'; Punkt nach 'Vol' fehlt bei [30] |
