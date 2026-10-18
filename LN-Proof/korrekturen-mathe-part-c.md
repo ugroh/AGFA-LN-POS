@@ -27,7 +27,7 @@ Insgesamt **222 Punkte**: 47 ●, 99 ◐, 76 ○. Davon stehen 26 bereits in der
 | 273 | 435 | ● | `$ h = f + ig $` | `$ h = f + \iu g $` | Notation | Kursives i für die imaginäre Einheit; sonst \iu/\im (aufrecht), z. B. Z. 428, 438, 446, 450, 461. Ebenso Z. 474 `T_{1} + iT_{2}` und Z. 533 `+ i(S_{3} - S_{4})`. |
 | 273 | 476 | ◐ | `if\/ $ T_{2} $ is $ = 0 $` | `if\/ $ T_{2} = 0 $` | Mathemodus | Schon in der Arbeitsliste. Relationszeichen allein im Mathemodus nach „is“. Ähnlich Z. 524 `one has necessarily the values $ = 0 $ for $ S_{f} $` (besser: „one has necessarily $ S_{f} = 0 $“). |
 | 275 | 508 | ○ | `\text{sign } f = f\cdot\vert f\vert^{-1}` | `\sign f = f\cdot\vert f\vert^{-1}` | Notation | In Z. 485 mit dem Operator \sign gesetzt; \text{sign } übernimmt die Umgebungsschrift und hat anderen Abstand. |
-| 275 | 520 | ◐ | `the band $ \{x\}^{dd} $` | `the band $ \{f\}^{dd} $` | Tippfehler | Ein Element x kommt im Kontext nicht vor, gemeint ist das Band zu f. Ebenso Z. 524 `\{x\}^{d}` und Z. 527 `\{x\}^{dd}`. Bitte prüfen. |
+| 275 | 520 | ◐ | `the band $ \{x\}^{dd} $` | `the band $ \{f\}^{dd} $` | Tippfehler | **Umgesetzt** (vorgezogen zusammen mit math-error Z. 529; Rainers Haken steht noch aus). Ein Element x kommt im Kontext nicht vor, gemeint ist das Band zu f. Ebenso Z. 524 `\{x\}^{d}` und Z. 527 `\{x\}^{dd}`. Bitte prüfen. |
 | 275 | 529 | ○ | `S_{f}h = \sup \{ S_{f}g \colon` | `S_{f}h = \sup \{ S_{0}g \colon` | Tippfehler | S_f wird hier erst definiert; rechts ist wohl S_0 gemeint (g ∈ E_{\vert f\vert}). Bitte prüfen. |
 | 276 | 579 | ● | `then $ Z(E) $ is isomorphic` | `then $ \mathcal{Z}(E) $ is isomorphic` | Notation | Zentrum sonst kalligraphisch \mathcal{Z}(E) (Z. 572, 573, 575, 582). |
 

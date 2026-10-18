@@ -4,7 +4,7 @@
 
 **Umfang:** Beweise, Rechnungen und Beispiele in Teil II, Kap. 1–4, inhaltlich geprüft im LaTeX-Quelltext (Branch `fahnenkorrektur`): Vorzeichen und Konstanten, Ungleichungsrichtungen, Voraussetzungen und Quantoren, zitierte Hilfsaussagen, Lücken, Beispiele. Reine Satz- und Notationsfragen stehen in `korrekturen-mathe-part-b.md`; wo ein Befund dort schon steht und hier ergänzt wird, ist das vermerkt („Ergänzt korrekturen-mathe“).
 
-**Wichtig:** Die Befunde sind von Claude nachgerechnet, aber nicht von einem zweiten Mathematiker geprüft. Bitte jeden Punkt selbst verifizieren, bevor er umgesetzt wird. **Am Quelltext ist nichts geändert.**
+**Wichtig:** Die Befunde sind von Claude nachgerechnet, aber nicht von einem zweiten Mathematiker geprüft. Bitte jeden Punkt selbst verifizieren, bevor er umgesetzt wird. **Stand 18.10.2026:** Kap. 1 ist nach Durchsicht durch Rainer Nagel umgesetzt (Branch `fahnenkorrektur`, als „Umgesetzt“ markiert); Kap. 2–4 sind am Quelltext noch nicht geändert.
 
 **Spalten:** S. = gedruckte Buchseite (über das nächstgelegene Label ermittelt, ±1 Seite). Z. = Zeile in der .tex-Datei. Sicherheit: ● sicher falsch · ◐ sehr wahrscheinlich falsch · ○ zweifelhaft, bitte prüfen.
 
@@ -16,8 +16,8 @@ Insgesamt **45 Punkte**: 28 ●, 9 ◐, 8 ○.
 
 | S. | Z. | | Stelle | Befund | Vorschlag |
 |---|---|---|---|---|---|
-| 139 | 139 | ○ | Section 1.3, Adjungierte von Homomorphismen | `the adjoint of an algebra homomorphism induces a continuous map $\phi$ from $Y$ ... into $X$`: Für einen nicht-unitalen Algebrenhomomorphismus ist $T'\delta_{s}$ für manche $s$ gleich $0$ (z. B. $T=0$ oder $Tf = \1_{U}\cdot f(x_{0})$ mit offen-abgeschlossenem $U \subsetneq Y$), dann ist $\phi$ nicht auf ganz $Y$ definiert. Richtig nur für $T\1_{X} = \1_{Y}$ (so auch in (b) „Markov algebra homomorphism“ und stillschweigend in Kap. B-II, Z. 1645). | `the adjoint of a Markov algebra homomorphism` (bzw. „of an algebra homomorphism with $T\1_{X} = \1_{Y}$“); bitte prüfen |
-| 139 | 159 | ● | Section 1.3 (i), Darstellung von Verbandshomomorphismen auf $C(K)$ | `a function $h \in C(K)$`: Ohne Positivität von $h$ ist die „if“-Richtung falsch, z. B. $h \equiv -1$, $\phi = \mathrm{id}$ liefert $Tf = -f$, das kein Verbandshomomorphismus ist. Notwendig gilt $h = T\1 \geq 0$. | `a function $h \in C(K)_{+}$` (bzw. `$0 \leq h \in C(K)$`) |
+| 139 | 139 | ○ | Section 1.3, Adjungierte von Homomorphismen | **Umgesetzt.** `the adjoint of an algebra homomorphism induces a continuous map $\phi$ from $Y$ ... into $X$`: Für einen nicht-unitalen Algebrenhomomorphismus ist $T'\delta_{s}$ für manche $s$ gleich $0$ (z. B. $T=0$ oder $Tf = \1_{U}\cdot f(x_{0})$ mit offen-abgeschlossenem $U \subsetneq Y$), dann ist $\phi$ nicht auf ganz $Y$ definiert. Richtig nur für $T\1_{X} = \1_{Y}$ (so auch in (b) „Markov algebra homomorphism“ und stillschweigend in Kap. B-II, Z. 1645). | `the adjoint of a Markov algebra homomorphism` |
+| 139 | 159 | ● | Section 1.3 (i), Darstellung von Verbandshomomorphismen auf $C(K)$ | **Umgesetzt.** `a function $h \in C(K)$`: Ohne Positivität von $h$ ist die „if“-Richtung falsch, z. B. $h \equiv -1$, $\phi = \mathrm{id}$ liefert $Tf = -f$, das kein Verbandshomomorphismus ist. Notwendig gilt $h = T\1 \geq 0$. | `a function $h \in C(K)_{+}$` |
 
 ### Teil II, Kap. 2 – Characterization of Positive Semigroups on C₀(X) (`part-b/chap-b2.tex`)
 
