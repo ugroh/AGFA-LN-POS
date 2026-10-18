@@ -582,7 +582,7 @@ and deduce from
 that $(g_{n})$ is an approximate eigenvector of\/ $A$ to the eigenvalue $\alpha$.
 
 \item 
-First we recall the well known \emph{resolvent equation}
+First we recall the well known \emph{resolvent equation}%
 \index{resolvent equation}. 
 
 For any $z$,  $\lambda_{0} \in \rho(A)$ we have 
@@ -756,7 +756,7 @@ R(\lambda_{0},A)P = R(\lambda_{0},A_{1}), \quad R(\lambda_{0},A)(\Id-P) = R(\lam
 %% --
 for the generator $A_{1}$ of\/ $T_{1} = (T(t)P)_{t \geq 0}$ and $A_{2}$ of\/ $T_{2} = (T(t)(\Id-P))_{t \geq 0}$.
 \index{spectral mapping theorem}
-Applying the spectral mapping theorem for the resolvent (Theorem~\ref{prop:a3-2.5})
+Applying the spectral mapping theorem for the resolvent (Proposition~\ref{prop:a3-2.5})
 we conclude
 %% --
 \[
@@ -1930,7 +1930,7 @@ In this section we prove similar weak spectral mapping theorems.
 We start with a generalization of the above example.
 
 Consider the Banach space $E = C_{0}(X,\C^{n})$ of all continuous $\C^{n}$-valued functions vanishing at infinity on some locally compact space $X$.
-In analogy to Section~\ref{subsec:a1-2.3} we associate to every continuous function $q \colon X \to M(n)$, where $M(n)$ denotes the space of all complex $n\times n$-matrices, a "multiplication operator" 
+In analogy to Section~\ref{subsec:a1-2.3} we associate to every continuous function $q \colon X \to M(n)$, where $M(n)$ denotes the space of all complex $n\times n$-matrices, a \enquote{multiplication operator} 
 \[
 M_{q} \colon f \mapsto q\cdot f \text{ where } (q\cdot f)(x) = q(x)\cdot f(x) \text{ for } x \in X , 
 \]
@@ -2182,7 +2182,7 @@ Henceforth we assume $\im\Z \subseteq \rho(A)$ and define for $k \in \Z$
 Q_{k}\coloneq \frac{1}{2\pi}\int_{0}^{2\pi} \eu^{-\im ks}T(s)\ds = \frac{1}{2\pi}(1 - T(2\pi))R(\im k,A)
 \end{equation}
 %% --
-(\cf Formula Eq.~\myeqpageref{eq:a1-3.1}).
+(\cf Eq.~\myeqpageref{eq:a1-3.1}).
 
 Our approach is based on Fejér's Theorem (for Banach space valued functions).
 Let us recall this result.
@@ -2326,7 +2326,7 @@ Then the following form of the spectral mapping theorem is valid.
 \begin{minipage}{.85\textwidth}
 	$ \eu^{\lambda t} \in \sigma(T(t))\setminus\{0\} $ if and only if either 
 	$\mu_{k}\coloneq \lambda + 2\pi\im  k/t \in \sigma(A)$ for some  $k \in \Z$
-	otherwise  if\/ $(\|R(\mu_{k},A)\|)_{k\in\Z}$ is unbounded.
+	or if\/ $(\|R(\mu_{k},A)\|)_{k\in\Z}$ is unbounded.
 \end{minipage}
 \]
 \end{theorem}
@@ -2350,7 +2350,7 @@ of a semigroup $(T(t))_{t\geq 0}$ on a Hilbert space $H$ satisfies
 \end{equation}
 \end{corollary}
 %% --
-The Example~\ref{ex:a3-1.3} above in combination with Corollary~\ref{cor:c3-1.3} shows that Eq.~\myeqpageref{eq:a3-7.9} is not valid in arbitrary Banach spaces.
+The Example~\ref{ex:a3-1.3} above in combination with Part-III, Corollary~\ref{cor:c3-1.3} shows that Eq.~\myeqpageref{eq:a3-7.9} is not valid in arbitrary Banach spaces.
 %% -- Notes
 %% --
 %\newpage
@@ -2369,11 +2369,11 @@ A more sophisticated example of a positive group with
 \item 
 In Definition~\ref{def:a3-2.1} we define the residual spectrum of\/ $A$ in such a way that it coincides with the point spectrum of the adjoint $A'$ (see Proposition~\ref{prop:a3-2.2}\,(ii)).
 It therefore differs slightly from the one used, \eg by \textcite{schaefer:1974}.
-The spectral mapping theorem for the resolvent (Theorem~\ref{prop:a3-2.5}) is well known and can, \eg be deduced from Lemma~9.2 and Theorem~3.11 of Chap.VII in \textcite{dunfordschwartz:1958}.
+The spectral mapping theorem for the resolvent (Proposition~\ref{prop:a3-2.5}) is well known and can, \eg be deduced from Lemma~9.2 and Theorem~3.11 of Chap.VII in \textcite{dunfordschwartz:1958}.
 
 \item 
-The general theory of spectral decompositions can be found in \textcite{kato:1976}, Chap.III,§ 6.4].
-Applications to isolated singularities like Example~3.6 are discussed extensively in [l.c., Chap.~III, §6.5] and \textcite[Chap.~VIII, Sec.8]{yosida:1965}.
+The general theory of spectral decompositions can be found in \textcite[Chap.~III, §6.4]{kato:1976}.
+Applications to isolated singularities like Example~\ref{ex:a3-3.6} are discussed extensively in [l.c., Chap.~III, §6.5] and \textcite[Chap.~VIII, Sec.8]{yosida:1965}.
 There are many ways to introduce an \enquote{essential spectrum} (see the footnote on page 243 of \textcite{kato:1976}).
 However each one yields the same \enquote{essential spectral radius}.
 

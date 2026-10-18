@@ -1,0 +1,195 @@
+\documentclass[10pt]{article}
+\input{korr-preamble}
+\hypersetup{pdftitle={Formelprüfung Part D (Teil IV): Satz und Notation}}
+\pagestyle{plain}
+\begin{document}
+% Erzeugt aus korrekturen-mathe-part-d.md: Formeln gesetzt statt Quelltext.
+% Grau/Schreibmaschine = Quelltext, der sich nicht als Formel setzen laesst (Makronamen, Labels).
+{\Large\bfseries Formelprüfung Part D (Teil IV): Satz und Notation\par}
+\smallskip
+\emph{One-parameter Semigroups of Positive Operators}, 2. Aufl. (Springer LNM 1184). Stand: 14.10.2026.
+
+\textbf{Umfang:} Teil IV, Kap. 1–4, geprüft im LaTeX-Quelltext (Branch \code{fahnenkorrektur}). Geprüft wurden nur Satz und Notation in Formeln: Tippfehler, Klammern, Indizes, uneinheitliche Schreibweisen, Mathemodus, Satzzeichen an Formeln, Verweise. Beweise wurden \textbf{nicht} nachgerechnet; wo ein Befund inhaltlich wirkt, steht „bitte prüfen“.
+
+\textbf{Noch nichts geändert.} Die Liste dient zur Besprechung; umgesetzt wird erst nach Rücksprache.
+
+\textbf{Spalten:} S. $=$ gedruckte Buchseite, ermittelt über das nächstgelegene Label (kann um eine Seite abweichen). Z. $=$ Zeile in der .tex-Datei. Sicherheit: \sichA{} eindeutig $\ensuremath{\cdot}$ \sichB{} sehr wahrscheinlich $\ensuremath{\cdot}$ \sichC{} Hinweis/Ermessen.
+
+Insgesamt \textbf{122 Punkte}: 40 \sichA{}, 55 \sichB{}, 27 \sichC{}. Davon stehen 9 bereits in der Arbeitsliste \code{Fahnenkorrektur\_Springer\_LNM1184.md} (im Kommentar markiert).
+
+\section*{Einzelbefunde}
+\subsection*{Teil IV, Kap. 1 – Basic Results on Semigroups and Operator Algebras (\code{part-d/chap-d1.tex})}
+\begin{longtable}{@{}rrc>{\RaggedRight\arraybackslash}p{5.8cm}>{\RaggedRight\arraybackslash}p{5.8cm}>{\RaggedRight\arraybackslash}p{1.9cm}>{\RaggedRight\arraybackslash}p{7.3cm}@{}}
+\toprule
+\textbf{S.} & \textbf{Z.} & \textbf{} & \textbf{Ist} & \textbf{Soll} & \textbf{Art} & \textbf{Kommentar} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{S.} & \textbf{Z.} & \textbf{} & \textbf{Ist} & \textbf{Soll} & \textbf{Art} & \textbf{Kommentar} \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+409 & 52 & \sichB{} & $\phi \in M'_{+}: \phi(\1) = 1$ & $\phi \in M'_{+} \colon \phi(\1) = 1$ & Notation & Sonst \code{\textbackslash{}colon} in Mengenklammern (Z. 32, 38, 46); „:“ ergibt sichtbar anderen Abstand. \\[2pt]
+409 & 67 & \sichA{} & {every n-positive map} & {every $n$-positive map} & Mathemodus & n ohne Mathemodus; in Z. 66 korrekt {$n$-positive}. \\[2pt]
+410 & 116 & \sichB{} & {on a\, \CA-algebra} & {on a \CA-algebra} & Abstand & \code{\textbackslash{}}, plus folgender Wortzwischenraum ergibt sichtbar zu großen Abstand. \\[2pt]
+410 & 127 & \sichC{} & $\mu R(\mu,A)xx^{*}$ & $\mu R(\mu,A)(xx^{*})$ & Notation & Uneinheitlich: Z. 120 $T(t)(xx^{*})$ und Z. 184 $R(\mu,A)(xx^{*})$ mit Klammern, hier und Z. 142, 150, 162, 164 f., 178, 231 ohne; ohne Klammern als $(Rx)x^{*}$ lesbar. \\[2pt]
+410 & 132 & \sichB{} & {If\/ $ \,\TT $} & {If\/ $ \TT $} & Abstand & Überzähliger Abstand \code{\textbackslash{}}, vor \code{\textbackslash{}TT}. \\[2pt]
+410 & 140 & \sichC{} & $\left( S(r)x)(S(r)x \right)^{*}$ & $(S(r)x)(S(r)x)^{*}$ & LaTeX & \code{\textbackslash{}left(} \dots{} \code{\textbackslash{}right}) über „)(“ hinweg falsch gepaart; optisch unauffällig, aber unsauber; ebenso zweiter Term in Z. 140. \\[2pt]
+410 & 161 & \sichA{} & \code{(S(t)x)(S(r)x)\textasciicircum{}\{*\} \allowbreak{} \allowbreak{}\allowbreak{}\textbackslash{}dr \allowbreak{}\allowbreak{}\textbackslash{}dt \allowbreak{}\allowbreak{}\textbackslash{}right)} & \code{(S(t)x)(S(r)x)\textasciicircum{}\{*\}) \allowbreak{}\allowbreak{}\textbackslash{}dr \allowbreak{}\allowbreak{}\textbackslash{}dt \allowbreak{}\allowbreak{}\textbackslash{}right)} & Klammern & Die in Z. 160 mit $((S(r)x)\dots$ geöffnete runde Klammer wird nicht geschlossen (vgl. Z. 162). \\[2pt]
+410 & 163 & \sichA{} & $\eu^{-\mu s} ds$ & $\eu^{-\mu s} \ds$ & Notation & Kursives d; sonst \code{\textbackslash{}dr}, \code{\textbackslash{}dt} mit aufrechtem d. \\[2pt]
+411 & 178 & \sichB{} & $xx^{*} \, , \, x \in M .$ & $xx^{*}, \quad x \in M.$ & Abstand & Dünnes Leerzeichen vor dem Komma sichtbar; vgl. Z. 206 $x, \quad x \in M$. \\[2pt]
+411 & 194 & \sichB{} & $\eu^{- \im  \lambda t }T(t)$ & $\eu^{- \im \Im(\lambda) t}T(t)$ & Tippfehler & Bitte prüfen: Mit $\lambda$ statt \code{\textbackslash{}Im(\allowbreak{}\textbackslash{}lambda)} gilt \code{R(\allowbreak{}\textbackslash{}lambda,A) \allowbreak{}= \allowbreak{}R(\allowbreak{}\textbackslash{}Re(\allowbreak{}\textbackslash{}lambda),B)} nicht; ebenso Z. 197 $B \coloneq A - \im \lambda$ $\ensuremath{\to}$ $B \coloneq A - \im \Im(\lambda)$. \\[2pt]
+412 & 213 & \sichB{} & {Part-III, Section~\lbl{sec:c3-3}} & {Part-III, Section~\lbl{sec:c3-2}} & Verweis & Schon in der Arbeitsliste. Pseudo-Resolventen stehen in chap-c3.tex Abschnitt sec:c3-2 (dort auch ex:c3-2.5), sec:c3-3 ist „Irreducible Semigroups“. \\[2pt]
+412 & 218 & \sichA{} & $\mathcal{R} \colon D \mapsto \LE$ & $\mathcal{R} \colon D \to \LE$ & Notation & Abbildungspfeil zwischen Mengen ist \code{\textbackslash{}to} (so Z. 304 und Part III, chap-c3 Z. 383). \\[2pt]
+412 & 262 & \sichA{} & $\Fix{ (\lambda R(\lambda,A) }$ & $\Fix{\lambda R(\lambda,A)}$ & Klammern & \code{\textbackslash{}Fix} setzt selbst Klammern; gedruckt „$\operatorname{Fix}((\ensuremath{\lambda}R(\ensuremath{\lambda},A))$“ mit unausgeglichener Klammer. \\[2pt]
+413 & 312 & \sichB{} & $\TT_p = (T(t)p)_{t \geq 0}$ & $\TT_p = (T(t)_{p})_{t \geq 0}$ & Tippfehler & Induzierte Abbildung heißt $S_{p}$ (Z. 304); T(t)p liest sich als Produkt. Bitte prüfen. \\[2pt]
+413 & 339 & \sichB{} & {(\lbl{item:d1-3.2}) above} & {\lbl{item:d1-3.2} above} & Verweis & \code{\textbackslash{}eqref} auf einen Aufzählungspunkt ergibt „(2.) above“; mit \code{\textbackslash{}ref} „2. above“. \\[2pt]
+413 & 347 & \sichC{} & $M_{s(\phi)}$ & $s(\phi)Ms(\phi)$ & Notation & $M_{s(\phi)}$ nirgends eingeführt und leicht mit $M_\phi = s(\phi)^\perp M s(\phi)^\perp$ (Z. 327, 334) zu verwechseln; ebenso Z. 368. Bitte prüfen. \\[2pt]
+413 & 360 & \sichA{} & $s(\phi)M_s(\phi)$ & $s(\phi)M_{*}s(\phi)$ & Tippfehler & Stern fehlt; gedruckt M mit Index s, danach $(\ensuremath{\varphi})$. \\[2pt]
+413 & 368 & \sichB{} & $T_{*_{\vert}}$ & $(T_{*})_{\vert s(\phi)M_{*}s(\phi)}$ & Notation & Im Quelltext senkrechter Strich als Unter-Index ohne Bezugsraum; sonst $_{\vert F}$ mit Raum (Z. 281, 370, 377). \\[2pt]
+413 & 370 & \sichB{} & $\phi \in \text{Fix}(T)$ & $\phi \in \Fix{\TT}$ & Notation & Sonst Makro \code{\textbackslash{}Fix} (Z. 261 f.); die Halbgruppe heißt hier \code{\textbackslash{}TT}, nicht T. \\
+\end{longtable}
+\subsection*{Teil IV, Kap. 2 – Characterization of Positive Semigroups on W*-Algebras (\code{part-d/chap-d2.tex})}
+\begin{longtable}{@{}rrc>{\RaggedRight\arraybackslash}p{5.8cm}>{\RaggedRight\arraybackslash}p{5.8cm}>{\RaggedRight\arraybackslash}p{1.9cm}>{\RaggedRight\arraybackslash}p{7.3cm}@{}}
+\toprule
+\textbf{S.} & \textbf{Z.} & \textbf{} & \textbf{Ist} & \textbf{Soll} & \textbf{Art} & \textbf{Kommentar} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{S.} & \textbf{Z.} & \textbf{} & \textbf{Ist} & \textbf{Soll} & \textbf{Art} & \textbf{Kommentar} \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+418 & 43 & \sichA{} & $\TT = (T(t)_{t \geq 0})$ & $\TT = (T(t))_{t \geq 0}$ & Klammern & Index steht innerhalb der Klammer; sonst im ganzen Buch $(T(t))_{t \geq 0}$. \\[2pt]
+418 & 57 & \sichC{} & $\|(T_n - \Id)(u_n)\| \leq n^{-1}$ & $\|(T_n - \Id)u_n\| \leq n^{-1}$ & Notation & Dieselbe Aussage in Z. 66 ohne Klammern um $u_n$; einheitlich setzen. \\[2pt]
+418 & 80 & \sichB{} & \code{\textbackslash{}in \allowbreak{}\allowbreak{}\textbackslash{}mathcal\{L\}(\allowbreak{}\textbackslash{}widehat\{M\})\$} & \code{\textbackslash{}in \allowbreak{}\allowbreak{}\textbackslash{}mathcal\{L\}(\allowbreak{}\textbackslash{}widehat\{M\})\$,} & Satzzeichen & Punkte (i)' und (ii)' enden mit Komma, (iii)' vor „and let \dots{}“ nicht. \\[2pt]
+418 & 90 & \sichB{} & {follows from \upshape(i)', \dots  follows from \upshape(iii)'} & {follows from (i), \dots  follows from (iii)} & Verweis & Bitte prüfen: T(pxp)=pxp folgt aus (i) (gleichmäßige Konvergenz), T(u)=u aus (iii) (Abschätzung für $u_n$) der ersten Liste; (i)'/(iii)' sind nur die Definitionen von \code{\textbackslash{}widehat\{M\}} bzw. T. \code{\textbackslash{}upshape} im Fließtext ist zudem überflüssig. \\
+\end{longtable}
+\subsection*{Teil IV, Kap. 3 – Spectral Theory on W*-Algebras and their Preduals (\code{part-d/chap-d3.tex})}
+\begin{longtable}{@{}rrc>{\RaggedRight\arraybackslash}p{5.8cm}>{\RaggedRight\arraybackslash}p{5.8cm}>{\RaggedRight\arraybackslash}p{1.9cm}>{\RaggedRight\arraybackslash}p{7.3cm}@{}}
+\toprule
+\textbf{S.} & \textbf{Z.} & \textbf{} & \textbf{Ist} & \textbf{Soll} & \textbf{Art} & \textbf{Kommentar} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{S.} & \textbf{Z.} & \textbf{} & \textbf{Ist} & \textbf{Soll} & \textbf{Art} & \textbf{Kommentar} \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+421 & 61 & \sichC{} & $\vert\phi(x)\vert^{2}  \leq \vert\phi\vert(xx^{*})$ & $\vert\phi(x)\vert^{2}  \leq \|\phi\|\,\vert\phi\vert(xx^{*})$ & Tippfehler & Faktor $\ensuremath{\|}\ensuremath{\varphi}\ensuremath{\|}$ fehlt vermutlich; in Z. 299–301 wird (*) mit $\ensuremath{\|}\ensuremath{\psi}\ensuremath{\|}$ angewandt. Bitte prüfen. \\[2pt]
+422 & 110 & \sichB{} & $0 \leq \psi \in M^{*}$ & $0 \leq \psi \in M'$ & Notation & Dualraum sonst M' bzw. E' (Z. 34, 389 ff.); ebenso Z. 113 $M^{*}_{+}$ $\ensuremath{\to}$ $M'_{+}$. \\[2pt]
+423 & 142 & \sichC{} & $S(x)(Sx)^{*} \leq T(xx^{*})$ & $S(x)S(x)^{*} \leq T(xx^{*})$ & Notation & Im selben Ausdruck S(x) und Sx gemischt; Z. 162 und 186 schreiben $S(x)S(x)^*$. \\[2pt]
+423 & 151 & \sichA{} & {is T-invariant} & {is $T$-invariant} & Mathemodus & T ohne Mathemodus; vgl. Z. 181 „$T$-invariant“. \\[2pt]
+423 & 159 & \sichB{} & $b: M\times M \mapsto M$ & $b \colon M\times M \to M$ & Notation & \code{\textbackslash{}mapsto} statt \code{\textbackslash{}to}; Doppelpunkt sonst \code{\textbackslash{}colon} (Z. 100). Doppelpunkt ebenso Z. 706 $D(A): A\psi$, 767 $\kappa:\R$, 963 $): D \to$, 1158 $J: (M_{*})^{\wedge}$. \\[2pt]
+423 & 204 & \sichB{} & $= 2\vert\phi\vert(uu^{*}) - \phi(u^{*})^{*}$ & $= 2\vert\phi\vert(u^{*}u) - \phi(u^{*})^{*}$ & Tippfehler & Z. 203 und 205 haben $u^*u$; bitte prüfen. \\[2pt]
+423 & 208 & \sichB{} & $(Su^{*} - u^{*})(Su^{*} - u^{*}) \in F$ & $(Su^{*} - u^{*})(Su^{*} - u^{*})^{*} \in F$ & Tippfehler & Stern am zweiten Faktor fehlt (vgl. Z. 195, 202); bitte prüfen. \\[2pt]
+425 & 299 & \sichB{} & $\vert^2 \leq    \leq \|\psi\|$ & $\vert^2    \leq \|\psi\|$ & LaTeX & Relationszeichen am Zeilenende und am Anfang der Folgezeile doppelt gesetzt; sonst im Kapitel nicht (Z. 338–341). Ebenso Z. 308 $=    =$. \\[2pt]
+425 & 300 & \sichB{} & $\dualp{(\mu R(\mu+\im\alpha)'x)(\ldots)^{*},\psi}$ & $\dualp{(\mu R(\mu+\im\alpha)'x)(\ldots)^{*},\vert\psi\vert}$ & Tippfehler & Nach (*) muss hier der Betrag von $\ensuremath{\psi}$ stehen (wie Z. 301); bitte prüfen. \\[2pt]
+425 & 340 & \sichC{} & $\dualp{R(\phi^{+}), \1}$ & $\dualp{\1, R(\phi^{+})}$ & Notation & Reihenfolge der dualen Paarung sonst $\ensuremath{\langle}x$, $\ensuremath{\psi}\ensuremath{\rangle}$ (Z. 299, 309, 517); ebenso $\dualp{R(\phi^{-}), \1}$. \\[2pt]
+426 & 408 & \sichB{} & $0 \neq \psi_{0} \in \Fix{S}$ & $0 \neq \psi_{0} \in \Fix{S'}$ & Tippfehler & $\ensuremath{\psi}_0$ liegt in Fix(S') (Z. 399); danach „Fix(S') separates the points“. \\[2pt]
+428 & 537 & \sichC{} & $A'u_{\alpha} = \im\alpha u_{\alpha}$ & $A'u_{\alpha}^{*} = \im\alpha u_{\alpha}^{*}$ & Tippfehler & Im Beweis (Z. 485) gilt die Gleichung für $u_\ensuremath{\alpha}^*$; bitte prüfen. \\[2pt]
+428 & 561 & \sichC{} & $\{0, \lambda, \lambda^{*}\}$ & $\{0, \lambda, \overline{\lambda}\}$ & Notation & Stern steht sonst für Involution/Adjungierte; wegen $\ensuremath{\lambda} \ensuremath{\in} iR$ ggf. einfach $\ensuremath{-}\ensuremath{\lambda}$. Bitte prüfen. \\[2pt]
+429 & 582 & \sichB{} & $\im \, \R$ & $\im\R$ & Abstand & Sonst überall \code{\textbackslash{}im\allowbreak{}\textbackslash{}R} ohne Zwischenraum. \\[2pt]
+429 & 640 & \sichC{} & $\circ V_{\alpha}^{-1} \quad (1)$ & \code{\textbackslash{}circ \allowbreak{}V\_\{\allowbreak{}\textbackslash{}alpha\}\textasciicircum{}\{-1\} \allowbreak{}\allowbreak{}\textbackslash{}tag\{1\}} & LaTeX & Handgesetzte Nummern stehen nicht am rechten Rand wie (*) in Z. 62; ebenso Z. 648 (dort zusätzlich Punkt vor (2), bei (1) und (3) nicht) und Z. 654. \\[2pt]
+429 & 645 & \sichA{} & $i\beta \in P\sigma(A)$ & $\im\beta \in P\sigma(A)$ & Notation & Kursives i statt \code{\textbackslash{}im}. \\[2pt]
+429 & 645 & \sichB{} & $\1 = u_{\beta}u_{\beta}^{*} = u_{\beta}u_{\beta}^{*}$ & $\1 = u_{\beta}u_{\beta}^{*} = u_{\beta}^{*}u_{\beta}$ & Tippfehler & Zweimal derselbe Ausdruck; vgl. Z. 620. \\[2pt]
+429 & 662 & \sichC{} & $\sigma(R(\mu+\im\alpha))$ & $\sigma(R(\mu+\im\alpha,A))$ & Notation & Im selben Ausdruck $R(\mu,A)$; Argument A fehlt. \\[2pt]
+430 & 695 & \sichC{} & $G \coloneq (\TT_{0})^{-}$ & $G \coloneq \overline{\TT_{0}}$ & Notation & Abschluss uneinheitlich: $^{-}$ (Z. 695, 710 \code{\textbackslash{}closure}) neben \code{\textbackslash{}overline} (Z. 698, 743, 789). \\[2pt]
+430 & 709 & \sichB{} & $U = \{U(\eta) \colon \eta \in \Omega\}$ & $U \coloneq \bigcup_{\eta \in \Omega} U(\eta)$ & Tippfehler & Mengensystem statt Vereinigung; danach „$\ensuremath{\psi} \ensuremath{\in} U$“ und Abschluss von $U = N_*$. Bitte prüfen. \\[2pt]
+430 & 715 & \sichB{} & $\{\eu^{-\eta t}\psi \colon t \in \R_{+}\}$ & $\{\eu^{\eta t}\psi \colon t \in \R_{+}\}$ & Tippfehler & Wegen $A\ensuremath{\psi} = \ensuremath{\eta}\ensuremath{\psi}$; Z. 725 ohne Minuszeichen. Bitte prüfen. \\[2pt]
+430 & 721 & \sichB{} & $\psi_{1}, ..., \psi_{n}$ & $\psi_{1}, \dots, \psi_{n}$ & LaTeX & „...“ im Mathemodus ergibt eng gesetzte Punkte; ebenso Z. 732 (zweimal), 1067, 1068. \\[2pt]
+430 & 743 & \sichA{} & $\subseteq L_{s}(N_{*})$ & $\subseteq \mathcal{L}_{s}(N_{*})$ & Notation & Sonst kalligraphisches L (Z. 695, 698, 718, 963); ebenso Z. 1137 $L(\widehat{E})$ $\ensuremath{\to}$ $\mathcal{L}(\widehat{E})$. \\[2pt]
+430 & 752 & \sichB{} & $S \coloneq \lim_{\mathfrak{U}}T(t-s)$ & $S \coloneq \lim_{\mathfrak{U}}T_{0}(t-s)$ & Notation & Im Beweis sonst $T_0$ (Z. 748, 758). \\[2pt]
+431 & 783 & \sichB{} & {fulfils the assertions of Theorem 1.10} & {fulfils the assertions of Theorem~\lbl{thm:d3-1.11}} & Verweis & Schon in der Arbeitsliste. Hart codierte Altnummer. \\[2pt]
+432 & 820 & \sichA{} & $\{p_{1}, .., p_{n}\}$ & $\{p_{1}, \dots, p_{n}\}$ & Tippfehler & Nur zwei Punkte; ebenso Z. 957 $(x, x, ..)$ $\ensuremath{\to}$ $(x, x, \dots)$. \\[2pt]
+432 & 824 & \sichB{} & {from Lemma 1.1.b that} & {from Lemma~\lbl{lem:d3-1.1}\,\lbl{item:d3-1.1-ii} that} & Verweis & Schon in der Arbeitsliste. Hart codierte Altnummer. \\[2pt]
+432 & 827 & \sichB{} & $x(\mu \RR'(\mu)y)$ & $x(\mu R(\mu)'y)$ & Notation & Links $R(\mu)'$, rechts kalligraphisches $\RR'(\mu)$. \\[2pt]
+432 & 843 & \sichA{} & $\leq (\1-s(\vert\psi_{\alpha}\vert) , \mu$ & $\leq \1-s(\vert\psi_{\alpha}\vert) , \mu$ & Klammern & Öffnende Klammer ohne Gegenstück (vgl. Z. 461 f.). \\[2pt]
+432 & 895 & \sichB{} & $\mu R(\mu)'(x u_{\alpha})u_{\alpha}^{*}$ & $\mu R(\mu)'(x u_{\alpha}^{*})u_{\alpha}$ & Tippfehler & Z. 889 und 903 haben $(xu_\ensuremath{\alpha}^*)u_\ensuremath{\alpha}$; bitte prüfen. \\[2pt]
+432 & 912 & \sichA{} & $\Fix  {\lambda R(\lambda)')\vert M(u_{\alpha}u_{\alpha}^{*}}$ & $\Fix{\lambda R(\lambda)'\vert M(u_{\alpha}u_{\alpha}^{*})}$ & Klammern & Schließende Klammer steht hinter $R(\ensuremath{\lambda})'$ statt hinter $u_\ensuremath{\alpha} u_\ensuremath{\alpha}^*$ (vgl. Z. 911). \\[2pt]
+432 & 927 & \sichB{} & $\dim \Fix{\lambda R(\lambda)'} ,$ & $\dim \Fix{\lambda R(\lambda)'}$ & Satzzeichen & Komma mitten in der Gleichungskette. \\[2pt]
+435 & 1058 & \sichB{} & $= \lim \|z - x_{n}\| = 0$ & $= \lim_{n} \|z - x_{n}\| = 0 .$ & Satzzeichen & Schlusspunkt fehlt (nächster Satz „Consequently“); \code{\textbackslash{}lim} ohne Index, sonst \code{\textbackslash{}lim\_\{n\}}. \\[2pt]
+435 & 1075 & \sichB{} & \code{R(\allowbreak{}\textbackslash{}lambda)\} \allowbreak{}\allowbreak{}\textbackslash{}bigoplus \allowbreak{}\allowbreak{}\textbackslash{}bigcap\_\{j=1\}\textasciicircum{}\{n\}} & \code{R(\allowbreak{}\textbackslash{}lambda)\} \allowbreak{}\allowbreak{}\textbackslash{}oplus \allowbreak{}\allowbreak{}\textbackslash{}bigcap\_\{j=1\}\textasciicircum{}\{n\}} & LaTeX & \code{\textbackslash{}bigoplus} ist ein großer Operator; als binäres Zeichen \code{\textbackslash{}oplus}. \\[2pt]
+435 & 1088 & \sichC{} & $\bigcap_{j=1}^{n} \ker\phi_{j}$ & $\bigcap_{j=1}^{n} \Kern{\phi_{j}}$ & Notation & Z. 1075 und 1090 $\ker (\ensuremath{\varphi}_j)$ mit Klammern; ebenso Z. 1099. \\[2pt]
+437 & 1161 & \sichC{} & $\dualp{x,J(\widehat{\phi})}$ & $\dualp{\hat{x},J(\widehat{\phi})}$ & Tippfehler & Definiert wird für \code{\textbackslash{}hat\{x\} \allowbreak{}\ensuremath{\in} \allowbreak{}\allowbreak{}\textbackslash{}widehat\{M\}}; bitte prüfen. \\[2pt]
+437 & 1168 & \sichC{} & {subspace of\/ $\widehat{M'}$} & {subspace of\/ $\widehat{M}'$} & Notation & Z. 1158: J bildet in \code{\textbackslash{}widehat\{M\}'} ab; ebenso Z. 1169 und 1172 $\widehat{M''}$. Bitte prüfen. \\[2pt]
+438 & 1186 & \sichB{} & $\dim \Fix{T}$ & $\dim \Fix{\TT}$ & Notation & Halbgruppe heißt \code{\textbackslash{}TT}, ein T ist nicht eingeführt; ebenso Z. 1198, 1199 (\code{\textbackslash{}Fix\{T\}}, \code{\textbackslash{}Fix\{\allowbreak{}\textbackslash{}widehat\{T\}\}}), 1203; in Z. 1198 außerdem E, \code{\textbackslash{}widehat\{E\}} statt $M_*$, $(M_*)^\wedge$. \\[2pt]
+438 & 1206 & \sichA{} & {(Proposition~\lbl{prop:d3-2.1} ).} & {(Proposition~\lbl{prop:d3-2.1}).} & Abstand & Schon in der Arbeitsliste. Leerzeichen vor der Klammer. \\
+\end{longtable}
+\subsection*{Teil IV, Kap. 4 – Asymptotics on C*- and W*-Algebras (\code{part-d/chap-d4.tex})}
+\begin{longtable}{@{}rrc>{\RaggedRight\arraybackslash}p{5.8cm}>{\RaggedRight\arraybackslash}p{5.8cm}>{\RaggedRight\arraybackslash}p{1.9cm}>{\RaggedRight\arraybackslash}p{7.3cm}@{}}
+\toprule
+\textbf{S.} & \textbf{Z.} & \textbf{} & \textbf{Ist} & \textbf{Soll} & \textbf{Art} & \textbf{Kommentar} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{S.} & \textbf{Z.} & \textbf{} & \textbf{Ist} & \textbf{Soll} & \textbf{Art} & \textbf{Kommentar} \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+441 & 57 & \sichB{} & $\exp(\omega_{0} t) \in \rho(T(t)')$ & $\exp(\omega_{0} t) \in \sigma(T(t)')$ & Tippfehler & $\exp (\ensuremath{\omega}\ensuremath{_{0}}t)$ ist nach Z. 52 Eigenwert von T(t)', liegt also nicht in der Resolventenmenge $\ensuremath{\varrho}$; vermutlich $\ensuremath{\sigma}$ bzw. $P\ensuremath{\sigma}$ gemeint, bitte prüfen. \\[2pt]
+442 & 83 & \sichA{} & $\eu^{-\lambda t}T(s)\phi \ds$ & $\eu^{-\lambda s}T(s)\phi \ds$ & Tippfehler & Integrationsvariable gemischt (t im Exponenten, s im Integranden und Differential). \\[2pt]
+442 & 90 & \sichB{} & $\eu^{\lambda t}\|T(s)\phi\| \ds$ & $\eu^{-\lambda s}\|T(s)\phi\| \ds$ & Tippfehler & Integrationsvariable gemischt wie Z. 83; außerdem fehlt das Minuszeichen im Exponenten (für $\ensuremath{\lambda} > s(A)$ ist $e^{-\ensuremath{\lambda}s}$ gemeint), bitte prüfen. \\[2pt]
+442 & 128 & \sichA{} & {C*-algebras} & {\CA-algebras} & Notation & Schon in der Arbeitsliste. Hier (und Z. 131 „C*-algebra“) normales Sternchen ohne Mathemodus statt {\CA{}} wie sonst im Kapitel. \\[2pt]
+443 & 151 & \sichB{} & {by Theorem~\lbl{thm:d4-1.3}} & {by Theorem~\lbl{thm:d4-1.1}} & Verweis & Schon in der Arbeitsliste. Theorem 4.1.7 betrifft C*-Algebren mit Eins (Theorem 4.1.1), nicht Prädualräume (4.1.3). \\[2pt]
+443 & 171 & \sichB{} & {hence $s(A) = 1$} & {hence $\omega_{0} = 0$} & Tippfehler & Aus $\ensuremath{\|}T(t)\ensuremath{\|} = 1$ folgt $\ensuremath{\omega}\ensuremath{_{0}} = 0$ (bzw. $s(A) = 0$), nicht $s(A) = 1$; bitte prüfen. \\[2pt]
+443 & 182 & \sichA{} & $\UG(t)^{*}MU(t)$ & $U(t)^{*}MU(t)$ & Notation & \code{\textbackslash{}UG} ist die Halbgruppe $\ensuremath{\mathcal{U}}$; gemeint ist der Operator U(t) (vgl. Z. 186). \\[2pt]
+444 & 223 & \sichC{} & $(\xi \mapsto x(B\xi)+B^{*}(x\xi)): D(B) \to H$ & $(\xi \mapsto x(B\xi)+B^{*}(x\xi))\colon D(B) \to H$ & Abstand & Doppelpunkt bei Abbildungen als Relation gesetzt (zu viel Abstand davor); ebenso Z. 733 ($(S \mapsto S'): K \to$), Z. 878 ($\kappa_{t}: \N \to \N$). \\[2pt]
+444 & 231 & \sichA{} & {\ie  $Ax = xB + B^{*}x$ for $ x \in D(A) $} & {\ie $Ax = xB + B^{*}x$ for $x \in D(A)$.} & Satzzeichen & Satzende-Punkt fehlt. \\[2pt]
+444 & 271 & \sichA{} & $\vert(T(s)x)\xi\vert\eta) \ds$ & $\abs{((T(s)x)\xi \,\vert\, \eta)} \ds$ & Klammern & Öffnende Klammer des Skalarprodukts fehlt, Betrag/Trennstrich vermischt (vgl. Z. 342: $((T(s)x)\xi \,\vert\, \eta)$). \\[2pt]
+444 & 327 & \sichA{} & $\int_{0}^{\infty}\|U(s)\|^2ds$ & $\int_{0}^{\infty}\|U(s)\xi\|^2 \ds$ & Tippfehler & $\ensuremath{\xi}$ fehlt (vgl. Theorem 4.2.2 (g), Z. 268); außerdem kursives „ds“ statt \code{\textbackslash{}ds}. \\[2pt]
+446 & 367 & \sichA{} & $\frac{1}{s}\int_{0}^{s} T(t)dt$ & $\frac{1}{s}\int_{0}^{s} T(t) \dt$ & Notation & Kursives d und fehlender Abstand; sonst im Kapitel aufrechtes \code{\textbackslash{}dt} (z. B. Z. 386, 473). \\[2pt]
+446 & 389 & \sichB{} & {exists for every $x$ in $M$} & {exists for every $\phi$ in $M_{*}$} & Notation & $\ensuremath{\mathcal{T}}$ wirkt auf $M_*$ (Z. 381, Beweis mit Orbits $T(t)\ensuremath{\varphi}$); dann in Z. 386 entsprechend $T(t)\phi \dt$; bitte prüfen. \\[2pt]
+446 & 401 & \sichC{} & $(T(t)p_{n})^2 \leq T(t)p_{n}$ & $(T(t)'p_{n})^2 \leq T(t)'p_{n}$ & Notation & $\ensuremath{\mathcal{T}}$ wirkt auf $M_*$, $p_n \ensuremath{\in} M$; sonst wird die Adjungierte mit Strich geschrieben (vgl. Z. 432 $T(t)'p_r$); ebenso Z. 407, 413, 418; bitte prüfen. \\[2pt]
+447 & 463 & \sichB{} & {It follows as in (b) that} & {It follows as in (ii) that} & Verweis & Schon in der Arbeitsliste. Remark 4.3.2 hat nur die Teile (i)–(iii). \\[2pt]
+447 & 473 & \sichC{} & $(x \in M, 0 \leq s \in \R)$ & $(x \in M, 0 < s \in \R)$ & Tippfehler & Wegen 1/s muss $s > 0$ sein; bitte prüfen. \\[2pt]
+448 & 522 & \sichA{} & $\mleft( C(s)'((\1-p_{r})x))(C(s)'((\1-p_{r})x)^{*} \mright)$ & $C(s)'((\1-p_{r})x)\,\bigl(C(s)'((\1-p_{r})x)\bigr)^{*}$ & Klammern & Klammern unausgeglichen: nach dem ersten Faktor eine Klammer zu viel, beim zweiten fehlt die schließende vor $^{*}$; \code{\textbackslash{}mleft/\allowbreak{}\textbackslash{}mright} umschließen hier nichts Sinnvolles. \\[2pt]
+448 & 539 & \sichB{} & {for $0 \neq x \in \Fix{\TT}$} & {for $0 \neq x \in \Fix{\TT'}$} & Notation & $x \ensuremath{\in} M$, vorher (Z. 533) $x \ensuremath{\in} \operatorname{Fix}(\ensuremath{\mathcal{T}}')$; bitte prüfen. \\[2pt]
+449 & 575 & \sichA{} & $\Fix{T'}$ & $\Fix{\TT'}$ & Notation & T' statt $\ensuremath{\mathcal{T}}'$ (sonst durchgehend $\TT'$); ebenso Z. 576 ($\Fix{T'} = \C.\1$). \\[2pt]
+449 & 576 & \sichB{} & $\C.\1$ & $\C \cdot \1$ & Notation & Punkt auf Grundlinie statt \code{\textbackslash{}cdot}; vgl. Z. 569 $\C \cdot \phi$ (Z. 573 dagegen $\phi\C$). \\[2pt]
+449 & 593 & \sichB{} & $(\TT)^{-} \subseteq L_{w}(M_{*})$ & $\closure{\TT} \subseteq L_{w}(M_{*})$ & Notation & Abschluss von $\ensuremath{\mathcal{T}}$ uneinheitlich: $(\ensuremath{\mathcal{T}})^-$ hier, \code{\textbackslash{}closure\{\allowbreak{}\textbackslash{}TT\}} Z. 641, \code{\textbackslash{}overline\{\allowbreak{}\textbackslash{}TT\}} Z. 648, $\TT^{-}$ Z. 730. \\[2pt]
+450 & 641 & \sichA{} & $\mathcal{L}_{w}{(M_{*})}$ & $L_{w}(M_{*})$ & Notation & Sonst steht $L_w(M_*)$ (Z. 593, 648, 730); hier kalligraphisches $\ensuremath{\mathcal{L}}$. \\[2pt]
+450 & 646 & \sichA{} & $\TT_{0}(t)' \coloneqq T(t)'_{\vert N}$ & $T_{0}(t)' \coloneqq T(t)'_{\vert N}$ & Notation & Einzeloperator, nicht Halbgruppe; später $T_{0}(t)'$ (Z. 699, 726, 727). \\[2pt]
+450 & 659 & \sichA{} & $(\lim_{\mathfrak{U}} \eu^{\eta})$ & $(\lim_{\mathfrak{U}} \eu^{\eta t})$ & Tippfehler & t im Exponenten fehlt (vgl. Z. 662). \\[2pt]
+450 & 666 & \sichA{} & $\langle\psi,Q'(u_{n})\rangle$ & $\langle\psi,Q'(u_{\eta})\rangle$ & Tippfehler & Index n statt $\ensuremath{\eta}$ (rechts $u_\ensuremath{\eta}$). \\[2pt]
+450 & 668 & \sichA{} & $(\lim_{\mathfrak{U}} \eu^{\eta t})\langle\psi,u_{\eta}\rangle \langle\psi,u_{\eta}\rangle.$ & $(\lim_{\mathfrak{U}} \eu^{\eta t})\langle\psi,u_{\eta}\rangle = \langle\psi,u_{\eta}\rangle.$ & Tippfehler & Gleichheitszeichen fehlt zwischen den beiden Termen. \\[2pt]
+450 & 677 & \sichB{} & $\overline{\langle S,\eta \rangle}$ & $\overline{\langle S,\gamma \rangle}$ & Notation & $x_\ensuremath{\gamma}$ wird mit $\ensuremath{\gamma}$ definiert (Z. 673, 676, 680), im Integranden steht $\ensuremath{\eta}$; Z. 682–687 dann $x_\ensuremath{\eta}$ mit „$\ensuremath{\eta} \ensuremath{\in} K$“ (gemeint: $\ensuremath{\eta}$ aus der dualen Gruppe von K); Bezeichnung bitte vereinheitlichen. \\[2pt]
+450 & 695 & \sichA{} & {let $\UG$ be a family of unitary eigenvectors} & {let $U$ be a family of unitary eigenvectors} & Notation & Z. 696 heißt die Familie U (kursiv); \code{\textbackslash{}UG} ist sonst die implementierende Halbgruppe $\ensuremath{\mathcal{U}}$. \\[2pt]
+450 & 699 & \sichC{} & $\eu^{(n_{1}-n_{2})t}$ & $\eu^{(\eta_{1}-\eta_{2})t}$ & Notation & $n_1$, $n_2$ werden nicht eingeführt (Eigenwerte heißen sonst $\ensuremath{\eta} \ensuremath{\in} \ensuremath{\Omega}$); ebenso Z. 707–708; bitte prüfen. \\[2pt]
+451 & 733 & \sichA{} & $\mathcal{L}( (N,\sigma(N,N_{*}) )$ & $\mathcal{L}(N,\sigma(N,N_{*}))$ & Klammern & Drei öffnende, zwei schließende Klammern. \\[2pt]
+451 & 740 & \sichC{} & \code{\textbackslash{}begin\{enumerate\}[\allowbreak{}\textbackslash{}upshape(i), \allowbreak{}wide, \allowbreak{}labelindent=.25em]} & \code{\textbackslash{}begin\{enumerate\}[\allowbreak{}\textbackslash{}upshape(a), \allowbreak{}wide, \allowbreak{}labelindent=.25em]} & LaTeX & Innere Aufzählung in Remarks 4.3.6 (iv) nummeriert wieder (i)–(iii) wie die äußere; „as in (ii)“ in Z. 755 dadurch mehrdeutig. \\[2pt]
+452 & 782 & \sichB{} & $\lim_{\mathfrak{U}} T(t) = P$ & $\lim_{\mathfrak{U}} T(t)_{*} = P_{*}$ & Notation & Sonst im Beweis $T(t)_*$, $P_*$ (Z. 774, 781, 801); bitte prüfen. \\[2pt]
+452 & 812 & \sichC{} & $\{p_{i}: i \in A\}$ & $\{p_{i} \colon i \in I\}$ & Notation & Indexmenge A kollidiert mit dem Generator A (ebenso Z. 814 $i_{0} \in A$); außerdem „:“ statt \code{\textbackslash{}colon} wie sonst in Mengenschreibweise, ebenso Z. 814, 924, 981, 1148, 1321. \\[2pt]
+452 & 842 & \sichA{} & $\|(\phi_{t} - \phi_{0})\vert_{p \BH p} \| \leq \delta .$ & $\|(\phi_{t} - \phi_{0})\vert_{p \BH p} \| \leq \delta$ & Satzzeichen & Punkt in der abgesetzten Formel, der Satz geht mit „for all $t \ensuremath{\in} U$.“ weiter. \\[2pt]
+453 & 871 & \sichB{} & {(Proposition~\lbl{prop:d4-3.7})} & {(Theorem~\lbl{thm:d4-3.5})} & Verweis & Schon in der Arbeitsliste. Die bedingte Erwartung stammt aus Theorem 4.3.5 (i). \\[2pt]
+453 & 885 & \sichB{} & $m = \kappa_{t}\eta$ & $m = \kappa_{t}n$ & Tippfehler & $\ensuremath{\kappa}_t$ : $\ensuremath{\mathbb{N}} \ensuremath{\to} \ensuremath{\mathbb{N}}$ wird auf n angewandt ($\ensuremath{\delta}_n \ensuremath{\circ} S(t) = \ensuremath{\delta}_m$); $\ensuremath{\eta}$ ist hier nicht definiert; bitte prüfen. \\[2pt]
+453 & 890 & \sichA{} & $N = B(H_{n})$ & $N = \mathcal{B}(H_{n})$ & Notation & Sonst $\BH = \ensuremath{\mathcal{B}}(H)$ kalligraphisch. \\[2pt]
+454 & 899 & \sichB{} & $\lim_{s \to \infty} T(s) = \1 \otimes \phi$ & $\lim_{s \to \infty} T(s)_{*} = \1 \otimes \phi$ & Notation & Konvergenz in $\ensuremath{\mathcal{L}}(\ensuremath{\mathcal{B}}(H)_*)$, also Prädualoperatoren (vgl. Prop. 4.3.7 (b)); ebenso Z. 902 $T_{*}$ statt $\TT_{*}$; bitte prüfen. \\[2pt]
+454 & 978 & \sichB{} & $\Re(\lambda) \leq \delta$ & $\Re(\lambda) \leq -\delta$ & Tippfehler & Mit $\ensuremath{\delta} > 0$ wäre die Aussage trivial; gemeint ist eine Spektrallücke; bitte prüfen. \\[2pt]
+454 & 983 & \sichA{} & {hence $ T_{\vert \Image{Q}} $} & {hence $ \TT_{\vert \Image{Q}} $} & Notation & Einschränkung der Halbgruppe, vgl. Z. 984 $\TT_{\vert \Image{Q}}$; außerdem $T(\tau)u_{\gamma}^{k}$ evtl. $T(\tau)'u_{\gamma}^{k}$ ($u \ensuremath{\in} M$), bitte prüfen. \\[2pt]
+455 & 1014 & \sichA{} & {$ \beta \in \R $ :} & {$ \beta \in \R $:} & Abstand & Leerzeichen vor dem Doppelpunkt nach $\dots $. \\[2pt]
+455 & 1017 & \sichA{} & $\|R(\eta + \im\beta A_{0})\| \leq c$ & $\|R(\eta + \im\beta, A_{0})\| \leq c$ & Tippfehler & Komma zwischen Argument und Operator der Resolvente fehlt. \\[2pt]
+456 & 1084 & \sichA{} & $\Fix{ R_{1}' }$ & $\Fix{\RR_{1}'}$ & Notation & $R_1$ statt $\ensuremath{\mathcal{R}}_1$ (vgl. Z. 1076). \\[2pt]
+456 & 1097 & \sichA{} & $\rangle =$ & $\rangle$ & LaTeX & In aligned endet jede Zeile mit „$=$“ und die nächste beginnt mit „\&=“: doppeltes Gleichheitszeichen im Druck; ebenso Z. 1098, 1099, 1100. \\[2pt]
+456 & 1098 & \sichC{} & $\langle\mu p_{n}p(R(\mu)p'x)p_{n},\phi_{n}\rangle$ & $\langle\mu p_{n}p(R(\mu)'x)p\,p_{n},\phi_{n}\rangle$ & Tippfehler & Strich an p statt an $R(\ensuremath{\mu})$; vermutlich $p_n = p_n p = p p_n$ eingeschoben; bitte prüfen. \\[2pt]
+456 & 1101 & \sichB{} & $\phi_{n}(p_{n})^{-1}\phi_{n}(x) = \psi_{n}(x)$ & $\phi_{n}(p_{n})^{-1}\phi_{n}(p_{n}xp_{n}) = \psi_{n}(x)$ & Tippfehler & Widerspricht der Definition von $\ensuremath{\psi}_n$ in Z. 1088; bitte prüfen. \\[2pt]
+457 & 1114 & \sichC{} & {by Lemma~\lbl{lem:d3-1.2}} & {by Lemma~\lbl{lem:d4-4.1}} & Verweis & Schon in der Arbeitsliste. Folge von Zuständen mit orthogonalen Trägern ist Lemma 4.4.1; bitte prüfen. \\[2pt]
+457 & 1162 & \sichB{} & {a net $ (z_{n,\eta}) $  in $ \widehat{M}_{1}^{+} $} & {a net $ (\hat{z}_{n,\eta}) $  in $ \widehat{M}_{1}^{+} $} & Notation & Im folgenden (Z. 1165, 1168, 1169) heißt das Netz \code{\textbackslash{}hat\{z\}\_\{n,\ensuremath{\eta}\}}. \\[2pt]
+457 & 1168 & \sichB{} & $(p\hat{z}_{n,\eta}\widehat{p})$ & $(\widehat{p}\hat{z}_{n,\eta}\widehat{p})$ & Tippfehler & Links p statt \code{\textbackslash{}widehat\{p\}} (Rechnung in \code{\textbackslash{}widehat\{M\}}); bitte prüfen. \\[2pt]
+457 & 1182 & \sichA{} & {$ {M}_{\widehat{p}} = \widehat{M_{p}} $ )} & {$ {M}_{\widehat{p}} = \widehat{M_{p}} $)} & Abstand & Leerzeichen vor schließender Klammer nach $\dots $; ebenso Z. 1278 (zweimal: \code{\textbackslash{}1 \allowbreak{}\$ \allowbreak{})}, \code{\textbackslash{}R\_\{+\} \allowbreak{}\$ \allowbreak{})}), Z. 1323 (\code{\textbackslash{}psi\_\{i\} \allowbreak{}\$ \allowbreak{})}). \\[2pt]
+457 & 1186 & \sichC{} & $\mu R(\mu)'\widehat{\psi}_{n} = \widehat{\psi}_{n}$ & $\mu \widehat{R}(\mu)\widehat{\psi}_{n} = \widehat{\psi}_{n}$ & Notation & $\ensuremath{\hat{\ensuremath{\psi}}}_n$ liegt im Prädual-Ultrapotenz-Raum, Strich (Adjungierte) passt nicht; vgl. Z. 1198 ohne Strich; bitte prüfen. \\[2pt]
+457 & 1208 & \sichB{} & $\lim_{n} \phi_{n}(z_{n}) = 0$ & $\lim_{n} \phi(z_{n}) = 0$ & Tippfehler & Widerspricht (iii'') $\ensuremath{\varphi}_n(z_n) \ensuremath{\geq} 1/2$; gemeint ist der treue Zustand $\ensuremath{\varphi}$ (vgl. (i') Z. 1195 und Z. 1217); bitte prüfen. \\[2pt]
+457 & 1218 & \sichB{} & {Therefore condition~\lbl{item:d4-4.3-iip} implies} & {Therefore condition (i$''$) implies} & Verweis & Die s*-Konvergenz $z_n \ensuremath{\to} 0$ folgt aus $\ensuremath{\varphi}(z_n) \ensuremath{\to} 0$ und der Treue von $\ensuremath{\varphi}$, also aus (i''), nicht (ii''); ebenso Z. 1225; bitte prüfen (für (i'') fehlt ein \code{\textbackslash{}label}). \\[2pt]
+459 & 1278 & \sichC{} & $R''\1 = R\1 = \1$ & $\mu R''(\mu)\1 = \mu R(\mu)\1 = \1$ & Notation & R ohne Argument $\ensuremath{\mu}$, sonst stets $\ensuremath{\mu}R(\ensuremath{\mu})$; bitte prüfen. \\[2pt]
+459 & 1280 & \sichB{} & {satisfying (i)--(ii) of Lemma~\lbl{lem:d4-4.3}} & {satisfying (i)--(iii) of Lemma~\lbl{lem:d4-4.3}} & Verweis & Lemma 4.4.3 hat drei Teile; im Folgenden wird auch (iii) $\ensuremath{\varphi}_k(z_k) \ensuremath{\geq} 1/2$ gebraucht; bitte prüfen. \\[2pt]
+459 & 1305 & \sichA{} & {the fixed space of\/ $ R' $} & {the fixed space of\/ $ \RR' $} & Notation & R' statt $\ensuremath{\mathcal{R}}'$ (vgl. Z. 1306). \\[2pt]
+459 & 1314 & \sichC{} & $\dim(\Fix{\RR'})$ & $\dim \Fix{\RR'}$ & Notation & Uneinheitlich mit/ohne Klammern um Fix(\dots{}): ohne Z. 1258, 1302, 1311, 1399; mit Z. 1314, 1320, 1334, 1364. \\[2pt]
+461 & 1367 & \sichA{} & $\phi_{1},\ldots,\phi_{n}$ & $\phi_{1},\ldots,\phi_{k}$ & Tippfehler & Laufindex bis k (vgl. $x_1$, \dots{}, $x_k$ und Z. 1370, 1376). \\[2pt]
+461 & 1376 & \sichC{} & $P = \sum_{i=1}^{k} \phi_{i} \otimes x_{i}$ & $P = \sum_{i=1}^{k} x_{i} \otimes \phi_{i}$ & Notation & In Z. 577 ist $P = \ensuremath{\mathbf{1}} \ensuremath{\otimes} \ensuremath{\varphi}$ mit $P\ensuremath{\psi} = \ensuremath{\psi}(\ensuremath{\mathbf{1}})\ensuremath{\varphi}$, also erst Element von M, dann von $M_*$; bitte prüfen. \\[2pt]
+461 & 1383 & \sichB{} & $\sum_{i=1}^{k} \phi_{i}(\psi)x_{i} \in M_{*}$ & $\sum_{i=1}^{k} \psi(x_{i})\phi_{i} \in M_{*}$ & Tippfehler & Argumente vertauscht: $\ensuremath{\varphi}_i \ensuremath{\in} M_*$ kann nicht auf $\ensuremath{\psi} \ensuremath{\in} M'$ angewandt werden, und das Ergebnis soll in $M_*$ liegen; bitte prüfen. \\
+\end{longtable}
+\end{document}

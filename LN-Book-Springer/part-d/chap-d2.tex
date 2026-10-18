@@ -17,7 +17,7 @@ Ulrich Groh
 % --
 Since the positive cone of a \CA-algebra with unit has non-empty interior, many results of Part-II, Chapter~\ref{chap:b2} can be applied verbatim to the characterization of the generator of positive semigroups on \CA-algebras.
 On the other hand, a concrete and detailed representation of such generators has been found only in the uniformly continuous case (see \textcite{lindblad:1976}).
-A third area of active research has been the following: Which maps on \CA-algebras (in particular, which derivations) commuting with certain automorphism groups are automatically generators of strongly continuous positive semigroups.
+A third area of active research has been the following: Which maps on \CA-algebras (in particular, which derivations) commuting with certain automorphism groups are automatically generators of strongly continuous positive semigroups?
 For more information we refer to the survey article of \textcite{evans:1984}.
 %% --
 \section{Semigroups on Properly Infinite \texorpdfstring{W$^{*}$-Algebras}{W*-Algebras}}
@@ -40,7 +40,7 @@ Every strongly continuous one-parameter semigroup of Schwarz type on a properly 
 \end{theorem}
 %% --
 \begin{proof}
-Let $\TT = (T(t)_{t \geq 0})$ be strongly continuous on $M$ and suppose $\TT$ not to be uniformly continuous.
+Let $\TT = (T(t))_{t \geq 0}$ be strongly continuous on $M$ and suppose $\TT$ not to be uniformly continuous.
 Then there exists a sequence $(T_n)$  in  $ \TT $ and $\epsilon > 0$ such that $\|T_n - \Id\| \geq \epsilon$, 
 but $T_n \to \Id$ in the strong operator topology.
 We claim that for every sequence $(p_{k})$ of mutually orthogonal projections and all bounded sequences $(x_{k})$ 
@@ -51,10 +51,10 @@ in $M$
 \]
 %% --
 uniformly in $k \in \N$.
-This follows from the {Lemma of Phillips} (\textcite[Lemma II.10.3]{schaefer:1974}) and the fact that the sequence $(p_{k} x_{k} p_{k})$ is summable in the $s^{*}(M,M_*)$-topology (compare \textcite{elliot:1972}, Lemma 2.).
+This follows from the {Lemma of Phillips} (\textcite[Lemma II.10.3]{schaefer:1974}) and the fact that the sequence $(p_{k} x_{k} p_{k})$ is summable in the $s^{*}(M,M_*)$-topology (compare \textcite[Lemma 2]{elliot:1972}).
 
 Let $(p_{k})$ be a sequence of mutually orthogonal projections in $M$ such that every $p_{k}$ is equivalent to $\1$ via some $u_{k} \in M$ (\textcite[2.2]{sakai:1971}).
-Without loss of generality we may assume $\|(T_n - \Id)(u_n)\| \leq n^{-1}$ since the semigroup $\TT$ is strongly continuous.
+Without loss of generality we may assume $\|(T_n - \Id)u_n\| \leq n^{-1}$ since the semigroup $\TT$ is strongly continuous.
 Thus we obtained the following.
 %% --
 \begin{enumerate}[\upshape (i)]
@@ -67,34 +67,34 @@ $\|(T_n - \Id)u_n\| \leq n^{-1}$ for all $n \in \N$.
 \end{enumerate}
 %% --
 For the following construction see Part-I, Section~\ref{subsec:a1-3.7} and Section~\ref{sec:d3-2} below.
-Take
 %% --
 \begin{enumerate}[\upshape (i)']
 \item
-$\widehat{M}$ be an ultrapower of\/ $M$,
+Let $\widehat{M}$ be an ultrapower of\/ $M$,
 
 \item
 let $p \coloneq \widehat{(p_{k})} \in \widehat{M}$,
 
 \item
-let $T \coloneq \widehat{(T_{n}) }\in \mathcal{L}(\widehat{M})$
+let $T \coloneq \widehat{(T_{n}) }\in \mathcal{L}(\widehat{M})$,
 
 \item
 and let $u \coloneq \widehat{(u_{k})}  \in \widehat{M}$.
 
 \end{enumerate}
 %% --  
-Then $T$ is identity preserving and of Schwarz type on $\widehat{M}$.
+Then $T$ is a Schwarz map on $\widehat{M}$.
 
 Since $u^{*}u = p$ and $uu^{*} = \1$, it follows $pu^{*} = u^{*}$ and $(uu^{*})x(uu^{*}) = x$ for all $x \in \widehat{M}$.
-Finally, $T(pxp) = pxp$ for all $x \in \widehat{M}$ which follows from \upshape(i)', and $T(u^{*}) = T(pu^{*}) = pu^{*} = u^{*}$ and $T(u) = u$, which follows from \upshape(iii)'.
-Using the Schwarz, inequality we obtain
+Finally, $T(pxp) = pxp$ for all $x \in \widehat{M}$ which follows from (i), and $T(u) = u$, which follows from (iii); hence $T(u^{*}) = T(u)^{*} = u^{*}$, since $T$ is positive.
+Using the Schwarz inequality, we obtain
 %% --
 \[
-	T(uu^{*}) = T(\1) \leq \1 = uu^{*} = T(u)T(u)^{*}.
+	T(uu^{*}) = T(\1) \leq \1 = uu^{*} = T(u)T(u)^{*} \leq T(uu^{*}).
 \]
 %% --
-From Lemma~\ref{lem:d3-1.1} below, we conclude $T(ux) = uT(x)$ and $T(xu^{*}) = T(x)u^{*}$ for all $x \in \widehat{M}$.
+Hence $T(uu^{*}) = T(u)T(u)^{*}$ and $T(\1) = \1$, \ie $T$ is identity preserving.
+From Lemma~\ref{lem:d3-1.1}\,\ref{item:d3-1.1-i} below, applied to $b(x,y) \coloneq T(xy^{*}) - T(x)T(y)^{*}$, we conclude $T(ux) = uT(x)$ and $T(xu^{*}) = T(x)u^{*}$ for all $x \in \widehat{M}$.
 Hence
 %% --
 \begin{align*}

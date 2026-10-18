@@ -355,7 +355,7 @@ Then $A$ is closable and the closure of\/ $A$ is the generator of a positive con
 $D(A)$ is clearly dense in $E$.
 Moreover, one can show as in~\vref{ex:c2-1.5-3} that $A$ is dispersive.
 It remains to prove that $(\Id - A)D(A)$ is dense in $E$.
-The space $C_{c}^{\infty}(\Omega)$ of all infinitely differentiabele functions on $\Omega$ with compact support contained in $\Omega$ is dense in $E \cap C_{c}^{\infty}(\Omega)$.
+The space $C_{c}^{\infty}(\Omega)$ of all infinitely differentiable functions on $\Omega$ with compact support contained in $\Omega$ is dense in $E \cap C_{c}^{\infty}(\Omega)$.
 We show that there exists $f \in D(A)$ satisfying $(\Id - A)f = g$.
 Let $\bar{g} \colon \R^{n} \to \R$ be given by 
 \[
@@ -898,7 +898,7 @@ for all $f \in D_{0}$, $0 \leq \phi \in C_{c}^{\infty}(\R^n)$.
 This is Kato's inequality in the distributional sense.
 %% --
 \begin{remark*}\label{rem:c2-3.0}
-It has been proved by \textcite{miyajimaokazawa:1984}] that \myeqpageref{eq:c2-Kd} implies that $m \leq 2$ and that the principal part $\mathcal{A}_{0} = \sum_{|\alpha|=2} a_{\alpha} D^{\alpha}$ of\/ $\mathcal{A}$ is elliptic; \ie if we write the operator $\mathcal{A}_{0}$ in the form $\mathcal{A}_{0} = \sum_{i,j=1}^{2} b_{ij} \partial^{2}/\partial x_{i} \partial x_{j}$, then the matrix $(b_{ij}(x))$ is positive semidefinite for all $x \in \R^n$.
+It has been proved by \textcite{miyajimaokazawa:1984} that \myeqpageref{eq:c2-Kd} implies that $m \leq 2$ and that the principal part $\mathcal{A}_{0} = \sum_{|\alpha|=2} a_{\alpha} D^{\alpha}$ of\/ $\mathcal{A}$ is elliptic; \ie if we write the operator $\mathcal{A}_{0}$ in the form $\mathcal{A}_{0} = \sum_{i,j=1}^{2} b_{ij} \partial^{2}/\partial x_{i} \partial x_{j}$, then the matrix $(b_{ij}(x))$ is positive semidefinite for all $x \in \R^n$.
 \end{remark*}
 %% --
 Finally we formulate Theorem~\ref{thm:c2-2.4}   for the space $E \coloneq C_{0}(X)$ ($X$ locally compact) (which is not $\sigma$-order complete unless $X$ is $\sigma$-Stonian).
@@ -1033,7 +1033,7 @@ of\/ $A'$ is strictly positive (\cf Definition~\ref{def:b3-3.1}).
 
 %%--
 \item \label{rem:c2-3.7-2}
-In the proof of the "only if" - part of Proposition~\ref{prop:c2-3.6} we needed the
+In the proof of the \enquote{only if} part of Proposition~\ref{prop:c2-3.6} we needed the
 positivity of the semigroup in order to be able to apply Gronwall's
 lemma.
 However, if instead of assuming that the semigroup is positive, 
@@ -1602,7 +1602,7 @@ Moreover, by Eq.~\eqref{eq:c2-4.4} and~\eqref{eq:c2-4.5} one obtains that
 Thus $B$ is $p$-dissipative. 
 By the proof of Part-I, Proposition~\ref{prop:a2-2.9} 
 one sees that $p(v) = 0$, \ie $\langle|v|,\phi\rangle = 0$.
-Since $\phi \in M'$ was arbitrary we conclude that $v = 0$, which finally implies that $B$ is closable
+Since $\phi \in M'$ was arbitrary we conclude that $v = 0$, which finally implies that $B$ is closable.
 \index{dissipative operator|)}
 
 Now let $\lambda > \lambda_{0} \coloneq \max\{s(A),0\}$. 
@@ -2444,7 +2444,7 @@ We extend this result to Banach lattices with order continuous norm.
 %% --
 \begin{proposition}\label{prop:c2-5.6}
 Let $E$ be a real or complex Banach lattice with order continuous norm. 
-Then the modulus function $\Theta \colon E \to E$, given by $\Theta(h) \coloneq |h|$, is right-sided Gateaux differerentiable and
+Then the modulus function $\Theta \colon E \to E$, given by $\Theta(h) \coloneq |h|$, is right-sided Gateaux differentiable and
 %% --
 \begin{equation}\label{eq:c2-5.6}
 D_{g}\Theta(f) = \Re\mleft((\widehat{\sign}  \bar{f})g\mright) \quad (f, g \in E).
@@ -2575,15 +2575,15 @@ This implies that $S(s)$ is disjointness preserving and $|S(s)| = T(s)$ (by Prop
 Since $D(B)$ is dense we can assume that $f \in D(B)$. 
 Let 
 \[
-\xi(t) = T(s-t)|S(t)f|  \text{ for } t \in [0,s]) .
+\xi(t) = T(s-t)|S(t)f|  \text{ for } t \in [0,s] .
 \]
 Since by assumption $|S(t)f| \in D(A)$ one obtains
 %% --
 \begin{align*}
 \diff{}/\dt \, \xi(t) &= -AT(s-t)|S(t)f| + T(s-t)\diff{}/\dr|_{r=t} |S(r)f|\\
 &= -AT(s-t)|S(t)f| + T(s-t)\mleft(\Re\mleft(\widehat{\sign}  \mleft(\overline{S(t)f}\mright)\mright)BS(t)f\mright)\\
-&\quad \text{(by  Proposition~\ref{prop:c2-5.6}   and the chain rule Part-II, Proposition~\ref{prop:b2-2.3})
-}\\
+&\quad \text{(by Proposition~\ref{prop:c2-5.6} and the chain rule}\\
+&\qquad \text{Part-II, Proposition~\ref{prop:b2-2.3})}\\
 &= 0 \quad \text{by the assumption~\ref{thm:c2-5.5-2}  }.
 \end{align*}
 %% --

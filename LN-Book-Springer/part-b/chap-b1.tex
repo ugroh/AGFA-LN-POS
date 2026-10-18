@@ -3,7 +3,7 @@
 %% --
 %%\setcounter{section}{0}
 %% --
-\chapternopage{Basic Results of Spaces \texorpdfstring{$C_{0}(X)$}{C_0(X)}}
+\chapternopage{Basic Results on Spaces \texorpdfstring{$C_{0}(X)$}{C₀(X)}}
 \label{chap:b1}%
 \thispagestyle{empty}
 %% --
@@ -27,7 +27,7 @@ We often write $C(X)$ instead of\/ $C_{0}(X)$ in this case.
 
 We sometimes study real-valued functions and denote the corresponding spaces as $C_{0}(X,\mathbb{R})$ and $C(X,\mathbb{R})$; we use the notations $C_{0}(X,\mathbb{C})$ and $C(X,\mathbb{C})$ when we need to distinguish between the two cases.
 %% --
-\section{Algebraic and Order-Structure: Ideals and Quotients}\label{sec:b1-1}%
+\section{Algebraic and Order Structure: Ideals and Quotients}\label{sec:b1-1}%
 %% --
 Any space $C_{0}(X)$ is a commutative \CA-algebra under the sup-norm and the pointwise multiplication, and by the \emph{Gelfand Representation Theorem} any commutative \CA-algebra can, on the other hand, be canonically represented as an algebra $C_{0}(X)$ on a suitable locally compact space $X$.
 The algebraic notions of ideal, quotient, homomorphism are well known and need not be explained further.
@@ -108,7 +108,7 @@ Since the algebra homomorphisms $\neq 0$ on $C_{0}(X)$ are known to be the point
 it follows that this latter condition on $\mu$ is equivalent to $\mu = \alpha\delta_{t}$ for a suitable $t$ in $X$ and a positive real number $\alpha$.
 
 This can be summarized by saying that $X$ can be canonically identified, via the map $t \to \delta_{t}$, with the subset of the dual $C_{0}(X)'$ consisting of the non-zero algebra homomorphisms, which is also the set of all normalized lattice homomorphisms.
-This identification is a topological isomorphisms with respect to the weak*-topology of\/ $ C_{0}(X)' $.
+This identification is a topological isomorphism with respect to the weak*-topology of\/ $ C_{0}(X)' $.
 %% -- 
 \section{Linear Operators}\label{sec:b1-3}%
 %% --
@@ -117,14 +117,14 @@ A linear mapping $T$ from $C_{0}(X,\R)$ into $C_{0}(Y,\R)$ is called
 \begin{enumerate}[\upshape (i), labelindent=.25em]
 
 \item
-\emph{positive} (notation: $T \geq 0$)  if\/ $Tf$  is a positive whenever $ f $ is positive, 
+\emph{positive} (notation: $T \geq 0$)  if\/ $Tf$  is positive whenever $ f $ is positive, 
 
 \item
 \emph{lattice homomorphism}  if\/ $|Tf| = T|f|$  for all $ f $,
 \index{lattice homomorphism}
 
 \item
-\emph{Markov-operator}  if  $ X $ and $ Y $ are compact and $ T $ is a positive operator mapping $\1_{X}$ to $\1_{Y}$.
+\emph{Markov operator}  if  $ X $ and $ Y $ are compact and $ T $ is a positive operator mapping $\1_{X}$ to $\1_{Y}$.
 \index{operator!Markov}
 
 \end{enumerate}
@@ -136,7 +136,7 @@ Note that a complex lattice homomorphism is necessarily positive, and that the \
 Positive operators are always continuous.
 
 Note that the adjoint of a Markov operator $T$ maps positive normalized measures into positive normalized measures while the adjoint of an algebra homomorphism (lattice homomorphism) maps point measures into (multiples of) point measures.
-Therefore the adjoint of a Markov lattice homomorphism as well as the adjoint of an algebra homomorphism induces a continuous map $\phi$ from $Y$ (viewed as a subset of the weak dual $C(Y)'$) into $X$ (viewed as a subset of\/ $C(X)'$).
+Therefore the adjoint of a Markov lattice homomorphism as well as the adjoint of a Markov algebra homomorphism induces a continuous map $\phi$ from $Y$ (viewed as a subset of the weak dual $C(Y)'$) into $X$ (viewed as a subset of\/ $C(X)'$).
 
 This mapping $\phi$ determines $T$ in a natural and unique way, so that the following are equivalent assertions on a linear mapping $T$ from a space $C(X)$ into a space $C(Y)$.
 %% --
@@ -156,7 +156,7 @@ For later reference we explicitly state the following.
 \begin{enumerate}[\upshape (i), labelindent=.25em]
 \item 
 	Let $K$ be compact. Then $ T \in \mathcal{L}(C(K)) $ is a lattice homomorphism if and only if there is a mapping 
-$\phi$ from $K$ into $K$ and a function $h \in C(K)$ such that 
+$\phi$ from $K$ into $K$ and a function $h \in C(K)_{+}$ such that 
 %
 \[
 	Tf(s) = h(s)f(\phi(s)) \quad (s \in K) .
