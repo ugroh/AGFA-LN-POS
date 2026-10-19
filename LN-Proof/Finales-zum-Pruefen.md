@@ -18,17 +18,14 @@ Hier stehen Punkte, die vor der Abgabe noch eine Entscheidung oder eine Kontroll
 - [ ] **Bewusst von zbMATH abweichend belassen (18.10.):** greiner:1982, kato:1973, kipnis:1974, milstein:1975.
 - [ ] **Namenspräfixe:** „de Laubenfels“ (Teil II) und „van Casteren“ (Teil III) stehen im Text von Hand vor `\cite`, weil biblatex das Präfix im Zitat weglässt. Falls der Stil auf `useprefix=true` umgestellt wird, diese Stellen anpassen.
 
-## 3. Konsistenz
-
-- [ ] **Notes-Aufzählung:** In Kap. 2 aller drei Teile jetzt „Section 2.1:“ usw. In Kap. 3 und 4 (Teil I–III) sowie in Teil IV steht noch „Section 1:“.
-
-## 4. Noch nicht bearbeitet
+## 3. Noch nicht bearbeitet
 
 - [ ] `math-error-part-a/b/c.md`: Kap. 2–4 offen.
 - [ ] `korrekturen-text-part-a/b/c.md` und `korrekturen-mathe-part-a/b/c.md`: Kap. 3–4 offen.
 
 ## Erledigt
 
+- [x] **Notes-Aufzählung:** in allen Kapiteln mit Abschnitts-Notes jetzt „Section k.1:“ usw. (Kap. 2–4 in Teil I–III, Kap. 3–4 in Teil IV) – 19.10.2026.
 - [x] **Lumer [26]/[27]:** in der Bib richtig (25 (1975) 409–446 bzw. 1973); die Fahne beruht auf dem alten Stand und ist durch unser PDF überholt – 19.10.2026.
 - [x] **van Casteren (Teil III, Notes zu Kap. 2):** „van Casteren (1984)“ war im Original ein Autor-Jahr-Zitat; jetzt echtes Zitat von vancasteren:1984 (Integral Equations Operator Theory 7 (1984) 884–892), damit steht der Eintrag in der Literaturliste von Teil III, Kap. 2 ([10]). Belegt durch das Literaturverzeichnis der 1. Auflage (`LN-1184/LN-Book/ln-biblio.pdf`, dort Druckfehler „2“ statt 7); Bib-Eintrag aus `LN-1184/LN-References/references-c.bib` (Feb. 2025) – 19.10.2026.
 - [x] **Miyajima–Okazawa:** auf die veröffentlichte Fassung umgestellt, Pacific J. Math. 125 (1986) 161–176 – 19.10.2026.

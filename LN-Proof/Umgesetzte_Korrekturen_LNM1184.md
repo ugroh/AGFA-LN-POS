@@ -268,7 +268,7 @@ Alle offenen Punkte aus `korrekturen-text-part-a/b/c.md` und `korrekturen-mathe-
 Abweichungen und Ergänzungen:
 
 - **Teil I, Example 2.1.4:** Lösung als u(t) = (f − tBg, g), passend zur Matrix. Der Vorzeichenfehler in Z. 409 (math-error-part-a) ist damit mit (λf + Bg, λg) zu beheben, nicht durch Änderung der Matrix.
-- **Teil I:** `$p$-contractive`/`$p$-dissipative` überall außer in `\index`-Einträgen. Notes-Aufzählung jetzt „Section 2.1/2.2/2.3“, ebenso in Kap. 2 von Teil II und III. Kap. 3 und 4 (auch Teil IV) haben noch „Section 1:“.
+- **Teil I:** `$p$-contractive`/`$p$-dissipative` überall außer in `\index`-Einträgen. Notes-Aufzählung jetzt „Section 2.1/2.2/2.3“, ebenso in Kap. 2 von Teil II und III; anschließend auch in Kap. 3 und 4 aller Teile (Teil IV: Kap. 3 und 4) „Section k.1:“ usw.
 - **Teil II, Theorem 2.1.16:** Neben m^{l/k} auch der Laufbereich l = 0, …, k−1 (der erste Schritt geht von B = A aus).
 - **Teil II, 0 ≪ u:** An allen genannten Stellen; Z. 733 (`0 \leq q`) bewusst nicht, dort genügt q ≥ 0.
 - **Teil II:** „neighbourhood“ → „neighborhood“ (amerikanisch, wie „behavior“). de Laubenfels als „de Laubenfels~\cite{…}“, Kurose mit `\cite`, weil biblatex sonst Präfix bzw. Namen doppelt setzt.
