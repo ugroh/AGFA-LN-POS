@@ -4,8 +4,8 @@
 
 Auszug aus `Fahnenkorrektur_Springer_LNM1184.md`. **Seitenangaben** = gedruckte Seitenzahl (PDF-Seite = gedruckte Seite + 18). **Sicherheit:** ● hoch · ◐ mittel · ○ niedrig.
 
-**Stand der Umsetzung (Branch `fahnenkorrektur`):** Alle ●-Punkte sind umgesetzt und im Kommentar mit „Umgesetzt“ markiert (Abweichungen siehe `Umgesetzte_Korrekturen_LNM1184.md`). Kap. 1 und die Updated Notes sind vollständig umgesetzt (Stand 18.10.2026). Sonst sind ◐ und ○ offen, außer wo „Umgesetzt“ steht.
-Insgesamt **104 Punkte**: 22 ●, 41 ◐, 41 ○; davon umgesetzt: 35.
+**Stand der Umsetzung (Branch `fahnenkorrektur`):** Alle ●-Punkte sind umgesetzt und im Kommentar mit „Umgesetzt“ markiert (Abweichungen siehe `Umgesetzte_Korrekturen_LNM1184.md`). Kap. 1, Kap. 2 und die Updated Notes sind vollständig umgesetzt (Kap. 2 am 19.10.2026). Sonst sind ◐ und ○ offen, außer wo „Umgesetzt“ steht.
+Insgesamt **104 Punkte**: 22 ●, 41 ◐, 41 ○; davon umgesetzt: 57.
 
 
 Übergreifende Punkte (Inhaltsverzeichnis, Kolumnentitel, Schreibweisen) und der Index stehen in `korrekturen-text-allgemein.md`.
@@ -26,34 +26,34 @@ Insgesamt **104 Punkte**: 22 ●, 41 ◐, 41 ○; davon umgesetzt: 35.
 
 | S. | | Ist | Soll | Art | Kommentar |
 |---|---|---|---|---|---|
-| 280 | ◐ | (this follows from the definition, see Eq. (2.2.3) on page 57. | (this follows from the definition, see Eq. (2.2.3) on page 57). | Satz | schließende Klammer fehlt |
+| 280 | ◐ | (this follows from the definition, see Eq. (2.2.3) on page 57. | (this follows from the definition, see Eq. (2.2.3) on page 57). | Satz | **Umgesetzt.** schließende Klammer fehlt |
 | 284 | ● | of all infinitely differentiabele functions on Ω | of all infinitely differentiable functions on Ω | Tippfehler | **Umgesetzt.**  |
-| 284 | ◐ | Consider the function b ∈ C(∂Ω), given by, b(x) = f̄(x) | Consider the function b ∈ C(∂Ω) given by b(x) = f̄(x) | Satz | Überflüssiges Komma nach „given by“. |
-| 285 | ◐ | We know from (iv) that C_c^∞(Ω) ⊆ (Id −A)D(A) | We know from (v) that C_c^∞(Ω) ⊆ (Id −A)D(A) | Querverweis | Die Aussage wird im Beweis von (v) gezeigt, nicht in (iv). |
-| 289 | ○ | Gateaux-derivative … right-sided Gateaux-differentiable | einheitlich ohne Bindestrich wie auf S. 315/317 („Gateaux differentiable“), ggf. „Gâteaux“ | Konsistenz | S. 289 schreibt „Gateaux-differentiable“, S. 315 und 317 „Gateaux differentiable“. |
+| 284 | ◐ | Consider the function b ∈ C(∂Ω), given by, b(x) = f̄(x) | Consider the function b ∈ C(∂Ω) given by b(x) = f̄(x) | Satz | **Umgesetzt.** Überflüssiges Komma nach „given by“. |
+| 285 | ◐ | We know from (iv) that C_c^∞(Ω) ⊆ (Id −A)D(A) | We know from (v) that C_c^∞(Ω) ⊆ (Id −A)D(A) | Querverweis | **Umgesetzt.** Die Aussage wird im Beweis von (v) gezeigt, nicht in (iv). |
+| 289 | ○ | Gateaux-derivative … right-sided Gateaux-differentiable | einheitlich ohne Bindestrich wie auf S. 315/317 („Gateaux differentiable“), ggf. „Gâteaux“ | Konsistenz | **Umgesetzt.** S. 289 schreibt „Gateaux-differentiable“, S. 315 und 317 „Gateaux differentiable“. |
 | 292 | ● | It has been proved by Miyajima & Okazawa [23]] that | It has been proved by Miyajima & Okazawa [23] that | Satz | **Umgesetzt.** Doppelte schließende Klammer; im PDF bestätigt. |
 | 294 | ● | In the proof of the "only if" - part of Proposition 2.3.6 | In the proof of the “only if” part of Proposition 2.3.6 | Satz | **Umgesetzt.** Gerade Anführungszeichen statt typografischer; dazu ein frei stehender Bindestrich. |
-| 301 | ◐ | in a manner analogous to the characterization of positive semigroups in Section 3.1, however, no positive subeigenvectors are needed here. | in a manner analogous to the characterization of positive semigroups in Section 2.3; however, no positive subeigenvectors are needed here. | Querverweis | Die Charakterisierung positiver Halbgruppen steht in Abschnitt 2.3 (Abschnitt 3.1 ist „The Spectral Bound“). Außerdem fehlt ein Semikolon (Komma-Spleiß vor „however“). |
-| 301 | ○ | in order to decide whether a semigroup is stable see Part-I, Chapter 4 | in order to decide whether a semigroup is stable, see Part-I, Chapter 4 | Satz |  |
+| 301 | ◐ | in a manner analogous to the characterization of positive semigroups in Section 3.1, however, no positive subeigenvectors are needed here. | in a manner analogous to the characterization of positive semigroups in Section 2.3; however, no positive subeigenvectors are needed here. | Querverweis | **Umgesetzt.** Die Charakterisierung positiver Halbgruppen steht in Abschnitt 2.3 (Abschnitt 3.1 ist „The Spectral Bound“). Außerdem fehlt ein Semikolon (Komma-Spleiß vor „however“). |
+| 301 | ○ | in order to decide whether a semigroup is stable see Part-I, Chapter 4 | in order to decide whether a semigroup is stable, see Part-I, Chapter 4 | Satz | **Umgesetzt.** |
 | 303 | ● | which finally implies that B is closable Now let λ > λ0 | which finally implies that B is closable. | Satz | **Umgesetzt.** Am Satzende fehlt der Punkt; im PDF bestätigt. |
-| 304 | ◐ | Let M ∈ Z(E) (the center of E (see Section 1.9). | Let M ∈ Z(E) (the center of E, see Section 1.9). | Satz | Die Klammern sind nicht ausgeglichen. |
-| 308 | ◐ | how the results of this section look like for C0(X) | what the results of this section look like for C0(X) | Grammatik |  |
-| 313 | ◐ | a linear operator S on E is called lattice homomorphism if | a linear operator S on E is called a lattice homomorphism if | Grammatik |  |
-| 314 | ○ | Note, that an operator S is a lattice homomorphism, if and only if S is positive | Note that an operator S is a lattice homomorphism if and only if S is positive | Satz | Kommas nach deutscher Zeichensetzung. |
+| 304 | ◐ | Let M ∈ Z(E) (the center of E (see Section 1.9). | Let M ∈ Z(E) (the center of E, see Section 1.9). | Satz | **Umgesetzt.** Die Klammern sind nicht ausgeglichen. |
+| 308 | ◐ | how the results of this section look like for C0(X) | what the results of this section look like for C0(X) | Grammatik | **Umgesetzt.** |
+| 313 | ◐ | a linear operator S on E is called lattice homomorphism if | a linear operator S on E is called a lattice homomorphism if | Grammatik | **Umgesetzt.** |
+| 314 | ○ | Note, that an operator S is a lattice homomorphism, if and only if S is positive | Note that an operator S is a lattice homomorphism if and only if S is positive | Satz | **Umgesetzt.** Kommas nach deutscher Zeichensetzung. |
 | 315 | ● | is right-sided Gateaux differerentiable and | is right-sided Gateaux differentiable and | Tippfehler | **Umgesetzt.** Im PDF bestätigt. |
-| 315 | ○ | For that we need, that the modulus function is differentiable. If E = L^p(X,Σ,μ) (1 ⩽ p < ∞) this had been proved in Example 2.2.3. | For that we need that the modulus function is differentiable. If E = L^p(X,Σ,μ) (1 ⩽ p < ∞) this has been proved in Example 2.2.3. | Grammatik | Komma nach deutscher Zeichensetzung; Zeitform. |
-| 316 | ◐ | Then by Part-II, Chapter 2, Lemma 2.4 | Then by Part-II, Lemma 2.2.4 | Querverweis | Andere Zitierweise als sonst. Dieselbe Aussage wird auf S. 289 als „Part-II, Lemma 2.2.4“ zitiert. |
-| 317 | ○ | (see Section 1.8) ). | (see Section 1.8)). | Satz | Leerzeichen vor der Klammer. |
-| 320 | ○ | Here we call a semigroup (T(t))t⩾0 multiplication semigroup if | Here we call a semigroup (T(t))t⩾0 a multiplication semigroup if | Grammatik |  |
-| 321 | ○ | (see Section 1.9) , it is clear that (a) implies (c). … Hence A ∈ Z(E) The last assertion | (see Section 1.9), it is clear that (a) implies (c). … Hence A ∈ Z(E). | Satz | Leerzeichen vor dem Komma; am Satzende fehlt der Punkt. |
-| 322 | ○ | (this follows from Eq. (2.1.6) on page 52) | (this follows from Part-I, Eq. (…) on page 52) | Querverweis | Mehrdeutig: Auch dieses Kapitel hat eine Eq. (2.1.6), nämlich die Gauß-Kern-Formel auf S. 284. Gemeint ist offenbar eine Formel aus einem anderen Teil; bitte den Teil angeben oder den Verweis prüfen. |
-| 323 | ◐ | Theorem 2.1.8 has been obtained independently by Arendt (1984a) and van Casteren (1984). | Zitierweise mit Nummern wie sonst (z. B. Arendt [3]); van Casteren fehlt im Literaturverzeichnis | Literatur | Autor-Jahr-Zitate passen nicht zum nummerierten Verzeichnis, und „van Casteren (1984)“ steht nicht in der Liste. |
-| 323 | ○ | characterizes the positivity of the semigroup (cf., Nagel & Uhlig [24]) | (cf. Nagel & Uhlig [24]) | Satz |  |
-| 324 | ◐ | [3] W. Arendt: “Generators of positive semigroups”. Infinite-dimensional Systems, Retahof 1983. Ed. by F. Kappel & W. Schappacher. Vol. 1076. Springer 1984 pp. 1–15. | … Infinite-dimensional Systems, Retzhof 1983. Ed. by F. Kappel & W. Schappacher. Lecture Notes in Math. 1076. Springer 1984, pp. 1–15. | Literatur | Ortsname falsch geschrieben (Retzhof); Reihentitel fehlt vor „Vol. 1076“; vor „pp.“ fehlt ein Komma. |
-| 324 | ○ | [10] … Ed. by R. Nagel, U. Schlotterbeck & M. Wolff. | Ed. by R. Nagel, U. Schlotterbeck & M. P. H. Wolff. | Literatur | [17] und [22] nennen die Herausgeber desselben Bandes als „M. P. H. Wolff“. |
+| 315 | ○ | For that we need, that the modulus function is differentiable. If E = L^p(X,Σ,μ) (1 ⩽ p < ∞) this had been proved in Example 2.2.3. | For that we need that the modulus function is differentiable. If E = L^p(X,Σ,μ) (1 ⩽ p < ∞) this has been proved in Example 2.2.3. | Grammatik | **Umgesetzt.** Komma nach deutscher Zeichensetzung; Zeitform. |
+| 316 | ◐ | Then by Part-II, Chapter 2, Lemma 2.4 | Then by Part-II, Lemma 2.2.4 | Querverweis | **Umgesetzt.** Andere Zitierweise als sonst. Dieselbe Aussage wird auf S. 289 als „Part-II, Lemma 2.2.4“ zitiert. |
+| 317 | ○ | (see Section 1.8) ). | (see Section 1.8)). | Satz | **Umgesetzt.** Leerzeichen vor der Klammer. |
+| 320 | ○ | Here we call a semigroup (T(t))t⩾0 multiplication semigroup if | Here we call a semigroup (T(t))t⩾0 a multiplication semigroup if | Grammatik | **Umgesetzt.** |
+| 321 | ○ | (see Section 1.9) , it is clear that (a) implies (c). … Hence A ∈ Z(E) The last assertion | (see Section 1.9), it is clear that (a) implies (c). … Hence A ∈ Z(E). | Satz | **Umgesetzt.** Leerzeichen vor dem Komma; am Satzende fehlt der Punkt. |
+| 322 | ○ | (this follows from Eq. (2.1.6) on page 52) | (this follows from Part-I, Eq. (…) on page 52) | Querverweis | **Umgesetzt.** Gemeint ist die Trotter-Produktformel; jetzt „Part-I, Eq.“ (eq:a2-1.8). Mehrdeutig: Auch dieses Kapitel hat eine Eq. (2.1.6), nämlich die Gauß-Kern-Formel auf S. 284. Gemeint ist offenbar eine Formel aus einem anderen Teil; bitte den Teil angeben oder den Verweis prüfen. |
+| 323 | ◐ | Theorem 2.1.8 has been obtained independently by Arendt (1984a) and van Casteren (1984). | Zitierweise mit Nummern wie sonst (z. B. Arendt [3]); van Casteren fehlt im Literaturverzeichnis | Literatur | **Umgesetzt.** Arendt mit Nummer; van Casteren als vancasteren:1984 (Integral Equations Operator Theory 7) zitiert – bitte prüfen, ob diese Arbeit gemeint ist. Autor-Jahr-Zitate passen nicht zum nummerierten Verzeichnis, und „van Casteren (1984)“ steht nicht in der Liste. |
+| 323 | ○ | characterizes the positivity of the semigroup (cf., Nagel & Uhlig [24]) | (cf. Nagel & Uhlig [24]) | Satz | **Umgesetzt.** |
+| 324 | ◐ | [3] W. Arendt: “Generators of positive semigroups”. Infinite-dimensional Systems, Retahof 1983. Ed. by F. Kappel & W. Schappacher. Vol. 1076. Springer 1984 pp. 1–15. | … Infinite-dimensional Systems, Retzhof 1983. Ed. by F. Kappel & W. Schappacher. Lecture Notes in Math. 1076. Springer 1984, pp. 1–15. | Literatur | **Umgesetzt.** Retzhof schon am 18.10.; Reihe „Lecture Notes in Math.“ ergänzt. Komma vor „pp.“ = biblatex-Stil. Ortsname falsch geschrieben (Retzhof); Reihentitel fehlt vor „Vol. 1076“; vor „pp.“ fehlt ein Komma. |
+| 324 | ○ | [10] … Ed. by R. Nagel, U. Schlotterbeck & M. Wolff. | Ed. by R. Nagel, U. Schlotterbeck & M. P. H. Wolff. | Literatur | **Umgesetzt.** „M.P.H.“ → „M. P. H.“ in allen Einträgen. [17] und [22] nennen die Herausgeber desselben Bandes als „M. P. H. Wolff“. |
 | 325 | ● | [27] J. Peetre: Une charactérisation abstraite des opérateurs différentiels. | [27] J. Peetre: Une caractérisation abstraite des opérateurs différentiels. | Literatur | **Umgesetzt.** Französische Schreibweise: „caractérisation“. |
-| 325 | ○ | [21] W. A. J. Luxemburg: Some Aspects of the Theory of Riesz Spaces. Vol. 4. (1979). | … Vol. 4. Univ. of Arkansas Lecture Notes in Math. (1979). | Literatur | Reihe bzw. Verlag fehlen, der Eintrag ist unvollständig. Bitte die genaue Angabe prüfen. |
-| 325 | ○ | [23] S. Miyajima & N. Okazawa: “Generators of positive C0-semigroups on Banach lattices”. 1984. | Bibliografische Angabe ergänzen (Zeitschrift, Band, Seiten bzw. „Preprint“) | Literatur | Unvollständiger Eintrag. |
+| 325 | ○ | [21] W. A. J. Luxemburg: Some Aspects of the Theory of Riesz Spaces. Vol. 4. (1979). | … Vol. 4. Univ. of Arkansas Lecture Notes in Math. (1979). | Literatur | **Umgesetzt.** Schon am 18.10. ergänzt. Reihe bzw. Verlag fehlen, der Eintrag ist unvollständig. Bitte die genaue Angabe prüfen. |
+| 325 | ○ | [23] S. Miyajima & N. Okazawa: “Generators of positive C0-semigroups on Banach lattices”. 1984. | Bibliografische Angabe ergänzen (Zeitschrift, Band, Seiten bzw. „Preprint“) | Literatur | **Umgesetzt.** Auf die veröffentlichte Fassung umgestellt: Pacific J. Math. 125 (1986) 161–176, „Generators of positive C0-semigroups“ (Schlüssel miyajimaokazawa:1984 beibehalten). Unvollständiger Eintrag. |
 
 ### Teil III, Kap. 3 – Spectral Theory of Positive Semigroups on Banach Lattices
 

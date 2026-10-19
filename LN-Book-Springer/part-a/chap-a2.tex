@@ -67,7 +67,7 @@ We will have a brief look at this circle of problems at the end of this section.
 The results are explained and illustrated by examples.
 Proofs are only given when new aspects are presented which are not yet contained in the literature, otherwise we refer to the recent monographs \textcite{davies:1980}, \textcite{goldstein:1985a}, \textcite{pazy:1983}.
 %% --
-\subsection{The abstract Cauchy problem} \label{subsec:a2-1.se1}
+\subsection{The Abstract Cauchy Problem} \label{subsec:a2-1.se1}
 %% --
 Let $A$ be a closed operator on a Banach space $E$ and consider the \emph{Abstract Cauchy Problem \eqref{eq:a2-acp}}
 %% –
@@ -89,7 +89,7 @@ Let $A$ be a closed operator on a Banach space $E$ and consider the \emph{Abstra
 \right\}   
 \end{equation*}
 %% --
-By a solution of \eqref{eq:a2-acp} for the initial value $f \in D(A)$ we understand a continuously differentiable function $u \colon \left[0,\infty\right) \to E$ satisfying $u(0) = f$ and $u(t) \in D(A)$ for all $t \geq 0$ such that $u'(t) = Au(t)$ for $t \geq 0$.
+By a solution of \eqref{eq:a2-acp} for the initial value $f \in D(A)$ we understand a continuously differentiable function $u \colon \left[0,\infty\right) \to E$ satisfying $u(0) = f$ and $u(t) \in D(A)$ for all $t \geq 0$ such that $\dot{u}(t) = Au(t)$ for $t \geq 0$.
 
 By Theorem~\ref{thm:a1-1.7} there exists a unique solution of \eqref{eq:a2-acp} for all initial values in the domain $D(A)$ whenever $A$ is the generator of a strongly continuous semigroup.
 The converse does not hold (see Example~\ref{ex:a2-1.4} below).
@@ -145,7 +145,7 @@ Let
 \tilde{v}(s) = 
 \begin{cases}
     T_{1}(s-t)v(t)      & \text{for $s > t$,}\\
-    \tilde{v}(s) = v(s) & \text{$0 \leq s \leq t$.}
+    v(s) & \text{for $0 \leq s \leq t$.}
 \end{cases}
 \]
 %% --
@@ -282,7 +282,7 @@ Thus $v \in C^{1}([0,\infty), E_{1})$ satisfies $\dot{v}(t) = A_{1}v(t)$.
 Since $v(0) = 0$, it follows that $v \equiv 0$, and hence $u \equiv 0$.
 \end{proof}
 %% --
-If \eqref{eq:a2-acp} has a unique solution for every initial value in $D(A)$, then $A$ is the generator of a strongly continuous semigroup only if some additional assumptions on the solutions (continuous dependence from the initial value) or on $A$ $(\rho(A) \neq \emptyset)$ are made.
+If \eqref{eq:a2-acp} has a unique solution for every initial value in $D(A)$, then $A$ is the generator of a strongly continuous semigroup only if some additional assumptions on the solutions (continuous dependence on the initial value) or on $A$ $(\rho(A) \neq \emptyset)$ are made.
 %% –
 \begin{corollary}\label{cor:a2-1.2}
 Let $A$ be a closed operator.
@@ -382,10 +382,10 @@ Since $ A $ is closed this implies that $ A = B $.
 \end{proof}
 %% --
 \begin{remark}\label{rem:a2-1.3}
-It is surprising that from condition~\ref{cor:a2-1.2-2}   and~\ref{cor:a2-1.2-3}   in the corollary it follows automatically that $ D(A) $ is dense.
+It is surprising that from conditions~\ref{cor:a2-1.2-2}   and~\ref{cor:a2-1.2-3}   in the corollary it follows automatically that $ D(A) $ is dense.
 On the other hand, this condition cannot be omitted in~\ref{cor:a2-1.2-4}.   
 In fact, consider any generator $ \tilde{A} $ and its restriction $ A $ with domain $ D(A) = \{0\} $.
-Then $ \overline{A} $ satisfies the remaining conditions in~\ref{cor:a2-1.2-4} but is not a generator (if\/ $ \dim E > 0 $).
+Then $ A $ satisfies the remaining conditions in~\ref{cor:a2-1.2-4} but is not a generator (if\/ $ \dim E > 0 $).
 \end{remark}
 %% --
 \begin{example}\label{ex:a2-1.4}
@@ -414,7 +414,7 @@ so $ \rho(A) = \emptyset $.
 As a further illustration, we note that the solution of the corresponding abstract Cauchy problem for the initial value $ (f,g) \in F \times D(B) $ is given by 
 %$ 
 \[
-u(t) = (f + tBg,g) .
+u(t) = (f - tBg,g) .
 \] 
 %$
 
@@ -442,7 +442,7 @@ Then $u$ is a solution of~\eqref{eq:a2-acp} for $B$ with initial value $f$.
 It follows from Corollary~\ref{cor:a2-1.2} that there exists a non-trivial solution for the initial value $0$.
 \end{remark*}
 %% --
-\subsection{One-parameter groups} \label{subsec:a2-1.se2}%
+\subsection{One-parameter Groups} \label{subsec:a2-1.se2}%
 %
 Generators of one-parameter groups can be characterized similarly by existence and uniqueness of the solutions of the associated Cauchy problem.
 However, here the assumption of continuous dependence on the initial values can be relaxed (in fact, one has no longer to assume that the continuous dependence is uniform in $t$).
@@ -525,7 +525,7 @@ The following conditions are equivalent.
 \item \label{thm:a2-1.7.1}
 $A$ is the generator of a strongly continuous semigroup.
 \item \label{thm:a2-1.7.2}
-The domain  $D(A)$ of\/ $A$ is dense in E and there exist $w$, $M \in \R$ such that $(w,\infty) \subseteq \rho(A)$ and
+The domain  $D(A)$ of\/ $A$ is dense in $E$ and there exist $w$, $M \in \R$ such that $(w,\infty) \subseteq \rho(A)$ and
 %% –
 \[
     \| {(\lambda - w)^{n}} (\lambda-A)^{-n}\| \leq M 
@@ -549,7 +549,7 @@ $A$ is densely defined, $(0,\infty) \subseteq \rho(A)$ and $\|\lambda R(\lambda,
 \end{enumerate}
 \end{corollary}
 %% –
-The difficult part in the proof of Theorem~\ref{thm:a2-1.7}   is to show that~\ref{cor:a2-1.8.2}   implies~\ref{cor:a2-1.8.1}. 
+The difficult part in the proof of Theorem~\ref{thm:a2-1.7}   is to show that~\ref{thm:a2-1.7.2}   implies~\ref{thm:a2-1.7.1}. 
 One has to construct the semigroup out of the resolvent.
 We mention two formulas which can be used for the proof.
 %% --
@@ -571,7 +571,7 @@ for all $f \in E$ and $t \geq 0$.
 \end{proposition}
 %% –
 Yosida's proof consists in showing that the limit in Eq.~\myeqpageref{eq:a2-1.2} exists under the hypothesis~\ref{thm:a2-1.7.2} of Theorem~\ref{thm:a2-1.7}  
-(see \textcite{davies:1980}, \textcite{goldstein:1985b} or \textcite{pazy:1983}).
+(see \textcite{davies:1980}, \textcite{goldstein:1985a} or \textcite{pazy:1983}).
 
 The proof of Hille (see \textcite{kato:1976}) is inspired by the following formula.
 \index{Hille-Yosida theorem|)}
@@ -587,7 +587,7 @@ Then
 for all $f \in E$ and $t \geq 0$.
 \end{proposition}
 %% --
-\subsection{Holomorphic semigroups} \label{subsec:a2-1.se4}%
+\subsection{Holomorphic Semigroups} \label{subsec:a2-1.se4}%
 \index{semigroup!holomorphic semigroup|(}
 %% --
 We now describe a hierarchy of smoothness conditions on the semigroup, starting with the most restrictive class; namely, holomorphic semigroups.
@@ -640,7 +640,7 @@ in  $ S( \alpha_{1} ) $  and every   $f \in E$.
 \end{definition}
 %% --
 \begin{remark*}\label{rem:a2-1.5-kgk}
-A function $T \colon S(\alpha) \to \LE$ is holomorphic with respect to the operator norm if and only if it is strongly holomorphic if and only if it is weakly holomorphic \textcite[V.3]{yosida:1965}.
+A function $T \colon S(\alpha) \to \LE$ is holomorphic with respect to the operator norm if and only if it is strongly holomorphic if and only if it is weakly holomorphic (\textcite[V.3]{yosida:1965}).
 \end{remark*}
 %% --
 \begin{theorem}\label{thm:a2-1.12}
@@ -654,7 +654,7 @@ S(\alpha + \pi/2) \subseteq \rho(A)
 and for every $\alpha_{1} \in (0,\alpha)$ there exists a constant $M$ such that
 %% –
 \begin{equation}\label{eq:a2-1.6}
-    \|R(\lambda,A)\| \leq M/|\lambda| \quad (\lambda \in S(\alpha_{1} + \pi/2). 
+    \|R(\lambda,A)\| \leq M/|\lambda| \quad (\lambda \in S(\alpha_{1} + \pi/2)). 
 \end{equation}
 %% –
 \end{theorem}
@@ -676,14 +676,14 @@ Then $A^{2}$ generates a bounded holomorphic semigroup of angle $\pi/2$.
 %% –
 \begin{proof}
 Let $0 < \alpha_{1} < \pi/2$ and $\lambda \in S(\alpha_{1} + \pi/2)$.
-There exists $r > 0$ and $\beta \in (-\beta_{1},\beta_{1})$,
+There exist $r > 0$ and $\beta \in (-\beta_{1},\beta_{1})$,
 where $\beta_{1} \coloneq (\alpha_{1} + \pi/2)/2$
 such that $\lambda = r^{2}\eu^{\iu 2\beta}$.
 Then 
 \[
 (\lambda - A^{2}) = (r\eu^{\iu\beta} - A)(r\eu^{\iu\beta} + A) \, .
 \] 
-It follows that $\lambda \in \rho(A)$ and 
+It follows that $\lambda \in \rho(A^{2})$ and 
 %%--
 \begin{equation}\label{eq:a2-1.7}
     R(\lambda,A^{2}) = R(r\eu^{\im\beta},A)R(r\eu^{-\im\beta},-A) \, .
@@ -741,7 +741,7 @@ Thus $A^{2}$ generates a bounded holomorphic semigroup by Corollary~\ref{cor:a2-
 %%-
 \item \label{ex:a2-1.13-kgk-2}
 Let $E = C_{0}(\R^{n})$ or $L^{p}(\R^{n})$ $(1 \leq p < \infty)$.
-For $i \in \{1,\ldots,n\}$ denote by $(U_{i})_{t \geq 0}$ the group given by 
+For $i \in \{1,\ldots,n\}$ denote by $(U_{i}(t))_{t \in \R}$ the group given by 
 %%
 \[
 (U_{i}(t)f)(x) = f(x_{1},\ldots,x_{i-1},x_{i}+t,\ldots,x_{n}) \quad  (x \in \R^{n}, t \in \R)
@@ -850,7 +850,7 @@ exists and
     &\leq N |\xi+\im\eta|^{-1}  . 
 \end{align*}
 %% –
-This together with the assumption implies that there exist $N' \geq 0$ and $\alpha \in \left]0,\pi/2\right]$ such that $\lambda \in \rho(A)$ and $\|R(\lambda,A)\| \leq N'/|\lambda|$ for all $\lambda \in S(\alpha+\pi/2)$.
+This together with the assumption implies that there exist $N' \geq 0$ and $\alpha \in (0,\pi/2]$ such that $\lambda \in \rho(A)$ and $\|R(\lambda,A)\| \leq N'/|\lambda|$ for all $\lambda \in S(\alpha+\pi/2)$.
 \end{proof}
 %% --
 Compared with the Hille-Yosida theorem, Theorem~\ref{thm:a2-1.14}   gives a very simple criterion for an operator to be the generator of a (holomorphic) semigroup.
@@ -891,7 +891,7 @@ The remaining estimate for a sector symmetric to the imaginary axis is given by 
 The reverse implication is clear.
 \end{proof}
 %% --
-We now prove the following extension of Corollary~\ref{cor:a2-1.13}  
+We now prove the following extension of Corollary~\ref{cor:a2-1.13}.
 %% –
 \begin{theorem}\label{thm:a2-1.15}
 Let $A$ be the generator of a strongly continuous group.
@@ -937,7 +937,7 @@ Then
 Thus 
 %
 \[
-	\lim_{t \to \infty} \Im\{z(t)\}^2/\Re\{z(t)\}^2 = 2\epsilon/(\epsilon^2-1) .
+	\lim_{t \to \infty} \Im(z(t)^2)/\Re(z(t)^2) = 2\epsilon/(\epsilon^2-1) .
 \]
 %
 Choose $\beta \in (\pi/4,\pi/2)$ such that $\tan(\alpha + \pi/2) > 2\epsilon/(\epsilon^2-1)$. 
@@ -946,7 +946,7 @@ Now let $\lambda \in S(\alpha+\pi/2)\setminus B(r_{0})$.
 Then there exist $\theta \in (-\beta,\beta)$ and $r \geq 0$ such that 
 %
 \[
-	 \lambda = (r\eu^{\im\theta}+\omega)^2 .
+	 \lambda = (r\eu^{\im\theta}+w)^2 .
 \]
 %
 Thus %
@@ -976,12 +976,12 @@ $\|R(\lambda,\pm A - w)\| \leq M/\Re(\lambda)$ for some $M \geq 0$, $w \geq 0$, 
 \end{remark*}
 %% –
 
-\subsection{Differentiable semigroups} \label{subsec:a2-1.se5}%
+\subsection{Differentiable Semigroups} \label{subsec:a2-1.se5}%
 \index{semigroup!differentiable semigroup}
 %%
 Let $(T(t))_{t\geq 0}$ be a strongly continuous semigroup with generator $A$.
 Let $t_0 \geq 0$ and $f \in E$.
-Then the function $t \mapsto T(t)f$ is right sided differentiable at $t_0$ if and only if\/ $T(t_0)f \in D(A)$; and in that case it is differentiable at every $s > t_0$ and the derivative is $AT(s)f$ (this follows from Proposition~\ref{prop:a1-1.6}\,(ii)).
+Then the function $t \mapsto T(t)f$ is right-sided differentiable at $t_0$ if and only if\/ $T(t_0)f \in D(A)$; and in that case it is differentiable at every $s > t_0$ and the derivative is $AT(s)f$ (this follows from Proposition~\ref{prop:a1-1.6}\,(ii)).
 
 %% –
 \begin{definition}\label{def:a2-1.16}
@@ -1017,7 +1017,7 @@ differentiable if and only if its generator $A$ satisfies the following.
 There exist constants $c, b, M > 0$ such that
 \[
     \Sigma \coloneq \left\{\lambda \in \C \colon 
-        c\eu^{-b\Re(\lambda)} \leq \lvert\Im(\lambda)\rvert
+        c\eu^{-b\cdot\Re(\lambda)} \leq \lvert\Im(\lambda)\rvert
     \right\} \subseteq \rho(A)
 \]
 and
@@ -1044,9 +1044,9 @@ and
 \]
 \end{theorem}
 %% –
-For the proofs of these two theorems we refer to \textcite[Chapter 3, Theorem 4.7 and 4.8]{pazy:1983}.
+For the proofs of these two theorems we refer to \textcite[Chapter 3, Theorems 4.7 and 4.8]{pazy:1983}.
 %% --
-\subsection{Norm continuous semigroups} \label{subsec:a2-1.se6}%
+\subsection{Norm Continuous Semigroups} \label{subsec:a2-1.se6}%
 \index{semigroup!norm continuous semigroup}
 %% --
 Let $(T(t))_{t\geq 0}$ be a strongly continuous semigroup and $s' > 0$.
@@ -1105,7 +1105,7 @@ r(R(\lambda,A)) &= \sup \left\{|\lambda-\mu|^{-1} \colon \mu \in \sigma(A)\right
 \let\qedsymbol\relax
 \end{proof}
 %% --
-\begin{proof}[Proof of Theorem~\ref{thm:a2-1.20}  ]
+\begin{proof}[Proof of Theorem~\ref{thm:a2-1.20}]
 It is enough to show the following.
 Let $a > \omega_{0}(A)$.
 Then for every $\epsilon > 0$ there exist $n \in \N$ and $r_0 \geq 0$ such that
@@ -1123,7 +1123,7 @@ In fact, then we have by Lemma~\ref{lem:a2-1.21}
 So let $\epsilon > 0$.
 If\/ $\Re(\lambda) > \omega_{0}(A)$, then by Proposition~\ref{prop:a1-1.11},
 \[
-R(\lambda,A)^{n+1} = \frac{1}{n!}\int_0^\infty \eu^{-\lambda t}t^nT(t) \dt (n \in \N).
+R(\lambda,A)^{n+1} = \frac{1}{n!}\int_0^\infty \eu^{-\lambda t}t^nT(t) \dt \quad (n \in \N).
 \]
 Let $s' > 0$ such that $t \mapsto T(t)$ is norm continuous on $(s',\infty)$.
 Let $w \in (\omega_{0}(A),a)$.
@@ -1149,7 +1149,7 @@ Choose $s \geq s'$ such that
 Since $(T(t))_{t\geq 0}$ is norm continuous for $t \geq s'$, it follows from the Riemann-Lebesgue lemma that there exists $r_{0} \geq 0$ such that 
 %% --
 \[
-\left\lVert \frac{1}{n!}\int_{s'}^s t^{n}\eu^{-\iu rt}\eu^{-at}T(t) \dt \right\lVert  < \epsilon^{n+1}/3
+\left\lVert \frac{1}{n!}\int_{s'}^s t^{n}\eu^{-\iu rt}\eu^{-at}T(t) \dt \right\rVert  < \epsilon^{n+1}/3
 \]
 %% --
  whenever $|r| \geq r_{0}$.
@@ -1170,14 +1170,14 @@ All together we obtain for $\lvert r\rvert \geq r_{0}$,
 \begin{align*}
   \norm{R(a + \iu r,A)^{n+1}}
     &= \frac{1}{n!}
-       \norm*{\int_0^\infty \eu^{-(a + \iu r)t} t^n T(t)\,\dt} \\
-    &\leq \frac{1}{n!}\int_{0}^{s'} \eu^{-at} t^n \norm{T(t)}\,\dt \\
+       \norm*{\int_0^\infty \eu^{-(a + \iu r)t} t^n T(t)\dt} \\
+    &\leq \frac{1}{n!}\int_{0}^{s'} \eu^{-at} t^n \norm{T(t)}\dt \\
     &\phantom{{}\leq{}}
        + \frac{1}{n!}
-         \norm*{\int_{s'}^{s} t^n \eu^{-\iu rt} \eu^{-at} T(t)\,\dt} \\
+         \norm*{\int_{s'}^{s} t^n \eu^{-\iu rt} \eu^{-at} T(t)\dt} \\
     &\phantom{{}\leq{}}
-       + \frac{1}{n!}\int_{s}^{\infty} \eu^{-at} t^n \norm{T(t)}\,\dt \\
-    &\leq \frac{(s')^{n}}{n!}\int_{0}^{s'} M \eu^{(\omega - a)t}\,\dt
+       + \frac{1}{n!}\int_{s}^{\infty} \eu^{-at} t^n \norm{T(t)}\dt \\
+    &\leq \frac{(s')^{n}}{n!}\int_{0}^{s'} M \eu^{(\omega - a)t}\dt
           + \tfrac{2}{3}\epsilon^{n+1} \\
     &\leq N \cdot \frac{(s')^n}{n!} + \tfrac{2}{3}\epsilon^{n+1} \\
    &\leq \epsilon^{n+1}. \tag*{\qedsymbol}%&&\qedhere
@@ -1191,7 +1191,7 @@ Moreover their asymptotic behavior is easy to describe (see Eq.~\myeqpageref{eq:
 
 Next we describe special norm continuous semigroups.
 %%--
-\subsection{Compact semigroups} \label{subsec:a2-1.se7}%
+\subsection{Compact Semigroups} \label{subsec:a2-1.se7}%
 \index{semigroup!compact semigroup}
 \index{operator!compact}
 \index{semigroup!eventually compact semigroup|(}
@@ -1325,7 +1325,7 @@ Hence this condition does not imply any smoothness property of the semigroup.
 \end{enumerate}
 \end{remark}
 %% --
-Positive eventually compact semigroups have remarkable properties in the setting of the Perron-Frobenius theory (see \eg Part-II, Corollary~\ref{cor:b3-2.12}).
+Positive eventually compact semigroups have remarkable properties in the setting of the Perron-Frobenius theory (see, \eg Part-II, Corollary~\ref{cor:b3-2.12}).
 
 The following scheme indicates the relation between the different classes of semigroups defined so far.
 %% -- tikz
@@ -1367,7 +1367,7 @@ Then $Af = m \cdot f$ with domain $D(A) = \{f \in E \colon m \cdot f \in E\}$ is
 Observe that $\sigma(A) = \closure{m(X)}$ in case $E = C_{0}(X)$ and 
 %%
 \[
-\sigma(A) = [\text{ess}]\text{-}\text{image}(m) \coloneq \{\lambda \in \C \colon \mu(\{x \in X \colon |m(x)-\lambda| < \epsilon\}) \neq 0 \text{ for all } \epsilon > 0\} 
+\sigma(A) = [\text{ess}]\text{-}\Image{m} \coloneq \{\lambda \in \C \colon \mu(\{x \in X \colon |m(x)-\lambda| < \epsilon\}) \neq 0 \text{ for all } \epsilon > 0\} 
 \]
 %% 
 if\/ $E = L^{p}$ (see Section~\ref{subsec:a1-2.3}).
@@ -1408,16 +1408,16 @@ By hypothesis, the set
 in the case $E = C_{0}(X)$ 
 and%
 \[
-	 H \coloneq \{m(x) \colon \Re(\lambda) \geq b \text{ and for all } \eta > 0,  
+	 H \coloneq \{\lambda \in \C \colon \Re(\lambda) \geq b \text{ and for all } \eta > 0,  
 \mu(\{x \in X \colon |m(x)-\lambda| < \eta \}) \neq 0\}
 \]
 %
 in the case $E = L^{p}$ is a bounded subset of\/ $\C$.
 Thus $\lim_{t \to t'} |\eu^{tz} - \eu^{t'z}| = 0$ uniformly for $z \in H$.
-Hence there exists $\delta \in \left]0,1\right]$ such that
+Hence there exists $\delta \in (0,1]$ such that
 %% --
 \[
-[\text{ess}]\text{-}\esssup\left\{\left|\eu^{tm(x)} - \eu^{t'm(x)}\right| \colon x \in X, \Re(m(x)) > b\right\} < \epsilon
+[\text{ess}]\text{-}\sup\left\{\left|\eu^{tm(x)} - \eu^{t'm(x)}\right| \colon x \in X, \Re(m(x)) > b\right\} < \epsilon
 \] 
 %% --
 whenever $|t-t'| < \delta$.
@@ -1470,7 +1470,7 @@ $\left\{\lambda \in \C \colon \lvert\Im(\lambda)\rvert > c \cdot \eu^{-t\Re(\lam
 %
 \begin{proof}
 The condition is necessary by Theorem~\ref{thm:a2-1.12}.
-Conversely, if\/ $S(\theta + \pi/2) \subset~\rho(A)$, then one verifies directly that 
+Conversely, if\/ $S(\theta + \pi/2) \subseteq \rho(A)$, then one verifies directly that 
 %%--
 \[
 (T(z)f)(x) = \eu^{z \cdot m(x)}f(x) \quad (f \in E, x \in X) 
@@ -1506,15 +1506,15 @@ Again let $X = \N$, so that $E = c_{0}$ or $\ell^{p}$.
 \begin{enumerate}[\upshape(i)]%\label{ex:a2-1.28-5}
 
 \item
-Let $m(n) = -n + \iu \cdot \exp(n^{2})$.
+Let $m(n) = -n + \iu\,\eu^{n^{2}}$.
 Then the semigroup is compact and (consequently) norm continuous for $t > 0$, but it is not eventually differentiable.
 
 \item
-Let $m(n) = -n + \iu \,\eu^{s'n}$.
+Let $m(n) = -n + \iu\,\eu^{s'n}$.
 Then the semigroup is differentiable for $t > s'$ but not differentiable at $t \in [0,s')$.
 
 \item
-If\/ $m(n) = -n +\iu \cdot n^2$, then the semigroup is differentiable but not holomorphic.
+If\/ $m(n) = -n + \iu\, n^{2}$, then the semigroup is differentiable but not holomorphic.
 
 \end{enumerate}
 %% --
@@ -1541,14 +1541,14 @@ holds for all $t \geq 0$ and $f \in E$.
 Moreover, $S(t)$ is the solution of the following integral equation
 %%--
 \begin{equation}\label{eq:a2-1.9}
-    S(t)f = T(t)f + \int_{0}^{t} T(t-s)BS(s)f\, \ds \quad (t \geq 0, f \in E).
+    S(t)f = T(t)f + \int_{0}^{t} T(t-s)BS(s)f\ds \quad (t \geq 0, f \in E).
 \end{equation}
 %%--
 
 Let $S_{0}(t) = T(t)$ and
 %%--
 \begin{equation}\label{eq:a2-1.10}
-    S_{n}(t)f = \int_{0}^{t} T(t-s)BS_{n-1}(s)f\, \ds \quad (f \in E)
+    S_{n}(t)f = \int_{0}^{t} T(t-s)BS_{n-1}(s)f\ds \quad (f \in E)
 \end{equation}
 %%--
 for $n \in \N$. Then
@@ -1625,26 +1625,26 @@ Denote by $U$ the unit ball of\/ $E$ and fix $s \in (0,t]$.
 Then
 %%--
 \[
-    \lim_{h \to 0} (T(t+s-h) - T(t-s))f = 0
+    \lim_{h \to 0} (T(t+h-s) - T(t-s))f = 0
 \]
 %%--
 for all $f \in \overline{BS(s)U} \eqqcolon K$.
 
 Since $K$ is compact it follows that the limit exists uniformly with respect to $f \in K$, \ie  
-$\lim_{h \to 0} \|(T(t+s-h) - T(t-s))BS(s)\| = 0$.
+$\lim_{h \to 0} \|(T(t+h-s) - T(t-s))BS(s)\| = 0$.
 It follows from the dominated convergence theorem that
 %%--
 \begin{equation}\label{eq:a2-1.13}
-    \lim_{h \to 0} \int_{0}^{t} \|(T(t+s-h) - T(t-s))BS(s)\|\, \ds = 0.
+    \lim_{h \to 0} \int_{0}^{t} \|(T(t+h-s) - T(t-s))BS(s)\|\ds = 0.
 \end{equation}
 %%--
 Using  Eq.~\myeqpageref{eq:a2-1.9}  we obtain 
 \begin{align*}
-	\|S(t+h) - S(t)\| &\leq \|T(t+h) - T(t)\|   \\
-	&+  \left\| \int_{0}^{t+h} T(t+h-s)BS(s)\, \ds 
-	-  \int_{0}^{t} (T(t-s)BS(s)\, \ds \right\|  \\
-	\leq \|T(t+h) - T(t)\| &+ \int_{t}^{t+h} \|T(t+h-s)BS(s)\| \ds    \\ 
-	&+ \int_{0}^{t} \|(T(t+h-s) - T(t-s))BS(s)\|\, \ds \to 0 
+	\|S(t+h) - S(t)\| &\leq \|T(t+h) - T(t)\| \\
+	&\quad +  \left\| \int_{0}^{t+h} T(t+h-s)BS(s)\ds 
+	-  \int_{0}^{t} T(t-s)BS(s)\ds \right\| \\
+	&\leq \|T(t+h) - T(t)\| + \int_{t}^{t+h} \|T(t+h-s)BS(s)\| \ds \\ 
+	&\quad + \int_{0}^{t} \|(T(t+h-s) - T(t-s))BS(s)\|\ds \to 0 
 \end{align*}
 %% --
 when  $h \to 0$. 	
@@ -1668,15 +1668,15 @@ Moreover, there exists a bounded operator $C$ on $E$ such that $A + B$ is simila
 We first show that $(\Id - BR(\lambda,A))$ is invertible for some $\lambda \in \C$.
 Choose $\lambda_{0} \in \rho(A)$.
 Then $S \coloneq (\lambda_{0}-A)BR(\lambda_{0},A) \in \mathcal{L}(E)$.
-Let $\lambda > s(A)$ be so large such that $\|SR(\lambda,A)\| < 1$.
+Let $\lambda > s(A)$ be so large that $\|SR(\lambda,A)\| < 1$.
 Then 
 %%
 \[
-\Id - (\lambda_{0} - A)BR(\lambda_{0},A)R(\lambda,A) = (\Id - SR(\lambda,A)
+\Id - (\lambda_{0} - A)BR(\lambda_{0},A)R(\lambda,A) = (\Id - SR(\lambda,A))
 \]
 %%
 is invertible.
-Consequently, also $(\Id -BR(\lambda,A))^{-1})$ exists
+Consequently, also $(\Id -BR(\lambda,A))^{-1}$ exists
 (since 
 %%
 \[
@@ -1810,14 +1810,14 @@ The continuity of\/ $p$ implies that there exists a constant $c > 0$ such that
 	|p(f)| \leq c\|f\| \quad (f \in E).
 \end{equation}
 %% -- 
-Moreover, it follows from Eq.~\myeqpageref{eq:a2-2.1} 
+Moreover, it follows from Eq.~\myeqpageref{eq:a2-2.1} that
 %% --
 \begin{equation*}\label{eq:a2-2.4}
 	p(f) + p(-f) \geq p(0) = 0 \quad (f \in E).
 \end{equation*}
 %% --
 A bounded operator $T$ on $E$ is called \emph{p-contractive} if\/ $p(Tf) \leq p(f)$ for all $f \in E$.
-Similarly, a semigroup $(T(t))_{t\geq 0}$ is called \emph{p-contractive} if\/ $T(t)$ is p-contractive for all $t \geq 0$.
+Similarly, a semigroup $(T(t))_{t\geq 0}$ is called \emph{p-contractive} if\/ $T(t)$ is $p$-contractive for all $t \geq 0$.
 Of course, the most important case in this section is when $p$ is the norm function $N$ given by $N(f) = \|f\|$ $(f \in E)$.
 An $N$-contractive operator is just a contraction in the usual sense.
 %% –
@@ -1835,7 +1835,7 @@ Then a bounded operator $T$ is $N^{+}$-contractive if and only if\/ $T$ is posit
 We first want to solve the following problem.
 %% --
 \begin{quote}
-\textit{Given the generator $A$ of a semigroup $(T(t))_{t\geq 0}$ find a condition on $A$ which is equivalent to $T(t)$ being p-contractive for all $t \geq 0$.}
+\textit{Given the generator $A$ of a semigroup $(T(t))_{t\geq 0}$ find a condition on $A$ which is equivalent to $T(t)$ being $p$-contractive for all $t \geq 0$.}
 \end{quote}
 %% --
 The \emph{subdifferential} $\ddp$ of\/ $p$ at $f$ is defined by
@@ -1847,7 +1847,7 @@ It follows from the Hahn-Banach theorem that $\ddp(f) \neq \emptyset$ for all $f
 \begin{definition}\label{def:a2-2.1}
 \index{half-norm!p-dissipative}
 An operator $A$ on $E$ is called \emph{p-dissipative} if for all $f \in D(A)$ there exists $\phi \in \ddp(f)$ such that $\dualp{Af,\phi} \leq 0$ 
-and $A$ is called \emph{strictly p-dissipative} if for all $f \in D(A)$ the inequality $\dualp{Af,\phi} \leq 0$ holds for all $\phi \in \ddp(f)$.
+and $A$ is called \emph{strictly $p$-dissipative} if for all $f \in D(A)$ the inequality $\dualp{Af,\phi} \leq 0$ holds for all $\phi \in \ddp(f)$.
 \end{definition}
 %%
 For convenience we want to have a distinctive name for the norm function.
@@ -1895,13 +1895,13 @@ $A - \|A\|\Id$ is strictly dissipative for every bounded operator $A$.
 %% –
 \begin{proposition}\label{prop:a2-2.3}
 Let $A$ be an operator on $E$.
-Then $A$ is p-dissipative if and only if
+Then $A$ is $p$-dissipative if and only if
 %% --
 \begin{equation} \label{eq:a2-2.7}
 p(f) \leq p(f - tAf) \text{ for all } f \in D(A) \text{ and } t > 0.
 \end{equation}
 %% --
-If in particular $(w,\infty) \subseteq \rho(A)$ for some $w \in \R$, then $A$ is p-dissipative if and only if
+If in particular $(w,\infty) \subseteq \rho(A)$ for some $w \in \R$, then $A$ is $p$-dissipative if and only if
 %% --
 \begin{equation}\label{eq:a2-2.8}
 p(\lambda R(\lambda,A)f) \leq p(f) \text{ for all } f \in E, \lambda > w.
@@ -1909,9 +1909,9 @@ p(\lambda R(\lambda,A)f) \leq p(f) \text{ for all } f \in E, \lambda > w.
 \end{proposition}
 %% --
 \begin{proof}
-Assume that $A$ is p-dissipative.
+Assume that $A$ is $p$-dissipative.
 Let $f \in D(A)$ and $t > 0$.
-There exists  $\phi~\in~\ddp(f)$ such that $\dualp{Af,\phi} \leq 0$.
+There exists  $\phi \in \ddp(f)$ such that $\dualp{Af,\phi} \leq 0$.
 Hence, 
 %%
 \[
@@ -1944,11 +1944,11 @@ Moreover,
 Letting $t \to 0$ yields $\dualp{f,\phi} = p(f)$.
 
 We have proved that $\phi \in \ddp(f)$.
-By hypothesis we have for all $t > 0$, \\
+By hypothesis we have for all $t > 0$,
 %
 \begin{equation*}
 \begin{split}
-	p(f)~& \leq~p(f-tAf) = \dualp{f-tAf,\phi_{t}} \\
+	p(f) &\leq p(f-tAf) = \dualp{f-tAf,\phi_{t}} \\
 &= \dualp{f,\phi_{t}} - t\dualp{Af,\phi_{t}} \leq p(f) - t \dualp{Af,\phi_{t}} .
 \end{split}
 \end{equation*}
@@ -1979,12 +1979,12 @@ D^{+}_{g} p(f) = \sup \{\dualp{g,\phi} \colon \phi \in \ddp(f)\},
 D^{-}_{g} p(f) = \inf \{\dualp{g,\phi} \colon \phi \in \ddp(f)\}.
 \end{equation}
 %% --
-Thus $A$ is p-dissipative if and only if\/ $D^{-}_{Af} p(f) \leq 0$, and $A$ is strictly p-dissipative if and only if\/ $D^{+}_{Af} p(f) \leq 0$ for all $f \in D(A)$.
+Thus $A$ is $p$-dissipative if and only if\/ $D^{-}_{Af} p(f) \leq 0$, and $A$ is strictly $p$-dissipative if and only if\/ $D^{+}_{Af} p(f) \leq 0$ for all $f \in D(A)$.
 \end{remark}
 %% --
 \begin{corollary}\label{cor:a2-2.5}
 Let $A$ be a closable operator.
-If\/ $A$ is p-dissipative, then so is its closure.
+If\/ $A$ is $p$-dissipative, then so is its closure.
 \end{corollary}
 %% --
 \begin{theorem}\label{thm:a2-2.6}
@@ -1997,10 +1997,10 @@ The following assertions are equivalent.
 $p(T(t)f) \leq p(f)$ for all $t \geq 0$, $f \in E$.
 
 \item \label{thm:a2-2.6.2}
-$A$ is strictly p-dissipative.
+$A$ is strictly $p$-dissipative.
  
 \item \label{thm:a2-2.6.3}
-There exists a core $D$ of\/ $A$ such that $A_{\vert D}$ is p-dissipative.
+There exists a core $D$ of\/ $A$ such that $A_{\vert D}$ is $p$-dissipative.
 \end{enumerate}
 \end{theorem}
 %% --
@@ -2017,31 +2017,31 @@ This proves~\ref{thm:a2-2.6.2}.
 
 It is trivial that~\ref{thm:a2-2.6.2} implies~\ref{thm:a2-2.6.3}.  
 So let us assume~\ref{thm:a2-2.6.3}. 
-Then it follows from Corollary~\ref{cor:a2-2.5}   that $A$ is p-dissipative.
+Then it follows from Corollary~\ref{cor:a2-2.5}   that $A$ is $p$-dissipative.
 Hence, by Eq.~\myeqpageref{eq:a2-2.8},  
 %
 \[
 	p(\lambda R(\lambda,A)g) \leq p(g) \quad\text{for all $g \in E$, $\lambda > \omega_{0}(A)$}.
 \]
 %
-Hence $\lambda R(\lambda,A)$ is p-contractive for $\lambda > \omega_{0}(A)$.
-This implies that $T(t)$ is p-contractive by the formula Eq.~\myeqpageref{eq:a2-1.3}, 
+Hence $\lambda R(\lambda,A)$ is $p$-contractive for $\lambda > \omega_{0}(A)$.
+This implies that $T(t)$ is $p$-contractive by the formula Eq.~\myeqpageref{eq:a2-1.3}, 
 %% –
 \begin{equation*}
-T(t) = \lim_{t\to 0} \left( \frac{n}{t} R\left( \frac{n}{t},A \right) \right)^{n} 
+T(t) = \lim_{n\to\infty} \left( \frac{n}{t} R\left( \frac{n}{t},A \right) \right)^{n} 
 	\text{ (strongly) for } t \geq 0. 
 	\qedhere
 \end{equation*}
 %% --
 \end{proof}
 %% --
-We have shown that for generators, p-dissipativity is equivalent to p-contractivity of the semigroup.
-Now we will consider a p-dissipative operator $A$ (which is not a generator a priori) and investigate under which additional hypotheses $A$ is the generator of a (necessarily p-contractive) semigroup.
-At first we present some consequences of p-dissipativity.
+We have shown that for generators, $p$-dissipativity is equivalent to $p$-contractivity of the semigroup.
+Now we will consider a $p$-dissipative operator $A$ (which is not a generator a priori) and investigate under which additional hypotheses $A$ is the generator of a (necessarily $p$-contractive) semigroup.
+At first we present some consequences of $p$-dissipativity.
 %% –
 \begin{theorem}\label{thm:a2-2.7}
-Let $A$ be a p-dissipative operator.
-If\/ $D(A)$ is dense, then $A$ is strictly p-dissipative.
+Let $A$ be a $p$-dissipative operator.
+If\/ $D(A)$ is dense, then $A$ is strictly $p$-dissipative.
 \end{theorem}
 %% –
 \begin{proof}
@@ -2062,7 +2062,7 @@ Then for every $t > 0$ and $g \in D(A)$ we have
 &= \frac{1}{t}(\dualp{f + tAf,\phi} - \dualp{f,\phi}) \leq \frac{1}{t}(p(f + tAf) - p(f)) \\
 &\leq \frac{1}{t}(p(f + tg) + tp(Af - g) - p(f)) \\
 &\leq \frac{1}{t}(p((\Id - tA)(f + tg)) + tp(Af - g) - p(f)) \\
-&\qquad \text{(by Eq.~\myeqpageref{eq:a2-2.7}\,)} \\
+&\qquad \text{(by Eq.~\myeqpageref{eq:a2-2.7})} \\
 &\leq \frac{1}{t}(p(f) + tp(g - Af) + t^2p(-Ag) + tp(Af - g) - p(f)) \\
 &\leq \frac{1}{t}(2tc\|g - Af\| + t^2c\|Ag\|) \quad \text{(by Eq.~\eqref{eq:a2-2.3})} \\
 &= 2c\|g - Af\| + tc\|Ag\|.
@@ -2074,7 +2074,7 @@ Since $D(A)$ is dense in $E$, this implies that $\dualp{Af,\phi} \leq 0$.
 %% --
 We now impose stronger conditions on $p$.
 \index{half-norm|(}
-A continuous sublinear function $p \colon E \to \R$ is called \emph{half-norm} if
+A continuous sublinear function $p \colon E \to \R$ is called a \emph{half-norm} if
 %%--
 \begin{equation}\label{eq:a2-2.11}
 p(f) + p(-f) > 0 \text{ whenever } f \neq 0;
@@ -2102,7 +2102,7 @@ E_{p} \coloneq \{f \in E \colon p(-f) \geq 0\}
 \] 
 %%
 on $E$.
-Any p-contractive operator $T$ on $E$ leaves the cone $E_{p}$ invariant (\ie  $T$ is positive for the corresponding ordering).
+Any $p$-contractive operator $T$ on $E$ leaves the cone $E_{p}$ invariant (\ie  $T$ is positive for the corresponding ordering).
 
 Conversely, given a closed proper cone $E_{+}$ on $E$, then 
 %$
@@ -2113,14 +2113,14 @@ p(f) \coloneq \text{dist}(-f,E_{+}) = \inf\{\|f + g\| \colon g \in E_{+}\}
 defines a half-norm on $E$ such that $E_{+} = E_{p}$.
 This half-norm is called the \emph{canonical half-norm} on the ordered Banach space $(E,E_{+})$.
 \index{ordered Banach space}
-The canonical half-norm is strict if and only if the cone $E_{+}$ is \emph{normal} (this is equivalent to the fact that for every $\phi \in E'$ there exist positive linear forms $\phi_{1}$ and $\phi_{2}$ on $E$ such that $\phi = \phi_{1} - \phi_{2}$ (see \textcite{battyrobinson:1984} or \textcite[Chapter V]{schaefer:1966}).
+The canonical half-norm is strict if and only if the cone $E_{+}$ is \emph{normal} (this is equivalent to the fact that for every $\phi \in E'$ there exist positive linear forms $\phi_{1}$ and $\phi_{2}$ on $E$ such that $\phi = \phi_{1} - \phi_{2}$; see \textcite{battyrobinson:1984} or \textcite[Chapter V]{schaefer:1966}).
 \end{remark}
 %% –
 %%
 %% –
 \begin{proposition}\label{prop:a2-2.9}
-Let $A$ be a p-dissipative operator where $p$ is a half-norm.
-If\/ $D(A)$ is dense, then $A$ is closable and the closure of\/ $A$ is p-dissipative as well (by Corollary~\ref{cor:a2-2.5}). 
+Let $A$ be a $p$-dissipative operator where $p$ is a half-norm.
+If\/ $D(A)$ is dense, then $A$ is closable and the closure of\/ $A$ is $p$-dissipative as well (by Corollary~\ref{cor:a2-2.5}). 
 \end{proposition}
 %% –
 %% --
@@ -2152,7 +2152,7 @@ Hence $p(g) + p(-g) \leq 0$ which implies $g = 0$ by Eq.~\myeqpageref{eq:a2-2.11
 \end{proof}
 %% –
 \begin{lemma}\label{lem:a2-2.10}
-Let $p$ be a half-norm and $A$ a p-dissipative operator.
+Let $p$ be a half-norm and $A$ a $p$-dissipative operator.
 Then
 %% --
 \begin{equation}\label{eq:a2-2.14}
@@ -2206,10 +2206,10 @@ The following assertions are equivalent.
 %% --
 \begin{enumerate}[\upshape (a)]
 \item \label{thm:a2-2.11.1}
-$A$ is the generator of a p-contraction semigroup.
+$A$ is the generator of a $p$-contraction semigroup.
 %%--
 \item \label{thm:a2-2.11.2}
-$D(A)$ is dense, $A$ is p-dissipative and $\Image{\lambda - A} = E$ for some $\lambda > 0$.
+$D(A)$ is dense, $A$ is $p$-dissipative and $\Image{\lambda - A} = E$ for some $\lambda > 0$.
 \end{enumerate}
 %% --
 \end{theorem}
@@ -2232,7 +2232,7 @@ Hence $(0,2\lambda) \subseteq \rho(A)$.
 
 Iterating this argument we see that $(0,\infty) \subseteq \rho(A)$.
 It follows from the Hille-Yosida theorem that $A$ generates a contraction semigroup $(T(t))_{t\geq 0}$.
-Finally, from~\ref{thm:a2-2.6} it follows that $(T(t))_{t\geq 0}$ is p-contractive.
+Finally, from Theorem~\ref{thm:a2-2.6} it follows that $(T(t))_{t\geq 0}$ is $p$-contractive.
 \end{proof}
 %% --
 Of course, the norm function $N$ given by $N(f) = \|f\|$ is a strict half-norm.
@@ -2245,16 +2245,16 @@ for the case when the operator is merely given on a core.
 %% –
 \begin{corollary}\label{cor:a2-2.12}
 Let $p$ be a strict half-norm and $A$ be a densely defined operator.
-If\/ $A$ is p-dissipative and $(\lambda - A)$ has dense range for some $\lambda > 0$, then $A$ is closable and the closure $\overline{A}$ of\/ $A$ generates a $p$-contraction semigroup.
+If\/ $A$ is $p$-dissipative and $(\lambda - A)$ has dense range for some $\lambda > 0$, then $A$ is closable and the closure $\overline{A}$ of\/ $A$ generates a $p$-contraction semigroup.
 \end{corollary}
 %% –
 \begin{proof}
-It follows from Proposition~\ref{prop:a2-2.9} that $A$ is closable and the closure $\overline{A}$ is p-dissipative.
+It follows from Proposition~\ref{prop:a2-2.9} that $A$ is closable and the closure $\overline{A}$ is $p$-dissipative.
 Lemma~\ref{lem:a2-2.10} implies that $(\lambda- \overline{A})D(\overline{A}) = E$.
 So Theorem~\ref{thm:a2-2.11} yields the desired conclusion.
 \end{proof}
 %% --
-We conclude this section indicating the results for the complex case.
+We conclude this section by indicating the results for the complex case.
 
 Let $E$ be a complex Banach space and $p \colon E \to \R_{+}$ 
 be a seminorm on $E$, \ie $p(f + g) \leq p(f) + p(g)$ and $p(\lambda f) = |\lambda|p(f)$ holds for all $f, g \in E$, $\lambda \in \C$.
@@ -2269,16 +2269,16 @@ Then it follows from the Hahn-Banach theorem that $\diff{p}(f) \neq \emptyset$ f
 %%
 A linear operator $A$ on $E$ is called \emph{p-dissipative} if for all $f \in D(A)$ there exists $\phi \in \ddp(f)$ such that $\Re\dualp{Af,\phi} \leq 0$.
 
-The arguments given above show that also in the situation considered here $A$ is p-dissipative if and only if
+The arguments given above show that also in the situation considered here $A$ is $p$-dissipative if and only if
 \[
-    p((1-tA)f) \geq p(f)
+    p((\Id-tA)f) \geq p(f)
 \]
 %% –
 for all $f \in D(A)$, $t \geq 0$.
 
 The results of this section carry over if they are appropriately modified.
 We explicitly state the most important result for the case when $p$ is the norm.
-A linear operator $A$ is simply called \emph{dissipative} if it is N-dissipative where $N(f) = \|f\|$ $(f \in E)$.
+A linear operator $A$ is simply called \emph{dissipative} if it is $N$-dissipative where $N(f) = \|f\|$ $(f \in E)$.
 
 %% –
 \begin{theorem}[Lumer-Phillips]\label{thm:a2-2.13}
@@ -2308,7 +2308,7 @@ In this section we shall prove that on $L^\infty$, on $H^\infty$, and on some ot
 %% –
 \begin{lemma}\label{lem:a2-3.1}
 Let\, $\TT = (T(t))_{t\geq 0}$\, be a one-parameter semigroup of operators on a Banach space $E$.
-Suppose that\, $s = \lim\sup_{t\to 0} \|T(t) - \Id\|$\, is finite.
+Suppose that\, $s = \limsup_{t\to 0} \|T(t) - \Id\|$\, is finite.
 Then $\TT$ is uniformly continuous, if\/ $\lim_{t\to 0} \|(T(t) - \Id)^2\| = 0$.
 \end{lemma}
 %% –
@@ -2319,8 +2319,8 @@ The identity  $2(T(t) - \Id) = T(2t) - \Id - (T(t) - \Id)^2$\, shows that
 	2\|T(t) - \Id\| - \|(T(t) - \Id)^{2} \| \leq \|T(2t) - \Id\| .
 \]
 %% -- 
-Hence $2s \leq \lim \sup_{t \downarrow 0} \|T(2t) - \Id\|$.
-Obviously, $\lim \sup_{t \downarrow 0} \|T(2t) - \Id\| = s$ and so, $2s \leq s$.
+Hence $2s \leq \limsup_{t \downarrow 0} \|T(2t) - \Id\|$.
+Obviously, $\limsup_{t \downarrow 0} \|T(2t) - \Id\| = s$ and so, $2s \leq s$.
 Consequently, $s = 0$.
 \end{proof}
 %% --
@@ -2338,7 +2338,7 @@ $s < \infty$, one can replace
 by the weaker condition 
 %%--
 \[
-\lim \sup_{t \to 0} r(T(t) - \Id) < 1\ ,
+\limsup_{t \to 0} r(T(t) - \Id) < 1,
 \]
 %%--
 where $r$ denotes the spectral radius (see \textcite[Lemma 2]{lotz:1985}).
@@ -2358,7 +2358,7 @@ T(t) = \left( \begin{array}{cc}
 \]
 %%–
 we have $s = \infty$.
-Therefore $\TT$ is not uniformly continuous however, $(T(t) - \Id)^{2} = 0$ for all $t \geq 0$.
+Therefore $\TT$ is not uniformly continuous; however, $(T(t) - \Id)^{2} = 0$ for all $t \geq 0$.
 \end{enumerate}
 \end{remarks*}
 %% --
@@ -2428,11 +2428,11 @@ If  $\TT'' = (T(t)'')_{t \geq 0}$ is strongly continuous in $E''$, then $\TT$ is
 \begin{proof}
 Suppose that $\TT''$ is a strongly continuous semigroup.
 Then Lemma~\ref{lem:a2-3.2}   implies that $\TT'$ and $\TT$ are strongly continuous.
-Hence by the uniform boundedness principle, $\lim \sup_{t \to 0} \|(T(t) - \Id)\|$ is finite.
+Hence by the uniform boundedness principle, $\limsup_{t \to 0} \|(T(t) - \Id)\|$ is finite.
 By Lemma~\ref{lem:a2-3.1}   it suffices to show that $\lim_{t \to 0} \|(T(t) - \Id)^2\| = 0$.
 
 Let $t_{n} \geq 0$ with $\lim t_{n} = 0$ be given.
-Then there exists a bounded sequence $(x_{n})$ in $E$ and a bounded sequence $(x_{n}')$ in $E'$ such that
+Then there exist a bounded sequence $(x_{n})$ in $E$ and a bounded sequence $(x_{n}')$ in $E'$ such that
 %%
 \[
 \left\|(T(t_{n}) - \Id)^2 \right\| - \frac{1}{n} \leq \dualp{(T(t_{n}) - \Id)x_{n}, (T(t_{n}) - \Id)'x_{n}'} .
@@ -2499,18 +2499,18 @@ By Theorem~\ref{thm:a2-3.5}   it suffices to show that the spaces listed above a
 	If\/ $K$ is a compact F-space, then $C(K)$ is a Grothendieck space (\cf \textcite[Theorem 2.5]{seever:1968}). 
 	The special cases for Stonean and $\sigma$-Stonean spaces are due to \textcite[Théorème 9]{grothendieck:1953} and \textcite{ando:1961},  respectively.
 		
-\item[\ref{thm:a2-3.6-2} and~\ref{thm:a2-3.6-3} ] It is well known that every $\sigma$-order complete AM-space with unit is isometric to a space $C(K)$ where $K$ is a compact $\sigma$-Stonean space.
+\item[\ref{thm:a2-3.6-2} and~\ref{thm:a2-3.6-3}] It is well known that every $\sigma$-order complete AM-space with unit is isometric to a space $C(K)$ where $K$ is a compact $\sigma$-Stonean space.
 Obviously, the spaces under~\ref{thm:a2-3.6-2}   and~\ref{thm:a2-3.6-3}  are $\sigma$-order complete AM-spaces with unit and therefore, by proof of~\ref{thm:a2-3.6-1}, are  Grothendieck spaces with the Dunford-Pettis property.
 		
 \item[\ref{thm:a2-3.6-4} and~\ref{thm:a2-3.6-5}] These spaces are order complete vector lattices.
 This follows from \textcite[pp.18-22, Standardbeispiele 1 and 2 p.55]{bauer:1966}.
 Since these spaces contain the constant functions on $O$, they are complete for the supremum-norm.
-Indeed, if\/ $(f_n)$ is a Cauchy-sequence for this norm, it is easily seen that $(f_n)$ converges in norm to $\inf_n \sup(f_k \colon n < k)$.
+Indeed, if\/ $(f_n)$ is a Cauchy sequence for this norm, it is easily seen that $(f_n)$ converges in norm to $\inf_n \sup(f_k \colon n < k)$.
 Therefore these spaces are $\sigma$-order complete AM-spaces with unit and so as before Grothendieck spaces with the Dunford-Pettis property.
 		
-\item[\ref{thm:a2-3.6-6}] In \textcite{bourgain:1982} it is shown, that $H^{\infty}(D)$ is a Grothendieck space, where $D$ is the open unit disc $\{z \colon |z| < 1\}$, and in \textcite{bourgain:1984}, that this Banach space has the Dunford-Pettis property (see also the summary of Bourgain in \textcite{blei:1983}).
+\item[\ref{thm:a2-3.6-6}] In \textcite{bourgain:1982} it is shown that $H^{\infty}(D)$ is a Grothendieck space, where $D$ is the open unit disc $\{z \colon |z| < 1\}$, and in \textcite{bourgain:1984}, that this Banach space has the Dunford-Pettis property (see also the summary of Bourgain in \textcite{blei:1983}).
 		
-If\/ $O$ is a finitely connected domain and $H^{\infty}$ does not only contain the constant functions, then $H^{\infty}(O)$ is isomorphic to a finite direct sum of copies of\/ $H^{\infty}(D)$.
+If\/ $O$ is a finitely connected domain and $H^{\infty}(O)$ does not only contain the constant functions, then $H^{\infty}(O)$ is isomorphic to a finite direct sum of copies of\/ $H^{\infty}(D)$.
 Note that $H^{\infty}(D)$ is isomorphic to $\{f \in H^{\infty}(D) \colon f(0) = 0\}$ via the map $f \mapsto zf$.
 Then use \textcite[p.77 and Proposition 4.4.1]{grothendieck:1953}.
 Hence $H^{\infty}(O)$ is a Grothendieck space with the Dunford-Pettis property.
@@ -2540,7 +2540,7 @@ H.\,Porta and the author have shown that if a Banach space $E$ has an infinite d
 \section*{Notes}\label{notes:a2-notes}
 \addcontentsline{toc}{section}{Notes}
 %% --
-\begin{enumerate}[label=\emph{Section \arabic*:}, wide, itemsep=1ex]
+\begin{enumerate}[label=\emph{Section 2.\arabic*:}, wide, itemsep=1ex]
 %% --
 \item
 The abstract Cauchy problem is treated systematically in the monographs of \textcite{krein:1971} and \textcite{fattorini:1983}.
@@ -2554,7 +2554,7 @@ Thus our terminology is slightly incorrect, and some authors refer to the genera
 Holomorphic semigroups belong to the standard material of the theory of one-parameter semigroups.
 Our Theorem~\ref{thm:a2-1.14}   deviates from the usual presentation since the condition on the resolvent is merely required on a half-plane.
 
-Differentiable semigroups are treated in detail in the book of \textcite{pazy:1983} who discovered Theorem~\ref{thm:a2-1.17}   and~\ref{thm:a2-1.18}. 
+Differentiable semigroups are treated in detail in the book of \textcite{pazy:1983} who discovered Theorems~\ref{thm:a2-1.17}   and~\ref{thm:a2-1.18}. 
 The spectral property of eventually norm continuous semigroups given in Theorem~\ref{thm:a2-1.20}   is contained in \textcite[Theorem 16.4.2]{hillephillips:1957} with a proof depending on Gelfand theory.
 For norm continuous semigroups it is contained in \textcite{pazy:1983} with a simpler proof.
 The elementary proof we give here is due to G. Greiner.
@@ -2562,23 +2562,23 @@ The elementary proof we give here is due to G. Greiner.
 Theorem~\ref{thm:a2-1.29}   on the perturbation by bounded operators is due to \textcite{phillips:1954} who also investigated permanence of smoothness properties by this kind of perturbation.
 We also refer to \textcite[Section 3.1]{pazy:1983}.
 
-The observation that eventually norm continuity is preserved by perturbation by a compact operator (see Theorem~\ref{thm:a2-1.30}) seems to be new.
+The observation that eventual norm continuity is preserved by perturbation by a compact operator (see Theorem~\ref{thm:a2-1.30}) seems to be new.
 
 %% -- umgestellt nach rana 250922 ulgr
 The perturbation by operators being continuous on the graph of the generator is due to \textcite{deschschappacher:1984}.
-The short proof we give here is due to G. Greiner and has the advantage to yield the same permanence for smoothness properties as in the classical case, see Corollary~\ref{cor:a2-1.32}. 
+The short proof we give here is due to G. Greiner and has the advantage of yielding the same permanence for smoothness properties as in the classical case, see Corollary~\ref{cor:a2-1.32}. 
 
 The characterization of a core as \enquote{domain of uniqueness} given in Theorem~\ref{thm:a2-1.33}   seems to be new.
 In this section we have presented part of the standard theory of one-parameter semigroups including some new aspects.
 A very elegant brief introduction to one-parameter semigroups is given in the treatise of \textcite{kato:1976} where one can also find all the results on perturbation theory going beyond the elementary facts we discuss here.
-A complete information on the general theory can be obtained by consulting the books of \textcite{davies:1980}, \textcite{goldstein:1985a} and \textcite{pazy:1983}.
+Complete information on the general theory can be obtained by consulting the books of \textcite{davies:1980}, \textcite{goldstein:1985a} and \textcite{pazy:1983}.
 The monograph of \textcite{goldstein:1985a} contains a variety of examples and applications.
 
 \item 
 Dissipative operators were introduced by \textcite{lumerphillips:1961}.
 The analogous notion of dispersiveness is due to \textcite{phillips:1962}.
 Our approach follows closely \textcite{arendtchernoffkato:1982} where half-norms were introduced.
-Related previous results were obtained by \textcite{calvert:1971a}, \textcite{hasegawa:1966}, \textcite{sato:1968}, \textcite{benilanpicard:1979} and \textcite{picard:1972}, where the two last consider non-linear semigroups.
+Related previous results were obtained by \textcite{calvert:1971a}, \textcite{hasegawa:1966}, \textcite{sato:1968}, \textcite{benilanpicard:1979} and \textcite{picard:1972}, where the last two consider non-linear semigroups.
 A further investigation of half-norms can be found in \textcite{battyrobinson:1984} who consider ordered Banach spaces other than Banach lattices in great detail.
 We also refer to the historical notes given there.
 

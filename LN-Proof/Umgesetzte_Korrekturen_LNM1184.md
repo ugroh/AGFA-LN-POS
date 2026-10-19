@@ -261,6 +261,22 @@ Inhaltlich relevant sind vor allem:
 
 Der Rest sind Satz- und Notationsfragen: Klammern, `\eqqcolon`, `\limsup`, `\mapsto`, `\setminus`, aufrechtes d, Mathemodus.
 
+## Kap. 2, Teil I–III (19.10.2026)
+
+Alle offenen Punkte aus `korrekturen-text-part-a/b/c.md` und `korrekturen-mathe-part-a/b/c.md` zu Kap. 2 sind umgesetzt (`chap-a2.tex`, `chap-b2.tex`, `chap-c2.tex`, `bib/ln-references.bib`) und in den Listen mit **Umgesetzt** markiert. Die Punkte aus `math-error-part-a/b/c.md` zu Kap. 2 sind davon nicht betroffen und weiter offen.
+
+Abweichungen und Ergänzungen:
+
+- **Teil I, Example 2.1.4:** Lösung als u(t) = (f − tBg, g), passend zur Matrix. Der Vorzeichenfehler in Z. 409 (math-error-part-a) ist damit mit (λf + Bg, λg) zu beheben, nicht durch Änderung der Matrix.
+- **Teil I:** `$p$-contractive`/`$p$-dissipative` überall außer in `\index`-Einträgen. Notes-Aufzählung jetzt „Section 2.1/2.2/2.3“, ebenso in Kap. 2 von Teil II und III. Kap. 3 und 4 (auch Teil IV) haben noch „Section 1:“.
+- **Teil II, Theorem 2.1.16:** Neben m^{l/k} auch der Laufbereich l = 0, …, k−1 (der erste Schritt geht von B = A aus).
+- **Teil II, 0 ≪ u:** An allen genannten Stellen; Z. 733 (`0 \leq q`) bewusst nicht, dort genügt q ≥ 0.
+- **Teil II:** „neighbourhood“ → „neighborhood“ (amerikanisch, wie „behavior“). de Laubenfels als „de Laubenfels~\cite{…}“, Kurose mit `\cite`, weil biblatex sonst Präfix bzw. Namen doppelt setzt.
+- **Teil III:** van Casteren (1984) jetzt als vancasteren:1984 (Integral Equations Operator Theory 7) zitiert – von Ulrich bestätigt. Ebenfalls mit „van Casteren~\cite{…}“.
+- **Teil III:** Die Felder in (2.1.7) und (2.3.11) mit `aligned` statt `array`.
+- **Bib:** Bénilan–Picard „linéaires“, Picard „accrétifs“, „Special Year in Analysis“, „North-Holland“ in allen Einträgen, Wolff „M. P. H.“ in allen Einträgen, Reihe „Lecture Notes in Math.“ bei arendt:1984a und greiner:1984a, `note = {Preprint}` bei lotz:1982 (veröffentlicht als Math. Z. 190 (1985), steht als lotz:1985 schon im Verzeichnis); miyajimaokazawa:1984 auf die veröffentlichte Fassung umgestellt: Pacific J. Math. 125 (1986) 161–176, Schlüssel beibehalten.
+- **Nicht geändert:** Anführungszeichen um Titel, Jahresformat und „Vol.“ in den Literaturlisten kommen aus dem biblatex-Stil und betreffen alle Einträge.
+
 ## Bereinigung der Bib-Dateien (18.10.2026)
 
 Beide Literaturdateien unter `LN-Book-Springer/bib/` sind durchgesehen und bereinigt.

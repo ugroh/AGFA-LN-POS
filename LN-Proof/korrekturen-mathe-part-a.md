@@ -4,7 +4,7 @@
 
 **Umfang:** Teil I, Kap. 1–4, geprüft im LaTeX-Quelltext (Branch `fahnenkorrektur`). Geprüft wurden nur Satz und Notation in Formeln: Tippfehler, Klammern, Indizes, uneinheitliche Schreibweisen, Mathemodus, Satzzeichen an Formeln, Gleichungsverweise. Beweise wurden **nicht** nachgerechnet; wo ein Befund inhaltlich wirkt, steht „bitte prüfen“.
 
-**Stand 18.10.2026:** Kap. 1 ist nach Durchsicht durch Rainer Nagel umgesetzt (in der Spalte Kommentar mit **Umgesetzt** markiert); Kap. 2–4 sind noch offen. Die Zeilenangaben beziehen sich auf den Stand vom 14.10.2026.
+**Stand 18.10.2026:** Kap. 1 ist nach Durchsicht durch Rainer Nagel umgesetzt (in der Spalte Kommentar mit **Umgesetzt** markiert); Kap. 2 ist am 19.10.2026 umgesetzt (Abweichungen im Kommentar); Kap. 3–4 sind noch offen. Die Zeilenangaben beziehen sich auf den Stand vom 14.10.2026.
 
 **Spalten:** S. = gedruckte Buchseite, ermittelt über das nächstgelegene Label (kann um eine Seite abweichen). Z. = Zeile in der .tex-Datei. Sicherheit: ● eindeutig · ◐ sehr wahrscheinlich · ○ Hinweis/Ermessen.
 
@@ -59,45 +59,45 @@ Insgesamt **141 Punkte**: 34 ●, 58 ◐, 49 ○. Davon stehen 9 bereits in der 
 
 | S. | Z. | | Ist | Soll | Art | Kommentar |
 |---|---|---|---|---|---|---|
-| 32 | 92 | ◐ | `u'(t) = Au(t)` | `\dot{u}(t) = Au(t)` | Notation | Sonst durchgehend `\dot{u}` (z. B. Z. 86). |
-| 33 | 148 | ● | `\tilde{v}(s) = v(s) & \text{$0 \leq s \leq t$.}` | `v(s) & \text{for $0 \leq s \leq t$.}` | Tippfehler | „ṽ(s) =“ im zweiten cases-Zweig doppelt; „for“ fehlt. |
-| 36 | 388 | ○ | `Then $ \overline{A} $ satisfies` | `Then $ A $ satisfies` | Tippfehler | Eingeführt wird die Einschränkung A, nicht ihr Abschluss; bitte prüfen. |
-| 36 | 417 | ○ | `u(t) = (f + tBg,g)` | `u(t) = (f - tBg,g)` | Tippfehler | Mit A = (0 −B; 0 0) wäre u̇ = (−Bg, 0); nur Hinweis. |
-| 38 | 528 | ● | `is dense in E and` | `is dense in $E$ and` | Mathemodus | E ohne Mathemodus. |
-| 39 | 552 | ○ | `~\ref{cor:a2-1.8.2} implies~\ref{cor:a2-1.8.1}` | `~\ref{thm:a2-1.7.2} implies~\ref{thm:a2-1.7.1}` | Verweis | Gedruckt gleich, aber der Hyperlink führt ins Korollar statt ins Theorem. |
-| 40 | 657 | ● | `(\lambda \in S(\alpha_{1} + \pi/2).` | `(\lambda \in S(\alpha_{1} + \pi/2)).` | Klammern | Äußere Klammer nicht geschlossen. |
-| 40 | 686 | ◐ | `$\lambda \in \rho(A)$` | `$\lambda \in \rho(A^{2})$` | Tippfehler | Gemeint ist die Resolventenmenge von A² (vgl. Z. 957). |
-| 41 | 744 | ◐ | `$(U_{i})_{t \geq 0}$ the group` | `$(U_{i}(t))_{t \in \R}$ the group` | Tippfehler | (t) fehlt; Gruppe, daher t ∈ ℝ (vgl. Z. 747). |
-| 42 | 853 | ◐ | `\alpha \in \left]0,\pi/2\right]` | `\alpha \in (0,\pi/2]` | Notation | Sonst `(0,\pi/2]` (Z. 604, 647, 798); ebenso Z. 1417 `\left]0,1\right]`. |
-| 43 | 940 | ◐ | `\Im\{z(t)\}^2/\Re\{z(t)\}^2` | `\Im(z(t)^2)/\Re(z(t)^2)` | Klammern | Geschweifte Klammern werden gedruckt und lesen sich als (Im z)²; gemeint Im(z²) (Z. 934). |
-| 43 | 949 | ● | `(r\eu^{\im\theta}+\omega)^2` | `(r\eu^{\im\theta}+w)^2` | Tippfehler | Im Beweis heißt es sonst w (Z. 902, 954). |
-| 45 | 1020 | ○ | `c\eu^{-b\Re(\lambda)}` | `c\eu^{-b\cdot\Re(\lambda)}` | Notation | Theorem 1.17 und 1.18 (Z. 1036, 1043) einmal mit, einmal ohne `\cdot`. |
-| 46 | 1108 | ○ | `[Proof of Theorem~\ref{thm:a2-1.20}  ]` | `[Proof of Theorem~\ref{thm:a2-1.20}]` | LaTeX | Schon in der Arbeitsliste (S. 46); ebenso Z. 2502. |
-| 46 | 1126 | ● | `T(t) \dt (n \in \N).` | `T(t) \dt \quad (n \in \N).` | Abstand | Gedruckt „dt(n ∈ ℕ)“. |
-| 46 | 1152 | ○ | `\right\lVert` | `\right\rVert` | LaTeX | Falsches schließendes Normzeichen (optisch gleich). |
-| 46 | 1173 | ○ | `T(t)\,\dt` | `T(t)\dt` | Abstand | Zusätzliches `\,` nur in Z. 1173–1180, 1544, 1551, 1638, 1644–1647. |
-| 50 | 1370 | ◐ | `[\text{ess}]\text{-}\text{image}(m)` | wie Z. 1455 (`\Image{m}`) | Notation | Dasselbe Objekt einmal „image“, einmal „im“. |
-| 50 | 1411 | ◐ | `H \coloneq \{m(x) \colon \Re(\lambda) \geq b …` | `H \coloneq \{\lambda \in \C \colon \Re(\lambda) \geq b …` | Tippfehler | Bedingung über λ, im Mengenterm steht m(x). |
-| 50 | 1420 | ● | `[\text{ess}]\text{-}\esssup\left\{` | `[\text{ess}]\text{-}\sup\left\{` | Notation | Gedruckt „[ess]-ess sup“; vgl. Z. 1427. |
-| 50 | 1473 | ● | `S(\theta + \pi/2) \subset~\rho(A)` | `S(\theta + \pi/2) \subseteq \rho(A)` | LaTeX | Tilde im Mathemodus erzeugt Leerraum; sonst `\subseteq`. |
-| 50 | 1509 | ○ | `\iu \cdot \exp(n^{2})` | `\iu\,\eu^{n^{2}}` | Notation | Die drei Beispiele (Z. 1509, 1513, 1517) uneinheitlich. |
-| 53 | 1628 | ◐ | `(T(t+s-h) - T(t-s))` | `(T(t+h-s) - T(t-s))` | Tippfehler | Z. 1647 hat t+h−s; ebenso Z. 1634, 1638. |
-| 54 | 1645 | ● | `\int_{0}^{t} (T(t-s)BS(s)\, \ds` | `\int_{0}^{t} T(t-s)BS(s)\, \ds` | Klammern | Öffnende Klammer ohne schließende. |
-| 54 | 1646 | ○ | `\leq \|T(t+h) - T(t)\| &+ …` | `&\leq \|T(t+h) - T(t)\| + …` | LaTeX | ≤ links vom Ausrichtungspunkt, Ausrichtung verschoben. |
-| 54 | 1675 | ● | `= (\Id - SR(\lambda,A)` | `= (\Id - SR(\lambda,A))` | Klammern | Schließende Klammer fehlt. |
-| 54 | 1679 | ● | `$(\Id -BR(\lambda,A))^{-1})$` | `$(\Id -BR(\lambda,A))^{-1}$` | Klammern | Überzählige schließende Klammer. |
-| 57 | 1819 | ○ | `\emph{p-contractive}`, `p-dissipative` | `$p$-contractive`, `$p$-dissipative` | Mathemodus | p steht aufrecht, `$N$-`, `$p$-` (Z. 2248) dagegen kursiv; ca. 30 Stellen in Z. 1819–2272. |
-| 58 | 1914 | ● | `$\phi~\in~\ddp(f)$` | `$\phi \in \ddp(f)$` | LaTeX | Tilden im Mathemodus erzeugen Leerraum. |
-| 58 | 1947 | ○ | `for all $t > 0$, \\` | `for all $t > 0$,` | LaTeX | `\\` vor abgesetzter Formel. |
-| 58 | 1951 | ● | `p(f)~& \leq~p(f-tAf)` | `p(f) &\leq p(f-tAf)` | LaTeX | Tilden im Mathemodus. |
-| 59 | 2031 | ● | `T(t) = \lim_{t\to 0} \left( \frac{n}{t} …` | `T(t) = \lim_{n\to\infty} \left( \frac{n}{t} …` | Tippfehler | Grenzübergang über n (vgl. Z. 584). |
-| 60 | 2116 | ○ | `(this is equivalent … {schaefer:1966}).` | `… {schaefer:1966})).` | Klammern | Schon in der Arbeitsliste (S. 61). |
-| 62 | 2235 | ◐ | `from~\ref{thm:a2-2.6} it follows` | `from Theorem~\ref{thm:a2-2.6} it follows` | Verweis | Schon in der Arbeitsliste (S. 62). |
-| 63 | 2274 | ◐ | `p((1-tA)f) \geq p(f)` | `p((\Id-tA)f) \geq p(f)` | Notation | Identität sonst `\Id`. |
-| 63 | 2281 | ● | `if it is N-dissipative` | `if it is $N$-dissipative` | Mathemodus | Z. 1861 schreibt `$N$-dissipative`. |
-| 64 | 2311 | ◐ | `\lim\sup_{t\to 0}` | `\limsup_{t\to 0}` | Notation | Z. 2014 `\limsup`; ebenso Z. 2322, 2323, 2341, 2431. |
-| 64 | 2341 | ○ | `< 1\ ,` | `< 1 ,` | Satzzeichen | Leerzeichen vor dem Komma. |
-| 66 | 2513 | ◐ | `and $H^{\infty}$ does not only contain` | `and $H^{\infty}(O)$ does not only contain` | Tippfehler | Im selben Satz `H^{\infty}(O)`. |
+| 32 | 92 | ◐ | `u'(t) = Au(t)` | `\dot{u}(t) = Au(t)` | Notation | **Umgesetzt.** Sonst durchgehend `\dot{u}` (z. B. Z. 86). |
+| 33 | 148 | ● | `\tilde{v}(s) = v(s) & \text{$0 \leq s \leq t$.}` | `v(s) & \text{for $0 \leq s \leq t$.}` | Tippfehler | **Umgesetzt.** „ṽ(s) =“ im zweiten cases-Zweig doppelt; „for“ fehlt. |
+| 36 | 388 | ○ | `Then $ \overline{A} $ satisfies` | `Then $ A $ satisfies` | Tippfehler | **Umgesetzt.** Eingeführt wird die Einschränkung A, nicht ihr Abschluss; bitte prüfen. |
+| 36 | 417 | ○ | `u(t) = (f + tBg,g)` | `u(t) = (f - tBg,g)` | Tippfehler | **Umgesetzt.** Gelöst mit f − tBg (passend zur Matrix in Z. 398). math-error-part-a, Z. 409, ist damit mit λf + Bg zu lösen, nicht durch Änderung der Matrix. Mit A = (0 −B; 0 0) wäre u̇ = (−Bg, 0); nur Hinweis. |
+| 38 | 528 | ● | `is dense in E and` | `is dense in $E$ and` | Mathemodus | **Umgesetzt.** E ohne Mathemodus. |
+| 39 | 552 | ○ | `~\ref{cor:a2-1.8.2} implies~\ref{cor:a2-1.8.1}` | `~\ref{thm:a2-1.7.2} implies~\ref{thm:a2-1.7.1}` | Verweis | **Umgesetzt.** Gedruckt gleich, aber der Hyperlink führt ins Korollar statt ins Theorem. |
+| 40 | 657 | ● | `(\lambda \in S(\alpha_{1} + \pi/2).` | `(\lambda \in S(\alpha_{1} + \pi/2)).` | Klammern | **Umgesetzt.** Äußere Klammer nicht geschlossen. |
+| 40 | 686 | ◐ | `$\lambda \in \rho(A)$` | `$\lambda \in \rho(A^{2})$` | Tippfehler | **Umgesetzt.** Gemeint ist die Resolventenmenge von A² (vgl. Z. 957). |
+| 41 | 744 | ◐ | `$(U_{i})_{t \geq 0}$ the group` | `$(U_{i}(t))_{t \in \R}$ the group` | Tippfehler | **Umgesetzt.** (t) fehlt; Gruppe, daher t ∈ ℝ (vgl. Z. 747). |
+| 42 | 853 | ◐ | `\alpha \in \left]0,\pi/2\right]` | `\alpha \in (0,\pi/2]` | Notation | **Umgesetzt.** Sonst `(0,\pi/2]` (Z. 604, 647, 798); ebenso Z. 1417 `\left]0,1\right]`. |
+| 43 | 940 | ◐ | `\Im\{z(t)\}^2/\Re\{z(t)\}^2` | `\Im(z(t)^2)/\Re(z(t)^2)` | Klammern | **Umgesetzt.** Geschweifte Klammern werden gedruckt und lesen sich als (Im z)²; gemeint Im(z²) (Z. 934). |
+| 43 | 949 | ● | `(r\eu^{\im\theta}+\omega)^2` | `(r\eu^{\im\theta}+w)^2` | Tippfehler | **Umgesetzt.** Im Beweis heißt es sonst w (Z. 902, 954). |
+| 45 | 1020 | ○ | `c\eu^{-b\Re(\lambda)}` | `c\eu^{-b\cdot\Re(\lambda)}` | Notation | **Umgesetzt.** Theorem 1.17 und 1.18 (Z. 1036, 1043) einmal mit, einmal ohne `\cdot`. |
+| 46 | 1108 | ○ | `[Proof of Theorem~\ref{thm:a2-1.20}  ]` | `[Proof of Theorem~\ref{thm:a2-1.20}]` | LaTeX | **Umgesetzt.** Schon in der Arbeitsliste (S. 46); ebenso Z. 2502. |
+| 46 | 1126 | ● | `T(t) \dt (n \in \N).` | `T(t) \dt \quad (n \in \N).` | Abstand | **Umgesetzt.** Gedruckt „dt(n ∈ ℕ)“. |
+| 46 | 1152 | ○ | `\right\lVert` | `\right\rVert` | LaTeX | **Umgesetzt.** Falsches schließendes Normzeichen (optisch gleich). |
+| 46 | 1173 | ○ | `T(t)\,\dt` | `T(t)\dt` | Abstand | **Umgesetzt.** Zusätzliches `\,` nur in Z. 1173–1180, 1544, 1551, 1638, 1644–1647. |
+| 50 | 1370 | ◐ | `[\text{ess}]\text{-}\text{image}(m)` | wie Z. 1455 (`\Image{m}`) | Notation | **Umgesetzt.** Dasselbe Objekt einmal „image“, einmal „im“. |
+| 50 | 1411 | ◐ | `H \coloneq \{m(x) \colon \Re(\lambda) \geq b …` | `H \coloneq \{\lambda \in \C \colon \Re(\lambda) \geq b …` | Tippfehler | **Umgesetzt.** Bedingung über λ, im Mengenterm steht m(x). |
+| 50 | 1420 | ● | `[\text{ess}]\text{-}\esssup\left\{` | `[\text{ess}]\text{-}\sup\left\{` | Notation | **Umgesetzt.** Gedruckt „[ess]-ess sup“; vgl. Z. 1427. |
+| 50 | 1473 | ● | `S(\theta + \pi/2) \subset~\rho(A)` | `S(\theta + \pi/2) \subseteq \rho(A)` | LaTeX | **Umgesetzt.** Tilde im Mathemodus erzeugt Leerraum; sonst `\subseteq`. |
+| 50 | 1509 | ○ | `\iu \cdot \exp(n^{2})` | `\iu\,\eu^{n^{2}}` | Notation | **Umgesetzt.** Z. 1509, 1513, 1517 einheitlich `\iu\,…`. Die drei Beispiele (Z. 1509, 1513, 1517) uneinheitlich. |
+| 53 | 1628 | ◐ | `(T(t+s-h) - T(t-s))` | `(T(t+h-s) - T(t-s))` | Tippfehler | **Umgesetzt.** Z. 1647 hat t+h−s; ebenso Z. 1634, 1638. |
+| 54 | 1645 | ● | `\int_{0}^{t} (T(t-s)BS(s)\, \ds` | `\int_{0}^{t} T(t-s)BS(s)\, \ds` | Klammern | **Umgesetzt.** Öffnende Klammer ohne schließende. |
+| 54 | 1646 | ○ | `\leq \|T(t+h) - T(t)\| &+ …` | `&\leq \|T(t+h) - T(t)\| + …` | LaTeX | **Umgesetzt.** ≤ links vom Ausrichtungspunkt, Ausrichtung verschoben. |
+| 54 | 1675 | ● | `= (\Id - SR(\lambda,A)` | `= (\Id - SR(\lambda,A))` | Klammern | **Umgesetzt.** Schließende Klammer fehlt. |
+| 54 | 1679 | ● | `$(\Id -BR(\lambda,A))^{-1})$` | `$(\Id -BR(\lambda,A))^{-1}$` | Klammern | **Umgesetzt.** Überzählige schließende Klammer. |
+| 57 | 1819 | ○ | `\emph{p-contractive}`, `p-dissipative` | `$p$-contractive`, `$p$-dissipative` | Mathemodus | **Umgesetzt.** Außer in `\index`-Einträgen. p steht aufrecht, `$N$-`, `$p$-` (Z. 2248) dagegen kursiv; ca. 30 Stellen in Z. 1819–2272. |
+| 58 | 1914 | ● | `$\phi~\in~\ddp(f)$` | `$\phi \in \ddp(f)$` | LaTeX | **Umgesetzt.** Tilden im Mathemodus erzeugen Leerraum. |
+| 58 | 1947 | ○ | `for all $t > 0$, \\` | `for all $t > 0$,` | LaTeX | **Umgesetzt.** `\\` vor abgesetzter Formel. |
+| 58 | 1951 | ● | `p(f)~& \leq~p(f-tAf)` | `p(f) &\leq p(f-tAf)` | LaTeX | **Umgesetzt.** Tilden im Mathemodus. |
+| 59 | 2031 | ● | `T(t) = \lim_{t\to 0} \left( \frac{n}{t} …` | `T(t) = \lim_{n\to\infty} \left( \frac{n}{t} …` | Tippfehler | **Umgesetzt.** Grenzübergang über n (vgl. Z. 584). |
+| 60 | 2116 | ○ | `(this is equivalent … {schaefer:1966}).` | `… {schaefer:1966})).` | Klammern | **Umgesetzt.** Schon in der Arbeitsliste (S. 61). |
+| 62 | 2235 | ◐ | `from~\ref{thm:a2-2.6} it follows` | `from Theorem~\ref{thm:a2-2.6} it follows` | Verweis | **Umgesetzt.** Schon in der Arbeitsliste (S. 62). |
+| 63 | 2274 | ◐ | `p((1-tA)f) \geq p(f)` | `p((\Id-tA)f) \geq p(f)` | Notation | **Umgesetzt.** Identität sonst `\Id`. |
+| 63 | 2281 | ● | `if it is N-dissipative` | `if it is $N$-dissipative` | Mathemodus | **Umgesetzt.** Z. 1861 schreibt `$N$-dissipative`. |
+| 64 | 2311 | ◐ | `\lim\sup_{t\to 0}` | `\limsup_{t\to 0}` | Notation | **Umgesetzt.** Z. 2014 `\limsup`; ebenso Z. 2322, 2323, 2341, 2431. |
+| 64 | 2341 | ○ | `< 1\ ,` | `< 1 ,` | Satzzeichen | **Umgesetzt.** Leerzeichen vor dem Komma. |
+| 66 | 2513 | ◐ | `and $H^{\infty}$ does not only contain` | `and $H^{\infty}(O)$ does not only contain` | Tippfehler | **Umgesetzt.** Im selben Satz `H^{\infty}(O)`. |
 
 ### Teil I, Kap. 3 – Spectral Theory (`part-a/chap-a3.tex`)
 

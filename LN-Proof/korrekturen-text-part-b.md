@@ -4,8 +4,8 @@
 
 Auszug aus `Fahnenkorrektur_Springer_LNM1184.md`. **Seitenangaben** = gedruckte Seitenzahl (PDF-Seite = gedruckte Seite + 18). **Sicherheit:** ● hoch · ◐ mittel · ○ niedrig.
 
-**Stand der Umsetzung (Branch `fahnenkorrektur`):** Alle ●-Punkte sind umgesetzt und im Kommentar mit „Umgesetzt“ markiert (Abweichungen siehe `Umgesetzte_Korrekturen_LNM1184.md`). Kap. 1 und die Updated Notes sind vollständig umgesetzt (Stand 18.10.2026). Sonst sind ◐ und ○ offen, außer wo „Umgesetzt“ steht.
-Insgesamt **120 Punkte**: 36 ●, 56 ◐, 28 ○; davon umgesetzt: 44.
+**Stand der Umsetzung (Branch `fahnenkorrektur`):** Alle ●-Punkte sind umgesetzt und im Kommentar mit „Umgesetzt“ markiert (Abweichungen siehe `Umgesetzte_Korrekturen_LNM1184.md`). Kap. 1, Kap. 2 und die Updated Notes sind vollständig umgesetzt (Kap. 2 am 19.10.2026). Sonst sind ◐ und ○ offen, außer wo „Umgesetzt“ steht.
+Insgesamt **120 Punkte**: 36 ●, 56 ◐, 28 ○; davon umgesetzt: 78.
 
 
 Übergreifende Punkte (Inhaltsverzeichnis, Kolumnentitel, Schreibweisen) und der Index stehen in `korrekturen-text-allgemein.md`.
@@ -24,55 +24,55 @@ Insgesamt **120 Punkte**: 36 ●, 56 ◐, 28 ○; davon umgesetzt: 44.
 
 | S. | | Ist | Soll | Art | Kommentar |
 |---|---|---|---|---|---|
-| 142 | ◐ | similar to a derivation perturbated by a multiplication operator | similar to a derivation perturbed by a multiplication operator | Tippfehler |  |
+| 142 | ◐ | similar to a derivation perturbated by a multiplication operator | similar to a derivation perturbed by a multiplication operator | Tippfehler | **Umgesetzt.** |
 | 143 | ● | It will be essential that K is compact for all what follows | It will be essential that K is compact for all that follows | Grammatik | **Umgesetzt.**  |
-| 146 | ◐ | is not positive (see Greiner et al. [16] ). | is not positive (see Greiner et al. [16]). | Satz | Leerzeichen vor schließender Klammer |
+| 146 | ◐ | is not positive (see Greiner et al. [16] ). | is not positive (see Greiner et al. [16]). | Satz | **Umgesetzt.** Leerzeichen vor schließender Klammer |
 | 148 | ● | The next result is a strengthened form of Theorem 1.6. | The next result is a strengthened form of Theorem 2.1.6. | Querverweis | **Umgesetzt.** Nicht verlinkter Altverweis; gemeint ist Theorem 2.1.6 (S. 144) |
-| 148 | ◐ | Thus (P) is not a "metric" condition | Thus (P) is not a “metric” condition | Satz | Gerade statt typografische Anführungszeichen (sonst “...” verwendet) |
-| 150 | ◐ | then by Part-I, Section 1.3.2, the operator m · A = ∥m∥∞ B also generates a positive semigroup). | ... also generates a positive semigroup. | Satz | Schließende Klammer ohne öffnende (Satz geht auf S. 151 weiter) |
+| 148 | ◐ | Thus (P) is not a "metric" condition | Thus (P) is not a “metric” condition | Satz | **Umgesetzt.** Gerade statt typografische Anführungszeichen (sonst “...” verwendet) |
+| 150 | ◐ | then by Part-I, Section 1.3.2, the operator m · A = ∥m∥∞ B also generates a positive semigroup). | ... also generates a positive semigroup. | Satz | **Umgesetzt.** Schließende Klammer ohne öffnende (Satz geht auf S. 151 weiter) |
 | 152 | ● | preceding page succesively to B = m^{1/k} · A | preceding page successively to ... | Tippfehler | **Umgesetzt.**  |
 | 154 | ● | Then A is the generator of positive semigroup. | Then A is the generator of a positive semigroup. | Grammatik | **Umgesetzt.**  |
-| 155 | ◐ | A semigroup (T(t))t⩾0 is called lattice semigroup if | A semigroup (T(t))t⩾0 is called a lattice semigroup if | Grammatik |  |
-| 155 | ◐ | a concrete representation of lattice-semigroups | a concrete representation of lattice semigroups | Konsistenz | Sonst durchgehend ohne Bindestrich |
-| 156 | ◐ | right-sided Gateaux-differentiable at every point f ∈ G (vs. 'right-sided Gateaux differentiable' im selben Absatz) | einheitlich 'Gateaux differentiable' (bzw. ggf. 'Gâteaux') | Konsistenz | Auf S. 155/156 gemischt mit und ohne Bindestrich (auch in Prop. 2.2.3) |
-| 159 | ○ | For A = Δ (the Laplacian) this is a version of the classical Kato’s inequality. | ... this is a version of the classical Kato inequality. | Grammatik |  |
-| 160 | ◐ | Remark Although we assume that (T(t))t⩾0 is a real semigroup, i.e., T(t)C(K,R) ⊆ C(K,R) for all t ⩾ 0. It is important for the proof | ... for all t ⩾ 0, it is important for the proof | Grammatik | Nebensatz mit 'Although' als eigener Satz abgetrennt |
+| 155 | ◐ | A semigroup (T(t))t⩾0 is called lattice semigroup if | A semigroup (T(t))t⩾0 is called a lattice semigroup if | Grammatik | **Umgesetzt.** |
+| 155 | ◐ | a concrete representation of lattice-semigroups | a concrete representation of lattice semigroups | Konsistenz | **Umgesetzt.** Sonst durchgehend ohne Bindestrich |
+| 156 | ◐ | right-sided Gateaux-differentiable at every point f ∈ G (vs. 'right-sided Gateaux differentiable' im selben Absatz) | einheitlich 'Gateaux differentiable' (bzw. ggf. 'Gâteaux') | Konsistenz | **Umgesetzt.** Einheitlich „Gateaux differentiable“. Auf S. 155/156 gemischt mit und ohne Bindestrich (auch in Prop. 2.2.3) |
+| 159 | ○ | For A = Δ (the Laplacian) this is a version of the classical Kato’s inequality. | ... this is a version of the classical Kato inequality. | Grammatik | **Umgesetzt.** |
+| 160 | ◐ | Remark Although we assume that (T(t))t⩾0 is a real semigroup, i.e., T(t)C(K,R) ⊆ C(K,R) for all t ⩾ 0. It is important for the proof | ... for all t ⩾ 0, it is important for the proof | Grammatik | **Umgesetzt.** Nebensatz mit 'Although' als eigener Satz abgetrennt |
 | 161 | ● | hence T(t) is so as well (cf. Remark 2.1). | hence T(t) is so as well (cf. Remark 2.2.1). | Querverweis | **Umgesetzt.** Remark 2.1 existiert nicht; gemeint Remark 2.2.1 (S. 155) |
 | 161 | ● | we denote by dφ he linear form on C[−1, 0] | we denote by dφ the linear form on C[−1, 0] | Tippfehler | **Umgesetzt.**  |
-| 161 | ◐ | The operator Amax on the (real or complex space) C[−1, 0] | The operator Amax on the (real or complex) space C[−1, 0] | Grammatik |  |
-| 162 | ◐ | Let A on (the real or complex) space C[−1, 0] be given by | Let A on the (real or complex) space C[−1, 0] be given by | Grammatik |  |
-| 162 | ◐ | A satisfies Kato’s Equality Eq. (2.2.9) | A satisfies Kato’s equality Eq. (2.2.9) | Konsistenz | Sonst 'Kato’s equality' klein |
+| 161 | ◐ | The operator Amax on the (real or complex space) C[−1, 0] | The operator Amax on the (real or complex) space C[−1, 0] | Grammatik | **Umgesetzt.** |
+| 162 | ◐ | Let A on (the real or complex) space C[−1, 0] be given by | Let A on the (real or complex) space C[−1, 0] be given by | Grammatik | **Umgesetzt.** |
+| 162 | ◐ | A satisfies Kato’s Equality Eq. (2.2.9) | A satisfies Kato’s equality Eq. (2.2.9) | Konsistenz | **Umgesetzt.** Sonst 'Kato’s equality' klein |
 | 163 | ● | this will enable us, to give a detailed description | this will enable us to give a detailed description | Satz | **Umgesetzt.**  |
-| 163 | ◐ | A mapping φ : [0, ∞) × K → K is called semiflow if | ... is called a semiflow if | Grammatik |  |
-| 163 | ○ | the space of all real valued continuous functions on K | the space of all real-valued continuous functions on K | Konsistenz | Sonst 'real-valued' |
-| 164 | ◐ | An operator δ on C(K) is called derivation if | An operator δ on C(K) is called a derivation if | Grammatik |  |
-| 166 | ◐ | Theorem 2.3.6 An operator A is generator of a lattice semigroup | An operator A is the generator of a lattice semigroup | Grammatik |  |
-| 166 | ○ | In fact, by Eq. (2.1.6) T0(t)f = lim e^{−t/n·h} · T(t/n)f | Verweis prüfen (Eq. (2.1.6) ist φx ∈ dpu(f); gemeint vermutlich die Trotter-Produktformel aus Part I) | Querverweis |  |
+| 163 | ◐ | A mapping φ : [0, ∞) × K → K is called semiflow if | ... is called a semiflow if | Grammatik | **Umgesetzt.** |
+| 163 | ○ | the space of all real valued continuous functions on K | the space of all real-valued continuous functions on K | Konsistenz | **Umgesetzt.** Sonst 'real-valued' |
+| 164 | ◐ | An operator δ on C(K) is called derivation if | An operator δ on C(K) is called a derivation if | Grammatik | **Umgesetzt.** |
+| 166 | ◐ | Theorem 2.3.6 An operator A is generator of a lattice semigroup | An operator A is the generator of a lattice semigroup | Grammatik | **Umgesetzt.** |
+| 166 | ○ | In fact, by Eq. (2.1.6) T0(t)f = lim e^{−t/n·h} · T(t/n)f | Verweis prüfen (Eq. (2.1.6) ist φx ∈ dpu(f); gemeint vermutlich die Trotter-Produktformel aus Part I) | Querverweis | **Umgesetzt.** Gemeint ist die Trotter-Produktformel; jetzt „Part-I, Eq.“ (eq:a2-1.8). |
 | 167 | ● | is closable (by Corollary 2.1.11 ); but | is closable (by Corollary 2.1.11); but | Satz | **Umgesetzt.** Im PDF bestätigt |
-| 169 | ◐ | Given a compact neighbourhood V of x0 | neighbourhood/neighborhood vereinheitlichen | Konsistenz | S. 169, 179: neighbourhood; S. 180 (3x): neighborhood; außerdem 'behavior' (S. 187) amerikanisch |
+| 169 | ◐ | Given a compact neighbourhood V of x0 | neighbourhood/neighborhood vereinheitlichen | Konsistenz | **Umgesetzt.** Überall „neighborhood“ (amerikanisch, wie „behavior“). S. 169, 179: neighbourhood; S. 180 (3x): neighborhood; außerdem 'behavior' (S. 187) amerikanisch |
 | 174 | ◐ | by Part I, Proposition 1.1.9 (or Part I, Corollary 2.1.33) | by Part-I, Proposition 1.1.9 (or Part-I, Corollary 2.1.33) | Konsistenz | **Umgesetzt.** Im Fließtext sonst durchgehend „Part-I“ mit Bindestrich, siehe Merkposten A.4. |
-| 178 | ◐ | This does no longer hold for functions which are not admissible | This no longer holds for functions which are not admissible | Grammatik |  |
+| 178 | ◐ | This does no longer hold for functions which are not admissible | This no longer holds for functions which are not admissible | Grammatik | **Umgesetzt.** |
 | 179 | ● | is closed in (a, b) Thus (a, b) ∖ K is the union | is closed in (a, b). Thus (a, b) ∖ K is the union | Satz | **Umgesetzt.** Punkt fehlt, im PDF bestätigt |
-| 179 | ◐ | Thus αn is strictly monotonous. | Thus αn is strictly monotone. | Tippfehler | 'monotonous' = eintönig; mathematisch 'monotone'/'monotonic' |
+| 179 | ◐ | Thus αn is strictly monotonous. | Thus αn is strictly monotone. | Tippfehler | **Umgesetzt.** 'monotonous' = eintönig; mathematisch 'monotone'/'monotonic' |
 | 183 | ● | It is easy to verify, that the generator of this group is | It is easy to verify that the generator of this group is | Satz | **Umgesetzt.**  |
-| 183 | ◐ | The operator δ̃m is generator of an automorphism group on C[a, b] | The operator δ̃m is the generator of an automorphism group | Grammatik |  |
+| 183 | ◐ | The operator δ̃m is generator of an automorphism group on C[a, b] | The operator δ̃m is the generator of an automorphism group | Grammatik | **Umgesetzt.** |
 | 184 | ● | we refer to the corresponding notes in Part-III, Chapter 2, Theorem 2.1.6 and 2.1.8 are due to Arendt et al. [4] | ... in Part-III, Chapter 2. Theorems 2.1.6 and 2.1.8 are due to Arendt et al. [4] | Satz | **Umgesetzt.** Komma statt Punkt; außerdem Plural 'Theorems' |
 | 184 | ● | Infinite-dimensional Systems, Retahof 1983. | Infinite-dimensional Systems, Retzhof 1983. | Literatur | **Umgesetzt.** Tagungsort Retzhof (LNM 1076) |
-| 184 | ◐ | as perturbation of a derivation (Theorem 2.3.5 and 2.3.6) | (Theorems 2.3.5 and 2.3.6) | Grammatik |  |
-| 184 | ◐ | positive groups on C0(X) (Theorem 2.3.14 ) was obtained | (Theorem 2.3.14) was obtained | Satz |  |
-| 184 | ◐ | to satisfy the "generalized Osgood condition" | to satisfy the “generalized Osgood condition” | Satz | Gerade Anführungszeichen |
-| 184 | ◐ | Uhlig [30] determined all semi-flows on an interval. | Uhlig [30] determined all semiflows on an interval. | Konsistenz | Im Kapitel sonst 'semiflow' |
-| 184 | ◐ | has been obtained by Kurose in a series of papers Kurose [21, 22, 23]. | has been obtained by Kurose in a series of papers [21, 22, 23]. | Grammatik | Name doppelt |
-| 184 | ○ | (see Part-III, Section 2.5), for general Banach spaces and C0(X) in particular the problem has been considered | (see Part-III, Section 2.5); for general Banach spaces ... | Satz |  |
-| 184 | ○ | Our approach is inspired by Laubenfels [24] | Our approach is inspired by de Laubenfels [24] | Konsistenz | Im Literaturverzeichnis 'R. de Laubenfels' |
-| 184 | ○ | In the sequel of Batty’s work (loc.cit.) | (loc. cit.) | Satz |  |
-| 184 | ○ | [2] W. Arendt: “Generators of positive semigroups”. ... Vol. 1076. Springer 1984 pp. 1–15. / [30] H. Uhlig: “Derivationen und Verbandshalbgruppen”. | Titel ohne Anführungszeichen, Jahr in Klammern wie bei den übrigen Einträgen (z. B. Lecture Notes in Math. 1076, Springer (1984) 1–15) | Literatur | Formatierung uneinheitlich |
+| 184 | ◐ | as perturbation of a derivation (Theorem 2.3.5 and 2.3.6) | (Theorems 2.3.5 and 2.3.6) | Grammatik | **Umgesetzt.** |
+| 184 | ◐ | positive groups on C0(X) (Theorem 2.3.14 ) was obtained | (Theorem 2.3.14) was obtained | Satz | **Umgesetzt.** |
+| 184 | ◐ | to satisfy the "generalized Osgood condition" | to satisfy the “generalized Osgood condition” | Satz | **Umgesetzt.** Gerade Anführungszeichen |
+| 184 | ◐ | Uhlig [30] determined all semi-flows on an interval. | Uhlig [30] determined all semiflows on an interval. | Konsistenz | **Umgesetzt.** Im Kapitel sonst 'semiflow' |
+| 184 | ◐ | has been obtained by Kurose in a series of papers Kurose [21, 22, 23]. | has been obtained by Kurose in a series of papers [21, 22, 23]. | Grammatik | **Umgesetzt.** `\cite` statt `\textcite`. Name doppelt |
+| 184 | ○ | (see Part-III, Section 2.5), for general Banach spaces and C0(X) in particular the problem has been considered | (see Part-III, Section 2.5); for general Banach spaces ... | Satz | **Umgesetzt.** |
+| 184 | ○ | Our approach is inspired by Laubenfels [24] | Our approach is inspired by de Laubenfels [24] | Konsistenz | **Umgesetzt.** Als „de Laubenfels~\cite{…}“, weil biblatex das „de“ im Zitat weglässt. Im Literaturverzeichnis 'R. de Laubenfels' |
+| 184 | ○ | In the sequel of Batty’s work (loc.cit.) | (loc. cit.) | Satz | **Umgesetzt.** |
+| 184 | ○ | [2] W. Arendt: “Generators of positive semigroups”. ... Vol. 1076. Springer 1984 pp. 1–15. / [30] H. Uhlig: “Derivationen und Verbandshalbgruppen”. | Titel ohne Anführungszeichen, Jahr in Klammern wie bei den übrigen Einträgen (z. B. Lecture Notes in Math. 1076, Springer (1984) 1–15) | Literatur | **Umgesetzt.** Anführungszeichen und Jahresformat kommen aus dem biblatex-Stil (alle Sammelband- und Thesis-Einträge), nicht geändert. Reihe „Lecture Notes in Math.“ bei arendt:1984a ergänzt. Formatierung uneinheitlich |
 | 185 | ● | [11] P. Collatz: Einschließungssatz für die charakteristischen Zahlen von Matrizen. | [11] L. Collatz: Einschließungssatz ... | Literatur | **Umgesetzt.** Lothar Collatz |
 | 185 | ◐ | [16] G. Greiner, J. Voigt & M. Wolff: ... J. Operator Theory (1981) 245–256. | J. Operator Theory 5 (1981) 245–256. | Literatur | **Umgesetzt.** Bandangabe fehlt |
-| 185 | ◐ | [24] R. de Laubenfels: Well behaved derivation on C[0,1]. | R. de Laubenfels: Well-behaved derivations on C[0,1]. | Literatur |  |
-| 185 | ○ | [19] E. Kamke: Über die partielle Differentialgleichung. Math. Z. 41 (1932) 56–66. | Titel/Angaben prüfen (Titel wirkt unvollständig) | Literatur |  |
-| 185 | ○ | [20] T. Kato: Schrödinger operators with singular potentials. Israel J. Math. 13 (1973) 135–148. | Israel J. Math. 13 (1972) 135–148 | Literatur | Band 13 erschien 1972 – bitte prüfen |
-| 186 | ○ | [27] G. Lumer: Problème de Cauchy pour opérateurs locaux et “changement de temps”. Ann. Inst. Fourier (Grenoble) 23 (1974) 409–466. | Ann. Inst. Fourier (Grenoble) 25 (1975) 409–446 | Literatur | Band/Jahr/Seiten wohl aus [26] übernommen – bitte prüfen; [26] ist Bd. 23 (1973) |
+| 185 | ◐ | [24] R. de Laubenfels: Well behaved derivation on C[0,1]. | R. de Laubenfels: Well-behaved derivations on C[0,1]. | Literatur | **Umgesetzt.** |
+| 185 | ○ | [19] E. Kamke: Über die partielle Differentialgleichung. Math. Z. 41 (1932) 56–66. | Titel/Angaben prüfen (Titel wirkt unvollständig) | Literatur | **Umgesetzt.** Schon am 18.10. korrigiert (Jahr 1936, Titel vollständig). |
+| 185 | ○ | [20] T. Kato: Schrödinger operators with singular potentials. Israel J. Math. 13 (1973) 135–148. | Israel J. Math. 13 (1972) 135–148 | Literatur | **Umgesetzt.** Bei der Bib-Bereinigung (18.10.) bewusst belassen. Band 13 erschien 1972 – bitte prüfen |
+| 186 | ○ | [27] G. Lumer: Problème de Cauchy pour opérateurs locaux et “changement de temps”. Ann. Inst. Fourier (Grenoble) 23 (1974) 409–466. | Ann. Inst. Fourier (Grenoble) 25 (1975) 409–446 | Literatur | **Umgesetzt.** Bib seit 18.10. richtig; bei Springer als Fahnenkorrektur melden. Band/Jahr/Seiten wohl aus [26] übernommen – bitte prüfen; [26] ist Bd. 23 (1973) |
 
 ### Teil II, Kap. 3 – Spectral Theory of Positive Semigroups on C₀(X)
 
