@@ -294,8 +294,8 @@ Alle zitierten Zeitschriften- und Sammelbandbeiträge wurden einzeln mit zbMATH 
 | kurose:1981 | Titel „derivation in C(I)“ |
 | lotz:1984 | Herausgeber Fuchssteiner, B.; Seiten 117–133 ergänzt |
 | lotz:1986 | Seiten 137–156 ergänzt |
-| lumer:1974, lumer:1974a | Jahr 1973 |
-| lumer:1974b, lumer:1975 | Band 25, Jahr 1975, Seiten 409–446; Titel „opérateurs locaux, et …“ |
+| lumer:1974, lumer:1974a | Jahr 1973; Titel „Perturbation“ (Singular, 19.10.) |
+| lumer:1974b, lumer:1975 | Band 25, Jahr 1975, Seiten 409–446; Titel „opérateurs locaux et …“ ohne Komma (19.10., nach Original-PDF der Annales) |
 | luxemburg:1979 | Verlag und Reihe University of Arkansas |
 | miyajima:1986 | Seiten 241–246 ergänzt |
 | nagel:1984 | Seiten 145–154 ergänzt |
@@ -332,3 +332,6 @@ Abweichung von zbMATH bewusst belassen: greiner:1982 (zbMATH: 3. Abh., 30 S.), k
 
 In `preamble/ln-biblatex.sty` steht vor dem Zeilenumbruch in den Literatureinträgen jetzt ein Punkt (`\setunit{\addperiod\par\nobreak}`).
 
+### Nachprüfung (19.10.2026)
+
+Alle oben aufgeführten Korrekturen sind in den aktuellen Dateien `ln-references.bib` und `ln-references-EN.bib` vorhanden; nichts wurde überschrieben. Die Springer-Fahne beruht bei Lumer [26]/[27] (Part II, Kap. 2) noch auf dem Stand vor dem 18.10.; die richtigen Angaben sind dort als Fahnenkorrektur zu melden.
