@@ -72,7 +72,7 @@ Insgesamt **120 Punkte**: 36 ●, 56 ◐, 28 ○; davon umgesetzt: 78.
 | 185 | ◐ | [24] R. de Laubenfels: Well behaved derivation on C[0,1]. | R. de Laubenfels: Well-behaved derivations on C[0,1]. | Literatur | **Umgesetzt.** |
 | 185 | ○ | [19] E. Kamke: Über die partielle Differentialgleichung. Math. Z. 41 (1932) 56–66. | Titel/Angaben prüfen (Titel wirkt unvollständig) | Literatur | **Umgesetzt.** Schon am 18.10. korrigiert (Jahr 1936, Titel vollständig). |
 | 185 | ○ | [20] T. Kato: Schrödinger operators with singular potentials. Israel J. Math. 13 (1973) 135–148. | Israel J. Math. 13 (1972) 135–148 | Literatur | **Umgesetzt.** Bei der Bib-Bereinigung (18.10.) bewusst belassen. Band 13 erschien 1972 – bitte prüfen |
-| 186 | ○ | [27] G. Lumer: Problème de Cauchy pour opérateurs locaux et “changement de temps”. Ann. Inst. Fourier (Grenoble) 23 (1974) 409–466. | Ann. Inst. Fourier (Grenoble) 25 (1975) 409–446 | Literatur | **Umgesetzt.** Bib seit 18.10. richtig; bei Springer als Fahnenkorrektur melden. Band/Jahr/Seiten wohl aus [26] übernommen – bitte prüfen; [26] ist Bd. 23 (1973) |
+| 186 | ○ | [27] G. Lumer: Problème de Cauchy pour opérateurs locaux et “changement de temps”. Ann. Inst. Fourier (Grenoble) 23 (1974) 409–466. | Ann. Inst. Fourier (Grenoble) 25 (1975) 409–446 | Literatur | **Umgesetzt.** Bib seit 18.10. richtig; die Fahne beruht auf dem alten Stand. Band/Jahr/Seiten wohl aus [26] übernommen – bitte prüfen; [26] ist Bd. 23 (1973) |
 
 ### Teil II, Kap. 3 – Spectral Theory of Positive Semigroups on C₀(X)
 
