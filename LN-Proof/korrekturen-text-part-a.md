@@ -4,8 +4,8 @@
 
 Auszug aus `Fahnenkorrektur_Springer_LNM1184.md`. **Seitenangaben** = gedruckte Seitenzahl (PDF-Seite = gedruckte Seite + 18). **Sicherheit:** ● hoch · ◐ mittel · ○ niedrig.
 
-**Stand der Umsetzung (Branch `fahnenkorrektur`):** Alle ●-Punkte sind umgesetzt und im Kommentar mit „Umgesetzt“ markiert (Abweichungen siehe `Umgesetzte_Korrekturen_LNM1184.md`). Kap. 1 und die Updated Notes sind vollständig umgesetzt (Stand 18.10.2026). Sonst sind ◐ und ○ offen, außer wo „Umgesetzt“ steht.
-Insgesamt **121 Punkte**: 31 ●, 39 ◐, 51 ○; davon umgesetzt: 45.
+**Stand der Umsetzung (Branch `fahnenkorrektur`):** Alle ●-Punkte sind umgesetzt und im Kommentar mit „Umgesetzt“ markiert (Abweichungen siehe `Umgesetzte_Korrekturen_LNM1184.md`). Kap. 1, Kap. 2 und die Updated Notes sind vollständig umgesetzt (Kap. 2 am 19.10.2026). Sonst sind ◐ und ○ offen, außer wo „Umgesetzt“ steht.
+Insgesamt **121 Punkte**: 31 ●, 39 ◐, 51 ○; davon umgesetzt: 79.
 
 
 Übergreifende Punkte (Inhaltsverzeichnis, Kolumnentitel, Schreibweisen) und der Index stehen in `korrekturen-text-allgemein.md`.
@@ -34,49 +34,49 @@ Insgesamt **121 Punkte**: 31 ●, 39 ◐, 51 ○; davon umgesetzt: 45.
 | S. | | Ist | Soll | Art | Kommentar |
 |---|---|---|---|---|---|
 | 32 | ● | (which might not be known explicitely) | (which might not be known explicitly) | Tippfehler | **Umgesetzt.**  |
-| 32 | ◐ | 2.1.1 The abstract Cauchy problem / 2.1.2 One-parameter groups / 2.1.4 Holomorphic semigroups ... vs. 2.1.3 The Hille-Yosida Theorem, 2.1.8 Perturbation of Generators, 2.1.9 Domains of Uniqueness | Einheitliche Groß-/Kleinschreibung der Unterabschnittsüberschriften (wie in Kap. 1 Title Case, z.B. 'The Abstract Cauchy Problem') | Konsistenz | Betroffen: 2.1.1, 2.1.2, 2.1.4, 2.1.5 (Differentiable semigroups), 2.1.6 (Norm continuous semigroups), 2.1.7 (Compact semigroups). |
-| 35 | ◐ | (continuous dependence from the initial value) | (continuous dependence on the initial value) | Grammatik | S. 37 korrekt 'dependence on the initial values'. |
+| 32 | ◐ | 2.1.1 The abstract Cauchy problem / 2.1.2 One-parameter groups / 2.1.4 Holomorphic semigroups ... vs. 2.1.3 The Hille-Yosida Theorem, 2.1.8 Perturbation of Generators, 2.1.9 Domains of Uniqueness | Einheitliche Groß-/Kleinschreibung der Unterabschnittsüberschriften (wie in Kap. 1 Title Case, z.B. 'The Abstract Cauchy Problem') | Konsistenz | **Umgesetzt.** Betroffen: 2.1.1, 2.1.2, 2.1.4, 2.1.5 (Differentiable semigroups), 2.1.6 (Norm continuous semigroups), 2.1.7 (Compact semigroups). |
+| 35 | ◐ | (continuous dependence from the initial value) | (continuous dependence on the initial value) | Grammatik | **Umgesetzt.** S. 37 korrekt 'dependence on the initial values'. |
 | 36 | ● | So by Theorem 1.1.9 (ii) D(A) is a core of B. | So by Proposition 1.1.9 (ii) D(A) is a core of B. | Querverweis | **Umgesetzt.** 1.1.9 ist eine Proposition. |
-| 36 | ◐ | It is surprising that from condition (b) and (c) in the corollary | It is surprising that from conditions (b) and (c) in the corollary | Grammatik |  |
+| 36 | ◐ | It is surprising that from condition (b) and (c) in the corollary | It is surprising that from conditions (b) and (c) in the corollary | Grammatik | **Umgesetzt.** |
 | 38 | ● | it follows that T(·)f is measureable. | it follows that T(·)f is measurable. | Tippfehler | **Umgesetzt.**  |
-| 39 | ◐ | (see Davies [11], Goldstein [15] or Pazy [31]) | (see Davies [11], Goldstein [16] or Pazy [31]) | Literatur | [15] ist die Bibliographie, das Lehrbuch ist [16] (so auch S. 32, 53, 68). |
-| 40 | ◐ | if and only if it is weakly holomorphic Yosida [40, V.3]. | if and only if it is weakly holomorphic (Yosida [40, V.3]). | Satz |  |
-| 40 | ○ | There exists r > 0 and β ∈ (−β1, β1) | There exist r > 0 and β ∈ (−β1, β1) | Grammatik |  |
-| 43 | ○ | We now prove the following extension of Corollary 2.1.12 | We now prove the following extension of Corollary 2.1.12. | Satz |  |
+| 39 | ◐ | (see Davies [11], Goldstein [15] or Pazy [31]) | (see Davies [11], Goldstein [16] or Pazy [31]) | Literatur | **Umgesetzt.** [15] ist die Bibliographie, das Lehrbuch ist [16] (so auch S. 32, 53, 68). |
+| 40 | ◐ | if and only if it is weakly holomorphic Yosida [40, V.3]. | if and only if it is weakly holomorphic (Yosida [40, V.3]). | Satz | **Umgesetzt.** |
+| 40 | ○ | There exists r > 0 and β ∈ (−β1, β1) | There exist r > 0 and β ∈ (−β1, β1) | Grammatik | **Umgesetzt.** |
+| 43 | ○ | We now prove the following extension of Corollary 2.1.12 | We now prove the following extension of Corollary 2.1.12. | Satz | **Umgesetzt.** |
 | 45 | ● | (this follows from Theorem 1.1.6 (ii)) | (this follows from Proposition 1.1.6 (ii)) | Querverweis | **Umgesetzt.** 1.1.6 ist eine Proposition. |
-| 45 | ○ | Pazy [31, Chapter 3, Theorem 4.7 and 4.8] | Pazy [31, Chapter 3, Theorems 4.7 and 4.8] | Grammatik |  |
-| 45 | ○ | the function t ↦ T(t)f is right sided differentiable at t0 | the function t ↦ T(t)f is right-sided differentiable at t0 | Konsistenz | S. 48 und 51: 'right-sided'. |
-| 46 | ○ | Proof of Theorem 2.1.19 . It is enough | Proof of Theorem 2.1.19. It is enough | Satz | Leerzeichen vor Punkt, im PDF sichtbar. |
+| 45 | ○ | Pazy [31, Chapter 3, Theorem 4.7 and 4.8] | Pazy [31, Chapter 3, Theorems 4.7 and 4.8] | Grammatik | **Umgesetzt.** Kapitelangabe (Chapter 3 oder 2) bleibt offener Punkt in math-error-part-a. |
+| 45 | ○ | the function t ↦ T(t)f is right sided differentiable at t0 | the function t ↦ T(t)f is right-sided differentiable at t0 | Konsistenz | **Umgesetzt.** S. 48 und 51: 'right-sided'. |
+| 46 | ○ | Proof of Theorem 2.1.19 . It is enough | Proof of Theorem 2.1.19. It is enough | Satz | **Umgesetzt.** Leerzeichen vor Punkt, im PDF sichtbar. |
 | 47 | ● | All together we obtain for \|r\| ⩾ r0, All together we obtain for \|r\| ⩾ r0, | All together we obtain for \|r\| ⩾ r0, | Satz | **Umgesetzt.** Satz doppelt gesetzt (im PDF bestätigt). |
-| 50 | ○ | (see e.g., Part-II, Corollary 3.2.12) | (see, e.g., Part-II, Corollary 3.2.12) | Satz | Komma nach 'see' fehlt. |
+| 50 | ○ | (see e.g., Part-II, Corollary 3.2.12) | (see, e.g., Part-II, Corollary 3.2.12) | Satz | **Umgesetzt.** Komma nach 'see' fehlt. |
 | 51 | ● | if and only if the following equivalent assertions holds. | if and only if the following equivalent assertions hold. | Grammatik | **Umgesetzt.**  |
-| 54 | ◐ | Let λ > s(A) be so large such that ∥SR(λ,A)∥ < 1. | Let λ > s(A) be so large that ∥SR(λ,A)∥ < 1. | Grammatik |  |
-| 57 | ○ | Moreover, it follows from Eq. (2.2.1) on the preceding page p(f) + p(−f) ⩾ p(0) = 0 | Moreover, it follows from Eq. (2.2.1) on the preceding page that p(f) + p(−f) ⩾ p(0) = 0 | Grammatik |  |
+| 54 | ◐ | Let λ > s(A) be so large such that ∥SR(λ,A)∥ < 1. | Let λ > s(A) be so large that ∥SR(λ,A)∥ < 1. | Grammatik | **Umgesetzt.** |
+| 57 | ○ | Moreover, it follows from Eq. (2.2.1) on the preceding page p(f) + p(−f) ⩾ p(0) = 0 | Moreover, it follows from Eq. (2.2.1) on the preceding page that p(f) + p(−f) ⩾ p(0) = 0 | Grammatik | **Umgesetzt.** |
 | 58 | ● | Consequently it posseses a σ(E′,E)-limit point | Consequently it possesses a σ(E′,E)-limit point | Tippfehler | **Umgesetzt.**  |
 | 59 | ● | p(λR(λ,A)g) ⩽ p(g)for all g ∈ E | p(λR(λ,A)g) ⩽ p(g) for all g ∈ E | Satz | **Umgesetzt.** Fehlendes Leerzeichen, im PDF sichtbar. |
 | 60 | ● | (2t c∥g − Af∥ + t² c∥Ag∥) (by (2.3)) | (by Eq. (2.2.2)) | Querverweis | Verweis '(2.3)' existiert nicht; gemeint ist offenbar die Abschätzung \|p(f)\| **Umgesetzt.** ⩽ c∥f∥ (2.2.2). |
-| 60 | ○ | A continuous sublinear function p : E → R is called half-norm if | is called a half-norm if | Grammatik | Analog folgt 'is called a strict half-norm'. |
-| 60 | ○ | (by Eq. (2.2.5) on page 58 ) | (by Eq. (2.2.5) on page 58) | Satz | Leerzeichen vor Klammer, im PDF sichtbar. |
-| 61 | ◐ | (this is equivalent to the fact that ... such that φ = φ1 − φ2 (see Batty & Robinson [3] or Schaefer [37, Chapter V]). | (this is equivalent to the fact that ... such that φ = φ1 − φ2; see Batty & Robinson [3] or Schaefer [37, Chapter V]). | Satz | Klammern nicht ausgeglichen. |
-| 62 | ◐ | Finally, from 2.2.6 it follows that (T(t)) is p-contractive. | Finally, from Theorem 2.2.6 it follows that (T(t)) is p-contractive. | Querverweis |  |
-| 63 | ○ | We conclude this section indicating the results for the complex case. | We conclude this section by indicating the results for the complex case. | Grammatik |  |
-| 64 | ◐ | Therefore T is not uniformly continuous however, (T(t) − Id)² = 0 | Therefore T is not uniformly continuous; however, (T(t) − Id)² = 0 | Satz |  |
-| 65 | ○ | Then there exists a bounded sequence (xn) in E and a bounded sequence (x′n) in E′ | Then there exist a bounded sequence (xn) in E and a bounded sequence (x′n) in E′ | Grammatik |  |
-| 67 | ◐ | Notes ... Section 1: The abstract Cauchy problem is treated ... | Section 2.1: ... | Konsistenz | In den Notes zu Kap. 2 heißen die Abschnitte 'Section 1/2/3' (S. 67/68), im Buch sonst 2.1, 2.2, 2.3. |
-| 67 | ○ | is a Cauchy-sequence for this norm | is a Cauchy sequence for this norm | Tippfehler |  |
-| 67 | ○ | In Bourgain [7] it is shown, that H∞(D) is a Grothendieck space | In Bourgain [7] it is shown that H∞(D) is a Grothendieck space | Grammatik |  |
-| 68 | ◐ | The observation that eventually norm continuity is preserved | The observation that eventual norm continuity is preserved | Grammatik |  |
-| 68 | ○ | in the book of Pazy [31] who discovered Theorem 2.1.16 and 2.1.17. | who discovered Theorems 2.1.16 and 2.1.17. | Grammatik |  |
-| 68 | ○ | has the advantage to yield the same permanence | has the advantage of yielding the same permanence | Grammatik |  |
-| 68 | ○ | A complete information on the general theory can be obtained | Complete information on the general theory can be obtained | Grammatik |  |
-| 68 | ○ | Bénilan & Picard [5] and Picard [34], where the two last consider non-linear semigroups | where the last two consider non-linear semigroups | Grammatik |  |
-| 69 | ◐ | [5] P. Bénilan & C. Picard: “Quelques aspects non lineaires du principe du maximum”. Séminaire de Théorie du Potentiel. Vol. 713. Springer 1979. | ... “Quelques aspects non linéaires du principe du maximum”. ... Springer (1979). | Literatur | Akzent fehlt; Jahr ohne Klammern (sonst '(Jahr)'); ggf. 'Lecture Notes in Math.' statt 'Vol.'. |
-| 69 | ○ | [7] J. Bourgain: H∞ is a Grothendieck space. Studia Math. 75 (1982) 192–226. | [7] J. Bourgain: H∞ is a Grothendieck space. Studia Math. 75 (1983) 193–216. | Literatur | Jahr/Seiten nach meiner Kenntnis 1983, 193–216; bitte prüfen. |
-| 69 | ○ | Proceedings of the Special year in analysis. Springer (1983). | Proceedings of the Special Year in Analysis. Springer (1983). | Literatur |  |
+| 60 | ○ | A continuous sublinear function p : E → R is called half-norm if | is called a half-norm if | Grammatik | **Umgesetzt.** Analog folgt 'is called a strict half-norm'. |
+| 60 | ○ | (by Eq. (2.2.5) on page 58 ) | (by Eq. (2.2.5) on page 58) | Satz | **Umgesetzt.** Leerzeichen vor Klammer, im PDF sichtbar. |
+| 61 | ◐ | (this is equivalent to the fact that ... such that φ = φ1 − φ2 (see Batty & Robinson [3] or Schaefer [37, Chapter V]). | (this is equivalent to the fact that ... such that φ = φ1 − φ2; see Batty & Robinson [3] or Schaefer [37, Chapter V]). | Satz | **Umgesetzt.** Klammern nicht ausgeglichen. |
+| 62 | ◐ | Finally, from 2.2.6 it follows that (T(t)) is p-contractive. | Finally, from Theorem 2.2.6 it follows that (T(t)) is p-contractive. | Querverweis | **Umgesetzt.** |
+| 63 | ○ | We conclude this section indicating the results for the complex case. | We conclude this section by indicating the results for the complex case. | Grammatik | **Umgesetzt.** |
+| 64 | ◐ | Therefore T is not uniformly continuous however, (T(t) − Id)² = 0 | Therefore T is not uniformly continuous; however, (T(t) − Id)² = 0 | Satz | **Umgesetzt.** |
+| 65 | ○ | Then there exists a bounded sequence (xn) in E and a bounded sequence (x′n) in E′ | Then there exist a bounded sequence (xn) in E and a bounded sequence (x′n) in E′ | Grammatik | **Umgesetzt.** |
+| 67 | ◐ | Notes ... Section 1: The abstract Cauchy problem is treated ... | Section 2.1: ... | Konsistenz | **Umgesetzt.** In den Notes zu Kap. 2 heißen die Abschnitte 'Section 1/2/3' (S. 67/68), im Buch sonst 2.1, 2.2, 2.3. |
+| 67 | ○ | is a Cauchy-sequence for this norm | is a Cauchy sequence for this norm | Tippfehler | **Umgesetzt.** |
+| 67 | ○ | In Bourgain [7] it is shown, that H∞(D) is a Grothendieck space | In Bourgain [7] it is shown that H∞(D) is a Grothendieck space | Grammatik | **Umgesetzt.** |
+| 68 | ◐ | The observation that eventually norm continuity is preserved | The observation that eventual norm continuity is preserved | Grammatik | **Umgesetzt.** |
+| 68 | ○ | in the book of Pazy [31] who discovered Theorem 2.1.16 and 2.1.17. | who discovered Theorems 2.1.16 and 2.1.17. | Grammatik | **Umgesetzt.** |
+| 68 | ○ | has the advantage to yield the same permanence | has the advantage of yielding the same permanence | Grammatik | **Umgesetzt.** |
+| 68 | ○ | A complete information on the general theory can be obtained | Complete information on the general theory can be obtained | Grammatik | **Umgesetzt.** |
+| 68 | ○ | Bénilan & Picard [5] and Picard [34], where the two last consider non-linear semigroups | where the last two consider non-linear semigroups | Grammatik | **Umgesetzt.** |
+| 69 | ◐ | [5] P. Bénilan & C. Picard: “Quelques aspects non lineaires du principe du maximum”. Séminaire de Théorie du Potentiel. Vol. 713. Springer 1979. | ... “Quelques aspects non linéaires du principe du maximum”. ... Springer (1979). | Literatur | **Umgesetzt.** Akzent korrigiert. Jahr ohne Klammern und „Vol.“ kommen aus dem biblatex-Stil, nicht geändert. Akzent fehlt; Jahr ohne Klammern (sonst '(Jahr)'); ggf. 'Lecture Notes in Math.' statt 'Vol.'. |
+| 69 | ○ | [7] J. Bourgain: H∞ is a Grothendieck space. Studia Math. 75 (1982) 192–226. | [7] J. Bourgain: H∞ is a Grothendieck space. Studia Math. 75 (1983) 193–216. | Literatur | **Umgesetzt.** Schon bei der Bib-Bereinigung (18.10.) korrigiert. Jahr/Seiten nach meiner Kenntnis 1983, 193–216; bitte prüfen. |
+| 69 | ○ | Proceedings of the Special year in analysis. Springer (1983). | Proceedings of the Special Year in Analysis. Springer (1983). | Literatur | **Umgesetzt.** |
 | 70 | ● | [30] J. J. Moreau: Fonctionelles convexes. Séminaire sur les équations aux derivées partielles. | [30] J. J. Moreau: Fonctionnelles convexes. Séminaire sur les équations aux dérivées partielles. | Literatur | **Umgesetzt.**  |
-| 70 | ◐ | [34] C. Picard: Opérateurs φ-accretifs et génération des semi-groupes non linéaires. | [34] C. Picard: Opérateurs φ-accrétifs et génération des semi-groupes non linéaires. | Literatur |  |
-| 70 | ◐ | Ed. by K. D. Bierstedt & E. Fuchssteiner. North Holland 1984. | Ed. by K. D. Bierstedt & B. Fuchssteiner. North-Holland (1984). | Literatur | Herausgeber ist Benno Fuchssteiner; Jahresangabe sonst in Klammern. |
-| 70 | ○ | [25] H. P. Lotz: “Uniform convergence of operators on L∞”. 1982. | Unvollständiger Eintrag (z.B. 'Preprint (1982)' ergänzen) | Literatur |  |
+| 70 | ◐ | [34] C. Picard: Opérateurs φ-accretifs et génération des semi-groupes non linéaires. | [34] C. Picard: Opérateurs φ-accrétifs et génération des semi-groupes non linéaires. | Literatur | **Umgesetzt.** |
+| 70 | ◐ | Ed. by K. D. Bierstedt & E. Fuchssteiner. North Holland 1984. | Ed. by K. D. Bierstedt & B. Fuchssteiner. North-Holland (1984). | Literatur | **Umgesetzt.** Herausgeber schon am 18.10. korrigiert; „North-Holland“ jetzt in allen Einträgen. Jahresformat = biblatex-Stil. Herausgeber ist Benno Fuchssteiner; Jahresangabe sonst in Klammern. |
+| 70 | ○ | [25] H. P. Lotz: “Uniform convergence of operators on L∞”. 1982. | Unvollständiger Eintrag (z.B. 'Preprint (1982)' ergänzen) | Literatur | **Umgesetzt.** `note = {Preprint}` ergänzt. Veröffentlicht als Math. Z. 190 (1985), steht als lotz:1985 schon im Verzeichnis. |
 
 ### Teil I, Kap. 3 – Spectral Theory
 

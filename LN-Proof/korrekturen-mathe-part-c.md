@@ -4,7 +4,7 @@
 
 **Umfang:** Teil III, Kap. 1–4, geprüft im LaTeX-Quelltext (Branch `fahnenkorrektur`). Geprüft wurden nur Satz und Notation in Formeln: Tippfehler, Klammern, Indizes, uneinheitliche Schreibweisen, Mathemodus, Satzzeichen an Formeln, Verweise. Beweise wurden **nicht** nachgerechnet; wo ein Befund inhaltlich wirkt, steht „bitte prüfen“.
 
-**Noch nichts geändert.** Die Liste dient zur Besprechung; umgesetzt wird erst nach Rücksprache.
+**Stand 18.10.2026:** Kap. 1 ist nach Durchsicht durch Rainer Nagel umgesetzt (in der Spalte Kommentar mit **Umgesetzt** markiert); Kap. 2 ist am 19.10.2026 umgesetzt (Abweichungen im Kommentar); Kap. 3–4 sind noch offen. Die Zeilenangaben beziehen sich auf den Stand vom 14.10.2026.
 
 **Spalten:** S. = gedruckte Buchseite, ermittelt über das nächstgelegene Label (kann um eine Seite abweichen). Z. = Zeile in der .tex-Datei. Sicherheit: ● eindeutig · ◐ sehr wahrscheinlich · ○ Hinweis/Ermessen.
 
@@ -16,99 +16,99 @@ Insgesamt **222 Punkte**: 47 ●, 99 ◐, 76 ○. Davon stehen 26 bereits in der
 
 | S. | Z. | | Ist | Soll | Art | Kommentar |
 |---|---|---|---|---|---|---|
-| 265 | 35 | ◐ | `\mathrm{(LO1)} \quad` | `\text{(LO$_{1}$)} \quad` | Notation | In der Definition „(LO1)“/„(LO2)“ ohne Index, im Fließtext Z. 45, 46, 49 „(LO$_{1}$)“/„(LO$_{2}$)“ mit tiefgestellter Ziffer, im Druck sichtbar verschieden; ebenso Z. 37 `\mathrm{(LO2)}`. Alternativ Z. 45–49 auf (LO1)/(LO2) umstellen. |
-| 265 | 71 | ● | `\inf   \sup_{\alpha} f_{\alpha},h  )` | `\inf(\sup_{\alpha} f_{\alpha},h)` | Klammern | Öffnende Klammer nach \inf fehlt (vgl. die Parallelformel Z. 72 `\sup(\inf_{\alpha}f_{\alpha},h)`). |
-| 266 | 79 | ○ | `\begin{equation*}\label{eq:c1-1}` | `\begin{equation*}` | LaTeX | \label in einer unnummerierten Umgebung; das Label wird nirgends referenziert (ein \ref würde die Abschnittsnummer liefern). Ebenso Z. 267 (eq:c1-2) und Z. 275 (eq:c1-3). Im Druck unsichtbar, nur Bereinigung. |
-| 269 | 206 | ○ | `\{u\}^{d} = 0` | `\{u\}^{d} = \{0\}` | Notation | Gleichheit von Mengen; sonst im Kapitel `= \{0\}` (Z. 180, 368). |
-| 270 | 245 | ◐ | `\sup\{\phi(h) \colon \vert h\vert \leq f \text{ for $ f \in E_{+} $}\}` | `\sup\{\phi(h) \colon \vert h\vert \leq f\} \quad \text{for $ f \in E_{+} $}` | Notation | Die Bedingung „for f ∈ E₊“ steht innerhalb der Mengenklammer, betrifft aber die feste Variable f, nicht die Laufvariable h; gehört hinter die Menge. Ebenso Z. 384 (`\vert h\vert \leq f , \text{ $ f \in E_{+} $} \}`) und Z. 529 (`\text{ for $ h \geq 0 $} \}`). |
-| 271 | 276 | ○ | `g \in E_{+}'` | `g \in E'_{+}` | Notation | Strich hinter dem Index gesetzt; in Teil III sonst durchweg E'_{+} (z. B. chap-c2 Z. 61, 415, 488, 568). |
-| 271 | 302 | ◐ | `which we denote by $ (E,x') $` | `which we denote by $ (E,f') $` | Tippfehler | Das Funktional heißt im Kontext f' (q_{f'}), ein x' kommt nicht vor; vgl. Z. 305 `(E,\mu)`. Bitte prüfen. |
-| 273 | 371 | ◐ | `\mathcal{L}^{r}(E;F)` | `\mathcal{L}^{r}(E,F)` | Notation | Semikolon als Trenner, während im selben Absatz `\L{E,F}` mit Komma steht (Z. 369, 372, 373, 475); sichtbar uneinheitlich. Ebenso Z. 372, 373, 374, 381. |
-| 273 | 435 | ● | `$ h = f + ig $` | `$ h = f + \iu g $` | Notation | Kursives i für die imaginäre Einheit; sonst \iu/\im (aufrecht), z. B. Z. 428, 438, 446, 450, 461. Ebenso Z. 474 `T_{1} + iT_{2}` und Z. 533 `+ i(S_{3} - S_{4})`. |
-| 273 | 476 | ◐ | `if\/ $ T_{2} $ is $ = 0 $` | `if\/ $ T_{2} = 0 $` | Mathemodus | Schon in der Arbeitsliste. Relationszeichen allein im Mathemodus nach „is“. Ähnlich Z. 524 `one has necessarily the values $ = 0 $ for $ S_{f} $` (besser: „one has necessarily $ S_{f} = 0 $“). |
-| 275 | 508 | ○ | `\text{sign } f = f\cdot\vert f\vert^{-1}` | `\sign f = f\cdot\vert f\vert^{-1}` | Notation | In Z. 485 mit dem Operator \sign gesetzt; \text{sign } übernimmt die Umgebungsschrift und hat anderen Abstand. |
-| 275 | 520 | ◐ | `the band $ \{x\}^{dd} $` | `the band $ \{f\}^{dd} $` | Tippfehler | **Umgesetzt** (vorgezogen zusammen mit math-error Z. 529; Rainers Haken steht noch aus). Ein Element x kommt im Kontext nicht vor, gemeint ist das Band zu f. Ebenso Z. 524 `\{x\}^{d}` und Z. 527 `\{x\}^{dd}`. Bitte prüfen. |
-| 275 | 529 | ○ | `S_{f}h = \sup \{ S_{f}g \colon` | `S_{f}h = \sup \{ S_{0}g \colon` | Tippfehler | S_f wird hier erst definiert; rechts ist wohl S_0 gemeint (g ∈ E_{\vert f\vert}). Bitte prüfen. |
-| 276 | 579 | ● | `then $ Z(E) $ is isomorphic` | `then $ \mathcal{Z}(E) $ is isomorphic` | Notation | Zentrum sonst kalligraphisch \mathcal{Z}(E) (Z. 572, 573, 575, 582). |
+| 265 | 35 | ◐ | `\mathrm{(LO1)} \quad` | `\text{(LO$_{1}$)} \quad` | Notation | **Umgesetzt.** In der Definition „(LO1)“/„(LO2)“ ohne Index, im Fließtext Z. 45, 46, 49 „(LO$_{1}$)“/„(LO$_{2}$)“ mit tiefgestellter Ziffer, im Druck sichtbar verschieden; ebenso Z. 37 `\mathrm{(LO2)}`. Alternativ Z. 45–49 auf (LO1)/(LO2) umstellen. |
+| 265 | 71 | ● | `\inf   \sup_{\alpha} f_{\alpha},h  )` | `\inf(\sup_{\alpha} f_{\alpha},h)` | Klammern | **Umgesetzt.** Öffnende Klammer nach \inf fehlt (vgl. die Parallelformel Z. 72 `\sup(\inf_{\alpha}f_{\alpha},h)`). |
+| 266 | 79 | ○ | `\begin{equation*}\label{eq:c1-1}` | `\begin{equation*}` | LaTeX | **Umgesetzt.** \label in einer unnummerierten Umgebung; das Label wird nirgends referenziert (ein \ref würde die Abschnittsnummer liefern). Ebenso Z. 267 (eq:c1-2) und Z. 275 (eq:c1-3). Im Druck unsichtbar, nur Bereinigung. |
+| 269 | 206 | ○ | `\{u\}^{d} = 0` | `\{u\}^{d} = \{0\}` | Notation | **Umgesetzt.** Gleichheit von Mengen; sonst im Kapitel `= \{0\}` (Z. 180, 368). |
+| 270 | 245 | ◐ | `\sup\{\phi(h) \colon \vert h\vert \leq f \text{ for $ f \in E_{+} $}\}` | `\sup\{\phi(h) \colon \vert h\vert \leq f\} \quad \text{for $ f \in E_{+} $}` | Notation | **Umgesetzt.** Die Bedingung „for f ∈ E₊“ steht innerhalb der Mengenklammer, betrifft aber die feste Variable f, nicht die Laufvariable h; gehört hinter die Menge. Ebenso Z. 384 (`\vert h\vert \leq f , \text{ $ f \in E_{+} $} \}`) und Z. 529 (`\text{ for $ h \geq 0 $} \}`). |
+| 271 | 276 | ○ | `g \in E_{+}'` | `g \in E'_{+}` | Notation | **Umgesetzt.** Strich hinter dem Index gesetzt; in Teil III sonst durchweg E'_{+} (z. B. chap-c2 Z. 61, 415, 488, 568). |
+| 271 | 302 | ◐ | `which we denote by $ (E,x') $` | `which we denote by $ (E,f') $` | Tippfehler | **Umgesetzt.** Das Funktional heißt im Kontext f' (q_{f'}), ein x' kommt nicht vor; vgl. Z. 305 `(E,\mu)`. Bitte prüfen. |
+| 273 | 371 | ◐ | `\mathcal{L}^{r}(E;F)` | `\mathcal{L}^{r}(E,F)` | Notation | **Umgesetzt.** Semikolon als Trenner, während im selben Absatz `\L{E,F}` mit Komma steht (Z. 369, 372, 373, 475); sichtbar uneinheitlich. Ebenso Z. 372, 373, 374, 381. |
+| 273 | 435 | ● | `$ h = f + ig $` | `$ h = f + \iu g $` | Notation | **Umgesetzt.** Kursives i für die imaginäre Einheit; sonst \iu/\im (aufrecht), z. B. Z. 428, 438, 446, 450, 461. Ebenso Z. 474 `T_{1} + iT_{2}` und Z. 533 `+ i(S_{3} - S_{4})`. |
+| 273 | 476 | ◐ | `if\/ $ T_{2} $ is $ = 0 $` | `if\/ $ T_{2} = 0 $` | Mathemodus | **Umgesetzt** (stand schon so im Text). Schon in der Arbeitsliste. Relationszeichen allein im Mathemodus nach „is“. Ähnlich Z. 524 `one has necessarily the values $ = 0 $ for $ S_{f} $` (besser: „one has necessarily $ S_{f} = 0 $“). |
+| 275 | 508 | ○ | `\text{sign } f = f\cdot\vert f\vert^{-1}` | `\sign f = f\cdot\vert f\vert^{-1}` | Notation | **Umgesetzt.** In Z. 485 mit dem Operator \sign gesetzt; \text{sign } übernimmt die Umgebungsschrift und hat anderen Abstand. |
+| 275 | 520 | ◐ | `the band $ \{x\}^{dd} $` | `the band $ \{f\}^{dd} $` | Tippfehler | **Umgesetzt** (vorgezogen zusammen mit math-error Z. 529; Rainer ohne Einwand). Ein Element x kommt im Kontext nicht vor, gemeint ist das Band zu f. Ebenso Z. 524 `\{x\}^{d}` und Z. 527 `\{x\}^{dd}`. Bitte prüfen. |
+| 275 | 529 | ○ | `S_{f}h = \sup \{ S_{f}g \colon` | `S_{f}h = \sup \{ S_{0}g \colon` | Tippfehler | **Umgesetzt** (stand schon so im Text). S_f wird hier erst definiert; rechts ist wohl S_0 gemeint (g ∈ E_{\vert f\vert}). Bitte prüfen. |
+| 276 | 579 | ● | `then $ Z(E) $ is isomorphic` | `then $ \mathcal{Z}(E) $ is isomorphic` | Notation | **Umgesetzt.** Zentrum sonst kalligraphisch \mathcal{Z}(E) (Z. 572, 573, 575, 582). |
 
 ### Teil III, Kap. 2 – Characterization of Positive Semigroups on Banach Lattices (`part-c/chap-c2.tex`)
 
 | S. | Z. | | Ist | Soll | Art | Kommentar |
 |---|---|---|---|---|---|---|
-| 280 | 57 | ○ | `(see Eq.~\myeqpageref{eq:a2-2.12})` | `(see Part-I, Eq.~\myeqpageref{eq:a2-2.12})` | Verweis | Formel aus Teil I ohne „Part-I,“ zitiert; das Kapitel hat eigene Formeln (2.2.x), die Nummer ist nur über die Seitenangabe eindeutig. Ebenso Z. 64 (eq:a2-2.5). |
-| 280 | 61 | ◐ | `\partial N^{+}(f)` | `\diff{N^{+}}(f)` | Notation | Subdifferential uneinheitlich: ∂N⁺(f) in Z. 61, 76, 95, 215, dagegen dN⁺(f) mit aufrechtem d (\diff) in Z. 91, 106, 181, 227, 250, 253, 487 und \ddp(f) in Z. 1094, 1106, 1596. Teil I schreibt \ddp, daher Vereinheitlichung auf d vorgeschlagen; ebenso Z. 76, 95, 215. |
-| 280 | 64 | ◐ | `see Eq.~\myeqpageref{eq:a2-2.5}.` | `see Eq.~\myeqpageref{eq:a2-2.5}).` | Klammern | Schon in der Arbeitsliste. Die mit „(this follows …“ geöffnete Klammer wird nicht geschlossen. |
-| 281 | 190 | ◐ | `C^{2}[0,1]` | `C^{2}([0,1])` | Notation | Sonst im Kapitel C^{2}([0,1]), L^{p}([0,1]), AC([0,1]); ebenso Z. 1287 (`L^{q}[0,1]`) und Z. 2074, 2123, 2136 (`C[-1,0]`, `C^{1}[-1,0]` gegenüber `C^{1}([-1,0],\C)` in Z. 2046, 2055). |
-| 281 | 216 | ● | `\ref{ex:c2-1.1},~\ref{ex:c2-1.1-2} )` | `\ref{ex:c2-1.1}\,\ref{ex:c2-1.1-2})` | Abstand | Leerzeichen vor der schließenden Klammer; außerdem sonst „Example~\ref{…}\,\ref{…}“ ohne Komma (Z. 1786, 1792, 2243). |
-| 281 | 252 | ◐ | `f(x) = \|f\|_{\infty}` | `f(x) = \|f^{+}\|_{\infty}` | Tippfehler | bitte prüfen: Das Maximum von f ist ‖f⁺‖∞ (vgl. Z. 75, 179), nicht ‖f‖∞. |
-| 283 | 264 | ● | `(1 + \sum_{i=1}^{n} y_{i}^{2})g(y), g \in \mathcal{S}(\R^{n})) .` | `(1 + \sum_{i=1}^{n} y_{i}^{2})g(y) \quad (g \in \mathcal{S}(\R^{n})) .` | Klammern | Überzählige schließende Klammer; die Nebenbedingung gehört offenbar in Klammern. |
-| 283 | 308 | ◐ | `\,$C_{c}^{\infty}(\R^{n})$\, is dense in \,$\mathcal{S}$\,` | `$C_{c}^{\infty}(\R^{n})$ is dense in $\mathcal{S}$` | Abstand | Die manuellen \, um die Inline-Formeln vergrößern die Wortabstände sichtbar. |
-| 283 | 317 | ● | `\phi \in S` | `\phi \in \mathcal{S}` | Notation | Der Schwartz-Raum heißt sonst \mathcal{S} (Z. 286, 314). |
-| 284 | 340 | ○ | `u(x) - \Delta u(x) &= 0 \quad &(x \in \Omega)` | `\begin{array}{r@{\;}l@{\quad}l}` | Abstand | Im array steht vor dem „=“ der Spaltenabstand 2\arraycolsep (10 pt), dahinter nur der normale Relationsabstand. Alternativ aligned mit &=. Ebenso Z. 1286 ({rl}, `D(A') &= …`). |
-| 284 | 381 | ◐ | `f \in C^{2}(\Omega) \cap C(\Omega)` | `f \in C^{2}(\Omega) \cap C(\overline{\Omega})` | Tippfehler | bitte prüfen: C(Ω) ist in C²(Ω) bereits enthalten; aus f̄ ∈ 𝒮 und u ∈ C(Ω̄) folgt f ∈ C(Ω̄) (vgl. Z. 376). |
-| 284 | 399 | ◐ | `We know from~\ref{ex:c2-1.5-4}` | `We know from~\ref{ex:c2-1.5-5}` | Verweis | Schon in der Arbeitsliste. Die Aussage wird im Beweis von (v) gezeigt. |
-| 285 | 426 | ● | `$E = C(K)$ (K compact)` | `$E = C(K)$ ($K$ compact)` | Mathemodus | K steht nicht im Mathemodus; ebenso Z. 2024 (`(X locally compact)`), Z. 2399 (`Assume that E is`), Z. 2885 (`(K compact)`). |
-| 286 | 518 | ◐ | `\lim_{n \to \infty} \|u - (n u \wedge g)\| = 0` | `\lim_{n \to \infty} \|g - (n u \wedge g)\| = 0` | Tippfehler | bitte prüfen: g liegt genau dann im Abschluss von E_u, wenn nu ∧ g gegen g konvergiert. |
-| 286 | 525 | ◐ | `(Au)^{-} \in E_{u}` | `(Au)^{-} \in \overline{E_{u}}` | Tippfehler | bitte prüfen: Der Beweis (Z. 532, 536) und Theorem 2.1.11 (c) (Z. 571) verwenden den Abschluss. |
-| 286 | 532 | ○ | `\overline{E}_{u}` | `\overline{E_{u}}` | Notation | Querstrich hier nur über E, sonst über E_u bzw. E_f (Z. 518, 571, 1378); ebenso Z. 533 (2×) und 536. |
-| 286 | 533 | ○ | `0 \leq \phi \in E_{+}'` | `0 \leq \phi \in E'_{+}` | Notation | Sonst durchgehend E'_{+}; im Druck steht der Strich hier hinter dem Index. |
-| 287 | 571 | ○ | `\overline{E_{f}}$ \ for all` | `\overline{E_{f}}$ for all` | Abstand | Leerzeichen plus „\ “ ergibt doppelten Wortabstand; ebenso Z. 1848 (`\text{for }\ 0`). |
-| 287 | 610 | ◐ | `Pg = g^{-} < 0` | `Pg = -g^{-} < 0` | Tippfehler | bitte prüfen: g⁻ ≥ 0; P projiziert auf das von g⁻ erzeugte Band, also Pg = −g⁻. |
-| 288 | 653 | ● | `the $n^{th}$ unit vector` | `the $n$th unit vector` | Mathemodus | „th“ wird als kursives Variablenprodukt im Exponenten gesetzt. |
-| 288 | 671 | ◐ | `linear operator (sign $f$) on $E$` | `linear operator $(\sign f)$ on $E$` | Notation | Im kursiven Satztext erscheint „sign“ kursiv, sonst überall aufrecht als \sign. |
-| 289 | 720 | ◐ | `(\sign f)g = m \cdot g \quad (g \in E), ` | `(\sign f)g = m \cdot g \quad (g \in E).` | Satzzeichen | Nach der Formel beginnt ein neuer Satz („Moreover,“). |
-| 289 | 750 | ○ | `\Re\left(\widehat{\sign} \bar{f}\right)g` | `\Re\left((\widehat{\sign} \bar{f})g\right)` | Klammern | So steht der Realteil des Operators statt des Elements; in Z. 2450 dieselbe Formel als \Re((ŝign f̄)g). Ebenso Z. 2491, 2526, 2564, 2566. |
-| 290 | 799 | ○ | `\begin{equation*}\label{eq:c2-K-2}` | `\begin{equation*}` | LaTeX | \label in unnummerierter Formel ohne \tag, nirgends referenziert; ebenso Z. 1355 (eq:c2-3-KGK). Im Druck unsichtbar, nur Bereinigung. |
-| 291 | 848 | ● | `\langle \phi,\Delta\vert f\vert \rangle (= \langle \Delta \phi,\vert f\vert \rangle` | `\langle \phi,\Delta\vert f\vert \rangle \;(= \langle \Delta \phi,\vert f\vert \rangle)` | Klammern | Die mit „(=“ geöffnete Klammer wird nicht geschlossen. |
-| 291 | 851 | ● | `$(1~\leq~p <~\infty)$` | `$(1 \leq p < \infty)$` | Abstand | Tilden im Mathemodus erzeugen zusätzliche Wortabstände; ebenso Z. 1412 (`-\phi^{(3)}(x)~\leq~\phi(x)`) und Z. 1422 (`f~\in~D(B)`). |
-| 291 | 884 | ○ | `C_{c}^{\infty} \subseteq D_{0}` | `C_{c}^{\infty}(\R^n) \subseteq D_{0}` | Notation | Im übrigen Absatz C_c^∞(R^n); die Kurzform C_c^∞ wird erst in Z. 1792 eingeführt. |
-| 291 | 893 | ● | `\Re\langle(\sign \bar{f})Af),\phi \rangle` | `\Re\langle(\sign \bar{f})Af,\phi \rangle` | Klammern | Überzählige „)“. |
-| 291 | 894 | ◐ | `\leq \langle \vert f\vert,A'\phi \rangle & = \langle` | `&\leq \langle \vert f\vert,A'\phi \rangle = \langle` | LaTeX | Das & der zweiten Zeile steht an der falschen Stelle; das „≤“ wird nicht unter dem „=“ der ersten Zeile ausgerichtet. |
-| 292 | 901 | ◐ | `\sum_{i,j=1}^{2} b_{ij}` | `\sum_{i,j=1}^{n} b_{ij}` | Tippfehler | bitte prüfen: Der Operator wirkt auf dem R^n; die obere Grenze 2 ist vermutlich mit der Ordnung m ≤ 2 verwechselt. |
-| 294 | 1032 | ◐ | `Definition~\ref{def:b3-3.1}` | `Definition~\ref{def:c3-3.1}` | Verweis | bitte prüfen: def:b3-3.1 ist die Irreduzibilität auf C_0(X) in Teil II (hier ohne „Part-II,“); für Banachverbände gibt es Definition 3.3.1 in Teil III (def:c3-3.1). Gedruckte Nummer gleich, Link und Seitenbezug führen aber nach Teil II. |
-| 294 | 1053 | ◐ | `f \in D_{0} \, ,  \phi \in M'` | `f \in D_{0}, \phi \in M'` | Abstand | Sichtbarer Abstand vor dem Komma (vgl. die gleiche Formel in Z. 1205). |
-| 295 | 1087 | ○ | `P_{+} \coloneq P_{f^{+}}` | `P_{+} \coloneq P_{(f^{+})}` | Notation | Bandprojektion teils P_{(f^{+})} (Z. 700, 1182, 1187, 1740, 1823), teils P_{f^{+}} (Z. 1087, 1932, 2658); einheitlich setzen. |
-| 295 | 1089 | ◐ | `Q \coloneq P_{+} + 1/2` | `Q \coloneq P_{+} + 1/2\,P` | Tippfehler | bitte prüfen: Nach Z. 1104 ist Qf = P₊f + ½Pf; „+ 1/2“ allein ergäbe auch nicht Q ≤ Id. |
-| 295 | 1139 | ● | `\text{ and } t\geq 0) .` | `\text{ and } t\geq 0 .` | Klammern | Überzählige „)“. |
-| 297 | 1260 | ● | `f(1) = \diff{}f(0)` | `f(1) = d f(0)` | Tippfehler | \diff{} setzt das aufrechte Differential-d; gemeint ist die Konstante d ∈ R aus Z. 1256 (vgl. φ(0) = dφ(1) in Z. 1287). |
-| 297 | 1266 | ○ | `(n \in \N )` | `(n \in \N_{0})` | Tippfehler | bitte prüfen: Für 0 ≤ x+t < 1 wird n = 0 gebraucht; \N_0 ist in Z. 872 eingeführt. |
-| 298 | 1288 | ◐ | `\text{for all } \phi \in D(A').` | `\text{for all } \phi \in D(A'),` | Satzzeichen | Nach dem Punkt geht der Satz mit „where 1/p + 1/q = 1“ weiter. |
-| 298 | 1324 | ○ | `\text{has codimension one in } D(A_{\max})` | `\text{has codimension one in } D(A_{\max}).` | Satzzeichen | Die übrigen Zeilen dieser Aufzählung enden mit Punkt. |
-| 299 | 1366 | ● | `\phi \in D(B')_{+}) .` | `\phi \in D(B')_{+} .` | Klammern | Überzählige „)“. |
-| 300 | 1439 | ● | `\left(-\phi^{(3)}(x)\right)) \dx` | `\left(-\phi^{(3)}(x)\right) \dx` | Klammern | Überzählige „)“. |
-| 301 | 1511 | ● | `Section~\ref{sec:c3-1}` | `Section~\ref{sec:c2-3}` | Verweis | Schon in der Arbeitsliste. Die Charakterisierung positiver Halbgruppen steht in Abschnitt 2.3, nicht in 3.1. |
-| 301 | 1531 | ◐ | `\Re\mleft\langle(\sign  \bar{f}) S(t)f\mright\rangle` | `\Re\mleft[(\sign \bar{f}) S(t)f\mright]` | Klammern | bitte prüfen: Spitze Klammern mit nur einem Argument; gemeint ist der Realteil des Elements (vgl. Z. 1719 \Re[…]). |
-| 301 | 1537 | ○ | `\max\{\omega (A),\omega (B)\}` | `\max\{\omega_{0}(A),\omega_{0}(B)\}` | Notation | Wachstumsschranke sonst ω_0 (Z. 407, 1677, 2218). |
-| 302 | 1552 | ○ | `= \langle R(\lambda,A)\vert g\vert,\psi\rangle` | `= \langle R(\lambda,A)\vert g\vert,\psi\rangle .` | Satzzeichen | Abgesetzte Formel ohne Satzende, danach beginnt ein neuer Satz; ebenso Z. 1600 (vor „Thus“) und Z. 1642 (vor „Assume“). |
-| 303 | 1651 | ◐ | `\vert f_{n} - f_{m}\vert \leq R(\lambda,A)\vert g_{n} - g_{m}\vert` | `\vert f_{n} - f_{m}\vert \leq R(\mu,A)\vert g_{n} - g_{m}\vert` | Tippfehler | bitte prüfen: g_n = (μ − B)f_n, also ist R(μ,A) gemeint. |
-| 304 | 1694 | ◐ | `(the center of\/ $E$ (see Section~\ref{sec:c1-9}).` | `(the center of\/ $E$, see Section~\ref{sec:c1-9}).` | Klammern | Schon in der Arbeitsliste. Klammern nicht ausgeglichen. |
-| 304 | 1695 | ○ | `$E =$ $L^{p}(X,\mu)$` | `$E = L^{p}(X,\mu)$` | LaTeX | Formel unnötig geteilt (Umbruch nach „=“ möglich, Abstand nach „=“ ist Wortabstand); ebenso Z. 2218 (`$\lambda \geq$ $\omega_{0}(A)+1$`). |
-| 304 | 1711 | ◐ | `B_{0} \in \mathcal{L}(E^{r})` | `B_{0} \in \mathcal{L}^{r}(E)` | Notation | bitte prüfen: Reguläre Operatoren sonst \mathcal{L}^{r}(E) (Z. 2207, 2280, 2294); in Z. 2207 genauer B_0 ∈ \mathcal{Z}(E)^{d}. |
-| 307 | 1924 | ◐ | `\lambda R(\lambda,A)u = \lambda R(\lambda,A)u+u` | `\lambda R(\lambda,A)u = AR(\lambda,A)u+u` | Tippfehler | bitte prüfen: So unterscheiden sich beide Seiten um u; gemeint ist λR(λ,A)u = AR(λ,A)u + u. |
-| 309 | 2071 | ○ | `\alpha \coloneq \Re(\beta)` | `\alpha = \Re(\beta)` | Notation | α ist vorgegeben; formuliert wird eine Annahme, keine Definition (parallel dazu „\mu = \vert\nu\vert“). |
-| 309 | 2086 | ● | `\leq \langle\vert f\vert,A'\phi\rangle .` | `\leq \langle\vert f\vert,A'\phi\rangle` | Satzzeichen | Punkt am Formelende, obwohl der Satz mit „holds for all …“ weitergeht. |
-| 310 | 2129 | ● | `1/t \, ((T(t)\vert f\vert)(0)` | `1/t \, (T(t)\vert f\vert)(0)` | Klammern | Eine öffnende Klammer zu viel. |
-| 310 | 2134 | ○ | `\mu\{0\} = \nu\{0\} = 0` | `\mu(\{0\}) = \nu(\{0\}) = 0` | Notation | In Z. 2041 μ({0}); ebenso Z. 2144. |
-| 311 | 2181 | ◐ | `- \langle\Re(V)\vert f\vert,\phi\rangle &= \Re\langle` | `- \langle\Re(V)\vert f\vert,\phi\rangle = \Re\langle` | LaTeX | Das zweite & öffnet eine neue align-Spaltengruppe; „= Re⟨…Af…⟩“ rückt mit großem Abstand nach rechts. |
-| 312 | 2234 | ○ | `Mc/\lambda(\|g^{+}\| + \|g^{-}\|)` | `(Mc/\lambda)(\|g^{+}\| + \|g^{-}\|)` | Klammern | Ohne Klammern liest sich λ(…) als Nenner; vgl. Z. 2229 und rechts (2Mc/λ). |
-| 314 | 2354 | ◐ | `Then by Eq.~\myeqpageref{eq:c2-5.1},` | `Then by Eq.~\myeqpageref{eq:c2-5.3},` | Verweis | bitte prüfen: Benutzt wird die Definition von T(s) als Modulus von S(s), also (2.5.3), nicht die Verbandshomomorphismus-Gleichung (2.5.1). |
-| 315 | 2489 | ○ | `$\displaystyle D_{g}\Theta(f) = \lim_{t \downarrow 0} k(t)/t$` | `$D_{g}\Theta(f) = \lim_{t \downarrow 0} k(t)/t$` | LaTeX | \displaystyle im Fließtext vergrößert den Zeilenabstand; ggf. als abgesetzte Formel. |
-| 316 | 2505 | ◐ | `Part-II, Chapter~\ref{chap:b2}, ⏎ Lemma 2.4` | `Part-II, Lemma~\ref{lem:b2-2.4}` | Verweis | Schon in der Arbeitsliste. Hartkodierte Nummer und abweichende Zitierweise (Z. 737: Part-II, Lemma~\ref{lem:b2-2.4}). |
-| 316 | 2512 | ○ | `regular Borel measure $\mu$ on $C(K)$` | `regular Borel measure $\mu$ on $K$` | Tippfehler | bitte prüfen: Das Maß lebt auf K (integriert wird in Z. 2517 über K). |
-| 316 | 2517 | ● | `\Re\mleft(\sign (\bar{f}(x))\mright)h(x))` | `\Re\mleft(\sign(\overline{f(x)})h(x)\mright)` | Klammern | Klammern unausgeglichen: \mright) steht zu früh, am Ende eine „)“ zu viel; vgl. Z. 2509. |
-| 316 | 2524 | ○ | `(see Section~\ref{sec:c1-8})\,).` | `(see Section~\ref{sec:c1-8})).` | Abstand | Schon in der Arbeitsliste. Abstand vor der schließenden Klammer. |
-| 317 | 2539 | ○ | `\Re((\sign  \overline{f})g)` | `\Re((\sign  \bar{f})g)` | Notation | Sonst durchgehend \bar{f}; \overline{f} ist im Druck breiter. |
-| 317 | 2542 | ◐ | `D^{-}_{g}\Theta(f) = \lim_{t \to 0}` | `D^{-}_{g}\Theta(f) = \lim_{t \uparrow 0}` | Tippfehler | bitte prüfen: Linksseitige Ableitung; die rechtsseitige ist mit t ↓ 0 notiert (Z. 2489). |
-| 317 | 2578 | ● | `\text{ for } t \in [0,s]) .` | `\text{ for } t \in [0,s] .` | Klammern | Überzählige „)“. |
-| 318 | 2664 | ◐ | `(P_{+} - P_{-})(Af^{+} + Af^{-})` | `(P_{+} - P_{-})(Af^{+} - Af^{-})` | Tippfehler | bitte prüfen: Af = Af⁺ − Af⁻; die folgende Zeile setzt das Minuszeichen voraus. |
-| 320 | 2747 | ○ | `is a multiplication operator for all $\lambda \in \rho(A)$` | `is a multiplication operator for all $\lambda \in \rho(A)$.` | Satzzeichen | In der Aufzählung enden (a), (b), (e) mit Punkt, (c) und (d) (Z. 2750) nicht; ebenso Prop. 2.5.15 (a), (b) (Z. 2833, 2836). |
-| 321 | 2846 | ● | `\ref{sec:c1-9})⏎, it is clear` | `\ref{sec:c1-9}), it is clear` | Abstand | Schon in der Arbeitsliste. Der Zeilenumbruch vor dem Komma ergibt im Druck ein Leerzeichen. |
-| 321 | 2849 | ◐ | `Hence $A \in \mathcal{Z}(E)$` | `Hence $A \in \mathcal{Z}(E)$.` | Satzzeichen | Schon in der Arbeitsliste. Am Satzende fehlt der Punkt. |
-| 322 | 2898 | ● | `\phi \in E^*` | `\phi \in E'` | Notation | Dualraum sonst durchgehend E'; ebenso Z. 2922 (`E_{+}^*` → `E'_{+}`). |
-| 322 | 2899 | ◐ | `Af \in (f)^{dd}` | `Af \in \{f\}^{dd}` | Notation | Sonst \{f\}^{dd} (Z. 1378, 2492, 2633). |
-| 322 | 2906 | ◐ | `(this follows from Eq.~\myeqpageref{eq:a2-1.8})` | `(this follows from Part-I, Eq.~\myeqpageref{eq:a2-1.8})` | Verweis | Schon in der Arbeitsliste. Formel aus Teil I ohne Teilangabe; die gedruckte Nummer kommt auch in diesem Kapitel vor. |
-| 322 | 2944 | ○ | `C*-algebras` | `\CA-algebras` | Notation | In Z. 2975 mit \CA (C mit hochgestelltem Stern), hier mit Text-Sternchen. |
-| 322 | 2951 | ○ | `C^{\infty}_0(\R^n)` | `C^{\infty}_{c}(\R^n)` | Notation | Testfunktionen sonst C_c^∞ (z. B. Z. 1785, 2166). |
+| 280 | 57 | ○ | `(see Eq.~\myeqpageref{eq:a2-2.12})` | `(see Part-I, Eq.~\myeqpageref{eq:a2-2.12})` | Verweis | **Umgesetzt.** Formel aus Teil I ohne „Part-I,“ zitiert; das Kapitel hat eigene Formeln (2.2.x), die Nummer ist nur über die Seitenangabe eindeutig. Ebenso Z. 64 (eq:a2-2.5). |
+| 280 | 61 | ◐ | `\partial N^{+}(f)` | `\diff{N^{+}}(f)` | Notation | **Umgesetzt.** Subdifferential uneinheitlich: ∂N⁺(f) in Z. 61, 76, 95, 215, dagegen dN⁺(f) mit aufrechtem d (\diff) in Z. 91, 106, 181, 227, 250, 253, 487 und \ddp(f) in Z. 1094, 1106, 1596. Teil I schreibt \ddp, daher Vereinheitlichung auf d vorgeschlagen; ebenso Z. 76, 95, 215. |
+| 280 | 64 | ◐ | `see Eq.~\myeqpageref{eq:a2-2.5}.` | `see Eq.~\myeqpageref{eq:a2-2.5}).` | Klammern | **Umgesetzt.** Schon in der Arbeitsliste. Die mit „(this follows …“ geöffnete Klammer wird nicht geschlossen. |
+| 281 | 190 | ◐ | `C^{2}[0,1]` | `C^{2}([0,1])` | Notation | **Umgesetzt.** Sonst im Kapitel C^{2}([0,1]), L^{p}([0,1]), AC([0,1]); ebenso Z. 1287 (`L^{q}[0,1]`) und Z. 2074, 2123, 2136 (`C[-1,0]`, `C^{1}[-1,0]` gegenüber `C^{1}([-1,0],\C)` in Z. 2046, 2055). |
+| 281 | 216 | ● | `\ref{ex:c2-1.1},~\ref{ex:c2-1.1-2} )` | `\ref{ex:c2-1.1}\,\ref{ex:c2-1.1-2})` | Abstand | **Umgesetzt.** Leerzeichen vor der schließenden Klammer; außerdem sonst „Example~\ref{…}\,\ref{…}“ ohne Komma (Z. 1786, 1792, 2243). |
+| 281 | 252 | ◐ | `f(x) = \|f\|_{\infty}` | `f(x) = \|f^{+}\|_{\infty}` | Tippfehler | **Umgesetzt.** bitte prüfen: Das Maximum von f ist ‖f⁺‖∞ (vgl. Z. 75, 179), nicht ‖f‖∞. |
+| 283 | 264 | ● | `(1 + \sum_{i=1}^{n} y_{i}^{2})g(y), g \in \mathcal{S}(\R^{n})) .` | `(1 + \sum_{i=1}^{n} y_{i}^{2})g(y) \quad (g \in \mathcal{S}(\R^{n})) .` | Klammern | **Umgesetzt.** Überzählige schließende Klammer; die Nebenbedingung gehört offenbar in Klammern. |
+| 283 | 308 | ◐ | `\,$C_{c}^{\infty}(\R^{n})$\, is dense in \,$\mathcal{S}$\,` | `$C_{c}^{\infty}(\R^{n})$ is dense in $\mathcal{S}$` | Abstand | **Umgesetzt.** Die manuellen \, um die Inline-Formeln vergrößern die Wortabstände sichtbar. |
+| 283 | 317 | ● | `\phi \in S` | `\phi \in \mathcal{S}` | Notation | **Umgesetzt.** Der Schwartz-Raum heißt sonst \mathcal{S} (Z. 286, 314). |
+| 284 | 340 | ○ | `u(x) - \Delta u(x) &= 0 \quad &(x \in \Omega)` | `\begin{array}{r@{\;}l@{\quad}l}` | Abstand | **Umgesetzt.** Mit `aligned` gelöst (ebenso Z. 1286). Im array steht vor dem „=“ der Spaltenabstand 2\arraycolsep (10 pt), dahinter nur der normale Relationsabstand. Alternativ aligned mit &=. Ebenso Z. 1286 ({rl}, `D(A') &= …`). |
+| 284 | 381 | ◐ | `f \in C^{2}(\Omega) \cap C(\Omega)` | `f \in C^{2}(\Omega) \cap C(\overline{\Omega})` | Tippfehler | **Umgesetzt.** bitte prüfen: C(Ω) ist in C²(Ω) bereits enthalten; aus f̄ ∈ 𝒮 und u ∈ C(Ω̄) folgt f ∈ C(Ω̄) (vgl. Z. 376). |
+| 284 | 399 | ◐ | `We know from~\ref{ex:c2-1.5-4}` | `We know from~\ref{ex:c2-1.5-5}` | Verweis | **Umgesetzt.** Schon in der Arbeitsliste. Die Aussage wird im Beweis von (v) gezeigt. |
+| 285 | 426 | ● | `$E = C(K)$ (K compact)` | `$E = C(K)$ ($K$ compact)` | Mathemodus | **Umgesetzt.** K steht nicht im Mathemodus; ebenso Z. 2024 (`(X locally compact)`), Z. 2399 (`Assume that E is`), Z. 2885 (`(K compact)`). |
+| 286 | 518 | ◐ | `\lim_{n \to \infty} \|u - (n u \wedge g)\| = 0` | `\lim_{n \to \infty} \|g - (n u \wedge g)\| = 0` | Tippfehler | **Umgesetzt.** bitte prüfen: g liegt genau dann im Abschluss von E_u, wenn nu ∧ g gegen g konvergiert. |
+| 286 | 525 | ◐ | `(Au)^{-} \in E_{u}` | `(Au)^{-} \in \overline{E_{u}}` | Tippfehler | **Umgesetzt.** bitte prüfen: Der Beweis (Z. 532, 536) und Theorem 2.1.11 (c) (Z. 571) verwenden den Abschluss. |
+| 286 | 532 | ○ | `\overline{E}_{u}` | `\overline{E_{u}}` | Notation | **Umgesetzt.** Z. 532, 533, 536 (3 Stellen). Querstrich hier nur über E, sonst über E_u bzw. E_f (Z. 518, 571, 1378); ebenso Z. 533 (2×) und 536. |
+| 286 | 533 | ○ | `0 \leq \phi \in E_{+}'` | `0 \leq \phi \in E'_{+}` | Notation | **Umgesetzt.** Sonst durchgehend E'_{+}; im Druck steht der Strich hier hinter dem Index. |
+| 287 | 571 | ○ | `\overline{E_{f}}$ \ for all` | `\overline{E_{f}}$ for all` | Abstand | **Umgesetzt.** Leerzeichen plus „\ “ ergibt doppelten Wortabstand; ebenso Z. 1848 (`\text{for }\ 0`). |
+| 287 | 610 | ◐ | `Pg = g^{-} < 0` | `Pg = -g^{-} < 0` | Tippfehler | **Umgesetzt.** bitte prüfen: g⁻ ≥ 0; P projiziert auf das von g⁻ erzeugte Band, also Pg = −g⁻. |
+| 288 | 653 | ● | `the $n^{th}$ unit vector` | `the $n$th unit vector` | Mathemodus | **Umgesetzt.** „th“ wird als kursives Variablenprodukt im Exponenten gesetzt. |
+| 288 | 671 | ◐ | `linear operator (sign $f$) on $E$` | `linear operator $(\sign f)$ on $E$` | Notation | **Umgesetzt.** Im kursiven Satztext erscheint „sign“ kursiv, sonst überall aufrecht als \sign. |
+| 289 | 720 | ◐ | `(\sign f)g = m \cdot g \quad (g \in E), ` | `(\sign f)g = m \cdot g \quad (g \in E).` | Satzzeichen | **Umgesetzt.** Nach der Formel beginnt ein neuer Satz („Moreover,“). |
+| 289 | 750 | ○ | `\Re\left(\widehat{\sign} \bar{f}\right)g` | `\Re\left((\widehat{\sign} \bar{f})g\right)` | Klammern | **Umgesetzt.** So steht der Realteil des Operators statt des Elements; in Z. 2450 dieselbe Formel als \Re((ŝign f̄)g). Ebenso Z. 2491, 2526, 2564, 2566. |
+| 290 | 799 | ○ | `\begin{equation*}\label{eq:c2-K-2}` | `\begin{equation*}` | LaTeX | **Umgesetzt.** \label in unnummerierter Formel ohne \tag, nirgends referenziert; ebenso Z. 1355 (eq:c2-3-KGK). Im Druck unsichtbar, nur Bereinigung. |
+| 291 | 848 | ● | `\langle \phi,\Delta\vert f\vert \rangle (= \langle \Delta \phi,\vert f\vert \rangle` | `\langle \phi,\Delta\vert f\vert \rangle \;(= \langle \Delta \phi,\vert f\vert \rangle)` | Klammern | **Umgesetzt.** Die mit „(=“ geöffnete Klammer wird nicht geschlossen. |
+| 291 | 851 | ● | `$(1~\leq~p <~\infty)$` | `$(1 \leq p < \infty)$` | Abstand | **Umgesetzt.** Tilden im Mathemodus erzeugen zusätzliche Wortabstände; ebenso Z. 1412 (`-\phi^{(3)}(x)~\leq~\phi(x)`) und Z. 1422 (`f~\in~D(B)`). |
+| 291 | 884 | ○ | `C_{c}^{\infty} \subseteq D_{0}` | `C_{c}^{\infty}(\R^n) \subseteq D_{0}` | Notation | **Umgesetzt.** Im übrigen Absatz C_c^∞(R^n); die Kurzform C_c^∞ wird erst in Z. 1792 eingeführt. |
+| 291 | 893 | ● | `\Re\langle(\sign \bar{f})Af),\phi \rangle` | `\Re\langle(\sign \bar{f})Af,\phi \rangle` | Klammern | **Umgesetzt.** Überzählige „)“. |
+| 291 | 894 | ◐ | `\leq \langle \vert f\vert,A'\phi \rangle & = \langle` | `&\leq \langle \vert f\vert,A'\phi \rangle = \langle` | LaTeX | **Umgesetzt.** Das & der zweiten Zeile steht an der falschen Stelle; das „≤“ wird nicht unter dem „=“ der ersten Zeile ausgerichtet. |
+| 292 | 901 | ◐ | `\sum_{i,j=1}^{2} b_{ij}` | `\sum_{i,j=1}^{n} b_{ij}` | Tippfehler | **Umgesetzt.** bitte prüfen: Der Operator wirkt auf dem R^n; die obere Grenze 2 ist vermutlich mit der Ordnung m ≤ 2 verwechselt. |
+| 294 | 1032 | ◐ | `Definition~\ref{def:b3-3.1}` | `Definition~\ref{def:c3-3.1}` | Verweis | **Umgesetzt.** bitte prüfen: def:b3-3.1 ist die Irreduzibilität auf C_0(X) in Teil II (hier ohne „Part-II,“); für Banachverbände gibt es Definition 3.3.1 in Teil III (def:c3-3.1). Gedruckte Nummer gleich, Link und Seitenbezug führen aber nach Teil II. |
+| 294 | 1053 | ◐ | `f \in D_{0} \, ,  \phi \in M'` | `f \in D_{0}, \phi \in M'` | Abstand | **Umgesetzt.** Sichtbarer Abstand vor dem Komma (vgl. die gleiche Formel in Z. 1205). |
+| 295 | 1087 | ○ | `P_{+} \coloneq P_{f^{+}}` | `P_{+} \coloneq P_{(f^{+})}` | Notation | **Umgesetzt.** Bandprojektion teils P_{(f^{+})} (Z. 700, 1182, 1187, 1740, 1823), teils P_{f^{+}} (Z. 1087, 1932, 2658); einheitlich setzen. |
+| 295 | 1089 | ◐ | `Q \coloneq P_{+} + 1/2` | `Q \coloneq P_{+} + 1/2\,P` | Tippfehler | **Umgesetzt.** bitte prüfen: Nach Z. 1104 ist Qf = P₊f + ½Pf; „+ 1/2“ allein ergäbe auch nicht Q ≤ Id. |
+| 295 | 1139 | ● | `\text{ and } t\geq 0) .` | `\text{ and } t\geq 0 .` | Klammern | **Umgesetzt.** Überzählige „)“. |
+| 297 | 1260 | ● | `f(1) = \diff{}f(0)` | `f(1) = d f(0)` | Tippfehler | **Umgesetzt.** \diff{} setzt das aufrechte Differential-d; gemeint ist die Konstante d ∈ R aus Z. 1256 (vgl. φ(0) = dφ(1) in Z. 1287). |
+| 297 | 1266 | ○ | `(n \in \N )` | `(n \in \N_{0})` | Tippfehler | **Umgesetzt.** bitte prüfen: Für 0 ≤ x+t < 1 wird n = 0 gebraucht; \N_0 ist in Z. 872 eingeführt. |
+| 298 | 1288 | ◐ | `\text{for all } \phi \in D(A').` | `\text{for all } \phi \in D(A'),` | Satzzeichen | **Umgesetzt.** Nach dem Punkt geht der Satz mit „where 1/p + 1/q = 1“ weiter. |
+| 298 | 1324 | ○ | `\text{has codimension one in } D(A_{\max})` | `\text{has codimension one in } D(A_{\max}).` | Satzzeichen | **Umgesetzt.** Die übrigen Zeilen dieser Aufzählung enden mit Punkt. |
+| 299 | 1366 | ● | `\phi \in D(B')_{+}) .` | `\phi \in D(B')_{+} .` | Klammern | **Umgesetzt.** Überzählige „)“. |
+| 300 | 1439 | ● | `\left(-\phi^{(3)}(x)\right)) \dx` | `\left(-\phi^{(3)}(x)\right) \dx` | Klammern | **Umgesetzt.** Überzählige „)“. |
+| 301 | 1511 | ● | `Section~\ref{sec:c3-1}` | `Section~\ref{sec:c2-3}` | Verweis | **Umgesetzt.** Schon in der Arbeitsliste. Die Charakterisierung positiver Halbgruppen steht in Abschnitt 2.3, nicht in 3.1. |
+| 301 | 1531 | ◐ | `\Re\mleft\langle(\sign  \bar{f}) S(t)f\mright\rangle` | `\Re\mleft[(\sign \bar{f}) S(t)f\mright]` | Klammern | **Umgesetzt.** bitte prüfen: Spitze Klammern mit nur einem Argument; gemeint ist der Realteil des Elements (vgl. Z. 1719 \Re[…]). |
+| 301 | 1537 | ○ | `\max\{\omega (A),\omega (B)\}` | `\max\{\omega_{0}(A),\omega_{0}(B)\}` | Notation | **Umgesetzt.** Wachstumsschranke sonst ω_0 (Z. 407, 1677, 2218). |
+| 302 | 1552 | ○ | `= \langle R(\lambda,A)\vert g\vert,\psi\rangle` | `= \langle R(\lambda,A)\vert g\vert,\psi\rangle .` | Satzzeichen | **Umgesetzt.** Abgesetzte Formel ohne Satzende, danach beginnt ein neuer Satz; ebenso Z. 1600 (vor „Thus“) und Z. 1642 (vor „Assume“). |
+| 303 | 1651 | ◐ | `\vert f_{n} - f_{m}\vert \leq R(\lambda,A)\vert g_{n} - g_{m}\vert` | `\vert f_{n} - f_{m}\vert \leq R(\mu,A)\vert g_{n} - g_{m}\vert` | Tippfehler | **Umgesetzt.** bitte prüfen: g_n = (μ − B)f_n, also ist R(μ,A) gemeint. |
+| 304 | 1694 | ◐ | `(the center of\/ $E$ (see Section~\ref{sec:c1-9}).` | `(the center of\/ $E$, see Section~\ref{sec:c1-9}).` | Klammern | **Umgesetzt.** Schon in der Arbeitsliste. Klammern nicht ausgeglichen. |
+| 304 | 1695 | ○ | `$E =$ $L^{p}(X,\mu)$` | `$E = L^{p}(X,\mu)$` | LaTeX | **Umgesetzt.** Formel unnötig geteilt (Umbruch nach „=“ möglich, Abstand nach „=“ ist Wortabstand); ebenso Z. 2218 (`$\lambda \geq$ $\omega_{0}(A)+1$`). |
+| 304 | 1711 | ◐ | `B_{0} \in \mathcal{L}(E^{r})` | `B_{0} \in \mathcal{L}^{r}(E)` | Notation | **Umgesetzt.** bitte prüfen: Reguläre Operatoren sonst \mathcal{L}^{r}(E) (Z. 2207, 2280, 2294); in Z. 2207 genauer B_0 ∈ \mathcal{Z}(E)^{d}. |
+| 307 | 1924 | ◐ | `\lambda R(\lambda,A)u = \lambda R(\lambda,A)u+u` | `\lambda R(\lambda,A)u = AR(\lambda,A)u+u` | Tippfehler | **Umgesetzt.** bitte prüfen: So unterscheiden sich beide Seiten um u; gemeint ist λR(λ,A)u = AR(λ,A)u + u. |
+| 309 | 2071 | ○ | `\alpha \coloneq \Re(\beta)` | `\alpha = \Re(\beta)` | Notation | **Umgesetzt.** α ist vorgegeben; formuliert wird eine Annahme, keine Definition (parallel dazu „\mu = \vert\nu\vert“). |
+| 309 | 2086 | ● | `\leq \langle\vert f\vert,A'\phi\rangle .` | `\leq \langle\vert f\vert,A'\phi\rangle` | Satzzeichen | **Umgesetzt.** Punkt am Formelende, obwohl der Satz mit „holds for all …“ weitergeht. |
+| 310 | 2129 | ● | `1/t \, ((T(t)\vert f\vert)(0)` | `1/t \, (T(t)\vert f\vert)(0)` | Klammern | **Umgesetzt.** Eine öffnende Klammer zu viel. |
+| 310 | 2134 | ○ | `\mu\{0\} = \nu\{0\} = 0` | `\mu(\{0\}) = \nu(\{0\}) = 0` | Notation | **Umgesetzt.** In Z. 2041 μ({0}); ebenso Z. 2144. |
+| 311 | 2181 | ◐ | `- \langle\Re(V)\vert f\vert,\phi\rangle &= \Re\langle` | `- \langle\Re(V)\vert f\vert,\phi\rangle = \Re\langle` | LaTeX | **Umgesetzt.** Das zweite & öffnet eine neue align-Spaltengruppe; „= Re⟨…Af…⟩“ rückt mit großem Abstand nach rechts. |
+| 312 | 2234 | ○ | `Mc/\lambda(\|g^{+}\| + \|g^{-}\|)` | `(Mc/\lambda)(\|g^{+}\| + \|g^{-}\|)` | Klammern | **Umgesetzt.** Ohne Klammern liest sich λ(…) als Nenner; vgl. Z. 2229 und rechts (2Mc/λ). |
+| 314 | 2354 | ◐ | `Then by Eq.~\myeqpageref{eq:c2-5.1},` | `Then by Eq.~\myeqpageref{eq:c2-5.3},` | Verweis | **Umgesetzt.** bitte prüfen: Benutzt wird die Definition von T(s) als Modulus von S(s), also (2.5.3), nicht die Verbandshomomorphismus-Gleichung (2.5.1). |
+| 315 | 2489 | ○ | `$\displaystyle D_{g}\Theta(f) = \lim_{t \downarrow 0} k(t)/t$` | `$D_{g}\Theta(f) = \lim_{t \downarrow 0} k(t)/t$` | LaTeX | **Umgesetzt.** \displaystyle im Fließtext vergrößert den Zeilenabstand; ggf. als abgesetzte Formel. |
+| 316 | 2505 | ◐ | `Part-II, Chapter~\ref{chap:b2}, ⏎ Lemma 2.4` | `Part-II, Lemma~\ref{lem:b2-2.4}` | Verweis | **Umgesetzt.** Schon in der Arbeitsliste. Hartkodierte Nummer und abweichende Zitierweise (Z. 737: Part-II, Lemma~\ref{lem:b2-2.4}). |
+| 316 | 2512 | ○ | `regular Borel measure $\mu$ on $C(K)$` | `regular Borel measure $\mu$ on $K$` | Tippfehler | **Umgesetzt.** bitte prüfen: Das Maß lebt auf K (integriert wird in Z. 2517 über K). |
+| 316 | 2517 | ● | `\Re\mleft(\sign (\bar{f}(x))\mright)h(x))` | `\Re\mleft(\sign(\overline{f(x)})h(x)\mright)` | Klammern | **Umgesetzt.** Klammern unausgeglichen: \mright) steht zu früh, am Ende eine „)“ zu viel; vgl. Z. 2509. |
+| 316 | 2524 | ○ | `(see Section~\ref{sec:c1-8})\,).` | `(see Section~\ref{sec:c1-8})).` | Abstand | **Umgesetzt.** Schon in der Arbeitsliste. Abstand vor der schließenden Klammer. |
+| 317 | 2539 | ○ | `\Re((\sign  \overline{f})g)` | `\Re((\sign  \bar{f})g)` | Notation | **Umgesetzt.** Sonst durchgehend \bar{f}; \overline{f} ist im Druck breiter. |
+| 317 | 2542 | ◐ | `D^{-}_{g}\Theta(f) = \lim_{t \to 0}` | `D^{-}_{g}\Theta(f) = \lim_{t \uparrow 0}` | Tippfehler | **Umgesetzt.** bitte prüfen: Linksseitige Ableitung; die rechtsseitige ist mit t ↓ 0 notiert (Z. 2489). |
+| 317 | 2578 | ● | `\text{ for } t \in [0,s]) .` | `\text{ for } t \in [0,s] .` | Klammern | **Umgesetzt.** War im Quelltext schon korrekt. Überzählige „)“. |
+| 318 | 2664 | ◐ | `(P_{+} - P_{-})(Af^{+} + Af^{-})` | `(P_{+} - P_{-})(Af^{+} - Af^{-})` | Tippfehler | **Umgesetzt.** bitte prüfen: Af = Af⁺ − Af⁻; die folgende Zeile setzt das Minuszeichen voraus. |
+| 320 | 2747 | ○ | `is a multiplication operator for all $\lambda \in \rho(A)$` | `is a multiplication operator for all $\lambda \in \rho(A)$.` | Satzzeichen | **Umgesetzt.** In der Aufzählung enden (a), (b), (e) mit Punkt, (c) und (d) (Z. 2750) nicht; ebenso Prop. 2.5.15 (a), (b) (Z. 2833, 2836). |
+| 321 | 2846 | ● | `\ref{sec:c1-9})⏎, it is clear` | `\ref{sec:c1-9}), it is clear` | Abstand | **Umgesetzt.** Schon in der Arbeitsliste. Der Zeilenumbruch vor dem Komma ergibt im Druck ein Leerzeichen. |
+| 321 | 2849 | ◐ | `Hence $A \in \mathcal{Z}(E)$` | `Hence $A \in \mathcal{Z}(E)$.` | Satzzeichen | **Umgesetzt.** Schon in der Arbeitsliste. Am Satzende fehlt der Punkt. |
+| 322 | 2898 | ● | `\phi \in E^*` | `\phi \in E'` | Notation | **Umgesetzt.** Dualraum sonst durchgehend E'; ebenso Z. 2922 (`E_{+}^*` → `E'_{+}`). |
+| 322 | 2899 | ◐ | `Af \in (f)^{dd}` | `Af \in \{f\}^{dd}` | Notation | **Umgesetzt.** Sonst \{f\}^{dd} (Z. 1378, 2492, 2633). |
+| 322 | 2906 | ◐ | `(this follows from Eq.~\myeqpageref{eq:a2-1.8})` | `(this follows from Part-I, Eq.~\myeqpageref{eq:a2-1.8})` | Verweis | **Umgesetzt.** Schon in der Arbeitsliste. Formel aus Teil I ohne Teilangabe; die gedruckte Nummer kommt auch in diesem Kapitel vor. |
+| 322 | 2944 | ○ | `C*-algebras` | `\CA-algebras` | Notation | **Umgesetzt.** In Z. 2975 mit \CA (C mit hochgestelltem Stern), hier mit Text-Sternchen. |
+| 322 | 2951 | ○ | `C^{\infty}_0(\R^n)` | `C^{\infty}_{c}(\R^n)` | Notation | **Umgesetzt.** Testfunktionen sonst C_c^∞ (z. B. Z. 1785, 2166). |
 
 ### Teil III, Kap. 3 – Spectral Theory of Positive Semigroups on Banach Lattices (`part-c/chap-c3.tex`)
 

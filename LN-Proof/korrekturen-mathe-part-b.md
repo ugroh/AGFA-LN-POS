@@ -4,7 +4,7 @@
 
 **Umfang:** Teil II, Kap. 1–4, geprüft im LaTeX-Quelltext (Branch `fahnenkorrektur`). Geprüft wurden nur Satz und Notation in Formeln: Tippfehler, Klammern, Indizes, uneinheitliche Schreibweisen, Mathemodus, Satzzeichen an Formeln, Verweise. Beweise wurden **nicht** nachgerechnet; wo ein Befund inhaltlich wirkt, steht „bitte prüfen“.
 
-**Noch nichts geändert.** Die Liste dient zur Besprechung; umgesetzt wird erst nach Rücksprache.
+**Stand 18.10.2026:** Kap. 1 ist nach Durchsicht durch Rainer Nagel umgesetzt (in der Spalte Kommentar mit **Umgesetzt** markiert); Kap. 2 ist am 19.10.2026 umgesetzt (Abweichungen im Kommentar); Kap. 3–4 sind noch offen. Die Zeilenangaben beziehen sich auf den Stand vom 14.10.2026.
 
 **Spalten:** S. = gedruckte Buchseite, ermittelt über das nächstgelegene Label (kann um eine Seite abweichen). Z. = Zeile in der .tex-Datei. Sicherheit: ● eindeutig · ◐ sehr wahrscheinlich · ○ Hinweis/Ermessen.
 
@@ -16,87 +16,87 @@ Insgesamt **206 Punkte**: 50 ●, 93 ◐, 63 ○. Davon stehen 13 bereits in der
 
 | S. | Z. | | Ist | Soll | Art | Kommentar |
 |---|---|---|---|---|---|---|
-| 137 | 57 | ○ | `C_{0}(X\backslash F)` | `C_{0}(X\setminus F)` | LaTeX | \backslash setzt einen großen Backslash ohne Abstände wie bei einem binären Operator; für Mengendifferenz \setminus (im Buch überwiegend, 34 vs. 12 Stellen). Einzige Stelle im Kapitel. |
-| 137 | 57 | ◐ | `via the map $f + J \to f\vert_{F}$` | `via the map $f + J \mapsto f\vert_{F}$` | Notation | Zuordnung von Elementen: \mapsto (im Buch durchgehend so, z. B. t ↦ T(t)f); ebenso Z. 110 `$t \to \delta_{t}$` → `$t \mapsto \delta_{t}$`. |
+| 137 | 57 | ○ | `C_{0}(X\backslash F)` | `C_{0}(X\setminus F)` | LaTeX | **Umgesetzt.** \backslash setzt einen großen Backslash ohne Abstände wie bei einem binären Operator; für Mengendifferenz \setminus (im Buch überwiegend, 34 vs. 12 Stellen). Einzige Stelle im Kapitel. |
+| 137 | 57 | ◐ | `via the map $f + J \to f\vert_{F}$` | `via the map $f + J \mapsto f\vert_{F}$` | Notation | **Umgesetzt.** Zuordnung von Elementen: \mapsto (im Buch durchgehend so, z. B. t ↦ T(t)f); ebenso Z. 110 `$t \to \delta_{t}$` → `$t \mapsto \delta_{t}$`. |
 
 ### Teil II, Kap. 2 – Characterization of Positive Semigroups on C₀(X) (`part-b/chap-b2.tex`)
 
 | S. | Z. | | Ist | Soll | Art | Kommentar |
 |---|---|---|---|---|---|---|
-| 142 | 58 | ○ | `(n/tR(n/t,A))^{n}` | `((n/t)R(n/t,A))^{n}` | Notation | „n/tR“ ist mehrdeutig (liest sich wie n/(tR…)); n/t klammern. |
-| 142 | 101 | ○ | `\mleft( (\eu^{tA}f(x) - f(x)) \mright)` | `\bigl( (\eu^{tA}f)(x) - f(x) \bigr)` | Klammern | Doppelte Klammer; gemeint ist (\eu^{tA}f)(x), vgl. Z. 102. |
-| 142 | 102 | ● | `\mleft( (\eu^{tA}f(x) \mright)` | `(\eu^{tA}f)(x)` | Klammern | Innere öffnende Klammer ohne Gegenstück; gedruckt „((e^{tA}f(x))“. |
-| 142 | 146 | ◐ | `This shows~\ref{thm:b2-1.3-2} to hold.` | `This shows~\ref{thm:b2-1.3-3} to hold.` | Verweis | Im Beweisschritt (b) ⇒ (c) wird A + ‖A‖Id ≥ 0, also (c), gezeigt; bitte prüfen. |
-| 142 | 152 | ◐ | `\qedhere \qedhere` | `\qedhere` | LaTeX | \qedhere steht doppelt (Z. 152/153). |
-| 144 | 225 | ◐ | `0 \leq  u \in C(K)` | `0 \ll u \in C(K)` | Tippfehler | Gemeint ist ein strikt positives u (vgl. Z. 246, 461, 629, 638: „strictly positive“ bzw. u ≫ 0); vermutlich ≪ bei der Konvertierung zu ≤ geworden. Ebenso Z. 251, 423, 474, 561, 605, 732, 823 (jeweils u), 1861 (p, vgl. Satz: „strictly positive p“) und 2260 (p mit inf p > 0). Bitte prüfen. |
-| 144 | 247 | ○ | `\{u \in C(K): u \gg 0\}` | `\{u \in C(K) \colon u \gg 0\}` | Notation | Sonst \colon in Mengenklammern (anderer Abstand); ebenso Z. 2455, 2463, 2664, 2669. |
-| 144 | 263 | ◐ | `\sup_{\lambda \geq \omega}` | `\sup_{\lambda \geq w}` | Tippfehler | Im selben Ausdruck und in Theorem~\ref{thm:b2-1.8} heißt die Konstante w, nicht ω. |
-| 146 | 389 | ● | `\textcite{greinervoigtwolff:1981}` + Zeilenumbruch + `)` | `\textcite{greinervoigtwolff:1981})` | Abstand | Schon in der Arbeitsliste. Der Zeilenumbruch erzeugt ein Leerzeichen vor „)“. |
-| 147 | 434 | ○ | `(f \in C(K)\,)` | `(f \in C(K))` | Abstand | Überzähliger Abstand vor „)“; ebenso Z. 902 `\,($f \in C[-1,0]$\,)`. |
-| 148 | 568 | ● | `$\lambda > \lambda_{0}$ ,` | `$\lambda > \lambda_{0}$,` | Abstand | Leerzeichen vor Komma. |
-| 148 | 588 | ◐ | `(see Eq.~\myeqpageref{eq:a3-1.3})` | `(see Part-I, Eq.~\myeqpageref{eq:a3-1.3})` | Verweis | Verweis auf Part I ohne „Part-I“; gedruckt „(3.1.3)“, kollidiert mit der Gleichungsnummerierung in Part II, Kap. 3. |
-| 149 | 636 | ○ | `Au = \lambda u - 1` | `Au = \lambda u - \1` | Notation | Konstante Funktion sonst \1 (vgl. u = R(λ,A)\1 in derselben Zeile). |
-| 150 | 696 | ● | `0 & \text{if } x+t > 0` | `0 & \text{if } x+t > 1` | Tippfehler | Gegenfall zu „x+t ≤ 1“; bitte prüfen (wegen X = [0,1) ggf. „< 1“ / „≥ 1“). |
-| 150 | 730 | ◐ | `also generates a positive semigroup).` | `also generates a positive semigroup.` | Klammern | Schon in der Arbeitsliste. Schließende Klammer ohne öffnende. |
-| 151 | 754 | ○ | `&\text{ then } q \cdot B` | `&\text{then } q \cdot B` | Abstand | Führendes Leerzeichen in \text rückt die Zeile gegenüber Z. 752/753 ein; ebenso Z. 2995/2996 im array (`\text{ and there exists …}`, `\text{ such that …}`). |
-| 151 | 770 | ◐ | `$(I - q \cdot B)$` | `$(\Id - q \cdot B)$` | Notation | Identität sonst \Id (Z. 775, 779); ebenso Z. 793 und 812 `(R(1,B) - I)`. |
-| 151 | 803 | ● | `\sup\nolimits_{\|f\|_{u} \leq 1}\{ \,` | `\sup\nolimits_{\|f\|_{u} \leq 1}` | Klammern | Die hier geöffnete Mengenklammer \{ wird nie geschlossen (Z. 804 schließt nur das innere \{…\}). |
-| 151 | 820 | ◐ | `B = m^{1/k} \cdot A` | `B = m^{l/k} \cdot A` | Tippfehler | Der Laufindex l (l = 1, …, k−1) kommt sonst nicht vor; gemeint m^{l/k}; bitte prüfen. |
-| 152 | 854 | ○ | `(P') \quad $f \in C(K)_{+}$` | `$(\mathrm{P}')$ \quad $f \in C(K)_{+}$` | Notation | Im Textmodus wird ' zum Apostroph statt Strich; ebenso Z. 846 und 876. Zudem überzähliges `\,` vor „implies“. |
-| 153 | 916 | ● | `\eu^{\lambda x} d\mu(x)` | `\eu^{\lambda x} \diff{\mu(x)}` | Notation | Kursives d, sonst aufrechtes \diff (vgl. Z. 913); ebenso Z. 1499 `- d\phi` und Z. 1832 `h(\phi(s,x))ds` (→ `\ds`). |
-| 153 | 958 | ○ | `L_{11}u_{1} + \ldots + L_{1n}u_{n}` | `L_{11}u_{1} + \dots + L_{1n}u_{n}` | LaTeX | Zwischen Operatoren zentrierte Punkte; ebenso Z. 960. |
-| 154 | 1026 | ○ | `g \in C([0,1])` | `g \in C[0,1]` | Notation | Im selben Beispiel C[0,1] (Z. 992) neben C([0,1]) und C^{2}([0,1]) (Z. 995, 1032, 1034); im Kapitel sonst meist C[−1,0], C^{1}[−1,0]. Vereinheitlichen. |
-| 154 | 1029 | ◐ | `k = \frac{1}{2}\lambda\mleft(` | `k = \frac{1}{2\lambda}\mleft(` | Tippfehler | Mit Faktor λ/2 gilt λ²k − k'' = g nicht, mit 1/(2λ) schon (Original vermutlich „1/2λ“); bitte prüfen. |
-| 154 | 1041 | ○ | `\exp(\lambda^{2})` | `\exp(2\lambda)` | Tippfehler | Die Determinante des Randwertsystems für h = a e^{λx} + b e^{−λx} enthält e^{2λ}; bitte prüfen. |
-| 155 | 1112 | ◐ | `\lim_{t \to 0} 1/t(\Theta(f+tu) - \Theta(f))` | `\lim_{t \downarrow 0} \frac{1}{t}(\Theta(f+tu) - \Theta(f))` | Notation | Rechtsseitige Ableitung, also t ↓ 0 (wie Z. 1138); „1/t(…)“ zudem mehrdeutig. |
-| 156 | 1122 | ○ | `\label{prop:b2-2.3}` … `(chain rule). Let` | `\begin{proposition}[Chain rule]\label{prop:b2-2.3}` | LaTeX | Titel steht als Text im Rumpf statt als optionales Argument (vgl. [Hille-Yosida] in Part I). |
-| 156 | 1140 | ◐ | `- \Theta(k(a)) - D_{k'(a)}\Theta(k(a))\bigr]` | `- \Theta(k(a))\bigr] - D_{k'(a)}\Theta(k(a))` | Klammern | Der D-Term gehört nicht unter 1/t (vgl. Z. 1138); bitte prüfen. |
-| 156 | 1172 | ◐ | `z = (x_{0} + iy_{0})` | `z = (x_{0} + \iu y_{0})` | Notation | Kursives i, sonst \iu (Z. 1417, 1541); ebenso Z. 1179 und 1183 (`iy_{0}`, `iu_{2}`). |
-| 156 | 1177 | ◐ | `(\Theta(x_{0},y_{0})\vert u)` | `(\nabla\Theta(x_{0},y_{0})\vert u)` | Tippfehler | Gemeint ist das Skalarprodukt mit dem Gradienten; Θ(x0,y0) ist ein Skalar; bitte prüfen. |
-| 158 | 1254 | ◐ | `= \left\langle \Re\left[\left(\widehat{\sign} \bar{f}\right)(Af)\right],\phi \right\rangle` | `= \Re\bigl[(\widehat{\sign} \bar{f})(Af)\bigr](x)` | Tippfehler | Die linke Seite ist punktweise in x; rechts gehört der Wert an der Stelle x (so die auskommentierte Z. 1255), nicht die Paarung mit φ. |
-| 158 | 1317 | ◐ | `\overline{\lim}_{h \downarrow 0}` | `\limsup_{h \downarrow 0}` | Notation | Sonst \limsup (Z. 1139–1141). |
-| 159 | 1338 | ● | `\lim_{t \downarrow 0}  \frac{1}{h}` | `\lim_{h \downarrow 0}  \frac{1}{h}` | Tippfehler | Grenzübergang in h (vgl. Z. 1336/1337). |
-| 159 | 1338 | ● | `\langle (\vert T(s+h)f\vert -  \vert T(s)f\vert ,` | `\langle \vert T(s+h)f\vert - \vert T(s)f\vert,` | Klammern | Öffnende Klammer ohne Gegenstück. |
-| 161 | 1482 | ◐ | `for $(f \in D(A_{\max})$ and $ \phi \in D(A'_{\max}))$.` | `for $f \in D(A_{\max})$ and $\phi \in D(A'_{\max})$.` | Klammern | Klammerpaar über zwei Formeln verteilt; Klammern überflüssig. |
-| 161 | 1527 | ● | `D(A'_{max})` | `D(A'_{\max})` | Notation | Kursives „max“, sonst \max. |
-| 161 | 1548 | ◐ | `\int_{0}^{1} \phi(x)\, \diff{\vert f(x)\vert}` | `\int_{-1}^{0} \phi(x)\, \diff{\vert f(x)\vert}` | Tippfehler | Integrationsgrenzen; das Intervall ist [−1,0]; bitte prüfen. |
-| 161 | 1548 | ○ | `= \\` + `&= \phi(0)` | `\\` + `&= \phi(0)` | LaTeX | Gleichheitszeichen am Zeilenende und am nächsten Zeilenanfang (doppelt); sonst im Kapitel nicht so gesetzt. |
-| 162 | 1588 | ● | `\Re[\widehat{(\sign} f)(Af)]` | `\Re[(\widehat{\sign} \bar{f})(Af)]` | Klammern | Klammer im \widehat-Argument, Hut über „(sign“. Zusätzlich \bar{f} wie in (2.2.9) (ebenso Z. 1587); bitte prüfen. |
-| 162 | 1601 | ● | `$f~\in~C_{0}[-1,0)$` | `$f \in C_{0}[-1,0)$` | LaTeX | Tilden im Mathemodus erzeugen zusätzliche Abstände; ebenso Z. 2678 `=~x` und Z. 2967 `M^{-1}~+~h`. |
-| 164 | 1692 | ◐ | `C([0,1]) \times K` | `C([0,1] \times K)` | Tippfehler | Identifikation C([0,1],C(K)) mit C([0,1] × K); bitte prüfen. |
-| 164 | 1702 | ○ | `f,g \in D(\delta). \label{eq:b2-3.4} \\` | `f,g \in D(\delta), \label{eq:b2-3.4} \\` | Satzzeichen | Punkt nach der ersten von zwei Bedingungen; ggf. Punkt ans Ende von Z. 1703. |
-| 166 | 1811 | ◐ | `by Eq.~\myeqpageref{eq:a2-1.8}` | `by Part-I, Eq.~\myeqpageref{eq:a2-1.8}` | Verweis | Schon in der Arbeitsliste (S. 166, „Verweis prüfen“). Das Ziel liegt jetzt in Part I, gedruckt wird aber „(2.1.8)“, identisch mit Eq. (2.1.8) dieses Kapitels; „Part-I,“ ergänzen. |
-| 166 | 1817 | ◐ | `for all $t \geq 0$, $f \in C(K)$` | `for all $t \geq 0$, $f \in C(K)$.` | Satzzeichen | Satzpunkt fehlt (Absatzende nach abgesetzter Formel). |
-| 166 | 1838 | ● | `$f \in D(\delta)$ ,` | `$f \in D(\delta)$,` | Abstand | Leerzeichen vor Komma. |
-| 166 | 1841 | ○ | `\frac{\diff{}}{\dt}\vert_{t = 0}` | `\left.\frac{\diff{}}{\dt}\right\vert_{t = 0}` | Notation | Strich nicht skaliert; sonst \left. … \right\vert (z. B. Z. 1744). |
-| 167 | 1895 | ○ | `$A$ is \text{local}` | `$A$ is \emph{local}` | LaTeX | \text im Textmodus wirkungslos; vermutlich Hervorhebung des definierten Begriffs gemeint. |
-| 167 | 1913 | ◐ | `non-com\-mutative C*-algebras` | `non-com\-mutative \CA-algebras` | Notation | In der Überschrift (Z. 1912) \CA (C mit hochgestelltem *), im Text „C*“ mit Sternchen auf der Grundlinie; ebenso Z. 1914 (2x). |
-| 167 | 1922 | ● | `(\pm\1 - A)(D(A)) = \mathcal{A}_{h}.` | `(\pm\1 - A)(D(A)) = \mathcal{A}_{h}` | Satzzeichen | Der Satz geht nach der Formel weiter („and A is local …“). |
-| 167 | 1934 | ● | `T(t)_{t \in \R}` | `(T(t))_{t \in \R}` | Klammern | Sonst durchgehend (T(t))_{t ∈ R}. |
-| 168 | 2003 | ◐ | `T(.)f` | `T(\cdot)f` | Notation | Platzhalter sonst \cdot (z. B. Z. 2560). |
-| 171 | 2151 | ◐ | `\eu^{-ws}k_{s}(x)` | `\eu^{-\omega s}k_{s}(x)` | Notation | In (2.3.16)/(2.3.17) heißt die Konstante ω, im weiteren Beweis w; ebenso Z. 2153, 2158, 2160, 2169, 2170, 2177, 2183. |
-| 171 | 2183 | ● | `k_{t}(t)\,p(x)^{-1}` | `k_{t}(x)\,p(x)^{-1}` | Tippfehler | Argument ist x (vgl. Z. 2177). |
-| 172 | 2211 | ○ | `for all \\` | `for all` | LaTeX | Manueller Zeilenumbruch im Fließtext; ebenso Z. 2764 (`\\is contained`) und 2767 (`$\delta_{m}$\\`). |
-| 173 | 2241 | ● | `p(\phi_{t}(x)^{-1}` | `p(\phi_{t}(x))^{-1}` | Klammern | Schließende Klammer fehlt (vgl. (2.3.15)). |
-| 173 | 2258 | ◐ | `$V^{-1}\delta V$ generates a positive group` | `$V\delta V^{-1}$ generates a positive group` | Tippfehler | Passend zu (2.3.18) A = VδV^{-1} + h und Z. 2270; bitte prüfen. |
-| 173 | 2299 | ○ | `denotes the scalar product in $\R^{n}$` | `denotes the scalar product in $\R^{n}$.` | Satzzeichen | Satzpunkt am Ende des Beispiels fehlt. |
-| 173 | 2308 | ● | `f(\phi(x,t))` | `f(\phi(t,x))` | Tippfehler | Argumentreihenfolge; sonst φ(t,x). |
-| 173 | 2309 | ● | `\big(\mathrm{grad}\: f)(\phi(t,x)) \big\vert F(\phi(t,x))\big)` | `\big((\mathrm{grad}\: f)(\phi(t,x)) \big\vert F(\phi(t,x))\big)` | Klammern | Öffnende Klammer vor grad fehlt (vgl. (2.3.21)). |
-| 173 | 2347 | ◐ | `\nabla(f \circ \phi_{t})(x) = (\nabla f)(\phi_{t}(x))` | `[\mathrm{grad}\:(f \circ \phi_{t})](x) = (\mathrm{grad}\: f)(\phi_{t}(x))` | Notation | Im selben Beispiel sonst „grad“ (Z. 2289–2315); ebenso Z. 2349, 2352, 2353 (überarbeitete Passage). |
-| 175 | 2405 | ◐ | `-\infty \leq c \text{ and } m(c) = 0` | `-\infty < c \text{ and } m(c) = 0` | Tippfehler | Analog zu „d < ∞“ in Z. 2413; der Fall c = −∞ ist die Alternative „a = c = −∞“. |
-| 175 | 2508 | ● | `Bg = V^{-1}\delta_{m}V = V^{-1}(m(g \circ q)')` | `Bg = V^{-1}\delta_{m}Vg = V^{-1}(m(g \circ q)')` | Tippfehler | g fehlt. |
-| 176 | 2532 | ● | `C^{1}(a',b)` | `C^{1}(a',b')` | Tippfehler | Strich fehlt. |
-| 176 | 2546 | ○ | `B_{1}u(t) \quad u(0) = f.` | `B_{1}u(t), \quad u(0) = f.` | Satzzeichen | Komma vor \quad. |
-| 176 | 2576 | ○ | `\quad x \in (a,b).` | `\quad (x \in (a,b)).` | Notation | Laufbereich sonst in Klammern (z. B. Z. 2569); ebenso Z. 2621. |
-| 176 | 2588 | ◐ | `g(q_{n}^{-1}(q_{n}(x) + t))` | `g(g_{n}^{-1}(g_{n}(x) + t))` | Notation | Die Funktionen heißen in Remark~\ref{rem:b2-3.17} bzw. in (2.3.22) g_n; q_n wird in Theorem~\ref{thm:b2-3.24} anders verwendet; ebenso rechte Seite. |
-| 178 | 2758 | ◐ | `then $D(\delta)$ contains` | `then $D(\delta_{m})$ contains` | Tippfehler | Gemeint ist der Definitionsbereich von δ_m. |
-| 178 | 2767 | ◐ | `differentiable functions in $D_{0}(\delta_{m})$` | `differentiable functions in $D(\delta_{m})$` | Tippfehler | Zirkuläre Definition; vgl. Theorem~\ref{thm:b2-3.17}. |
-| 180 | 2865 | ◐ | `constructed from $m$ in Theorem~\ref{thm:b2-3.17}` | `constructed from $m$ in Remark~\ref{rem:b2-3.17}` | Verweis | Die Konstruktion des Flusses (2.3.22) steht nach der Aufteilung jetzt in der Remark; ebenso Z. 2931. |
-| 182 | 2970 | ○ | `$A = V\delta_{m}V^{-1} + h$` | `$A = V^{-1}\delta_{m}V + h$` | Notation | Die Aussage (2.3.24) lautet A = V^{-1}δ_mV + h; mit V = MU passt die Form im Beweis nicht dazu (dann V = (MU)^{-1}); bitte prüfen. |
-| 182 | 2975 | ● | `\phi(a,t) = a` … `\phi(b,t) = b` | `\phi(t,a) = a` … `\phi(t,b) = b` | Tippfehler | Argumentreihenfolge (vgl. Z. 2978). |
-| 182 | 2981 | ◐ | `\widetilde{\delta}_{m}` | `\tilde{\delta}_{m}` | Notation | Sonst \tilde{\delta}_m (Z. 2992–3037); sichtbar verschiedene Akzentbreite (2x in der Zeile). |
-| 183 | 3050 | ◐ | `A = V^{-1}\delta_{m}V + h` | `A = V^{-1}\tilde{\delta}_{m}V + h` | Notation | Auf C[a,b] ist der Operator δ̃_m (vgl. Theorem~\ref{thm:b2-3.27}); bitte prüfen. |
-| 184 | 3077 | ● | `(Theorem~\ref{thm:b2-3.14} )` | `(Theorem~\ref{thm:b2-3.14})` | Abstand | Schon in der Arbeitsliste. Leerzeichen vor „)“. |
+| 142 | 58 | ○ | `(n/tR(n/t,A))^{n}` | `((n/t)R(n/t,A))^{n}` | Notation | **Umgesetzt.** „n/tR“ ist mehrdeutig (liest sich wie n/(tR…)); n/t klammern. |
+| 142 | 101 | ○ | `\mleft( (\eu^{tA}f(x) - f(x)) \mright)` | `\bigl( (\eu^{tA}f)(x) - f(x) \bigr)` | Klammern | **Umgesetzt.** Doppelte Klammer; gemeint ist (\eu^{tA}f)(x), vgl. Z. 102. |
+| 142 | 102 | ● | `\mleft( (\eu^{tA}f(x) \mright)` | `(\eu^{tA}f)(x)` | Klammern | **Umgesetzt.** Innere öffnende Klammer ohne Gegenstück; gedruckt „((e^{tA}f(x))“. |
+| 142 | 146 | ◐ | `This shows~\ref{thm:b2-1.3-2} to hold.` | `This shows~\ref{thm:b2-1.3-3} to hold.` | Verweis | **Umgesetzt.** Im Beweisschritt (b) ⇒ (c) wird A + ‖A‖Id ≥ 0, also (c), gezeigt; bitte prüfen. |
+| 142 | 152 | ◐ | `\qedhere \qedhere` | `\qedhere` | LaTeX | **Umgesetzt.** \qedhere steht doppelt (Z. 152/153). |
+| 144 | 225 | ◐ | `0 \leq  u \in C(K)` | `0 \ll u \in C(K)` | Tippfehler | **Umgesetzt.** Alle genannten Stellen. Z. 733 (`0 \leq q`) bewusst nicht geändert, dort genügt q ≥ 0. Gemeint ist ein strikt positives u (vgl. Z. 246, 461, 629, 638: „strictly positive“ bzw. u ≫ 0); vermutlich ≪ bei der Konvertierung zu ≤ geworden. Ebenso Z. 251, 423, 474, 561, 605, 732, 823 (jeweils u), 1861 (p, vgl. Satz: „strictly positive p“) und 2260 (p mit inf p > 0). Bitte prüfen. |
+| 144 | 247 | ○ | `\{u \in C(K): u \gg 0\}` | `\{u \in C(K) \colon u \gg 0\}` | Notation | **Umgesetzt.** Sonst \colon in Mengenklammern (anderer Abstand); ebenso Z. 2455, 2463, 2664, 2669. |
+| 144 | 263 | ◐ | `\sup_{\lambda \geq \omega}` | `\sup_{\lambda \geq w}` | Tippfehler | **Umgesetzt.** Im selben Ausdruck und in Theorem~\ref{thm:b2-1.8} heißt die Konstante w, nicht ω. |
+| 146 | 389 | ● | `\textcite{greinervoigtwolff:1981}` + Zeilenumbruch + `)` | `\textcite{greinervoigtwolff:1981})` | Abstand | **Umgesetzt.** Schon in der Arbeitsliste. Der Zeilenumbruch erzeugt ein Leerzeichen vor „)“. |
+| 147 | 434 | ○ | `(f \in C(K)\,)` | `(f \in C(K))` | Abstand | **Umgesetzt.** Überzähliger Abstand vor „)“; ebenso Z. 902 `\,($f \in C[-1,0]$\,)`. |
+| 148 | 568 | ● | `$\lambda > \lambda_{0}$ ,` | `$\lambda > \lambda_{0}$,` | Abstand | **Umgesetzt.** Leerzeichen vor Komma. |
+| 148 | 588 | ◐ | `(see Eq.~\myeqpageref{eq:a3-1.3})` | `(see Part-I, Eq.~\myeqpageref{eq:a3-1.3})` | Verweis | **Umgesetzt.** Verweis auf Part I ohne „Part-I“; gedruckt „(3.1.3)“, kollidiert mit der Gleichungsnummerierung in Part II, Kap. 3. |
+| 149 | 636 | ○ | `Au = \lambda u - 1` | `Au = \lambda u - \1` | Notation | **Umgesetzt.** Konstante Funktion sonst \1 (vgl. u = R(λ,A)\1 in derselben Zeile). |
+| 150 | 696 | ● | `0 & \text{if } x+t > 0` | `0 & \text{if } x+t > 1` | Tippfehler | **Umgesetzt.** Gegenfall zu „x+t ≤ 1“; bitte prüfen (wegen X = [0,1) ggf. „< 1“ / „≥ 1“). |
+| 150 | 730 | ◐ | `also generates a positive semigroup).` | `also generates a positive semigroup.` | Klammern | **Umgesetzt.** Schon in der Arbeitsliste. Schließende Klammer ohne öffnende. |
+| 151 | 754 | ○ | `&\text{ then } q \cdot B` | `&\text{then } q \cdot B` | Abstand | **Umgesetzt.** Führendes Leerzeichen in \text rückt die Zeile gegenüber Z. 752/753 ein; ebenso Z. 2995/2996 im array (`\text{ and there exists …}`, `\text{ such that …}`). |
+| 151 | 770 | ◐ | `$(I - q \cdot B)$` | `$(\Id - q \cdot B)$` | Notation | **Umgesetzt.** Identität sonst \Id (Z. 775, 779); ebenso Z. 793 und 812 `(R(1,B) - I)`. |
+| 151 | 803 | ● | `\sup\nolimits_{\|f\|_{u} \leq 1}\{ \,` | `\sup\nolimits_{\|f\|_{u} \leq 1}` | Klammern | **Umgesetzt.** Die hier geöffnete Mengenklammer \{ wird nie geschlossen (Z. 804 schließt nur das innere \{…\}). |
+| 151 | 820 | ◐ | `B = m^{1/k} \cdot A` | `B = m^{l/k} \cdot A` | Tippfehler | **Umgesetzt.** Zusätzlich Laufbereich l = 0, …, k−1 (der erste Schritt geht von B = A aus). Der Laufindex l (l = 1, …, k−1) kommt sonst nicht vor; gemeint m^{l/k}; bitte prüfen. |
+| 152 | 854 | ○ | `(P') \quad $f \in C(K)_{+}$` | `$(\mathrm{P}')$ \quad $f \in C(K)_{+}$` | Notation | **Umgesetzt.** Im Textmodus wird ' zum Apostroph statt Strich; ebenso Z. 846 und 876. Zudem überzähliges `\,` vor „implies“. |
+| 153 | 916 | ● | `\eu^{\lambda x} d\mu(x)` | `\eu^{\lambda x} \diff{\mu(x)}` | Notation | **Umgesetzt.** Kursives d, sonst aufrechtes \diff (vgl. Z. 913); ebenso Z. 1499 `- d\phi` und Z. 1832 `h(\phi(s,x))ds` (→ `\ds`). |
+| 153 | 958 | ○ | `L_{11}u_{1} + \ldots + L_{1n}u_{n}` | `L_{11}u_{1} + \dots + L_{1n}u_{n}` | LaTeX | **Umgesetzt.** Zwischen Operatoren zentrierte Punkte; ebenso Z. 960. |
+| 154 | 1026 | ○ | `g \in C([0,1])` | `g \in C[0,1]` | Notation | **Umgesetzt.** Im ganzen Beispiel C[0,1] bzw. C^{2}[0,1]. Im selben Beispiel C[0,1] (Z. 992) neben C([0,1]) und C^{2}([0,1]) (Z. 995, 1032, 1034); im Kapitel sonst meist C[−1,0], C^{1}[−1,0]. Vereinheitlichen. |
+| 154 | 1029 | ◐ | `k = \frac{1}{2}\lambda\mleft(` | `k = \frac{1}{2\lambda}\mleft(` | Tippfehler | **Umgesetzt.** Mit Faktor λ/2 gilt λ²k − k'' = g nicht, mit 1/(2λ) schon (Original vermutlich „1/2λ“); bitte prüfen. |
+| 154 | 1041 | ○ | `\exp(\lambda^{2})` | `\exp(2\lambda)` | Tippfehler | **Umgesetzt.** Die Determinante des Randwertsystems für h = a e^{λx} + b e^{−λx} enthält e^{2λ}; bitte prüfen. |
+| 155 | 1112 | ◐ | `\lim_{t \to 0} 1/t(\Theta(f+tu) - \Theta(f))` | `\lim_{t \downarrow 0} \frac{1}{t}(\Theta(f+tu) - \Theta(f))` | Notation | **Umgesetzt.** Rechtsseitige Ableitung, also t ↓ 0 (wie Z. 1138); „1/t(…)“ zudem mehrdeutig. |
+| 156 | 1122 | ○ | `\label{prop:b2-2.3}` … `(chain rule). Let` | `\begin{proposition}[Chain rule]\label{prop:b2-2.3}` | LaTeX | **Umgesetzt.** Titel steht als Text im Rumpf statt als optionales Argument (vgl. [Hille-Yosida] in Part I). |
+| 156 | 1140 | ◐ | `- \Theta(k(a)) - D_{k'(a)}\Theta(k(a))\bigr]` | `- \Theta(k(a))\bigr] - D_{k'(a)}\Theta(k(a))` | Klammern | **Umgesetzt.** Der D-Term gehört nicht unter 1/t (vgl. Z. 1138); bitte prüfen. |
+| 156 | 1172 | ◐ | `z = (x_{0} + iy_{0})` | `z = (x_{0} + \iu y_{0})` | Notation | **Umgesetzt.** Kursives i, sonst \iu (Z. 1417, 1541); ebenso Z. 1179 und 1183 (`iy_{0}`, `iu_{2}`). |
+| 156 | 1177 | ◐ | `(\Theta(x_{0},y_{0})\vert u)` | `(\nabla\Theta(x_{0},y_{0})\vert u)` | Tippfehler | **Umgesetzt.** Gemeint ist das Skalarprodukt mit dem Gradienten; Θ(x0,y0) ist ein Skalar; bitte prüfen. |
+| 158 | 1254 | ◐ | `= \left\langle \Re\left[\left(\widehat{\sign} \bar{f}\right)(Af)\right],\phi \right\rangle` | `= \Re\bigl[(\widehat{\sign} \bar{f})(Af)\bigr](x)` | Tippfehler | **Umgesetzt.** Die linke Seite ist punktweise in x; rechts gehört der Wert an der Stelle x (so die auskommentierte Z. 1255), nicht die Paarung mit φ. |
+| 158 | 1317 | ◐ | `\overline{\lim}_{h \downarrow 0}` | `\limsup_{h \downarrow 0}` | Notation | **Umgesetzt.** Sonst \limsup (Z. 1139–1141). |
+| 159 | 1338 | ● | `\lim_{t \downarrow 0}  \frac{1}{h}` | `\lim_{h \downarrow 0}  \frac{1}{h}` | Tippfehler | **Umgesetzt.** Grenzübergang in h (vgl. Z. 1336/1337). |
+| 159 | 1338 | ● | `\langle (\vert T(s+h)f\vert -  \vert T(s)f\vert ,` | `\langle \vert T(s+h)f\vert - \vert T(s)f\vert,` | Klammern | **Umgesetzt.** Öffnende Klammer ohne Gegenstück. |
+| 161 | 1482 | ◐ | `for $(f \in D(A_{\max})$ and $ \phi \in D(A'_{\max}))$.` | `for $f \in D(A_{\max})$ and $\phi \in D(A'_{\max})$.` | Klammern | **Umgesetzt.** Klammerpaar über zwei Formeln verteilt; Klammern überflüssig. |
+| 161 | 1527 | ● | `D(A'_{max})` | `D(A'_{\max})` | Notation | **Umgesetzt.** Kursives „max“, sonst \max. |
+| 161 | 1548 | ◐ | `\int_{0}^{1} \phi(x)\, \diff{\vert f(x)\vert}` | `\int_{-1}^{0} \phi(x)\, \diff{\vert f(x)\vert}` | Tippfehler | **Umgesetzt.** Integrationsgrenzen; das Intervall ist [−1,0]; bitte prüfen. |
+| 161 | 1548 | ○ | `= \\` + `&= \phi(0)` | `\\` + `&= \phi(0)` | LaTeX | **Umgesetzt.** Gleichheitszeichen am Zeilenende und am nächsten Zeilenanfang (doppelt); sonst im Kapitel nicht so gesetzt. |
+| 162 | 1588 | ● | `\Re[\widehat{(\sign} f)(Af)]` | `\Re[(\widehat{\sign} \bar{f})(Af)]` | Klammern | **Umgesetzt.** Klammer im \widehat-Argument, Hut über „(sign“. Zusätzlich \bar{f} wie in (2.2.9) (ebenso Z. 1587); bitte prüfen. |
+| 162 | 1601 | ● | `$f~\in~C_{0}[-1,0)$` | `$f \in C_{0}[-1,0)$` | LaTeX | **Umgesetzt.** Tilden im Mathemodus erzeugen zusätzliche Abstände; ebenso Z. 2678 `=~x` und Z. 2967 `M^{-1}~+~h`. |
+| 164 | 1692 | ◐ | `C([0,1]) \times K` | `C([0,1] \times K)` | Tippfehler | **Umgesetzt.** Identifikation C([0,1],C(K)) mit C([0,1] × K); bitte prüfen. |
+| 164 | 1702 | ○ | `f,g \in D(\delta). \label{eq:b2-3.4} \\` | `f,g \in D(\delta), \label{eq:b2-3.4} \\` | Satzzeichen | **Umgesetzt.** Punkt ans Ende von Z. 1703 gesetzt. Punkt nach der ersten von zwei Bedingungen; ggf. Punkt ans Ende von Z. 1703. |
+| 166 | 1811 | ◐ | `by Eq.~\myeqpageref{eq:a2-1.8}` | `by Part-I, Eq.~\myeqpageref{eq:a2-1.8}` | Verweis | **Umgesetzt.** Schon in der Arbeitsliste (S. 166, „Verweis prüfen“). Das Ziel liegt jetzt in Part I, gedruckt wird aber „(2.1.8)“, identisch mit Eq. (2.1.8) dieses Kapitels; „Part-I,“ ergänzen. |
+| 166 | 1817 | ◐ | `for all $t \geq 0$, $f \in C(K)$` | `for all $t \geq 0$, $f \in C(K)$.` | Satzzeichen | **Umgesetzt.** Satzpunkt fehlt (Absatzende nach abgesetzter Formel). |
+| 166 | 1838 | ● | `$f \in D(\delta)$ ,` | `$f \in D(\delta)$,` | Abstand | **Umgesetzt.** Leerzeichen vor Komma. |
+| 166 | 1841 | ○ | `\frac{\diff{}}{\dt}\vert_{t = 0}` | `\left.\frac{\diff{}}{\dt}\right\vert_{t = 0}` | Notation | **Umgesetzt.** Strich nicht skaliert; sonst \left. … \right\vert (z. B. Z. 1744). |
+| 167 | 1895 | ○ | `$A$ is \text{local}` | `$A$ is \emph{local}` | LaTeX | **Umgesetzt.** \text im Textmodus wirkungslos; vermutlich Hervorhebung des definierten Begriffs gemeint. |
+| 167 | 1913 | ◐ | `non-com\-mutative C*-algebras` | `non-com\-mutative \CA-algebras` | Notation | **Umgesetzt.** In der Überschrift (Z. 1912) \CA (C mit hochgestelltem *), im Text „C*“ mit Sternchen auf der Grundlinie; ebenso Z. 1914 (2x). |
+| 167 | 1922 | ● | `(\pm\1 - A)(D(A)) = \mathcal{A}_{h}.` | `(\pm\1 - A)(D(A)) = \mathcal{A}_{h}` | Satzzeichen | **Umgesetzt.** Der Satz geht nach der Formel weiter („and A is local …“). |
+| 167 | 1934 | ● | `T(t)_{t \in \R}` | `(T(t))_{t \in \R}` | Klammern | **Umgesetzt.** Sonst durchgehend (T(t))_{t ∈ R}. |
+| 168 | 2003 | ◐ | `T(.)f` | `T(\cdot)f` | Notation | **Umgesetzt.** Platzhalter sonst \cdot (z. B. Z. 2560). |
+| 171 | 2151 | ◐ | `\eu^{-ws}k_{s}(x)` | `\eu^{-\omega s}k_{s}(x)` | Notation | **Umgesetzt.** Im ganzen Beweis ω. In (2.3.16)/(2.3.17) heißt die Konstante ω, im weiteren Beweis w; ebenso Z. 2153, 2158, 2160, 2169, 2170, 2177, 2183. |
+| 171 | 2183 | ● | `k_{t}(t)\,p(x)^{-1}` | `k_{t}(x)\,p(x)^{-1}` | Tippfehler | **Umgesetzt.** Argument ist x (vgl. Z. 2177). |
+| 172 | 2211 | ○ | `for all \\` | `for all` | LaTeX | **Umgesetzt.** Manueller Zeilenumbruch im Fließtext; ebenso Z. 2764 (`\\is contained`) und 2767 (`$\delta_{m}$\\`). |
+| 173 | 2241 | ● | `p(\phi_{t}(x)^{-1}` | `p(\phi_{t}(x))^{-1}` | Klammern | **Umgesetzt.** Schließende Klammer fehlt (vgl. (2.3.15)). |
+| 173 | 2258 | ◐ | `$V^{-1}\delta V$ generates a positive group` | `$V\delta V^{-1}$ generates a positive group` | Tippfehler | **Umgesetzt.** Passend zu (2.3.18) A = VδV^{-1} + h und Z. 2270; bitte prüfen. |
+| 173 | 2299 | ○ | `denotes the scalar product in $\R^{n}$` | `denotes the scalar product in $\R^{n}$.` | Satzzeichen | **Umgesetzt.** Satzpunkt am Ende des Beispiels fehlt. |
+| 173 | 2308 | ● | `f(\phi(x,t))` | `f(\phi(t,x))` | Tippfehler | **Umgesetzt.** Argumentreihenfolge; sonst φ(t,x). |
+| 173 | 2309 | ● | `\big(\mathrm{grad}\: f)(\phi(t,x)) \big\vert F(\phi(t,x))\big)` | `\big((\mathrm{grad}\: f)(\phi(t,x)) \big\vert F(\phi(t,x))\big)` | Klammern | **Umgesetzt.** Öffnende Klammer vor grad fehlt (vgl. (2.3.21)). |
+| 173 | 2347 | ◐ | `\nabla(f \circ \phi_{t})(x) = (\nabla f)(\phi_{t}(x))` | `[\mathrm{grad}\:(f \circ \phi_{t})](x) = (\mathrm{grad}\: f)(\phi_{t}(x))` | Notation | **Umgesetzt.** Im selben Beispiel sonst „grad“ (Z. 2289–2315); ebenso Z. 2349, 2352, 2353 (überarbeitete Passage). |
+| 175 | 2405 | ◐ | `-\infty \leq c \text{ and } m(c) = 0` | `-\infty < c \text{ and } m(c) = 0` | Tippfehler | **Umgesetzt.** Analog zu „d < ∞“ in Z. 2413; der Fall c = −∞ ist die Alternative „a = c = −∞“. |
+| 175 | 2508 | ● | `Bg = V^{-1}\delta_{m}V = V^{-1}(m(g \circ q)')` | `Bg = V^{-1}\delta_{m}Vg = V^{-1}(m(g \circ q)')` | Tippfehler | **Umgesetzt.** g fehlt. |
+| 176 | 2532 | ● | `C^{1}(a',b)` | `C^{1}(a',b')` | Tippfehler | **Umgesetzt.** Strich fehlt. |
+| 176 | 2546 | ○ | `B_{1}u(t) \quad u(0) = f.` | `B_{1}u(t), \quad u(0) = f.` | Satzzeichen | **Umgesetzt.** Komma vor \quad. |
+| 176 | 2576 | ○ | `\quad x \in (a,b).` | `\quad (x \in (a,b)).` | Notation | **Umgesetzt.** Laufbereich sonst in Klammern (z. B. Z. 2569); ebenso Z. 2621. |
+| 176 | 2588 | ◐ | `g(q_{n}^{-1}(q_{n}(x) + t))` | `g(g_{n}^{-1}(g_{n}(x) + t))` | Notation | **Umgesetzt.** Die Funktionen heißen in Remark~\ref{rem:b2-3.17} bzw. in (2.3.22) g_n; q_n wird in Theorem~\ref{thm:b2-3.24} anders verwendet; ebenso rechte Seite. |
+| 178 | 2758 | ◐ | `then $D(\delta)$ contains` | `then $D(\delta_{m})$ contains` | Tippfehler | **Umgesetzt.** Gemeint ist der Definitionsbereich von δ_m. |
+| 178 | 2767 | ◐ | `differentiable functions in $D_{0}(\delta_{m})$` | `differentiable functions in $D(\delta_{m})$` | Tippfehler | **Umgesetzt.** Zirkuläre Definition; vgl. Theorem~\ref{thm:b2-3.17}. |
+| 180 | 2865 | ◐ | `constructed from $m$ in Theorem~\ref{thm:b2-3.17}` | `constructed from $m$ in Remark~\ref{rem:b2-3.17}` | Verweis | **Umgesetzt.** Die Konstruktion des Flusses (2.3.22) steht nach der Aufteilung jetzt in der Remark; ebenso Z. 2931. |
+| 182 | 2970 | ○ | `$A = V\delta_{m}V^{-1} + h$` | `$A = V^{-1}\delta_{m}V + h$` | Notation | **Umgesetzt.** Die Aussage (2.3.24) lautet A = V^{-1}δ_mV + h; mit V = MU passt die Form im Beweis nicht dazu (dann V = (MU)^{-1}); bitte prüfen. |
+| 182 | 2975 | ● | `\phi(a,t) = a` … `\phi(b,t) = b` | `\phi(t,a) = a` … `\phi(t,b) = b` | Tippfehler | **Umgesetzt.** Argumentreihenfolge (vgl. Z. 2978). |
+| 182 | 2981 | ◐ | `\widetilde{\delta}_{m}` | `\tilde{\delta}_{m}` | Notation | **Umgesetzt.** Sonst \tilde{\delta}_m (Z. 2992–3037); sichtbar verschiedene Akzentbreite (2x in der Zeile). |
+| 183 | 3050 | ◐ | `A = V^{-1}\delta_{m}V + h` | `A = V^{-1}\tilde{\delta}_{m}V + h` | Notation | **Umgesetzt.** Auf C[a,b] ist der Operator δ̃_m (vgl. Theorem~\ref{thm:b2-3.27}); bitte prüfen. |
+| 184 | 3077 | ● | `(Theorem~\ref{thm:b2-3.14} )` | `(Theorem~\ref{thm:b2-3.14})` | Abstand | **Umgesetzt.** Schon in der Arbeitsliste. Leerzeichen vor „)“. |
 
 ### Teil II, Kap. 3 – Spectral Theory of Positive Semigroups on C₀(X) (`part-b/chap-b3.tex`)
 

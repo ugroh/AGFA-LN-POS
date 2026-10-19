@@ -235,6 +235,48 @@ Bei diesen Punkten hat der Quelltext (Label-Namen) das gemeinte Verweisziel geze
 | 489 | This also follows from the example given above above and the fact | from the example given above and the fact |  |
 | 490 | By Greiner et al. [12, Theorem 5.3.1]] one has | By Greiner et al. [12, Theorem 5.3.1] one has |  |
 
+Prüfpunkte Updated Notes (aus `updated-notes-pruefpunkte.md`, von Ulrich am Original geprüft, umgesetzt 19.10.2026):
+
+- Part III, Kap. 2 (Edeko–Gerlach–Kühner, `un-part-c.tex`): „continuous flow on a compact Borel probability space“ → „continuous flow on a compact space equipped with a Borel probability measure“; dazu „measure-preserving“ mit Bindestrich.
+- Part III, Kap. 2 (Domination, zbmath00417080): Text richtig, keine Änderung.
+- Part I, Kap. 2 (Lumer–Phillips-Variante, zbmath07950102): Text richtig, keine Änderung.
+
+## Formelkorrekturen Kap. 1, Teil I–III (18.10.2026)
+
+Umgesetzt sind alle Punkte zu Kap. 1 aus den Formellisten `korrekturen-mathe-part-a/b/c.md`, nachdem Rainer Nagel sie durchgesehen hat (seine Anmerkungen in `rana/korrekturen-mathe-part-*.pdf` betreffen nur spätere Kapitel). In den Listen sind die Zeilen mit **Umgesetzt** markiert; Einzelheiten stehen dort.
+
+| Teil | Datei | Punkte | davon schon vorher erledigt |
+|---|---|---|---|
+| I | `part-a/chap-a1.tex` | 31 | 3 (Z. 767, 881, 1159) |
+| II | `part-b/chap-b1.tex` | 2 | – |
+| III | `part-c/chap-c1.tex` | 14 | 3 (Z. 476, 520, 529) |
+
+Inhaltlich relevant sind vor allem:
+
+- **Teil I, Abschnitt 1.2.2 (Matrixhalbgruppen, S. 9):** `1/2` → `s/2` im Exponenten.
+- **Teil I, Abschnitt 1.3.5 (adjungierte Halbgruppe, S. 22):** `f_f'` → `\xi_f'` und `0 < s \leq t_0` statt `0 \leq s`.
+- **Teil I, Tensorprodukte:** „least cross norm on E ⊗ F“ statt „E × F“; im Beweis der Proposition in Abschnitt 1.3.8 sind S und T jetzt richtig zugeordnet (`S(h)f ⊗ (T(h)g − g) + (S(h)f − f) ⊗ g`).
+- **Teil I, 𝓕-Produkt:** `E_𝓕^T` → `E_𝓕^𝒯` wie in Teil II/III; `T(t)_F` → `T(t)_𝓕`.
+- **Teil III, Kap. 1:** `\inf(\sup_α f_α, h)` (fehlende Klammer), AL-Raum `(E, f')` statt `(E, x')`, Bedingung „for f ∈ E₊“ hinter die Mengenklammer, `\mathcal{L}^r(E,F)` einheitlich mit Komma, aufrechtes i, Zentrum `𝒵(E)`.
+
+Der Rest sind Satz- und Notationsfragen: Klammern, `\eqqcolon`, `\limsup`, `\mapsto`, `\setminus`, aufrechtes d, Mathemodus.
+
+## Kap. 2, Teil I–III (19.10.2026)
+
+Alle offenen Punkte aus `korrekturen-text-part-a/b/c.md` und `korrekturen-mathe-part-a/b/c.md` zu Kap. 2 sind umgesetzt (`chap-a2.tex`, `chap-b2.tex`, `chap-c2.tex`, `bib/ln-references.bib`) und in den Listen mit **Umgesetzt** markiert. Die Punkte aus `math-error-part-a/b/c.md` zu Kap. 2 sind davon nicht betroffen und weiter offen.
+
+Abweichungen und Ergänzungen:
+
+- **Teil I, Example 2.1.4:** Lösung als u(t) = (f − tBg, g), passend zur Matrix. Der Vorzeichenfehler in Z. 409 (math-error-part-a) ist damit mit (λf + Bg, λg) zu beheben, nicht durch Änderung der Matrix.
+- **Teil I:** `$p$-contractive`/`$p$-dissipative` überall außer in `\index`-Einträgen. Notes-Aufzählung jetzt „Section 2.1/2.2/2.3“, ebenso in Kap. 2 von Teil II und III; anschließend auch in Kap. 3 und 4 aller Teile (Teil IV: Kap. 3 und 4) „Section k.1:“ usw.
+- **Teil II, Theorem 2.1.16:** Neben m^{l/k} auch der Laufbereich l = 0, …, k−1 (der erste Schritt geht von B = A aus).
+- **Teil II, 0 ≪ u:** An allen genannten Stellen; Z. 733 (`0 \leq q`) bewusst nicht, dort genügt q ≥ 0.
+- **Teil II:** „neighbourhood“ → „neighborhood“ (amerikanisch, wie „behavior“). de Laubenfels als „de Laubenfels~\cite{…}“, Kurose mit `\cite`, weil biblatex sonst Präfix bzw. Namen doppelt setzt.
+- **Teil III:** van Casteren (1984) jetzt als vancasteren:1984 (Integral Equations Operator Theory 7) zitiert – im Literaturverzeichnis der 1. Auflage belegt (`LN-1184/LN-Book/ln-biblio.pdf`), von Ulrich bestätigt. Ebenfalls mit „van Casteren~\cite{…}“.
+- **Teil III:** Die Felder in (2.1.7) und (2.3.11) mit `aligned` statt `array`.
+- **Bib:** Bénilan–Picard „linéaires“, Picard „accrétifs“, „Special Year in Analysis“, „North-Holland“ in allen Einträgen, Wolff „M. P. H.“ in allen Einträgen, Reihe „Lecture Notes in Math.“ bei arendt:1984a und greiner:1984a, `note = {Preprint}` bei lotz:1982 (veröffentlicht als Math. Z. 190 (1985), steht als lotz:1985 schon im Verzeichnis); miyajimaokazawa:1984 auf die veröffentlichte Fassung umgestellt: Pacific J. Math. 125 (1986) 161–176, Schlüssel beibehalten.
+- **Nicht geändert:** Anführungszeichen um Titel, Jahresformat und „Vol.“ in den Literaturlisten kommen aus dem biblatex-Stil und betreffen alle Einträge.
+
 ## Bereinigung der Bib-Dateien (18.10.2026)
 
 Beide Literaturdateien unter `LN-Book-Springer/bib/` sind durchgesehen und bereinigt.
@@ -267,15 +309,15 @@ Alle zitierten Zeitschriften- und Sammelbandbeiträge wurden einzeln mit zbMATH 
 | feller:1952 | Titel „parabolic differential equations“ |
 | gearhart:1978 | Titel „on Hilbert space“ |
 | greinernagel:1982 | Band 9 → 61 (die 9 war die Serie) |
-| grohkuemmerer:1982 | Titel „Bibounded operators on W*-algebras“; Seitenformat |
+| grohkuemmerer:1982 | Seitenangabe vereinheitlicht |
 | hadeler:1978 | Jahr 1978 → 1979 |
 | kamke:1932 | Jahr 1932 → 1936; Gleichung im Titel ergänzt |
 | kato:1986 | Seiten 63–78 ergänzt |
 | kurose:1981 | Titel „derivation in C(I)“ |
 | lotz:1984 | Herausgeber Fuchssteiner, B.; Seiten 117–133 ergänzt |
 | lotz:1986 | Seiten 137–156 ergänzt |
-| lumer:1974, lumer:1974a | Jahr 1973 |
-| lumer:1974b, lumer:1975 | Band 25, Jahr 1975, Seiten 409–446; Titel „opérateurs locaux, et …“ |
+| lumer:1974, lumer:1974a | Jahr 1973; Titel „Perturbation“ (Singular, 19.10.) |
+| lumer:1974b, lumer:1975 | Band 25, Jahr 1975, Seiten 409–446; Titel „opérateurs locaux et …“ ohne Komma (19.10., nach Original-PDF der Annales) |
 | luxemburg:1979 | Verlag und Reihe University of Arkansas |
 | miyajima:1986 | Seiten 241–246 ergänzt |
 | nagel:1984 | Seiten 145–154 ergänzt |
@@ -312,3 +354,6 @@ Abweichung von zbMATH bewusst belassen: greiner:1982 (zbMATH: 3. Abh., 30 S.), k
 
 In `preamble/ln-biblatex.sty` steht vor dem Zeilenumbruch in den Literatureinträgen jetzt ein Punkt (`\setunit{\addperiod\par\nobreak}`).
 
+### Nachprüfung (19.10.2026)
+
+Alle oben aufgeführten Korrekturen sind in den aktuellen Dateien `ln-references.bib` und `ln-references-EN.bib` vorhanden; nichts wurde überschrieben. Die Springer-Fahne beruht bei Lumer [26]/[27] (Part II, Kap. 2) noch auf dem Stand vor dem 18.10.; das abgegebene PDF enthält die richtigen Angaben.
