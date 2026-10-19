@@ -235,6 +235,12 @@ Bei diesen Punkten hat der Quelltext (Label-Namen) das gemeinte Verweisziel geze
 | 489 | This also follows from the example given above above and the fact | from the example given above and the fact |  |
 | 490 | By Greiner et al. [12, Theorem 5.3.1]] one has | By Greiner et al. [12, Theorem 5.3.1] one has |  |
 
+Prüfpunkte Updated Notes (aus `updated-notes-pruefpunkte.md`, von Ulrich am Original geprüft, umgesetzt 19.10.2026):
+
+- Part III, Kap. 2 (Edeko–Gerlach–Kühner, `un-part-c.tex`): „continuous flow on a compact Borel probability space“ → „continuous flow on a compact space equipped with a Borel probability measure“; dazu „measure-preserving“ mit Bindestrich.
+- Part III, Kap. 2 (Domination, zbmath00417080): Text richtig, keine Änderung.
+- Part I, Kap. 2 (Lumer–Phillips-Variante, zbmath07950102): Text richtig, keine Änderung.
+
 ## Formelkorrekturen Kap. 1, Teil I–III (18.10.2026)
 
 Umgesetzt sind alle Punkte zu Kap. 1 aus den Formellisten `korrekturen-mathe-part-a/b/c.md`, nachdem Rainer Nagel sie durchgesehen hat (seine Anmerkungen in `rana/korrekturen-mathe-part-*.pdf` betreffen nur spätere Kapitel). In den Listen sind die Zeilen mit **Umgesetzt** markiert; Einzelheiten stehen dort.
