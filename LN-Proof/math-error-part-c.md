@@ -1,10 +1,14 @@
 # Mathematische Fehler in Beweisen: Part C (Teil III)
 
-*One-parameter Semigroups of Positive Operators*, 2. Aufl. (Springer LNM 1184). Stand: 14.10.2026.
+*One-parameter Semigroups of Positive Operators*, 2. Aufl. (Springer LNM 1184). Geprüft am 14.10.2026; Stand der Umsetzung: 20.10.2026.
 
 **Umfang:** Beweise, Rechnungen und Beispiele in Teil III, Kap. 1–4, inhaltlich geprüft im LaTeX-Quelltext (Branch `fahnenkorrektur`): Vorzeichen und Konstanten, Ungleichungsrichtungen, Voraussetzungen und Quantoren, zitierte Hilfsaussagen, Lücken, Beispiele. Reine Satz- und Notationsfragen stehen in `korrekturen-mathe-part-c.md`; wo ein Befund dort schon steht und hier ergänzt wird, ist das vermerkt („Ergänzt korrekturen-mathe“).
 
-**Wichtig:** Die Befunde sind von Claude nachgerechnet, aber nicht von einem zweiten Mathematiker geprüft. Bitte jeden Punkt selbst verifizieren, bevor er umgesetzt wird. **Stand 18.10.2026:** Kap. 1 ist nach Durchsicht durch Rainer Nagel umgesetzt (Branch `fahnenkorrektur`, als „Umgesetzt“ markiert); Kap. 2–4 sind am Quelltext noch nicht geändert.
+**Wichtig:** Die Befunde sind von Claude nachgerechnet, aber nicht von einem zweiten Mathematiker geprüft. Bitte jeden Punkt selbst verifizieren, bevor er umgesetzt wird.
+
+**Stand 20.10.2026:** Kap. 1 ist erledigt (nach Durchsicht durch Rainer Nagel umgesetzt, Branch `fahnenkorrektur`, als „Umgesetzt“ markiert). **Kap. 2, 3 und 4 sind noch zu bearbeiten.**
+
+**Buchführung:** Maßgeblich für den Korrekturstand sind nur die Listen `korrekturen-text-*`, `korrekturen-mathe-*` und `math-error-*` (seit 20.10.2026). `Umgesetzte_Korrekturen_LNM1184.md`, `Finales-zum-Pruefen.md` und `Fahnenkorrektur_Springer_LNM1184.md` werden nicht mehr fortgeführt.
 
 **Spalten:** S. = gedruckte Buchseite (über das nächstgelegene Label ermittelt, ±1 Seite). Z. = Zeile in der .tex-Datei. Sicherheit: ● sicher falsch · ◐ sehr wahrscheinlich falsch · ○ zweifelhaft, bitte prüfen.
 

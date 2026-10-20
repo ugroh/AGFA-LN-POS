@@ -7,11 +7,13 @@
 % Grau/Schreibmaschine = Quelltext, der sich nicht als Formel setzen laesst (Makronamen, Labels).
 {\Large\bfseries Formelprüfung Part A (Teil I): Satz und Notation\par}
 \smallskip
-\emph{One-parameter Semigroups of Positive Operators}, 2. Aufl. (Springer LNM 1184). Stand: 14.10.2026.
+\emph{One-parameter Semigroups of Positive Operators}, 2. Aufl. (Springer LNM 1184). Geprüft am 14.10.2026; Stand der Umsetzung: 20.10.2026.
 
 \textbf{Umfang:} Teil I, Kap. 1–4, geprüft im LaTeX-Quelltext (Branch \code{fahnenkorrektur}). Geprüft wurden nur Satz und Notation in Formeln: Tippfehler, Klammern, Indizes, uneinheitliche Schreibweisen, Mathemodus, Satzzeichen an Formeln, Gleichungsverweise. Beweise wurden \textbf{nicht} nachgerechnet; wo ein Befund inhaltlich wirkt, steht „bitte prüfen“.
 
-\textbf{Noch nichts geändert.} Die Liste dient zur Besprechung; umgesetzt wird erst nach Rücksprache.
+\textbf{Stand 20.10.2026:} \textbf{Kap. 1 und Kap. 2 sind erledigt} (Kap. 1 nach Durchsicht durch Rainer Nagel; in der Spalte Kommentar mit \textbf{Umgesetzt} markiert, Abweichungen ebenda). Kap. 3–4 sind noch offen. Die Zeilenangaben beziehen sich auf den Stand vom 14.10.2026.
+
+\textbf{Buchführung:} Maßgeblich für den Korrekturstand sind nur die Listen {korrekturen-text-*}, {korrekturen-mathe-*} und {math-error-*} (seit 20.10.2026). \code{Umgesetzte\_Korrekturen\_LNM1184.md}, \code{Finales-zum-Pruefen.md} und \code{Fahnenkorrektur\_Springer\_LNM1184.md} werden nicht mehr fortgeführt.
 
 \textbf{Spalten:} S. $=$ gedruckte Buchseite, ermittelt über das nächstgelegene Label (kann um eine Seite abweichen). Z. $=$ Zeile in der .tex-Datei. Sicherheit: \sichA{} eindeutig $\ensuremath{\cdot}$ \sichB{} sehr wahrscheinlich $\ensuremath{\cdot}$ \sichC{} Hinweis/Ermessen.
 
@@ -37,37 +39,37 @@ Insgesamt \textbf{141 Punkte}: 34 \sichA{}, 58 \sichB{}, 49 \sichC{}. Davon steh
 \endhead
 \bottomrule
 \endlastfoot
-4 & 69 & \sichB{} & $T(t)_{t\geq0}$ & $(T(t))_{t\geq0}$ & Klammern & Sonst überall $(T(t))_{t\geq0}$; ebenso Z. 78. \\[2pt]
-4 & 104 & \sichB{} & $-\infty \leq \omega < +\infty$ & $-\infty \leq \omega_{0} < +\infty$ & Tippfehler & Im Satz geht es um $\ensuremath{\omega}\ensuremath{_{0}}$. \\[2pt]
-6 & 220 & \sichB{} & $\frac{d}{\dt}\xi(t)$ & $\frac{\diff{}}{\dt}\xi(t)$ & Notation & Kursives d; in Z. 187, 321, 648 aufrecht. Ebenso Z. 785 $\frac{d}{\dx}$. \\[2pt]
-7 & 285 & \sichB{} & $\text{ for $ n \geq 2 $, }$ & $\text{ for $ n \geq 2 $.}$ & Satzzeichen & Danach beginnt ein neuer Satz („Then“, Z. 288). \\[2pt]
-9 & 380 & \sichB{} & $= \colon  \eu^{tA}$ & $\eqqcolon \eu^{tA}$ & LaTeX & $= \colon$ ergibt „$=$ :“ mit falschem Abstand; ebenso Z. 561 und 818. \\[2pt]
-9 & 448 & \sichB{} & {for all $ (k \geq 2)$} & {for all $ k \geq 2 $} & Klammern & Überflüssige Klammern. \\[2pt]
-9 & 470 & \sichA{} & $\eu^{t( A - 1/2  \cdot \Id )}$ & $\eu^{t( A - s/2  \cdot \Id )}$ & Tippfehler & In Z. 451 und 471 steht s/2. \\[2pt]
-9 & 472 & \sichB{} & $\sum_{ \text{k even} }$ & $\sum_{k \text{ even}}$ & Mathemodus & k aufrecht in Textschrift; ebenso $\text{k odd}$. \\[2pt]
-14 & 767 & \sichA{} & \code{\dots{}\$Af \allowbreak{}\allowbreak{}\textbackslash{}coloneq \allowbreak{}f'\$\}. \allowbreak{}\allowbreak{}\textbackslash{}\}} & $\dots , f' \in E\}, \quad Af \coloneq f'.$ & Klammern & Punkt vor $\}$, und „Af := $f\ensuremath{{}'}$“ steht innerhalb der Mengenklammer. \\[2pt]
-15 & 814 & \sichC{} & $\cos \pi nx$ & $\cos(\pi nx)$ & Notation & Z. 851 mit Klammern, Z. 814 und 858 ohne. \\[2pt]
-15 & 871 & \sichA{} & $k_{t}(x,y)dy$ & $k_{t}(x,y)\dy$ & Notation & Kursives d ohne Abstand; sonst $\dy$. Ebenso Z. 884 $f(y)dy$. \\[2pt]
-16 & 878 & \sichB{} & \code{\textbackslash{}subsection\{n-dimensional \allowbreak{}\dots{}\}} & \code{\textbackslash{}subsection\{\allowbreak{}\textbackslash{}texorpdfstring\{\$n\$\}\{n\}-dimensional \allowbreak{}\dots{}\}} & Mathemodus & n nicht im Mathemodus (im Index steht $n$). \\[2pt]
-16 & 881 & \sichC{} & $1 \leq p \leq \infty$ & $1 \leq p < \infty$ & Tippfehler & Auf $L^\ensuremath{\infty}$ nicht stark stetig, $\ensuremath{\mathcal{S}}$ dort nicht dicht (Z. 906); inhaltlich bitte prüfen. \\[2pt]
-16 & 916 & \sichA{} & $T(t)\vert_{ S(\R^{n})}$ & $T(t)\vert_{\mathcal{S}(\R^{n})}$ & Notation & Schwartz-Raum sonst $\mathcal{S}$. \\[2pt]
-16 & 952 & \sichC{} & $L^{p}\interval{0,1}$ & $L^{p}(\interval{0,1})$ & Notation & Z. 755 und 1176: $L^p([0,1])$. \\[2pt]
-19 & 1047 & \sichB{} & $(T(t)_{\vert})$ & $(T_{\vert}(t))_{t \geq 0}$ & Notation & Z. 1035 definiert $T_{\vert}(t)$; Einschränkungen insgesamt uneinheitlich notiert (Z. 1167, 1251, 1379). \\[2pt]
-20 & 1109 & \sichC{} & $\hat{g} \, \ds$ & $\hat{g} \ds$ & Abstand & Zusätzliches \code{\textbackslash{},} nur in Z. 1109–1111. \\[2pt]
-20 & 1115 & \sichC{} & $\lambda > \omega$ & $\lambda > \omega_{0}$ & Notation & $\ensuremath{\omega}$ ohne Index hier nicht definiert. \\[2pt]
-20 & 1159 & \sichB{} & {(see Example~\lbl{subsec:a1-2.4})} & {(see Section~\lbl{subsec:a1-2.4})} & Verweis & Schon in der Arbeitsliste (S. 20). \\[2pt]
-20 & 1173 & \sichB{} & $f \in AC$ & $f \in \mathrm{AC}$ & Notation & Z. 1187 $\mathrm{AC}$; ebenso Z. 1362. \\[2pt]
-20 & 1177 & \sichC{} & {quotient space \mfrac{F}{I}, where} & {quotient space $\mfrac{F}{I}$, where} & Mathemodus & \code{\textbackslash{}mfrac} ist für den Mathemodus gedacht (vgl. Z. 1088). \\[2pt]
-21 & 1265 & \sichB{} & $\lim\sup_{t \to 0}$ & $\limsup_{t \to 0}$ & LaTeX & Index hängt sonst nur am sup; ebenso Z. 1512. \\[2pt]
-22 & 1332 & \sichA{} & $\vert f_f'(0) - f_f'(s)\vert$ & $\vert \xi_f'(0) - \xi_f'(s)\vert$ & Tippfehler & Gemeint sind die Funktionen $\ensuremath{\xi}_f$ (Z. 1295, 1328); ebenso Z. 1337 $f'_f(0)$. \\[2pt]
-22 & 1347 & \sichC{} & $0 \leq s \leq t_{0}$ & $0 < s \leq t_{0}$ & Tippfehler & Bei $s = 0$ ist 1/s nicht definiert; Z. 1332: $0 < s < t\ensuremath{_{0}}$. \\[2pt]
-23 & 1398 & \sichA{} & {\emph{n-th Sobolev space}} & {\emph{$n$-th Sobolev space}} & Mathemodus & Zweimal in der Zeile (auch „n-th Sobolev semigroup“). \\[2pt]
-26 & 1500 & \sichC{} & $E_{\mathcal{F}}^{T}$ & $E_{\mathcal{F}}^{\TT}$ & Notation & Daneben $m^{\TT}(E)$; ebenso Z. 1506, 1507, 1526, 1542 – bitte prüfen, ob gewollt. \\[2pt]
-26 & 1522 & \sichB{} & $T(t)_{F}$ & $T(t)_{\mathcal{F}}$ & Notation & Gemeint ist der Filter $\ensuremath{\mathcal{F}}$, nicht der Raum F; ebenso Z. 1523. \\[2pt]
-27 & 1583 & \sichC{} & {let $X$,$Y$ be} & {let $X$, $Y$ be} & Abstand & Leerzeichen nach dem Komma fehlt. \\[2pt]
-27 & 1605 & \sichA{} & {on $E \times F$} & {on $E \otimes F$} & Tippfehler & Gemeint ist die Norm auf dem Tensorprodukt (Z. 1601, 1609). \\[2pt]
-27 & 1628 & \sichC{} & $L^{1}(\mu \otimes \nu)$ & $L^{1}(\mu \times \nu)$ & Notation & Z. 1574, 1580: $\mu \times \nu$; ebenso Z. 1630. \\[2pt]
-28 & 1683 & \sichB{} & $(T(h) \otimes S(h))(f \otimes g)$ & $(S(h) \otimes T(h))(f \otimes g)$ & Tippfehler & Im Satz heißt das Produkt $S(t)\ensuremath{\otimes}T(t)$; im Beweis vertauscht, auch Z. 1686. \\
+4 & 69 & \sichB{} & $T(t)_{t\geq0}$ & $(T(t))_{t\geq0}$ & Klammern & \textbf{Umgesetzt.} Sonst überall $(T(t))_{t\geq0}$; ebenso Z. 78. \\[2pt]
+4 & 104 & \sichB{} & $-\infty \leq \omega < +\infty$ & $-\infty \leq \omega_{0} < +\infty$ & Tippfehler & \textbf{Umgesetzt.} Im Satz geht es um $\ensuremath{\omega}\ensuremath{_{0}}$. \\[2pt]
+6 & 220 & \sichB{} & $\frac{d}{\dt}\xi(t)$ & $\frac{\diff{}}{\dt}\xi(t)$ & Notation & \textbf{Umgesetzt.} Kursives d; in Z. 187, 321, 648 aufrecht. Ebenso Z. 785 $\frac{d}{\dx}$. \\[2pt]
+7 & 285 & \sichB{} & $\text{ for $ n \geq 2 $, }$ & $\text{ for $ n \geq 2 $.}$ & Satzzeichen & \textbf{Umgesetzt.} Danach beginnt ein neuer Satz („Then“, Z. 288). \\[2pt]
+9 & 380 & \sichB{} & $= \colon  \eu^{tA}$ & $\eqqcolon \eu^{tA}$ & LaTeX & \textbf{Umgesetzt.} $= \colon$ ergibt „$=$ :“ mit falschem Abstand; ebenso Z. 561 und 818. \\[2pt]
+9 & 448 & \sichB{} & {for all $ (k \geq 2)$} & {for all $ k \geq 2 $} & Klammern & \textbf{Umgesetzt.} Überflüssige Klammern. \\[2pt]
+9 & 470 & \sichA{} & $\eu^{t( A - 1/2  \cdot \Id )}$ & $\eu^{t( A - s/2  \cdot \Id )}$ & Tippfehler & \textbf{Umgesetzt.} In Z. 451 und 471 steht s/2. \\[2pt]
+9 & 472 & \sichB{} & $\sum_{ \text{k even} }$ & $\sum_{k \text{ even}}$ & Mathemodus & \textbf{Umgesetzt.} k aufrecht in Textschrift; ebenso $\text{k odd}$. \\[2pt]
+14 & 767 & \sichA{} & \code{\dots{}\$Af \allowbreak{}\allowbreak{}\textbackslash{}coloneq \allowbreak{}f'\$\}. \allowbreak{}\allowbreak{}\textbackslash{}\}} & $\dots , f' \in E\}, \quad Af \coloneq f'.$ & Klammern & \textbf{Umgesetzt} (stand schon so im Text). Punkt vor $\}$, und „Af := $f\ensuremath{{}'}$“ steht innerhalb der Mengenklammer. \\[2pt]
+15 & 814 & \sichC{} & $\cos \pi nx$ & $\cos(\pi nx)$ & Notation & \textbf{Umgesetzt.} Z. 851 mit Klammern, Z. 814 und 858 ohne. \\[2pt]
+15 & 871 & \sichA{} & $k_{t}(x,y)dy$ & $k_{t}(x,y)\dy$ & Notation & \textbf{Umgesetzt.} Kursives d ohne Abstand; sonst $\dy$. Ebenso Z. 884 $f(y)dy$. \\[2pt]
+16 & 878 & \sichB{} & \code{\textbackslash{}subsection\{n-dimensional \allowbreak{}\dots{}\}} & \code{\textbackslash{}subsection\{\allowbreak{}\textbackslash{}texorpdfstring\{\$n\$\}\{n\}-dimensional \allowbreak{}\dots{}\}} & Mathemodus & \textbf{Umgesetzt.} n nicht im Mathemodus (im Index steht $n$). \\[2pt]
+16 & 881 & \sichC{} & $1 \leq p \leq \infty$ & $1 \leq p < \infty$ & Tippfehler & \textbf{Umgesetzt} (stand schon so im Text). Auf $L^\ensuremath{\infty}$ nicht stark stetig, $\ensuremath{\mathcal{S}}$ dort nicht dicht (Z. 906); inhaltlich bitte prüfen. \\[2pt]
+16 & 916 & \sichA{} & $T(t)\vert_{ S(\R^{n})}$ & $T(t)\vert_{\mathcal{S}(\R^{n})}$ & Notation & \textbf{Umgesetzt.} Schwartz-Raum sonst $\mathcal{S}$. \\[2pt]
+16 & 952 & \sichC{} & $L^{p}\interval{0,1}$ & $L^{p}(\interval{0,1})$ & Notation & \textbf{Umgesetzt.} Z. 755 und 1176: $L^p([0,1])$. \\[2pt]
+19 & 1047 & \sichB{} & $(T(t)_{\vert})$ & $(T_{\vert}(t))_{t \geq 0}$ & Notation & \textbf{Umgesetzt.} Z. 1035 definiert $T_{\vert}(t)$; Einschränkungen insgesamt uneinheitlich notiert (Z. 1167, 1251, 1379). \\[2pt]
+20 & 1109 & \sichC{} & $\hat{g} \, \ds$ & $\hat{g} \ds$ & Abstand & \textbf{Umgesetzt.} Zusätzliches \code{\textbackslash{},} nur in Z. 1109–1111. \\[2pt]
+20 & 1115 & \sichC{} & $\lambda > \omega$ & $\lambda > \omega_{0}$ & Notation & \textbf{Umgesetzt.} $\ensuremath{\omega}$ ohne Index hier nicht definiert. \\[2pt]
+20 & 1159 & \sichB{} & {(see Example~\lbl{subsec:a1-2.4})} & {(see Section~\lbl{subsec:a1-2.4})} & Verweis & \textbf{Umgesetzt} (stand schon so im Text). Schon in der Arbeitsliste (S. 20). \\[2pt]
+20 & 1173 & \sichB{} & $f \in AC$ & $f \in \mathrm{AC}$ & Notation & \textbf{Umgesetzt.} Z. 1187 $\mathrm{AC}$; ebenso Z. 1362. \\[2pt]
+20 & 1177 & \sichC{} & {quotient space \mfrac{F}{I}, where} & {quotient space $\mfrac{F}{I}$, where} & Mathemodus & \textbf{Umgesetzt.} \code{\textbackslash{}mfrac} ist für den Mathemodus gedacht (vgl. Z. 1088). \\[2pt]
+21 & 1265 & \sichB{} & $\lim\sup_{t \to 0}$ & $\limsup_{t \to 0}$ & LaTeX & \textbf{Umgesetzt.} Index hängt sonst nur am sup; ebenso Z. 1512. \\[2pt]
+22 & 1332 & \sichA{} & $\vert f_f'(0) - f_f'(s)\vert$ & $\vert \xi_f'(0) - \xi_f'(s)\vert$ & Tippfehler & \textbf{Umgesetzt.} Gemeint sind die Funktionen $\ensuremath{\xi}_f$ (Z. 1295, 1328); ebenso Z. 1337 $f'_f(0)$. \\[2pt]
+22 & 1347 & \sichC{} & $0 \leq s \leq t_{0}$ & $0 < s \leq t_{0}$ & Tippfehler & \textbf{Umgesetzt.} Bei $s = 0$ ist 1/s nicht definiert; Z. 1332: $0 < s < t\ensuremath{_{0}}$. \\[2pt]
+23 & 1398 & \sichA{} & {\emph{n-th Sobolev space}} & {\emph{$n$-th Sobolev space}} & Mathemodus & \textbf{Umgesetzt.} Zweimal in der Zeile (auch „n-th Sobolev semigroup“). \\[2pt]
+26 & 1500 & \sichC{} & $E_{\mathcal{F}}^{T}$ & $E_{\mathcal{F}}^{\TT}$ & Notation & \textbf{Umgesetzt.} Daneben $m^{\TT}(E)$; ebenso Z. 1506, 1507, 1526, 1542 – bitte prüfen, ob gewollt. \\[2pt]
+26 & 1522 & \sichB{} & $T(t)_{F}$ & $T(t)_{\mathcal{F}}$ & Notation & \textbf{Umgesetzt.} Gemeint ist der Filter $\ensuremath{\mathcal{F}}$, nicht der Raum F; ebenso Z. 1523. \\[2pt]
+27 & 1583 & \sichC{} & {let $X$,$Y$ be} & {let $X$, $Y$ be} & Abstand & \textbf{Umgesetzt.} Leerzeichen nach dem Komma fehlt. \\[2pt]
+27 & 1605 & \sichA{} & {on $E \times F$} & {on $E \otimes F$} & Tippfehler & \textbf{Umgesetzt.} Gemeint ist die Norm auf dem Tensorprodukt (Z. 1601, 1609). \\[2pt]
+27 & 1628 & \sichC{} & $L^{1}(\mu \otimes \nu)$ & $L^{1}(\mu \times \nu)$ & Notation & \textbf{Umgesetzt.} Z. 1574, 1580: $\mu \times \nu$; ebenso Z. 1630. \\[2pt]
+28 & 1683 & \sichB{} & $(T(h) \otimes S(h))(f \otimes g)$ & $(S(h) \otimes T(h))(f \otimes g)$ & Tippfehler & \textbf{Umgesetzt.} Im Satz heißt das Produkt $S(t)\ensuremath{\otimes}T(t)$; im Beweis vertauscht, auch Z. 1686. \\
 \end{longtable}
 \subsection*{Teil I, Kap. 2 – Characterization of Semigroups on Banach Spaces (\code{part-a/chap-a2.tex})}
 \begin{longtable}{@{}rrc>{\RaggedRight\arraybackslash}p{5.8cm}>{\RaggedRight\arraybackslash}p{5.8cm}>{\RaggedRight\arraybackslash}p{1.9cm}>{\RaggedRight\arraybackslash}p{7.3cm}@{}}
@@ -81,45 +83,45 @@ Insgesamt \textbf{141 Punkte}: 34 \sichA{}, 58 \sichB{}, 49 \sichC{}. Davon steh
 \endhead
 \bottomrule
 \endlastfoot
-32 & 92 & \sichB{} & $u'(t) = Au(t)$ & $\dot{u}(t) = Au(t)$ & Notation & Sonst durchgehend $\dot{u}$ (z. B. Z. 86). \\[2pt]
-33 & 148 & \sichA{} & {$\tilde{v}(s) = v(s)$ \& \textbackslash{}text\{$0 \leq s \leq t$.\}} & {v(s) \& \textbackslash{}text\{for $0 \leq s \leq t$.\}} & Tippfehler & „\ensuremath{\tilde{v}}(s) $=$“ im zweiten cases-Zweig doppelt; „for“ fehlt. \\[2pt]
-36 & 388 & \sichC{} & {Then $ \overline{A} $ satisfies} & {Then $ A $ satisfies} & Tippfehler & Eingeführt wird die Einschränkung A, nicht ihr Abschluss; bitte prüfen. \\[2pt]
-36 & 417 & \sichC{} & $u(t) = (f + tBg,g)$ & $u(t) = (f - tBg,g)$ & Tippfehler & Mit $A =$ ($0 \ensuremath{-}B$; 0 0) wäre \ensuremath{\dot{u}} $=$ ($\ensuremath{-}Bg$, 0); nur Hinweis. \\[2pt]
-38 & 528 & \sichA{} & {is dense in E and} & {is dense in $E$ and} & Mathemodus & E ohne Mathemodus. \\[2pt]
-39 & 552 & \sichC{} & {~\lbl{cor:a2-1.8.2} implies~\lbl{cor:a2-1.8.1}} & {~\lbl{thm:a2-1.7.2} implies~\lbl{thm:a2-1.7.1}} & Verweis & Gedruckt gleich, aber der Hyperlink führt ins Korollar statt ins Theorem. \\[2pt]
-40 & 657 & \sichA{} & $(\lambda \in S(\alpha_{1} + \pi/2).$ & $(\lambda \in S(\alpha_{1} + \pi/2)).$ & Klammern & Äußere Klammer nicht geschlossen. \\[2pt]
-40 & 686 & \sichB{} & $\lambda \in \rho(A)$ & $\lambda \in \rho(A^{2})$ & Tippfehler & Gemeint ist die Resolventenmenge von $A\ensuremath{^{2}}$ (vgl. Z. 957). \\[2pt]
-41 & 744 & \sichB{} & {$(U_{i})_{t \geq 0}$ the group} & {$(U_{i}(t))_{t \in \R}$ the group} & Tippfehler & (t) fehlt; Gruppe, daher $t \ensuremath{\in} \ensuremath{\mathbb{R}}$ (vgl. Z. 747). \\[2pt]
-42 & 853 & \sichB{} & $\alpha \in \left]0,\pi/2\right]$ & $\alpha \in (0,\pi/2]$ & Notation & Sonst $(0,\pi/2]$ (Z. 604, 647, 798); ebenso Z. 1417 $\left]0,1\right]$. \\[2pt]
-43 & 940 & \sichB{} & $\Im\{z(t)\}^2/\Re\{z(t)\}^2$ & $\Im(z(t)^2)/\Re(z(t)^2)$ & Klammern & Geschweifte Klammern werden gedruckt und lesen sich als (Im $z)\ensuremath{^{2}}$; gemeint $\Im (z\ensuremath{^{2}})$ (Z. 934). \\[2pt]
-43 & 949 & \sichA{} & $(r\eu^{\im\theta}+\omega)^2$ & $(r\eu^{\im\theta}+w)^2$ & Tippfehler & Im Beweis heißt es sonst w (Z. 902, 954). \\[2pt]
-45 & 1020 & \sichC{} & $c\eu^{-b\Re(\lambda)}$ & $c\eu^{-b\cdot\Re(\lambda)}$ & Notation & Theorem 1.17 und 1.18 (Z. 1036, 1043) einmal mit, einmal ohne $\cdot$. \\[2pt]
-46 & 1108 & \sichC{} & {[Proof of Theorem~\lbl{thm:a2-1.20}  ]} & {[Proof of Theorem~\lbl{thm:a2-1.20}]} & LaTeX & Schon in der Arbeitsliste (S. 46); ebenso Z. 2502. \\[2pt]
-46 & 1126 & \sichA{} & $T(t) \dt (n \in \N).$ & $T(t) \dt \quad (n \in \N).$ & Abstand & Gedruckt „$dt(n \ensuremath{\in} \ensuremath{\mathbb{N}}$)“. \\[2pt]
-46 & 1152 & \sichC{} & \code{\textbackslash{}right\allowbreak{}\textbackslash{}lVert} & \code{\textbackslash{}right\allowbreak{}\textbackslash{}rVert} & LaTeX & Falsches schließendes Normzeichen (optisch gleich). \\[2pt]
-46 & 1173 & \sichC{} & $T(t)\,\dt$ & $T(t)\dt$ & Abstand & Zusätzliches \code{\textbackslash{},} nur in Z. 1173–1180, 1544, 1551, 1638, 1644–1647. \\[2pt]
-50 & 1370 & \sichB{} & $[\text{ess}]\text{-}\text{image}(m)$ & wie Z. 1455 ($\Image{m}$) & Notation & Dasselbe Objekt einmal „image“, einmal „im“. \\[2pt]
-50 & 1411 & \sichB{} & $H \coloneq \{m(x) \colon \Re(\lambda) \geq b \dots$ & $H \coloneq \{\lambda \in \C \colon \Re(\lambda) \geq b \dots$ & Tippfehler & Bedingung über $\ensuremath{\lambda}$, im Mengenterm steht m(x). \\[2pt]
-50 & 1420 & \sichA{} & \code{[\allowbreak{}\textbackslash{}text\{ess\}]\allowbreak{}\textbackslash{}text\{-\}\allowbreak{}\textbackslash{}esssup\allowbreak{}\textbackslash{}left\allowbreak{}\textbackslash{}\{} & \code{[\allowbreak{}\textbackslash{}text\{ess\}]\allowbreak{}\textbackslash{}text\{-\}\allowbreak{}\textbackslash{}sup\allowbreak{}\textbackslash{}left\allowbreak{}\textbackslash{}\{} & Notation & Gedruckt „[ess]-ess sup“; vgl. Z. 1427. \\[2pt]
-50 & 1473 & \sichA{} & $S(\theta + \pi/2) \subset~\rho(A)$ & $S(\theta + \pi/2) \subseteq \rho(A)$ & LaTeX & Tilde im Mathemodus erzeugt Leerraum; sonst $\subseteq$. \\[2pt]
-50 & 1509 & \sichC{} & $\iu \cdot \exp(n^{2})$ & $\iu\,\eu^{n^{2}}$ & Notation & Die drei Beispiele (Z. 1509, 1513, 1517) uneinheitlich. \\[2pt]
-53 & 1628 & \sichB{} & $(T(t+s-h) - T(t-s))$ & $(T(t+h-s) - T(t-s))$ & Tippfehler & Z. 1647 hat $t+h\ensuremath{-}s$; ebenso Z. 1634, 1638. \\[2pt]
-54 & 1645 & \sichA{} & $\int_{0}^{t} (T(t-s)BS(s)\, \ds$ & $\int_{0}^{t} T(t-s)BS(s)\, \ds$ & Klammern & Öffnende Klammer ohne schließende. \\[2pt]
-54 & 1646 & \sichC{} & $\leq \|T(t+h) - T(t)\|  + \dots$ & $\leq \|T(t+h) - T(t)\| + \dots$ & LaTeX & $\ensuremath{\leq}$ links vom Ausrichtungspunkt, Ausrichtung verschoben. \\[2pt]
-54 & 1675 & \sichA{} & $= (\Id - SR(\lambda,A)$ & $= (\Id - SR(\lambda,A))$ & Klammern & Schließende Klammer fehlt. \\[2pt]
-54 & 1679 & \sichA{} & $(\Id -BR(\lambda,A))^{-1})$ & $(\Id -BR(\lambda,A))^{-1}$ & Klammern & Überzählige schließende Klammer. \\[2pt]
-57 & 1819 & \sichC{} & {\emph{p-contractive}}, {p-dissipative} & {$p$-contractive}, {$p$-dissipative} & Mathemodus & p steht aufrecht, {$N$-}, {$p$-} (Z. 2248) dagegen kursiv; ca. 30 Stellen in Z. 1819–2272. \\[2pt]
-58 & 1914 & \sichA{} & $\phi~\in~\ddp(f)$ & $\phi \in \ddp(f)$ & LaTeX & Tilden im Mathemodus erzeugen Leerraum. \\[2pt]
-58 & 1947 & \sichC{} & {for all $t > 0$, \code{\textbackslash\textbackslash}} & {for all $t > 0$,} & LaTeX & \code{\textbackslash{}\allowbreak{}\textbackslash{}} vor abgesetzter Formel. \\[2pt]
-58 & 1951 & \sichA{} & $p(f)~  \leq~p(f-tAf)$ & $p(f)  \leq p(f-tAf)$ & LaTeX & Tilden im Mathemodus. \\[2pt]
-59 & 2031 & \sichA{} & \code{T(t) \allowbreak{}= \allowbreak{}\allowbreak{}\textbackslash{}lim\_\{t\allowbreak{}\textbackslash{}to \allowbreak{}0\} \allowbreak{}\allowbreak{}\textbackslash{}left( \allowbreak{}\allowbreak{}\textbackslash{}frac\{n\}\{t\} \allowbreak{}\dots{}} & \code{T(t) \allowbreak{}= \allowbreak{}\allowbreak{}\textbackslash{}lim\_\{n\allowbreak{}\textbackslash{}to\allowbreak{}\textbackslash{}infty\} \allowbreak{}\allowbreak{}\textbackslash{}left( \allowbreak{}\allowbreak{}\textbackslash{}frac\{n\}\{t\} \allowbreak{}\dots{}} & Tippfehler & Grenzübergang über n (vgl. Z. 584). \\[2pt]
-60 & 2116 & \sichC{} & {(this is equivalent \dots  {schaefer:1966}).} & {\dots  {schaefer:1966})).} & Klammern & Schon in der Arbeitsliste (S. 61). \\[2pt]
-62 & 2235 & \sichB{} & {from~\lbl{thm:a2-2.6} it follows} & {from Theorem~\lbl{thm:a2-2.6} it follows} & Verweis & Schon in der Arbeitsliste (S. 62). \\[2pt]
-63 & 2274 & \sichB{} & $p((1-tA)f) \geq p(f)$ & $p((\Id-tA)f) \geq p(f)$ & Notation & Identität sonst $\Id$. \\[2pt]
-63 & 2281 & \sichA{} & {if it is N-dissipative} & {if it is $N$-dissipative} & Mathemodus & Z. 1861 schreibt {$N$-dissipative}. \\[2pt]
-64 & 2311 & \sichB{} & $\lim\sup_{t\to 0}$ & $\limsup_{t\to 0}$ & Notation & Z. 2014 $\limsup$; ebenso Z. 2322, 2323, 2341, 2431. \\[2pt]
-64 & 2341 & \sichC{} & $< 1\ ,$ & $< 1 ,$ & Satzzeichen & Leerzeichen vor dem Komma. \\[2pt]
-66 & 2513 & \sichB{} & {and $H^{\infty}$ does not only contain} & {and $H^{\infty}(O)$ does not only contain} & Tippfehler & Im selben Satz $H^{\infty}(O)$. \\
+32 & 92 & \sichB{} & $u'(t) = Au(t)$ & $\dot{u}(t) = Au(t)$ & Notation & \textbf{Umgesetzt.} Sonst durchgehend $\dot{u}$ (z. B. Z. 86). \\[2pt]
+33 & 148 & \sichA{} & {$\tilde{v}(s) = v(s)$ \& \textbackslash{}text\{$0 \leq s \leq t$.\}} & {v(s) \& \textbackslash{}text\{for $0 \leq s \leq t$.\}} & Tippfehler & \textbf{Umgesetzt.} „\ensuremath{\tilde{v}}(s) $=$“ im zweiten cases-Zweig doppelt; „for“ fehlt. \\[2pt]
+36 & 388 & \sichC{} & {Then $ \overline{A} $ satisfies} & {Then $ A $ satisfies} & Tippfehler & \textbf{Umgesetzt.} Eingeführt wird die Einschränkung A, nicht ihr Abschluss; bitte prüfen. \\[2pt]
+36 & 417 & \sichC{} & $u(t) = (f + tBg,g)$ & $u(t) = (f - tBg,g)$ & Tippfehler & \textbf{Umgesetzt.} Gelöst mit $f \ensuremath{-} tBg$ (passend zur Matrix in Z. 398). math-error-part-a, Z. 409, ist damit mit $\ensuremath{\lambda}f + Bg$ zu lösen, nicht durch Änderung der Matrix. Mit $A =$ ($0 \ensuremath{-}B$; 0 0) wäre \ensuremath{\dot{u}} $=$ ($\ensuremath{-}Bg$, 0); nur Hinweis. \\[2pt]
+38 & 528 & \sichA{} & {is dense in E and} & {is dense in $E$ and} & Mathemodus & \textbf{Umgesetzt.} E ohne Mathemodus. \\[2pt]
+39 & 552 & \sichC{} & {~\lbl{cor:a2-1.8.2} implies~\lbl{cor:a2-1.8.1}} & {~\lbl{thm:a2-1.7.2} implies~\lbl{thm:a2-1.7.1}} & Verweis & \textbf{Umgesetzt.} Gedruckt gleich, aber der Hyperlink führt ins Korollar statt ins Theorem. \\[2pt]
+40 & 657 & \sichA{} & $(\lambda \in S(\alpha_{1} + \pi/2).$ & $(\lambda \in S(\alpha_{1} + \pi/2)).$ & Klammern & \textbf{Umgesetzt.} Äußere Klammer nicht geschlossen. \\[2pt]
+40 & 686 & \sichB{} & $\lambda \in \rho(A)$ & $\lambda \in \rho(A^{2})$ & Tippfehler & \textbf{Umgesetzt.} Gemeint ist die Resolventenmenge von $A\ensuremath{^{2}}$ (vgl. Z. 957). \\[2pt]
+41 & 744 & \sichB{} & {$(U_{i})_{t \geq 0}$ the group} & {$(U_{i}(t))_{t \in \R}$ the group} & Tippfehler & \textbf{Umgesetzt.} (t) fehlt; Gruppe, daher $t \ensuremath{\in} \ensuremath{\mathbb{R}}$ (vgl. Z. 747). \\[2pt]
+42 & 853 & \sichB{} & $\alpha \in \left]0,\pi/2\right]$ & $\alpha \in (0,\pi/2]$ & Notation & \textbf{Umgesetzt.} Sonst $(0,\pi/2]$ (Z. 604, 647, 798); ebenso Z. 1417 $\left]0,1\right]$. \\[2pt]
+43 & 940 & \sichB{} & $\Im\{z(t)\}^2/\Re\{z(t)\}^2$ & $\Im(z(t)^2)/\Re(z(t)^2)$ & Klammern & \textbf{Umgesetzt.} Geschweifte Klammern werden gedruckt und lesen sich als (Im $z)\ensuremath{^{2}}$; gemeint $\Im (z\ensuremath{^{2}})$ (Z. 934). \\[2pt]
+43 & 949 & \sichA{} & $(r\eu^{\im\theta}+\omega)^2$ & $(r\eu^{\im\theta}+w)^2$ & Tippfehler & \textbf{Umgesetzt.} Im Beweis heißt es sonst w (Z. 902, 954). \\[2pt]
+45 & 1020 & \sichC{} & $c\eu^{-b\Re(\lambda)}$ & $c\eu^{-b\cdot\Re(\lambda)}$ & Notation & \textbf{Umgesetzt.} Theorem 1.17 und 1.18 (Z. 1036, 1043) einmal mit, einmal ohne $\cdot$. \\[2pt]
+46 & 1108 & \sichC{} & {[Proof of Theorem~\lbl{thm:a2-1.20}  ]} & {[Proof of Theorem~\lbl{thm:a2-1.20}]} & LaTeX & \textbf{Umgesetzt.} Schon in der Arbeitsliste (S. 46); ebenso Z. 2502. \\[2pt]
+46 & 1126 & \sichA{} & $T(t) \dt (n \in \N).$ & $T(t) \dt \quad (n \in \N).$ & Abstand & \textbf{Umgesetzt.} Gedruckt „$dt(n \ensuremath{\in} \ensuremath{\mathbb{N}}$)“. \\[2pt]
+46 & 1152 & \sichC{} & \code{\textbackslash{}right\allowbreak{}\textbackslash{}lVert} & \code{\textbackslash{}right\allowbreak{}\textbackslash{}rVert} & LaTeX & \textbf{Umgesetzt.} Falsches schließendes Normzeichen (optisch gleich). \\[2pt]
+46 & 1173 & \sichC{} & $T(t)\,\dt$ & $T(t)\dt$ & Abstand & \textbf{Umgesetzt.} Zusätzliches \code{\textbackslash{},} nur in Z. 1173–1180, 1544, 1551, 1638, 1644–1647. \\[2pt]
+50 & 1370 & \sichB{} & $[\text{ess}]\text{-}\text{image}(m)$ & wie Z. 1455 ($\Image{m}$) & Notation & \textbf{Umgesetzt.} Dasselbe Objekt einmal „image“, einmal „im“. \\[2pt]
+50 & 1411 & \sichB{} & $H \coloneq \{m(x) \colon \Re(\lambda) \geq b \dots$ & $H \coloneq \{\lambda \in \C \colon \Re(\lambda) \geq b \dots$ & Tippfehler & \textbf{Umgesetzt.} Bedingung über $\ensuremath{\lambda}$, im Mengenterm steht m(x). \\[2pt]
+50 & 1420 & \sichA{} & \code{[\allowbreak{}\textbackslash{}text\{ess\}]\allowbreak{}\textbackslash{}text\{-\}\allowbreak{}\textbackslash{}esssup\allowbreak{}\textbackslash{}left\allowbreak{}\textbackslash{}\{} & \code{[\allowbreak{}\textbackslash{}text\{ess\}]\allowbreak{}\textbackslash{}text\{-\}\allowbreak{}\textbackslash{}sup\allowbreak{}\textbackslash{}left\allowbreak{}\textbackslash{}\{} & Notation & \textbf{Umgesetzt.} Gedruckt „[ess]-ess sup“; vgl. Z. 1427. \\[2pt]
+50 & 1473 & \sichA{} & $S(\theta + \pi/2) \subset~\rho(A)$ & $S(\theta + \pi/2) \subseteq \rho(A)$ & LaTeX & \textbf{Umgesetzt.} Tilde im Mathemodus erzeugt Leerraum; sonst $\subseteq$. \\[2pt]
+50 & 1509 & \sichC{} & $\iu \cdot \exp(n^{2})$ & $\iu\,\eu^{n^{2}}$ & Notation & \textbf{Umgesetzt.} Z. 1509, 1513, 1517 einheitlich $\iu\,\dots$. Die drei Beispiele (Z. 1509, 1513, 1517) uneinheitlich. \\[2pt]
+53 & 1628 & \sichB{} & $(T(t+s-h) - T(t-s))$ & $(T(t+h-s) - T(t-s))$ & Tippfehler & \textbf{Umgesetzt.} Z. 1647 hat $t+h\ensuremath{-}s$; ebenso Z. 1634, 1638. \\[2pt]
+54 & 1645 & \sichA{} & $\int_{0}^{t} (T(t-s)BS(s)\, \ds$ & $\int_{0}^{t} T(t-s)BS(s)\, \ds$ & Klammern & \textbf{Umgesetzt.} Öffnende Klammer ohne schließende. \\[2pt]
+54 & 1646 & \sichC{} & $\leq \|T(t+h) - T(t)\|  + \dots$ & $\leq \|T(t+h) - T(t)\| + \dots$ & LaTeX & \textbf{Umgesetzt.} $\ensuremath{\leq}$ links vom Ausrichtungspunkt, Ausrichtung verschoben. \\[2pt]
+54 & 1675 & \sichA{} & $= (\Id - SR(\lambda,A)$ & $= (\Id - SR(\lambda,A))$ & Klammern & \textbf{Umgesetzt.} Schließende Klammer fehlt. \\[2pt]
+54 & 1679 & \sichA{} & $(\Id -BR(\lambda,A))^{-1})$ & $(\Id -BR(\lambda,A))^{-1}$ & Klammern & \textbf{Umgesetzt.} Überzählige schließende Klammer. \\[2pt]
+57 & 1819 & \sichC{} & {\emph{p-contractive}}, {p-dissipative} & {$p$-contractive}, {$p$-dissipative} & Mathemodus & \textbf{Umgesetzt.} Außer in \code{\textbackslash{}index}-Einträgen. p steht aufrecht, {$N$-}, {$p$-} (Z. 2248) dagegen kursiv; ca. 30 Stellen in Z. 1819–2272. \\[2pt]
+58 & 1914 & \sichA{} & $\phi~\in~\ddp(f)$ & $\phi \in \ddp(f)$ & LaTeX & \textbf{Umgesetzt.} Tilden im Mathemodus erzeugen Leerraum. \\[2pt]
+58 & 1947 & \sichC{} & {for all $t > 0$, \code{\textbackslash\textbackslash}} & {for all $t > 0$,} & LaTeX & \textbf{Umgesetzt.} \code{\textbackslash{}\allowbreak{}\textbackslash{}} vor abgesetzter Formel. \\[2pt]
+58 & 1951 & \sichA{} & $p(f)~  \leq~p(f-tAf)$ & $p(f)  \leq p(f-tAf)$ & LaTeX & \textbf{Umgesetzt.} Tilden im Mathemodus. \\[2pt]
+59 & 2031 & \sichA{} & \code{T(t) \allowbreak{}= \allowbreak{}\allowbreak{}\textbackslash{}lim\_\{t\allowbreak{}\textbackslash{}to \allowbreak{}0\} \allowbreak{}\allowbreak{}\textbackslash{}left( \allowbreak{}\allowbreak{}\textbackslash{}frac\{n\}\{t\} \allowbreak{}\dots{}} & \code{T(t) \allowbreak{}= \allowbreak{}\allowbreak{}\textbackslash{}lim\_\{n\allowbreak{}\textbackslash{}to\allowbreak{}\textbackslash{}infty\} \allowbreak{}\allowbreak{}\textbackslash{}left( \allowbreak{}\allowbreak{}\textbackslash{}frac\{n\}\{t\} \allowbreak{}\dots{}} & Tippfehler & \textbf{Umgesetzt.} Grenzübergang über n (vgl. Z. 584). \\[2pt]
+60 & 2116 & \sichC{} & {(this is equivalent \dots  {schaefer:1966}).} & {\dots  {schaefer:1966})).} & Klammern & \textbf{Umgesetzt.} Schon in der Arbeitsliste (S. 61). \\[2pt]
+62 & 2235 & \sichB{} & {from~\lbl{thm:a2-2.6} it follows} & {from Theorem~\lbl{thm:a2-2.6} it follows} & Verweis & \textbf{Umgesetzt.} Schon in der Arbeitsliste (S. 62). \\[2pt]
+63 & 2274 & \sichB{} & $p((1-tA)f) \geq p(f)$ & $p((\Id-tA)f) \geq p(f)$ & Notation & \textbf{Umgesetzt.} Identität sonst $\Id$. \\[2pt]
+63 & 2281 & \sichA{} & {if it is N-dissipative} & {if it is $N$-dissipative} & Mathemodus & \textbf{Umgesetzt.} Z. 1861 schreibt {$N$-dissipative}. \\[2pt]
+64 & 2311 & \sichB{} & $\lim\sup_{t\to 0}$ & $\limsup_{t\to 0}$ & Notation & \textbf{Umgesetzt.} Z. 2014 $\limsup$; ebenso Z. 2322, 2323, 2341, 2431. \\[2pt]
+64 & 2341 & \sichC{} & $< 1\ ,$ & $< 1 ,$ & Satzzeichen & \textbf{Umgesetzt.} Leerzeichen vor dem Komma. \\[2pt]
+66 & 2513 & \sichB{} & {and $H^{\infty}$ does not only contain} & {and $H^{\infty}(O)$ does not only contain} & Tippfehler & \textbf{Umgesetzt.} Im selben Satz $H^{\infty}(O)$. \\
 \end{longtable}
 \subsection*{Teil I, Kap. 3 – Spectral Theory (\code{part-a/chap-a3.tex})}
 \begin{longtable}{@{}rrc>{\RaggedRight\arraybackslash}p{5.8cm}>{\RaggedRight\arraybackslash}p{5.8cm}>{\RaggedRight\arraybackslash}p{1.9cm}>{\RaggedRight\arraybackslash}p{7.3cm}@{}}

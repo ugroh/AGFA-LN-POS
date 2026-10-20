@@ -1,5 +1,7 @@
 # Fahnenkorrektur: *One-parameter Semigroups of Positive Operators* (2. Aufl.)
 
+> **Archiv – wird seit 20.10.2026 nicht mehr fortgeführt.** Maßgeblich für den Korrekturstand sind nur die Listen `korrekturen-text-*`, `korrekturen-mathe-*` und `math-error-*`. Diese Datei ist die Ausgangsliste vom 14.10.2026; ihr Inhalt ist auf `korrekturen-text-allgemein.md` und `korrekturen-text-part-a/b/c/d.md` verteilt, dort wird der Stand geführt.
+
 Springer LNM 1184, Proof-PDF vom 14.10.2026 (514 PDF-Seiten). Geprüft: Text ab S. 1 bis Index. Titelei, Formeln und Layout wurden nicht geprüft.
 
 **Seitenangaben** = gedruckte Seitenzahl (PDF-Seite = gedruckte Seite + 18).

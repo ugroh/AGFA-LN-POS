@@ -4,7 +4,11 @@
 
 **Umfang:** Beweise, Rechnungen und Beispiele in Teil IV, Kap. 1–4, inhaltlich geprüft im LaTeX-Quelltext (Branch `fahnenkorrektur`): Vorzeichen und Konstanten, Ungleichungsrichtungen, Voraussetzungen und Quantoren, zitierte Hilfsaussagen, Lücken, Beispiele. Reine Satz- und Notationsfragen stehen in `korrekturen-mathe-part-d.md`; wo ein Befund dort schon steht und hier ergänzt wird, ist das vermerkt („Ergänzt korrekturen-mathe“).
 
-**Wichtig:** Die Befunde sind von Claude nachgerechnet, aber nicht von einem zweiten Mathematiker geprüft. Bitte jeden Punkt selbst verifizieren, bevor er umgesetzt wird. **Stand 18.10.2026:** Alle Punkte sind im Quelltext umgesetzt (Branch `fahnenkorrektur`, als „Umgesetzt“ markiert).
+**Wichtig:** Die Befunde sind von Claude nachgerechnet, aber nicht von einem zweiten Mathematiker geprüft. Bitte jeden Punkt selbst verifizieren, bevor er umgesetzt wird.
+
+**Stand 18.10.2026:** Alle Punkte sind im Quelltext umgesetzt (Branch `fahnenkorrektur`, als „Umgesetzt“ markiert).
+
+**Buchführung:** Maßgeblich für den Korrekturstand sind nur die Listen `korrekturen-text-*`, `korrekturen-mathe-*` und `math-error-*` (seit 20.10.2026). `Umgesetzte_Korrekturen_LNM1184.md`, `Finales-zum-Pruefen.md` und `Fahnenkorrektur_Springer_LNM1184.md` werden nicht mehr fortgeführt.
 
 **Spalten:** S. = gedruckte Buchseite (über das nächstgelegene Label ermittelt, ±1 Seite). Z. = Zeile in der .tex-Datei. Sicherheit: ● sicher falsch · ◐ sehr wahrscheinlich falsch · ○ zweifelhaft, bitte prüfen.
 

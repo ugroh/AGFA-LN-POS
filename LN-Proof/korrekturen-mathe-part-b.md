@@ -1,10 +1,12 @@
 # Formelprüfung Part B (Teil II): Satz und Notation
 
-*One-parameter Semigroups of Positive Operators*, 2. Aufl. (Springer LNM 1184). Stand: 14.10.2026.
+*One-parameter Semigroups of Positive Operators*, 2. Aufl. (Springer LNM 1184). Geprüft am 14.10.2026; Stand der Umsetzung: 20.10.2026.
 
 **Umfang:** Teil II, Kap. 1–4, geprüft im LaTeX-Quelltext (Branch `fahnenkorrektur`). Geprüft wurden nur Satz und Notation in Formeln: Tippfehler, Klammern, Indizes, uneinheitliche Schreibweisen, Mathemodus, Satzzeichen an Formeln, Verweise. Beweise wurden **nicht** nachgerechnet; wo ein Befund inhaltlich wirkt, steht „bitte prüfen“.
 
-**Stand 18.10.2026:** Kap. 1 ist nach Durchsicht durch Rainer Nagel umgesetzt (in der Spalte Kommentar mit **Umgesetzt** markiert); Kap. 2 ist am 19.10.2026 umgesetzt (Abweichungen im Kommentar); Kap. 3–4 sind noch offen. Die Zeilenangaben beziehen sich auf den Stand vom 14.10.2026.
+**Stand 20.10.2026:** **Kap. 1 und Kap. 2 sind erledigt** (Kap. 1 nach Durchsicht durch Rainer Nagel; in der Spalte Kommentar mit **Umgesetzt** markiert, Abweichungen ebenda). Kap. 3–4 sind noch offen. Die Zeilenangaben beziehen sich auf den Stand vom 14.10.2026.
+
+**Buchführung:** Maßgeblich für den Korrekturstand sind nur die Listen `korrekturen-text-*`, `korrekturen-mathe-*` und `math-error-*` (seit 20.10.2026). `Umgesetzte_Korrekturen_LNM1184.md`, `Finales-zum-Pruefen.md` und `Fahnenkorrektur_Springer_LNM1184.md` werden nicht mehr fortgeführt.
 
 **Spalten:** S. = gedruckte Buchseite, ermittelt über das nächstgelegene Label (kann um eine Seite abweichen). Z. = Zeile in der .tex-Datei. Sicherheit: ● eindeutig · ◐ sehr wahrscheinlich · ○ Hinweis/Ermessen.
 

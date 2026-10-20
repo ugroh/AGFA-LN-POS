@@ -1,5 +1,7 @@
 # Finales zum Prüfen
 
+> **Archiv – wird seit 20.10.2026 nicht mehr fortgeführt.** Maßgeblich für den Korrekturstand sind nur die Listen `korrekturen-text-*`, `korrekturen-mathe-*` und `math-error-*`. Die offenen Punkte sind übernommen: Example 2.1.4 und Pazy in `math-error-part-a.md`, die Abweichungen in Teil II im Kommentar von `korrekturen-mathe-part-b.md`, die Literaturfragen in `korrekturen-text-allgemein.md`.
+
 *One-parameter Semigroups of Positive Operators*, 2. Aufl. (Springer LNM 1184). Angelegt am 19.10.2026.
 
 Hier stehen Punkte, die vor der Abgabe noch eine Entscheidung oder eine Kontrolle brauchen: bewusste Abweichungen von den Korrekturlisten, Literaturfragen und Konsistenz. Erledigtes bitte abhaken und mit Datum versehen; Einzelheiten zu den umgesetzten Korrekturen stehen in `Umgesetzte_Korrekturen_LNM1184.md`.

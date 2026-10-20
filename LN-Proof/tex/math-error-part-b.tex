@@ -7,11 +7,15 @@
 % Grau/Schreibmaschine = Quelltext, der sich nicht als Formel setzen laesst (Makronamen, Labels).
 {\Large\bfseries Mathematische Fehler in Beweisen: Part B (Teil II)\par}
 \smallskip
-\emph{One-parameter Semigroups of Positive Operators}, 2. Aufl. (Springer LNM 1184). Stand: 14.10.2026.
+\emph{One-parameter Semigroups of Positive Operators}, 2. Aufl. (Springer LNM 1184). Geprüft am 14.10.2026; Stand der Umsetzung: 20.10.2026.
 
 \textbf{Umfang:} Beweise, Rechnungen und Beispiele in Teil II, Kap. 1–4, inhaltlich geprüft im LaTeX-Quelltext (Branch \code{fahnenkorrektur}): Vorzeichen und Konstanten, Ungleichungsrichtungen, Voraussetzungen und Quantoren, zitierte Hilfsaussagen, Lücken, Beispiele. Reine Satz- und Notationsfragen stehen in \code{korrekturen-mathe-part-b.md}; wo ein Befund dort schon steht und hier ergänzt wird, ist das vermerkt („Ergänzt korrekturen-mathe“).
 
-\textbf{Wichtig:} Die Befunde sind von Claude nachgerechnet, aber nicht von einem zweiten Mathematiker geprüft. Bitte jeden Punkt selbst verifizieren, bevor er umgesetzt wird. \textbf{Am Quelltext ist nichts geändert.}
+\textbf{Wichtig:} Die Befunde sind von Claude nachgerechnet, aber nicht von einem zweiten Mathematiker geprüft. Bitte jeden Punkt selbst verifizieren, bevor er umgesetzt wird.
+
+\textbf{Stand 20.10.2026:} Kap. 1 ist erledigt (nach Durchsicht durch Rainer Nagel umgesetzt, Branch \code{fahnenkorrektur}, als „Umgesetzt“ markiert). \textbf{Kap. 2, 3 und 4 sind noch zu bearbeiten.}
+
+\textbf{Buchführung:} Maßgeblich für den Korrekturstand sind nur die Listen {korrekturen-text-*}, {korrekturen-mathe-*} und {math-error-*} (seit 20.10.2026). \code{Umgesetzte\_Korrekturen\_LNM1184.md}, \code{Finales-zum-Pruefen.md} und \code{Fahnenkorrektur\_Springer\_LNM1184.md} werden nicht mehr fortgeführt.
 
 \textbf{Spalten:} S. $=$ gedruckte Buchseite (über das nächstgelegene Label ermittelt, $\ensuremath{\pm}1$ Seite). Z. $=$ Zeile in der .tex-Datei. Sicherheit: \sichA{} sicher falsch $\ensuremath{\cdot}$ \sichB{} sehr wahrscheinlich falsch $\ensuremath{\cdot}$ \sichC{} zweifelhaft, bitte prüfen.
 
@@ -30,8 +34,8 @@ Insgesamt \textbf{45 Punkte}: 28 \sichA{}, 9 \sichB{}, 8 \sichC{}.
 \endhead
 \bottomrule
 \endlastfoot
-139 & 139 & \sichC{} & Section 1.3, Adjungierte von Homomorphismen & {the adjoint of an algebra homomorphism induces a continuous map $\phi$ from $Y$ ... into $X$}: Für einen nicht-unitalen Algebrenhomomorphismus ist $T'\delta_{s}$ für manche $s$ gleich $0$ (z. B. $T=0$ oder $Tf = \1_{U}\cdot f(x_{0})$ mit offen-abgeschlossenem $U \subsetneq Y$), dann ist $\phi$ nicht auf ganz $Y$ definiert. Richtig nur für $T\1_{X} = \1_{Y}$ (so auch in (b) „Markov algebra homomorphism“ und stillschweigend in Kap. B-II, Z. 1645). & {the adjoint of a Markov algebra homomorphism} (bzw. „of an algebra homomorphism with $T\1_{X} = \1_{Y}$“); bitte prüfen \\[2pt]
-139 & 159 & \sichA{} & Section 1.3 (i), Darstellung von Verbandshomomorphismen auf $C(K)$ & {a function $h \in C(K)$}: Ohne Positivität von $h$ ist die „if“-Richtung falsch, z. B. $h \equiv -1$, $\phi = \mathrm{id}$ liefert $Tf = -f$, das kein Verbandshomomorphismus ist. Notwendig gilt $h = T\1 \geq 0$. & {a function $h \in C(K)_{+}$} (bzw. $0 \leq h \in C(K)$) \\
+139 & 139 & \sichC{} & Section 1.3, Adjungierte von Homomorphismen & \textbf{Umgesetzt.} {the adjoint of an algebra homomorphism induces a continuous map $\phi$ from $Y$ ... into $X$}: Für einen nicht-unitalen Algebrenhomomorphismus ist $T'\delta_{s}$ für manche $s$ gleich $0$ (z. B. $T=0$ oder $Tf = \1_{U}\cdot f(x_{0})$ mit offen-abgeschlossenem $U \subsetneq Y$), dann ist $\phi$ nicht auf ganz $Y$ definiert. Richtig nur für $T\1_{X} = \1_{Y}$ (so auch in (b) „Markov algebra homomorphism“ und stillschweigend in Kap. B-II, Z. 1645). & {the adjoint of a Markov algebra homomorphism} \\[2pt]
+139 & 159 & \sichA{} & Section 1.3 (i), Darstellung von Verbandshomomorphismen auf $C(K)$ & \textbf{Umgesetzt.} {a function $h \in C(K)$}: Ohne Positivität von $h$ ist die „if“-Richtung falsch, z. B. $h \equiv -1$, $\phi = \mathrm{id}$ liefert $Tf = -f$, das kein Verbandshomomorphismus ist. Notwendig gilt $h = T\1 \geq 0$. & {a function $h \in C(K)_{+}$} \\
 \end{longtable}
 \subsection*{Teil II, Kap. 2 – Characterization of Positive Semigroups on $C\ensuremath{_{0}}(X)$ (\code{part-b/chap-b2.tex})}
 \begin{longtable}{@{}rrc>{\RaggedRight\arraybackslash}p{3.0cm}>{\RaggedRight\arraybackslash}p{11.4cm}>{\RaggedRight\arraybackslash}p{7.4cm}@{}}

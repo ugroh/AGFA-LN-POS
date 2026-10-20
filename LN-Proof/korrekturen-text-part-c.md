@@ -4,8 +4,11 @@
 
 Auszug aus `Fahnenkorrektur_Springer_LNM1184.md`. **Seitenangaben** = gedruckte Seitenzahl (PDF-Seite = gedruckte Seite + 18). **Sicherheit:** ● hoch · ◐ mittel · ○ niedrig.
 
-**Stand der Umsetzung (Branch `fahnenkorrektur`):** Alle ●-Punkte sind umgesetzt und im Kommentar mit „Umgesetzt“ markiert (Abweichungen siehe `Umgesetzte_Korrekturen_LNM1184.md`). Kap. 1, Kap. 2 und die Updated Notes sind vollständig umgesetzt (Kap. 2 am 19.10.2026). Sonst sind ◐ und ○ offen, außer wo „Umgesetzt“ steht.
-Insgesamt **104 Punkte**: 22 ●, 41 ◐, 41 ○; davon umgesetzt: 57.
+**Stand 20.10.2026 (Branch `fahnenkorrektur`):** **Kap. 1 und Kap. 2 sind erledigt**, ebenso die Updated Notes. In Kap. 3–4 sind alle ●-Punkte umgesetzt; ◐ und ○ sind dort offen, außer wo im Kommentar „Umgesetzt“ steht. Abweichungen vom Soll stehen im Kommentar der jeweiligen Zeile.
+
+**Buchführung:** Maßgeblich für den Korrekturstand sind nur die Listen `korrekturen-text-*`, `korrekturen-mathe-*` und `math-error-*` (seit 20.10.2026). `Umgesetzte_Korrekturen_LNM1184.md`, `Finales-zum-Pruefen.md` und `Fahnenkorrektur_Springer_LNM1184.md` werden nicht mehr fortgeführt.
+
+Insgesamt **104 Punkte**: 22 ●, 41 ◐, 41 ○; davon umgesetzt: 58, teilweise: 2.
 
 
 Übergreifende Punkte (Inhaltsverzeichnis, Kolumnentitel, Schreibweisen) und der Index stehen in `korrekturen-text-allgemein.md`.
@@ -91,7 +94,7 @@ Insgesamt **104 Punkte**: 22 ●, 41 ◐, 41 ○; davon umgesetzt: 57.
 | 366 | ● | or “quasi-strictly positive” in Karlin [21]). Sawashima [30] | or “quasi-strictly positive” in Karlin [21]. Sawashima [30] | Satz | **Umgesetzt.** Schließende Klammer ohne öffnende |
 | 367 | ◐ | [17] G. Greiner, J. Voigt & M. Wolff: On the spectral bound of the generator of semigroups of positive operators. J. Operator Theory (1981) 245–256. | J. Operator Theory 5 (1981) 245–256. | Literatur | **Umgesetzt.** Bandnummer fehlt |
 | 368 | ● | [34] J. Voigt: On the abszissa of convergence for the Laplace transform | On the abscissa of convergence for the Laplace transform | Literatur | **Umgesetzt.** Deutsche Schreibweise im englischen Titel |
-| 368 | ○ | [37] J. Voigt: Spectral properties of the neutron transport equations. | Spectral properties of the neutron transport equation. | Literatur | Originaltitel im Singular – bitte prüfen |
+| 368 | ○ | [37] J. Voigt: Spectral properties of the neutron transport equations. | Spectral properties of the neutron transport equation. | Literatur | **Umgesetzt** (in der Bib-Datei, 18./19.10.2026). Originaltitel im Singular – bitte prüfen |
 
 ### Teil III, Kap. 4 – Asymptotics of Positive Semigroups on Banach Lattices
 
@@ -122,8 +125,8 @@ Insgesamt **104 Punkte**: 22 ●, 41 ◐, 41 ○; davon umgesetzt: 57.
 | 403 | ◐ | Example 4.2.3 is discussed in more detail in Webb [42] and Greiner [14]. | ... in Webb [42] and Greiner [13]. | Literatur | [14] ist 'An irreducibility criterion for the linear transport equation'; zur Altersstruktur passt [13] (so auch S. 381 zitiert). Ebenso 'population equations by Greiner [14]' weiter unten auf S. 403 |
 | 403 | ◐ | is given in Chapter 2 of Casteren [4] | is given in Chapter 2 of van Casteren [4] | Literatur | Name laut Literaturliste 'J. van Casteren' |
 | 403 | ○ | (see Part-II, Chapter 4, Sec.3) | (see Part-II, Section 4.3) | Konsistenz | Sonst stets 'Section x.y' |
-| 404 | ◐ | [15] G. Greiner & R. Nagel: La loi “zero ou deux” et ses conséquences ... J. Math. Pures Appl. 9 (1982) 261–273. | La loi « zéro ou deux » et ses conséquences ... J. Math. Pures Appl. (9) 61 (1982) 261–273. | Literatur | Akzent 'zéro' fehlt; '9' ist die Serie, Band 61 fehlt |
-| 405 | ○ | North Holland 1986. / North Holland 1984. / Riesz Spaces II. North Holland (1983). | North-Holland (1986) / North-Holland (1984) / North-Holland (1983) | Literatur | Verlagsname 'North-Holland'; Jahresangabe teils mit, teils ohne Klammern (auch 'Springer 1984 pp.', 'Marcel Dekker 1985 pp.') |
+| 404 | ◐ | [15] G. Greiner & R. Nagel: La loi “zero ou deux” et ses conséquences ... J. Math. Pures Appl. 9 (1982) 261–273. | La loi « zéro ou deux » et ses conséquences ... J. Math. Pures Appl. (9) 61 (1982) 261–273. | Literatur | **Teilweise umgesetzt** (in der Bib-Datei, 18./19.10.2026): Band 61; offen sind „zéro“ und die Serie (9). Akzent 'zéro' fehlt; '9' ist die Serie, Band 61 fehlt |
+| 405 | ○ | North Holland 1986. / North Holland 1984. / Riesz Spaces II. North Holland (1983). | North-Holland (1986) / North-Holland (1984) / North-Holland (1983) | Literatur | **Teilweise umgesetzt** (in der Bib-Datei, 18./19.10.2026): „North-Holland“ in allen Einträgen; die Jahresklammern kommen aus dem biblatex-Stil und sind offen. Verlagsname 'North-Holland'; Jahresangabe teils mit, teils ohne Klammern (auch 'Springer 1984 pp.', 'Marcel Dekker 1985 pp.') |
 
 ### Updated Notes, Part III
 

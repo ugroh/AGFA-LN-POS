@@ -4,7 +4,10 @@
 
 Auszug aus `Fahnenkorrektur_Springer_LNM1184.md`. **Seitenangaben** = gedruckte Seitenzahl (PDF-Seite = gedruckte Seite + 18). **Sicherheit:** ● hoch · ◐ mittel · ○ niedrig.
 
-**Stand der Umsetzung (Branch `fahnenkorrektur`):** Alle ●-Punkte sind umgesetzt und im Kommentar mit „Umgesetzt“ markiert (Abweichungen siehe `Umgesetzte_Korrekturen_LNM1184.md`). Kap. 1, Kap. 2 und die Updated Notes sind vollständig umgesetzt (Kap. 2 am 19.10.2026). Sonst sind ◐ und ○ offen, außer wo „Umgesetzt“ steht.
+**Stand 20.10.2026 (Branch `fahnenkorrektur`):** **Kap. 1 und Kap. 2 sind erledigt**, ebenso die Updated Notes. In Kap. 3–4 sind alle ●-Punkte umgesetzt; ◐ und ○ sind dort offen, außer wo im Kommentar „Umgesetzt“ steht. Abweichungen vom Soll stehen im Kommentar der jeweiligen Zeile.
+
+**Buchführung:** Maßgeblich für den Korrekturstand sind nur die Listen `korrekturen-text-*`, `korrekturen-mathe-*` und `math-error-*` (seit 20.10.2026). `Umgesetzte_Korrekturen_LNM1184.md`, `Finales-zum-Pruefen.md` und `Fahnenkorrektur_Springer_LNM1184.md` werden nicht mehr fortgeführt.
+
 Insgesamt **120 Punkte**: 36 ●, 56 ◐, 28 ○; davon umgesetzt: 78.
 
 
@@ -129,14 +132,14 @@ Insgesamt **120 Punkte**: 36 ●, 56 ◐, 28 ○; davon umgesetzt: 78.
 | 240 | ○ | (see e.g., Schaefer [29, II. Proposition 9.4 ]) | (see e.g., Schaefer [29, II. Proposition 9.4]) | Satz | Leerzeichen vor schließender Klammer |
 | 242 | ● | Then ω_ess(T) < 0 by Eq. (3.3.10) on page 85). | Then ω_ess(T) < 0 by Eq. (3.3.10) on page 85. | Satz | **Umgesetzt.** überzählige schließende Klammer |
 | 245 | ◐ | the asymptotic behavior as t → ∞ of certain semigroups if only its generator is known | ... of certain semigroups if only their generator is known | Grammatik |  |
-| 251 | ● | as developed in Part-I, Section 4.1, Section 4.1 | as developed in Part-I, Section 4.1. | Tippfehler | **Umgesetzt, abweichend (siehe Umgesetzte_Korrekturen_LNM1184.md).** Verweis doppelt, Satzpunkt fehlt |
+| 251 | ● | as developed in Part-I, Section 4.1, Section 4.1 | as developed in Part-I, Section 4.1. | Tippfehler | **Umgesetzt, abweichend:** „Part-I, Section 4.1, Section 4.1 and Part-III, Section 4.1“ (gemeint sind die Abschnitte 4.1 aus Teil I, II und III; Labels `sec:a4-1`, `sec:b4-1`, `sec:c4-1`). Verweis doppelt, Satzpunkt fehlt |
 | 251 | ◐ | Again we use the assertion that dim F < ∞ | Again we use the assumption that dim F < ∞ | Tippfehler |  |
 | 251 | ◐ | by the Theorem of Arzela-Ascoli | by the Theorem of Arzelà–Ascoli | Tippfehler |  |
 | 252 | ○ | Proof. By Formula Eq. (4.3.2) on page 248 | Proof. By Eq. (4.3.2) on page 248 | Satz | ebenso S. 258: 'see Formula Eq. (4.3.3)' |
 | 253 | ● | then σ(A) = ∅ by Proposition 3.4. | then σ(A) = ∅ by Proposition 4.3.4. | Querverweis | **Umgesetzt.**  |
 | 253 | ◐ | by Part-III, Theorem 3.1.1. (i), we obtain | by Part-III, Theorem 3.1.1 (i), we obtain | Satz |  |
 | 256 | ○ | since, even a scalar valued delay differential equation may be stable | since even a scalar-valued delay differential equation may be stable | Satz |  |
-| 257 | ● | Then (3.11) takes the abstract form | Then Eq. (4.3.10) takes the abstract form | Querverweis | **Umgesetzt, abweichend (siehe Umgesetzte_Korrekturen_LNM1184.md).** Alter Gleichungsverweis '(3.11)'; gemeint ist die Gleichung aus Example 4.3.11 (bitte Nummer prüfen) |
+| 257 | ● | Then (3.11) takes the abstract form | Then Eq. (4.3.10) takes the abstract form | Querverweis | **Umgesetzt, abweichend:** „Then the problem in Example 4.3.11 takes …“ (das Label zeigt nur auf die Randbedingung; gemeint ist das ganze System des Beispiels). Alter Gleichungsverweis '(3.11)'; gemeint ist die Gleichung aus Example 4.3.11 (bitte Nummer prüfen) |
 | 257 | ○ | It is well-known that B̃ generates | It is well known that B̃ generates | Konsistenz | sonst 'well known' (S. 247, 259) |
 | 259 | ● | showed the translation property (T)for the solution semigroup | showed the translation property (T) for the solution semigroup | Satz | **Umgesetzt.** im PDF geprüft |
 | 259 | ● | (see Part-III, Section 3.4 can be used to derive | (see Part-III, Section 3.4) can be used to derive | Satz | **Umgesetzt.** schließende Klammer fehlt |
