@@ -11,7 +11,7 @@
 
 \textbf{Umfang:} Teil I, Kap. 1–4, geprüft im LaTeX-Quelltext (Branch \code{fahnenkorrektur}). Geprüft wurden nur Satz und Notation in Formeln: Tippfehler, Klammern, Indizes, uneinheitliche Schreibweisen, Mathemodus, Satzzeichen an Formeln, Gleichungsverweise. Beweise wurden \textbf{nicht} nachgerechnet; wo ein Befund inhaltlich wirkt, steht „bitte prüfen“.
 
-\textbf{Stand 20.10.2026:} \textbf{Kap. 1 und Kap. 2 sind erledigt} (Kap. 1 nach Durchsicht durch Rainer Nagel; in der Spalte Kommentar mit \textbf{Umgesetzt} markiert, Abweichungen ebenda). Kap. 3–4 sind noch offen. Die Zeilenangaben beziehen sich auf den Stand vom 14.10.2026.
+\textbf{Stand 20.10.2026:} \textbf{Kap. 1, 2 und 3 sind erledigt} (Kap. 1 nach Durchsicht durch Rainer Nagel, Kap. 3 nach Freigabe durch Günther Greiner; in der Spalte Kommentar mit \textbf{Umgesetzt} markiert, Abweichungen ebenda). Kap. 4 ist noch offen. Die Zeilenangaben beziehen sich auf den Stand vom 14.10.2026.
 
 \textbf{Buchführung:} Maßgeblich für den Korrekturstand sind nur die Listen {korrekturen-text-*}, {korrekturen-mathe-*} und {math-error-*} (seit 20.10.2026). \code{Umgesetzte\_Korrekturen\_LNM1184.md}, \code{Finales-zum-Pruefen.md} und \code{Fahnenkorrektur\_Springer\_LNM1184.md} werden nicht mehr fortgeführt.
 
@@ -135,43 +135,43 @@ Insgesamt \textbf{141 Punkte}: 34 \sichA{}, 58 \sichB{}, 49 \sichC{}. Davon steh
 \endhead
 \bottomrule
 \endlastfoot
-73 & 182 & \sichA{} & \code{\textbackslash{}begin\{example\}\allowbreak{}\textbackslash{}label\{ex:a3-1.4\}[Hilbert \allowbreak{}space, \allowbreak{}\allowbreak{}\textbackslash{}textcite\{zabczyk:1975\}]} & \code{\textbackslash{}begin\{example\}[Hilbert \allowbreak{}space, \allowbreak{}\allowbreak{}\textbackslash{}textcite\{zabczyk:1975\}]\allowbreak{}\textbackslash{}label\{ex:a3-1.4\}} & LaTeX & Optionales Argument hinter \code{\textbackslash{}label}: „[Hilbert space, \dots{}]“ erscheint als Fließtext statt im Kopf des Beispiels (vgl. Z. 127). \\[2pt]
-73 & 207 & \sichC{} & {$n \in \N$ ,} & {$n \in \N$,} & Satzzeichen & Leerzeichen vor dem Komma; dasselbe Muster in Z. 210, 712, 1050, 1053, 1056, 1162, 1163, 1166, 1215, 1383, 1386, 1432, 1490, 1493, 1713, 1733, 1736, 2206. \\[2pt]
-73 & 234 & \sichB{} & {continuous on each component $E_{n}$} & $H_{n}$ & Tippfehler & Komponenten heißen $H_n$ (Z. 184, 220). \\[2pt]
-76 & 355 & \sichA{} & $(\text{dist}(x,\sigma(A)))^{-1}$ & $(\mathrm{dist}(\lambda_{n},\sigma(A)))^{-1}$ & Tippfehler & x statt $\ensuremath{\lambda}_n$; sonst $\mathrm{dist}$ (Z. 537). \\[2pt]
-76 & 358 & \sichB{} & {Proposition~\lbl{prop:a3-2.5}\,(ii)} & $\dots \,(i)$ & Verweis & Schon in der Arbeitsliste (S. 76). \\[2pt]
-76 & 392 & \sichB{} & $q \colon X \mapsto \C$ & $q \colon X \to \C$ & Notation & Sonst $\to$ (Z. 1933, 1948). \\[2pt]
-76 & 402 & \sichC{} & $\eu^{tq} \cdot f \, , \, f \in E .$ & $\eu^{tq} \cdot f, \quad f \in E .$ & Abstand & Sonst $, \quad$; ebenso Z. 2141, 2293. \\[2pt]
-76 & 431 & \sichC{} & {spectral value of\/ $A$} \dots{} & $M_{q}$ & Notation & Im Beispiel heißt der Generator sonst $M_q$ (Z. 431–434). \\[2pt]
-77 & 467 & \sichC{} & $\epsilon_{\lambda}$ (vs. $e_{\lambda}$ Z. 160) & einheitlich $\epsilon_{\lambda}$ & Notation & Sonst $\ensuremath{\varepsilon}_\ensuremath{\lambda}$ (Z. 520, 708, 1515). \\[2pt]
-78 & 603 & \sichB{} & $\diff{z} =    = \dots$ & $\diff{z}    = \dots$ & Satzzeichen & Doppeltes Gleichheitszeichen am Zeilenende und -anfang. \\[2pt]
-82 & 757 & \sichB{} & $T_{1} = (T(t)P)_{t \geq 0}$ & $\TT_{1} = \dots$ & Notation & Halbgruppen sonst $\ensuremath{\mathcal{T}}_i$ (Z. 669, 685, 727); ebenso Z. 774 $(T\ensuremath{_{3}})$, 801 $(\ensuremath{\omega}\ensuremath{_{0}}(T\ensuremath{_{1}}))$. \\[2pt]
-82 & 808 & \sichA{} & {Theorem~~\lbl{thm:a3-3.3}} & {Theorem~\lbl{thm:a3-3.3}} & LaTeX & Doppelte Tilde, sichtbar doppelter Abstand. \\[2pt]
-83 & 817 & \sichB{} & {(see~\lbl{prop:a3-6.2})} & {(see Proposition~\lbl{prop:a3-6.2})} & Verweis & Schon in der Arbeitsliste (S. 83). \\[2pt]
-86 & 1070 & \sichB{} & $D(A)\backslash N$ & $D(A) \setminus N$ & Notation & Sonst $\setminus$ (Z. 537, 1446). \\[2pt]
-86 & 1071 & \sichC{} & $E_{/}$ & $E/N$ & Notation & Z. 1018: E/N; ebenso Z. 1077, 1084. (Fehlender Schlusspunkt schon in der Arbeitsliste, S. 87.) \\[2pt]
-87 & 1134 & \sichC{} & {we have \quad $\dots $, $\quad R\dots  = \sum U_{n\vert}\dots $} & abgesetzte Formel, einheitlich $\sum_{n}$ & LaTeX & $\quad$ im Fließtext, Tilde am Ende, Summe teils ohne Index (Z. 1134–1135). \\[2pt]
-88 & 1155 & \sichA{} & $\lim_{t \to \infty} \|T(t)'\phi-\phi\| = 0$ & $\lim_{t \to 0} \dots$ & Tippfehler & Definition des Halbgruppen-Duals über $t \ensuremath{\to} 0$ (vgl. chap-a1 Z. 1245). \\[2pt]
-88 & 1173 & \sichB{} & {\lbl{prop:a3-2.2}(ii)} & {Proposition~\lbl{prop:a3-2.2}\,(ii)} & Verweis & Schon in der Arbeitsliste (S. 88). \\[2pt]
-89 & 1233 & \sichA{} & $({\hat{f}^{m}})_{n \in \N}$ & $(\hat{f}^{m})_{m \in \N}$ & Tippfehler & Folge läuft über m. \\[2pt]
-91 & 1351 & \sichA{} & {the n-th Fourier coefficient} & {the $n$-th Fourier coefficient} & Mathemodus & n nicht im Mathemodus. \\[2pt]
-93 & 1511 & \sichC{} & {generator\quad $Af(z) = \dots $\quad is \dots } & ohne $\quad$ & Abstand & $\quad$ im Fließtext (Z. 1511–1514). \\[2pt]
-93 & 1525 & \sichC{} & $Q_{m} \coloneq \sum_{-m}^{+m} P_{n}$ in $L^{p}(\Gamma,m)$ & anderer Index, z. B. $Q_{N}$ & Notation & m zugleich Summationsgrenze und Maß. \\[2pt]
-94 & 1574 & \sichC{} & $\sigma(T(t)) = \Gamma$ & $\sigma(R_{\tau}(t)) = \Gamma$ & Notation & In (ii) heißt die Gruppe $R_\ensuremath{\tau}(t)$ (Z. 1572). \\[2pt]
-96 & 1702 & \sichB{} & {(see Proposition~\lbl{prop:a3-4.4})} & {(see Section~\lbl{subsec:a3-4.4})} & Verweis & Schon in der Arbeitsliste (S. 96). \\[2pt]
-97 & 1736 & \sichB{} & $\overline{\text{span}_{n \in \Z} \{P_{n}E\}}$ & $\overline{\mathrm{span}_{n \in \Z} \dots }$ & Notation & $\text{span}$ wird im kursiven Korollar kursiv; Z. 1716 $\mathrm{span}$. \\[2pt]
-97 & 1772 & \sichC{} & \code{\textbackslash{}label\{eq:a3-6.6)\}} & \code{\textbackslash{}label\{eq:a3-6.6\}} & LaTeX & Überzählige Klammer im Label (derzeit nicht referenziert). \\[2pt]
-97 & 1815 & \sichB{} & {(see~\lbl{cor:a3-1.2})} & {(see Corollary~\lbl{cor:a3-1.2})} & Verweis & Bezeichnung fehlt, gedruckt nur die Nummer. \\[2pt]
-98 & 1898 & \sichC{} & {Theorem~\lbl{thm:a2-1.20} )} & {Theorem~\lbl{thm:a2-1.20})} & Satzzeichen & Schon in der Arbeitsliste (S. 99). \\[2pt]
-102 & 2099 & \sichB{} & $\widehat{\left(\eu^{\im 2k}\check{\phi_{0}}\right)}$ & $\widehat{\left(\eu^{\im 2k\cdot}\check{\phi_{0}}\right)}$ & Tippfehler & Variable fehlt im Exponenten (vgl. Z. 2161 $\eu^{\im\pi\cdot}$). \\[2pt]
-103 & 2150 & \sichC{} & $\eu^{-\im n0}$ & $\eu^{-\im n\cdot 0}$ & Notation & „n0“ liest sich wie ein Symbol. \\[2pt]
-105 & 2194 & \sichA{} & $C_{1}\text{-}\sum_{k\in\Z} \xi_{n}$ & $C_{1}\text{-}\sum_{k\in\Z} \xi_{k}$ & Tippfehler & Summationsindex k, Summand mit n. \\[2pt]
-106 & 2269 & \sichB{} & \code{< \allowbreak{}\allowbreak{}\textbackslash{}infty\$\textasciitilde{}, \allowbreak{}then\allowbreak{}\textbackslash{}quad \allowbreak{}\$\dots{}\$\allowbreak{}\textbackslash{}quad \allowbreak{}is \allowbreak{}summable} & \code{< \allowbreak{}\allowbreak{}\textbackslash{}infty\$, \allowbreak{}then \allowbreak{}\$\dots{}\$ \allowbreak{}is \allowbreak{}summable} & Satzzeichen & Geschütztes Leerzeichen vor Komma, $\quad$ im Fließtext. \\[2pt]
-106 & 2270 & \sichC{} & Leerzeile in Item (ii) & Leerzeile entfernen & LaTeX & Absatzumbruch mitten im Satz. \\[2pt]
-106 & 2286 & \sichB{} & {(use Eq.~(\lbl{eq:a3-7.5}))} & \code{eq:a3-7.7} & Verweis & Benötigt wird die Definition von $Q_k$ (7.7), nicht (7.5). \\[2pt]
-106 & 2311 & \sichA{} & \code{\textbackslash{}eu\textasciicircum{}\{-\allowbreak{}\textbackslash{}im \allowbreak{}ks\}g\_\{k\}\allowbreak{}\textbackslash{}right\allowbreak{}\textbackslash{}|\textasciicircum{}\{2\} \allowbreak{}\allowbreak{}\textbackslash{}dx} & $\dots  \ds$ & Tippfehler & Integrationsvariable ist s. \\[2pt]
-106 & 2313 & \sichC{} & $c(\sum_{k\in N} \|g_{k}\|^{2})^{1/2}$ & $c\left(\sum \dots  \right)^{1/2}$ & Klammern & Klammern zu klein; daneben mit $\left(\dots \right)$. \\[2pt]
-107 & 2335 & \sichC{} & $\not\in$ $(2\ensuremath{\times})$ & $\notin$ & Notation & Sonst $\notin$. \\
+73 & 182 & \sichA{} & \code{\textbackslash{}begin\{example\}\allowbreak{}\textbackslash{}label\{ex:a3-1.4\}[Hilbert \allowbreak{}space, \allowbreak{}\allowbreak{}\textbackslash{}textcite\{zabczyk:1975\}]} & \code{\textbackslash{}begin\{example\}[Hilbert \allowbreak{}space, \allowbreak{}\allowbreak{}\textbackslash{}textcite\{zabczyk:1975\}]\allowbreak{}\textbackslash{}label\{ex:a3-1.4\}} & LaTeX & \textbf{Umgesetzt} (20.10.2026, Freigabe G. Greiner). Optionales Argument hinter \code{\textbackslash{}label}: „[Hilbert space, \dots{}]“ erscheint als Fließtext statt im Kopf des Beispiels (vgl. Z. 127). \\[2pt]
+73 & 207 & \sichC{} & {$n \in \N$ ,} & {$n \in \N$,} & Satzzeichen & \textbf{Umgesetzt} (20.10.2026, Freigabe G. Greiner). Leerzeichen vor dem Komma; dasselbe Muster in Z. 210, 712, 1050, 1053, 1056, 1162, 1163, 1166, 1215, 1383, 1386, 1432, 1490, 1493, 1713, 1733, 1736, 2206. \\[2pt]
+73 & 234 & \sichB{} & {continuous on each component $E_{n}$} & $H_{n}$ & Tippfehler & \textbf{Umgesetzt} (20.10.2026, Freigabe G. Greiner). Komponenten heißen $H_n$ (Z. 184, 220). \\[2pt]
+76 & 355 & \sichA{} & $(\text{dist}(x,\sigma(A)))^{-1}$ & $(\mathrm{dist}(\lambda_{n},\sigma(A)))^{-1}$ & Tippfehler & \textbf{Umgesetzt} (20.10.2026, Freigabe G. Greiner). x statt $\ensuremath{\lambda}_n$; sonst $\mathrm{dist}$ (Z. 537). \\[2pt]
+76 & 358 & \sichB{} & {Proposition~\lbl{prop:a3-2.5}\,(ii)} & $\dots \,(i)$ & Verweis & \textbf{Umgesetzt} (20.10.2026, Freigabe G. Greiner). Schon in der Arbeitsliste (S. 76). \\[2pt]
+76 & 392 & \sichB{} & $q \colon X \mapsto \C$ & $q \colon X \to \C$ & Notation & \textbf{Umgesetzt} (20.10.2026, Freigabe G. Greiner). Sonst $\to$ (Z. 1933, 1948). \\[2pt]
+76 & 402 & \sichC{} & $\eu^{tq} \cdot f \, , \, f \in E .$ & $\eu^{tq} \cdot f, \quad f \in E .$ & Abstand & \textbf{Umgesetzt} (20.10.2026, Freigabe G. Greiner). Sonst $, \quad$; ebenso Z. 2141, 2293. \\[2pt]
+76 & 431 & \sichC{} & {spectral value of\/ $A$} \dots{} & $M_{q}$ & Notation & \textbf{Umgesetzt} (20.10.2026, Freigabe G. Greiner). Ebenso Z. 434 ($\sigma(M_{q}) = A\sigma(M_{q})$). Im Beispiel heißt der Generator sonst $M_q$ (Z. 431–434). \\[2pt]
+77 & 467 & \sichC{} & $\epsilon_{\lambda}$ (vs. $e_{\lambda}$ Z. 160) & einheitlich $\epsilon_{\lambda}$ & Notation & \textbf{Umgesetzt} (20.10.2026, Freigabe G. Greiner). Sonst $\ensuremath{\varepsilon}_\ensuremath{\lambda}$ (Z. 520, 708, 1515). \\[2pt]
+78 & 603 & \sichB{} & $\diff{z} =    = \dots$ & $\diff{z}    = \dots$ & Satzzeichen & \textbf{Umgesetzt} (20.10.2026, Freigabe G. Greiner). Doppeltes Gleichheitszeichen am Zeilenende und -anfang. \\[2pt]
+82 & 757 & \sichB{} & $T_{1} = (T(t)P)_{t \geq 0}$ & $\TT_{1} = \dots$ & Notation & \textbf{Umgesetzt} (20.10.2026, Freigabe G. Greiner). Halbgruppen sonst $\ensuremath{\mathcal{T}}_i$ (Z. 669, 685, 727); ebenso Z. 774 $(T\ensuremath{_{3}})$, 801 $(\ensuremath{\omega}\ensuremath{_{0}}(T\ensuremath{_{1}}))$. \\[2pt]
+82 & 808 & \sichA{} & {Theorem~~\lbl{thm:a3-3.3}} & {Theorem~\lbl{thm:a3-3.3}} & LaTeX & \textbf{Umgesetzt} (20.10.2026, Freigabe G. Greiner). Doppelte Tilde, sichtbar doppelter Abstand. \\[2pt]
+83 & 817 & \sichB{} & {(see~\lbl{prop:a3-6.2})} & {(see Proposition~\lbl{prop:a3-6.2})} & Verweis & \textbf{Umgesetzt} (20.10.2026, Freigabe G. Greiner). Schon in der Arbeitsliste (S. 83). \\[2pt]
+86 & 1070 & \sichB{} & $D(A)\backslash N$ & $D(A) \setminus N$ & Notation & \textbf{Umgesetzt} (20.10.2026, Freigabe G. Greiner). Sonst $\setminus$ (Z. 537, 1446). \\[2pt]
+86 & 1071 & \sichC{} & $E_{/}$ & $E/N$ & Notation & \textbf{Umgesetzt} (20.10.2026, Freigabe G. Greiner). Fehlender Schlusspunkt (Arbeitsliste S. 87) ebenfalls ergänzt. Z. 1018: E/N; ebenso Z. 1077, 1084. (Fehlender Schlusspunkt schon in der Arbeitsliste, S. 87.) \\[2pt]
+87 & 1134 & \sichC{} & {we have \quad $\dots $, $\quad R\dots  = \sum U_{n\vert}\dots $} & abgesetzte Formel, einheitlich $\sum_{n}$ & LaTeX & \textbf{Umgesetzt} (20.10.2026, Freigabe G. Greiner). Als abgesetzte Formel ({gather*}, wegen der Breite zweizeilig). $\quad$ im Fließtext, Tilde am Ende, Summe teils ohne Index (Z. 1134–1135). \\[2pt]
+88 & 1155 & \sichA{} & $\lim_{t \to \infty} \|T(t)'\phi-\phi\| = 0$ & $\lim_{t \to 0} \dots$ & Tippfehler & \textbf{Umgesetzt} (20.10.2026, Freigabe G. Greiner). Definition des Halbgruppen-Duals über $t \ensuremath{\to} 0$ (vgl. chap-a1 Z. 1245). \\[2pt]
+88 & 1173 & \sichB{} & {\lbl{prop:a3-2.2}(ii)} & {Proposition~\lbl{prop:a3-2.2}\,(ii)} & Verweis & \textbf{Umgesetzt} (20.10.2026, Freigabe G. Greiner). Schon in der Arbeitsliste (S. 88). \\[2pt]
+89 & 1233 & \sichA{} & $({\hat{f}^{m}})_{n \in \N}$ & $(\hat{f}^{m})_{m \in \N}$ & Tippfehler & \textbf{Umgesetzt} (20.10.2026, Freigabe G. Greiner). Folge läuft über m. \\[2pt]
+91 & 1351 & \sichA{} & {the n-th Fourier coefficient} & {the $n$-th Fourier coefficient} & Mathemodus & \textbf{Umgesetzt} (20.10.2026, Freigabe G. Greiner). n nicht im Mathemodus. \\[2pt]
+93 & 1511 & \sichC{} & {generator\quad $Af(z) = \dots $\quad is \dots } & ohne $\quad$ & Abstand & \textbf{Umgesetzt} (20.10.2026, Freigabe G. Greiner). $\quad$ im Fließtext (Z. 1511–1514). \\[2pt]
+93 & 1525 & \sichC{} & $Q_{m} \coloneq \sum_{-m}^{+m} P_{n}$ in $L^{p}(\Gamma,m)$ & anderer Index, z. B. $Q_{N}$ & Notation & \textbf{Umgesetzt} (20.10.2026, Freigabe G. Greiner). m zugleich Summationsgrenze und Maß. \\[2pt]
+94 & 1574 & \sichC{} & $\sigma(T(t)) = \Gamma$ & $\sigma(R_{\tau}(t)) = \Gamma$ & Notation & \textbf{Umgesetzt} (20.10.2026, Freigabe G. Greiner). In (ii) heißt die Gruppe $R_\ensuremath{\tau}(t)$ (Z. 1572). \\[2pt]
+96 & 1702 & \sichB{} & {(see Proposition~\lbl{prop:a3-4.4})} & {(see Section~\lbl{subsec:a3-4.4})} & Verweis & \textbf{Umgesetzt} (20.10.2026, Freigabe G. Greiner). Schon in der Arbeitsliste (S. 96). \\[2pt]
+97 & 1736 & \sichB{} & $\overline{\text{span}_{n \in \Z} \{P_{n}E\}}$ & $\overline{\mathrm{span}_{n \in \Z} \dots }$ & Notation & \textbf{Umgesetzt} (20.10.2026, Freigabe G. Greiner). $\text{span}$ wird im kursiven Korollar kursiv; Z. 1716 $\mathrm{span}$. \\[2pt]
+97 & 1772 & \sichC{} & \code{\textbackslash{}label\{eq:a3-6.6)\}} & \code{\textbackslash{}label\{eq:a3-6.6\}} & LaTeX & \textbf{Umgesetzt} (20.10.2026, Freigabe G. Greiner). Überzählige Klammer im Label (derzeit nicht referenziert). \\[2pt]
+97 & 1815 & \sichB{} & {(see~\lbl{cor:a3-1.2})} & {(see Corollary~\lbl{cor:a3-1.2})} & Verweis & \textbf{Umgesetzt} (20.10.2026, Freigabe G. Greiner). Bezeichnung fehlt, gedruckt nur die Nummer. \\[2pt]
+98 & 1898 & \sichC{} & {Theorem~\lbl{thm:a2-1.20} )} & {Theorem~\lbl{thm:a2-1.20})} & Satzzeichen & \textbf{Umgesetzt} (20.10.2026, Freigabe G. Greiner). Schon in der Arbeitsliste (S. 99). \\[2pt]
+102 & 2099 & \sichB{} & $\widehat{\left(\eu^{\im 2k}\check{\phi_{0}}\right)}$ & $\widehat{\left(\eu^{\im 2k\cdot}\check{\phi_{0}}\right)}$ & Tippfehler & \textbf{Umgesetzt} (20.10.2026, Freigabe G. Greiner). Variable fehlt im Exponenten (vgl. Z. 2161 $\eu^{\im\pi\cdot}$). \\[2pt]
+103 & 2150 & \sichC{} & $\eu^{-\im n0}$ & $\eu^{-\im n\cdot 0}$ & Notation & \textbf{Umgesetzt} (20.10.2026, Freigabe G. Greiner). „n0“ liest sich wie ein Symbol. \\[2pt]
+105 & 2194 & \sichA{} & $C_{1}\text{-}\sum_{k\in\Z} \xi_{n}$ & $C_{1}\text{-}\sum_{k\in\Z} \xi_{k}$ & Tippfehler & \textbf{Umgesetzt} (20.10.2026, Freigabe G. Greiner). Summationsindex k, Summand mit n. \\[2pt]
+106 & 2269 & \sichB{} & \code{< \allowbreak{}\allowbreak{}\textbackslash{}infty\$\textasciitilde{}, \allowbreak{}then\allowbreak{}\textbackslash{}quad \allowbreak{}\$\dots{}\$\allowbreak{}\textbackslash{}quad \allowbreak{}is \allowbreak{}summable} & \code{< \allowbreak{}\allowbreak{}\textbackslash{}infty\$, \allowbreak{}then \allowbreak{}\$\dots{}\$ \allowbreak{}is \allowbreak{}summable} & Satzzeichen & \textbf{Umgesetzt} (20.10.2026, Freigabe G. Greiner). Geschütztes Leerzeichen vor Komma, $\quad$ im Fließtext. \\[2pt]
+106 & 2270 & \sichC{} & Leerzeile in Item (ii) & Leerzeile entfernen & LaTeX & \textbf{Umgesetzt} (20.10.2026, Freigabe G. Greiner). Absatzumbruch mitten im Satz. \\[2pt]
+106 & 2286 & \sichB{} & {(use Eq.~(\lbl{eq:a3-7.5}))} & \code{eq:a3-7.7} & Verweis & \textbf{Umgesetzt} (20.10.2026, Freigabe G. Greiner). Benötigt wird die Definition von $Q_k$ (7.7), nicht (7.5). \\[2pt]
+106 & 2311 & \sichA{} & \code{\textbackslash{}eu\textasciicircum{}\{-\allowbreak{}\textbackslash{}im \allowbreak{}ks\}g\_\{k\}\allowbreak{}\textbackslash{}right\allowbreak{}\textbackslash{}|\textasciicircum{}\{2\} \allowbreak{}\allowbreak{}\textbackslash{}dx} & $\dots  \ds$ & Tippfehler & \textbf{Umgesetzt} (20.10.2026, Freigabe G. Greiner). Integrationsvariable ist s. \\[2pt]
+106 & 2313 & \sichC{} & $c(\sum_{k\in N} \|g_{k}\|^{2})^{1/2}$ & $c\left(\sum \dots  \right)^{1/2}$ & Klammern & \textbf{Umgesetzt} (20.10.2026, Freigabe G. Greiner). Klammern zu klein; daneben mit $\left(\dots \right)$. \\[2pt]
+107 & 2335 & \sichC{} & $\not\in$ $(2\ensuremath{\times})$ & $\notin$ & Notation & \textbf{Umgesetzt} (20.10.2026, Freigabe G. Greiner). Sonst $\notin$. \\
 \end{longtable}
 \subsection*{Teil I, Kap. 4 – Asymptotics of Semigroups on Banach Spaces (\code{part-a/chap-a4.tex})}
 \begin{longtable}{@{}rrc>{\RaggedRight\arraybackslash}p{5.8cm}>{\RaggedRight\arraybackslash}p{5.8cm}>{\RaggedRight\arraybackslash}p{1.9cm}>{\RaggedRight\arraybackslash}p{7.3cm}@{}}
