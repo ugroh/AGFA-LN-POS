@@ -4,11 +4,11 @@
 
 Auszug aus `Fahnenkorrektur_Springer_LNM1184.md`. **Seitenangaben** = gedruckte Seitenzahl (PDF-Seite = gedruckte Seite + 18). **Sicherheit:** ● hoch · ◐ mittel · ○ niedrig.
 
-**Stand 20.10.2026 (Branch `fahnenkorrektur`):** **Kap. 1 und Kap. 2 sind erledigt**, ebenso die Updated Notes. In Kap. 3–4 sind alle ●-Punkte umgesetzt; ◐ und ○ sind dort offen, außer wo im Kommentar „Umgesetzt“ steht. Abweichungen vom Soll stehen im Kommentar der jeweiligen Zeile.
+**Stand 20.10.2026 (Branch `fahnenkorrektur`):** **Kap. 1 und Kap. 2 sind erledigt**, ebenso die Updated Notes. In Kap. 3–4 sind alle ●-Punkte umgesetzt; ◐ und ○ sind dort offen, außer wo im Kommentar „Umgesetzt“ steht (einige über die Formellisten, Stand 20.10.2026). Abweichungen vom Soll stehen im Kommentar der jeweiligen Zeile.
 
 **Buchführung:** Maßgeblich für den Korrekturstand sind nur die Listen `korrekturen-text-*`, `korrekturen-mathe-*` und `math-error-*` (seit 20.10.2026). `Umgesetzte_Korrekturen_LNM1184.md`, `Finales-zum-Pruefen.md` und `Fahnenkorrektur_Springer_LNM1184.md` werden nicht mehr fortgeführt.
 
-Insgesamt **104 Punkte**: 22 ●, 41 ◐, 41 ○; davon umgesetzt: 58, teilweise: 2.
+Insgesamt **104 Punkte**: 22 ●, 41 ◐, 41 ○; davon umgesetzt: 64, teilweise: 2.
 
 
 Übergreifende Punkte (Inhaltsverzeichnis, Kolumnentitel, Schreibweisen) und der Index stehen in `korrekturen-text-allgemein.md`.
@@ -62,22 +62,22 @@ Insgesamt **104 Punkte**: 22 ●, 41 ◐, 41 ○; davon umgesetzt: 58, teilweise
 
 | S. | | Ist | Soll | Art | Kommentar |
 |---|---|---|---|---|---|
-| 338 | ◐ | Now we apply Proposition 3.2.7(b) and obtain | Now we apply Proposition 3.2.7 and obtain | Querverweis | Proposition 3.2.7 hat keinen Teil (b). |
-| 338 | ○ | Then h2 ≔ h1 + I ≠ 0 (by Eq. (3.2.19). Moreover, λR2(λ + iβ)h2 = h2 (by Eq. (3.2.16) on the preceding page and | (by Eq. (3.2.19)). … (by Eq. (3.2.16) on the preceding page) and | Satz | Die Klammern sind nicht ausgeglichen. |
-| 339 | ○ | In case that σb(A) is cyclic one has the alternative (cf. Eq. (3.2.19) on page 202) | (cf. Part-II, Eq. (3.2.19) on page 202) | Querverweis | Mehrdeutig: Dieses Kapitel hat auf S. 338 eine eigene Eq. (3.2.19). Gemeint ist wohl die Formel aus Part II. |
+| 338 | ◐ | Now we apply Proposition 3.2.7(b) and obtain | Now we apply Proposition 3.2.7 and obtain | Querverweis | **Umgesetzt** (20.10.2026, über `korrekturen-mathe-part-c`, Freigabe G. Greiner). Proposition 3.2.7 hat keinen Teil (b). |
+| 338 | ○ | Then h2 ≔ h1 + I ≠ 0 (by Eq. (3.2.19). Moreover, λR2(λ + iβ)h2 = h2 (by Eq. (3.2.16) on the preceding page and | (by Eq. (3.2.19)). … (by Eq. (3.2.16) on the preceding page) and | Satz | **Umgesetzt** (20.10.2026, über `korrekturen-mathe-part-c`, Freigabe G. Greiner). Die Klammern sind nicht ausgeglichen. |
+| 339 | ○ | In case that σb(A) is cyclic one has the alternative (cf. Eq. (3.2.19) on page 202) | (cf. Part-II, Eq. (3.2.19) on page 202) | Querverweis | **Umgesetzt** (20.10.2026, über `korrekturen-mathe-part-c`, Freigabe G. Greiner). Mehrdeutig: Dieses Kapitel hat auf S. 338 eine eigene Eq. (3.2.19). Gemeint ist wohl die Formel aus Part II. |
 | 339 | ○ | then σb(A) is cyclic . | then σb(A) is cyclic. | Satz |  |
 | 341 | ● | then T(t)f is a quasi-interior pointof E+ whenever | then T(t)f is a quasi-interior point of E+ whenever | Satz | **Umgesetzt.** Wörter zusammengezogen; im PDF bestätigt. |
 | 341 | ◐ | examples of semigroups whose resolvent do not grow slowly | examples of semigroups whose resolvents do not grow slowly | Grammatik |  |
 | 341 | ○ | (see p.65 in Greiner [13]) | (see p. 65 in Greiner [13]) | Satz |  |
 | 342 | ○ | Then strong continuity and T(0) = Id ≠ 0 implies that | Then strong continuity and T(0) = Id ≠ 0 imply that | Grammatik |  |
-| 345 | ◐ | This extends Theorem 2.3.5 to the setting of Banach lattices. The first assertion of the latter proposition | This extends Part-II, Proposition 3.3.5 to the setting of Banach lattices. The first assertion of the latter proposition | Querverweis | „latter proposition“ und der Beweis („see Part-II, Proposition 3.3.5“) zeigen, dass Part-II, Proposition 3.3.5 gemeint ist. Theorem 2.3.5 gibt es so nicht. |
+| 345 | ◐ | This extends Theorem 2.3.5 to the setting of Banach lattices. The first assertion of the latter proposition | This extends Part-II, Proposition 3.3.5 to the setting of Banach lattices. The first assertion of the latter proposition | Querverweis | **Umgesetzt** (20.10.2026, über `korrekturen-mathe-part-c`, Freigabe G. Greiner). „latter proposition“ und der Beweis („see Part-II, Proposition 3.3.5“) zeigen, dass Part-II, Proposition 3.3.5 gemeint ist. Theorem 2.3.5 gibt es so nicht. |
 | 345 | ○ | Suppose A to be the generator of an irreducible, positive semigroup | Suppose A is the generator of an irreducible, positive semigroup | Grammatik |  |
-| 345 | ○ | By assumption and by assertion (i) there exists φ ≫ 0 | By assumption and by assertion (ii) there exists φ ≫ 0 | Querverweis | Dass das Funktional strikt positiv ist, folgt aus (ii) (Eigenvektoren von A′), nicht aus (i). |
+| 345 | ○ | By assumption and by assertion (i) there exists φ ≫ 0 | By assumption and by assertion (ii) there exists φ ≫ 0 | Querverweis | **Umgesetzt** (20.10.2026, über `korrekturen-mathe-part-c`, Freigabe G. Greiner). Dass das Funktional strikt positiv ist, folgt aus (ii) (Eigenvektoren von A′), nicht aus (i). |
 | 347 | ◐ | (i) Pσ(A) ∩ iR is a (additive) subgroup of iR. | (i) Pσ(A) ∩ iR is an (additive) subgroup of iR. | Grammatik |  |
 | 347 | ○ | as presented in Sect.V.6 of Schaefer [32] (see Proposition 6.1, Theorem 6.5 Corollary and Theorem 6.5 l.c.). … The assertions (ii),(iv) and (v) | as presented in Sect. V.6 of Schaefer [32] (see Proposition 6.1, Theorem 6.5, Corollary and Theorem 6.5 l.c.). … The assertions (ii), (iv) and (v) | Satz | Leerzeichen fehlen; die Aufzählung ist unklar („Theorem 6.5“ steht doppelt), bitte prüfen. |
 | 348 | ● | which is finer than the Frechet filter | which is finer than the Fréchet filter | Tippfehler | **Umgesetzt.** Akzent fehlt. Dasselbe auf S. 350 (PDF 368). |
 | 348 | ○ | Hereby, j ∘ i is the canonical inclusion of C(Γ) in L1(Γ). | Here, j ∘ i is the canonical inclusion of C(Γ) in L1(Γ). | Grammatik | „Hereby“ ist ein Germanismus (von „hierbei“). |
-| 348 | ○ | We define j : C(Γ) → E by j(f) ≔ f ∘ h … we define j̃ to be the canonical mapping from E | We define i : C(Γ) → E by i(f) ≔ f ∘ h … (entsprechend der Bezeichnung i, j in der Aussage) | Konsistenz | In der Aussage heißen die Abbildungen i und j, im Beweis j und j̃. Das betrifft die Bezeichnungen; bitte prüfen. |
+| 348 | ○ | We define j : C(Γ) → E by j(f) ≔ f ∘ h … we define j̃ to be the canonical mapping from E | We define i : C(Γ) → E by i(f) ≔ f ∘ h … (entsprechend der Bezeichnung i, j in der Aussage) | Konsistenz | **Umgesetzt** (20.10.2026, über `korrekturen-mathe-part-c`, Freigabe G. Greiner). In der Aussage heißen die Abbildungen i und j, im Beweis j und j̃. Das betrifft die Bezeichnungen; bitte prüfen. |
 | 350 | ● | ultrafilter U on N which is finer than the Frechet filter | ultrafilter U on N which is finer than the Fréchet filter | Tippfehler | **Umgesetzt.**  |
 | 352 | ● | by calculating the resolvent explicitely | by calculating the resolvent explicitly | Tippfehler | **Umgesetzt.**  |
 | 352 | ◐ | The meaning of r_ess(T(t)) and ω_ess(T) and its properties are explained | The meaning of r_ess(T(t)) and ω_ess(T) and their properties are explained | Grammatik |  |

@@ -61,7 +61,7 @@ In case $X$ is compact, we always have $s(A) > -\infty$.
 	From Part-I, Proposition~\ref{prop:a3-2.5} it follows that
 	%% --
 	\begin{equation}\label{eq:b3-1.3}
-		\lambda_{0} - r(R(\lambda_{0},A))^{-1} \in \sigma(A) \quad \text{and} \quad r(R(\lambda_{0},A)) \geq |\lambda_{0} - \mu_{0}|^{-1}
+		\lambda_{0} - r(R(\lambda_{0},A))^{-1} \in \sigma(A) \quad \text{and} \quad r(R(\lambda_{0},A)) \geq |\lambda_{0} - \mu_{0}|^{-1}.
 	\end{equation}
 	%% --
 	This and Eq.~\myeqpageref{eq:b3-1.2} imply that $\lambda_{0} - r(R(\lambda_{0},A))^{-1}$ is a real spectral value which is greater than $s(A) - \epsilon$.
@@ -71,7 +71,7 @@ In case $X$ is compact, we always have $s(A) > -\infty$.
 	In particular, for $f = \1_{X}$ we find a (large) $\lambda_{0} \in \R$ such that
 	%% --
 	\begin{equation}\label{eq:b3-1.4}
-		\lambda_{0}R(\lambda_{0},A)\1_{X} \geq 1/2\cdot\1_{X} \quad \text{hence} \quad R(\lambda_{0},A)\1_{X} \geq (2\lambda_{0})^{-1}\cdot\1_{X}
+		\lambda_{0}R(\lambda_{0},A)\1_{X} \geq 1/2\cdot\1_{X} \quad \text{hence} \quad R(\lambda_{0},A)\1_{X} \geq (2\lambda_{0})^{-1}\cdot\1_{X}.
 	\end{equation}
 	%% --
 	We may assume $\lambda_{0} > \omega_{0}(A)$ then $R(\lambda_{0},A) \geq 0$, and iterating Eq.~\myeqpageref{eq:b3-1.4} we obtain
@@ -112,7 +112,7 @@ It follows that $\sigma(T(t)) = \{0\}$ for all $t > 0$ and by Part-I, Propositio
 The operator $A$ on $E \coloneq C_{0}[0,\infty)$ given by
 %%--
 \begin{equation}\label{eq:b3-1.8}
-	(Af)(x) = f'(x) - xf(x), D(A) = \{f \in E \colon f \in C^1, Af \in E\}
+	(Af)(x) = f'(x) - xf(x), \quad D(A) = \{f \in E \colon f \in C^1, Af \in E\}
 \end{equation}
 %%--
 has empty spectrum.
@@ -124,7 +124,7 @@ It is the generator of a positive non-nilpotent semigroup which is given by
 	
 \item 
 Taking into account that $C_{0}( \, \left[ 0 , 1\right) \, )$ as well as 
-$C_{0}( \, \left[ 0 , \infty \right) \, )$ both are topologically (but not isometrically) isomorphic to $C(\left[0,1\right])$ (see \textcite[Section~21.5]{semadeni:1971}), one obtains from (i) and (ii) (non-positive) semigroups on $C(\left[0,1\right])$ whose generators have empty spectrum.
+$C_{0}( \, \left[ 0 , \infty \right) \, )$ both are topologically (but not isometrically) isomorphic to $C[0,1]$ (see \textcite[Section~21.5]{semadeni:1971}), one obtains from (i) and (ii) (non-positive) semigroups on $C[0,1]$ whose generators have empty spectrum.
 \end{enumerate}
 \end{examples}
 %% --
@@ -163,7 +163,7 @@ A direct proof not using this fact is given in Part-III, Corollary~\ref{cor:c3-1
 As we have shown above, $R(\lambda,A)$ is positive for $\lambda > \max\{\lambda_0,s(A)\}$ hence an application of the resolvent equation\index{resolvent equation} yields
 	%%--
 	\begin{equation}\label{eq:b3-1.11}
-		R(\lambda_0,A) = R(\lambda,A) + (\lambda - \lambda_0)R(\lambda,A)R(\lambda_0,A) \geq R(\lambda,A) \geq 0
+		R(\lambda_0,A) = R(\lambda,A) + (\lambda - \lambda_0)R(\lambda,A)R(\lambda_0,A) \geq R(\lambda,A) \geq 0.
 	\end{equation}
 	%%--
 	It follows that for all $\lambda > \max\{\lambda_{0},s(A)\}$ we have
@@ -194,7 +194,7 @@ Suppose $X$ is compact and $A$ has compact resolvent.
 	%% --
 It follows from Corollary~\ref{cor:b3-1.3} that $Q$ is a positive operator.
 Since $Q \neq 0$, there exists $g \geq 0$ such that $h \coloneq Qg > 0$.
-Moreover, by Example~\ref{ex:a3-3.6}, we have 
+Moreover, by Part-I, Example~\ref{ex:a3-3.6}, we have 
 %
 \begin{equation*}
 	 (\lambda_{0} - A)h = (\lambda_{0} - A)Qg = 0 .
@@ -227,7 +227,7 @@ $h_{0}$, then there is a positive $h \in D(A)$ such that $Ah = \alpha h$ and
 \]
 		
 \item 
-If\/ $r$ is an eigenvalue of\/ $T(\tau)'$ with positive eigenvector $\phi_{0}$, then there is a positive $\phi \in D(A^*)$ such that $A^*\phi = \alpha\phi$ and $\supp\phi_{0} \subseteq \supp\phi$.
+If\/ $r$ is an eigenvalue of\/ $T(\tau)'$ with positive eigenvector $\phi_{0}$, then there is a positive $\phi \in D(A')$ such that $A'\phi = \alpha\phi$ and $\supp\phi_{0} \subseteq \supp\phi$.
 	\end{enumerate}
 \end{proposition}
 %% --
@@ -246,7 +246,7 @@ If\/ $r$ is an eigenvalue of\/ $T(\tau)'$ with positive eigenvector $\phi_{0}$, 
 	%% --
 	\begin{align*}
 		T(t)h &= \int_{0}^{\tau} T(s+t)h_{0} \, \ds  = \int_{t}^{\tau} T(s)h_{0} \, \ds  + \int_{\tau}^{\tau+t} T(s-\tau)T(\tau)h_{0} \, \ds  \\
-		&= \int_{t}^{\tau} T(s)h_{0} \, \ds  + \int_{0}^{t} T(s)T(\tau)h_{0} \, \ds  = h
+		&= \int_{t}^{\tau} T(s)h_{0} \, \ds  + \int_{0}^{t} T(s)T(\tau)h_{0} \, \ds  = h .
 	\end{align*}
 	%% --
 	It follows that 
@@ -304,12 +304,12 @@ For the sake of completeness we include the proof of this classical result, stat
 		\end{split}
 	\end{equation}
 	%% --
-	Since $(r - T')$ is $\sigma(M(K),C(K))$-continuous, equation Eq.~\myeqpageref{eq:b3-1.16} implies that every $\sigma(M(K),C(K))$ cluster point of\/ $(\psi_{n})$ is a positive eigenvector, provided that it is non-zero.
+	Since $(r - T')$ is $\sigma(M(K),C(K))$-continuous, Eq.~\myeqpageref{eq:b3-1.16} implies that every $\sigma(M(K),C(K))$ cluster point of\/ $(\psi_{n})$ is a positive eigenvector, provided that it is non-zero.
 	Because $K$ is compact we have 
 %
 \[
 	\{\phi \in M(K) \colon \phi \geq 0, \|\phi\| = 1\} 
-	= \{\phi \in M(K) \colon \phi \geq 0, \langle \phi,1 \rangle = 1\} , 
+	= \{\phi \in M(K) \colon \phi \geq 0, \langle \phi,\1_{K} \rangle = 1\} , 
 \]
 %% --
 which shows that the set of probability measures is $\sigma(M(K),C(K))$-compact.
@@ -331,7 +331,7 @@ Theorem~\ref{thm:b3-1.6} fails to be true for locally compact spaces as the foll
 From the explicit representation of\/ $T(t)$,
 	%% --
 	\begin{equation}\label{eq:b3-1.17}
-		(T(t)f)(x) = (4\pi t)^{-n/2}\int_{\R^{n}} \exp(-(x-y)^{2}/4t)\cdot f(y) \, \dy  , 
+		(T(t)f)(x) = (4\pi t)^{-n/2}\int_{\R^{n}} \exp(-|x-y|^{2}/(4t))\cdot f(y) \, \dy  , 
 	\end{equation}
 	%% --
 	it follows that $\lim_{t \to \infty}T(t)f = 0$ for every $f \in C_{0}(\R^{n})$. In fact, for $f$ having compact support, we have     
@@ -341,7 +341,7 @@ From the explicit representation of\/ $T(t)$,
     and since $\|T(t)\| = 1$ for all $t \geq 0$, convergence to $0$ holds for all  $f\in E$.
 	If\/ $\phi$ is an eigenvector of\/ $A'$ corresponding to $s(A) = \omega_{0}(A) = 0$, we have $T(t)'\phi = \phi$ for all $t \geq 0$, hence 
     \[
-    \langle \phi,f \rangle = \lim_{t \to \infty}\langle T(t)f,\phi \rangle = 0 \text{ for every } f , 
+    \langle f,\phi \rangle = \lim_{t \to \infty}\langle T(t)f,\phi \rangle = 0 \text{ for every } f , 
     \]
     \ie $\phi = 0$.
 \end{example}
@@ -446,7 +446,7 @@ They will be used frequently in the following.
 \end{equation}
 %% --
 \begin{equation}\label{eq:b3-2.6}
-	    f^{[1]} = f, f^{[0]} = |f|, f^{[-1]} = \overline{f}, |f^{[n]}| = |f| \text{  for every $n \in \Z$, }
+	    f^{[1]} = f, \quad f^{[0]} = |f|, \quad f^{[-1]} = \overline{f}, \quad |f^{[n]}| = |f| \text{  for every $n \in \Z$, }
 \end{equation}
 %%
 \begin{equation}\label{eq:b3-2.7}\rule{0ex}{3ex}
@@ -461,7 +461,7 @@ Let $T$ and $R$ be bounded linear operators on $C_{0}(X)$ and assume that $h \in
 Suppose we have
 %% --
 \begin{equation}\label{eq:b3-2.8}
-	Rh = h, T|h| = |h| \text{ and } |Rf| \leq T|f| \text{ for every $f \in C_{0}(X)$.} 
+	Rh = h, \quad T|h| = |h| \text{ and } |Rf| \leq T|f| \text{ for every $f \in C_{0}(X)$.} 
 \end{equation}
 %% --
 Then $R$ and $T$ are similar, more precisely, $T = S_{h}^{-1}RS_{h}$.
@@ -476,7 +476,7 @@ In particular, the spectra (and point spectra, resp.) of\/ $T$ and $R$ coincide.
     \] 
     is an invariant subspace for $T$ and for $R$ as well.
 	$E_{h}$ is isomorphic to $C^{b}(X) \cong C(\beta X)$ ($\beta X$ denotes the Stone-Čech compactification of\/ $X$), an isomorphism is given by $f \mapsto f|h|$.
-	Considering the restrictions $T_{|E_{h}}$ and $R_{|E_{h}}$ as operators on $C(\beta X)$ and denoting them $\tilde{T}$ and $\tilde{R}$ respectively, we have for all $f$.
+	Considering the restrictions $T_{|E_{h}}$ and $R_{|E_{h}}$ as operators on $C(\beta X)$ and denoting them $\tilde{T}$ and $\tilde{R}$ respectively, we have for all $f$
 	%% --
 \begin{equation}\label{eq:b3-2.9}
 		\tilde{R}\tilde{h} = \tilde{h}, \quad \tilde{T}\1 = \1, \quad \tilde{T} \geq 0, \quad |\tilde{R}f| \leq \tilde{T}|f| .
@@ -515,7 +515,7 @@ We are now able to prove a result which in some sense is the key to cyclicity re
 Let $T$ be a positive linear operator on $C_{0}(X)$, let $h \in C_{0}(X)$ and $\lambda \in \C$, $|\lambda| = 1$.
 	If\/ $Th = \lambda h$ and $T|h| = |h|$, then we have 
     \[
-    Th^{[n]} = \lambda^{n}h^{[n]} \text{ for every } n \in \Z
+    Th^{[n]} = \lambda^{n}h^{[n]} \text{ for every } n \in \Z.
     \]
     %(\cf Eq.~\myeqpageref{eq:b3-2.4}).
 	If\/ $h$ does not have zeros in $X$, then 
@@ -533,7 +533,7 @@ Suppose $A$ is the generator of a positive semigroup, $h \in C_{0}(X)$, $\alpha,
 	If\/ $h$ does not have zeros, then 
 	%% --
 	\[
-	S_{h}D(A) = D(A) \text{ and \ } \im\beta + A = S_{h}^{-1}AS_{h}.
+	S_{h}D(A) = D(A) \text{ and } \im\beta + A = S_{h}^{-1}AS_{h}.
 	\]
 	%% --
 \end{enumerate}
@@ -591,7 +591,7 @@ The closed principal ideal $\overline{E_{h}}$, which is canonically isomorphic t
     \] 
 	If\/ $h$ does not have zeros, then 
     \[
-    \eu^{-\alpha t}T(t) = \eu^{-\alpha t}\eu^{\im\beta  t}S_{h}^{-1}T(t)S_{h} \text{ for every } t \geq 0 , 
+    \eu^{-\alpha t}T(t) = \eu^{-\alpha t}\eu^{-\im\beta t}S_{h}^{-1}T(t)S_{h} \text{ for every } t \geq 0 , 
     \] 
     which is equivalent to the final statement of (ii).
     \qedhere
@@ -607,7 +607,7 @@ Before we state a first cyclicity result we give the definition and illustrate i
 A subset $M \subseteq \C$ is called \emph{imaginary additively cyclic} 
 (or simply \emph{cyclic}), if it satisfies the following condition. 
 \begin{quote}
-$\alpha + \im\beta \in M$, $\alpha,\beta \in \R$ implies that $\alpha +  \im k\beta \in M$ for every $k \in \Z$\,
+$\alpha + \im\beta \in M$, $\alpha,\beta \in \R$ implies that $\alpha +  \im k\beta \in M$ for every $k \in \Z$.
 \end{quote}
 \end{definition}
 %% --
@@ -620,7 +620,7 @@ For a subset $M$ of\/ $\im \R$ we give the following equivalent conditions.
 		$M$ is imaginary additively cyclic,
 		
 		\item 
-		$M$ is the union of (additive) subgroups of\/ $\im \R$ , 
+		$M$ is the union of (additive) subgroups of\/ $\im \R$, 
 		
 		\item 
 		$M = \bigcup_{\alpha \in S} \im\alpha\Z$ for some set $S \subseteq \R$.
@@ -632,7 +632,7 @@ For a subset $M$ of\/ $\im \R$ we give the following equivalent conditions.
 		M_{1} &= \{0\}, \quad M_{2} = \im\R, \quad M_{3} = \im\alpha\Z \quad (\alpha > 0), \\
 		M_{4} &= \im\alpha\Z + \im\beta\Z = \{\im n\alpha +  \im m\beta \colon n,m \in \Z\} \quad (\alpha, \beta \in \R), \\
 		M_{5} &= \{0\} \cup \{\im \lambda \colon \lambda \in \R, |\lambda| \geq 1\}, \\
-		M_{6} &= \cup_{n=0}^{\infty}\{\im \lambda \colon \lambda \in \R, n\alpha \leq |\lambda| \leq n\beta\} \quad (0 < \alpha \leq \beta, \alpha,\beta \in \R)
+		M_{6} &= \bigcup_{n=0}^{\infty}\{\im \lambda \colon \lambda \in \R, n\alpha \leq |\lambda| \leq n\beta\} \quad (0 < \alpha \leq \beta, \alpha,\beta \in \R).
 	\end{align*}
 	%% --
 	In the following we consider the boundary spectrum of several semigroups. 
@@ -671,7 +671,7 @@ Consider %
 \]
 %
 and a strictly positive function $\kappa \in C[0,1]$.
-The flow on $D$ governed by the differential equation $\dot{r} = 0$, $\dot{\omega} = \kappa(r)$ induces a strongly continuous semigroup on $C(D)$ (which is given by
+The flow on $D$ governed by the differential equation $\dot{r} = 0$, $\dot{\omega} = \kappa(r)$ induces a strongly continuous semigroup on $C(D)$ which is given by
 %% --
 \[
 	(T(t)f)(z) = f(z\cdot \eu^{\im\kappa(|z|)t}).
@@ -688,7 +688,7 @@ The boundary spectrum is $M_{6}$ with
 In particular, for $\kappa(r) = 1 + r$ we obtain as boundary spectrum the set $M_{5}$.
 	
 \item
-Suppose $M$ is a closed cyclic subset of\/ $\im \R$, $M = \bigcup_{\alpha \in S} \im\alpha\Z$ for a suitable $S \subseteq \R$ (\eg $S = M$).
+Suppose $M$ is a closed cyclic subset of\/ $\im \R$, $M = \bigcup_{\alpha \in S} \im\alpha\Z$ for a suitable $S \subseteq \R$ (\eg $S = -\im M$).
 	
 The space 
 \[
@@ -719,7 +719,7 @@ Let $(T_{\alpha}(t))_{t \geq 0}$ denote the rotation semigroup on $C(\Gamma)$ wi
 Our first result concerns cyclicity of the eigenvalues contained in the boundary spectrum, \ie of the set
 %% --
 	\[
-	P\sigma_{b}(A) \coloneq P\sigma(A) \cap \sigma_{b}(A) = \{\lambda \in P\sigma(A) \colon \Re(\lambda)  = s(A)\}
+	P\sigma_{b}(A) \coloneq P\sigma(A) \cap \sigma_{b}(A) = \{\lambda \in P\sigma(A) \colon \Re(\lambda)  = s(A)\}.
 	\]
 	%% --
 	It is an almost straightforward consequence of Theorem~\ref{thm:b3-2.4}.
@@ -741,9 +741,10 @@ Given $\im \alpha \in P\sigma_{b}(A)$ then there is $h \in C_{0}(X)$, $h \neq 0$
 	Then we have
 	%% --
 	\begin{equation}\label{eq:b3-2.14}
-		|h| = |\eu^{\im\alpha t}h| = |T(t)h| \leq T(t)|h| \text{ or } T(t)|h| - |h| \geq 0
+		|h| = |\eu^{\im\alpha t}h| = |T(t)h| \leq T(t)|h| \text{ or } T(t)|h| - |h| \geq 0,
 	\end{equation}
 	%% --
+	and
 	%% --
 	\begin{equation}\label{eq:b3-2.15}
 		\langle T(t)|h| - |h|,\phi \rangle = \langle |h|,T(t)'\phi \rangle - \langle |h|,\phi \rangle = 0.
@@ -764,8 +765,8 @@ More precisely, if
 \[
 I = \{f \in C_{0}(X) \colon f|_{M} = 0\}
 \]
-for a suitable closed subset $M \subseteq X$, then $I \cong C_{0}(X\backslash M)$ and $C_{0}(X)/I \cong C_{0}(M)$ (\cf Chapter~\ref{chap:b1}).
-It follows that given another closed ideal $J = \{f \in C_{0}(X) \colon f|_{N} = 0\}$ such that $I \subseteq J$ \ie $N \subseteq M$, then $J/I$ can be identified with $C_{0}(M\backslash N)$.
+for a suitable closed subset $M \subseteq X$, then $I \cong C_{0}(X\setminus M)$ and $C_{0}(X)/I \cong C_{0}(M)$ (\cf Chapter~\ref{chap:b1}).
+It follows that given another closed ideal $J = \{f \in C_{0}(X) \colon f|_{N} = 0\}$ such that $I \subseteq J$ \ie $N \subseteq M$, then $J/I$ can be identified with $C_{0}(M\setminus N)$.
 
 We do not use this concrete representation of\/ $J/I$.
 However, this shows that we stay within our setting of Banach spaces of continuous functions on locally compact spaces.
@@ -778,7 +779,7 @@ of order $k$.
 Then there is a sequence
 %% --
 \begin{equation}\label{eq:b3-2.16}
-    I_{-1} \coloneq \{0\} \subseteq I_{0} \subsetneq I_{1} \subsetneq \ldots \subsetneq I_{k} \coloneq E
+    I_{-1} \coloneq \{0\} \subseteq I_{0} \subsetneq I_{1} \subsetneq \cdots \subsetneq I_{k} \coloneq E
 \end{equation}
 %% --
 of\/ $\TT$-invariant closed ideals satisfying the following. 
@@ -786,7 +787,7 @@ Denoting by $A_{n}$ $(n = 0,1,\ldots,k)$ the generator of the semigroup on $I_{n
 %% --
 \begin{enumerate}[\upshape (i)]
     \item 
-    $s(A_{0}) < s(A)$ , 
+    $s(A_{0}) < s(A)$, 
     
     \item 
     If\/ $n \geq 1$, then $s(A_{n}) = s(A)$ is a first order pole of the resolvent $R(\cdot,A_{n})$. 
@@ -800,7 +801,7 @@ Denoting by $A_{n}$ $(n = 0,1,\ldots,k)$ the generator of the semigroup on $I_{n
 	%% --
 	\begin{equation}\label{eq:b3-2.17}
 	\begin{split}
-		Q_{n} &= \frac{1}{2\pi i}\int_{\gamma} z^{n-1}R(z,A)  \diff{z} \quad (n \in \N) ,  \\
+		Q_{n} &= \frac{1}{2\pi\im}\int_{\gamma} z^{n-1}R(z,A)  \diff{z} \quad (n \in \N) ,  \\
 		Q_{n} &\neq 0 \text{ if } n \leq k \text{ and } Q_{n} = 0 \text{ for } n > k ,  \\
 		\rule{0ex}{3ex} Q_{n} &= A^{n-1}Q_{1} \quad (n \in \N); \quad Q_{k} = \lim_{z \to 0}z^{k}\cdot R(z,A).
 	\end{split}
@@ -809,7 +810,7 @@ Denoting by $A_{n}$ $(n = 0,1,\ldots,k)$ the generator of the semigroup on $I_{n
 	We define $I_{n}$ as follows $(n = 0,1,\ldots,k-1)$.
 	%% --
 	\[
-	I_{n} \coloneq \{f \in E \colon Q_{n+1}|f| = Q_{n+2}|f| = \ldots = Q_{k}|f| = 0\}
+	I_{n} \coloneq \{f \in E \colon Q_{n+1}|f| = Q_{n+2}|f| = \cdots = Q_{k}|f| = 0\}.
 	\]
 	%% --
 	At first we restrict our attention to $I_{k-1}$.
@@ -824,7 +825,7 @@ Denoting by $A_{n}$ $(n = 0,1,\ldots,k)$ the generator of the semigroup on $I_{n
 	The coefficients of the Laurent series are the operators induced by $Q_{n}$ on $E/I_{k-1}$ and $I_{k-1}$, respectively.
 	
 	Suppose that the pole order of\/ $R(\cdot,A_{k})$ is greater than $1$, say $m$.
-	Then $Q_{m/} = \lim_{z \to 0}z^{m}R(z,A_{k})$ is a positive non-zero operator, hence we find for every $x \in E_{+}$ an element $y \in I_{k-1}$ such that $Q_{m}x + y \geq 0$.
+	Then $Q_{m/I_{k-1}} = \lim_{z \to 0}z^{m}R(z,A_{k})$ is a positive non-zero operator, hence we find for every $x \in E_{+}$ an element $y \in I_{k-1}$ such that $Q_{m}x + y \geq 0$.
 	Then we have
 	%% --
 	\[
@@ -832,13 +833,13 @@ Denoting by $A_{n}$ $(n = 0,1,\ldots,k)$ the generator of the semigroup on $I_{n
 	\]
 	%% --
 	hence $Q_{m}x = (Q_{m}x + y) - y \in I_{k-1}$ $(x \in E_{+})$.
-	It follows that $Q_{m/} = 0$ which is a contradiction.
+	It follows that $Q_{m/I_{k-1}} = 0$ which is a contradiction.
 	
 	So far we know that the resolvent of\/ $A_{k}$ has a pole of order $\leq 1$.
 	Moreover, since ${Q_{k}}_{|I_{k-1}} = 0$, 
 	the resolvent of\/ $A_{|I_{k-1}}$ has a pole of order $\leq k-1$.
 	From Part-I, Corollary~\ref{cor:a3-4.3} it follows that the pole order of\/ $A_{k}$ and $A_{|I_{k-1}}$ is precisely $1$ and $k-1$, respectively.
-	The residue ${Q_{1}}_{/I_{k-1}} = \lim_{z \to 0}zR(z,A_{k})$ is positive since $R(z,A_{k}) \geq 0$ for $z > 0$ (see Corollary~\ref{cor:b3-1.3}).
+	The residue $Q_{1/I_{k-1}} = \lim_{z \to 0}zR(z,A_{k})$ is positive since $R(z,A_{k}) \geq 0$ for $z > 0$ (see Corollary~\ref{cor:b3-1.3}).
 	It remains to prove that it is strictly positive. We assume $Q_{1/I_{k-1}}(|x + I_{k-1}|) = 0$ which means $Q_{1}|x| \in I_{k-1}$ hence $Q_{k}|x| = A^{k-1}Q_{1}|x| = 0$, that is, $x \in I_{k-1}$ or $x + I_{k-1} = 0$.
 	
 	Applying what we have proved so far to $I_{k-1}$ and $A_{|I_{k-1}}$ we obtain $I_{k-2}$, $A_{k-1}$, and so on.
@@ -890,7 +891,7 @@ and $s(A) = 0$ is a pole of the resolvent of order $k$ where $1 \leq k \leq n$.
 \caption{Matrix Example}\label{tab:b3-table1}
 \begin{tabular}{p{10mm}p{10mm}p{10mm}|c|p{8mm}ccc}
   &&& $\overset{\text{\small pole}}{\text{\small order}}$
-      & $\ I_0$ & $I_2$ & $I_2$ & $I_3$ \\[1ex]\hline
+      & $I_0$ & $I_1$ & $I_2$ & $I_3$ \\[1ex]\hline
   $d>0$, & $f>0$, & $e\geq 0$ & 3
       & $\langle e_1\rangle$ & $\langle e_1,e_2\rangle$
       & $\langle e_1,e_2,e_3\rangle$ & $\C^4$ \\
@@ -942,7 +943,7 @@ Then $P\sigma_{b}(A) = \sigma_{b}(A)$ is cyclic.
 \begin{proof}
 	If\/ $\sigma(A) = \emptyset$, there is nothing to prove, thus we can assume that $s(A) = 0$.
 	In view of Lemma~\ref{lem:b3-2.8} and Part-I,  Corollary~\ref{cor:a3-4.3}\,(i) we can assume that $s(A)$ is a first order pole with strictly positive residue, we call it $Q$.
-	We have $AQ = QA = s(A)A = 0$ (see Part-I, Example~\ref{ex:a3-3.6}), hence
+	We have $AQ = QA = s(A)Q = 0$ (see Part-I, Example~\ref{ex:a3-3.6}), hence
 	%% --
 	\begin{equation}\label{eq:b3-2.18}
 		QT(t) = T(t)Q = Q \text{ for all } t \geq 0.
@@ -1012,8 +1013,8 @@ The assumptions of Corollary~\ref{cor:b3-2.10} do not imply that $s(A)$ is domin
     \]
     %% -- 
     contains infinitely many eigenvalues for every $r > 0$.
-	From Part-I, Corollary~\ref{cor:a3-6.4} it follows that $\{\lambda \in \sigma(T(t)) \colon |\lambda| > r\}$ contains infinitely many eigenvalues (counted according to their multiplicities) for every $r < \exp(s(A)t) = r(T(t))$.
-	This contradicts the assumption $r_{\text{ess}}(T(t)) < r(T(t))$ (see Eq.~\myeqpageref{eq:a3-3.7}).
+	From Part-I, Corollary~\ref{cor:a3-6.4} it follows that $\{\lambda \in \sigma(T(t_{0})) \colon |\lambda| > r\}$ contains infinitely many eigenvalues (counted according to their multiplicities) for every $r < \exp(s(A)t_{0}) = r(T(t_{0}))$.
+	This contradicts the assumption $r_{\text{ess}}(T(t_{0})) < r(T(t_{0}))$ (see Eq.~\myeqpageref{eq:a3-3.7}).
 \end{proof}
 %% --
 \begin{corollary}\label{cor:b3-2.12}
@@ -1067,7 +1068,7 @@ It is unknown whether there are positive semigroups where $\sigma_{b}(A)$ is not
 	%% --
 	Then $(T(t))_{t \geq 0}$ is a positive semigroup and $\|T(t)\| \leq (1 + \|k\|_{1})$.
 	In particular, $s(A) \leq \omega_{0}(A) \leq 0$.
-	It is easy to see that $0$ is not an eigenvalue of\/ $A$, while all $\im k$, $k \in \Z$, $k \neq 0$ are eigenvalues, the corresponding eigenfunctions being $(e_{k},0)$ with $e_{k}(\theta) = \eu^{\im k\theta}$.
+	It is easy to see that $0$ is not an eigenvalue of\/ $A$, while all $\im n$, $n \in \Z$, $n \neq 0$ are eigenvalues, the corresponding eigenfunctions being $(e_{n},0)$ with $e_{n}(\theta) = \eu^{\im n\theta}$.
 \end{example}
 %% --
 \begin{example}\label{ex:b3-2.14}
@@ -1143,7 +1144,7 @@ It is unknown whether there are positive semigroups where $\sigma_{b}(A)$ is not
 		\|(\Id  - 1/\lambda \cdot \phi \otimes e_{\lambda})^{-1}\| \leq \lambda/(\lambda - \|\phi\|) \quad \text{if } \lambda > \|\phi\| .
 	\end{equation}
 	%% --
-It follows from Eq.~\myeqpageref{eq:b3-2.25} and Eq.~\myeqpageref{eq:b3-2.26} that for $\lambda > \|\phi\|$, the resolvent $R(\lambda,A_{\phi})$ exists and satisfies 
+It follows from Eq.~\myeqpageref{eq:b3-2.27} and Eq.~\myeqpageref{eq:b3-2.28} that for $\lambda > \|\phi\|$, the resolvent $R(\lambda,A_{\phi})$ exists and satisfies 
 \[
 \|R(\lambda,A_{\phi})\| \leq \lambda/(\lambda-\|\phi\|)\cdot 1/\lambda = 1/(\lambda-\|\phi\|) .
 \]
@@ -1159,7 +1160,7 @@ By Example~\ref{ex:b2-1.22} we have the following equivalence.
 Thus Corollary~\ref{cor:b3-2.12} is applicable if\/ $\phi + r\delta_{0} \geq 0$ for some $r \in \R$.
 Since every eigenvalue of\/ $A_{\phi}$ is an eigenvalue of\/ $A_{m}$ and since 
 \[
-\Kern{\lambda-A_{m}} = \{\alpha e_{\lambda} \colon a \in \C\} , 
+\Kern{\lambda-A_{m}} = \{\alpha e_{\lambda} \colon \alpha \in \C\} , 
 \]
 the spectral bound $s(A_{\phi})$ is determined by the (unique) real $\lambda \in \R$ such that $e_{\lambda} \in D(A_{\phi})$ or equivalently, $\lambda$ is a solution of the so-called \emph{characteristic equation}
 %% --
@@ -1167,7 +1168,7 @@ the spectral bound $s(A_{\phi})$ is determined by the (unique) real $\lambda \in
 	\lambda = \phi(e_{\lambda}), \quad \lambda \in \R , 
 \end{equation}
 %% --
-since the assumption $\phi + r\delta_{0} \geq 0$ implies that the function $\lambda \mapsto \phi(e_{\lambda})$ is strictly decreasing and $\lim_{\lambda \to \infty}\langle e_{\lambda},\phi \rangle > -\infty$, $\lim_{\lambda \to -\infty}\langle e_{\lambda},\phi \rangle = \infty$ unless $\phi = r_{0}\delta_{0}$ for some $r_{0} \in \R$.
+since the assumption $\phi + r\delta_{0} \geq 0$ implies that the function $\lambda \mapsto \phi(e_{\lambda})$ is strictly decreasing and $\lim_{\lambda \to \infty}\phi(e_{\lambda}) > -\infty$, $\lim_{\lambda \to -\infty}\phi(e_{\lambda}) = \infty$ unless $\phi = r_{0}\delta_{0}$ for some $r_{0} \in \R$.
 \end{enumerate}
 %% --
 \end{example}
@@ -1290,7 +1291,7 @@ $\bigcup_{t \geq 0}\supp T(t)'\delta_{x}$ is dense in $X$ for every $x \in X$.
 That these six conditions are actually equivalent can be seen as follows.
 
 \ref{item:b3-3.1-i} $\implies$~\ref{item:b3-3.1-ii}: Suppose there are $0 < f \in E$, $0 < \phi \in E'$ such that $\langle T(t)f,\phi \rangle = 0$ for every $t \geq 0$.
-Then the ideal $I$ generated by $\{T(t)f \colon t \geq 0\}$ satisfy $T \neq \{0\}$  and  $T \subseteq \{g \in E \colon \phi(|g|) = 0\} \neq E$.
+Then the ideal $I$ generated by $\{T(t)f \colon t \geq 0\}$ satisfies $I \neq \{0\}$ and $I \subseteq \{g \in E \colon \phi(|g|) = 0\} \neq E$.
 Obviously $I$ is $\TT$-invariant.
 
 \ref{item:b3-3.1-ii} $\implies$~\ref{item:b3-3.1-iii}: Given $0 < f \in E$, $x \in X$.
@@ -1299,11 +1300,11 @@ Then by (b) there exists $t_{0}$ such that $(T(t_{0})f)(x) = \langle T(t_{0})f,\
 \ref{item:b3-3.1-iii} $\implies$~\ref{item:b3-3.1-vi}: Suppose that $\bigcup_{t \geq 0}\supp T(t)'\delta_{y}$ is not dense for some $y \in X$.
 Then there exists $f_{0} \in E$, $f_{0} > 0$ such that
 $\supp f_{0} \cap \supp T(t)'\delta_{y} = \emptyset$ for every $t \geq 0$.
-Hence $(T(t)f_{0})(y) = \langle f_{0},T(t)'\delta_{y} \rangle > 0$, \ie $y \notin \bigcup_{t\geq 0}\{x \in X \colon (T(t)f_{0})(x) > 0\}$.
+Hence $(T(t)f_{0})(y) = \langle f_{0},T(t)'\delta_{y} \rangle = 0$, \ie $y \notin \bigcup_{t\geq 0}\{x \in X \colon (T(t)f_{0})(x) > 0\}$.
 
 \ref{item:b3-3.1-vi} $\implies$~\ref{item:b3-3.1-v}: Given $0 < f \in E$, $\lambda > \omega_{0}(A)$, $y \in X$, there exists $t_{0} \geq 0$ such that 
 $\{x \colon f(x) > 0\} \cap \supp T(t_{0})'\delta_{y} \neq \emptyset$.
-Hence, $(T(t_{0})(f)(y) = \langle f,T(t_{0})'\delta_{y} \rangle > 0$ and therefore
+Hence, $(T(t_{0})f)(y) = \langle f,T(t_{0})'\delta_{y} \rangle > 0$ and therefore
 %% --
 \[
 (R(\lambda,A)f)(y) = \int_{0}^{\infty} \eu^{-\lambda t}(T(t)f)(y) \dt > 0 .
@@ -1312,12 +1313,12 @@ Hence, $(T(t_{0})(f)(y) = \langle f,T(t_{0})'\delta_{y} \rangle > 0$ and therefo
 Since $\lambda \mapsto R(\lambda,A)f$ is decreasing in the interval $(s(A),\infty)$ (use the resolvent equation and the fact that $R(\lambda,A)$ is positive) we have $R(\lambda,A)f \gg 0$ for all $\lambda > s(A)$.
 %% --
 
-\ref{item:b3-3.1-v} $\implies$~\ref{item:b3-3.1-vi}: If\/ $I$ is a $R(\lambda,A)$-invariant ideal and $0 < f \in I$, then $g \coloneq R(\lambda,A)f \in I$. 
+\ref{item:b3-3.1-v} $\implies$~\ref{item:b3-3.1-iv}: If\/ $I$ is a $R(\lambda,A)$-invariant ideal and $0 < f \in I$, then $g \coloneq R(\lambda,A)f \in I$. 
 By (e), $g$ is strictly positive, thus $I$ has to be dense (it contains all functions of compact support). 
 
 \ref{item:b3-3.1-iv} $\implies$~\ref{item:b3-3.1-i}: At first we recall that a closed linear subspace which is invariant for $R(\lambda_0,A)\ (\lambda_0 \in \rho(A))$, is invariant for $R(\lambda ,A)$
 whenever $\lambda$ and $\lambda_0$ belong to the same component of\/ $\rho(A)$. 
-Hence, if\/ $\lambda_0 \in \rho_{+}(A)$ then by Part-I, Example~\ref{subsec:a1-3.3} every $R(\lambda_0,A)$-invariant subspace is $\TT$-invariant and vice versa.
+Hence, if\/ $\lambda_0 \in \rho_{+}(A)$ then by Part-I, Section~\ref{subsec:a1-3.3} every $R(\lambda_0,A)$-invariant subspace is $\TT$-invariant and vice versa.
 %% --
 \begin{remark}\label{rem:b3-3.2}
 %%
@@ -1349,9 +1350,9 @@ In fact, we have the following result.
 	Thus the assertion follows from the expansions which are true for $\lambda$ sufficiently large
 	%% --
 \begin{align*}
-R(\lambda,B) &= (1 - R(\lambda,A)M_{h})^{-1}R(\lambda,A) 
+R(\lambda,B) &= (\Id - R(\lambda,A)M_{h})^{-1}R(\lambda,A) 
 	= \sum_{n=0}^{\infty} (R(\lambda,A)M_{h})^{n}R(\lambda,A) \\
-R(\lambda,A) &= (1 - R(\lambda,B)M_{-h})^{-1}R(\lambda,B) = \sum_{n=0}^{\infty} (R(\lambda,B)M_{-h})^{n}R(\lambda,B).
+R(\lambda,A) &= (\Id - R(\lambda,B)M_{-h})^{-1}R(\lambda,B) = \sum_{n=0}^{\infty} (R(\lambda,B)M_{-h})^{n}R(\lambda,B).
 \tag*{\qedsymbol}%&&\qedhere
 \end{align*} 
 \let\qedsymbol\relax
@@ -1385,7 +1386,7 @@ R(\lambda,A) &= (1 - R(\lambda,B)M_{-h})^{-1}R(\lambda,B) = \sum_{n=0}^{\infty} 
 		(T(t)f)(x) = \int_{X} k(t,x,y)f(y) \diff{\mu}(y) \quad (t > 0, f \in C_{0}(X), x \in X).		
 	\end{equation}	
 %% --
-	Then $(T(t))_{t\geq 0}$ is irreducible if and only if\/ $\bigcup_{t>0}\text{supp}\{k(t,x,.)\}$ is dense in $X$ for every $x \in X$.
+	Then $(T(t))_{t\geq 0}$ is irreducible if and only if\/ $\bigcup_{t>0}\supp k(t,x,\cdot)$ is dense in $X$ for every $x \in X$.
 	
 	\item 
 	We consider the first derivative $Af = f'$ (\cf Part-I, Section~\ref{subsec:a1-2.4}). 
@@ -1401,7 +1402,7 @@ R(\lambda,A) &= (1 - R(\lambda,B)M_{-h})^{-1}R(\lambda,B) = \sum_{n=0}^{\infty} 
 	
 	\item 
 	The second derivative $Af = f''$ generates an irreducible semigroup on $C_{0}(\R)$ and on $C_{0}(0,1)$.
-	With Neumann boundary conditions (or more generally, $f'(0) = \alpha_{0}f(0)$, $f'(1) = \alpha_{1}f(1)$ where $\alpha_{0}, \alpha_{1} \in \R$) the second derivative generates an irreducible semigroup on $C([0,1])$ (\cf Part-I, Section~\ref{subsec:a1-2.7}).
+	With Neumann boundary conditions (or more generally, $f'(0) = \alpha_{0}f(0)$, $f'(1) = \alpha_{1}f(1)$ where $\alpha_{0}, \alpha_{1} \in \R$) the second derivative generates an irreducible semigroup on $C[0,1]$ (\cf Part-I, Section~\ref{subsec:a1-2.7}).
 	
 	The operator $Af = f'' - Vf$ on $C_{0}(\R)$, where $V$ is continuous, real-valued with $\inf V(x) > -\infty$ (see Example~\ref{ex:b3-2.14}\,(i)) also generates an irreducible semigroup.
 	This can be derived from the maximum principle as follows. 
@@ -1432,7 +1433,7 @@ We now return to the general situation and show that irreducible semigroups poss
 		Every positive eigenvector of\/ $A'$ is strictly positive.
 		
 		\item 
-		If\ $\Kern{s(A) - A'}$ contains a positive element (\eg if\/ $X$ is compact (\cf Theorem~\ref{thm:b3-1.6}), then $\dim(\Kern{s(A) - A} \leq 1$.
+		If\ $\Kern{s(A) - A'}$ contains a positive element (\eg if\/ $X$ is compact (\cf Theorem~\ref{thm:b3-1.6})), then $\dim(\Kern{s(A) - A}) \leq 1$.
 		
 		\item 
         \index{resolvent!pole}
@@ -1471,7 +1472,7 @@ We now return to the general situation and show that irreducible semigroups poss
 	From
 	%% --
 	\begin{equation}\label{eq:b3-3.3}
-	\langle|T(t)f|,\phi\rangle \leq \langle T(t)|f|,\phi\rangle = \langle|f|,\eu^{rt}\phi\rangle, f \in E			
+	\langle|T(t)f|,\phi\rangle \leq \langle T(t)|f|,\phi\rangle = \langle|f|,\eu^{rt}\phi\rangle, \quad f \in E			
 	\end{equation}
 	%% --
 	it follows that $I \coloneq \{f \in E \colon \phi(|f|) = 0\}$ is an invariant ideal.
@@ -1483,7 +1484,7 @@ We now return to the general situation and show that irreducible semigroups poss
 	It follows from Eqs.~\eqref{eq:b3-2.14} and~\myeqpageref{eq:b3-2.15} that
 	%% --
 	\begin{equation}\label{eq:b3-3.4}
-	h \in \Kern{A} \text{ implies } |h| \in \Kern{A}
+	h \in \Kern{A} \text{ implies } |h| \in \Kern{A}.
 	\end{equation}
 %% --
 	Assuming $\dim(\Kern{A}) \geq 2$, then there is an eigenfunction $h \in \Kern{A}$, $h \neq 0$ which has at least one zero in $X$ $(h \coloneq h_{1}(x_{0})\cdot h_{2} - h_{2}(x_{0})\cdot h_{1}$, where $h_{1}$, $h_{2}$ are linearly independent, $x_{0} \in X)$.
@@ -1555,13 +1556,13 @@ And in case $X$ is compact, a $\phi \geq 0$ satisfying $A'\phi = 0$ always exist
 	Assume that $Ah = \im\alpha h$, $Ag = \im\beta g$ $(\alpha,\beta \in \R, h \neq 0, g \neq 0)$.
 	By Eq.~\myeqpageref{eq:b3-3.5} we have $S_{\bar{g}}A S_{g} = A + \im\beta$ and $S_{h}A S_{\bar{h}} = A - \im\alpha$, therefore
 	\begin{equation}\label{eq:b3-3.6}
-	A + i(\beta - \alpha) = S_{h}(A + \im\beta)S_{\bar{h}} = S_{h}S_{\bar{g}}A S_{g}S_{h}^{-1}.
+	A + \im(\beta - \alpha) = S_{h}(A + \im\beta)S_{\bar{h}} = S_{h}S_{\bar{g}}A S_{g}S_{h}^{-1}.
 	\end{equation}
 	It follows that 
     \[%\textstyle
-    \Kern{A + i(\beta - \alpha)} = S_{h}S_{\bar{g}}(\Kern{A}) \neq \{0\} , 
+    \Kern{A + \im(\beta - \alpha)} = S_{h}S_{\bar{g}}(\Kern{A}) \neq \{0\} , 
     \]
-    hence $\im (\beta - \alpha) \in P\sigma(A)$.
+    hence $\im (\alpha - \beta) \in P\sigma(A)$.
 	
 	\item[(v)] 
 	If\/ $Af = \lambda f$ where $f > 0$, then
@@ -1587,17 +1588,17 @@ And in case $X$ is compact, a $\phi \geq 0$ satisfying $A'\phi = 0$ always exist
     h(x)\cdot p_{n}(\tilde{h}(x)) \to |h|(x)
     \]
     uniformly in $x \in X$.
-	Obviously, $h\cdot p_{n}(h)$ is a linear combination of\/ $h^{[1]}$, $h^{[2]}$, $h^{[3]}$, \ldots, that is, it is an element of
+	Obviously, $h\cdot p_{n}(\tilde{h})$ is a linear combination of\/ $h^{[1]}$, $h^{[2]}$, $h^{[3]}$, \ldots, that is, it is an element of
 	%\[
 	%\text{span }\{\bigcup_{k=1}^\infty\,\Kern{ \im k\alpha - A)\}} \mathrm{(\cf Theorem~\ref{thm:b3-2.4})}.
 	%\]
 	\[
-	\text{span$\{\Kern{ \im k\alpha - A} \colon  k=0,1,2,\ldots \}$}, \  \text{(\cf Theorem~\ref{thm:b3-2.4})}.
+	\text{span$\{\Kern{ \im k\alpha - A} \colon  k=1,2,3,\ldots \}$}, \  \text{(\cf Theorem~\ref{thm:b3-2.4})}.
 	\]
 	By Eq.~\myeqpageref{eq:b3-3.7} the linear form $\phi$ vanishes on $\Kern{\lambda - A}$ whenever $\lambda \neq 0$.
-	Therefore $\langle h\cdot p_{n}(h),\phi\rangle = 0$ and we have 
+	Therefore $\langle h\cdot p_{n}(\tilde{h}),\phi\rangle = 0$ and we have 
     \[
-    0 < \langle|h|,\phi\rangle = \lim_{n\to\infty}\langle h\cdot p_{n}(h),\phi\rangle = 0
+    0 < \langle|h|,\phi\rangle = \lim_{n\to\infty}\langle h\cdot p_{n}(\tilde{h}),\phi\rangle = 0
     \]
     which is a contradiction.
     \qedhere
@@ -1608,7 +1609,7 @@ And in case $X$ is compact, a $\phi \geq 0$ satisfying $A'\phi = 0$ always exist
 The group $P\sigma(A) \cap \im\R$ need not be discrete. 
 For example, the semigroup described in Example~\ref{ex:b3-2.6}\,(iv) satisfies the assumptions of Theorem~\ref{thm:b3-3.6} if\/ ${\alpha}/{\beta}$ is irrational. 
 In this case $P\sigma(A) = \im\alpha \Z + \im\beta \Z$ is a dense subgroup of\/ $\im \R$. 
-Actually one can show that for every subgroup $H$ of\/ $\im \R$ there is an irreducible semigroup on $C(G), G \coloneq (H_d)\,{\tilde{ }}$, such that $P\sigma(A) = H$. 
+Actually one can show that for every subgroup $H$ of\/ $\im \R$ there is an irreducible semigroup on $C(G)$, $G \coloneq (H_d)\,{\tilde{ }}$, such that $P\sigma(A) = H$. 
 Here $(H_d)\,{\tilde{ }}$ denotes the dual of the abelian group $H$ equipped with the discrete topology. 
 For details see \textcite[p.62]{greiner:1982}. 
 
@@ -1663,7 +1664,7 @@ If\/ $X$ is compact, then $j$ is a topological embedding.
     %% --
     Since $\{e_{n} \colon n \in \Z\}$ is a total subset of\/ $C(\Gamma)$, we have $T(t)\circ j = j\circ R_{\tau}(t)$ for every $t > 0$.
 	
-	If\/ $X$ is compact, then $\tilde{h}(X)$ is closed, hence $\tilde{h}$ is onto, moreover, $|h| \geq \epsilon$ for some $\epsilon > 0$, thus the definition of\/ $j$ implies that $\|j(f)\| > \epsilon\|f\|$ for every $f \in C(\Gamma)$.
+	If\/ $X$ is compact, then $\tilde{h}(X)$ is closed, hence $\tilde{h}$ is onto, moreover, $|h| \geq \epsilon$ for some $\epsilon > 0$, thus the definition of\/ $j$ implies that $\|j(f)\| \geq \epsilon\|f\|$ for every $f \in C(\Gamma)$.
 \end{proof}
 %% --
 A consequence of Corollary~\ref{cor:b3-3.8} is the following. 
@@ -1723,10 +1724,10 @@ We give some examples.
 	For example, this is true if the boundary  $\partial\Omega$ is $C^{\infty}$ and $a_{ij} \in C^{\infty}(\overline{\Omega})$ (\cf Theorem~4.8.3 of \textcite{fattorini:1983}).
 	We will show that 
     \[
-    P\sigma(A)\cap(s(A) + \im\R) = \{s(A)\} .
+    P\sigma(L)\cap(s(L) + \im\R) = \{s(L)\} .
     \]
 	In order to apply Theorem~\ref{thm:b3-3.6}, we have to show that the corresponding semigroup $(T(t))$ is irreducible.
-	Given $0 < f \in C_{0}(X)$, then there is $g \in D(L_{0})$ such that $0 < g \leq f$. The function 
+	Given $0 < f \in C_{0}(\Omega)$, then there is $g \in D(L_{0})$ such that $0 < g \leq f$. The function 
 	$h \coloneq R(\lambda,L)g$ is $C^{\infty}$ (Weyl's Lemma) and satisfies 
     \[
     L_{0}h - \lambda h = -g < 0 .
@@ -1736,14 +1737,14 @@ We give some examples.
     \[ 
     R(\lambda,L)f \geq R(\lambda,L)g = h \gg 0 \text{ for every } f>0 
     \]
-    showing that $(T(t))$ is irreducible (see Definition~\ref{def:b3-3.1}\,(e))
+    showing that $(T(t))$ is irreducible (see Definition~\ref{def:b3-3.1}\,(e)).
 
 Next we apply Theorem~\ref{thm:b3-3.6}\,(iv) in order to show that the spectral bound is a dominant eigenvalue.
 	We can assume that $s(L) = 0$.
 	If\/ $s(L)$ is not dominant, then by Theorem~\ref{thm:b3-3.6}\,(iv) we have
 	
 	\begin{equation}\label{eq:b3-3.12}
-		L_{0}h = i \alpha h, L_{0}|h| = 0, L_0\bar{h} = -\im\alpha \bar{h} 
+		L_{0}h = \im\alpha h, \quad L_{0}|h| = 0, \quad L_0\bar{h} = -\im\alpha \bar{h} 
 		\text{ for some } h \ne 0, \alpha > 0.
 	\end{equation}
 %% --
@@ -1754,23 +1755,23 @@ If we define $u \coloneq |h|$ and $w \coloneq h/|h|$, then Eq.~\myeqpageref{eq:b
 	Explicit calculation of\/ $L_{0}(uw)$ and $L_{0}(u/w)$ using the product formula yields
 		\begin{equation}\label{eq:b3-3.14}
 		\begin{split}
-		L_{0}(uw) &=  wL_{0}(u) + u\sum_{i,j} a_{ij}w_{ij}'' + \sum_{i}\left(ub_{i} + \sum_{j} a_{ij}u_{j}'\right)w_{i}'~,\\
-		L_{0}(u/w) &= \frac{1}{w}L_{0}(u) + u\sum_{i,j}a_{ij}(1/w)_{ij}'' + \sum_{i}\left(ub_{i} + \sum_{j} a_{ij}u_{j}'\right)(1/w)_{i}'~.
+		L_{0}(uw) &=  wL_{0}(u) + u\sum_{i,j} a_{ij}w_{ij}'' + \sum_{i}\left(ub_{i} + \sum_{j} a_{ij}u_{j}'\right)w_{i}',\\
+		L_{0}(u/w) &= \frac{1}{w}L_{0}(u) + u\sum_{i,j}a_{ij}(1/w)_{ij}'' + \sum_{i}\left(ub_{i} + \sum_{j} a_{ij}u_{j}'\right)(1/w)_{i}'.
 		\end{split}
 	\end{equation}
 %% --
 	Observing that $(1/w)_{i}' = -w^{-2}\cdot w_{i}'$ and $(1/w)_{ij}'' = w^{-3}\cdot(2w_{i}'w_{j}' - ww_{ij}'')$, we obtain
 %% --
 		\begin{equation}\label{eq:b3-3.15}
-			L_{0}(uw) + w^{2}L_{0}(u/w) = 2wL_{0}(u) + 2u/w\cdot\sum_{ij} a_{ij}w_{i}'w_{j}'~.
+			L_{0}(uw) + w^{2}L_{0}(u/w) = 2wL_{0}(u) + 2u/w\cdot\sum_{i,j} a_{ij}w_{i}'w_{j}'.
 		\end{equation}
 %% --
-	This identity and Eq.~\myeqpageref{eq:b3-3.13} implies that $2u/w\cdot\sum_{ij} a_{ij}w_{i}'w_{j}' = 0$.
+	This identity and Eq.~\myeqpageref{eq:b3-3.13} implies that $2u/w\cdot\sum_{i,j} a_{ij}w_{i}'w_{j}' = 0$.
 	Since $u$ has no zeros and $(a_{ij})$ is positive definite, we have $\text{grad } w = (w_{i}') = 0$ in $\Omega$, hence $w = \text{const}$.
 	Then, by Eq.~\myeqpageref{eq:b3-3.13}, we have $\im \alpha uw = L_{0}(uw) = wL_{0}(u) = 0$, a contradiction.
 
 	The assumption that $L_{0}$ is elliptic, \ie that $(a_{ij})$ is positive definite, is essential in order to show that there is only one eigenvalue in the boundary spectrum.
-	In the following example $(a_{ij})$ is positive semi-definite and $P\sigma_{b}(A) = s(A) + \im\alpha\Z$.
+	In the following example $(a_{ij})$ is positive semi-definite and $P\sigma_{b}(L) = s(L) + \im\alpha\Z$.
 	
 	\item 
 	We consider 
@@ -1817,7 +1818,7 @@ As we have seen in Section~\ref{sec:b3-2} the boundary spectrum of many positive
 However, there are hardly any restrictions on the set 
 %% --
 \[
-\lambda \in \{ \sigma(A) \colon \Re(\lambda) < s(A)\} , 
+\{\lambda \in \sigma(A) \colon \Re(\lambda) < s(A)\} , 
 \] 
 %% --
 except that it is symmetric with respect to the real axis.
@@ -1832,11 +1833,11 @@ A complete proof of this result requires some facts of the theory of Banach latt
 If\/ $A$ is the generator of a semigroup of lattice homomorphisms, then $\sigma(A)$, $A\sigma(A)$ and $P\sigma(A)$ are cyclic subsets of\/ $\C$.
 \end{theorem}
 %% --
-\begin{proof}[$1^{st}$ part of the proof]
+\begin{proof}[First part of the proof]
 We prove the assertion concerning $A\sigma(A)$ and $P\sigma(A)$.
 	Assume that 
     \[
-    Ah = (\alpha + \im\beta)h ,  \alpha,\beta \in \R ,  h \neq 0 , 
+    Ah = (\alpha + \im\beta)h, \quad \alpha,\beta \in \R, \quad h \neq 0 , 
     \]
     then by Part-I, Corollary~\ref{cor:a3-6.4}
     \[
@@ -1863,7 +1864,7 @@ We prove the assertion concerning $A\sigma(A)$ and $P\sigma(A)$.
 \end{proof}
 %% --
 \index{semiflow|(}
-Performing a similar construction as in Example~\ref{ex:b3-2.6}(vi) one can show that every closed cyclic subset of\/ $\C$  which is contained in a left halfplane is the spectrum of a suitable semigroup of lattice homomorphisms. 
+Performing a similar construction as in Example~\ref{ex:b3-2.6}\,(vi) one can show that every closed cyclic subset of\/ $\C$  which is contained in a left halfplane is the spectrum of a suitable semigroup of lattice homomorphisms. 
 For details see \textcite{derndingernagel:1979}. 
 In the following we restrict ourselves to the case of compact spaces. 
 Then a semigroup of lattice homomorphisms can be described explicitly by a semi-flow $\phi$, and real-valued functions $h$ and $p$ (see Theorem~\ref{thm:b2-3.5} and Theorem~\ref{thm:b2-3.6}). 
@@ -1876,7 +1877,7 @@ Therefore we will assume that $(T(t))$ has the following form (\cf Theorem~\ref{
 %% --
 where 
 \[
-\phi = (\phi_{t}): \R_{+} \times K \to K , \ \phi_{t+s}
+\phi = (\phi_{t}) \colon \R_{+} \times K \to K , \ \phi_{t+s}
 =\phi_{t}\circ\phi_{s}  
 \ (t,\,s \geq 0) , 
 \]
@@ -1969,7 +1970,7 @@ Before we state the general result (see Theorem~\ref{thm:b3-4.4}) we give some t
 	\phi(t,x) \coloneq \begin{cases} 
 		x - t & \text{if } x \geq t  , \\
 		0 & \text{if } x < t .
-	\end{cases} \quad (\infty - t = \infty)
+	\end{cases} \quad (\infty - t = \infty) .
 	\]
 	Then $K_{t} = K$ for all $t$, hence $K_{\infty} = K$ and \[
     \sigma(A) = \{\lambda \in \C \colon \Re(\lambda) \leq 0\} ,  \ R\sigma(A) = \{\lambda \in \C \colon \Re(\lambda) < 0\} \cup \{0\} .
@@ -2026,7 +2027,7 @@ induces a semiflow $\phi$ on $K \coloneq K_{1}/{\sim}$.
 	For $\epsilon > 0$ we define $H_{\epsilon} = \{\lambda \in \C \colon \Re(\lambda) < \underline{c}(h,\phi)-\epsilon\}$.
 	Obviously it is enough to prove assertion (i), (ii) and (iii) respectively for $H_{2\epsilon}$, $\epsilon> 0$ arbitrary, instead of\/ $H$.
 
-	(i) By the definition given in Eq.~\myeqpageref{eq:b3-4.1} there exists a $\tau > 0$ such that $\underline{c}_{t}(h,\phi) \geq \underline{c}(h,\phi) - \epsilon$ for all $t \geq \tau$.
+	(i) By the definition given in Eq.~\myeqpageref{eq:b3-4.4} there exists a $\tau > 0$ such that $\underline{c}_{t}(h,\phi) \geq \underline{c}(h,\phi) - \epsilon$ for all $t \geq \tau$.
 	It follows that
 	%% --
 	\begin{equation}\label{eq:b3-4.5}
@@ -2055,24 +2056,21 @@ induces a semiflow $\phi$ on $K \coloneq K_{1}/{\sim}$.
 	Considering $g_{n}\coloneq \int_{0}^{n+1} \eu^{-\lambda t} T(t)f_{n} \dt$, then $g_{n} \in D(A)$ and
 	%% --
 	\begin{equation}\label{eq:b3-4.7}
-		(A - \lambda)g_{n} = (1 - \eu^{-\lambda(n+1)}T(n+1))f_{n} = f_{n} - \eu^{-\lambda(n+1)} \cdot h_{n+1} \cdot f_{n} \circ \phi_{n+1} = f_{n}.
+		(\lambda - A)g_{n} = (\Id - \eu^{-\lambda(n+1)}T(n+1))f_{n} = f_{n} - \eu^{-\lambda(n+1)} \cdot h_{n+1} \cdot f_{n} \circ \phi_{n+1} = f_{n}.
 	\end{equation}
 	%% --
 	Moreover,
 	%% --
-	\[\|g_{n}\| \geq |g_{n}(y_{n})| = \left|\int_{0}^{n+1} \eu^{-\lambda t} h_{t}(y_{n})f_{n}(\phi(t,y_{n})) \dt \right| \geq\]
-	%% --
-	\[\left|\int_{n-1}^{n} \eu^{-\lambda t} h_{t}(y_{n}) \eu^{\im\beta  t} \dt\right| - \left[\int_{n-(1+\delta)}^{n-1} + \int_{n}^{n+\delta}\left| \eu^{-\lambda t}|h_{t}(y_{n})f_{n}(\phi(t,y_{n}))\right| \dt\right]\]
-	%% --
-	\[\geq \int_{n-1}^{n} \eu^{-at} \eu^{(a+\epsilon)t} \dt - \left[\int_{n-(1+\delta)}^{n-1} + \int_{n}^{n+\delta} \eu^{-at}|h_{t}(y_{n})| \dt\right]\]
-	%% --
-	\[
-    = \frac{1}{\epsilon}\cdot\left(\eu^{\epsilon n} - \eu^{\epsilon(n-1)}\right) - \mleft(\int_{n-(1+\delta)}^{n-1} + \int_{n}^{n+\delta} \eu^{-at}|h_{t}(y_{n})| \dt\mright) .
-    \]
+	\begin{multline*}
+	\|g_{n}\| \geq |g_{n}(y_{n})| = \left|\int_{0}^{n+1} \eu^{-\lambda t} h_{t}(y_{n})f_{n}(\phi(t,y_{n})) \dt \right| \\
+	\geq \left|\int_{n-1}^{n} \eu^{-\lambda t} h_{t}(y_{n}) \eu^{\im\beta  t} \dt\right| - \left[\int_{n-(1+\delta)}^{n-1} + \int_{n}^{n+\delta}\left| \eu^{-\lambda t}h_{t}(y_{n})f_{n}(\phi(t,y_{n}))\right| \dt\right] \\
+	\geq \int_{n-1}^{n} \eu^{-at} \eu^{(a+\epsilon)t} \dt - \left[\int_{n-(1+\delta)}^{n-1} + \int_{n}^{n+\delta} \eu^{-at}|h_{t}(y_{n})| \dt\right] \\
+	= \frac{1}{\epsilon}\cdot\left(\eu^{\epsilon n} - \eu^{\epsilon(n-1)}\right) - \mleft(\int_{n-(1+\delta)}^{n-1} + \int_{n}^{n+\delta} \eu^{-at}|h_{t}(y_{n})| \dt\mright) .
+	\end{multline*}
 	The constant $\delta$ can be chosen such that
 	%% --
 	\begin{equation}\label{eq:b3-4.8}
-		\|g_{n}\| \geq 1/2\epsilon \cdot\left(\eu^{\epsilon n} - \eu^{\epsilon(n-1)})\right) \to \infty \text{ for } n \to \infty.
+		\|g_{n}\| \geq 1/(2\epsilon)\cdot\left(\eu^{\epsilon n} - \eu^{\epsilon(n-1)}\right) \to \infty \text{ for } n \to \infty.
 	\end{equation}
 	%% --
 	It follows from Eq.~\myeqpageref{eq:b3-4.8} and Eq.~\myeqpageref{eq:b3-4.7} that $ g_n / \|g_n\|$ is an approximate
@@ -2090,8 +2088,8 @@ induces a semiflow $\phi$ on $K \coloneq K_{1}/{\sim}$.
     is a $\TT$-invariant ideal.
 	Identifying $C(K)/I_{\infty}$ with $C(K_{\infty})$ (\cf Section~\ref{sec:b1-1}), then $(T_{/I_{\infty}}(t))$ is the semigroup governed by $\phi_{|K_{\infty}}$ and $h_{|K_{\infty}}$.
     
-	Since one always has $R{\sigma}(A_{/}) \subseteq R{\sigma}(A)$, assertion (ii) is proved, 
-	when we can show that $H_{2\epsilon} \subseteq R{\sigma}(A_{/})$.
+	Since one always has $R\sigma(A_{/I_{\infty}}) \subseteq R{\sigma}(A)$, assertion (ii) is proved, 
+	when we can show that $H_{2\epsilon} \subseteq R\sigma(A_{/I_{\infty}})$.
     
 	In case (iii) one has $K_{s} = K_{\infty}$ for some $s < \infty$, which implies $T(s)_{|I_{\infty}} = 0$.
 	Hence we have $\sigma(A_{|I_{\infty}}) = \emptyset$ and therefore $\sigma(A) = \sigma(A_{/I_{\infty}})$ by Part-I, Proposition~\ref{prop:a3-4.2}.
@@ -2099,7 +2097,7 @@ induces a semiflow $\phi$ on $K \coloneq K_{1}/{\sim}$.
 	Henceforth we will assume that $K = K_{\infty}$, that is, $\phi$ is surjective (\cf Lemma~\ref{lem:b3-4.2}\,(ii)).
 	
 	We choose $\tau > 0$ such that Eq.~\myeqpageref{eq:b3-4.5} is true.
-	Since $\phi$ is surjective, for every $f \in C(K)$ there is a $x_{f} \in K$ such that $\|f\| = \|f(\phi(\tau,x_{f}))\|$ and we obtain for $\lambda \in H_{2\epsilon}$, $\lambda = a + \im\beta$, $\alpha,\beta \in \R$
+	Since $\phi$ is surjective, for every $f \in C(K)$ there is a $x_{f} \in K$ such that $\|f\| = |f(\phi(\tau,x_{f}))|$ and we obtain for $\lambda \in H_{2\epsilon}$, $\lambda = a + \im\beta$, $a,\beta \in \R$
 	%% --
 	\begin{equation}\label{eq:b3-4.9}
 		\begin{aligned}
@@ -2112,7 +2110,7 @@ induces a semiflow $\phi$ on $K \coloneq K_{1}/{\sim}$.
 	%% --
 	It follows that the disc 
     \[
-    D \coloneq \{\lambda \in \C \colon |\lambda| < \exp(\underbar{c}(h,\phi)-2\epsilon)\}
+    D \coloneq \{\lambda \in \C \colon |\lambda| < \exp((\underline{c}(h,\phi)-2\epsilon)\tau)\}
     \]
     has an empty intersection with $A{\sigma}(T(\tau))$ and therefore $H_{2\epsilon}\cap A\sigma(A) = \emptyset$ by Part-I, Proposition~\ref{prop:a3-6.2}.
 	Since every boundary point of the spectrum is an approximate eigenvalue (by Part-I, Proposition~\ref{prop:a3-2.2}\,(i)) we have the following alternative.
@@ -2144,13 +2142,13 @@ Example~\ref{ex:b3-4.3}\,(iv) shows that (i) and (ii) do not exclude each other.
 \end{corollary}
 %% --
 \begin{proof}
-	$(a)\implies(b)$:\ \  holds true because $-A$ is a generator of a semigroup.
+	(a)~$\implies$~(b):\ \  holds true because $-A$ is a generator of a semigroup.
 	
-	$(b)\implies(a)$:\ \ 
+	(b)~$\implies$~(a):\ \ 
 	We have to show that one (hence each) operator $T(t)$, $t > 0$ is invertible.
 	Obviously this is true if\/ $\phi$ is bijective.
 	At first we assume that $\phi$ is surjective, that is, $K = K_{\infty}$.
-	By Theorem~\ref{thm:b3-4.4} we have that $\phi|_{K_{\infty}}$ is injective if (b) is true.
+	By Theorem~\ref{thm:b3-4.4} we have that $\phi_{|K_{\infty}}$ is injective if (b) is true.
 	Thus $\phi$ is bijective.
 	Now we assume that $\phi$ is injective.
 	We have to show that $K = K_{\infty}$.
@@ -2204,12 +2202,12 @@ Example~\ref{ex:b3-4.3}\,(iv) shows that (i) and (ii) do not exclude each other.
 	Then for $x \in \overline{\Omega}$ we have $\underline{t}_{x} = -\infty$.
 	Moreover, either $\phi_{0}(t,x) \in \Omega$ for all $t \geq 0$ or else there exists a unique $s_{x}$ with $0 \leq s_{x} < \overline{t}_{x}$ such that $\phi_{0}(s_{x},x) \in \partial\Omega$.
 	In the first case we write $s_{x} \coloneq \infty$.
-	Then we define $\phi: \R_{+} \times \overline{\Omega} \to \overline{\Omega}$ as 
+	Then we define $\phi \colon \R_{+} \times \overline{\Omega} \to \overline{\Omega}$ as 
 	%% --
 	\[\phi(t,x) \coloneq \begin{cases}
 		\phi_{0}(t,x) & \text{if } 0 \leq t < s_{x}  ,  \\
 		\phi_{0}(s_{x},x) & \text{if } t \geq s_{x} .
-	\end{cases}\]
+	\end{cases} .\]
 	%% --
 	Then $\phi$ is a continuous semiflow on the compact set $K \coloneq \overline{\Omega}$.
 	We have $K_{\infty} = K$ and $\phi_{|K_{\infty}}$ is not injective.
@@ -2246,19 +2244,19 @@ The half-plane
 \[
 \{\lambda \in \C \colon \Re(\lambda) > \overline{c}(h,\phi)\}
 \] 
-is always a subset of the resolvent set (see Proposition~\ref{prop:b3-4.8}(i) below).
+is always a subset of the resolvent set (see Proposition~\ref{prop:b3-4.8}\,(i) below).
 The description of the remaining part 
 \[\{\lambda \in \sigma(A) \colon \underline{c}(h,\phi) \leq \Re(\lambda) \leq \overline{c}(h,\phi)\}
 \]
 is more difficult.
-First we discuss some examples and then give a partial answer to this problem (see Proposition~\ref{prop:b3-4.8}\,(i)).
+First we discuss some examples and then give a partial answer to this problem (see Proposition~\ref{prop:b3-4.8}\,(ii)--(v)).
 %% --
 \begin{example}\label{ex:b3-4.7}
 	\begin{enumerate}[\upshape (i), wide, labelindent=.25em]
 		\item 
 		Consider the flow on $[-\frac{\pi}{2},\frac{\pi}{2}]$ defined by
 		\[
-		\phi(t,x)\coloneq \arctan(\tan x - t) , x \in [-{\pi}/{2},{\pi}/{2}], 
+		\phi(t,x)\coloneq \arctan(\tan x - t), \quad x \in [-{\pi}/{2},{\pi}/{2}], 
 		t \in \R\
 		\] 
 		and a continuous function $h \colon [-\frac{\pi}{2},\frac{\pi}{2}] \to \R$ with $h(-\frac{\pi}{2}) \leq h(\frac{\pi}{2})$. The flow belongs to the differential equation $y' = -\cos^2y$. 
@@ -2273,14 +2271,14 @@ First we discuss some examples and then give a partial answer to this problem (s
 		\item 
 		Consider 
         \[
-        K = \{z \in \C \colon 1 \leq |z| \leq 2\} = \{r\cdot \eu^{\mathcal{\im\omega}} \colon \omega\in \R, 1 \leq r \leq 2\}
+        K = \{z \in \C \colon 1 \leq |z| \leq 2\} = \{r\cdot \eu^{\im\omega} \colon \omega\in \R, 1 \leq r \leq 2\}
          \]
-         and a continuous function $\kappa: [1,2] \to \R_+$.
+         and a continuous function $\kappa \colon [1,2] \to \R_+$.
 		
 		Let $\tilde{\phi}$ be the flow on $K$ governed by the differential equation $\dot{\omega} = \kappa(r)$, $\dot{r} = 0$, hence $\tilde{\phi}(t,r\cdot \eu^{\im\omega}) = r\cdot \eu^{\im(\omega + \kappa(r)t)}$.
 		
-		For a continuous function $h: K \to \R$ let $\hat{h}(r) \coloneq \frac{1}{2\pi}\int_{0}^{2\pi} h(r\cdot \eu^{\im t}) \dt$ $(1 \leq r \leq 2)$.
-		The spectrum of the semigroup corresponding to $\phi$ and $h$ (\cf Eq.~\myeqpageref{eq:b3-4.1}) is given by
+		For a continuous function $h \colon K \to \R$ let $\hat{h}(r) \coloneq \frac{1}{2\pi}\int_{0}^{2\pi} h(r\cdot \eu^{\im t}) \dt$ $(1 \leq r \leq 2)$.
+		The spectrum of the semigroup corresponding to $\tilde{\phi}$ and $h$ (\cf Eq.~\myeqpageref{eq:b3-4.1}) is given by
 		%% --
 		\[
 		\sigma(A) = \{\hat{h}(r) +  \im k\kappa(r) \colon k \in \Z, 1 \leq r \leq 2\} \cup \{h(z) \colon \kappa(|z|) = 0\}.
@@ -2295,13 +2293,13 @@ Then the following assertions hold.
 %% --
 \begin{enumerate}[\upshape (i)]
 \item 
-	$\{\lambda \in \C \colon \Re(\lambda) > \overline{c}(h,\phi)\} \subseteq \rho(A)$ , 
+	$\{\lambda \in \C \colon \Re(\lambda) > \overline{c}(h,\phi)\} \subseteq \rho(A)$, 
 		
 \item 
-	$\overline{c}(h,\phi)$ and $\underline{c}(h,\phi)$ are spectral values , 
+	$\overline{c}(h,\phi)$ and $\underline{c}(h,\phi)$ are spectral values, 
 		
 \item 
-	If\/ $\phi(t,x_{0}) = x_{0}$ for every $t \geq 0$, then $h(x_{0}) \in R{\sigma}(A)$ , 
+	If\/ $\phi(t,x_{0}) = x_{0}$ for every $t \geq 0$, then $h(x_{0}) \in R{\sigma}(A)$, 
 		
 \item 
 Assume $x_{0}$ has a finite orbit, \ie $\phi(\R_{+},x_{0}) = \phi([0,T],x_{0})$ for some $T < \infty$ and 
@@ -2312,7 +2310,7 @@ Assume $x_{0}$ has a finite orbit, \ie $\phi(\R_{+},x_{0}) = \phi([0,T],x_{0})$ 
 %% --
 then 
 \[
-\hat{h}(x_{0}) + \frac{2\pi}{\tau}\im\Z \subseteq R{\sigma}(A)\quad\text{where}\quad \hat{h}(x_{0}) \coloneq \frac{1}{\tau}\int_{T}^{T+\tau}h(\phi(s,x_{0}))\ds\,
+\hat{h}(x_{0}) + \frac{2\pi}{\tau}\im\Z \subseteq R{\sigma}(A)\quad\text{where}\quad \hat{h}(x_{0}) \coloneq \frac{1}{\tau}\int_{T}^{T+\tau}h(\phi(s,x_{0}))\ds,
 \]
 		
 \item 
@@ -2349,7 +2347,7 @@ then
     For $n,m \in \N$ we define a linear functional $\phi_{nm}$ as 
 %% --
 \[  
-	\phi_{nm}(f) \coloneq \frac{1}{n}\int_{0}^{n} \exp(-(h^{\star}+\im\beta )t)\cdot h_{t}(\phi(m,x_{0}))\cdot f(\phi(m+t,x_{0})) \dt, \ f\in C(K).
+	\phi_{nm}(f) \coloneq \frac{1}{n}\int_{0}^{n} \exp(-(\hat{h}+\im\beta )t)\cdot h_{t}(\phi(m,x_{0}))\cdot f(\phi(m+t,x_{0})) \dt, \ f\in C(K).
 \]
 For $f \in D(A)$ we have 
 %% --
@@ -2368,8 +2366,8 @@ It follows that $\phi_{nm} \in D(A')$ and, since $\lim_{t\to\infty} h(\phi(t,x_{
 Because the orbit is infinite we have
 %% --
 	\begin{align*}
-	\|\phi_{nm}\| & {= \frac{1}{n}\int_{0}^{n} \left|\eu^{-(\hat{h}+\im\beta )t} h_{t}(\phi(m,x_{0}))\right| \dt} \\
-	& {= \frac{1}{n}\int_{0}^{n} \exp\left(\int_{m}^{m+t} (h(\phi(s,x_{0}))-\hat{h})\ds \right)\dt}
+	\|\phi_{nm}\| &= \frac{1}{n}\int_{0}^{n} \left|\eu^{-(\hat{h}+\im\beta )t} h_{t}(\phi(m,x_{0}))\right| \dt \\
+	&= \frac{1}{n}\int_{0}^{n} \exp\left(\int_{m}^{m+t} (h(\phi(s,x_{0}))-\hat{h})\ds \right)\dt
 	\end{align*}
 %% --
 which shows that
@@ -2421,8 +2419,8 @@ We are now going to apply the results obtained so far to the special case where 
 	%% --
 	\begin{equation}\label{eq:b3-4.15}
 		\begin{split}
-			(R(\lambda,A)f)(x) &= \int_{0}^{\infty} \eu^{-\lambda t}f(\phi(t,x)) \dt = \\
-			&= \sum_{k=0}^{\infty} \eu^{-\lambda kr}\int_{kr}^{(k+1)r} \eu^{-\lambda(t-kr)} f(\phi(t-kr,x)) \dt =  \\
+			(R(\lambda,A)f)(x) &= \int_{0}^{\infty} \eu^{-\lambda t}f(\phi(t,x)) \dt \\
+			&= \sum_{k=0}^{\infty} \eu^{-\lambda kr}\int_{kr}^{(k+1)r} \eu^{-\lambda(t-kr)} f(\phi(t-kr,x)) \dt \\
 			&= (1 - \eu^{-\lambda r})^{-1}\cdot\int_{0}^{r} \eu^{-\lambda t} f(\phi(t,x)) \dt .
 		\end{split}
 	\end{equation}
@@ -2481,7 +2479,7 @@ For more details and the proof of the following result we refer to \textcite{are
 		$\sigma(A) = \sigma_{1}\cup\sigma_{2}\cup\sigma_{3}$ where the sets $\sigma_{i}$ are defined as follows.
 		%% --
 		\[\begin{aligned}
-			\sigma_{1} &\coloneq \overline{\{\hat{h}(x) + \im\cdot 2\pi k/\tau_{x} \colon x \in X, 0 < \tau_{x} < \infty\}} , \\
+			\sigma_{1} &\coloneq \overline{\{\hat{h}(x) + \im\cdot 2\pi k/\tau_{x} \colon k \in \Z, x \in X, 0 < \tau_{x} < \infty\}} , \\
 			\sigma_{2} &\coloneq \overline{\{h(x) \colon x \in X, \tau_{x} = 0\}} ,  \\
 			\sigma_{3} &\coloneq \{\lambda \in \C \colon \lambda + \im\R \subseteq \sigma(A)\}
 		\end{aligned}\]
@@ -2534,17 +2532,17 @@ In particular we refer to Part-III, Theorems~\ref{thm:c3-2.10},~\ref{thm:c3-3.12
 The dichotomy stated in Eq.~\myeqpageref{eq:b3-2.19}  is probably the most interesting consequence of cyclicity results.
 It has far reaching consequences on the asymptotic behavior of positive semigroups.
 Example~\ref{ex:b3-2.13} is due to Davies (unpublished note).
-Example~\ref{ex:b3-3.4}\,(iii) will be discussed in more detail and more generality in Section~\ref{sec:b4-3}.
+Example~\ref{ex:b3-2.14}\,(ii) will be discussed in more detail and more generality in Section~\ref{sec:b4-3}.
 We return to Remark~\ref{rem:b3-2.15}\,(ii) in Section~\ref{sec:b4-2}.
 
 \item
-The concept of irreducibility as defined in~\ref{def:b3-3.1} is closely related to various other notions:
+The concept of irreducibility as defined in Definition~\ref{def:b3-3.1} is closely related to various other notions:
 In topological dynamics flows inducing irreducible semigroups are called \enquote{minimal flows} (\cf Example~\ref{ex:b3-3.4}\,(i)).
 Moreover, \enquote{ergodicity} and \enquote{unique ergodicity} are closely related to irreducibility (see \textcite{cornfeldetal:1982} or \textcite{krengel:1985}).
 Irreducible semigroups are discussed to some extent in \textcite{davies:1980} where he proves a special case of Theorem~\ref{thm:b3-3.6}.
 Proposition~\ref{prop:b3-3.3} will be generalized in Part-III, Proposition~\ref{prop:c3-3.3}.
 Assertion (i) of Proposition~\ref{prop:b3-3.5} was proven by \textcite{schaefer:1982} while Theorem~\ref{thm:b3-3.6} is taken from \textcite{greiner:1982}.
-Elliptic operators (more general than Example~\ref{ex:b3-3.4}\,(ii)) as generators on spaces of continuous functions, were investigated by many people, \eg \textcite{bonyetal:1968}, \textcite{kuhn:1984}, \textcite{roth:1976}, \textcite{roth:1978} and \textcite{stewart:1974}.
+Elliptic operators (more general than Example~\ref{ex:b3-3.10}\,(ii)) as generators on spaces of continuous functions, were investigated by many people, \eg \textcite{bonyetal:1968}, \textcite{kuhn:1984}, \textcite{roth:1976}, \textcite{roth:1978} and \textcite{stewart:1974}.
 
 \item
 Theorem~\ref{thm:b3-4.1} is due to \textcite{derndinger:1984}.

@@ -4,7 +4,7 @@
 
 **Umfang:** Teil I, Kap. 1–4, geprüft im LaTeX-Quelltext (Branch `fahnenkorrektur`). Geprüft wurden nur Satz und Notation in Formeln: Tippfehler, Klammern, Indizes, uneinheitliche Schreibweisen, Mathemodus, Satzzeichen an Formeln, Gleichungsverweise. Beweise wurden **nicht** nachgerechnet; wo ein Befund inhaltlich wirkt, steht „bitte prüfen“.
 
-**Stand 20.10.2026:** **Kap. 1 und Kap. 2 sind erledigt** (Kap. 1 nach Durchsicht durch Rainer Nagel; in der Spalte Kommentar mit **Umgesetzt** markiert, Abweichungen ebenda). Kap. 3–4 sind noch offen. Die Zeilenangaben beziehen sich auf den Stand vom 14.10.2026.
+**Stand 20.10.2026:** **Kap. 1, 2 und 3 sind erledigt** (Kap. 1 nach Durchsicht durch Rainer Nagel, Kap. 3 nach Freigabe durch Günther Greiner; in der Spalte Kommentar mit **Umgesetzt** markiert, Abweichungen ebenda). Kap. 4 ist noch offen. Die Zeilenangaben beziehen sich auf den Stand vom 14.10.2026.
 
 **Buchführung:** Maßgeblich für den Korrekturstand sind nur die Listen `korrekturen-text-*`, `korrekturen-mathe-*` und `math-error-*` (seit 20.10.2026). `Umgesetzte_Korrekturen_LNM1184.md`, `Finales-zum-Pruefen.md` und `Fahnenkorrektur_Springer_LNM1184.md` werden nicht mehr fortgeführt.
 
@@ -105,43 +105,43 @@ Insgesamt **141 Punkte**: 34 ●, 58 ◐, 49 ○. Davon stehen 9 bereits in der 
 
 | S. | Z. | | Ist | Soll | Art | Kommentar |
 |---|---|---|---|---|---|---|
-| 73 | 182 | ● | `\begin{example}\label{ex:a3-1.4}[Hilbert space, \textcite{zabczyk:1975}]` | `\begin{example}[Hilbert space, \textcite{zabczyk:1975}]\label{ex:a3-1.4}` | LaTeX | Optionales Argument hinter `\label`: „[Hilbert space, …]“ erscheint als Fließtext statt im Kopf des Beispiels (vgl. Z. 127). |
-| 73 | 207 | ○ | `$n \in \N$ ,` | `$n \in \N$,` | Satzzeichen | Leerzeichen vor dem Komma; dasselbe Muster in Z. 210, 712, 1050, 1053, 1056, 1162, 1163, 1166, 1215, 1383, 1386, 1432, 1490, 1493, 1713, 1733, 1736, 2206. |
-| 73 | 234 | ◐ | `continuous on each component $E_{n}$` | `$H_{n}$` | Tippfehler | Komponenten heißen H_n (Z. 184, 220). |
-| 76 | 355 | ● | `(\text{dist}(x,\sigma(A)))^{-1}` | `(\mathrm{dist}(\lambda_{n},\sigma(A)))^{-1}` | Tippfehler | x statt λ_n; sonst `\mathrm{dist}` (Z. 537). |
-| 76 | 358 | ◐ | `Proposition~\ref{prop:a3-2.5}\,(ii)` | `…\,(i)` | Verweis | Schon in der Arbeitsliste (S. 76). |
-| 76 | 392 | ◐ | `q \colon X \mapsto \C` | `q \colon X \to \C` | Notation | Sonst `\to` (Z. 1933, 1948). |
-| 76 | 402 | ○ | `\eu^{tq} \cdot f \, , \, f \in E .` | `\eu^{tq} \cdot f, \quad f \in E .` | Abstand | Sonst `, \quad`; ebenso Z. 2141, 2293. |
-| 76 | 431 | ○ | `spectral value of\/ $A$` … | `$M_{q}$` | Notation | Im Beispiel heißt der Generator sonst M_q (Z. 431–434). |
-| 77 | 467 | ○ | `\epsilon_{\lambda}` (vs. `e_{\lambda}` Z. 160) | einheitlich `\epsilon_{\lambda}` | Notation | Sonst ε_λ (Z. 520, 708, 1515). |
-| 78 | 603 | ◐ | `\diff{z} = \\ &= …` | `\diff{z} \\ &= …` | Satzzeichen | Doppeltes Gleichheitszeichen am Zeilenende und -anfang. |
-| 82 | 757 | ◐ | `$T_{1} = (T(t)P)_{t \geq 0}$` | `$\TT_{1} = …$` | Notation | Halbgruppen sonst 𝒯_i (Z. 669, 685, 727); ebenso Z. 774 (T₃), 801 (ω₀(T₁)). |
-| 82 | 808 | ● | `Theorem~~\ref{thm:a3-3.3}` | `Theorem~\ref{thm:a3-3.3}` | LaTeX | Doppelte Tilde, sichtbar doppelter Abstand. |
-| 83 | 817 | ◐ | `(see~\ref{prop:a3-6.2})` | `(see Proposition~\ref{prop:a3-6.2})` | Verweis | Schon in der Arbeitsliste (S. 83). |
-| 86 | 1070 | ◐ | `D(A)\backslash N` | `D(A) \setminus N` | Notation | Sonst `\setminus` (Z. 537, 1446). |
-| 86 | 1071 | ○ | `E_{/}` | `E/N` | Notation | Z. 1018: E/N; ebenso Z. 1077, 1084. (Fehlender Schlusspunkt schon in der Arbeitsliste, S. 87.) |
-| 87 | 1134 | ○ | `we have \quad $…$, $\quad R… = \sum U_{n\vert}…$` | abgesetzte Formel, einheitlich `\sum_{n}` | LaTeX | `\quad` im Fließtext, Tilde am Ende, Summe teils ohne Index (Z. 1134–1135). |
-| 88 | 1155 | ● | `\lim_{t \to \infty} \|T(t)'\phi-\phi\| = 0` | `\lim_{t \to 0} …` | Tippfehler | Definition des Halbgruppen-Duals über t → 0 (vgl. chap-a1 Z. 1245). |
-| 88 | 1173 | ◐ | `\ref{prop:a3-2.2}(ii)` | `Proposition~\ref{prop:a3-2.2}\,(ii)` | Verweis | Schon in der Arbeitsliste (S. 88). |
-| 89 | 1233 | ● | `({\hat{f}^{m}})_{n \in \N}` | `(\hat{f}^{m})_{m \in \N}` | Tippfehler | Folge läuft über m. |
-| 91 | 1351 | ● | `the n-th Fourier coefficient` | `the $n$-th Fourier coefficient` | Mathemodus | n nicht im Mathemodus. |
-| 93 | 1511 | ○ | `generator\quad $Af(z) = …$\quad is …` | ohne `\quad` | Abstand | `\quad` im Fließtext (Z. 1511–1514). |
-| 93 | 1525 | ○ | `Q_{m} \coloneq \sum_{-m}^{+m} P_{n}$ in $L^{p}(\Gamma,m)` | anderer Index, z. B. `Q_{N}` | Notation | m zugleich Summationsgrenze und Maß. |
-| 94 | 1574 | ○ | `$\sigma(T(t)) = \Gamma$` | `$\sigma(R_{\tau}(t)) = \Gamma$` | Notation | In (ii) heißt die Gruppe R_τ(t) (Z. 1572). |
-| 96 | 1702 | ◐ | `(see Proposition~\ref{prop:a3-4.4})` | `(see Section~\ref{subsec:a3-4.4})` | Verweis | Schon in der Arbeitsliste (S. 96). |
-| 97 | 1736 | ◐ | `\overline{\text{span}_{n \in \Z} \{P_{n}E\}}` | `\overline{\mathrm{span}_{n \in \Z} …}` | Notation | `\text{span}` wird im kursiven Korollar kursiv; Z. 1716 `\mathrm{span}`. |
-| 97 | 1772 | ○ | `\label{eq:a3-6.6)}` | `\label{eq:a3-6.6}` | LaTeX | Überzählige Klammer im Label (derzeit nicht referenziert). |
-| 97 | 1815 | ◐ | `(see~\ref{cor:a3-1.2})` | `(see Corollary~\ref{cor:a3-1.2})` | Verweis | Bezeichnung fehlt, gedruckt nur die Nummer. |
-| 98 | 1898 | ○ | `Theorem~\ref{thm:a2-1.20} )` | `Theorem~\ref{thm:a2-1.20})` | Satzzeichen | Schon in der Arbeitsliste (S. 99). |
-| 102 | 2099 | ◐ | `\widehat{\left(\eu^{\im 2k}\check{\phi_{0}}\right)}` | `\widehat{\left(\eu^{\im 2k\cdot}\check{\phi_{0}}\right)}` | Tippfehler | Variable fehlt im Exponenten (vgl. Z. 2161 `\eu^{\im\pi\cdot}`). |
-| 103 | 2150 | ○ | `\eu^{-\im n0}` | `\eu^{-\im n\cdot 0}` | Notation | „n0“ liest sich wie ein Symbol. |
-| 105 | 2194 | ● | `C_{1}\text{-}\sum_{k\in\Z} \xi_{n}` | `C_{1}\text{-}\sum_{k\in\Z} \xi_{k}` | Tippfehler | Summationsindex k, Summand mit n. |
-| 106 | 2269 | ◐ | `< \infty$~, then\quad $…$\quad is summable` | `< \infty$, then $…$ is summable` | Satzzeichen | Geschütztes Leerzeichen vor Komma, `\quad` im Fließtext. |
-| 106 | 2270 | ○ | Leerzeile in Item (ii) | Leerzeile entfernen | LaTeX | Absatzumbruch mitten im Satz. |
-| 106 | 2286 | ◐ | `(use Eq.~\myeqpageref{eq:a3-7.5})` | `eq:a3-7.7` | Verweis | Benötigt wird die Definition von Q_k (7.7), nicht (7.5). |
-| 106 | 2311 | ● | `\eu^{-\im ks}g_{k}\right\|^{2} \dx` | `… \ds` | Tippfehler | Integrationsvariable ist s. |
-| 106 | 2313 | ○ | `c(\sum_{k\in N} \|g_{k}\|^{2})^{1/2}` | `c\left(\sum … \right)^{1/2}` | Klammern | Klammern zu klein; daneben mit `\left(…\right)`. |
-| 107 | 2335 | ○ | `\not\in` (2×) | `\notin` | Notation | Sonst `\notin`. |
+| 73 | 182 | ● | `\begin{example}\label{ex:a3-1.4}[Hilbert space, \textcite{zabczyk:1975}]` | `\begin{example}[Hilbert space, \textcite{zabczyk:1975}]\label{ex:a3-1.4}` | LaTeX | **Umgesetzt** (20.10.2026, Freigabe G. Greiner). Optionales Argument hinter `\label`: „[Hilbert space, …]“ erscheint als Fließtext statt im Kopf des Beispiels (vgl. Z. 127). |
+| 73 | 207 | ○ | `$n \in \N$ ,` | `$n \in \N$,` | Satzzeichen | **Umgesetzt** (20.10.2026, Freigabe G. Greiner). Leerzeichen vor dem Komma; dasselbe Muster in Z. 210, 712, 1050, 1053, 1056, 1162, 1163, 1166, 1215, 1383, 1386, 1432, 1490, 1493, 1713, 1733, 1736, 2206. |
+| 73 | 234 | ◐ | `continuous on each component $E_{n}$` | `$H_{n}$` | Tippfehler | **Umgesetzt** (20.10.2026, Freigabe G. Greiner). Komponenten heißen H_n (Z. 184, 220). |
+| 76 | 355 | ● | `(\text{dist}(x,\sigma(A)))^{-1}` | `(\mathrm{dist}(\lambda_{n},\sigma(A)))^{-1}` | Tippfehler | **Umgesetzt** (20.10.2026, Freigabe G. Greiner). x statt λ_n; sonst `\mathrm{dist}` (Z. 537). |
+| 76 | 358 | ◐ | `Proposition~\ref{prop:a3-2.5}\,(ii)` | `…\,(i)` | Verweis | **Umgesetzt** (20.10.2026, Freigabe G. Greiner). Schon in der Arbeitsliste (S. 76). |
+| 76 | 392 | ◐ | `q \colon X \mapsto \C` | `q \colon X \to \C` | Notation | **Umgesetzt** (20.10.2026, Freigabe G. Greiner). Sonst `\to` (Z. 1933, 1948). |
+| 76 | 402 | ○ | `\eu^{tq} \cdot f \, , \, f \in E .` | `\eu^{tq} \cdot f, \quad f \in E .` | Abstand | **Umgesetzt** (20.10.2026, Freigabe G. Greiner). Sonst `, \quad`; ebenso Z. 2141, 2293. |
+| 76 | 431 | ○ | `spectral value of\/ $A$` … | `$M_{q}$` | Notation | **Umgesetzt** (20.10.2026, Freigabe G. Greiner). Ebenso Z. 434 ($\sigma(M_{q}) = A\sigma(M_{q})$). Im Beispiel heißt der Generator sonst M_q (Z. 431–434). |
+| 77 | 467 | ○ | `\epsilon_{\lambda}` (vs. `e_{\lambda}` Z. 160) | einheitlich `\epsilon_{\lambda}` | Notation | **Umgesetzt** (20.10.2026, Freigabe G. Greiner). Sonst ε_λ (Z. 520, 708, 1515). |
+| 78 | 603 | ◐ | `\diff{z} = \\ &= …` | `\diff{z} \\ &= …` | Satzzeichen | **Umgesetzt** (20.10.2026, Freigabe G. Greiner). Doppeltes Gleichheitszeichen am Zeilenende und -anfang. |
+| 82 | 757 | ◐ | `$T_{1} = (T(t)P)_{t \geq 0}$` | `$\TT_{1} = …$` | Notation | **Umgesetzt** (20.10.2026, Freigabe G. Greiner). Halbgruppen sonst 𝒯_i (Z. 669, 685, 727); ebenso Z. 774 (T₃), 801 (ω₀(T₁)). |
+| 82 | 808 | ● | `Theorem~~\ref{thm:a3-3.3}` | `Theorem~\ref{thm:a3-3.3}` | LaTeX | **Umgesetzt** (20.10.2026, Freigabe G. Greiner). Doppelte Tilde, sichtbar doppelter Abstand. |
+| 83 | 817 | ◐ | `(see~\ref{prop:a3-6.2})` | `(see Proposition~\ref{prop:a3-6.2})` | Verweis | **Umgesetzt** (20.10.2026, Freigabe G. Greiner). Schon in der Arbeitsliste (S. 83). |
+| 86 | 1070 | ◐ | `D(A)\backslash N` | `D(A) \setminus N` | Notation | **Umgesetzt** (20.10.2026, Freigabe G. Greiner). Sonst `\setminus` (Z. 537, 1446). |
+| 86 | 1071 | ○ | `E_{/}` | `E/N` | Notation | **Umgesetzt** (20.10.2026, Freigabe G. Greiner). Fehlender Schlusspunkt (Arbeitsliste S. 87) ebenfalls ergänzt. Z. 1018: E/N; ebenso Z. 1077, 1084. (Fehlender Schlusspunkt schon in der Arbeitsliste, S. 87.) |
+| 87 | 1134 | ○ | `we have \quad $…$, $\quad R… = \sum U_{n\vert}…$` | abgesetzte Formel, einheitlich `\sum_{n}` | LaTeX | **Umgesetzt** (20.10.2026, Freigabe G. Greiner). Als abgesetzte Formel (`gather*`, wegen der Breite zweizeilig). `\quad` im Fließtext, Tilde am Ende, Summe teils ohne Index (Z. 1134–1135). |
+| 88 | 1155 | ● | `\lim_{t \to \infty} \|T(t)'\phi-\phi\| = 0` | `\lim_{t \to 0} …` | Tippfehler | **Umgesetzt** (20.10.2026, Freigabe G. Greiner). Definition des Halbgruppen-Duals über t → 0 (vgl. chap-a1 Z. 1245). |
+| 88 | 1173 | ◐ | `\ref{prop:a3-2.2}(ii)` | `Proposition~\ref{prop:a3-2.2}\,(ii)` | Verweis | **Umgesetzt** (20.10.2026, Freigabe G. Greiner). Schon in der Arbeitsliste (S. 88). |
+| 89 | 1233 | ● | `({\hat{f}^{m}})_{n \in \N}` | `(\hat{f}^{m})_{m \in \N}` | Tippfehler | **Umgesetzt** (20.10.2026, Freigabe G. Greiner). Folge läuft über m. |
+| 91 | 1351 | ● | `the n-th Fourier coefficient` | `the $n$-th Fourier coefficient` | Mathemodus | **Umgesetzt** (20.10.2026, Freigabe G. Greiner). n nicht im Mathemodus. |
+| 93 | 1511 | ○ | `generator\quad $Af(z) = …$\quad is …` | ohne `\quad` | Abstand | **Umgesetzt** (20.10.2026, Freigabe G. Greiner). `\quad` im Fließtext (Z. 1511–1514). |
+| 93 | 1525 | ○ | `Q_{m} \coloneq \sum_{-m}^{+m} P_{n}$ in $L^{p}(\Gamma,m)` | anderer Index, z. B. `Q_{N}` | Notation | **Umgesetzt** (20.10.2026, Freigabe G. Greiner). m zugleich Summationsgrenze und Maß. |
+| 94 | 1574 | ○ | `$\sigma(T(t)) = \Gamma$` | `$\sigma(R_{\tau}(t)) = \Gamma$` | Notation | **Umgesetzt** (20.10.2026, Freigabe G. Greiner). In (ii) heißt die Gruppe R_τ(t) (Z. 1572). |
+| 96 | 1702 | ◐ | `(see Proposition~\ref{prop:a3-4.4})` | `(see Section~\ref{subsec:a3-4.4})` | Verweis | **Umgesetzt** (20.10.2026, Freigabe G. Greiner). Schon in der Arbeitsliste (S. 96). |
+| 97 | 1736 | ◐ | `\overline{\text{span}_{n \in \Z} \{P_{n}E\}}` | `\overline{\mathrm{span}_{n \in \Z} …}` | Notation | **Umgesetzt** (20.10.2026, Freigabe G. Greiner). `\text{span}` wird im kursiven Korollar kursiv; Z. 1716 `\mathrm{span}`. |
+| 97 | 1772 | ○ | `\label{eq:a3-6.6)}` | `\label{eq:a3-6.6}` | LaTeX | **Umgesetzt** (20.10.2026, Freigabe G. Greiner). Überzählige Klammer im Label (derzeit nicht referenziert). |
+| 97 | 1815 | ◐ | `(see~\ref{cor:a3-1.2})` | `(see Corollary~\ref{cor:a3-1.2})` | Verweis | **Umgesetzt** (20.10.2026, Freigabe G. Greiner). Bezeichnung fehlt, gedruckt nur die Nummer. |
+| 98 | 1898 | ○ | `Theorem~\ref{thm:a2-1.20} )` | `Theorem~\ref{thm:a2-1.20})` | Satzzeichen | **Umgesetzt** (20.10.2026, Freigabe G. Greiner). Schon in der Arbeitsliste (S. 99). |
+| 102 | 2099 | ◐ | `\widehat{\left(\eu^{\im 2k}\check{\phi_{0}}\right)}` | `\widehat{\left(\eu^{\im 2k\cdot}\check{\phi_{0}}\right)}` | Tippfehler | **Umgesetzt** (20.10.2026, Freigabe G. Greiner). Variable fehlt im Exponenten (vgl. Z. 2161 `\eu^{\im\pi\cdot}`). |
+| 103 | 2150 | ○ | `\eu^{-\im n0}` | `\eu^{-\im n\cdot 0}` | Notation | **Umgesetzt** (20.10.2026, Freigabe G. Greiner). „n0“ liest sich wie ein Symbol. |
+| 105 | 2194 | ● | `C_{1}\text{-}\sum_{k\in\Z} \xi_{n}` | `C_{1}\text{-}\sum_{k\in\Z} \xi_{k}` | Tippfehler | **Umgesetzt** (20.10.2026, Freigabe G. Greiner). Summationsindex k, Summand mit n. |
+| 106 | 2269 | ◐ | `< \infty$~, then\quad $…$\quad is summable` | `< \infty$, then $…$ is summable` | Satzzeichen | **Umgesetzt** (20.10.2026, Freigabe G. Greiner). Geschütztes Leerzeichen vor Komma, `\quad` im Fließtext. |
+| 106 | 2270 | ○ | Leerzeile in Item (ii) | Leerzeile entfernen | LaTeX | **Umgesetzt** (20.10.2026, Freigabe G. Greiner). Absatzumbruch mitten im Satz. |
+| 106 | 2286 | ◐ | `(use Eq.~\myeqpageref{eq:a3-7.5})` | `eq:a3-7.7` | Verweis | **Umgesetzt** (20.10.2026, Freigabe G. Greiner). Benötigt wird die Definition von Q_k (7.7), nicht (7.5). |
+| 106 | 2311 | ● | `\eu^{-\im ks}g_{k}\right\|^{2} \dx` | `… \ds` | Tippfehler | **Umgesetzt** (20.10.2026, Freigabe G. Greiner). Integrationsvariable ist s. |
+| 106 | 2313 | ○ | `c(\sum_{k\in N} \|g_{k}\|^{2})^{1/2}` | `c\left(\sum … \right)^{1/2}` | Klammern | **Umgesetzt** (20.10.2026, Freigabe G. Greiner). Klammern zu klein; daneben mit `\left(…\right)`. |
+| 107 | 2335 | ○ | `\not\in` (2×) | `\notin` | Notation | **Umgesetzt** (20.10.2026, Freigabe G. Greiner). Sonst `\notin`. |
 
 ### Teil I, Kap. 4 – Asymptotics of Semigroups on Banach Spaces (`part-a/chap-a4.tex`)
 

@@ -4,11 +4,11 @@
 
 Auszug aus `Fahnenkorrektur_Springer_LNM1184.md`. **Seitenangaben** = gedruckte Seitenzahl (PDF-Seite = gedruckte Seite + 18). **Sicherheit:** ● hoch · ◐ mittel · ○ niedrig.
 
-**Stand 20.10.2026 (Branch `fahnenkorrektur`):** **Kap. 1 und Kap. 2 sind erledigt**, ebenso die Updated Notes. In Kap. 3–4 sind alle ●-Punkte umgesetzt; ◐ und ○ sind dort offen, außer wo im Kommentar „Umgesetzt“ steht. Abweichungen vom Soll stehen im Kommentar der jeweiligen Zeile.
+**Stand 20.10.2026 (Branch `fahnenkorrektur`):** **Kap. 1 und Kap. 2 sind erledigt**, ebenso die Updated Notes. In Kap. 3–4 sind alle ●-Punkte umgesetzt; ◐ und ○ sind dort offen, außer wo im Kommentar „Umgesetzt“ steht (einige über die Formellisten, Stand 20.10.2026). Abweichungen vom Soll stehen im Kommentar der jeweiligen Zeile.
 
 **Buchführung:** Maßgeblich für den Korrekturstand sind nur die Listen `korrekturen-text-*`, `korrekturen-mathe-*` und `math-error-*` (seit 20.10.2026). `Umgesetzte_Korrekturen_LNM1184.md`, `Finales-zum-Pruefen.md` und `Fahnenkorrektur_Springer_LNM1184.md` werden nicht mehr fortgeführt.
 
-Insgesamt **121 Punkte**: 31 ●, 39 ◐, 51 ○; davon umgesetzt: 82, teilweise: 1.
+Insgesamt **121 Punkte**: 31 ●, 39 ◐, 51 ○; davon umgesetzt: 87, teilweise: 2.
 
 
 Übergreifende Punkte (Inhaltsverzeichnis, Kolumnentitel, Schreibweisen) und der Index stehen in `korrekturen-text-allgemein.md`.
@@ -87,19 +87,19 @@ Insgesamt **121 Punkte**: 31 ●, 39 ◐, 51 ○; davon umgesetzt: 82, teilweise
 |---|---|---|---|---|---|
 | 71 | ○ | called spectral mapping theorem. | called the spectral mapping theorem. | Grammatik |  |
 | 71 | ○ | These — or similar — relations will be of great use | These—or similar—relations will be of great use | Konsistenz | Sonst Geviertstrich ohne Leerzeichen (S. 9 'are—at least in many aspects—', S. 28, S. 72). |
-| 76 | ◐ | = (dist(𝑥, 𝜎(𝐴)))^−1 (see Proposition 3.2.5 (ii)) | (see Proposition 3.2.5 (i)) | Querverweis | Die Formel r(R(λ0)) = dist^−1 steht in 3.2.5 (i), nicht (ii). |
+| 76 | ◐ | = (dist(𝑥, 𝜎(𝐴)))^−1 (see Proposition 3.2.5 (ii)) | (see Proposition 3.2.5 (i)) | Querverweis | **Umgesetzt** (20.10.2026, über `korrekturen-mathe-part-a`, Freigabe G. Greiner). Die Formel r(R(λ0)) = dist^−1 steht in 3.2.5 (i), nicht (ii). |
 | 77 | ◐ | using the notion essential range, see Goldstein [8] | using the notion of essential range | Grammatik |  |
 | 79 | ● | we recall the well known resolvent equation . | we recall the well-known resolvent equation. | Satz | **Umgesetzt.** Leerzeichen vor dem Punkt (im PDF sichtbar). |
 | 82 | ● | the spectral mapping theorem for the resolvent (Theorem 3.2.5) | (Proposition 3.2.5) | Querverweis | **Umgesetzt.** 3.2.5 ist eine Proposition; ebenso in den Notes S. 108 'Theorem 3.2.5'. |
 | 83 | ◐ | Only by adding appropriate hypotheses we will achieve spectral decompositions | Only by adding appropriate hypotheses will we achieve spectral decompositions | Grammatik | Inversion nach 'Only by ...'. |
-| 83 | ○ | follows from the Spectral Inclusion Theorem (see 3.6.2) below. | follows from the Spectral Inclusion Theorem (see Proposition 3.6.2 below). | Querverweis |  |
+| 83 | ○ | follows from the Spectral Inclusion Theorem (see 3.6.2) below. | follows from the Spectral Inclusion Theorem (see Proposition 3.6.2 below). | Querverweis | **Umgesetzt** (20.10.2026, über `korrekturen-mathe-part-a`, Freigabe G. Greiner). |
 | 86 | ◐ | We review these constructions under the spectral theoretical point of view | from the spectral theoretical point of view | Grammatik |  |
-| 87 | ◐ | it follows that (𝜆 − 𝐴/) 𝑓ˆ = 𝑔ˆ = 0, i.e., 𝜆 ∈ 𝜎(𝐴/) | …, i.e., 𝜆 ∈ 𝜎(𝐴/). | Satz | Schlusspunkt fehlt (im PDF geprüft). |
-| 88 | ○ | either well known or has been stated in 3.2.2(ii). | stated in Proposition 3.2.2 (ii). | Querverweis |  |
+| 87 | ◐ | it follows that (𝜆 − 𝐴/) 𝑓ˆ = 𝑔ˆ = 0, i.e., 𝜆 ∈ 𝜎(𝐴/) | …, i.e., 𝜆 ∈ 𝜎(𝐴/). | Satz | **Umgesetzt** (20.10.2026, über `korrekturen-mathe-part-a`, Freigabe G. Greiner). Schlusspunkt fehlt (im PDF geprüft). |
+| 88 | ○ | either well known or has been stated in 3.2.2(ii). | stated in Proposition 3.2.2 (ii). | Querverweis | **Umgesetzt** (20.10.2026, über `korrekturen-mathe-part-a`, Freigabe G. Greiner). |
 | 92 | ○ | the representations Eq. (3.5.3) on the previous page and Eq. (3.5.4) on the preceding page | the representations (3.5.3) and (3.5.4) on the previous page | Satz | Automatische varioref-Zusätze wirken doppelt/unbeholfen; tritt im Bereich häufig auf (z. B. S. 128 sechsmal 'Eq. (4.2.1) on the previous/preceding page'). |
-| 96 | ◐ | Since 𝑅𝜎(𝐴) = 𝑃𝜎(𝐴∗) and 𝑅𝜎(𝑇(𝑡)) = 𝑃𝜎(𝑇(𝑡)∗) (see Proposition 3.4.4) | (see Section 3.4.1) | Querverweis | Proposition 3.4.4 behandelt das F-Produkt; die Aussage über den adjungierten Halbgruppen steht in 3.4.1. |
+| 96 | ◐ | Since 𝑅𝜎(𝐴) = 𝑃𝜎(𝐴∗) and 𝑅𝜎(𝑇(𝑡)) = 𝑃𝜎(𝑇(𝑡)∗) (see Proposition 3.4.4) | (see Section 3.4.1) | Querverweis | **Umgesetzt** (20.10.2026, über `korrekturen-mathe-part-a`, Freigabe G. Greiner). Verweis auf den Unterabschnitt „Spectrum of the adjoint semigroup“. Proposition 3.4.4 behandelt das F-Produkt; die Aussage über den adjungierten Halbgruppen steht in 3.4.1. |
 | 98 | ◐ | on Banach spaces 𝐸1, 𝐸2 with generator 𝐴1, 𝐴2. | with generators 𝐴1, 𝐴2. | Grammatik |  |
-| 99 | ◐ | (see Theorem 2.1.19 ). By taking | (see Theorem 2.1.19). By taking | Satz | Leerzeichen vor ')' bzw. ','; gleiches Muster im PDF bestätigt auf S. 121 ('Corollary 3.6.7 )', 'Theorem 2.1.6 )'), außerdem S. 123 'Theorem 3.6.3 )', S. 124 'Corollary 3.6.4 ,', S. 125 'Corollary 2.1.12 )'. |
+| 99 | ◐ | (see Theorem 2.1.19 ). By taking | (see Theorem 2.1.19). By taking | Satz | **Teilweise umgesetzt** (20.10.2026, über `korrekturen-mathe-part-a`, Freigabe G. Greiner): S. 99 erledigt; die gleichen Stellen auf S. 121 und 123 offen. Leerzeichen vor ')' bzw. ','; gleiches Muster im PDF bestätigt auf S. 121 ('Corollary 3.6.7 )', 'Theorem 2.1.6 )'), außerdem S. 123 'Theorem 3.6.3 )', S. 124 'Corollary 3.6.4 ,', S. 125 'Corollary 2.1.12 )'. |
 | 100 | ● | a "multiplication operator" | a “multiplication operator” | Satz | **Umgesetzt.** Gerade Anführungszeichen statt typografischer (sonst überall “…”). |
 | 102 | ○ | That 𝑇(𝜑) is well-defined follows | well defined (einheitlich) | Konsistenz | Wechsel zwischen 'well defined' (S. 85, 87) und 'well-defined' (S. 102, 128) bzw. 'well known' / 'well-known' (S. 84, 138). |
 | 104 | ● | (cf. Formula Eq. (1.3.1) on page 19) | (cf. Eq. (1.3.1) on page 19) | Tippfehler | **Umgesetzt.** 'Formula' und 'Eq.' doppelt. |
