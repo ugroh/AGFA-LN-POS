@@ -409,7 +409,7 @@ Thus
 	T(t) &= T_1(t) + T_2(t) + \cdots + T_m(t) + R_m(t) ,\\
 	T_n(t) &= \exp(\lambda_n t) \cdot \sum_{j=0}^{k(n)-1} \frac{1}{j!}t^j(A - \lambda_n)^j \circ P_n 
 		\quad (t \geq 0) ,\\
-	\|R_m(t)\| & \leq C \cdot \exp((\epsilon +\Re(\lambda_m))t) \text{ for }  t \geq 0, \epsilon >0\\
+	\|R_m(t)\| & \leq C \cdot \exp((\epsilon +\Re(\lambda_m))t)\\
 			&  \text{ for }  t \geq 0, \epsilon >0  \text{ and a suitable	constant } C=C(\epsilon ,m) .
 		\end{aligned}
 	\end{equation}
@@ -431,12 +431,12 @@ Thus
 	For simplicity we assume $\Re(\lambda_{m+1}) < \Re(\lambda_m)$.
     \index{spectral projection}
 	Let $P$ be the spectral projection
-	of\/ $T(t_{0})$ corresponding to the spectral set $\{z \in \sigma(T(t_{0})) :
+	of\/ $T(t_{0})$ corresponding to the spectral set $\{z \in \sigma(T(t_{0})) \colon
 	|z| \geq \exp(\Re(\lambda_m) \cdot t_{0})\}$.
 	Then $P$ reduces the semigroup and we have
 	%% --
 	\[
-	\sigma(T(t_{0})_{\vert \Kern{P}} \subseteq \{z \in \C \colon |z| < \exp(\Re(\lambda_m) \cdot t_{0})\} .
+	\sigma(T(t_{0})_{\vert \Kern{P}}) \subseteq \{z \in \C \colon |z| < \exp(\Re(\lambda_m) \cdot t_{0})\} .
 \]
 %
 	Hence the type of
@@ -452,8 +452,8 @@ Then $R_m(t)$ satisfies the estimate stated in Eq.~\myeqpageref{eq:b4-2.1}, and 
 \sum_{n=1}^m T_n(t) + R_m(t)$ because $P = \sum_{n=1}^m P_n$ by Part-I, Corollary~\ref{cor:a3-6.5}\,(ii).
 The family of projections $\Id -P$, $P_1$, $P_2$, \ldots , $P_m$ reduces the semigroup.
 Thus in order to prove the representation of\/ $T_n(t)$ stated in
-Eq.~\myeqpageref{eq:b4-2.1}, we only have to consider elements $f \in P_n E = \ker(\lambda_n-A)$.
-Hence we can assume $E = P_n E$, $\sigma(A) = \{\lambda_n\}$, $P_n = \Id $ and for simplification
+Eq.~\myeqpageref{eq:b4-2.1}, we only have to consider elements $f \in P_n G = \ker(\lambda_n-A)^{k(n)}$.
+Hence we can assume $G = P_n G$, $\sigma(A) = \{\lambda_n\}$, $P_n = \Id $ and for simplification
 we drop the index $n$, \ie  $\lambda = \lambda_n$, $k = k(n)$.
 Then $A$ is a bounded operator satisfying $(\lambda - A)^k = 0$ and its resolvent is given by
 %
@@ -479,7 +479,7 @@ Since
 \quad \text{and} \quad \lim_{i\to\infty}\binom{j+i-1}{i-1}\,(i-\lambda t)^{-j} = \frac{1}{j!}
 \]
 %
-for every $j \in \N$, the assertion follows from Eq.~\myeqpageref{eq:a2-1.3}
+for every $j \in \N$, the assertion follows from Part-I, Eq.~\myeqpageref{eq:a2-1.3}.
 \end{proof}
 %
 \ifnum 0=1 
@@ -526,7 +526,7 @@ We give a typical example.
 %% --
 \begin{proof}
 	We take $r  \coloneq  s(A)$.
-	By Proposition~\ref{prop:b3-3.5}(i) we have $r > -\infty$.
+	By Proposition~\ref{prop:b3-3.5}\,(i) we have $r > -\infty$.
 	Moreover, by assertion (v) of the same proposition we know that $r$ is
 	an algebraically simple pole and the corresponding residue $P$ has the
 	form $P = \nu \otimes h$ for strictly positive eigenvectors $\nu$ of\/ $A'$
@@ -586,7 +586,7 @@ weakly compact subsets in the dual space $M(K) = C(K)'$, due to
 For a proof of this result, see \eg II.9.8 in \textcite{schaefer:1974}.
 We use this proposition in order to describe weakly compact operators on spaces $C(K)$.
 As usual we naturally identify the bounded Borel functions on $K$ with a subspace $B(K)$ of\/ $M(K)' = C(K)''$, note that in
-general, $C(K) \not\subseteq B(K) \not\subseteq C(K)''$.
+general, $C(K) \subsetneq B(K) \subsetneq C(K)''$.
 %% --
 \begin{proposition}\label{prop:b4-2.4}
 	Let $K$ be a compact space, $G$ be a Banach space, and let $R \colon C(K) \to G$ be a bounded linear operator.\index{operator!weakly compact}
@@ -619,7 +619,7 @@ compact operator $T \colon C(K) \to C(K)$ is a compact operator.
 \end{proposition}
 %% --
 \begin{proof}
-(i) $(a)\Rightarrow(b)$ follows from the following characterization of
+(i) (a)~$\Rightarrow$~(b) follows from the following characterization of
 weakly compact operators (see \eg \textcite[II. Proposition~9.4 ]{schaefer:1974}).
 %% --
 \begin{quote}
@@ -629,7 +629,7 @@ weakly compact operators (see \eg \textcite[II. Proposition~9.4 ]{schaefer:1974}
     }
 \end{quote}
 %% --
-$(b)\Rightarrow(c)$ is trivial and it remains to show that $(c) \Rightarrow (a)$.
+(b)~$\Rightarrow$~(c) is trivial and it remains to show that (c)~$\Rightarrow$~(a).
 
 On the Borel field $\mathcal{B}$ we define $m$ by $m(C)  \coloneq  R''(\1_C)$.
 Then $m$ is
@@ -645,11 +645,11 @@ $\lim_{n\to\infty}\|m(U_n)\| = 0$.
 It follows that $\lim_{n\to\infty}y'\circ m(U_n) = 0$ uniformly for
 $y' \in G'$, $\|y'\| \leq 1$.
 Now condition (c) of Proposition~\ref{prop:b4-2.3} shows that $\{R'y'
-\colon y' \in G'$, $\|y'\| \leq 1\}$ is relatively weakly compact, \ie  $R'$ is
+\colon y' \in G',\ \|y'\| \leq 1\}$ is relatively weakly compact, \ie  $R'$ is
 weakly compact.
 Thus $R$ is weakly compact as well.
 
-In case $G = C(K)$ the equivalence of\/ $(a)$ and $(d)$ is a consequence of
+In case $G = C(K)$ the equivalence of\/ (a) and (d) is a consequence of
 two results. First, \emph{Eberlein's Theorem} states that for the weak topology in any Banach space compactness and sequential compactness are
 equivalent.
 Second, \emph{Lebesgue's Dominated Convergence Theorem} assures
@@ -659,12 +659,12 @@ only if it is bounded and $f_n(x) \to f(x)$ for every $x \in K$.
 (ii) Suppose that $(f_n)$ is a sequence in $C(K)$ which converges to $0$ for
 the weak topology.
 Since $R$ is weakly compact, the same is true for
-the adjoint $R'$, \ie $\{R'y' \colon y' \in G'$, $\|y'\| \leq 1\}$ is relatively weakly compact in $M(K)$.
-From Proposition~\ref{prop:b4-2.3} $(a)\Rightarrow(b)$ we obtain that
+the adjoint $R'$, \ie $\{R'y' \colon y' \in G',\ \|y'\| \leq 1\}$ is relatively weakly compact in $M(K)$.
+From Proposition~\ref{prop:b4-2.3} (a)~$\Rightarrow$~(b) we obtain that
 $\langle Rf_n,y'\rangle = \langle f_n,R'y'\rangle \to 0$ as $n \to \infty$ uniformly for $y' \in G'$, $\|y'\|\leq1$.
 That is $\lim_{n\to\infty}\|Rf_n\| = 0$.
 The final assertion follows from the first and the characterization of
-weakly compact operators stated in $(d)$ of (i).
+weakly compact operators stated in (d) of (i).
 \end{proof}
 %% --
 The next result which is an immediate consequence of Theorem~\ref{thm:b4-2.1} and
@@ -710,10 +710,10 @@ $P_t$ is a real-valued function defined on the product $K \times \mathcal{B}$, w
 denotes the Borel field on $K$, such that
 \begin{enumerate}[\upshape (i)]
     \item 
-    for $x \in K$ and $t > 0$ fixed, $P_t(x,.)$ is a probability measure,
+    for $x \in K$ and $t > 0$ fixed, $P_t(x,\cdot)$ is a probability measure,
 
     \item 
-    for $C \in \mathcal{B}$ and $t > 0$ fixed, $P_t(.,C)$ is a continuous function,
+    for $C \in \mathcal{B}$ and $t > 0$ fixed, $P_t(\cdot,C)$ is a continuous function,
 
     \item 
     $P_{t+s}(x,C) = \int_K P_s(y,C)P_t(x,\dy)$ for all $s,t > 0$, $x \in K$, $C \in \mathcal{B}$,
@@ -754,8 +754,8 @@ $|f(x) - f(y)| < \epsilon$ for every $y \in U$.
 Then we have
 \begin{align*} 
     (T(t)f)(x) - f(x) &= \int_K f(y)P_t(x,\dy) - \int_K f(x)P_t(x,\dy) \\
-    &= \int_U (f(y)-f(x))P_t(x,\dy) + \int_{K\backslash U} (f(y)-f(x))P_t(x,\dy)  \\
-    &\leq \epsilon\cdot P_t(x,U) + 2\|f\|_{\infty}\cdot P_t(x,K\backslash U) .
+    &= \int_U (f(y)-f(x))P_t(x,\dy) + \int_{K\setminus U} (f(y)-f(x))P_t(x,\dy)  \\
+    &\leq \epsilon\cdot P_t(x,U) + 2\|f\|_{\infty}\cdot P_t(x,K\setminus U) .
 \end{align*}
 %% --
 Since $P_t(x,U) \leq 1$ and $\lim_{t\downarrow0} P_t(x,U) = 1 = P_t(x,K)$, this estimate
@@ -767,7 +767,7 @@ implies %
 Since $\epsilon > 0$ was arbitrary we have pointwise convergence, hence strong continuity of the semigroup.
 
 Finally we observe that every operator $T(t)$ defined by Eq.~\myeqpageref{eq:b4-2.4} has the
-strong Feller property since $T(t)''\1_C = P_t(.,C)$ for every Borel set
+strong Feller property since $T(t)''\1_C = P_t(\cdot,C)$ for every Borel set
 $C \subseteq K$ (see Proposition~\ref{prop:b4-2.4}\,(i)).
 Thus Theorem~\ref{thm:b4-2.5} can be applied in this situation.
 \end{example}
@@ -804,7 +804,7 @@ The first one uses the notion of the essential growth bound $\omega_{\text{ess}}
 		$\TT$ is quasi-compact,
 	
 		\item 
-		$\omega_{\text{ess}}(\TT) < 0$,
+		$\omega_{\mathrm{ess}}(\TT) < 0$,
 	
 		\item 
 		There exist $t_{0} > 0$, $K \in \mathcal{K}(G)$ such that $\|T(t_{0}) - K\| < 1$.
@@ -812,16 +812,16 @@ The first one uses the notion of the essential growth bound $\omega_{\text{ess}}
 \end{proposition}
 %% --
 \begin{proof}
-$(a) \Rightarrow (c)$ is obvious by the definition of quasi-compactness.
+(a)~$\Rightarrow$~(c) is obvious by the definition of quasi-compactness.
 
-$(c) \Rightarrow (b)$: Recalling the definition of the essential spectral radius from 
+(c)~$\Rightarrow$~(b): Recalling the definition of the essential spectral radius from 
  Eq.~\myeqpageref{eq:a3-3.6},
-assertion $(c)$ implies 
+assertion (c) implies 
 $r_{\text{ess}}(T(t_0)) \leq \|T(t_0)\|_{\text{ess}} < 1 .$ 
 Then  $\omega_{\text{ess}}(\TT) < 0 $ by  
 Eq.~\myeqpageref{eq:a3-3.10}.
 
-$(b) \Rightarrow (a)$: By 
+(b)~$\Rightarrow$~(a): By 
  Eq.~\myeqpageref{eq:a3-3.10}
 we have $r_{\text{ess}}(T(1)) < 1$. 
 Then 
@@ -843,7 +843,7 @@ This implies that $\lim_{t \to \infty}\mathrm{dist}(T(t),\mathcal{K}(G)) = 0 $.
 \end{proof}
 %% --
 A typical situation where quasi-compact semigroups occur is the following. 
-If\/ $\TT = (T(t))_{t \geq 0}$ is a strongly continuous semigroup with $\omega_{\text{ess}}(\TT) < \omega_{0}(\TT)$, then the rescaled semigroup $(\text{exp}(-\omega_{0}(\TT)t)\cdot T(t))_{t \geq 0}$ is quasi-compact. 
+If\/ $\TT = (T(t))_{t \geq 0}$ is a strongly continuous semigroup with $\omega_{\text{ess}}(\TT) < \omega_{0}(\TT)$, then the rescaled semigroup $(\exp(-\omega_{0}(\TT)t)\cdot T(t))_{t \geq 0}$ is quasi-compact. 
 Obviously every semigroup with growth bound less than zero is quasi-compact. 
 A more interesting situation is the following.
 
@@ -890,13 +890,13 @@ However, the rate of decay cannot be chosen to be arbitrarily large.
   space $G$ with generator $A$. Then 
   $\{\lambda \in \sigma(A) \colon \Re(\lambda) \geq 0\}$ is a finite set 
   (possibly empty) and contains only poles of finite algebraic multiplicity.
-  Denoting the eigenvalues with nonneg­ative real part by 
+  Denoting the eigenvalues with nonnegative real part by 
   $\lambda_1, \dots, \lambda_m$, the corresponding residues 
-  $P_1, \dots, P_m$, and the orders of the poles $k_1, \dots, k_m$, we have
+  $P_1, \dots, P_m$, and the orders of the poles $k(1), \dots, k(m)$, we have
   \begin{equation}\label{eq:b4-2.5}
     \begin{aligned}
       T(t) &= T_1(t) + \dots + T_m(t) + R(t), \quad \text{where} \\%[4pt]
-      T_n(t) &= e^{\lambda_n t} \sum_{j=0}^{k_n - 1} \frac{t^j}{j!}
+      T_n(t) &= \eu^{\lambda_n t} \sum_{j=0}^{k(n) - 1} \frac{t^j}{j!}
                (A - \lambda_n)^j P_n
                \quad (n = 1, \dots, m), \quad \text{and} \\%[4pt]
       \|R(t)\| &\leq C \eu^{-\epsilon t}
@@ -907,11 +907,11 @@ However, the rate of decay cannot be chosen to be arbitrarily large.
 \end{theorem}
 %% --
 \begin{proof} 
-We have $\omega_{ess}(\TT) < 0$, hence $r_{ess}(T(1)) < 1$ (see  Eq.~\myeqpageref{eq:a3-3.10}).
+We have $\omega_{\text{ess}}(\TT) < 0$, hence $r_{\text{ess}}(T(1)) < 1$ (see  Eq.~\myeqpageref{eq:a3-3.10}).
 Therefore $\{z \in \sigma(T(1)) \colon |z| \geq 1\}$ is a finite set and contains only poles of finite algebraic multiplicity (\cf Eq.~\myeqpageref{eq:a3-3.8}). 
 
 Let $P$ denote the spectral projection of\/ $T(1)$ corresponding to $\{z \in \sigma(T(1))\colon |z| \geq 1\}$. 
-Then Part-I, Corollary~\ref{cor:a3-6.5} implies that $\{\lambda \in \sigma(A) \colon \Re(\lambda) \geq 0\}$ is a finite set, contains only poles of\/ $R(\cdot,A)$ of finite algebraic multiplicity and $P = P_1+P_2+ \ldots +P_m$. 
+Then Part-I, Corollary~\ref{cor:a3-6.5} implies that $\{\lambda \in \sigma(A) \colon \Re(\lambda) \geq 0\}$ is a finite set, contains only poles of\/ $R(\cdot,A)$ of finite algebraic multiplicity and $P = P_1 + P_2 + \dots + P_m$. 
 One can now prove the representation of\/ $T(t)$ stated in Eq.~\myeqpageref{eq:b4-2.5} in the same way as statement Eq.~\myeqpageref{eq:b4-2.1}.
 \end{proof}
 %% --
@@ -937,7 +937,7 @@ Let $\TT = (T(t))_{t \geq 0}$ be a positive semigroup on $C_{0}(X)$ which is qua
 		\|\exp(-\omega_{0}(\TT)t) \cdot T(t) - \nu \otimes h\| \leq M \cdot \eu^{-\delta t} \quad \text{for all} \quad t \geq 0 \text{.}
 	\end{equation}
 \end{enumerate}
-In both cases $(i)$ and $(ii)$ the estimates Eq.~\myeqpageref{eq:b4-2.3} for $\|T(t)f\|$ hold true (in case $(i)$ one has to replace $|\int f \diff{\nu}|$ by $\|Pf\|$).
+In both cases (i) and (ii) the estimates Eq.~\myeqpageref{eq:b4-2.3} for $\|T(t)f\|$ hold true (in case (i) one has to replace $|\int f \diff{\nu}|$ by $\|Pf\|$).
 \end{corollary}
 %% --
 \begin{proof}
@@ -1005,7 +1005,7 @@ Then $g_r$ is differentiable with $g_r, g_r' \in C_{0}(X)$.
 Thus, $g_r \in D(A)$ if and only if\/ 
 %
 \[
-	g_r'(0) = \alpha g(0) - \int_0^{\infty} g_r(y) \diff{\nu}(y) .
+	g_r'(0) = \alpha g_r(0) - \int_0^{\infty} g_r(y) \diff{\nu}(y) .
 \]
 %
 Inserting Eq.~\myeqpageref{eq:b4-2.9}, then this condition becomes
@@ -1015,7 +1015,7 @@ m(0) - r = \alpha - \int_0^{\infty} \eu^{-ry} \cdot \exp\left(\int_{0}^{y}  m(z)
 \]
 By monotonicity this equation has a unique solution $r \geq 0$ if and only if
 \begin{equation}\label{eq:b4-2.10}
-	m(0) + \int_0^{\infty} \exp\left(\int_0^y m(z) \, dz\right)\diff{\nu}(y) \geq \alpha .
+	m(0) + \int_0^{\infty} \exp\left(\int_0^y m(z) \,\diff{z}\right)\diff{\nu}(y) \geq \alpha .
 \end{equation}
 %% --
 In case $\alpha$, $\nu$ and $m$ satisfy Eq.~\myeqpageref{eq:b4-2.10} and $m(\infty) < 0$, then $g_r$ is a strictly positive eigenfunction of\/ $A$ corresponding to $r \geq 0$. 
@@ -1815,7 +1815,7 @@ The notion \emph{quasi-compact} for a single operator dates back to \textcite{eb
 Quasi-compactness for strongly continuous semigroups and its relationship to uniform ergodicity is investigated in \textcite{lin:1975}. 
 Proposition~\ref{prop:b4-2.9} is due to \textcite{voigt:1980}, a special case was proven by \textcite{vidav:1970}. 
 Corollaries~\ref{cor:b4-2.2} and~\ref{cor:b4-2.11} can be found in   \textcite{greiner:1984}.
-The criterion stated in Eq.~\myeqpageref{eq:b4-2.12} is known as \emph{Doeblin's condition} (see, \eg \textcite{yosidakakutani:1941}). It is sufficient and
+The criterion stated in Proposition~\ref{prop:b4-2.13} is known as \emph{Doeblin's condition} (see, \eg \textcite{yosidakakutani:1941}). It is sufficient and
 necessary for quasi-compactness of the Markov operators. 
 A new proof of this result is given in \textcite{lotz:1981}.
 

@@ -4,7 +4,10 @@
 
 Auszug aus `Fahnenkorrektur_Springer_LNM1184.md`. **Seitenangaben** = gedruckte Seitenzahl (PDF-Seite = gedruckte Seite + 18). **Sicherheit:** ● hoch · ◐ mittel · ○ niedrig.
 
-**Stand der Umsetzung (Branch `fahnenkorrektur`):** Alle Punkte dieser Liste sind umgesetzt und im Kommentar mit „Umgesetzt“ markiert (Stand 18.10.2026; Abweichungen bei den ●-Punkten siehe `Umgesetzte_Korrekturen_LNM1184.md`).
+**Stand der Umsetzung (Branch `fahnenkorrektur`):** Alle Punkte dieser Liste sind umgesetzt und im Kommentar mit „Umgesetzt“ markiert (Stand 18.10.2026; Abweichungen stehen im Kommentar der jeweiligen Zeile).
+
+**Buchführung:** Maßgeblich für den Korrekturstand sind nur die Listen `korrekturen-text-*`, `korrekturen-mathe-*` und `math-error-*` (seit 20.10.2026). `Umgesetzte_Korrekturen_LNM1184.md`, `Finales-zum-Pruefen.md` und `Fahnenkorrektur_Springer_LNM1184.md` werden nicht mehr fortgeführt.
+
 Insgesamt **72 Punkte**: 33 ●, 25 ◐, 14 ○; davon umgesetzt: alle.
 
 
@@ -69,7 +72,7 @@ Insgesamt **72 Punkte**: 33 ●, 25 ◐, 14 ○; davon umgesetzt: alle.
 | 443 | ○ | positive semigroups on C*-algebras with unit. Theorem 4.1.7 Let 𝑀 be a C*-algebra | C∗-algebras (gleicher Stern wie sonst) | Konsistenz | **Umgesetzt.** Hier ein normales Sternchen statt des sonst verwendeten hochgestellten ∗; bitte im PDF prüfen |
 | 443 | ○ | but (𝑇(𝑡))𝑡⩾0 is strongly stable | is uniformly stable (Terminologie aus Definition 4.1.6 (ii)) | Konsistenz | **Umgesetzt.** In Definition 4.1.6 heißt die starke Konvergenz gegen 0 'uniformly stable'; 'strongly stable' kommt dort nicht vor |
 | 445 | ● | whereas (c) and (d)), resp. (e) and (f) are equivalent by the Remark 4.2.1 (iii). | whereas (c) and (d), resp. (e) and (f), are equivalent by Remark 4.2.1 (iii). | Satz | **Umgesetzt.** überzählige Klammer, überflüssiger Artikel 'the' |
-| 446 | ● | (see Propositions 4.3.7, 4.3.8 &. 4.3.9) | (see Propositions 4.3.7, 4.3.8 & 4.3.9) | Satz | **Umgesetzt.** Punkt nach '&' streichen; 4.3.8 ist außerdem ein Theorem und 4.3.9 ein Corollary |
+| 446 | ● | (see Propositions 4.3.7, 4.3.8 &. 4.3.9) | (see Propositions 4.3.7, 4.3.8 & 4.3.9) | Satz | **Umgesetzt** als „Proposition 4.3.7, Theorem 4.3.8 and Corollary 4.3.9“. Punkt nach '&' streichen; 4.3.8 ist außerdem ein Theorem und 4.3.9 ein Corollary |
 | 446 | ● | Therefore the following compactness criterium is quite useful. | compactness criterion | Tippfehler | **Umgesetzt.**  |
 | 446 | ● | the orbit {𝑇(𝑡)𝜑 : 𝑡 ∈ R+} is relatively weak compact | is relatively weakly compact | Grammatik | **Umgesetzt.**  |
 | 447 | ◐ | which is of Schwarz type. It follows as in (b) that | It follows as in (ii) that | Querverweis | **Umgesetzt.** Remark 4.3.2 hat die Teile (i)–(iii), ein Teil (b) existiert nicht |
@@ -93,7 +96,7 @@ Insgesamt **72 Punkte**: 33 ●, 25 ◐, 14 ○; davon umgesetzt: alle.
 | 457 | ○ | then by Lemma 3.1.2, there exists a sequence of normal states in Fix(R′) with orthogonal supports | then by Lemma 4.4.1, there exists ... | Querverweis | **Umgesetzt.** Die Existenz einer Folge von Zuständen mit orthogonalen Trägern ist Lemma 4.4.1; bitte prüfen |
 | 459 | ● | Without further comments, we will now use following facts. | we will now use the following facts. | Grammatik | **Umgesetzt.**  |
 | 459 | ◐ | if and only if it converges in 𝜎(𝑀′, 𝑀′′)-topology | converges in the 𝜎(𝑀′, 𝑀′′)-topology | Grammatik | **Umgesetzt.** |
-| 461 | ● | hence Theorem 4.4.2 (iv) is proved. | hence Theorem 4.4.5 (iv) is proved. | Querverweis | **Umgesetzt, abweichend (siehe Umgesetzte_Korrekturen_LNM1184.md).** 4.4.2 ist eine Remark; gemeint ist Theorem 4.4.5 |
+| 461 | ● | hence Theorem 4.4.2 (iv) is proved. | hence Theorem 4.4.5 (iv) is proved. | Querverweis | **Umgesetzt, abweichend:** Verweis jetzt auf den Satz, dessen Beweis an dieser Stelle steht (Label `thm:d4-4.4`). 4.4.2 ist eine Remark; gemeint ist Theorem 4.4.5 |
 | 461 | ● | exists in the strong operator topology with 𝐴′ is the generator of T′. | where 𝐴′ is the generator of T′. | Grammatik | **Umgesetzt.**  |
 | 463 | ● | U. Groh & B. Kümmerer: Bibounded operators 𝑊∗-algebras. | Bibounded operators on W∗-algebras. | Literatur | **Umgesetzt.** 'on' fehlt im Titel |
 |      |      |                                                              |                                                              |             |                                                              |

@@ -1,5 +1,7 @@
 # Umgesetzte Korrekturen: *One-parameter Semigroups of Positive Operators* (2. Aufl.)
 
+> **Archiv – wird seit 20.10.2026 nicht mehr fortgeführt.** Maßgeblich für den Korrekturstand sind nur die Listen `korrekturen-text-*`, `korrekturen-mathe-*` und `math-error-*`. Die Abweichungen von der Arbeitsliste stehen dort jetzt im Kommentar der jeweiligen Zeile; die offenen Literaturfragen in `korrekturen-text-allgemein.md`.
+
 Springer LNM 1184, Fahnenkorrektur zum Proof-PDF vom 14.10.2026. Stand: 18.10.2026.
 
 Die Seitenangaben beziehen sich auf die gedruckten Buchseiten (PDF-Seite = Buchseite + 18).

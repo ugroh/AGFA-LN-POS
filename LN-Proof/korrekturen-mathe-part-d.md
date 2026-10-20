@@ -6,6 +6,8 @@
 
 **Stand 18.10.2026:** Alle Punkte sind im Quelltext umgesetzt (Branch `fahnenkorrektur`, als „Umgesetzt“ markiert).
 
+**Buchführung:** Maßgeblich für den Korrekturstand sind nur die Listen `korrekturen-text-*`, `korrekturen-mathe-*` und `math-error-*` (seit 20.10.2026). `Umgesetzte_Korrekturen_LNM1184.md`, `Finales-zum-Pruefen.md` und `Fahnenkorrektur_Springer_LNM1184.md` werden nicht mehr fortgeführt.
+
 **Spalten:** S. = gedruckte Buchseite, ermittelt über das nächstgelegene Label (kann um eine Seite abweichen). Z. = Zeile in der .tex-Datei. Sicherheit: ● eindeutig · ◐ sehr wahrscheinlich · ○ Hinweis/Ermessen.
 
 Insgesamt **122 Punkte**: 40 ●, 55 ◐, 27 ○. Davon stehen 9 bereits in der Arbeitsliste `Fahnenkorrektur_Springer_LNM1184.md` (im Kommentar markiert).
