@@ -246,7 +246,7 @@ Therefore we obtain $s(A) \leq 0$.
 On the other hand, each $2\pi\im n$ is an eigenvalue of\/ $A$, hence $s(A) = 0$.
 
 Take now $x_{n} \in H_{n}$ as above and consider the sequence $(x_{n})_{n \in \N}$.
-From (iii) it follows that for $t > 0$ the number $\eu^{t}$ is an approximate eigenvalue of\/ $T(t)$ with approximate eigenvector $(x_{n})_{n \in \N}$ (see Definition~\ref{def:a3-2.1} below).
+From (iii) it follows that for $t > 0$ the number $\eu^{t}$ is an approximate eigenvalue of\/ $T(t)$ with approximate eigenvector $(x_{n_{j}})_{j \in \N}$, where $\eu^{2\pi\im n_{j}t} \to 1$ (see Definition~\ref{def:a3-2.1} below).
 Therefore 
 %
 \[
@@ -482,7 +482,7 @@ Since $\TT = (T(t))_{t \geq 0}$ is a contraction semigroup, it follows that
 Using the same functions one obtains
 %% --
 \begin{align*}
-	P\sigma(T(t)) &= \{\eu^{\lambda t} \colon \Re(\lambda) < 0\} = \{z \in \C \colon |z| < 1\} ,\\
+	P\sigma(T(t)) &= \{\eu^{\lambda t} \colon \Re(\lambda) < 0\} \cup \{0\} = \{z \in \C \colon |z| < 1\} ,\\
 	\sigma(T(t)) &= \{z \in \C \colon |z| \leq 1\} \text{ for every } t > 0 .
 \end{align*}
 %% --
@@ -490,7 +490,7 @@ Using the same functions one obtains
 \index{eigenvector!approximate|(}
 In the case of the translation group on $E = C_{0}(\R)$ one has $\sigma(A) \subseteq \im\R$.
 As above one obtains approximate eigenvectors for every $\alpha \in \R$ from 
-$f_{n}(x) = \eu^{\im\alpha x}\eu^{-|x|/n}$, hence
+$f_{n}(x) = \eu^{\im\alpha x}\eu^{-x^{2}/n^{2}}$, hence
 %% --
 \[
 \sigma(A) = A\sigma(A) = \im\R .
@@ -747,7 +747,7 @@ Therefore $\sigma(R(\lambda_{0},A)) \cup \{0\}$ is the disjoint union of the clo
 \index{resolvent}
 \index{resolvent!series representation}
 Take now $P$ to be the spectral projection of\/ $R(\lambda_{0},A)$ corresponding to this decomposition.
-Then $P$ commutes with $R(\lambda_{0},A)$ (by definition), with $R(\lambda,A)$ for every $\lambda > \omega_{0}(\TT)$ (use the series representation of the resolvent), with $T(t)$ for each $t \geq 0$ (use Proposition~\ref{prop:b2-1.10}) and therefore with the generator $A$ (in the sense explained above).
+Then $P$ commutes with $R(\lambda_{0},A)$ (by definition), with $R(\lambda,A)$ for every $\lambda > \omega_{0}(\TT)$ (use the series representation of the resolvent), with $T(t)$ for each $t \geq 0$ (use Proposition~\ref{prop:a2-1.9}) and therefore with the generator $A$ (in the sense explained above).
 In particular, we obtain
 %% --
 \begin{equation*}\label{eq:a3-new}
@@ -827,7 +827,7 @@ This decomposition can be applied to the study of the asymptotic behavior of\/ $
 for some $\alpha > 0$. 
 If we set $\beta \coloneq (\log\alpha)/t_{0}$ and use 
 \textcite[Chap.I, Theorem~6.5]{pazy:1983}, 
-we obtain $\omega_{0}(\TT_{2}) < \beta$ and $\omega_{0}(\TT_{1}^{-1}) < \beta$ by Proposition~\ref{prop:a3-1.1}.
+we obtain $\omega_{0}(\TT_{2}) < \beta$ and $\omega_{0}(\TT_{1}^{-1}) < -\beta$ by Proposition~\ref{prop:a3-1.1}.
 Therefore we have constants $m$, $M$ with $m  \leq 1  \leq M $ such that
 %% --
 \begin{align*}
@@ -1176,7 +1176,7 @@ $s(A) = s(A^{*})$, $\omega_{0}(A) = \omega_{0}(A^{*})$.
 \begin{proof}
 The left part of these equalities is either well known or has been stated in 
 Proposition~\ref{prop:a3-2.2}\,(ii).
-The first statement of (iii) follows from (ii), while the second is an immediate consequence of the estimate $\|T(t)^{*}\| \leq \|T(t)\| \leq M\cdot\|T(t)^{*}\|$ given in Section~\ref{subsec:a1-3.5}.
+The first statement of (iii) follows from (ii), while the second is an immediate consequence of the estimate $\|T(t)^{*}\| \leq \|T(t)\| \leq M\cdot\|T(t)^{*}\|$ with $M \coloneq \limsup_{t \to 0} \|T(t)\|$ (see Section~\ref{subsec:a1-3.5}).
 
 As a sample for the remaining assertions we show that $0 \notin \sigma(A)$ if and only if\/ $0 \notin \sigma(A^{*})$:
 If\/ $A$ and therefore $A'$ is invertible, it follows from Section~\ref{subsec:a1-3.5} that $A^{*}$ is a bijection from $D(A^{*})$ onto $E^{*}$.
@@ -1185,18 +1185,18 @@ Conversely assume that $A^{*}$ is invertible.
 Then $A'$ must be injective by the Proposition in Section~\ref{subsec:a1-3.5}.
 Moreover $A'(D(A'))$ contains $A^{*}(D(A^{*})) = E^{*}$ and is $\sigma(E',E)$-dense in $E'$.
 By standard duality arguments it follows that $A$ is injective with dense image.
-Next we show that $A(D(A))$ is closed: For $f \in D(A)$ choose $\phi \in D(A')$ such that $\|\phi\| \leq 1$ and $|\langle f,\phi \rangle| \geq \frac{1}{2}\|f\|$.
+Next we show that $A(D(A))$ is closed: For $f \in D(A)$ choose $\phi \in D(A')$ such that $\|\phi\| \leq 1$ and $|\langle f,\phi \rangle| \geq \frac{1}{2M}\|f\|$.
 Then
 %% --
 \begin{align*}
-\|(A^{*})^{-1}\| \|Af\| &\geq \|(A^{*})^{-1}\| |\langle Af,\phi \rangle| \geq |\langle Af,(A^{*})^{-1}\phi \rangle| \\
-&= |\langle f,\phi \rangle| \geq \frac{1}{2}\|f\| ,
+\|(A^{*})^{-1}\| \|Af\| &\geq \|Af\| \|(A^{*})^{-1}\phi\| \geq |\langle Af,(A^{*})^{-1}\phi \rangle| \\
+&= |\langle f,\phi \rangle| \geq \frac{1}{2M}\|f\| ,
 \end{align*}
 %% --
 hence
 %% --
 \[
-\|Af\| \geq \frac{1}{2}\|(A^{*})^{-1}\|^{-1}\|f\| ,
+\|Af\| \geq \frac{1}{2M}\|(A^{*})^{-1}\|^{-1}\|f\| ,
 \]
 %% --
 and $A(D(A))$ is closed since $A$ is closed.
@@ -1340,7 +1340,7 @@ R(\mu,A) = (1-\eu^{-\mu\tau})^{-1} \int_{0}^{\tau}\eu^{-\mu s}T(s) \ds .
 From the basic identities Eqs.~\eqref{eq:a1-3.1} and~\myeqpageref{eq:a1-3.2} for $t = \tau$, it follows that $(\mu - A)$ has a left and right inverse if\/ $\mu \neq 2\pi\im n/\tau$, $n \in \Z$, and that the inverse is given by the above expression.
 \end{proof}
 %% --
-The representation of\/ $R(\mu,A)$ given in Proposition~\ref{prop:a1-1.11} shows that the resolvent of the generator of a periodic semigroup is a meromorphic function having only poles of order one and the residues
+The representation of\/ $R(\mu,A)$ given in Eq.~\myeqpageref{eq:a3-5.1} shows that the resolvent of the generator of a periodic semigroup is a meromorphic function having only poles of order one and the residues
 %% --
 \[
 P_{n} \coloneq \lim_{\mu \to \mu_{n}} (\mu-\mu_{n})R(\mu,A) \quad \text{in} \quad \mu_{n} \coloneq 2\pi\im n/\tau, \quad n \in \Z ,
@@ -1588,7 +1588,7 @@ Therefore in this example the spectral mapping theorem is valid only in the foll
 \item 
 By Example~\ref{ex:a3-1.3} there exists a semigroup $\TT = (T(t))_{t \geq 0}$ with generator $A$ such that $s(A) = -1$ and $\omega_{0}(\TT) = 0$.
 This implies that for preassigned real numbers $\alpha < \beta$ there exists a semigroup $\mathcal{S} = (S(t))_{t \geq 0}$ with generator $B$ such that $s(B) = \alpha$ and $\omega_{0}(\mathcal{S}) = \beta$. Indeed, take $S(t) = \eu^{\beta t}T((\beta - \alpha)t)$ and observe that $B = (\beta-\alpha)A + \beta\Id$. 
-In that case, $\exp(t\sigma(B))$ is contained in the circle about $0$ with radius $\eu^{\alpha t}$ 
+In that case, $\exp(t\sigma(B))$ is contained in the disc $\{z \in \C \colon |z| \leq \eu^{\alpha t}\}$ 
 while $\sigma(S(t))$ has spectral values satisfying $|\lambda| = r(S(t)) = \eu^{\beta t} > \eu^{\alpha t}$. 
 
 
@@ -2031,7 +2031,7 @@ and its inverse $\Psi \mapsto \check{\Psi}$,
 \]
 %% --
 are topological isomorphisms of the Schwartz space $\mathcal{S} ( = \mathcal{S}(\R))$.
-Since the subspace $\mathcal{D}$ of all functions having compact support is dense in $\mathcal{S}$, it follows that $\{\phi \in \mathcal{S} \colon \check{\phi} \in \mathcal{D}\}$ is also dense in $\mathcal{S}$.
+Since the subspace $\mathcal{D}$ of all functions having compact support is dense in $\mathcal{S}$, it follows that $\{\phi \in \mathcal{S} \colon \hat{\phi} \in \mathcal{D}\}$ is also dense in $\mathcal{S}$.
 %% --
 \begin{lemma}\label{lem:a3-7.5}
 For every function $\phi \in \mathcal{S}$ we obtain an operator $T(\phi) \in \LE$ by
@@ -2042,7 +2042,7 @@ T(\phi)f \coloneq \int_{-\infty}^{\infty} \phi(s)T(s)f \ds, \quad f \in E .
 %% --
 This operator can be represented as
 \begin{equation}\label{eq:a3-7.3}
-T(\phi)f = \lim_{\epsilon\to 0} \frac{1}{2\pi}\int_{-\infty}^{\infty} \check{\phi}(\alpha)[R(\epsilon-\im\alpha,A)f - R(-\epsilon-\im\alpha,A)f] \diff{\alpha}, \ f \in E .
+T(\phi)f = \lim_{\epsilon\to 0} \frac{1}{2\pi}\int_{-\infty}^{\infty} \hat{\phi}(\alpha)[R(\epsilon-\im\alpha,A)f - R(-\epsilon-\im\alpha,A)f] \diff{\alpha}, \ f \in E .
 \end{equation}
 \end{lemma}
 %% --
@@ -2052,9 +2052,9 @@ In fact, the mapping $\phi \mapsto T(\phi)$ is continuous from $\mathcal{S}$ int
 We obtain
 \begin{align*}
 	T(\phi)f &= \lim_{\epsilon\to 0} \int_{-\infty}^{\infty} \phi(s)\eu^{-\epsilon|s|}T(s)f \ds \\
-	&= \lim_{\epsilon\to 0} \int_{-\infty}^{\infty} \frac{1}{2\pi}\int_{-\infty}^{\infty} \check{\phi}(\alpha)\eu^{\im\alpha s}\eu^{-\epsilon|s|}T(s)f \diff{\alpha} \ds \\
-	&= \lim_{\epsilon\to 0} \frac{1}{2\pi}\int_{-\infty}^{\infty} \check{\phi}(\alpha)\int_{-\infty}^{\infty} \eu^{\im\alpha s}\eu^{-\epsilon|s|}T(s)f \ds \diff{\alpha}\\
-	&= \lim_{\epsilon\to 0} \frac{1}{2\pi}\int_{-\infty}^{\infty} \check{\phi}(\alpha)[R(\epsilon-\im\alpha,A)f - R(-\epsilon-\im\alpha,A)f] \diff{\alpha}  .
+	&= \lim_{\epsilon\to 0} \int_{-\infty}^{\infty} \frac{1}{2\pi}\int_{-\infty}^{\infty} \hat{\phi}(\alpha)\eu^{\im\alpha s}\eu^{-\epsilon|s|}T(s)f \diff{\alpha} \ds \\
+	&= \lim_{\epsilon\to 0} \frac{1}{2\pi}\int_{-\infty}^{\infty} \hat{\phi}(\alpha)\int_{-\infty}^{\infty} \eu^{\im\alpha s}\eu^{-\epsilon|s|}T(s)f \ds \diff{\alpha}\\
+	&= \lim_{\epsilon\to 0} \frac{1}{2\pi}\int_{-\infty}^{\infty} \hat{\phi}(\alpha)[R(\epsilon-\im\alpha,A)f - R(-\epsilon-\im\alpha,A)f] \diff{\alpha}  .
 \end{align*}
 Here we used that polynomially bounded groups have growth bound $0$, hence $\omega_{0}(A) = \omega_{0}(-A) = 0$.
 Therefore the integral representation of\/ $R(\epsilon-\im\alpha,A)$ (\cf Proposition~\ref{prop:a1-1.11}) exists for $\epsilon \neq 0$.
@@ -2065,7 +2065,7 @@ If\/ $E \neq \{0\}$, then $\sigma(A) \neq \emptyset$.
 \end{lemma}
 %% --
 \begin{proof}
-If\/ $\sigma(A) = \emptyset$, then Eq.~\myeqpageref{eq:a3-7.3} implies $T(\phi) = 0$ whenever $\check{\phi}$ has compact support.
+If\/ $\sigma(A) = \emptyset$, then Eq.~\myeqpageref{eq:a3-7.3} implies $T(\phi) = 0$ whenever $\hat{\phi}$ has compact support.
 Since these functions form a dense subspace of\/ $\mathcal{S}$, we conclude that $T(\phi) = 0$ for all $\phi \in \mathcal{S}$.
 Choosing an approximate identity $(\psi_{n})_{n\in\N} \subseteq \mathcal{D}$, we obtain
 %% --
@@ -2101,13 +2101,13 @@ it follows from Eq.~\myeqpageref{eq:a3-7.3} and the integral representation of\/
 
 More generally, since %
 \[
-	\widehat{\left(\eu^{\im 2k\cdot}\check{\phi_{0}}\right)}(\alpha) = \phi_{0}(\alpha-2k) ,
+	\widehat{\left(\eu^{-\im 2k\cdot}\check{\phi_{0}}\right)}(\alpha) = \phi_{0}(\alpha+2k) ,
 \]
 %
 the assertions Eq.~\myeqpageref{eq:a3-7.3} and Eq.~\myeqpageref{eq:a3-7.4} imply
 %% --
 \begin{equation}\label{eq:a3-7.5}
-P_{k} = \int_{-\infty}^{\infty} \eu^{\im 2ks}\check{\phi_{0}}(s)T(s)\ds \text{ for } k \in \Z .
+P_{k} = \int_{-\infty}^{\infty} \eu^{-\im 2ks}\check{\phi_{0}}(s)T(s)\ds \text{ for } k \in \Z .
 \qedhere
 \end{equation}
 %% --
@@ -2122,7 +2122,7 @@ $\mathrm{span }\bigcup_{k\in\Z} P_{k}E$ is dense in $E$.
 \begin{proof}
 The closure of\/ $\text{span }\bigcup_{k\in\Z} P_{k}E$ is a $\TT$-invariant subspace $G$ of\/ $E$.
 Consider the quotient group $(T_/(t))_{t\in\R}$ induced on $E/G$.
-The spectrum of its generator $A_{/}$ is contained in $\sigma(A)$ by Proposition~\ref{prop:a3-4.2}\,(ii).
+By Eq.~\myeqpageref{eq:a3-7.4}, $\rho(A)$ is connected, hence by Proposition~\ref{prop:a3-4.2}\,(iii) the spectrum $\sigma(A_{/})$ of its generator $A_{/}$ is contained in $\sigma(A)$.
 Moreover, the spectral projection corresponding to $\sigma(A_{/}) \cap \sigma_{k}$ is the quotient operator $P_{k/}$.
 \index{spectral projection}
 Obviously $P_{k/} = 0$, hence $\sigma(A_{/}) \cap \sigma_{k} = \emptyset$ for every $k \in \Z$ and $\sigma(A_{/}) = \emptyset$.
@@ -2136,12 +2136,12 @@ Using Eq.~\myeqpageref{eq:a3-7.5}, the spectral projection $P_{k}$ can be transf
 \index{spectral projection}
 %% --
 \begin{align*}
-P_{k} &= \int_{-\infty}^{\infty} \eu^{\im 2ks}\check{\phi_{0}}(s)T(s)\ds \\
-&= \sum_{m\in\Z} \int_{(m-1/2)\pi}^{(m+1/2)\pi} \eu^{\im 2ks}\check{\phi_{0}}(s)T(s)\ds \\
-&= \int_{-\pi/2}^{\pi/2} \eu^{\im 2ks}\sum_{m\in\Z}\check{\phi_{0}}(s+m\pi)T(s+m\pi)\ds ,
+P_{k} &= \int_{-\infty}^{\infty} \eu^{-\im 2ks}\check{\phi_{0}}(s)T(s)\ds \\
+&= \sum_{m\in\Z} \int_{(m-1/2)\pi}^{(m+1/2)\pi} \eu^{-\im 2ks}\check{\phi_{0}}(s)T(s)\ds \\
+&= \int_{-\pi/2}^{\pi/2} \eu^{-\im 2ks}\sum_{m\in\Z}\check{\phi_{0}}(s+m\pi)T(s+m\pi)\ds ,
 \end{align*}
 %% --
-\ie $P_{k}f$ is the $k$-th Fourier coefficient of the $\pi$-periodic, continuous function 
+\ie $P_{k}f$ is $\pi$ times the $k$-th Fourier coefficient of the $\pi$-periodic, continuous function 
 \[
 \xi_{f} \colon s \mapsto \sum_{m\in\Z} \check{\phi_{0}}(s+m\pi)T(s+m\pi)f, \quad f \in E .
 \]
@@ -2152,25 +2152,25 @@ For $s = 0$ we obtain for
 $g \in \text{span }\bigcup_{k\in\Z} P_{k}E$
 %% --
 \[
-g = \sum_{n\in\Z} P_{n}g\cdot \eu^{-\im n\cdot 0} = \sum_{m\in\Z} \check{\phi_{0}}(0 + m\pi)T(0 + m\pi)g .
+g = \sum_{n\in\Z} P_{n}g = \pi\,\xi_{g}(0) = \pi\sum_{m\in\Z} \check{\phi_{0}}(m\pi)T(m\pi)g .
 \]
 %% --
 Since $\text{span }\bigcup_{k\in\Z} P_{k}E$ is dense (Lemma~\ref{lem:a3-7.7}), we conclude that
 %% --
 \begin{equation}\label{eq:a3-7.6}
-\sum_{m\in\Z} \check{\phi_{0}}(m\pi)T(m\pi) = \Id .
+\pi\sum_{m\in\Z} \check{\phi_{0}}(m\pi)T(m\pi) = \Id .
 \end{equation}
 %% --
 As the final step we construct the inverse operator of\/ $\Id + T(\pi)$ showing that $-1 \in \rho(T(\pi))$.
-We define $\psi_{0}(\alpha) \coloneq \phi_{0}(\alpha)\cdot(1 + \eu^{\im\pi\alpha})^{-1}$, $\alpha \in \R$.
-Then we have $\psi_{0} \in \mathcal{S}$ and $\psi_{0}\cdot(1 + \eu^{\im\pi\cdot}) = \phi_{0}$,
-hence $\check{\psi_{0}}(x) + \check{\psi_{0}}(x + \pi) = \check{\phi_{0}}(x)$ for all $x \in \R$.
+We define $\psi_{0}(\alpha) \coloneq \phi_{0}(\alpha)\cdot(1 + \eu^{-\im\pi\alpha})^{-1}$, $\alpha \in \R$.
+Then we have $\psi_{0} \in \mathcal{S}$ and $\psi_{0}\cdot(1 + \eu^{-\im\pi\cdot}) = \phi_{0}$,
+hence $\check{\psi_{0}}(x) + \check{\psi_{0}}(x - \pi) = \check{\phi_{0}}(x)$ for all $x \in \R$.
 Then Eq.~\myeqpageref{eq:a3-7.6} implies
 %% --
 \begin{align*}
-\Id &= \sum_{m\in\Z} \check{\phi_{0}}(m\pi)T(m\pi) \\
-&= \sum_{m\in\Z} (\check{\psi_{0}}(m\pi) + \check{\psi_{0}}((m+1)\pi))T(m\pi) \\
-&= \left[ \sum_{m\in\Z} \check{\psi_{0}}(m\pi)T(m\pi) \right] (\Id + T(\pi)) . \tag*{\qedsymbol}%&&\qedhere
+\Id &= \pi\sum_{m\in\Z} \check{\phi_{0}}(m\pi)T(m\pi) \\
+&= \pi\sum_{m\in\Z} (\check{\psi_{0}}(m\pi) + \check{\psi_{0}}((m-1)\pi))T(m\pi) \\
+&= \pi\left[ \sum_{m\in\Z} \check{\psi_{0}}(m\pi)T(m\pi) \right] (\Id + T(\pi)) . \tag*{\qedsymbol}%&&\qedhere
 \end{align*}
 \let\qedsymbol\relax
 \end{proof}
@@ -2317,7 +2317,7 @@ This yields for every finite subset $N$ of\/ $\Z$ that
 	= c\left(\sum_{k\in N} \|g_{k}\|^{2}\right)^{1/2} & \leq c(1 + \lambda M)\left(\sum_{k\in N} \|f_{k}\|^{2}\right)^{1/2} .
 \end{align*}
 %% --
-Here $c\coloneq \|(1 - \eu^{-2\pi\lambda}T(2\pi))^{-1}\|\cdot\left(\int_{0}^{2\pi}\|T(s)\|^{2} \ds\right)^{1/2}$ and $M\coloneq \sup_{k\in\Z}\|R(\im k,A)\|$ do the job.
+Here $c\coloneq \sqrt{2\pi}\,\|(1 - \eu^{-2\pi\lambda}T(2\pi))^{-1}\|\cdot\left(\int_{0}^{2\pi}\|T(s)\|^{2} \ds\right)^{1/2}$ and $M\coloneq \sup_{k\in\Z}\|R(\im k,A)\|$ do the job.
 \end{proof}
 %% --
 \begin{theorem}\label{thm:a3-7.10}
@@ -2350,7 +2350,7 @@ The growth bound
 of a semigroup $(T(t))_{t\geq 0}$ on a Hilbert space $H$ satisfies
 %% --
 \begin{equation}\label{eq:a3-7.9}
-\omega_{0} = \inf \{\lambda \in \R \colon \lambda + \im\R \subseteq \rho(A) \text{ and } \|R(\lambda+\im\mu,A)\| \text{ is bounded for } \mu \in \R\} .
+\omega_{0} = \inf \{\lambda \in \R \colon \{z \in \C \colon \Re(z) > \lambda\} \subseteq \rho(A) \text{ and } \sup_{\Re(z) > \lambda}\|R(z,A)\| < \infty\} .
 \end{equation}
 \end{corollary}
 %% --
