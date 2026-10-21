@@ -347,7 +347,7 @@ Then $f \in D(A^{2}) = D(A_{1})$, and so $f = 0$ since $\lambda \in \rho(A_{1})$
 This proves that (c) implies (b).  
 
 It remains to show that (d)  implies (a). 
-Assertion (d) implies that for all $ t \geq 0 $ there exist bounded operators $ T(t) \in \LE $ such that 
+Assertion (d) (and the semigroup property) implies that for all $ t \geq 0 $ there exist bounded operators $ T(t) \in \LE $ such that 
 %
 \[
 	u(t,f) = T(t)f 
@@ -395,7 +395,7 @@ Let $ B $ be a densely defined unbounded closed operator on a Banach space $ F $
 Consider $ E = F \oplus F $ and $ A $ on $ E $ given by
 %% --
 \[
-    A \coloneq \begin{pmatrix} 0 & -B \\ 0 & 0 \end{pmatrix}
+    A \coloneq \begin{pmatrix} 0 & B \\ 0 & 0 \end{pmatrix}
 \]
 %% --
 with domain $ F \times D(B) $.
@@ -414,14 +414,14 @@ so $ \rho(A) = \emptyset $.
 As a further illustration, we note that the solution of the corresponding abstract Cauchy problem for the initial value $ (f,g) \in F \times D(B) $ is given by 
 %$ 
 \[
-u(t) = (f - tBg,g) .
+u(t) = (f + tBg,g) .
 \] 
 %$
 
 Since $ B $ is unbounded, condition~\ref{cor:a2-1.2-4}  of Corollary~\ref{cor:a2-1.2}  is clearly violated.
 \end{example}
 %% --
-\begin{remark*}\label{rem:a2-1.4-kgk} 
+\begin{remark}\label{rem:a2-1.5} 
 It may happen that a generator $A$ can be extended to a closed operator $B$.
 Then one can consider the abstract Cauchy problem~\eqref{eq:a2-acp} associated with $B$.
 It also has a solution for every initial value in $D(B)$, but none of the solutions is unique unless $A = B$.
@@ -440,7 +440,7 @@ Define $u$ by
 %
 Then $u$ is a solution of~\eqref{eq:a2-acp} for $B$ with initial value $f$.
 It follows from Corollary~\ref{cor:a2-1.2} that there exists a non-trivial solution for the initial value $0$.
-\end{remark*}
+\end{remark}
 %% --
 \subsection{One-parameter Groups} \label{subsec:a2-1.se2}%
 %
@@ -496,7 +496,7 @@ It follows from the uniqueness of the solutions that $T(t+s) = T(t)T(s)$ $(s,t \
 Let $f \in E$. 
 There exist $(f_{n}) \in D(A)$ such that $\lim_{n \to \infty} f_{n} = f$.
 Then $\lim_{n \to \infty} T(t)f_{n} = T(t)f$ for all $t \in \R$.
-Since $T(\cdot)f$ is continuous, it follows that $T(\cdot)f$ is measurable.
+Since $T(\cdot)f_{n}$ is continuous, it follows that $T(\cdot)f$ is measurable.
 Hence by \textcite[10.2.1]{hillephillips:1957} 
 %
 \[
@@ -507,7 +507,8 @@ for every compact interval $J \subseteq (0,\infty)$.
 
 By the group property this implies that $T(\cdot)$ is norm bounded on bounded subsets of\/ $\R$ and
 $T(\cdot)f$ is continuous if\/ $f \in D(A)$.
-Since $D(A)$ is dense, this implies the strong continuity of\/ $(T(t))_{t \geq 0}$.
+Since $D(A)$ is dense, this implies the strong continuity of\/ $(T(t))_{t \in \R}$.
+As in the proof of Corollary~\ref{cor:a2-1.2} one shows that $A$ is its generator.
 \end{proof}
 %%
 \subsection{The Hille-Yosida Theorem} \label{subsec:a2-1.se3}%
@@ -596,13 +597,13 @@ The generators of these semigroups can be characterized by a particularly simple
 For $\alpha \in (0,\pi]$ we define the sector $S(\alpha)$ in the complex plane by
 %% –
 \[
-    S(\alpha) = \{r\eu^{\im\theta} \colon r \geq 0, \theta \in (-\alpha,\alpha)\} .
+    S(\alpha) = \{r\eu^{\im\theta} \colon r > 0, \theta \in (-\alpha,\alpha)\} .
 \]
 %% –
 %% --
 \begin{definition}\label{def:a2-1.11}
 Let $\alpha \in (0,\pi/2]$.
-A strongly continuous semigroup $(T(t))_{t \geq 0}$ is called a bounded holomorphic semigroup of angle $\alpha$ if\/ $T(\cdot)$ is the restriction of a holomorphic function
+A strongly continuous semigroup $(T(t))_{t \geq 0}$ is called a \emph{bounded holomorphic semigroup of angle $\alpha$} if\/ $T(\cdot)$ on $(0,\infty)$ is the restriction of a holomorphic function
 %% –
 \[
     T \colon S(\alpha) \to \LE
@@ -686,7 +687,7 @@ Then
 It follows that $\lambda \in \rho(A^{2})$ and 
 %%--
 \begin{equation}\label{eq:a2-1.7}
-    R(\lambda,A^{2}) = R(r\eu^{\im\beta},A)R(r\eu^{-\im\beta},-A) \, .
+    R(\lambda,A^{2}) = R(r\eu^{\im\beta},A)R(r\eu^{\im\beta},-A) \, .
 \end{equation}
 %% –
 Since $A$ generates a bounded group, there exists a constant $N \geq 0$ such that 
@@ -850,7 +851,7 @@ exists and
     &\leq N |\xi+\im\eta|^{-1}  . 
 \end{align*}
 %% –
-This together with the assumption implies that there exist $N' \geq 0$ and $\alpha \in (0,\pi/2]$ such that $\lambda \in \rho(A)$ and $\|R(\lambda,A)\| \leq N'/|\lambda|$ for all $\lambda \in S(\alpha+\pi/2)$.
+This together with the assumption implies that there exist $N' \geq 0$, $r' > r$ and $\alpha \in (0,\pi/2]$ such that $\lambda \in \rho(A)$ and $\|R(\lambda,A)\| \leq N'/|\lambda|$ for all $\lambda \in S(\alpha+\pi/2) \setminus B(r')$.
 \end{proof}
 %% --
 Compared with the Hille-Yosida theorem, Theorem~\ref{thm:a2-1.14}   gives a very simple criterion for an operator to be the generator of a (holomorphic) semigroup.
@@ -940,7 +941,7 @@ Thus
 	\lim_{t \to \infty} \Im(z(t)^2)/\Re(z(t)^2) = 2\epsilon/(\epsilon^2-1) .
 \]
 %
-Choose $\beta \in (\pi/4,\pi/2)$ such that $\tan(\alpha + \pi/2) > 2\epsilon/(\epsilon^2-1)$. 
+Choose $\beta \in (\pi/4,\pi/2)$ such that $\tan(\alpha + \pi/2) < 2\epsilon/(\epsilon^2-1)$. 
 
 Now let $\lambda \in S(\alpha+\pi/2)\setminus B(r_{0})$.
 Then there exist $\theta \in (-\beta,\beta)$ and $r \geq 0$ such that 
@@ -1044,7 +1045,7 @@ and
 \]
 \end{theorem}
 %% –
-For the proofs of these two theorems we refer to \textcite[Chapter 3, Theorems 4.7 and 4.8]{pazy:1983}.
+For the proofs of these two theorems we refer to \textcite[Chapter 2, Theorems 4.7 and 4.8]{pazy:1983}.
 %% --
 \subsection{Norm Continuous Semigroups} \label{subsec:a2-1.se6}%
 \index{semigroup!norm continuous semigroup}
@@ -1177,7 +1178,7 @@ All together we obtain for $\lvert r\rvert \geq r_{0}$,
          \norm*{\int_{s'}^{s} t^n \eu^{-\iu rt} \eu^{-at} T(t)\dt} \\
     &\phantom{{}\leq{}}
        + \frac{1}{n!}\int_{s}^{\infty} \eu^{-at} t^n \norm{T(t)}\dt \\
-    &\leq \frac{(s')^{n}}{n!}\int_{0}^{s'} M \eu^{(\omega - a)t}\dt
+    &\leq \frac{(s')^{n}}{n!}\int_{0}^{s'} M \eu^{(w - a)t}\dt
           + \tfrac{2}{3}\epsilon^{n+1} \\
     &\leq N \cdot \frac{(s')^n}{n!} + \tfrac{2}{3}\epsilon^{n+1} \\
    &\leq \epsilon^{n+1}. \tag*{\qedsymbol}%&&\qedhere
@@ -1202,11 +1203,11 @@ Moreover, $t \mapsto T(t)$ is norm continuous at every $t > t_0$.
 
 In fact, since $T(h) \to \Id $ strongly with $h \downarrow 0$, it follows that $\lim_{h \downarrow 0} T(h)f = f$ uniformly on every compact subset $K$ of\/ $E$.
 Now let $t \geq t_0$.
-Then $K = T(t)(U)$ is compact (where $U$ denotes the unit ball of\/ $E$).
+Then $K = \overline{T(t)(U)}$ is compact (where $U$ denotes the unit ball of\/ $E$).
 Hence 
 %
 \[
-	\lim \limits_{h \downarrow 0} T(h+t)f = \lim \limits_{h \downarrow 0} T(h)T(t)f 
+	\lim \limits_{h \downarrow 0} T(h+t)f = \lim \limits_{h \downarrow 0} T(h)T(t)f = T(t)f
 \]
 %
 uniformly for $f \in U$.
@@ -1274,7 +1275,7 @@ A strongly continuous semigroup $(T(t))_{t\geq 0}$ is compact if and only if it 
 Assume that $(T(t))_{t\geq 0}$ is compact. Then $T(\cdot)$ is norm continuous on $(0,\infty)$, and so 
 %%--
 \[
-    \int_{0}^{t} \eu^{-ws} T(s) \ds
+    \int_{0}^{t} \eu^{-ws} T(s) \ds = \lim_{\delta \downarrow 0} \int_{\delta}^{t} \eu^{-ws} T(s) \ds
 \]
 %%--
 is compact as the norm limit of linear combinations of compact operators, whenever $w > \omega_{0}(A)$.
@@ -1356,7 +1357,7 @@ But it is not norm continuous and consequently not differentiable or compact.
 \begin{example}\label{ex:a2-1.28}
 We consider multiplication semigroups (see Section~\ref{subsec:a1-2.3}).
 Let $E = C_{0}(X)$, where $X$ is a locally compact space, or $E = L^{p}(X,\Sigma,\mu)$, where $1 \leq p < \infty$ and $(X,\Sigma,\mu)$ is a $\sigma$-finite measure space.
-Let $m \colon X \to \R$ be continuous (\resp measurable) such that $[\text{ess}]\text{-}\sup_{x \in X} \Re(m(x)) < \infty$.
+Let $m \colon X \to \C$ be continuous (\resp measurable) such that $[\text{ess}]\text{-}\sup_{x \in X} \Re(m(x)) < \infty$.
 
 Then $Af = m \cdot f$ with domain $D(A) = \{f \in E \colon m \cdot f \in E\}$ is the generator of the semigroup $(T(t))_{t \geq 0}$ given by
 %%--
@@ -1389,15 +1390,15 @@ Thus the property proved in Theorem~\ref{thm:a2-1.20}   characterizes generators
 Assume that $\{\lambda \in \sigma(A) \colon \Re(\lambda) \geq b\}$ is bounded for every $b \in \R$.
 Let $t' > 0$.
 We show that the semigroup is norm continuous at $t'$.
-Take $\epsilon > 0$ and $b \in \R$ such that $2\eu^{(t'+1)b} < \epsilon$.
+Take $\epsilon > 0$ and $b \in \R$ such that $2\eu^{t'b/2} < \epsilon$.
 
 If\/ $\Re(m(x)) \leq b$, then
 %%--
 \[
-    \left|\eu^{tm(x)} - \eu^{t'm(x)}\right| \leq \eu^{t\Re(m(x))} + \eu^{t'\Re(m(x))} \leq 2\eu^{(t'+1)b} < \epsilon
+    \left|\eu^{tm(x)} - \eu^{t'm(x)}\right| \leq \eu^{t\Re(m(x))} + \eu^{t'\Re(m(x))} \leq 2\eu^{t'b/2} < \epsilon
 \]
 %%--
-whenever $|t-t'| \leq 1$.
+whenever $|t-t'| \leq t'/2$.
 
 By hypothesis, the set 
 %
@@ -1414,7 +1415,7 @@ and%
 %
 in the case $E = L^{p}$ is a bounded subset of\/ $\C$.
 Thus $\lim_{t \to t'} |\eu^{tz} - \eu^{t'z}| = 0$ uniformly for $z \in H$.
-Hence there exists $\delta \in (0,1]$ such that
+Hence there exists $\delta \in (0,t'/2]$ such that
 %% --
 \[
 [\text{ess}]\text{-}\sup\left\{\left|\eu^{tm(x)} - \eu^{t'm(x)}\right| \colon x \in X, \Re(m(x)) > b\right\} < \epsilon
@@ -1610,7 +1611,7 @@ Now if\/ $A$ generates a holomorphic semigroup, there exists $M \geq 0$ such tha
 Consequently, 
 %%--
 \[
-\|R(\lambda_{0}+\im\eta,A+B)\| \leq \|(\Id-BR(\lambda_{0} + \iu \eta,A))^{-1}\| \cdot 2M/|\eta| \leq 2M/|\eta|
+\|R(\lambda_{0}+\im\eta,A+B)\| \leq \|(\Id-BR(\lambda_{0} + \iu \eta,A))^{-1}\| \cdot M/|\eta| \leq 2M/|\eta|
 \]
 %%--
 for all $\eta \in \R$.
@@ -1717,7 +1718,7 @@ If\/ $B$ is compact as an operator on $D(A)$ endowed with the graph norm and if\
 \end{corollary}
 %% --
 \begin{proof}
-Both assertions follow from Theorem~\ref{thm:a2-1.30}  because $(US(t)U^{-1})_{t\geq 0}$ has $A+C$ as generator.
+Both assertions follow from Theorem~\ref{thm:a2-1.30}  because $(U^{-1}S(t)U)_{t\geq 0}$ has $A+C$ as generator.
 \end{proof}
 %% --
 %% -- Stand 2026-03-10
@@ -1826,7 +1827,7 @@ However in Part-II, Chapter~\ref{chap:b2} and Part-III, Chapter~\ref{chap:c2} it
 For example, we will consider $N^{+}$ on $C([0,1])$ given by 
 %
 \[
-	N^{+}(f) = \sup_{x \in [0,1]} f(x) .
+	N^{+}(f) = \sup_{x \in [0,1]} f^{+}(x) = \|f^{+}\|_{\infty} .
 \]
 %
 Then a bounded operator $T$ is $N^{+}$-contractive if and only if\/ $T$ is positive and $\|T\| \leq 1$.
@@ -1901,7 +1902,7 @@ Then $A$ is $p$-dissipative if and only if
 p(f) \leq p(f - tAf) \text{ for all } f \in D(A) \text{ and } t > 0.
 \end{equation}
 %% --
-If in particular $(w,\infty) \subseteq \rho(A)$ for some $w \in \R$, then $A$ is $p$-dissipative if and only if
+If in particular $(w,\infty) \subseteq \rho(A)$ for some $w \geq 0$, then $A$ is $p$-dissipative if and only if
 %% --
 \begin{equation}\label{eq:a2-2.8}
 p(\lambda R(\lambda,A)f) \leq p(f) \text{ for all } f \in E, \lambda > w.
@@ -2021,10 +2022,10 @@ Then it follows from Corollary~\ref{cor:a2-2.5}   that $A$ is $p$-dissipative.
 Hence, by Eq.~\myeqpageref{eq:a2-2.8},  
 %
 \[
-	p(\lambda R(\lambda,A)g) \leq p(g) \quad\text{for all $g \in E$, $\lambda > \omega_{0}(A)$}.
+	p(\lambda R(\lambda,A)g) \leq p(g) \quad\text{for all $g \in E$, $\lambda > \max\{\omega_{0}(A),0\}$}.
 \]
 %
-Hence $\lambda R(\lambda,A)$ is $p$-contractive for $\lambda > \omega_{0}(A)$.
+Hence $\lambda R(\lambda,A)$ is $p$-contractive for $\lambda > \max\{\omega_{0}(A),0\}$.
 This implies that $T(t)$ is $p$-contractive by the formula \myeqpageref{eq:a2-1.3}, 
 %% –
 \begin{equation*}
@@ -2098,7 +2099,7 @@ defines a norm on $E$ which is equivalent to the given norm if and only if\/ $p$
 Every half-norm $p$ induces a closed proper cone 
 %%
 \[
-E_{p} \coloneq \{f \in E \colon p(-f) \geq 0\}
+E_{p} \coloneq \{f \in E \colon p(-f) \leq 0\}
 \] 
 %%
 on $E$.
