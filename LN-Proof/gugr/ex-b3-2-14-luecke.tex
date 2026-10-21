@@ -1,0 +1,135 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,ngerman]{babel}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{mathtools}
+\usepackage{enumitem}
+\usepackage[a4paper,margin=2.6cm]{geometry}
+\usepackage[autostyle]{csquotes}
+\emergencystretch=3em
+\usepackage[hidelinks]{hyperref}
+
+\theoremstyle{plain}
+\newtheorem{lemma}{Lemma}
+\theoremstyle{remark}
+\newtheorem*{bemerkung}{Bemerkung}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\dx}{\,\mathrm{d}x}
+\newcommand{\ie}{i.e.}
+
+\title{LNM 1184, Part-II, Example~3.2.14\,(i):\\ Schließen der Lücke (eindimensionaler Schrödinger-Operator)}
+\author{Arbeitsnotiz}
+\date{21.~Oktober 2026}
+
+\begin{document}
+\maketitle
+
+\section*{1.\quad Die Stelle}
+
+In Example~3.2.14\,(i) (\texttt{part-b/chap-b3.tex}, \texttt{ex:b3-2.14}) ist $X = \R$, $E = C_0(\R)$ und
+\[
+  (Af)(x) = f''(x) - V(x)f(x), \qquad D(A) = \{f \in C_0(\R) \colon f \in C^2,\ Af \in C_0(\R)\},
+\]
+mit $V \colon \R \to \R$ stetig, $\inf_x V(x) > -\infty$ und $\lim_{|x|\to\infty} V(x) = \infty$; dann hat $A$ kompakte Resolvente. Im Buch heißt es weiter:
+
+\begin{quote}\selectlanguage{english}
+Then, by Corollary~3.2.10, there exists a dominant real eigenvalue with corresponding positive eigenfunction.
+\end{quote}
+
+Korollar~3.2.10 liefert aber nur, dass $P\sigma_b(A) = \sigma_b(A)$ zyklisch ist. Daraus folgt weder
+\begin{enumerate}[label=(\alph*)]
+\item $\sigma(A) \neq \emptyset$ (also $s(A) > -\infty$), noch
+\item die Dominanz von $s(A)$; nach (3.2.19) könnte $\sigma_b(A)$ auch unendlich und unbeschränkt sein.
+\end{enumerate}
+Die positive Eigenfunktion liefert der Beweis von Korollar~3.1.4, sobald $s(A) > -\infty$ bekannt ist; die dort vorausgesetzte Kompaktheit von $X$ wird nur für $s(A) > -\infty$ gebraucht.
+
+Beides, (a) und (b), lässt sich im konkreten Beispiel elementar zeigen. (Der Weg über Korollar~3.2.12 würde die eventuelle Normstetigkeit der Schrödinger-Halbgruppe auf $C_0(\R)$ erfordern, die im Buch nicht zur Verfügung steht.)
+
+\section*{2.\quad Beweis}
+
+\begin{lemma}[$\sigma(A) \neq \emptyset$]\label{lem:a}
+Es gilt $s(A) \geq \mu \coloneq -6 - \max_{|x| \leq 1} V(x) > -\infty$.
+\end{lemma}
+
+\begin{proof}
+Setze $g(x) \coloneq (1-x^2)^3$ für $|x| \leq 1$ und $g(x) \coloneq 0$ sonst. Wegen
+\[
+  g'(x) = -6x(1-x^2)^2, \qquad g''(x) = 6(1-x^2)(5x^2-1) \qquad (|x| \leq 1)
+\]
+verschwinden $g$, $g'$, $g''$ in $\pm 1$, also ist $g \in C^2_c(\R) \subseteq D(A)$, $g \geq 0$, $g \neq 0$. Auf $(-1,1)$ gilt
+\[
+  \frac{g''(x)}{g(x)} = \frac{6(5x^2-1)}{(1-x^2)^2} \geq -6 ,
+\]
+da die rechte Seite in $x^2$ wächst. Somit ist $Ag = g'' - Vg \geq (-6 - V)g \geq \mu g$ auf $(-1,1)$, und außerhalb gilt $Ag = 0 = \mu g$. Also $Ag \geq \mu g$.
+
+Angenommen $s(A) < \mu$ (das schließt $s(A) = -\infty$ ein). Wähle $\lambda \in (s(A),\mu)$. Nach Korollar~3.1.3 ist $\lambda \in \rho(A)$ und $R(\lambda,A) \geq 0$. Aus $(\lambda - A)g \leq (\lambda - \mu)g$ folgt
+\[
+  g = R(\lambda,A)(\lambda - A)g \leq (\lambda - \mu)\,R(\lambda,A)g \leq 0 ,
+\]
+im Widerspruch zu $0 \neq g \geq 0$.
+\end{proof}
+
+\begin{lemma}[Eigenwerte sind reell]\label{lem:b}
+Ist $Af = \lambda f$ mit $0 \neq f \in D(A)$, so gilt $f, f' \in L^2(\R)$, $V|f|^2 \in L^1(\R)$ und
+\[
+  \lambda \int_{\R} |f|^2 \dx = -\int_{\R} |f'|^2 \dx - \int_{\R} V|f|^2 \dx .
+\]
+Insbesondere ist $\lambda \in \R$ und $\lambda \leq -\inf_x V(x)$.
+\end{lemma}
+
+\begin{proof}
+Es ist $f'' = (V+\lambda)f$. Wähle $R_0 > 0$ mit $V(x) + \Re(\lambda) \geq 1$ für $|x| \geq R_0$. Für $u \coloneq |f|^2 = f\bar f \in C^2$ gilt
+\[
+  u'' = 2\Re(f''\bar f) + 2|f'|^2 = 2\bigl(V + \Re(\lambda)\bigr)u + 2|f'|^2 \geq 0 \qquad (|x| \geq R_0).
+\]
+Auf $[R_0,\infty)$ ist $u$ also konvex, $u'$ wachsend. Wegen $u \geq 0$ und $u(x) \to 0$ ist $u' \leq 0$ dort (sonst $u \to \infty$), und der Grenzwert $\lim_{x\to\infty} u'(x)$ existiert und ist $0$ (sonst $u \to -\infty$). Monotone Konvergenz liefert
+\[
+  \int_{R_0}^{\infty} \Bigl(2\bigl(V + \Re(\lambda)\bigr)|f|^2 + 2|f'|^2\Bigr) \dx = \lim_{R\to\infty} \bigl(u'(R) - u'(R_0)\bigr) = -u'(R_0) < \infty .
+\]
+Wegen $V + \Re(\lambda) \geq 1$ sind daher $|f|^2$, $|f'|^2$ und $V|f|^2$ auf $[R_0,\infty)$ integrierbar; ebenso auf $(-\infty,-R_0]$, und auf $[-R_0,R_0]$ ohnehin. Mit $|f'\bar f| \leq \frac12(|f'|^2 + |f|^2)$ ist auch $f'\bar f \in L^1(\R)$; es gibt also Folgen $a_n \to -\infty$, $b_n \to \infty$ mit $f'(a_n)\bar f(a_n) \to 0$ und $f'(b_n)\bar f(b_n) \to 0$. Partielle Integration ergibt
+\[
+  \int_{a_n}^{b_n} (V+\lambda)|f|^2 \dx = \int_{a_n}^{b_n} f''\bar f \dx = \bigl[f'\bar f\bigr]_{a_n}^{b_n} - \int_{a_n}^{b_n} |f'|^2 \dx ,
+\]
+und mit $n \to \infty$ (majorisierte Konvergenz) folgt die Behauptung. Die rechte Seite ist reell und $\int |f|^2 > 0$, also $\lambda \in \R$; außerdem $\lambda\int|f|^2 \leq -\inf V \int |f|^2$.
+\end{proof}
+
+\paragraph{Folgerung.}
+Nach Lemma~\ref{lem:a} ist $s(A) > -\infty$, nach Theorem~3.1.1 also $s(A) \in \sigma(A)$. Da $A$ kompakte Resolvente hat, besteht $\sigma(A) = P\sigma(A)$ aus isolierten Polen ohne endlichen Häufungspunkt, und nach Lemma~\ref{lem:b} gilt $\sigma(A) \subseteq (-\infty, s(A)]$. Es gibt daher $\delta > 0$ mit $\sigma(A) \setminus \{s(A)\} \subseteq (-\infty, s(A) - \delta]$, \ie $s(A)$ ist ein \emph{strikt dominanter} Eigenwert. Eine positive Eigenfunktion erhält man wie im Beweis von Korollar~3.1.4: $Q \coloneq \lim_{\lambda\downarrow s(A)} (\lambda - s(A))^k R(\lambda,A)$ ($k$ die Polordnung) ist nach Korollar~3.1.3 positiv und $\neq 0$; für ein $g \geq 0$ mit $h \coloneq Qg > 0$ gilt $(s(A) - A)h = 0$. Die strikte Positivität von $h$ zeigt der Buchtext anschließend über die Eindeutigkeit für gewöhnliche Differentialgleichungen; diese Stelle bleibt unverändert.
+
+\begin{bemerkung}
+Lemma~\ref{lem:a} braucht $\lim_{|x|\to\infty}V(x) = \infty$ nicht. Mit $g_{a,\epsilon}(x) \coloneq g((x-a)/\epsilon)$ erhält man allgemeiner
+\[
+  -\frac{6}{\epsilon^2} - \max_{|x-a| \leq \epsilon} V(x) \;\leq\; s(A) \;\leq\; -\inf_x V(x) \qquad (a \in \R,\ \epsilon > 0),
+\]
+die obere Schranke aus Lemma~\ref{lem:b}.
+\end{bemerkung}
+
+\section*{3.\quad Vorschlag für den Buchtext}
+
+Ersetzt in Example~3.2.14\,(i) den Satz \enquote{Then, by Corollary~3.2.10, there exists a dominant real eigenvalue with corresponding positive eigenfunction.}
+
+\begin{quote}\selectlanguage{english}
+Then $\sigma(A) = P\sigma(A)$ is discrete, and all eigenvalues are real.
+In fact, if $Af = \lambda f$ with $0 \neq f \in D(A)$, then $u \coloneq |f|^{2}$ satisfies $u'' = 2(V + \Re(\lambda))u + 2|f'|^{2} \geq 0$ for $|x|$ large.
+Since $u$ is convex near $\pm\infty$ and vanishes at infinity, it follows that $f, f' \in L^{2}(\R)$ and $V|f|^{2} \in L^{1}(\R)$, and integration by parts yields
+\[
+  \lambda \int_{\R} |f|^{2} \dx = -\int_{\R} |f'|^{2} \dx - \int_{\R} V|f|^{2} \dx \in \R .
+\]
+Moreover, $\sigma(A) \neq \emptyset$:
+For $g(x) \coloneq (1-x^{2})^{3}$ on $[-1,1]$ and $g(x) \coloneq 0$ otherwise we have $0 < g \in D(A)$ and $Ag \geq \mu g$ with $\mu \coloneq -6 - \max_{|x| \leq 1} V(x)$.
+If $s(A) < \mu$, then $R(\lambda,A) \geq 0$ for $\lambda \in (s(A),\mu)$ by Corollary~3.1.3, and $(\lambda - A)g \leq (\lambda - \mu)g$ implies $g \leq (\lambda-\mu)R(\lambda,A)g \leq 0$, a contradiction.
+Hence $s(A) \geq \mu > -\infty$, and $s(A)$ is a strictly dominant eigenvalue.
+A corresponding positive eigenfunction is obtained as in the proof of Corollary~3.1.4.
+\end{quote}
+
+Im Quelltext stehen statt der festen Nummern \verb|Corollary~\ref{cor:b3-1.3}| und \verb|Corollary~\ref{cor:b3-1.4}|.
+
+\vspace{1ex}
+\noindent\emph{Hinweis:} Von Claude nachgerechnet, aber noch nicht von einem zweiten Mathematiker geprüft.
+
+\end{document}

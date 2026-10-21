@@ -19,7 +19,7 @@ This part of the spectrum is of interest because it determines the asymptotic be
 \index{semigroup!positive semigroup}
 \index{asymptotic behavior}
 The spectral properties indicated above were first proved by \textcite{perron:1907} and \textcite{frobenius:1909} for positive square matrices, \ie for positive operators on the Banach lattice $\C^{n}$.
-These results were later extended to the infinite dimensional setting, with important contributions from Jentzsch, Karlin, Krein, Krasnoselski'i, Lotz, Rota, Rutman, Schaefer and others (see Chapt.V of \textcite{schaefer:1974}).
+These results were later extended to the infinite dimensional setting, with important contributions from Jentzsch, Karlin, Krein, Krasnosel'skii, Lotz, Rota, Rutman, Schaefer and others (see Chap.~V of \textcite{schaefer:1974}).
 
 In this chapter we investigate the spectrum $\sigma(A)$ of the generator $A$ of a positive semigroup $\TT = (T(t))_{t \geq 0}$ on the Banach space $C_{0}(X)$.
 Throughout this chapter we assume that $C_{0}(X)$ is the space of all \emph{complex-valued} functions on the locally compact space $X$.
@@ -28,7 +28,7 @@ In case we restrict to compact spaces we write $K$ instead of\/ $X$.
 %% --
 \section{The Spectral Bound}\label{sec:b3-1}%
 %% --
-One of the basic results on the spectrum of a positive operator is the fact that its spectral radius is an element of the spectrum (\textcite[V.Proposition~4.1]{schaefer:1974}).
+One of the basic results on the spectrum of a positive operator is the fact that its spectral radius is an element of the spectrum (\textcite[V, Proposition~4.1]{schaefer:1974}).
 We begin the investigation of the spectrum of positive semigroups with the analogous result.
 To that purpose we recall that the spectral bound $s(A)$ of a generator $A$ is defined as the least upper bound of the real parts of all spectral values (\cf Eq.~\myeqpageref{eq:a3-1.2}).
 %\pagebreak[1]
@@ -74,7 +74,7 @@ In case $X$ is compact, we always have $s(A) > -\infty$.
 		\lambda_{0}R(\lambda_{0},A)\1_{X} \geq 1/2\cdot\1_{X} \quad \text{hence} \quad R(\lambda_{0},A)\1_{X} \geq (2\lambda_{0})^{-1}\cdot\1_{X}.
 	\end{equation}
 	%% --
-	We may assume $\lambda_{0} > \omega_{0}(A)$ then $R(\lambda_{0},A) \geq 0$, and iterating Eq.~\myeqpageref{eq:b3-1.4} we obtain
+	We may assume $\lambda_{0} > \omega_{0}(A)$; then $R(\lambda_{0},A) \geq 0$, and iterating Eq.~\myeqpageref{eq:b3-1.4} we obtain
 	%% --
 	\begin{equation}\label{eq:b3-1.5}
 		R(\lambda_{0},A)^{n}\1_{X} \geq (2\lambda_{0})^{-n}\cdot\1_{X} > 0 \quad \text{for every } n \in \N.
@@ -1229,7 +1229,7 @@ We conclude this section with some additional remarks related to Theorem~\ref{th
     	\end{minipage}
     \end{equation}
 %% --
-    Actually, its adjoint  $T'$ is dominated by a finite rank operator as well, hence it maps the unit ball in an order interval. Since the dual space has order continuous norm, order intervals are weakly compact (see Part-III, Section~\ref{sec:c1-5}). 
+    Actually, its adjoint  $T'$ is dominated by a finite rank operator as well, hence it maps the unit ball into an order interval. Since the dual space has order continuous norm, order intervals are weakly compact (see Part-III, Section~\ref{sec:c1-5}). 
 	It follows that $ T' $  is weakly compact, hence so is $T$.		
 		
 	\item 
@@ -1238,7 +1238,7 @@ We conclude this section with some additional remarks related to Theorem~\ref{th
 	In Part-III, Corollary~\ref{cor:c3-2.12} we will show that $\sigma_{b}(A)$ is cyclic whenever $s(A)$ is a pole of the resolvent.
 	
 	\item 
-	Example~\ref{ex:b3-2.14}\,(ii) can be extended to systems of functional differential equations even the infinite dimensional case.
+	Example~\ref{ex:b3-2.14}\,(ii) can be extended to systems of functional differential equations, even to the infinite-dimensional case.
 	For details we refer to Section~\ref{sec:b4-3}.
 \end{enumerate}	
 \end{remarks}
@@ -1313,7 +1313,7 @@ Hence, $(T(t_{0})f)(y) = \langle f,T(t_{0})'\delta_{y} \rangle > 0$ and therefor
 Since $\lambda \mapsto R(\lambda,A)f$ is decreasing in the interval $(s(A),\infty)$ (use the resolvent equation and the fact that $R(\lambda,A)$ is positive) we have $R(\lambda,A)f \gg 0$ for all $\lambda > s(A)$.
 %% --
 
-\ref{item:b3-3.1-v} $\implies$~\ref{item:b3-3.1-iv}: If\/ $I$ is a $R(\lambda,A)$-invariant ideal and $0 < f \in I$, then $g \coloneq R(\lambda,A)f \in I$. 
+\ref{item:b3-3.1-v} $\implies$~\ref{item:b3-3.1-iv}: If\/ $I$ is an $R(\lambda,A)$-invariant ideal and $0 < f \in I$, then $g \coloneq R(\lambda,A)f \in I$. 
 By (e), $g$ is strictly positive, thus $I$ has to be dense (it contains all functions of compact support). 
 
 \ref{item:b3-3.1-iv} $\implies$~\ref{item:b3-3.1-i}: At first we recall that a closed linear subspace which is invariant for $R(\lambda_0,A)\ (\lambda_0 \in \rho(A))$, is invariant for $R(\lambda ,A)$
@@ -1328,7 +1328,7 @@ Hence, if\/ $\lambda_0 \in \rho_{+}(A)$ then by Part-I, Section~\ref{subsec:a1-3
 $T(t)f \gg 0$ whenever $f > 0$ and $t > 0$.
 \end{enumerate}
 %% --
-The rotation semigroup (see Part-I, Example~\ref{subsec:a1-2.5}) is irreducible but it does not satisfy condition~\ref{item:b3-3.1-vii}.
+The rotation semigroup (see Part-I, Example~\ref{ex:a3-5.6}) is irreducible but it does not satisfy condition~\ref{item:b3-3.1-vii}.
 	However, assuming that the semigroup $(T(t))$ is holomorphic, then~\ref{item:b3-3.1-vii}
 	is equivalent to irreducibility.
 	We will give a proof of this result in the more general situation of Banach lattices (see Part-III, Theorem~\ref{thm:c3-3.2}\,(ii)).
@@ -1407,7 +1407,7 @@ R(\lambda,A) &= (\Id - R(\lambda,B)M_{-h})^{-1}R(\lambda,B) = \sum_{n=0}^{\infty
 	The operator $Af = f'' - Vf$ on $C_{0}(\R)$, where $V$ is continuous, real-valued with $\inf V(x) > -\infty$ (see Example~\ref{ex:b3-2.14}\,(i)) also generates an irreducible semigroup.
 	This can be derived from the maximum principle as follows. 
     For $\lambda > -\inf V(x)$, $f \in C_{0}(\R)$, $g \coloneq R(\lambda,A)f$ we have $g \in C^2$ and $g'' - (\lambda + V)g = -f$.
-	If\/ $f > 0$, then $g > 0$, hence \textcite[Chap.I, Theorem~3]{protterweinberger:1967} implies that $g$ is strictly positive.
+	If\/ $f > 0$, then $g > 0$, hence \textcite[Chap.~I, Theorem~3]{protterweinberger:1967} implies that $g$ is strictly positive.
 	
 	\item 
 	The Laplacian 
@@ -1506,7 +1506,7 @@ We now return to the general situation and show that irreducible semigroups poss
 In the remainder of this section we focus our interest on the boundary spectrum of irreducible semigroups, more precisely, on the eigenvalues and the corresponding eigenfunctions of the boundary spectrum. 
 In view of assertion (i) of Proposition~\ref{prop:b3-3.5} the assumption \enquote{$s(A) = 0$} is not crucial in the following theorem. 
 However, it allows a simpler formulation. 
-And in case $X$ is compact, a $\phi \geq 0$ satisfying $A'\phi = 0$ always exists (see Theorem~\ref{thm:b3-1.6})
+And in case $X$ is compact, a $\phi \geq 0$ satisfying $A'\phi = 0$ always exists (see Theorem~\ref{thm:b3-1.6}).
 %% --
 \begin{theorem}\label{thm:b3-3.6}
 %
@@ -1518,7 +1518,7 @@ And in case $X$ is compact, a $\phi \geq 0$ satisfying $A'\phi = 0$ always exist
 	If\/ $P\sigma(A)\cap \im\R$ is non-empty, then the following assertions are true.
 	\begin{enumerate}[\upshape (i)]
 		\item 
-		$P\sigma(A)\cap \im\R$ is a (additive) subgroup of\/ $\im \R$.
+		$P\sigma(A)\cap \im\R$ is an (additive) subgroup of\/ $\im \R$.
 	
 		\item 
 		The eigenspaces corresponding to $\lambda \in P\sigma(A)\cap \im\R$ are one-dimensional.
@@ -1611,7 +1611,7 @@ For example, the semigroup described in Example~\ref{ex:b3-2.6}\,(iv) satisfies 
 In this case $P\sigma(A) = \im\alpha \Z + \im\beta \Z$ is a dense subgroup of\/ $\im \R$. 
 Actually one can show that for every subgroup $H$ of\/ $\im \R$ there is an irreducible semigroup on $C(G)$, $G \coloneq (H_d)\,{\tilde{ }}$, such that $P\sigma(A) = H$. 
 Here $(H_d)\,{\tilde{ }}$ denotes the dual of the abelian group $H$ equipped with the discrete topology. 
-For details see \textcite[p.62]{greiner:1982}. 
+For details see \textcite[p.~62]{greiner:1982}. 
 
 An immediate consequence of assertion (iv) of Theorem~\ref{thm:b3-3.6} is the following corollary. 
 %% --
@@ -1639,7 +1639,7 @@ Then there exists a continuous injective lattice homomorphism $j \colon C(\Gamma
 %% --
 Here, $(R_{\tau}(t))$ denotes the rotation semigroup%
 \index{rotation semigroup} 
-of period $\tau$ (see Part-I, Example~\ref{subsec:a1-2.5}).
+of period $\tau$ (see Part-I, Example~\ref{ex:a3-5.6}).
 If\/ $X$ is compact, then $j$ is a topological embedding.
 \end{corollary}
 %% --
@@ -1867,7 +1867,7 @@ We prove the assertion concerning $A\sigma(A)$ and $P\sigma(A)$.
 Performing a similar construction as in Example~\ref{ex:b3-2.6}\,(vi) one can show that every closed cyclic subset of\/ $\C$  which is contained in a left halfplane is the spectrum of a suitable semigroup of lattice homomorphisms. 
 For details see \textcite{derndingernagel:1979}. 
 In the following we restrict ourselves to the case of compact spaces. 
-Then a semigroup of lattice homomorphisms can be described explicitly by a semi-flow $\phi$, and real-valued functions $h$ and $p$ (see Theorem~\ref{thm:b2-3.5} and Theorem~\ref{thm:b2-3.6}). 
+Then a semigroup of lattice homomorphisms can be described explicitly by a semiflow $\phi$, and real-valued functions $h$ and $p$ (see Theorem~\ref{thm:b2-3.5} and Theorem~\ref{thm:b2-3.6}). 
 The function $p$ has no influence on spectral properties (\cf Eq.~\myeqpageref{eq:b2-3.7}). 
 Therefore we will assume that $(T(t))$ has the following form (\cf Theorem~\ref{thm:b2-3.5}). 
 %% --
@@ -2025,7 +2025,7 @@ induces a semiflow $\phi$ on $K \coloneq K_{1}/{\sim}$.
 %% --
 \begin{proof}
 	For $\epsilon > 0$ we define $H_{\epsilon} = \{\lambda \in \C \colon \Re(\lambda) < \underline{c}(h,\phi)-\epsilon\}$.
-	Obviously it is enough to prove assertion (i), (ii) and (iii) respectively for $H_{2\epsilon}$, $\epsilon> 0$ arbitrary, instead of\/ $H$.
+	Obviously it is enough to prove assertions (i), (ii) and (iii) respectively for $H_{2\epsilon}$, $\epsilon> 0$ arbitrary, instead of\/ $H$.
 
 	(i) By the definition given in Eq.~\myeqpageref{eq:b3-4.4} there exists a $\tau > 0$ such that $\underline{c}_{t}(h,\phi) \geq \underline{c}(h,\phi) - \epsilon$ for all $t \geq \tau$.
 	It follows that
@@ -2097,7 +2097,7 @@ induces a semiflow $\phi$ on $K \coloneq K_{1}/{\sim}$.
 	Henceforth we will assume that $K = K_{\infty}$, that is, $\phi$ is surjective (\cf Lemma~\ref{lem:b3-4.2}\,(ii)).
 	
 	We choose $\tau > 0$ such that Eq.~\myeqpageref{eq:b3-4.5} is true.
-	Since $\phi$ is surjective, for every $f \in C(K)$ there is a $x_{f} \in K$ such that $\|f\| = |f(\phi(\tau,x_{f}))|$ and we obtain for $\lambda \in H_{2\epsilon}$, $\lambda = a + \im\beta$, $a,\beta \in \R$
+	Since $\phi$ is surjective, for every $f \in C(K)$ there is an $x_{f} \in K$ such that $\|f\| = |f(\phi(\tau,x_{f}))|$ and we obtain for $\lambda \in H_{2\epsilon}$, $\lambda = a + \im\beta$, $a,\beta \in \R$
 	%% --
 	\begin{equation}\label{eq:b3-4.9}
 		\begin{aligned}
@@ -2188,7 +2188,7 @@ Example~\ref{ex:b3-4.3}\,(iv) shows that (i) and (ii) do not exclude each other.
 	\end{equation}
 	%% --
 	Then $\phi_{0}$ can be uniquely extended to a flow $\tilde{\phi}_{0}$ on $\R^n\cup\{\infty\}$ by defining $\tilde{\phi}_{0}(t,\infty) \coloneq \infty$ for all $t \in \R$.
-	$\phi_{0}$ and $\tilde{\phi}_{0}$ satisfy condition Theorem~\ref{thm:b3-4.4}\,(iii).
+	$\phi_{0}$ and $\tilde{\phi}_{0}$ satisfy condition (iii) of Theorem~\ref{thm:b3-4.4}.
 
 %%KKG 2025-12-19
     \index{semiflow|(}
@@ -2233,7 +2233,7 @@ Example~\ref{ex:b3-4.3}\,(iv) shows that (i) and (ii) do not exclude each other.
 \end{enumerate}
 \end{example}
 %% --
-We conclude the discussion of semi-flows associated with ordinary differential equations by remarking that the ideas of (ii) and (iii) can be combined to obtain semigroups for more general subsets $\Omega$.
+We conclude the discussion of semiflows associated with ordinary differential equations by remarking that the ideas of (ii) and (iii) can be combined to obtain semigroups for more general subsets $\Omega$.
 
 We continue the discussion of the spectrum of semigroups of lattice homomorphisms on $C(K)$ given by Eq.~\myeqpageref{eq:b3-4.1}.
 Theorem~\ref{thm:b3-4.4} gives a good description of the part contained in 
@@ -2409,7 +2409,7 @@ We are now going to apply the results obtained so far to the special case where 
 	If there is no upper bound for the length of the orbits, then $\sigma(A) = \im\R$ by assertions (iv) and (v) of Proposition~\ref{prop:b3-4.8}.
 	
 	Now we assume that the lengths of the orbits are bounded by $T$.
-	Because $\phi$ is bijective, for every $x \in K$ there exists a $r = r_{x}$ with $T/2 \leq r \leq T$ such that 
+	Because $\phi$ is bijective, for every $x \in K$ there exists an $r = r_{x}$ with $T/2 \leq r \leq T$ such that 
 	%% --
 	\[
 	\phi(t,x) = \phi(t+r,x) = \phi(t+2r,x) = \cdots = \phi(t+kr,x) \quad (t \in \R_{+}, k \in \N).
@@ -2464,7 +2464,7 @@ We are now going to apply the results obtained so far to the special case where 
     I \coloneq \{f \in C(K_{1}) \colon f|_{K_{0}} = 0\}
     \] 
     invariant and induces via restriction a semigroup $(T(t))$ on $I = C_{0}(X)$, where $X = K_{1} \setminus K_{0}$.
-    In this case one can construct semi-flows associated with $(T(t))$ on $X\cup\{\infty\}$ or on $\overline{X}$ (closure in $K_{1}$), but in general one cannot find a corresponding multiplicator which is defined on one of these compactifications.
+    In this case one can construct semiflows associated with $(T(t))$ on $X\cup\{\infty\}$ or on $\overline{X}$ (closure in $K_{1}$), but in general one cannot find a corresponding multiplicator which is defined on one of these compactifications.
 
 The situation is much nicer when groups of lattice homomorphisms instead of semigroups are considered.
 In this case there is an analogue of Eq.~\myeqpageref{eq:b3-4.1} (\cf Theorem~\ref{thm:b2-3.14}) and the spectrum can be described completely.
@@ -2522,7 +2522,7 @@ A generalization to (non-lattice) ordered Banach spaces can be found in Section~
 \item
 Lemma~\ref{lem:b3-2.3} dates back to Rota (see \textcite{schaefer:1974}).
 Our approach follows \textcite{greiner:1981}.
-The notion \enquote{(imaginary) additively cyclic} was introduced by \textcite{derndinger:1980} (and {Schaefer (1980)} respectively).
+The notion \enquote{(imaginary) additively cyclic} was introduced by \textcite{derndinger:1980}.
 Derndinger proves some cyclicity results for the boundary spectrum.
 A result similar to Proposition~\ref{prop:b3-2.7} is given in Section~7.4 of \textcite{davies:1980}.
 Lemma~\ref{lem:b3-2.8} in combination with Part-III, Lemma~\ref{lem:c3-3.13}  can be used to characterize semigroups whose spectral bound is a pole of finite algebraic multiplicity (see Eq.~\myeqpageref{eq:c3-3.19}).
