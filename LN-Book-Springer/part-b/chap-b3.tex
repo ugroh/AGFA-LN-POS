@@ -561,7 +561,7 @@ The closed principal ideal $\overline{E_{h}}$, which is canonically isomorphic t
 	%% --
 		\begin{equation*}
 		\tilde{T}\tilde{h}^{[n]} = \tilde{T} \circ S_{\tilde{h}}^{n}|\tilde{h}| = \lambda^{n} \cdot S_{\tilde{h}}^{n} \circ \tilde{T}|\tilde{h}| 
-		= \lambda^{n} \cdot S_{\tilde{h}}^{n}\tilde{h} = \lambda^{n} \cdot \tilde{h}^{[n]} , 
+		= \lambda^{n} \cdot S_{\tilde{h}}^{n}|\tilde{h}| = \lambda^{n} \cdot \tilde{h}^{[n]} , 
 	\end{equation*}
 	%% --
 	which is precisely $Th^{[n]} = \lambda^{n}h^{[n]}$ for all $n \in \Z$ (see Eq.~\myeqpageref{eq:b3-2.7} and Eq.~\myeqpageref{eq:b3-2.12}). 
@@ -1034,7 +1034,7 @@ The assumptions of Corollary~\ref{cor:b3-2.10} do not imply that $s(A)$ is domin
     %% --$$ 
     is compact for every $r > 0$ (see Part-I, Theorem~\ref{thm:a2-1.20}) and this set does not have accumulation points because $A$ has compact resolvent.
 	In other words, it is a finite set.
-	The assertion now follows from Theorem~\ref{thm:b3-2.9} and Corollary~\ref{cor:b3-1.4}.
+	The assertion now follows from Theorem~\ref{thm:b3-2.9} and the proof of Corollary~\ref{cor:b3-1.4}.
 \end{proof}
 %% --
 We now consider some examples. 
@@ -1549,7 +1549,7 @@ And in case $X$ is compact, a $\phi \geq 0$ satisfying $A'\phi = 0$ always exist
 	By Proposition~\ref{prop:b3-3.5}\,(ii) $|h|$ is strictly positive, thus Theorem~\ref{thm:b3-2.4}\,(ii) implies Eq.~\myeqpageref{eq:b3-3.5}.
 	
 	\item[(ii)] 
-	Assertion (iv) implies that $S_{h}$ maps $\Kern{\im\alpha + A}$ onto $\Kern{A}$ whenever $\im \alpha \in P\sigma(A)\cap \im\R$.
+	Assertion (iv) implies that $S_{h}$ maps $\Kern{A}$ onto $\Kern{\im\alpha - A}$ whenever $\im \alpha \in P\sigma(A)\cap \im\R$.
 	Moreover, we have seen in the proof of (iv) that $\Kern{A} \neq \{0\}$ hence it is one-dimensional by Proposition~\ref{prop:b3-3.5}\,(iv).
 	
 	\item[(i)] 
@@ -1573,7 +1573,7 @@ And in case $X$ is compact, a $\phi \geq 0$ satisfying $A'\phi = 0$ always exist
 	
 	\item[(iii)] 
 	We already know that $Ah = \im\alpha h$ implies that $A|h| = 0$.
-	It follows from Proposition~\ref{prop:b3-3.5}\,(ii) that $h$ is strictly positive, \ie $h$ has no zeros in $X$.
+	It follows from Proposition~\ref{prop:b3-3.5}\,(ii) that $|h|$ is strictly positive, \ie $h$ has no zeros in $X$.
 	By Proposition~\ref{prop:b3-3.5}\,(iv) $\Kern{A}$ is one-dimensional hence every
 	eigenfunction corresponding to $0$ is the scalar multiple of a strictly positive function.
 	If\/ $Ah = \im\alpha h$, $h \neq 0$, $\alpha \neq 0$, we consider $\tilde{h}(x) \coloneq h(x)/|h(x)|$.
@@ -1755,8 +1755,8 @@ If we define $u \coloneq |h|$ and $w \coloneq h/|h|$, then Eq.~\myeqpageref{eq:b
 	Explicit calculation of\/ $L_{0}(uw)$ and $L_{0}(u/w)$ using the product formula yields
 		\begin{equation}\label{eq:b3-3.14}
 		\begin{split}
-		L_{0}(uw) &=  wL_{0}(u) + u\sum_{i,j} a_{ij}w_{ij}'' + \sum_{i}\left(ub_{i} + \sum_{j} a_{ij}u_{j}'\right)w_{i}',\\
-		L_{0}(u/w) &= \frac{1}{w}L_{0}(u) + u\sum_{i,j}a_{ij}(1/w)_{ij}'' + \sum_{i}\left(ub_{i} + \sum_{j} a_{ij}u_{j}'\right)(1/w)_{i}'.
+		L_{0}(uw) &=  wL_{0}(u) + u\sum_{i,j} a_{ij}w_{ij}'' + \sum_{i}\left(ub_{i} + 2\sum_{j} a_{ij}u_{j}'\right)w_{i}',\\
+		L_{0}(u/w) &= \frac{1}{w}L_{0}(u) + u\sum_{i,j}a_{ij}(1/w)_{ij}'' + \sum_{i}\left(ub_{i} + 2\sum_{j} a_{ij}u_{j}'\right)(1/w)_{i}'.
 		\end{split}
 	\end{equation}
 %% --
@@ -1767,7 +1767,7 @@ If we define $u \coloneq |h|$ and $w \coloneq h/|h|$, then Eq.~\myeqpageref{eq:b
 		\end{equation}
 %% --
 	This identity and Eq.~\myeqpageref{eq:b3-3.13} implies that $2u/w\cdot\sum_{i,j} a_{ij}w_{i}'w_{j}' = 0$.
-	Since $u$ has no zeros and $(a_{ij})$ is positive definite, we have $\text{grad } w = (w_{i}') = 0$ in $\Omega$, hence $w = \text{const}$.
+	Since $|w| = 1$, we have $w_{i}' = \im\theta_{i}w$ with real-valued functions $\theta_{i}$, hence $\sum_{i,j} a_{ij}w_{i}'w_{j}' = -w^{2}\sum_{i,j} a_{ij}\theta_{i}\theta_{j}$. Since $u$ has no zeros and $(a_{ij})$ is positive definite, we obtain $\theta_{i} = 0$, \ie $\text{grad } w = (w_{i}') = 0$ in $\Omega$, hence $w = \text{const}$.
 	Then, by Eq.~\myeqpageref{eq:b3-3.13}, we have $\im \alpha uw = L_{0}(uw) = wL_{0}(u) = 0$, a contradiction.
 
 	The assumption that $L_{0}$ is elliptic, \ie that $(a_{ij})$ is positive definite, is essential in order to show that there is only one eigenvalue in the boundary spectrum.
@@ -2281,7 +2281,7 @@ First we discuss some examples and then give a partial answer to this problem (s
 		The spectrum of the semigroup corresponding to $\tilde{\phi}$ and $h$ (\cf Eq.~\myeqpageref{eq:b3-4.1}) is given by
 		%% --
 		\[
-		\sigma(A) = \{\hat{h}(r) +  \im k\kappa(r) \colon k \in \Z, 1 \leq r \leq 2\} \cup \{h(z) \colon \kappa(|z|) = 0\}.
+		\sigma(A) = \overline{\{\hat{h}(r) +  \im k\kappa(r) \colon k \in \Z, 1 \leq r \leq 2\}} \cup \{h(z) \colon \kappa(|z|) = 0\}.
 		\]
 	\end{enumerate}
 \end{example}
@@ -2338,7 +2338,7 @@ then
     A little bit more calculation is necessary to check that in case of (iv) the functional $\phi_{k}$ defined by
 %% --
 \[
-	\phi_{k}(f) \coloneq \int_{T}^{T+\tau} \exp\left(-\im\cdot\frac{2\pi k}{\tau}\cdot t\right)\cdot h_{t}(x_{0})\cdot f(\phi(t,x_{0})) \dt  \ (k \in \Z, f \in C(K))
+	\phi_{k}(f) \coloneq \int_{T}^{T+\tau} \exp\left(-\left(\hat{h}(x_{0}) + \im\cdot\frac{2\pi k}{\tau}\right) t\right)\cdot h_{t}(x_{0})\cdot f(\phi(t,x_{0})) \dt  \ (k \in \Z, f \in C(K))
 \]
 %% --
     is an eigenvector of\/ $A'$ corresponding to $\hat{h}(x_{0}) + \im\cdot\frac{2\pi k}{\tau}$.
@@ -2360,7 +2360,7 @@ For $f \in D(A)$ we have
 It follows that $\phi_{nm} \in D(A')$ and, since $\lim_{t\to\infty} h(\phi(t,x_{0})) = \hat{h}$,
 %% --
 \begin{equation}\label{eq:b3-4.13}
-	\limsup_{m\to\infty} \|(\hat{h}+\im\beta -A')\phi_{nm}\| \leq 1/n \text{ for every } n \in \N.
+	\limsup_{m\to\infty} \|(\hat{h}+\im\beta -A')\phi_{nm}\| \leq 2/n \text{ for every } n \in \N.
 \end{equation}
 %% --
 Because the orbit is infinite we have

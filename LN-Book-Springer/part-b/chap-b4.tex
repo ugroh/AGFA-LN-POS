@@ -409,11 +409,12 @@ Thus
 	T(t) &= T_1(t) + T_2(t) + \cdots + T_m(t) + R_m(t) ,\\
 	T_n(t) &= \exp(\lambda_n t) \cdot \sum_{j=0}^{k(n)-1} \frac{1}{j!}t^j(A - \lambda_n)^j \circ P_n 
 		\quad (t \geq 0) ,\\
-	\|R_m(t)\| & \leq C \cdot \exp((\epsilon +\Re(\lambda_m))t)\\
+	\|R_m(t)\| & \leq C \cdot \exp((\epsilon +\Re(\lambda_{m+1}))t)\\
 			&  \text{ for }  t \geq 0, \epsilon >0  \text{ and a suitable	constant } C=C(\epsilon ,m) .
 		\end{aligned}
 	\end{equation}
 	%% --
+If\/ $\sigma(A) = \{\lambda_{1},\ldots,\lambda_{m}\}$, then $\Re(\lambda_{m+1})$ in Eq.~\myeqpageref{eq:b4-2.1} may be replaced by any real number.
 \end{theorem}
 %% --
 \begin{proof}
@@ -439,12 +440,12 @@ Thus
 	\sigma(T(t_{0})_{\vert \Kern{P}}) \subseteq \{z \in \C \colon |z| < \exp(\Re(\lambda_m) \cdot t_{0})\} .
 \]
 %
+	Moreover, $\sigma(A_{\vert \Kern{P}}) = \{\lambda_{m+1},\lambda_{m+2},\ldots\}$, and the spectral mapping theorem for eventually compact semigroups (Part-I, Corollary~\ref{cor:a3-6.7}) yields $r(T(t_{0})_{\vert \Kern{P}}) = \exp(\Re(\lambda_{m+1}) \cdot t_{0})$.
 	Hence the type of
-	$T(t_{0})_{\vert \Kern{P}} $ is less than $\Re(\lambda_m)$.
-	Then there exists a constant $C_{0}$ such that
+	$(T(t)_{\vert \Kern{P}})_{t \geq 0}$ is at most $\Re(\lambda_{m+1})$, and for every $\epsilon > 0$ there exists a constant $C_{0}$ such that
 %% -- 
 \[
-\|T(t)(\Id -P)\| \leq \|T(t)_{\vert \Kern{P}}\|\cdot\|\Id -P\| \leq \|\Id -P\|\cdot C_{0} \cdot \exp(\Re(\lambda_m) \cdot t) .
+\|T(t)(\Id -P)\| \leq \|T(t)_{\vert \Kern{P}}\|\cdot\|\Id -P\| \leq \|\Id -P\|\cdot C_{0} \cdot \exp((\Re(\lambda_{m+1})+\epsilon) \cdot t) .
 \]
 %% --
 We define $R_m(t)  \coloneq  T(t)(\Id -P)$ and $T_n(t)  \coloneq  T(t)P_n$ $(n \in \N)$.
@@ -569,7 +570,7 @@ weakly compact subsets in the dual space $M(K) = C(K)'$, due to
 %% --
 \begin{proposition}\label{prop:b4-2.3}
 	Let $K$ be a compact space.
-	For a subset $D \subseteq M(K) = C(K)'$ the following assertions are equivalent.
+	For a bounded subset $D \subseteq M(K) = C(K)'$ the following assertions are equivalent.
 	
 	\begin{enumerate}[\upshape (a)]
 		\item 
