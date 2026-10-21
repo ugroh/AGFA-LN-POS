@@ -84,6 +84,7 @@
 \DeclareFieldFormat[book]{isbn}{} 
 \DeclareFieldFormat[book]{series}{} 
 \DeclareFieldFormat[book]{number}{} 
+\DeclareFieldFormat[book]{volume}{}% kein „Vol.“ bei Büchern (21.10.2026)
 \DeclareFieldFormat[book]{edition}{} 
 \DeclareFieldFormat[book]{address}{} 
 %% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -97,6 +98,27 @@
 %% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \DeclareFieldFormat[online]{date}{\mkbibparens{#1}}
 %% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Beiträge, Berichte, Hochschulschriften (21.10.2026):
+%% einheitlich zu article/book: Titel kursiv, Jahr in Klammern,
+%% kein „Vol.“, kein „pp.“, kein Komma vor dem Jahr
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\DeclareFieldFormat[incollection,inproceedings,inbook,report,thesis,unpublished,misc]{title}{\mkbibemph{#1}}
+\DeclareFieldFormat[incollection,inproceedings,inbook]{booktitle}{#1}
+\DeclareFieldFormat[incollection,inproceedings,inbook,report,thesis,unpublished,misc]{date}{\mkbibparens{#1}}
+\DeclareFieldFormat[incollection,inproceedings,inbook,report,thesis,unpublished,misc]{volume}{#1}
+\DeclareFieldFormat[incollection,inproceedings,inbook,report,thesis,unpublished,misc]{pages}{#1}
+\renewbibmacro*{institution+location+date}{%
+  \printlist{institution}%
+  \setunit*{\addspace}%
+  \usebibmacro{date}%
+  \newunit}
+\renewbibmacro*{organization+location+date}{%
+  \printlist{organization}%
+  \setunit*{\addspace}%
+  \usebibmacro{date}%
+  \newunit}
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \DeclareFieldFormat{postnote}{#1}
 \DeclareFieldFormat{multipostnote}{#1}
 %%%
@@ -104,7 +126,7 @@
 \renewcommand*{\finalnamedelim}{\addspace\&\addspace}% 	
 \renewcommand*{\bibpagespunct}{\addspace} %\addcomma
 %%\renewcommand*{\newunitpunct}{\addspace}
-%%\renewcommand*{\finentrypunct}{}
+\renewcommand*{\finentrypunct}{}% kein Punkt am Ende eines Eintrags (21.10.2026)
 \renewcommand{\mkbibnamegiven}{\textsc}
 \renewcommand{\mkbibnamefamily}{\textsc}
 %%%
