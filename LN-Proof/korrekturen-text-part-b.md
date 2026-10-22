@@ -4,7 +4,7 @@
 
 Auszug aus `Fahnenkorrektur_Springer_LNM1184.md`. **Seitenangaben** = gedruckte Seitenzahl (PDF-Seite = gedruckte Seite + 18). **Sicherheit:** ● hoch · ◐ mittel · ○ niedrig.
 
-**Stand 21.10.2026 (Branch `fahnenkorrektur`):** **Kap. 1, 2 und 3 sind erledigt** (Kap. 3 nach Freigabe durch Günther Greiner), ebenso die Updated Notes. In Kap. 4 sind alle ●-Punkte umgesetzt; ◐ und ○ sind dort offen, außer wo im Kommentar „Umgesetzt“ steht (einige über die Formellisten, Stand 20.10.2026). Abweichungen vom Soll stehen im Kommentar der jeweiligen Zeile.
+**Stand 21.10.2026 (Branch `fahnenkorrektur`):** **Kap. 1, 2 und 3 sind erledigt** (Kap. 3 nach Freigabe durch Günther Greiner), ebenso die Updated Notes. In Kap. 4 sind alle ●-Punkte umgesetzt; die von Frank Neubrander geprüften Seiten sind komplett umgesetzt (Teil I, Kap. 4 und Updated Notes S. 468–471; Teil II, S. 231–235; Teil III, S. 369–376; Freigabe 22.10.2026); sonst sind ◐ und ○ in Kap. 4 offen, außer wo im Kommentar „Umgesetzt“ steht (einige über die Formellisten, Stand 20.10.2026). Abweichungen vom Soll stehen im Kommentar der jeweiligen Zeile.
 
 **Buchführung:** Maßgeblich für den Korrekturstand sind nur die Listen `korrekturen-text-*`, `korrekturen-mathe-*` und `math-error-*` (seit 20.10.2026). `Umgesetzte_Korrekturen_LNM1184.md`, `Finales-zum-Pruefen.md` und `Fahnenkorrektur_Springer_LNM1184.md` werden nicht mehr fortgeführt.
 
@@ -122,11 +122,11 @@ Insgesamt **120 Punkte**: 36 ●, 56 ◐, 28 ○; davon umgesetzt: 83, teilweise
 
 | S. | | Ist | Soll | Art | Kommentar |
 |---|---|---|---|---|---|
-| 232 | ◐ | Proof. Eq. (4.1.2) follows directly from Section 3.4.1 and the results from Chapter 2 | vermutlich: Theorem 3.4.1 (oder ein anderer gemeinter Verweis) | Querverweis | Einen Abschnitt 3.4.1 gibt es nicht |
-| 233 | ○ | Γ\{1} is a homoclinic orbit i.e., | Γ\{1} is a homoclinic orbit, i.e., | Satz |  |
-| 234 | ◐ | (2) Assume, that T(t)f = e^{iαt}f | (2) Assume that T(t)f = e^{iαt}f | Grammatik | kein Komma vor 'that' |
-| 234 | ◐ | (T(t)f)(z) → 0 μ-a.e.. Lebesgue’s | (T(t)f)(z) → 0 μ-a.e. Lebesgue’s | Satz | doppelter Punkt |
-| 235 | ○ | (see Schaefer [29, II.Theorem 5.9]) | (see Schaefer [29, II. Theorem 5.9]) | Satz | vgl. S. 240 'II. Proposition 9.4' |
+| 232 | ◐ | Proof. Eq. (4.1.2) follows directly from Section 3.4.1 and the results from Chapter 2 | vermutlich: Theorem 3.4.1 (oder ein anderer gemeinter Verweis) | Querverweis | **Umgesetzt** (22.10.2026, Freigabe F. Neubrander): Gemeint ist Part-I, Section 3.4.1 (Spectrum of the adjoint semigroup); „Part-I,“ ergänzt. Einen Abschnitt 3.4.1 gibt es nicht |
+| 233 | ○ | Γ\{1} is a homoclinic orbit i.e., | Γ\{1} is a homoclinic orbit, i.e., | Satz | **Umgesetzt** (22.10.2026, Freigabe F. Neubrander; wie vorgeschlagen). |
+| 234 | ◐ | (2) Assume, that T(t)f = e^{iαt}f | (2) Assume that T(t)f = e^{iαt}f | Grammatik | **Umgesetzt** (22.10.2026, Freigabe F. Neubrander; wie vorgeschlagen). kein Komma vor 'that' |
+| 234 | ◐ | (T(t)f)(z) → 0 μ-a.e.. Lebesgue’s | (T(t)f)(z) → 0 μ-a.e. Lebesgue’s | Satz | **Bereits erledigt** (21.10.2026, globale Korrektur „a.e..“). doppelter Punkt |
+| 235 | ○ | (see Schaefer [29, II.Theorem 5.9]) | (see Schaefer [29, II. Theorem 5.9]) | Satz | **Umgesetzt** (22.10.2026, Freigabe F. Neubrander; wie vorgeschlagen). vgl. S. 240 'II. Proposition 9.4' |
 | 236 | ○ | (see Asimow & Ellis [1], p.39) | (see Asimow & Ellis [1], p. 39) | Satz |  |
 | 240 | ● | is a countable additive set function | is a countably additive set function | Grammatik | **Umgesetzt.**  |
 | 240 | ○ | (see e.g., Schaefer [29, II. Proposition 9.4 ]) | (see e.g., Schaefer [29, II. Proposition 9.4]) | Satz | Leerzeichen vor schließender Klammer |

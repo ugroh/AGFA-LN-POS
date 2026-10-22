@@ -228,7 +228,7 @@ This example illustrates that there may be a significant difference between the 
 %% -- 
 In what follows, we characterize the exponential growth bounds $\omega(f)$, $\omega_{1}(A)$, and $\omega_{0}(A)$ in terms of certain abscissas of simple or absolute convergence of the Laplace transform of\/ $T(\cdot)f$. 
 These characterizations will serve as one of the tools for 
-establishing that, for certain semigroups beyond the class of eventually norm-continuous semigroups (see Theorem~\ref{thm:a3-6.6}), the growth bounds $\omega_{0}(A)$ and/or $\omega_{1}(A)$ coincide with the spectral bound %
+establishing that, for certain semigroups beyond the class of eventually norm continuous semigroups (see Theorem~\ref{thm:a3-6.6}), the growth bounds $\omega_{0}(A)$ and/or $\omega_{1}(A)$ coincide with the spectral bound %
 \[
 	s(A) = \sup\{\Re(\lambda)\colon\lambda \in \sigma(A)\} .
 \]
@@ -360,7 +360,7 @@ c \coloneq \inf\{\Re(\lambda)\colon\int_{0}^{\infty} \eu^{-\lambda t}T(t)Af  \dt
 Next, we show that $c < 0$ implies $c = \omega(f)$. 
 For $c < 0$, it follows from Eq.~\myeqpageref{eq:a4-1} that $\int_{0}^{\infty} T(s)Af  \ds$ exists. 
 Since $\int_{0}^{r} T(s)Af  \ds = T(r)f - f$, it follows that \[g \coloneqq\lim_{r \to \infty} T(r)f\] exists. 
-But for every $t \geq 0$, $T(t)g = g$ which implies that $g \in \ker(A) = \{0\}$ or $g = 0$. 
+But for every $t \geq 0$, $T(t)g = g$ which implies that $g \in \ker(A) = \{0\}$, \ie $g = 0$. 
 Hence, $\int_{0}^{\infty} T(s)Af  \ds = -f$.
 
 Now, fix $c < r < 0$.
@@ -459,7 +459,8 @@ In Equations \eqref{eq:a4-1.4} and \eqref{eq:a4-1.5}, the term \enquote{$\Re(\la
 %% --
 \end{remarks*}
 %% --
-\begin{proof}(Proof of Theorem~\ref{thm:a4-1.4}) 
+\begin{proof}
+We now prove Theorem~\ref{thm:a4-1.4}.
 The equality 
  \[ 
  \omega_1(A) = \inf \left\{ \Re(\lambda)\colon\int_0^\infty \|\eu^{-\lambda t} T(t) f \|  \dt \text{ exists for all } f \in D(A) \right\} 
@@ -617,7 +618,7 @@ s(C) &= \max \{s(A), s(B)\} = -1, \quad \omega_1(C) = \max\{\omega_1(A), \omega_
 \end{example}
 %% -- 
 \begin{remark}\label{rem:a4-1.7}
-For eventually norm continuous semigroups---particularly compact, differentiable, holomorphic, or nilpotent ones--- the spectral mapping theorem 
+For eventually norm continuous semigroups---particularly compact, differentiable, holomorphic, or nilpotent ones---the spectral mapping theorem 
 %% --
 \begin{equation}\label{eq:a4-1.7}
 \sigma(T(t)) \setminus \{0\} = \eu^{t \sigma(A)}
@@ -631,7 +632,7 @@ s(A) = \omega_1(A) = \omega_{0}(A)
 \end{equation}
 %% --
 is valid (Corollary~\ref{cor:a4-1.5} and Corollary~\ref{cor:a3-6.7} ).
-Hence, if\/ $A$ is the generator of an eventually norm-continuous semigroup, the exponential growth bounds of the strong and mild solutions of the abstract Cauchy problem $\dot{u}(t) = A u(t), u(0) = x$, are determined by the spectral bound
+Hence, if\/ $A$ is the generator of an eventually norm continuous semigroup, the exponential growth bounds of the strong and mild solutions of the abstract Cauchy problem $\dot{u}(t) = A u(t), u(0) = x$, are determined by the spectral bound
 $s(A) = \sup\{\Re(\lambda)\colon\lambda \in \sigma(A)\}.$
 \end{remark}
 %--
@@ -644,7 +645,7 @@ $s(A) = \sup\{\Re(\lambda)\colon\lambda \in \sigma(A)\}.$
 &\text{every } n \in \N \text{ and } \lambda \in \C \text{ with } \Re(\lambda) > w\}. 
 \end{split}
 \end{equation}
-\index{growth bound!omega0@$\omega_0(A)$}
+\index{growth bound!omega0@$\omega_0(A)$}%
 %% --
 Due to the difficulty of estimating all powers of the resolvent, this characterization is of limited practical use. 
 \index{resolvent}
@@ -695,7 +696,7 @@ Then, for every $f \in D(A)$ , the inversion formula for the Laplace transform y
 T(t) f = \frac{1}{2\pi i} \int_{p' - i\infty}^{p' + i\infty} \eu^{\lambda t} R(\lambda, A) f \, d\lambda.
 \end{equation}
 %% --
- (For a proof of the vector-valued inversion formula, see \textcite[p.66]{widder:1946}; see also the notes in this section.)
+ (For a proof of the vector-valued inversion formula, see \textcite[p.~66]{widder:1946}; see also the notes at the end of this chapter.)
 Using the resolvent equation, we obtain 
 \index{resolvent equation}
 %% --
@@ -843,7 +844,7 @@ Then $ |\langle T(t) f, \phi \rangle| = | \langle f, \phi \rangle| > 0 $ for eve
 (ii) From the stability of the semigroup and the identity   $\int_{0}^{t} T(s) A f  \ds = T(t) f - f$, it follows that  
 $\int_{0}^{\infty} T(s) A f  \ds$ exists for every $ f \in D(A) $.  
 Since $ \omega_1(A) \leq 0 $, we may apply Theorem~\ref{thm:a4-1.4} to write  $ R(\lambda, A) A f = \int_{0}^{\infty} \eu^{-\lambda s} T(s) A f  \ds $ for every $ \lambda > 0 $. 
-By a classical theorem of Laplace transform theory, (for a proof of the vector-valued version one may follow \textcite[p.196]{widder:1971}), we conclude that $\lim_{\lambda \to 0+} R(\lambda,A)Af$ exists
+By a classical theorem of Laplace transform theory (for a proof of the vector-valued version one may follow \textcite[p.~196]{widder:1971}), we conclude that $\lim_{\lambda \to 0+} R(\lambda,A)Af$ exists
 and is equal to $\int_{0}^{\infty} T(s)Af  \ds$. 
 The identity $R(\lambda,A)Af = \lambda R(\lambda,A)f - f$
 yields the existence of\/ $\lim_{\lambda \to 0+} \lambda R(\lambda,A)f$ for every $f \in D(A)$.
@@ -905,7 +906,7 @@ $\ker(A) = \{0\}$ and $\int_{0}^{\infty} T(t)f  \dt$ exists for all $f \in \Imag
 
 \end{enumerate}
 %% --
-Furthermore the following statements are equivalent,
+Furthermore, the following statements are equivalent.
 %% --
 \begin{enumerate}[(a')]
 \item $(T(t))_{t \geq 0}$ is stable and bounded.
@@ -950,7 +951,7 @@ Define
 \]
 %
 Then $h_{s} \in G$, and $h_{s} \to g$ as $s \to 0$. 
-Therefore, $D \subseteq \overline{G}$ or $\overline{G} = E$ since $D$ is dense in $E$. 
+Therefore, $D \subseteq \overline{G}$, and hence $\overline{G} = E$ since $D$ is dense in $E$. 
 
 Now, let $h \in G$, so $h=\int_0^\infty T(t)g\dt$ for some $g\in D$.
 Then %
@@ -991,7 +992,7 @@ in the open left half-plane, \ie $\Re(\lambda) < 0$ for all $\lambda \in \sigma(
 
 \item 
 If one defines a semigroup $(T(t))_{t \geq 0}$ to be weakly stable if
-$\langle T(t)f,\phi \rangle \to 0$ as $t \to \infty$ for all $f \in D(A)$ and $\phi \in E'$ or as
+$\langle T(t)f,\phi \rangle \to 0$ as $t \to \infty$ for all $f \in D(A)$ and $\phi \in E'$ or
 weakly uniformly stable if the above holds  for all $f \in E$
 and $\phi \in E'$, then Theorems~\ref{thm:a4-1.13} and~\ref{thm:a4-1.16} can be reformulated in a weak form (\ie  replacing stable by weakly stable and \emph{lim} by
 \emph{weak-lim}). 
@@ -1058,7 +1059,7 @@ Whenever the expression Eq.~\myeqpageref{eq:a4-2.2} is well-defined, we refer to
 \emph{mild}) solution of Eq.~\myeqpageref{eq:a4-2.1}. 
 If\/ $F(\cdot)$ is continuous and $f \in D(A)$, then
 the generalized solution of Eq.~\myeqpageref{eq:a4-2.1} is a strong solution if and only if the function 
-$v(t) \coloneq  \int_{0}^{t} T(t-s)F(s)  \ds$ is differentiable (see \textcite[Chapter~4,2.4]{pazy:1983}). 
+$v(t) \coloneq  \int_{0}^{t} T(t-s)F(s)  \ds$ is differentiable (see \textcite[Chapter~4, 2.4]{pazy:1983}). 
 There are several sufficient conditions on the generator $A$,
 the forcing term $F(\cdot)$, or the space $E$ under which every mild solution
 is a strong solution of Eq.~\myeqpageref{eq:a4-2.1} (see \textcite{travis:1981}
@@ -1254,7 +1255,7 @@ Growth bounds similar to $\omega_{1}(A)$ were first considered in \textcite{djac
 Example~\ref{ex:a4-1.2}(ii) is taken from \textcite{wolff:1981}; other \emph{counterexamples} can be found in \textcite{hillephillips:1957}, \textcite{foias:1973}, \textcite{triggiani:1975a}, 
 \textcite{zabczyk:1975} and \textcite{greinervoigtwolff:1981}. 
 Statements Eq.~\myeqpageref{eq:a4-1.2}, Eq.~\myeqpageref{eq:a4-1.6} and Theorem~\ref{thm:a4-1.3}\,(i) are semigroup versions of results in classical Laplace transform theory, see \textcite{hillephillips:1957} and \textcite{widder:1946}. 
-Theorem~\ref{thm:a4-1.3}\,(ii) is a semigroup version of Theorem 1.2.7 and 1.2.8 in \textcite{doetsch:1950}. 
+Theorem~\ref{thm:a4-1.3}\,(ii) is a semigroup version of Theorems~1.2.7 and~1.2.8 in \textcite{doetsch:1950}. 
 The lemma in the proof of Theorem~\ref{thm:a4-1.3} is taken from \textcite{milstein:1975}. 
 Theorem~\ref{thm:a4-1.4} and Corollary~\ref{cor:a4-1.5} can be found in \textcite{neubrander:1985a}. 
 Example~\ref{ex:a4-1.6} follows Remark~2 in \textcite{zabczyk:1975}. 
@@ -1274,7 +1275,7 @@ T(t)f = \frac{1}{2\pi i} \int_{p-i\infty}^{p+i\infty} \eu^{\mu t}R(\mu,A)f \, d\
 \end{theorem}
  
 
-The equivalence of the statements Eq.~\myeqpageref{eq:a4-1.12}, Eq.~\myeqpageref{eq:a4-1.13} and \emph{$\omega_{0}(A) < 0$} was observed by many authors, see for example, \textcite[p.178]{balakrishnan:1976}, 
+The equivalence of the statements Eq.~\myeqpageref{eq:a4-1.12}, Eq.~\myeqpageref{eq:a4-1.13} and \emph{$\omega_{0}(A) < 0$} was observed by many authors, see, for example, \textcite[p.~178]{balakrishnan:1976}
 or \textcite{benchimol:1978b}. 
 Theorem~\ref{thm:a4-1.11} is due to \textcite{datko:1970};
 for a proof see \textcite[p.116]{pazy:1983}. 

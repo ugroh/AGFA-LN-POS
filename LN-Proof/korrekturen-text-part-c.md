@@ -4,7 +4,7 @@
 
 Auszug aus `Fahnenkorrektur_Springer_LNM1184.md`. **Seitenangaben** = gedruckte Seitenzahl (PDF-Seite = gedruckte Seite + 18). **Sicherheit:** ● hoch · ◐ mittel · ○ niedrig.
 
-**Stand 21.10.2026 (Branch `fahnenkorrektur`):** **Kap. 1, 2 und 3 sind erledigt** (Kap. 3 nach Freigabe durch Günther Greiner), ebenso die Updated Notes. In Kap. 4 sind alle ●-Punkte umgesetzt; ◐ und ○ sind dort offen, außer wo im Kommentar „Umgesetzt“ steht (einige über die Formellisten, Stand 20.10.2026). Abweichungen vom Soll stehen im Kommentar der jeweiligen Zeile.
+**Stand 21.10.2026 (Branch `fahnenkorrektur`):** **Kap. 1, 2 und 3 sind erledigt** (Kap. 3 nach Freigabe durch Günther Greiner), ebenso die Updated Notes. In Kap. 4 sind alle ●-Punkte umgesetzt; die von Frank Neubrander geprüften Seiten sind komplett umgesetzt (Teil I, Kap. 4 und Updated Notes S. 468–471; Teil II, S. 231–235; Teil III, S. 369–376; Freigabe 22.10.2026); sonst sind ◐ und ○ in Kap. 4 offen, außer wo im Kommentar „Umgesetzt“ steht (einige über die Formellisten, Stand 20.10.2026). Abweichungen vom Soll stehen im Kommentar der jeweiligen Zeile.
 
 **Buchführung:** Maßgeblich für den Korrekturstand sind nur die Listen `korrekturen-text-*`, `korrekturen-mathe-*` und `math-error-*` (seit 20.10.2026). `Umgesetzte_Korrekturen_LNM1184.md`, `Finales-zum-Pruefen.md` und `Fahnenkorrektur_Springer_LNM1184.md` werden nicht mehr fortgeführt.
 
@@ -82,7 +82,7 @@ Insgesamt **104 Punkte**: 22 ●, 41 ◐, 41 ○; davon umgesetzt: 64, teilweise
 | 352 | ● | by calculating the resolvent explicitely | by calculating the resolvent explicitly | Tippfehler | **Umgesetzt.**  |
 | 352 | ◐ | The meaning of r_ess(T(t)) and ω_ess(T) and its properties are explained | The meaning of r_ess(T(t)) and ω_ess(T) and their properties are explained | Grammatik | **Umgesetzt** (21.10.2026, Freigabe G. Greiner; wie vorgeschlagen). |
 | 352 | ◐ | Proof. There exist ε > 0 such that | Proof. There exists ε > 0 such that | Grammatik | **Umgesetzt** (21.10.2026, Freigabe G. Greiner; wie vorgeschlagen). |
-| 352 | ○ | an irreducible, eventually norm continuous semigroup | an irreducible, eventually norm-continuous semigroup | Konsistenz | **Umgesetzt** (21.10.2026, Freigabe G. Greiner; wie vorgeschlagen). S. 340 (Corollary 3.2.13) schreibt „eventually norm-continuous“. |
+| 352 | ○ | an irreducible, eventually norm continuous semigroup | an irreducible, eventually norm-continuous semigroup | Konsistenz | **Ersetzt** (22.10.2026): Auf Wunsch von F. Neubrander jetzt im ganzen Buch einheitlich „norm continuous“ ohne Bindestrich. **Umgesetzt** (21.10.2026, Freigabe G. Greiner; wie vorgeschlagen). S. 340 (Corollary 3.2.13) schreibt „eventually norm-continuous“. |
 | 354 | ● | appearing in the the representation Eq. (3.3.21) | appearing in the representation Eq. (3.3.21) | Tippfehler | **Umgesetzt.** Doppeltes 'the' |
 | 354 | ◐ | For details we refer to Greiner [15] or Voigt [36] where the linear transport equation in higher dimensional spaces is discussed. | ... Greiner [15] or Voigt [37] ... | Literatur | **Umgesetzt** (21.10.2026, Freigabe G. Greiner; wie vorgeschlagen). [36] ist 'Interpolation for positive C0-semigroups'; zur Transportgleichung passt [37] (so auch in den Notes S. 366 zitiert) |
 | 355 | ◐ | then one of the following assertions are true | then one of the following assertions is true | Grammatik | **Umgesetzt** (21.10.2026, Freigabe G. Greiner; wie vorgeschlagen). |
@@ -100,12 +100,12 @@ Insgesamt **104 Punkte**: 22 ●, 41 ◐, 41 ○; davon umgesetzt: 64, teilweise
 
 | S. | | Ist | Soll | Art | Kommentar |
 |---|---|---|---|---|---|
-| 369 | ○ | positive semigroups on AM- , AL-, and Hilbert spaces | positive semigroups on AM-, AL-, and Hilbert spaces | Satz | Leerzeichen vor Komma |
+| 369 | ○ | positive semigroups on AM- , AL-, and Hilbert spaces | positive semigroups on AM-, AL-, and Hilbert spaces | Satz | **Umgesetzt** (22.10.2026, Freigabe F. Neubrander); zusätzlich zeigte der Verweis „Part-III, Chapter 3“ intern auf Teil II (`chap:b3`), jetzt `chap:c3` (gedruckte Nummer unverändert). Leerzeichen vor Komma |
 | 370 | ● | 𝑠(𝐴) ∈ 𝜎(𝐴) (see Corollary 3.1.4 ). | (see Corollary 3.1.4). | Satz | **Umgesetzt.** Leerzeichen vor Klammer (im PDF sichtbar); ebenso S. 395 '(see Proposition 2.4.1 )' und '(see Corollary 3.2.12 )', S. 401 '[3, p.257ff] )' |
-| 370 | ◐ | (cf. Part-II, Remark 4.1.5.) | (cf. Part-II, Remark 4.1.5) | Satz | Überflüssiger Punkt |
-| 372 | ◐ | combining Part-III, Theorems 3.1.2 with Part-I, Theorem 4.1.4 | combining Theorem 3.1.2 with Part-I, Theorem 4.1.4 | Grammatik | Plural 'Theorems' bei nur einem Satz; zudem sonst innerhalb von Part III ohne 'Part-III' zitiert |
-| 376 | ○ | In case where 𝐴 generates a positive semigroup | In case 𝐴 generates a positive semigroup | Grammatik |  |
-| 376 | ○ | we discuss the long term behavior of the solutions | we discuss the long-term behavior of the solutions | Konsistenz | S. 369 'long-term behavior'; S. 398 wieder 'long term behavior' |
+| 370 | ◐ | (cf. Part-II, Remark 4.1.5.) | (cf. Part-II, Remark 4.1.5) | Satz | **Umgesetzt** (22.10.2026, Freigabe F. Neubrander; wie vorgeschlagen). Überflüssiger Punkt |
+| 372 | ◐ | combining Part-III, Theorems 3.1.2 with Part-I, Theorem 4.1.4 | combining Theorem 3.1.2 with Part-I, Theorem 4.1.4 | Grammatik | **Umgesetzt** (22.10.2026, Freigabe F. Neubrander; wie vorgeschlagen). Plural 'Theorems' bei nur einem Satz; zudem sonst innerhalb von Part III ohne 'Part-III' zitiert |
+| 376 | ○ | In case where 𝐴 generates a positive semigroup | In case 𝐴 generates a positive semigroup | Grammatik | **Umgesetzt** (22.10.2026, Freigabe F. Neubrander; wie vorgeschlagen). |
+| 376 | ○ | we discuss the long term behavior of the solutions | we discuss the long-term behavior of the solutions | Konsistenz | **Umgesetzt** (22.10.2026, Freigabe F. Neubrander; wie vorgeschlagen). S. 369 'long-term behavior'; S. 398 wieder 'long term behavior' |
 | 379 | ◐ | Using the general results presented in Section 4.2 and the spectral theoretical result of Chapter 3 | Using the general results presented in Part-II, Section 4.2 and the spectral theoretical results of Chapter 3 | Querverweis | Man befindet sich selbst in Section 4.2; gemeint ist offenbar Part-II (Beweis zitiert Part-II, Theorem 4.2.10 und S. 244) |
 | 379 | ○ | (see Part-I, Example 3.1.3 & 3.1.4) | (see Part-I, Examples 3.1.3 and 3.1.4) | Grammatik |  |
 | 384 | ◐ | We briefly describe this situation and remind that in this context | We briefly describe this situation and recall that in this context | Grammatik | 'remind' verlangt ein Objekt |

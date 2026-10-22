@@ -24,7 +24,7 @@ Most of the examples are motivated by biological models.
 %% --
 In Part-II, Section~\ref{sec:b4-1}, we have seen that the growth bound of a positive semigroup on spaces $C_{0}(X)$ coincides with the spectral bound of the generator $A$, which is --- for positive semigroups --- an element of the spectrum of\/ $A$.
 Now, combining the results of Part-I, Chapter~\ref{chap:a3} and Chapter~\ref{chap:a4},  
-Part-II, Chapter~\ref{chap:b4} and Part-III, Chapter~\ref{chap:b3},  it can be shown that this is valid for positive semigroups on AM- , AL-, and Hilbert spaces.
+Part-II, Chapter~\ref{chap:b4} and Part-III, Chapter~\ref{chap:c3}, it can be shown that this is valid for positive semigroups on AM-, AL-, and Hilbert spaces.
 %% --
 \begin{theorem}\label{thm:c4-1.1}
 Let $A$ be the generator of a positive semigroup $(T(t))_{t \geq 0}$ on a Banach lattice $E$ such that $s(A) > -\infty$.
@@ -52,7 +52,7 @@ Thus we have to show $s(A) = \omega_{0}(A)$.
 %% --
 \begin{enumerate}[\upshape (i), wide, labelindent=.25em]
 \item 
-For AM-spaces the proof given in Part-II, Section~\ref{sec:b4-1} works (cf.\ Part-II, Remark~\ref{rem:b4-1.5}.).
+For AM-spaces the proof given in Part-II, Section~\ref{sec:b4-1} works (cf.\ Part-II, Remark~\ref{rem:b4-1.5}).
 Since for positive semigroups we always have $\|R(\lambda,A)\| \leq \|R(\Re(\lambda), A)\|$ ($\Re(\lambda) > s(A)$) (see   Corollary~\ref{cor:c3-1.3}), the assertion for $L^{2}$-spaces follows from Part-I, Corollary~\ref{cor:a3-7.11}.
 If\/ $E$ is an $L^{1}$-space, the assumptions of~\ref{thm:c4-1.1-3} are satisfied.
 
@@ -173,7 +173,7 @@ As shown in Part-I, Example~\ref{ex:a4-1.2}\,(ii), the equality $s(A) = \omega_{
 \index{abstract Cauchy problem}
 However, the knowledge of\/ $s(A)$ is still sufficient to determine the growth bound $\omega_{1}(A)$ of the strong solutions of the abstract Cauchy problem.
 In fact, combining 
-Part-III, Theorems~\ref{thm:c3-1.2}  with 
+Theorem~\ref{thm:c3-1.2} with 
 Part-I, Theorem~\ref{thm:a4-1.4} 
 we obtain the following fundamental result for the stability of positive semigroups.
 %% --
@@ -209,7 +209,7 @@ If~\ref{cor:c4-1.4-2} is satisfied then $R(0,A) \geq 0$, hence $s(A) < 0$ by The
 It follows from Theorem~\ref{thm:c4-1.3} that $\sup\{\omega(f) \colon f \in D(A)\} = \omega_{1}(A) < 0$.
 \end{proof}
 %% --
-In the following we give a spectral characterization of stability for eventually norm-continuous positive semigroups.
+In the following we give a spectral characterization of stability for eventually norm continuous positive semigroups.
 An important tool in the proof is the following result on power bounded operators due to \textcite{katznelsontzafriri:1984}.
 %% --
 \begin{equation}\label{eq:c4-1.4}
@@ -221,9 +221,9 @@ $ \lim_{n \to \infty} \|R^{n} - R^{n+1}\| = 0$.}
 \end{equation}
 %% --
 \begin{theorem}\label{thm:c4-1.5}%
-\index{semigroup!eventually norm-continuous semigroup}
+\index{semigroup!eventually norm continuous semigroup}
 %% --
-Let $(T(t))_{t\geq 0}$ be a positive semigroup on a Banach lattice $E$ which is bounded and eventually norm-continuous.
+Let $(T(t))_{t\geq 0}$ be a positive semigroup on a Banach lattice $E$ which is bounded and eventually norm continuous.
 The following two assertions are equivalent.
 \index{stability!uniformly stable}
 \begin{enumerate}[\upshape (a)]
@@ -274,7 +274,7 @@ Since the semigroup is bounded, we have $\lim_{t \to \infty} \|T(t)f\| = 0$ for 
 \ref{thm:c4-1.5-3} $\Rightarrow$~\ref{thm:c4-1.5-2}:  
 \index{adjoint semigroup}
 \index{semigroup!adjoint}
-The adjoint semigroup $(T(t)^*)_{t \geq 0}$ is eventually norm-continuous and boun\-ded and we have $R{\sigma}(A^*) = P{\sigma}(A^{**}) = P{\sigma}(A)$.
+The adjoint semigroup $(T(t)^*)_{t \geq 0}$ is eventually norm continuous and boun\-ded and we have $R{\sigma}(A^*) = P{\sigma}(A^{**}) = P{\sigma}(A)$.
 Thus the implication \enquote{\ref{thm:c4-1.5-2} $\Rightarrow$~\ref{thm:c4-1.5-1}} can be applied and we obtain that $(T(t)^*)_{t \geq 0}$ is stable.
 Then Part-I, Theorem~\ref{thm:a4-1.13} yields $0 \notin P{\sigma}(A^*) = R{\sigma}(A)$.
 \end{proof}
@@ -413,7 +413,7 @@ This follows from the fact that if  $f \in D(A^{n})$, then
 where $f_{1}$, $f_{2} \in D(A^{n})_{+}$ and Theorem~1.43 in \textcite{davies:1980}.
 \end{remark}
 %% --
-In the rest of this section we discuss the long term behavior of the solutions of the inhomogeneous equation
+In the rest of this section we discuss the long-term behavior of the solutions of the inhomogeneous equation
 \index{Cauchy problem!inhomogeneous}
 %% --
 \begin{equation}\label{eq:c4-1.6}
@@ -421,7 +421,7 @@ In the rest of this section we discuss the long term behavior of the solutions o
 \end{equation}
 %% --
 where the forcing term $F(t)$ converges to some $f_{0} \in E$ as $t \to \infty$.
-In case where $A$ generates a positive semigroup, the assumption \emph{$\omega_{0}(A) < 0$}, which is needed to prove the next proposition for arbitrary generators (see \textcite[ Theorem~4.4.4]{pazy:1983}), can be replaced by the \emph{stability} of the semigroup.
+In case $A$ generates a positive semigroup, the assumption \emph{$\omega_{0}(A) < 0$}, which is needed to prove the next proposition for arbitrary generators (see \textcite[ Theorem~4.4.4]{pazy:1983}), can be replaced by the \emph{stability} of the semigroup.
 We recall that some important generators, such as the Laplacian on $L^{p}(\R^{n})$, $1 < p < \infty$, generate positive, stable semigroups which are not uniformly exponentially stable.
 Therefore, the weakening of the assumptions on $A$ mentioned above --- \ie  replacing \emph{$\omega_{0}(A) < 0$} by \emph{positive and stable} --- widens the class of equations~\myeqpageref{eq:c4-1.6} for which the following stability result is applicable.
 For additional results of this kind see \textcite{neubrander:1985b}.
@@ -722,12 +722,12 @@ Assume that there exist $t_{0} \geq 0$, $\phi \in E'_{+}$,\, $b < 1$ such that
 %% --
 Then $(T(t))_{t \geq 0}$ is quasi-compact.
 \end{proposition}
-\index{semigroup!eventually norm-continuous semigroup|(}
+\index{semigroup!eventually norm continuous semigroup|(}
 In the following result we replace quasi-compactness by eventual norm-continuity of the semigroup.
 %% --
 \begin{theorem} \label{thm:c4-2.5}
 %
-Let $\TT = (T(t))_{t \geq 0}$ be a bounded, eventually norm-continuous positive semigroup with generator $A$ on a reflexive Banach lattice $E$.
+Let $\TT = (T(t))_{t \geq 0}$ be a bounded, eventually norm continuous positive semigroup with generator $A$ on a reflexive Banach lattice $E$.
 Then $Pf \coloneq  \lim_{t \to \infty} T(t)f$ exists for every $f \in E$, and
 $P$ is a positive projection onto the fixed space $\Fix{\TT} = \Kern{A}$. 
 \end{theorem}
@@ -770,7 +770,7 @@ On the other hand, an inspection of the proof of Theorem~\ref{thm:c4-2.5} shows 
 This remark also shows where to look for examples of semigroups not converging as $t \to \infty$.
 
 Consider the positive contraction $R$ defined by $(Rf)(x) \coloneq f(x+1)$ on $E = L^{1}(\R)$.
-Then $T(t) \coloneq \eu^{t(R-\Id)}$ defines a positive norm-continuous semigroup on $E$.
+Then $T(t) \coloneq \eu^{t(R-\Id)}$ defines a positive norm continuous semigroup on $E$.
 Since $\Kern{R - \Id} = \Fix{R} = \{0\}$, but 
 \[
 \|T(t)f\| = \eu^{-t} \left\|\sum_{n=0}^{\infty} \frac{t^n}{n!}R^{n}f\right\| = 
@@ -781,7 +781,7 @@ for every $0 < f \in E$, we see that $\lim_{t\to\infty} T(t)$ does not exist for
 Finally we remark that in Theorem~\ref{thm:c4-2.5} \enquote{eventual norm continuity} is crucial as well.
 This can be seen by considering the translation (semi-) groups on $L^{p}(\R)$.
 
-In the next few results we study semigroups which are not necessarily eventually norm-continuous, but restrict our attention to positive semigroups on $L^{p}$-spaces, for $1 \leq p < \infty$.
+In the next few results we study semigroups which are not necessarily eventually norm continuous, but restrict our attention to positive semigroups on $L^{p}$-spaces, for $1 \leq p < \infty$.
 The essential tool will be the following \emph{0-2 Law} which we quote from \textcite[Theorem~3.7]{greiner:1982}.
 
 If\/ $(X, \Sigma, \mu)$ is a measure space and $\TT = (T(t))_{t \geq 0}$ is a positive semigroup on $L^{p}(\mu)$, then a subset $C \in \Sigma$ is called \emph{$\TT$-invariant} if the principal ideal generated by the characteristic function $\1_{C}$ is $(T(t))$-invariant in the usual sense.
@@ -936,12 +936,12 @@ In view of Corollary~\ref{cor:c4-2.7} it is enough to show $X_{2} = \emptyset$.
 \begin{corollary}\label{cor:c4-2.9}
 %
 Let $(T(t))_{t \geq 0}$ be a positive semigroup of contractions on the Banach lattice $L^{1}(\mu)$ and assume that there exists a strictly positive eigenfunction $e \in \Kern{A}$.
-If\/ $(T(t))_{t \geq 0}$ is eventually norm-continuous, then $\lim_{t \to \infty}T(t)f$ exists for every $f \in L^{1}(\mu)$.
-\index{semigroup!eventually norm-continuous semigroup|)}
+If\/ $(T(t))_{t \geq 0}$ is eventually norm continuous, then $\lim_{t \to \infty}T(t)f$ exists for every $f \in L^{1}(\mu)$.
+\index{semigroup!eventually norm continuous semigroup|)}
 \end{corollary}
 %% --
 \begin{proof}
-Since the semigroup is positive and eventually norm-continuous, its boundary spectrum is cyclic and bounded, \ie  we have $P{\sigma}(A) \cap \im\R = \{0\}$.
+Since the semigroup is positive and eventually norm continuous, its boundary spectrum is cyclic and bounded, \ie  we have $P{\sigma}(A) \cap \im\R = \{0\}$.
 Moreover, there exist $t_{0} > 0$ and $\tau > 0$ such that $\|T(t_{0}) - T(t_{0}+\tau)\| < 1$.
 
 For bounded linear operators $S \in \L{L^{1}}$ 

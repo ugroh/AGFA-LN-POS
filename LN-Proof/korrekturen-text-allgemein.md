@@ -34,7 +34,7 @@ Beide Bib-Dateien unter `LN-Book-Springer/bib/` sind am 18./19.10.2026 mit zbMAT
 Offen (Entscheidung nötig):
 
 - **Format der Literaturlisten:** **Umgesetzt** (21.10.2026, Entscheidung U. Groh) in `preamble/ln-biblatex.sty`: Bei Sammelbandbeiträgen, Tagungsbeiträgen, Berichten, Hochschulschriften und Preprints jetzt wie bei Artikeln und Büchern Titel kursiv ohne Anführungszeichen, Jahr in Klammern, kein „Vol.“, kein „pp.“, kein Komma vor dem Jahr (z. B. „Universität Tübingen (1985) 33–49“).
-- **Bewusst von zbMATH abweichend belassen:** greiner:1982 (zbMATH: 3. Abh., 30 S.), kato:1973 (Jahr 1972/1973 uneinheitlich), kipnis:1974 (zbMATH 1975, Numdam 1974), milstein:1975 (Seiten der russischen Ausgabe). Bitte bestätigen.
+- **Bewusst von zbMATH abweichend belassen:** greiner:1982 **bestätigt** (U. Groh, 22.10.2026); kato:1973 auf Jahr **1972** geändert (U. Groh, 22.10.2026; Schlüssel unverändert). **Offen:** kipnis:1974 (zbMATH 1975, Numdam 1974), milstein:1975 (Seiten der russischen Ausgabe bei englischer Zeitschrift).
 - **Namenspräfixe:** „de Laubenfels“ (Teil II) und „van Casteren“ (Teil III) stehen im Text von Hand vor `\cite`, weil biblatex das Präfix im Zitat weglässt. Falls der Stil auf `useprefix=true` umgestellt wird, diese Stellen anpassen.
 - **lotz:1982:** steht als „Preprint (1982)“; die veröffentlichte Fassung steht als lotz:1985 schon im Verzeichnis (siehe `korrekturen-text-part-a.md`, S. 70).
 
