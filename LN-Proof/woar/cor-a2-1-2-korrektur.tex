@@ -1,0 +1,195 @@
+% !TeX program = pdflatex
+%% ---------------------------------------------------------------
+%%  Korrekturnotiz zu Korollar 2.1.2 (Kapitel A-2, Abschnitt 2.1)
+%%  Eigenstaendig uebersetzbar: pdflatex cor-a2-1-2-korrektur.tex
+%% ---------------------------------------------------------------
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{lmodern}
+\usepackage[margin=3cm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{mathtools}
+\usepackage{csquotes}
+\usepackage{enumitem}
+\usepackage{verbatim}
+\usepackage[colorlinks=true,linkcolor=black,urlcolor=blue]{hyperref}
+
+%% -- Makros aus dem Buchprojekt (hier lokal nachgebildet) --------
+\newcommand{\LE}{\mathcal{L}(E)}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\providecommand{\coloneq}{\mathrel{\vcentcolon=}}
+\newcommand{\dr}{\,\mathrm{d}r}
+\newcommand{\ds}{\,\mathrm{d}s}
+
+\title{Zum Beweis von \enquote{(d) $\Rightarrow$ (a)}\\
+       in Korollar 2.1.2}
+\author{Claude \& Ulrich Groh}
+\date{23.~Oktober 2026}
+
+\begin{document}
+\maketitle
+
+\section*{Der fragliche Satz}
+
+Im Beweis von Korollar~2.1.2 (Kapitel A-2, Abschnitt~2.1) steht am
+Beginn des letzten Beweisteils:
+
+\begin{quote}
+It remains to show that (d) implies (a).
+Assertion (d) and the semigroup property imply that for all $t \geq 0$
+there exist bounded operators $T(t) \in \LE$ such that
+\[
+    u(t,f) = T(t)f
+    \quad \text{if} \quad
+    f \in D(A) .
+\]
+Moreover,
+\[
+    \sup_{0 \leq t \leq 1} \|T(t)\| < \infty .
+\]
+\end{quote}
+
+\noindent
+Die Formulierung scheint mir an zwei Stellen nicht zu stimmen.
+
+\section*{Was (d) tatsächlich liefert}
+
+Bedingung (d) lautet: $A$ erfüllt (EU), hat dichten Definitionsbereich,
+und für jede Folge $(f_n)$ in $D(A)$ mit $\lim_{n\to\infty} f_n = 0$ gilt
+$\lim_{n\to\infty} u(t,f_n) = 0$ \emph{gleichmäßig in} $t \in [0,1]$.
+
+Daraus folgt der Reihe nach:
+
+\begin{enumerate}[label=(\roman*)]
+\item Aus der Eindeutigkeit in (EU) ergibt sich, dass
+      $f \mapsto u(\cdot,f)$ auf $D(A)$ linear ist.
+\item Die lineare Abbildung
+      $\eta \colon D(A) \to C([0,1],E)$, $\eta(f) = u(\cdot,f)$,
+      ist nach (d) folgenstetig im Nullpunkt bezüglich der Norm von $E$,
+      also beschränkt. Es gibt somit ein $M \geq 0$ mit
+      \[
+          \sup_{0 \leq t \leq 1} \|u(t,f)\| \leq M\|f\|
+          \qquad (f \in D(A)).
+      \]
+\item Da $D(A)$ dicht in $E$ ist, setzt sich $f \mapsto u(t,f)$ für jedes
+      $t \in [0,1]$ eindeutig zu einem Operator $T(t) \in \LE$ fort, und
+      zugleich erhält man $\sup_{0 \leq t \leq 1}\|T(t)\| \leq M < \infty$.
+\end{enumerate}
+
+\section*{Zwei Einwände}
+
+\paragraph{1.\ Der Bereich $t \geq 0$ ist zu groß.}
+Die obige Argumentation liefert die Operatoren $T(t)$ nur für
+$t \in [0,1]$; für $t > 1$ gibt (d) nichts her. Genau deshalb wird
+$T(t)$ im übernächsten Absatz des Beweises ja erst durch
+$T(t) \coloneq T(1)^{n}\,T(s)$ mit $t = n+s$, $s \in [0,1)$,
+\emph{definiert}. Mit der bisherigen Formulierung ist dieser Absatz
+redundant bzw.\ widersprüchlich: $T(t)$ wäre für $t > 1$ bereits
+vorhanden und würde anschließend nochmals festgelegt.
+
+\paragraph{2.\ \enquote{the semigroup property} steht noch nicht zur Verfügung.}
+Eine Halbgruppe gibt es an dieser Stelle noch gar nicht --- sie wird
+erst konstruiert. Benötigt werden die Eindeutigkeit der Lösungen (für
+die Linearität) und die Stetigkeitsbedingung aus (d) (für die
+Beschränktheit). Der Verweis auf die Halbgruppeneigenschaft ist daher
+auch sachlich schief.
+
+Außerdem sollte am Schluss des Absatzes die Dichtheit von $D(A)$
+erwähnt werden, damit die Halbgruppeneigenschaft von $D(A)$ auf ganz
+$E$ übergeht.
+
+\section*{Vorschlag für die Neufassung}
+
+\begin{quote}
+It remains to show that (d) implies (a).
+Assertion (d) and the uniqueness of the solutions imply that for every
+$t \in [0,1]$ there exists a bounded operator $T(t) \in \LE$ such that
+\[
+    u(t,f) = T(t)f
+    \quad \text{if} \quad
+    f \in D(A),
+\]
+and that
+\[
+    \sup_{0 \leq t \leq 1} \|T(t)\| < \infty .
+\]
+In fact, by the uniqueness of the solutions the mapping
+$f \mapsto u(\cdot,f)$ from $D(A)$ into $C([0,1],E)$ is linear, and by
+(d) it is continuous at $0$, hence bounded. Since $D(A)$ is dense in
+$E$, it extends uniquely to a bounded operator from $E$ into
+$C([0,1],E)$.
+It follows that $T(\cdot)f$ is strongly continuous on $[0,1]$ for all
+$f \in E$ (since it is so for $f \in D(A)$ and $D(A)$ is dense).
+
+Let $t > 1$.
+There exist unique $n \in \N$ and $s \in [0,1)$ such that $t = n+s$.
+Let
+\[
+    T(t) \coloneq T(1)^{n} \cdot T(s) .
+\]
+From the uniqueness of the solutions it follows that $T(t)f = u(t,f)$
+for all $t \geq 0$ and $f \in D(A)$, as well as
+$T(t+s)f = T(s)T(t)f$ for all $f \in D(A)$ and $s$, $t \geq 0$.
+Since $D(A)$ is dense, $T$ is a semigroup.
+\end{quote}
+
+\section*{Bemerkung zum Gruppenfall}
+
+Im Beweis von Theorem~2.1.6 steht dieselbe Konstruktion, dort aber
+korrekt in der Form \enquote{If (b) holds then there exist operators
+$T(t) \in \mathcal{L}(E)$ \ldots}. Dort wird zusätzlich der Satz von
+Hille--Phillips über die Messbarkeit benötigt, weil die Konvergenz in
+der Voraussetzung nur punktweise in $t$ gefordert wird. Im
+Halbgruppenfall ist die Gleichmäßigkeit auf $[0,1]$ Teil der
+Voraussetzung (d); deshalb geht es hier direkter.
+
+\appendix
+\section*{Anhang: Quelltext des Vorschlags}
+\addcontentsline{toc}{section}{Anhang}
+
+\small
+\begin{verbatim}
+It remains to show that (d) implies (a). 
+Assertion~(d) and the uniqueness of the solutions imply that for 
+every $ t \in [0,1] $ there exists a bounded operator $ T(t) \in \LE $ 
+such that 
+%
+\[
+	u(t,f) = T(t)f 
+	\quad \text{if} \quad 
+	f \in D(A) ,
+\]
+%
+and that 
+%
+\[
+	\sup_{0 \leq t \leq 1} \|T(t)\| < \infty .
+\]
+%
+In fact, by the uniqueness of the solutions the mapping 
+$ f \mapsto u(\cdot,f) $ from $ D(A) $ into $ C([0,1],E) $ is linear, 
+and by~(d) it is continuous at $ 0 $, hence bounded. 
+Since $ D(A) $ is dense in $ E $, it extends uniquely to a bounded 
+operator from $ E $ into $ C([0,1],E) $.
+It follows that $ T(\cdot)f $ is strongly continuous on $ [0,1] $ for 
+all $ f \in E $ (since it is so for $ f \in D(A) $ and $ D(A) $ is dense).
+
+Let $ t > 1 $.
+There exist unique $ n \in \N $ and $ s \in [0,1) $ such that $ t = n + s $.
+Let 
+%
+\[
+	T(t) \coloneq T(1)^{n} \cdot T(s) .
+\]
+%
+From the uniqueness of the solutions it follows that $ T(t)f = u(t,f) $ 
+for all $ t \geq 0 $ and $ f \in D(A) $, as well as 
+$ T(t+s)f = T(s)T(t)f $ for all $ f \in D(A) $ and $ s$, $t \geq 0 $.
+Since $ D(A) $ is dense, $ T $ is a semigroup.
+\end{verbatim}
+
+\end{document}
