@@ -1,6 +1,6 @@
 # Fahnenkorrektur (Text): Übergreifende Punkte und Index
 
-*One-parameter Semigroups of Positive Operators*, 2. Aufl. (Springer LNM 1184), Proof-PDF vom 14.10.2026.
+*One-parameter Semigroups of Positive Operators*, 2. Aufl. (Springer LNM 1184), Proof-PDF vom 23.10.2026.
 
 Auszug aus `Fahnenkorrektur_Springer_LNM1184.md`. **Seitenangaben** = gedruckte Seitenzahl (PDF-Seite = gedruckte Seite + 18). **Sicherheit:** ● hoch · ◐ mittel · ○ niedrig.
 
@@ -14,7 +14,7 @@ Insgesamt **2 Punkte**: 0 ●, 1 ◐, 1 ○; davon umgesetzt: 1.
 
 ## A. Übergreifende Punkte
 
-1. **Einleitungsseiten der Teile (S. 2, 136, 264, 408):** Die Bezeichnung „Part A–D“ ist gewollt. Diese Seiten sind aber in einer anderen Schrift gesetzt (Computer Modern statt Times). Falls das nicht beabsichtigt ist, bitte an Springer melden.
+1. **Einleitungsseiten der Teile (S. 2, 136, 264, 408): Umgesetzt** (23.10.2026). Diese Seiten sind in Computer Modern statt Times gesetzt. Sie stammen nicht aus Springers Satz, sondern aus `LN-Contract-Springer/cover-teaser/Teaser.pdf`: Dort stehen die vier Abschnitte als `\section*{Part A}`…`{Part D}` in einem `scrartcl` ohne Schriftpaket. Die Font-Subsets im Proof (`UYAFPX+CMSSBX10`, `HMBTDU+CMR12`, `EQPFII+CMMI12`, `VZZGNZ+CMR8`, `OKAOPP+CMMI8`, `FRNIHB+CMSY8`) sind zeichengleich die aus `Teaser.pdf`; Springer hat die Seiten also übernommen, nicht neu gesetzt. **Nichts an Springer zu melden.** Die vier Texte stehen daher jetzt in den `partbacktext`-Umgebungen von `part-a/part-a.tex` … `part-d/part-d.tex` (dort schon vorhanden, bis dahin leer); damit setzt das Buch sie selbst, in Times, und Springer muss nichts mehr einfügen. Die Überschrift „Part A“…„Part D“ ist dabei **entfallen** (Entscheidung U. Groh, 23.10.2026): Das Titelblatt auf der Vorderseite nennt den Teil bereits, und zwar mit der Zählung der 2. Auflage („Part I“), die Teaser-Seite dagegen mit der alten („Part A“). Beim Übernehmen angeglichen: `$K$` statt `K` (Teil II), `\CA`/`\WA` statt `$C^*$`/`$W^*$` und „Part-II und Part-III“ statt „Parts B and C“ (Teil IV). Der Rückentext aus `cover-teaser/Cover.tex` bleibt davon unberührt, er ist Umschlagtext.
 2. **Inhaltsverzeichnis (S. xi–xiv): Umgesetzt** (Stand 23.10.2026, im Quelltext geprüft). „Uniformly Ergodic Semig**o**ups“ → „Semig**r**oups“ (Teil IV, 3.2; gleicher Fehler in Überschrift und Kolumnentitel S. 432–436). „Basic Results **of** Spaces C₀(X)“ → „**on**“ (Teil II, Kap. 1; auch Kolumnentitel).
 3. **Kolumnentitel:** Teil I, Kap. 1 heißt im Kolumnentitel „Basic Results on Banach Spaces“ (Kapiteltitel: „… on Semigroups on Banach Spaces“) — als Kurztitel vertretbar, **offen**, ob das so bleiben soll (`\chaptermark` in `part-a/chap-a1.tex`, Z. 8). Teil IV, Kap. 3 („W∗-algebras“ klein): **umgesetzt**, der Kolumnentitel schreibt jetzt „\WA-Algebras“ (`part-d/chap-d3.tex`, Z. 6). Kurztitel sonst konsistent.
 4. **„Part-I“ im Fließtext:** Die Bindestrich-Form ist gewollt. Gelistet sind nur Stellen, an denen sie fehlt (S. 174, zweimal).
